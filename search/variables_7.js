@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['g_5faddr_5fis_5fuser',['g_addr_is_user',['../dummy_8c.html#ab5369b50a261427373655cb500c202fd',1,'dummy.c']]],
+  ['g_5fbody_5fparts',['g_body_parts',['../dummy_8c.html#afbc2a94715e45607382e99d22cd3d01f',1,'dummy.c']]],
+  ['g_5fis_5fmail_5flist',['g_is_mail_list',['../dummy_8c.html#a582c45bb1ff1198a5615914ab083ed2f',1,'dummy.c']]],
+  ['g_5fis_5fsubscribed_5flist',['g_is_subscribed_list',['../dummy_8c.html#a669bf985bfe8eff0594b87b732ddaae0',1,'dummy.c']]],
+  ['g_5fmyvar',['g_myvar',['../dummy_8c.html#a2fc6ca3551159046f780481e9a450a83',1,'dummy.c']]],
+  ['gen_5fhash',['gen_hash',['../structHash.html#aad1414984d3429f8179bc139c9a73476',1,'Hash']]],
+  ['gen_5ftime',['gen_time',['../structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd',1,'PgpKeyInfo']]],
+  ['get_5ffield',['get_field',['../structConnAccount.html#a7d50ff0be45788ebe73431c850925fc9',1,'ConnAccount']]],
+  ['gid',['gid',['../structFolderFile.html#a5a5786506959747b14573f280a8e5a7c',1,'FolderFile']]],
+  ['gitver',['GitVer',['../globals_8h.html#adc526a91dddf9717c5e96ef6e85d19d7',1,'globals.h']]],
+  ['global_5fdata',['global_data',['../structNotifyCallback.html#a7c321c2d13dc78888dbd478128224acb',1,'NotifyCallback::global_data()'],['../structObserver.html#a7ef010a38c5353e1c77c0b9d4b7dfb52',1,'Observer::global_data()']]],
+  ['goodsig',['goodsig',['../structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e',1,'Body']]],
+  ['gossip_5fkeydata',['gossip_keydata',['../structAutocryptPeer.html#a1bd4a6de2d08f94c3ea91aaef3e32d74',1,'AutocryptPeer::gossip_keydata()'],['../structAutocryptGossipHistory.html#ad6b310f2d3be37b0e769c6eb26396344',1,'AutocryptGossipHistory::gossip_keydata()']]],
+  ['gossip_5fkeyid',['gossip_keyid',['../structAutocryptPeer.html#a5c47e57194dc2af5bfcfdbd250f8f749',1,'AutocryptPeer']]],
+  ['gossip_5ftimestamp',['gossip_timestamp',['../structAutocryptPeer.html#acaefee844147a0219b241986646aa36b',1,'AutocryptPeer']]],
+  ['gossiphistoryinsertstmt',['GossipHistoryInsertStmt',['../autocrypt__db_8c.html#a9c401461f82bbd761feed64166fb7802',1,'autocrypt_db.c']]],
+  ['group',['group',['../structAddress.html#a12bd44ccc016e50c674ec3a902ba1c28',1,'Address::group()'],['../structGroupNode.html#ad95aef75a1380ec120748c922ab77bc1',1,'GroupNode::group()'],['../structNntpMboxData.html#a4eeac824a82fb5bb884aa9aab449ccf8',1,'NntpMboxData::group()'],['../structPattern.html#a137f1b5a9fe923c4ea6c567465f522e7',1,'Pattern::group()']]],
+  ['group_5fmatch',['group_match',['../structPattern.html#a018ea950c8d8c27eec7fe9338953f918',1,'Pattern']]],
+  ['groups',['Groups',['../group_8c.html#aaa983196b34b7d8a74f8bc03350e4bc8',1,'group.c']]],
+  ['groups_5fhash',['groups_hash',['../structNntpAccountData.html#ac90cceb403179b014cc80a9d109560d3',1,'NntpAccountData']]],
+  ['groups_5flist',['groups_list',['../structNntpAccountData.html#aa8a61ca529162078c8b06d4cec65e63c',1,'NntpAccountData']]],
+  ['groups_5fmax',['groups_max',['../structNntpAccountData.html#a9d74636989a2ad52c90363e982997b9a',1,'NntpAccountData']]],
+  ['groups_5fnum',['groups_num',['../structNntpAccountData.html#a37bf5f2141a2488012a0441694bae9bf',1,'NntpAccountData']]]
+];

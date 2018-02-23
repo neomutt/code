@@ -1,0 +1,26 @@
+var structCryptModuleSpecs =
+[
+    [ "identifier", "structCryptModuleSpecs.html#a826c8626deb6f6d25fb824668b2a7191", null ],
+    [ "init", "structCryptModuleSpecs.html#a819c87369b2dc3806d846c3a7e9fb7b6", null ],
+    [ "void_passphrase", "structCryptModuleSpecs.html#ac08ed67f7b29c7b6cba6d4999cebf739", null ],
+    [ "valid_passphrase", "structCryptModuleSpecs.html#a8e4fee6a5203c68d854e1d328559889a", null ],
+    [ "decrypt_mime", "structCryptModuleSpecs.html#a4cba06c7d0dfb0e4d1fba7c9ded25c0d", null ],
+    [ "application_handler", "structCryptModuleSpecs.html#ab422f00f242155c816f7b4a16af52d60", null ],
+    [ "encrypted_handler", "structCryptModuleSpecs.html#a356c4135c3412cfae7dad038630aa9bf", null ],
+    [ "find_keys", "structCryptModuleSpecs.html#a4e416a9641e0ff59d62f53cd1b9f258e", null ],
+    [ "sign_message", "structCryptModuleSpecs.html#aa580b14417c03a5d05a2b87f6f6a3c96", null ],
+    [ "verify_one", "structCryptModuleSpecs.html#a0a1d9c0eb016fb8f7cabc71e2f9f2398", null ],
+    [ "send_menu", "structCryptModuleSpecs.html#a5f1c1af91442b5aa9861a3980e916e8f", null ],
+    [ "set_sender", "structCryptModuleSpecs.html#a71465f373622ace78b4637eed9694f45", null ],
+    [ "pgp_encrypt_message", "structCryptModuleSpecs.html#a1307534fb70babaa05e0c0966996839b", null ],
+    [ "pgp_make_key_attachment", "structCryptModuleSpecs.html#a505fa888b6994755f055d202c339dbef", null ],
+    [ "pgp_check_traditional", "structCryptModuleSpecs.html#ae255c8042e6e492b410bfe7f125d1fe4", null ],
+    [ "pgp_traditional_encryptsign", "structCryptModuleSpecs.html#a9b9eb0fa8946d01366489f5f96998e76", null ],
+    [ "pgp_invoke_getkeys", "structCryptModuleSpecs.html#acd2b13751354a0ea6dc82ee6bbdf3724", null ],
+    [ "pgp_invoke_import", "structCryptModuleSpecs.html#a1023662632e226a84a7d7c6002edce19", null ],
+    [ "pgp_extract_key_from_attachment", "structCryptModuleSpecs.html#a7c197e2213c950245ad7bde7f0c51256", null ],
+    [ "smime_getkeys", "structCryptModuleSpecs.html#a555d3da530f7c25207fcbae9efa8ab03", null ],
+    [ "smime_verify_sender", "structCryptModuleSpecs.html#a13cf81bd2933d5ab2874975e84faeba3", null ],
+    [ "smime_build_smime_entity", "structCryptModuleSpecs.html#a0f34108f7d4989f464d524aa0241596f", null ],
+    [ "smime_invoke_import", "structCryptModuleSpecs.html#ad5b7c9666d4927379aaffcd74bf24bb9", null ]
+];

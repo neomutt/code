@@ -1,0 +1,27 @@
+var hcache_8c =
+[
+    [ "RealKey", "structRealKey.html", "structRealKey" ],
+    [ "HCACHE_BACKEND", "hcache_8c.html#a19daca2082a8add642e698602b625fb2", null ],
+    [ "hcache_get_ops", "hcache_8c.html#a51511cd14787b537b38ed24431384743", null ],
+    [ "hcache_get_backend_ops", "hcache_8c.html#af820150342f1bb1c41cb8add852212b1", null ],
+    [ "header_size", "hcache_8c.html#abcb84cb05c59336907daa68565cc5b38", null ],
+    [ "dump", "hcache_8c.html#a6a4d78cf0bd14f4bb7a0315c5b93fa18", null ],
+    [ "restore", "hcache_8c.html#ab8ce7457145c54b7efb24890404ac9d2", null ],
+    [ "realkey", "hcache_8c.html#a95370cb353c6c77fd800811d3df4d3d7", null ],
+    [ "create_hcache_dir", "hcache_8c.html#a5086e15744da558388677cc362f74959", null ],
+    [ "hcache_per_folder", "hcache_8c.html#adb876190552b516c4e3a32c1ca92960f", null ],
+    [ "get_foldername", "hcache_8c.html#a950cdaf6e000a670ba816ef87bca445e", null ],
+    [ "mutt_hcache_open", "hcache_8c.html#ae01c81d7bc2f290309a28bbb8474ff40", null ],
+    [ "mutt_hcache_close", "hcache_8c.html#a1c8df3091187e8307f80718868ee1718", null ],
+    [ "mutt_hcache_fetch", "hcache_8c.html#a6abef7abe23d9af30e40bcc62e3bf3e3", null ],
+    [ "mutt_hcache_fetch_raw", "hcache_8c.html#a85f8cc22d3aa6633a1c31289ffd9628e", null ],
+    [ "mutt_hcache_free_raw", "hcache_8c.html#ac5a808d9afc863291f8b167f555ca80f", null ],
+    [ "mutt_hcache_store", "hcache_8c.html#a1ed43e2b7207723f17e5969519bb310b", null ],
+    [ "mutt_hcache_store_raw", "hcache_8c.html#a3abe8868238b4e29a445cdbf4da3ca8c", null ],
+    [ "mutt_hcache_delete_header", "hcache_8c.html#a00d8017e832930cb699c8bdd12417023", null ],
+    [ "mutt_hcache_backend_list", "hcache_8c.html#a19989208cbd44d4083d872702017e1fc", null ],
+    [ "mutt_hcache_is_valid_backend", "hcache_8c.html#af2522d53121a164856680743be32ea18", null ],
+    [ "C_HeaderCacheBackend", "hcache_8c.html#a2224a700997de24abfbaa63344a72969", null ],
+    [ "hcachever", "hcache_8c.html#ac0dde9400cb5f702e4b8c6fbd6e5c0ab", null ],
+    [ "hcache_ops", "hcache_8c.html#aafea30469d08ba46dc83b5abf0c88285", null ]
+];

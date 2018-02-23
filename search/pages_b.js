@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['manage_20where_20the_20email_20is_20piped_20to_20external_20commands',['Manage where the email is piped to external commands',['../commands.html',1,'index']]],
+  ['misc_20pgp_20helper_20routines',['Misc PGP helper routines',['../crypt_pgplib.html',1,'ncrypt']]],
+  ['miscellaneous_20email_20parsing_20routines',['Miscellaneous email parsing routines',['../email_parse.html',1,'email']]],
+  ['manipulate_20the_20flags_20in_20an_20email_20header',['Manipulate the flags in an email header',['../flags.html',1,'index']]],
+  ['mailbox_20browser',['Mailbox browser',['../imap_browse.html',1,'imap']]],
+  ['manage_20imap_20messages',['Manage IMAP messages',['../imap_message.html',1,'imap']]],
+  ['manage_20keymappings',['Manage keymappings',['../keymap.html',1,'index']]],
+  ['mailbox_20helper_20functions',['Mailbox helper functions',['../mailbox.html',1,'index']]],
+  ['maildir_3a_20local_20mailbox_20type',['MAILDIR: Local mailbox type',['../maildir.html',1,'']]],
+  ['maildir_20local_20mailbox_20type',['Maildir local mailbox type',['../maildir_maildir.html',1,'maildir']]],
+  ['mh_20local_20mailbox_20type',['MH local mailbox type',['../maildir_mh.html',1,'maildir']]],
+  ['maildir_2fmh_20local_20mailbox_20type',['Maildir/MH local mailbox type',['../maildir_shared.html',1,'maildir']]],
+  ['map_20between_20a_20string_20and_20a_20constant',['Map between a string and a constant',['../mapping.html',1,'mutt']]],
+  ['mbox_3a_20local_20mailbox_20type',['MBOX: Local mailbox type',['../mbox.html',1,'']]],
+  ['mbox_20local_20mailbox_20type',['Mbox local mailbox type',['../mbox_mbox.html',1,'mbox']]],
+  ['multi_2dbyte_20string_20manipulation_20functions',['Multi-byte String manipulation functions',['../mbyte.html',1,'mutt']]],
+  ['memory_20management_20wrappers',['Memory management wrappers',['../memory.html',1,'mutt']]],
+  ['monitor_20files_20for_20changes',['Monitor files for changes',['../monitor.html',1,'index']]],
+  ['mutt_3a_20shared_20code_20for_20handling_20strings_2c_20files_2c_20dates_2c_20etc',['MUTT: Shared code for handling strings, files, dates, etc',['../mutt.html',1,'']]],
+  ['manipulate_20an_20email_27s_20header',['Manipulate an email&apos;s header',['../mutt_header.html',1,'index']]],
+  ['miscellaneous_20email_20parsing_20routines',['Miscellaneous email parsing routines',['../mutt_parse.html',1,'index']]],
+  ['mailbox_20multiplexor',['Mailbox multiplexor',['../mx.html',1,'index']]],
+  ['match_20patterns_20to_20emails',['Match patterns to emails',['../pattern.html',1,'index']]],
+  ['manage_20regular_20expressions',['Manage regular expressions',['../regex.html',1,'mutt']]],
+  ['miscellaneous_20functions_20for_20sending_20an_20email',['Miscellaneous functions for sending an email',['../sendlib.html',1,'index']]]
+];

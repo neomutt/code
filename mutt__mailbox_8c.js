@@ -1,0 +1,18 @@
+var mutt__mailbox_8c =
+[
+    [ "mailbox_check", "mutt__mailbox_8c.html#a938dcc48d289b1b7c881fbb8995e48e9", null ],
+    [ "mutt_mailbox_check", "mutt__mailbox_8c.html#a699c8af5931c0e7156efb889a6e43738", null ],
+    [ "mutt_mailbox_notify", "mutt__mailbox_8c.html#a9e2e89628d0b2ac8cb68e6a07e0e04f3", null ],
+    [ "mutt_mailbox_list", "mutt__mailbox_8c.html#ab9927df6282aeabd032cfca3332f4907", null ],
+    [ "mutt_mailbox_set_notified", "mutt__mailbox_8c.html#a7b979f11bcd9c44ae5779c0a432fcb8f", null ],
+    [ "mutt_mailbox_next_buffer", "mutt__mailbox_8c.html#a63307e3169199baad3918dd592e02e49", null ],
+    [ "mutt_mailbox_next", "mutt__mailbox_8c.html#a1cf97a7ae59b8272cca6183fa6f27a3f", null ],
+    [ "mutt_mailbox_cleanup", "mutt__mailbox_8c.html#abf8c2a3fe001e431c5f0dd76e7e4e114", null ],
+    [ "MailboxTime", "mutt__mailbox_8c.html#aeb7307ad9fd4cae39c95358e38484fb0", null ],
+    [ "MailboxStatsTime", "mutt__mailbox_8c.html#a0158b0a6ecc3627c41905aab3d02ad3d", null ],
+    [ "MailboxCount", "mutt__mailbox_8c.html#a1aeedd8c682aea901d3f9c5906ab6c83", null ],
+    [ "MailboxNotify", "mutt__mailbox_8c.html#a3851e970bf769f3ed8baedc7def6ffcc", null ],
+    [ "C_MailCheck", "mutt__mailbox_8c.html#a3074a610356328c230d6c145b424e2dd", null ],
+    [ "C_MailCheckStats", "mutt__mailbox_8c.html#aa3ddf22cf6aef4c49cc0f883b3f748c5", null ],
+    [ "C_MailCheckStatsInterval", "mutt__mailbox_8c.html#a8d950eec7f2bfa0f7b5f7e054589e5b0", null ]
+];

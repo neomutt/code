@@ -1,0 +1,24 @@
+var init_8h =
+[
+    [ "charset_validator", "init_8h.html#a2af01c740da7a35724ab4052aaf6abb8", null ],
+    [ "hcache_validator", "init_8h.html#ae29b82f804730e46d47261bd6d4a3604", null ],
+    [ "multipart_validator", "init_8h.html#a60338bba8ddc85a92ca589cdbb174da3", null ],
+    [ "pager_validator", "init_8h.html#a015d25eea10195c886816e39503ca183", null ],
+    [ "reply_validator", "init_8h.html#a89b7ac9b14bd9007726ca035d36962be", null ],
+    [ "wrapheaders_validator", "init_8h.html#a1a23d8cffeb9941ba45499085897ffc3", null ],
+    [ "init_config", "init_8h.html#a010347bb26a5857fdac5430b85cfaab0", null ],
+    [ "mutt_command_complete", "init_8h.html#ad41f1b6fbd5aeeee1bfc56f620ff0f44", null ],
+    [ "mutt_command_get", "init_8h.html#a6550391715386cf9f843992b97cd6165", null ],
+    [ "mutt_commands_apply", "init_8h.html#a4946a635036d6bc6a8018624849855bb", null ],
+    [ "mutt_extract_token", "init_8h.html#a0c8965a76cc79c02268a42a859968bcb", null ],
+    [ "mutt_get_hook_type", "init_8h.html#a2b5a9a2f2f93e047f07ee4d095e39b3e", null ],
+    [ "mutt_init", "init_8h.html#aadc99134446d4162844e0a8d103df18b", null ],
+    [ "mutt_label_complete", "init_8h.html#a5a8b0c83a6dcb7d57edae458041869ad", null ],
+    [ "mutt_nm_query_complete", "init_8h.html#a17d5ac51e166d61b729ebdd66cd25c88", null ],
+    [ "mutt_nm_tag_complete", "init_8h.html#a8f739fa0c68ded6e209f2ceccd9bcfdf", null ],
+    [ "mutt_opts_free", "init_8h.html#aa49c5a3aa046da11a3df8924443c1732", null ],
+    [ "mutt_parse_rc_line", "init_8h.html#af3c6ffd438386832fae72f8b5856adf1", null ],
+    [ "mutt_query_variables", "init_8h.html#a10a5a62f5a2ac28b4b4954f7f1250267", null ],
+    [ "mutt_var_value_complete", "init_8h.html#a173ae67a86a1c7bfc88e98a0edbe514f", null ],
+    [ "query_quadoption", "init_8h.html#ab02047769214ff014b9a8a1782babadc", null ]
+];
