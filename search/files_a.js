@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['lib_2eh',['lib.h',['../address_2lib_8h.html',1,'(Global Namespace)'],['../autocrypt_2lib_8h.html',1,'(Global Namespace)'],['../compress_2lib_8h.html',1,'(Global Namespace)'],['../config_2lib_8h.html',1,'(Global Namespace)'],['../conn_2lib_8h.html',1,'(Global Namespace)'],['../core_2lib_8h.html',1,'(Global Namespace)'],['../debug_2lib_8h.html',1,'(Global Namespace)'],['../email_2lib_8h.html',1,'(Global Namespace)'],['../gui_2lib_8h.html',1,'(Global Namespace)'],['../hcache_2lib_8h.html',1,'(Global Namespace)'],['../imap_2lib_8h.html',1,'(Global Namespace)'],['../maildir_2lib_8h.html',1,'(Global Namespace)'],['../mbox_2lib_8h.html',1,'(Global Namespace)'],['../mutt_2lib_8h.html',1,'(Global Namespace)'],['../ncrypt_2lib_8h.html',1,'(Global Namespace)'],['../nntp_2lib_8h.html',1,'(Global Namespace)'],['../notmuch_2lib_8h.html',1,'(Global Namespace)'],['../pop_2lib_8h.html',1,'(Global Namespace)']]],
+  ['lib_2eh',['lib.h',['../address_2lib_8h.html',1,'(Global Namespace)'],['../autocrypt_2lib_8h.html',1,'(Global Namespace)'],['../bcache_2lib_8h.html',1,'(Global Namespace)'],['../compmbox_2lib_8h.html',1,'(Global Namespace)'],['../compress_2lib_8h.html',1,'(Global Namespace)'],['../config_2lib_8h.html',1,'(Global Namespace)'],['../conn_2lib_8h.html',1,'(Global Namespace)'],['../core_2lib_8h.html',1,'(Global Namespace)'],['../debug_2lib_8h.html',1,'(Global Namespace)'],['../email_2lib_8h.html',1,'(Global Namespace)'],['../gui_2lib_8h.html',1,'(Global Namespace)'],['../hcache_2lib_8h.html',1,'(Global Namespace)'],['../history_2lib_8h.html',1,'(Global Namespace)'],['../imap_2lib_8h.html',1,'(Global Namespace)'],['../maildir_2lib_8h.html',1,'(Global Namespace)'],['../mbox_2lib_8h.html',1,'(Global Namespace)'],['../mutt_2lib_8h.html',1,'(Global Namespace)'],['../ncrypt_2lib_8h.html',1,'(Global Namespace)'],['../nntp_2lib_8h.html',1,'(Global Namespace)'],['../notmuch_2lib_8h.html',1,'(Global Namespace)'],['../pop_2lib_8h.html',1,'(Global Namespace)']]],
   ['list_2ec',['list.c',['../list_8c.html',1,'']]],
   ['list_2eh',['list.h',['../list_8h.html',1,'']]],
   ['lmdb_2ec',['lmdb.c',['../lmdb_8c.html',1,'']]],
   ['log_5fdisp_5ffile_2ec',['log_disp_file.c',['../log__disp__file_8c.html',1,'']]],
+  ['log_5fdisp_5fnull_2ec',['log_disp_null.c',['../log__disp__null_8c.html',1,'']]],
   ['log_5fdisp_5fqueue_2ec',['log_disp_queue.c',['../log__disp__queue_8c.html',1,'']]],
   ['log_5fdisp_5fterminal_2ec',['log_disp_terminal.c',['../log__disp__terminal_8c.html',1,'']]],
   ['log_5ffile_5fclose_2ec',['log_file_close.c',['../log__file__close_8c.html',1,'']]],
@@ -21,5 +22,6 @@ var searchData=
   ['logging_2ec',['logging.c',['../logging_8c.html',1,'']]],
   ['logging_2eh',['logging.h',['../logging_8h.html',1,'']]],
   ['long_2ec',['long.c',['../config_2long_8c.html',1,'(Global Namespace)'],['../test_2config_2long_8c.html',1,'(Global Namespace)']]],
-  ['long_2eh',['long.h',['../config_2long_8h.html',1,'(Global Namespace)'],['../test_2config_2long_8h.html',1,'(Global Namespace)']]]
+  ['long_2eh',['long.h',['../config_2long_8h.html',1,'(Global Namespace)'],['../test_2config_2long_8h.html',1,'(Global Namespace)']]],
+  ['lz4_2ec',['lz4.c',['../lz4_8c.html',1,'']]]
 ];

@@ -2,8 +2,9 @@ var searchData=
 [
   ['conversion_20to_2ffrom_20base64_20encoding',['Conversion to/from base64 encoding',['../base64.html',1,'mutt']]],
   ['conversion_20between_20different_20character_20encodings',['Conversion between different character encodings',['../charset.html',1,'mutt']]],
-  ['compress_3a_20compressed_20mailbox',['COMPRESS: Compressed Mailbox',['../comp.html',1,'']]],
-  ['compressed_20mbox_20local_20mailbox_20type',['Compressed mbox local mailbox type',['../comp_compress.html',1,'comp']]],
+  ['compmbox_3a_20compressed_20mailbox',['COMPMBOX: Compressed Mailbox',['../compmbox.html',1,'']]],
+  ['compressed_20mbox_20local_20mailbox_20type',['Compressed mbox local mailbox type',['../compmbox_compress.html',1,'compmbox']]],
+  ['compress_3a_20compression',['COMPRESS: Compression',['../compress.html',1,'']]],
   ['config_3a_20flexible_20handling_20of_20config_20items',['CONFIG: Flexible handling of config items',['../config.html',1,'']]],
   ['config_20set',['Config Set',['../config_set.html',1,'config']]],
   ['conn_3a_20network_20connections_20and_20their_20encryption',['CONN: Network connections and their encryption',['../conn.html',1,'']]],

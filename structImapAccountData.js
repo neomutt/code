@@ -22,5 +22,6 @@ var structImapAccountData =
     [ "cmdbuf", "structImapAccountData.html#afd638dd8300b5defc46c07392d91b3b3", null ],
     [ "delim", "structImapAccountData.html#a02bf8e48eeec528eadf8bd63a2cbb6b4", null ],
     [ "mailbox", "structImapAccountData.html#ab08af69f675be131e1431c11bf6cf4f0", null ],
+    [ "prev_mailbox", "structImapAccountData.html#a1d1842d28b0455afee7ddd7f829f6c02", null ],
     [ "account", "structImapAccountData.html#aad188b30be1c81436ca0e13d21e807d7", null ]
 ];

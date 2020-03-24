@@ -32,7 +32,7 @@ var mx_8h =
     [ "mx_msg_open", "mx_8h.html#a7df2f9d4d83ce9fca2cf48e08f8a4bc0", null ],
     [ "mx_msg_padding_size", "mx_8h.html#a4721eba787445b6c9ab9a6366b5e816d", null ],
     [ "mx_save_hcache", "mx_8h.html#ab564fbbf566928004b4564b9aa01a603", null ],
-    [ "mx_path_canon", "mx_8h.html#a58b59bb1317f382bff828e985e8ed76e", null ],
+    [ "mx_path_canon", "mx_8h.html#a5fd7ddec18249a46944727c7297add2f", null ],
     [ "mx_path_canon2", "mx_8h.html#ae0f8710a0b85d6ebf96cbd2e4e0f6bc1", null ],
     [ "mx_path_parent", "mx_8h.html#ac3d6cc3d3d92b1a503d3709fbf20638f", null ],
     [ "mx_path_pretty", "mx_8h.html#aae663097459c5d2d096256bf29a84ebd", null ],
@@ -49,7 +49,7 @@ var mx_8h =
     [ "mx_alloc_memory", "mx_8h.html#acd0bf144d7c5ae05d86d8fb5e0058780", null ],
     [ "mx_check_empty", "mx_8h.html#abfcb134b61319721a49a9b205a67b58c", null ],
     [ "mx_fastclose_mailbox", "mx_8h.html#ac883dc0d1391457ac62efe762067a544", null ],
-    [ "mx_get_ops", "mx_8h.html#aa38d0f48e3608a1782472a4f9e55cda7", null ],
+    [ "mx_get_ops", "mx_8h.html#a69fb97b5bdfa030216af32bccd9b6fed", null ],
     [ "mx_tags_is_supported", "mx_8h.html#aa5e9e28ca8461569523e2dbd90ee14b1", null ],
     [ "mx_ops", "mx_8h.html#ad9ba91c403384d3c18d57a8cabf86e26", null ],
     [ "C_CatchupNewsgroup", "mx_8h.html#a2949a5819c0b254c751255ab7c9f02e4", null ],
@@ -57,5 +57,5 @@ var mx_8h =
     [ "C_MboxType", "mx_8h.html#a06da03900810e5c8f98b09dc688cff1e", null ],
     [ "C_Move", "mx_8h.html#a2515116e9ee5e578bf065702dffb6eda", null ],
     [ "C_Trash", "mx_8h.html#ac52946da71c8899693e80f091d7b51b7", null ],
-    [ "MagicDef", "mx_8h.html#a2dc3b2bb78a35b95b001f542d2dc32a1", null ]
+    [ "MboxTypeDef", "mx_8h.html#a500988f3151cd7021ad1c1e1dea27a26", null ]
 ];

@@ -9,7 +9,7 @@ var test_2config_2dump_8c =
     [ "test_get_elem_list", "test_2config_2dump_8c.html#a6a059730becf6978054548825d87f50b", null ],
     [ "test_dump_config_neo", "test_2config_2dump_8c.html#ae388d481275cedf515e0d4eb48572306", null ],
     [ "test_dump_config", "test_2config_2dump_8c.html#adee3066ab14834e27b940ac459862f3f", null ],
-    [ "config_dump", "test_2config_2dump_8c.html#a37dbea533ae5ac42be000f08dbe34f27", null ],
+    [ "test_config_dump", "test_2config_2dump_8c.html#af5378a4f14345cf259ca737dd881f168", null ],
     [ "VarApple", "test_2config_2dump_8c.html#a79ffad962c51cbaef7da0dde57cffa9d", null ],
     [ "VarBanana", "test_2config_2dump_8c.html#aba4f103ddf6539edad683594c3838af2", null ],
     [ "VarCherry", "test_2config_2dump_8c.html#af9dade780bcd78adbe63e0c507e88d4b", null ],
@@ -24,7 +24,7 @@ var test_2config_2dump_8c =
     [ "VarMango", "test_2config_2dump_8c.html#ac7da1b15de2c69047f5d5783b9af01f5", null ],
     [ "VarNectarine", "test_2config_2dump_8c.html#a535c2ec3061df3c017bc0a8fe8ef66f8", null ],
     [ "VarOlive", "test_2config_2dump_8c.html#a7d0716414fc87f8a072bd9eee90b9f9f", null ],
-    [ "MagicMap", "test_2config_2dump_8c.html#abbdf33fe903d4bf33f6cd04aa09d3191", null ],
-    [ "MagicDef", "test_2config_2dump_8c.html#a2dc3b2bb78a35b95b001f542d2dc32a1", null ],
+    [ "MboxTypeMap", "test_2config_2dump_8c.html#a94a0b09f098d128751ea45d79c25cc65", null ],
+    [ "MboxTypeDef", "test_2config_2dump_8c.html#a500988f3151cd7021ad1c1e1dea27a26", null ],
     [ "Vars", "test_2config_2dump_8c.html#a0ec6714905325f37533da49c4f419268", null ]
 ];

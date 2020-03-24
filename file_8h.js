@@ -50,6 +50,7 @@ var file_8h =
     [ "mutt_file_unlink", "file_8h.html#ae57463c2854c006a3c67b78736e9056e", null ],
     [ "mutt_file_unlink_empty", "file_8h.html#a1d61fd8c991d26942e6ae461aaf0fe13", null ],
     [ "mutt_file_unlock", "file_8h.html#a58563edc1ad32b074fb2425a929b0f39", null ],
+    [ "mutt_file_resolve_symlink", "file_8h.html#ab2b6d0cfae3b1a4038db5f44d06117c1", null ],
     [ "mutt_buffer_quote_filename", "file_8h.html#a52d932a8cfb110a123fef9eb096a84e0", null ],
     [ "mutt_buffer_file_expand_fmt_quote", "file_8h.html#aea349ade5677e5139606fdc8b44c8e00", null ],
     [ "C_Tmpdir", "file_8h.html#a5da60391fcb9bade2768342dc86cfa49", null ],

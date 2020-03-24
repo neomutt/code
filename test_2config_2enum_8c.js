@@ -18,7 +18,7 @@ var test_2config_2enum_8c =
     [ "test_validator", "test_2config_2enum_8c.html#a906a32278ed761fb29743aebd54e5bac", null ],
     [ "dump_native", "test_2config_2enum_8c.html#a3a25b594f616f113e6bc749efeb43531", null ],
     [ "test_inherit", "test_2config_2enum_8c.html#a76541f7dea628989ebe0d44929067f64", null ],
-    [ "config_enum", "test_2config_2enum_8c.html#aec8a69fe37232e5a31289d6cfe2eb285", null ],
+    [ "test_config_enum", "test_2config_2enum_8c.html#ab7749583223fcbe089f25e6b8e6378dc", null ],
     [ "VarApple", "test_2config_2enum_8c.html#a829e787ac275713e16fa440d71a1a69b", null ],
     [ "VarBanana", "test_2config_2enum_8c.html#ad736ef6b09e0f97420a1493a1748d164", null ],
     [ "VarCherry", "test_2config_2enum_8c.html#ac23580c7762b222db9528282b13646b3", null ],

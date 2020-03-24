@@ -5,6 +5,6 @@ var neomutt_8c =
     [ "neomutt_account_add", "neomutt_8c.html#a719e4995956628c3e2286051fd2448ee", null ],
     [ "neomutt_account_remove", "neomutt_8c.html#a76fdf60e1956810fd3b5f9653e2b04d6", null ],
     [ "neomutt_mailboxlist_clear", "neomutt_8c.html#a124116674adb30d3bceef08eeaad6905", null ],
-    [ "neomutt_mailboxlist_get_all", "neomutt_8c.html#a5fdaccf6b64a67825e90d024407dbd49", null ],
+    [ "neomutt_mailboxlist_get_all", "neomutt_8c.html#a8da77454847feae8957cc49fc6ca3baa", null ],
     [ "NeoMutt", "neomutt_8c.html#af4e00a7436ecc725b5a801685fadf3f4", null ]
 ];

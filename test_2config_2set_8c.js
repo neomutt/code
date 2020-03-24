@@ -9,7 +9,7 @@ var test_2config_2set_8c =
     [ "dummy_destroy", "test_2config_2set_8c.html#ac810c6408db283be1e17289e823c7a11", null ],
     [ "degenerate_tests", "test_2config_2set_8c.html#a365eeca46effef2ede2ac88142afea49", null ],
     [ "invalid_tests", "test_2config_2set_8c.html#a1ceeb0790626d7cdb04749816a32ea21", null ],
-    [ "config_set", "test_2config_2set_8c.html#a9df85117efed404dbec10443a902d5dd", null ],
+    [ "test_config_set", "test_2config_2set_8c.html#ad6c9e69f27b19b24f59630a7c944843c", null ],
     [ "VarApple", "test_2config_2set_8c.html#a5fa3dd978cfa4545f774b9766c5dde09", null ],
     [ "VarBanana", "test_2config_2set_8c.html#aba4f103ddf6539edad683594c3838af2", null ],
     [ "Vars", "test_2config_2set_8c.html#a0ec6714905325f37533da49c4f419268", null ]

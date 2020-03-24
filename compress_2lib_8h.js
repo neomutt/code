@@ -1,8 +1,9 @@
 var compress_2lib_8h =
 [
-    [ "CompressInfo", "structCompressInfo.html", "structCompressInfo" ],
-    [ "mutt_comp_can_append", "compress_2lib_8h.html#a9f3c7362d3b06ea8c32ce55d5c3db5f1", null ],
-    [ "mutt_comp_can_read", "compress_2lib_8h.html#af5e4caf583046a535cf5fda9933d3c74", null ],
-    [ "mutt_comp_valid_command", "compress_2lib_8h.html#ab77ea42f102d3aced8ea915e95a83bd4", null ],
-    [ "MxCompOps", "compress_2lib_8h.html#a69f737b0581952c0ef57f37af78ac6c7", null ]
+    [ "ComprOps", "structComprOps.html", "structComprOps" ],
+    [ "compress_get_ops", "compress_2lib_8h.html#ae5d8b1caefcb09857644dd0ed0d52755", null ],
+    [ "compress_list", "compress_2lib_8h.html#a18ad8e3351af2be6a0aae10c7fbbfc9a", null ],
+    [ "compr_lz4_ops", "compress_2lib_8h.html#a6d8f099f5c2b70d1b0cfb6128b06257f", null ],
+    [ "compr_zlib_ops", "compress_2lib_8h.html#a37acce8b5506a3791917ed32942c754d", null ],
+    [ "compr_zstd_ops", "compress_2lib_8h.html#a8e1064e163ced5487ec12de2be9db634", null ]
 ];

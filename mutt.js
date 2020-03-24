@@ -9,7 +9,6 @@ var mutt =
     [ "File management functions", "file.html", null ],
     [ "Pass files through external commands (filters)", "filter.html", null ],
     [ "Hash table data structure", "hash.html", null ],
-    [ "Read/write command history from/to a file", "history.html", null ],
     [ "Singly-linked list type", "list.html", null ],
     [ "Logging Dispatcher", "logging.html", null ],
     [ "Map between a string and a constant", "mapping.html", null ],

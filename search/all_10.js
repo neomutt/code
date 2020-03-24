@@ -25,7 +25,7 @@ var searchData=
   ['opcodes_2eh',['opcodes.h',['../opcodes_8h.html',1,'']]],
   ['opcompose',['OpCompose',['../functions_8c.html#a6dee3c280247d461f19ca099d7cc31f9',1,'OpCompose():&#160;functions.c'],['../functions_8h.html#aaae3e40ee6d36ad97416c65a5ab88d55',1,'OpCompose():&#160;functions.c']]],
   ['opeditor',['OpEditor',['../functions_8c.html#a9c040515fe94198e9745f3e973504db1',1,'OpEditor():&#160;functions.c'],['../functions_8h.html#a2b9870959e4ad6435f16d05422303957',1,'OpEditor():&#160;functions.c']]],
-  ['open',['open',['../structConnection.html#ad015a1227002b6ae42d5ad0d3add33d2',1,'Connection::open()'],['../structSaslSockData.html#a4dca120d8de4eb1842db0850ffa1c018',1,'SaslSockData::open()'],['../structHcacheOps.html#ac457f4af829dc5dc3b91b4ad0dc4e910',1,'HcacheOps::open()'],['../structComprOps.html#ae6e7d0a4ac01e689b263156d4df7c90e',1,'ComprOps::open()']]],
+  ['open',['open',['../structComprOps.html#ae6e7d0a4ac01e689b263156d4df7c90e',1,'ComprOps::open()'],['../structConnection.html#ad015a1227002b6ae42d5ad0d3add33d2',1,'Connection::open()'],['../structSaslSockData.html#a4dca120d8de4eb1842db0850ffa1c018',1,'SaslSockData::open()'],['../structHcacheOps.html#ac457f4af829dc5dc3b91b4ad0dc4e910',1,'HcacheOps::open()']]],
   ['opened',['opened',['../structMailbox.html#adce1e1ca0f16e44647fe2156182336c2',1,'Mailbox']]],
   ['openmailboxflags',['OpenMailboxFlags',['../mx_8h.html#a12d50555671e01ef64b027974fc5acfa',1,'mx.h']]],
   ['openssl_2ec',['openssl.c',['../openssl_8c.html',1,'']]],

@@ -3,6 +3,11 @@ var searchData=
   ['account_2ec',['account.c',['../core_2account_8c.html',1,'(Global Namespace)'],['../test_2config_2account_8c.html',1,'(Global Namespace)']]],
   ['account_2eh',['account.h',['../account_8h.html',1,'']]],
   ['account2_2eh',['account2.h',['../account2_8h.html',1,'']]],
+  ['account_5ffree_2ec',['account_free.c',['../account__free_8c.html',1,'']]],
+  ['account_5fmailbox_5fadd_2ec',['account_mailbox_add.c',['../account__mailbox__add_8c.html',1,'']]],
+  ['account_5fmailbox_5fremove_2ec',['account_mailbox_remove.c',['../account__mailbox__remove_8c.html',1,'']]],
+  ['account_5fnew_2ec',['account_new.c',['../account__new_8c.html',1,'']]],
+  ['acct_5fmenu_2ec',['acct_menu.c',['../acct__menu_8c.html',1,'']]],
   ['acutest_2eh',['acutest.h',['../acutest_8h.html',1,'']]],
   ['addrbook_2ec',['addrbook.c',['../addrbook_8c.html',1,'']]],
   ['addrbook_2eh',['addrbook.h',['../addrbook_8h.html',1,'']]],
@@ -22,9 +27,5 @@ var searchData=
   ['auth_5fplain_2ec',['auth_plain.c',['../auth__plain_8c.html',1,'']]],
   ['auth_5fsasl_2ec',['auth_sasl.c',['../auth__sasl_8c.html',1,'']]],
   ['autocrypt_2ec',['autocrypt.c',['../autocrypt_8c.html',1,'']]],
-  ['autocrypt_5facct_5fmenu_2ec',['autocrypt_acct_menu.c',['../autocrypt__acct__menu_8c.html',1,'']]],
-  ['autocrypt_5fdb_2ec',['autocrypt_db.c',['../autocrypt__db_8c.html',1,'']]],
-  ['autocrypt_5fgpgme_2ec',['autocrypt_gpgme.c',['../autocrypt__gpgme_8c.html',1,'']]],
-  ['autocrypt_5fprivate_2eh',['autocrypt_private.h',['../autocrypt__private_8h.html',1,'']]],
-  ['autocrypt_5fschema_2ec',['autocrypt_schema.c',['../autocrypt__schema_8c.html',1,'']]]
+  ['autocrypt_5fprivate_2eh',['autocrypt_private.h',['../autocrypt__private_8h.html',1,'']]]
 ];

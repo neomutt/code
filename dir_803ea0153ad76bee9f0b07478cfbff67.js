@@ -21,5 +21,7 @@ var dir_803ea0153ad76bee9f0b07478cfbff67 =
     [ "socket.c", "socket_8c.html", "socket_8c" ],
     [ "socket.h", "socket_8h.html", "socket_8h" ],
     [ "ssl.h", "ssl_8h.html", "ssl_8h" ],
-    [ "tunnel.c", "tunnel_8c.html", "tunnel_8c" ]
+    [ "tunnel.c", "tunnel_8c.html", "tunnel_8c" ],
+    [ "zstrm.c", "zstrm_8c.html", "zstrm_8c" ],
+    [ "zstrm.h", "zstrm_8h.html", "zstrm_8h" ]
 ];

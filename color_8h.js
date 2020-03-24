@@ -61,8 +61,8 @@ var color_8h =
     [ "mutt_color_free", "color_8h.html#a6decfe66d8615776049296a3b305930b", null ],
     [ "mutt_colors_new", "color_8h.html#af293b9a93e73b1dab46bca3cc5b4a11e", null ],
     [ "mutt_colors_free", "color_8h.html#af0ec14c3e096e102e319334939e5579a", null ],
-    [ "mutt_parse_color", "color_8h.html#addda0331b87b1ab8ee7a49761c4ea406", null ],
-    [ "mutt_parse_mono", "color_8h.html#ac8cf03a2aee853214803153d5f3dc02f", null ],
-    [ "mutt_parse_uncolor", "color_8h.html#ac06316b3c8b49763f4452d6bcf56e93a", null ],
-    [ "mutt_parse_unmono", "color_8h.html#add682a9ac21f7387a03f159e9b44d0eb", null ]
+    [ "mutt_parse_color", "color_8h.html#a63082a057de4b1f08741c9a312157e00", null ],
+    [ "mutt_parse_mono", "color_8h.html#a6001a5f58d1dcceec589a84a794efa6c", null ],
+    [ "mutt_parse_uncolor", "color_8h.html#a6e42243b65a9fa38b497dac61ec6d5ca", null ],
+    [ "mutt_parse_unmono", "color_8h.html#a426cea032e47c0d0772003826f2bc980", null ]
 ];

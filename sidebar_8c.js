@@ -21,6 +21,7 @@ var sidebar_8c =
     [ "prepare_sidebar", "sidebar_8c.html#a93a498e6a70231ba96fbdd66c6cff18d", null ],
     [ "draw_divider", "sidebar_8c.html#a228ec4bf709f7d688fbc8d5a264c00dd", null ],
     [ "fill_empty_space", "sidebar_8c.html#a170c92ace88b40e4afde3456023aff72", null ],
+    [ "imap_is_prefix", "sidebar_8c.html#a63315697f53b8d55512078470b04ea3c", null ],
     [ "draw_sidebar", "sidebar_8c.html#addfcfc56e3db5f2ca1d115fb654712b2", null ],
     [ "mutt_sb_draw", "sidebar_8c.html#a8bda2e6ff9359317ca2f1cd479659e21", null ],
     [ "mutt_sb_change_mailbox", "sidebar_8c.html#aec201a8e5376d56ce51d3285edbe1f5b", null ],

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['icmd_5fbind',['icmd_bind',['../icommands_8c.html#a22394dffac6940f66ae4404a63cfcef1',1,'icommands.c']]],
-  ['icmd_5fset',['icmd_set',['../icommands_8c.html#a7ab0541ec78d9c11ce7bb267ae01d888',1,'icommands.c']]],
-  ['icmd_5fversion',['icmd_version',['../icommands_8c.html#a3d3bd28d13294b890c599549d224f13e',1,'icommands.c']]],
+  ['icmd_5fbind',['icmd_bind',['../icommands_8c.html#a5bfcead22b4fe48bedac67a5e68231c4',1,'icommands.c']]],
+  ['icmd_5fset',['icmd_set',['../icommands_8c.html#a442157e6a64c4842777767ed3ceaa3bf',1,'icommands.c']]],
+  ['icmd_5fversion',['icmd_version',['../icommands_8c.html#a5eb034dc842c438ffc15252e4326d53e',1,'icommands.c']]],
   ['if',['if',['../acutest_8h.html#a61d3a7a37bb558ef6efb5e3d02c6562a',1,'if(!test_colorize_):&#160;acutest.h'],['../acutest_8h.html#a018a001f9337dd5d9a264c9bcef0ce59',1,'if(cond):&#160;acutest.h'],['../acutest_8h.html#a275c1d66f1a49fd24a8688f1efdd5ebc',1,'if(test_verbose_level_ &gt;=verbose_level):&#160;acutest.h'],['../acutest_8h.html#a5192274a11bee806acdc44ada26bdd0d',1,'if(test_verbose_level_&lt; 2) return:&#160;acutest.h'],['../acutest_8h.html#ab9f0e3ca467b8ee40cdb4c6a3879d3ca',1,'if(test_case_name_[0]):&#160;acutest.h'],['../acutest_8h.html#ae6e5bd1f7397db14908f648699f44c41',1,'if(fmt==NULL) return:&#160;acutest.h'],['../acutest_8h.html#a6cef0182919868f5f4e4f2e97015630d',1,'if(test_current_unit_==NULL||!test_cond_failed_) return:&#160;acutest.h'],['../acutest_8h.html#aa53427a1508fc7012cb9511f333c6c06',1,'if(line_beg[0] !=&apos;\0&apos;):&#160;acutest.h'],['../acutest_8h.html#a5ecbb9dcf50445f9f1fccd8ce11fedca',1,'if(test_verbose_level_==0) return:&#160;acutest.h']]],
   ['imap_5fac_5fadd',['imap_ac_add',['../imap_8c.html#a426ab6becdd21a3bc74f8aa240bd8f33',1,'imap.c']]],
   ['imap_5fac_5ffind',['imap_ac_find',['../imap_8c.html#ae0884b4151edb32e727cfe3f77554b78',1,'imap.c']]],
@@ -68,6 +68,7 @@ var searchData=
   ['imap_5fhcache_5fopen',['imap_hcache_open',['../imap__private_8h.html#a4519e1fc7a5d19b1f12dcf118e913b9b',1,'imap_hcache_open(struct ImapAccountData *adata, struct ImapMboxData *mdata):&#160;util.c'],['../util_8c.html#a4519e1fc7a5d19b1f12dcf118e913b9b',1,'imap_hcache_open(struct ImapAccountData *adata, struct ImapMboxData *mdata):&#160;util.c']]],
   ['imap_5fhcache_5fput',['imap_hcache_put',['../imap__private_8h.html#a4b04cf064a1da9c217a9650f0fd60e68',1,'imap_hcache_put(struct ImapMboxData *mdata, struct Email *e):&#160;util.c'],['../util_8c.html#a4b04cf064a1da9c217a9650f0fd60e68',1,'imap_hcache_put(struct ImapMboxData *mdata, struct Email *e):&#160;util.c']]],
   ['imap_5fhcache_5fstore_5fuid_5fseqset',['imap_hcache_store_uid_seqset',['../imap__private_8h.html#a4acae80a7c01e9047c5813b7a62675ad',1,'imap_hcache_store_uid_seqset(struct ImapMboxData *mdata):&#160;util.c'],['../util_8c.html#a4acae80a7c01e9047c5813b7a62675ad',1,'imap_hcache_store_uid_seqset(struct ImapMboxData *mdata):&#160;util.c']]],
+  ['imap_5fis_5fprefix',['imap_is_prefix',['../sidebar_8c.html#a63315697f53b8d55512078470b04ea3c',1,'sidebar.c']]],
   ['imap_5fkeepalive',['imap_keepalive',['../imap_2lib_8h.html#aa06d1239e1beef3cb38a979aad9a651e',1,'imap_keepalive(void):&#160;util.c'],['../util_8c.html#aa06d1239e1beef3cb38a979aad9a651e',1,'imap_keepalive(void):&#160;util.c']]],
   ['imap_5flogin',['imap_login',['../imap_8c.html#aeb15c04fee226298708dc044645df651',1,'imap_login(struct ImapAccountData *adata):&#160;imap.c'],['../imap__private_8h.html#aeb15c04fee226298708dc044645df651',1,'imap_login(struct ImapAccountData *adata):&#160;imap.c']]],
   ['imap_5flogout',['imap_logout',['../imap_8c.html#a0b142599cd1c529a1ffc0bacc6a064f7',1,'imap.c']]],

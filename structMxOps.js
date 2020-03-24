@@ -1,6 +1,6 @@
 var structMxOps =
 [
-    [ "magic", "structMxOps.html#a73493a7240a6946fc0ef3b7f9a03aadf", null ],
+    [ "type", "structMxOps.html#a7426508d3737f8021c01df861f58a997", null ],
     [ "name", "structMxOps.html#add03949683c170dc70e02f24f201356d", null ],
     [ "is_local", "structMxOps.html#a15a6d1b3b3a214b6e23a36e4b82e1353", null ],
     [ "ac_find", "structMxOps.html#a0c32dbbc5b81c53527d3bc4d223501c1", null ],

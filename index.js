@@ -43,7 +43,6 @@ var index =
     [ "Signal handling", "mutt_signal.html", null ],
     [ "NeoMutt connections", "mutt_socket.html", null ],
     [ "Create/manipulate threading in emails", "mutt_thread.html", null ],
-    [ "Zlib compression of network traffic", "zlib.html", null ],
     [ "Mailbox multiplexor", "mx.html", null ],
     [ "Handling of personal config ('my' variables)", "myvar.html", null ],
     [ "GUI display a file/email/help in a viewport with paging", "pager.html", null ],

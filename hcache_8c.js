@@ -3,6 +3,7 @@ var hcache_8c =
     [ "RealKey", "structRealKey.html", "structRealKey" ],
     [ "HCACHE_BACKEND", "hcache_8c.html#a19daca2082a8add642e698602b625fb2", null ],
     [ "hcache_get_ops", "hcache_8c.html#a51511cd14787b537b38ed24431384743", null ],
+    [ "compr_get_ops", "hcache_8c.html#a36bb76ba7301af3ce5ec65758c907afd", null ],
     [ "hcache_get_backend_ops", "hcache_8c.html#af820150342f1bb1c41cb8add852212b1", null ],
     [ "header_size", "hcache_8c.html#abcb84cb05c59336907daa68565cc5b38", null ],
     [ "dump", "hcache_8c.html#a6a4d78cf0bd14f4bb7a0315c5b93fa18", null ],
@@ -23,5 +24,8 @@ var hcache_8c =
     [ "mutt_hcache_is_valid_backend", "hcache_8c.html#af2522d53121a164856680743be32ea18", null ],
     [ "C_HeaderCacheBackend", "hcache_8c.html#a2224a700997de24abfbaa63344a72969", null ],
     [ "hcachever", "hcache_8c.html#ac0dde9400cb5f702e4b8c6fbd6e5c0ab", null ],
-    [ "hcache_ops", "hcache_8c.html#aafea30469d08ba46dc83b5abf0c88285", null ]
+    [ "hcache_ops", "hcache_8c.html#aafea30469d08ba46dc83b5abf0c88285", null ],
+    [ "C_HeaderCacheCompressDictionary", "hcache_8c.html#a772af678e5ad1ec8654c3de15dd7f946", null ],
+    [ "C_HeaderCacheCompressLevel", "hcache_8c.html#a4b23771c7935aa5e619f1bbac6cc0197", null ],
+    [ "C_HeaderCacheCompressMethod", "hcache_8c.html#af96bb6bee5a46b0787b642a4d625ac55", null ]
 ];

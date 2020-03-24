@@ -5,7 +5,6 @@ var searchData=
   ['base64_2ec',['base64.c',['../base64_8c.html',1,'']]],
   ['base64_2eh',['base64.h',['../base64_8h.html',1,'']]],
   ['bcache_2ec',['bcache.c',['../bcache_8c.html',1,'']]],
-  ['bcache_2eh',['bcache.h',['../bcache_8h.html',1,'']]],
   ['bdb_2ec',['bdb.c',['../bdb_8c.html',1,'']]],
   ['body_2ec',['body.c',['../body_8c.html',1,'']]],
   ['body_2eh',['body.h',['../body_8h.html',1,'']]],

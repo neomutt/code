@@ -11,6 +11,8 @@ var searchData=
   ['email_5fglobals_2eh',['email_globals.h',['../email__globals_8h.html',1,'']]],
   ['email_5fnew_2ec',['email_new.c',['../email__new_8c.html',1,'']]],
   ['email_5fsize_2ec',['email_size.c',['../email__size_8c.html',1,'']]],
+  ['emaillist_5fadd_5femail_2ec',['emaillist_add_email.c',['../emaillist__add__email_8c.html',1,'']]],
+  ['emaillist_5fclear_2ec',['emaillist_clear.c',['../emaillist__clear_8c.html',1,'']]],
   ['enriched_2ec',['enriched.c',['../enriched_8c.html',1,'']]],
   ['enriched_2eh',['enriched.h',['../enriched_8h.html',1,'']]],
   ['enter_2ec',['enter.c',['../enter_8c.html',1,'']]],

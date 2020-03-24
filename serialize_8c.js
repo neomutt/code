@@ -5,7 +5,7 @@ var serialize_8c =
     [ "serial_dump_size_t", "serialize_8c.html#af9f533eec777339780a562be26ea62e9", null ],
     [ "serial_restore_int", "serialize_8c.html#ae337dfc66e217ae0253a77eef4271f02", null ],
     [ "serial_restore_size_t", "serialize_8c.html#aa4629701fa11063b76e0076c8bedf0e2", null ],
-    [ "serial_dump_char_size", "serialize_8c.html#a5de3417db2f58568d7da82b74571efd4", null ],
+    [ "serial_dump_char_size", "serialize_8c.html#aa45c416053e87953f0cd015cfff5e556", null ],
     [ "serial_dump_char", "serialize_8c.html#a7fa6bf18ed1915cdfb49d945b6c018d3", null ],
     [ "serial_restore_char", "serialize_8c.html#a43a280bdcd6ff4e026fbab74aa3f82c4", null ],
     [ "serial_dump_address", "serialize_8c.html#a2848bbf4c6324c8d236fcad6f55f264a", null ],

@@ -1,6 +1,6 @@
 var mx_8c =
 [
-    [ "mx_get_ops", "mx_8c.html#aa38d0f48e3608a1782472a4f9e55cda7", null ],
+    [ "mx_get_ops", "mx_8c.html#a69fb97b5bdfa030216af32bccd9b6fed", null ],
     [ "mutt_is_spool", "mx_8c.html#a669989013069c5858de1556a2e36a859", null ],
     [ "mx_access", "mx_8c.html#a3a49664b99f8c9e57f94c02c922922cd", null ],
     [ "mx_open_mailbox_append", "mx_8c.html#a1263ed9dd21097a071e39a73f86f6eab", null ],
@@ -21,7 +21,7 @@ var mx_8c =
     [ "mx_tags_commit", "mx_8c.html#a38288bed1c5844da8860d94249ac5c6f", null ],
     [ "mx_tags_is_supported", "mx_8c.html#aa5e9e28ca8461569523e2dbd90ee14b1", null ],
     [ "mx_path_probe", "mx_8c.html#add36baf7d8410fb37158defdaebe9a5d", null ],
-    [ "mx_path_canon", "mx_8c.html#a58b59bb1317f382bff828e985e8ed76e", null ],
+    [ "mx_path_canon", "mx_8c.html#a5fd7ddec18249a46944727c7297add2f", null ],
     [ "mx_path_canon2", "mx_8c.html#ae0f8710a0b85d6ebf96cbd2e4e0f6bc1", null ],
     [ "mx_path_pretty", "mx_8c.html#aae663097459c5d2d096256bf29a84ebd", null ],
     [ "mx_path_parent", "mx_8c.html#ac3d6cc3d3d92b1a503d3709fbf20638f", null ],
@@ -39,7 +39,7 @@ var mx_8c =
     [ "C_MboxType", "mx_8c.html#a06da03900810e5c8f98b09dc688cff1e", null ],
     [ "C_Move", "mx_8c.html#a2515116e9ee5e578bf065702dffb6eda", null ],
     [ "C_Trash", "mx_8c.html#ac52946da71c8899693e80f091d7b51b7", null ],
-    [ "MagicMap", "mx_8c.html#abbdf33fe903d4bf33f6cd04aa09d3191", null ],
-    [ "MagicDef", "mx_8c.html#a2dc3b2bb78a35b95b001f542d2dc32a1", null ],
+    [ "MboxTypeMap", "mx_8c.html#a94a0b09f098d128751ea45d79c25cc65", null ],
+    [ "MboxTypeDef", "mx_8c.html#a500988f3151cd7021ad1c1e1dea27a26", null ],
     [ "mx_ops", "mx_8c.html#ad9ba91c403384d3c18d57a8cabf86e26", null ]
 ];

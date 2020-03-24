@@ -34,6 +34,7 @@ var searchData=
   ['event_5fsubtype',['event_subtype',['../structNotifyCallback.html#a73db338abce1e44355fb42b9c2224d34',1,'NotifyCallback']]],
   ['event_5ftype',['event_type',['../structNotifyCallback.html#a310cf079dceac403a8a71fd19c85a487',1,'NotifyCallback']]],
   ['exact',['exact',['../structScore.html#a02333cc6a0f497e57f189dafb8f8b3ff',1,'Score']]],
+  ['exit_5fcalled',['exit_called',['../mutt__mem__malloc_8c.html#a3db614269f915e0e125571c76a8f81c3',1,'mutt_mem_malloc.c']]],
   ['exit_5fhandler',['exit_handler',['../signal_8c.html#a72d101eae821d9cc5dde2d291a3cf065',1,'signal.c']]],
   ['expected',['expected',['../structMakeTimeTest.html#a42819879dd1e40e0515de2edcb0efec8',1,'MakeTimeTest::expected()'],['../structNormalizeTest.html#a1c243f70d25a4d2a874442807cf35cd4',1,'NormalizeTest::expected()'],['../structParseDateTest.html#a0f67ceb85e7aa7b3a6b0754f5ac8b908',1,'ParseDateTest::expected()'],['../structParseImapTest.html#a05a4af676f0e5d7dd4d97e5d2c549346',1,'ParseImapTest::expected()'],['../structInlineReplaceTest.html#affdd645a9683a33b25ce7d843cb04ca4',1,'InlineReplaceTest::expected()'],['../structRemallTest.html#a4aa5fd6d1b875463b029d78415f970cb',1,'RemallTest::expected()'],['../structTrailTest.html#ade4ecce7abc4e6b1bd80e5ec54a5be6d',1,'TrailTest::expected()']]],
   ['expire',['expire',['../structPopAccountData.html#aad2e94674fb9bc43561cc360270aad3d',1,'PopAccountData']]],

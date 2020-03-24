@@ -8,7 +8,7 @@ var searchData=
   ['gui_20ask_20the_20user_20to_20enter_20a_20string',['GUI ask the user to enter a string',['../enter.html',1,'index']]],
   ['gui_3a_20graphical_20code',['GUI: Graphical code',['../gui.html',1,'']]],
   ['gui_20miscellaneous_20curses_20_28window_20drawing_29_20routines',['GUI miscellaneous curses (window drawing) routines',['../gui_curs_lib.html',1,'gui']]],
-  ['gdmb',['GDMB',['../hc_gdbm.html',1,'hcache']]],
+  ['gdbm',['GDBM',['../hc_gdbm.html',1,'hcache']]],
   ['generate_20the_20help_2dline_20and_20help_2dpage_20and_20gui_20display_20them',['Generate the help-line and help-page and GUI display them',['../help.html',1,'index']]],
   ['gui_20manage_20the_20main_20index_20_28list_20of_20emails_29',['GUI manage the main index (list of emails)',['../index2.html',1,'index']]],
   ['gui_20present_20the_20user_20with_20a_20selectable_20list',['GUI present the user with a selectable list',['../menu.html',1,'index']]],

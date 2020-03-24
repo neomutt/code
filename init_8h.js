@@ -1,6 +1,7 @@
 var init_8h =
 [
     [ "charset_validator", "init_8h.html#a2af01c740da7a35724ab4052aaf6abb8", null ],
+    [ "compress_validator", "init_8h.html#a57d32fbffa68cdb2dc4f301ed8f371c7", null ],
     [ "hcache_validator", "init_8h.html#ae29b82f804730e46d47261bd6d4a3604", null ],
     [ "multipart_validator", "init_8h.html#a60338bba8ddc85a92ca589cdbb174da3", null ],
     [ "pager_validator", "init_8h.html#a015d25eea10195c886816e39503ca183", null ],

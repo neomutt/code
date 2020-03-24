@@ -1,6 +1,7 @@
 var dir_1affd7d97bd8d9f0cd65075bdd874f52 =
 [
     [ "log_disp_file.c", "log__disp__file_8c.html", "log__disp__file_8c" ],
+    [ "log_disp_null.c", "log__disp__null_8c.html", "log__disp__null_8c" ],
     [ "log_disp_queue.c", "log__disp__queue_8c.html", "log__disp__queue_8c" ],
     [ "log_disp_terminal.c", "log__disp__terminal_8c.html", "log__disp__terminal_8c" ],
     [ "log_file_close.c", "log__file__close_8c.html", "log__file__close_8c" ],

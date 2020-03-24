@@ -34,7 +34,7 @@ var globals_8h =
     [ "C_EnvelopeFromAddress", "globals_8h.html#abca6b4223062b29af7e6293f53ae48fe", null ],
     [ "C_From", "globals_8h.html#aa9294ec20d2082f352b6b646e69af23f", null ],
     [ "C_AbortBackspace", "globals_8h.html#a0eb3b4cb37ccf50c6435e40fd1fa4049", null ],
-    [ "C_AbortKeyStr", "globals_8h.html#a3450a9c8c160fd7ee90fece4644aa217", null ],
+    [ "C_AbortKey", "globals_8h.html#aa2dd9e7aa5fb9fe04aafd6cb0a9af1dd", null ],
     [ "C_AliasFile", "globals_8h.html#afbaf87ea951727e2a448d37fbd8a992e", null ],
     [ "C_Attribution", "globals_8h.html#a652d897b45c9942bb5d527034345a48c", null ],
     [ "C_AttributionLocale", "globals_8h.html#ad74be3f3f56f80f8b9ade1e354caa2cf", null ],

@@ -40,6 +40,7 @@ var dir_1439c9d351dd978c38b2510729161b97 =
     [ "mutt_str_strncat.c", "mutt__str__strncat_8c.html", "mutt__str__strncat_8c" ],
     [ "mutt_str_strncmp.c", "mutt__str__strncmp_8c.html", "mutt__str__strncmp_8c" ],
     [ "mutt_str_strnfcpy.c", "mutt__str__strnfcpy_8c.html", "mutt__str__strnfcpy_8c" ],
+    [ "mutt_str_strnlower.c", "mutt__str__strnlower_8c.html", "mutt__str__strnlower_8c" ],
     [ "mutt_str_substr_copy.c", "mutt__str__substr__copy_8c.html", "mutt__str__substr__copy_8c" ],
     [ "mutt_str_substr_dup.c", "mutt__str__substr__dup_8c.html", "mutt__str__substr__dup_8c" ],
     [ "mutt_str_sysexit.c", "mutt__str__sysexit_8c.html", "mutt__str__sysexit_8c" ],

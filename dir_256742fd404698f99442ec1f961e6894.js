@@ -13,5 +13,6 @@ var dir_256742fd404698f99442ec1f961e6894 =
     [ "mutt_path_tidy.c", "mutt__path__tidy_8c.html", "mutt__path__tidy_8c" ],
     [ "mutt_path_tidy_dotdot.c", "mutt__path__tidy__dotdot_8c.html", "mutt__path__tidy__dotdot_8c" ],
     [ "mutt_path_tidy_slash.c", "mutt__path__tidy__slash_8c.html", "mutt__path__tidy__slash_8c" ],
+    [ "mutt_path_tilde.c", "mutt__path__tilde_8c.html", "mutt__path__tilde_8c" ],
     [ "mutt_path_to_absolute.c", "mutt__path__to__absolute_8c.html", "mutt__path__to__absolute_8c" ]
 ];

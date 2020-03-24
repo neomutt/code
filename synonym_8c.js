@@ -6,7 +6,7 @@ var synonym_8c =
     [ "test_native_set", "synonym_8c.html#ab5935bf604cc953008fde261e13163b8", null ],
     [ "test_native_get", "synonym_8c.html#afdd5f411dfa0e2d1c7c7a2a9710182dd", null ],
     [ "test_reset", "synonym_8c.html#ac8ddbbe16d88cb9b096c15cf225cbeb3", null ],
-    [ "config_synonym", "synonym_8c.html#acf81082ee377e802e06c0e4533c5d90f", null ],
+    [ "test_config_synonym", "synonym_8c.html#a526ea56d22987b0571991b933c4d3fa9", null ],
     [ "VarApple", "synonym_8c.html#a9c18bdcae4abdd1a9525578e5aa5d0a7", null ],
     [ "VarCherry", "synonym_8c.html#aa5336ec90481656d3147fc722ee50ba6", null ],
     [ "VarElderberry", "synonym_8c.html#ab5dc47ef77d4551c81348ded3718f368", null ],

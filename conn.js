@@ -10,5 +10,6 @@ var conn =
     [ "SASL authentication support", "conn_sasl.html", null ],
     [ "SASL plain authentication support", "conn_sasl_plain.html", null ],
     [ "Low-level socket handling", "conn_socket.html", null ],
-    [ "Support for network tunnelling", "conn_tunnel.html", null ]
+    [ "Support for network tunnelling", "conn_tunnel.html", null ],
+    [ "Zlib compression of network traffic", "conn_zstrm.html", null ]
 ];

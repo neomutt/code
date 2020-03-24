@@ -4,6 +4,7 @@ var curs__lib_8c =
     [ "mutt_refresh", "curs__lib_8c.html#a99dc8e687f3d5688695d0d7a1bab3c3f", null ],
     [ "mutt_need_hard_redraw", "curs__lib_8c.html#abbd51b0f01f2565da12fddf6716c7b9c", null ],
     [ "mutt_getch_timeout", "curs__lib_8c.html#a07f104cc4b27d47d46f9a83993acc5ef", null ],
+    [ "mutt_monitor_getch", "curs__lib_8c.html#ac2c152cda0ef919ae627ddde039dd12c", null ],
     [ "mutt_getch", "curs__lib_8c.html#a6bde4da049798871747b54bff8d83b4f", null ],
     [ "mutt_buffer_get_field_full", "curs__lib_8c.html#ab55d2a00617af6d56a7bca37991f1a23", null ],
     [ "mutt_get_field_full", "curs__lib_8c.html#ad68e96b0fa805c56398a89bee466cdcd", null ],

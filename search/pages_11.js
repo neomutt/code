@@ -1,6 +1,7 @@
 var searchData=
 [
   ['string_20auto_2dcompletion_20routines',['String auto-completion routines',['../complete.html',1,'index']]],
+  ['shared_20compression_20code',['Shared compression code',['../compress_compress.html',1,'compress']]],
   ['subset_20of_20config_20items',['Subset of config items',['../config_subset.html',1,'config']]],
   ['sasl_20authentication_20support',['SASL authentication support',['../conn_sasl.html',1,'conn']]],
   ['sasl_20plain_20authentication_20support',['SASL plain authentication support',['../conn_sasl_plain.html',1,'conn']]],

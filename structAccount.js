@@ -1,7 +1,7 @@
 var structAccount =
 [
     [ "TAILQ_ENTRY", "structAccount.html#a7f82aa1dd0ad6a77fd8e68f1e94b2735", null ],
-    [ "magic", "structAccount.html#a492e65b88017a32d18c5d4e27bc8aec7", null ],
+    [ "type", "structAccount.html#a1aa62f517fae4248e51123f38fd3ebba", null ],
     [ "name", "structAccount.html#a32c8a82b92146b6c614c5bdd3228e176", null ],
     [ "sub", "structAccount.html#ac8060a67aa1653840ea8de235e3a1e07", null ],
     [ "mailboxes", "structAccount.html#adc5749a0eae47e062e10f2a53ec2f0d2", null ],

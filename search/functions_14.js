@@ -7,7 +7,7 @@ var searchData=
   ['union_5fhash_5ffind_5felem',['union_hash_find_elem',['../hash_8c.html#a246aa14e4bff182af407046dbd3e8066',1,'hash.c']]],
   ['union_5fhash_5finsert',['union_hash_insert',['../hash_8c.html#a8dc57e858d1ffc60654d2a51bca1d72f',1,'hash.c']]],
   ['unlink_5fmessage',['unlink_message',['../thread_8c.html#a0fd268c12ac9d5c96aaff581ee341878',1,'unlink_message(struct MuttThread **old, struct MuttThread *cur):&#160;thread.c'],['../thread_8h.html#a0fd268c12ac9d5c96aaff581ee341878',1,'unlink_message(struct MuttThread **old, struct MuttThread *cur):&#160;thread.c']]],
-  ['unlock_5frealpath',['unlock_realpath',['../compress_8c.html#aa35e239a0ed2772ae5824c317276f83a',1,'compress.c']]],
+  ['unlock_5frealpath',['unlock_realpath',['../compmbox_2compress_8c.html#aa35e239a0ed2772ae5824c317276f83a',1,'compress.c']]],
   ['unsort_5fentries',['unsort_entries',['../sidebar_8c.html#a3c16267e97bec6c47357930d36f8a4d8',1,'sidebar.c']]],
   ['up_5fn_5flines',['up_n_lines',['../pager_8c.html#a3a00a793bf2a50cf8d7006624c37dfb6',1,'pager.c']]],
   ['update_5fcontent_5finfo',['update_content_info',['../sendlib_8c.html#ac3e92e1179befa263745dcfa128bc8a6',1,'sendlib.c']]],

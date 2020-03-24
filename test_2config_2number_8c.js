@@ -10,7 +10,7 @@ var test_2config_2number_8c =
     [ "test_validator", "test_2config_2number_8c.html#a906a32278ed761fb29743aebd54e5bac", null ],
     [ "dump_native", "test_2config_2number_8c.html#a3a25b594f616f113e6bc749efeb43531", null ],
     [ "test_inherit", "test_2config_2number_8c.html#a76541f7dea628989ebe0d44929067f64", null ],
-    [ "config_number", "test_2config_2number_8c.html#aec737386712b021f98736e91a4c2d47a", null ],
+    [ "test_config_number", "test_2config_2number_8c.html#a5ace3555e77525189ef36c599242e136", null ],
     [ "VarApple", "test_2config_2number_8c.html#a5fa3dd978cfa4545f774b9766c5dde09", null ],
     [ "VarBanana", "test_2config_2number_8c.html#a76d35a7622aac981f040538ad967edc7", null ],
     [ "VarCherry", "test_2config_2number_8c.html#af9dade780bcd78adbe63e0c507e88d4b", null ],

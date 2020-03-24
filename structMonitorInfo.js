@@ -1,6 +1,6 @@
 var structMonitorInfo =
 [
-    [ "magic", "structMonitorInfo.html#a3cf8e4c21be5befc8aa0dd23f620c9c2", null ],
+    [ "type", "structMonitorInfo.html#a8570208d247505766e0efb462c31afef", null ],
     [ "is_dir", "structMonitorInfo.html#ab3fe8bfc126c8ab275f7b88ba5cb13e0", null ],
     [ "path", "structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab", null ],
     [ "st_dev", "structMonitorInfo.html#a01ed854597916f96b4395d1da320bf91", null ],

@@ -7,7 +7,7 @@ var monitor_8c =
     [ "EVENT_BUFLEN", "monitor_8c.html#ae2d7a76eb11489d0a687c36a3af81a90", null ],
     [ "ResolveResult", "monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580", [
       [ "RESOLVE_RES_FAIL_NOMAILBOX", "monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580ae17d34cc6e1243bff5c884471d663e84", null ],
-      [ "RESOLVE_RES_FAIL_NOMAGIC", "monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580ae202d3b3cc00ea5340f2377865a434c8", null ],
+      [ "RESOLVE_RES_FAIL_NOTYPE", "monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580a191af13f055b319452c172626af9b57a", null ],
       [ "RESOLVE_RES_FAIL_STAT", "monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580a5645178a3e2d6a22c6c44584afec3d9b", null ],
       [ "RESOLVE_RES_OK_NOTEXISTING", "monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580a96eae9f5d2a0f8f1e4a9a5263a0d9b86", null ],
       [ "RESOLVE_RES_OK_EXISTING", "monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16", null ]

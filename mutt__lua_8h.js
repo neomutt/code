@@ -1,5 +1,5 @@
 var mutt__lua_8h =
 [
-    [ "mutt_lua_parse", "mutt__lua_8h.html#a2e817f6f8070209034af9303e0340134", null ],
-    [ "mutt_lua_source_file", "mutt__lua_8h.html#af431b29b1618925d1fad2bd472545450", null ]
+    [ "mutt_lua_parse", "mutt__lua_8h.html#a91c41afa7a2a63d5a43885d9cc59790b", null ],
+    [ "mutt_lua_source_file", "mutt__lua_8h.html#a70cdff4a76452475cb756f4f3386a3eb", null ]
 ];

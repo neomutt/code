@@ -6,15 +6,21 @@ var dir_21e3efd53fd4c4676824fd65e560372a =
     [ "mutt_buffer_addstr_n.c", "mutt__buffer__addstr__n_8c.html", "mutt__buffer__addstr__n_8c" ],
     [ "mutt_buffer_alloc.c", "mutt__buffer__alloc_8c.html", "mutt__buffer__alloc_8c" ],
     [ "mutt_buffer_concat_path.c", "mutt__buffer__concat__path_8c.html", "mutt__buffer__concat__path_8c" ],
+    [ "mutt_buffer_concatn_path.c", "mutt__buffer__concatn__path_8c.html", "mutt__buffer__concatn__path_8c" ],
+    [ "mutt_buffer_copy.c", "mutt__buffer__copy_8c.html", "mutt__buffer__copy_8c" ],
+    [ "mutt_buffer_dealloc.c", "mutt__buffer__dealloc_8c.html", "mutt__buffer__dealloc_8c" ],
     [ "mutt_buffer_fix_dptr.c", "mutt__buffer__fix__dptr_8c.html", "mutt__buffer__fix__dptr_8c" ],
     [ "mutt_buffer_init.c", "mutt__buffer__init_8c.html", "mutt__buffer__init_8c" ],
     [ "mutt_buffer_is_empty.c", "mutt__buffer__is__empty_8c.html", "mutt__buffer__is__empty_8c" ],
     [ "mutt_buffer_len.c", "mutt__buffer__len_8c.html", "mutt__buffer__len_8c" ],
+    [ "mutt_buffer_make.c", "mutt__buffer__make_8c.html", "mutt__buffer__make_8c" ],
     [ "mutt_buffer_pool_free.c", "mutt__buffer__pool__free_8c.html", "mutt__buffer__pool__free_8c" ],
     [ "mutt_buffer_pool_get.c", "mutt__buffer__pool__get_8c.html", "mutt__buffer__pool__get_8c" ],
     [ "mutt_buffer_pool_release.c", "mutt__buffer__pool__release_8c.html", "mutt__buffer__pool__release_8c" ],
     [ "mutt_buffer_printf.c", "mutt__buffer__printf_8c.html", "mutt__buffer__printf_8c" ],
     [ "mutt_buffer_reset.c", "mutt__buffer__reset_8c.html", "mutt__buffer__reset_8c" ],
     [ "mutt_buffer_strcpy.c", "mutt__buffer__strcpy_8c.html", "mutt__buffer__strcpy_8c" ],
-    [ "mutt_buffer_strcpy_n.c", "mutt__buffer__strcpy__n_8c.html", "mutt__buffer__strcpy__n_8c" ]
+    [ "mutt_buffer_strcpy_n.c", "mutt__buffer__strcpy__n_8c.html", "mutt__buffer__strcpy__n_8c" ],
+    [ "mutt_buffer_strdup.c", "mutt__buffer__strdup_8c.html", "mutt__buffer__strdup_8c" ],
+    [ "mutt_buffer_substrcpy.c", "mutt__buffer__substrcpy_8c.html", "mutt__buffer__substrcpy_8c" ]
 ];

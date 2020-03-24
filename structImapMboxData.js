@@ -7,7 +7,7 @@ var structImapMboxData =
     [ "check_status", "structImapMboxData.html#aabd21dc6c911b4b657865b36aafef6ca", null ],
     [ "new_mail_count", "structImapMboxData.html#a5b7958aa356cbb9e73e5b95334613eb6", null ],
     [ "flags", "structImapMboxData.html#a2beaa276acd56ef3039d045536467873", null ],
-    [ "uid_validity", "structImapMboxData.html#af214c49f84a3d270c550a5ed0c19be40", null ],
+    [ "uidvalidity", "structImapMboxData.html#a21e10db0344ecd57de97cf0b0e565259", null ],
     [ "uid_next", "structImapMboxData.html#a07a8887ba1a079dd0d5079e0df523f97", null ],
     [ "modseq", "structImapMboxData.html#a8efadd7049504cce68615397dfbf0f05", null ],
     [ "messages", "structImapMboxData.html#a1c2e1c96d914106f9a2acb79b86e5acf", null ],

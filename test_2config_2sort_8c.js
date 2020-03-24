@@ -11,7 +11,7 @@ var test_2config_2sort_8c =
     [ "dump_native", "test_2config_2sort_8c.html#a3a25b594f616f113e6bc749efeb43531", null ],
     [ "test_inherit", "test_2config_2sort_8c.html#a76541f7dea628989ebe0d44929067f64", null ],
     [ "test_sort_type", "test_2config_2sort_8c.html#ad6967df231a56537b9c597c09d69e8fe", null ],
-    [ "config_sort", "test_2config_2sort_8c.html#a1e48ee018f813022d178d6df8df06f60", null ],
+    [ "test_config_sort", "test_2config_2sort_8c.html#af8ac1f278df9fed0730ee85e04732f5e", null ],
     [ "VarApple", "test_2config_2sort_8c.html#a5fa3dd978cfa4545f774b9766c5dde09", null ],
     [ "VarBanana", "test_2config_2sort_8c.html#a76d35a7622aac981f040538ad967edc7", null ],
     [ "VarCherry", "test_2config_2sort_8c.html#af9dade780bcd78adbe63e0c507e88d4b", null ],

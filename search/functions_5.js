@@ -41,5 +41,7 @@ var searchData=
   ['folder_5fmake_5fentry',['folder_make_entry',['../browser_8c.html#a2fdd342366031697eaaececec586db00',1,'browser.c']]],
   ['format_5faddress_5fheader',['format_address_header',['../copy_8c.html#aee298ff7661f33a3083d6e6c6563069a',1,'copy.c']]],
   ['format_5fline',['format_line',['../help_8c.html#a5f69016fd555f40166b0b1e721519298',1,'format_line(FILE *fp, int ismacro, const char *t1, const char *t2, const char *t3, int wraplen):&#160;help.c'],['../pager_8c.html#ab3d610ae528f103462e8cb98ff2c9859',1,'format_line(struct Line **line_info, int n, unsigned char *buf, PagerFlags flags, struct AnsiAttr *pa, int cnt, int *pspace, int *pvch, int *pcol, int *pspecial, int width):&#160;pager.c']]],
+  ['free_5fadata',['free_adata',['../account__free_8c.html#a8bd576aa8231de5216ff3550050bb18e',1,'account_free.c']]],
+  ['free_5fmdata',['free_mdata',['../mailbox__free_8c.html#a4034ceb011bb14365c4baa8db00f7045',1,'mailbox_free.c']]],
   ['fseek_5flast_5fmessage',['fseek_last_message',['../mbox_8c.html#a89487605aeb3fb71d2488fe976060ee5',1,'mbox.c']]]
 ];

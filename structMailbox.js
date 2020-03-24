@@ -17,7 +17,7 @@ var structMailbox =
     [ "v2r", "structMailbox.html#a29d550d9a2d2a6a65b4b6ba1c625ef36", null ],
     [ "vcount", "structMailbox.html#a0e1673cdf63976b1d148786457666f84", null ],
     [ "notified", "structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c", null ],
-    [ "magic", "structMailbox.html#a950cb5b7a2ea907371d445b0a5b56582", null ],
+    [ "type", "structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174", null ],
     [ "newly_created", "structMailbox.html#a64e988bd2f8f1c9a27f4193523f4a336", null ],
     [ "mtime", "structMailbox.html#a1c10c2f7076d9e5bf58b8c495a6d264d", null ],
     [ "last_visited", "structMailbox.html#ae355489c17bcccdd40768ef3f42dfb39", null ],

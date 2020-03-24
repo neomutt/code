@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['account_5fformat_5fstr',['account_format_str',['../autocrypt__acct__menu_8c.html#aa4aaef8570fd06e7aeecc5f1a77f4576',1,'autocrypt_acct_menu.c']]],
+  ['account_5fformat_5fstr',['account_format_str',['../acct__menu_8c.html#aa4aaef8570fd06e7aeecc5f1a77f4576',1,'acct_menu.c']]],
   ['account_5ffree',['account_free',['../core_2account_8c.html#afa1f48d391eddc3e994c5e0e64decb82',1,'account_free(struct Account **ptr):&#160;account.c'],['../account_8h.html#afa1f48d391eddc3e994c5e0e64decb82',1,'account_free(struct Account **ptr):&#160;account.c']]],
   ['account_5fmailbox_5fadd',['account_mailbox_add',['../core_2account_8c.html#ab8e8ca2bf1780642056e5522ba9650c7',1,'account_mailbox_add(struct Account *a, struct Mailbox *m):&#160;account.c'],['../account_8h.html#ab8e8ca2bf1780642056e5522ba9650c7',1,'account_mailbox_add(struct Account *a, struct Mailbox *m):&#160;account.c']]],
   ['account_5fmailbox_5fremove',['account_mailbox_remove',['../core_2account_8c.html#a14989e440fba9c705d4d64f4d121890a',1,'account_mailbox_remove(struct Account *a, struct Mailbox *m):&#160;account.c'],['../account_8h.html#a14989e440fba9c705d4d64f4d121890a',1,'account_mailbox_remove(struct Account *a, struct Mailbox *m):&#160;account.c']]],
-  ['account_5fmake_5fentry',['account_make_entry',['../autocrypt__acct__menu_8c.html#ad8b44baf475276e5104c26595a99e71a',1,'autocrypt_acct_menu.c']]],
+  ['account_5fmake_5fentry',['account_make_entry',['../acct__menu_8c.html#ad8b44baf475276e5104c26595a99e71a',1,'acct_menu.c']]],
   ['account_5fnew',['account_new',['../core_2account_8c.html#a28e797f55aea95117bd98686eda141d7',1,'account_new(const char *name, struct ConfigSubset *sub):&#160;account.c'],['../account_8h.html#a28e797f55aea95117bd98686eda141d7',1,'account_new(const char *name, struct ConfigSubset *sub):&#160;account.c']]],
   ['active_5fget_5fcache',['active_get_cache',['../newsrc_8c.html#a8a0f0a9d60138637dde00cb0732c6b9e',1,'newsrc.c']]],
   ['add_5faddrspec',['add_addrspec',['../address_2address_8c.html#a0edcb239a41a0bd08370e3bdc0218b63',1,'address.c']]],
@@ -70,7 +70,7 @@ var searchData=
   ['attach_5ftag',['attach_tag',['../mutt__attach_8h.html#a86305a7b86a230165ada61d110743699',1,'attach_tag(struct Menu *menu, int sel, int act):&#160;recvattach.c'],['../recvattach_8c.html#a86305a7b86a230165ada61d110743699',1,'attach_tag(struct Menu *menu, int sel, int act):&#160;recvattach.c']]],
   ['attachments_5fclean',['attachments_clean',['../command__parse_8c.html#a442ed9edb79f97d35b191c0c4293f62f',1,'command_parse.c']]],
   ['autocrypt_5fcompose_5fmenu',['autocrypt_compose_menu',['../compose_8c.html#a98ed00cf4ec74483e8ae709ee0507bc0',1,'compose.c']]],
-  ['autocrypt_5fdb_5fcreate',['autocrypt_db_create',['../autocrypt__db_8c.html#acf7b106265614277728d6aa0ece0dfd9',1,'autocrypt_db.c']]],
+  ['autocrypt_5fdb_5fcreate',['autocrypt_db_create',['../db_8c.html#acf7b106265614277728d6aa0ece0dfd9',1,'db.c']]],
   ['autocrypt_5fdir_5finit',['autocrypt_dir_init',['../autocrypt_8c.html#a33b9a5f3a296e1bcaaeebda77f86ab44',1,'autocrypt.c']]],
   ['autoview_5fhandler',['autoview_handler',['../handler_8c.html#a4019b110ff53c32c7779c33209b7ebb1',1,'handler.c']]]
 ];
