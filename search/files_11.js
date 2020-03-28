@@ -45,6 +45,7 @@ var searchData=
   ['state_2eh',['state.h',['../state_8h.html',1,'']]],
   ['status_2ec',['status.c',['../status_8c.html',1,'']]],
   ['status_2eh',['status.h',['../status_8h.html',1,'']]],
+  ['store_2ec',['store.c',['../store_8c.html',1,'']]],
   ['string_2ec',['string.c',['../config_2string_8c.html',1,'(Global Namespace)'],['../mutt_2string_8c.html',1,'(Global Namespace)'],['../test_2config_2string_8c.html',1,'(Global Namespace)']]],
   ['string2_2eh',['string2.h',['../string2_8h.html',1,'']]],
   ['string3_2eh',['string3.h',['../string3_8h.html',1,'']]],

@@ -10,6 +10,7 @@ var main_8c =
     [ "MUTT_CLI_SELECT", "main_8c.html#a23067a9c3767974075a68056d1ab67c1", null ],
     [ "MUTT_CLI_NEWS", "main_8c.html#af8716ba47101364a92c5fc406f30ed95", null ],
     [ "CliFlags", "main_8c.html#a3ac5699e790cd4ce3bd7caafcee07311", null ],
+    [ "reset_tilde", "main_8c.html#a65d332be0abf5b14c519e50da55d72bf", null ],
     [ "mutt_exit", "main_8c.html#a65be75bf998d2462599b7d391676554c", null ],
     [ "usage", "main_8c.html#ad96d407a911fbb914fa8e4cfbf2faf0f", null ],
     [ "start_curses", "main_8c.html#a89dfa0cebc094eedb2f4855e6db352ca", null ],

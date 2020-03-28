@@ -15,5 +15,6 @@ var searchData=
   ['the_20_22currently_2dopen_22_20mailbox',['The &quot;currently-open&quot; mailbox',['../ctx.html',1,'index']]],
   ['time_20and_20date_20handling_20routines',['Time and date handling routines',['../date.html',1,'mutt']]],
   ['test_20the_20config_20parsing_20code',['Test the config parsing code',['../debug_parse.html',1,'debug']]],
-  ['tokyo_20cabinet',['Tokyo Cabinet',['../hc_tc.html',1,'hcache']]]
+  ['tokyo_20cabinet',['Tokyo Cabinet',['../store_tc.html',1,'store']]],
+  ['trivial_20database',['Trivial DataBase',['../store_tdb.html',1,'store']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['qdbm',['QDBM',['../hc_qdbm.html',1,'hcache']]],
   ['q_5fencoder',['q_encoder',['../rfc2047_8c.html#ac84a78b1788e7c21ab20df68a24c9cd0',1,'rfc2047.c']]],
   ['q_5flevel',['q_level',['../structPagerRedrawData.html#aa4b6264cb3765622bc9592e1288481c4',1,'PagerRedrawData']]],
   ['qclass',['QClass',['../structQClass.html',1,'']]],
@@ -67,5 +66,6 @@ var searchData=
   ['quotes_5fclear',['quotes_clear',['../color_8c.html#a3d95cbff842faafa6fc4182d05f8c467',1,'color.c']]],
   ['quotes_5ffree',['quotes_free',['../color_8c.html#af1db7b47710d39fc787cf20d98da4c94',1,'color.c']]],
   ['quotes_5finit',['quotes_init',['../color_8c.html#a1e97ecf74d71847315da05a470a36a5a',1,'color.c']]],
-  ['quotes_5fused',['quotes_used',['../structColors.html#ac845965ecb1c215ebc5120e7d8036093',1,'Colors']]]
+  ['quotes_5fused',['quotes_used',['../structColors.html#ac845965ecb1c215ebc5120e7d8036093',1,'Colors']]],
+  ['quick_20database_20manager_20_28qdbm_29',['Quick Database Manager (QDBM)',['../store_qdbm.html',1,'store']]]
 ];

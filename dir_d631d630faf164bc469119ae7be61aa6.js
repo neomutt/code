@@ -29,6 +29,7 @@ var dir_d631d630faf164bc469119ae7be61aa6 =
     [ "mutt_file_read_keyword.c", "mutt__file__read__keyword_8c.html", "mutt__file__read__keyword_8c" ],
     [ "mutt_file_read_line.c", "mutt__file__read__line_8c.html", "mutt__file__read__line_8c" ],
     [ "mutt_file_rename.c", "mutt__file__rename_8c.html", "mutt__file__rename_8c" ],
+    [ "mutt_file_resolve_symlink.c", "mutt__file__resolve__symlink_8c.html", "mutt__file__resolve__symlink_8c" ],
     [ "mutt_file_rmtree.c", "mutt__file__rmtree_8c.html", "mutt__file__rmtree_8c" ],
     [ "mutt_file_safe_rename.c", "mutt__file__safe__rename_8c.html", "mutt__file__safe__rename_8c" ],
     [ "mutt_file_sanitize_filename.c", "mutt__file__sanitize__filename_8c.html", "mutt__file__sanitize__filename_8c" ],

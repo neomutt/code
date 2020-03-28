@@ -21,6 +21,7 @@ var files =
     [ "nntp", "dir_3964b18c0581b4bf6bd3caf7ae7211c9.html", "dir_3964b18c0581b4bf6bd3caf7ae7211c9" ],
     [ "notmuch", "dir_a107a7d642c5039faa343a4d949f1542.html", "dir_a107a7d642c5039faa343a4d949f1542" ],
     [ "pop", "dir_f17d134b98760ceda0469e937c8ea8fb.html", "dir_f17d134b98760ceda0469e937c8ea8fb" ],
+    [ "store", "dir_a067212c9d0141ae09f64ef6d125d940.html", "dir_a067212c9d0141ae09f64ef6d125d940" ],
     [ "test", "dir_13e138d54eb8818da29c3992edef070a.html", "dir_13e138d54eb8818da29c3992edef070a" ],
     [ "addrbook.c", "addrbook_8c.html", "addrbook_8c" ],
     [ "addrbook.h", "addrbook_8h.html", "addrbook_8h" ],

@@ -20,5 +20,7 @@ var searchData=
   ['support_20of_20mixmaster_20anonymous_20remailer',['Support of Mixmaster anonymous remailer',['../remailer.html',1,'index']]],
   ['signal_20handling',['Signal handling',['../signal.html',1,'mutt']]],
   ['send_20email_20to_20an_20smtp_20server',['Send email to an SMTP server',['../smtp.html',1,'index']]],
+  ['store_3a_20key_20value_20store',['STORE: Key value store',['../store.html',1,'']]],
+  ['shared_20store_20code',['Shared store code',['../store_store.html',1,'store']]],
   ['string_20manipulation_20functions',['String manipulation functions',['../string.html',1,'mutt']]]
 ];

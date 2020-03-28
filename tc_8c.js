@@ -1,10 +1,10 @@
 var tc_8c =
 [
-    [ "hcache_tokyocabinet_open", "tc_8c.html#a5a4d4a5652314f5306ba246662258143", null ],
-    [ "hcache_tokyocabinet_fetch", "tc_8c.html#ad9333f12cd0b57abaa2990cfe9476d31", null ],
-    [ "hcache_tokyocabinet_free", "tc_8c.html#a8a65f650c864a145b93d975bef54303b", null ],
-    [ "hcache_tokyocabinet_store", "tc_8c.html#a5b282b53056abc3f9b6b4da4da9656ca", null ],
-    [ "hcache_tokyocabinet_delete_header", "tc_8c.html#aa28124e8aa12dc315078bb675a21d01d", null ],
-    [ "hcache_tokyocabinet_close", "tc_8c.html#a7d1c5bc1aa29bfe9db7dacf06e175ae3", null ],
-    [ "hcache_tokyocabinet_backend", "tc_8c.html#acde4926853daab0290a541c70d9bc4e9", null ]
+    [ "store_tokyocabinet_open", "tc_8c.html#aea6e02cbad1b537411290308bedf571a", null ],
+    [ "store_tokyocabinet_fetch", "tc_8c.html#a8af50bbbbfb605a3eb966a9a931017a2", null ],
+    [ "store_tokyocabinet_free", "tc_8c.html#a255a567aa5e8a9df85f972ab7462b937", null ],
+    [ "store_tokyocabinet_store", "tc_8c.html#a39b2cd3ecd599a84a90a89a208fe7a04", null ],
+    [ "store_tokyocabinet_delete_record", "tc_8c.html#afa6aa9adaec5bf514a0df7141078f770", null ],
+    [ "store_tokyocabinet_close", "tc_8c.html#a3cce2a390249709eb88f7e4f29f51d7b", null ],
+    [ "store_tokyocabinet_version", "tc_8c.html#a50ec9ab158733bf1cf860eab5468d992", null ]
 ];

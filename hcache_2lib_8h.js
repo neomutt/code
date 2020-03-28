@@ -12,11 +12,7 @@ var hcache_2lib_8h =
     [ "mutt_hcache_fetch_raw", "hcache_2lib_8h.html#a85f8cc22d3aa6633a1c31289ffd9628e", null ],
     [ "mutt_hcache_free_raw", "hcache_2lib_8h.html#ac5a808d9afc863291f8b167f555ca80f", null ],
     [ "mutt_hcache_delete_header", "hcache_2lib_8h.html#a00d8017e832930cb699c8bdd12417023", null ],
-    [ "mutt_hcache_backend_list", "hcache_2lib_8h.html#a19989208cbd44d4083d872702017e1fc", null ],
-    [ "mutt_hcache_compress_list", "hcache_2lib_8h.html#aab9f2006629b011c72cf0f8f4e737dad", null ],
-    [ "mutt_hcache_is_valid_backend", "hcache_2lib_8h.html#af2522d53121a164856680743be32ea18", null ],
     [ "C_HeaderCacheBackend", "hcache_2lib_8h.html#a2224a700997de24abfbaa63344a72969", null ],
-    [ "C_HeaderCacheCompressDictionary", "hcache_2lib_8h.html#a772af678e5ad1ec8654c3de15dd7f946", null ],
     [ "C_HeaderCacheCompressLevel", "hcache_2lib_8h.html#a4b23771c7935aa5e619f1bbac6cc0197", null ],
     [ "C_HeaderCacheCompressMethod", "hcache_2lib_8h.html#af96bb6bee5a46b0787b642a4d625ac55", null ]
 ];

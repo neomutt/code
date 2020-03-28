@@ -57,6 +57,7 @@ var searchData=
   ['get_5fquery_5fstring',['get_query_string',['../mutt__notmuch_8c.html#a95530396a63e131b06f6f8fe9da6b1a6',1,'mutt_notmuch.c']]],
   ['get_5fquote_5flevel',['get_quote_level',['../rfc3676_8c.html#aae9c55042003c431c7a004bab1f93860',1,'rfc3676.c']]],
   ['get_5fsort_5fstr',['get_sort_str',['../status_8c.html#ac8156953ab9d8f697ac86866bcd3b876',1,'status.c']]],
+  ['get_5ftest_5fpath',['get_test_path',['../file_2common_8c.html#a4196c34dd1682952e103aee7a0d8e590',1,'common.c']]],
   ['get_5fthreads',['get_threads',['../mutt__notmuch_8c.html#adfecb2ef7d67ad1b5e08ea6c77591ee9',1,'mutt_notmuch.c']]],
   ['get_5ftoplevel_5fencoding',['get_toplevel_encoding',['../sendlib_8c.html#a8d290c7ff9cbf2d3f5ef9e4ff67d3c73',1,'sendlib.c']]],
   ['get_5fuser_5finfo',['get_user_info',['../main_8c.html#ab1ab96b05777c73f61c060778657ec38',1,'main.c']]],
@@ -109,12 +110,12 @@ var searchData=
   ['gui_2ec',['gui.c',['../gui_8c.html',1,'']]],
   ['gui_20miscellaneous_20curses_20_28window_20drawing_29_20routines',['GUI miscellaneous curses (window drawing) routines',['../gui_curs_lib.html',1,'gui']]],
   ['gv_5fhide_5fcontext_5fcontents',['GV_HIDE_CONTEXT_CONTENTS',['../graphviz_8c.html#a65bd7454dece048c8424af2b630c9e2b',1,'graphviz.c']]],
-  ['gdbm',['GDBM',['../hc_gdbm.html',1,'hcache']]],
   ['generate_20the_20help_2dline_20and_20help_2dpage_20and_20gui_20display_20them',['Generate the help-line and help-page and GUI display them',['../help.html',1,'index']]],
   ['gui_20manage_20the_20main_20index_20_28list_20of_20emails_29',['GUI manage the main index (list of emails)',['../index2.html',1,'index']]],
   ['gui_20present_20the_20user_20with_20a_20selectable_20list',['GUI present the user with a selectable list',['../menu.html',1,'index']]],
   ['gui_20display_20a_20file_2femail_2fhelp_20in_20a_20viewport_20with_20paging',['GUI display a file/email/help in a viewport with paging',['../pager.html',1,'index']]],
   ['gui_20handle_20the_20resizing_20of_20the_20screen',['GUI handle the resizing of the screen',['../resize.html',1,'index']]],
   ['gui_20display_20the_20mailboxes_20in_20a_20side_20panel',['GUI display the mailboxes in a side panel',['../sidebar.html',1,'index']]],
-  ['gui_20display_20a_20user_2dconfigurable_20status_20line',['GUI display a user-configurable status line',['../status.html',1,'index']]]
+  ['gui_20display_20a_20user_2dconfigurable_20status_20line',['GUI display a user-configurable status line',['../status.html',1,'index']]],
+  ['gnu_20dbm_20_28gdbm_29',['GNU dbm (GDBM)',['../store_gdbm.html',1,'store']]]
 ];

@@ -38,6 +38,7 @@ var searchData=
   ['ver',['ver',['../structRemailer.html#aef7f7207d81289a5d1a7c4233542d64b',1,'Remailer']]],
   ['verbose_5flevel',['verbose_level',['../acutest_8h.html#a4216bd8b1f7166ac548cfa2889b89db0',1,'acutest.h']]],
   ['verify_5fone',['verify_one',['../structCryptModuleSpecs.html#a0a1d9c0eb016fb8f7cabc71e2f9f2398',1,'CryptModuleSpecs']]],
+  ['version',['version',['../structStoreOps.html#aef5e81cd92a2052bbf5224369242b701',1,'StoreOps']]],
   ['virtual_5fid',['virtual_id',['../structNmEmailData.html#ac95286a6a9f4b7d1649cb4bed151ec97',1,'NmEmailData']]],
   ['visible',['visible',['../structMuttThread.html#a30c80a1167887f0dc4ab7bff443b8df3',1,'MuttThread::visible()'],['../structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b',1,'WindowState::visible()']]],
   ['vnum',['vnum',['../structEmail.html#aa5e274ea0f8ce3482f226752fcccad12',1,'Email']]],

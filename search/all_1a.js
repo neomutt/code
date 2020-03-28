@@ -1,7 +1,7 @@
 var searchData=
 [
   ['zlib_20compression',['ZLIB compression',['../compress_zlib.html',1,'compress']]],
-  ['zstandard_20compression',['Zstandard compression',['../compress_zstd.html',1,'compress']]],
+  ['zstandard_20_28zstd_29_20compression',['Zstandard (zstd) compression',['../compress_zstd.html',1,'compress']]],
   ['zlib_20compression_20of_20network_20traffic',['Zlib compression of network traffic',['../conn_zstrm.html',1,'conn']]],
   ['z',['z',['../structZstrmDirection.html#a771415b53524bad27006db570ecb1850',1,'ZstrmDirection']]],
   ['zhours',['zhours',['../structEmail.html#a9e2ba09b444f493916f7289116bd9f1c',1,'Email::zhours()'],['../structTz.html#aef24900adb513ba510b97c4c77426caa',1,'Tz::zhours()']]],

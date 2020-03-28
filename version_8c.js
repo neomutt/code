@@ -2,8 +2,8 @@ var version_8c =
 [
     [ "CompileOptions", "structCompileOptions.html", "structCompileOptions" ],
     [ "mutt_make_version", "version_8c.html#ab3d3b1807527dd8a4f60d6e5789ea999", null ],
-    [ "mutt_hcache_backend_list", "version_8c.html#a19989208cbd44d4083d872702017e1fc", null ],
-    [ "mutt_hcache_compress_list", "version_8c.html#aab9f2006629b011c72cf0f8f4e737dad", null ],
+    [ "store_backend_list", "version_8c.html#a25dd3424e2c1c3fa9a1106bb97748636", null ],
+    [ "store_compress_list", "version_8c.html#ab598d695bfd0aa0590cf6dfc1d8456bc", null ],
     [ "print_compile_options", "version_8c.html#a3ee80e8f51c1f112f53e807777835616", null ],
     [ "rstrip_in_place", "version_8c.html#a8493557cba032152c75045cefa18b7d3", null ],
     [ "print_version", "version_8c.html#a1dbd8df3b4f45819bca45390288fcd77", null ],

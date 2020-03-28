@@ -32,7 +32,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2020-03-20-2-ga2b6a4</span>
+   &#160;<span id="projectnumber">2020-03-20-39-gf49faa</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -91,44 +91,40 @@ $(document).ready(function(){initNavTree('hcache.html','');});
 <div class="title">HCACHE: Header cache API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Header cache API</p>
-<p>This module defines the user-visible header cache API, which is used within neomutt to cache and restore mail header data.</p>
-<p><a class="el" href="hc_serial.html">Email-object serialiser</a></p>
-<p><a class="el" href="hc_hcache.html">Header cache multiplexor</a></p>
-<p>Backends:</p>
+<div class="textblock"><p>The Header Cache saves data from email headers to a local store in order to speed up network mailboxes.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="store.html">STORE: Key value store</a> </dd>
+<dd>
+<a class="el" href="compress.html">COMPRESS: Data compression</a></dd></dl>
+<h2>Operation</h2>
+<p>When <a class="el" href="structNeoMutt.html" title="Container for Accounts, Notifications. ">NeoMutt</a> parses an email, it stores the results in a number of structures (listed below). To save time and network traffic, <a class="el" href="structNeoMutt.html" title="Container for Accounts, Notifications. ">NeoMutt</a> can save the results into a <a class="el" href="store.html">STORE: Key value store</a> (optionally using <a class="el" href="compress.html">COMPRESS: Data compression</a>).</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structAddress.html" title="An email address. ">Address</a> <a class="el" href="structBody.html" title="The body of an email. ">Body</a> <a class="el" href="structBuffer.html" title="String manipulation buffer. ">Buffer</a> <a class="el" href="structEmail.html" title="The envelope/body of an email. ">Email</a> <a class="el" href="structEnvelope.html" title="The header of an Email. ">Envelope</a> <a class="el" href="structListNode.html" title="A List node for strings. ">ListNode</a> <a class="el" href="structParameter.html" title="Attribute associated with a MIME part. ">Parameter</a></dd></dl>
+<p>To save the data, the Header Cache uses a set of 'dump' functions (<a class="el" href="hc_serial.html">Email-object serialiser</a>) to 'serialise' the structures. The cache also stores a CRC checksum of the C structs that were used. When retrieving the data, the Header Cache uses a set of 'restore' functions to turn the data back into structs.</p>
+<p>The CRC checksum is created by <code>hcache/hcachever.sh</code> during the build process. Whenever the definition of any of the structs changes, the CRC will change, invalidating any existing cached data.</p>
+<dl class="section note"><dt>Note</dt><dd>Adding or removing a field from the set of serialised fields will <b>not</b> affect the CRC. In this case, it is vital that you bump the **<code>BASEVERSION</code>** variable in <code>hcache/hcachever.sh</code></dd></dl>
+<h2>Source</h2>
 <table class="doxtable">
 <tr>
 <th align="left">File </th><th align="left">Description  </th></tr>
 <tr>
-<td align="left"><a class="el" href="bdb_8c.html" title="Berkeley DB backend for the header cache. ">hcache/bdb.c</a> </td><td align="left"><a class="el" href="hc_bdb.html">Berkeley DB</a> </td></tr>
+<td align="left"><a class="el" href="hcache_8c.html" title="Header cache multiplexor. ">hcache/hcache.c</a> </td><td align="left"><a class="el" href="hc_hcache.html">Header cache multiplexor</a> </td></tr>
 <tr>
-<td align="left"><a class="el" href="gdbm_8c.html" title="GDBM backend for the header cache. ">hcache/gdbm.c</a> </td><td align="left"><a class="el" href="hc_gdbm.html">GDBM</a> </td></tr>
-<tr>
-<td align="left"><a class="el" href="kc_8c.html" title="Kyotocabinet DB backend for the header cache. ">hcache/kc.c</a> </td><td align="left"><a class="el" href="hc_kc.html">Kyoto Cabinet</a> </td></tr>
-<tr>
-<td align="left"><a class="el" href="lmdb_8c.html" title="LMDB backend for the header cache. ">hcache/lmdb.c</a> </td><td align="left"><a class="el" href="hc_lmdb.html">LMDB</a> </td></tr>
-<tr>
-<td align="left"><a class="el" href="qdbm_8c.html" title="QDBM backend for the header cache. ">hcache/qdbm.c</a> </td><td align="left"><a class="el" href="hc_qdbm.html">QDBM</a> </td></tr>
-<tr>
-<td align="left"><a class="el" href="tc_8c.html" title="Tokyocabinet DB backend for the header cache. ">hcache/tc.c</a> </td><td align="left"><a class="el" href="hc_tc.html">Tokyo Cabinet</a> </td></tr>
+<td align="left"><a class="el" href="serialize_8c.html" title="Email-object serialiser. ">hcache/serialize.c</a> </td><td align="left"><a class="el" href="hc_serial.html">Email-object serialiser</a> </td></tr>
 </table>
 <table class="doxtable">
 <tr>
 <th align="left">Function </th><th align="left">Description  </th></tr>
 <tr>
-<td align="left"><a class="el" href="hcache_8c.html#a19989208cbd44d4083d872702017e1fc" title="Get a list of backend names. ">mutt_hcache_backend_list()</a> </td><td align="left">get a list of backend identification strings </td></tr>
+<td align="left"><a class="el" href="hcache_8c.html#a1c8df3091187e8307f80718868ee1718" title="Multiplexor for StoreOps::close. ">mutt_hcache_close()</a> </td><td align="left">close the connection to the header cache </td></tr>
 <tr>
-<td align="left"><a class="el" href="hcache_8c.html#a1c8df3091187e8307f80718868ee1718" title="Multiplexor for HcacheOps::close. ">mutt_hcache_close()</a> </td><td align="left">close the connection to the header cache </td></tr>
+<td align="left"><a class="el" href="hcache_8c.html#a00d8017e832930cb699c8bdd12417023" title="Multiplexor for StoreOps::delete_header. ">mutt_hcache_delete_header()</a> </td><td align="left">delete a key / data pair </td></tr>
 <tr>
-<td align="left"><a class="el" href="hcache_8c.html#a00d8017e832930cb699c8bdd12417023" title="Multiplexor for HcacheOps::delete_header. ">mutt_hcache_delete_header()</a> </td><td align="left">delete a key / data pair </td></tr>
+<td align="left"><a class="el" href="hcache_8c.html#a6abef7abe23d9af30e40bcc62e3bf3e3" title="Multiplexor for StoreOps::fetch. ">mutt_hcache_fetch()</a> </td><td align="left">fetch and validate a message's header from the cache </td></tr>
 <tr>
-<td align="left"><a class="el" href="hcache_8c.html#a6abef7abe23d9af30e40bcc62e3bf3e3" title="Multiplexor for HcacheOps::fetch. ">mutt_hcache_fetch()</a> </td><td align="left">fetch and validate a message's header from the cache </td></tr>
+<td align="left"><a class="el" href="hcache_8c.html#ac5a808d9afc863291f8b167f555ca80f" title="Multiplexor for StoreOps::free. ">mutt_hcache_free_raw()</a> </td><td align="left">free data fetched with <a class="el" href="hcache_8c.html#a85f8cc22d3aa6633a1c31289ffd9628e" title="Fetch a message&#39;s header from the cache. ">mutt_hcache_fetch_raw()</a> </td></tr>
 <tr>
-<td align="left"><a class="el" href="hcache_8c.html#ac5a808d9afc863291f8b167f555ca80f" title="Multiplexor for HcacheOps::free. ">mutt_hcache_free_raw()</a> </td><td align="left">free data fetched with <a class="el" href="hcache_8c.html#a85f8cc22d3aa6633a1c31289ffd9628e" title="Fetch a message&#39;s header from the cache. ">mutt_hcache_fetch_raw()</a> </td></tr>
+<td align="left"><a class="el" href="hcache_8c.html#ae01c81d7bc2f290309a28bbb8474ff40" title="Multiplexor for StoreOps::open. ">mutt_hcache_open()</a> </td><td align="left">open the connection to the header cache </td></tr>
 <tr>
-<td align="left"><a class="el" href="hcache_8c.html#ae01c81d7bc2f290309a28bbb8474ff40" title="Multiplexor for HcacheOps::open. ">mutt_hcache_open()</a> </td><td align="left">open the connection to the header cache </td></tr>
-<tr>
-<td align="left"><a class="el" href="hcache_8c.html#a1ed43e2b7207723f17e5969519bb310b" title="Multiplexor for HcacheOps::store. ">mutt_hcache_store()</a> </td><td align="left">store a Header along with a validity datum </td></tr>
+<td align="left"><a class="el" href="hcache_8c.html#a1ed43e2b7207723f17e5969519bb310b" title="Multiplexor for StoreOps::store. ">mutt_hcache_store()</a> </td><td align="left">store a Header along with a validity datum </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

@@ -17,7 +17,6 @@ var searchData=
   ['hasxover',['hasXOVER',['../structNntpAccountData.html#a158b6bdd5a8be673e51ce25946709052',1,'NntpAccountData']]],
   ['hc',['hc',['../structFetchCtx.html#a00a42eb1333fcbc25ad3fe3339f54516',1,'FetchCtx']]],
   ['hcache',['hcache',['../structImapMboxData.html#a10fecd1cc613dd80b934b602b86412fc',1,'ImapMboxData']]],
-  ['hcache_5fops',['hcache_ops',['../hcache_8c.html#aafea30469d08ba46dc83b5abf0c88285',1,'hcache.c']]],
   ['hcachever',['hcachever',['../hcache_8c.html#ac0dde9400cb5f702e4b8c6fbd6e5c0ab',1,'hcache.c']]],
   ['hdata',['hdata',['../structHash.html#a31c0cadf1ae55d74445c3b662e9f5781',1,'Hash']]],
   ['hdr',['hdr',['../structMUpdate.html#a79326bce090fb8e01d21ddd96f6672bb',1,'MUpdate']]],

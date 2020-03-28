@@ -20,6 +20,8 @@ var keymap_8h =
       [ "MENU_QUERY", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a739c790e5df497ca3d7e7f2e3837aaf1", null ],
       [ "MENU_PGP", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4abde0a6cb18588a44a6d0a63828f1c603", null ],
       [ "MENU_SMIME", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4add02b7e5714bc7ecd2a6d3e2b618fce9", null ],
+      [ "MENU_KEY_SELECT_PGP", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a09b1c3405845537c65ba5f14190dbd96", null ],
+      [ "MENU_KEY_SELECT_SMIME", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a4c3ea204f083b74a45ce05fc3f151634", null ],
       [ "MENU_MIX", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ab0104cd450b9d9ca9d5f6686b260efc9", null ],
       [ "MENU_AUTOCRYPT_ACCT", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af9c343e9f9161f3b1d07ba93457e2d13", null ],
       [ "MENU_MAX", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae", null ]

@@ -8,6 +8,7 @@ var searchData=
   ['hash_20table_20data_20structure',['Hash table data structure',['../hash.html',1,'mutt']]],
   ['header_20cache_20multiplexor',['Header cache multiplexor',['../hc_hcache.html',1,'hcache']]],
   ['hcache_3a_20header_20cache_20api',['HCACHE: Header cache API',['../hcache.html',1,'']]],
+  ['history_3a_20read_2fwrite_20command_20history_20from_2fto_20a_20file',['HISTORY: Read/write command history from/to a file',['../history.html',1,'']]],
   ['handling_20of_20email_20attachments',['Handling of email attachments',['../mutt_attach.html',1,'index']]],
   ['handling_20of_20personal_20config_20_28_27my_27_20variables_29',['Handling of personal config (&apos;my&apos; variables)',['../myvar.html',1,'index']]]
 ];

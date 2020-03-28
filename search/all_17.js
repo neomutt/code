@@ -47,6 +47,7 @@ var searchData=
   ['verify_5fkey',['verify_key',['../crypt__gpgme_8c.html#abf137f94451de251c8179788615f4b74',1,'crypt_gpgme.c']]],
   ['verify_5fone',['verify_one',['../structCryptModuleSpecs.html#a0a1d9c0eb016fb8f7cabc71e2f9f2398',1,'CryptModuleSpecs::verify_one()'],['../crypt__gpgme_8c.html#a490d3344cd29fb3466bc7868e4b26c87',1,'verify_one():&#160;crypt_gpgme.c']]],
   ['verify_5fsender',['verify_sender',['../crypt__gpgme_8c.html#a10e8fb8f5b9b458202bc424762ff96cd',1,'crypt_gpgme.c']]],
+  ['version',['version',['../structStoreOps.html#aef5e81cd92a2052bbf5224369242b701',1,'StoreOps']]],
   ['version_2ec',['version.c',['../version_8c.html',1,'']]],
   ['version_2eh',['version.h',['../version_8h.html',1,'']]],
   ['viewattachmode',['ViewAttachMode',['../mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946',1,'mutt_attach.h']]],

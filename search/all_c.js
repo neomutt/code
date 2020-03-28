@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['kyoto_20cabinet',['Kyoto Cabinet',['../hc_kc.html',1,'hcache']]],
   ['kc_2ec',['kc.c',['../kc_8c.html',1,'']]],
   ['key',['key',['../structRealKey.html#a5a1371e4574b9d487326d1c4b5ae0564',1,'RealKey::key()'],['../structMimeNames.html#a43266ef0b04e2d3bd3f7eb6df267aa6b',1,'MimeNames::key()'],['../structHashElem.html#aad741b08743ae4afe22e9b2407820b35',1,'HashElem::key()'],['../structDnArray.html#af682d246eebfc795bcff03ee578c42df',1,'DnArray::key()'],['../structCryptEntry.html#a4363556c4ae4942326896b876615e9b8',1,'CryptEntry::key()'],['../structSmimeCommandContext.html#a7c5e080eefc6e98377db7ba11f5ffbba',1,'SmimeCommandContext::key()']]],
   ['key_5fcap_5fcan_5fcertify',['KEY_CAP_CAN_CERTIFY',['../crypt__gpgme_8c.html#aedb110bc0a5b06622df514a7b1f9bca7a6c74ebab89ddf2395613214f1de91e10',1,'crypt_gpgme.c']]],
@@ -65,5 +64,6 @@ var searchData=
   ['km_5fkeyname',['km_keyname',['../keymap_8c.html#a4880e77c79fb25474315465363a2372f',1,'keymap.c']]],
   ['km_5funbind_5fall',['km_unbind_all',['../keymap_8c.html#a3bd5d8e397ffd6f82cb75e67cd74f98b',1,'keymap.c']]],
   ['kobj',['kobj',['../structCryptKeyInfo.html#ae1f570089508f19aa36f6c1cdb31eca0',1,'CryptKeyInfo']]],
-  ['keep_20track_20when_20processing_20files',['Keep track when processing files',['../state.html',1,'index']]]
+  ['keep_20track_20when_20processing_20files',['Keep track when processing files',['../state.html',1,'index']]],
+  ['kyoto_20cabinet',['Kyoto Cabinet',['../store_kc.html',1,'store']]]
 ];

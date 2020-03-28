@@ -119,7 +119,6 @@ var globals_8h =
     [ "C_FlagSafe", "globals_8h.html#addc0b6aeeddbab49ce0071aec36805a3", null ],
     [ "C_ForwardDecode", "globals_8h.html#ad82dea05c594940ff2788b2f44737a35", null ],
     [ "C_ForwardQuote", "globals_8h.html#a9f51ae4a2c27729524c1451f4d0f342b", null ],
-    [ "C_HeaderCacheCompress", "globals_8h.html#ac3129e2e3290cfff52f8c9cedf5fe07f", null ],
     [ "C_Header", "globals_8h.html#a35cc58185b9b8d67e00d3c6fa1cb6133", null ],
     [ "C_Help", "globals_8h.html#a0f7bc7fd43a0db2911c72f8fa44e94a0", null ],
     [ "C_ImapCheckSubscribed", "globals_8h.html#aefcb29c2cfa63b7d61f0740e605bdbe1", null ],

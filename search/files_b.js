@@ -194,6 +194,7 @@ var searchData=
   ['mutt_5ffile_5fread_5fkeyword_2ec',['mutt_file_read_keyword.c',['../mutt__file__read__keyword_8c.html',1,'']]],
   ['mutt_5ffile_5fread_5fline_2ec',['mutt_file_read_line.c',['../mutt__file__read__line_8c.html',1,'']]],
   ['mutt_5ffile_5frename_2ec',['mutt_file_rename.c',['../mutt__file__rename_8c.html',1,'']]],
+  ['mutt_5ffile_5fresolve_5fsymlink_2ec',['mutt_file_resolve_symlink.c',['../mutt__file__resolve__symlink_8c.html',1,'']]],
   ['mutt_5ffile_5frmtree_2ec',['mutt_file_rmtree.c',['../mutt__file__rmtree_8c.html',1,'']]],
   ['mutt_5ffile_5fsafe_5frename_2ec',['mutt_file_safe_rename.c',['../mutt__file__safe__rename_8c.html',1,'']]],
   ['mutt_5ffile_5fsanitize_5ffilename_2ec',['mutt_file_sanitize_filename.c',['../mutt__file__sanitize__filename_8c.html',1,'']]],

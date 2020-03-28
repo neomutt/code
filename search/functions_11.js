@@ -43,6 +43,7 @@ var searchData=
   ['replace_5fpart',['replace_part',['../enter_8c.html#aee2885e93ba4e712c261b65bf587dbb3',1,'enter.c']]],
   ['reply_5fvalidator',['reply_validator',['../init_8c.html#a89b7ac9b14bd9007726ca035d36962be',1,'reply_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c'],['../init_8h.html#a89b7ac9b14bd9007726ca035d36962be',1,'reply_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c']]],
   ['report_5fregerror',['report_regerror',['../pattern_8c.html#af2a229242dd3931823311964a36d4c51',1,'pattern.c']]],
+  ['reset_5ftilde',['reset_tilde',['../main_8c.html#a65d332be0abf5b14c519e50da55d72bf',1,'main.c']]],
   ['reset_5fvalue',['reset_value',['../mutt_8h.html#a7d4c46669b95c76ce52d540fc592834f',1,'mutt.h']]],
   ['resolve_5fcolor',['resolve_color',['../pager_8c.html#a0332f4c924e94ceeea60609b80a3839f',1,'pager.c']]],
   ['resolve_5ftypes',['resolve_types',['../pager_8c.html#a423ab61788ace956cf2945f6d70d3014',1,'pager.c']]],

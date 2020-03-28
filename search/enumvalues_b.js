@@ -7,6 +7,8 @@ var searchData=
   ['menu_5feditor',['MENU_EDITOR',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270',1,'keymap.h']]],
   ['menu_5ffolder',['MENU_FOLDER',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae86bb494d081abe9caf74402638c0d3d',1,'keymap.h']]],
   ['menu_5fgeneric',['MENU_GENERIC',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b',1,'keymap.h']]],
+  ['menu_5fkey_5fselect_5fpgp',['MENU_KEY_SELECT_PGP',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a09b1c3405845537c65ba5f14190dbd96',1,'keymap.h']]],
+  ['menu_5fkey_5fselect_5fsmime',['MENU_KEY_SELECT_SMIME',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a4c3ea204f083b74a45ce05fc3f151634',1,'keymap.h']]],
   ['menu_5fmain',['MENU_MAIN',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a1ffe14584858fba0fb59c4098ed9d30e',1,'keymap.h']]],
   ['menu_5fmax',['MENU_MAX',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae',1,'keymap.h']]],
   ['menu_5fmix',['MENU_MIX',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ab0104cd450b9d9ca9d5f6686b260efc9',1,'keymap.h']]],

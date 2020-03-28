@@ -101,7 +101,7 @@ var searchData=
   ['enum_5fstring_5fget',['enum_string_get',['../config_2enum_8c.html#a78b8c3c203de744be9cc40185ecbb07f',1,'enum.c']]],
   ['enum_5fstring_5fset',['enum_string_set',['../config_2enum_8c.html#ad1cb9038cae3c2f18c23629b4a27592e',1,'enum.c']]],
   ['enumdef',['EnumDef',['../structEnumDef.html',1,'']]],
-  ['env',['env',['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env()'],['../structHcacheDbCtx.html#aab2a7dee06d468f7692cf61d083cbf33',1,'HcacheDbCtx::env()'],['../structHcacheLmdbCtx.html#ad9b074418604c6ceed79ec6f2775ca2d',1,'HcacheLmdbCtx::env()']]],
+  ['env',['env',['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env()'],['../structStoreDbCtx.html#aff3b971dce03f8f262a67e5a19974c71',1,'StoreDbCtx::env()'],['../structStoreLmdbCtx.html#a7a2d761cba6f20cab4259fd20c5cace5',1,'StoreLmdbCtx::env()']]],
   ['envelope',['Envelope',['../structEnvelope.html',1,'']]],
   ['envelope_2ec',['envelope.c',['../envelope_8c.html',1,'']]],
   ['envelope_2eh',['envelope.h',['../envelope_8h.html',1,'']]],

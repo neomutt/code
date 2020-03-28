@@ -7,8 +7,6 @@ var searchData=
   ['b64chars',['B64Chars',['../utf7_8c.html#abff3beb459075c9e0859e64d791273b8',1,'B64Chars():&#160;utf7.c'],['../base64_8c.html#abff3beb459075c9e0859e64d791273b8',1,'B64Chars():&#160;base64.c']]],
   ['b64context',['B64Context',['../structB64Context.html',1,'']]],
   ['b_5fencoder',['b_encoder',['../rfc2047_8c.html#a386450bad3229da26d1cd1a63d0fc257',1,'rfc2047.c']]],
-  ['backend',['backend',['../structHcacheOps.html#aba98eb52b1c9947155c6a5a7c8bd3a6b',1,'HcacheOps']]],
-  ['backend_2eh',['backend.h',['../backend_8h.html',1,'']]],
   ['backtrace_2ec',['backtrace.c',['../backtrace_8c.html',1,'']]],
   ['bad',['BAD',['../base64_8c.html#afd3fc9004925132db4faf607ebbf9db7',1,'base64.c']]],
   ['badsig',['badsig',['../structBody.html#a4de063a5f09cb7376f9fde6bb0fe48bc',1,'Body']]],
@@ -99,6 +97,6 @@ var searchData=
   ['bufo',['bufo',['../structFgetConv.html#a0e82782ef364c7d6bf7a34981e3325e5',1,'FgetConv']]],
   ['bufo_5fsize',['BUFO_SIZE',['../handler_8c.html#aad826a02aca1883b9747a603a5c0b54d',1,'handler.c']]],
   ['bufpos',['bufpos',['../structConnection.html#a6c86ddad667d9db254dff142ceed42dd',1,'Connection']]],
-  ['berkeley_20db',['Berkeley DB',['../hc_bdb.html',1,'hcache']]],
-  ['browse_20nntp_20groups',['Browse NNTP groups',['../nntp_browse.html',1,'nntp']]]
+  ['browse_20nntp_20groups',['Browse NNTP groups',['../nntp_browse.html',1,'nntp']]],
+  ['berkeley_20db_20_28bdb_29',['Berkeley DB (BDB)',['../store_bdb.html',1,'store']]]
 ];

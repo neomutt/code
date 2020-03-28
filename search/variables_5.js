@@ -21,7 +21,7 @@ var searchData=
   ['entrycount',['EntryCount',['../sidebar_8c.html#a3c6db6c4ac78009403564ab9f85d9e76',1,'sidebar.c']]],
   ['entrylen',['entrylen',['../structBrowserState.html#a05e79f5c1a3f671286b1398d26cb52e2',1,'BrowserState::entrylen()'],['../sidebar_8c.html#ad5fc2bc9cf6695f3f7d922a5e80337eb',1,'EntryLen():&#160;sidebar.c']]],
   ['entrymax',['entrymax',['../structBrowserState.html#a077031d56ee107eba75d0e1f5e957c29',1,'BrowserState']]],
-  ['env',['env',['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env()'],['../structHcacheDbCtx.html#aab2a7dee06d468f7692cf61d083cbf33',1,'HcacheDbCtx::env()'],['../structHcacheLmdbCtx.html#ad9b074418604c6ceed79ec6f2775ca2d',1,'HcacheLmdbCtx::env()']]],
+  ['env',['env',['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env()'],['../structStoreDbCtx.html#aff3b971dce03f8f262a67e5a19974c71',1,'StoreDbCtx::env()'],['../structStoreLmdbCtx.html#a7a2d761cba6f20cab4259fd20c5cace5',1,'StoreLmdbCtx::env()']]],
   ['envlist',['EnvList',['../envlist_8c.html#ae45378328cf8b407e63b6d53eaf61a01',1,'envlist.c']]],
   ['eostr',['eostr',['../structSeqsetIterator.html#a26751cac5a01df780c75aad85206a8da',1,'SeqsetIterator']]],
   ['eq',['eq',['../structKeymap.html#a908683bf209748c84e1f60b1e36bfd16',1,'Keymap']]],
