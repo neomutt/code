@@ -17,5 +17,6 @@ var searchData=
   ['popauth',['PopAuth',['../structPopAuth.html',1,'']]],
   ['popcache',['PopCache',['../structPopCache.html',1,'']]],
   ['popemaildata',['PopEmailData',['../structPopEmailData.html',1,'']]],
+  ['prexstorage',['PrexStorage',['../structPrexStorage.html',1,'']]],
   ['progress',['Progress',['../structProgress.html',1,'']]]
 ];

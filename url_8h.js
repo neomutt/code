@@ -20,7 +20,6 @@ var url_8h =
     [ "STAILQ_HEAD", "url_8h.html#ad79c9bf161f77a8619560d915ea69ce2", null ],
     [ "url_check_scheme", "url_8h.html#a62966c55e1aee3e55a464bdb125691c1", null ],
     [ "url_free", "url_8h.html#a7b05825b8bb8f87657713fe5bc6edfaa", null ],
-    [ "url_new", "url_8h.html#ac9a8f797e672f047ceed5ef9d69a9d0a", null ],
     [ "url_parse", "url_8h.html#a10d35f5553c8e443c38257b69ca91075", null ],
     [ "url_pct_decode", "url_8h.html#a04f548a80bf78fcc748e6dd70a0059b2", null ],
     [ "url_pct_encode", "url_8h.html#ad489a551217fd22a942ae19d009f3342", null ],

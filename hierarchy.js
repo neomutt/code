@@ -156,6 +156,7 @@ var hierarchy =
     [ "PgpUid", "structPgpUid.html", null ],
     [ "PopAuth", "structPopAuth.html", null ],
     [ "PopCache", "structPopCache.html", null ],
+    [ "PrexStorage", "structPrexStorage.html", null ],
     [ "Progress", "structProgress.html", null ],
     [ "QClass", "structQClass.html", null ],
     [ "Query", "structQuery.html", null ],

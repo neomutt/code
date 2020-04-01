@@ -109,6 +109,7 @@ var searchData=
   ['nm_5furl_5ffrom_5fquery',['nm_url_from_query',['../notmuch_2lib_8h.html#af6a894a34eca1a263c572322a8d66da8',1,'nm_url_from_query(struct Mailbox *m, char *buf, size_t buflen):&#160;mutt_notmuch.c'],['../mutt__notmuch_8c.html#af6a894a34eca1a263c572322a8d66da8',1,'nm_url_from_query(struct Mailbox *m, char *buf, size_t buflen):&#160;mutt_notmuch.c']]],
   ['nmaccountdata',['NmAccountData',['../structNmAccountData.html',1,'']]],
   ['nmatch',['nmatch',['../structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51',1,'Replace']]],
+  ['nmatches',['nmatches',['../structPrexStorage.html#a8011462211411de7a7e89af23ceccbd1',1,'PrexStorage']]],
   ['nmemaildata',['NmEmailData',['../structNmEmailData.html',1,'']]],
   ['nmmboxdata',['NmMboxData',['../structNmMboxData.html',1,'']]],
   ['nmquerytype',['NmQueryType',['../notmuch__private_8h.html#a7653053ec8dc38d5dd26401163bb1276',1,'notmuch_private.h']]],

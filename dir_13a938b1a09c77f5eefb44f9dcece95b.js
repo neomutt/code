@@ -7,5 +7,6 @@ var dir_13a938b1a09c77f5eefb44f9dcece95b =
     [ "email_new.c", "email__new_8c.html", "email__new_8c" ],
     [ "email_size.c", "email__size_8c.html", "email__size_8c" ],
     [ "emaillist_add_email.c", "emaillist__add__email_8c.html", "emaillist__add__email_8c" ],
-    [ "emaillist_clear.c", "emaillist__clear_8c.html", "emaillist__clear_8c" ]
+    [ "emaillist_clear.c", "emaillist__clear_8c.html", "emaillist__clear_8c" ],
+    [ "mutt_autocrypthdr_new.c", "mutt__autocrypthdr__new_8c.html", "mutt__autocrypthdr__new_8c" ]
 ];

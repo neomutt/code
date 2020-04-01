@@ -20,5 +20,5 @@ var parse_8c =
     [ "mutt_parse_part", "parse_8c.html#a0b38ac4f44b3414d0e18d26324861369", null ],
     [ "mutt_parse_multipart", "parse_8c.html#ad5c83c39801d48f7bb7af082d599a687", null ],
     [ "mutt_rfc822_parse_message", "parse_8c.html#ad06e310e34e4b864ba64ee9301c57664", null ],
-    [ "mutt_parse_mailto", "parse_8c.html#a9e392fa9240634e80bcb34653ba338d8", null ]
+    [ "mutt_parse_mailto", "parse_8c.html#a40d55d4be6be11a22f0ac73fe251aa6e", null ]
 ];

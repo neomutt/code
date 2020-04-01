@@ -16,5 +16,5 @@ var searchData=
   ['time_20and_20date_20handling_20routines',['Time and date handling routines',['../date.html',1,'mutt']]],
   ['test_20the_20config_20parsing_20code',['Test the config parsing code',['../debug_parse.html',1,'debug']]],
   ['tokyo_20cabinet',['Tokyo Cabinet',['../store_tc.html',1,'store']]],
-  ['trivial_20database',['Trivial DataBase',['../store_tdb.html',1,'store']]]
+  ['trivial_20database_20_28tdb_29',['Trivial DataBase (TDB)',['../store_tdb.html',1,'store']]]
 ];

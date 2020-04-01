@@ -7,6 +7,7 @@ var searchData=
   ['wdata',['wdata',['../structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc',1,'MuttWindow']]],
   ['weekdays',['Weekdays',['../date_8c.html#aa5d24504b23bed6ab0ecb092806303e7',1,'date.c']]],
   ['what',['what',['../structCryptCache.html#a5fca95213bd24b267517e0dcfaf15c24',1,'CryptCache::what()'],['../structPgpCache.html#ac00837b2f448d7de0de62e4d96154aa0',1,'PgpCache::what()']]],
+  ['which',['which',['../structPrexStorage.html#a72b2059fbefb9e89c0d5b7912f8b52f0',1,'PrexStorage']]],
   ['whitespace',['whitespace',['../structContentState.html#a54db42e78cb60f77b08b70acad296b54',1,'ContentState']]],
   ['width',['width',['../structFlowedState.html#a635fa843f878b8699143b02b178e5dcb',1,'FlowedState']]],
   ['win',['win',['../structComposeRedrawData.html#a8f7f64c4532e5b0b9d166c6093fae660',1,'ComposeRedrawData']]],

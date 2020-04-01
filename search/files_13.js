@@ -5,7 +5,6 @@ var searchData=
   ['url_2eh',['url.h',['../url_8h.html',1,'']]],
   ['url_5fcheck_5fscheme_2ec',['url_check_scheme.c',['../url__check__scheme_8c.html',1,'']]],
   ['url_5ffree_2ec',['url_free.c',['../url__free_8c.html',1,'']]],
-  ['url_5fnew_2ec',['url_new.c',['../url__new_8c.html',1,'']]],
   ['url_5fparse_2ec',['url_parse.c',['../url__parse_8c.html',1,'']]],
   ['url_5fpct_5fdecode_2ec',['url_pct_decode.c',['../url__pct__decode_8c.html',1,'']]],
   ['url_5fpct_5fencode_2ec',['url_pct_encode.c',['../url__pct__encode_8c.html',1,'']]],

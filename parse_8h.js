@@ -7,7 +7,7 @@ var parse_8h =
     [ "mutt_is_message_type", "parse_8h.html#adcc90fb584fec1be116777c533e9b3d4", null ],
     [ "mutt_matches_ignore", "parse_8h.html#a5f2728949322a1a6210d61d9629005d1", null ],
     [ "mutt_parse_content_type", "parse_8h.html#a44cbe20da647bd7112cf1f4857ad01a3", null ],
-    [ "mutt_parse_mailto", "parse_8h.html#a9e392fa9240634e80bcb34653ba338d8", null ],
+    [ "mutt_parse_mailto", "parse_8h.html#a40d55d4be6be11a22f0ac73fe251aa6e", null ],
     [ "mutt_parse_multipart", "parse_8h.html#ad5c83c39801d48f7bb7af082d599a687", null ],
     [ "mutt_parse_part", "parse_8h.html#a0b38ac4f44b3414d0e18d26324861369", null ],
     [ "mutt_read_mime_header", "parse_8h.html#ad373211d5d49e235c1aa9b818f0f10a1", null ],

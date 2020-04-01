@@ -153,6 +153,7 @@ var annotated_dup =
     [ "PopAuth", "structPopAuth.html", "structPopAuth" ],
     [ "PopCache", "structPopCache.html", "structPopCache" ],
     [ "PopEmailData", "structPopEmailData.html", "structPopEmailData" ],
+    [ "PrexStorage", "structPrexStorage.html", "structPrexStorage" ],
     [ "Progress", "structProgress.html", "structProgress" ],
     [ "QClass", "structQClass.html", "structQClass" ],
     [ "Query", "structQuery.html", "structQuery" ],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['path',['PATH',['../prex_8c.html#ab0139008fdda107456f13f837872b410',1,'prex.c']]],
   ['path_5fmax',['PATH_MAX',['../mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166',1,'mutt.h']]],
   ['pgp_5fencrypt',['PGP_ENCRYPT',['../ncrypt_2lib_8h.html#a6694d25dff1ee1958351160a84bb2dc0',1,'lib.h']]],
   ['pgp_5fgoodsign',['PGP_GOODSIGN',['../ncrypt_2lib_8h.html#ae480697fdeb3d6b2c127e0ae36c52e8e',1,'lib.h']]],

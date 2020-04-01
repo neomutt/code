@@ -20,7 +20,7 @@ var searchData=
   ['make_5fentry',['make_entry',['../structMenu.html#a5b8e7a81b1ad3299bf8271b8f41042a1',1,'Menu']]],
   ['match',['match',['../structColorLine.html#ad6f9e2cdf2b57d937947ac84fef9bcbc',1,'ColorLine']]],
   ['matched',['matched',['../structEmail.html#a176c9555da85be4329562050056c0071',1,'Email']]],
-  ['matches',['Matches',['../init_8c.html#af0afb15323b78fadbc9b78ad59276997',1,'init.c']]],
+  ['matches',['matches',['../structPrexStorage.html#aaa337527edf626ffda0c7baf8c43178f',1,'PrexStorage::matches()'],['../init_8c.html#af0afb15323b78fadbc9b78ad59276997',1,'Matches():&#160;init.c']]],
   ['matcheslistsize',['MatchesListsize',['../init_8c.html#a0561fe78f1df9b54ad60ea0efb41d469',1,'init.c']]],
   ['max',['max',['../structMhSequences.html#a4f50dd478cc24d2af98b7d72d99f8f6f',1,'MhSequences::max()'],['../structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b',1,'Menu::max()'],['../structChildCtx.html#a7791d536383236bfbb2084f7644e606b',1,'ChildCtx::max()'],['../structPattern.html#a0d4d142b9ed06d4180dec28505da73ca',1,'Pattern::max()']]],
   ['max_5fline',['max_line',['../structPagerRedrawData.html#a13b6f5ebb6f266adfccbe4d50b0a0662',1,'PagerRedrawData']]],

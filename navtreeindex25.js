@@ -1,5 +1,12 @@
 var NAVTREEINDEX25 =
 {
+"mutt__mem__calloc_8c.html#a1465435aa2a7ebce7e07057e23c74af9":[2,0,22,26,0,1],
+"mutt__mem__calloc_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,26,0,0],
+"mutt__mem__calloc_8c_source.html":[2,0,22,26,0],
+"mutt__mem__free_8c.html":[2,0,22,26,1],
+"mutt__mem__free_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,26,1,0],
+"mutt__mem__free_8c.html#a486543d71ed1477f74148ca08be48cd8":[2,0,22,26,1,1],
+"mutt__mem__free_8c_source.html":[2,0,22,26,1],
 "mutt__mem__malloc_8c.html":[2,0,22,26,2],
 "mutt__mem__malloc_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,26,2,0],
 "mutt__mem__malloc_8c.html#a2f7e106cefd3c4bf0040a94911f21751":[2,0,22,26,2,2],
@@ -226,7 +233,8 @@ var NAVTREEINDEX25 =
 "mutt__parse__content__type_8c_source.html":[2,0,22,30,6],
 "mutt__parse__mailto_8c.html":[2,0,22,30,7],
 "mutt__parse__mailto_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,30,7,0],
-"mutt__parse__mailto_8c.html#ab10d103ccd95aeeb1f6c1347eac5898d":[2,0,22,30,7,1],
+"mutt__parse__mailto_8c.html#a6215f0a0548c5475303f1b7e39e49cf2":[2,0,22,30,7,1],
+"mutt__parse__mailto_8c.html#ab10d103ccd95aeeb1f6c1347eac5898d":[2,0,22,30,7,2],
 "mutt__parse__mailto_8c_source.html":[2,0,22,30,7],
 "mutt__parse__multipart_8c.html":[2,0,22,30,8],
 "mutt__parse__multipart_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,30,8,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX25 =
 "mutt__path__abbr__folder_8c.html#ae0e337372dedbc489c541cf426610a55":[2,0,22,31,0,1],
 "mutt__path__abbr__folder_8c_source.html":[2,0,22,31,0],
 "mutt__path__basename_8c.html":[2,0,22,31,1],
-"mutt__path__basename_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,31,1,0],
-"mutt__path__basename_8c.html#a1dadf397bd7a9fc6acfb352fd65c5fa7":[2,0,22,31,1,1],
-"mutt__path__basename_8c_source.html":[2,0,22,31,1],
-"mutt__path__canon_8c.html":[2,0,22,31,2],
-"mutt__path__canon_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,31,2,0],
-"mutt__path__canon_8c.html#a9bc52b3c94ced09da20237582b70746b":[2,0,22,31,2,1],
-"mutt__path__canon_8c_source.html":[2,0,22,31,2],
-"mutt__path__concat_8c.html":[2,0,22,31,3],
-"mutt__path__concat_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,31,3,0]
+"mutt__path__basename_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,31,1,0]
 };

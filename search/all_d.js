@@ -190,5 +190,5 @@ var searchData=
   ['luastate',['LuaState',['../mutt__lua_8c.html#a8af176d3e7c60ee4905f03742bd621da',1,'mutt_lua.c']]],
   ['lwslentest',['LwsLenTest',['../structLwsLenTest.html',1,'']]],
   ['lz4_2ec',['lz4.c',['../lz4_8c.html',1,'']]],
-  ['lmdb',['LMDB',['../store_lmdb.html',1,'store']]]
+  ['lightning_20memory_2dmapped_20database_20_28lmdb_29',['Lightning Memory-Mapped Database (LMDB)',['../store_lmdb.html',1,'store']]]
 ];

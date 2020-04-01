@@ -26,6 +26,7 @@ var searchData=
   ['nlink',['nlink',['../structFolderFile.html#a708a7822ee0ea5958aa55b61bd9c5f4a',1,'FolderFile']]],
   ['nm_5ftags',['nm_tags',['../init_8c.html#a2a3ca0f0605ccecd37624b28ae01db16',1,'init.c']]],
   ['nmatch',['nmatch',['../structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51',1,'Replace']]],
+  ['nmatches',['nmatches',['../structPrexStorage.html#a8011462211411de7a7e89af23ceccbd1',1,'PrexStorage']]],
   ['nmurlprotocol',['NmUrlProtocol',['../mutt__notmuch_8c.html#af3142ba8f1a45d56da0e74227b5ccdb4',1,'mutt_notmuch.c']]],
   ['nmurlprotocollen',['NmUrlProtocolLen',['../mutt__notmuch_8c.html#a8ff34e2c5dba7a81ce5b877213be040f',1,'NmUrlProtocolLen():&#160;mutt_notmuch.c'],['../notmuch__private_8h.html#a8ff34e2c5dba7a81ce5b877213be040f',1,'NmUrlProtocolLen():&#160;mutt_notmuch.c']]],
   ['noconv',['noconv',['../structBody.html#a2f795dc4337b500fbf2ae6682dc5360b',1,'Body']]],

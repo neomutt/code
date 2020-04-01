@@ -77,6 +77,7 @@ var searchData=
   ['mutt_5fattach_2eh',['mutt_attach.h',['../mutt__attach_8h.html',1,'']]],
   ['mutt_5fauto_5fsubscribe_2ec',['mutt_auto_subscribe.c',['../mutt__auto__subscribe_8c.html',1,'']]],
   ['mutt_5fautocrypthdr_5ffree_2ec',['mutt_autocrypthdr_free.c',['../mutt__autocrypthdr__free_8c.html',1,'']]],
+  ['mutt_5fautocrypthdr_5fnew_2ec',['mutt_autocrypthdr_new.c',['../mutt__autocrypthdr__new_8c.html',1,'']]],
   ['mutt_5fb64_5fbuffer_5fdecode_2ec',['mutt_b64_buffer_decode.c',['../mutt__b64__buffer__decode_8c.html',1,'']]],
   ['mutt_5fb64_5fbuffer_5fencode_2ec',['mutt_b64_buffer_encode.c',['../mutt__b64__buffer__encode_8c.html',1,'']]],
   ['mutt_5fb64_5fdecode_2ec',['mutt_b64_decode.c',['../mutt__b64__decode_8c.html',1,'']]],

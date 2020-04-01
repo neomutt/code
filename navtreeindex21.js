@@ -1,5 +1,8 @@
 var NAVTREEINDEX21 =
 {
+"mutt__attach_8c.html#accdda994ba4457544dcf9ae681cfb6b9":[2,0,79,5],
+"mutt__attach_8c.html#acf4b24753bffc9e93f0ec9c157c850fe":[2,0,79,1],
+"mutt__attach_8c.html#ad17742bb1239d32b203e93e082bfa903":[2,0,79,12],
 "mutt__attach_8c.html#adb94477fad8521799cd4a94ec0e3eecf":[2,0,79,8],
 "mutt__attach_8c.html#adef1563a136b685ed418f12a6228ef42":[2,0,79,2],
 "mutt__attach_8c_source.html":[2,0,79],
@@ -37,6 +40,10 @@ var NAVTREEINDEX21 =
 "mutt__autocrypthdr__free_8c.html#a134be8b8546e8e489307be2ad968acef":[2,0,22,10,0,1],
 "mutt__autocrypthdr__free_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,10,0,0],
 "mutt__autocrypthdr__free_8c_source.html":[2,0,22,10,0],
+"mutt__autocrypthdr__new_8c.html":[2,0,22,9,8],
+"mutt__autocrypthdr__new_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,9,8,0],
+"mutt__autocrypthdr__new_8c.html#a60c8793d42563fb5da4a50765afe04d3":[2,0,22,9,8,1],
+"mutt__autocrypthdr__new_8c_source.html":[2,0,22,9,8],
 "mutt__b64__buffer__decode_8c.html":[2,0,22,3,0],
 "mutt__b64__buffer__decode_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,3,0,0],
 "mutt__b64__buffer__decode_8c.html#ae74d22b20bff6230064e6d4eeb8b27f5":[2,0,22,3,0,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX21 =
 "mutt__ch__iconv__lookup_8c.html":[2,0,22,6,15],
 "mutt__ch__iconv__lookup_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,6,15,0],
 "mutt__ch__iconv__lookup_8c.html#a2b9e7e7fe33c83e96d210b10871351eb":[2,0,22,6,15,1],
-"mutt__ch__iconv__lookup_8c_source.html":[2,0,22,6,15],
-"mutt__ch__iconv__open_8c.html":[2,0,22,6,16],
-"mutt__ch__iconv__open_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,6,16,0],
-"mutt__ch__iconv__open_8c.html#adb914afb7b11eab97832b986bc2c7c25":[2,0,22,6,16,1],
-"mutt__ch__iconv__open_8c_source.html":[2,0,22,6,16],
-"mutt__ch__lookup__add_8c.html":[2,0,22,6,17],
-"mutt__ch__lookup__add_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,22,6,17,0],
-"mutt__ch__lookup__add_8c.html#a9b97d50c39442eca6b0d1e29eaf210c5":[2,0,22,6,17,1]
+"mutt__ch__iconv__lookup_8c_source.html":[2,0,22,6,15]
 };
