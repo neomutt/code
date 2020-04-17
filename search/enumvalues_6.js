@@ -8,7 +8,6 @@ var searchData=
   ['hc_5fmbox',['HC_MBOX',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a268178c32488395d8afeac98117a88ee',1,'lib.h']]],
   ['hc_5fother',['HC_OTHER',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a',1,'lib.h']]],
   ['hc_5fpattern',['HC_PATTERN',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b',1,'lib.h']]],
-  ['hdr_5fattach',['HDR_ATTACH',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefadc17235387d23c83236ecc05e6250ccd',1,'compose.c']]],
   ['hdr_5fattach_5ftitle',['HDR_ATTACH_TITLE',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefa43f7afec0cc5209a2b68bea401ec20f2',1,'compose.c']]],
   ['hdr_5fautocrypt',['HDR_AUTOCRYPT',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefa26271ff4de69905731ba0156d7585460',1,'compose.c']]],
   ['hdr_5fbcc',['HDR_BCC',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefa874d952c2b2d2e5352db258e87507b02',1,'compose.c']]],

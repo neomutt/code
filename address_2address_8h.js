@@ -38,6 +38,7 @@ var address_2address_8h =
     [ "mutt_addrlist_to_intl", "address_2address_8h.html#abe8afdaeb5bdca19a1867823d73a1ec4", null ],
     [ "mutt_addrlist_to_local", "address_2address_8h.html#a7b1224fc8c5dde7114228cfc8ffbbc23", null ],
     [ "mutt_addrlist_write", "address_2address_8h.html#a69d612ac8c7f2fc7e471561216bd1c41", null ],
+    [ "mutt_addrlist_write_list", "address_2address_8h.html#a3f26185f6b123539b752d5be774606ea", null ],
     [ "AddressError", "address_2address_8h.html#ad858e9af7a80f0d17ff763bed3821500", null ],
     [ "AddressErrors", "address_2address_8h.html#a51cd0cf4038bc17ec6402a5478cb6490", null ],
     [ "AddressSpecials", "address_2address_8h.html#a930029e50328c7a0b48e302ef87fe023", null ]

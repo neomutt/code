@@ -12,7 +12,7 @@ var mutt__logging_8c =
     [ "mutt_log_start", "mutt__logging_8c.html#a948c652aa2a06285749afc1f4c21ed3b", null ],
     [ "level_validator", "mutt__logging_8c.html#a7e27ae5cd93d98cf28e160dbc27e52c5", null ],
     [ "mutt_log_observer", "mutt__logging_8c.html#aa88cedc6974757968eeaa46a1a3f5ea1", null ],
-    [ "LastError", "mutt__logging_8c.html#af57de65002f71c6b0d0f22e5033061f3", null ],
+    [ "LastError", "mutt__logging_8c.html#a49f1e05a1dde601efb9e6ad987b3c3ae", null ],
     [ "C_DebugLevel", "mutt__logging_8c.html#a34f194dfa8c0bcdf4dc91ef58c4006d4", null ],
     [ "C_DebugFile", "mutt__logging_8c.html#ae4859a47be5ac0dcf7bd97bdf8e062af", null ],
     [ "CurrentFile", "mutt__logging_8c.html#ad04ed06de1bf40839fd6c1d51178161b", null ],

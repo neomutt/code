@@ -18,7 +18,7 @@ var searchData=
   ['test_5fabort_5fjmp_5fbuf_5f',['test_abort_jmp_buf_',['../acutest_8h.html#a1870eec38aa6ab5035027e76ceb9e584',1,'acutest.h']]],
   ['test_5fargv0_5f',['test_argv0_',['../acutest_8h.html#a6e12fa3051b0a0ef3f456816c243fc96',1,'acutest.h']]],
   ['test_5fcase_5fcurrent_5falready_5flogged_5f',['test_case_current_already_logged_',['../acutest_8h.html#ab6d57d4a23a50a61a4d183bd45469766',1,'acutest.h']]],
-  ['test_5fcase_5fname_5f',['test_case_name_',['../acutest_8h.html#aabdbaa2129a26dc0a7549a4a6709ee57',1,'acutest.h']]],
+  ['test_5fcase_5fname_5f',['test_case_name_',['../acutest_8h.html#a460df43c4a476caee6f06dc8813da1e6',1,'acutest.h']]],
   ['test_5fcmdline_5foptions_5f',['test_cmdline_options_',['../acutest_8h.html#aff3d08ae6a9e11bdc5d1b58d84629970',1,'acutest.h']]],
   ['test_5fcolorize_5f',['test_colorize_',['../acutest_8h.html#acb7d715b48c856ed87682aa0369f35aa',1,'acutest.h']]],
   ['test_5fcond_5ffailed_5f',['test_cond_failed_',['../acutest_8h.html#a33e7f3d80688bb5feec071ae9b68b42a',1,'acutest.h']]],
@@ -54,11 +54,13 @@ var searchData=
   ['thread_5fhash',['thread_hash',['../structContext.html#a8cc199b129eaf8e3f646b04b2595be6f',1,'Context']]],
   ['threaded',['threaded',['../structEmail.html#a95029ac9edf984e229faefb6c8630fa9',1,'Email']]],
   ['time',['time',['../structLogLine.html#afeec3f261a14a70ac885fdff163dc179',1,'LogLine']]],
-  ['timestamp',['timestamp',['../structAutocryptPeerHistory.html#adf822acc8c596dec6b3b1178743347c6',1,'AutocryptPeerHistory::timestamp()'],['../structAutocryptGossipHistory.html#adc78ce4adef73cb27a9db3e2a045f9d3',1,'AutocryptGossipHistory::timestamp()'],['../structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3',1,'PopAccountData::timestamp()'],['../structProgress.html#a98985b21ed4a289e95c7eeb24a988ade',1,'Progress::timestamp()']]],
+  ['timestamp',['timestamp',['../structAutocryptPeerHistory.html#adf822acc8c596dec6b3b1178743347c6',1,'AutocryptPeerHistory::timestamp()'],['../structAutocryptGossipHistory.html#adc78ce4adef73cb27a9db3e2a045f9d3',1,'AutocryptGossipHistory::timestamp()'],['../structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3',1,'PopAccountData::timestamp()'],['../structProgress.html#ac8f90b1e0ea206cd72f66518e841453e',1,'Progress::timestamp()']]],
   ['timezones',['TimeZones',['../date_8c.html#acf6c086a99210f984154a01727d8026d',1,'date.c']]],
   ['title',['title',['../structMenu.html#a1cf561ffb11a83698437c966fb8d54f0',1,'Menu']]],
   ['tm',['tm',['../structMakeTimeTest.html#abf3e0f18dda29066b8178c318306cf43',1,'MakeTimeTest']]],
   ['to',['to',['../structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7',1,'Envelope']]],
+  ['to_5flist',['to_list',['../structComposeRedrawData.html#ab5e94cc7212ed2c22c974c5f4780f6a1',1,'ComposeRedrawData']]],
+  ['to_5frows',['to_rows',['../structComposeRedrawData.html#a1a6f15c67fb5a3339d28cf93c5352d04',1,'ComposeRedrawData']]],
   ['top',['top',['../structMenu.html#a9b6a0ee3837c582e8cf70e985cde69cc',1,'Menu']]],
   ['topindex',['TopIndex',['../sidebar_8c.html#ad1fda6d0d4d7141dbd11196c843957c6',1,'sidebar.c']]],
   ['topline',['topline',['../structPagerRedrawData.html#ac039038574c9d232200b3a0f022ea57c',1,'PagerRedrawData::topline()'],['../pager_8c.html#af7c753f5d70592c25bcb40f78dc67709',1,'TopLine():&#160;pager.c']]],
@@ -77,5 +79,5 @@ var searchData=
   ['txn_5fmode',['txn_mode',['../structStoreLmdbCtx.html#a4b616aa9dd5e9bd34574ae826433c5f5',1,'StoreLmdbCtx']]],
   ['type',['type',['../structConfigDef.html#a7ef98523e839cd54edcdabdc8bcda148',1,'ConfigDef::type()'],['../structConnAccount.html#aefc6c0b647de43e60472000102a0e208',1,'ConnAccount::type()'],['../structAccount.html#a1aa62f517fae4248e51123f38fd3ebba',1,'Account::type()'],['../structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174',1,'Mailbox::type()'],['../structBody.html#af77d79aadb278bef8f2829c268f2486f',1,'Body::type()'],['../structMuttWindow.html#af1290d572b0d8a0fac6b28a1a4c2b4da',1,'MuttWindow::type()'],['../structHook.html#a00de75760baf799e44b79761769f3ea2',1,'Hook::type()'],['../structMonitor.html#a794ff4adaf68713ec835fe99a8cda0c0',1,'Monitor::type()'],['../structMonitorInfo.html#a8570208d247505766e0efb462c31afef',1,'MonitorInfo::type()'],['../structLookup.html#a89726da813ba93a35abba858ff2f5a0b',1,'Lookup::type()'],['../structHashElem.html#aafb6e3d6500e9f3dee67b7eab85f0480',1,'HashElem::type()'],['../structMenu.html#a9fc12a9cc0614626cff484f1b0120bbf',1,'Menu::type()'],['../structMxOps.html#a7426508d3737f8021c01df861f58a997',1,'MxOps::type()'],['../structNmEmailData.html#afb9a8e94a3b200cbbe366c2ce14657bf',1,'NmEmailData::type()'],['../structLine.html#aef274c2398448d2f835f740a62ea5cb9',1,'Line::type()']]],
   ['types',['types',['../structConfigSet.html#ab04a207e405abc005c3f52ab602c7a5d',1,'ConfigSet']]],
-  ['tzname',['tzname',['../structTz.html#aca21c09ca5a36894f4c9c8bf90f9c532',1,'Tz']]]
+  ['tzname',['tzname',['../structTz.html#aec12fba005d9c1d398aa6f7dbb4c7f16',1,'Tz']]]
 ];

@@ -32,6 +32,7 @@ var address_2address_8c =
     [ "mutt_addr_for_display", "address_2address_8c.html#a64951ec4d595356746ef4d26dd7533c6", null ],
     [ "mutt_addr_write", "address_2address_8c.html#ac1ccf9a098991f797af50f11e6575695", null ],
     [ "mutt_addrlist_write", "address_2address_8c.html#a69d612ac8c7f2fc7e471561216bd1c41", null ],
+    [ "mutt_addrlist_write_list", "address_2address_8c.html#a3f26185f6b123539b752d5be774606ea", null ],
     [ "mutt_addr_to_intl", "address_2address_8c.html#abfd85ca14a8e67427bbc809212ae7fd4", null ],
     [ "mutt_addrlist_to_intl", "address_2address_8c.html#abe8afdaeb5bdca19a1867823d73a1ec4", null ],
     [ "mutt_addr_to_local", "address_2address_8c.html#a95bcf9ec8be0b69b33fadde85800b559", null ],

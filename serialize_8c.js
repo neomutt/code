@@ -2,9 +2,9 @@ var serialize_8c =
 [
     [ "lazy_realloc", "serialize_8c.html#a8743cdacf78e84234da08650c0210580", null ],
     [ "serial_dump_int", "serialize_8c.html#a4cb970e9ca646206b7428ae05d6fc62a", null ],
-    [ "serial_dump_size_t", "serialize_8c.html#af9f533eec777339780a562be26ea62e9", null ],
+    [ "serial_dump_uint32_t", "serialize_8c.html#a86ada3ed5058de1b16670858e8f8dc6c", null ],
     [ "serial_restore_int", "serialize_8c.html#ae337dfc66e217ae0253a77eef4271f02", null ],
-    [ "serial_restore_size_t", "serialize_8c.html#aa4629701fa11063b76e0076c8bedf0e2", null ],
+    [ "serial_restore_uint32_t", "serialize_8c.html#ae980b8c638841c27a002c0839685ed56", null ],
     [ "serial_dump_char_size", "serialize_8c.html#aa45c416053e87953f0cd015cfff5e556", null ],
     [ "serial_dump_char", "serialize_8c.html#a7fa6bf18ed1915cdfb49d945b6c018d3", null ],
     [ "serial_restore_char", "serialize_8c.html#a43a280bdcd6ff4e026fbab74aa3f82c4", null ],

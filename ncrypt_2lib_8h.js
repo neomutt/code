@@ -60,6 +60,7 @@ var ncrypt_2lib_8h =
     [ "mutt_protected_headers_handler", "ncrypt_2lib_8h.html#a42beb76a6119ccad540eafb2d65b3147", null ],
     [ "mutt_should_hide_protected_subject", "ncrypt_2lib_8h.html#a52c65477f5b80ad3dc8028663653771d", null ],
     [ "mutt_signed_handler", "ncrypt_2lib_8h.html#ab4a0490d64e0a23332c76fabe5c58105", null ],
+    [ "crypt_cleanup", "ncrypt_2lib_8h.html#a397940a79b0c75800fed7d264f7fd6b4", null ],
     [ "crypt_has_module_backend", "ncrypt_2lib_8h.html#a07a6c891658dd90ef8333a1e5bbcc285", null ],
     [ "crypt_init", "ncrypt_2lib_8h.html#aaecf706c319966f9eafd582b58ba531f", null ],
     [ "crypt_invoke_message", "ncrypt_2lib_8h.html#a166ec08d102f4330fdd0cc44a32bdf96", null ],

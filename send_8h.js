@@ -17,7 +17,7 @@ var send_8h =
     [ "SEND_GROUP_CHAT_REPLY", "send_8h.html#a0e11db957196a8cc43bbe955178f3686", null ],
     [ "SEND_NEWS", "send_8h.html#ae31498a0e61355a0b4ece8f0c89daf49", null ],
     [ "SendFlags", "send_8h.html#af731a62ddd44f1d907196beef8f8f19f", null ],
-    [ "ci_send_message", "send_8h.html#a95072c8ec793d76eddf1dfb47216fdda", null ],
+    [ "mutt_send_message", "send_8h.html#a9a131da5ee0f643956737d137c5523b0", null ],
     [ "mutt_add_to_reference_headers", "send_8h.html#a3bd32443d49b53466af32d101c16d418", null ],
     [ "mutt_default_from", "send_8h.html#aa57b6946b9f64b289da0da408ee27789", null ],
     [ "mutt_edit_address", "send_8h.html#a3a50e112e7c0ddd1270a550e63fdd80f", null ],

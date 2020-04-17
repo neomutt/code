@@ -7,6 +7,8 @@ var searchData=
   ['base32',['base32',['../muttlib_8c.html#afb8aeff81321e9da1f915f929d4b058d',1,'muttlib.c']]],
   ['bcache',['bcache',['../structImapMboxData.html#a506e50b5acb8f79ac1a855cef7f4e6de',1,'ImapMboxData::bcache()'],['../structNntpMboxData.html#a4a0fee3ab5b7ee9b0027505083f16790',1,'NntpMboxData::bcache()'],['../structPopAccountData.html#ad54e1437730d092d35f53d7c4aba6e5a',1,'PopAccountData::bcache()']]],
   ['bcc',['bcc',['../structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6',1,'Envelope']]],
+  ['bcc_5flist',['bcc_list',['../structComposeRedrawData.html#a2d0c9671af88fb3aeb40e92bbb03d6cd',1,'ComposeRedrawData']]],
+  ['bcc_5frows',['bcc_rows',['../structComposeRedrawData.html#a2c3cdd0936668bbbd8eba6e12660a808',1,'ComposeRedrawData']]],
   ['begin',['begin',['../structEnterState.html#a83071b07ce7cfa6c49852fd9379768d9',1,'EnterState']]],
   ['bg',['bg',['../structColorLine.html#a06a900b6426acb141875497a8e666bd1',1,'ColorLine::bg()'],['../structColorList.html#ac11b150730e8c324d7772628c7de8b20',1,'ColorList::bg()'],['../structAnsiAttr.html#af5d23b90bdd04c64a734ded7c452bc9f',1,'AnsiAttr::bg()']]],
   ['binary',['binary',['../structContent.html#a9b7fb2b72f01b83ee4e9b91213752120',1,'Content']]],

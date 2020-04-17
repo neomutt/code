@@ -18,5 +18,6 @@ var searchData=
   ['routines_20for_20querying_20and_20external_20address_20book',['Routines for querying and external address book',['../query.html',1,'index']]],
   ['routines_20for_20managing_20attachments',['Routines for managing attachments',['../recvattach.html',1,'index']]],
   ['rfc3676_20format_20flowed_20routines',['RFC3676 Format Flowed routines',['../rfc3676.html',1,'index']]],
-  ['routines_20for_20adding_20user_20scores_20to_20emails',['Routines for adding user scores to emails',['../score.html',1,'index']]]
+  ['routines_20for_20adding_20user_20scores_20to_20emails',['Routines for adding user scores to emails',['../score.html',1,'index']]],
+  ['rocksdb',['RocksDB',['../store_rocksdb.html',1,'store']]]
 ];

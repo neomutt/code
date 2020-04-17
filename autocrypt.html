@@ -32,7 +32,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2020-03-20-65-g141838</span>
+   &#160;<span id="projectnumber">2020-04-17</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -91,7 +91,26 @@ $(document).ready(function(){initNavTree('autocrypt.html','');});
 <div class="title">AUTOCRYPT: End-to-end encryption </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Autocrypt end-to-end encryption</p>
+<div class="textblock"><p>This is an implementation of Autocrypt Level 1.1.</p>
+<p><a href="https://autocrypt.org/">https://autocrypt.org/</a></p>
+<h2>Still Todo</h2>
+<ul>
+<li>Setup message creation</li>
+<li>Setup message import These can both be added to the account menu, and perhaps the first-run too.</li>
+</ul>
+<h2>Developer Notes</h2>
+<h3><code>header-&gt;security | SEC_AUTOCRYPT</code></h3>
+<p>During message composition, SEC_AUTOCRYPT is mutually exclusive from SEC_ENCRYPT and SEC_SIGN. The former means that autocrypt will sign and encrypt the email upon send, the latter means the normal keyring will do so.</p>
+<p>We keep these separate so that autocrypt can detect the normal keyring has been turned on (manually, or by oppenc or something) and disable itself.</p>
+<p>Outside message composition the flags are not exclusive. We can't tell a message is an autocrypt message until we try to decrypt it. Once we do so, the flag is added to the existing flags. The only relevance for decrypted messages is when replying - in which case we want to force using autocrypt in the reply.</p>
+<h3><code>header-&gt;security | SEC_AUTOCRYPT_OVERRIDE</code></h3>
+<p>I was loathe to use another bit for this, but unlike SEC_OPPENCRYPT, SEC_AUTOCRYPT means the message <em>will</em> be encrypted, not that the option is on.</p>
+<p>We need a way to distinguish between the user manually enabling autocrypt and the recommendation engine doing so. If this is not set, the engine can turn SEC_AUTOCRYPT back off when the recipients change. But if the user manually set it, we don't want to do that.</p>
+<h3><code><a class="el" href="autocrypt_2lib_8h.html#ac2a58142d9962d1108cf66d8386a70bd" title="Initialise Autocrypt. ">mutt_autocrypt_init()</a></code></h3>
+<p>All public functions (in autocrypt.h) should call this function to make sure everything is set up. Nothing prevents the user from manually flipping the option at runtime, but in that case the directory and such may not even exist.</p>
+<p>Right now, I only allow "first run" initialization during startup. Not all calls are interactive, and we don't want to prompt the user while opening a mailbox, for instance.</p>
+<h3>Database schema version</h3>
+<p>There is a "schema" table in the database, which records database version. Any changes to the database should bump the schema version by adding a call in <a class="el" href="autocrypt__private_8h.html#a6bf8cc8f42e2dce5232ea607b5706b32" title="Update the version number of the Autocrypt database schema. ">mutt_autocrypt_schema_update()</a>.</p>
 <table class="doxtable">
 <tr>
 <th align="left">File </th><th align="left">Description  </th></tr>

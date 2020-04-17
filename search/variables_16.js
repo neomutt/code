@@ -10,7 +10,10 @@ var searchData=
   ['which',['which',['../structPrexStorage.html#a72b2059fbefb9e89c0d5b7912f8b52f0',1,'PrexStorage']]],
   ['whitespace',['whitespace',['../structContentState.html#a54db42e78cb60f77b08b70acad296b54',1,'ContentState']]],
   ['width',['width',['../structFlowedState.html#a635fa843f878b8699143b02b178e5dcb',1,'FlowedState']]],
-  ['win',['win',['../structComposeRedrawData.html#a8f7f64c4532e5b0b9d166c6093fae660',1,'ComposeRedrawData']]],
+  ['win_5fabar',['win_abar',['../structComposeRedrawData.html#af7e3d45772314a13d14ab276cf8ad5c6',1,'ComposeRedrawData']]],
+  ['win_5fattach',['win_attach',['../structComposeRedrawData.html#ab839b025c4c87c59a173ebfcbec28cb3',1,'ComposeRedrawData']]],
+  ['win_5fcbar',['win_cbar',['../structComposeRedrawData.html#ab35713d1f60b2c1d40ee975f579d0372',1,'ComposeRedrawData']]],
+  ['win_5fenvelope',['win_envelope',['../structComposeRedrawData.html#a8c2c6d195d268c2dbfbe80fc9ed566b3',1,'ComposeRedrawData']]],
   ['win_5fibar',['win_ibar',['../structMenu.html#a95b073682bbe6ec7acdc2c80e8f1e8df',1,'Menu::win_ibar()'],['../structPager.html#a16b272de86007b87a11bf0783f8b97db',1,'Pager::win_ibar()']]],
   ['win_5findex',['win_index',['../structMenu.html#a8531d1210426e46689f8c08935b24df2',1,'Menu::win_index()'],['../structPager.html#a27d323e1a9a5d344ac169e5b4938b4fa',1,'Pager::win_index()']]],
   ['win_5fpager',['win_pager',['../structPager.html#a1411062ee50b67bca9264cb6ed4ae4bf',1,'Pager']]],
@@ -18,5 +21,6 @@ var searchData=
   ['word_5flen',['word_len',['../structEnrichedState.html#acb9ee0793e0aff2f26e4845a1161f46e',1,'EnrichedState']]],
   ['wrap_5fmargin',['wrap_margin',['../structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26',1,'EnrichedState']]],
   ['wraplen',['wraplen',['../structState.html#a2c506e7d8513e59e6162cdc5d6f9f320',1,'State']]],
-  ['write',['write',['../structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db',1,'Connection::write()'],['../structSaslSockData.html#ac333dd30a76dea2d1dfbed78f7ba3281',1,'SaslSockData::write()'],['../structZstrmContext.html#a83f56498421caa65ebe34386cc21b58b',1,'ZstrmContext::write()'],['../structMessage.html#aa97affe6dd666261890aee8ec004c26c',1,'Message::write()']]]
+  ['write',['write',['../structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db',1,'Connection::write()'],['../structSaslSockData.html#ac333dd30a76dea2d1dfbed78f7ba3281',1,'SaslSockData::write()'],['../structZstrmContext.html#a83f56498421caa65ebe34386cc21b58b',1,'ZstrmContext::write()'],['../structMessage.html#aa97affe6dd666261890aee8ec004c26c',1,'Message::write()']]],
+  ['write_5foptions',['write_options',['../structRocksDB__Ctx.html#a43940db7a3ddd72e6509600a3900b05b',1,'RocksDB_Ctx']]]
 ];

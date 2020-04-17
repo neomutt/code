@@ -18,6 +18,8 @@ var sidebar_8c =
     [ "select_prev_new", "sidebar_8c.html#ae82bdda47eca445c16744b1f12e494bf", null ],
     [ "select_page_down", "sidebar_8c.html#ae7eac8f0a1f2a8774daca730a979fb55", null ],
     [ "select_page_up", "sidebar_8c.html#a089cd9d88e3e9d8729e725cabb2c6ff1", null ],
+    [ "select_first", "sidebar_8c.html#a0d295ad82cb9a501bec380b9010c007f", null ],
+    [ "select_last", "sidebar_8c.html#a55334fecf64adb5b9c96bde664fcc2a4", null ],
     [ "prepare_sidebar", "sidebar_8c.html#a93a498e6a70231ba96fbdd66c6cff18d", null ],
     [ "draw_divider", "sidebar_8c.html#a228ec4bf709f7d688fbc8d5a264c00dd", null ],
     [ "fill_empty_space", "sidebar_8c.html#a170c92ace88b40e4afde3456023aff72", null ],

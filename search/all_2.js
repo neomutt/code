@@ -48,6 +48,7 @@ var searchData=
   ['add_5fquote_5fsuffix',['add_quote_suffix',['../rfc3676_8c.html#a65b6441acda161a859dcf941c4d0ee9f',1,'rfc3676.c']]],
   ['add_5freferences',['add_references',['../send_8c.html#af14544f55d0b62fcba84643fadec4890',1,'send.c']]],
   ['add_5fto_5fstailq',['add_to_stailq',['../muttlib_8c.html#a2e3c864ac49cfb7bc862c32416baf81d',1,'add_to_stailq(struct ListHead *head, const char *str):&#160;muttlib.c'],['../muttlib_8h.html#a2e3c864ac49cfb7bc862c32416baf81d',1,'add_to_stailq(struct ListHead *head, const char *str):&#160;muttlib.c']]],
+  ['add_5ftz_5foffset',['add_tz_offset',['../date_8c.html#afebb3c39355c12efcf484c5645ace65b',1,'date.c']]],
   ['addr',['addr',['../structAlias.html#a82faa14f5f54dafba615959032b3731b',1,'Alias::addr()'],['../structAccountEntry.html#a2862fe121e55738f267fe690916d7f45',1,'AccountEntry::addr()'],['../structAutocryptHeader.html#aff8c01557e8d51c9fe23f2375535d39f',1,'AutocryptHeader::addr()'],['../structPgpUid.html#ac916dd9fa18406f33104b05352fe413d',1,'PgpUid::addr()'],['../structQuery.html#a01ad2d3b4be42c098ef2776594843ac5',1,'Query::addr()'],['../structRemailer.html#a66ac824f3f9dbaea7d4e7191f1d29ea7',1,'Remailer::addr()']]],
   ['addr_5ferr_5fbad_5faddr_5fspec',['ADDR_ERR_BAD_ADDR_SPEC',['../address_2address_8h.html#aa3cf99a8b937291394a16ae959e175aea73949ddb55f1c35d9291866c47fe48ed',1,'address.h']]],
   ['addr_5ferr_5fbad_5froute',['ADDR_ERR_BAD_ROUTE',['../address_2address_8h.html#aa3cf99a8b937291394a16ae959e175aea4d70e5a2d40cfa2720795098ec32c1ab',1,'address.h']]],

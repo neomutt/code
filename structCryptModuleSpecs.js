@@ -2,6 +2,7 @@ var structCryptModuleSpecs =
 [
     [ "identifier", "structCryptModuleSpecs.html#a826c8626deb6f6d25fb824668b2a7191", null ],
     [ "init", "structCryptModuleSpecs.html#a819c87369b2dc3806d846c3a7e9fb7b6", null ],
+    [ "cleanup", "structCryptModuleSpecs.html#a964e577093325ada36eccd27f2077799", null ],
     [ "void_passphrase", "structCryptModuleSpecs.html#ac08ed67f7b29c7b6cba6d4999cebf739", null ],
     [ "valid_passphrase", "structCryptModuleSpecs.html#a8e4fee6a5203c68d854e1d328559889a", null ],
     [ "decrypt_mime", "structCryptModuleSpecs.html#a4cba06c7d0dfb0e4d1fba7c9ded25c0d", null ],

@@ -3,6 +3,7 @@ var commands_8h =
     [ "ci_bounce_message", "commands_8h.html#a2fc497abbb4426b3352d9ec6676cc39f", null ],
     [ "mutt_check_stats", "commands_8h.html#a02ca5373d05a327109310e13d0f66309", null ],
     [ "mutt_check_traditional_pgp", "commands_8h.html#a84666d102dc87cf5d3a33c6315896373", null ],
+    [ "mutt_commands_cleanup", "commands_8h.html#a285a3606fd845c0e1373a25863bfcbf5", null ],
     [ "mutt_display_address", "commands_8h.html#af74f4a746f477efa94a5e576e285bb71", null ],
     [ "mutt_display_message", "commands_8h.html#a8a46a520d098c69d31753164679300ac", null ],
     [ "mutt_edit_content_type", "commands_8h.html#a9b5874c3558cb300404bb50f60fc6a31", null ],

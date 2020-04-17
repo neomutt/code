@@ -2,6 +2,7 @@ var searchData=
 [
   ['main_5fc',['MAIN_C',['../main_8c.html#a243a02d5ffdb9b84887eaef667137588',1,'MAIN_C():&#160;main.c'],['../comp_8c.html#a243a02d5ffdb9b84887eaef667137588',1,'MAIN_C():&#160;comp.c']]],
   ['max',['MAX',['../memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'memory.h']]],
+  ['max_5faddr_5frows',['MAX_ADDR_ROWS',['../compose_8c.html#ae0a35f3369b4cd706f92571c89a99b34',1,'compose.c']]],
   ['max_5fcomp_5flevel',['MAX_COMP_LEVEL',['../lz4_8c.html#aa6d6e294762302249e6996ab960a130a',1,'MAX_COMP_LEVEL():&#160;lz4.c'],['../zlib_8c.html#aa6d6e294762302249e6996ab960a130a',1,'MAX_COMP_LEVEL():&#160;zlib.c'],['../zstd_8c.html#aa6d6e294762302249e6996ab960a130a',1,'MAX_COMP_LEVEL():&#160;zstd.c']]],
   ['max_5ferrs',['MAX_ERRS',['../command__parse_8c.html#a353a4aa7daecf61f3407082936e94bfe',1,'command_parse.c']]],
   ['max_5flock_5fattempts',['MAX_LOCK_ATTEMPTS',['../file_8c.html#a3703357f73aac7f0e1508977fdf9bd6a',1,'file.c']]],

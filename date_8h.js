@@ -6,7 +6,7 @@ var date_8h =
     [ "TM_YEAR_MAX", "date_8h.html#aabd7073018d740dc1148b7b8dc59650d", null ],
     [ "TM_YEAR_MIN", "date_8h.html#a1126901c8803fbd7569b768ff112a01b", null ],
     [ "MUTT_DATE_NOW", "date_8h.html#abf03771572f8244cb2d72e234d3a9e29", null ],
-    [ "mutt_date_add_timeout", "date_8h.html#ac2afca44227dcdc262f2e37bc6c639a4", null ],
+    [ "mutt_date_add_timeout", "date_8h.html#ac0abb4d8ad7cd26e1dea5ac43a20a329", null ],
     [ "mutt_date_check_month", "date_8h.html#a58c8238ef7c9cc33ee04f5a88dbe5559", null ],
     [ "mutt_date_epoch", "date_8h.html#a97bacb1574ec0b1c69b6236fbacceccf", null ],
     [ "mutt_date_epoch_ms", "date_8h.html#af116b4ad52dd21a36ac701e7c376ecd1", null ],

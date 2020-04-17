@@ -28,6 +28,7 @@ var searchData=
   ['find_5fmatching_5fparen',['find_matching_paren',['../pattern_8c.html#a34120478ddc4976939fb82e05bb42cb7',1,'pattern.c']]],
   ['find_5fparent',['find_parent',['../recvcmd_8c.html#af75f34573790a122a80c96ff84c36c79',1,'recvcmd.c']]],
   ['find_5fsubject',['find_subject',['../mutt__thread_8c.html#a6caa00fea3238ba9a1fb13e4a589d680',1,'mutt_thread.c']]],
+  ['find_5ftz',['find_tz',['../date_8c.html#a42d01f188c3a843400fb907b7f9781dd',1,'date.c']]],
   ['find_5fvirtual',['find_virtual',['../thread_8c.html#acb6aecabe8ec88f13c5e9621e7cdb2e9',1,'find_virtual(struct MuttThread *cur, int reverse):&#160;thread.c'],['../thread_8h.html#acb6aecabe8ec88f13c5e9621e7cdb2e9',1,'find_virtual(struct MuttThread *cur, int reverse):&#160;thread.c']]],
   ['first_5fmailing_5flist',['first_mailing_list',['../hdrline_8c.html#a3e537b5af579c3a9f0e14832bce0429e',1,'hdrline.c']]],
   ['fix_5fend_5fof_5ffile',['fix_end_of_file',['../send_8c.html#ad5e73f6a253107a7f55ee7388fbbf92f',1,'send.c']]],

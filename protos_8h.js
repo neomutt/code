@@ -11,7 +11,7 @@ var protos_8h =
     ] ],
     [ "mutt_ev_message", "protos_8h.html#ae931366f6e3368b007b210da085f5672", null ],
     [ "mutt_system", "protos_8h.html#aa1d4ad04b000036513ca3f741059942c", null ],
-    [ "mutt_set_xdg_path", "protos_8h.html#ab34a52d61d60357a92bc3cf0da20327c", null ],
+    [ "mutt_set_xdg_path", "protos_8h.html#aaa27303d43dc65ef87fa448ddd08c41f", null ],
     [ "mutt_help", "protos_8h.html#ad9bb0ca40ea82be9ffc97caba4e631f7", null ],
     [ "mutt_make_help", "protos_8h.html#a7688433b773018a7ada602549e701b14", null ],
     [ "mutt_set_flag_update", "protos_8h.html#a10bc5f3e9550655780688d2f8d145ba4", null ],

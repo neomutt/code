@@ -43,5 +43,7 @@ var dir_13e138d54eb8818da29c3992edef070a =
     [ "thread", "dir_29d451a2863856c43a60a8dee920c6fd.html", "dir_29d451a2863856c43a60a8dee920c6fd" ],
     [ "url", "dir_39541de600992191d6fe13bd1754ce52.html", "dir_39541de600992191d6fe13bd1754ce52" ],
     [ "acutest.h", "acutest_8h.html", "acutest_8h" ],
-    [ "main.c", "test_2main_8c.html", "test_2main_8c" ]
+    [ "common.c", "common_8c.html", "common_8c" ],
+    [ "main.c", "test_2main_8c.html", "test_2main_8c" ],
+    [ "test_common.h", "test__common_8h.html", "test__common_8h" ]
 ];

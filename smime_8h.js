@@ -1,6 +1,8 @@
 var smime_8h =
 [
     [ "SmimeKey", "structSmimeKey.html", "structSmimeKey" ],
+    [ "smime_init", "smime_8h.html#a6f582853bd091e5fda82a82dc049a38d", null ],
+    [ "smime_cleanup", "smime_8h.html#a7d3eec74fc4e57062dd82ab74beea573", null ],
     [ "smime_class_application_handler", "smime_8h.html#af04b670cb74ccfaac9d020cd6d475867", null ],
     [ "smime_class_build_smime_entity", "smime_8h.html#a7c447834a2bcda8aecc09a295778bbae", null ],
     [ "smime_class_decrypt_mime", "smime_8h.html#a7bce79c6bce03ebe9e09d0ab8b479ac3", null ],

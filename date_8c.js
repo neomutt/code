@@ -1,8 +1,9 @@
 var date_8c =
 [
     [ "compute_tz", "date_8c.html#a87c0827afa6f4a44754b37845e7754a5", null ],
+    [ "add_tz_offset", "date_8c.html#afebb3c39355c12efcf484c5645ace65b", null ],
+    [ "find_tz", "date_8c.html#a42d01f188c3a843400fb907b7f9781dd", null ],
     [ "is_leap_year_feb", "date_8c.html#a8d648b2e81fc1413097598f9fc3a71a5", null ],
-    [ "uncomment_timezone", "date_8c.html#aa107c8fe2fa3968085223a29123ccbc6", null ],
     [ "mutt_date_local_tz", "date_8c.html#a82bd2f1fb214328612aa1900b731972b", null ],
     [ "mutt_date_make_time", "date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e", null ],
     [ "mutt_date_normalize_time", "date_8c.html#ae62f60a70955bfdf32b669f4cac02571", null ],
@@ -15,7 +16,7 @@ var date_8c =
     [ "mutt_date_make_imap", "date_8c.html#ab30120ea670e25b9f47ccc9c83eda66f", null ],
     [ "mutt_date_make_tls", "date_8c.html#a8193091a9ad44eba4b0db60e950c57e6", null ],
     [ "mutt_date_parse_imap", "date_8c.html#adf19e8285681d19c7858a66cd0eba84d", null ],
-    [ "mutt_date_add_timeout", "date_8c.html#ac2afca44227dcdc262f2e37bc6c639a4", null ],
+    [ "mutt_date_add_timeout", "date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329", null ],
     [ "mutt_date_localtime", "date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba", null ],
     [ "mutt_date_gmtime", "date_8c.html#a76f10949abf7521c519bced738be2694", null ],
     [ "mutt_date_localtime_format", "date_8c.html#a0fab1956f93fd1be1a2dbfb740788ef7", null ],

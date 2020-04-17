@@ -44,7 +44,7 @@ var searchData=
   ['query_5fmenu',['query_menu',['../query_8c.html#a1ca9d237583501cf25a206723b5c15ec',1,'query.c']]],
   ['query_5fnew',['query_new',['../query_8c.html#a436ac05a00471a5699fa34c704855966',1,'query.c']]],
   ['query_5fpart',['QUERY_PART',['../prex_8c.html#a77db7ffb949a0b492b7548eff099d020',1,'prex.c']]],
-  ['query_5fpipe_5fattachment',['query_pipe_attachment',['../recvattach_8c.html#af9a91b1708bff64bf5e3d46c6b3efce1',1,'recvattach.c']]],
+  ['query_5fpipe_5fattachment',['query_pipe_attachment',['../recvattach_8c.html#af3d9eba146519070da9cdc16cd6d92b7',1,'recvattach.c']]],
   ['query_5fquadoption',['query_quadoption',['../init_8c.html#ab02047769214ff014b9a8a1782babadc',1,'query_quadoption(enum QuadOption opt, const char *prompt):&#160;init.c'],['../init_8h.html#ab02047769214ff014b9a8a1782babadc',1,'query_quadoption(enum QuadOption opt, const char *prompt):&#160;init.c']]],
   ['query_5fsave_5fattachment',['query_save_attachment',['../recvattach_8c.html#aad56960e0d22f0b6e36dbf18d120d84a',1,'recvattach.c']]],
   ['query_5fsearch',['query_search',['../query_8c.html#a783bc0e7221defca6d72b304746e3aba',1,'query.c']]],

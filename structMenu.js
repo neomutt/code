@@ -7,7 +7,6 @@ var structMenu =
     [ "max", "structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b", null ],
     [ "redraw", "structMenu.html#a8fc369d344b2e43c9985803f84729dc9", null ],
     [ "type", "structMenu.html#a9fc12a9cc0614626cff484f1b0120bbf", null ],
-    [ "offset", "structMenu.html#a729965f5610f365b8011253598dbaed7", null ],
     [ "pagelen", "structMenu.html#aaeccd09816a8432598225fcf326ce280", null ],
     [ "tagprefix", "structMenu.html#ad61a688c4022947670351f87b04a222d", null ],
     [ "is_mailbox_list", "structMenu.html#a5074cc0f9fe1292ac13fedabc5cb553d", null ],

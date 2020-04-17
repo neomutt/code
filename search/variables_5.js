@@ -25,6 +25,7 @@ var searchData=
   ['envlist',['EnvList',['../envlist_8c.html#ae45378328cf8b407e63b6d53eaf61a01',1,'envlist.c']]],
   ['eostr',['eostr',['../structSeqsetIterator.html#a26751cac5a01df780c75aad85206a8da',1,'SeqsetIterator']]],
   ['eq',['eq',['../structKeymap.html#a908683bf209748c84e1f60b1e36bfd16',1,'Keymap']]],
+  ['err',['err',['../structRocksDB__Ctx.html#a30e7b79f8bd1c3bb9634ea2bbced8bbc',1,'RocksDB_Ctx']]],
   ['err_5fmsg',['err_msg',['../structPopAccountData.html#a84cf659582c28abdd77d78e74257143f',1,'PopAccountData']]],
   ['err_5fnum',['err_num',['../structSysExits.html#ab9b32acf39565aa5d6532b3d79c1f051',1,'SysExits::err_num()'],['../structTestValue.html#ae73ac5376f1c02718edf2b221c0b5464',1,'TestValue::err_num()']]],
   ['err_5fstr',['err_str',['../structSysExits.html#a8804c66542441e33db367e823d449546',1,'SysExits']]],

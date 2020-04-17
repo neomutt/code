@@ -3,6 +3,7 @@ var cryptglue_8c =
     [ "CRYPT_MOD_CALL_CHECK", "cryptglue_8c.html#a69a7f3b98b67a0831a8a5e3fc47d5c93", null ],
     [ "CRYPT_MOD_CALL", "cryptglue_8c.html#acaf721ab817757c241a5abd18fc8618b", null ],
     [ "crypt_init", "cryptglue_8c.html#aaecf706c319966f9eafd582b58ba531f", null ],
+    [ "crypt_cleanup", "cryptglue_8c.html#a397940a79b0c75800fed7d264f7fd6b4", null ],
     [ "crypt_invoke_message", "cryptglue_8c.html#a166ec08d102f4330fdd0cc44a32bdf96", null ],
     [ "crypt_has_module_backend", "cryptglue_8c.html#a07a6c891658dd90ef8333a1e5bbcc285", null ],
     [ "crypt_pgp_void_passphrase", "cryptglue_8c.html#ab11bb907cc90bcd3aadecfd0000b5350", null ],

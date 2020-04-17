@@ -18,7 +18,8 @@ var init_8h =
     [ "mutt_nm_query_complete", "init_8h.html#a17d5ac51e166d61b729ebdd66cd25c88", null ],
     [ "mutt_nm_tag_complete", "init_8h.html#a8f739fa0c68ded6e209f2ceccd9bcfdf", null ],
     [ "mutt_opts_free", "init_8h.html#aa49c5a3aa046da11a3df8924443c1732", null ],
-    [ "mutt_parse_rc_line", "init_8h.html#af3c6ffd438386832fae72f8b5856adf1", null ],
+    [ "mutt_parse_rc_buffer", "init_8h.html#a2a463ed3c7fe921eb96c06d32c4ba0bc", null ],
+    [ "mutt_parse_rc_line", "init_8h.html#a136d8ba552e1a6f982e8349e0629ee8d", null ],
     [ "mutt_query_variables", "init_8h.html#a10a5a62f5a2ac28b4b4954f7f1250267", null ],
     [ "mutt_var_value_complete", "init_8h.html#a173ae67a86a1c7bfc88e98a0edbe514f", null ],
     [ "query_quadoption", "init_8h.html#ab02047769214ff014b9a8a1782babadc", null ]

@@ -26,7 +26,7 @@ var muttlib_8c =
     [ "mutt_sleep", "muttlib_8c.html#a6fbcbe533be7c4e05d99b0eb9cdb2581", null ],
     [ "mutt_make_version", "muttlib_8c.html#ab3d3b1807527dd8a4f60d6e5789ea999", null ],
     [ "mutt_encode_path", "muttlib_8c.html#aeac015518fd637e7822d8e679dc3d18f", null ],
-    [ "mutt_set_xdg_path", "muttlib_8c.html#ab34a52d61d60357a92bc3cf0da20327c", null ],
+    [ "mutt_set_xdg_path", "muttlib_8c.html#aaa27303d43dc65ef87fa448ddd08c41f", null ],
     [ "mutt_get_parent_path", "muttlib_8c.html#a18edb91c53ec5ae71e0dad16f14eef27", null ],
     [ "mutt_inbox_cmp", "muttlib_8c.html#a4ce75034c4c32b8ee744c255ce912159", null ],
     [ "mutt_buffer_sanitize_filename", "muttlib_8c.html#ae692df87fbd7bdb40a6fd3748aa0f9e8", null ],

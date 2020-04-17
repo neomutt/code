@@ -5,6 +5,6 @@ var structProgress =
     [ "pos", "structProgress.html#a18d444b946917d71ce41c14458a0d887", null ],
     [ "size", "structProgress.html#a1038e6a7b58cec133f6ea35a9e8337ad", null ],
     [ "inc", "structProgress.html#a3f0d252a810475f6fc9017bc27e5b94f", null ],
-    [ "timestamp", "structProgress.html#a98985b21ed4a289e95c7eeb24a988ade", null ],
+    [ "timestamp", "structProgress.html#ac8f90b1e0ea206cd72f66518e841453e", null ],
     [ "is_bytes", "structProgress.html#aed4de48a5836df0002aec4ae71953256", null ]
 ];

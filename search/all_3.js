@@ -20,6 +20,8 @@ var searchData=
   ['bcache_5flist_5ft',['bcache_list_t',['../bcache_2lib_8h.html#a1cbba854dbad4ca2ef97dfad376a2fa6',1,'lib.h']]],
   ['bcache_5fpath',['bcache_path',['../bcache_8c.html#a5a6da9a92e635c11bf3af21611c6ea5f',1,'bcache.c']]],
   ['bcc',['bcc',['../structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6',1,'Envelope']]],
+  ['bcc_5flist',['bcc_list',['../structComposeRedrawData.html#a2d0c9671af88fb3aeb40e92bbb03d6cd',1,'ComposeRedrawData']]],
+  ['bcc_5frows',['bcc_rows',['../structComposeRedrawData.html#a2c3cdd0936668bbbd8eba6e12660a808',1,'ComposeRedrawData']]],
   ['bdb_2ec',['bdb.c',['../bdb_8c.html',1,'']]],
   ['be_5fbarf_5ffile',['be_barf_file',['../edit_8c.html#a53f616f9ba6431fcb1925d31b9fbca90',1,'edit.c']]],
   ['be_5fedit_5fheader',['be_edit_header',['../edit_8c.html#a6fa69b7a038b092121e6a5af25f028a9',1,'edit.c']]],

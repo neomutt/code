@@ -1,6 +1,8 @@
 var smime_8c =
 [
     [ "SmimeCommandContext", "structSmimeCommandContext.html", "structSmimeCommandContext" ],
+    [ "smime_init", "smime_8c.html#a6f582853bd091e5fda82a82dc049a38d", null ],
+    [ "smime_cleanup", "smime_8c.html#a7d3eec74fc4e57062dd82ab74beea573", null ],
     [ "smime_key_free", "smime_8c.html#ae8fc02f34e610b2f4d7cc6823fb41f3f", null ],
     [ "smime_copy_key", "smime_8c.html#a0d53f5a314a25f777d3bf039318a3c68", null ],
     [ "smime_class_void_passphrase", "smime_8c.html#adb364b3c8158f09603b981b70bbee2eb", null ],
@@ -55,8 +57,8 @@ var smime_8c =
     [ "C_SmimeVerifyCommand", "smime_8c.html#a50d92f1a454ee64e9f121fd163eb28d0", null ],
     [ "C_SmimeVerifyOpaqueCommand", "smime_8c.html#a1e20059dee5dc1720d7f8c89ccb82afa", null ],
     [ "SmimePass", "smime_8c.html#a34dd93b9b68b65428e25c44739a51349", null ],
-    [ "SmimeExptime", "smime_8c.html#a11f89b0fd5a277a504973b1b76639235", null ],
-    [ "SmimeKeyToUse", "smime_8c.html#a27e03bae1bf061b8fa458e96b03c9d49", null ],
-    [ "SmimeCertToUse", "smime_8c.html#a145781cfdd852e1b0357e91132c05561", null ],
-    [ "fp_smime_intermediateToUse", "smime_8c.html#a9f1f3b47e6bf22324959fd37deceefbd", null ]
+    [ "SmimeExpTime", "smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7", null ],
+    [ "SmimeKeyToUse", "smime_8c.html#aa6e38e9a28b61f5b2a7040931e58afaa", null ],
+    [ "SmimeCertToUse", "smime_8c.html#ad37cb485abe0aeafae99190ea323d3c4", null ],
+    [ "SmimeIntermediateToUse", "smime_8c.html#a19c9a640138167646b8df02dcd2a7234", null ]
 ];

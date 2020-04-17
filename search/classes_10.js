@@ -10,5 +10,6 @@ var searchData=
   ['resize',['Resize',['../structResize.html',1,'']]],
   ['rfc2047testdata',['Rfc2047TestData',['../structRfc2047TestData.html',1,'']]],
   ['rfc2231parameter',['Rfc2231Parameter',['../structRfc2231Parameter.html',1,'']]],
+  ['rocksdb_5fctx',['RocksDB_Ctx',['../structRocksDB__Ctx.html',1,'']]],
   ['rstrntest',['RstrnTest',['../structRstrnTest.html',1,'']]]
 ];

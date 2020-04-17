@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['uncomment_5ftimezone',['uncomment_timezone',['../date_8c.html#aa107c8fe2fa3968085223a29123ccbc6',1,'date.c']]],
   ['unfold_5fheader',['unfold_header',['../sendlib_8c.html#a16d4f7b7c5d985a249de6ee7eaf183ab',1,'sendlib.c']]],
   ['union_5fhash_5fdelete',['union_hash_delete',['../hash_8c.html#ac2d5f4ca027333613a6856f1966854e2',1,'hash.c']]],
   ['union_5fhash_5ffind',['union_hash_find',['../hash_8c.html#a8e43ce45509af68a97e0400779239be5',1,'hash.c']]],

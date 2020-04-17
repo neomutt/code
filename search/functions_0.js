@@ -22,6 +22,7 @@ var searchData=
   ['add_5fquote_5fsuffix',['add_quote_suffix',['../rfc3676_8c.html#a65b6441acda161a859dcf941c4d0ee9f',1,'rfc3676.c']]],
   ['add_5freferences',['add_references',['../send_8c.html#af14544f55d0b62fcba84643fadec4890',1,'send.c']]],
   ['add_5fto_5fstailq',['add_to_stailq',['../muttlib_8c.html#a2e3c864ac49cfb7bc862c32416baf81d',1,'add_to_stailq(struct ListHead *head, const char *str):&#160;muttlib.c'],['../muttlib_8h.html#a2e3c864ac49cfb7bc862c32416baf81d',1,'add_to_stailq(struct ListHead *head, const char *str):&#160;muttlib.c']]],
+  ['add_5ftz_5foffset',['add_tz_offset',['../date_8c.html#afebb3c39355c12efcf484c5645ace65b',1,'date.c']]],
   ['addr_5fhook',['addr_hook',['../hook_8c.html#ae2a08bbc82777210610a0aea6c52cb9f',1,'hook.c']]],
   ['addr_5fis_5fintl',['addr_is_intl',['../address_2address_8c.html#a063ba7f9bacb413f113386620fc75ca7',1,'address.c']]],
   ['addr_5fis_5flocal',['addr_is_local',['../address_2address_8c.html#a1f6fcdd22fe42071c49ff7ca0d7beb91',1,'address.c']]],
