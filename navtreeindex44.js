@@ -1,5 +1,8 @@
 var NAVTREEINDEX44 =
 {
+"structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b":[1,0,121,0],
+"structNeoMutt.html#af98065e32243ce9331f93b7f30247d47":[1,0,121,1],
+"structNewsrcEntry.html":[1,0,122],
 "structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565":[1,0,122,1],
 "structNewsrcEntry.html#a9754473230323401f3cfddcbdc560d0b":[1,0,122,0],
 "structNextWordTest.html":[1,0,123],
@@ -246,8 +249,5 @@ var NAVTREEINDEX44 =
 "structProgress.html#a18d444b946917d71ce41c14458a0d887":[1,0,154,2],
 "structProgress.html#a258e1bf53f7e38bb1c78d5c51015656c":[1,0,154,1],
 "structProgress.html#a3f0d252a810475f6fc9017bc27e5b94f":[1,0,154,4],
-"structProgress.html#ac8f90b1e0ea206cd72f66518e841453e":[1,0,154,5],
-"structProgress.html#aed4de48a5836df0002aec4ae71953256":[1,0,154,6],
-"structQClass.html":[1,0,155],
-"structQClass.html#a0fcb75d79de98e9d5d894b7cf1da497d":[1,0,155,5]
+"structProgress.html#ac8f90b1e0ea206cd72f66518e841453e":[1,0,154,5]
 };

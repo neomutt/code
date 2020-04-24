@@ -465,6 +465,7 @@ var searchData=
   ['calc_5faddress',['calc_address',['../compose_8c.html#acf62812556f366eca05b794c44217a8d',1,'compose.c']]],
   ['calc_5fenvelope',['calc_envelope',['../compose_8c.html#a260eba8ce50a7b007ccd1e42df97bd4f',1,'compose.c']]],
   ['calc_5fheader_5fwidth_5fpadding',['calc_header_width_padding',['../compose_8c.html#aef0c67b5c00c17dd35738a4fdc6b65a3',1,'compose.c']]],
+  ['calc_5fpath_5fdepth',['calc_path_depth',['../sidebar_8c.html#ab3c4643d10cb335f27654df87e28c38d',1,'sidebar.c']]],
   ['calc_5fsecurity',['calc_security',['../compose_8c.html#a0c7f2a2edd34ddef436a3990a77b96bf',1,'compose.c']]],
   ['calculate_5fvisibility',['calculate_visibility',['../mutt__thread_8c.html#ad2aec36725271c9ebb7acfe863a560f4',1,'mutt_thread.c']]],
   ['callback',['callback',['../structObserver.html#a2ff2c9789976421fdde1ffaedb011482',1,'Observer']]],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX43 =
 {
+"structLine.html#a24d901f3f4842148e3b3ab54b084dd2a":[1,0,92,4],
+"structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097":[1,0,92,0],
+"structLine.html#a6373c46aef7996d8b7fd79a3e68f3a9d":[1,0,92,8],
 "structLine.html#a6ab51029045d05a4bd0e429c70a8ea10":[1,0,92,2],
 "structLine.html#ad89cb1dcff5ed4e5553943b254c31527":[1,0,92,5],
 "structLine.html#ad9dda57834117eb0598816db9e9833c0":[1,0,92,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX43 =
 "structMyVar.html#a2f365e6628531825228cbccf502b586d":[1,0,120,2],
 "structMyVar.html#a89b56a0412c8d97dbde004be714a07ee":[1,0,120,0],
 "structNeoMutt.html":[1,0,121],
-"structNeoMutt.html#a6d954f6370463364dbd5b78db333fbfd":[1,0,121,2],
-"structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b":[1,0,121,0],
-"structNeoMutt.html#af98065e32243ce9331f93b7f30247d47":[1,0,121,1],
-"structNewsrcEntry.html":[1,0,122]
+"structNeoMutt.html#a6d954f6370463364dbd5b78db333fbfd":[1,0,121,2]
 };

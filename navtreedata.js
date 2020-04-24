@@ -92,17 +92,17 @@ var NAVTREEINDEX =
 "rfc2047_8h.html#a4f979b4ba087d3291049da868935e005",
 "send_8h.html#a3943ec9d1c66b72fc7420c6221b2e9d2",
 "shared_8c.html#a1beb9bdd072c82f832b832762957ed72",
-"smime_8h.html",
-"string2_8h.html#a3b8965b21d6e21536750f8883cd4333a",
-"structCompileOptions.html#a71c6eb259236e364896e132f82018310",
-"structEnumDef.html",
-"structLine.html#a6ab51029045d05a4bd0e429c70a8ea10",
-"structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565",
-"structQClass.html#a120af7e164b126a12c660971eda9afeb",
-"subset_8h.html#a439e82194af78ebb1c24dabc16f068b7af9830f369cf9b3cc169ffefe97ae90d9",
-"test_2config_2long_8c.html#a40eec3d97466f2d73178e11681c8f763",
-"test_2config_2slist_8c.html#af4a28cdf57113d1d418edaf1bbb650ba",
-"url__pct__encode_8c_source.html"
+"smime_8c.html#af7757c700f6325ebe2aa1e8c33f00542",
+"string2_8h.html#a28ed71d2f686113e100516424be6ac42",
+"structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f",
+"structEnterState.html#a83071b07ce7cfa6c49852fd9379768d9",
+"structLine.html#a24d901f3f4842148e3b3ab54b084dd2a",
+"structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b",
+"structProgress.html#aed4de48a5836df0002aec4ae71953256",
+"subset_8h.html#a439e82194af78ebb1c24dabc16f068b7",
+"test_2config_2long_8c.html#a2e25add5a11819ab22f2b425c5e87c7c",
+"test_2config_2slist_8c.html#ae5afe42c929bbbb154c1e8a04a6bcc5f",
+"url__pct__encode_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

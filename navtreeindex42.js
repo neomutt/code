@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"structEnterState.html#a83071b07ce7cfa6c49852fd9379768d9":[1,0,52,4],
+"structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012":[1,0,52,0],
+"structEnterState.html#ab94327a0300b5c132e37416c87d44699":[1,0,52,2],
 "structEnumDef.html":[1,0,53],
 "structEnumDef.html#a441eb3fc660518d4c32b8a76f5401d91":[1,0,53,1],
 "structEnumDef.html#a6a707e9bd9d63e1dab2e45dcf13e4161":[1,0,53,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "structKeymap.html#add26f340b9b45b9e12bec12fe980929c":[1,0,91,5],
 "structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145":[1,0,91,3],
 "structLine.html":[1,0,92],
-"structLine.html#a0e3866d298de382819e1bcf2b9b70456":[1,0,92,6],
-"structLine.html#a24d901f3f4842148e3b3ab54b084dd2a":[1,0,92,4],
-"structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097":[1,0,92,0],
-"structLine.html#a6373c46aef7996d8b7fd79a3e68f3a9d":[1,0,92,8]
+"structLine.html#a0e3866d298de382819e1bcf2b9b70456":[1,0,92,6]
 };

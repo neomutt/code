@@ -1,6 +1,8 @@
 var searchData=
 [
   ['a',['A',['../structMd5Ctx.html#a91fce8381cfccac291534e33b6f7085c',1,'Md5Ctx']]],
+  ['abbrev_5ffolder',['abbrev_folder',['../sidebar_8c.html#a3823d4824a61f7203ee3243970af78dc',1,'sidebar.c']]],
+  ['abbrev_5furl',['abbrev_url',['../sidebar_8c.html#a3cf1b9ac6e6b9791c468204ccf804ceb',1,'sidebar.c']]],
   ['abortkey',['AbortKey',['../keymap_8c.html#a22bced2c7fdf47916ddc963f43432541',1,'AbortKey():&#160;keymap.c'],['../keymap_8h.html#a22bced2c7fdf47916ddc963f43432541',1,'AbortKey():&#160;keymap.c']]],
   ['ac_5fadd',['ac_add',['../structMxOps.html#acaaf1dbbfc2a6011bdbd0b30df1b923c',1,'MxOps']]],
   ['ac_5ffind',['ac_find',['../structMxOps.html#a0c32dbbc5b81c53527d3bc4d223501c1',1,'MxOps']]],

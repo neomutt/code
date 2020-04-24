@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['abbrev_5ffolder',['abbrev_folder',['../sidebar_8c.html#a3823d4824a61f7203ee3243970af78dc',1,'sidebar.c']]],
+  ['abbrev_5furl',['abbrev_url',['../sidebar_8c.html#a3cf1b9ac6e6b9791c468204ccf804ceb',1,'sidebar.c']]],
   ['account_5fformat_5fstr',['account_format_str',['../acct__menu_8c.html#aa4aaef8570fd06e7aeecc5f1a77f4576',1,'acct_menu.c']]],
   ['account_5ffree',['account_free',['../core_2account_8c.html#afa1f48d391eddc3e994c5e0e64decb82',1,'account_free(struct Account **ptr):&#160;account.c'],['../account_8h.html#afa1f48d391eddc3e994c5e0e64decb82',1,'account_free(struct Account **ptr):&#160;account.c']]],
   ['account_5fmailbox_5fadd',['account_mailbox_add',['../core_2account_8c.html#ab8e8ca2bf1780642056e5522ba9650c7',1,'account_mailbox_add(struct Account *a, struct Mailbox *m):&#160;account.c'],['../account_8h.html#ab8e8ca2bf1780642056e5522ba9650c7',1,'account_mailbox_add(struct Account *a, struct Mailbox *m):&#160;account.c']]],

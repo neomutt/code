@@ -139,7 +139,7 @@ var searchData=
   ['imap_5fhcache_5fstore_5fuid_5fseqset',['imap_hcache_store_uid_seqset',['../imap__private_8h.html#a4acae80a7c01e9047c5813b7a62675ad',1,'imap_hcache_store_uid_seqset(struct ImapMboxData *mdata):&#160;util.c'],['../util_8c.html#a4acae80a7c01e9047c5813b7a62675ad',1,'imap_hcache_store_uid_seqset(struct ImapMboxData *mdata):&#160;util.c']]],
   ['imap_5fidle',['IMAP_IDLE',['../imap__private_8h.html#a3207e3d0454924e85cf684412e72ed7aaadd336b424ff9f41a60b0d217de18ba6',1,'imap_private.h']]],
   ['imap_20network_20mailbox',['IMAP network mailbox',['../imap_imap.html',1,'imap']]],
-  ['imap_5fis_5fprefix',['imap_is_prefix',['../sidebar_8c.html#a63315697f53b8d55512078470b04ea3c',1,'sidebar.c']]],
+  ['imap_5fis_5fprefix',['imap_is_prefix',['../sidebar_8c.html#ab8ee9c3eeb900924234a2ad97d7c56b0',1,'sidebar.c']]],
   ['imap_5fkeepalive',['imap_keepalive',['../imap_2lib_8h.html#aa06d1239e1beef3cb38a979aad9a651e',1,'imap_keepalive(void):&#160;util.c'],['../util_8c.html#aa06d1239e1beef3cb38a979aad9a651e',1,'imap_keepalive(void):&#160;util.c']]],
   ['imap_5flog_5fcmd',['IMAP_LOG_CMD',['../imap__private_8h.html#aec00386d77d7f909d3c952b7d45bb9db',1,'imap_private.h']]],
   ['imap_5flog_5fltrl',['IMAP_LOG_LTRL',['../imap__private_8h.html#a4c6b82e52750d9be1ea91067a0281f72',1,'imap_private.h']]],
