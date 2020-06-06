@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['p',['p',['../structFgetConv.html#a723a63c788d0a7f7d007da7a2c0e7ddb',1,'FgetConv::p()'],['../structPattern.html#af82f1223193fb4870c0a6f65a1847740',1,'Pattern::p()']]],
+  ['p',['p',['../structFgetConv.html#a723a63c788d0a7f7d007da7a2c0e7ddb',1,'FgetConv::p()'],['../structPattern.html#a8fb52cb9e07b53c14e6640846de83542',1,'Pattern::p()']]],
   ['pagelen',['pagelen',['../structMenu.html#aaeccd09816a8432598225fcf326ce280',1,'Menu']]],
   ['pager_5fprogress',['pager_progress',['../structHdrFormatInfo.html#a7e9e3a904d834012a4269ff9b60c1280',1,'HdrFormatInfo']]],
   ['pagerhelp',['PagerHelp',['../pager_8c.html#acf47b3ffd858fe087c093fd8bb2eac18',1,'pager.c']]],
@@ -19,7 +19,7 @@ var searchData=
   ['pass',['pass',['../structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037',1,'ConnAccount::pass()'],['../structUrl.html#ac65d0bd34ac810ddf4a9a1a348151e67',1,'Url::pass()']]],
   ['pat',['pat',['../structScore.html#ac24a9ee49947c02e77b95d47181e3371',1,'Score']]],
   ['pat_5fnot',['pat_not',['../structRegex.html#adf40b2d25dabe5abb853946f35fe7c44',1,'Regex::pat_not()'],['../structPattern.html#ac30b84c71e88bc933aaaa87fe0afe06e',1,'Pattern::pat_not()']]],
-  ['path',['path',['../structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727',1,'BodyCache::path()'],['../structEmail.html#ac041599cfe41b49e7b8f9d752d07bb39',1,'Email::path()'],['../structUrl.html#ad4b772878b40b204a7e91520b0bcbed4',1,'Url::path()'],['../structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab',1,'MonitorInfo::path()'],['../structMessage.html#a668759f9813e882a9cfcf3ac725b6200',1,'Message::path()'],['../structNntpAcache.html#a33c62982769726fafeb4e89d6c92905c',1,'NntpAcache::path()'],['../structPopCache.html#aedc9204da39b93e203a5ffc0a2e0c2e1',1,'PopCache::path()']]],
+  ['path',['path',['../structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727',1,'BodyCache::path()'],['../structEmail.html#ac041599cfe41b49e7b8f9d752d07bb39',1,'Email::path()'],['../structUrl.html#ad4b772878b40b204a7e91520b0bcbed4',1,'Url::path()'],['../structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab',1,'MonitorInfo::path()'],['../structMessage.html#a668759f9813e882a9cfcf3ac725b6200',1,'Message::path()'],['../structNntpAcache.html#a33c62982769726fafeb4e89d6c92905c',1,'NntpAcache::path()'],['../structPopCache.html#aedc9204da39b93e203a5ffc0a2e0c2e1',1,'PopCache::path()'],['../structIsFromTest.html#ae71cc251d794d34527755899419e6b2e',1,'IsFromTest::path()']]],
   ['path_5fbuf',['path_buf',['../structMonitorInfo.html#aff4b454790ebbf7b814495fd0e1ead8d',1,'MonitorInfo']]],
   ['path_5fcanon',['path_canon',['../structMxOps.html#ad7d938f02ba15c08d45128bc2ca00e28',1,'MxOps']]],
   ['path_5fparent',['path_parent',['../structMxOps.html#a0816dd26eb79c12783e9ac9e7b67ecd9',1,'MxOps']]],

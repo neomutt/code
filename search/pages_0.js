@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['address_20book_20handling_20aliases',['Address book handling aliases',['../addrbook.html',1,'index']]],
   ['address_3a_20email_20address_20handling',['ADDRESS: Email Address Handling',['../address.html',1,'']]],
+  ['alias_3a_20email_20aliases',['ALIAS: Email Aliases',['../alias.html',1,'']]],
+  ['alias_20commands',['Alias commands',['../alias_commands.html',1,'alias']]],
+  ['address_20book_20handling_20aliases',['Address book handling aliases',['../alias_dlgalias.html',1,'alias']]],
   ['autocrypt_3a_20end_2dto_2dend_20encryption',['AUTOCRYPT: End-to-end encryption',['../autocrypt.html',1,'']]],
   ['autocrypt_20account_20menu',['Autocrypt account menu',['../autocrypt_account.html',1,'autocrypt']]],
   ['autocrypt_20end_2dto_2dend_20encryption',['Autocrypt end-to-end encryption',['../autocrypt_autocrypt.html',1,'autocrypt']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['shared_20code_20for_20the_20alias_20and_20query_20dialogs',['Shared code for the Alias and Query Dialogs',['../alias_gui.html',1,'alias']]],
   ['string_20auto_2dcompletion_20routines',['String auto-completion routines',['../complete.html',1,'index']]],
   ['shared_20compression_20code',['Shared compression code',['../compress_compress.html',1,'compress']]],
   ['subset_20of_20config_20items',['Subset of config items',['../config_subset.html',1,'config']]],
@@ -8,6 +9,7 @@ var searchData=
   ['support_20for_20network_20tunnelling',['Support for network tunnelling',['../conn_tunnel.html',1,'conn']]],
   ['signing_2fencryption_20multiplexor',['Signing/encryption multiplexor',['../crypt_crypt.html',1,'ncrypt']]],
   ['smime_20helper_20routines',['SMIME helper routines',['../crypt_smime.html',1,'ncrypt']]],
+  ['shared_20debug_20code',['Shared debug code',['../debug_common.html',1,'debug']]],
   ['store_20attributes_20associated_20with_20a_20mime_20part',['Store attributes associated with a MIME part',['../email_parameter.html',1,'email']]],
   ['set_20the_20terminal_20title_2ficon',['Set the terminal title/icon',['../gui_terminal.html',1,'gui']]],
   ['string_20processing_20routines_20to_20generate_20the_20mail_20index',['String processing routines to generate the mail index',['../hdrline.html',1,'index']]],

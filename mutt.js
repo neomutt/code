@@ -8,7 +8,7 @@ var mutt =
     [ "Leave the program NOW", "exit.html", null ],
     [ "File management functions", "file.html", null ],
     [ "Pass files through external commands (filters)", "filter.html", null ],
-    [ "Hash table data structure", "hash.html", null ],
+    [ "Hash Table data structure", "hash.html", null ],
     [ "Singly-linked list type", "list.html", null ],
     [ "Logging Dispatcher", "logging.html", null ],
     [ "Map between a string and a constant", "mapping.html", null ],

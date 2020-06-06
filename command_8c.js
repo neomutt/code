@@ -14,7 +14,6 @@ var command_8c =
     [ "cmd_parse_list", "command_8c.html#a013b0a775f0bcf4a0ad26c6422662672", null ],
     [ "cmd_parse_lsub", "command_8c.html#a0e79cb73e383a2b78a80795d488193c7", null ],
     [ "cmd_parse_myrights", "command_8c.html#a763beb713367064b6dca13524f9fa797", null ],
-    [ "cmd_parse_search", "command_8c.html#a359d10f24ffda27da39edfea3759cac9", null ],
     [ "find_mailbox", "command_8c.html#a4955baebcb96a894dbac0a998d16e233", null ],
     [ "cmd_parse_status", "command_8c.html#a2849b4fe7ac723d32741be1427e7f082", null ],
     [ "cmd_parse_enabled", "command_8c.html#aaf28f526444610e8aeac82d8f51a3d9b", null ],

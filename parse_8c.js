@@ -8,7 +8,7 @@ var parse_8c =
     [ "parse_content_language", "parse_8c.html#a735dd3431aab7bd02e99f206c8766572", null ],
     [ "mutt_matches_ignore", "parse_8c.html#a5f2728949322a1a6210d61d9629005d1", null ],
     [ "mutt_check_mime_type", "parse_8c.html#a6c22ec026399e230ecedab86f831a754", null ],
-    [ "mutt_extract_message_id", "parse_8c.html#ae6e13de7c8b7aa92cb468ff00818a4ce", null ],
+    [ "mutt_extract_message_id", "parse_8c.html#a383628b0d4778ad83677498fab4132dd", null ],
     [ "mutt_check_encoding", "parse_8c.html#a8692f01c25d10e357dbeee470ba26c2c", null ],
     [ "mutt_parse_content_type", "parse_8c.html#a44cbe20da647bd7112cf1f4857ad01a3", null ],
     [ "parse_autocrypt", "parse_8c.html#a05c94595aeafb0ca283e5af4797e5125", null ],

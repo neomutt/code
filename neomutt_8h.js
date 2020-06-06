@@ -11,6 +11,6 @@ var neomutt_8h =
     [ "neomutt_free", "neomutt_8h.html#af06ffebf075ceb3397d90d0501c83301", null ],
     [ "neomutt_new", "neomutt_8h.html#ad4a70538fbdb2a6e1af230d598dd0732", null ],
     [ "neomutt_mailboxlist_clear", "neomutt_8h.html#a124116674adb30d3bceef08eeaad6905", null ],
-    [ "neomutt_mailboxlist_get_all", "neomutt_8h.html#a8da77454847feae8957cc49fc6ca3baa", null ],
+    [ "neomutt_mailboxlist_get_all", "neomutt_8h.html#a74862fb7702c895aaacaebb097af8bb2", null ],
     [ "NeoMutt", "neomutt_8h.html#af4e00a7436ecc725b5a801685fadf3f4", null ]
 ];

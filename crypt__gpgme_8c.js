@@ -90,7 +90,7 @@ var crypt__gpgme_8c =
     [ "pgp_gpgme_application_handler", "crypt__gpgme_8c.html#af9f3a30e035954c5624c3d673819a597", null ],
     [ "pgp_gpgme_encrypted_handler", "crypt__gpgme_8c.html#a49d3535b68adb1b38c4599091d04a7b2", null ],
     [ "smime_gpgme_application_handler", "crypt__gpgme_8c.html#a6a916c84aff7214350875cce78777fa5", null ],
-    [ "crypt_format_str", "crypt__gpgme_8c.html#a9603ad1d72275f1527c2868262125f0b", null ],
+    [ "crypt_format_str", "crypt__gpgme_8c.html#a0f917c383b09751f64bd6be090821acb", null ],
     [ "crypt_make_entry", "crypt__gpgme_8c.html#ae22420abff25462d4022ed3508cb8b17", null ],
     [ "compare_key_address", "crypt__gpgme_8c.html#ab1f557a2a6819ade3514a25b72cb1f49", null ],
     [ "crypt_compare_address", "crypt__gpgme_8c.html#a36f9707aa70c9ca4db97845a85360872", null ],

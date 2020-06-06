@@ -9,5 +9,5 @@ var list_8c =
     [ "mutt_list_clear", "list_8c.html#a6cd8f2f5c5e48a6eac0c24ae664898ee", null ],
     [ "mutt_list_match", "list_8c.html#ae6e78596bbf371c69064967d7386def0", null ],
     [ "mutt_list_compare", "list_8c.html#a68ba391a486e10168743101cba624ff7", null ],
-    [ "mutt_list_str_split", "list_8c.html#a9ae543ddbe30915582fb10c1e363a5dc", null ]
+    [ "mutt_list_str_split", "list_8c.html#a8452a5e19043ca17f9b80b4443399e3b", null ]
 ];

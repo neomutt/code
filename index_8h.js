@@ -8,7 +8,7 @@ var index_8h =
     [ "update_index", "index_8h.html#a40e2ad7230ec2a26fba0da55e8987eed", null ],
     [ "index_pager_init", "index_8h.html#af944024baa5ff339da372496e63fb69d", null ],
     [ "index_pager_shutdown", "index_8h.html#ae93257bea6017b396d3b5ee8c3cbe611", null ],
-    [ "mutt_dlg_index_observer", "index_8h.html#a443a5f5273dde398e5d9d17cb826a17f", null ],
+    [ "mutt_dlgindex_observer", "index_8h.html#acde55b5814852d0713f23d4880fcfc7d", null ],
     [ "C_ChangeFolderNext", "index_8h.html#a2a475a56c0662d019f9fea316a7aeb37", null ],
     [ "C_CollapseAll", "index_8h.html#a0f36e86c8807a4b16579118134e178f5", null ],
     [ "C_CollapseFlagged", "index_8h.html#a25293a41497524e5b006983c4d492973", null ],

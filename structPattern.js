@@ -18,5 +18,5 @@ var structPattern =
     [ "group", "structPattern.html#a137f1b5a9fe923c4ea6c567465f522e7", null ],
     [ "str", "structPattern.html#a502bcf07280750bacbba15073bee2aa6", null ],
     [ "multi_cases", "structPattern.html#a4e88c803a593a311d84fa34d6c634883", null ],
-    [ "p", "structPattern.html#af82f1223193fb4870c0a6f65a1847740", null ]
+    [ "p", "structPattern.html#a8fb52cb9e07b53c14e6640846de83542", null ]
 ];

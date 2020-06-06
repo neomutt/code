@@ -4,6 +4,8 @@ var searchData=
   ['accountentry',['AccountEntry',['../structAccountEntry.html',1,'']]],
   ['address',['Address',['../structAddress.html',1,'']]],
   ['alias',['Alias',['../structAlias.html',1,'']]],
+  ['aliasmenudata',['AliasMenuData',['../structAliasMenuData.html',1,'']]],
+  ['aliasview',['AliasView',['../structAliasView.html',1,'']]],
   ['ansiattr',['AnsiAttr',['../structAnsiAttr.html',1,'']]],
   ['appendtest',['AppendTest',['../structAppendTest.html',1,'']]],
   ['attachctx',['AttachCtx',['../structAttachCtx.html',1,'']]],

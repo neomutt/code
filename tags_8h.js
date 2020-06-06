@@ -9,5 +9,5 @@ var tags_8h =
     [ "driver_tags_get_with_hidden", "tags_8h.html#a98ad754cf00b7de8eaf8e3a92d8766d0", null ],
     [ "driver_tags_replace", "tags_8h.html#a6537105664c2986d658d5a7325748f31", null ],
     [ "C_HiddenTags", "tags_8h.html#afe18297917619b6d01ff3303ddd7db8f", null ],
-    [ "TagTransforms", "tags_8h.html#a78519b9c49a46ce5423e470190b1aee3", null ]
+    [ "TagTransforms", "tags_8h.html#aadb38a7004cb2dfa0550d53004eb74d1", null ]
 ];

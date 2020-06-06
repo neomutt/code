@@ -1,6 +1,6 @@
 var dir_b90a86b248d781efc7ff26d030d8ab02 =
 [
-    [ "common.c", "list_2common_8c.html", "list_2common_8c" ],
+    [ "common.c", "test_2list_2common_8c.html", "test_2list_2common_8c" ],
     [ "common.h", "list_2common_8h.html", "list_2common_8h" ],
     [ "mutt_list_clear.c", "mutt__list__clear_8c.html", "mutt__list__clear_8c" ],
     [ "mutt_list_compare.c", "mutt__list__compare_8c.html", "mutt__list__compare_8c" ],

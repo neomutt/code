@@ -16,6 +16,7 @@ var main_8c =
     [ "start_curses", "main_8c.html#a89dfa0cebc094eedb2f4855e6db352ca", null ],
     [ "init_locale", "main_8c.html#a274eea3c14525423de529ba1b1e22c68", null ],
     [ "get_user_info", "main_8c.html#ab1ab96b05777c73f61c060778657ec38", null ],
+    [ "log_translation", "main_8c.html#a41a06145ff14e9670f59c948c1628a88", null ],
     [ "main", "main_8c.html#adedb285b02c41bde2158ded9cc9fd7ac", null ],
     [ "C_ResumeEditedDraftFiles", "main_8c.html#a50a2ceabd79c2bfe76dc09a05b2023d9", null ]
 ];

@@ -12,7 +12,7 @@ var pgpkey_8c =
     [ "pgp_key_abilities", "pgpkey_8c.html#adcd62275784ce2237f0dcb32fe57167e", null ],
     [ "pgp_flags", "pgpkey_8c.html#a9cb50994cfe04867f6684f506930dff3", null ],
     [ "pgp_principal_key", "pgpkey_8c.html#a65f955e6ef1562c5918d2958e2187c0d", null ],
-    [ "pgp_entry_fmt", "pgpkey_8c.html#acc12219437d7da31887c00ee05f2ce1d", null ],
+    [ "pgp_entry_format_str", "pgpkey_8c.html#ad62c1620e97a88eed7cdd6d5a2e3661a", null ],
     [ "pgp_make_entry", "pgpkey_8c.html#ad186d8484cbe0adfb4942798bf4d041f", null ],
     [ "compare_key_address", "pgpkey_8c.html#ab1f557a2a6819ade3514a25b72cb1f49", null ],
     [ "pgp_compare_address", "pgpkey_8c.html#ae5cd34c9877ae7fa74f3acb1b511323d", null ],

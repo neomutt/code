@@ -2,6 +2,7 @@ var searchData=
 [
   ['eat_5farg',['eat_arg',['../structPatternFlags.html#ae2b91654c68bf4894b2d059a0534fb5f',1,'PatternFlags']]],
   ['edata',['edata',['../structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b',1,'Email::edata()'],['../structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50',1,'ImapHeader::edata()']]],
+  ['edata_5ffree',['edata_free',['../structEmail.html#a781551eba730fd251226081727ae74bb',1,'Email']]],
   ['editcommand',['editcommand',['../structMailcapEntry.html#ac195e10d836eb0b886580310c2cf0554',1,'MailcapEntry']]],
   ['editorhelp1',['EditorHelp1',['../edit_8c.html#aa53412f11420ecc1f2102cc191ba40b3',1,'edit.c']]],
   ['editorhelp2',['EditorHelp2',['../edit_8c.html#a2c157f19540d33f154d25e16da6e2617',1,'edit.c']]],
@@ -24,6 +25,7 @@ var searchData=
   ['env',['env',['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env()'],['../structStoreDbCtx.html#aff3b971dce03f8f262a67e5a19974c71',1,'StoreDbCtx::env()'],['../structStoreLmdbCtx.html#a7a2d761cba6f20cab4259fd20c5cace5',1,'StoreLmdbCtx::env()']]],
   ['envlist',['EnvList',['../envlist_8c.html#ae45378328cf8b407e63b6d53eaf61a01',1,'envlist.c']]],
   ['eostr',['eostr',['../structSeqsetIterator.html#a26751cac5a01df780c75aad85206a8da',1,'SeqsetIterator']]],
+  ['epoch',['epoch',['../structIsFromTest.html#a422760e2e77a4496fa6fc6f50611316a',1,'IsFromTest']]],
   ['eq',['eq',['../structKeymap.html#a908683bf209748c84e1f60b1e36bfd16',1,'Keymap']]],
   ['err',['err',['../structRocksDB__Ctx.html#a30e7b79f8bd1c3bb9634ea2bbced8bbc',1,'RocksDB_Ctx']]],
   ['err_5fmsg',['err_msg',['../structPopAccountData.html#a84cf659582c28abdd77d78e74257143f',1,'PopAccountData']]],

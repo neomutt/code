@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['hash',['Hash',['../structHash.html',1,'']]],
+  ['hashalgorithm',['HashAlgorithm',['../structHashAlgorithm.html',1,'']]],
   ['hashelem',['HashElem',['../structHashElem.html',1,'']]],
   ['hashkey',['HashKey',['../unionHashKey.html',1,'']]],
+  ['hashtable',['HashTable',['../structHashTable.html',1,'']]],
   ['hashwalkstate',['HashWalkState',['../structHashWalkState.html',1,'']]],
   ['hcacheentry',['HCacheEntry',['../structHCacheEntry.html',1,'']]],
   ['hdrformatinfo',['HdrFormatInfo',['../structHdrFormatInfo.html',1,'']]],

@@ -12,6 +12,7 @@ var imap =
     [ "Mailbox browser", "imap_browse.html", null ],
     [ "Send/receive commands to/from an IMAP server", "imap_command.html", null ],
     [ "Manage IMAP messages", "imap_message.html", null ],
+    [ "IMAP search routines", "imap_search.html", null ],
     [ "UTF-7 Manipulation", "imap_utf7.html", null ],
     [ "IMAP helper functions", "imap_util.html", null ]
 ];

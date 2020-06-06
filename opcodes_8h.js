@@ -12,5 +12,6 @@ var opcodes_8h =
     [ "DEFINE_OPS", "opcodes_8h.html#a1bf673fe27b714464aadda6edbb6d652", null ],
     [ "MuttOps", "opcodes_8h.html#aec704af10ca19d5cedb9485467eeb2fb", [
       [ "OP_MAX", "opcodes_8h.html#aec704af10ca19d5cedb9485467eeb2fba5c270cf3e25cfa83f27b787be93b99f9", null ]
-    ] ]
+    ] ],
+    [ "OpStrings", "opcodes_8h.html#a7d5df4be9f474a589fb8a85ae0b0c4bb", null ]
 ];

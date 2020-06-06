@@ -1,6 +1,5 @@
 var dir_13d84c64aa6c9a833c0e5ef93d79bfe2 =
 [
-    [ "common.h", "address_2common_8h.html", "address_2common_8h" ],
     [ "mutt_addr_cat.c", "mutt__addr__cat_8c.html", "mutt__addr__cat_8c" ],
     [ "mutt_addr_cmp.c", "mutt__addr__cmp_8c.html", "mutt__addr__cmp_8c" ],
     [ "mutt_addr_copy.c", "mutt__addr__copy_8c.html", "mutt__addr__copy_8c" ],

@@ -24,6 +24,6 @@ var structNntpAccountData =
     [ "groups_num", "structNntpAccountData.html#a37bf5f2141a2488012a0441694bae9bf", null ],
     [ "groups_max", "structNntpAccountData.html#a9d74636989a2ad52c90363e982997b9a", null ],
     [ "groups_list", "structNntpAccountData.html#aa8a61ca529162078c8b06d4cec65e63c", null ],
-    [ "groups_hash", "structNntpAccountData.html#ac90cceb403179b014cc80a9d109560d3", null ],
+    [ "groups_hash", "structNntpAccountData.html#a0c47d705c8553a61127b79839399607d", null ],
     [ "conn", "structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a", null ]
 ];

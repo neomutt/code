@@ -5,8 +5,7 @@ var email_8h =
     [ "EventEmail", "structEventEmail.html", "structEventEmail" ],
     [ "NotifyEmail", "email_8h.html#acc016ba3017237be6db0130216742d17", [
       [ "NT_EMAIL_ADD", "email_8h.html#acc016ba3017237be6db0130216742d17a190192a70b0c559228cc51324a10a68b", null ],
-      [ "NT_EMAIL_REMOVE", "email_8h.html#acc016ba3017237be6db0130216742d17ad45113e9febe2b3931ccebafc3dabff5", null ],
-      [ "NT_EMAIL_NEW", "email_8h.html#acc016ba3017237be6db0130216742d17a35ada5904990af61119565e8a9105325", null ]
+      [ "NT_EMAIL_REMOVE", "email_8h.html#acc016ba3017237be6db0130216742d17ad45113e9febe2b3931ccebafc3dabff5", null ]
     ] ],
     [ "STAILQ_HEAD", "email_8h.html#a1449bec531e1bfa8aee664aad7c6b6f2", null ],
     [ "email_cmp_strict", "email_8h.html#a3d20f2e3c0991425b91d9403a038a51e", null ],

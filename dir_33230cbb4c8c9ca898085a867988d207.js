@@ -19,6 +19,7 @@ var dir_33230cbb4c8c9ca898085a867988d207 =
       [ "ImapEmailData", "structImapEmailData.html", "structImapEmailData" ],
       [ "ImapHeader", "structImapHeader.html", "structImapHeader" ]
     ] ],
+    [ "search.c", "search_8c.html", "search_8c" ],
     [ "utf7.c", "utf7_8c.html", "utf7_8c" ],
     [ "util.c", "util_8c.html", "util_8c" ]
 ];

@@ -49,7 +49,6 @@ var searchData=
   ['resolve_5ftypes',['resolve_types',['../pager_8c.html#a423ab61788ace956cf2945f6d70d3014',1,'pager.c']]],
   ['resort_5findex',['resort_index',['../index_8c.html#a7ac6db07f1defe65da501f9a28feacc4',1,'index.c']]],
   ['restore',['restore',['../hcache_8c.html#ab8ce7457145c54b7efb24890404ac9d2',1,'hcache.c']]],
-  ['result_5fto_5faddr',['result_to_addr',['../query_8c.html#ae4be109092ded09ec7c53366dc88fab3',1,'query.c']]],
   ['retry_5fgeneric',['retry_generic',['../keymap_8c.html#a91d4ff23b10b4fd86214b149311fe301',1,'keymap.c']]],
   ['rfc1524_5fmailcap_5fparse',['rfc1524_mailcap_parse',['../mailcap_8c.html#a5dfe54f8a085654fe55107a3df120abf',1,'mailcap.c']]],
   ['rfc2047_5fdecode',['rfc2047_decode',['../rfc2047_8c.html#a89c57c82465740567f73641c9397d760',1,'rfc2047_decode(char **pd):&#160;rfc2047.c'],['../rfc2047_8h.html#a89c57c82465740567f73641c9397d760',1,'rfc2047_decode(char **pd):&#160;rfc2047.c']]],
@@ -59,12 +58,11 @@ var searchData=
   ['rfc2047_5fencode_5faddrlist',['rfc2047_encode_addrlist',['../rfc2047_8c.html#a4f979b4ba087d3291049da868935e005',1,'rfc2047_encode_addrlist(struct AddressList *al, const char *tag):&#160;rfc2047.c'],['../rfc2047_8h.html#a4f979b4ba087d3291049da868935e005',1,'rfc2047_encode_addrlist(struct AddressList *al, const char *tag):&#160;rfc2047.c']]],
   ['rfc2047_5fencode_5fenvelope',['rfc2047_encode_envelope',['../rfc2047_8c.html#aceeb3a044de1c06a649af033af856486',1,'rfc2047_encode_envelope(struct Envelope *env):&#160;rfc2047.c'],['../rfc2047_8h.html#aceeb3a044de1c06a649af033af856486',1,'rfc2047_encode_envelope(struct Envelope *env):&#160;rfc2047.c']]],
   ['rfc2231_5fdecode_5fparameters',['rfc2231_decode_parameters',['../rfc2231_8c.html#a95eb6a825f563e45d47c100ea43954c6',1,'rfc2231_decode_parameters(struct ParameterList *pl):&#160;rfc2231.c'],['../rfc2231_8h.html#a95eb6a825f563e45d47c100ea43954c6',1,'rfc2231_decode_parameters(struct ParameterList *pl):&#160;rfc2231.c']]],
-  ['rfc2231_5fencode_5fstring',['rfc2231_encode_string',['../rfc2231_8c.html#a95e7b2c65b43302e1dbd9ee199b2bd2a',1,'rfc2231_encode_string(const char *attribute, char *value):&#160;rfc2231.c'],['../rfc2231_8h.html#a95e7b2c65b43302e1dbd9ee199b2bd2a',1,'rfc2231_encode_string(const char *attribute, char *value):&#160;rfc2231.c']]],
+  ['rfc2231_5fencode_5fstring',['rfc2231_encode_string',['../rfc2231_8c.html#aca9032d6ef162cc900d4b96455c341ee',1,'rfc2231_encode_string(struct ParameterList *head, const char *attribute, char *value):&#160;rfc2231.c'],['../rfc2231_8h.html#aca9032d6ef162cc900d4b96455c341ee',1,'rfc2231_encode_string(struct ParameterList *head, const char *attribute, char *value):&#160;rfc2231.c']]],
   ['rfc3676_5fhandler',['rfc3676_handler',['../rfc3676_8c.html#a1a3abb7fcf3409cd1fe345fd20eee6a9',1,'rfc3676_handler(struct Body *a, struct State *s):&#160;rfc3676.c'],['../rfc3676_8h.html#a1a3abb7fcf3409cd1fe345fd20eee6a9',1,'rfc3676_handler(struct Body *a, struct State *s):&#160;rfc3676.c']]],
   ['rfc3676_5fspace_5fstuff',['rfc3676_space_stuff',['../rfc3676_8c.html#a9f6ce3a66b1215633ec857cae09f5ea0',1,'rfc3676.c']]],
   ['rotate_5flogs',['rotate_logs',['../mutt__logging_8c.html#a49200939593f1fe61b70d9d1267b71c8',1,'mutt_logging.c']]],
   ['rstrip_5fin_5fplace',['rstrip_in_place',['../version_8c.html#a8493557cba032152c75045cefa18b7d3',1,'version.c']]],
   ['run_5fdecode_5fand_5fhandler',['run_decode_and_handler',['../handler_8c.html#a7cb7eedc6f224327b26807c96d24a167',1,'handler.c']]],
-  ['run_5fmime_5ftype_5fquery',['run_mime_type_query',['../sendlib_8c.html#ac4ba3830d8a4136b4153942453a2c5b8',1,'sendlib.c']]],
-  ['run_5fquery',['run_query',['../query_8c.html#ac91e62e634de5454afe744ee05947ccd',1,'query.c']]]
+  ['run_5fmime_5ftype_5fquery',['run_mime_type_query',['../sendlib_8c.html#ac4ba3830d8a4136b4153942453a2c5b8',1,'sendlib.c']]]
 ];

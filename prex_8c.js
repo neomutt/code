@@ -3,6 +3,7 @@ var prex_8c =
     [ "PrexStorage", "structPrexStorage.html", "structPrexStorage" ],
     [ "PREX_MONTH", "prex_8c.html#a7f1d6e69661920424c3dab13811cf980", null ],
     [ "PREX_DOW", "prex_8c.html#a62b36cd222fb65c5b9777db5b0d6d1c8", null ],
+    [ "PREX_DOW_NOCASE", "prex_8c.html#a187af9207700c77f9bce74f39b3b4290", null ],
     [ "PREX_TIME", "prex_8c.html#a764a49e2052d6153d8d48ab29a8d826c", null ],
     [ "PREX_YEAR", "prex_8c.html#ab22a780ee67ee6a818fcc4d34c0da3a7", null ],
     [ "UNR_PCTENC_SUBDEL", "prex_8c.html#aecb557628850b6570f2c105ec3135a21", null ],

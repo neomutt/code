@@ -3,7 +3,7 @@ var hcache_8c =
     [ "RealKey", "structRealKey.html", "structRealKey" ],
     [ "hcache_get_ops", "hcache_8c.html#a51511cd14787b537b38ed24431384743", null ],
     [ "compr_get_ops", "hcache_8c.html#a36bb76ba7301af3ce5ec65758c907afd", null ],
-    [ "header_size", "hcache_8c.html#abcb84cb05c59336907daa68565cc5b38", null ],
+    [ "header_size", "hcache_8c.html#ab0e95e8a30f666418f3f8205cecc0582", null ],
     [ "dump", "hcache_8c.html#a6590056dc883402b100e74579ad6e0e4", null ],
     [ "restore", "hcache_8c.html#ab8ce7457145c54b7efb24890404ac9d2", null ],
     [ "realkey", "hcache_8c.html#a95370cb353c6c77fd800811d3df4d3d7", null ],

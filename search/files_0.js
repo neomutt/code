@@ -9,8 +9,6 @@ var searchData=
   ['account_5fnew_2ec',['account_new.c',['../account__new_8c.html',1,'']]],
   ['acct_5fmenu_2ec',['acct_menu.c',['../acct__menu_8c.html',1,'']]],
   ['acutest_2eh',['acutest.h',['../acutest_8h.html',1,'']]],
-  ['addrbook_2ec',['addrbook.c',['../addrbook_8c.html',1,'']]],
-  ['addrbook_2eh',['addrbook.h',['../addrbook_8h.html',1,'']]],
   ['address_2ec',['address.c',['../address_2address_8c.html',1,'(Global Namespace)'],['../config_2address_8c.html',1,'(Global Namespace)'],['../test_2config_2address_8c.html',1,'(Global Namespace)']]],
   ['address_2eh',['address.h',['../address_2address_8h.html',1,'(Global Namespace)'],['../config_2address_8h.html',1,'(Global Namespace)'],['../test_2config_2address_8h.html',1,'(Global Namespace)']]],
   ['alias_2ec',['alias.c',['../alias_8c.html',1,'']]],

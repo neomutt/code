@@ -2,7 +2,7 @@ var structMenu =
 [
     [ "title", "structMenu.html#a1cf561ffb11a83698437c966fb8d54f0", null ],
     [ "help", "structMenu.html#a657a86a6503ded9ef6f683e6ae555ede", null ],
-    [ "data", "structMenu.html#aa29643129988495c918ced8d57645531", null ],
+    [ "mdata", "structMenu.html#adc6d277fec333aca5b57f1156e6dabfc", null ],
     [ "current", "structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1", null ],
     [ "max", "structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b", null ],
     [ "redraw", "structMenu.html#a8fc369d344b2e43c9985803f84729dc9", null ],

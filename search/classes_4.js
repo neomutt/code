@@ -9,9 +9,11 @@ var searchData=
   ['envelope',['Envelope',['../structEnvelope.html',1,'']]],
   ['etags',['Etags',['../structEtags.html',1,'']]],
   ['eventaccount',['EventAccount',['../structEventAccount.html',1,'']]],
+  ['eventalias',['EventAlias',['../structEventAlias.html',1,'']]],
   ['eventcolor',['EventColor',['../structEventColor.html',1,'']]],
   ['eventconfig',['EventConfig',['../structEventConfig.html',1,'']]],
   ['eventcontext',['EventContext',['../structEventContext.html',1,'']]],
   ['eventemail',['EventEmail',['../structEventEmail.html',1,'']]],
-  ['eventmailbox',['EventMailbox',['../structEventMailbox.html',1,'']]]
+  ['eventmailbox',['EventMailbox',['../structEventMailbox.html',1,'']]],
+  ['eventwindow',['EventWindow',['../structEventWindow.html',1,'']]]
 ];

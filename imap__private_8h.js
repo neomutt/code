@@ -135,5 +135,6 @@ var imap__private_8h =
     [ "imap_utf_encode", "imap__private_8h.html#a6970893efd4d873cddabe0bd32e4c63c", null ],
     [ "imap_utf_decode", "imap__private_8h.html#aa6b721fd8d940328593f41b60eaee4de", null ],
     [ "imap_allow_reopen", "imap__private_8h.html#a2d2129a01a682441eeec2eaaeb4015ce", null ],
-    [ "imap_disallow_reopen", "imap__private_8h.html#a2f5d2ee95c9fbfcbfda3bc83287a75eb", null ]
+    [ "imap_disallow_reopen", "imap__private_8h.html#a2f5d2ee95c9fbfcbfda3bc83287a75eb", null ],
+    [ "cmd_parse_search", "imap__private_8h.html#ac70f93a3e34bf5c69713a1ee2c262766", null ]
 ];

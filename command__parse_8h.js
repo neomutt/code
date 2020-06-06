@@ -1,6 +1,5 @@
 var command__parse_8h =
 [
-    [ "parse_alias", "command__parse_8h.html#a8487d20a2159f19cdf61e8a9030f0e72", null ],
     [ "parse_alternates", "command__parse_8h.html#a2b802266d3a89bc30f84dda0854c54c8", null ],
     [ "parse_attachments", "command__parse_8h.html#af433f0af5d00dc471fbcd0b62c1b2f9b", null ],
     [ "parse_echo", "command__parse_8h.html#a4b83a280b9b7bc4124d008acb4b98f46", null ],
@@ -23,7 +22,6 @@ var command__parse_8h =
     [ "parse_subscribe_to", "command__parse_8h.html#a7efc4ec1c2dc8ab06a302452b9c66d38", null ],
     [ "parse_tag_formats", "command__parse_8h.html#a0bb2743c6260e509642ea6025e15b652", null ],
     [ "parse_tag_transforms", "command__parse_8h.html#a19a6473b10de513f181bd0ea4fa0c80f", null ],
-    [ "parse_unalias", "command__parse_8h.html#a867b2daae6e906b5cb92d66f898acaad", null ],
     [ "parse_unalternates", "command__parse_8h.html#a54533252c9370371d97e1325015c0961", null ],
     [ "parse_unattachments", "command__parse_8h.html#abbd9abd9a9e82ae4de6db96b7c6d8df2", null ],
     [ "parse_unignore", "command__parse_8h.html#a5daaca3326b46c2a331585bfdda3a26e", null ],
@@ -34,6 +32,7 @@ var command__parse_8h =
     [ "parse_unsubjectrx_list", "command__parse_8h.html#a1ee4159cd29b919a3ffbc3b0f62439f6", null ],
     [ "parse_unsubscribe", "command__parse_8h.html#a5cac54aaf46eabaae1a85acd1e36a309", null ],
     [ "parse_unsubscribe_from", "command__parse_8h.html#a4de6648a96f0b42657a3b5bb3eccfa22", null ],
+    [ "parse_grouplist", "command__parse_8h.html#a441b580ab90bd2bc9e1346bc82fd973c", null ],
     [ "clear_source_stack", "command__parse_8h.html#a8351acfae62dec43e37e90bc9d837cf9", null ],
     [ "source_rc", "command__parse_8h.html#ae940c8a2d277f104d28f9998cd73ead5", null ]
 ];

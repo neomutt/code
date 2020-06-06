@@ -13,7 +13,7 @@ var structImapMboxData =
     [ "messages", "structImapMboxData.html#a1c2e1c96d914106f9a2acb79b86e5acf", null ],
     [ "recent", "structImapMboxData.html#a577bf35b11a51ec0cf6a97f5928d02b5", null ],
     [ "unseen", "structImapMboxData.html#add06baf96fd584f61a318a84ccbd3bf1", null ],
-    [ "uid_hash", "structImapMboxData.html#abe3f63db53e6e2a2d54816eaad5fd178", null ],
+    [ "uid_hash", "structImapMboxData.html#a5d4ade771376ea3dbb3fe5816ddeac84", null ],
     [ "msn_index", "structImapMboxData.html#a55f0bd33712623073a0a0c54ce0db8c7", null ],
     [ "msn_index_size", "structImapMboxData.html#a5a8d86c0542247e2ead340be23219afc", null ],
     [ "max_msn", "structImapMboxData.html#a365640fdc3036ad769d8b81f892877c3", null ],

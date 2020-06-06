@@ -7,6 +7,7 @@ var searchData=
   ['schema_2ec',['schema.c',['../schema_8c.html',1,'']]],
   ['score_2ec',['score.c',['../score_8c.html',1,'']]],
   ['score_2eh',['score.h',['../score_8h.html',1,'']]],
+  ['search_2ec',['search.c',['../search_8c.html',1,'']]],
   ['send_2ec',['send.c',['../send_8c.html',1,'']]],
   ['send_2eh',['send.h',['../send_8h.html',1,'']]],
   ['sendlib_2ec',['sendlib.c',['../sendlib_8c.html',1,'']]],

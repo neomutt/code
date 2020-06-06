@@ -15,7 +15,7 @@ var remailer_8c =
     [ "mix_redraw_chain", "remailer_8c.html#ab3f70f41a449de7dab5d4d9d0264ba45", null ],
     [ "mix_redraw_head", "remailer_8c.html#a6aedd68d18973cb892555b9e0dff9353", null ],
     [ "mix_format_caps", "remailer_8c.html#ac1185869ada19a5d3f9b6bf8e0b64db4", null ],
-    [ "mix_format_str", "remailer_8c.html#a565dd028820a7edb05903aef3531fee4", null ],
+    [ "mix_format_str", "remailer_8c.html#a718fa86ab6d391f0fe4fbe2c4a1831fb", null ],
     [ "mix_make_entry", "remailer_8c.html#a91ede3b43b8773ed01defd231dc17cd5", null ],
     [ "mix_chain_add", "remailer_8c.html#a4783bd16f7a686bbb78afbf24be9eab0", null ],
     [ "mutt_dlg_mixmaster_observer", "remailer_8c.html#a909048c9c9b0f86fd2950ffd63fae3d3", null ],

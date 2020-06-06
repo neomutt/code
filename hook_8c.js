@@ -25,6 +25,6 @@ var hook_8c =
     [ "C_ForceName", "hook_8c.html#a8c942c1f06402cbaa14e3d08b9626442", null ],
     [ "C_SaveName", "hook_8c.html#a3165c36713939fdeee7a8a3cee0f5b85", null ],
     [ "Hooks", "hook_8c.html#a972b6dffb799adc5f7e8d91438317d64", null ],
-    [ "IdxFmtHooks", "hook_8c.html#a507a33449aa4982b5c448b65ace26a08", null ],
+    [ "IdxFmtHooks", "hook_8c.html#a1ca53f19587562575952e7626c839056", null ],
     [ "current_hook_type", "hook_8c.html#af39c5b98ef339ba6f93dedfd414d13bb", null ]
 ];

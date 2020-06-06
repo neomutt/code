@@ -20,7 +20,7 @@ var newsrc_8c =
     [ "nntp_bcache_update", "newsrc_8c.html#ab103e38d32e64122d7892f29eeb67fcf", null ],
     [ "nntp_delete_group_cache", "newsrc_8c.html#a140bf8e49e3f11e0d9cb4d8253767819", null ],
     [ "nntp_clear_cache", "newsrc_8c.html#a0e57436b35d68983c6fe44815f3ad505", null ],
-    [ "nntp_format_str", "newsrc_8c.html#a2c303d2f8cf0b5ed133e25a6b395b12f", null ],
+    [ "nntp_format_str", "newsrc_8c.html#a2f9880f62ed891cdd63f136d9d9766fc", null ],
     [ "nntp_get_field", "newsrc_8c.html#a0e2b120f6fa0e69004a2c2e556c77d57", null ],
     [ "nntp_select_server", "newsrc_8c.html#a7ba29bbfa4543e780d0e49241bcd2496", null ],
     [ "nntp_article_status", "newsrc_8c.html#a3a2a364d853a786fb0b224c379d28eab", null ],

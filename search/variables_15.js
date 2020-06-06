@@ -2,7 +2,7 @@ var searchData=
 [
   ['v2r',['v2r',['../structMailbox.html#a29d550d9a2d2a6a65b4b6ba1c625ef36',1,'Mailbox::v2r()'],['../structAttachCtx.html#af3d254a510a44c1a2f55eef4a27908fc',1,'AttachCtx::v2r()']]],
   ['val',['val',['../structScore.html#acff8f0b67774525bb1be99a13ac62cd8',1,'Score']]],
-  ['valid',['valid',['../structMUpdate.html#ac4ff1f4e3d6bfa6d2a0ea29d95934965',1,'MUpdate::valid()'],['../structUrlTest.html#ac352df2d188768d210aec9cbfad60e8c',1,'UrlTest::valid()']]],
+  ['valid',['valid',['../structMUpdate.html#ac4ff1f4e3d6bfa6d2a0ea29d95934965',1,'MUpdate::valid()'],['../structIsFromTest.html#aad294e8ec33b3f6eae8e0b0ebf816d3d',1,'IsFromTest::valid()'],['../structUrlTest.html#ac352df2d188768d210aec9cbfad60e8c',1,'UrlTest::valid()']]],
   ['valid_5fpassphrase',['valid_passphrase',['../structCryptModuleSpecs.html#a8e4fee6a5203c68d854e1d328559889a',1,'CryptModuleSpecs']]],
   ['validator',['validator',['../structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e',1,'ConfigDef']]],
   ['validity',['validity',['../structCryptKeyInfo.html#a219b2bfe121a382b7d834a68893320b5',1,'CryptKeyInfo']]],
@@ -36,6 +36,7 @@ var searchData=
   ['varstrawberry',['VarStrawberry',['../test_2config_2path_8c.html#a6b6eb78284741b7e91c53d965563fc66',1,'VarStrawberry():&#160;path.c'],['../test_2config_2regex_8c.html#a13a6ebac1a59cf64439303910dac0613',1,'VarStrawberry():&#160;regex.c'],['../test_2config_2sort_8c.html#a605fb2d323851b01a1b79a73c1d0f41d',1,'VarStrawberry():&#160;sort.c'],['../test_2config_2string_8c.html#a6b6eb78284741b7e91c53d965563fc66',1,'VarStrawberry():&#160;string.c']]],
   ['vcount',['vcount',['../structMailbox.html#a0e1673cdf63976b1d148786457666f84',1,'Mailbox::vcount()'],['../structAttachCtx.html#a0dfc8b92b72351536f7bd3cfbc08eb30',1,'AttachCtx::vcount()']]],
   ['ver',['ver',['../structRemailer.html#aef7f7207d81289a5d1a7c4233542d64b',1,'Remailer']]],
+  ['verbose',['verbose',['../structMailbox.html#af1ff47b8f14a4503c9b8473582b13d5a',1,'Mailbox']]],
   ['verbose_5flevel',['verbose_level',['../acutest_8h.html#a4216bd8b1f7166ac548cfa2889b89db0',1,'acutest.h']]],
   ['verify_5fone',['verify_one',['../structCryptModuleSpecs.html#a0a1d9c0eb016fb8f7cabc71e2f9f2398',1,'CryptModuleSpecs']]],
   ['version',['version',['../structStoreOps.html#aef5e81cd92a2052bbf5224369242b701',1,'StoreOps']]],

@@ -10,5 +10,6 @@ var searchData=
   ['graphviz_2ec',['graphviz.c',['../graphviz_8c.html',1,'']]],
   ['group_2ec',['group.c',['../group_8c.html',1,'']]],
   ['group_2eh',['group.h',['../group_8h.html',1,'']]],
-  ['gui_2ec',['gui.c',['../gui_8c.html',1,'']]]
+  ['gui_2ec',['gui.c',['../alias_2gui_8c.html',1,'(Global Namespace)'],['../conn_2gui_8c.html',1,'(Global Namespace)']]],
+  ['gui_2eh',['gui.h',['../gui_8h.html',1,'']]]
 ];

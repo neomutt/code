@@ -1,0 +1,14 @@
+var alias_2gui_8c =
+[
+    [ "RSORT", "alias_2gui_8c.html#a89ffac83aa53c9558af1f25adf995450", null ],
+    [ "alias_sort_name", "alias_2gui_8c.html#a5c74944549499e99c7b94d8031d38b89", null ],
+    [ "alias_sort_address", "alias_2gui_8c.html#a28de2577284eacc94ddbb88626c3da45", null ],
+    [ "alias_view_free", "alias_2gui_8c.html#ae71988c228df01607611de56d0e4ab53", null ],
+    [ "alias_view_new", "alias_2gui_8c.html#ab23a3bce6864824b56be28e6de095ea1", null ],
+    [ "menu_data_clear", "alias_2gui_8c.html#ae7e240888c5e3496560d2c096c3388f3", null ],
+    [ "menu_data_free", "alias_2gui_8c.html#a3f0226ca53d4959c67884b885e283a1e", null ],
+    [ "menu_data_new", "alias_2gui_8c.html#a48eeac7809850f3e39bcfc32f31e9915", null ],
+    [ "menu_data_alias_add", "alias_2gui_8c.html#ac1ef56d043b3465f0d6a491aa4f8eb19", null ],
+    [ "menu_data_alias_delete", "alias_2gui_8c.html#a18d586e1bf8927d85dafa23072bc06b0", null ],
+    [ "menu_data_sort", "alias_2gui_8c.html#ae3aca3a9bb917a69db2d4d0322237b5b", null ]
+];

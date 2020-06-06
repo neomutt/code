@@ -1,6 +1,5 @@
 var help_8c =
 [
-    [ "DEFINE_HELP_MESSAGE", "help_8c.html#a6e217c4db8d49bf63699b655756a98d3", null ],
     [ "help_lookup_function", "help_8c.html#a7a2f5bef0066b2adc07678a164db63bc", null ],
     [ "mutt_make_help", "help_8c.html#a3c7eb467e6f81abfa6c09bd3d9c66739", null ],
     [ "mutt_compile_help", "help_8c.html#a1ebab39bff585dda72f9955e183176c4", null ],
@@ -11,6 +10,5 @@ var help_8c =
     [ "dump_menu", "help_8c.html#aad9991c3286c6cb9c0a98a495a9d3a26", null ],
     [ "is_bound", "help_8c.html#a1eaef1827a839c5c77b4d75c3a07605c", null ],
     [ "dump_unbound", "help_8c.html#af880f7b08688d93ee72f70c516b78656", null ],
-    [ "mutt_help", "help_8c.html#a1267fc376a554184b62d121718ef12c1", null ],
-    [ "HelpStrings", "help_8c.html#a68f50f1a69311b32fbbf917b3749519f", null ]
+    [ "mutt_help", "help_8c.html#a1267fc376a554184b62d121718ef12c1", null ]
 ];

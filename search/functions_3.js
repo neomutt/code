@@ -31,8 +31,7 @@ var searchData=
   ['digit',['digit',['../crypt__gpgme_8c.html#a90dd4fd502e0e0bb5e11d58dcd8c3e32',1,'crypt_gpgme.c']]],
   ['digit_5for_5fletter',['digit_or_letter',['../crypt__gpgme_8c.html#acf5477f3e2e14a3ab81fe289be6e28bb',1,'crypt_gpgme.c']]],
   ['display_5fline',['display_line',['../pager_8c.html#abb544ac601507e39432ffb33671f632b',1,'pager.c']]],
-  ['dlg_5fverify_5fcert',['dlg_verify_cert',['../gui_8c.html#a76021b6e113f9e4e25732217453b12d4',1,'dlg_verify_cert(const char *title, struct ListHead *list, bool allow_always, bool allow_skip):&#160;gui.c'],['../ssl_8h.html#a76021b6e113f9e4e25732217453b12d4',1,'dlg_verify_cert(const char *title, struct ListHead *list, bool allow_always, bool allow_skip):&#160;gui.c']]],
-  ['do_5fsearch',['do_search',['../imap_8c.html#a1ad1a98356486584a7257fee3747c425',1,'imap.c']]],
+  ['dlg_5fverify_5fcert',['dlg_verify_cert',['../conn_2gui_8c.html#a76021b6e113f9e4e25732217453b12d4',1,'dlg_verify_cert(const char *title, struct ListHead *list, bool allow_always, bool allow_skip):&#160;gui.c'],['../ssl_8h.html#a76021b6e113f9e4e25732217453b12d4',1,'dlg_verify_cert(const char *title, struct ListHead *list, bool allow_always, bool allow_skip):&#160;gui.c']]],
   ['do_5funcolor',['do_uncolor',['../color_8c.html#a847efcc3f4da78c2ba539cf551ed2fff',1,'color.c']]],
   ['dot_5faccount',['dot_account',['../graphviz_8c.html#aa8ed68697024c4b1ca74fc26e8f9c2e4',1,'graphviz.c']]],
   ['dot_5faccount_5fimap',['dot_account_imap',['../graphviz_8c.html#ab3736d1afaa5946d0964f85c07bfb134',1,'graphviz.c']]],
@@ -77,7 +76,7 @@ var searchData=
   ['draw_5fdivider',['draw_divider',['../sidebar_8c.html#a228ec4bf709f7d688fbc8d5a264c00dd',1,'sidebar.c']]],
   ['draw_5fenvelope',['draw_envelope',['../compose_8c.html#aafa46e29920afd47903620b3d77ac45f',1,'compose.c']]],
   ['draw_5fenvelope_5faddr',['draw_envelope_addr',['../compose_8c.html#a094c42d2adc33086bf5e51684819cd24',1,'compose.c']]],
-  ['draw_5ffloating',['draw_floating',['../compose_8c.html#a15b0b76fd53d706c36e1bef8b0711556',1,'compose.c']]],
+  ['draw_5ffloating',['draw_floating',['../compose_8c.html#a3a2628773125cc354856c45fbffbb224',1,'compose.c']]],
   ['draw_5fheader',['draw_header',['../compose_8c.html#a1c8ed66a5996c5748a22515f6915d559',1,'compose.c']]],
   ['draw_5fsidebar',['draw_sidebar',['../sidebar_8c.html#addfcfc56e3db5f2ca1d115fb654712b2',1,'sidebar.c']]],
   ['driver_5ftags_5fadd',['driver_tags_add',['../tags_8c.html#a0310fce6f8e688d4e4b2c520c3181269',1,'tags.c']]],
@@ -105,6 +104,6 @@ var searchData=
   ['dump_5fmenu',['dump_menu',['../help_8c.html#aad9991c3286c6cb9c0a98a495a9d3a26',1,'dump_menu(FILE *fp, enum MenuType menu, int wraplen):&#160;help.c'],['../icommands_8c.html#ac3cce3472b74c72f345b5b49c2125bea',1,'dump_menu(struct Buffer *buf, struct Mapping *menu, bool bind):&#160;icommands.c']]],
   ['dump_5fnative',['dump_native',['../test_2config_2address_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;address.c'],['../test_2config_2bool_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;bool.c'],['../test_2config_2enum_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;enum.c'],['../test_2config_2long_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;long.c'],['../test_2config_2mbtable_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;mbtable.c'],['../test_2config_2number_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;number.c'],['../test_2config_2path_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;path.c'],['../test_2config_2quad_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;quad.c'],['../test_2config_2regex_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;regex.c'],['../test_2config_2slist_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;slist.c'],['../test_2config_2sort_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;sort.c'],['../test_2config_2string_8c.html#a3a25b594f616f113e6bc749efeb43531',1,'dump_native(struct ConfigSet *cs, const char *parent, const char *child):&#160;string.c']]],
   ['dump_5funbound',['dump_unbound',['../help_8c.html#af880f7b08688d93ee72f70c516b78656',1,'help.c']]],
-  ['dup_5fhash_5fdec',['dup_hash_dec',['../history_8c.html#a1eab49a9aec29422588e5c65406491d9',1,'history.c']]],
-  ['dup_5fhash_5finc',['dup_hash_inc',['../history_8c.html#a922c9ee80c05548351ffc211b937d7f8',1,'history.c']]]
+  ['dup_5fhash_5fdec',['dup_hash_dec',['../history_8c.html#a80279e314b487c4cb563c3f7e4779b05',1,'history.c']]],
+  ['dup_5fhash_5finc',['dup_hash_inc',['../history_8c.html#a2bbf0600b6333d9b99e2f7b25949d0a6',1,'history.c']]]
 ];

@@ -13,6 +13,8 @@ var searchData=
   ['remailer_2ec',['remailer.c',['../remailer_8c.html',1,'']]],
   ['remailer_2eh',['remailer.h',['../remailer_8h.html',1,'']]],
   ['resize_2ec',['resize.c',['../resize_8c.html',1,'']]],
+  ['reverse_2ec',['reverse.c',['../reverse_8c.html',1,'']]],
+  ['reverse_2eh',['reverse.h',['../reverse_8h.html',1,'']]],
   ['rfc2047_2ec',['rfc2047.c',['../rfc2047_8c.html',1,'']]],
   ['rfc2047_2eh',['rfc2047.h',['../rfc2047_8h.html',1,'']]],
   ['rfc2047_5fdecode_2ec',['rfc2047_decode.c',['../rfc2047__decode_8c.html',1,'']]],

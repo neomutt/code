@@ -6,7 +6,7 @@ var compmbox_2compress_8c =
     [ "store_size", "compmbox_2compress_8c.html#a877acb05482802a48bc56da5e24c8c54", null ],
     [ "set_compress_info", "compmbox_2compress_8c.html#a958dff103de14a95ce0a8a5dd977167b", null ],
     [ "compress_info_free", "compmbox_2compress_8c.html#a5ae987f4dda46e1423fedf6a0ac0b2de", null ],
-    [ "compress_format_str", "compmbox_2compress_8c.html#a5a82b24974340eaff15cd242050e2523", null ],
+    [ "compress_format_str", "compmbox_2compress_8c.html#a804a1a638527ebaddb0d693ec35d5198", null ],
     [ "expand_command_str", "compmbox_2compress_8c.html#abec93f40f46e453d46cb9d7181ae39f9", null ],
     [ "execute_command", "compmbox_2compress_8c.html#a77600af8755fc3921168f6c0727abf18", null ],
     [ "mutt_comp_can_append", "compmbox_2compress_8c.html#a9f3c7362d3b06ea8c32ce55d5c3db5f1", null ],

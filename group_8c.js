@@ -16,5 +16,5 @@ var group_8c =
     [ "mutt_grouplist_add_regex", "group_8c.html#a3c095f50ad6dc2f0744cb8dbcefd35eb", null ],
     [ "mutt_grouplist_remove_regex", "group_8c.html#aae2df2f0fedab3b22492a1f382e0d842", null ],
     [ "mutt_group_match", "group_8c.html#a85d4636eab11d9c91cc6af8840819f86", null ],
-    [ "Groups", "group_8c.html#aaa983196b34b7d8a74f8bc03350e4bc8", null ]
+    [ "Groups", "group_8c.html#a567f322116b96d91da15e30f08a14c2f", null ]
 ];

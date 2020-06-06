@@ -1,7 +1,5 @@
 var index =
 [
-    [ "Address book handling aliases", "addrbook.html", null ],
-    [ "Representation of a single alias to an email address", "alias.html", null ],
     [ "Body Caching - local copies of email bodies", "bcache.html", null ],
     [ "GUI component for displaying/selecting items from a list", "browser.html", null ],
     [ "Manage where the email is piped to external commands", "commands.html", null ],
@@ -25,6 +23,7 @@ var index =
     [ "Config/command parsing", "init.html", null ],
     [ "Manage keymappings", "keymap.html", null ],
     [ "RFC1524 Mailcap routines", "mailcap.html", null ],
+    [ "Handle mailing lists", "maillist.html", null ],
     [ "Command line processing", "main.html", null ],
     [ "GUI present the user with a selectable list", "menu.html", null ],
     [ "Monitor files for changes", "monitor.html", null ],
@@ -49,7 +48,6 @@ var index =
     [ "Match patterns to emails", "pattern.html", null ],
     [ "Save/restore and GUI list postponed emails", "postpone.html", null ],
     [ "Progress bar", "progress.html", null ],
-    [ "Routines for querying and external address book", "query.html", null ],
     [ "Routines for managing attachments", "recvattach.html", null ],
     [ "Send/reply with an attachment", "recvcmd.html", null ],
     [ "Support of Mixmaster anonymous remailer", "remailer.html", null ],

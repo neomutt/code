@@ -11,7 +11,6 @@ var date_8c =
     [ "mutt_date_check_month", "date_8c.html#a58c8238ef7c9cc33ee04f5a88dbe5559", null ],
     [ "mutt_date_epoch", "date_8c.html#a97bacb1574ec0b1c69b6236fbacceccf", null ],
     [ "mutt_date_epoch_ms", "date_8c.html#af116b4ad52dd21a36ac701e7c376ecd1", null ],
-    [ "mutt_date_is_day_name", "date_8c.html#a223e9dbc53993a6ce0f3f11e4e01bed2", null ],
     [ "mutt_date_parse_date", "date_8c.html#ad8aaf5118148ed8f6708f32bfab3146f", null ],
     [ "mutt_date_make_imap", "date_8c.html#ab30120ea670e25b9f47ccc9c83eda66f", null ],
     [ "mutt_date_make_tls", "date_8c.html#a8193091a9ad44eba4b0db60e950c57e6", null ],

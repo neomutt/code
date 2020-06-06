@@ -1,7 +1,7 @@
 var dummy_8c =
 [
     [ "crypt_valid_passphrase", "dummy_8c.html#a99c2d9b5ec280d93293e3b6a7416fc72", null ],
-    [ "imap_search", "dummy_8c.html#a2ea7c676733b833ffbba9e09552deae2", null ],
+    [ "imap_search", "dummy_8c.html#ae87fdaea22e417ba723592e2b21609bd", null ],
     [ "mutt_addr_is_user", "dummy_8c.html#a1a7905f34ac21a48a34e14e2c1becbef", null ],
     [ "mutt_alias_reverse_lookup", "dummy_8c.html#a6d1a2b0ced7c75c54b9e651b04b88eaf", null ],
     [ "mutt_body_handler", "dummy_8c.html#adae8bf0eec9bee0bd62f639bbcf8599f", null ],

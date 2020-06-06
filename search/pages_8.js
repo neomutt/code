@@ -12,6 +12,7 @@ var searchData=
   ['imap_20plain_20authentication_20method',['IMAP plain authentication method',['../imap_auth_plain.html',1,'imap']]],
   ['imap_20sasl_20authentication_20method',['IMAP SASL authentication method',['../imap_auth_sasl.html',1,'imap']]],
   ['imap_20network_20mailbox',['IMAP network mailbox',['../imap_imap.html',1,'imap']]],
+  ['imap_20search_20routines',['IMAP search routines',['../imap_search.html',1,'imap']]],
   ['imap_20helper_20functions',['IMAP helper functions',['../imap_util.html',1,'imap']]],
   ['integrated_20lua_20scripting',['Integrated Lua scripting',['../mutt_lua.html',1,'index']]]
 ];

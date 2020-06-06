@@ -10,5 +10,5 @@ var format__flags_8h =
     [ "MUTT_FORMAT_NOFILTER", "format__flags_8h.html#a07bd02c4c6cb295fd9cb38ca8302a5d0", null ],
     [ "MUTT_FORMAT_PLAIN", "format__flags_8h.html#acb5a64e4f8546e73796d2d31988221ac", null ],
     [ "MuttFormatFlags", "format__flags_8h.html#ad2734d319d795141616e1b5f241be1b2", null ],
-    [ "format_t", "format__flags_8h.html#a0408fb43311bb5ec0431372ea14af1f8", null ]
+    [ "format_t", "format__flags_8h.html#ac540f73b133b76c0ab37b3ef10480280", null ]
 ];

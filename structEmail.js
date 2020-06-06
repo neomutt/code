@@ -49,6 +49,6 @@ var structEmail =
     [ "tags", "structEmail.html#aaa992628043f7a89ba87b8ce24f8c1b1", null ],
     [ "maildir_flags", "structEmail.html#a7e2f5fa7df4d8ad7da3857bda2442983", null ],
     [ "edata", "structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b", null ],
-    [ "free_edata", "structEmail.html#a4b92949977f72098618710131bb55428", null ],
+    [ "edata_free", "structEmail.html#a781551eba730fd251226081727ae74bb", null ],
     [ "notify", "structEmail.html#aacf5772e590568f9bda0373986775354", null ]
 ];

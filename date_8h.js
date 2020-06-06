@@ -11,7 +11,6 @@ var date_8h =
     [ "mutt_date_epoch", "date_8h.html#a97bacb1574ec0b1c69b6236fbacceccf", null ],
     [ "mutt_date_epoch_ms", "date_8h.html#af116b4ad52dd21a36ac701e7c376ecd1", null ],
     [ "mutt_date_gmtime", "date_8h.html#a76f10949abf7521c519bced738be2694", null ],
-    [ "mutt_date_is_day_name", "date_8h.html#a223e9dbc53993a6ce0f3f11e4e01bed2", null ],
     [ "mutt_date_localtime_format", "date_8h.html#a0fab1956f93fd1be1a2dbfb740788ef7", null ],
     [ "mutt_date_localtime", "date_8h.html#a0d0711d4e480f33786b1c936bf2fd6ba", null ],
     [ "mutt_date_local_tz", "date_8h.html#a82bd2f1fb214328612aa1900b731972b", null ],

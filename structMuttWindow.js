@@ -1,15 +1,16 @@
 var structMuttWindow =
 [
     [ "TAILQ_ENTRY", "structMuttWindow.html#aeaccbf58d05885c1c85fdb1c6887a428", null ],
-    [ "req_rows", "structMuttWindow.html#a5f230c86f48f70162d2c408b0e9ad6c3", null ],
     [ "req_cols", "structMuttWindow.html#a3d852a60f45c3df06d64dc20114fa3df", null ],
+    [ "req_rows", "structMuttWindow.html#a5f230c86f48f70162d2c408b0e9ad6c3", null ],
     [ "state", "structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f", null ],
     [ "old", "structMuttWindow.html#a0826671808d56e0b7a1b1e579654515d", null ],
     [ "orient", "structMuttWindow.html#a5b3418a2f98cc9588f1483c47079ce3f", null ],
     [ "size", "structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54", null ],
     [ "parent", "structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3", null ],
     [ "children", "structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae", null ],
+    [ "notify", "structMuttWindow.html#a5bf1302122ef2778be449cde2f1909e6", null ],
     [ "type", "structMuttWindow.html#af1290d572b0d8a0fac6b28a1a4c2b4da", null ],
     [ "wdata", "structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc", null ],
-    [ "free_wdata", "structMuttWindow.html#ae3910c1615fbdea76b6aed0a8166528c", null ]
+    [ "wdata_free", "structMuttWindow.html#a78011dd7f37a6a39f0d404a76d133a5d", null ]
 ];

@@ -8,6 +8,10 @@ var searchData=
   ['nt_5faccount',['NT_ACCOUNT',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a8ef73bad3a96e175f955bdd31762bbda',1,'notify_type.h']]],
   ['nt_5faccount_5fadd',['NT_ACCOUNT_ADD',['../account_8h.html#a19a9ad056d93491b610201fa644eef6ea2f33ec4035fcd1ed206ae564c3c54631',1,'account.h']]],
   ['nt_5faccount_5fremove',['NT_ACCOUNT_REMOVE',['../account_8h.html#a19a9ad056d93491b610201fa644eef6ea0570a2408670a7e4865ab2f22b6f261c',1,'account.h']]],
+  ['nt_5falias',['NT_ALIAS',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8aed9e9769f3355292b796eb7675411b04',1,'notify_type.h']]],
+  ['nt_5falias_5fchanged',['NT_ALIAS_CHANGED',['../alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7ba158a633155fe2f31d2c8b1123db406e1',1,'alias.h']]],
+  ['nt_5falias_5fdeleted',['NT_ALIAS_DELETED',['../alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7ba2354c23554a676de7a0025e59218245a',1,'alias.h']]],
+  ['nt_5falias_5fnew',['NT_ALIAS_NEW',['../alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7ba854757840b396d5001e89290f995e94e',1,'alias.h']]],
   ['nt_5fcolor',['NT_COLOR',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a2e99b9536d698981bbcf5cdce49c9d05',1,'notify_type.h']]],
   ['nt_5fcommand',['NT_COMMAND',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a7d03e2fa3fa1efd3c1b31da87a032b19',1,'notify_type.h']]],
   ['nt_5fconfig',['NT_CONFIG',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a279f8c4386a4e0efac638ac67e221e7f',1,'notify_type.h']]],
@@ -19,7 +23,6 @@ var searchData=
   ['nt_5fcontext_5fopen',['NT_CONTEXT_OPEN',['../context_8h.html#a4b12137da3b4327ecfe951e545f36d4ca551ca75b292371bbc41245b44edb1bee',1,'context.h']]],
   ['nt_5femail',['NT_EMAIL',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a42f0ca49f1334c4edded574f4267b34a',1,'notify_type.h']]],
   ['nt_5femail_5fadd',['NT_EMAIL_ADD',['../email_8h.html#acc016ba3017237be6db0130216742d17a190192a70b0c559228cc51324a10a68b',1,'email.h']]],
-  ['nt_5femail_5fnew',['NT_EMAIL_NEW',['../email_8h.html#acc016ba3017237be6db0130216742d17a35ada5904990af61119565e8a9105325',1,'email.h']]],
   ['nt_5femail_5fremove',['NT_EMAIL_REMOVE',['../email_8h.html#acc016ba3017237be6db0130216742d17ad45113e9febe2b3931ccebafc3dabff5',1,'email.h']]],
   ['nt_5fglobal',['NT_GLOBAL',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8acce7b38b7377553781432765eb427d59',1,'notify_type.h']]],
   ['nt_5fglobal_5fshutdown',['NT_GLOBAL_SHUTDOWN',['../neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5dae3ff642cd6e8bb088da0176c55a4675c',1,'neomutt.h']]],
@@ -32,5 +35,7 @@ var searchData=
   ['nt_5fmailbox_5fremove',['NT_MAILBOX_REMOVE',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4aa8014daf764a5636d76f565c15743973',1,'mailbox.h']]],
   ['nt_5fmailbox_5fresort',['NT_MAILBOX_RESORT',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a96d28ff20a133d31e2e6ce8bb4e8b78f',1,'mailbox.h']]],
   ['nt_5fmailbox_5funtag',['NT_MAILBOX_UNTAG',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a05f2ee1d91419ab8a3b86221ed1e0ca8',1,'mailbox.h']]],
-  ['nt_5fmailbox_5fupdate',['NT_MAILBOX_UPDATE',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4ad0c3ae03b6a1ba8f4a91d5f8c81796ac',1,'mailbox.h']]]
+  ['nt_5fmailbox_5fupdate',['NT_MAILBOX_UPDATE',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4ad0c3ae03b6a1ba8f4a91d5f8c81796ac',1,'mailbox.h']]],
+  ['nt_5fwindow',['NT_WINDOW',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a0effa043e3256fe597161d6fa95f7442',1,'notify_type.h']]],
+  ['nt_5fwindow_5fstate',['NT_WINDOW_STATE',['../mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca47bb65598401cdb438a2768ca5d99eaa',1,'mutt_window.h']]]
 ];

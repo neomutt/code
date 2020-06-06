@@ -1,11 +1,11 @@
 var sidebar_8h =
 [
-    [ "mutt_sb_change_mailbox", "sidebar_8h.html#aec201a8e5376d56ce51d3285edbe1f5b", null ],
-    [ "mutt_sb_draw", "sidebar_8h.html#a8bda2e6ff9359317ca2f1cd479659e21", null ],
-    [ "mutt_sb_get_highlight", "sidebar_8h.html#a5271ff330a9f99848e053ea67b25c89b", null ],
-    [ "mutt_sb_notify_mailbox", "sidebar_8h.html#a324b80c7e4db11987311969bb3077160", null ],
-    [ "mutt_sb_observer", "sidebar_8h.html#aba0a02f709ae32601e32e068636e0d47", null ],
-    [ "mutt_sb_set_open_mailbox", "sidebar_8h.html#a52f9c2d93428263d60e354b8b398a3b9", null ],
+    [ "sb_change_mailbox", "sidebar_8h.html#ac78ef9b605cbd89412f40c1340c3eb30", null ],
+    [ "sb_draw", "sidebar_8h.html#a7b6c9815953c724b2e8c67d8c22abfed", null ],
+    [ "sb_get_highlight", "sidebar_8h.html#a49535b45f065f504341890f52c2dc6ff", null ],
+    [ "sb_notify_mailbox", "sidebar_8h.html#a562476c6228470d587bb4d67ae3d1299", null ],
+    [ "sb_observer", "sidebar_8h.html#a9b25b9828e3cf022ac70a4e5e35452a1", null ],
+    [ "sb_set_open_mailbox", "sidebar_8h.html#ad397dcc5f0e5685ecd0ce2c411e5341b", null ],
     [ "C_SidebarComponentDepth", "sidebar_8h.html#a76532f3c7b1b741803507888ceac4e76", null ],
     [ "C_SidebarDelimChars", "sidebar_8h.html#a41e5afff98625fa8c648c9cdc4a35914", null ],
     [ "C_SidebarDividerChar", "sidebar_8h.html#a272f5ccc3c1f33eee901b41b242172c1", null ],

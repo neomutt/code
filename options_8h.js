@@ -7,7 +7,6 @@ var options_8h =
     [ "OptForceRefresh", "options_8h.html#a9c536c5f6fd101337c664b033f7dbd3b", null ],
     [ "OptIgnoreMacroEvents", "options_8h.html#ad4d256d25c8f518f015ea333b2ab43ca", null ],
     [ "OptKeepQuiet", "options_8h.html#ac352ffac3355c31b717480dfaf257a72", null ],
-    [ "OptMenuCaller", "options_8h.html#a55df5a0fdeff4d46a2b4dc090df3eb21", null ],
     [ "OptMenuPopClearScreen", "options_8h.html#addb91c4d9672024275a23dd9bbcfac86", null ],
     [ "OptMsgErr", "options_8h.html#a152233da96b74b63f938c1b16cbf883e", null ],
     [ "OptNeedRescore", "options_8h.html#a062041dfceab5a24fdc8476b5930a427", null ],

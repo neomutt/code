@@ -10,5 +10,6 @@ var searchData=
   ['imapmboxdata',['ImapMboxData',['../structImapMboxData.html',1,'']]],
   ['inheritance',['Inheritance',['../structInheritance.html',1,'']]],
   ['inlinereplacetest',['InlineReplaceTest',['../structInlineReplaceTest.html',1,'']]],
-  ['isasciitest',['IsAsciiTest',['../structIsAsciiTest.html',1,'']]]
+  ['isasciitest',['IsAsciiTest',['../structIsAsciiTest.html',1,'']]],
+  ['isfromtest',['IsFromTest',['../structIsFromTest.html',1,'']]]
 ];

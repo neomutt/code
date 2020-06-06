@@ -6,7 +6,7 @@ var dir_cacbde19607c3cec78eacabbd2438380 =
     [ "address.h", "test_2config_2address_8h.html", "test_2config_2address_8h" ],
     [ "bool.c", "test_2config_2bool_8c.html", "test_2config_2bool_8c" ],
     [ "bool.h", "test_2config_2bool_8h.html", "test_2config_2bool_8h" ],
-    [ "common.c", "config_2common_8c.html", "config_2common_8c" ],
+    [ "common.c", "test_2config_2common_8c.html", "test_2config_2common_8c" ],
     [ "common.h", "config_2common_8h.html", "config_2common_8h" ],
     [ "dump.c", "test_2config_2dump_8c.html", "test_2config_2dump_8c" ],
     [ "enum.c", "test_2config_2enum_8c.html", "test_2config_2enum_8c" ],
