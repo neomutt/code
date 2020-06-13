@@ -9,9 +9,7 @@ var searchData=
   ['neomutt_5fmailboxlist_5fget_5fall_2ec',['neomutt_mailboxlist_get_all.c',['../neomutt__mailboxlist__get__all_8c.html',1,'']]],
   ['neomutt_5fnew_2ec',['neomutt_new.c',['../neomutt__new_8c.html',1,'']]],
   ['newsrc_2ec',['newsrc.c',['../newsrc_8c.html',1,'']]],
-  ['nm_5fdb_2ec',['nm_db.c',['../nm__db_8c.html',1,'']]],
   ['nntp_2ec',['nntp.c',['../nntp_8c.html',1,'']]],
-  ['nntp_5fprivate_2eh',['nntp_private.h',['../nntp__private_8h.html',1,'']]],
   ['notify_2ec',['notify.c',['../debug_2notify_8c.html',1,'(Global Namespace)'],['../mutt_2notify_8c.html',1,'(Global Namespace)']]],
   ['notify_2eh',['notify.h',['../notify_8h.html',1,'']]],
   ['notify_5ffree_2ec',['notify_free.c',['../notify__free_8c.html',1,'']]],
@@ -21,7 +19,7 @@ var searchData=
   ['notify_5fsend_2ec',['notify_send.c',['../notify__send_8c.html',1,'']]],
   ['notify_5fset_5fparent_2ec',['notify_set_parent.c',['../notify__set__parent_8c.html',1,'']]],
   ['notify_5ftype_2eh',['notify_type.h',['../notify__type_8h.html',1,'']]],
-  ['notmuch_5fprivate_2eh',['notmuch_private.h',['../notmuch__private_8h.html',1,'']]],
+  ['notmuch_2ec',['notmuch.c',['../notmuch_8c.html',1,'']]],
   ['number_2ec',['number.c',['../config_2number_8c.html',1,'(Global Namespace)'],['../test_2config_2number_8c.html',1,'(Global Namespace)']]],
   ['number_2eh',['number.h',['../config_2number_8h.html',1,'(Global Namespace)'],['../test_2config_2number_8h.html',1,'(Global Namespace)']]]
 ];

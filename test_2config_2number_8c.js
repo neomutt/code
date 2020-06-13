@@ -6,6 +6,8 @@ var test_2config_2number_8c =
     [ "test_string_get", "test_2config_2number_8c.html#a85fd1e4e98bab2f2185f2d6cb270d14b", null ],
     [ "test_native_set", "test_2config_2number_8c.html#ab5935bf604cc953008fde261e13163b8", null ],
     [ "test_native_get", "test_2config_2number_8c.html#afdd5f411dfa0e2d1c7c7a2a9710182dd", null ],
+    [ "test_string_plus_equals", "test_2config_2number_8c.html#aafcdd5bbc6f9067b68457f02dea234a3", null ],
+    [ "test_string_minus_equals", "test_2config_2number_8c.html#acb3e6dc70f16b4b1e211ab27286f81dd", null ],
     [ "test_reset", "test_2config_2number_8c.html#ac8ddbbe16d88cb9b096c15cf225cbeb3", null ],
     [ "test_validator", "test_2config_2number_8c.html#a906a32278ed761fb29743aebd54e5bac", null ],
     [ "dump_native", "test_2config_2number_8c.html#a3a25b594f616f113e6bc749efeb43531", null ],

@@ -13,6 +13,7 @@ var config_2set_8h =
     [ "CSR_SUC_NO_CHANGE", "config_2set_8h.html#a8460db195cfcca17759dae5ae0791dbc", null ],
     [ "CSR_INV_TYPE", "config_2set_8h.html#a3f971a05f55756597a0128c1181fa671", null ],
     [ "CSR_INV_VALIDATOR", "config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6", null ],
+    [ "CSV_INV_NOT_IMPL", "config_2set_8h.html#a3e19f461501927d7ef0b7f6ffc959c90", null ],
     [ "CSR_RESULT_MASK", "config_2set_8h.html#ae0a97d3df30f7df4c5c0f204b92b1462", null ],
     [ "CSR_RESULT", "config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4", null ],
     [ "IP", "config_2set_8h.html#af00e4b63d736381e1c527ac5ef2c8f3c", null ],
@@ -32,6 +33,8 @@ var config_2set_8h =
     [ "cs_he_native_set", "config_2set_8h.html#a81e8688ba324bf79fdb467df153028b1", null ],
     [ "cs_he_reset", "config_2set_8h.html#a52b4a1b57f44e2a7972fe3e3747c3557", null ],
     [ "cs_he_string_get", "config_2set_8h.html#aae8bc50e36b926998d926687f97c8b48", null ],
+    [ "cs_he_string_minus_equals", "config_2set_8h.html#afb22f304def10b645bb397b6b8b29641", null ],
+    [ "cs_he_string_plus_equals", "config_2set_8h.html#a2962bf134043ca7a65ce8c5a9d8b33f2", null ],
     [ "cs_he_string_set", "config_2set_8h.html#a6c9cf00df6994a9cef7caf5d9f0f01c6", null ],
     [ "cs_str_initial_get", "config_2set_8h.html#a1bc435f8e505a9274333899fa70250ce", null ],
     [ "cs_str_initial_set", "config_2set_8h.html#a2923b046583690255351a486a6a7a0c6", null ],
@@ -39,5 +42,7 @@ var config_2set_8h =
     [ "cs_str_native_set", "config_2set_8h.html#a6eec066d228f0ded678c35ed8aa9ac28", null ],
     [ "cs_str_reset", "config_2set_8h.html#a2c2cb475e50df247e8c88dab8c123534", null ],
     [ "cs_str_string_get", "config_2set_8h.html#a6fd54e2cfa94fb1157988cebc135ef67", null ],
+    [ "cs_str_string_minus_equals", "config_2set_8h.html#ae7fb6258054e01e79f06bdc64b705cd8", null ],
+    [ "cs_str_string_plus_equals", "config_2set_8h.html#a651003f60b9d9882dd5c6cc31833927b", null ],
     [ "cs_str_string_set", "config_2set_8h.html#a5b6c4a72c38c2eca93569af53cc82eed", null ]
 ];

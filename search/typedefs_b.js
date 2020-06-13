@@ -6,5 +6,5 @@ var searchData=
   ['patterncompflags',['PatternCompFlags',['../pattern_8h.html#a1d78529336f13dffb6168735b63f0384',1,'pattern.h']]],
   ['patternexecflags',['PatternExecFlags',['../pattern_8h.html#afc18a7b0cd352fb9ea17aedb748aaff9',1,'pattern.h']]],
   ['pgpkeyvalidflags',['PgpKeyValidFlags',['../pgpkey_8c.html#afa1aa4d0dec2040afc7e3d72d3ffc6b3',1,'pgpkey.c']]],
-  ['pop_5ffetch_5ft',['pop_fetch_t',['../pop__private_8h.html#a6f34d9779646083fed3b121e1997f4f6',1,'pop_private.h']]]
+  ['pop_5ffetch_5ft',['pop_fetch_t',['../pop_2private_8h.html#a6f34d9779646083fed3b121e1997f4f6',1,'private.h']]]
 ];

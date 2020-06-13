@@ -5,7 +5,6 @@ var searchData=
   ['idna_2ec',['idna.c',['../idna_8c.html',1,'']]],
   ['idna2_2eh',['idna2.h',['../idna2_8h.html',1,'']]],
   ['imap_2ec',['imap.c',['../imap_8c.html',1,'']]],
-  ['imap_5fprivate_2eh',['imap_private.h',['../imap__private_8h.html',1,'']]],
   ['index_2ec',['index.c',['../index_8c.html',1,'']]],
   ['index_2eh',['index.h',['../index_8h.html',1,'']]],
   ['inheritance_2eh',['inheritance.h',['../inheritance_8h.html',1,'']]],

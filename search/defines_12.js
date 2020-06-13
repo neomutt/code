@@ -32,7 +32,7 @@ var searchData=
   ['send_5freply',['SEND_REPLY',['../send_8h.html#ac23e1891bcbc52cc25b5824acfb42d3c',1,'send.h']]],
   ['send_5fresend',['SEND_RESEND',['../send_8h.html#abeb38906954f30b89ad58ebbf95ac2b0',1,'send.h']]],
   ['send_5fto_5fsender',['SEND_TO_SENDER',['../send_8h.html#aa0a201a6d90a4760c1e0ece8be43c1cb',1,'send.h']]],
-  ['seq_5flen',['SEQ_LEN',['../imap__private_8h.html#a9bb61942a4e9c9cab56634ba82d06be9',1,'imap_private.h']]],
+  ['seq_5flen',['SEQ_LEN',['../imap_2private_8h.html#a9bb61942a4e9c9cab56634ba82d06be9',1,'private.h']]],
   ['set_5fup',['SET_UP',['../file_2common_8h.html#a8e9610a0e4e2c2804eb16798f0070e73',1,'common.h']]],
   ['signed_5fmessage',['SIGNED_MESSAGE',['../crypt__gpgme_8c.html#a704d35681bc3f3a349721e2c69426405',1,'crypt_gpgme.c']]],
   ['skipws',['SKIPWS',['../string2_8h.html#aebd4477213a7b706515efaffdec64181',1,'string2.h']]],

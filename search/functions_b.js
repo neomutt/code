@@ -37,6 +37,8 @@ var searchData=
   ['long_5fnative_5fset',['long_native_set',['../config_2long_8c.html#a092950b386f831d0e8c0f80614093bea',1,'long.c']]],
   ['long_5freset',['long_reset',['../config_2long_8c.html#a6b9f210c80578e3a6470dcc9668d7c13',1,'long.c']]],
   ['long_5fstring_5fget',['long_string_get',['../config_2long_8c.html#af7c02093f19f42a947d9f18ff2139ca6',1,'long.c']]],
+  ['long_5fstring_5fminus_5fequals',['long_string_minus_equals',['../config_2long_8c.html#a1c9c9d14e91536d29b5c4f583337dcbc',1,'long.c']]],
+  ['long_5fstring_5fplus_5fequals',['long_string_plus_equals',['../config_2long_8c.html#ac0aa604c89779d8594360606b06e10aa',1,'long.c']]],
   ['long_5fstring_5fset',['long_string_set',['../config_2long_8c.html#ab3829740e15fb933e827302ffd3b05f4',1,'long.c']]],
   ['longest_5fcommon_5fprefix',['longest_common_prefix',['../imap_8c.html#a4dae2198b19fe4fbf2bfecb671c72f73',1,'imap.c']]],
   ['lookup_5fcharset',['lookup_charset',['../charset_8c.html#af43a68726bf22dc398ceb3535e95934a',1,'charset.c']]],

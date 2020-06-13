@@ -5,5 +5,5 @@ var dir_3964b18c0581b4bf6bd3caf7ae7211c9 =
     [ "lib.h", "nntp_2lib_8h.html", "nntp_2lib_8h" ],
     [ "newsrc.c", "newsrc_8c.html", "newsrc_8c" ],
     [ "nntp.c", "nntp_8c.html", "nntp_8c" ],
-    [ "nntp_private.h", "nntp__private_8h.html", "nntp__private_8h" ]
+    [ "private.h", "nntp_2private_8h.html", "nntp_2private_8h" ]
 ];

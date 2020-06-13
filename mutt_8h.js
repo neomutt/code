@@ -24,6 +24,8 @@ var mutt_8h =
     [ "MUTT_TOKEN_BACKTICK_VARS", "mutt_8h.html#a185a08eddfc84aef4903b4f2df522d57", null ],
     [ "MUTT_TOKEN_NOSHELL", "mutt_8h.html#a51650035c248fe2daa728dc4c78e37bc", null ],
     [ "MUTT_TOKEN_QUESTION", "mutt_8h.html#adb54e435e224e9a316667ffc837c1b06", null ],
+    [ "MUTT_TOKEN_PLUS", "mutt_8h.html#a304dc6d27797d3e81f0bca3b37c4699c", null ],
+    [ "MUTT_TOKEN_MINUS", "mutt_8h.html#a1e5e931788faf5e247d0d53fc35ed37c", null ],
     [ "MUTT_SPAM", "mutt_8h.html#ae07cfd55776874cb17533f6fdb79b084", null ],
     [ "MUTT_NOSPAM", "mutt_8h.html#a68f9123b75a5f0a15805b2db4cb2dea4", null ],
     [ "CompletionFlags", "mutt_8h.html#aa551207529ef0be5a655fa2f471f070b", null ],

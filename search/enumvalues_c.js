@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['nm_5fquery_5ftype_5fmesgs',['NM_QUERY_TYPE_MESGS',['../notmuch__private_8h.html#a7653053ec8dc38d5dd26401163bb1276ad556837b89dfda3f049992f43620ece0',1,'notmuch_private.h']]],
-  ['nm_5fquery_5ftype_5fthreads',['NM_QUERY_TYPE_THREADS',['../notmuch__private_8h.html#a7653053ec8dc38d5dd26401163bb1276a36c5648d27a123f04dd1cb459b5e02cc',1,'notmuch_private.h']]],
-  ['nntp_5fbye',['NNTP_BYE',['../nntp__private_8h.html#a30e5c5a44ecbd929699e93d887f39f6fa3c8db6bef2f46a4076cb9888ac96a1a0',1,'nntp_private.h']]],
-  ['nntp_5fnone',['NNTP_NONE',['../nntp__private_8h.html#a30e5c5a44ecbd929699e93d887f39f6fa32f5431a095a439134751f874712176c',1,'nntp_private.h']]],
-  ['nntp_5fok',['NNTP_OK',['../nntp__private_8h.html#a30e5c5a44ecbd929699e93d887f39f6faf2f388bc874e63dbdd37734a53e9ac03',1,'nntp_private.h']]],
+  ['nm_5fquery_5ftype_5fmesgs',['NM_QUERY_TYPE_MESGS',['../notmuch_2private_8h.html#a7653053ec8dc38d5dd26401163bb1276ad556837b89dfda3f049992f43620ece0',1,'private.h']]],
+  ['nm_5fquery_5ftype_5fthreads',['NM_QUERY_TYPE_THREADS',['../notmuch_2private_8h.html#a7653053ec8dc38d5dd26401163bb1276a36c5648d27a123f04dd1cb459b5e02cc',1,'private.h']]],
+  ['nntp_5fbye',['NNTP_BYE',['../nntp_2private_8h.html#a30e5c5a44ecbd929699e93d887f39f6fa3c8db6bef2f46a4076cb9888ac96a1a0',1,'private.h']]],
+  ['nntp_5fnone',['NNTP_NONE',['../nntp_2private_8h.html#a30e5c5a44ecbd929699e93d887f39f6fa32f5431a095a439134751f874712176c',1,'private.h']]],
+  ['nntp_5fok',['NNTP_OK',['../nntp_2private_8h.html#a30e5c5a44ecbd929699e93d887f39f6faf2f388bc874e63dbdd37734a53e9ac03',1,'private.h']]],
   ['nt_5faccount',['NT_ACCOUNT',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a8ef73bad3a96e175f955bdd31762bbda',1,'notify_type.h']]],
   ['nt_5faccount_5fadd',['NT_ACCOUNT_ADD',['../account_8h.html#a19a9ad056d93491b610201fa644eef6ea2f33ec4035fcd1ed206ae564c3c54631',1,'account.h']]],
   ['nt_5faccount_5fremove',['NT_ACCOUNT_REMOVE',['../account_8h.html#a19a9ad056d93491b610201fa644eef6ea0570a2408670a7e4865ab2f22b6f261c',1,'account.h']]],

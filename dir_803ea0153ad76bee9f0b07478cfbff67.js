@@ -2,7 +2,6 @@ var dir_803ea0153ad76bee9f0b07478cfbff67 =
 [
     [ "conn_globals.c", "conn__globals_8c.html", "conn__globals_8c" ],
     [ "conn_globals.h", "conn__globals_8h.html", "conn__globals_8h" ],
-    [ "conn_private.h", "conn__private_8h.html", "conn__private_8h" ],
     [ "connaccount.c", "connaccount_8c.html", "connaccount_8c" ],
     [ "connaccount.h", "connaccount_8h.html", "connaccount_8h" ],
     [ "connection.h", "connection_8h.html", [
@@ -13,6 +12,7 @@ var dir_803ea0153ad76bee9f0b07478cfbff67 =
     [ "gui.c", "conn_2gui_8c.html", "conn_2gui_8c" ],
     [ "lib.h", "conn_2lib_8h.html", "conn_2lib_8h" ],
     [ "openssl.c", "openssl_8c.html", "openssl_8c" ],
+    [ "private.h", "conn_2private_8h.html", "conn_2private_8h" ],
     [ "raw.c", "raw_8c.html", "raw_8c" ],
     [ "sasl.c", "sasl_8c.html", "sasl_8c" ],
     [ "sasl.h", "sasl_8h.html", "sasl_8h" ],

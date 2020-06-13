@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['libnotmuch_5fcheck_5fversion',['LIBNOTMUCH_CHECK_VERSION',['../notmuch__private_8h.html#a8229277f0a5af2e176d47e81bec91fda',1,'notmuch_private.h']]],
+  ['libnotmuch_5fcheck_5fversion',['LIBNOTMUCH_CHECK_VERSION',['../notmuch_2private_8h.html#a8229277f0a5af2e176d47e81bec91fda',1,'private.h']]],
   ['lingual_5ftag',['LINGUAL_TAG',['../compose_8c.html#afba239d7867db7919ad4e4bc8e20283f',1,'compose.c']]],
   ['list_5fclass_5fentry',['LIST_CLASS_ENTRY',['../queue_8h.html#a329cf1e6182d97db4443f57b9ffad13f',1,'queue.h']]],
   ['list_5fclass_5fhead',['LIST_CLASS_HEAD',['../queue_8h.html#a6b134bbd708a547e1539db14ea4e4c9c',1,'queue.h']]],

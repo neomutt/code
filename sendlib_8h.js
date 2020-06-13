@@ -12,7 +12,7 @@ var sendlib_8h =
     [ "mutt_fqdn", "sendlib_8h.html#a2b5c4f6a3ed63bac7f4d59bbeca72d2c", null ],
     [ "mutt_generate_boundary", "sendlib_8h.html#af4c3a6ae771ff84860d31fbd54325af3", null ],
     [ "mutt_get_content_info", "sendlib_8h.html#a0ca26551c77ac46f69710b91eec6675e", null ],
-    [ "mutt_invoke_sendmail", "sendlib_8h.html#a8d72092abc10f857192789dd82694491", null ],
+    [ "mutt_invoke_sendmail", "sendlib_8h.html#a761358199bfda0944c4b1e363a29c937", null ],
     [ "mutt_lookup_mime_type", "sendlib_8h.html#a1431e9401865165dfef92315f3ca7ae2", null ],
     [ "mutt_make_file_attach", "sendlib_8h.html#ac3c97bd11a16a252a685410e35a39dda", null ],
     [ "mutt_make_message_attach", "sendlib_8h.html#a2a3d7dad89d626430aaa588e75490ff8", null ],

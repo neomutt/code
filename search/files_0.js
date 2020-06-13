@@ -24,6 +24,5 @@ var searchData=
   ['auth_5foauth_2ec',['auth_oauth.c',['../auth__oauth_8c.html',1,'']]],
   ['auth_5fplain_2ec',['auth_plain.c',['../auth__plain_8c.html',1,'']]],
   ['auth_5fsasl_2ec',['auth_sasl.c',['../auth__sasl_8c.html',1,'']]],
-  ['autocrypt_2ec',['autocrypt.c',['../autocrypt_8c.html',1,'']]],
-  ['autocrypt_5fprivate_2eh',['autocrypt_private.h',['../autocrypt__private_8h.html',1,'']]]
+  ['autocrypt_2ec',['autocrypt.c',['../autocrypt_8c.html',1,'']]]
 ];

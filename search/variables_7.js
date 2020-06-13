@@ -15,7 +15,7 @@ var searchData=
   ['gossip_5fkeydata',['gossip_keydata',['../structAutocryptPeer.html#a1bd4a6de2d08f94c3ea91aaef3e32d74',1,'AutocryptPeer::gossip_keydata()'],['../structAutocryptGossipHistory.html#ad6b310f2d3be37b0e769c6eb26396344',1,'AutocryptGossipHistory::gossip_keydata()']]],
   ['gossip_5fkeyid',['gossip_keyid',['../structAutocryptPeer.html#a5c47e57194dc2af5bfcfdbd250f8f749',1,'AutocryptPeer']]],
   ['gossip_5ftimestamp',['gossip_timestamp',['../structAutocryptPeer.html#acaefee844147a0219b241986646aa36b',1,'AutocryptPeer']]],
-  ['gossiphistoryinsertstmt',['GossipHistoryInsertStmt',['../db_8c.html#a9c401461f82bbd761feed64166fb7802',1,'db.c']]],
+  ['gossiphistoryinsertstmt',['GossipHistoryInsertStmt',['../autocrypt_2db_8c.html#a9c401461f82bbd761feed64166fb7802',1,'db.c']]],
   ['group',['group',['../structAddress.html#a12bd44ccc016e50c674ec3a902ba1c28',1,'Address::group()'],['../structGroupNode.html#ad95aef75a1380ec120748c922ab77bc1',1,'GroupNode::group()'],['../structNntpMboxData.html#a4eeac824a82fb5bb884aa9aab449ccf8',1,'NntpMboxData::group()'],['../structPattern.html#a137f1b5a9fe923c4ea6c567465f522e7',1,'Pattern::group()']]],
   ['group_5fmatch',['group_match',['../structPattern.html#a018ea950c8d8c27eec7fe9338953f918',1,'Pattern']]],
   ['groups',['Groups',['../group_8c.html#a567f322116b96d91da15e30f08a14c2f',1,'group.c']]],

@@ -95,6 +95,8 @@ var searchData=
   ['stream_5feof',['stream_eof',['../structZstrmDirection.html#ae37ef93b6763b472554c0bcb454b1fed',1,'ZstrmDirection']]],
   ['string_5fget',['string_get',['../structConfigSetType.html#a4459745b328d5ff773741a53fccd5fc7',1,'ConfigSetType']]],
   ['string_5fmatch',['string_match',['../structPattern.html#a2cac8c1d8b02180325ad36e401480bc9',1,'Pattern']]],
+  ['string_5fminus_5fequals',['string_minus_equals',['../structConfigSetType.html#ac4e43b6323e48db0598157381fe41798',1,'ConfigSetType']]],
+  ['string_5fplus_5fequals',['string_plus_equals',['../structConfigSetType.html#ac240dea41315672a2ec0c1f94fdd90aa',1,'ConfigSetType']]],
   ['string_5fset',['string_set',['../structConfigSetType.html#aaab5c1abc281e7f906cccb7bf64d2554',1,'ConfigSetType']]],
   ['strkey',['strkey',['../unionHashKey.html#a356e42fcecbc8232b01ef3b9e3368811',1,'HashKey']]],
   ['sub',['sub',['../structEventConfig.html#a8ad167d2ac2710a3d9f17203524e23f6',1,'EventConfig::sub()'],['../structAccount.html#ac8060a67aa1653840ea8de235e3a1e07',1,'Account::sub()'],['../structMailbox.html#afbd00b44dedabb87c3b86042287a812a',1,'Mailbox::sub()'],['../structNeoMutt.html#af98065e32243ce9331f93b7f30247d47',1,'NeoMutt::sub()']]],

@@ -6,11 +6,11 @@ var command__parse_8c =
       [ "GS_RX", "command__parse_8c.html#a28ba8325f0898ed34334448a529be7efa0506327c12cd772182cad0d4115f39b7", null ],
       [ "GS_ADDR", "command__parse_8c.html#a28ba8325f0898ed34334448a529be7efafb99c50ae127e02906df58a5688d97cb", null ]
     ] ],
-    [ "parse_unreplace_list", "command__parse_8c.html#aa738f901b4c8a856bd761c6bfebcf123", null ],
+    [ "parse_unreplace_list", "command__parse_8c.html#aecb1b2c60446e7de5fbae18b9ea7721f", null ],
     [ "attachments_clean", "command__parse_8c.html#a442ed9edb79f97d35b191c0c4293f62f", null ],
     [ "parse_unattach_list", "command__parse_8c.html#ad9a616dd25dd5e92e35ea7e29ad0d6c1", null ],
     [ "clear_subject_mods", "command__parse_8c.html#a83a9d372ad20b86539f34b8b7b2c87a1", null ],
-    [ "parse_replace_list", "command__parse_8c.html#a4ba99ac68fb02c34491d8b3d8e8932d7", null ],
+    [ "parse_replace_list", "command__parse_8c.html#abfa8a44f9af30a491c602f484ca656c8", null ],
     [ "is_function", "command__parse_8c.html#afafced1b84e7868cb29d1cde26c7c74a", null ],
     [ "mutt_attachmatch_new", "command__parse_8c.html#a6154f81f4ea32caaabb897160dd9c084", null ],
     [ "parse_attach_list", "command__parse_8c.html#afbf3fcb4f4e98aa1f1844c546cb145b5", null ],

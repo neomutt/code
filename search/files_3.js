@@ -2,7 +2,7 @@ var searchData=
 [
   ['date_2ec',['date.c',['../date_8c.html',1,'']]],
   ['date_2eh',['date.h',['../date_8h.html',1,'']]],
-  ['db_2ec',['db.c',['../db_8c.html',1,'']]],
+  ['db_2ec',['db.c',['../autocrypt_2db_8c.html',1,'(Global Namespace)'],['../notmuch_2db_8c.html',1,'(Global Namespace)']]],
   ['dlgalias_2ec',['dlgalias.c',['../dlgalias_8c.html',1,'']]],
   ['dlgquery_2ec',['dlgquery.c',['../dlgquery_8c.html',1,'']]],
   ['driver_5ftags_5ffree_2ec',['driver_tags_free.c',['../driver__tags__free_8c.html',1,'']]],

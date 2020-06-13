@@ -13,7 +13,7 @@ var searchData=
   ['window_5freflow_5fhoriz',['window_reflow_horiz',['../gui_2reflow_8c.html#a272019359561fd9f5c369dcba4f235ae',1,'reflow.c']]],
   ['window_5freflow_5fvert',['window_reflow_vert',['../gui_2reflow_8c.html#a0c807a5c20cc6d04f426325ca3c46f96',1,'reflow.c']]],
   ['window_5fset_5fvisible',['window_set_visible',['../mutt__window_8c.html#aae941d17bf3237a0c3fcf06641ca6ee2',1,'window_set_visible(struct MuttWindow *win, bool visible):&#160;mutt_window.c'],['../mutt__window_8h.html#aae941d17bf3237a0c3fcf06641ca6ee2',1,'window_set_visible(struct MuttWindow *win, bool visible):&#160;mutt_window.c']]],
-  ['windowed_5fquery_5ffrom_5fquery',['windowed_query_from_query',['../mutt__notmuch_8c.html#a3c1e6b40d6cc7a396ef95d90e4364337',1,'mutt_notmuch.c']]],
+  ['windowed_5fquery_5ffrom_5fquery',['windowed_query_from_query',['../notmuch_8c.html#a3c1e6b40d6cc7a396ef95d90e4364337',1,'notmuch.c']]],
   ['wrapheaders_5fvalidator',['wrapheaders_validator',['../init_8c.html#a1a23d8cffeb9941ba45499085897ffc3',1,'wrapheaders_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c'],['../init_8h.html#a1a23d8cffeb9941ba45499085897ffc3',1,'wrapheaders_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c']]],
   ['write_5fas_5ftext_5fpart',['write_as_text_part',['../sendlib_8c.html#a55c55e2f50317ab8226c0c2768e01ad0',1,'sendlib.c']]],
   ['write_5fautocrypt_5fheader_5fline',['write_autocrypt_header_line',['../autocrypt_8c.html#a5a11d5de380fab330d5f37e7ef018da1',1,'autocrypt.c']]],

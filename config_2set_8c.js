@@ -26,5 +26,9 @@ var config_2set_8c =
     [ "cs_str_native_set", "config_2set_8c.html#a6eec066d228f0ded678c35ed8aa9ac28", null ],
     [ "cs_he_native_get", "config_2set_8c.html#a86307a07e4994514634a1658ec0cfe66", null ],
     [ "cs_str_native_get", "config_2set_8c.html#aa24d0f20de3cddc0e486772a303b07cc", null ],
+    [ "cs_he_string_plus_equals", "config_2set_8c.html#a2962bf134043ca7a65ce8c5a9d8b33f2", null ],
+    [ "cs_str_string_plus_equals", "config_2set_8c.html#a651003f60b9d9882dd5c6cc31833927b", null ],
+    [ "cs_he_string_minus_equals", "config_2set_8c.html#afb22f304def10b645bb397b6b8b29641", null ],
+    [ "cs_str_string_minus_equals", "config_2set_8c.html#ae7fb6258054e01e79f06bdc64b705cd8", null ],
     [ "RegisteredTypes", "config_2set_8c.html#a2deafcb135c925caecec974914365475", null ]
 ];

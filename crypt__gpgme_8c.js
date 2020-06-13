@@ -125,7 +125,7 @@ var crypt__gpgme_8c =
     [ "init_smime", "crypt__gpgme_8c.html#aab62fa83c30ed25209d5fac293cdb59d", null ],
     [ "pgp_gpgme_init", "crypt__gpgme_8c.html#a7061521ecb51237cbbc557440353af39", null ],
     [ "smime_gpgme_init", "crypt__gpgme_8c.html#a19bf09fde57098f4d77a85b4b73ca90e", null ],
-    [ "gpgme_send_menu", "crypt__gpgme_8c.html#a868608f95ed9fc1628cedea77679c6de", null ],
+    [ "gpgme_send_menu", "crypt__gpgme_8c.html#a196790f245ce25f9335f28895b3911dd", null ],
     [ "pgp_gpgme_send_menu", "crypt__gpgme_8c.html#a10c76f6e46d6aa56d8d61f987d3a5d32", null ],
     [ "smime_gpgme_send_menu", "crypt__gpgme_8c.html#ab703c2c2bc2c5cf3aa349d48db80232c", null ],
     [ "verify_sender", "crypt__gpgme_8c.html#a10e8fb8f5b9b458202bc424762ff96cd", null ],

@@ -12,13 +12,13 @@ var dir_33230cbb4c8c9ca898085a867988d207 =
     [ "browse.c", "imap_2browse_8c.html", "imap_2browse_8c" ],
     [ "command.c", "command_8c.html", "command_8c" ],
     [ "imap.c", "imap_8c.html", "imap_8c" ],
-    [ "imap_private.h", "imap__private_8h.html", "imap__private_8h" ],
     [ "lib.h", "imap_2lib_8h.html", "imap_2lib_8h" ],
     [ "message.c", "message_8c.html", "message_8c" ],
     [ "message.h", "imap_2message_8h.html", [
       [ "ImapEmailData", "structImapEmailData.html", "structImapEmailData" ],
       [ "ImapHeader", "structImapHeader.html", "structImapHeader" ]
     ] ],
+    [ "private.h", "imap_2private_8h.html", "imap_2private_8h" ],
     [ "search.c", "search_8c.html", "search_8c" ],
     [ "utf7.c", "utf7_8c.html", "utf7_8c" ],
     [ "util.c", "util_8c.html", "util_8c" ]

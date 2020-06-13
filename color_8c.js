@@ -25,7 +25,7 @@ var color_8c =
     [ "parse_color_name", "color_8c.html#abca247e9c44913645cf9b5dcc28b0635", null ],
     [ "parse_object", "color_8c.html#abdec1e86d5a9b056b36c3618e39eec77", null ],
     [ "do_uncolor", "color_8c.html#a847efcc3f4da78c2ba539cf551ed2fff", null ],
-    [ "parse_uncolor", "color_8c.html#a82d38ac83a04bf7bc3989da05eadd21d", null ],
+    [ "parse_uncolor", "color_8c.html#a14713ed78b4ac4b232cc50115b46b714", null ],
     [ "mutt_parse_uncolor", "color_8c.html#a6e42243b65a9fa38b497dac61ec6d5ca", null ],
     [ "mutt_parse_unmono", "color_8c.html#a426cea032e47c0d0772003826f2bc980", null ],
     [ "add_pattern", "color_8c.html#aa9c4e1b7174ed367c781deea66f6dbd1", null ],

@@ -55,7 +55,7 @@ var sendlib_8c =
     [ "add_args_one", "sendlib_8c.html#ab704ced2548f4b8f74e4d6c1e280132c", null ],
     [ "add_args", "sendlib_8c.html#a9f46bf87e498b63373f75c81fca0bbaf", null ],
     [ "add_option", "sendlib_8c.html#a205098a093c5307a510e7a0412e558e0", null ],
-    [ "mutt_invoke_sendmail", "sendlib_8c.html#a8d72092abc10f857192789dd82694491", null ],
+    [ "mutt_invoke_sendmail", "sendlib_8c.html#a761358199bfda0944c4b1e363a29c937", null ],
     [ "mutt_prepare_envelope", "sendlib_8c.html#a2a7a91c90b4cefccdb1b9a91f1505a02", null ],
     [ "mutt_unprepare_envelope", "sendlib_8c.html#a99b5cff5076c9e25bce367f0bae45f4c", null ],
     [ "bounce_message", "sendlib_8c.html#a3c2fc3a6d223bdad3483d3c8a5359162", null ],

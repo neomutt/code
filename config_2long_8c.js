@@ -4,6 +4,8 @@ var config_2long_8c =
     [ "long_string_get", "config_2long_8c.html#af7c02093f19f42a947d9f18ff2139ca6", null ],
     [ "long_native_set", "config_2long_8c.html#a092950b386f831d0e8c0f80614093bea", null ],
     [ "long_native_get", "config_2long_8c.html#acd4f3cdb0dd12722312f77ac4795fc9a", null ],
+    [ "long_string_plus_equals", "config_2long_8c.html#ac0aa604c89779d8594360606b06e10aa", null ],
+    [ "long_string_minus_equals", "config_2long_8c.html#a1c9c9d14e91536d29b5c4f583337dcbc", null ],
     [ "long_reset", "config_2long_8c.html#a6b9f210c80578e3a6470dcc9668d7c13", null ],
     [ "long_init", "config_2long_8c.html#a214c571bcb1b6322e21f0a34fa55e742", null ]
 ];

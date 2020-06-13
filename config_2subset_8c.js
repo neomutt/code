@@ -16,5 +16,9 @@ var config_2subset_8c =
     [ "cs_subset_he_string_get", "config_2subset_8c.html#a2226e4ab6c7e6a8099844c7ab927dd5b", null ],
     [ "cs_subset_str_string_get", "config_2subset_8c.html#a7e8ecc401fed4ef7d076bc377ec8b80a", null ],
     [ "cs_subset_he_string_set", "config_2subset_8c.html#a8a31ecbb31d116ffc29cbf2b5645a375", null ],
-    [ "cs_subset_str_string_set", "config_2subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12", null ]
+    [ "cs_subset_str_string_set", "config_2subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12", null ],
+    [ "cs_subset_he_string_plus_equals", "config_2subset_8c.html#abdb3a9b5c8876db2541cfa31e075b5f5", null ],
+    [ "cs_subset_str_string_plus_equals", "config_2subset_8c.html#a28038ae3e3e508802fdb3a0932d5ff9e", null ],
+    [ "cs_subset_he_string_minus_equals", "config_2subset_8c.html#a0d2424534e2280b6c0bf8ca06a6b421b", null ],
+    [ "cs_subset_str_string_minus_equals", "config_2subset_8c.html#a60f7e66361309fdb276ea4458672abe5", null ]
 ];
