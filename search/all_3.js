@@ -22,7 +22,7 @@ var searchData=
   ['bcc',['bcc',['../structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6',1,'Envelope']]],
   ['bcc_5flist',['bcc_list',['../structComposeRedrawData.html#a2d0c9671af88fb3aeb40e92bbb03d6cd',1,'ComposeRedrawData']]],
   ['bcc_5frows',['bcc_rows',['../structComposeRedrawData.html#a2c3cdd0936668bbbd8eba6e12660a808',1,'ComposeRedrawData']]],
-  ['bdb_2ec',['bdb.c',['../bdb_8c.html',1,'']]],
+  ['bdb_2ec',['bdb.c',['../store_2bdb_8c.html',1,'(Global Namespace)'],['../test_2store_2bdb_8c.html',1,'(Global Namespace)']]],
   ['be_5fbarf_5ffile',['be_barf_file',['../edit_8c.html#a53f616f9ba6431fcb1925d31b9fbca90',1,'edit.c']]],
   ['be_5fedit_5fheader',['be_edit_header',['../edit_8c.html#a6fa69b7a038b092121e6a5af25f028a9',1,'edit.c']]],
   ['be_5ffree_5fmemory',['be_free_memory',['../edit_8c.html#a41e3f6ffd6449852e4eef38363b2ada1',1,'edit.c']]],

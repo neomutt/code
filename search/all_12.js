@@ -3,7 +3,7 @@ var searchData=
   ['q_5fencoder',['q_encoder',['../rfc2047_8c.html#ac84a78b1788e7c21ab20df68a24c9cd0',1,'rfc2047.c']]],
   ['q_5flevel',['q_level',['../structPagerRedrawData.html#aa4b6264cb3765622bc9592e1288481c4',1,'PagerRedrawData']]],
   ['qclass',['QClass',['../structQClass.html',1,'']]],
-  ['qdbm_2ec',['qdbm.c',['../qdbm_8c.html',1,'']]],
+  ['qdbm_2ec',['qdbm.c',['../store_2qdbm_8c.html',1,'(Global Namespace)'],['../test_2store_2qdbm_8c.html',1,'(Global Namespace)']]],
   ['qmd_5fis_5ftrashed',['QMD_IS_TRASHED',['../queue_8h.html#ae28d21dad229fec35f66006913b223b7',1,'queue.h']]],
   ['qmd_5flist_5fcheck_5fhead',['QMD_LIST_CHECK_HEAD',['../queue_8h.html#a56b1069d0673242f84246986614b15cc',1,'queue.h']]],
   ['qmd_5flist_5fcheck_5fnext',['QMD_LIST_CHECK_NEXT',['../queue_8h.html#a98d7f73cec635caf9515945f0d5413f6',1,'queue.h']]],

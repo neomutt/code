@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['db_5fname',['DB_NAME',['../test_2store_2bdb_8c.html#ab840d057a03e1da1ef1b7e6d63a92d75',1,'DB_NAME():&#160;bdb.c'],['../test_2store_2gdbm_8c.html#ab840d057a03e1da1ef1b7e6d63a92d75',1,'DB_NAME():&#160;gdbm.c'],['../test_2store_2kc_8c.html#ab840d057a03e1da1ef1b7e6d63a92d75',1,'DB_NAME():&#160;kc.c'],['../test_2store_2lmdb_8c.html#ab840d057a03e1da1ef1b7e6d63a92d75',1,'DB_NAME():&#160;lmdb.c'],['../test_2store_2qdbm_8c.html#ab840d057a03e1da1ef1b7e6d63a92d75',1,'DB_NAME():&#160;qdbm.c'],['../test_2store_2rocksdb_8c.html#ab840d057a03e1da1ef1b7e6d63a92d75',1,'DB_NAME():&#160;rocksdb.c'],['../test_2store_2tc_8c.html#ab840d057a03e1da1ef1b7e6d63a92d75',1,'DB_NAME():&#160;tc.c'],['../test_2store_2tdb_8c.html#ab840d057a03e1da1ef1b7e6d63a92d75',1,'DB_NAME():&#160;tdb.c']]],
   ['define_5fhelp_5fmessage',['DEFINE_HELP_MESSAGE',['../opcodes_8c.html#a25e5aa6946427ebda3e8580a0970b748',1,'opcodes.c']]],
   ['define_5fops',['DEFINE_OPS',['../opcodes_8h.html#a1bf673fe27b714464aadda6edbb6d652',1,'opcodes.h']]],
   ['direction',['DIRECTION',['../menu_8c.html#a1d692daf1ffadae2243a5ab556589629',1,'menu.c']]],

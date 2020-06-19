@@ -4,7 +4,7 @@ var searchData=
   ['base64_2ec',['base64.c',['../base64_8c.html',1,'']]],
   ['base64_2eh',['base64.h',['../base64_8h.html',1,'']]],
   ['bcache_2ec',['bcache.c',['../bcache_8c.html',1,'']]],
-  ['bdb_2ec',['bdb.c',['../bdb_8c.html',1,'']]],
+  ['bdb_2ec',['bdb.c',['../store_2bdb_8c.html',1,'(Global Namespace)'],['../test_2store_2bdb_8c.html',1,'(Global Namespace)']]],
   ['body_2ec',['body.c',['../body_8c.html',1,'']]],
   ['body_2eh',['body.h',['../body_8h.html',1,'']]],
   ['bool_2ec',['bool.c',['../config_2bool_8c.html',1,'(Global Namespace)'],['../test_2config_2bool_8c.html',1,'(Global Namespace)']]],

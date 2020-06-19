@@ -26,5 +26,6 @@ var dir_13d84c64aa6c9a833c0e5ef93d79bfe2 =
     [ "mutt_addrlist_search.c", "mutt__addrlist__search_8c.html", "mutt__addrlist__search_8c" ],
     [ "mutt_addrlist_to_intl.c", "mutt__addrlist__to__intl_8c.html", "mutt__addrlist__to__intl_8c" ],
     [ "mutt_addrlist_to_local.c", "mutt__addrlist__to__local_8c.html", "mutt__addrlist__to__local_8c" ],
-    [ "mutt_addrlist_write.c", "mutt__addrlist__write_8c.html", "mutt__addrlist__write_8c" ]
+    [ "mutt_addrlist_write.c", "mutt__addrlist__write_8c.html", "mutt__addrlist__write_8c" ],
+    [ "mutt_addrlist_write_list.c", "mutt__addrlist__write__list_8c.html", "mutt__addrlist__write__list_8c" ]
 ];

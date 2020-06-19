@@ -9,5 +9,6 @@ var socket_8c =
     [ "mutt_socket_poll", "socket_8c.html#a4d13f6965c151f2b7e0b3c20bd0def21", null ],
     [ "mutt_socket_readchar", "socket_8c.html#a8c8e2c0db6bc26a505c9a5d8c46c139e", null ],
     [ "mutt_socket_readln_d", "socket_8c.html#af3cf9e32b156de3acf7902b59db117f9", null ],
-    [ "mutt_socket_new", "socket_8c.html#a1e3195d6b1472777b64d1d9633e3b2cc", null ]
+    [ "mutt_socket_new", "socket_8c.html#a1e3195d6b1472777b64d1d9633e3b2cc", null ],
+    [ "mutt_socket_empty", "socket_8c.html#a90c5b50a98f0f9a0b73b82e90c096aba", null ]
 ];

@@ -28,6 +28,7 @@ var imap_2private_8h =
     [ "IMAP_CMD_PASS", "imap_2private_8h.html#a771c673c032c91069650ab8ffadce881", null ],
     [ "IMAP_CMD_QUEUE", "imap_2private_8h.html#af5a1e8e10143cb70e9af987686df4108", null ],
     [ "IMAP_CMD_POLL", "imap_2private_8h.html#a53f5cb128123d9d6367486ecedfe97e1", null ],
+    [ "IMAP_CMD_SINGLE", "imap_2private_8h.html#ac9d49b37a7cdffcbedee17f6bb7ac5da", null ],
     [ "IMAP_DATELEN", "imap_2private_8h.html#ab0d3d8e4da8ce8222ee2510ec68bff74", null ],
     [ "IMAP_CAP_NO_FLAGS", "imap_2private_8h.html#a0c84422a991742c4edb5cc900e7dd8b1", null ],
     [ "IMAP_CAP_IMAP4", "imap_2private_8h.html#a5dad25f043b2ae468f4942f0d816b3c7", null ],

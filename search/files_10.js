@@ -29,5 +29,5 @@ var searchData=
   ['rfc2231_5fencode_5fstring_2ec',['rfc2231_encode_string.c',['../rfc2231__encode__string_8c.html',1,'']]],
   ['rfc3676_2ec',['rfc3676.c',['../rfc3676_8c.html',1,'']]],
   ['rfc3676_2eh',['rfc3676.h',['../rfc3676_8h.html',1,'']]],
-  ['rocksdb_2ec',['rocksdb.c',['../rocksdb_8c.html',1,'']]]
+  ['rocksdb_2ec',['rocksdb.c',['../store_2rocksdb_8c.html',1,'(Global Namespace)'],['../test_2store_2rocksdb_8c.html',1,'(Global Namespace)']]]
 ];

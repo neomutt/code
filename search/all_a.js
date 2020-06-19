@@ -91,6 +91,7 @@ var searchData=
   ['imap_5fcmd_5fpass',['IMAP_CMD_PASS',['../imap_2private_8h.html#a771c673c032c91069650ab8ffadce881',1,'private.h']]],
   ['imap_5fcmd_5fpoll',['IMAP_CMD_POLL',['../imap_2private_8h.html#a53f5cb128123d9d6367486ecedfe97e1',1,'private.h']]],
   ['imap_5fcmd_5fqueue',['IMAP_CMD_QUEUE',['../imap_2private_8h.html#af5a1e8e10143cb70e9af987686df4108',1,'private.h']]],
+  ['imap_5fcmd_5fsingle',['IMAP_CMD_SINGLE',['../imap_2private_8h.html#ac9d49b37a7cdffcbedee17f6bb7ac5da',1,'private.h']]],
   ['imap_5fcmd_5fstart',['imap_cmd_start',['../command_8c.html#a07786a21982bd266c8faca5423b7f2cf',1,'imap_cmd_start(struct ImapAccountData *adata, const char *cmdstr):&#160;command.c'],['../imap_2private_8h.html#a07786a21982bd266c8faca5423b7f2cf',1,'imap_cmd_start(struct ImapAccountData *adata, const char *cmdstr):&#160;command.c']]],
   ['imap_5fcmd_5fstep',['imap_cmd_step',['../command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f',1,'imap_cmd_step(struct ImapAccountData *adata):&#160;command.c'],['../imap_2private_8h.html#a8b9d7c9333e35981d94074e9dcc28e6f',1,'imap_cmd_step(struct ImapAccountData *adata):&#160;command.c']]],
   ['imap_5fcmd_5ftrailer',['imap_cmd_trailer',['../command_8c.html#a5c81a0893e9070766af57c6cb0af0e80',1,'imap_cmd_trailer(struct ImapAccountData *adata):&#160;command.c'],['../imap_2private_8h.html#a5c81a0893e9070766af57c6cb0af0e80',1,'imap_cmd_trailer(struct ImapAccountData *adata):&#160;command.c']]],

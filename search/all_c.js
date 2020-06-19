@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['kc_2ec',['kc.c',['../kc_8c.html',1,'']]],
+  ['kc_2ec',['kc.c',['../store_2kc_8c.html',1,'(Global Namespace)'],['../test_2store_2kc_8c.html',1,'(Global Namespace)']]],
   ['key',['key',['../structRealKey.html#a5a1371e4574b9d487326d1c4b5ae0564',1,'RealKey::key()'],['../structMimeNames.html#a43266ef0b04e2d3bd3f7eb6df267aa6b',1,'MimeNames::key()'],['../structHashElem.html#aad741b08743ae4afe22e9b2407820b35',1,'HashElem::key()'],['../structDnArray.html#af682d246eebfc795bcff03ee578c42df',1,'DnArray::key()'],['../structCryptEntry.html#a4363556c4ae4942326896b876615e9b8',1,'CryptEntry::key()'],['../structSmimeCommandContext.html#a7c5e080eefc6e98377db7ba11f5ffbba',1,'SmimeCommandContext::key()']]],
   ['key_5fcap_5fcan_5fcertify',['KEY_CAP_CAN_CERTIFY',['../crypt__gpgme_8c.html#aedb110bc0a5b06622df514a7b1f9bca7a6c74ebab89ddf2395613214f1de91e10',1,'crypt_gpgme.c']]],
   ['key_5fcap_5fcan_5fencrypt',['KEY_CAP_CAN_ENCRYPT',['../crypt__gpgme_8c.html#aedb110bc0a5b06622df514a7b1f9bca7a75ebf9fda903040f7f471570de3b8007',1,'crypt_gpgme.c']]],

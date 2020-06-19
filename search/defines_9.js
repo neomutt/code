@@ -27,6 +27,7 @@ var searchData=
   ['imap_5fcmd_5fpass',['IMAP_CMD_PASS',['../imap_2private_8h.html#a771c673c032c91069650ab8ffadce881',1,'private.h']]],
   ['imap_5fcmd_5fpoll',['IMAP_CMD_POLL',['../imap_2private_8h.html#a53f5cb128123d9d6367486ecedfe97e1',1,'private.h']]],
   ['imap_5fcmd_5fqueue',['IMAP_CMD_QUEUE',['../imap_2private_8h.html#af5a1e8e10143cb70e9af987686df4108',1,'private.h']]],
+  ['imap_5fcmd_5fsingle',['IMAP_CMD_SINGLE',['../imap_2private_8h.html#ac9d49b37a7cdffcbedee17f6bb7ac5da',1,'private.h']]],
   ['imap_5fdatelen',['IMAP_DATELEN',['../imap_2private_8h.html#ab0d3d8e4da8ce8222ee2510ec68bff74',1,'private.h']]],
   ['imap_5fexpunge_5fexpected',['IMAP_EXPUNGE_EXPECTED',['../imap_2private_8h.html#a483485dda7387c36fc50b26f8c3c2b21',1,'private.h']]],
   ['imap_5fexpunge_5fpending',['IMAP_EXPUNGE_PENDING',['../imap_2private_8h.html#a3689a88c930024deb05c9fd6703a451b',1,'private.h']]],

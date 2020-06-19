@@ -26,7 +26,7 @@ var searchData=
   ['range_5frel_5frx',['RANGE_REL_RX',['../pattern_8c.html#af0f880e23674bfc827cc09ab8c0b639a',1,'pattern.c']]],
   ['range_5frel_5fslot_5frx',['RANGE_REL_SLOT_RX',['../pattern_8c.html#ac11f19e4751ecaedb35e93072ac0cd50',1,'pattern.c']]],
   ['range_5frx_5fgroups',['RANGE_RX_GROUPS',['../pattern_8c.html#a9b9b7a7ee786c0832ecdb0ee378cd1bb',1,'pattern.c']]],
-  ['rdbver',['RDBVER',['../rocksdb_8c.html#a92d9878041c9c09243f41d6233df6a03',1,'rocksdb.c']]],
+  ['rdbver',['RDBVER',['../store_2rocksdb_8c.html#a92d9878041c9c09243f41d6233df6a03',1,'rocksdb.c']]],
   ['redraw_5fbody',['REDRAW_BODY',['../mutt__menu_8h.html#ac9ef629d8b77ec35f04f52fae487e306',1,'mutt_menu.h']]],
   ['redraw_5fcurrent',['REDRAW_CURRENT',['../mutt__menu_8h.html#a3496434eacf006a8f10feeddd42f96f1',1,'mutt_menu.h']]],
   ['redraw_5fflow',['REDRAW_FLOW',['../mutt__menu_8h.html#af2bef4a166f1cc649eb20d8f5954a405',1,'mutt_menu.h']]],

@@ -196,6 +196,7 @@ var hierarchy =
     [ "TEST_CMDLINE_OPTION_", "structTEST__CMDLINE__OPTION__.html", null ],
     [ "test_detail_", "structtest__detail__.html", null ],
     [ "TestData", "structTestData.html", null ],
+    [ "TestString", "structTestString.html", null ],
     [ "TestValue", "structTestValue.html", null ],
     [ "TextSyntax", "structTextSyntax.html", null ],
     [ "timespec", "structtimespec.html", null ],

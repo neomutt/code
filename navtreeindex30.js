@@ -1,6 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"newsrc_8c.html#aea2d7fb63b1b73a6815a0ad8cd8ae07e":[2,0,19,3,25],
 "newsrc_8c_source.html":[2,0,19,3],
 "nm_db.html":[3,19,1],
 "nm_notmuch.html":[3,19,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX30 =
 "notmuch_8c.html#a077d62a65a036f3cacc562db56582ab4":[2,0,20,2,68],
 "notmuch_8c.html#a07e4579ec5069bc485da6342f302eb0e":[2,0,20,2,80],
 "notmuch_8c.html#a117bd16ebdde574564b14e737dc1349e":[2,0,20,2,54],
-"notmuch_8c.html#a160ce214b0f82c2f5980ee6b97f8c2bf":[2,0,20,2,78]
+"notmuch_8c.html#a160ce214b0f82c2f5980ee6b97f8c2bf":[2,0,20,2,78],
+"notmuch_8c.html#a1745318ae90c43d78804c035531e697e":[2,0,20,2,9]
 };

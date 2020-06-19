@@ -12,7 +12,7 @@ var gnutls_8c =
     [ "CERTERR_OTHER", "gnutls_8c.html#aac4e8a38d6e6447cf56d7e8c31f8a1ea", null ],
     [ "CERT_SEP", "gnutls_8c.html#a29228397b041c34539fa0a88ce19c1cf", null ],
     [ "tls_init", "gnutls_8c.html#a7fb79e9e2b622f5f50deb486d5efe0d4", null ],
-    [ "tls_verify_peers", "gnutls_8c.html#aeb33a7e32163c184c048ea0b361ab3c7", null ],
+    [ "tls_verify_peers", "gnutls_8c.html#a3d0c68a01f6632452a1d0fb8346634a7", null ],
     [ "tls_fingerprint", "gnutls_8c.html#a8239964b8dfceb6044efcd2e7d782460", null ],
     [ "tls_check_stored_hostname", "gnutls_8c.html#a597542541dffbf6e78276db4909d2c6c", null ],
     [ "tls_compare_certificates", "gnutls_8c.html#a5f83fcf416e283f9cb51ed8e2187b0ba", null ],
