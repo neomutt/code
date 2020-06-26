@@ -1,7 +1,5 @@
 var NAVTREEINDEX22 =
 {
-"mutt__buffer__strdup_8c_source.html":[2,0,23,5,18],
-"mutt__buffer__substrcpy_8c.html":[2,0,23,5,19],
 "mutt__buffer__substrcpy_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,23,5,19,0],
 "mutt__buffer__substrcpy_8c.html#a3734c809fcc428d0911a5d00c008f642":[2,0,23,5,19,1],
 "mutt__buffer__substrcpy_8c_source.html":[2,0,23,5,19],
@@ -249,5 +247,7 @@ var NAVTREEINDEX22 =
 "mutt__envlist__unset_8c_source.html":[2,0,23,12,4],
 "mutt__extract__message__id_8c.html":[2,0,23,31,3],
 "mutt__extract__message__id_8c.html#a11226e996b930a0c0519e40d30d935c1":[2,0,23,31,3,4],
-"mutt__extract__message__id_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,23,31,3,1]
+"mutt__extract__message__id_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,23,31,3,1],
+"mutt__extract__message__id_8c.html#a2e84714d9bda277b7b7d49481189107c":[2,0,23,31,3,2],
+"mutt__extract__message__id_8c.html#ab331e285c9d002ee0f3fcb4440c6a859":[2,0,23,31,3,3]
 };

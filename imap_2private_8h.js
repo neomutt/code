@@ -102,7 +102,7 @@ var imap_2private_8h =
     [ "imap_msg_save_hcache", "imap_2private_8h.html#af92aa8eebe364d7a8d1f7e94a1d50d28", null ],
     [ "imap_adata_get", "imap_2private_8h.html#a0ca70f0a790494cb3e6cbdaf3cb004a4", null ],
     [ "imap_mdata_get", "imap_2private_8h.html#acdbc54bfe42c13f551c58b0a9b9ba8ff", null ],
-    [ "imap_hcache_open", "imap_2private_8h.html#a4519e1fc7a5d19b1f12dcf118e913b9b", null ],
+    [ "imap_hcache_open", "imap_2private_8h.html#acd75897efa210794ca144cea1e3f7ca9", null ],
     [ "imap_hcache_close", "imap_2private_8h.html#aac4c4b05fb952889e950219e16098099", null ],
     [ "imap_hcache_get", "imap_2private_8h.html#af93ad49e9f9afb93821cf9f76cae6dc8", null ],
     [ "imap_hcache_put", "imap_2private_8h.html#a4b04cf064a1da9c217a9650f0fd60e68", null ],

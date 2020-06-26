@@ -193,7 +193,6 @@ var annotated_dup =
     [ "TEST_CMDLINE_OPTION_", "structTEST__CMDLINE__OPTION__.html", "structTEST__CMDLINE__OPTION__" ],
     [ "test_detail_", "structtest__detail__.html", "structtest__detail__" ],
     [ "TestData", "structTestData.html", "structTestData" ],
-    [ "TestString", "structTestString.html", "structTestString" ],
     [ "TestValue", "structTestValue.html", "structTestValue" ],
     [ "TextSyntax", "structTextSyntax.html", "structTextSyntax" ],
     [ "timespec", "structtimespec.html", "structtimespec" ],

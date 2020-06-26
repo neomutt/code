@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['casesensitivity',['CaseSensitivity',['../string2_8h.html#aaa929f83398f109dfbff9789108b159b',1,'string2.h']]],
   ['colorid',['ColorId',['../color_8h.html#ac0dddfeb58e0f6855f22796d240b070d',1,'color.h']]],
   ['commandresult',['CommandResult',['../mutt__commands_8h.html#ab263ddf6663365ed434ab750bf339557',1,'mutt_commands.h']]],
   ['configscope',['ConfigScope',['../subset_8h.html#ab22c0ffba2be3aee5b9d3d0af2997f8d',1,'subset.h']]],

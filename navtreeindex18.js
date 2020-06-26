@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"maildir_2private_8h.html#ac05f97c3d2b14c1e952032b5c624fd29":[2,0,15,3,28],
 "maildir_2private_8h.html#ac6a1ef17d0d72f67fa4b5d56188bf1b6":[2,0,15,3,7],
 "maildir_2private_8h.html#ac7d2634f420881625877f5b0dd904b3e":[2,0,15,3,23],
 "maildir_2private_8h.html#acd4b02f6f6422afa6b014e5795c9cc0d":[2,0,15,3,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "menu_8c.html#a4ba92e31cdc5ba96e4851554ff820066":[2,0,72,20],
 "menu_8c.html#a4dc047ee6f471343beb7ba148301d1b5":[2,0,72,45],
 "menu_8c.html#a54cbaf41671f4484bb2b3ad0611abc90":[2,0,72,2],
-"menu_8c.html#a55d34ab14d6a7e12e728e131e1022ae0":[2,0,72,32],
-"menu_8c.html#a5fbd07c9ba05297dbb9c6b6da1d310e3":[2,0,72,28]
+"menu_8c.html#a55d34ab14d6a7e12e728e131e1022ae0":[2,0,72,32]
 };

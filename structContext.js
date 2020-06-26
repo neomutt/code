@@ -3,7 +3,6 @@ var structContext =
     [ "vsize", "structContext.html#a252a82eaae91091309c8691a8950b066", null ],
     [ "pattern", "structContext.html#a146acecc03ea332cc3aa2aa00bb2f341", null ],
     [ "limit_pattern", "structContext.html#a3ed95d522b150c7d7f0fbff63e1d4552", null ],
-    [ "last_tag", "structContext.html#a95ad1230c492cba0d6c02c6923f2e830", null ],
     [ "tree", "structContext.html#a1ef5680fd22f0a913f489c11f3271a42", null ],
     [ "thread_hash", "structContext.html#a0ad2dd01511500a0355455fa6618bb5c", null ],
     [ "msg_not_read_yet", "structContext.html#a8ece3bd4ab3d89cd495b505fa6acbe94", null ],

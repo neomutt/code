@@ -1,19 +1,17 @@
 var searchData=
 [
-  ['test_5fflag_5ffailure_5f',['TEST_FLAG_FAILURE_',['../acutest_8h.html#a99fb83031ce9923c84392b4e92f956b5a5b4674e503adddadc432806732e42776',1,'acutest.h']]],
-  ['test_5fflag_5frun_5f',['TEST_FLAG_RUN_',['../acutest_8h.html#a99fb83031ce9923c84392b4e92f956b5a7fc0542efb4be5a3ad471b25dd6d308f',1,'acutest.h']]],
-  ['test_5fflag_5fsuccess_5f',['TEST_FLAG_SUCCESS_',['../acutest_8h.html#a99fb83031ce9923c84392b4e92f956b5ad1d4a11248c9f3de5a492f37ad84c42a',1,'acutest.h']]],
-  ['txn_5fread',['TXN_READ',['../store_2lmdb_8c.html#aeecdc6fc084a2a3646e242f0e0343514a5ff52c31fd17555eee58e59be657e29a',1,'lmdb.c']]],
-  ['txn_5funinitialized',['TXN_UNINITIALIZED',['../store_2lmdb_8c.html#aeecdc6fc084a2a3646e242f0e0343514a8967a2f6cedb6773ac00ede97267f710',1,'lmdb.c']]],
-  ['txn_5fwrite',['TXN_WRITE',['../store_2lmdb_8c.html#aeecdc6fc084a2a3646e242f0e0343514a8336ebb46e8f3a6c3f2147bcdfda5edc',1,'lmdb.c']]],
-  ['type_5fany',['TYPE_ANY',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79af173f42b16daa16262e56c2e12fb11b3',1,'mime.h']]],
-  ['type_5fapplication',['TYPE_APPLICATION',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e',1,'mime.h']]],
-  ['type_5faudio',['TYPE_AUDIO',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a17e2dc2b6c45bd9d56010ed4aed3fcf4',1,'mime.h']]],
-  ['type_5fimage',['TYPE_IMAGE',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a1c84f9cd2b0d05b7d3f7711fcc0caad8',1,'mime.h']]],
-  ['type_5fmessage',['TYPE_MESSAGE',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a2cbb8dddd761b8bfba754d933a979c1b',1,'mime.h']]],
-  ['type_5fmodel',['TYPE_MODEL',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a33cf44e9e129e31bc10bf94ff7d50c03',1,'mime.h']]],
-  ['type_5fmultipart',['TYPE_MULTIPART',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a877e24e62c85f20ff0e0f09ab983031e',1,'mime.h']]],
-  ['type_5fother',['TYPE_OTHER',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a2c4c96a2b998731adad0506fabeb9c17',1,'mime.h']]],
-  ['type_5ftext',['TYPE_TEXT',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ad88e88afaec507209421bba20aeeb167',1,'mime.h']]],
-  ['type_5fvideo',['TYPE_VIDEO',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79afeeff8542e46439d4b704699ff009323',1,'mime.h']]]
+  ['u_5ffile',['U_FILE',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a34ba69060ab91f8e745be20b21493d51',1,'url.h']]],
+  ['u_5fimap',['U_IMAP',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a942f2be085af2ad4e3fd87f9eb9856bc',1,'url.h']]],
+  ['u_5fimaps',['U_IMAPS',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243ad9302ef173d70c1dc8c9b813d23ea0c8',1,'url.h']]],
+  ['u_5fmailto',['U_MAILTO',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a37e57b950d3261812a4af815c0505411',1,'url.h']]],
+  ['u_5fnntp',['U_NNTP',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a867c7d440d5858e5c749d595a7e971a1',1,'url.h']]],
+  ['u_5fnntps',['U_NNTPS',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a36622ec19979218e1af310e5e17fba76',1,'url.h']]],
+  ['u_5fnotmuch',['U_NOTMUCH',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a0b455eb7070416ae3bc1d00e9977dfb0',1,'url.h']]],
+  ['u_5fpop',['U_POP',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243ade7d15f0ce183fc87df80c1d48340ce5',1,'url.h']]],
+  ['u_5fpops',['U_POPS',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243aa92a64322010fe7e04babde25ff02f0a',1,'url.h']]],
+  ['u_5fsmtp',['U_SMTP',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a84592370a6845410408ef347ab154c4e',1,'url.h']]],
+  ['u_5fsmtps',['U_SMTPS',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a5975934c7bde3342734ca20090bdbe79',1,'url.h']]],
+  ['u_5funknown',['U_UNKNOWN',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e',1,'url.h']]],
+  ['userhdrs_5foverride_5fcontent_5ftype',['USERHDRS_OVERRIDE_CONTENT_TYPE',['../sendlib_8c.html#ab53860ce4ae55a975e85479ed7424644a9e1313c258f31df1340219b9e8f74696',1,'sendlib.c']]],
+  ['userhdrs_5foverride_5fuser_5fagent',['USERHDRS_OVERRIDE_USER_AGENT',['../sendlib_8c.html#ab53860ce4ae55a975e85479ed7424644aea42ffe75815ced5b10de68ce067343c',1,'sendlib.c']]]
 ];

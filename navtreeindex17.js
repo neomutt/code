@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"log__queue__flush_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,23,22,12,0],
 "log__queue__flush_8c.html#a50f5bb0bd52cd445fed412f0389541e1":[2,0,23,22,12,1],
 "log__queue__flush_8c_source.html":[2,0,23,22,12],
 "log__queue__save_8c.html":[2,0,23,22,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "maildir_2private_8h.html#ab6aaba48e8965ae7147d7bb16c9be255":[2,0,15,3,36],
 "maildir_2private_8h.html#ab817ffae2cd4bea19b9ef023139bc7d0":[2,0,15,3,20],
 "maildir_2private_8h.html#ab90612a145bd327ab7a5ce5d78286b64":[2,0,15,3,34],
-"maildir_2private_8h.html#aba9bb3156dd352e0d508dc8c0fd8148f":[2,0,15,3,12],
-"maildir_2private_8h.html#ac05f97c3d2b14c1e952032b5c624fd29":[2,0,15,3,28]
+"maildir_2private_8h.html#aba9bb3156dd352e0d508dc8c0fd8148f":[2,0,15,3,12]
 };

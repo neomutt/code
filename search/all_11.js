@@ -395,7 +395,7 @@ var searchData=
   ['prev',['prev',['../structMuttThread.html#a5931c5905063b72935f0b37f044dad00',1,'MuttThread::prev()'],['../structQClass.html#a0fcb75d79de98e9d5d894b7cf1da497d',1,'QClass::prev()']]],
   ['prev_5fmailbox',['prev_mailbox',['../structImapAccountData.html#a1d1842d28b0455afee7ddd7f829f6c02',1,'ImapAccountData']]],
   ['previoussort',['PreviousSort',['../sidebar_8c.html#a56d9eb221e34fb22062110314f409b6a',1,'sidebar.c']]],
-  ['prex',['Prex',['../prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488',1,'Prex():&#160;prex.h'],['../prex_8c.html#a95fe03366173eac74aa77aca91643aea',1,'prex(enum Prex which):&#160;prex.c']]],
+  ['prex',['prex',['../prex_8c.html#a95fe03366173eac74aa77aca91643aea',1,'prex(enum Prex which):&#160;prex.c'],['../prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488',1,'Prex():&#160;prex.h']]],
   ['prex_2ec',['prex.c',['../prex_8c.html',1,'']]],
   ['prex_2eh',['prex.h',['../prex_8h.html',1,'']]],
   ['prex_5fdow',['PREX_DOW',['../prex_8c.html#a62b36cd222fb65c5b9777db5b0d6d1c8',1,'prex.c']]],

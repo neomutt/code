@@ -1,7 +1,5 @@
 var NAVTREEINDEX23 =
 {
-"mutt__extract__message__id_8c.html#a2e84714d9bda277b7b7d49481189107c":[2,0,23,31,3,2],
-"mutt__extract__message__id_8c.html#ab331e285c9d002ee0f3fcb4440c6a859":[2,0,23,31,3,3],
 "mutt__extract__message__id_8c_source.html":[2,0,23,31,3],
 "mutt__file__check__empty_8c.html":[2,0,23,13,4],
 "mutt__file__check__empty_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,23,13,4,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX23 =
 "mutt__hash__new_8c_source.html":[2,0,23,18,10],
 "mutt__hash__set__destructor_8c.html":[2,0,23,18,11],
 "mutt__hash__set__destructor_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,23,18,11,0],
-"mutt__hash__set__destructor_8c.html#ab779e5f797556f725f4c050cdcb45578":[2,0,23,18,11,1]
+"mutt__hash__set__destructor_8c.html#ab779e5f797556f725f4c050cdcb45578":[2,0,23,18,11,1],
+"mutt__hash__set__destructor_8c.html#ac050319571c97b11ae4c00c0d15ac299":[2,0,23,18,11,2],
+"mutt__hash__set__destructor_8c_source.html":[2,0,23,18,11]
 };

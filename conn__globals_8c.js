@@ -15,5 +15,6 @@ var conn__globals_8c =
     [ "C_SslCaCertificatesFile", "conn__globals_8c.html#af3a80333a010f437cf0e1eefa17b2b4f", null ],
     [ "C_SslMinDhPrimeBits", "conn__globals_8c.html#af928f8e80dfafcdf13fc0f4ae049cc6d", null ],
     [ "C_Preconnect", "conn__globals_8c.html#ade38a08957ccfb4df4942b6592939849", null ],
-    [ "C_Tunnel", "conn__globals_8c.html#a4ed5ec70cc4de3566816fa576aad40f4", null ]
+    [ "C_Tunnel", "conn__globals_8c.html#a4ed5ec70cc4de3566816fa576aad40f4", null ],
+    [ "C_TunnelIsSecure", "conn__globals_8c.html#aaa9976b026f83b91e0a6bb676dff2b5d", null ]
 ];

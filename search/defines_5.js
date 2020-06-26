@@ -1,7 +1,6 @@
 var searchData=
 [
   ['eilseq',['EILSEQ',['../charset_8c.html#ac6c071293826a4e66a717bb38db7794d',1,'charset.c']]],
-  ['email_5fwsp',['EMAIL_WSP',['../string2_8h.html#a2bcfbbf9c742182c2de7aeb7c84f586a',1,'string2.h']]],
   ['emsg',['EMSG',['../pattern_8c.html#aaa5cbcbe0103cbab07d9fc4314e5a0b3',1,'pattern.c']]],
   ['encoding',['ENCODING',['../mime_8h.html#a94255dc776bc865448f83758d3176aa6',1,'mime.h']]],
   ['encword_5flen_5fmax',['ENCWORD_LEN_MAX',['../rfc2047_8c.html#aed2999c145a004bc9c37fbd6248b822e',1,'rfc2047.c']]],

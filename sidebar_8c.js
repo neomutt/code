@@ -32,7 +32,7 @@ var sidebar_8c =
     [ "sb_change_mailbox", "sidebar_8c.html#ac78ef9b605cbd89412f40c1340c3eb30", null ],
     [ "sb_get_highlight", "sidebar_8c.html#a49535b45f065f504341890f52c2dc6ff", null ],
     [ "sb_set_open_mailbox", "sidebar_8c.html#ad397dcc5f0e5685ecd0ce2c411e5341b", null ],
-    [ "sb_notify_mailbox", "sidebar_8c.html#a562476c6228470d587bb4d67ae3d1299", null ],
+    [ "sb_notify_mailbox", "sidebar_8c.html#a7f582a6fa81a37d2e0eb3bf7a262b4f5", null ],
     [ "sb_observer", "sidebar_8c.html#a9b25b9828e3cf022ac70a4e5e35452a1", null ],
     [ "C_SidebarComponentDepth", "sidebar_8c.html#a76532f3c7b1b741803507888ceac4e76", null ],
     [ "C_SidebarDelimChars", "sidebar_8c.html#a41e5afff98625fa8c648c9cdc4a35914", null ],

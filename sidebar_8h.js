@@ -1,9 +1,14 @@
 var sidebar_8h =
 [
+    [ "SidebarNotification", "sidebar_8h.html#a554048676c812158906fb3cac3338924", [
+      [ "SBN_CREATED", "sidebar_8h.html#a554048676c812158906fb3cac3338924ac3d7542744ed1084334bc6dc58b0ad23", null ],
+      [ "SBN_DELETED", "sidebar_8h.html#a554048676c812158906fb3cac3338924ac11dafced97617bbdf9bb34493c4b317", null ],
+      [ "SBN_RENAMED", "sidebar_8h.html#a554048676c812158906fb3cac3338924a45282983d450f02a3fc5ba556cc785a7", null ]
+    ] ],
     [ "sb_change_mailbox", "sidebar_8h.html#ac78ef9b605cbd89412f40c1340c3eb30", null ],
     [ "sb_draw", "sidebar_8h.html#a7b6c9815953c724b2e8c67d8c22abfed", null ],
     [ "sb_get_highlight", "sidebar_8h.html#a49535b45f065f504341890f52c2dc6ff", null ],
-    [ "sb_notify_mailbox", "sidebar_8h.html#a562476c6228470d587bb4d67ae3d1299", null ],
+    [ "sb_notify_mailbox", "sidebar_8h.html#a7f582a6fa81a37d2e0eb3bf7a262b4f5", null ],
     [ "sb_observer", "sidebar_8h.html#a9b25b9828e3cf022ac70a4e5e35452a1", null ],
     [ "sb_set_open_mailbox", "sidebar_8h.html#ad397dcc5f0e5685ecd0ce2c411e5341b", null ],
     [ "C_SidebarComponentDepth", "sidebar_8h.html#a76532f3c7b1b741803507888ceac4e76", null ],

@@ -16,8 +16,6 @@ var searchData=
   ['change_5ffolder_5fmailbox',['change_folder_mailbox',['../index_8c.html#a45e50ffd81e3d025751f6b04329b2e9e',1,'index.c']]],
   ['change_5ffolder_5fnotmuch',['change_folder_notmuch',['../index_8c.html#a4d27c2ec150e00fe5a80a6a3e2b4bab4',1,'index.c']]],
   ['change_5ffolder_5fstring',['change_folder_string',['../index_8c.html#aa4442f64e7277505d67e3a3de7cfcc87',1,'index.c']]],
-  ['char_5fcmp_5fidentity',['char_cmp_identity',['../mutt_2string_8c.html#ac53263bc64be44173a74e4c501be56a6',1,'string.c']]],
-  ['char_5fcmp_5flower',['char_cmp_lower',['../mutt_2string_8c.html#afee475e957df38b6dbf0428ecfe166a2',1,'string.c']]],
   ['charset_5fvalidator',['charset_validator',['../init_8c.html#a2af01c740da7a35724ab4052aaf6abb8',1,'charset_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c'],['../init_8h.html#a2af01c740da7a35724ab4052aaf6abb8',1,'charset_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c']]],
   ['check_5facl',['check_acl',['../index_8c.html#afb174a12c95e0153fb81baaf05c35d8f',1,'index.c']]],
   ['check_5faddrlist',['check_addrlist',['../mutt__parse__mailto_8c.html#a6215f0a0548c5475303f1b7e39e49cf2',1,'mutt_parse_mailto.c']]],

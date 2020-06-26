@@ -22,7 +22,6 @@ var searchData=
   ['generic_5fsearch',['generic_search',['../menu_8c.html#a0d240f13bc1269e8946046a28014c1bc',1,'menu.c']]],
   ['generic_5ftokenize_5fpush_5fstring',['generic_tokenize_push_string',['../keymap_8c.html#a56d5f105e35042e9701cc672eabd0f6c',1,'keymap.c']]],
   ['get_5fcandidates',['get_candidates',['../crypt__gpgme_8c.html#aef0516e3d7f7c2d43567034cb67c8e71',1,'crypt_gpgme.c']]],
-  ['get_5fchar_5fcmp',['get_char_cmp',['../mutt_2string_8c.html#a2573860a9830802b6808ced6b814632d',1,'string.c']]],
   ['get_5fcharset',['get_charset',['../rfc2231_8c.html#adff03833afc464d04a290f5faed3bc5c',1,'rfc2231.c']]],
   ['get_5fcolor',['get_color',['../menu_8c.html#a950cc3355862be82cbe07d94f6207fc5',1,'menu.c']]],
   ['get_5fconfig_5ftype',['get_config_type',['../debug_2notify_8c.html#a6ce9aff1b061b2403778e0ec4c31bed1',1,'notify.c']]],
