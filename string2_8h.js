@@ -30,7 +30,7 @@ var string2_8h =
     [ "mutt_str_lws_rlen", "string2_8h.html#af8c92df8d61d015debbd2e719730cefc", null ],
     [ "mutt_str_next_word", "string2_8h.html#a891421f33ea26bdc48c1fee4911a9ef8", null ],
     [ "mutt_str_remove_trailing_ws", "string2_8h.html#a1d343dcbce0482f8979fe2a298913225", null ],
-    [ "mutt_str_replace", "string2_8h.html#ad5b66f8059a202f7bfa5fc4fa3047c67", null ],
+    [ "mutt_str_replace", "string2_8h.html#ae9b6bbaa52b6ce51f2a384fe500e028e", null ],
     [ "mutt_str_skip_email_wsp", "string2_8h.html#aa5fb929533630a48c6d2e893267ce208", null ],
     [ "mutt_str_skip_whitespace", "string2_8h.html#a7c18c9b6c126e558387c13efce1c1e2a", null ],
     [ "mutt_str_sysexit", "string2_8h.html#a1ca58dcecaae9d97c2c7b09f9b818e88", null ],

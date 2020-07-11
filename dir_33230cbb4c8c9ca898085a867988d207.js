@@ -1,6 +1,6 @@
 var dir_33230cbb4c8c9ca898085a867988d207 =
 [
-    [ "auth.c", "auth_8c.html", "auth_8c" ],
+    [ "auth.c", "imap_2auth_8c.html", "imap_2auth_8c" ],
     [ "auth.h", "auth_8h.html", "auth_8h" ],
     [ "auth_anon.c", "auth__anon_8c.html", "auth__anon_8c" ],
     [ "auth_cram.c", "auth__cram_8c.html", "auth__cram_8c" ],
@@ -11,6 +11,7 @@ var dir_33230cbb4c8c9ca898085a867988d207 =
     [ "auth_sasl.c", "auth__sasl_8c.html", "auth__sasl_8c" ],
     [ "browse.c", "imap_2browse_8c.html", "imap_2browse_8c" ],
     [ "command.c", "command_8c.html", "command_8c" ],
+    [ "config.c", "imap_2config_8c.html", "imap_2config_8c" ],
     [ "imap.c", "imap_8c.html", "imap_8c" ],
     [ "lib.h", "imap_2lib_8h.html", "imap_2lib_8h" ],
     [ "message.c", "message_8c.html", "message_8c" ],

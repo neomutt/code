@@ -42,14 +42,8 @@ var shared_8c =
     [ "maildir_path_canon", "shared_8c.html#ab3000bf71e9f48992290dda5b868bf70", null ],
     [ "maildir_path_pretty", "shared_8c.html#a82c3fa764c58e841f0e4b9884b002cb4", null ],
     [ "maildir_path_parent", "shared_8c.html#aba9bb3156dd352e0d508dc8c0fd8148f", null ],
-    [ "mh_mbox_sync", "shared_8c.html#a3c1f32aa8b748506dc4b64a378603a9a", null ],
+    [ "mh_mbox_sync", "shared_8c.html#a5b0d82f90208aa4da82905602d3b321a", null ],
     [ "mh_mbox_close", "shared_8c.html#a1beb9bdd072c82f832b832762957ed72", null ],
     [ "mh_msg_close", "shared_8c.html#a41ed62b3e2b71b6c945d6abfe8a2a142", null ],
-    [ "mh_msg_save_hcache", "shared_8c.html#af2af0145d20c54226fa0d46c4979e7a6", null ],
-    [ "C_CheckNew", "shared_8c.html#a6e754995cd546bf22a71dadd16e7a712", null ],
-    [ "C_MaildirHeaderCacheVerify", "shared_8c.html#a991264c3f712b937144e4546d94bd212", null ],
-    [ "C_MhPurge", "shared_8c.html#a68464b6b5de28c1a777d2a9a0bc62ea4", null ],
-    [ "C_MhSeqFlagged", "shared_8c.html#ab62dd5432f9e147b7fc51279687ebca1", null ],
-    [ "C_MhSeqReplied", "shared_8c.html#a6655a4f9b4e80ed763a14949bcd896d8", null ],
-    [ "C_MhSeqUnseen", "shared_8c.html#ab384a9141a7fd75be408a6a626fce64f", null ]
+    [ "mh_msg_save_hcache", "shared_8c.html#af2af0145d20c54226fa0d46c4979e7a6", null ]
 ];

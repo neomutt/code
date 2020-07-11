@@ -1,7 +1,7 @@
 var conn =
 [
+    [ "Config used by libconn", "conn_config.html", null ],
     [ "Connection Credentials", "conn_account.html", null ],
-    [ "Connection Global Variables", "conn_globals.html", null ],
     [ "DNS lookups", "conn_getdomain.html", null ],
     [ "Handling of GnuTLS encryption", "conn_gnutls.html", null ],
     [ "GUI parts of Connection Library", "conn_gui.html", null ],

@@ -9,15 +9,18 @@ var searchData=
   ['win_5fsize',['win_size',['../window_8c.html#a74789e69bea2ce6b17e5721c2fcf5e8c',1,'win_size(const struct MuttWindow *win):&#160;window.c'],['../test_2gui_2reflow_8c.html#a8fc36201205aaaf83a34b75b341be2d6',1,'win_size(struct MuttWindow *win):&#160;reflow.c']]],
   ['window_5fnotify',['window_notify',['../mutt__window_8c.html#a24a1cf059877c84faad07eae0f5aaa00',1,'mutt_window.c']]],
   ['window_5fnotify_5fall',['window_notify_all',['../mutt__window_8c.html#a182bdee15eddac41d849c7b2a5896554',1,'window_notify_all(struct MuttWindow *win):&#160;mutt_window.c'],['../mutt__window_8h.html#a182bdee15eddac41d849c7b2a5896554',1,'window_notify_all(struct MuttWindow *win):&#160;mutt_window.c']]],
+  ['window_5frecalc',['window_recalc',['../mutt__window_8c.html#addf9c6f49c7129822e301b10257ebc68',1,'mutt_window.c']]],
+  ['window_5fredraw',['window_redraw',['../mutt__window_8c.html#a0af7bfe97dbb8f95d03851ec3fe62553',1,'window_redraw(struct MuttWindow *win):&#160;mutt_window.c'],['../mutt__window_8h.html#a0af7bfe97dbb8f95d03851ec3fe62553',1,'window_redraw(struct MuttWindow *win):&#160;mutt_window.c']]],
   ['window_5freflow',['window_reflow',['../gui_2reflow_8c.html#a50e81ea47b75f474efabdfce6231fe7f',1,'window_reflow(struct MuttWindow *win):&#160;reflow.c'],['../reflow_8h.html#a50e81ea47b75f474efabdfce6231fe7f',1,'window_reflow(struct MuttWindow *win):&#160;reflow.c']]],
   ['window_5freflow_5fhoriz',['window_reflow_horiz',['../gui_2reflow_8c.html#a272019359561fd9f5c369dcba4f235ae',1,'reflow.c']]],
   ['window_5freflow_5fvert',['window_reflow_vert',['../gui_2reflow_8c.html#a0c807a5c20cc6d04f426325ca3c46f96',1,'reflow.c']]],
+  ['window_5frepaint',['window_repaint',['../mutt__window_8c.html#afff0639352892ed7d0f7765a57c0ef0c',1,'mutt_window.c']]],
   ['window_5fset_5fvisible',['window_set_visible',['../mutt__window_8c.html#aae941d17bf3237a0c3fcf06641ca6ee2',1,'window_set_visible(struct MuttWindow *win, bool visible):&#160;mutt_window.c'],['../mutt__window_8h.html#aae941d17bf3237a0c3fcf06641ca6ee2',1,'window_set_visible(struct MuttWindow *win, bool visible):&#160;mutt_window.c']]],
   ['windowed_5fquery_5ffrom_5fquery',['windowed_query_from_query',['../notmuch_8c.html#a3c1e6b40d6cc7a396ef95d90e4364337',1,'notmuch.c']]],
-  ['wrapheaders_5fvalidator',['wrapheaders_validator',['../init_8c.html#a1a23d8cffeb9941ba45499085897ffc3',1,'wrapheaders_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c'],['../init_8h.html#a1a23d8cffeb9941ba45499085897ffc3',1,'wrapheaders_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c']]],
-  ['write_5fas_5ftext_5fpart',['write_as_text_part',['../sendlib_8c.html#a55c55e2f50317ab8226c0c2768e01ad0',1,'sendlib.c']]],
+  ['wrapheaders_5fvalidator',['wrapheaders_validator',['../send_2config_8c.html#a1a23d8cffeb9941ba45499085897ffc3',1,'config.c']]],
+  ['write_5fas_5ftext_5fpart',['write_as_text_part',['../send_2body_8c.html#a55c55e2f50317ab8226c0c2768e01ad0',1,'body.c']]],
   ['write_5fautocrypt_5fheader_5fline',['write_autocrypt_header_line',['../autocrypt_8c.html#a5a11d5de380fab330d5f37e7ef018da1',1,'autocrypt.c']]],
-  ['write_5fone_5fheader',['write_one_header',['../sendlib_8c.html#a828d1945817f8143b44a264dff4de473',1,'sendlib.c']]],
+  ['write_5fone_5fheader',['write_one_header',['../header_8c.html#a828d1945817f8143b44a264dff4de473',1,'header.c']]],
   ['write_5fsafe_5faddress',['write_safe_address',['../alias_8c.html#a72f25c630f91fffd47d013745fae3b74',1,'alias.c']]],
-  ['write_5fuserhdrs',['write_userhdrs',['../sendlib_8c.html#a7c17417dfa052d3c7e5b27e867885fff',1,'sendlib.c']]]
+  ['write_5fuserhdrs',['write_userhdrs',['../header_8c.html#a914f4e2e1ee9198323ffecb32a936423',1,'header.c']]]
 ];

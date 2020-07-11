@@ -30,12 +30,17 @@ var searchData=
   ['nt_5fglobal_5ftimeout',['NT_GLOBAL_TIMEOUT',['../neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5dac563bcbfb0a4a392a1c2e425adb79d29',1,'neomutt.h']]],
   ['nt_5fmailbox',['NT_MAILBOX',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a69518e4247799dbc934e07163b747c03',1,'notify_type.h']]],
   ['nt_5fmailbox_5fadd',['NT_MAILBOX_ADD',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4af4301eba28d0776c6718b42b143e54df',1,'mailbox.h']]],
+  ['nt_5fmailbox_5fchanged',['NT_MAILBOX_CHANGED',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4ac45e1f8e26630e0caa503ed933a1a76a',1,'mailbox.h']]],
   ['nt_5fmailbox_5fclosed',['NT_MAILBOX_CLOSED',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a348eb9c5cce554ebf1da40ce739c2265',1,'mailbox.h']]],
   ['nt_5fmailbox_5finvalid',['NT_MAILBOX_INVALID',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4aa2cbdb348633a2bc5926ba0efddf2e3a',1,'mailbox.h']]],
   ['nt_5fmailbox_5fremove',['NT_MAILBOX_REMOVE',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4aa8014daf764a5636d76f565c15743973',1,'mailbox.h']]],
   ['nt_5fmailbox_5fresort',['NT_MAILBOX_RESORT',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a96d28ff20a133d31e2e6ce8bb4e8b78f',1,'mailbox.h']]],
+  ['nt_5fmailbox_5fswitch',['NT_MAILBOX_SWITCH',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a055047f00ee810cf2b96f35e639dde8d',1,'mailbox.h']]],
   ['nt_5fmailbox_5funtag',['NT_MAILBOX_UNTAG',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a05f2ee1d91419ab8a3b86221ed1e0ca8',1,'mailbox.h']]],
   ['nt_5fmailbox_5fupdate',['NT_MAILBOX_UPDATE',['../mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4ad0c3ae03b6a1ba8f4a91d5f8c81796ac',1,'mailbox.h']]],
   ['nt_5fwindow',['NT_WINDOW',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a0effa043e3256fe597161d6fa95f7442',1,'notify_type.h']]],
+  ['nt_5fwindow_5fdelete',['NT_WINDOW_DELETE',['../mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca8d3b770dfc438ed96cbd7f16ba462c0a',1,'mutt_window.h']]],
+  ['nt_5fwindow_5fdialog',['NT_WINDOW_DIALOG',['../mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca2ed3828e839e0850fb87c077772adad8',1,'mutt_window.h']]],
+  ['nt_5fwindow_5fnew',['NT_WINDOW_NEW',['../mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138cafd28e2be5b9530dff2ebdc7855aa88a3',1,'mutt_window.h']]],
   ['nt_5fwindow_5fstate',['NT_WINDOW_STATE',['../mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca47bb65598401cdb438a2768ca5d99eaa',1,'mutt_window.h']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['config_20used_20by_20libautocrypt',['Config used by libautocrypt',['../autocrypt_config.html',1,'autocrypt']]],
   ['conversion_20to_2ffrom_20base64_20encoding',['Conversion to/from base64 encoding',['../base64.html',1,'mutt']]],
   ['conversion_20between_20different_20character_20encodings',['Conversion between different character encodings',['../charset.html',1,'mutt']]],
   ['compmbox_3a_20compressed_20mailbox',['COMPMBOX: Compressed Mailbox',['../compmbox.html',1,'']]],
@@ -9,18 +10,29 @@ var searchData=
   ['config_20set',['Config Set',['../config_set.html',1,'config']]],
   ['conn_3a_20network_20connections_20and_20their_20encryption',['CONN: Network connections and their encryption',['../conn.html',1,'']]],
   ['connection_20credentials',['Connection Credentials',['../conn_account.html',1,'conn']]],
-  ['connection_20global_20variables',['Connection Global Variables',['../conn_globals.html',1,'conn']]],
+  ['config_20used_20by_20libconn',['Config used by libconn',['../conn_config.html',1,'conn']]],
   ['core_3a_20backbone_20objects_20of_20neomutt',['CORE: Backbone objects of NeoMutt',['../core.html',1,'']]],
   ['container_20for_20accounts_2c_20notifications',['Container for Accounts, Notifications',['../core_neomutt.html',1,'core']]],
+  ['config_20used_20by_20libncrypt',['Config used by libncrypt',['../crypt_config.html',1,'ncrypt']]],
   ['code_20backtrace',['Code backtrace',['../debug_backtrace.html',1,'debug']]],
   ['create_20a_20graphviz_20dot_20file',['Create a GraphViz dot file',['../debug_graphviz.html',1,'debug']]],
   ['constants_20and_20macros_20for_20managing_20mime_20encoding',['Constants and macros for managing MIME encoding',['../email_mime.html',1,'email']]],
   ['create_2fmanipulate_20threading_20in_20emails',['Create/manipulate threading in emails',['../email_thread.html',1,'email']]],
   ['color_20and_20attribute_20parsing',['Color and attribute parsing',['../gui_color.html',1,'gui']]],
+  ['config_20used_20by_20libhcache',['Config used by libhcache',['../hc_config.html',1,'hcache']]],
+  ['config_20used_20by_20libhistory',['Config used by libhistory',['../history_config.html',1,'history']]],
+  ['config_20used_20by_20libimap',['Config used by libimap',['../imap_config.html',1,'imap']]],
   ['code_20docs',['Code Docs',['../index.html',1,'']]],
   ['config_2fcommand_20parsing',['Config/command parsing',['../init.html',1,'index']]],
+  ['config_20used_20by_20libmaildir',['Config used by libmaildir',['../maildir_config.html',1,'maildir']]],
   ['command_20line_20processing',['Command line processing',['../main.html',1,'index']]],
+  ['config_20used_20by_20libmbox',['Config used by libmbox',['../mbox_config.html',1,'mbox']]],
   ['calculate_20the_20md5_20checksum_20of_20a_20buffer',['Calculate the MD5 checksum of a buffer',['../md5.html',1,'mutt']]],
   ['connaccount_20object_20used_20by_20pop_20and_20imap',['ConnAccount object used by POP and IMAP',['../mutt_account.html',1,'index']]],
-  ['create_2fmanipulate_20threading_20in_20emails',['Create/manipulate threading in emails',['../mutt_thread.html',1,'index']]]
+  ['create_2fmanipulate_20threading_20in_20emails',['Create/manipulate threading in emails',['../mutt_thread.html',1,'index']]],
+  ['config_20used_20by_20libnotmuch',['Config used by libnotmuch',['../nm_config.html',1,'notmuch']]],
+  ['config_20used_20by_20libnntp',['Config used by libnntp',['../nntp_config.html',1,'nntp']]],
+  ['config_20used_20by_20libpop',['Config used by libpop',['../pop_config.html',1,'pop']]],
+  ['config_20used_20by_20libsend',['Config used by libsend',['../send_config.html',1,'send']]],
+  ['config_20used_20by_20libsidebar',['Config used by libsidebar',['../sidebar_config.html',1,'sidebar']]]
 ];

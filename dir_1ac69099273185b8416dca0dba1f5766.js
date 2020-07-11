@@ -2,19 +2,19 @@ var dir_1ac69099273185b8416dca0dba1f5766 =
 [
     [ "attach.c", "attach_8c.html", "attach_8c" ],
     [ "attach.h", "attach_8h.html", "attach_8h" ],
-    [ "body.c", "body_8c.html", "body_8c" ],
-    [ "body.h", "body_8h.html", "body_8h" ],
+    [ "body.c", "email_2body_8c.html", "email_2body_8c" ],
+    [ "body.h", "email_2body_8h.html", "email_2body_8h" ],
     [ "content.h", "content_8h.html", [
       [ "Content", "structContent.html", "structContent" ]
     ] ],
     [ "email.c", "email_8c.html", "email_8c" ],
     [ "email.h", "email_8h.html", "email_8h" ],
-    [ "email_globals.c", "email__globals_8c.html", "email__globals_8c" ],
-    [ "email_globals.h", "email__globals_8h.html", "email__globals_8h" ],
     [ "envelope.c", "envelope_8c.html", "envelope_8c" ],
     [ "envelope.h", "envelope_8h.html", "envelope_8h" ],
     [ "from.c", "from_8c.html", "from_8c" ],
     [ "from.h", "from_8h.html", "from_8h" ],
+    [ "globals.c", "globals_8c.html", "globals_8c" ],
+    [ "globals.h", "globals_8h.html", "globals_8h" ],
     [ "lib.h", "email_2lib_8h.html", null ],
     [ "mime.c", "mime_8c.html", "mime_8c" ],
     [ "mime.h", "mime_8h.html", "mime_8h" ],

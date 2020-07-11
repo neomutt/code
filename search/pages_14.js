@@ -9,5 +9,7 @@ var searchData=
   ['wrapper_20around_20calls_20to_20external_20pgp_20program',['Wrapper around calls to external PGP program',['../crypt_pgpinvoke.html',1,'ncrypt']]],
   ['wrapper_20functions_20around_20curses_2fslang',['Wrapper functions around Curses/Slang',['../gui_curses.html',1,'gui']]],
   ['window_20reflowing',['Window reflowing',['../gui_reflow.html',1,'gui']]],
-  ['window_20management',['Window management',['../gui_window.html',1,'gui']]]
+  ['window_20management',['Window management',['../gui_window.html',1,'gui']]],
+  ['write_20a_20mime_20email_20to_20a_20file',['Write a MIME Email to a file',['../send_body.html',1,'send']]],
+  ['write_20a_20mime_20email_20header_20to_20a_20file',['Write a MIME Email Header to a file',['../send_header.html',1,'send']]]
 ];

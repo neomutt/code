@@ -14,16 +14,10 @@ var notmuch_2lib_8h =
     [ "nm_record_message", "notmuch_2lib_8h.html#a76a97a39757a2e0441d23eab1ba5a221", null ],
     [ "nm_update_filename", "notmuch_2lib_8h.html#a117bd16ebdde574564b14e737dc1349e", null ],
     [ "nm_url_from_query", "notmuch_2lib_8h.html#af6a894a34eca1a263c572322a8d66da8", null ],
-    [ "C_NmDbLimit", "notmuch_2lib_8h.html#a1c3dfe84cf73a3fd760d127867195d16", null ],
-    [ "C_NmDefaultUrl", "notmuch_2lib_8h.html#a6842d0e05b73621e204482b61ecaee30", null ],
-    [ "C_NmExcludeTags", "notmuch_2lib_8h.html#a2acc3a85a63e837d2a6e5394b37aaa8c", null ],
-    [ "C_NmOpenTimeout", "notmuch_2lib_8h.html#a160ce214b0f82c2f5980ee6b97f8c2bf", null ],
-    [ "C_NmQueryType", "notmuch_2lib_8h.html#adc84c2cb9efaf2498833bce4afa4d126", null ],
-    [ "C_NmQueryWindowCurrentPosition", "notmuch_2lib_8h.html#a07e4579ec5069bc485da6342f302eb0e", null ],
-    [ "C_NmQueryWindowTimebase", "notmuch_2lib_8h.html#ae754c9b2f96be9d508fb26181faf0258", null ],
-    [ "C_NmRecordTags", "notmuch_2lib_8h.html#ad7e624f000c5f0664d6113e0a8895c5a", null ],
-    [ "C_NmUnreadTag", "notmuch_2lib_8h.html#a2ad0325556b729ec13e8771a76675282", null ],
-    [ "C_NmFlaggedTag", "notmuch_2lib_8h.html#a5b3814ec222605e89b3af0b7ea4479ca", null ],
-    [ "C_NmRepliedTag", "notmuch_2lib_8h.html#ad9e8d6cafea42eca59223b3eb4b9e12f", null ],
-    [ "MxNotmuchOps", "notmuch_2lib_8h.html#aeb8eaded43f46d1709e8174fccbe5004", null ]
+    [ "config_init_notmuch", "notmuch_2lib_8h.html#a3117e94583c13a44244916b417f5d3f2", null ],
+    [ "MxNotmuchOps", "notmuch_2lib_8h.html#aeb8eaded43f46d1709e8174fccbe5004", null ],
+    [ "C_NmQueryWindowCurrentSearch", "notmuch_2lib_8h.html#a44ffa400341e0d882323144535e6cd67", null ],
+    [ "C_NmQueryWindowDuration", "notmuch_2lib_8h.html#a4d14fb1551ca8b72b369ccbc6d4fa1a5", null ],
+    [ "C_VfolderFormat", "notmuch_2lib_8h.html#a8e3f6a8cae7d09afa25083dfdabee344", null ],
+    [ "C_VirtualSpoolfile", "notmuch_2lib_8h.html#a4fd16c814918a48ad225d9ff1dec7c01", null ]
 ];

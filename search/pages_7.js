@@ -2,6 +2,7 @@ var searchData=
 [
   ['handling_20for_20email_20address_20groups',['Handling for email address groups',['../addr_group.html',1,'address']]],
   ['handling_20of_20international_20domain_20names',['Handling of international domain names',['../addr_idna.html',1,'address']]],
+  ['helper_20functions_20to_20get_20config_20values',['Helper functions to get config values',['../config_helpers.html',1,'config']]],
   ['handling_20of_20gnutls_20encryption',['Handling of GnuTLS encryption',['../conn_gnutls.html',1,'conn']]],
   ['handling_20of_20openssl_20encryption',['Handling of OpenSSL encryption',['../conn_openssl.html',1,'conn']]],
   ['handling_20of_20email_20attachments',['Handling of email attachments',['../email_attach.html',1,'email']]],

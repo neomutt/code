@@ -26,5 +26,6 @@ var searchData=
   ['cryptentry',['CryptEntry',['../structCryptEntry.html',1,'']]],
   ['cryptkeyinfo',['CryptKeyInfo',['../structCryptKeyInfo.html',1,'']]],
   ['cryptmodule',['CryptModule',['../structCryptModule.html',1,'']]],
-  ['cryptmodulespecs',['CryptModuleSpecs',['../structCryptModuleSpecs.html',1,'']]]
+  ['cryptmodulespecs',['CryptModuleSpecs',['../structCryptModuleSpecs.html',1,'']]],
+  ['currentemail',['CurrentEmail',['../structCurrentEmail.html',1,'']]]
 ];

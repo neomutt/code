@@ -21,16 +21,12 @@ var newsrc_8c =
     [ "nntp_delete_group_cache", "newsrc_8c.html#a140bf8e49e3f11e0d9cb4d8253767819", null ],
     [ "nntp_clear_cache", "newsrc_8c.html#a0e57436b35d68983c6fe44815f3ad505", null ],
     [ "nntp_format_str", "newsrc_8c.html#a2f9880f62ed891cdd63f136d9d9766fc", null ],
-    [ "nntp_get_field", "newsrc_8c.html#a0e2b120f6fa0e69004a2c2e556c77d57", null ],
+    [ "nntp_get_field", "newsrc_8c.html#a1fa32556d100e52868574d5c1be2228f", null ],
     [ "nntp_select_server", "newsrc_8c.html#a7ba29bbfa4543e780d0e49241bcd2496", null ],
     [ "nntp_article_status", "newsrc_8c.html#a3a2a364d853a786fb0b224c379d28eab", null ],
     [ "mutt_newsgroup_subscribe", "newsrc_8c.html#a74a7958486648b61d6ce1fe34318eed8", null ],
     [ "mutt_newsgroup_unsubscribe", "newsrc_8c.html#aea2d7fb63b1b73a6815a0ad8cd8ae07e", null ],
     [ "mutt_newsgroup_catchup", "newsrc_8c.html#a5f67ac08e3719a644d03b62e22127100", null ],
     [ "mutt_newsgroup_uncatchup", "newsrc_8c.html#a16c66587ba5ca1cde6cc7408dfc3e66e", null ],
-    [ "nntp_mailbox", "newsrc_8c.html#a5d6b4cf3e2a57697ddf28fb7b616cb46", null ],
-    [ "C_NewsCacheDir", "newsrc_8c.html#ab8ca1454d4243cb92da974ce0cd511d6", null ],
-    [ "C_Newsrc", "newsrc_8c.html#a63b8f0fd985de7a7f2e2a6b7dba546bb", null ],
-    [ "C_NntpPass", "newsrc_8c.html#a03f65b47f9cfa7f07efac6b10a92020a", null ],
-    [ "C_NntpUser", "newsrc_8c.html#a888071a07b2203dc4d06a336b6cc4a1f", null ]
+    [ "nntp_mailbox", "newsrc_8c.html#a5d6b4cf3e2a57697ddf28fb7b616cb46", null ]
 ];

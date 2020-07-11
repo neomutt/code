@@ -33,6 +33,7 @@ var address_2address_8c =
     [ "mutt_addr_write", "address_2address_8c.html#ac1ccf9a098991f797af50f11e6575695", null ],
     [ "mutt_addrlist_write", "address_2address_8c.html#a69d612ac8c7f2fc7e471561216bd1c41", null ],
     [ "mutt_addrlist_write_list", "address_2address_8c.html#a3f26185f6b123539b752d5be774606ea", null ],
+    [ "mutt_addrlist_write_file", "address_2address_8c.html#a80e981d462b7749c3b3ab013b415675f", null ],
     [ "mutt_addr_to_intl", "address_2address_8c.html#abfd85ca14a8e67427bbc809212ae7fd4", null ],
     [ "mutt_addrlist_to_intl", "address_2address_8c.html#abe8afdaeb5bdca19a1867823d73a1ec4", null ],
     [ "mutt_addr_to_local", "address_2address_8c.html#a95bcf9ec8be0b69b33fadde85800b559", null ],
@@ -42,6 +43,8 @@ var address_2address_8c =
     [ "mutt_addrlist_clear", "address_2address_8c.html#a396bcf6adfff6663096fa6ae99c31c9a", null ],
     [ "mutt_addrlist_append", "address_2address_8c.html#a68385b174baad74a9aecf3dec61432a0", null ],
     [ "mutt_addrlist_prepend", "address_2address_8c.html#aa68a29c1feb5938596aa589cf2d6a1af", null ],
+    [ "mutt_addr_uses_unicode", "address_2address_8c.html#a87d3aafedba94d99128c14ca87d7d6ef", null ],
+    [ "mutt_addrlist_uses_unicode", "address_2address_8c.html#a5b9dcfae60924e14f0b55a33dcbdec33", null ],
     [ "AddressSpecials", "address_2address_8c.html#a930029e50328c7a0b48e302ef87fe023", null ],
     [ "AddressError", "address_2address_8c.html#ad858e9af7a80f0d17ff763bed3821500", null ],
     [ "AddressErrors", "address_2address_8c.html#a51cd0cf4038bc17ec6402a5478cb6490", null ]

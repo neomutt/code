@@ -1,6 +1,5 @@
 var index =
 [
-    [ "Body Caching - local copies of email bodies", "bcache.html", null ],
     [ "GUI component for displaying/selecting items from a list", "browser.html", null ],
     [ "Manage where the email is piped to external commands", "commands.html", null ],
     [ "Functions to parse commands in a config file", "command_parse.html", null ],
@@ -8,7 +7,6 @@ var index =
     [ "GUI editor for an email's headers", "compose.html", null ],
     [ "The \"currently-open\" mailbox", "ctx.html", null ],
     [ "Duplicate the structure of an entire email", "copy.html", null ],
-    [ "GUI basic built-in text editor", "edit.html", null ],
     [ "Prepare an email to be edited", "editmsg.html", null ],
     [ "Rich text handler", "enriched.html", null ],
     [ "GUI ask the user to enter a string", "enter.html", null ],
@@ -54,10 +52,6 @@ var index =
     [ "GUI handle the resizing of the screen", "resize.html", null ],
     [ "RFC3676 Format Flowed routines", "rfc3676.html", null ],
     [ "Routines for adding user scores to emails", "score.html", null ],
-    [ "Prepare and send an email", "send.html", null ],
-    [ "Miscellaneous functions for sending an email", "sendlib.html", null ],
-    [ "GUI display the mailboxes in a side panel", "sidebar.html", null ],
-    [ "Send email to an SMTP server", "smtp.html", null ],
     [ "Assorted sorting methods", "sort.html", null ],
     [ "Keep track when processing files", "state.html", null ],
     [ "GUI display a user-configurable status line", "status.html", null ],

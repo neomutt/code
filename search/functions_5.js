@@ -1,8 +1,8 @@
 var searchData=
 [
   ['feature_5fenabled',['feature_enabled',['../version_8c.html#ad4a3f719e02f32c690d0a68785481422',1,'feature_enabled(const char *name):&#160;version.c'],['../version_8h.html#ad4a3f719e02f32c690d0a68785481422',1,'feature_enabled(const char *name):&#160;version.c']]],
-  ['fetch_5fauth',['fetch_auth',['../pop__lib_8c.html#aabff8caa7467a16ac8d2f77d0d14abc5',1,'pop_lib.c']]],
-  ['fetch_5fcapa',['fetch_capa',['../pop__lib_8c.html#a408a66a06e087854500a1de8fbf2d3c8',1,'pop_lib.c']]],
+  ['fetch_5fauth',['fetch_auth',['../lib_8c.html#aabff8caa7467a16ac8d2f77d0d14abc5',1,'lib.c']]],
+  ['fetch_5fcapa',['fetch_capa',['../lib_8c.html#a408a66a06e087854500a1de8fbf2d3c8',1,'lib.c']]],
   ['fetch_5fchildren',['fetch_children',['../nntp_8c.html#a1b2bc10241891f96f165f08e03ef18b4',1,'nntp.c']]],
   ['fetch_5fdescription',['fetch_description',['../nntp_8c.html#ae79240002fd35ab8a9331bcd4e8a6e90',1,'nntp.c']]],
   ['fetch_5fmessage',['fetch_message',['../pop_8c.html#a3cc06c4686cd79cfa3177fca6a868fa2',1,'pop.c']]],
@@ -35,7 +35,7 @@ var searchData=
   ['fix_5fuid',['fix_uid',['../gnupgparse_8c.html#a18dfeec11744f1c9a301dbbfaec153bc',1,'gnupgparse.c']]],
   ['flush_5fbuffer',['flush_buffer',['../message_8c.html#a6d20c017931a27796e7462278f74defe',1,'message.c']]],
   ['flush_5fpar',['flush_par',['../rfc3676_8c.html#af68b25d42671ff7d158cd8c039add61d',1,'rfc3676.c']]],
-  ['fold_5fone_5fheader',['fold_one_header',['../sendlib_8c.html#a05f309b54c36fe2f7121cb91b2d202d0',1,'sendlib.c']]],
+  ['fold_5fone_5fheader',['fold_one_header',['../header_8c.html#a05f309b54c36fe2f7121cb91b2d202d0',1,'header.c']]],
   ['folder_5fformat_5fstr',['folder_format_str',['../browser_8c.html#a521fce142a7a9c2761988fcfebeceac0',1,'browser.c']]],
   ['folder_5fmake_5fentry',['folder_make_entry',['../browser_8c.html#a2fdd342366031697eaaececec586db00',1,'browser.c']]],
   ['format_5faddress_5fheader',['format_address_header',['../copy_8c.html#aee298ff7661f33a3083d6e6c6563069a',1,'copy.c']]],

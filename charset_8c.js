@@ -1,6 +1,7 @@
 var charset_8c =
 [
     [ "Lookup", "structLookup.html", "structLookup" ],
+    [ "MimeNames", "structMimeNames.html", "structMimeNames" ],
     [ "EILSEQ", "charset_8c.html#ac6c071293826a4e66a717bb38db7794d", null ],
     [ "TAILQ_HEAD", "charset_8c.html#a5af9267b27b67cda3a18b4f0adaa4857", null ],
     [ "lookup_new", "charset_8c.html#a48b62a9347e37e654630d036383cb955", null ],

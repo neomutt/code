@@ -55,6 +55,7 @@ var hierarchy =
     [ "CryptKeyInfo", "structCryptKeyInfo.html", null ],
     [ "CryptModule", "structCryptModule.html", null ],
     [ "CryptModuleSpecs", "structCryptModuleSpecs.html", null ],
+    [ "CurrentEmail", "structCurrentEmail.html", null ],
     [ "DnArray", "structDnArray.html", null ],
     [ "Email", "structEmail.html", [
       [ "ImapEmailData", "structImapEmailData.html", null ],
@@ -135,7 +136,9 @@ var hierarchy =
     [ "MUpdate", "structMUpdate.html", null ],
     [ "MuttFileIter", "structMuttFileIter.html", null ],
     [ "MuttThread", "structMuttThread.html", null ],
-    [ "MuttWindow", "structMuttWindow.html", null ],
+    [ "MuttWindow", "structMuttWindow.html", [
+      [ "SidebarWindowData", "structSidebarWindowData.html", null ]
+    ] ],
     [ "MxOps", "structMxOps.html", null ],
     [ "MyVar", "structMyVar.html", null ],
     [ "NeoMutt", "structNeoMutt.html", null ],
@@ -185,6 +188,7 @@ var hierarchy =
     [ "Slist", "structSlist.html", null ],
     [ "SmimeCommandContext", "structSmimeCommandContext.html", null ],
     [ "SmimeKey", "structSmimeKey.html", null ],
+    [ "SmtpAccountData", "structSmtpAccountData.html", null ],
     [ "State", "structState.html", null ],
     [ "StoreDbCtx", "structStoreDbCtx.html", null ],
     [ "StoreLmdbCtx", "structStoreLmdbCtx.html", null ],

@@ -8,6 +8,8 @@ var dir_9f351d46ce3cc29445a41dc3a31e6919 =
     [ "dump.h", "dump_8h.html", "dump_8h" ],
     [ "enum.c", "config_2enum_8c.html", "config_2enum_8c" ],
     [ "enum.h", "config_2enum_8h.html", "config_2enum_8h" ],
+    [ "helpers.c", "helpers_8c.html", "helpers_8c" ],
+    [ "helpers.h", "helpers_8h.html", "helpers_8h" ],
     [ "inheritance.h", "inheritance_8h.html", [
       [ "Inheritance", "structInheritance.html", "structInheritance" ]
     ] ],

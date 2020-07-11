@@ -21,13 +21,5 @@ var crypt_8c =
     [ "mutt_protected_headers_handler", "crypt_8c.html#a7a570642e688ff7d8bc1a073103aef92", null ],
     [ "mutt_signed_handler", "crypt_8c.html#ab4a0490d64e0a23332c76fabe5c58105", null ],
     [ "crypt_get_fingerprint_or_id", "crypt_8c.html#a0a1a629e56fca1dc19c84c5577cdbb9f", null ],
-    [ "crypt_is_numerical_keyid", "crypt_8c.html#a3230991ab72820135b5ba8fe94a5f43d", null ],
-    [ "C_CryptTimestamp", "crypt_8c.html#a075b6cd1ba532788589f28027771795d", null ],
-    [ "C_PgpEncryptSelf", "crypt_8c.html#a38746a0bb0f3023613f136ff9a7d2775", null ],
-    [ "C_PgpMimeAuto", "crypt_8c.html#a792fc80519334de89b6408bcf820cad2", null ],
-    [ "C_PgpRetainableSigs", "crypt_8c.html#abc3fff195d81fd1171713d7777b34815", null ],
-    [ "C_PgpSelfEncrypt", "crypt_8c.html#abe0e61481bf9e9b58563f439bbb76c33", null ],
-    [ "C_PgpStrictEnc", "crypt_8c.html#a8fc68467ab51929e48beb0e3e905c140", null ],
-    [ "C_SmimeEncryptSelf", "crypt_8c.html#ada57bc586e7ba4540243196c253d9b49", null ],
-    [ "C_SmimeSelfEncrypt", "crypt_8c.html#acc694a19960a2ce87f9f0d5c173c9814", null ]
+    [ "crypt_is_numerical_keyid", "crypt_8c.html#a3230991ab72820135b5ba8fe94a5f43d", null ]
 ];

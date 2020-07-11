@@ -19,8 +19,8 @@ var pop_8c =
     [ "pop_ac_find", "pop_8c.html#a5c088533a3c9fff2f12c32e4e037295a", null ],
     [ "pop_ac_add", "pop_8c.html#af00be472994755930e72b18eb1976f60", null ],
     [ "pop_mbox_open", "pop_8c.html#acdba1ee37ea546f48016d1cf3f7f512b", null ],
-    [ "pop_mbox_check", "pop_8c.html#aa405c080879c91d295f7e13710b305e9", null ],
-    [ "pop_mbox_sync", "pop_8c.html#ace831e30d7a25a059df97c83f874d25b", null ],
+    [ "pop_mbox_check", "pop_8c.html#acc854b150d5fc2fbe01af6dea1ba61c4", null ],
+    [ "pop_mbox_sync", "pop_8c.html#aebf6ed4e14773a95fe83caa0b79f2445", null ],
     [ "pop_mbox_close", "pop_8c.html#aebc7b81fdfa8c397574ab3a243534ec6", null ],
     [ "pop_msg_open", "pop_8c.html#ac2445888a612c0679bf9b71e529f5846", null ],
     [ "pop_msg_close", "pop_8c.html#a7401b6da959be8294880ff7df8c611a8", null ],
@@ -29,9 +29,5 @@ var pop_8c =
     [ "pop_path_canon", "pop_8c.html#a15f51348ae6a47437dcd21d7aca945b9", null ],
     [ "pop_path_pretty", "pop_8c.html#a47c10790f7a2d4bac15a9a82a90e1f04", null ],
     [ "pop_path_parent", "pop_8c.html#a0c80b09a7ac17ad83cf6b5d647cde95c", null ],
-    [ "C_PopCheckinterval", "pop_8c.html#ab790971917614127487f7ae6d2687abc", null ],
-    [ "C_PopDelete", "pop_8c.html#aab982ef48c984a5fa900a432929c000d", null ],
-    [ "C_PopHost", "pop_8c.html#ac2c2920d79d79010b662e655f07371a4", null ],
-    [ "C_PopLast", "pop_8c.html#a33a4ca217f4b2e4e7df69136b001fc7c", null ],
     [ "MxPopOps", "pop_8c.html#aec53cbb4297fe9b475784600a3957dc7", null ]
 ];

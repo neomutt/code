@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['edit_2ec',['edit.c',['../edit_8c.html',1,'']]],
-  ['edit_2eh',['edit.h',['../edit_8h.html',1,'']]],
   ['editmsg_2ec',['editmsg.c',['../editmsg_8c.html',1,'']]],
   ['email_2ec',['email.c',['../email_8c.html',1,'']]],
   ['email_2eh',['email.h',['../email_8h.html',1,'']]],
   ['email_5fcmp_5fstrict_2ec',['email_cmp_strict.c',['../email__cmp__strict_8c.html',1,'']]],
   ['email_5ffree_2ec',['email_free.c',['../email__free_8c.html',1,'']]],
-  ['email_5fglobals_2ec',['email_globals.c',['../email__globals_8c.html',1,'']]],
-  ['email_5fglobals_2eh',['email_globals.h',['../email__globals_8h.html',1,'']]],
   ['email_5fnew_2ec',['email_new.c',['../email__new_8c.html',1,'']]],
   ['email_5fsize_2ec',['email_size.c',['../email__size_8c.html',1,'']]],
   ['emaillist_5fadd_5femail_2ec',['emaillist_add_email.c',['../emaillist__add__email_8c.html',1,'']]],

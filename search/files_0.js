@@ -15,7 +15,7 @@ var searchData=
   ['alias_2eh',['alias.h',['../alias_8h.html',1,'']]],
   ['attach_2ec',['attach.c',['../attach_8c.html',1,'']]],
   ['attach_2eh',['attach.h',['../attach_8h.html',1,'']]],
-  ['auth_2ec',['auth.c',['../auth_8c.html',1,'']]],
+  ['auth_2ec',['auth.c',['../imap_2auth_8c.html',1,'(Global Namespace)'],['../pop_2auth_8c.html',1,'(Global Namespace)']]],
   ['auth_2eh',['auth.h',['../auth_8h.html',1,'']]],
   ['auth_5fanon_2ec',['auth_anon.c',['../auth__anon_8c.html',1,'']]],
   ['auth_5fcram_2ec',['auth_cram.c',['../auth__cram_8c.html',1,'']]],

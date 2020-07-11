@@ -11,7 +11,7 @@ var util_8c =
     [ "imap_get_parent", "util_8c.html#a5c25adc3a9cda9a494d747a928b6f522", null ],
     [ "imap_get_parent_path", "util_8c.html#a78c7437c0f185ed8ab37e666b8a69ec0", null ],
     [ "imap_clean_path", "util_8c.html#a7c4dbc9f84be00789935c291832b75b2", null ],
-    [ "imap_get_field", "util_8c.html#a6a952629dc43acfdeb1e1b7c1b529f52", null ],
+    [ "imap_get_field", "util_8c.html#a62da60fe9d013077662e9e2f1352a931", null ],
     [ "imap_msn_index_to_uid_seqset", "util_8c.html#ad409beef170c60f6ece722f948f452bd", null ],
     [ "imap_hcache_namer", "util_8c.html#a19bc8f7fbeb48402994c77c1ad0a38de", null ],
     [ "imap_hcache_open", "util_8c.html#acd75897efa210794ca144cea1e3f7ca9", null ],
@@ -44,10 +44,5 @@ var util_8c =
     [ "imap_account_match", "util_8c.html#ac2225c270b21b238b8f64e1f7090baf0", null ],
     [ "mutt_seqset_iterator_new", "util_8c.html#ae790592c988fe6561b73d0a406d61c86", null ],
     [ "mutt_seqset_iterator_next", "util_8c.html#a7b7c68a3163c79c2a1dcbe20275563e4", null ],
-    [ "mutt_seqset_iterator_free", "util_8c.html#a7ece0c8ce93c0c57e933f5cebb7913ed", null ],
-    [ "C_ImapDelimChars", "util_8c.html#ab703712fbdeb459a713a725d4ac5abbd", null ],
-    [ "C_ImapLogin", "util_8c.html#a9e178026126c78ebbcc697120fafa616", null ],
-    [ "C_ImapOauthRefreshCommand", "util_8c.html#adbda41f57e032f0447a037bdbe7fd698", null ],
-    [ "C_ImapPass", "util_8c.html#aff1ba825a5f7d1a081cdd0dc2b52cf9c", null ],
-    [ "C_ImapPipelineDepth", "util_8c.html#a35c0d3df8c4d7d2a2156a4c3239fd4ee", null ]
+    [ "mutt_seqset_iterator_free", "util_8c.html#a7ece0c8ce93c0c57e933f5cebb7913ed", null ]
 ];

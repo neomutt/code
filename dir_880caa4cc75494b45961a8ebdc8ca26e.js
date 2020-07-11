@@ -1,5 +1,6 @@
 var dir_880caa4cc75494b45961a8ebdc8ca26e =
 [
+    [ "config.c", "ncrypt_2config_8c.html", "ncrypt_2config_8c" ],
     [ "crypt.c", "crypt_8c.html", "crypt_8c" ],
     [ "crypt.h", "crypt_8h.html", "crypt_8h" ],
     [ "crypt_gpgme.c", "crypt__gpgme_8c.html", "crypt__gpgme_8c" ],
@@ -27,6 +28,7 @@ var dir_880caa4cc75494b45961a8ebdc8ca26e =
     [ "pgpmicalg.h", "pgpmicalg_8h.html", "pgpmicalg_8h" ],
     [ "pgppacket.c", "pgppacket_8c.html", "pgppacket_8c" ],
     [ "pgppacket.h", "pgppacket_8h.html", "pgppacket_8h" ],
+    [ "private.h", "ncrypt_2private_8h.html", "ncrypt_2private_8h" ],
     [ "smime.c", "smime_8c.html", "smime_8c" ],
     [ "smime.h", "smime_8h.html", "smime_8h" ]
 ];

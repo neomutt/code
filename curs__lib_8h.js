@@ -40,6 +40,7 @@ var curs__lib_8h =
     [ "mutt_unget_string", "curs__lib_8h.html#a6ef7b1ace696713f403479e10c391642", null ],
     [ "mutt_wstr_trunc", "curs__lib_8h.html#a48a9fd66de2ef76e2b72704badd3c40b", null ],
     [ "mutt_yesorno", "curs__lib_8h.html#a67a4f6d2c21c9de420130089bb20505c", null ],
+    [ "query_quadoption", "curs__lib_8h.html#ab02047769214ff014b9a8a1782babadc", null ],
     [ "mutt_buffer_get_field_full", "curs__lib_8h.html#ab55d2a00617af6d56a7bca37991f1a23", null ],
     [ "mutt_buffer_enter_fname_full", "curs__lib_8h.html#ad3db1a1fd479d43995c314ef152857f9", null ],
     [ "C_MetaKey", "curs__lib_8h.html#a5ae96c74d953ed6282da71b8d3752053", null ],

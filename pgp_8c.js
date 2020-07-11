@@ -28,12 +28,6 @@ var pgp_8c =
     [ "pgp_class_encrypt_message", "pgp_8c.html#a670a77cb262550ce2a37b6eb3b5b5c88", null ],
     [ "pgp_class_traditional_encryptsign", "pgp_8c.html#ac131bc7b36afa45cd86e864a66baee6f", null ],
     [ "pgp_class_send_menu", "pgp_8c.html#a563518f9cdac5ec697065b7c49ce37c6", null ],
-    [ "C_PgpCheckExit", "pgp_8c.html#aad7ea38dc56522cb6aefde8eff702618", null ],
-    [ "C_PgpCheckGpgDecryptStatusFd", "pgp_8c.html#a3519c0edef57cde72f80d3e46da5344a", null ],
-    [ "C_PgpDecryptionOkay", "pgp_8c.html#a920b3d87d276f7e1e29d2961e03cbe4c", null ],
-    [ "C_PgpGoodSign", "pgp_8c.html#aeab0836f257ee29f1c6a6fb65191102c", null ],
-    [ "C_PgpTimeout", "pgp_8c.html#a9dc75c89254618902549cb880b774292", null ],
-    [ "C_PgpUseGpgAgent", "pgp_8c.html#abaf43fb6085f936d6941a37bc9d49301", null ],
     [ "PgpPass", "pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d", null ],
     [ "PgpExptime", "pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1", null ]
 ];

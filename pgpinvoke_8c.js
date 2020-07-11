@@ -14,18 +14,5 @@ var pgpinvoke_8c =
     [ "pgp_class_invoke_getkeys", "pgpinvoke_8c.html#a41108b7fbffaf50678e9299b62a8fc7a", null ],
     [ "pgp_invoke_export", "pgpinvoke_8c.html#a6ce58fd133819e138da6a9294ee081bb", null ],
     [ "pgp_invoke_verify_key", "pgpinvoke_8c.html#a07a1392c06efa0eaa3e02b39cc2e4571", null ],
-    [ "pgp_invoke_list_keys", "pgpinvoke_8c.html#a9922a095eaa2b9f874028bd0ae5332ef", null ],
-    [ "C_PgpClearsignCommand", "pgpinvoke_8c.html#a40758918e5d503a4408feb4a8204892c", null ],
-    [ "C_PgpDecodeCommand", "pgpinvoke_8c.html#ad47a8fa8f93e910cdea36e5bcaeda1c0", null ],
-    [ "C_PgpDecryptCommand", "pgpinvoke_8c.html#a9d4b073aee38b3ef43fb28230a4474f1", null ],
-    [ "C_PgpEncryptOnlyCommand", "pgpinvoke_8c.html#a8f6cfa47b4dfe067683836d27c7502e5", null ],
-    [ "C_PgpEncryptSignCommand", "pgpinvoke_8c.html#ac5514c1023836a53f58223a2a44cb9cc", null ],
-    [ "C_PgpExportCommand", "pgpinvoke_8c.html#af83e9adbf207132d945f50d7bfb52ac4", null ],
-    [ "C_PgpGetkeysCommand", "pgpinvoke_8c.html#aae552a18d6ff301efbeb97add3875016", null ],
-    [ "C_PgpImportCommand", "pgpinvoke_8c.html#ae9e186beb1bbe22ee2eb407e9727dc44", null ],
-    [ "C_PgpListPubringCommand", "pgpinvoke_8c.html#ab9b748028576ef3f5f2c2c08d69342d0", null ],
-    [ "C_PgpListSecringCommand", "pgpinvoke_8c.html#a9652fe5bf43de3c6ce051ae04003bb7b", null ],
-    [ "C_PgpSignCommand", "pgpinvoke_8c.html#ac3ade10489a4d795dfa2d8d07f460112", null ],
-    [ "C_PgpVerifyCommand", "pgpinvoke_8c.html#a2065148c9fc04d268edcf604239ff498", null ],
-    [ "C_PgpVerifyKeyCommand", "pgpinvoke_8c.html#a783394463a769cef8f17014d8b86aacb", null ]
+    [ "pgp_invoke_list_keys", "pgpinvoke_8c.html#a9922a095eaa2b9f874028bd0ae5332ef", null ]
 ];

@@ -16,7 +16,7 @@ var mh_8c =
     [ "mh_sync_message", "mh_8c.html#a165a4e742c432037d9063fbe8afa97ce", null ],
     [ "mh_mbox_open", "mh_8c.html#abdf02885d1d741a84e8ebd99aef8cf10", null ],
     [ "mh_mbox_open_append", "mh_8c.html#a6683ee55cc11fb9430cb51cd110c7254", null ],
-    [ "mh_mbox_check", "mh_8c.html#aea77911bef4938ed5208e99e3d2942f3", null ],
+    [ "mh_mbox_check", "mh_8c.html#a2a2f83814f45a1f1364bae22ed6240af", null ],
     [ "mh_msg_open", "mh_8c.html#a37a59f0a2d3e560ef149608d36160b14", null ],
     [ "mh_msg_open_new", "mh_8c.html#af833cc8092cda2f7ccf3f2c7249a1234", null ],
     [ "mh_msg_commit", "mh_8c.html#ab7cdabd2411f9704a83e58359212256a", null ],

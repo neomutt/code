@@ -1,7 +1,6 @@
 var dir_803ea0153ad76bee9f0b07478cfbff67 =
 [
-    [ "conn_globals.c", "conn__globals_8c.html", "conn__globals_8c" ],
-    [ "conn_globals.h", "conn__globals_8h.html", "conn__globals_8h" ],
+    [ "config.c", "conn_2config_8c.html", "conn_2config_8c" ],
     [ "connaccount.c", "connaccount_8c.html", "connaccount_8c" ],
     [ "connaccount.h", "connaccount_8h.html", "connaccount_8h" ],
     [ "connection.h", "connection_8h.html", [

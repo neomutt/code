@@ -18,8 +18,5 @@ var hcache_8c =
     [ "mutt_hcache_store", "hcache_8c.html#a37205970da3a588203337af567f796fd", null ],
     [ "mutt_hcache_store_raw", "hcache_8c.html#a3abe8868238b4e29a445cdbf4da3ca8c", null ],
     [ "mutt_hcache_delete_header", "hcache_8c.html#a00d8017e832930cb699c8bdd12417023", null ],
-    [ "C_HeaderCacheBackend", "hcache_8c.html#a2224a700997de24abfbaa63344a72969", null ],
-    [ "hcachever", "hcache_8c.html#ac0dde9400cb5f702e4b8c6fbd6e5c0ab", null ],
-    [ "C_HeaderCacheCompressLevel", "hcache_8c.html#a4b23771c7935aa5e619f1bbac6cc0197", null ],
-    [ "C_HeaderCacheCompressMethod", "hcache_8c.html#af96bb6bee5a46b0787b642a4d625ac55", null ]
+    [ "hcachever", "hcache_8c.html#ac0dde9400cb5f702e4b8c6fbd6e5c0ab", null ]
 ];

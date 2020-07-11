@@ -32,5 +32,15 @@ var pop_2private_8h =
     [ "pop_logout", "pop_2private_8h.html#aeb87c461c48395e38564034b64ec2d37", null ],
     [ "pop_adata_get", "pop_2private_8h.html#ae2ba9262442cd65666aafbf191de30f4", null ],
     [ "pop_edata_get", "pop_2private_8h.html#ad62316d343b8a8cc4724eb3af0d3ba09", null ],
-    [ "pop_get_field", "pop_2private_8h.html#a98067d9fc8d7d448c2a08c7a86071313", null ]
+    [ "pop_get_field", "pop_2private_8h.html#a02fea670debdd85f5fc42b27b50b7344", null ],
+    [ "C_PopAuthTryAll", "pop_2private_8h.html#adfde6e3983f6413b7b21f360dd82f341", null ],
+    [ "C_PopAuthenticators", "pop_2private_8h.html#ad0b3813f566af34fb60e8574fd48d2d0", null ],
+    [ "C_PopCheckinterval", "pop_2private_8h.html#ab790971917614127487f7ae6d2687abc", null ],
+    [ "C_PopDelete", "pop_2private_8h.html#aab982ef48c984a5fa900a432929c000d", null ],
+    [ "C_PopHost", "pop_2private_8h.html#ac2c2920d79d79010b662e655f07371a4", null ],
+    [ "C_PopLast", "pop_2private_8h.html#a33a4ca217f4b2e4e7df69136b001fc7c", null ],
+    [ "C_PopOauthRefreshCommand", "pop_2private_8h.html#ae32cb844ee62091dcab6fc0c44136394", null ],
+    [ "C_PopPass", "pop_2private_8h.html#a2b7c303ebda42954c5a6367429e9683b", null ],
+    [ "C_PopReconnect", "pop_2private_8h.html#a8a323194ee9e2ce3b6f726b13a7f93fb", null ],
+    [ "C_PopUser", "pop_2private_8h.html#a50baca37c143767c460171416d659558", null ]
 ];

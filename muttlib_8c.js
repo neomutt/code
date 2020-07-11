@@ -8,10 +8,6 @@ var muttlib_8c =
     [ "mutt_gecos_name", "muttlib_8c.html#ade83525987828c9cee6b67b3e2b77db1", null ],
     [ "mutt_needs_mailcap", "muttlib_8c.html#a408880eb332fd5a312dcae1df22ff688", null ],
     [ "mutt_is_text_part", "muttlib_8c.html#ab74b8ff8a0761cc4ef015c39a63f502d", null ],
-    [ "mutt_randbuf", "muttlib_8c.html#ab6f7ab904f47a0ccc44ece588dbd7800", null ],
-    [ "mutt_rand_base32", "muttlib_8c.html#a337e348262a3f644fa932c6cec320baf", null ],
-    [ "mutt_rand32", "muttlib_8c.html#a8ccfb7a1f8c74cb588ceb3ad978fb084", null ],
-    [ "mutt_rand64", "muttlib_8c.html#a642006ba161a78cbefb5667ff780feca", null ],
     [ "mutt_buffer_mktemp_full", "muttlib_8c.html#a6042e51813a4896ab2de336c06472c53", null ],
     [ "mutt_mktemp_full", "muttlib_8c.html#a42683a50ac8c91d46229bf1dcb99f4c7", null ],
     [ "mutt_pretty_mailbox", "muttlib_8c.html#ab9cf3d06c285c7d21065ef96a32aa6c6", null ],
@@ -34,8 +30,6 @@ var muttlib_8c =
     [ "add_to_stailq", "muttlib_8c.html#a2e3c864ac49cfb7bc862c32416baf81d", null ],
     [ "remove_from_stailq", "muttlib_8c.html#a1b422ce225f4eb96e3ce8e276467ae9f", null ],
     [ "C_GecosMask", "muttlib_8c.html#a810f68222fb6b25c11c551bf4c5c22d8", null ],
-    [ "fp_random", "muttlib_8c.html#accc32e53492176bc1c3cb526f7233fb4", null ],
-    [ "base32", "muttlib_8c.html#afb8aeff81321e9da1f915f929d4b058d", null ],
     [ "xdg_env_vars", "muttlib_8c.html#aa56f51d9542560ead857cd669e7081fe", null ],
     [ "xdg_defaults", "muttlib_8c.html#acc0475757fa09772b783f791f2c41a80", null ]
 ];

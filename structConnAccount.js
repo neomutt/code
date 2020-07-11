@@ -8,5 +8,6 @@ var structConnAccount =
     [ "type", "structConnAccount.html#aefc6c0b647de43e60472000102a0e208", null ],
     [ "flags", "structConnAccount.html#af674ed2969fc29ff7d99f8b4cff6c92b", null ],
     [ "service", "structConnAccount.html#a86102cb75ff512603a5559d4908b1ba4", null ],
-    [ "get_field", "structConnAccount.html#a7d50ff0be45788ebe73431c850925fc9", null ]
+    [ "get_field", "structConnAccount.html#ab6af33cde42120a828e3d37d0c67f863", null ],
+    [ "gf_data", "structConnAccount.html#af8038540105baf4da84d15bcb6bffa61", null ]
 ];

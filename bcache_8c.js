@@ -11,5 +11,6 @@ var bcache_8c =
     [ "mutt_bcache_del", "bcache_8c.html#a81a73e04de0e74abec304abb57f9a21a", null ],
     [ "mutt_bcache_exists", "bcache_8c.html#a0fd8cd0e88c27788e6268674c71c7879", null ],
     [ "mutt_bcache_list", "bcache_8c.html#a61b6432fa4ef33ea232dad524cf907bb", null ],
+    [ "C_MessageCacheClean", "bcache_8c.html#a0bf86733ff0fefb7879f1d75bb44415a", null ],
     [ "C_MessageCachedir", "bcache_8c.html#a747ba79497d0a085ea36885146f187f4", null ]
 ];

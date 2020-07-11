@@ -26,5 +26,6 @@ var searchData=
   ['match_20patterns_20to_20emails',['Match patterns to emails',['../pattern.html',1,'index']]],
   ['manage_20precompiled_20_2f_20predefined_20regular_20expressions',['Manage precompiled / predefined regular expressions',['../prex.html',1,'mutt']]],
   ['manage_20regular_20expressions',['Manage regular expressions',['../regex.html',1,'mutt']]],
-  ['miscellaneous_20functions_20for_20sending_20an_20email',['Miscellaneous functions for sending an email',['../sendlib.html',1,'index']]]
+  ['manipulate_20multipart_20emails',['Manipulate multipart Emails',['../send_multipart.html',1,'send']]],
+  ['miscellaneous_20functions_20for_20sending_20an_20email',['Miscellaneous functions for sending an email',['../send_sendlib.html',1,'send']]]
 ];

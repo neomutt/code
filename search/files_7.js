@@ -7,7 +7,11 @@ var searchData=
   ['hcache_2ec',['hcache.c',['../hcache_8c.html',1,'']]],
   ['hdrline_2ec',['hdrline.c',['../hdrline_8c.html',1,'']]],
   ['hdrline_2eh',['hdrline.h',['../hdrline_8h.html',1,'']]],
+  ['header_2ec',['header.c',['../header_8c.html',1,'']]],
+  ['header_2eh',['header.h',['../header_8h.html',1,'']]],
   ['help_2ec',['help.c',['../help_8c.html',1,'']]],
+  ['helpers_2ec',['helpers.c',['../helpers_8c.html',1,'']]],
+  ['helpers_2eh',['helpers.h',['../helpers_8h.html',1,'']]],
   ['history_2ec',['history.c',['../history_8c.html',1,'']]],
   ['hook_2ec',['hook.c',['../hook_8c.html',1,'']]],
   ['hook_2eh',['hook.h',['../hook_8h.html',1,'']]]

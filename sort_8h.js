@@ -8,6 +8,5 @@ var sort_8h =
     [ "mutt_get_name", "sort_8h.html#a9a230efa9217e987ca1d1adb14b7e235", null ],
     [ "C_ReverseAlias", "sort_8h.html#a8d408d0bfffcfd6f6c5f7adea215cfcc", null ],
     [ "C_Sort", "sort_8h.html#acfd072fdd89f9029c0bfd4b0a0c8be61", null ],
-    [ "C_SortAux", "sort_8h.html#aca4b52906acb38c6a150f9ef5a83887a", null ],
-    [ "C_PgpSortKeys", "sort_8h.html#a7aff2cd44f339d1e164cca4dfdf92a95", null ]
+    [ "C_SortAux", "sort_8h.html#aca4b52906acb38c6a150f9ef5a83887a", null ]
 ];

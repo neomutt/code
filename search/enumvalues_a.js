@@ -212,10 +212,10 @@ var searchData=
   ['mutt_5fwin_5fsize_5ffixed',['MUTT_WIN_SIZE_FIXED',['../mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0075b8525a52aaf6af06522984f56d0f',1,'mutt_window.h']]],
   ['mutt_5fwin_5fsize_5fmaximise',['MUTT_WIN_SIZE_MAXIMISE',['../mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a',1,'mutt_window.h']]],
   ['mutt_5fwin_5fsize_5fminimise',['MUTT_WIN_SIZE_MINIMISE',['../mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0112ebcfb8215976b1b148189cf1af28',1,'mutt_window.h']]],
-  ['mutt_5fwrite_5fheader_5fedithdrs',['MUTT_WRITE_HEADER_EDITHDRS',['../sendlib_8h.html#a610db600447893b501a944c8e5dbb9f7ad0d457403d03e8b8a4f70d5b41bc55cc',1,'sendlib.h']]],
-  ['mutt_5fwrite_5fheader_5ffcc',['MUTT_WRITE_HEADER_FCC',['../sendlib_8h.html#a610db600447893b501a944c8e5dbb9f7a0a28c77e0af5e5563e7493b4265b58e8',1,'sendlib.h']]],
-  ['mutt_5fwrite_5fheader_5fmime',['MUTT_WRITE_HEADER_MIME',['../sendlib_8h.html#a610db600447893b501a944c8e5dbb9f7a9c9142b3d504a8adbbef76e4191a58bd',1,'sendlib.h']]],
-  ['mutt_5fwrite_5fheader_5fnormal',['MUTT_WRITE_HEADER_NORMAL',['../sendlib_8h.html#a610db600447893b501a944c8e5dbb9f7ab8ca5468a3e97884fe52cfc76ff40fa8',1,'sendlib.h']]],
-  ['mutt_5fwrite_5fheader_5fpostpone',['MUTT_WRITE_HEADER_POSTPONE',['../sendlib_8h.html#a610db600447893b501a944c8e5dbb9f7acc9c373684aed9be7171f4de9f893566',1,'sendlib.h']]],
+  ['mutt_5fwrite_5fheader_5fedithdrs',['MUTT_WRITE_HEADER_EDITHDRS',['../header_8h.html#a610db600447893b501a944c8e5dbb9f7ad0d457403d03e8b8a4f70d5b41bc55cc',1,'header.h']]],
+  ['mutt_5fwrite_5fheader_5ffcc',['MUTT_WRITE_HEADER_FCC',['../header_8h.html#a610db600447893b501a944c8e5dbb9f7a0a28c77e0af5e5563e7493b4265b58e8',1,'header.h']]],
+  ['mutt_5fwrite_5fheader_5fmime',['MUTT_WRITE_HEADER_MIME',['../header_8h.html#a610db600447893b501a944c8e5dbb9f7a9c9142b3d504a8adbbef76e4191a58bd',1,'header.h']]],
+  ['mutt_5fwrite_5fheader_5fnormal',['MUTT_WRITE_HEADER_NORMAL',['../header_8h.html#a610db600447893b501a944c8e5dbb9f7ab8ca5468a3e97884fe52cfc76ff40fa8',1,'header.h']]],
+  ['mutt_5fwrite_5fheader_5fpostpone',['MUTT_WRITE_HEADER_POSTPONE',['../header_8h.html#a610db600447893b501a944c8e5dbb9f7acc9c373684aed9be7171f4de9f893566',1,'header.h']]],
   ['mutt_5fyes',['MUTT_YES',['../config_2quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7',1,'quad.h']]]
 ];

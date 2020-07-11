@@ -7,10 +7,13 @@ var structMuttWindow =
     [ "old", "structMuttWindow.html#a0826671808d56e0b7a1b1e579654515d", null ],
     [ "orient", "structMuttWindow.html#a5b3418a2f98cc9588f1483c47079ce3f", null ],
     [ "size", "structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54", null ],
+    [ "actions", "structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253", null ],
     [ "parent", "structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3", null ],
     [ "children", "structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae", null ],
     [ "notify", "structMuttWindow.html#a5bf1302122ef2778be449cde2f1909e6", null ],
     [ "type", "structMuttWindow.html#af1290d572b0d8a0fac6b28a1a4c2b4da", null ],
     [ "wdata", "structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc", null ],
-    [ "wdata_free", "structMuttWindow.html#a78011dd7f37a6a39f0d404a76d133a5d", null ]
+    [ "wdata_free", "structMuttWindow.html#a78011dd7f37a6a39f0d404a76d133a5d", null ],
+    [ "recalc", "structMuttWindow.html#a1e28ef6fc66b1bf26ac5df82fcbbcafd", null ],
+    [ "repaint", "structMuttWindow.html#a30131f6cbc1d35df2d5c187cd9931c0a", null ]
 ];

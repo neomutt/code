@@ -2,6 +2,7 @@ var searchData=
 [
   ['gdbm_2ec',['gdbm.c',['../store_2gdbm_8c.html',1,'(Global Namespace)'],['../test_2store_2gdbm_8c.html',1,'(Global Namespace)']]],
   ['getdomain_2ec',['getdomain.c',['../getdomain_8c.html',1,'']]],
+  ['globals_2ec',['globals.c',['../globals_8c.html',1,'']]],
   ['globals_2eh',['globals.h',['../globals_8h.html',1,'']]],
   ['gnupgparse_2ec',['gnupgparse.c',['../gnupgparse_8c.html',1,'']]],
   ['gnupgparse_2eh',['gnupgparse.h',['../gnupgparse_8h.html',1,'']]],

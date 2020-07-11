@@ -20,6 +20,7 @@ var mutt =
     [ "Path manipulation functions", "path.html", null ],
     [ "A global pool of Buffers", "pool.html", null ],
     [ "Manage precompiled / predefined regular expressions", "prex.html", null ],
+    [ "Random number/string functions", "random.html", null ],
     [ "Manage regular expressions", "regex.html", null ],
     [ "A separated list of strings", "slist.html", null ],
     [ "Signal handling", "signal.html", null ],

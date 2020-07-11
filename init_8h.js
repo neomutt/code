@@ -7,7 +7,6 @@ var init_8h =
     [ "multipart_validator", "init_8h.html#a60338bba8ddc85a92ca589cdbb174da3", null ],
     [ "pager_validator", "init_8h.html#a015d25eea10195c886816e39503ca183", null ],
     [ "reply_validator", "init_8h.html#a89b7ac9b14bd9007726ca035d36962be", null ],
-    [ "wrapheaders_validator", "init_8h.html#a1a23d8cffeb9941ba45499085897ffc3", null ],
     [ "init_config", "init_8h.html#a010347bb26a5857fdac5430b85cfaab0", null ],
     [ "mutt_command_complete", "init_8h.html#ad41f1b6fbd5aeeee1bfc56f620ff0f44", null ],
     [ "mutt_command_get", "init_8h.html#a6550391715386cf9f843992b97cd6165", null ],
@@ -22,6 +21,5 @@ var init_8h =
     [ "mutt_parse_rc_buffer", "init_8h.html#a2a463ed3c7fe921eb96c06d32c4ba0bc", null ],
     [ "mutt_parse_rc_line", "init_8h.html#a136d8ba552e1a6f982e8349e0629ee8d", null ],
     [ "mutt_query_variables", "init_8h.html#a10a5a62f5a2ac28b4b4954f7f1250267", null ],
-    [ "mutt_var_value_complete", "init_8h.html#a173ae67a86a1c7bfc88e98a0edbe514f", null ],
-    [ "query_quadoption", "init_8h.html#ab02047769214ff014b9a8a1782babadc", null ]
+    [ "mutt_var_value_complete", "init_8h.html#a173ae67a86a1c7bfc88e98a0edbe514f", null ]
 ];

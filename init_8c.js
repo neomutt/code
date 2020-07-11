@@ -1,5 +1,6 @@
 var init_8c =
 [
+    [ "config_init_main", "init_8c.html#abc8e3bba4436fbcb1f47d0a04728f974", null ],
     [ "matches_ensure_morespace", "init_8c.html#a2f66c7c3b7477ce4c0654fa3bbf0ed90", null ],
     [ "candidate", "init_8c.html#a0276a7834461e2059b10a3eacf693432", null ],
     [ "complete_all_nm_tags", "init_8c.html#a60382d35e2f0edeb0b736323d76894fd", null ],
@@ -16,7 +17,6 @@ var init_8c =
     [ "mutt_parse_rc_buffer", "init_8c.html#a2a463ed3c7fe921eb96c06d32c4ba0bc", null ],
     [ "mutt_parse_rc_line", "init_8c.html#a136d8ba552e1a6f982e8349e0629ee8d", null ],
     [ "mutt_query_variables", "init_8c.html#a10a5a62f5a2ac28b4b4954f7f1250267", null ],
-    [ "query_quadoption", "init_8c.html#ab02047769214ff014b9a8a1782babadc", null ],
     [ "mutt_command_complete", "init_8c.html#ad41f1b6fbd5aeeee1bfc56f620ff0f44", null ],
     [ "mutt_label_complete", "init_8c.html#a5a8b0c83a6dcb7d57edae458041869ad", null ],
     [ "mutt_nm_query_complete", "init_8c.html#a17d5ac51e166d61b729ebdd66cd25c88", null ],
@@ -30,7 +30,6 @@ var init_8c =
     [ "pager_validator", "init_8c.html#a015d25eea10195c886816e39503ca183", null ],
     [ "multipart_validator", "init_8c.html#a60338bba8ddc85a92ca589cdbb174da3", null ],
     [ "reply_validator", "init_8c.html#a89b7ac9b14bd9007726ca035d36962be", null ],
-    [ "wrapheaders_validator", "init_8c.html#a1a23d8cffeb9941ba45499085897ffc3", null ],
     [ "UserTyped", "init_8c.html#ab3ee96d7e971ed297da156ede55e8fc8", null ],
     [ "NumMatched", "init_8c.html#af0b2139f9bc786e19a5df18e0f237496", null ],
     [ "Completed", "init_8c.html#a09cd068e97f67161093c82dc09739727", null ],

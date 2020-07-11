@@ -11,6 +11,7 @@ var curs__lib_8c =
     [ "mutt_get_field_unbuffered", "curs__lib_8c.html#acfa4667194d147e49afcdf66f9ab0a79", null ],
     [ "mutt_edit_file", "curs__lib_8c.html#a0590f11f42a6242002ea4c842438231b", null ],
     [ "mutt_yesorno", "curs__lib_8c.html#a67a4f6d2c21c9de420130089bb20505c", null ],
+    [ "query_quadoption", "curs__lib_8c.html#ab02047769214ff014b9a8a1782babadc", null ],
     [ "mutt_query_exit", "curs__lib_8c.html#ac7ca868e51ee14c92ab7a7b09487258e", null ],
     [ "mutt_show_error", "curs__lib_8c.html#ab4e979afe8e495a35d45bf1bf22f7eed", null ],
     [ "mutt_endwin", "curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2", null ],

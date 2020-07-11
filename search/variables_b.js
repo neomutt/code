@@ -17,7 +17,7 @@ var searchData=
   ['lastdir',['LastDir',['../browser_8c.html#a7b9330cfc3900716b46bcb97f0a65f04',1,'browser.c']]],
   ['lastdirbackup',['LastDirBackup',['../browser_8c.html#ac52844664e29705d1ff9110ad6c62bf0',1,'browser.c']]],
   ['lasterror',['LastError',['../mutt__logging_8c.html#a49f1e05a1dde601efb9e6ad987b3c3ae',1,'mutt_logging.c']]],
-  ['lastfolder',['LastFolder',['../globals_8h.html#ad23cf0886812a6249f071928f9832806',1,'globals.h']]],
+  ['lastfolder',['LastFolder',['../mutt__globals_8h.html#ad23cf0886812a6249f071928f9832806',1,'mutt_globals.h']]],
   ['lastkey',['LastKey',['../keymap_8c.html#a715fabcdc382c085e09d0bd3a8a44419',1,'LastKey():&#160;keymap.c'],['../keymap_8h.html#a715fabcdc382c085e09d0bd3a8a44419',1,'LastKey():&#160;keymap.c']]],
   ['lastread',['lastread',['../structImapAccountData.html#a89ff311b312a9d0bc216d689161bf1a7',1,'ImapAccountData']]],
   ['lastsavefolder',['LastSaveFolder',['../commands_8c.html#a736c53062dd85b1a3a22ae35a87963ae',1,'commands.c']]],

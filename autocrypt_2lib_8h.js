@@ -20,5 +20,12 @@ var autocrypt_2lib_8h =
     [ "mutt_autocrypt_set_sign_as_default_key", "autocrypt_2lib_8h.html#ae4aac04801499d414565c58f9f5ac6f6", null ],
     [ "mutt_autocrypt_ui_recommendation", "autocrypt_2lib_8h.html#aa4a3f8e9aa1ff62c878f2622f1c55ba5", null ],
     [ "mutt_autocrypt_write_autocrypt_header", "autocrypt_2lib_8h.html#adba267f8e040ccf88d4c556c6c9e7868", null ],
-    [ "mutt_autocrypt_write_gossip_headers", "autocrypt_2lib_8h.html#a7babe74e49d7b8a73e9f72093d622e66", null ]
+    [ "mutt_autocrypt_write_gossip_headers", "autocrypt_2lib_8h.html#a7babe74e49d7b8a73e9f72093d622e66", null ],
+    [ "config_init_autocrypt", "autocrypt_2lib_8h.html#a8a8e0e956c7e9b8da132ec899bdbd8ac", null ],
+    [ "AutocryptSignAs", "autocrypt_2lib_8h.html#a1ff2e3a6d4ac57f4f1ddad1e70362217", null ],
+    [ "AutocryptDefaultKey", "autocrypt_2lib_8h.html#a933b5108398b46e2aadfe51b4ce466a7", null ],
+    [ "C_Autocrypt", "autocrypt_2lib_8h.html#ae14143f593d5c98d88eeb12bf207ac3b", null ],
+    [ "C_AutocryptReply", "autocrypt_2lib_8h.html#a5bf45f267972a6a25b972607dabfaa75", null ],
+    [ "C_AutocryptAcctFormat", "autocrypt_2lib_8h.html#a586714ecbbf893b366082cf8997b015b", null ],
+    [ "C_AutocryptDir", "autocrypt_2lib_8h.html#a2ead7bcfa32f8fc40027a9d094e24ee3", null ]
 ];

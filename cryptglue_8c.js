@@ -36,7 +36,6 @@ var cryptglue_8c =
     [ "crypt_smime_verify_one", "cryptglue_8c.html#a805ac5f7d1ad9d7714f01d2e13e8b6be", null ],
     [ "crypt_smime_send_menu", "cryptglue_8c.html#ad3d6b0f181d912a4b2ce734c79dcd4eb", null ],
     [ "crypt_smime_set_sender", "cryptglue_8c.html#a9f57744c7bcac595aa1a8838f83dc369", null ],
-    [ "C_CryptUseGpgme", "cryptglue_8c.html#aca6b6db084cdfbfc7c349268de79d04d", null ],
     [ "CryptModPgpClassic", "cryptglue_8c.html#a1f7c9dc5fc2564205211bbc38c0e191e", null ],
     [ "CryptModSmimeClassic", "cryptglue_8c.html#ae586200df6b40e4d660cca9a505b6b05", null ],
     [ "CryptModPgpGpgme", "cryptglue_8c.html#a18a127bb6ba65da242de83f9a996a072", null ],

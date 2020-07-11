@@ -16,6 +16,7 @@ var searchData=
   ['representation_20of_20the_20body_20of_20an_20email',['Representation of the body of an email',['../mutt_body.html',1,'index']]],
   ['read_2fwrite_20command_20history_20from_2fto_20a_20file',['Read/write command history from/to a file',['../mutt_history.html',1,'index']]],
   ['read_2fparse_2fwrite_20an_20nntp_20config_20file_20of_20subscribed_20newsgroups',['Read/parse/write an NNTP config file of subscribed newsgroups',['../nntp_newsrc.html',1,'nntp']]],
+  ['random_20number_2fstring_20functions',['Random number/string functions',['../random.html',1,'mutt']]],
   ['routines_20for_20managing_20attachments',['Routines for managing attachments',['../recvattach.html',1,'index']]],
   ['rfc3676_20format_20flowed_20routines',['RFC3676 Format Flowed routines',['../rfc3676.html',1,'index']]],
   ['routines_20for_20adding_20user_20scores_20to_20emails',['Routines for adding user scores to emails',['../score.html',1,'index']]],

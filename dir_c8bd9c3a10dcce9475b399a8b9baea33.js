@@ -43,6 +43,8 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "prex.c", "prex_8c.html", "prex_8c" ],
     [ "prex.h", "prex_8h.html", "prex_8h" ],
     [ "queue.h", "queue_8h.html", "queue_8h" ],
+    [ "random.c", "random_8c.html", "random_8c" ],
+    [ "random.h", "random_8h.html", "random_8h" ],
     [ "regex.c", "mutt_2regex_8c.html", "mutt_2regex_8c" ],
     [ "regex3.h", "mutt_2regex3_8h.html", "mutt_2regex3_8h" ],
     [ "signal.c", "signal_8c.html", "signal_8c" ],

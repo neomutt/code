@@ -15,5 +15,5 @@ var searchData=
   ['pop_20helper_20routines',['POP helper routines',['../pop_lib.html',1,'pop']]],
   ['pop_20network_20mailbox',['POP network mailbox',['../pop_pop.html',1,'pop']]],
   ['progress_20bar',['Progress bar',['../progress.html',1,'index']]],
-  ['prepare_20and_20send_20an_20email',['Prepare and send an email',['../send.html',1,'index']]]
+  ['prepare_20and_20send_20an_20email',['Prepare and send an email',['../send_send.html',1,'send']]]
 ];

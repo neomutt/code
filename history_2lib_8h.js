@@ -20,6 +20,7 @@ var history_2lib_8h =
     [ "mutt_hist_reset_state", "history_2lib_8h.html#a6197a536a3da0385551bac50a45d6a7a", null ],
     [ "mutt_hist_save_scratch", "history_2lib_8h.html#a2d26cab55cd51b83f6e2a45a8ce44799", null ],
     [ "mutt_hist_search", "history_2lib_8h.html#a40b0d1de2839ee28e60ab014fbe281be", null ],
+    [ "config_init_history", "history_2lib_8h.html#ab7c81cf54d9468a2a99e10cac3eae6be", null ],
     [ "C_History", "history_2lib_8h.html#a8dadefb318c2ee5694224068b4e9628c", null ],
     [ "C_HistoryFile", "history_2lib_8h.html#aa388c99168c4672738e9a7b070555bdd", null ],
     [ "C_HistoryRemoveDups", "history_2lib_8h.html#a2cd7093a15c4ebefbc8881daceea86e2", null ],

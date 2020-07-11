@@ -30,7 +30,5 @@ var message_8c =
     [ "imap_msg_open", "message_8c.html#a081d91e6a08785cf13de80ccddcc4171", null ],
     [ "imap_msg_commit", "message_8c.html#a1226858cc62e436a52cf0c64b97f6fdb", null ],
     [ "imap_msg_close", "message_8c.html#a976a007de492b4814274866632d62708", null ],
-    [ "imap_msg_save_hcache", "message_8c.html#af92aa8eebe364d7a8d1f7e94a1d50d28", null ],
-    [ "C_ImapHeaders", "message_8c.html#a1901ad521f2032efe17749004da56f26", null ],
-    [ "C_ImapFetchChunkSize", "message_8c.html#a41e820fa75a318ddf05f13c2c3a353d0", null ]
+    [ "imap_msg_save_hcache", "message_8c.html#af92aa8eebe364d7a8d1f7e94a1d50d28", null ]
 ];

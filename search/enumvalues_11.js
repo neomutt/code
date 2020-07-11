@@ -12,6 +12,6 @@ var searchData=
   ['u_5fsmtp',['U_SMTP',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a84592370a6845410408ef347ab154c4e',1,'url.h']]],
   ['u_5fsmtps',['U_SMTPS',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a5975934c7bde3342734ca20090bdbe79',1,'url.h']]],
   ['u_5funknown',['U_UNKNOWN',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e',1,'url.h']]],
-  ['userhdrs_5foverride_5fcontent_5ftype',['USERHDRS_OVERRIDE_CONTENT_TYPE',['../sendlib_8c.html#ab53860ce4ae55a975e85479ed7424644a9e1313c258f31df1340219b9e8f74696',1,'sendlib.c']]],
-  ['userhdrs_5foverride_5fuser_5fagent',['USERHDRS_OVERRIDE_USER_AGENT',['../sendlib_8c.html#ab53860ce4ae55a975e85479ed7424644aea42ffe75815ced5b10de68ce067343c',1,'sendlib.c']]]
+  ['userhdrs_5foverride_5fcontent_5ftype',['USERHDRS_OVERRIDE_CONTENT_TYPE',['../header_8c.html#ab53860ce4ae55a975e85479ed7424644a9e1313c258f31df1340219b9e8f74696',1,'header.c']]],
+  ['userhdrs_5foverride_5fuser_5fagent',['USERHDRS_OVERRIDE_USER_AGENT',['../header_8c.html#ab53860ce4ae55a975e85479ed7424644aea42ffe75815ced5b10de68ce067343c',1,'header.c']]]
 ];

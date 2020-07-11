@@ -15,7 +15,7 @@ var mutt_2string_8c =
     [ "mutt_str_dup", "mutt_2string_8c.html#a4c2560f787bd1226b977992c16860c98", null ],
     [ "mutt_str_cat", "mutt_2string_8c.html#ae6900b5833f68692e265c5732b2a3556", null ],
     [ "mutt_strn_cat", "mutt_2string_8c.html#a0faedf1f21afdde5c94847c3b0e55966", null ],
-    [ "mutt_str_replace", "mutt_2string_8c.html#ad5b66f8059a202f7bfa5fc4fa3047c67", null ],
+    [ "mutt_str_replace", "mutt_2string_8c.html#ae9b6bbaa52b6ce51f2a384fe500e028e", null ],
     [ "mutt_str_append_item", "mutt_2string_8c.html#a673fcef2fe2e918e036d01afa7486873", null ],
     [ "mutt_str_adjust", "mutt_2string_8c.html#af5259fb04e41947639bafb49a371e12e", null ],
     [ "mutt_str_lower", "mutt_2string_8c.html#abf937f45dc94634de5d1e274602ee204", null ],

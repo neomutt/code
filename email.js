@@ -2,10 +2,10 @@ var email =
 [
     [ "Handling of email attachments", "email_attach.html", null ],
     [ "Representation of the body of an email", "email_body.html", null ],
-    [ "Email Global Variables", "email_globals.html", null ],
+    [ "Representation of an email", "email_email.html", null ],
     [ "Representation of an email header (envelope)", "email_envelope.html", null ],
     [ "Determine who the email is from", "email_from.html", null ],
-    [ "Representation of an email", "email_email.html", null ],
+    [ "Email Global Variables", "email_globals.html", null ],
     [ "Constants and macros for managing MIME encoding", "email_mime.html", null ],
     [ "Store attributes associated with a MIME part", "email_parameter.html", null ],
     [ "Miscellaneous email parsing routines", "email_parse.html", null ],

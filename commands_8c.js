@@ -21,7 +21,6 @@ var commands_8c =
     [ "check_traditional_pgp", "commands_8c.html#a8fcae96bc18ef785ff84a05cf96f5d85", null ],
     [ "mutt_check_traditional_pgp", "commands_8c.html#a84666d102dc87cf5d3a33c6315896373", null ],
     [ "mutt_check_stats", "commands_8c.html#a02ca5373d05a327109310e13d0f66309", null ],
-    [ "C_CryptVerifySig", "commands_8c.html#afd34536518c51f70916643289bb4c2dc", null ],
     [ "C_DisplayFilter", "commands_8c.html#adeb357fcd9a2f66205ced23bea756ec6", null ],
     [ "C_PipeDecode", "commands_8c.html#a9d50376776e9a6bb8bc85d98e18f0a5a", null ],
     [ "C_PipeSep", "commands_8c.html#afeca6ee60af4383c966c1393a307e4f1", null ],

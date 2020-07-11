@@ -12,7 +12,10 @@ var hcache_2lib_8h =
     [ "mutt_hcache_fetch_raw", "hcache_2lib_8h.html#a85f8cc22d3aa6633a1c31289ffd9628e", null ],
     [ "mutt_hcache_free_raw", "hcache_2lib_8h.html#ac5a808d9afc863291f8b167f555ca80f", null ],
     [ "mutt_hcache_delete_header", "hcache_2lib_8h.html#a00d8017e832930cb699c8bdd12417023", null ],
+    [ "config_init_hcache", "hcache_2lib_8h.html#afc15e7a5ea409e9f17f504bb58ad92c2", null ],
+    [ "C_HeaderCache", "hcache_2lib_8h.html#a91c61a7ecc737c8f6316fd9827122d5a", null ],
     [ "C_HeaderCacheBackend", "hcache_2lib_8h.html#a2224a700997de24abfbaa63344a72969", null ],
     [ "C_HeaderCacheCompressLevel", "hcache_2lib_8h.html#a4b23771c7935aa5e619f1bbac6cc0197", null ],
-    [ "C_HeaderCacheCompressMethod", "hcache_2lib_8h.html#af96bb6bee5a46b0787b642a4d625ac55", null ]
+    [ "C_HeaderCacheCompressMethod", "hcache_2lib_8h.html#af96bb6bee5a46b0787b642a4d625ac55", null ],
+    [ "C_MaildirHeaderCacheVerify", "hcache_2lib_8h.html#a991264c3f712b937144e4546d94bd212", null ]
 ];

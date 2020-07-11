@@ -19,10 +19,6 @@ var history_8c =
     [ "mutt_hist_read_file", "history_8c.html#a282fdccadb31bf6aaf2a45c392a46f88", null ],
     [ "mutt_hist_at_scratch", "history_8c.html#a493d2064e68bab2fe5cee4b4769c2d49", null ],
     [ "mutt_hist_save_scratch", "history_8c.html#a2d26cab55cd51b83f6e2a45a8ce44799", null ],
-    [ "C_History", "history_8c.html#a8dadefb318c2ee5694224068b4e9628c", null ],
-    [ "C_HistoryFile", "history_8c.html#aa388c99168c4672738e9a7b070555bdd", null ],
-    [ "C_HistoryRemoveDups", "history_8c.html#a2cd7093a15c4ebefbc8881daceea86e2", null ],
-    [ "C_SaveHistory", "history_8c.html#a0b965a98942066e593f0205fc282dc6f", null ],
     [ "Histories", "history_8c.html#a329ccaff01ca4f4562d6262426a5f3ea", null ],
     [ "OldSize", "history_8c.html#a19a7f7a6c55b6ca543e9f2a2cc7fe482", null ]
 ];

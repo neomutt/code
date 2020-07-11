@@ -39,7 +39,7 @@ var searchData=
   ['remove_5fuser',['remove_user',['../send_8c.html#a6671477ec99e59665fcbac17986d6e93',1,'send.c']]],
   ['rename_5ffilename',['rename_filename',['../notmuch_8c.html#a9007300d0a2336c11035d0d34f9458aa',1,'notmuch.c']]],
   ['rename_5fmaildir_5ffilename',['rename_maildir_filename',['../notmuch_8c.html#a57496754297d15a9c6cb92cc4562b895',1,'notmuch.c']]],
-  ['reopen_5fmailbox',['reopen_mailbox',['../mbox_8c.html#a993f4cb5b3a4fd4d37cf29f2b192b8ba',1,'mbox.c']]],
+  ['reopen_5fmailbox',['reopen_mailbox',['../mbox_8c.html#addea22f21e2c96c407018be2afe1cd90',1,'mbox.c']]],
   ['replace_5fpart',['replace_part',['../enter_8c.html#aee2885e93ba4e712c261b65bf587dbb3',1,'enter.c']]],
   ['reply_5fvalidator',['reply_validator',['../init_8c.html#a89b7ac9b14bd9007726ca035d36962be',1,'reply_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c'],['../init_8h.html#a89b7ac9b14bd9007726ca035d36962be',1,'reply_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c']]],
   ['report_5fregerror',['report_regerror',['../pattern_8c.html#af2a229242dd3931823311964a36d4c51',1,'pattern.c']]],
@@ -64,5 +64,5 @@ var searchData=
   ['rotate_5flogs',['rotate_logs',['../mutt__logging_8c.html#a49200939593f1fe61b70d9d1267b71c8',1,'mutt_logging.c']]],
   ['rstrip_5fin_5fplace',['rstrip_in_place',['../version_8c.html#a8493557cba032152c75045cefa18b7d3',1,'version.c']]],
   ['run_5fdecode_5fand_5fhandler',['run_decode_and_handler',['../handler_8c.html#a7cb7eedc6f224327b26807c96d24a167',1,'handler.c']]],
-  ['run_5fmime_5ftype_5fquery',['run_mime_type_query',['../sendlib_8c.html#ac4ba3830d8a4136b4153942453a2c5b8',1,'sendlib.c']]]
+  ['run_5fmime_5ftype_5fquery',['run_mime_type_query',['../sendlib_8c.html#aedf9e081d3acda51f669619b55cea4e7',1,'sendlib.c']]]
 ];

@@ -37,7 +37,7 @@ var imap_8c =
     [ "imap_login", "imap_8c.html#aeb15c04fee226298708dc044645df651", null ],
     [ "imap_mbox_open", "imap_8c.html#a5f17314f40d7c39f9780f5b83b4b6039", null ],
     [ "imap_mbox_open_append", "imap_8c.html#aea2adbe144d1d68db127bb3734a914af", null ],
-    [ "imap_mbox_check", "imap_8c.html#aff00b55d0ef71ff599e43ef0fd9aaaf8", null ],
+    [ "imap_mbox_check", "imap_8c.html#a460a4cf43dbddbe46c5aaf7785bfbdbd", null ],
     [ "imap_mbox_close", "imap_8c.html#ae31c7a7de51b7ae1e8b99ceae2ba4974", null ],
     [ "imap_msg_open_new", "imap_8c.html#aa3bb05bde539afae5e715cd75e9a4b2f", null ],
     [ "imap_tags_edit", "imap_8c.html#ab61a50c1694e5e41511078202a902f77", null ],
@@ -47,8 +47,5 @@ var imap_8c =
     [ "imap_expand_path", "imap_8c.html#ab2645aa08902090e5e29dff471d1bb0e", null ],
     [ "imap_path_pretty", "imap_8c.html#a77266ac5e79c4aede2cbb51bbd2f8f58", null ],
     [ "imap_path_parent", "imap_8c.html#a7d533f860d0f7109cfec59b860ff2e23", null ],
-    [ "C_ImapDeflate", "imap_8c.html#ae8da52dfd46b077cf7853c8f7f7b6a01", null ],
-    [ "C_ImapIdle", "imap_8c.html#adac0c7ebf8ec87be415e974ba5f61721", null ],
-    [ "C_ImapRfc5161", "imap_8c.html#a2cebfc74dae175661b0d287a8c430c51", null ],
     [ "MxImapOps", "imap_8c.html#a9cd881485b601b78cae25ade04b475c8", null ]
 ];

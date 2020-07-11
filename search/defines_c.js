@@ -194,7 +194,7 @@ var searchData=
   ['mutt_5fprevious_5fthread',['mutt_previous_thread',['../mutt__thread_8h.html#a55fed9e48b9cc9087788cce5c1604514',1,'mutt_thread.h']]],
   ['mutt_5fprinting',['MUTT_PRINTING',['../state_8h.html#ab79ff0c5d1a6836a4838634233c5a97e',1,'state.h']]],
   ['mutt_5fquiet',['MUTT_QUIET',['../mx_8h.html#a75f314042a266df29efcc524d35c4b2d',1,'mx.h']]],
-  ['mutt_5frandtag_5flen',['MUTT_RANDTAG_LEN',['../sendlib_8c.html#a3eb2475f59b97dda306d28971399217a',1,'sendlib.c']]],
+  ['mutt_5frandtag_5flen',['MUTT_RANDTAG_LEN',['../sendlib_8h.html#a3eb2475f59b97dda306d28971399217a',1,'sendlib.h']]],
   ['mutt_5freadonly',['MUTT_READONLY',['../mx_8h.html#a11b97885a0fc04bcd13572076e8a17ab',1,'mx.h']]],
   ['mutt_5freply_5fhook',['MUTT_REPLY_HOOK',['../hook_8h.html#ab6ec93bff7f691fb01cb5233f4040f62',1,'hook.h']]],
   ['mutt_5freplying',['MUTT_REPLYING',['../state_8h.html#a702d70532cdae3d9adff7fe7967e720b',1,'state.h']]],

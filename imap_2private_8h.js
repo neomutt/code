@@ -137,5 +137,22 @@ var imap_2private_8h =
     [ "imap_utf_decode", "imap_2private_8h.html#aa6b721fd8d940328593f41b60eaee4de", null ],
     [ "imap_allow_reopen", "imap_2private_8h.html#a2d2129a01a682441eeec2eaaeb4015ce", null ],
     [ "imap_disallow_reopen", "imap_2private_8h.html#a2f5d2ee95c9fbfcbfda3bc83287a75eb", null ],
-    [ "cmd_parse_search", "imap_2private_8h.html#ac70f93a3e34bf5c69713a1ee2c262766", null ]
+    [ "cmd_parse_search", "imap_2private_8h.html#ac70f93a3e34bf5c69713a1ee2c262766", null ],
+    [ "C_ImapAuthenticators", "imap_2private_8h.html#afd7dc8b625bae9d647f6a06887125c69", null ],
+    [ "C_ImapCheckSubscribed", "imap_2private_8h.html#ae901b07e879b679cf92bc2aaa7b72a30", null ],
+    [ "C_ImapCondstore", "imap_2private_8h.html#a1a087ea03074799c8f385dfee21632d9", null ],
+    [ "C_ImapDeflate", "imap_2private_8h.html#ae8da52dfd46b077cf7853c8f7f7b6a01", null ],
+    [ "C_ImapDelimChars", "imap_2private_8h.html#ab703712fbdeb459a713a725d4ac5abbd", null ],
+    [ "C_ImapFetchChunkSize", "imap_2private_8h.html#a41e820fa75a318ddf05f13c2c3a353d0", null ],
+    [ "C_ImapHeaders", "imap_2private_8h.html#a1901ad521f2032efe17749004da56f26", null ],
+    [ "C_ImapIdle", "imap_2private_8h.html#adac0c7ebf8ec87be415e974ba5f61721", null ],
+    [ "C_ImapLogin", "imap_2private_8h.html#a9e178026126c78ebbcc697120fafa616", null ],
+    [ "C_ImapOauthRefreshCommand", "imap_2private_8h.html#adbda41f57e032f0447a037bdbe7fd698", null ],
+    [ "C_ImapPass", "imap_2private_8h.html#aff1ba825a5f7d1a081cdd0dc2b52cf9c", null ],
+    [ "C_ImapPipelineDepth", "imap_2private_8h.html#a35c0d3df8c4d7d2a2156a4c3239fd4ee", null ],
+    [ "C_ImapPollTimeout", "imap_2private_8h.html#a442d469a67ef9be579d75f0b4dafbc23", null ],
+    [ "C_ImapQresync", "imap_2private_8h.html#a4f32cf293a235fca773ab434b2ce4a9e", null ],
+    [ "C_ImapRfc5161", "imap_2private_8h.html#a2cebfc74dae175661b0d287a8c430c51", null ],
+    [ "C_ImapServernoise", "imap_2private_8h.html#a048faf9a069b0a4b0f8274604c64e90b", null ],
+    [ "C_ImapUser", "imap_2private_8h.html#a9406cb1e580ef9c91ae1b94461f1c758", null ]
 ];

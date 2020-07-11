@@ -4,6 +4,7 @@ var config =
     [ "Type: Boolean", "config_bool.html", null ],
     [ "Dump all the config", "config_dump.html", null ],
     [ "Type: Enumeration", "config_enum.html", null ],
+    [ "Helper functions to get config values", "config_helpers.html", null ],
     [ "Type: Long", "config_long.html", null ],
     [ "Type: Multi-byte character table", "config_mbtable.html", null ],
     [ "Type: Number", "config_number.html", null ],

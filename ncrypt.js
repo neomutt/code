@@ -1,5 +1,6 @@
 var ncrypt =
 [
+    [ "Config used by libncrypt", "crypt_config.html", null ],
     [ "Signing/encryption multiplexor", "crypt_crypt.html", null ],
     [ "Wrapper around crypto functions", "crypt_cryptglue.html", null ],
     [ "Wrapper for PGP/SMIME calls to GPGME", "crypt_crypt_gpgme.html", null ],

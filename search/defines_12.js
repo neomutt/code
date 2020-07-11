@@ -23,7 +23,6 @@ var searchData=
   ['send_5fgroup_5freply',['SEND_GROUP_REPLY',['../send_8h.html#a47e90c63dbdc4426d0630139c04cc8f3',1,'send.h']]],
   ['send_5fkey',['SEND_KEY',['../send_8h.html#a623f46e1bab1e562893dbd01bbbd92dd',1,'send.h']]],
   ['send_5flist_5freply',['SEND_LIST_REPLY',['../send_8h.html#a54e225c19799cf682ef8228825dbb3d8',1,'send.h']]],
-  ['send_5fmailx',['SEND_MAILX',['../send_8h.html#a7a8f9407b859cbbeb16fa5091ea94d7f',1,'send.h']]],
   ['send_5fnews',['SEND_NEWS',['../send_8h.html#ae31498a0e61355a0b4ece8f0c89daf49',1,'send.h']]],
   ['send_5fno_5fflags',['SEND_NO_FLAGS',['../send_8h.html#ab7438d8f019957d3a2f9b5d783c4393e',1,'send.h']]],
   ['send_5fno_5ffree_5fheader',['SEND_NO_FREE_HEADER',['../send_8h.html#a160dd7bb90081f1d45201ef2ab6b46d3',1,'send.h']]],

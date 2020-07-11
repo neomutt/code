@@ -2,7 +2,6 @@ var charset_8h =
 [
     [ "FgetConv", "structFgetConv.html", "structFgetConv" ],
     [ "FgetConvNot", "structFgetConvNot.html", "structFgetConvNot" ],
-    [ "MimeNames", "structMimeNames.html", "structMimeNames" ],
     [ "MUTT_ICONV_HOOK_FROM", "charset_8h.html#a1807a22585916adccafa5e09bda9b6a7", null ],
     [ "mutt_ch_is_utf8", "charset_8h.html#a56cbec4a6366d637d41d151d10dc5b87", null ],
     [ "mutt_ch_is_us_ascii", "charset_8h.html#a3ef43eece2b49fd708887669f556a15b", null ],
@@ -33,6 +32,5 @@ var charset_8h =
     [ "C_AssumedCharset", "charset_8h.html#a92590c7e4494684c3617b14b7078c62a", null ],
     [ "C_Charset", "charset_8h.html#ade738a376a12882f854dcc274a74732b", null ],
     [ "CharsetIsUtf8", "charset_8h.html#a7bcd93869f482805be7e6d437d29f54d", null ],
-    [ "ReplacementChar", "charset_8h.html#ac31e11b5fb12abda40361188af9105ef", null ],
-    [ "PreferredMimeNames", "charset_8h.html#a47beed716c9bc8caa77714aeb8a20d7f", null ]
+    [ "ReplacementChar", "charset_8h.html#ac31e11b5fb12abda40361188af9105ef", null ]
 ];

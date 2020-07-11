@@ -11,6 +11,6 @@ var searchData=
   ['muttstattype',['MuttStatType',['../file_8h.html#ad852389693b4c5a8d79c25e84b2d1139',1,'file.h']]],
   ['muttwindoworientation',['MuttWindowOrientation',['../mutt__window_8h.html#a47e8ed5996247ec48ab676c55aa8d3c7',1,'mutt_window.h']]],
   ['muttwindowsize',['MuttWindowSize',['../mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929',1,'mutt_window.h']]],
-  ['muttwriteheadermode',['MuttWriteHeaderMode',['../sendlib_8h.html#a610db600447893b501a944c8e5dbb9f7',1,'sendlib.h']]],
+  ['muttwriteheadermode',['MuttWriteHeaderMode',['../header_8h.html#a610db600447893b501a944c8e5dbb9f7',1,'header.h']]],
   ['mxcheckreturns',['MxCheckReturns',['../mx_8h.html#a51ec47adeb053fdc910f627a0ff47119',1,'mx.h']]]
 ];

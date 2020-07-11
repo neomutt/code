@@ -26,6 +26,5 @@ var command_8c =
     [ "imap_exec", "command_8c.html#adeef1f9ecc4cb80dbddee9264200d7bd", null ],
     [ "imap_cmd_finish", "command_8c.html#af2ca39cef31791d421e96e168ee1bda5", null ],
     [ "imap_cmd_idle", "command_8c.html#a83baf2c6cadbab42aadc30edaacafac1", null ],
-    [ "C_ImapServernoise", "command_8c.html#a048faf9a069b0a4b0f8274604c64e90b", null ],
     [ "Capabilities", "command_8c.html#a62c7bb696ace6f437af14ba3206de442", null ]
 ];

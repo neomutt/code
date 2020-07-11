@@ -9,13 +9,12 @@ var maildir_8c =
     [ "maildir_sync_message", "maildir_8c.html#a5c9c7482d01b4f95b57219f0adcce732", null ],
     [ "maildir_mbox_open", "maildir_8c.html#a36ffe70409b4924143958692dee9c27a", null ],
     [ "maildir_mbox_open_append", "maildir_8c.html#a964b2e3b5db2ecbe875d584267e4cefe", null ],
-    [ "maildir_mbox_check", "maildir_8c.html#aec82f026cb5bc38b8c4bd66bacba3afe", null ],
+    [ "maildir_mbox_check", "maildir_8c.html#a5fc055d963f5721ea971b245c08e3403", null ],
     [ "maildir_mbox_check_stats", "maildir_8c.html#aefec80ce2f4a521a57f7f6a69935a5a4", null ],
     [ "maildir_msg_open", "maildir_8c.html#a1d06635ca69a9dd611411869e2970d1a", null ],
     [ "maildir_msg_open_new", "maildir_8c.html#a708a4eeb60714f7ea72f594c753f584a", null ],
     [ "maildir_msg_commit", "maildir_8c.html#ae15bcdc3ac4efe23f002f2a1a67f54ee", null ],
     [ "maildir_msg_save_hcache", "maildir_8c.html#ab70335fde06bb79ef5f98c1e85a040b0", null ],
     [ "maildir_path_probe", "maildir_8c.html#a736c790541994662bc2ecb96d9deb626", null ],
-    [ "C_MaildirCheckCur", "maildir_8c.html#af53a1ab2756b3d822c7c393245f8c091", null ],
     [ "MxMaildirOps", "maildir_8c.html#a0748343fa768080ad12f35154d7dfbde", null ]
 ];

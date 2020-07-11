@@ -10,8 +10,6 @@ var command__parse_8h =
     [ "parse_lists", "command__parse_8h.html#a89f64a00e7616e86cb8a32502bf51bd2", null ],
     [ "parse_mailboxes", "command__parse_8h.html#a8769157e701120c7855feed61fa6741f", null ],
     [ "parse_my_hdr", "command__parse_8h.html#add5dbbf0bd35a9aa93a19537a939aafe", null ],
-    [ "parse_path_list", "command__parse_8h.html#a6ba50c35108c2413167bf9e6260958ef", null ],
-    [ "parse_path_unlist", "command__parse_8h.html#a1c661212863085bb360af3a64dc019a0", null ],
     [ "parse_set", "command__parse_8h.html#a25f38c8598d83fa49328925e85bfc837", null ],
     [ "parse_setenv", "command__parse_8h.html#ab9987d00e9a64d38e459db1cf1e58d33", null ],
     [ "parse_source", "command__parse_8h.html#a84bf2b09085394db9bbbfc6656914fbd", null ],
