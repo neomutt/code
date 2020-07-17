@@ -15,5 +15,5 @@ var searchData=
   ['keyflag_5frevoked',['KEYFLAG_REVOKED',['../ncrypt_2lib_8h.html#acb95b48318487d9eb8f9709e933d749e',1,'lib.h']]],
   ['keyflag_5fsecret',['KEYFLAG_SECRET',['../ncrypt_2lib_8h.html#aacc955f91dd3fdc8b82246c140f023fa',1,'lib.h']]],
   ['keyflag_5fsubkey',['KEYFLAG_SUBKEY',['../ncrypt_2lib_8h.html#a73a1ead56127b7fac407296e153c0967',1,'lib.h']]],
-  ['kilo',['KILO',['../pattern_8c.html#a9d8f54c9e4c2990b9171d1c88119f454',1,'pattern.c']]]
+  ['kilo',['KILO',['../compile_8c.html#a9d8f54c9e4c2990b9171d1c88119f454',1,'compile.c']]]
 ];

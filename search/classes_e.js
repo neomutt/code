@@ -7,6 +7,7 @@ var searchData=
   ['parseimaptest',['ParseImapTest',['../structParseImapTest.html',1,'']]],
   ['pattern',['Pattern',['../structPattern.html',1,'']]],
   ['patterncache',['PatternCache',['../structPatternCache.html',1,'']]],
+  ['patternentry',['PatternEntry',['../structPatternEntry.html',1,'']]],
   ['patternflags',['PatternFlags',['../structPatternFlags.html',1,'']]],
   ['pgpcache',['PgpCache',['../structPgpCache.html',1,'']]],
   ['pgpcommandcontext',['PgpCommandContext',['../structPgpCommandContext.html',1,'']]],

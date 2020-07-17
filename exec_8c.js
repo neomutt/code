@@ -1,0 +1,25 @@
+var exec_8c =
+[
+    [ "patmatch", "exec_8c.html#a844e83dec3ede73359894abb11917016", null ],
+    [ "print_crypt_pattern_op_error", "exec_8c.html#a3f35cf1cbf2647adbe32c14bac385dcf", null ],
+    [ "msg_search", "exec_8c.html#a34273d998f6620afb9efebbe0e325ad0", null ],
+    [ "perform_and", "exec_8c.html#a25e3cd3c8af0fe6ce7a2c2df36b22f7a", null ],
+    [ "perform_or", "exec_8c.html#aba5d01796c5eb2def7cc5139da1532b5", null ],
+    [ "match_addrlist", "exec_8c.html#a79b186a41db70f60a9d7b5b5e7d0c906", null ],
+    [ "match_reference", "exec_8c.html#a74f564fa761dade9b0750ca5f1044fc1", null ],
+    [ "mutt_is_predicate_recipient", "exec_8c.html#a08346d4d816f8e9438efc75103a9583a", null ],
+    [ "mutt_is_subscribed_list_recipient", "exec_8c.html#a668a02e9879868145b1da7edbc8c4508", null ],
+    [ "mutt_is_list_recipient", "exec_8c.html#aa406114bea99ec4cdb561d61b3813c6d", null ],
+    [ "match_user", "exec_8c.html#a0f7d49c040b58bc04d4c080d417752e1", null ],
+    [ "match_threadcomplete", "exec_8c.html#a29361764f6a1c3a8fd739e808c0aa808", null ],
+    [ "match_threadparent", "exec_8c.html#a40b82e6ecf51cff0749a0bd600900d2e", null ],
+    [ "match_threadchildren", "exec_8c.html#a6f9cbaa4aff9fe801aac378de27a4e5d", null ],
+    [ "match_content_type", "exec_8c.html#a48966c7240906cc272849c7b4a8279bd", null ],
+    [ "match_mime_content_type", "exec_8c.html#ac609e4754cc63c2a0cc06a11d34ee48e", null ],
+    [ "match_update_dynamic_date", "exec_8c.html#acd2e1040938a072a8176e65ae7c1d17b", null ],
+    [ "set_pattern_cache_value", "exec_8c.html#ae81ed1b46154407e468a567e0c19072c", null ],
+    [ "get_pattern_cache_value", "exec_8c.html#a09126c13e8b0726f36f194cd5ffe6ff2", null ],
+    [ "is_pattern_cache_set", "exec_8c.html#a87fc380b9026d97286e330b169ce16f4", null ],
+    [ "msg_search_sendmode", "exec_8c.html#af19bf41d266bc5adc6815ed73dfe22e9", null ],
+    [ "mutt_pattern_exec", "exec_8c.html#a19019da905ed802ad656fbe8b2c8ca93", null ]
+];

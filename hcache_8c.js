@@ -17,6 +17,6 @@ var hcache_8c =
     [ "mutt_hcache_free_raw", "hcache_8c.html#ac5a808d9afc863291f8b167f555ca80f", null ],
     [ "mutt_hcache_store", "hcache_8c.html#a37205970da3a588203337af567f796fd", null ],
     [ "mutt_hcache_store_raw", "hcache_8c.html#a3abe8868238b4e29a445cdbf4da3ca8c", null ],
-    [ "mutt_hcache_delete_header", "hcache_8c.html#a00d8017e832930cb699c8bdd12417023", null ],
+    [ "mutt_hcache_delete_record", "hcache_8c.html#a4f32cd62353950c0d6d277b8474f763f", null ],
     [ "hcachever", "hcache_8c.html#ac0dde9400cb5f702e4b8c6fbd6e5c0ab", null ]
 ];

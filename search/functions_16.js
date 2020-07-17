@@ -16,6 +16,7 @@ var searchData=
   ['window_5freflow_5fvert',['window_reflow_vert',['../gui_2reflow_8c.html#a0c807a5c20cc6d04f426325ca3c46f96',1,'reflow.c']]],
   ['window_5frepaint',['window_repaint',['../mutt__window_8c.html#afff0639352892ed7d0f7765a57c0ef0c',1,'mutt_window.c']]],
   ['window_5fset_5fvisible',['window_set_visible',['../mutt__window_8c.html#aae941d17bf3237a0c3fcf06641ca6ee2',1,'window_set_visible(struct MuttWindow *win, bool visible):&#160;mutt_window.c'],['../mutt__window_8h.html#aae941d17bf3237a0c3fcf06641ca6ee2',1,'window_set_visible(struct MuttWindow *win, bool visible):&#160;mutt_window.c']]],
+  ['window_5fwas_5fvisible',['window_was_visible',['../mutt__window_8c.html#ab152f1452f5fefde1f999ab42863731c',1,'mutt_window.c']]],
   ['windowed_5fquery_5ffrom_5fquery',['windowed_query_from_query',['../notmuch_8c.html#a3c1e6b40d6cc7a396ef95d90e4364337',1,'notmuch.c']]],
   ['wrapheaders_5fvalidator',['wrapheaders_validator',['../send_2config_8c.html#a1a23d8cffeb9941ba45499085897ffc3',1,'config.c']]],
   ['write_5fas_5ftext_5fpart',['write_as_text_part',['../send_2body_8c.html#a55c55e2f50317ab8226c0c2768e01ad0',1,'body.c']]],

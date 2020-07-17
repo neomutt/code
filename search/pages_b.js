@@ -23,7 +23,7 @@ var searchData=
   ['manipulate_20an_20email_27s_20header',['Manipulate an email&apos;s header',['../mutt_header.html',1,'index']]],
   ['miscellaneous_20email_20parsing_20routines',['Miscellaneous email parsing routines',['../mutt_parse.html',1,'index']]],
   ['mailbox_20multiplexor',['Mailbox multiplexor',['../mx.html',1,'index']]],
-  ['match_20patterns_20to_20emails',['Match patterns to emails',['../pattern.html',1,'index']]],
+  ['match_20patterns_20to_20emails',['Match patterns to emails',['../pattern_pattern.html',1,'pattern']]],
   ['manage_20precompiled_20_2f_20predefined_20regular_20expressions',['Manage precompiled / predefined regular expressions',['../prex.html',1,'mutt']]],
   ['manage_20regular_20expressions',['Manage regular expressions',['../regex.html',1,'mutt']]],
   ['manipulate_20multipart_20emails',['Manipulate multipart Emails',['../send_multipart.html',1,'send']]],

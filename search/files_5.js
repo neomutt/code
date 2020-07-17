@@ -8,7 +8,7 @@ var searchData=
   ['filter_5fcreate_5ffd_2ec',['filter_create_fd.c',['../filter__create__fd_8c.html',1,'']]],
   ['filter_5fwait_2ec',['filter_wait.c',['../filter__wait_8c.html',1,'']]],
   ['find_5fvirtual_2ec',['find_virtual.c',['../find__virtual_8c.html',1,'']]],
-  ['flags_2ec',['flags.c',['../flags_8c.html',1,'']]],
+  ['flags_2ec',['flags.c',['../flags_8c.html',1,'(Global Namespace)'],['../pattern_2flags_8c.html',1,'(Global Namespace)']]],
   ['format_5fflags_2eh',['format_flags.h',['../format__flags_8h.html',1,'']]],
   ['from_2ec',['from.c',['../from_8c.html',1,'']]],
   ['from_2eh',['from.h',['../from_8h.html',1,'']]],

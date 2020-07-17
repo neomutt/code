@@ -1,7 +1,8 @@
 var searchData=
 [
   ['e',['e',['../structCurrentEmail.html#a921c6d62788a138d553aa2dd5d72fa0f',1,'CurrentEmail']]],
-  ['eat_5farg',['eat_arg',['../structPatternFlags.html#ae2b91654c68bf4894b2d059a0534fb5f',1,'PatternFlags']]],
+  ['eat_5farg',['eat_arg',['../structPatternFlags.html#a16103e8052a6ec92c5d7eabe87d3f3aa',1,'PatternFlags']]],
+  ['eat_5farg_5ft',['eat_arg_t',['../pattern_8c.html#ad0fdd9aa2c0725c712a34e76a51b79a6',1,'pattern.c']]],
   ['edata',['edata',['../structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b',1,'Email::edata()'],['../structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50',1,'ImapHeader::edata()']]],
   ['edata_5ffree',['edata_free',['../structEmail.html#a781551eba730fd251226081727ae74bb',1,'Email']]],
   ['editcommand',['editcommand',['../structMailcapEntry.html#ac195e10d836eb0b886580310c2cf0554',1,'MailcapEntry']]],
@@ -42,6 +43,7 @@ var searchData=
   ['expected',['expected',['../structMakeTimeTest.html#a42819879dd1e40e0515de2edcb0efec8',1,'MakeTimeTest::expected()'],['../structNormalizeTest.html#a1c243f70d25a4d2a874442807cf35cd4',1,'NormalizeTest::expected()'],['../structParseDateTest.html#a0f67ceb85e7aa7b3a6b0754f5ac8b908',1,'ParseDateTest::expected()'],['../structParseImapTest.html#a05a4af676f0e5d7dd4d97e5d2c549346',1,'ParseImapTest::expected()'],['../structRemallTest.html#a4aa5fd6d1b875463b029d78415f970cb',1,'RemallTest::expected()'],['../structInlineReplaceTest.html#affdd645a9683a33b25ce7d843cb04ca4',1,'InlineReplaceTest::expected()'],['../structTrailTest.html#ade4ecce7abc4e6b1bd80e5ec54a5be6d',1,'TrailTest::expected()']]],
   ['expire',['expire',['../structPopAccountData.html#aad2e94674fb9bc43561cc360270aad3d',1,'PopAccountData']]],
   ['expired',['expired',['../structEmail.html#aa72ad88f6a82e49b76a0d0eb790abae8',1,'Email']]],
+  ['expr',['expr',['../structPatternEntry.html#ab1260f8baedeff5ce0a8539d47143a52',1,'PatternEntry']]],
   ['extpagerprogress',['ExtPagerProgress',['../commands_8c.html#a7137b6425845f3ca8a126e273ec8022a',1,'commands.c']]],
   ['extra',['extra',['../structPagerRedrawData.html#ac212f16a62855fb6c25630b84ad190c1',1,'PagerRedrawData']]]
 ];

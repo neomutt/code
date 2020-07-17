@@ -39,7 +39,7 @@ var searchData=
   ['keymaps',['Keymaps',['../keymap_8c.html#a0d9cae8733b4a597c4b0202c2872f0ec',1,'Keymaps():&#160;keymap.c'],['../keymap_8h.html#af243912e9a8b4c42cfa0fddb710093b8',1,'Keymaps():&#160;keymap.c']]],
   ['keynames',['KeyNames',['../keymap_8c.html#ac969492dae41de846590e2257f260d3b',1,'keymap.c']]],
   ['keys',['keys',['../structKeymap.html#a6e9753f45d5dbb60ba4f9328df9a6bc4',1,'Keymap::keys()'],['../structMenu.html#a50b14c1b6315c41fc5032b964dd2ce5b',1,'Menu::keys()']]],
-  ['kilo',['KILO',['../pattern_8c.html#a9d8f54c9e4c2990b9171d1c88119f454',1,'pattern.c']]],
+  ['kilo',['KILO',['../compile_8c.html#a9d8f54c9e4c2990b9171d1c88119f454',1,'compile.c']]],
   ['kip_5faka',['KIP_AKA',['../crypt__gpgme_8c.html#a80db1b75499135b0c823096dd459d932a6a0cfc7c559872a881dbdf230df64e92',1,'crypt_gpgme.c']]],
   ['kip_5ffingerprint',['KIP_FINGERPRINT',['../crypt__gpgme_8c.html#a80db1b75499135b0c823096dd459d932a0da1e6c50d13c2648463758263de92c6',1,'crypt_gpgme.c']]],
   ['kip_5fissued_5fby',['KIP_ISSUED_BY',['../crypt__gpgme_8c.html#a80db1b75499135b0c823096dd459d932aed4a4ec5124569a1e1fd143946b44232',1,'crypt_gpgme.c']]],

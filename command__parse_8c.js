@@ -20,6 +20,7 @@ var command__parse_8c =
     [ "source_rc", "command__parse_8c.html#ae940c8a2d277f104d28f9998cd73ead5", null ],
     [ "parse_alternates", "command__parse_8c.html#a2b802266d3a89bc30f84dda0854c54c8", null ],
     [ "parse_attachments", "command__parse_8c.html#af433f0af5d00dc471fbcd0b62c1b2f9b", null ],
+    [ "parse_cd", "command__parse_8c.html#a8cd7794996f6a70cacd47a88c9182366", null ],
     [ "parse_echo", "command__parse_8c.html#a4b83a280b9b7bc4124d008acb4b98f46", null ],
     [ "parse_finish", "command__parse_8c.html#a763dad4385f6f04bd6f19829cb8ff0e3", null ],
     [ "parse_group", "command__parse_8c.html#a837b7ba6d366f3151fbe47441ca34cc9", null ],

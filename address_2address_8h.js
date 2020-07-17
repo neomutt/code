@@ -2,6 +2,7 @@ var address_2address_8h =
 [
     [ "Address", "structAddress.html", "structAddress" ],
     [ "address_error", "address_2address_8h.html#a90484d55cb9c6d3d227fb28011084fc9", null ],
+    [ "addr_predicate_t", "address_2address_8h.html#ae1f1886d7f33660482f32c040278031b", null ],
     [ "AddressError", "address_2address_8h.html#aa3cf99a8b937291394a16ae959e175ae", [
       [ "ADDR_ERR_MEMORY", "address_2address_8h.html#aa3cf99a8b937291394a16ae959e175aea9621128c93e043a6a52fc56e409f2ad9", null ],
       [ "ADDR_ERR_MISMATCH_PAREN", "address_2address_8h.html#aa3cf99a8b937291394a16ae959e175aeac9383ad3d3d38dd6086f261c96b8d434", null ],

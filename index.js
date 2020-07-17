@@ -43,7 +43,6 @@ var index =
     [ "Mailbox multiplexor", "mx.html", null ],
     [ "Handling of personal config ('my' variables)", "myvar.html", null ],
     [ "GUI display a file/email/help in a viewport with paging", "pager.html", null ],
-    [ "Match patterns to emails", "pattern.html", null ],
     [ "Save/restore and GUI list postponed emails", "postpone.html", null ],
     [ "Progress bar", "progress.html", null ],
     [ "Routines for managing attachments", "recvattach.html", null ],

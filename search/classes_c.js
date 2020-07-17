@@ -12,5 +12,6 @@ var searchData=
   ['nntpmboxdata',['NntpMboxData',['../structNntpMboxData.html',1,'']]],
   ['normalizetest',['NormalizeTest',['../structNormalizeTest.html',1,'']]],
   ['notify',['Notify',['../structNotify.html',1,'']]],
-  ['notifycallback',['NotifyCallback',['../structNotifyCallback.html',1,'']]]
+  ['notifycallback',['NotifyCallback',['../structNotifyCallback.html',1,'']]],
+  ['notifycatcher',['NotifyCatcher',['../structNotifyCatcher.html',1,'']]]
 ];

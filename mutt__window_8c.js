@@ -1,5 +1,6 @@
 var mutt__window_8c =
 [
+    [ "window_was_visible", "mutt__window_8c.html#ab152f1452f5fefde1f999ab42863731c", null ],
     [ "window_notify", "mutt__window_8c.html#a24a1cf059877c84faad07eae0f5aaa00", null ],
     [ "window_notify_all", "mutt__window_8c.html#a182bdee15eddac41d849c7b2a5896554", null ],
     [ "window_set_visible", "mutt__window_8c.html#aae941d17bf3237a0c3fcf06641ca6ee2", null ],

@@ -6,7 +6,7 @@ var searchData=
   ['msgopenflags',['MsgOpenFlags',['../mx_8h.html#a3c2b592b42c4c70ba32b8fb9ce869750',1,'mx.h']]],
   ['mutt_5ffile_5fmap_5ft',['mutt_file_map_t',['../file_8h.html#aaaf529d5bd4c473f5be88b45cbed18a2',1,'file.h']]],
   ['muttaccountflags',['MuttAccountFlags',['../connaccount_8h.html#a25025c559ef26ae8bbd9349cfea83d49',1,'connaccount.h']]],
-  ['muttformatflags',['MuttFormatFlags',['../format__flags_8h.html#ad2734d319d795141616e1b5f241be1b2',1,'format_flags.h']]],
+  ['muttformatflags',['MuttFormatFlags',['../format__flags_8h.html#ad2734d319d795141616e1b5f241be1b2',1,'MuttFormatFlags():&#160;format_flags.h'],['../dummy_8c.html#ad2734d319d795141616e1b5f241be1b2',1,'MuttFormatFlags():&#160;dummy.c']]],
   ['muttredrawflags',['MuttRedrawFlags',['../mutt__menu_8h.html#a7bd0809997971e28d300dfa17c0873f0',1,'MuttRedrawFlags():&#160;mutt_menu.h'],['../test_2gui_2reflow_8c.html#a7bd0809997971e28d300dfa17c0873f0',1,'MuttRedrawFlags():&#160;reflow.c']]],
   ['muttthreadflags',['MuttThreadFlags',['../mutt__thread_8h.html#a13d89de5f6b408671d0e624de135ea8a',1,'mutt_thread.h']]]
 ];

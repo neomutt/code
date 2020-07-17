@@ -24,7 +24,8 @@ var keymap_8h =
       [ "MENU_KEY_SELECT_SMIME", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a4c3ea204f083b74a45ce05fc3f151634", null ],
       [ "MENU_MIX", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ab0104cd450b9d9ca9d5f6686b260efc9", null ],
       [ "MENU_AUTOCRYPT_ACCT", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af9c343e9f9161f3b1d07ba93457e2d13", null ],
-      [ "MENU_MAX", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae", null ]
+      [ "MENU_MAX", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae", null ],
+      [ "mt_dummy", "dummy_8c.html#ae5c7b6b4f6e696391cd7faaea6571bb4a734b13b0dc1b65ca0ca2a4f101128c0e", null ]
     ] ],
     [ "init_extended_keys", "keymap_8h.html#ae6be8f34be875971676339bac0d726bd", null ],
     [ "km_expand_key", "keymap_8h.html#a830fff42df69ae5c6e256eb03ce18892", null ],

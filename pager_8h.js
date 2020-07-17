@@ -18,6 +18,7 @@ var pager_8h =
     [ "MUTT_DISPLAYFLAGS", "pager_8h.html#a45c117fe5bfea2a2e42c6571eb637b38", null ],
     [ "PagerFlags", "pager_8h.html#a4b89dc870e3d48afbacfc74da0533898", null ],
     [ "mutt_pager", "pager_8h.html#a4cc11143557f95ded6a80f3cffff4483", null ],
+    [ "mutt_buffer_strip_formatting", "pager_8h.html#a29a3939691dd7a49875fc11c290bdfe1", null ],
     [ "mutt_clear_pager_position", "pager_8h.html#a52cb29b8a518d62062551b6ff7a3cb4f", null ],
     [ "C_AllowAnsi", "pager_8h.html#a6b700cbac399d0f8221c7e61fcec27e1", null ],
     [ "C_HeaderColorPartial", "pager_8h.html#a8b3696d504ae42d6bd92761c36932ad7", null ],

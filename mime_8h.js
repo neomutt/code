@@ -1,5 +1,7 @@
 var mime_8h =
 [
+    [ "MUTT_MIME_MAX_DEPTH", "mime_8h.html#a37d78827e3cbfabf93b6341b5da8cdc1", null ],
+    [ "MUTT_MIME_MAX_PARTS", "mime_8h.html#af00b35324f19084a5f85ac5d1af2f1c3", null ],
     [ "hexval", "mime_8h.html#ac212ee80d510d8f8af8fde1675b910a3", null ],
     [ "is_multipart", "mime_8h.html#aeaf0dc750233c21ac5b499082c6ff62f", null ],
     [ "TYPE", "mime_8h.html#ab12186b6fac3d22b88fac67700f07b1d", null ],

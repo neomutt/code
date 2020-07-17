@@ -32,6 +32,8 @@ var searchData=
   ['create_2fmanipulate_20threading_20in_20emails',['Create/manipulate threading in emails',['../mutt_thread.html',1,'index']]],
   ['config_20used_20by_20libnotmuch',['Config used by libnotmuch',['../nm_config.html',1,'notmuch']]],
   ['config_20used_20by_20libnntp',['Config used by libnntp',['../nntp_config.html',1,'nntp']]],
+  ['compile_20a_20pattern',['Compile a Pattern',['../pattern_compile.html',1,'pattern']]],
+  ['config_20used_20by_20libpattern',['Config used by libpattern',['../pattern_config.html',1,'pattern']]],
   ['config_20used_20by_20libpop',['Config used by libpop',['../pop_config.html',1,'pop']]],
   ['config_20used_20by_20libsend',['Config used by libsend',['../send_config.html',1,'send']]],
   ['config_20used_20by_20libsidebar',['Config used by libsidebar',['../sidebar_config.html',1,'sidebar']]]

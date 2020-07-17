@@ -10,6 +10,8 @@ var searchData=
   ['pass_20files_20through_20external_20commands_20_28filters_29',['Pass files through external commands (filters)',['../filter.html',1,'mutt']]],
   ['parse_20and_20execute_20user_2ddefined_20hooks',['Parse and execute user-defined hooks',['../hook.html',1,'index']]],
   ['path_20manipulation_20functions',['Path manipulation functions',['../path.html',1,'mutt']]],
+  ['pattern_3a_20match_20patterns_20to_20emails',['PATTERN: Match patterns to emails',['../pattern.html',1,'']]],
+  ['pattern_20definitions',['Pattern definitions',['../pattern_flags.html',1,'pattern']]],
   ['pop_3a_20network_20mailbox',['POP: Network mailbox',['../pop.html',1,'']]],
   ['pop_20authentication',['POP authentication',['../pop_auth.html',1,'pop']]],
   ['pop_20helper_20routines',['POP helper routines',['../pop_lib.html',1,'pop']]],

@@ -10,5 +10,6 @@ var searchData=
   ['verify_5fkey',['verify_key',['../crypt__gpgme_8c.html#abf137f94451de251c8179788615f4b74',1,'crypt_gpgme.c']]],
   ['verify_5fone',['verify_one',['../crypt__gpgme_8c.html#a490d3344cd29fb3466bc7868e4b26c87',1,'crypt_gpgme.c']]],
   ['verify_5fsender',['verify_sender',['../crypt__gpgme_8c.html#a10e8fb8f5b9b458202bc424762ff96cd',1,'crypt_gpgme.c']]],
+  ['visible_5fobserver',['visible_observer',['../visible_8c.html#a401eec2d9e19822012d72410ef416101',1,'visible.c']]],
   ['vsnprintf',['vsnprintf',['../acutest_8h.html#a0a1654a06ebb97ab667a031bc081143e',1,'vsnprintf(buffer, sizeof(buffer), fmt, args):&#160;acutest.h'],['../acutest_8h.html#a2b60c4e03a3420931795adb834e35309',1,'vsnprintf(test_case_name_, sizeof(test_case_name_) - 1, fmt, args):&#160;acutest.h'],['../acutest_8h.html#aa9c61b456fae321de676cb2d9d3fba68',1,'vsnprintf(buffer, TEST_MSG_MAXSIZE, fmt, args):&#160;acutest.h']]]
 ];

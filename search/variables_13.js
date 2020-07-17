@@ -2,7 +2,7 @@ var searchData=
 [
   ['table',['table',['../structHashTable.html#a1090e1661e541fe1b621bdf42a82ec11',1,'HashTable']]],
   ['tabs',['tabs',['../structEnterState.html#a6aa88a89598cb7ffe00a8a2f2581bc9b',1,'EnterState']]],
-  ['tag',['tag',['../structMenu.html#a9f56131f02aaece633d13c8b2007476a',1,'Menu::tag()'],['../structPatternFlags.html#a265c8e5d9d700896e688c9a19072c0b5',1,'PatternFlags::tag()']]],
+  ['tag',['tag',['../structMenu.html#a9f56131f02aaece633d13c8b2007476a',1,'Menu::tag()'],['../structPatternEntry.html#a6f53011b5ccf9fe3ac294b2dc48a862c',1,'PatternEntry::tag()'],['../structPatternFlags.html#a265c8e5d9d700896e688c9a19072c0b5',1,'PatternFlags::tag()']]],
   ['tag_5flevel',['tag_level',['../structEnrichedState.html#a7003e363f1bd2f53eded1dffd3dd51d3',1,'EnrichedState']]],
   ['tag_5fname',['tag_name',['../structEtags.html#aea21780374e5741d70205a1efc9781ea',1,'Etags']]],
   ['tagformats',['TagFormats',['../mutt__globals_8h.html#a53bb484d28fe76b8f8c428c821b35f13',1,'mutt_globals.h']]],

@@ -3,7 +3,7 @@ var searchData=
   ['r',['r',['../structCoord.html#ae707cab2f8853900fa3387130717eb9a',1,'Coord']]],
   ['range_5fcur',['range_cur',['../structSeqsetIterator.html#ae10c87c51d30bb4210827fbb23826c84',1,'SeqsetIterator']]],
   ['range_5fend',['range_end',['../structSeqsetIterator.html#a40cdf6884f007351960e5c7fbce96fd8',1,'SeqsetIterator']]],
-  ['range_5fregexes',['range_regexes',['../pattern_8c.html#ae874bbe6a505a361ef27925d0e6e8f24',1,'pattern.c']]],
+  ['range_5fregexes',['range_regexes',['../pattern_8c.html#ae874bbe6a505a361ef27925d0e6e8f24',1,'range_regexes():&#160;pattern.c'],['../pattern_2private_8h.html#ae874bbe6a505a361ef27925d0e6e8f24',1,'range_regexes():&#160;pattern.c']]],
   ['raw',['raw',['../structRangeRegex.html#af7bb292bc1d13955aae8df3cbf40c652',1,'RangeRegex']]],
   ['re',['re',['../structPrexStorage.html#aa92ecca35e86301c0d93d8607aba281d',1,'PrexStorage']]],
   ['reachingus',['ReachingUs',['../version_8c.html#a440c5f4913af8663a4d6c5626b44c11d',1,'version.c']]],

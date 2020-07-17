@@ -25,7 +25,7 @@ var searchData=
   ['find_5fcommon_5fparent',['find_common_parent',['../recvcmd_8c.html#a901d3c7f945de489c16050a731dee83c',1,'recvcmd.c']]],
   ['find_5fkeys',['find_keys',['../crypt__gpgme_8c.html#aa15024a537ac84b348d4f4dd7e3fc7bf',1,'crypt_gpgme.c']]],
   ['find_5fmailbox',['find_mailbox',['../command_8c.html#a4955baebcb96a894dbac0a998d16e233',1,'command.c']]],
-  ['find_5fmatching_5fparen',['find_matching_paren',['../pattern_8c.html#a34120478ddc4976939fb82e05bb42cb7',1,'pattern.c']]],
+  ['find_5fmatching_5fparen',['find_matching_paren',['../compile_8c.html#a34120478ddc4976939fb82e05bb42cb7',1,'compile.c']]],
   ['find_5fparent',['find_parent',['../recvcmd_8c.html#af75f34573790a122a80c96ff84c36c79',1,'recvcmd.c']]],
   ['find_5fsubject',['find_subject',['../mutt__thread_8c.html#a6caa00fea3238ba9a1fb13e4a589d680',1,'mutt_thread.c']]],
   ['find_5ftz',['find_tz',['../date_8c.html#a42d01f188c3a843400fb907b7f9781dd',1,'date.c']]],
@@ -40,5 +40,6 @@ var searchData=
   ['folder_5fmake_5fentry',['folder_make_entry',['../browser_8c.html#a2fdd342366031697eaaececec586db00',1,'browser.c']]],
   ['format_5faddress_5fheader',['format_address_header',['../copy_8c.html#aee298ff7661f33a3083d6e6c6563069a',1,'copy.c']]],
   ['format_5fline',['format_line',['../help_8c.html#a5f69016fd555f40166b0b1e721519298',1,'format_line(FILE *fp, int ismacro, const char *t1, const char *t2, const char *t3, int wraplen):&#160;help.c'],['../pager_8c.html#ab3d610ae528f103462e8cb98ff2c9859',1,'format_line(struct Line **line_info, int n, unsigned char *buf, PagerFlags flags, struct AnsiAttr *pa, int cnt, int *pspace, int *pvch, int *pcol, int *pspecial, int width):&#160;pager.c']]],
+  ['free_5fpattern_5fmenu',['free_pattern_menu',['../dlgpattern_8c.html#a43d6d9ca9a552bf9209df1b52d922407',1,'dlgpattern.c']]],
   ['fseek_5flast_5fmessage',['fseek_last_message',['../mbox_8c.html#a89487605aeb3fb71d2488fe976060ee5',1,'mbox.c']]]
 ];

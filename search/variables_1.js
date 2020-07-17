@@ -1,7 +1,7 @@
 var searchData=
 [
   ['a',['A',['../structMd5Ctx.html#a91fce8381cfccac291534e33b6f7085c',1,'Md5Ctx']]],
-  ['abortkey',['AbortKey',['../keymap_8c.html#a22bced2c7fdf47916ddc963f43432541',1,'AbortKey():&#160;keymap.c'],['../keymap_8h.html#a22bced2c7fdf47916ddc963f43432541',1,'AbortKey():&#160;keymap.c']]],
+  ['abortkey',['AbortKey',['../keymap_8c.html#a22bced2c7fdf47916ddc963f43432541',1,'AbortKey():&#160;keymap.c'],['../keymap_8h.html#a22bced2c7fdf47916ddc963f43432541',1,'AbortKey():&#160;keymap.c'],['../dummy_8c.html#ab9156abb6bf4e195f61c6b3e894947d9',1,'AbortKey():&#160;dummy.c']]],
   ['ac_5fadd',['ac_add',['../structMxOps.html#acaaf1dbbfc2a6011bdbd0b30df1b923c',1,'MxOps']]],
   ['ac_5ffind',['ac_find',['../structMxOps.html#a0c32dbbc5b81c53527d3bc4d223501c1',1,'MxOps']]],
   ['acache',['acache',['../structNntpMboxData.html#ac77579c4bad5769c1ed74f5990701cf5',1,'NntpMboxData']]],

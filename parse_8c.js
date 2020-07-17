@@ -1,6 +1,9 @@
 var parse_8c =
 [
     [ "CONTENT_TOO_BIG", "parse_8c.html#afc8bf29df56e545eff7652964eea6081", null ],
+    [ "parse_part", "parse_8c.html#aa9d682d64619becd7ca5e03de02f6f18", null ],
+    [ "rfc822_parse_message", "parse_8c.html#a6f9e27e3cd898ef0935029da9c3dcefd", null ],
+    [ "parse_multipart", "parse_8c.html#ac20b6c54dff7929453167e30d9dcc1a3", null ],
     [ "mutt_auto_subscribe", "parse_8c.html#a2a830caa65e6f462ab0ecae77bce746b", null ],
     [ "parse_parameters", "parse_8c.html#af286c6b467329705cc1ca7d92f9ad954", null ],
     [ "parse_content_disposition", "parse_8c.html#a8e2b483bdfdf7cf3a2889e11eb7f6c85", null ],
@@ -17,8 +20,8 @@ var parse_8c =
     [ "mutt_rfc822_read_header", "parse_8c.html#a32cd9ed48d31f100bd8525018e1450da", null ],
     [ "mutt_read_mime_header", "parse_8c.html#ad373211d5d49e235c1aa9b818f0f10a1", null ],
     [ "mutt_is_message_type", "parse_8c.html#adcc90fb584fec1be116777c533e9b3d4", null ],
+    [ "mutt_parse_mailto", "parse_8c.html#a40d55d4be6be11a22f0ac73fe251aa6e", null ],
     [ "mutt_parse_part", "parse_8c.html#a0b38ac4f44b3414d0e18d26324861369", null ],
-    [ "mutt_parse_multipart", "parse_8c.html#ad5c83c39801d48f7bb7af082d599a687", null ],
     [ "mutt_rfc822_parse_message", "parse_8c.html#ad06e310e34e4b864ba64ee9301c57664", null ],
-    [ "mutt_parse_mailto", "parse_8c.html#a40d55d4be6be11a22f0ac73fe251aa6e", null ]
+    [ "mutt_parse_multipart", "parse_8c.html#ad5c83c39801d48f7bb7af082d599a687", null ]
 ];

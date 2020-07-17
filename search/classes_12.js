@@ -6,6 +6,7 @@ var searchData=
   ['test_5fdetail_5f',['test_detail_',['../structtest__detail__.html',1,'']]],
   ['testdata',['TestData',['../structTestData.html',1,'']]],
   ['testvalue',['TestValue',['../structTestValue.html',1,'']]],
+  ['testvisible',['TestVisible',['../structTestVisible.html',1,'']]],
   ['textsyntax',['TextSyntax',['../structTextSyntax.html',1,'']]],
   ['timespec',['timespec',['../structtimespec.html',1,'']]],
   ['tlssockdata',['TlsSockData',['../structTlsSockData.html',1,'']]],

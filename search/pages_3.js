@@ -12,5 +12,6 @@ var searchData=
   ['decide_20how_20to_20display_20email_20content',['Decide how to display email content',['../handler.html',1,'index']]],
   ['definitions_20of_20neomutt_20commands',['Definitions of NeoMutt commands',['../mutt_commands.html',1,'index']]],
   ['definitions_20of_20config_20variables',['Definitions of config variables',['../mutt_config.html',1,'index']]],
+  ['display_20a_20guide_20to_20patterns',['Display a guide to Patterns',['../pattern_dlgpattern.html',1,'pattern']]],
   ['display_20version_20and_20copyright_20about_20neomutt',['Display version and copyright about NeoMutt',['../version.html',1,'index']]]
 ];

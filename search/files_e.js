@@ -10,7 +10,6 @@ var searchData=
   ['path_2ec',['path.c',['../config_2path_8c.html',1,'(Global Namespace)'],['../mutt_2path_8c.html',1,'(Global Namespace)'],['../test_2config_2path_8c.html',1,'(Global Namespace)']]],
   ['path_2eh',['path.h',['../config_2path_8h.html',1,'(Global Namespace)'],['../mutt_2path_8h.html',1,'(Global Namespace)'],['../test_2config_2path_8h.html',1,'(Global Namespace)']]],
   ['pattern_2ec',['pattern.c',['../pattern_8c.html',1,'']]],
-  ['pattern_2eh',['pattern.h',['../pattern_8h.html',1,'']]],
   ['pgp_2ec',['pgp.c',['../pgp_8c.html',1,'']]],
   ['pgp_2eh',['pgp.h',['../pgp_8h.html',1,'']]],
   ['pgpinvoke_2ec',['pgpinvoke.c',['../pgpinvoke_8c.html',1,'']]],
@@ -29,7 +28,7 @@ var searchData=
   ['postpone_2ec',['postpone.c',['../postpone_8c.html',1,'']]],
   ['prex_2ec',['prex.c',['../prex_8c.html',1,'']]],
   ['prex_2eh',['prex.h',['../prex_8h.html',1,'']]],
-  ['private_2eh',['private.h',['../autocrypt_2private_8h.html',1,'(Global Namespace)'],['../compress_2private_8h.html',1,'(Global Namespace)'],['../conn_2private_8h.html',1,'(Global Namespace)'],['../imap_2private_8h.html',1,'(Global Namespace)'],['../maildir_2private_8h.html',1,'(Global Namespace)'],['../ncrypt_2private_8h.html',1,'(Global Namespace)'],['../nntp_2private_8h.html',1,'(Global Namespace)'],['../notmuch_2private_8h.html',1,'(Global Namespace)'],['../pop_2private_8h.html',1,'(Global Namespace)'],['../sidebar_2private_8h.html',1,'(Global Namespace)']]],
+  ['private_2eh',['private.h',['../autocrypt_2private_8h.html',1,'(Global Namespace)'],['../compress_2private_8h.html',1,'(Global Namespace)'],['../conn_2private_8h.html',1,'(Global Namespace)'],['../imap_2private_8h.html',1,'(Global Namespace)'],['../maildir_2private_8h.html',1,'(Global Namespace)'],['../ncrypt_2private_8h.html',1,'(Global Namespace)'],['../nntp_2private_8h.html',1,'(Global Namespace)'],['../notmuch_2private_8h.html',1,'(Global Namespace)'],['../pattern_2private_8h.html',1,'(Global Namespace)'],['../pop_2private_8h.html',1,'(Global Namespace)'],['../sidebar_2private_8h.html',1,'(Global Namespace)']]],
   ['progress_2ec',['progress.c',['../progress_8c.html',1,'']]],
   ['progress_2eh',['progress.h',['../progress_8h.html',1,'']]],
   ['protos_2eh',['protos.h',['../protos_8h.html',1,'']]]

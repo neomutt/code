@@ -57,7 +57,8 @@ var searchData=
   ['delim',['delim',['../structFolderFile.html#a1d0f057cba1ea9cb0933acccac91bf78',1,'FolderFile::delim()'],['../structImapList.html#ae781ce990b408777cf84f7da397303fe',1,'ImapList::delim()'],['../structImapAccountData.html#a02bf8e48eeec528eadf8bd63a2cbb6b4',1,'ImapAccountData::delim()']]],
   ['delsp',['delsp',['../structFlowedState.html#a002470002d76c1ede9624e88fe9f2f36',1,'FlowedState']]],
   ['depth',['depth',['../structSbEntry.html#a23ebcead73d1691757fd66925cc24246',1,'SbEntry']]],
-  ['desc',['desc',['../structFolderFile.html#a862ba1521b82421e7b7261e86cbd232b',1,'FolderFile::desc()'],['../structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f',1,'Keymap::desc()'],['../structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf',1,'Monitor::desc()'],['../structNntpMboxData.html#a6d1f6681e3b32714f5c85d463f38fab8',1,'NntpMboxData::desc()']]],
+  ['desc',['desc',['../structFolderFile.html#a862ba1521b82421e7b7261e86cbd232b',1,'FolderFile::desc()'],['../structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f',1,'Keymap::desc()'],['../structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf',1,'Monitor::desc()'],['../structNntpMboxData.html#a6d1f6681e3b32714f5c85d463f38fab8',1,'NntpMboxData::desc()'],['../structPatternFlags.html#a59bdf829b129533bfd13702ef1020430',1,'PatternFlags::desc()']]],
+  ['descr',['descr',['../structPatternEntry.html#a6c9e8dbb72b7eff94e7c89d5d2ca1f8a',1,'PatternEntry']]],
   ['description',['description',['../structBody.html#a90db5151872e23e56a8f31d68925c121',1,'Body']]],
   ['destroy',['destroy',['../structConfigSetType.html#ad7c535ff8033c38dbaffa7c14bb4412e',1,'ConfigSetType::destroy()'],['../config_2set_8c.html#af612051570ed31dd6bb88f0ebf086a78',1,'destroy():&#160;set.c']]],
   ['destroy_5fstate',['destroy_state',['../browser_8c.html#a66083512f4b2523d4012b7f501eb1842',1,'browser.c']]],
@@ -89,6 +90,7 @@ var searchData=
   ['divtype',['DivType',['../sidebar_2private_8h.html#a1df81cd29a17636099f97add487c0b7d',1,'private.h']]],
   ['dlg_5fverify_5fcert',['dlg_verify_cert',['../conn_2gui_8c.html#a76021b6e113f9e4e25732217453b12d4',1,'dlg_verify_cert(const char *title, struct ListHead *list, bool allow_always, bool allow_skip):&#160;gui.c'],['../ssl_8h.html#a76021b6e113f9e4e25732217453b12d4',1,'dlg_verify_cert(const char *title, struct ListHead *list, bool allow_always, bool allow_skip):&#160;gui.c']]],
   ['dlgalias_2ec',['dlgalias.c',['../dlgalias_8c.html',1,'']]],
+  ['dlgpattern_2ec',['dlgpattern.c',['../dlgpattern_8c.html',1,'']]],
   ['dlgquery_2ec',['dlgquery.c',['../dlgquery_8c.html',1,'']]],
   ['dnarray',['DnArray',['../structDnArray.html',1,'']]],
   ['do_5funcolor',['do_uncolor',['../color_8c.html#a847efcc3f4da78c2ba539cf551ed2fff',1,'color.c']]],
@@ -240,5 +242,6 @@ var searchData=
   ['decide_20how_20to_20display_20email_20content',['Decide how to display email content',['../handler.html',1,'index']]],
   ['definitions_20of_20neomutt_20commands',['Definitions of NeoMutt commands',['../mutt_commands.html',1,'index']]],
   ['definitions_20of_20config_20variables',['Definitions of config variables',['../mutt_config.html',1,'index']]],
+  ['display_20a_20guide_20to_20patterns',['Display a guide to Patterns',['../pattern_dlgpattern.html',1,'pattern']]],
   ['display_20version_20and_20copyright_20about_20neomutt',['Display version and copyright about NeoMutt',['../version.html',1,'index']]]
 ];
