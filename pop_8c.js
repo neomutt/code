@@ -12,7 +12,7 @@ var pop_8c =
     [ "fetch_uidl", "pop_8c.html#ac2b98a8e580cfbd41e57db2b4132ea59", null ],
     [ "msg_cache_check", "pop_8c.html#a3bf9c44e730e2d242d09c2b0662c3a30", null ],
     [ "pop_hcache_namer", "pop_8c.html#a38f44bd1528545c8c77a842e2a9f7e0d", null ],
-    [ "pop_hcache_open", "pop_8c.html#a5ac9d8a6d8da74a5d06c6f7002a61c9b", null ],
+    [ "pop_hcache_open", "pop_8c.html#a3956320a3812ac0af7796e4b99d4c3e6", null ],
     [ "pop_fetch_headers", "pop_8c.html#aed296290f911b6522df2dd97ce554f65", null ],
     [ "pop_clear_cache", "pop_8c.html#a306deeb158f76bd338f04b1a5494d6a9", null ],
     [ "pop_fetch_mail", "pop_8c.html#ae41e43ca791955eb76c5709db39a21d7", null ],

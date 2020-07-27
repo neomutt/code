@@ -1,7 +1,6 @@
 var structMenu =
 [
     [ "title", "structMenu.html#a1cf561ffb11a83698437c966fb8d54f0", null ],
-    [ "help", "structMenu.html#a657a86a6503ded9ef6f683e6ae555ede", null ],
     [ "mdata", "structMenu.html#adc6d277fec333aca5b57f1156e6dabfc", null ],
     [ "current", "structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1", null ],
     [ "max", "structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b", null ],
@@ -20,6 +19,7 @@ var structMenu =
     [ "oldcurrent", "structMenu.html#ac967b14ec1024873493cae10c2ba3968", null ],
     [ "search_dir", "structMenu.html#a103ef41d81b44ee5b7a280d660fbdf37", null ],
     [ "tagged", "structMenu.html#a2aee1b3bf835ab3deb8f042b9eb38419", null ],
+    [ "custom_search", "structMenu.html#aeca263e57d98804d5fbcade232fa6c17", null ],
     [ "make_entry", "structMenu.html#a5b8e7a81b1ad3299bf8271b8f41042a1", null ],
     [ "search", "structMenu.html#a8a45572a1ba92aedfb9327d3c203ccb7", null ],
     [ "tag", "structMenu.html#a9f56131f02aaece633d13c8b2007476a", null ],

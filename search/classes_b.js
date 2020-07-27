@@ -4,6 +4,7 @@ var searchData=
   ['mailboxnode',['MailboxNode',['../structMailboxNode.html',1,'']]],
   ['mailcapentry',['MailcapEntry',['../structMailcapEntry.html',1,'']]],
   ['maildir',['Maildir',['../structMaildir.html',1,'']]],
+  ['maildiremaildata',['MaildirEmailData',['../structMaildirEmailData.html',1,'']]],
   ['maildirmboxdata',['MaildirMboxData',['../structMaildirMboxData.html',1,'']]],
   ['maketimetest',['MakeTimeTest',['../structMakeTimeTest.html',1,'']]],
   ['mapping',['Mapping',['../structMapping.html',1,'']]],

@@ -24,6 +24,7 @@ var searchData=
   ['next_5fsubtree_5fvisible',['next_subtree_visible',['../structMuttThread.html#ae8aeb3656c0937883a1a0c955b12712c',1,'MuttThread']]],
   ['nextcmd',['nextcmd',['../structImapAccountData.html#aaf69f482c87523eb832135c2c23d3d3f',1,'ImapAccountData']]],
   ['nlink',['nlink',['../structFolderFile.html#a708a7822ee0ea5958aa55b61bd9c5f4a',1,'FolderFile']]],
+  ['nm_5fedata',['nm_edata',['../structEmail.html#a677a6956d02a1df8b87751a6161109b5',1,'Email']]],
   ['nm_5ftags',['nm_tags',['../init_8c.html#a2a3ca0f0605ccecd37624b28ae01db16',1,'init.c']]],
   ['nmatch',['nmatch',['../structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51',1,'Replace']]],
   ['nmatches',['nmatches',['../structPrexStorage.html#a8011462211411de7a7e89af23ceccbd1',1,'PrexStorage']]],

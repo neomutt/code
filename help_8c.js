@@ -1,8 +1,6 @@
 var help_8c =
 [
     [ "help_lookup_function", "help_8c.html#a7a2f5bef0066b2adc07678a164db63bc", null ],
-    [ "mutt_make_help", "help_8c.html#a3c7eb467e6f81abfa6c09bd3d9c66739", null ],
-    [ "mutt_compile_help", "help_8c.html#a1ebab39bff585dda72f9955e183176c4", null ],
     [ "print_macro", "help_8c.html#a87e06fabf80e85175d630bc8c96d8c92", null ],
     [ "get_wrapped_width", "help_8c.html#a7c05fdeadcd24b3faea2a6bce94fd2ca", null ],
     [ "pad", "help_8c.html#a3185d406c5af79ad32b642591af7820f", null ],

@@ -3,6 +3,7 @@ var keymap_8h =
     [ "Keymap", "structKeymap.html", "structKeymap" ],
     [ "KeyEvent", "structKeyEvent.html", "structKeyEvent" ],
     [ "Binding", "structBinding.html", "structBinding" ],
+    [ "EventBinding", "structEventBinding.html", "structEventBinding" ],
     [ "MUTT_UNBIND", "keymap_8h.html#a3056cbe028c833095c78f555247be52c", null ],
     [ "MUTT_UNMACRO", "keymap_8h.html#a9a836da3d0bc3e615e9b2f3b130f9a4f", null ],
     [ "MAX_SEQ", "keymap_8h.html#ae22870a5cb59343e903a29d446eb3aac", null ],
@@ -26,6 +27,14 @@ var keymap_8h =
       [ "MENU_AUTOCRYPT_ACCT", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af9c343e9f9161f3b1d07ba93457e2d13", null ],
       [ "MENU_MAX", "keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae", null ],
       [ "mt_dummy", "dummy_8c.html#ae5c7b6b4f6e696391cd7faaea6571bb4a734b13b0dc1b65ca0ca2a4f101128c0e", null ]
+    ] ],
+    [ "NotifyBinding", "keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8", [
+      [ "NT_BINDING_NEW", "keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8a89a74e030aad5d617c29922a03beed0c", null ],
+      [ "NT_BINDING_DELETED", "keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8a680b013af80cf7730611090fd38231f0", null ],
+      [ "NT_BINDING_DELETE_ALL", "keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8afa66cceb085f5be3d000701f5446bb17", null ],
+      [ "NT_MACRO_NEW", "keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8adf3047cc843b3afdca08224fec600cc5", null ],
+      [ "NT_MACRO_DELETED", "keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8a4bfb49c7adef5a3aaac57bdb0fe6aff9", null ],
+      [ "NT_MACRO_DELETE_ALL", "keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8a29308e212d9cecf34aaf3df131be0928", null ]
     ] ],
     [ "init_extended_keys", "keymap_8h.html#ae6be8f34be875971676339bac0d726bd", null ],
     [ "km_expand_key", "keymap_8h.html#a830fff42df69ae5c6e256eb03ce18892", null ],

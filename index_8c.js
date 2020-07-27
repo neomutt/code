@@ -49,5 +49,5 @@ var index_8c =
     [ "C_UncollapseJump", "index_8c.html#ab7248a200f0edc68e797f1cb49cf5c55", null ],
     [ "C_UncollapseNew", "index_8c.html#a08eed13b52a7215baf26da80bb6ca870", null ],
     [ "IndexHelp", "index_8c.html#a8aacc6addd100c5e3acd677d2c88d790", null ],
-    [ "IndexNewsHelp", "index_8c.html#ac86eaaa390a5a8c953585b13d3c94f76", null ]
+    [ "IndexNewsHelp", "index_8c.html#a2bc480ec1d6debf952165e41454e1070", null ]
 ];

@@ -1,5 +1,8 @@
 var ncrypt_2private_8h =
 [
+    [ "smime_select_key", "ncrypt_2private_8h.html#acaaf220017e41e71ef8bf84f8166dc41", null ],
+    [ "pgp_select_key", "ncrypt_2private_8h.html#a40dc7f95ad96201cc401dfa90d09abc5", null ],
+    [ "crypt_select_key", "ncrypt_2private_8h.html#a4d9c0b4a020467bf6a3c5368906aa8bf", null ],
     [ "C_CryptUsePka", "ncrypt_2private_8h.html#ae3d7a908a6140f4a09a1ff07781e2570", null ],
     [ "C_CryptConfirmhook", "ncrypt_2private_8h.html#af3552155ef754b8aaae6a2697726c241", null ],
     [ "C_CryptOpportunisticEncrypt", "ncrypt_2private_8h.html#a46584de01677931974f7401e7c7c8733", null ],

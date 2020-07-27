@@ -18,7 +18,7 @@ var searchData=
   ['dt_5flong',['DT_LONG',['../types_8h.html#a3e996ab40386ca1965152452a38df738',1,'types.h']]],
   ['dt_5fmailbox',['DT_MAILBOX',['../types_8h.html#a62e8bc9ef453815b2f704ef54f6639c2',1,'types.h']]],
   ['dt_5fmbtable',['DT_MBTABLE',['../types_8h.html#ad95e7bd7cb79ff71fd4eacd193bd9ea8',1,'types.h']]],
-  ['dt_5fmy_5fconfig',['DT_MY_CONFIG',['../types_8h.html#a8b96049a1232402c9d80bfed3406fb13',1,'types.h']]],
+  ['dt_5fno_5fvariable',['DT_NO_VARIABLE',['../types_8h.html#a509e1b19de15647003ed377cacc70a49',1,'types.h']]],
   ['dt_5fnot_5fempty',['DT_NOT_EMPTY',['../types_8h.html#a757f4209460cc66a307289b244885a2f',1,'types.h']]],
   ['dt_5fnot_5fnegative',['DT_NOT_NEGATIVE',['../types_8h.html#ab6cbe1d68a262d987b449efe7053ec81',1,'types.h']]],
   ['dt_5fnumber',['DT_NUMBER',['../types_8h.html#af4dc3b2f4681bd1e5187751f5b14e621',1,'types.h']]],

@@ -40,5 +40,5 @@ var searchData=
   ['reg_5fcomp',['REG_COMP',['../mutt_2regex3_8h.html#a349838a3143be1dd9b0500bfbe54d48f',1,'regex3.h']]],
   ['reg_5fwords',['REG_WORDS',['../mutt_2regex3_8h.html#acbf0cd6774750d7f48bd8a5dd466d1fa',1,'regex3.h']]],
   ['rgb24',['RGB24',['../color_8c.html#a6da7eac8e659a98b512f4b81eee68c45',1,'color.c']]],
-  ['rsort',['RSORT',['../alias_2gui_8c.html#a89ffac83aa53c9558af1f25adf995450',1,'gui.c']]]
+  ['rsort',['RSORT',['../gui_8c.html#a89ffac83aa53c9558af1f25adf995450',1,'gui.c']]]
 ];

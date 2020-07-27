@@ -17,7 +17,6 @@ var config_2set_8h =
     [ "CSR_RESULT_MASK", "config_2set_8h.html#ae0a97d3df30f7df4c5c0f204b92b1462", null ],
     [ "CSR_RESULT", "config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4", null ],
     [ "IP", "config_2set_8h.html#af00e4b63d736381e1c527ac5ef2c8f3c", null ],
-    [ "CS_REG_DISABLED", "config_2set_8h.html#ad45e7c57f4939bf1b34db61373dc60b9", null ],
     [ "cs_new", "config_2set_8h.html#a782cae3ae2a644f227712ba2b9777f85", null ],
     [ "cs_free", "config_2set_8h.html#a2ab12e419e99eef8f118eb83886078e0", null ],
     [ "cs_get_base", "config_2set_8h.html#abc8977c3a4db023bfd5f5e8e93bd4cf9", null ],

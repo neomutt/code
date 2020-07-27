@@ -44,6 +44,6 @@ var types_8h =
     [ "DT_INHERITED", "types_8h.html#ac87c549d134140e071675f3b871bb84a", null ],
     [ "DT_INITIAL_SET", "types_8h.html#a28e38eb4b5323c904f21142f27c2722e", null ],
     [ "DT_DISABLED", "types_8h.html#ae7e89be4c280203eae7913e86aeefce5", null ],
-    [ "DT_MY_CONFIG", "types_8h.html#a8b96049a1232402c9d80bfed3406fb13", null ],
+    [ "DT_NO_VARIABLE", "types_8h.html#a509e1b19de15647003ed377cacc70a49", null ],
     [ "ConfigRedrawFlags", "types_8h.html#a539fbcf5926505ec22b9bc4026f2feda", null ]
 ];

@@ -23,14 +23,13 @@ var browser_8c =
     [ "init_menu", "browser_8c.html#a9c2f420fab462b5dc0f7cf74824b802b", null ],
     [ "file_tag", "browser_8c.html#af4d5441e6e33296a9fb742390153a099", null ],
     [ "mutt_browser_select_dir", "browser_8c.html#a9fbed4ed086e8d9c2907e8f43d6143f2", null ],
-    [ "mutt_dlg_browser_observer", "browser_8c.html#a1f4f273663e2267167571f4b93cf82aa", null ],
     [ "mutt_buffer_select_file", "browser_8c.html#abb3a2ce1cfb6a7e1e56a1cc15f7a5254", null ],
     [ "mutt_select_file", "browser_8c.html#a88c879366e92953daa03b631c39a035a", null ],
     [ "C_BrowserAbbreviateMailboxes", "browser_8c.html#aefe07e5e1fe89e6390871eb878663257", null ],
     [ "C_FolderFormat", "browser_8c.html#a9539f5a5517ab0467e3f1bd01e35c750", null ],
     [ "C_SortBrowser", "browser_8c.html#acf2d7fcba7f5dcbea572a76427e0da0d", null ],
     [ "FolderHelp", "browser_8c.html#ac8e1c032b65d1d5ba98e737571215bb1", null ],
-    [ "FolderNewsHelp", "browser_8c.html#a7527cf51fab28e9283f17b2eca6a1917", null ],
+    [ "FolderNewsHelp", "browser_8c.html#a4c2145b2c5c5bce768e8c77d335a45cc", null ],
     [ "LastDir", "browser_8c.html#a7b9330cfc3900716b46bcb97f0a65f04", null ],
     [ "LastDirBackup", "browser_8c.html#ac52844664e29705d1ff9110ad6c62bf0", null ]
 ];

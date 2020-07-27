@@ -6,9 +6,9 @@ var dir_803ea0153ad76bee9f0b07478cfbff67 =
     [ "connection.h", "connection_8h.html", [
       [ "Connection", "structConnection.html", "structConnection" ]
     ] ],
+    [ "dlgverifycert.c", "dlgverifycert_8c.html", "dlgverifycert_8c" ],
     [ "getdomain.c", "getdomain_8c.html", "getdomain_8c" ],
     [ "gnutls.c", "gnutls_8c.html", "gnutls_8c" ],
-    [ "gui.c", "conn_2gui_8c.html", "conn_2gui_8c" ],
     [ "lib.h", "conn_2lib_8h.html", "conn_2lib_8h" ],
     [ "openssl.c", "openssl_8c.html", "openssl_8c" ],
     [ "private.h", "conn_2private_8h.html", "conn_2private_8h" ],

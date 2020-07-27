@@ -4,6 +4,8 @@ var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
     [ "color.h", "color_8h.html", "color_8h" ],
     [ "curs_lib.c", "curs__lib_8c.html", "curs__lib_8c" ],
     [ "curs_lib.h", "curs__lib_8h.html", "curs__lib_8h" ],
+    [ "dialog.c", "dialog_8c.html", "dialog_8c" ],
+    [ "dialog.h", "dialog_8h.html", "dialog_8h" ],
     [ "lib.h", "gui_2lib_8h.html", null ],
     [ "mutt_curses.c", "mutt__curses_8c.html", "mutt__curses_8c" ],
     [ "mutt_curses.h", "mutt__curses_8h.html", "mutt__curses_8h" ],

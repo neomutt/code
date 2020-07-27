@@ -11,6 +11,7 @@ var recvattach_8c =
     [ "attach_tag", "recvattach_8c.html#a86305a7b86a230165ada61d110743699", null ],
     [ "prepend_savedir", "recvattach_8c.html#a7ead8fceb1c2b8c8c8a86b08e73a1191", null ],
     [ "has_a_message", "recvattach_8c.html#a24d56034e98ac9dc0c2bef857afda02c", null ],
+    [ "save_attachment_flowed_helper", "recvattach_8c.html#a3c36223d243ef6b041baf6e0bb54533f", null ],
     [ "query_save_attachment", "recvattach_8c.html#aad56960e0d22f0b6e36dbf18d120d84a", null ],
     [ "save_without_prompting", "recvattach_8c.html#a999be3ce814a6a72a2a5c409b7583521", null ],
     [ "mutt_save_attachment_list", "recvattach_8c.html#a2b47c498759b3b7d7d8b1e111a034df8", null ],

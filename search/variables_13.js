@@ -70,7 +70,7 @@ var searchData=
   ['trash',['trash',['../structEmail.html#ad14bdb707d3b5811734782cfb570d9eb',1,'Email']]],
   ['tree',['tree',['../structContext.html#a1ef5680fd22f0a913f489c11f3271a42',1,'Context::tree()'],['../structAttachPtr.html#a675e3442ea87e4479649a58c20f68aa7',1,'AttachPtr::tree()'],['../structEmail.html#a6ab0c038ad82a3771c419731c93398ce',1,'Email::tree()']]],
   ['trust',['trust',['../structPgpUid.html#a581c0cff806e1f531c21b10b30529a3d',1,'PgpUid::trust()'],['../structSmimeKey.html#abc36d7072ad69579e39e26326eed39e0',1,'SmimeKey::trust()']]],
-  ['trust_5fflags',['trust_flags',['../pgpkey_8c.html#a50b4d6ff4bf36e0d906905c4e10f8726',1,'pgpkey.c']]],
+  ['trust_5fflags',['trust_flags',['../dlgpgp_8c.html#a50b4d6ff4bf36e0d906905c4e10f8726',1,'dlgpgp.c']]],
   ['tsl',['tsl',['../terminal_8c.html#a5ffe7ea12d2d3464f8688c410dea885e',1,'terminal.c']]],
   ['tssupported',['TsSupported',['../terminal_8c.html#a0d85ab6bf7d5c8806fab02f86155c18c',1,'TsSupported():&#160;terminal.c'],['../terminal_8h.html#a0d85ab6bf7d5c8806fab02f86155c18c',1,'TsSupported():&#160;terminal.c']]],
   ['tv_5fnsec',['tv_nsec',['../structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683',1,'timespec']]],

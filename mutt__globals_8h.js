@@ -87,7 +87,6 @@ var mutt__globals_8h =
     [ "C_ForwardDecode", "mutt__globals_8h.html#ad82dea05c594940ff2788b2f44737a35", null ],
     [ "C_ForwardQuote", "mutt__globals_8h.html#a9f51ae4a2c27729524c1451f4d0f342b", null ],
     [ "C_Header", "mutt__globals_8h.html#a35cc58185b9b8d67e00d3c6fa1cb6133", null ],
-    [ "C_Help", "mutt__globals_8h.html#a0f7bc7fd43a0db2911c72f8fa44e94a0", null ],
     [ "C_MailCheckRecent", "mutt__globals_8h.html#a099bd62251e4c7d9bd89d501558c72e3", null ],
     [ "C_Markers", "mutt__globals_8h.html#a85955e0f31eb1a93bbe11339063da033", null ],
     [ "C_PipeDecodeWeed", "mutt__globals_8h.html#ab1067843a52ea9c99ca3c3d7ad006ec7", null ],

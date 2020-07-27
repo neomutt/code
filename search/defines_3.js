@@ -73,7 +73,6 @@ var searchData=
   ['cs_5fdump_5fshow_5fdeprecated',['CS_DUMP_SHOW_DEPRECATED',['../dump_8h.html#a609447cfa8a93c99d48d8c856c006957',1,'dump.h']]],
   ['cs_5fdump_5fshow_5fdisabled',['CS_DUMP_SHOW_DISABLED',['../dump_8h.html#a324a460a35ea8a91e00f390d56152560',1,'dump.h']]],
   ['cs_5fdump_5fshow_5fsynonyms',['CS_DUMP_SHOW_SYNONYMS',['../dump_8h.html#a3009c688dc6d6d7860e4feb6f6546cfb',1,'dump.h']]],
-  ['cs_5freg_5fdisabled',['CS_REG_DISABLED',['../config_2set_8h.html#ad45e7c57f4939bf1b34db61373dc60b9',1,'set.h']]],
   ['csr_5ferr_5fcode',['CSR_ERR_CODE',['../config_2set_8h.html#a8785f60615c4c531e94a9c97974522d7',1,'set.h']]],
   ['csr_5ferr_5finvalid',['CSR_ERR_INVALID',['../config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139',1,'set.h']]],
   ['csr_5ferr_5funknown',['CSR_ERR_UNKNOWN',['../config_2set_8h.html#a81618a00ec001199a18ae2bc89f39dda',1,'set.h']]],

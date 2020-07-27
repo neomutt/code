@@ -9,7 +9,7 @@ var maildir_2lib_8h =
     [ "maildir_parse_stream", "maildir_2lib_8h.html#a0f75c9821ec9e4b65add4260c35e61d4", null ],
     [ "maildir_update_flags", "maildir_2lib_8h.html#a79713d04e839c3782ef9e0b7bc25e9c0", null ],
     [ "mh_check_empty", "maildir_2lib_8h.html#a0bc1f221906f8f540fa7a98e81f0dc31", null ],
-    [ "mh_sync_mailbox_message", "maildir_2lib_8h.html#ad0eadcd1edd07f6c435c3bc8a99b07a6", null ],
+    [ "mh_sync_mailbox_message", "maildir_2lib_8h.html#a233a7a0d01e5a50160e42219674f2e16", null ],
     [ "config_init_maildir", "maildir_2lib_8h.html#a6ef3e1ae79d5e93c50bf6d68b9b0d49b", null ],
     [ "C_MaildirTrash", "maildir_2lib_8h.html#a0d0cecbc72552d9702502c21b938d581", null ],
     [ "MxMaildirOps", "maildir_2lib_8h.html#a0748343fa768080ad12f35154d7dfbde", null ],

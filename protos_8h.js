@@ -13,7 +13,6 @@ var protos_8h =
     [ "mutt_system", "protos_8h.html#aa1d4ad04b000036513ca3f741059942c", null ],
     [ "mutt_set_xdg_path", "protos_8h.html#aaa27303d43dc65ef87fa448ddd08c41f", null ],
     [ "mutt_help", "protos_8h.html#ad9bb0ca40ea82be9ffc97caba4e631f7", null ],
-    [ "mutt_make_help", "protos_8h.html#a7688433b773018a7ada602549e701b14", null ],
     [ "mutt_set_flag_update", "protos_8h.html#a10bc5f3e9550655780688d2f8d145ba4", null ],
     [ "mutt_signal_init", "protos_8h.html#a91ee7d4aca86a7dc55c9ffda2f494c37", null ],
     [ "mutt_emails_set_flag", "protos_8h.html#a523c3467943ba8e0b0d9ece23a350a5d", null ],

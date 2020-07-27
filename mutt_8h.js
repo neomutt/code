@@ -51,6 +51,5 @@ var mutt_8h =
       [ "MUTT_TRASH", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a31ab4665e994c9b34ba3aa3175f59a39", null ],
       [ "MUTT_MT_MAX", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a5d5b2c187b266abd3ccc0b6bbf579eeb", null ]
     ] ],
-    [ "mutt_compile_help", "mutt_8h.html#a1ebab39bff585dda72f9955e183176c4", null ],
     [ "reset_value", "mutt_8h.html#a7d4c46669b95c76ce52d540fc592834f", null ]
 ];

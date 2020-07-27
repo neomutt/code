@@ -18,5 +18,5 @@ var structImapMboxData =
     [ "msn_index_size", "structImapMboxData.html#a5a8d86c0542247e2ead340be23219afc", null ],
     [ "max_msn", "structImapMboxData.html#a365640fdc3036ad769d8b81f892877c3", null ],
     [ "bcache", "structImapMboxData.html#a506e50b5acb8f79ac1a855cef7f4e6de", null ],
-    [ "hcache", "structImapMboxData.html#a10fecd1cc613dd80b934b602b86412fc", null ]
+    [ "hcache", "structImapMboxData.html#a2201c72b20cba8bcd5cc42e7f395ae6a", null ]
 ];

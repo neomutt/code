@@ -14,9 +14,5 @@ var browser_8h =
     [ "mutt_browser_cleanup", "browser_8h.html#ae57ac9cc2f16e09d897d2c37177da2cd", null ],
     [ "C_BrowserAbbreviateMailboxes", "browser_8h.html#aefe07e5e1fe89e6390871eb878663257", null ],
     [ "C_FolderFormat", "browser_8h.html#a9539f5a5517ab0467e3f1bd01e35c750", null ],
-    [ "C_GroupIndexFormat", "browser_8h.html#aae474a51d5657b37cb9f3d0a14738034", null ],
-    [ "C_NewsgroupsCharset", "browser_8h.html#a7f7d6f28cf5fef9623b89beb9a085364", null ],
-    [ "C_ShowOnlyUnread", "browser_8h.html#a045bf48150ffe84d749f934c2be390b3", null ],
-    [ "C_SortBrowser", "browser_8h.html#acf2d7fcba7f5dcbea572a76427e0da0d", null ],
-    [ "C_VfolderFormat", "browser_8h.html#a8e3f6a8cae7d09afa25083dfdabee344", null ]
+    [ "C_SortBrowser", "browser_8h.html#acf2d7fcba7f5dcbea572a76427e0da0d", null ]
 ];

@@ -1,5 +1,6 @@
 var maildir_2private_8h =
 [
+    [ "MaildirEmailData", "structMaildirEmailData.html", "structMaildirEmailData" ],
     [ "MaildirMboxData", "structMaildirMboxData.html", "structMaildirMboxData" ],
     [ "Maildir", "structMaildir.html", "structMaildir" ],
     [ "MhSequences", "structMhSequences.html", "structMhSequences" ],
@@ -20,6 +21,9 @@ var maildir_2private_8h =
     [ "mh_msg_close", "maildir_2private_8h.html#a41ed62b3e2b71b6c945d6abfe8a2a142", null ],
     [ "mh_msg_save_hcache", "maildir_2private_8h.html#af2af0145d20c54226fa0d46c4979e7a6", null ],
     [ "maildir_canon_filename", "maildir_2private_8h.html#ae0026c4d5bd99be78469095721d1e744", null ],
+    [ "maildir_edata_free", "maildir_2private_8h.html#a64d6c6eca4ddc56acc9157a876f07d63", null ],
+    [ "maildir_edata_get", "maildir_2private_8h.html#a7ff8f2680557008b4f28a6a4b8c7d2b1", null ],
+    [ "maildir_edata_new", "maildir_2private_8h.html#a3dfb16b26ffe871f3aa5753f0115bcdc", null ],
     [ "maildir_delayed_parsing", "maildir_2private_8h.html#ab817ffae2cd4bea19b9ef023139bc7d0", null ],
     [ "maildir_hcache_keylen", "maildir_2private_8h.html#a0f561136d8ba70bbe45ef4385d994bb3", null ],
     [ "maildir_mdata_get", "maildir_2private_8h.html#a02bc1414732ddb9065ef531bc7170fb6", null ],

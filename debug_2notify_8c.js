@@ -14,7 +14,8 @@ var debug_2notify_8c =
     [ "notify_dump_email", "debug_2notify_8c.html#aed8392535f2c8bda48bcf31b2e20f92e", null ],
     [ "notify_dump_global", "debug_2notify_8c.html#a3149e24686acf4686bca95759cf1cf9f", null ],
     [ "notify_dump_mailbox", "debug_2notify_8c.html#acb3ead2d9f12110fa6c7bcf13e6a613f", null ],
-    [ "notify_dump_window", "debug_2notify_8c.html#ab163ea71fd0dab5f40ee80c1015a9d8f", null ],
+    [ "notify_dump_window_state", "debug_2notify_8c.html#afea224275b7b400352a04317877218f7", null ],
+    [ "notify_dump_window_focus", "debug_2notify_8c.html#ad766956bc33de5387af4d71172a52b0a", null ],
     [ "debug_notify_observer", "debug_2notify_8c.html#adf2a000157beda65b4aa66978f8197a1", null ],
     [ "Fields", "debug_2notify_8c.html#aee5135c1f9da204c527959041ce8855c", null ],
     [ "ComposeFields", "debug_2notify_8c.html#af47ebccd58bf7198974c09f09a8df181", null ]

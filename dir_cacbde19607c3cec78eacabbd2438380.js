@@ -35,5 +35,6 @@ var dir_cacbde19607c3cec78eacabbd2438380 =
     [ "string4.h", "string4_8h.html", "string4_8h" ],
     [ "subset.c", "test_2config_2subset_8c.html", "test_2config_2subset_8c" ],
     [ "synonym.c", "synonym_8c.html", "synonym_8c" ],
-    [ "synonym.h", "synonym_8h.html", "synonym_8h" ]
+    [ "synonym.h", "synonym_8h.html", "synonym_8h" ],
+    [ "variable.c", "variable_8c.html", "variable_8c" ]
 ];

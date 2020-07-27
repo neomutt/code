@@ -7,7 +7,7 @@ var graphviz_8c =
     [ "ADDR_LIST", "graphviz_8c.html#a34aade36b1400490484d77e6bc9a0559", null ],
     [ "ADD_BOOL", "graphviz_8c.html#ac812637f6c7ac2de0b210f546a66937b", null ],
     [ "ADD_BOOL", "graphviz_8c.html#ac812637f6c7ac2de0b210f546a66937b", null ],
-    [ "dot_email", "graphviz_8c.html#ad1b32acba4f4bd668c8a61d45e5a4404", null ],
+    [ "dot_email", "graphviz_8c.html#af580ce3bb1304d7b9cf4fd8698c145a3", null ],
     [ "dot_envelope", "graphviz_8c.html#ac25a407b18c80387652c7b58027a2a56", null ],
     [ "get_content_type", "graphviz_8c.html#a10248b9b9c64088d2f1267050429ade6", null ],
     [ "get_content_encoding", "graphviz_8c.html#a357a369eb41a21a50cc1dc8ec21e06e8", null ],
@@ -60,5 +60,5 @@ var graphviz_8c =
     [ "dot_body", "graphviz_8c.html#abdc31579f038f08491def5175968f029", null ],
     [ "dot_list_head", "graphviz_8c.html#a48751be1152bfa2bed245484f5e73e09", null ],
     [ "dot_addr_list", "graphviz_8c.html#ab3da4b38f91f74a9ed37f33fc00b3b77", null ],
-    [ "dump_graphviz_email", "graphviz_8c.html#a1a47017b115969f8df0f25104477d9c6", null ]
+    [ "dump_graphviz_email", "graphviz_8c.html#afc4b43c22f15774f658191f43e0514d3", null ]
 ];

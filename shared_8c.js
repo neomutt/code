@@ -1,6 +1,9 @@
 var shared_8c =
 [
     [ "INS_SORT_THRESHOLD", "shared_8c.html#a1513da3d670ae75ae13746092629afab", null ],
+    [ "maildir_edata_free", "shared_8c.html#a64d6c6eca4ddc56acc9157a876f07d63", null ],
+    [ "maildir_edata_new", "shared_8c.html#a3dfb16b26ffe871f3aa5753f0115bcdc", null ],
+    [ "maildir_edata_get", "shared_8c.html#a7ff8f2680557008b4f28a6a4b8c7d2b1", null ],
     [ "maildir_mdata_free", "shared_8c.html#aff64e2f2fbaff9fae27b26f003928081", null ],
     [ "maildir_mdata_new", "shared_8c.html#a9dd97a31aafc5f15d70e164bc27ca3cc", null ],
     [ "maildir_mdata_get", "shared_8c.html#a02bc1414732ddb9065ef531bc7170fb6", null ],
@@ -31,7 +34,7 @@ var shared_8c =
     [ "maildir_parse_flags", "shared_8c.html#afad70ac642ae3a3a925778412bb64097", null ],
     [ "maildir_parse_stream", "shared_8c.html#a0f75c9821ec9e4b65add4260c35e61d4", null ],
     [ "maildir_parse_message", "shared_8c.html#a8fc323eb62e562ccedcba11e29a39631", null ],
-    [ "mh_sync_mailbox_message", "shared_8c.html#ad0eadcd1edd07f6c435c3bc8a99b07a6", null ],
+    [ "mh_sync_mailbox_message", "shared_8c.html#a233a7a0d01e5a50160e42219674f2e16", null ],
     [ "maildir_update_flags", "shared_8c.html#a79713d04e839c3782ef9e0b7bc25e9c0", null ],
     [ "maildir_open_find_message", "shared_8c.html#a8c1dd82fc41fced471926501135b95d4", null ],
     [ "maildir_mh_open_message", "shared_8c.html#ac7d2634f420881625877f5b0dd904b3e", null ],

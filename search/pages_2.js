@@ -20,6 +20,8 @@ var searchData=
   ['create_2fmanipulate_20threading_20in_20emails',['Create/manipulate threading in emails',['../email_thread.html',1,'email']]],
   ['color_20and_20attribute_20parsing',['Color and attribute parsing',['../gui_color.html',1,'gui']]],
   ['config_20used_20by_20libhcache',['Config used by libhcache',['../hc_config.html',1,'hcache']]],
+  ['convenience_20wrapper_20for_20the_20help_20bar_20headers',['Convenience wrapper for the Help Bar headers',['../helpbar.html',1,'']]],
+  ['config_20used_20by_20help_20bar',['Config used by Help Bar',['../helpbar_config.html',1,'']]],
   ['config_20used_20by_20libhistory',['Config used by libhistory',['../history_config.html',1,'history']]],
   ['config_20used_20by_20libimap',['Config used by libimap',['../imap_config.html',1,'imap']]],
   ['code_20docs',['Code Docs',['../index.html',1,'']]],

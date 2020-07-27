@@ -11,9 +11,12 @@ var rfc3676_8c =
     [ "print_flowed_line", "rfc3676_8c.html#aac259238494c57983f6b213392cbe91a", null ],
     [ "print_fixed_line", "rfc3676_8c.html#a75f88b287dd092e1c3129dee78409930", null ],
     [ "rfc3676_handler", "rfc3676_8c.html#a1a3abb7fcf3409cd1fe345fd20eee6a9", null ],
-    [ "rfc3676_space_stuff", "rfc3676_8c.html#a9f6ce3a66b1215633ec857cae09f5ea0", null ],
+    [ "mutt_rfc3676_is_format_flowed", "rfc3676_8c.html#adc6a5cc71d87432efb771f495c6efb9c", null ],
+    [ "rfc3676_space_stuff", "rfc3676_8c.html#a2fb3e8d4c89f28fca07fe90b66adff6a", null ],
     [ "mutt_rfc3676_space_stuff", "rfc3676_8c.html#ae80c6b55541960f57f67f4ea3e4467e8", null ],
     [ "mutt_rfc3676_space_unstuff", "rfc3676_8c.html#a47bfc67ef302e9b51cee14c713a70f35", null ],
+    [ "mutt_rfc3676_space_unstuff_attachment", "rfc3676_8c.html#aafc5472c7687d8941a25999aa30d2be4", null ],
+    [ "mutt_rfc3676_space_stuff_attachment", "rfc3676_8c.html#a9cd1b3af0b88c1d0179e890b444c5be0", null ],
     [ "C_ReflowSpaceQuotes", "rfc3676_8c.html#ae72a662cae766d5a2de536c96685f046", null ],
     [ "C_ReflowWrap", "rfc3676_8c.html#a5be5171c37ea30b3ff53c2339daba4d2", null ]
 ];

@@ -13,6 +13,7 @@ var files =
     [ "email", "dir_1ac69099273185b8416dca0dba1f5766.html", "dir_1ac69099273185b8416dca0dba1f5766" ],
     [ "gui", "dir_11bc0974ce736ce9a6fadebbeb7a8314.html", "dir_11bc0974ce736ce9a6fadebbeb7a8314" ],
     [ "hcache", "dir_59c8f561077ed875efa8c337ec911444.html", "dir_59c8f561077ed875efa8c337ec911444" ],
+    [ "helpbar", "dir_a8e3d475cdd3803a017c6a3972109258.html", "dir_a8e3d475cdd3803a017c6a3972109258" ],
     [ "history", "dir_3280939c46ccbacf208ea4bc86aae746.html", "dir_3280939c46ccbacf208ea4bc86aae746" ],
     [ "imap", "dir_33230cbb4c8c9ca898085a867988d207.html", "dir_33230cbb4c8c9ca898085a867988d207" ],
     [ "maildir", "dir_5eff417f4e4a3dc2f20e5cba9389b7e3.html", "dir_5eff417f4e4a3dc2f20e5cba9389b7e3" ],

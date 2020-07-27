@@ -9,6 +9,7 @@ var searchData=
   ['determine_20who_20the_20email_20is_20from',['Determine who the email is from',['../email_from.html',1,'email']]],
   ['driver_20based_20email_20tags',['Driver based email tags',['../email_tags.html',1,'email']]],
   ['definitions_20of_20user_20functions',['Definitions of user functions',['../functions.html',1,'index']]],
+  ['dialog_20windows',['Dialog Windows',['../gui_dialog.html',1,'gui']]],
   ['decide_20how_20to_20display_20email_20content',['Decide how to display email content',['../handler.html',1,'index']]],
   ['definitions_20of_20neomutt_20commands',['Definitions of NeoMutt commands',['../mutt_commands.html',1,'index']]],
   ['definitions_20of_20config_20variables',['Definitions of config variables',['../mutt_config.html',1,'index']]],

@@ -66,6 +66,7 @@ var pager_8c =
     [ "Mailbox_is_read_only", "pager_8c.html#a12ff66bc53a0f656ef581441f836aafe", null ],
     [ "Function_not_permitted_in_attach_message_mode", "pager_8c.html#a902bce6ff62a5b8e0c4c05e0c10e8c2e", null ],
     [ "PagerHelp", "pager_8c.html#acf47b3ffd858fe087c093fd8bb2eac18", null ],
-    [ "PagerHelpExtra", "pager_8c.html#a7082d147f953649ece2f16a1755fa1f8", null ],
-    [ "PagerNewsHelpExtra", "pager_8c.html#a248144985dd2964bcc236cddbb84c2d5", null ]
+    [ "PagerHelpHelp", "pager_8c.html#aa28a1c2205b6faa48305586807d75a23", null ],
+    [ "PagerNormalHelp", "pager_8c.html#abe1f6fa814dc62f21af8f5e9370f9d88", null ],
+    [ "PagerNewsHelp", "pager_8c.html#aa6187d937a0f4e3c2243780eb3fbe15d", null ]
 ];

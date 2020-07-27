@@ -58,6 +58,6 @@ var compose_8c =
     [ "MaxHeaderWidth", "compose_8c.html#aa57902c74e4b99785680a0bc4e263029", null ],
     [ "Prompts", "compose_8c.html#a577b891ac761db94d93ff7d31e9670bb", null ],
     [ "ComposeHelp", "compose_8c.html#a785f04ab170c17ce970ceea7d2615150", null ],
-    [ "ComposeNewsHelp", "compose_8c.html#a35fd40b2d946374e3e629bdc27d36bd0", null ],
+    [ "ComposeNewsHelp", "compose_8c.html#aa5d7e91e9396582befc17198ad78464c", null ],
     [ "AutocryptRecUiFlags", "compose_8c.html#acf023820a2a75f370be7bc00634502d6", null ]
 ];

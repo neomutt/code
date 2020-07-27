@@ -60,11 +60,11 @@ var mutt__window_8h =
       [ "NT_WINDOW_NEW", "mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138cafd28e2be5b9530dff2ebdc7855aa88a3", null ],
       [ "NT_WINDOW_DELETE", "mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca8d3b770dfc438ed96cbd7f16ba462c0a", null ],
       [ "NT_WINDOW_STATE", "mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca47bb65598401cdb438a2768ca5d99eaa", null ],
-      [ "NT_WINDOW_DIALOG", "mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca2ed3828e839e0850fb87c077772adad8", null ]
+      [ "NT_WINDOW_DIALOG", "mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca2ed3828e839e0850fb87c077772adad8", null ],
+      [ "NT_WINDOW_FOCUS", "mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138cabfac4c6c1daf6d5960a92dba22c2e0bc", null ]
     ] ],
     [ "TAILQ_HEAD", "mutt__window_8h.html#aa4722d36b872bcdf7014cf3e4fbefb11", null ],
     [ "mutt_window_add_child", "mutt__window_8h.html#a5e30d98341ba1a4b358e4add06c97597", null ],
-    [ "mutt_window_copy_size", "mutt__window_8h.html#a7d19c7b98dd366125e065857fbbb18c2", null ],
     [ "mutt_window_free", "mutt__window_8h.html#a52ff022e671a7fbdec773fc2d24e0e15", null ],
     [ "mutt_window_free_all", "mutt__window_8h.html#aadb13fedf9d2a52ad3ad923ff37a9240", null ],
     [ "mutt_window_get_coords", "mutt__window_8h.html#ab52d56e9585a364e3f6bc61fbe649a7d", null ],
@@ -89,13 +89,12 @@ var mutt__window_8h =
     [ "mutt_window_is_visible", "mutt__window_8h.html#a03920015a9ccfd1814779c1570f2fee6", null ],
     [ "mutt_winlist_free", "mutt__window_8h.html#abfa1b39d20cf0aa3e71bd4639c1b8b3f", null ],
     [ "mutt_window_find", "mutt__window_8h.html#a69bdaa94c0db6ef5472bab3d84efcb96", null ],
-    [ "mutt_window_dialog", "mutt__window_8h.html#acd8bb311e4f792b2a2f862a34d103bb7", null ],
     [ "window_notify_all", "mutt__window_8h.html#a182bdee15eddac41d849c7b2a5896554", null ],
     [ "window_set_visible", "mutt__window_8h.html#aae941d17bf3237a0c3fcf06641ca6ee2", null ],
-    [ "dialog_pop", "mutt__window_8h.html#a82616808183352fb315931b2bb3518c0", null ],
-    [ "dialog_push", "mutt__window_8h.html#a7c4678f81d8185d89e16e4befe94bb08", null ],
-    [ "window_redraw", "mutt__window_8h.html#a0af7bfe97dbb8f95d03851ec3fe62553", null ],
-    [ "MuttDialogWindow", "mutt__window_8h.html#a87e198f992fa9799704f211d0349d251", null ],
-    [ "MuttHelpWindow", "mutt__window_8h.html#a4ebfeca810021bdd932f9843b6504ce8", null ],
-    [ "MuttMessageWindow", "mutt__window_8h.html#a688c346235fbff98f39721860bf5af9b", null ]
+    [ "window_set_focus", "mutt__window_8h.html#ae98ff6a3448f406d31fcc314ccc6cffe", null ],
+    [ "window_get_focus", "mutt__window_8h.html#a92dbdbe509e12d9059e2b2ee9f108608", null ],
+    [ "window_redraw", "mutt__window_8h.html#a1b258c88df82ef7046e56d00e67fa3ef", null ],
+    [ "RootWindow", "mutt__window_8h.html#abac196af46545fe9bebd15dabb91a8b2", null ],
+    [ "AllDialogsWindow", "mutt__window_8h.html#aa379408e2d835c200c803b4d0f33b2d6", null ],
+    [ "MessageWindow", "mutt__window_8h.html#a7eb4ef9fcb6abe51dff3a662710d396b", null ]
 ];

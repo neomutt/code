@@ -1,7 +1,6 @@
 var searchData=
 [
   ['email',['Email',['../structEmail.html',1,'']]],
-  ['emailcache',['EmailCache',['../structEmailCache.html',1,'']]],
   ['emailnode',['EmailNode',['../structEmailNode.html',1,'']]],
   ['enrichedstate',['EnrichedState',['../structEnrichedState.html',1,'']]],
   ['enterstate',['EnterState',['../structEnterState.html',1,'']]],
@@ -10,6 +9,7 @@ var searchData=
   ['etags',['Etags',['../structEtags.html',1,'']]],
   ['eventaccount',['EventAccount',['../structEventAccount.html',1,'']]],
   ['eventalias',['EventAlias',['../structEventAlias.html',1,'']]],
+  ['eventbinding',['EventBinding',['../structEventBinding.html',1,'']]],
   ['eventcolor',['EventColor',['../structEventColor.html',1,'']]],
   ['eventconfig',['EventConfig',['../structEventConfig.html',1,'']]],
   ['eventcontext',['EventContext',['../structEventContext.html',1,'']]],

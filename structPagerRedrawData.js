@@ -23,7 +23,6 @@ var structPagerRedrawData =
     [ "search_flag", "structPagerRedrawData.html#aaec826ff1610f460cadb714f7a2ddf64", null ],
     [ "search_back", "structPagerRedrawData.html#a18cda320297684c6a2ed70eb69c7d2cb", null ],
     [ "banner", "structPagerRedrawData.html#a8f179bb1b14ee916c9afbb35d9ed83f8", null ],
-    [ "helpstr", "structPagerRedrawData.html#a6c110ed0406c3bb8c553df8c1c9c7fce", null ],
     [ "searchbuf", "structPagerRedrawData.html#a3fb155858d07ee049df9ec60f7d52e8d", null ],
     [ "line_info", "structPagerRedrawData.html#afa67e587ce4b0132bca893820520cc6c", null ],
     [ "fp", "structPagerRedrawData.html#afc5f665174e9a45ea78a45d028501ff3", null ],

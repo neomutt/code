@@ -18,7 +18,6 @@ var remailer_8c =
     [ "mix_format_str", "remailer_8c.html#a718fa86ab6d391f0fe4fbe2c4a1831fb", null ],
     [ "mix_make_entry", "remailer_8c.html#a91ede3b43b8773ed01defd231dc17cd5", null ],
     [ "mix_chain_add", "remailer_8c.html#a4783bd16f7a686bbb78afbf24be9eab0", null ],
-    [ "mutt_dlg_mixmaster_observer", "remailer_8c.html#a909048c9c9b0f86fd2950ffd63fae3d3", null ],
     [ "mix_make_chain", "remailer_8c.html#ac7fa88f7cf6fd502addd6aa38fcbc67d", null ],
     [ "mix_check_message", "remailer_8c.html#a0df3fbea97e2b0fc17a753640d20d92d", null ],
     [ "mix_send_message", "remailer_8c.html#a0b48fa9d9df7079340bb349c86635738", null ],

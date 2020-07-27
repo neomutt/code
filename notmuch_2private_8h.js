@@ -21,6 +21,7 @@ var notmuch_2private_8h =
     [ "nm_adata_get", "notmuch_2private_8h.html#aa07e47cb403598c209335b9112516d46", null ],
     [ "nm_adata_new", "notmuch_2private_8h.html#a909a6c9758d90d2c61f6ad7ef617a6e6", null ],
     [ "nm_edata_free", "notmuch_2private_8h.html#a1745318ae90c43d78804c035531e697e", null ],
+    [ "nm_edata_get", "notmuch_2private_8h.html#a04634c423c6b079175e33f5ec2ab6ef2", null ],
     [ "nm_edata_new", "notmuch_2private_8h.html#a72d74b3a6c98868abe52952c3bcfc6c1", null ],
     [ "nm_mdata_free", "notmuch_2private_8h.html#a2b2dbfa2b1f60e776e9bc6371e08ba37", null ],
     [ "nm_mdata_get", "notmuch_2private_8h.html#a819fc59593f985a02abe21f26037bc74", null ],

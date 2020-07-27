@@ -7,5 +7,5 @@ var dir_ba7605e090b236767558f9e165f3154f =
     [ "observer.c", "observer_8c.html", "observer_8c" ],
     [ "private.h", "sidebar_2private_8h.html", "sidebar_2private_8h" ],
     [ "sidebar.c", "sidebar_8c.html", "sidebar_8c" ],
-    [ "wdata.c", "wdata_8c.html", "wdata_8c" ]
+    [ "wdata.c", "sidebar_2wdata_8c.html", "sidebar_2wdata_8c" ]
 ];

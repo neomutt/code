@@ -6,5 +6,5 @@ var structFetchCtx =
     [ "restore", "structFetchCtx.html#a2fc01f0b6bca5a84734a9d9dbaedcd5b", null ],
     [ "messages", "structFetchCtx.html#aed2eda9299c2676e6f68b3055782c61f", null ],
     [ "progress", "structFetchCtx.html#ae43defb96cfd6bb94b56575dad55761a", null ],
-    [ "hc", "structFetchCtx.html#a00a42eb1333fcbc25ad3fe3339f54516", null ]
+    [ "hc", "structFetchCtx.html#a06c9faa0ed92dabb50369110298fea03", null ]
 ];

@@ -9,7 +9,10 @@ var searchData=
   ['hash_20table_20data_20structure',['Hash Table data structure',['../hash.html',1,'mutt']]],
   ['header_20cache_20multiplexor',['Header cache multiplexor',['../hc_hcache.html',1,'hcache']]],
   ['hcache_3a_20header_20cache_20api',['HCACHE: Header cache API',['../hcache.html',1,'']]],
+  ['help_20bar',['Help Bar',['../helpbar_helpbar.html',1,'']]],
+  ['help_20bar_20window_20data',['Help Bar Window data',['../helpbar_wdata.html',1,'']]],
   ['history_3a_20read_2fwrite_20command_20history_20from_2fto_20a_20file',['HISTORY: Read/write command history from/to a file',['../history.html',1,'']]],
+  ['history_20selection_20dialog',['History selection dialog',['../history_dlghistory.html',1,'']]],
   ['handle_20mailing_20lists',['Handle mailing lists',['../maillist.html',1,'index']]],
   ['handling_20of_20email_20attachments',['Handling of email attachments',['../mutt_attach.html',1,'index']]],
   ['handling_20of_20personal_20config_20_28_27my_27_20variables_29',['Handling of personal config (&apos;my&apos; variables)',['../myvar.html',1,'index']]]

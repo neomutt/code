@@ -62,6 +62,7 @@ var searchData=
   ['smime_5fverify_5fsender',['smime_verify_sender',['../structCryptModuleSpecs.html#a13cf81bd2933d5ab2874975e84faeba3',1,'CryptModuleSpecs']]],
   ['smimecerttouse',['SmimeCertToUse',['../smime_8c.html#ad37cb485abe0aeafae99190ea323d3c4',1,'smime.c']]],
   ['smimeexptime',['SmimeExpTime',['../smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7',1,'smime.c']]],
+  ['smimehelp',['SmimeHelp',['../dlgsmime_8c.html#ac6c9ac86be7813c12d7e4b811c1ffd77',1,'dlgsmime.c']]],
   ['smimeintermediatetouse',['SmimeIntermediateToUse',['../smime_8c.html#a19c9a640138167646b8df02dcd2a7234',1,'smime.c']]],
   ['smimekeytouse',['SmimeKeyToUse',['../smime_8c.html#aa6e38e9a28b61f5b2a7040931e58afaa',1,'smime.c']]],
   ['smimepass',['SmimePass',['../smime_8c.html#a34dd93b9b68b65428e25c44739a51349',1,'smime.c']]],

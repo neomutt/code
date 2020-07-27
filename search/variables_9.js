@@ -36,7 +36,7 @@ var searchData=
   ['indexhelp',['IndexHelp',['../index_8c.html#a8aacc6addd100c5e3acd677d2c88d790',1,'index.c']]],
   ['indexhex',['IndexHex',['../mime_8c.html#a7d93ba93c1d63620ca795aa7b831f9ef',1,'IndexHex():&#160;mime.c'],['../mime_8h.html#a7d93ba93c1d63620ca795aa7b831f9ef',1,'IndexHex():&#160;mime.c']]],
   ['indexlen',['indexlen',['../structPagerRedrawData.html#aa4e5533c88b4ef0e913ff95c9cbd0bbf',1,'PagerRedrawData']]],
-  ['indexnewshelp',['IndexNewsHelp',['../index_8c.html#ac86eaaa390a5a8c953585b13d3c94f76',1,'index.c']]],
+  ['indexnewshelp',['IndexNewsHelp',['../index_8c.html#a2bc480ec1d6debf952165e41454e1070',1,'index.c']]],
   ['indicator',['indicator',['../structPagerRedrawData.html#a6a98e0e35027fa1be10a04b6a60a5ef9',1,'PagerRedrawData']]],
   ['inferiors',['inferiors',['../structFolderFile.html#ad72eeead1dc078467a02c6c4f5e01a93',1,'FolderFile']]],
   ['inhelp',['InHelp',['../pager_8c.html#a01485d486b1a37232c37a6725c9c96e0',1,'pager.c']]],
