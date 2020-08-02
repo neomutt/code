@@ -39,5 +39,7 @@ var send_8c =
     [ "search_attach_keyword", "send_8c.html#ad829e8c88d7630a8a6ed719378dd4570", null ],
     [ "save_fcc", "send_8c.html#adc1a524d34837a03dc4d4a6ca940a293", null ],
     [ "postpone_message", "send_8c.html#a08794ff2edb022ef0c0f59086da9675f", null ],
+    [ "is_text_plain", "send_8c.html#adaad7f2e93eb41299f638d224d90f82b", null ],
+    [ "abort_for_missing_attachments", "send_8c.html#aad5805f2620506ae4bc2d7f6474cb849", null ],
     [ "mutt_send_message", "send_8c.html#a67465bb3c06833d9887caebcf2697b07", null ]
 ];

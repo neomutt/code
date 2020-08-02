@@ -1,6 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"config_2common_8h.html#ac552ac4c600abc7ccd1894af2cbdd9c6":[2,0,27,8,7,0],
 "config_2common_8h.html#ad6e9132932148992e8c87123e56b4fb4":[2,0,27,8,7,3],
 "config_2common_8h_source.html":[2,0,27,8,7],
 "config_2dump_8c.html":[2,0,6,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX5 =
 "config_2subset_8c.html#ac43bd842a2754ed35821aad9929f795c":[2,0,6,32,8],
 "config_2subset_8c.html#ade6fadcb576282a84fd1746c1231f41c":[2,0,6,32,6],
 "config_2subset_8c_source.html":[2,0,6,32],
-"config_address.html":[3,6,0]
+"config_address.html":[3,6,0],
+"config_bool.html":[3,6,1]
 };

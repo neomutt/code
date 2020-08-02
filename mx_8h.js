@@ -44,6 +44,7 @@ var mx_8h =
     [ "mx_ac_find", "mx_8h.html#ad776c3914edf339722c373004cd06a3f", null ],
     [ "mx_mbox_find", "mx_8h.html#ac701cb363f8c39f9023a1d4e68d23e8b", null ],
     [ "mx_mbox_find2", "mx_8h.html#a84a2454384495994852f5c8c797070dc", null ],
+    [ "mx_mbox_ac_link", "mx_8h.html#ac32b635494a705cc5828b7686b910834", null ],
     [ "mx_ac_add", "mx_8h.html#a270e799776aa61a83f0da6a2ec58bde1", null ],
     [ "mx_ac_remove", "mx_8h.html#a0531a5f089718b745413a38ea8d5e2a6", null ],
     [ "mx_access", "mx_8h.html#a3a49664b99f8c9e57f94c02c922922cd", null ],

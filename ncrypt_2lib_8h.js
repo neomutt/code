@@ -81,7 +81,6 @@ var ncrypt_2lib_8h =
     [ "pgp_gpgme_init", "ncrypt_2lib_8h.html#a7061521ecb51237cbbc557440353af39", null ],
     [ "mutt_gpgme_select_secret_key", "ncrypt_2lib_8h.html#a2e8df329d00791c453eb6b3f60eabfdf", null ],
     [ "mutt_gpgme_print_version", "ncrypt_2lib_8h.html#a6d2692bdc72ffa198bb8ca2a28cfa395", null ],
-    [ "config_init_ncrypt", "ncrypt_2lib_8h.html#aee20f674efcb28599e8089818553e284", null ],
     [ "C_CryptOpportunisticEncrypt", "ncrypt_2lib_8h.html#a46584de01677931974f7401e7c7c8733", null ],
     [ "C_CryptProtectedHeadersRead", "ncrypt_2lib_8h.html#a1c0a56c6020601fafa89a7a695701e61", null ],
     [ "C_CryptProtectedHeadersSave", "ncrypt_2lib_8h.html#ad45e7044786fe67b5ce1c9dc4e2d02db", null ],

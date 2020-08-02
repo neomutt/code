@@ -132,7 +132,7 @@ var searchData=
   ['index_5fpager_5finit',['index_pager_init',['../index_8c.html#af944024baa5ff339da372496e63fb69d',1,'index_pager_init(void):&#160;index.c'],['../index_8h.html#af944024baa5ff339da372496e63fb69d',1,'index_pager_init(void):&#160;index.c']]],
   ['index_5fpager_5fshutdown',['index_pager_shutdown',['../index_8c.html#ae93257bea6017b396d3b5ee8c3cbe611',1,'index_pager_shutdown(struct MuttWindow *dlg):&#160;index.c'],['../index_8h.html#ae93257bea6017b396d3b5ee8c3cbe611',1,'index_pager_shutdown(struct MuttWindow *dlg):&#160;index.c']]],
   ['init_5fcommon',['init_common',['../crypt__gpgme_8c.html#a145bf0426df849dc84a86732a6f679f1',1,'crypt_gpgme.c']]],
-  ['init_5fconfig',['init_config',['../init_8c.html#a010347bb26a5857fdac5430b85cfaab0',1,'init_config(size_t size):&#160;init.c'],['../init_8h.html#a010347bb26a5857fdac5430b85cfaab0',1,'init_config(size_t size):&#160;init.c']]],
+  ['init_5fconfig',['init_config',['../init_8h.html#a010347bb26a5857fdac5430b85cfaab0',1,'init_config(size_t size):&#160;mutt_config.c'],['../mutt__config_8c.html#a010347bb26a5857fdac5430b85cfaab0',1,'init_config(size_t size):&#160;mutt_config.c']]],
   ['init_5femail',['init_email',['../notmuch_8c.html#a61864e0bbe54304156a22768894a95e3',1,'notmuch.c']]],
   ['init_5fextended_5fkeys',['init_extended_keys',['../keymap_8c.html#ae6be8f34be875971676339bac0d726bd',1,'init_extended_keys(void):&#160;keymap.c'],['../keymap_8h.html#ae6be8f34be875971676339bac0d726bd',1,'init_extended_keys(void):&#160;keymap.c']]],
   ['init_5fheader_5fpadding',['init_header_padding',['../compose_8c.html#afc34fec9cb024fbc4c2e4d1b72e90ac5',1,'compose.c']]],
@@ -165,5 +165,6 @@ var searchData=
   ['is_5fpattern_5fcache_5fset',['is_pattern_cache_set',['../exec_8c.html#a87fc380b9026d97286e330b169ce16f4',1,'exec.c']]],
   ['is_5fpka_5fnotation',['is_pka_notation',['../crypt__gpgme_8c.html#acdcdf90f5684da72dc5c8d26b8d1b0b9',1,'crypt_gpgme.c']]],
   ['is_5freply',['is_reply',['../send_8c.html#a19cc8b134c97bc3752c778d8b4977e8c',1,'send.c']]],
+  ['is_5ftext_5fplain',['is_text_plain',['../send_8c.html#adaad7f2e93eb41299f638d224d90f82b',1,'send.c']]],
   ['is_5fvisible',['is_visible',['../mutt__thread_8c.html#a64d060e25cd2b28911988550ac1be9b0',1,'mutt_thread.c']]]
 ];

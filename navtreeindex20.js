@@ -1,13 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"message_8c.html#a976a007de492b4814274866632d62708":[2,0,15,14,29],
-"message_8c.html#aa881016bc7aba8e6c29a910459cfa260":[2,0,15,14,12],
-"message_8c.html#aa9385a09428c5a64e66e588255370360":[2,0,15,14,23],
-"message_8c.html#aade70cfb183e32e948a40ba633fd711a":[2,0,15,14,24],
-"message_8c.html#aafd4d11d668ae9ea3af0a3c2b9aaa3a5":[2,0,15,14,16],
-"message_8c.html#aba59bdd59b97344cb3827fb02ec616b1":[2,0,15,14,20],
-"message_8c.html#abe57c68df95e87d0dbe1453903343042":[2,0,15,14,21],
-"message_8c.html#abff6bc396da8f9f4d8eb7f55587bfe7f":[2,0,15,14,6],
 "message_8c.html#ac859b71390c6ecbcecbe5bf3627db566":[2,0,15,14,17],
 "message_8c.html#aca39a57c385f6fdc7aa1297b87c48085":[2,0,15,14,0],
 "message_8c.html#ae2caafd14e477d7a51501898a4e4fdc8":[2,0,15,14,8],
@@ -135,7 +127,7 @@ var NAVTREEINDEX20 =
 "multipart_8h.html#a71d5ccd20fbbbe2fa56e6d1f577e34ae":[2,0,24,7,2],
 "multipart_8h.html#af4c3a6ae771ff84860d31fbd54325af3":[2,0,24,7,0],
 "multipart_8h_source.html":[2,0,24,7],
-"mutt.html":[3,22],
+"mutt.html":[3,19],
 "mutt_2lib_8h.html":[2,0,18,18],
 "mutt_2lib_8h_source.html":[2,0,18,18],
 "mutt_2message_8h.html":[2,0,18,31],
@@ -249,5 +241,13 @@ var NAVTREEINDEX20 =
 "mutt_2slist_8h.html#a24ef1f205d23bbc703828e916f571a98":[2,0,18,50,11],
 "mutt_2slist_8h.html#a4b5f2f52bfd6861100d9da4fa653044a":[2,0,18,50,12],
 "mutt_2slist_8h.html#a52e930a7c9662bda29b33e33b3768a1c":[2,0,18,50,8],
-"mutt_2slist_8h.html#a56598a63201de1cf31bcb5e923cfa559":[2,0,18,50,2]
+"mutt_2slist_8h.html#a56598a63201de1cf31bcb5e923cfa559":[2,0,18,50,2],
+"mutt_2slist_8h.html#a56a8eca5b8c63f928ae9944661a208bd":[2,0,18,50,9],
+"mutt_2slist_8h.html#a63d0a7363816cc60c6af191b09039a55":[2,0,18,50,10],
+"mutt_2slist_8h.html#a7c69d305defed93b70403c325461ef9b":[2,0,18,50,14],
+"mutt_2slist_8h.html#a8469647e63483c367daa8ce05b02de31":[2,0,18,50,16],
+"mutt_2slist_8h.html#a991d9009fbd5219e4a7f9e6bf734be5c":[2,0,18,50,3],
+"mutt_2slist_8h.html#ac26d16eba28e60fb4d235f1caa69179e":[2,0,18,50,4],
+"mutt_2slist_8h.html#ac97fc48f98ea9286a7e58db0289725e0":[2,0,18,50,13],
+"mutt_2slist_8h.html#acdd9f3bc93397381cb04e5c2ae936220":[2,0,18,50,6]
 };

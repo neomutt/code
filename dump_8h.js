@@ -10,6 +10,7 @@ var dump_8h =
     [ "CS_DUMP_SHOW_DISABLED", "dump_8h.html#a324a460a35ea8a91e00f390d56152560", null ],
     [ "CS_DUMP_SHOW_SYNONYMS", "dump_8h.html#a3009c688dc6d6d7860e4feb6f6546cfb", null ],
     [ "CS_DUMP_SHOW_DEPRECATED", "dump_8h.html#a609447cfa8a93c99d48d8c856c006957", null ],
+    [ "CS_DUMP_SHOW_DOCS", "dump_8h.html#aed43f9e35bb2925ad257d59d87d84041", null ],
     [ "ConfigDumpFlags", "dump_8h.html#abe3e4e7d1c2d1e1dc744b23c2e588c31", null ],
     [ "dump_config_neo", "dump_8h.html#a98a7ec58cbc4628935b32f23d6066945", null ],
     [ "dump_config", "dump_8h.html#a200d11d28ce799a726af4e7bd2bad49d", null ],

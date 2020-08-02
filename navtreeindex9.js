@@ -1,7 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"dir_a35967d22e474cce15cdbf5b579676d2.html":[2,0,27,33],
-"dir_a648c135a3abe297956d154477befb9f.html":[2,0,27,27],
 "dir_a8e3d475cdd3803a017c6a3972109258.html":[2,0,13],
 "dir_b90a86b248d781efc7ff26d030d8ab02.html":[2,0,27,21],
 "dir_ba7605e090b236767558f9e165f3154f.html":[2,0,25],
@@ -207,21 +205,22 @@ var NAVTREEINDEX9 =
 "dummy_8c.html#afde6c0a2b0c99baa6b2ee3a0c855e966":[2,0,27,33,1,4],
 "dummy_8c_source.html":[2,0,27,33,1],
 "dump_8h.html":[2,0,6,5],
-"dump_8h.html#a03edb5012f9f0894b258ab6a6cb6ed11":[2,0,6,5,13],
-"dump_8h.html#a200d11d28ce799a726af4e7bd2bad49d":[2,0,6,5,12],
-"dump_8h.html#a276cdae2ea9e186548c4a6f247cc0e58":[2,0,6,5,14],
+"dump_8h.html#a03edb5012f9f0894b258ab6a6cb6ed11":[2,0,6,5,14],
+"dump_8h.html#a200d11d28ce799a726af4e7bd2bad49d":[2,0,6,5,13],
+"dump_8h.html#a276cdae2ea9e186548c4a6f247cc0e58":[2,0,6,5,15],
 "dump_8h.html#a3009c688dc6d6d7860e4feb6f6546cfb":[2,0,6,5,8],
 "dump_8h.html#a324a460a35ea8a91e00f390d56152560":[2,0,6,5,7],
 "dump_8h.html#a4f5d9f616aea5163604074ccef5aa829":[2,0,6,5,5],
 "dump_8h.html#a609447cfa8a93c99d48d8c856c006957":[2,0,6,5,9],
 "dump_8h.html#a6271d015acaa9757171e604ea1e16fa9":[2,0,6,5,3],
 "dump_8h.html#a87203403e9db65fe322c7ab9b5e927b8":[2,0,6,5,2],
-"dump_8h.html#a98a7ec58cbc4628935b32f23d6066945":[2,0,6,5,11],
-"dump_8h.html#abe3e4e7d1c2d1e1dc744b23c2e588c31":[2,0,6,5,10],
+"dump_8h.html#a98a7ec58cbc4628935b32f23d6066945":[2,0,6,5,12],
+"dump_8h.html#abe3e4e7d1c2d1e1dc744b23c2e588c31":[2,0,6,5,11],
 "dump_8h.html#ad1c1f23d6efefa8f2f65b4172f306de0":[2,0,6,5,1],
 "dump_8h.html#ad2015784847439b8baf9be0700feb935":[2,0,6,5,0],
 "dump_8h.html#ad623a4d4997a7e933b56e79be1d31787":[2,0,6,5,4],
 "dump_8h.html#ae751b7b8fac7d667eee97ded0a7debe1":[2,0,6,5,6],
+"dump_8h.html#aed43f9e35bb2925ad257d59d87d84041":[2,0,6,5,10],
 "dump_8h_source.html":[2,0,6,5],
 "editmsg.html":[0,7],
 "editmsg_8c.html":[2,0,42],
@@ -249,5 +248,6 @@ var NAVTREEINDEX9 =
 "email_8c.html":[2,0,10,5],
 "email_8c.html#a0c1d7a53b53fccd8f52dc45f69282318":[2,0,10,5,6],
 "email_8c.html#a1745318ae90c43d78804c035531e697e":[2,0,10,5,0],
-"email_8c.html#a3d20f2e3c0991425b91d9403a038a51e":[2,0,10,5,3]
+"email_8c.html#a3d20f2e3c0991425b91d9403a038a51e":[2,0,10,5,3],
+"email_8c.html#a77c9ecff4b23001b81177ffe398bad44":[2,0,10,5,2]
 };

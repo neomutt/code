@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"config_bool.html":[3,6,1],
 "config_dump.html":[3,6,2],
 "config_enum.html":[3,6,3],
 "config_helpers.html":[3,6,4],
@@ -15,7 +14,7 @@ var NAVTREEINDEX6 =
 "config_sort.html":[3,6,13],
 "config_string.html":[3,6,14],
 "config_subset.html":[3,6,15],
-"config_vars.html":[3,34],
+"config_vars.html":[3,31],
 "conn.html":[3,7],
 "conn_2config_8c.html":[2,0,7,0],
 "conn_2config_8c.html#a05e191a3c0c775d374128429c0274550":[2,0,7,0,11],
@@ -44,10 +43,9 @@ var NAVTREEINDEX6 =
 "conn_2config_8c_source.html":[2,0,7,0],
 "conn_2lib_8h.html":[2,0,7,7],
 "conn_2lib_8h.html#a23591e82bf992ceb5e62c459fd787b8a":[2,0,7,7,0],
-"conn_2lib_8h.html#a4ed5ec70cc4de3566816fa576aad40f4":[2,0,7,7,5],
-"conn_2lib_8h.html#a52fef5ef021b66d834624e94b64b2f3d":[2,0,7,7,4],
-"conn_2lib_8h.html#a840c1a3289f36d8ca32d52af6355118d":[2,0,7,7,3],
-"conn_2lib_8h.html#a86f39c85acdec1116d68920c0f8da071":[2,0,7,7,2],
+"conn_2lib_8h.html#a4ed5ec70cc4de3566816fa576aad40f4":[2,0,7,7,4],
+"conn_2lib_8h.html#a52fef5ef021b66d834624e94b64b2f3d":[2,0,7,7,3],
+"conn_2lib_8h.html#a840c1a3289f36d8ca32d52af6355118d":[2,0,7,7,2],
 "conn_2lib_8h.html#ad998e0af6bdf041d6e6ee944f652f048":[2,0,7,7,1],
 "conn_2lib_8h_source.html":[2,0,7,7],
 "conn_2private_8h.html":[2,0,7,9],
@@ -249,5 +247,7 @@ var NAVTREEINDEX6 =
 "crypt_8h.html#a05b285778a6dec28cc2fa123fd622a27":[2,0,19,2,1],
 "crypt_8h.html#a0a1a629e56fca1dc19c84c5577cdbb9f":[2,0,19,2,2],
 "crypt_8h.html#a3230991ab72820135b5ba8fe94a5f43d":[2,0,19,2,3],
-"crypt_8h.html#a32cadd5ce0071d7f003dde3d80f52d5d":[2,0,19,2,4]
+"crypt_8h.html#a32cadd5ce0071d7f003dde3d80f52d5d":[2,0,19,2,4],
+"crypt_8h.html#a7321a72cf7c00a3a126fdba74a648191":[2,0,19,2,0],
+"crypt_8h_source.html":[2,0,19,2]
 };

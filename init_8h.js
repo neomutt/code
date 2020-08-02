@@ -20,6 +20,6 @@ var init_8h =
     [ "mutt_opts_free", "init_8h.html#aa49c5a3aa046da11a3df8924443c1732", null ],
     [ "mutt_parse_rc_buffer", "init_8h.html#a2a463ed3c7fe921eb96c06d32c4ba0bc", null ],
     [ "mutt_parse_rc_line", "init_8h.html#a136d8ba552e1a6f982e8349e0629ee8d", null ],
-    [ "mutt_query_variables", "init_8h.html#a10a5a62f5a2ac28b4b4954f7f1250267", null ],
+    [ "mutt_query_variables", "init_8h.html#a77ec94a99800475c38871a7b67a43ecb", null ],
     [ "mutt_var_value_complete", "init_8h.html#a173ae67a86a1c7bfc88e98a0edbe514f", null ]
 ];

@@ -14,7 +14,6 @@ var notmuch_2lib_8h =
     [ "nm_record_message", "notmuch_2lib_8h.html#a76a97a39757a2e0441d23eab1ba5a221", null ],
     [ "nm_update_filename", "notmuch_2lib_8h.html#a117bd16ebdde574564b14e737dc1349e", null ],
     [ "nm_url_from_query", "notmuch_2lib_8h.html#af6a894a34eca1a263c572322a8d66da8", null ],
-    [ "config_init_notmuch", "notmuch_2lib_8h.html#a3117e94583c13a44244916b417f5d3f2", null ],
     [ "MxNotmuchOps", "notmuch_2lib_8h.html#aeb8eaded43f46d1709e8174fccbe5004", null ],
     [ "C_NmQueryWindowCurrentSearch", "notmuch_2lib_8h.html#a44ffa400341e0d882323144535e6cd67", null ],
     [ "C_NmQueryWindowDuration", "notmuch_2lib_8h.html#a4d14fb1551ca8b72b369ccbc6d4fa1a5", null ],

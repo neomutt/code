@@ -4,6 +4,7 @@ var mx_8c =
     [ "mutt_is_spool", "mx_8c.html#a669989013069c5858de1556a2e36a859", null ],
     [ "mx_access", "mx_8c.html#a3a49664b99f8c9e57f94c02c922922cd", null ],
     [ "mx_open_mailbox_append", "mx_8c.html#a1263ed9dd21097a071e39a73f86f6eab", null ],
+    [ "mx_mbox_ac_link", "mx_8c.html#ac32b635494a705cc5828b7686b910834", null ],
     [ "mx_mbox_open", "mx_8c.html#a72efa68c4041905af8d9b38948580a56", null ],
     [ "mx_fastclose_mailbox", "mx_8c.html#ac883dc0d1391457ac62efe762067a544", null ],
     [ "sync_mailbox", "mx_8c.html#ad4ce86a1c0a0a27a870843d0b7874365", null ],
