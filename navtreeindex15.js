@@ -4,7 +4,7 @@ var NAVTREEINDEX15 =
 "idna_8c.html#ab9c3a349e9af8c5e621bb426f30bd1c1":[2,0,0,4,0],
 "idna_8c.html#aef6b24f519e61f2fe9ae2a37bbf3ba5b":[2,0,0,4,1],
 "idna_8c_source.html":[2,0,0,4],
-"imap.html":[3,16],
+"imap.html":[3,15],
 "imap_2auth_8c.html":[2,0,15,0],
 "imap_2auth_8c.html#a1dd7afdc3b5fb1e6fec127dae240b1dc":[2,0,15,0,2],
 "imap_2auth_8c.html#ad4f9217f1dee3172d9fb97cff8f4d2a3":[2,0,15,0,1],

@@ -14,7 +14,7 @@ var NAVTREEINDEX6 =
 "config_sort.html":[3,6,13],
 "config_string.html":[3,6,14],
 "config_subset.html":[3,6,15],
-"config_vars.html":[3,31],
+"config_vars.html":[3,27],
 "conn.html":[3,7],
 "conn_2config_8c.html":[2,0,7,0],
 "conn_2config_8c.html#a05e191a3c0c775d374128429c0274550":[2,0,7,0,11],

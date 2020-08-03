@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pgp_20key_20selection_20dialog',['PGP key selection dialog',['../crypt_dlgpgp.html',1,'']]],
+  ['pgp_20key_20selection_20dialog',['PGP key selection dialog',['../crypt_dlgpgp.html',1,'ncrypt']]],
   ['parse_20the_20output_20of_20cli_20pgp_20program',['Parse the output of CLI PGP program',['../crypt_gnupg.html',1,'ncrypt']]],
   ['pgp_20sign_2c_20encrypt_2c_20check_20routines',['PGP sign, encrypt, check routines',['../crypt_pgp.html',1,'ncrypt']]],
   ['pgp_20key_20management_20routines',['PGP key management routines',['../crypt_pgpkey.html',1,'ncrypt']]],

@@ -8,7 +8,7 @@ var searchData=
   ['sasl_20plain_20authentication_20support',['SASL plain authentication support',['../conn_sasl_plain.html',1,'conn']]],
   ['support_20for_20network_20tunnelling',['Support for network tunnelling',['../conn_tunnel.html',1,'conn']]],
   ['signing_2fencryption_20multiplexor',['Signing/encryption multiplexor',['../crypt_crypt.html',1,'ncrypt']]],
-  ['smime_20key_20selection_20dialog',['SMIME key selection dialog',['../crypt_dlgsmime.html',1,'']]],
+  ['smime_20key_20selection_20dialog',['SMIME key selection dialog',['../crypt_dlgsmime.html',1,'ncrypt']]],
   ['smime_20helper_20routines',['SMIME helper routines',['../crypt_smime.html',1,'ncrypt']]],
   ['shared_20debug_20code',['Shared debug code',['../debug_common.html',1,'debug']]],
   ['store_20attributes_20associated_20with_20a_20mime_20part',['Store attributes associated with a MIME part',['../email_parameter.html',1,'email']]],

@@ -127,7 +127,7 @@ var NAVTREEINDEX20 =
 "multipart_8h.html#a71d5ccd20fbbbe2fa56e6d1f577e34ae":[2,0,24,7,2],
 "multipart_8h.html#af4c3a6ae771ff84860d31fbd54325af3":[2,0,24,7,0],
 "multipart_8h_source.html":[2,0,24,7],
-"mutt.html":[3,19],
+"mutt.html":[3,18],
 "mutt_2lib_8h.html":[2,0,18,18],
 "mutt_2lib_8h_source.html":[2,0,18,18],
 "mutt_2message_8h.html":[2,0,18,31],

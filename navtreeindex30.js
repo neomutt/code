@@ -79,7 +79,7 @@ var NAVTREEINDEX30 =
 "myvar_8h.html#a42b60ad4b6962e2e79675c8f4b8c0c85":[2,0,111,1],
 "myvar_8h.html#abd1e532c6d4b12b18fde238b0eb74ca5":[2,0,111,5],
 "myvar_8h_source.html":[2,0,111],
-"ncrypt.html":[3,23],
+"ncrypt.html":[3,19],
 "ncrypt_2config_8c.html":[2,0,19,0],
 "ncrypt_2config_8c.html#a075b6cd1ba532788589f28027771795d":[2,0,19,0,21],
 "ncrypt_2config_8c.html#a0b1b2bf53afa1fc552875be5b887effc":[2,0,19,0,57],

@@ -4,7 +4,7 @@ var searchData=
   ['general_20purpose_20object_20for_20storing_20and_20parsing_20strings',['General purpose object for storing and parsing strings',['../buffer.html',1,'mutt']]],
   ['gui_20editor_20for_20an_20email_27s_20headers',['GUI editor for an email&apos;s headers',['../compose.html',1,'index']]],
   ['gui_20parts_20of_20connection_20library',['GUI parts of Connection Library',['../conn_gui.html',1,'conn']]],
-  ['gpgme_20select_20key_20dialog',['GPGME select key dialog',['../crypt_dlggpgme.html',1,'']]],
+  ['gpgme_20key_20selection_20dialog',['GPGME key selection dialog',['../crypt_dlggpgme.html',1,'ncrypt']]],
   ['gui_20ask_20the_20user_20to_20enter_20a_20string',['GUI ask the user to enter a string',['../enter.html',1,'index']]],
   ['g_5faddr_5fis_5fuser',['g_addr_is_user',['../dummy_8c.html#ab5369b50a261427373655cb500c202fd',1,'dummy.c']]],
   ['g_5fbody_5fparts',['g_body_parts',['../dummy_8c.html#afbc2a94715e45607382e99d22cd3d01f',1,'dummy.c']]],

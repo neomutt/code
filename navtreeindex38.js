@@ -158,7 +158,7 @@ var NAVTREEINDEX38 =
 "search_8c.html#ac55dfb1446427e7f3cb17405877d585a":[2,0,15,17,5],
 "search_8c.html#ac70f93a3e34bf5c69713a1ee2c262766":[2,0,15,17,6],
 "search_8c_source.html":[2,0,15,17],
-"send.html":[3,28],
+"send.html":[3,24],
 "send_2body_8c.html":[2,0,24,0],
 "send_2body_8c.html#a149912c44e0cca53e6896e54c323a199":[2,0,24,0,6],
 "send_2body_8c.html#a55c55e2f50317ab8226c0c2768e01ad0":[2,0,24,0,7],

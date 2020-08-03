@@ -33,7 +33,7 @@ var NAVTREEINDEX33 =
 "notmuch_8c.html#afda128ba745fba822ebb49441a35d8e3":[2,0,21,3,33],
 "notmuch_8c.html#afebce6fa84d3ae51d9d2ce67c56448f6":[2,0,21,3,36],
 "notmuch_8c_source.html":[2,0,21,3],
-"observer.html":[3,19,16],
+"observer.html":[3,18,16],
 "observer_8c.html":[2,0,25,4],
 "observer_8c.html#a5c4edd4474849312c4030c5df6f28a5f":[2,0,25,4,1],
 "observer_8c.html#a9b25b9828e3cf022ac70a4e5e35452a1":[2,0,25,4,0],
