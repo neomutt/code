@@ -1,9 +1,12 @@
 var keymap_8c =
 [
+    [ "mutt_keymap_free", "keymap_8c.html#a8446ead373f1a1b494899ef0f6306479", null ],
+    [ "mutt_keymaplist_free", "keymap_8c.html#adbdc88cb4c82ae41499789c72281a4f2", null ],
     [ "alloc_keys", "keymap_8c.html#a1175087ba3c4c120956d9bbdc5b3c928", null ],
     [ "parse_fkey", "keymap_8c.html#ae77e5ffd2edcaa4ac02b1e6b51fb7775", null ],
     [ "parse_keycode", "keymap_8c.html#a68e34cfedd4c4e7f11534ac901c2348c", null ],
     [ "parsekeys", "keymap_8c.html#abc1788f3cbc36acfbd5781ca5f0ca0ba", null ],
+    [ "km_compare_keys", "keymap_8c.html#a5edcdae327a6bf707be19c250bf54132", null ],
     [ "km_bind_err", "keymap_8c.html#acb28b72cde52751daf0d345dc7735142", null ],
     [ "km_bind", "keymap_8c.html#af42c7416a9b56c730000b6e341b9c2b2", null ],
     [ "km_bindkey_err", "keymap_8c.html#a7a84cf89a72d5eb686515a2bfa77a590", null ],
@@ -28,7 +31,7 @@ var keymap_8c =
     [ "km_get_table", "keymap_8c.html#a801ea589be2efae68988dfc7d343820f", null ],
     [ "mutt_parse_bind", "keymap_8c.html#a4a07241c2d4f2a55e4c669cd241fa07a", null ],
     [ "parse_menu", "keymap_8c.html#a6b1966adfc180f393a10ea248bad1702", null ],
-    [ "km_unbind_all", "keymap_8c.html#a3bd5d8e397ffd6f82cb75e67cd74f98b", null ],
+    [ "km_unbind_all", "keymap_8c.html#a6f4f749c1d279d30c302e03961f4a9f5", null ],
     [ "mutt_parse_unbind", "keymap_8c.html#a8167d07caa2c08334e8f10405104046c", null ],
     [ "mutt_parse_macro", "keymap_8c.html#ab110a24561eb55190de031d0e6e5dc4c", null ],
     [ "mutt_parse_exec", "keymap_8c.html#af84f116289baf67db6243a7442a03b4f", null ],
@@ -38,5 +41,5 @@ var keymap_8c =
     [ "KeyNames", "keymap_8c.html#ac969492dae41de846590e2257f260d3b", null ],
     [ "LastKey", "keymap_8c.html#a715fabcdc382c085e09d0bd3a8a44419", null ],
     [ "AbortKey", "keymap_8c.html#a22bced2c7fdf47916ddc963f43432541", null ],
-    [ "Keymaps", "keymap_8c.html#a0d9cae8733b4a597c4b0202c2872f0ec", null ]
+    [ "Keymaps", "keymap_8c.html#a786f5d70631dfcec23d9e9439304d52e", null ]
 ];

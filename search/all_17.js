@@ -55,7 +55,7 @@ var searchData=
   ['version_2eh',['version.h',['../version_8h.html',1,'']]],
   ['viewattachmode',['ViewAttachMode',['../mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946',1,'mutt_attach.h']]],
   ['virtual_5fid',['virtual_id',['../structNmEmailData.html#ac95286a6a9f4b7d1649cb4bed151ec97',1,'NmEmailData']]],
-  ['visible',['visible',['../structMuttThread.html#a30c80a1167887f0dc4ab7bff443b8df3',1,'MuttThread::visible()'],['../structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b',1,'WindowState::visible()']]],
+  ['visible',['visible',['../structEmail.html#a1b48457d5e16b021ada7d227b689f516',1,'Email::visible()'],['../structMuttThread.html#a30c80a1167887f0dc4ab7bff443b8df3',1,'MuttThread::visible()'],['../structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b',1,'WindowState::visible()']]],
   ['visible_2ec',['visible.c',['../visible_8c.html',1,'']]],
   ['visible_5fobserver',['visible_observer',['../visible_8c.html#a401eec2d9e19822012d72410ef416101',1,'visible.c']]],
   ['vnum',['vnum',['../structEmail.html#aa5e274ea0f8ce3482f226752fcccad12',1,'Email']]],

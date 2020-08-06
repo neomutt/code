@@ -7,6 +7,7 @@ var searchData=
   ['km_5fbind_5ferr',['km_bind_err',['../keymap_8c.html#acb28b72cde52751daf0d345dc7735142',1,'keymap.c']]],
   ['km_5fbindkey',['km_bindkey',['../keymap_8c.html#a600c9e5afad8065eae4deeefb1204d24',1,'keymap.c']]],
   ['km_5fbindkey_5ferr',['km_bindkey_err',['../keymap_8c.html#a7a84cf89a72d5eb686515a2bfa77a590',1,'keymap.c']]],
+  ['km_5fcompare_5fkeys',['km_compare_keys',['../keymap_8c.html#a5edcdae327a6bf707be19c250bf54132',1,'keymap.c']]],
   ['km_5fdokey',['km_dokey',['../keymap_8c.html#a9fa27bc0a5dc94d95f1530bab3036e85',1,'km_dokey(enum MenuType menu):&#160;keymap.c'],['../keymap_8h.html#a9fa27bc0a5dc94d95f1530bab3036e85',1,'km_dokey(enum MenuType menu):&#160;keymap.c']]],
   ['km_5ferror_5fkey',['km_error_key',['../keymap_8c.html#a9a65c50d8ea6508c7bb0aff7fc3bfecc',1,'km_error_key(enum MenuType menu):&#160;keymap.c'],['../keymap_8h.html#a9a65c50d8ea6508c7bb0aff7fc3bfecc',1,'km_error_key(enum MenuType menu):&#160;keymap.c']]],
   ['km_5fexpand_5fkey',['km_expand_key',['../keymap_8c.html#a830fff42df69ae5c6e256eb03ce18892',1,'km_expand_key(char *s, size_t len, struct Keymap *map):&#160;keymap.c'],['../keymap_8h.html#a830fff42df69ae5c6e256eb03ce18892',1,'km_expand_key(char *s, size_t len, struct Keymap *map):&#160;keymap.c'],['../dummy_8c.html#a830fff42df69ae5c6e256eb03ce18892',1,'km_expand_key(char *s, size_t len, struct Keymap *map):&#160;dummy.c']]],
@@ -14,5 +15,5 @@ var searchData=
   ['km_5fget_5ftable',['km_get_table',['../keymap_8c.html#a801ea589be2efae68988dfc7d343820f',1,'km_get_table(enum MenuType menu):&#160;keymap.c'],['../keymap_8h.html#a801ea589be2efae68988dfc7d343820f',1,'km_get_table(enum MenuType menu):&#160;keymap.c']]],
   ['km_5finit',['km_init',['../keymap_8c.html#a58e38a78c1e289c77166b7239ee843b0',1,'km_init(void):&#160;keymap.c'],['../keymap_8h.html#a58e38a78c1e289c77166b7239ee843b0',1,'km_init(void):&#160;keymap.c']]],
   ['km_5fkeyname',['km_keyname',['../keymap_8c.html#a4880e77c79fb25474315465363a2372f',1,'keymap.c']]],
-  ['km_5funbind_5fall',['km_unbind_all',['../keymap_8c.html#a3bd5d8e397ffd6f82cb75e67cd74f98b',1,'keymap.c']]]
+  ['km_5funbind_5fall',['km_unbind_all',['../keymap_8c.html#a6f4f749c1d279d30c302e03961f4a9f5',1,'keymap.c']]]
 ];

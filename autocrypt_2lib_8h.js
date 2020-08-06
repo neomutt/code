@@ -11,7 +11,7 @@ var autocrypt_2lib_8h =
       [ "AUTOCRYPT_REC_AVAILABLE", "autocrypt_2lib_8h.html#aed237ffa27e23d83cb0acc07586ffbdaab14b9a70442ff260fb2da093d0ab0c4f", null ],
       [ "AUTOCRYPT_REC_YES", "autocrypt_2lib_8h.html#aed237ffa27e23d83cb0acc07586ffbdaaf1e9fd8d8b038a7cf37ee5fd1e4ee741", null ]
     ] ],
-    [ "mutt_autocrypt_account_menu", "autocrypt_2lib_8h.html#afbca1fbf67704f11381810633bc8de34", null ],
+    [ "dlg_select_autocrypt_account", "autocrypt_2lib_8h.html#ab0cad601c656450a46c98e47197b8376", null ],
     [ "mutt_autocrypt_cleanup", "autocrypt_2lib_8h.html#a6ccee2b006fad28ea865139d135e5d59", null ],
     [ "mutt_autocrypt_generate_gossip_list", "autocrypt_2lib_8h.html#a30461121efab5b3f112767d63191c507", null ],
     [ "mutt_autocrypt_init", "autocrypt_2lib_8h.html#ac2a58142d9962d1108cf66d8386a70bd", null ],

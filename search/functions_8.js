@@ -95,6 +95,7 @@ var searchData=
   ['imap_5fmunge_5fmbox_5fname',['imap_munge_mbox_name',['../imap_2private_8h.html#ac9c2cdd52d28f7f494f9ddc6e62c469b',1,'imap_munge_mbox_name(bool unicode, char *dest, size_t dlen, const char *src):&#160;util.c'],['../util_8c.html#ac9c2cdd52d28f7f494f9ddc6e62c469b',1,'imap_munge_mbox_name(bool unicode, char *dest, size_t dlen, const char *src):&#160;util.c']]],
   ['imap_5fmxcmp',['imap_mxcmp',['../imap_2lib_8h.html#a95b870498ac3b923dc276a18c8c5add8',1,'imap_mxcmp(const char *mx1, const char *mx2):&#160;util.c'],['../util_8c.html#a95b870498ac3b923dc276a18c8c5add8',1,'imap_mxcmp(const char *mx1, const char *mx2):&#160;util.c']]],
   ['imap_5fnext_5fword',['imap_next_word',['../imap_2private_8h.html#a58b60495085285d725885a1efef98074',1,'imap_next_word(char *s):&#160;util.c'],['../util_8c.html#a58b60495085285d725885a1efef98074',1,'imap_next_word(char *s):&#160;util.c']]],
+  ['imap_5fnotify_5fdelete_5femail',['imap_notify_delete_email',['../imap_8c.html#a12008dfceea99a26fa88f26b625637a8',1,'imap_notify_delete_email(struct Mailbox *m, struct Email *e):&#160;imap.c'],['../imap_2lib_8h.html#a12008dfceea99a26fa88f26b625637a8',1,'imap_notify_delete_email(struct Mailbox *m, struct Email *e):&#160;imap.c']]],
   ['imap_5fopen_5fconnection',['imap_open_connection',['../imap_8c.html#a93ed20ff163bf6a15c46071ba357d17a',1,'imap_open_connection(struct ImapAccountData *adata):&#160;imap.c'],['../imap_2private_8h.html#a93ed20ff163bf6a15c46071ba357d17a',1,'imap_open_connection(struct ImapAccountData *adata):&#160;imap.c']]],
   ['imap_5fparse_5fpath',['imap_parse_path',['../imap_2lib_8h.html#a0fdb4b19c276d28f6f1a014da9e860d5',1,'imap_parse_path(const char *path, struct ConnAccount *cac, char *mailbox, size_t mailboxlen):&#160;util.c'],['../util_8c.html#a0fdb4b19c276d28f6f1a014da9e860d5',1,'imap_parse_path(const char *path, struct ConnAccount *cac, char *mailbox, size_t mailboxlen):&#160;util.c']]],
   ['imap_5fpath_5fcanon',['imap_path_canon',['../imap_8c.html#a45a0368f1fc09168bed51ec53ad91bb5',1,'imap_path_canon(char *buf, size_t buflen):&#160;imap.c'],['../imap_2lib_8h.html#a45a0368f1fc09168bed51ec53ad91bb5',1,'imap_path_canon(char *buf, size_t buflen):&#160;imap.c']]],
@@ -153,7 +154,7 @@ var searchData=
   ['iptostring',['iptostring',['../sasl_8c.html#abd06051d6bdbf9f011dbfa8df64c424c',1,'sasl.c']]],
   ['is_5fansi',['is_ansi',['../pager_8c.html#adf290d8b56802820bc1934d76afba50f',1,'pager.c']]],
   ['is_5fautoview',['is_autoview',['../handler_8c.html#a09f27e2821153040ea4cad0b9ade6153',1,'handler.c']]],
-  ['is_5fbound',['is_bound',['../help_8c.html#a1eaef1827a839c5c77b4d75c3a07605c',1,'help.c']]],
+  ['is_5fbound',['is_bound',['../help_8c.html#a3fe741379b821e5ebf472d1b823c7b01',1,'help.c']]],
   ['is_5fcontext_5favailable',['is_context_available',['../compile_8c.html#a026ca7488dc3d79eb51f762eae318790',1,'compile.c']]],
   ['is_5fcurrent_5femail',['is_current_email',['../index_8c.html#ae927817abdb5c378197802bd63af765c',1,'index.c']]],
   ['is_5fdescendant',['is_descendant',['../thread_8c.html#a8a7da5b0de3ed98c62a0e5ea9d943f5e',1,'is_descendant(struct MuttThread *a, struct MuttThread *b):&#160;thread.c'],['../thread_8h.html#a8a7da5b0de3ed98c62a0e5ea9d943f5e',1,'is_descendant(struct MuttThread *a, struct MuttThread *b):&#160;thread.c']]],
@@ -166,5 +167,5 @@ var searchData=
   ['is_5fpka_5fnotation',['is_pka_notation',['../crypt__gpgme_8c.html#acdcdf90f5684da72dc5c8d26b8d1b0b9',1,'crypt_gpgme.c']]],
   ['is_5freply',['is_reply',['../send_8c.html#a19cc8b134c97bc3752c778d8b4977e8c',1,'send.c']]],
   ['is_5ftext_5fplain',['is_text_plain',['../send_8c.html#adaad7f2e93eb41299f638d224d90f82b',1,'send.c']]],
-  ['is_5fvisible',['is_visible',['../mutt__thread_8c.html#a64d060e25cd2b28911988550ac1be9b0',1,'mutt_thread.c']]]
+  ['is_5fvisible',['is_visible',['../mutt__thread_8c.html#af6f89eb1fe9177d9a3484842f7d5c1cc',1,'mutt_thread.c']]]
 ];

@@ -11,6 +11,7 @@ var imap_2lib_8h =
     [ "imap_fast_trash", "imap_2lib_8h.html#af182b942c92c298d0b1762e7c8a2660f", null ],
     [ "imap_path_probe", "imap_2lib_8h.html#ab4f27af8eb857a20834f445be3f498de", null ],
     [ "imap_path_canon", "imap_2lib_8h.html#a45a0368f1fc09168bed51ec53ad91bb5", null ],
+    [ "imap_notify_delete_email", "imap_2lib_8h.html#a12008dfceea99a26fa88f26b625637a8", null ],
     [ "imap_browse", "imap_2lib_8h.html#a3148406431ca84d8cfaae786e47c5c8d", null ],
     [ "imap_mailbox_create", "imap_2lib_8h.html#ad29c8310856c366b81a118ff231ed35c", null ],
     [ "imap_mailbox_rename", "imap_2lib_8h.html#ae031b576b34ef1f6cb04aeaaab1c4bb7", null ],

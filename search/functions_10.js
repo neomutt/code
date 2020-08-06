@@ -17,7 +17,6 @@ var searchData=
   ['query_5fformat_5fstr',['query_format_str',['../dlgquery_8c.html#a170d2276b3e0f9c059498cff0c355d3d',1,'dlgquery.c']]],
   ['query_5findex',['query_index',['../dlgquery_8c.html#af0088d47def0b7ffbadcf4f635cfc904',1,'query_index(void):&#160;dlgquery.c'],['../alias_2lib_8h.html#af0088d47def0b7ffbadcf4f635cfc904',1,'query_index(void):&#160;dlgquery.c']]],
   ['query_5fmake_5fentry',['query_make_entry',['../dlgquery_8c.html#a4081ef04c1e90ab28b3279f8df6c3458',1,'dlgquery.c']]],
-  ['query_5fmenu',['query_menu',['../dlgquery_8c.html#a189ed6cfb3f5ed431822cdb6c2d1999e',1,'dlgquery.c']]],
   ['query_5fpipe_5fattachment',['query_pipe_attachment',['../recvattach_8c.html#af3d9eba146519070da9cdc16cd6d92b7',1,'recvattach.c']]],
   ['query_5fquadoption',['query_quadoption',['../curs__lib_8c.html#ab02047769214ff014b9a8a1782babadc',1,'query_quadoption(enum QuadOption opt, const char *prompt):&#160;curs_lib.c'],['../curs__lib_8h.html#ab02047769214ff014b9a8a1782babadc',1,'query_quadoption(enum QuadOption opt, const char *prompt):&#160;curs_lib.c']]],
   ['query_5frun',['query_run',['../dlgquery_8c.html#a70163198f1bfa9f5f6a15dd608bdd612',1,'dlgquery.c']]],

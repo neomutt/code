@@ -60,7 +60,7 @@ var pattern_2lib_8h =
     [ "mutt_pattern_comp", "pattern_2lib_8h.html#ac2a8729662aa8d0b6cf21d7c5ab7826f", null ],
     [ "mutt_check_simple", "pattern_2lib_8h.html#a6cee22aa2e3cb0c24cbbcdcc175d7ac6", null ],
     [ "mutt_pattern_free", "pattern_2lib_8h.html#ae447e834babbe84bef7005199ec39962", null ],
-    [ "mutt_ask_pattern", "pattern_2lib_8h.html#a98c6fed7a4fe14225d9c0c73dc71174a", null ],
+    [ "dlg_select_pattern", "pattern_2lib_8h.html#a0a33d91a2e7d8c02e922003ea3d155f5", null ],
     [ "mutt_which_case", "pattern_2lib_8h.html#a3e6341459a0d8778ea126cac343bf16d", null ],
     [ "mutt_is_list_recipient", "pattern_2lib_8h.html#aa406114bea99ec4cdb561d61b3813c6d", null ],
     [ "mutt_is_subscribed_list_recipient", "pattern_2lib_8h.html#a668a02e9879868145b1da7edbc8c4508", null ],

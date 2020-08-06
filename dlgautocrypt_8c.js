@@ -7,6 +7,6 @@ var dlgautocrypt_8c =
     [ "menu_free", "dlgautocrypt_8c.html#ac9109890715305821c8599f1f3e853f1", null ],
     [ "toggle_active", "dlgautocrypt_8c.html#a1457d95507bf4ee7a4bd4a15e3545f32", null ],
     [ "toggle_prefer_encrypt", "dlgautocrypt_8c.html#afb946e389ae112c24e849bd35daa43f3", null ],
-    [ "mutt_autocrypt_account_menu", "dlgautocrypt_8c.html#afbca1fbf67704f11381810633bc8de34", null ],
+    [ "dlg_select_autocrypt_account", "dlgautocrypt_8c.html#ab0cad601c656450a46c98e47197b8376", null ],
     [ "AutocryptAcctHelp", "dlgautocrypt_8c.html#a9cc214846a1e7807e67958bd0acce696", null ]
 ];

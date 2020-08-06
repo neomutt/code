@@ -30,7 +30,6 @@ var searchData=
   ['lgrp',['lgrp',['../structRangeRegex.html#a979dcf4a66592658b38e66f92c239c51',1,'RangeRegex']]],
   ['license',['License',['../version_8c.html#a289cfedeacecbae604e6ecc14a007b84',1,'version.c']]],
   ['limit_5fpattern',['limit_pattern',['../structContext.html#a3ed95d522b150c7d7f0fbff63e1d4552',1,'Context']]],
-  ['limited',['limited',['../structEmail.html#af8dff023ea54dfb540c3c2754cfc1462',1,'Email']]],
   ['line',['line',['../structEnrichedState.html#a5c98ee59229be04267e11585aa973684',1,'EnrichedState::line()'],['../structMuttFileIter.html#a6d36915919730adb1e42907f62404a73',1,'MuttFileIter::line()'],['../structLogLine.html#acb35f98b73f61e98ffd5115ddb260595',1,'LogLine::line()'],['../structResize.html#ae3c939f1688dcf94fd16a18443a07f08',1,'Resize::line()'],['../acutest_8h.html#ae02820def36ef70995744181ed0e9c4f',1,'line():&#160;acutest.h'],['../test_2config_2common_8c.html#a2a7a1aa13a4f14075411123a4495593c',1,'line():&#160;common.c'],['../config_2common_8h.html#a2a7a1aa13a4f14075411123a4495593c',1,'line():&#160;acutest.h']]],
   ['line_5fbeg',['line_beg',['../acutest_8h.html#aab11e35056ee48ab0e4cee60a5e56a24',1,'acutest.h']]],
   ['line_5fend',['line_end',['../acutest_8h.html#aabc59f259d2c1212b45c35a11dc3734f',1,'acutest.h']]],

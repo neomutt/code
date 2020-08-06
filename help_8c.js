@@ -6,7 +6,7 @@ var help_8c =
     [ "pad", "help_8c.html#a3185d406c5af79ad32b642591af7820f", null ],
     [ "format_line", "help_8c.html#a5f69016fd555f40166b0b1e721519298", null ],
     [ "dump_menu", "help_8c.html#aad9991c3286c6cb9c0a98a495a9d3a26", null ],
-    [ "is_bound", "help_8c.html#a1eaef1827a839c5c77b4d75c3a07605c", null ],
-    [ "dump_unbound", "help_8c.html#af880f7b08688d93ee72f70c516b78656", null ],
+    [ "is_bound", "help_8c.html#a3fe741379b821e5ebf472d1b823c7b01", null ],
+    [ "dump_unbound", "help_8c.html#adb01d122101b3546bb78bf68f86ffcf6", null ],
     [ "mutt_help", "help_8c.html#a1267fc376a554184b62d121718ef12c1", null ]
 ];

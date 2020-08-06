@@ -1,6 +1,6 @@
 var structAttachPtr =
 [
-    [ "content", "structAttachPtr.html#ad43a18633fb82517dc1c80c707d59ae9", null ],
+    [ "body", "structAttachPtr.html#a0546c0753a6155ae9555c290b80d0356", null ],
     [ "fp", "structAttachPtr.html#a776ea6f490cedf7dc47accba055d964c", null ],
     [ "parent_type", "structAttachPtr.html#acf17bc64e657348fe6b5fdcdf69880f4", null ],
     [ "tree", "structAttachPtr.html#a675e3442ea87e4479649a58c20f68aa7", null ],

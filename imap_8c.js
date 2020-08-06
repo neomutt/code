@@ -15,6 +15,7 @@ var imap_8c =
     [ "imap_logout", "imap_8c.html#a0b142599cd1c529a1ffc0bacc6a064f7", null ],
     [ "imap_logout_all", "imap_8c.html#ace40ffc72b9f8ed5f315ea2825472773", null ],
     [ "imap_read_literal", "imap_8c.html#a5adc6a50d981b74f9210b202ca117861", null ],
+    [ "imap_notify_delete_email", "imap_8c.html#a12008dfceea99a26fa88f26b625637a8", null ],
     [ "imap_expunge_mailbox", "imap_8c.html#aa526e62e5ec404f052c82e72f8a942b8", null ],
     [ "imap_open_connection", "imap_8c.html#a93ed20ff163bf6a15c46071ba357d17a", null ],
     [ "imap_close_connection", "imap_8c.html#a14b36ce07a1b1b0fbe046f9e0e192119", null ],

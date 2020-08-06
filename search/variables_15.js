@@ -42,7 +42,7 @@ var searchData=
   ['verifyhelp',['VerifyHelp',['../dlgverifycert_8c.html#aa69730b009a948a078128038057f8a92',1,'dlgverifycert.c']]],
   ['version',['version',['../structStoreOps.html#aef5e81cd92a2052bbf5224369242b701',1,'StoreOps']]],
   ['virtual_5fid',['virtual_id',['../structNmEmailData.html#ac95286a6a9f4b7d1649cb4bed151ec97',1,'NmEmailData']]],
-  ['visible',['visible',['../structMuttThread.html#a30c80a1167887f0dc4ab7bff443b8df3',1,'MuttThread::visible()'],['../structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b',1,'WindowState::visible()']]],
+  ['visible',['visible',['../structEmail.html#a1b48457d5e16b021ada7d227b689f516',1,'Email::visible()'],['../structMuttThread.html#a30c80a1167887f0dc4ab7bff443b8df3',1,'MuttThread::visible()'],['../structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b',1,'WindowState::visible()']]],
   ['vnum',['vnum',['../structEmail.html#aa5e274ea0f8ce3482f226752fcccad12',1,'Email']]],
   ['void_5fpassphrase',['void_passphrase',['../structCryptModuleSpecs.html#ac08ed67f7b29c7b6cba6d4999cebf739',1,'CryptModuleSpecs']]],
   ['vsize',['vsize',['../structContext.html#a252a82eaae91091309c8691a8950b066',1,'Context']]]

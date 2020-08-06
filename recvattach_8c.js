@@ -29,7 +29,7 @@ var recvattach_8c =
     [ "mutt_generate_recvattach_list", "recvattach_8c.html#a7688e395101baa5931494c883909d1da", null ],
     [ "mutt_attach_init", "recvattach_8c.html#aa21744623c750c6f114a93f06ac5e257", null ],
     [ "attach_collapse", "recvattach_8c.html#a5cf096fe71b24be736511d0f6291fe9b", null ],
-    [ "mutt_view_attachments", "recvattach_8c.html#a392a2cd3e7552f6a73e1f78143863e5f", null ],
+    [ "dlg_select_attachment", "recvattach_8c.html#a7bea02ad8971e507de4d94b0f7e87a62", null ],
     [ "C_AttachSaveDir", "recvattach_8c.html#a04bcc22093de3415ac71326159b811a0", null ],
     [ "C_AttachSaveWithoutPrompting", "recvattach_8c.html#abbeaadd477fc375248f1cd02818b4318", null ],
     [ "C_AttachSep", "recvattach_8c.html#aee9ef3743bfbc7184db6e3a364c45f9d", null ],

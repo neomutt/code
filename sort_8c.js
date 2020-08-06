@@ -13,7 +13,7 @@ var sort_8c =
     [ "compare_spam", "sort_8c.html#a99aa24b4aed29278d9933ac08668adae", null ],
     [ "compare_label", "sort_8c.html#aa1905fcf29c9728a25c85565b1b714a6", null ],
     [ "mutt_get_sort_func", "sort_8c.html#ae13c0d9d3ffd823955ec4d4653de376d", null ],
-    [ "mutt_sort_headers", "sort_8c.html#aa99d4b590a29f24c0950934c15be6a83", null ],
+    [ "mutt_sort_headers", "sort_8c.html#a1584f893fd698002518500ee3139b75d", null ],
     [ "C_ReverseAlias", "sort_8c.html#a8d408d0bfffcfd6f6c5f7adea215cfcc", null ],
     [ "AuxSort", "sort_8c.html#acf9001119e295f90b204c11c7137e4e9", null ]
 ];

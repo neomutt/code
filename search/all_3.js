@@ -29,7 +29,7 @@ var searchData=
   ['binary',['binary',['../structContent.html#a9b7fb2b72f01b83ee4e9b91213752120',1,'Content']]],
   ['binding',['Binding',['../structBinding.html',1,'']]],
   ['blen',['blen',['../structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a',1,'SaslSockData::blen()'],['../structImapAccountData.html#aaed384a49fa308902250d28b91b70c46',1,'ImapAccountData::blen()']]],
-  ['body',['Body',['../structBody.html',1,'Body'],['../structMUpdate.html#ab4ab3bf8092f0bde3e1ecc84bab30e21',1,'MUpdate::body()'],['../structPager.html#a22d7ef72e2c7541ad95c7173298dc6e1',1,'Pager::body()']]],
+  ['body',['Body',['../structBody.html',1,'Body'],['../structAttachPtr.html#a0546c0753a6155ae9555c290b80d0356',1,'AttachPtr::body()'],['../structEmail.html#a57ad6ac618c0f685804f6f5bb390b3a6',1,'Email::body()'],['../structMUpdate.html#ab4ab3bf8092f0bde3e1ecc84bab30e21',1,'MUpdate::body()'],['../structPager.html#a22d7ef72e2c7541ad95c7173298dc6e1',1,'Pager::body()']]],
   ['body_2ec',['body.c',['../email_2body_8c.html',1,'(Global Namespace)'],['../send_2body_8c.html',1,'(Global Namespace)']]],
   ['body_2eh',['body.h',['../email_2body_8h.html',1,'(Global Namespace)'],['../send_2body_8h.html',1,'(Global Namespace)']]],
   ['body_5fidx',['body_idx',['../structAttachCtx.html#a91b62fe3fb812a138c34f793b6a543d6',1,'AttachCtx']]],

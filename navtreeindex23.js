@@ -1,6 +1,5 @@
 var NAVTREEINDEX23 =
 {
-"mutt__ch__get__default__charset_8c_source.html":[2,0,27,6,12],
 "mutt__ch__get__langinfo__charset_8c.html":[2,0,27,6,13],
 "mutt__ch__get__langinfo__charset_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,27,6,13,0],
 "mutt__ch__get__langinfo__charset_8c.html#a74f7fa9c1b8acc5181302df7339dd20c":[2,0,27,6,13,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX23 =
 "mutt__file__fsync__close_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,27,13,16,0],
 "mutt__file__fsync__close_8c_source.html":[2,0,27,13,16],
 "mutt__file__get__size_8c.html":[2,0,27,13,17],
-"mutt__file__get__size_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,27,13,17,0]
+"mutt__file__get__size_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,27,13,17,0],
+"mutt__file__get__size_8c.html#acb399b86d7f46b3411ddc3749b388621":[2,0,27,13,17,1]
 };

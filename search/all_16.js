@@ -38,7 +38,7 @@ var searchData=
   ['unmaillists',['UnMailLists',['../globals_8c.html#a4604400f5d21502c96623074740c892d',1,'UnMailLists():&#160;globals.c'],['../globals_8h.html#a4604400f5d21502c96623074740c892d',1,'UnMailLists():&#160;globals.c']]],
   ['unowned',['unowned',['../structAttachPtr.html#a85722c8044f044e59047c3c8b12ef279',1,'AttachPtr']]],
   ['unr_5fpctenc_5fsubdel',['UNR_PCTENC_SUBDEL',['../prex_8c.html#aecb557628850b6570f2c105ec3135a21',1,'prex.c']]],
-  ['unread',['unread',['../structNntpMboxData.html#a98dfbd45b53b18796fa524f87b8ce32e',1,'NntpMboxData::unread()'],['../index_8c.html#ace93b75423f7bed73a4a071e5069d2d5',1,'UNREAD():&#160;index.c']]],
+  ['unread',['unread',['../structNntpMboxData.html#a98dfbd45b53b18796fa524f87b8ce32e',1,'NntpMboxData']]],
   ['unseen',['unseen',['../structImapMboxData.html#add06baf96fd584f61a318a84ccbd3bf1',1,'ImapMboxData']]],
   ['unsort_5fentries',['unsort_entries',['../sidebar_8c.html#ab0901c22c300d3c5b7904de35e036482',1,'sidebar.c']]],
   ['unsubscribedlists',['UnSubscribedLists',['../globals_8c.html#a2c8a30051d77dd1573791a115b1be7fc',1,'UnSubscribedLists():&#160;globals.c'],['../globals_8h.html#a2c8a30051d77dd1573791a115b1be7fc',1,'UnSubscribedLists():&#160;globals.c']]],

@@ -1,6 +1,7 @@
 var notify__type_8h =
 [
     [ "NotifyType", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8", [
+      [ "NT_ALL", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8abefae45682d43dbd27f85832dcbf3014", null ],
       [ "NT_ACCOUNT", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a8ef73bad3a96e175f955bdd31762bbda", null ],
       [ "NT_COLOR", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a2e99b9536d698981bbcf5cdce49c9d05", null ],
       [ "NT_COMMAND", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a7d03e2fa3fa1efd3c1b31da87a032b19", null ],

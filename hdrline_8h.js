@@ -1,8 +1,8 @@
 var hdrline_8h =
 [
     [ "HdrFormatInfo", "structHdrFormatInfo.html", "structHdrFormatInfo" ],
-    [ "mutt_make_string", "hdrline_8h.html#a7a83c450414789d6bb33db5f03f7f935", null ],
-    [ "mutt_make_string_flags", "hdrline_8h.html#a4b477fc1bd96f6c7bd3a2f4910623d0f", null ],
+    [ "mutt_make_string", "hdrline_8h.html#a3d7bcca7814d58e3f7ac837b5fc2e058", null ],
+    [ "mutt_make_string_flags", "hdrline_8h.html#aeac86407c75d6618b3461b2a985ca209", null ],
     [ "mutt_make_string_info", "hdrline_8h.html#a0ef54141e984065f57b563a4f6463a4d", null ],
     [ "C_CryptChars", "hdrline_8h.html#a390e4bda640209317c138f652f4f65f8", null ],
     [ "C_FlagChars", "hdrline_8h.html#a302e9dc80513f4eab2233ca5818cfae0", null ],

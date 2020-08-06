@@ -1,6 +1,5 @@
 var NAVTREEINDEX22 =
 {
-"mutt__addrlist__write__list_8c.html":[2,0,27,1,27],
 "mutt__addrlist__write__list_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,27,1,27,0],
 "mutt__addrlist__write__list_8c.html#a46219a3031fd6e555f146cf06936c449":[2,0,27,1,27,1],
 "mutt__addrlist__write__list_8c_source.html":[2,0,27,1,27],
@@ -249,5 +248,6 @@ var NAVTREEINDEX22 =
 "mutt__ch__fgetconvs_8c_source.html":[2,0,27,6,11],
 "mutt__ch__get__default__charset_8c.html":[2,0,27,6,12],
 "mutt__ch__get__default__charset_8c.html#a132ca98115adf2f560f5238e447e3f40":[2,0,27,6,12,1],
-"mutt__ch__get__default__charset_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,27,6,12,0]
+"mutt__ch__get__default__charset_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,27,6,12,0],
+"mutt__ch__get__default__charset_8c_source.html":[2,0,27,6,12]
 };

@@ -37,6 +37,7 @@ var keymap_8h =
       [ "NT_MACRO_DELETE_ALL", "keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8a29308e212d9cecf34aaf3df131be0928", null ]
     ] ],
     [ "init_extended_keys", "keymap_8h.html#ae6be8f34be875971676339bac0d726bd", null ],
+    [ "STAILQ_HEAD", "keymap_8h.html#a576a53279d5bc717c6404e91a0c78ef8", null ],
     [ "km_expand_key", "keymap_8h.html#a830fff42df69ae5c6e256eb03ce18892", null ],
     [ "km_find_func", "keymap_8h.html#afc9152fe28dd1129dd24c2f094411a61", null ],
     [ "km_init", "keymap_8h.html#a58e38a78c1e289c77166b7239ee843b0", null ],
@@ -55,7 +56,7 @@ var keymap_8h =
     [ "mutt_parse_push", "keymap_8h.html#aee353816c517466abb6a0fc6ab80be89", null ],
     [ "mutt_parse_unbind", "keymap_8h.html#a8167d07caa2c08334e8f10405104046c", null ],
     [ "mutt_parse_unmacro", "keymap_8h.html#a2074128fd284729e700ee36b710fbc98", null ],
-    [ "Keymaps", "keymap_8h.html#af243912e9a8b4c42cfa0fddb710093b8", null ],
+    [ "Keymaps", "keymap_8h.html#af5cf007895e0e22fb9ae5fc102dee9f6", null ],
     [ "LastKey", "keymap_8h.html#a715fabcdc382c085e09d0bd3a8a44419", null ],
     [ "AbortKey", "keymap_8h.html#a22bced2c7fdf47916ddc963f43432541", null ],
     [ "Menus", "keymap_8h.html#a0ef04e8681ce9c5a90453b267a2ca030", null ]

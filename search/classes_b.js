@@ -13,6 +13,7 @@ var searchData=
   ['md5ctx',['Md5Ctx',['../structMd5Ctx.html',1,'']]],
   ['md5testdata',['Md5TestData',['../structMd5TestData.html',1,'']]],
   ['menu',['Menu',['../structMenu.html',1,'']]],
+  ['menustatuslinedata',['MenuStatusLineData',['../structMenuStatusLineData.html',1,'']]],
   ['message',['Message',['../structMessage.html',1,'']]],
   ['mhsequences',['MhSequences',['../structMhSequences.html',1,'']]],
   ['mimenames',['MimeNames',['../structMimeNames.html',1,'']]],
