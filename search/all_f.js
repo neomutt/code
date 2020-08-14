@@ -228,6 +228,7 @@ var searchData=
   ['notify_5fsend_2ec',['notify_send.c',['../notify__send_8c.html',1,'']]],
   ['notify_5fset_5fparent',['notify_set_parent',['../mutt_2notify_8c.html#ae467a73cac36feec67e38b695f67d0a5',1,'notify_set_parent(struct Notify *notify, struct Notify *parent):&#160;notify.c'],['../notify_8h.html#ae467a73cac36feec67e38b695f67d0a5',1,'notify_set_parent(struct Notify *notify, struct Notify *parent):&#160;notify.c']]],
   ['notify_5fset_5fparent_2ec',['notify_set_parent.c',['../notify__set__parent_8c.html',1,'']]],
+  ['notify_5fsidebar',['notify_sidebar',['../command__parse_8c.html#a235d39bb2ca20ea85b698937ba86267b',1,'command_parse.c']]],
   ['notify_5ftype_2eh',['notify_type.h',['../notify__type_8h.html',1,'']]],
   ['notifyaccount',['NotifyAccount',['../account_8h.html#a19a9ad056d93491b610201fa644eef6e',1,'account.h']]],
   ['notifyalias',['NotifyAlias',['../alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7b',1,'alias.h']]],

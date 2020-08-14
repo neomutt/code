@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"mutt_2slist_8h.html#aeedf7a8a4003a7645ad3515fba3594b2":[2,0,18,50,5],
 "mutt_2slist_8h_source.html":[2,0,18,50],
 "mutt_2string_8c.html":[2,0,18,51],
 "mutt_2string_8c.html#a0446692c26c02a16f43abaff7765cd06":[2,0,18,51,44],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "mutt__addrlist__write_8c.html":[2,0,27,1,26],
 "mutt__addrlist__write_8c.html#a1b84ff28c89e01d51a2312861b012599":[2,0,27,1,26,0],
 "mutt__addrlist__write_8c.html#a76a68929e28a974164667989773d254b":[2,0,27,1,26,1],
-"mutt__addrlist__write_8c_source.html":[2,0,27,1,26],
-"mutt__addrlist__write__list_8c.html":[2,0,27,1,27]
+"mutt__addrlist__write_8c_source.html":[2,0,27,1,26]
 };

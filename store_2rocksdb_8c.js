@@ -1,6 +1,6 @@
 var store_2rocksdb_8c =
 [
-    [ "RocksDB_Ctx", "structRocksDB__Ctx.html", "structRocksDB__Ctx" ],
+    [ "RocksDbCtx", "structRocksDbCtx.html", "structRocksDbCtx" ],
     [ "RDBVER", "store_2rocksdb_8c.html#a92d9878041c9c09243f41d6233df6a03", null ],
     [ "store_rocksdb_open", "store_2rocksdb_8c.html#a25a9b116ea49135eee7780a0f78df1a2", null ],
     [ "store_rocksdb_fetch", "store_2rocksdb_8c.html#a3c5dc76edd4687480da0add4652582c5", null ],

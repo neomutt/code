@@ -90,7 +90,7 @@ var searchData=
   ['test_5fcase_5fmaxsize',['TEST_CASE_MAXSIZE',['../acutest_8h.html#a54049d59de62fe530637c8d09cc0118c',1,'acutest.h']]],
   ['test_5fcase_5fname_5f',['test_case_name_',['../acutest_8h.html#a460df43c4a476caee6f06dc8813da1e6',1,'acutest.h']]],
   ['test_5fcheck',['TEST_CHECK',['../acutest_8h.html#a1f11495375db2b0daa6efe2850388dd9',1,'acutest.h']]],
-  ['test_5fcheck_5f',['test_check_',['../acutest_8h.html#a517b6845c6abf96c8cdaa0b202d02bd7',1,'test_check_(int cond, const char *file, int line, const char *fmt,...):&#160;acutest.h'],['../acutest_8h.html#a37941ae829e9f3457ee31486f9e63a0d',1,'TEST_CHECK_():&#160;acutest.h']]],
+  ['test_5fcheck_5f',['TEST_CHECK_',['../acutest_8h.html#a37941ae829e9f3457ee31486f9e63a0d',1,'TEST_CHECK_():&#160;acutest.h'],['../acutest_8h.html#a517b6845c6abf96c8cdaa0b202d02bd7',1,'test_check_(int cond, const char *file, int line, const char *fmt,...):&#160;acutest.h']]],
   ['test_5fcheck_5fstr_5feq',['TEST_CHECK_STR_EQ',['../test__common_8h.html#a4356296f6da0cc40cfb04d71419604c3',1,'test_common.h']]],
   ['test_5fclean_5freferences',['test_clean_references',['../clean__references_8c.html#af2479cb5fa630d7274a498900426bf57',1,'clean_references.c']]],
   ['test_5fcmdline_5fauxbuf_5fsize_5f',['TEST_CMDLINE_AUXBUF_SIZE_',['../acutest_8h.html#ad27be481d5c9cca54c0b978208b91d28',1,'acutest.h']]],

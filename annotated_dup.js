@@ -179,7 +179,7 @@ var annotated_dup =
     [ "Resize", "structResize.html", "structResize" ],
     [ "Rfc2047TestData", "structRfc2047TestData.html", "structRfc2047TestData" ],
     [ "Rfc2231Parameter", "structRfc2231Parameter.html", "structRfc2231Parameter" ],
-    [ "RocksDB_Ctx", "structRocksDB__Ctx.html", "structRocksDB__Ctx" ],
+    [ "RocksDbCtx", "structRocksDbCtx.html", "structRocksDbCtx" ],
     [ "RstrnTest", "structRstrnTest.html", "structRstrnTest" ],
     [ "SaslSockData", "structSaslSockData.html", "structSaslSockData" ],
     [ "SbEntry", "structSbEntry.html", "structSbEntry" ],

@@ -27,6 +27,7 @@ var command__parse_8c =
     [ "parse_ifdef", "command__parse_8c.html#a4afcead942937013d0508ebbec9c57ac", null ],
     [ "parse_ignore", "command__parse_8c.html#af9fdb8fa1c75d49cdf90529da7b683b7", null ],
     [ "parse_lists", "command__parse_8c.html#a89f64a00e7616e86cb8a32502bf51bd2", null ],
+    [ "notify_sidebar", "command__parse_8c.html#a235d39bb2ca20ea85b698937ba86267b", null ],
     [ "parse_mailboxes", "command__parse_8c.html#a8769157e701120c7855feed61fa6741f", null ],
     [ "parse_my_hdr", "command__parse_8c.html#add5dbbf0bd35a9aa93a19537a939aafe", null ],
     [ "parse_set", "command__parse_8c.html#a25f38c8598d83fa49328925e85bfc837", null ],

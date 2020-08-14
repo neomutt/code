@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"crypt_8h_source.html":[2,0,19,2],
 "crypt__gpgme_8c.html":[2,0,19,3],
 "crypt__gpgme_8c.html#a06057059d161b58e6b17c6b00fe54ab6":[2,0,19,3,51],
 "crypt__gpgme_8c.html#a0a360c190938728cf8cbc2ee1befa057":[2,0,19,3,34],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "cryptglue_8h.html#ac9687b66aca5969d0a9ad0f5c122dbdb":[2,0,19,12,10],
 "cryptglue_8h.html#ad29ef155ee6ccc83b50614068bb5b597":[2,0,19,12,6],
 "cryptglue_8h_source.html":[2,0,19,12],
-"ctx.html":[0,5],
-"curs__lib_8c.html":[2,0,11,2]
+"ctx.html":[0,5]
 };

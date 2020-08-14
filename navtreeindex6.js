@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"config_bool.html":[3,6,1],
 "config_dump.html":[3,6,2],
 "config_enum.html":[3,6,3],
 "config_helpers.html":[3,6,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "crypt_8h.html#a0a1a629e56fca1dc19c84c5577cdbb9f":[2,0,19,2,2],
 "crypt_8h.html#a3230991ab72820135b5ba8fe94a5f43d":[2,0,19,2,3],
 "crypt_8h.html#a32cadd5ce0071d7f003dde3d80f52d5d":[2,0,19,2,4],
-"crypt_8h.html#a7321a72cf7c00a3a126fdba74a648191":[2,0,19,2,0],
-"crypt_8h_source.html":[2,0,19,2]
+"crypt_8h.html#a7321a72cf7c00a3a126fdba74a648191":[2,0,19,2,0]
 };

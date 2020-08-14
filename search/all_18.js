@@ -82,7 +82,7 @@ var searchData=
   ['write_5fas_5ftext_5fpart',['write_as_text_part',['../send_2body_8c.html#a55c55e2f50317ab8226c0c2768e01ad0',1,'body.c']]],
   ['write_5fautocrypt_5fheader_5fline',['write_autocrypt_header_line',['../autocrypt_8c.html#a5a11d5de380fab330d5f37e7ef018da1',1,'autocrypt.c']]],
   ['write_5fone_5fheader',['write_one_header',['../header_8c.html#a828d1945817f8143b44a264dff4de473',1,'header.c']]],
-  ['write_5foptions',['write_options',['../structRocksDB__Ctx.html#a43940db7a3ddd72e6509600a3900b05b',1,'RocksDB_Ctx']]],
+  ['write_5foptions',['write_options',['../structRocksDbCtx.html#a11735554ecd30ce3717ace387f47d500',1,'RocksDbCtx']]],
   ['write_5fsafe_5faddress',['write_safe_address',['../alias_8c.html#a72f25c630f91fffd47d013745fae3b74',1,'alias.c']]],
   ['write_5fuserhdrs',['write_userhdrs',['../header_8c.html#a914f4e2e1ee9198323ffecb32a936423',1,'header.c']]],
   ['wt_5fall_5fdialogs',['WT_ALL_DIALOGS',['../mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509a34adfefe3f47347b5bb227af9803f52e',1,'mutt_window.h']]],

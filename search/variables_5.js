@@ -29,7 +29,7 @@ var searchData=
   ['eostr',['eostr',['../structSeqsetIterator.html#a26751cac5a01df780c75aad85206a8da',1,'SeqsetIterator']]],
   ['epoch',['epoch',['../structIsFromTest.html#a422760e2e77a4496fa6fc6f50611316a',1,'IsFromTest']]],
   ['eq',['eq',['../structKeymap.html#a908683bf209748c84e1f60b1e36bfd16',1,'Keymap']]],
-  ['err',['err',['../structRocksDB__Ctx.html#a30e7b79f8bd1c3bb9634ea2bbced8bbc',1,'RocksDB_Ctx']]],
+  ['err',['err',['../structRocksDbCtx.html#aaa2b1e14001880bf45aa1d99e9f6f762',1,'RocksDbCtx']]],
   ['err_5fmsg',['err_msg',['../structPopAccountData.html#a84cf659582c28abdd77d78e74257143f',1,'PopAccountData']]],
   ['err_5fnum',['err_num',['../structSysExits.html#ab9b32acf39565aa5d6532b3d79c1f051',1,'SysExits::err_num()'],['../structTestValue.html#ae73ac5376f1c02718edf2b221c0b5464',1,'TestValue::err_num()']]],
   ['err_5fstr',['err_str',['../structSysExits.html#a8804c66542441e33db367e823d449546',1,'SysExits']]],

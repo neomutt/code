@@ -274,7 +274,7 @@ var searchData=
   ['slist_5ffree_2ec',['slist_free.c',['../slist__free_8c.html',1,'']]],
   ['slist_5fhead',['SLIST_HEAD',['../queue_8h.html#a8224e40ea764bc857bab6f6d9c357dd9',1,'SLIST_HEAD():&#160;queue.h'],['../pattern_2lib_8h.html#a2bfd0ca84e9773d600ef85243eeb4550',1,'SLIST_HEAD(PatternList, Pattern):&#160;lib.h']]],
   ['slist_5fhead_5finitializer',['SLIST_HEAD_INITIALIZER',['../queue_8h.html#a9ae2aca3d46e62be4cb1408bd946ef15',1,'queue.h']]],
-  ['slist_5finit',['SLIST_INIT',['../queue_8h.html#a361ac8e88cf066cc4d46d28b54fd3031',1,'SLIST_INIT():&#160;queue.h'],['../config_2slist_8c.html#ac66a3c33e0d20b9bdfc1dc62dbd02c93',1,'slist_init(struct ConfigSet *cs):&#160;slist.c'],['../config_2slist_8h.html#ac66a3c33e0d20b9bdfc1dc62dbd02c93',1,'slist_init(struct ConfigSet *cs):&#160;slist.c']]],
+  ['slist_5finit',['slist_init',['../config_2slist_8c.html#ac66a3c33e0d20b9bdfc1dc62dbd02c93',1,'slist_init(struct ConfigSet *cs):&#160;slist.c'],['../config_2slist_8h.html#ac66a3c33e0d20b9bdfc1dc62dbd02c93',1,'slist_init(struct ConfigSet *cs):&#160;slist.c'],['../queue_8h.html#a361ac8e88cf066cc4d46d28b54fd3031',1,'SLIST_INIT():&#160;queue.h']]],
   ['slist_5finsert_5fafter',['SLIST_INSERT_AFTER',['../queue_8h.html#af1d994d9652ccbc41a60b747dfc15ea5',1,'queue.h']]],
   ['slist_5finsert_5fhead',['SLIST_INSERT_HEAD',['../queue_8h.html#a48df7439e09a419afabdd1f2f8551e73',1,'queue.h']]],
   ['slist_5fis_5fmember',['slist_is_member',['../mutt_2slist_8c.html#a7c69d305defed93b70403c325461ef9b',1,'slist_is_member(const struct Slist *list, const char *str):&#160;slist.c'],['../mutt_2slist_8h.html#a7c69d305defed93b70403c325461ef9b',1,'slist_is_member(const struct Slist *list, const char *str):&#160;slist.c']]],

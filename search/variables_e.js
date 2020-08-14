@@ -36,7 +36,7 @@ var searchData=
   ['optdonthandlepgpkeys',['OptDontHandlePgpKeys',['../options_8h.html#ac37333941e0b57abec75329a20feaba8',1,'options.h']]],
   ['optforcerefresh',['OptForceRefresh',['../options_8h.html#a9c536c5f6fd101337c664b033f7dbd3b',1,'options.h']]],
   ['optignoremacroevents',['OptIgnoreMacroEvents',['../options_8h.html#ad4d256d25c8f518f015ea333b2ab43ca',1,'options.h']]],
-  ['options',['options',['../structRocksDB__Ctx.html#a8dd25ab26e0942a5076c498de647ed84',1,'RocksDB_Ctx']]],
+  ['options',['options',['../structRocksDbCtx.html#afbdd195cb09895113e5a45392cf8c8c5',1,'RocksDbCtx']]],
   ['optkeepquiet',['OptKeepQuiet',['../options_8h.html#ac352ffac3355c31b717480dfaf257a72',1,'options.h']]],
   ['optlocales',['OptLocales',['../mbyte_8c.html#a82f8a6a3adff040ee79e734db05b61b1',1,'OptLocales():&#160;mbyte.c'],['../mbyte_8h.html#a82f8a6a3adff040ee79e734db05b61b1',1,'OptLocales():&#160;mbyte.c']]],
   ['optmenupopclearscreen',['OptMenuPopClearScreen',['../options_8h.html#addb91c4d9672024275a23dd9bbcfac86',1,'options.h']]],

@@ -24,5 +24,5 @@ var searchData=
   ['wrap_5fmargin',['wrap_margin',['../structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26',1,'EnrichedState']]],
   ['wraplen',['wraplen',['../structState.html#a2c506e7d8513e59e6162cdc5d6f9f320',1,'State']]],
   ['write',['write',['../structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db',1,'Connection::write()'],['../structSaslSockData.html#ac333dd30a76dea2d1dfbed78f7ba3281',1,'SaslSockData::write()'],['../structZstrmContext.html#a83f56498421caa65ebe34386cc21b58b',1,'ZstrmContext::write()'],['../structMessage.html#aa97affe6dd666261890aee8ec004c26c',1,'Message::write()']]],
-  ['write_5foptions',['write_options',['../structRocksDB__Ctx.html#a43940db7a3ddd72e6509600a3900b05b',1,'RocksDB_Ctx']]]
+  ['write_5foptions',['write_options',['../structRocksDbCtx.html#a11735554ecd30ce3717ace387f47d500',1,'RocksDbCtx']]]
 ];

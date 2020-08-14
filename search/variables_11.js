@@ -8,7 +8,7 @@ var searchData=
   ['re',['re',['../structPrexStorage.html#aa92ecca35e86301c0d93d8607aba281d',1,'PrexStorage']]],
   ['reachingus',['ReachingUs',['../version_8c.html#a440c5f4913af8663a4d6c5626b44c11d',1,'version.c']]],
   ['read',['read',['../structConnection.html#afdd852b383b3926639ec9132c048590a',1,'Connection::read()'],['../structSaslSockData.html#abe6d944ead0a2be3010e7cbe9fdc7846',1,'SaslSockData::read()'],['../structZstrmContext.html#a4694ccace39f253ce6191e80d88f435f',1,'ZstrmContext::read()'],['../structEmail.html#a0bd79550be901d44e50953fb43614e10',1,'Email::read()'],['../structImapEmailData.html#adbcc9070eab67c69d1d2fcd48aa04021',1,'ImapEmailData::read()'],['../structMessage.html#ace4606e8dc8aa0c35738e9f788f47705',1,'Message::read()']]],
-  ['read_5foptions',['read_options',['../structRocksDB__Ctx.html#a40af62bdf51d420b4ccb14b4f56ddae6',1,'RocksDB_Ctx']]],
+  ['read_5foptions',['read_options',['../structRocksDbCtx.html#a8e542bb92cce58fe3cd7867a1e9cbc18',1,'RocksDbCtx']]],
   ['readonly',['readonly',['../structMailbox.html#ae55237419d0e842cd6efeed0c41d27e8',1,'Mailbox']]],
   ['ready',['ready',['../structRangeRegex.html#ade9d650ab197a02af46745256da9c921',1,'RangeRegex']]],
   ['real_5fname',['real_name',['../structImapMboxData.html#a3c6e05d5048bd093090211073ef69a4f',1,'ImapMboxData']]],

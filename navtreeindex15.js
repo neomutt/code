@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"idna_8c.html#a1cf366a66462d6448ba1de79c693bf4a":[2,0,0,4,2],
 "idna_8c.html#ab9c3a349e9af8c5e621bb426f30bd1c1":[2,0,0,4,0],
 "idna_8c.html#aef6b24f519e61f2fe9ae2a37bbf3ba5b":[2,0,0,4,1],
 "idna_8c_source.html":[2,0,0,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "imap_8c.html#a8f78f88f04284f923f839a64ec680c35":[2,0,15,12,11],
 "imap_8c.html#a916a7acb5369b71bdf1d1ca1daeff36e":[2,0,15,12,2],
 "imap_8c.html#a93ed20ff163bf6a15c46071ba357d17a":[2,0,15,12,17],
-"imap_8c.html#a9cd881485b601b78cae25ade04b475c8":[2,0,15,12,48],
-"imap_8c.html#a9f4b46b80a1dd0e00cc956c06d377464":[2,0,15,12,10]
+"imap_8c.html#a9cd881485b601b78cae25ade04b475c8":[2,0,15,12,48]
 };

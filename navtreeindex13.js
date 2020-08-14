@@ -1,5 +1,6 @@
 var NAVTREEINDEX13 =
 {
+"gui.html":[3,11],
 "gui_2lib_8h.html":[2,0,11,6],
 "gui_2lib_8h_source.html":[2,0,11,6],
 "gui_2reflow_8c.html":[2,0,11,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "hdrline_8h.html#aa791bd4c1754a5423911bf226c2b5bd7":[2,0,54,6],
 "hdrline_8h.html#aeac86407c75d6618b3461b2a985ca209":[2,0,54,2],
 "hdrline_8h_source.html":[2,0,54],
-"header_8c.html":[2,0,24,3],
-"header_8c.html#a045f6fd01c4518a926b3d1e97ce4ed8e":[2,0,24,3,9]
+"header_8c.html":[2,0,24,3]
 };

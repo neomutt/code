@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"structComprLz4Ctx.html#a201a5228414d428a0154f36618847b8e":[1,0,30,0],
 "structComprLz4Ctx.html#a487822be8d63e880d98cbde93709a022":[1,0,30,1],
 "structComprOps.html":[1,0,31],
 "structComprOps.html#a08526f624659b9b4d638928490d65d9c":[1,0,31,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "structEnvelope.html#a50418c13a849bf27b22922bd5867e5e1":[1,0,56,13],
 "structEnvelope.html#a52153c6e4fdb551233e26d4fdb48fb78":[1,0,56,21],
 "structEnvelope.html#a525bd5213606067d5c2be2e17fbe956b":[1,0,56,8],
-"structEnvelope.html#a59c64138a508cd27c61dc719e7aab5a0":[1,0,56,27],
-"structEnvelope.html#a5f680f60f1713477a879877dcbd21a5c":[1,0,56,18]
+"structEnvelope.html#a59c64138a508cd27c61dc719e7aab5a0":[1,0,56,27]
 };

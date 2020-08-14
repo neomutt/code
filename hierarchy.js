@@ -184,7 +184,7 @@ var hierarchy =
     [ "Resize", "structResize.html", null ],
     [ "Rfc2047TestData", "structRfc2047TestData.html", null ],
     [ "Rfc2231Parameter", "structRfc2231Parameter.html", null ],
-    [ "RocksDB_Ctx", "structRocksDB__Ctx.html", null ],
+    [ "RocksDbCtx", "structRocksDbCtx.html", null ],
     [ "RstrnTest", "structRstrnTest.html", null ],
     [ "SaslSockData", "structSaslSockData.html", null ],
     [ "SbEntry", "structSbEntry.html", null ],

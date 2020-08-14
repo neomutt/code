@@ -1,5 +1,6 @@
 var NAVTREEINDEX31 =
 {
+"ncrypt_2lib_8h.html#ae480697fdeb3d6b2c127e0ae36c52e8e":[2,0,19,18,18],
 "ncrypt_2lib_8h.html#aebb744100faa768a15a3099a9a9b5147":[2,0,19,18,76],
 "ncrypt_2lib_8h.html#aee8e2da44282ca27f6a786cef781334f":[2,0,19,18,28],
 "ncrypt_2lib_8h.html#afa26cebcc0c8d8866129fc2eabdbe874":[2,0,19,18,68],
@@ -248,6 +249,5 @@ var NAVTREEINDEX31 =
 "nntp_2private_8h.html#a63056faf9f11d01dcf0ce711aefcf2d2":[2,0,20,6,31],
 "nntp_2private_8h.html#a63b8f0fd985de7a7f2e2a6b7dba546bb":[2,0,20,6,25],
 "nntp_2private_8h.html#a6878e3c1f4e9732730a98a1fdda431e7":[2,0,20,6,13],
-"nntp_2private_8h.html#a7f7d6f28cf5fef9623b89beb9a085364":[2,0,20,6,24],
-"nntp_2private_8h.html#a817e3ca31e87a083177c3c7bea868f38":[2,0,20,6,23]
+"nntp_2private_8h.html#a7f7d6f28cf5fef9623b89beb9a085364":[2,0,20,6,24]
 };

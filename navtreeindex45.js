@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"structKeymap.html#a825d6f924661f5a1376e0b527950029c":[1,0,100,0],
 "structKeymap.html#a908683bf209748c84e1f60b1e36bfd16":[1,0,100,4],
 "structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f":[1,0,100,2],
 "structKeymap.html#add26f340b9b45b9e12bec12fe980929c":[1,0,100,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "structMxOps.html#a25bfad683d37065e6229b6b423208b3a":[1,0,130,6],
 "structMxOps.html#a3a85067a3d76652ec0014ce520c565db":[1,0,130,21],
 "structMxOps.html#a4c0ce9432905dfb3f6849c97ae504f84":[1,0,130,16],
-"structMxOps.html#a6222971b7c4455ec5db897da762cd388":[1,0,130,9],
-"structMxOps.html#a625a6ea0abfdb6620542e26acc499177":[1,0,130,19]
+"structMxOps.html#a6222971b7c4455ec5db897da762cd388":[1,0,130,9]
 };

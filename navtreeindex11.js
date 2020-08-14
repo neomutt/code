@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"file_8h.html#a42b89c4ae9ca386c22de502b37cdf45e":[2,0,18,13,26],
 "file_8h.html#a476ab3606a28b4cca8a7489e38d50151":[2,0,18,13,50],
 "file_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6":[2,0,18,13,4],
 "file_8h.html#a4cdd1f9b1b370cbf5a8348f63cfe67cf":[2,0,18,13,24],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "globals_defs_o.html":[2,1,6,14],
 "globals_defs_p.html":[2,1,6,15],
 "globals_defs_q.html":[2,1,6,16],
-"globals_defs_r.html":[2,1,6,17],
-"globals_defs_s.html":[2,1,6,18]
+"globals_defs_r.html":[2,1,6,17]
 };
