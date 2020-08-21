@@ -42,6 +42,7 @@ var notmuch_8c =
     [ "read_threads_query", "notmuch_8c.html#a73570c4d26bc98c4862a64d96859d09f", null ],
     [ "get_nm_message", "notmuch_8c.html#a6cb5b7de033e66ace814bcc069c775d8", null ],
     [ "nm_message_has_tag", "notmuch_8c.html#aa2697eb2457e0bcd498462830debc346", null ],
+    [ "sync_email_path_with_nm", "notmuch_8c.html#a5d9e6d209beb0f018e50e865a7b53c44", null ],
     [ "update_tags", "notmuch_8c.html#a745c6210b7b6364f6b052e34f0cfcd2b", null ],
     [ "update_email_flags", "notmuch_8c.html#a5833a5560a2f813df24a68fa55d0e42e", null ],
     [ "rename_maildir_filename", "notmuch_8c.html#a57496754297d15a9c6cb92cc4562b895", null ],

@@ -31,7 +31,6 @@ var searchData=
   ['enriched_5fputwc',['enriched_putwc',['../enriched_8c.html#a5e33ab7f80a1f52fb127f6b73c763e92',1,'enriched.c']]],
   ['enriched_5fset_5fflags',['enriched_set_flags',['../enriched_8c.html#adbdf225700fa264865bf9df7464a5895',1,'enriched.c']]],
   ['enriched_5fwrap',['enriched_wrap',['../enriched_8c.html#a0c637f4762f561a41663e83a5dddee7d',1,'enriched.c']]],
-  ['enum_5finit',['enum_init',['../config_2enum_8c.html#a59acd3a17714200bd39fcb6db5501d6d',1,'enum_init(struct ConfigSet *cs):&#160;enum.c'],['../config_2enum_8h.html#a59acd3a17714200bd39fcb6db5501d6d',1,'enum_init(struct ConfigSet *cs):&#160;enum.c']]],
   ['enum_5fnative_5fget',['enum_native_get',['../config_2enum_8c.html#a5e4bce191d544a8b0ce3c3df5a4d434f',1,'enum.c']]],
   ['enum_5fnative_5fset',['enum_native_set',['../config_2enum_8c.html#a01cbc276c2c7236cdcc4c12c7a6dd299',1,'enum.c']]],
   ['enum_5freset',['enum_reset',['../config_2enum_8c.html#a29d0fea6326c950f32712265a9dd68dd',1,'enum.c']]],

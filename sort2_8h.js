@@ -33,7 +33,6 @@ var sort2_8h =
       [ "SORT_DESC", "sort2_8h.html#ad7fca38b521558f128d4a566729f5803a929660763f15ba6c6e2be3cd126f37bf", null ],
       [ "SORT_MAX", "sort2_8h.html#ad7fca38b521558f128d4a566729f5803addafbcc634d624d82570dc1b0d887a0b", null ]
     ] ],
-    [ "sort_init", "sort2_8h.html#a950a5552f7fa1af85327fac1fe894c9f", null ],
     [ "SortAliasMethods", "sort2_8h.html#a6accc5f32e32ca3daa7c85ceeb133106", null ],
     [ "SortAuxMethods", "sort2_8h.html#ac7f3faefbd4de2a855ebe35e07867f95", null ],
     [ "SortBrowserMethods", "sort2_8h.html#a62d1200a7833a80c1b44631fc91ac874", null ],

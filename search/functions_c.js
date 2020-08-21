@@ -116,7 +116,6 @@ var searchData=
   ['mbtable_5fdestroy',['mbtable_destroy',['../config_2mbtable_8c.html#aea3f143fe75aa40ffa14b2785120c3e0',1,'mbtable.c']]],
   ['mbtable_5fdup',['mbtable_dup',['../config_2mbtable_8c.html#a6549fbf61fcc514cd213d1c94556cb7f',1,'mbtable.c']]],
   ['mbtable_5ffree',['mbtable_free',['../config_2mbtable_8c.html#a0b3dcd31a2a7c92445e3bfb7a8ab993a',1,'mbtable_free(struct MbTable **table):&#160;mbtable.c'],['../config_2mbtable_8h.html#a0b3dcd31a2a7c92445e3bfb7a8ab993a',1,'mbtable_free(struct MbTable **table):&#160;mbtable.c']]],
-  ['mbtable_5finit',['mbtable_init',['../config_2mbtable_8c.html#ab986d01ef3b35a31442489a4966323f5',1,'mbtable_init(struct ConfigSet *cs):&#160;mbtable.c'],['../config_2mbtable_8h.html#ab986d01ef3b35a31442489a4966323f5',1,'mbtable_init(struct ConfigSet *cs):&#160;mbtable.c']]],
   ['mbtable_5fnative_5fget',['mbtable_native_get',['../config_2mbtable_8c.html#a4040c334e1ab245578f8161060f552c2',1,'mbtable.c']]],
   ['mbtable_5fnative_5fset',['mbtable_native_set',['../config_2mbtable_8c.html#aec94b58e1f18b3c870b847c1fb0c2db9',1,'mbtable.c']]],
   ['mbtable_5fparse',['mbtable_parse',['../config_2mbtable_8c.html#afb0bee15389907c821f92e6790571c11',1,'mbtable_parse(const char *s):&#160;mbtable.c'],['../config_2mbtable_8h.html#a0accf24bbae331880036e64e1e5c2f17',1,'mbtable_parse(const char *str):&#160;mbtable.c']]],

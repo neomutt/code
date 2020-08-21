@@ -52,7 +52,7 @@ var searchData=
   ['rfc2047_5ftest_5fdata',['rfc2047_test_data',['../test_2rfc2047_2common_8c.html#ab6fb15dcac494a3f654b02382ea240ef',1,'rfc2047_test_data():&#160;common.c'],['../rfc2047_2common_8h.html#ab6fb15dcac494a3f654b02382ea240ef',1,'rfc2047_test_data():&#160;common.c']]],
   ['rgrp',['rgrp',['../structRangeRegex.html#ac4e25ea4b622354a12208d2e8e0375b6',1,'RangeRegex']]],
   ['rights',['rights',['../structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73',1,'Mailbox']]],
-  ['rootwindow',['RootWindow',['../window_8c.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow():&#160;mutt_window.c'],['../mutt__window_8c.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow():&#160;mutt_window.c'],['../mutt__window_8h.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow():&#160;mutt_window.c']]],
+  ['rootwindow',['RootWindow',['../mutt__window_8c.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow():&#160;mutt_window.c'],['../mutt__window_8h.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow():&#160;mutt_window.c']]],
   ['row_5foffset',['row_offset',['../structWindowState.html#a5f16dfc8603af222e79759ea1f965b13',1,'WindowState']]],
   ['rows',['rows',['../structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5',1,'WindowState']]],
   ['rs',['rs',['../structGroup.html#a43e209bd3d746d2e18ca8d3387712f90',1,'Group']]],

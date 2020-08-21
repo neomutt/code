@@ -278,6 +278,8 @@ var searchData=
   ['init_5fpgp',['init_pgp',['../crypt__gpgme_8c.html#aead4e2c25ab6b1ea42f818cc243cd2d1',1,'crypt_gpgme.c']]],
   ['init_5fsmime',['init_smime',['../crypt__gpgme_8c.html#aab62fa83c30ed25209d5fac293cdb59d',1,'crypt_gpgme.c']]],
   ['init_5fstate',['init_state',['../browser_8c.html#a40a157ecde1135a2ddde0a85c0e07150',1,'browser.c']]],
+  ['init_5ftypes',['init_types',['../mutt__config_8c.html#a13cc00c229c3f0f0f30bb815e6ad730e',1,'mutt_config.c']]],
+  ['init_5fvariables',['init_variables',['../mutt__config_8c.html#a9d070cc074d60b1a01a1f0f7bcb4d8ec',1,'mutt_config.c']]],
   ['initial',['initial',['../structConfigDef.html#a669d58ec0f68946995b69af97333d71a',1,'ConfigDef::initial()'],['../structInlineReplaceTest.html#ac15994f11b9c38ac0d562b5f7152fc6b',1,'InlineReplaceTest::initial()']]],
   ['initial_2ec',['initial.c',['../initial_8c.html',1,'']]],
   ['initial_2eh',['initial.h',['../initial_8h.html',1,'']]],

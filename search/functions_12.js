@@ -92,7 +92,6 @@ var searchData=
   ['slist_5fflags',['slist_flags',['../test_2config_2slist_8c.html#a316140d855f187da7591f4ce85b171ac',1,'slist.c']]],
   ['slist_5ffree',['slist_free',['../mutt_2slist_8c.html#ac97fc48f98ea9286a7e58db0289725e0',1,'slist_free(struct Slist **list):&#160;slist.c'],['../mutt_2slist_8h.html#ac97fc48f98ea9286a7e58db0289725e0',1,'slist_free(struct Slist **list):&#160;slist.c']]],
   ['slist_5fhead',['SLIST_HEAD',['../pattern_2lib_8h.html#a2bfd0ca84e9773d600ef85243eeb4550',1,'lib.h']]],
-  ['slist_5finit',['slist_init',['../config_2slist_8c.html#ac66a3c33e0d20b9bdfc1dc62dbd02c93',1,'slist_init(struct ConfigSet *cs):&#160;slist.c'],['../config_2slist_8h.html#ac66a3c33e0d20b9bdfc1dc62dbd02c93',1,'slist_init(struct ConfigSet *cs):&#160;slist.c']]],
   ['slist_5fis_5fmember',['slist_is_member',['../mutt_2slist_8c.html#a7c69d305defed93b70403c325461ef9b',1,'slist_is_member(const struct Slist *list, const char *str):&#160;slist.c'],['../mutt_2slist_8h.html#a7c69d305defed93b70403c325461ef9b',1,'slist_is_member(const struct Slist *list, const char *str):&#160;slist.c']]],
   ['slist_5fnative_5fget',['slist_native_get',['../config_2slist_8c.html#aa60cb81318682f31aef178530cc10712',1,'slist.c']]],
   ['slist_5fnative_5fset',['slist_native_set',['../config_2slist_8c.html#a055775a6492a473ed984369f01e0eaea',1,'slist.c']]],
@@ -166,7 +165,6 @@ var searchData=
   ['socket_5fconnect',['socket_connect',['../raw_8c.html#a2ccc15b62b68a8fe2ce29e3c0e77911b',1,'raw.c']]],
   ['socket_5fpreconnect',['socket_preconnect',['../socket_8c.html#adf02c2e6d55a1690ecd999e05f5b784b',1,'socket.c']]],
   ['sort_5fentries',['sort_entries',['../sidebar_8c.html#a23b176184372cf6793ebcadd8c38e287',1,'sidebar.c']]],
-  ['sort_5finit',['sort_init',['../config_2sort_8c.html#a950a5552f7fa1af85327fac1fe894c9f',1,'sort_init(struct ConfigSet *cs):&#160;sort.c'],['../sort2_8h.html#a950a5552f7fa1af85327fac1fe894c9f',1,'sort_init(struct ConfigSet *cs):&#160;sort.c']]],
   ['sort_5flist_5fcb',['sort_list_cb',['../test_2config_2common_8c.html#ab59e4106ba744d106bf214764395b68e',1,'common.c']]],
   ['sort_5fnative_5fget',['sort_native_get',['../config_2sort_8c.html#a18be22df2e15ec86a710d846e548a8b6',1,'sort.c']]],
   ['sort_5fnative_5fset',['sort_native_set',['../config_2sort_8c.html#ad4ee67ea5d8ab1c9d654fc2e8fa77af8',1,'sort.c']]],
@@ -270,7 +268,6 @@ var searchData=
   ['store_5ftokyocabinet_5fversion',['store_tokyocabinet_version',['../store_2tc_8c.html#a50ec9ab158733bf1cf860eab5468d992',1,'tc.c']]],
   ['strdup_5fcolumn_5ftext',['strdup_column_text',['../autocrypt_2db_8c.html#a506a23fdc617b5d2f4a810f4138abce3',1,'db.c']]],
   ['string_5fdestroy',['string_destroy',['../config_2string_8c.html#a02e912517ad66b0b9f74cf9726ab3ede',1,'string.c']]],
-  ['string_5finit',['string_init',['../config_2string_8c.html#a5dd1e57b7abf9ddc92a8742efb6a7d2a',1,'string_init(struct ConfigSet *cs):&#160;string.c'],['../string3_8h.html#a5dd1e57b7abf9ddc92a8742efb6a7d2a',1,'string_init(struct ConfigSet *cs):&#160;string.c']]],
   ['string_5fis_5faddress',['string_is_address',['../alias_8c.html#a207a8105a441657885093d91f6dadcb2',1,'alias.c']]],
   ['string_5fnative_5fget',['string_native_get',['../config_2string_8c.html#ab5bb6eaa20eb0bc40f0e2fa305a0ad90',1,'string.c']]],
   ['string_5fnative_5fset',['string_native_set',['../config_2string_8c.html#a4edd040b3fc2ed50d5c5ad925b184e88',1,'string.c']]],
@@ -278,6 +275,7 @@ var searchData=
   ['string_5fstring_5fget',['string_string_get',['../config_2string_8c.html#abf83cfcb7725c482a8ee0d9fbb15c070',1,'string.c']]],
   ['string_5fstring_5fset',['string_string_set',['../config_2string_8c.html#a1836b567baead24f9ae06e3abb1cf01b',1,'string.c']]],
   ['string_5fto_5fquery_5ftype',['string_to_query_type',['../notmuch_8c.html#afa7e5955ac29942514fd4900a2cf1b01',1,'notmuch.c']]],
+  ['sync_5femail_5fpath_5fwith_5fnm',['sync_email_path_with_nm',['../notmuch_8c.html#a5d9e6d209beb0f018e50e865a7b53c44',1,'notmuch.c']]],
   ['sync_5fhelper',['sync_helper',['../imap_8c.html#aef628c772edba9c0984296a8544ce147',1,'imap.c']]],
   ['sync_5fmailbox',['sync_mailbox',['../mx_8c.html#ad4ce86a1c0a0a27a870843d0b7874365',1,'mx.c']]]
 ];

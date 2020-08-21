@@ -54,7 +54,6 @@ var mx_8h =
     [ "mx_get_ops", "mx_8h.html#a69fb97b5bdfa030216af32bccd9b6fed", null ],
     [ "mx_tags_is_supported", "mx_8h.html#aa5e9e28ca8461569523e2dbd90ee14b1", null ],
     [ "mx_ops", "mx_8h.html#ad9ba91c403384d3c18d57a8cabf86e26", null ],
-    [ "C_CatchupNewsgroup", "mx_8h.html#a2949a5819c0b254c751255ab7c9f02e4", null ],
     [ "C_KeepFlagged", "mx_8h.html#abcd43c6340ac73eebf1ef272a8e51224", null ],
     [ "C_MboxType", "mx_8h.html#a06da03900810e5c8f98b09dc688cff1e", null ],
     [ "C_Move", "mx_8h.html#a2515116e9ee5e578bf065702dffb6eda", null ],

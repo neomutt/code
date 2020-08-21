@@ -8,5 +8,6 @@ var helpers_8h =
     [ "cs_subset_quad", "helpers_8h.html#a9154ba713ce99b0937f475eec7c61af9", null ],
     [ "cs_subset_regex", "helpers_8h.html#ae5ccc8068dd017455c38dd01982f7908", null ],
     [ "cs_subset_slist", "helpers_8h.html#a55c39d357f3bb648c3aab7f4abdb076e", null ],
+    [ "cs_subset_sort", "helpers_8h.html#af7f3de51c3c2f5b8f527f40c8397a3fc", null ],
     [ "cs_subset_string", "helpers_8h.html#ac477c591155aa4ae0452bbabc0affffe", null ]
 ];

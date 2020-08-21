@@ -1,5 +1,6 @@
 var init_8h =
 [
+    [ "module_init_config_t", "init_8h.html#aef4d2692508aa7b2c018a2e53e177c0e", null ],
     [ "charset_validator", "init_8h.html#a2af01c740da7a35724ab4052aaf6abb8", null ],
     [ "compress_method_validator", "init_8h.html#a56ce715aca1b473d0f1bbec685b9705f", null ],
     [ "compress_level_validator", "init_8h.html#a05c677ad63d61d246ec589db50101da7", null ],

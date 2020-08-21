@@ -8,5 +8,5 @@ var config_2regex_8c =
     [ "regex_native_set", "config_2regex_8c.html#a7ecbccf08fd5cd85c8f3c734d91c853d", null ],
     [ "regex_native_get", "config_2regex_8c.html#a68c106fe1c0b3a62f63458fb45e5e9da", null ],
     [ "regex_reset", "config_2regex_8c.html#ad7344b1ac14714c2e96844a49f454e58", null ],
-    [ "regex_init", "config_2regex_8c.html#a0eac3faaf8685546c79a7e648f15b6f7", null ]
+    [ "cst_regex", "config_2regex_8c.html#ae0d01281c30e5504c744004c11690370", null ]
 ];

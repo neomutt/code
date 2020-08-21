@@ -13,5 +13,6 @@ var sidebar_2lib_8h =
     [ "sb_parse_whitelist", "sidebar_2lib_8h.html#a7d3a4db808135ebb02ebd2b5d2c5713a", null ],
     [ "sb_notify_mailbox", "sidebar_2lib_8h.html#a0c897d6503fd01c8d268702d62325a0d", null ],
     [ "sb_draw", "sidebar_2lib_8h.html#a7b6c9815953c724b2e8c67d8c22abfed", null ],
-    [ "sb_set_open_mailbox", "sidebar_2lib_8h.html#a05b7357cd8ed1f27e21587d1bb78a5c1", null ]
+    [ "sb_set_open_mailbox", "sidebar_2lib_8h.html#a05b7357cd8ed1f27e21587d1bb78a5c1", null ],
+    [ "config_init_sidebar", "sidebar_2lib_8h.html#ae7634227027409303c7d244cb68cac49", null ]
 ];

@@ -21,5 +21,5 @@ var searchData=
   ['notify_5ftype_2eh',['notify_type.h',['../notify__type_8h.html',1,'']]],
   ['notmuch_2ec',['notmuch.c',['../notmuch_8c.html',1,'']]],
   ['number_2ec',['number.c',['../config_2number_8c.html',1,'(Global Namespace)'],['../test_2config_2number_8c.html',1,'(Global Namespace)']]],
-  ['number_2eh',['number.h',['../config_2number_8h.html',1,'(Global Namespace)'],['../test_2config_2number_8h.html',1,'(Global Namespace)']]]
+  ['number_2eh',['number.h',['../number_8h.html',1,'']]]
 ];

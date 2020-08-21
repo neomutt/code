@@ -67,5 +67,6 @@ var pattern_2lib_8h =
     [ "mutt_pattern_func", "pattern_2lib_8h.html#a828247b3a5ea339163835205d56d8f52", null ],
     [ "mutt_search_command", "pattern_2lib_8h.html#a8656dd8e803a66dc4b51935a96a0f9ba", null ],
     [ "mutt_limit_current_thread", "pattern_2lib_8h.html#abde1e461fbc946bed0ce30f572fac6c8", null ],
+    [ "config_init_pattern", "pattern_2lib_8h.html#a26be0435201fcac5a63233943cab92cf", null ],
     [ "C_ThoroughSearch", "pattern_2lib_8h.html#a190716c58fa4ce0df8441cb7b688ade3", null ]
 ];

@@ -1,13 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"crypt_8h_source.html":[2,0,19,2],
-"crypt__gpgme_8c.html":[2,0,19,3],
-"crypt__gpgme_8c.html#a06057059d161b58e6b17c6b00fe54ab6":[2,0,19,3,51],
-"crypt__gpgme_8c.html#a0a360c190938728cf8cbc2ee1befa057":[2,0,19,3,34],
-"crypt__gpgme_8c.html#a0a75fedd2aff0b209ba1adf06099d8c8":[2,0,19,3,40],
-"crypt__gpgme_8c.html#a10c76f6e46d6aa56d8d61f987d3a5d32":[2,0,19,3,81],
-"crypt__gpgme_8c.html#a10e8fb8f5b9b458202bc424762ff96cd":[2,0,19,3,83],
-"crypt__gpgme_8c.html#a123a620e8b1711536a4675ff5e5dd622":[2,0,19,3,43],
 "crypt__gpgme_8c.html#a145bf0426df849dc84a86732a6f679f1":[2,0,19,3,75],
 "crypt__gpgme_8c.html#a192c41e1923f64fd284a130d27328cb2":[2,0,19,3,85],
 "crypt__gpgme_8c.html#a196790f245ce25f9335f28895b3911dd":[2,0,19,3,80],
@@ -249,5 +241,13 @@ var NAVTREEINDEX7 =
 "cryptglue_8h.html#ac9687b66aca5969d0a9ad0f5c122dbdb":[2,0,19,12,10],
 "cryptglue_8h.html#ad29ef155ee6ccc83b50614068bb5b597":[2,0,19,12,6],
 "cryptglue_8h_source.html":[2,0,19,12],
-"ctx.html":[0,5]
+"ctx.html":[0,5],
+"curs__lib_8c.html":[2,0,11,2],
+"curs__lib_8c.html#a04d8a2d2b69a39f50c87cec8452fcc47":[2,0,11,2,37],
+"curs__lib_8c.html#a0590f11f42a6242002ea4c842438231b":[2,0,11,2,9],
+"curs__lib_8c.html#a07f104cc4b27d47d46f9a83993acc5ef":[2,0,11,2,3],
+"curs__lib_8c.html#a2431bccb0ba678f3b31e015a9145f064":[2,0,11,2,41],
+"curs__lib_8c.html#a2509f872a1986db92a5a2b7d2a7e9759":[2,0,11,2,18],
+"curs__lib_8c.html#a31e6cf5a50bccf3cb75b6a7f2ecf1405":[2,0,11,2,25],
+"curs__lib_8c.html#a48a9fd66de2ef76e2b72704badd3c40b":[2,0,11,2,33]
 };

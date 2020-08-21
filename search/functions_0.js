@@ -39,7 +39,6 @@ var searchData=
   ['address_5fdup',['address_dup',['../config_2address_8c.html#ab8aaeecfcc1ee3a4fb48cbccf3cd4a34',1,'address.c']]],
   ['address_5ffree',['address_free',['../config_2address_8c.html#a43b78e7c154cec4ca2dffb8334fe4c37',1,'address_free(struct Address **addr):&#160;address.c'],['../config_2address_8h.html#a43b78e7c154cec4ca2dffb8334fe4c37',1,'address_free(struct Address **addr):&#160;address.c']]],
   ['address_5fheader_5fdecode',['address_header_decode',['../copy_8c.html#a240d006c7a7b579c5e6c82836fc7917c',1,'copy.c']]],
-  ['address_5finit',['address_init',['../config_2address_8c.html#ac3f6d995646320966d761937f5a6db14',1,'address_init(struct ConfigSet *cs):&#160;address.c'],['../config_2address_8h.html#ac3f6d995646320966d761937f5a6db14',1,'address_init(struct ConfigSet *cs):&#160;address.c']]],
   ['address_5fnative_5fget',['address_native_get',['../config_2address_8c.html#a8008133974fe559ede7da70d359f5418',1,'address.c']]],
   ['address_5fnative_5fset',['address_native_set',['../config_2address_8c.html#ae93647fb497ccd3fbe0e2fd2cb834224',1,'address.c']]],
   ['address_5fnew',['address_new',['../config_2address_8c.html#ae65da9a6a2378923a758a3d116354777',1,'address_new(const char *addr):&#160;address.c'],['../config_2address_8h.html#ae65da9a6a2378923a758a3d116354777',1,'address_new(const char *addr):&#160;address.c']]],

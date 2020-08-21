@@ -7,7 +7,6 @@ var searchData=
   ['bcache_5fpath',['bcache_path',['../bcache_8c.html#a5a6da9a92e635c11bf3af21611c6ea5f',1,'bcache.c']]],
   ['body_5fto_5fdata_5fobject',['body_to_data_object',['../crypt__gpgme_8c.html#a5f88576e041b52a5e0196a77d808ad74',1,'crypt_gpgme.c']]],
   ['bool_5fhe_5ftoggle',['bool_he_toggle',['../config_2bool_8c.html#ab5dff16050811e0eb5537725169fb0f4',1,'bool_he_toggle(struct ConfigSubset *sub, struct HashElem *he, struct Buffer *err):&#160;bool.c'],['../config_2bool_8h.html#ab5dff16050811e0eb5537725169fb0f4',1,'bool_he_toggle(struct ConfigSubset *sub, struct HashElem *he, struct Buffer *err):&#160;bool.c']]],
-  ['bool_5finit',['bool_init',['../config_2bool_8c.html#a95a976b51db5924fb9614cc41d4fed70',1,'bool_init(struct ConfigSet *cs):&#160;bool.c'],['../config_2bool_8h.html#a95a976b51db5924fb9614cc41d4fed70',1,'bool_init(struct ConfigSet *cs):&#160;bool.c']]],
   ['bool_5fnative_5fget',['bool_native_get',['../config_2bool_8c.html#add3e84a22709e9a0711b174a2d8201e8',1,'bool.c']]],
   ['bool_5fnative_5fset',['bool_native_set',['../config_2bool_8c.html#a8c62e12d9f8415ec172ca96cdf8d83f1',1,'bool.c']]],
   ['bool_5freset',['bool_reset',['../config_2bool_8c.html#ad3c45cb204d1372625fa72c9f00fa2db',1,'bool.c']]],

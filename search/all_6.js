@@ -92,7 +92,6 @@ var searchData=
   ['entrymax',['entrymax',['../structBrowserState.html#a077031d56ee107eba75d0e1f5e957c29',1,'BrowserState']]],
   ['enum_2ec',['enum.c',['../config_2enum_8c.html',1,'(Global Namespace)'],['../test_2config_2enum_8c.html',1,'(Global Namespace)']]],
   ['enum_2eh',['enum.h',['../config_2enum_8h.html',1,'(Global Namespace)'],['../test_2config_2enum_8h.html',1,'(Global Namespace)']]],
-  ['enum_5finit',['enum_init',['../config_2enum_8c.html#a59acd3a17714200bd39fcb6db5501d6d',1,'enum_init(struct ConfigSet *cs):&#160;enum.c'],['../config_2enum_8h.html#a59acd3a17714200bd39fcb6db5501d6d',1,'enum_init(struct ConfigSet *cs):&#160;enum.c']]],
   ['enum_5fnative_5fget',['enum_native_get',['../config_2enum_8c.html#a5e4bce191d544a8b0ce3c3df5a4d434f',1,'enum.c']]],
   ['enum_5fnative_5fset',['enum_native_set',['../config_2enum_8c.html#a01cbc276c2c7236cdcc4c12c7a6dd299',1,'enum.c']]],
   ['enum_5freset',['enum_reset',['../config_2enum_8c.html#a29d0fea6326c950f32712265a9dd68dd',1,'enum.c']]],

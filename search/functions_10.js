@@ -4,7 +4,6 @@ var searchData=
   ['qp_5fdecode_5fline',['qp_decode_line',['../handler_8c.html#ad9dfa15d279adb0b36f48b69960b73f0',1,'handler.c']]],
   ['qp_5fdecode_5ftriple',['qp_decode_triple',['../handler_8c.html#af95ca3b052e2bba361d247bcf658f58b',1,'handler.c']]],
   ['quad_5fhe_5ftoggle',['quad_he_toggle',['../config_2quad_8c.html#a0941549e62011d068a3b9ea78ac61ab1',1,'quad_he_toggle(struct ConfigSubset *sub, struct HashElem *he, struct Buffer *err):&#160;quad.c'],['../config_2quad_8h.html#a0941549e62011d068a3b9ea78ac61ab1',1,'quad_he_toggle(struct ConfigSubset *sub, struct HashElem *he, struct Buffer *err):&#160;quad.c']]],
-  ['quad_5finit',['quad_init',['../config_2quad_8c.html#ade096ee3fb64386af67bd4b664066506',1,'quad_init(struct ConfigSet *cs):&#160;quad.c'],['../config_2quad_8h.html#ade096ee3fb64386af67bd4b664066506',1,'quad_init(struct ConfigSet *cs):&#160;quad.c']]],
   ['quad_5fnative_5fget',['quad_native_get',['../config_2quad_8c.html#a6d66064192ce84f02aedd76fdcbeaf22',1,'quad.c']]],
   ['quad_5fnative_5fset',['quad_native_set',['../config_2quad_8c.html#aaaeca6a9d90ddda8278427e87b53beb8',1,'quad.c']]],
   ['quad_5freset',['quad_reset',['../config_2quad_8c.html#a2a994f2c2d681cbbea8bdc2af86696cc',1,'quad.c']]],

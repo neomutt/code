@@ -15,6 +15,7 @@ var imap_2lib_8h =
     [ "imap_browse", "imap_2lib_8h.html#a3148406431ca84d8cfaae786e47c5c8d", null ],
     [ "imap_mailbox_create", "imap_2lib_8h.html#ad29c8310856c366b81a118ff231ed35c", null ],
     [ "imap_mailbox_rename", "imap_2lib_8h.html#ae031b576b34ef1f6cb04aeaaab1c4bb7", null ],
+    [ "config_init_imap", "imap_2lib_8h.html#ac90197978126f55f7573ba629cd31a27", null ],
     [ "imap_copy_messages", "imap_2lib_8h.html#aa9385a09428c5a64e66e588255370360", null ],
     [ "imap_logout_all", "imap_2lib_8h.html#ace40ffc72b9f8ed5f315ea2825472773", null ],
     [ "imap_expand_path", "imap_2lib_8h.html#ab2645aa08902090e5e29dff471d1bb0e", null ],

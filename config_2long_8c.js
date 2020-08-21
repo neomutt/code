@@ -7,5 +7,5 @@ var config_2long_8c =
     [ "long_string_plus_equals", "config_2long_8c.html#ac0aa604c89779d8594360606b06e10aa", null ],
     [ "long_string_minus_equals", "config_2long_8c.html#a1c9c9d14e91536d29b5c4f583337dcbc", null ],
     [ "long_reset", "config_2long_8c.html#a6b9f210c80578e3a6470dcc9668d7c13", null ],
-    [ "long_init", "config_2long_8c.html#a214c571bcb1b6322e21f0a34fa55e742", null ]
+    [ "cst_long", "config_2long_8c.html#a6e4d350227b49ddb4f5127e55745d878", null ]
 ];

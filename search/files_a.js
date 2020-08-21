@@ -23,6 +23,6 @@ var searchData=
   ['logging_2ec',['logging.c',['../logging_8c.html',1,'']]],
   ['logging_2eh',['logging.h',['../logging_8h.html',1,'']]],
   ['long_2ec',['long.c',['../config_2long_8c.html',1,'(Global Namespace)'],['../test_2config_2long_8c.html',1,'(Global Namespace)']]],
-  ['long_2eh',['long.h',['../config_2long_8h.html',1,'(Global Namespace)'],['../test_2config_2long_8h.html',1,'(Global Namespace)']]],
+  ['long_2eh',['long.h',['../long_8h.html',1,'']]],
   ['lz4_2ec',['lz4.c',['../compress_2lz4_8c.html',1,'(Global Namespace)'],['../test_2compress_2lz4_8c.html',1,'(Global Namespace)']]]
 ];

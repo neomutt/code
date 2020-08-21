@@ -32,7 +32,6 @@ var searchData=
   ['log_5fqueue_5fsave',['log_queue_save',['../logging_8c.html#acad0c0b307a231e25494dc8cfa0f2f37',1,'log_queue_save(FILE *fp):&#160;logging.c'],['../logging_8h.html#acad0c0b307a231e25494dc8cfa0f2f37',1,'log_queue_save(FILE *fp):&#160;logging.c']]],
   ['log_5fqueue_5fset_5fmax_5fsize',['log_queue_set_max_size',['../logging_8c.html#a22363e7b791fe93f8c17977850c5dfec',1,'log_queue_set_max_size(int size):&#160;logging.c'],['../logging_8h.html#a22363e7b791fe93f8c17977850c5dfec',1,'log_queue_set_max_size(int size):&#160;logging.c']]],
   ['log_5ftranslation',['log_translation',['../main_8c.html#a41a06145ff14e9670f59c948c1628a88',1,'main.c']]],
-  ['long_5finit',['long_init',['../config_2long_8c.html#a214c571bcb1b6322e21f0a34fa55e742',1,'long_init(struct ConfigSet *cs):&#160;long.c'],['../config_2long_8h.html#a214c571bcb1b6322e21f0a34fa55e742',1,'long_init(struct ConfigSet *cs):&#160;long.c']]],
   ['long_5fnative_5fget',['long_native_get',['../config_2long_8c.html#acd4f3cdb0dd12722312f77ac4795fc9a',1,'long.c']]],
   ['long_5fnative_5fset',['long_native_set',['../config_2long_8c.html#a092950b386f831d0e8c0f80614093bea',1,'long.c']]],
   ['long_5freset',['long_reset',['../config_2long_8c.html#a6b9f210c80578e3a6470dcc9668d7c13',1,'long.c']]],

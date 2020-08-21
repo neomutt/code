@@ -7,6 +7,6 @@ var config_2path_8c =
     [ "path_native_set", "config_2path_8c.html#a39dfd45cca0f625fe08094455ca50796", null ],
     [ "path_native_get", "config_2path_8c.html#a048ef6b4f565e17041f9e897c9d52744", null ],
     [ "path_reset", "config_2path_8c.html#aaf98b11e7e07a0b7e8cb6f97679cb6de", null ],
-    [ "path_init", "config_2path_8c.html#a88200a97cb95b0daba50e04f318a5f03", null ],
-    [ "HomeDir", "config_2path_8c.html#a6f7b1cf93328b961c3e3a64f300d75b0", null ]
+    [ "HomeDir", "config_2path_8c.html#a6f7b1cf93328b961c3e3a64f300d75b0", null ],
+    [ "cst_path", "config_2path_8c.html#a11bc77a62a23ae07f6cfadfb1f6fe87b", null ]
 ];

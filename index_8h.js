@@ -12,7 +12,6 @@ var index_8h =
     [ "C_ChangeFolderNext", "index_8h.html#a2a475a56c0662d019f9fea316a7aeb37", null ],
     [ "C_CollapseAll", "index_8h.html#a0f36e86c8807a4b16579118134e178f5", null ],
     [ "C_MarkMacroPrefix", "index_8h.html#abf885ebab2e2cc079dce819dbbdd37aa", null ],
-    [ "C_PgpAutoDecode", "index_8h.html#a3e8d20b3fd15245e1c9dbd8086e0df91", null ],
     [ "C_UncollapseJump", "index_8h.html#ab7248a200f0edc68e797f1cb49cf5c55", null ],
     [ "C_UncollapseNew", "index_8h.html#a08eed13b52a7215baf26da80bb6ca870", null ]
 ];

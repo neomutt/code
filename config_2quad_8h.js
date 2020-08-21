@@ -7,7 +7,6 @@ var config_2quad_8h =
       [ "MUTT_ASKNO", "config_2quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbaaf90604c0e1430d5002944c93ac46952", null ],
       [ "MUTT_ASKYES", "config_2quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbae15a0a03ca0d129a7ff4530a73fea140", null ]
     ] ],
-    [ "quad_init", "config_2quad_8h.html#ade096ee3fb64386af67bd4b664066506", null ],
     [ "quad_he_toggle", "config_2quad_8h.html#a0941549e62011d068a3b9ea78ac61ab1", null ],
     [ "quad_str_toggle", "config_2quad_8h.html#a9ef7c77683761ac4625463fb19ce2657", null ],
     [ "QuadValues", "config_2quad_8h.html#aa543c1d754d2ee8c48add8911f801f43", null ]

@@ -76,7 +76,6 @@ var searchData=
   ['parse_5funsubscribe_5ffrom',['parse_unsubscribe_from',['../command__parse_8c.html#a4de6648a96f0b42657a3b5bb3eccfa22',1,'parse_unsubscribe_from(struct Buffer *buf, struct Buffer *s, intptr_t data, struct Buffer *err):&#160;command_parse.c'],['../command__parse_8h.html#a4de6648a96f0b42657a3b5bb3eccfa22',1,'parse_unsubscribe_from(struct Buffer *buf, struct Buffer *s, intptr_t data, struct Buffer *err):&#160;command_parse.c']]],
   ['parsekeys',['parsekeys',['../keymap_8c.html#abc1788f3cbc36acfbd5781ca5f0ca0ba',1,'keymap.c']]],
   ['path_5fdestroy',['path_destroy',['../config_2path_8c.html#a550f8f42ea47fdc252201cdd189674b6',1,'path.c']]],
-  ['path_5finit',['path_init',['../config_2path_8c.html#a88200a97cb95b0daba50e04f318a5f03',1,'path_init(struct ConfigSet *cs):&#160;path.c'],['../config_2path_8h.html#a88200a97cb95b0daba50e04f318a5f03',1,'path_init(struct ConfigSet *cs):&#160;path.c']]],
   ['path_5fnative_5fget',['path_native_get',['../config_2path_8c.html#a048ef6b4f565e17041f9e897c9d52744',1,'path.c']]],
   ['path_5fnative_5fset',['path_native_set',['../config_2path_8c.html#a39dfd45cca0f625fe08094455ca50796',1,'path.c']]],
   ['path_5freset',['path_reset',['../config_2path_8c.html#aaf98b11e7e07a0b7e8cb6f97679cb6de',1,'path.c']]],

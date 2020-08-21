@@ -44,7 +44,6 @@ var maildir_2private_8h =
     [ "mh_rewrite_message", "maildir_2private_8h.html#ab449581b7e9a8cbdca031bb0d80573d2", null ],
     [ "C_CheckNew", "maildir_2private_8h.html#a6e754995cd546bf22a71dadd16e7a712", null ],
     [ "C_MaildirCheckCur", "maildir_2private_8h.html#af53a1ab2756b3d822c7c393245f8c091", null ],
-    [ "C_MaildirTrash", "maildir_2private_8h.html#a0d0cecbc72552d9702502c21b938d581", null ],
     [ "C_MhPurge", "maildir_2private_8h.html#a68464b6b5de28c1a777d2a9a0bc62ea4", null ],
     [ "C_MhSeqFlagged", "maildir_2private_8h.html#ab62dd5432f9e147b7fc51279687ebca1", null ],
     [ "C_MhSeqReplied", "maildir_2private_8h.html#a6655a4f9b4e80ed763a14949bcd896d8", null ],

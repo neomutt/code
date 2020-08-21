@@ -44,6 +44,5 @@ var pattern_2private_8h =
     [ "range_regexes", "pattern_2private_8h.html#ae874bbe6a505a361ef27925d0e6e8f24", null ],
     [ "Flags", "pattern_2private_8h.html#a669a98acfe6bfc0997fc263c94eab77b", null ],
     [ "C_ExternalSearchCommand", "pattern_2private_8h.html#a8d02ddf1e8a9d04f2172362cb89924ae", null ],
-    [ "C_PatternFormat", "pattern_2private_8h.html#a65d455ca8775b9314f04881454be60b4", null ],
-    [ "C_ThoroughSearch", "pattern_2private_8h.html#a190716c58fa4ce0df8441cb7b688ade3", null ]
+    [ "C_PatternFormat", "pattern_2private_8h.html#a65d455ca8775b9314f04881454be60b4", null ]
 ];

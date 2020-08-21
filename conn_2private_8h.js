@@ -13,9 +13,7 @@ var conn_2private_8h =
     [ "C_SslCaCertificatesFile", "conn_2private_8h.html#af3a80333a010f437cf0e1eefa17b2b4f", null ],
     [ "C_SslCiphers", "conn_2private_8h.html#af9b9801e20e5dd39fae418cf1c97cef5", null ],
     [ "C_SslClientCert", "conn_2private_8h.html#ab482bb61885660cc520c19516bc8da7e", null ],
-    [ "C_SslForceTls", "conn_2private_8h.html#a840c1a3289f36d8ca32d52af6355118d", null ],
     [ "C_SslMinDhPrimeBits", "conn_2private_8h.html#af928f8e80dfafcdf13fc0f4ae049cc6d", null ],
-    [ "C_SslStarttls", "conn_2private_8h.html#a52fef5ef021b66d834624e94b64b2f3d", null ],
     [ "C_SslUseSslv2", "conn_2private_8h.html#a9be7ce448971eca7a2f66562c5cb099c", null ],
     [ "C_SslUseSslv3", "conn_2private_8h.html#a05e191a3c0c775d374128429c0274550", null ],
     [ "C_SslUseTlsv11", "conn_2private_8h.html#a4994dfe839e84c75d76f687306da2aee", null ],
@@ -26,7 +24,6 @@ var conn_2private_8h =
     [ "C_SslVerifyDates", "conn_2private_8h.html#a9a013e08303a9368291a499a45da0819", null ],
     [ "C_SslVerifyHost", "conn_2private_8h.html#a2f9a2fb1935960af6e2c9b0361d633e4", null ],
     [ "C_SslVerifyPartialChains", "conn_2private_8h.html#a3a2450dba008d1337e88555620d91506", null ],
-    [ "C_Tunnel", "conn_2private_8h.html#a4ed5ec70cc4de3566816fa576aad40f4", null ],
     [ "C_TunnelIsSecure", "conn_2private_8h.html#aaa9976b026f83b91e0a6bb676dff2b5d", null ],
     [ "C_UseIpv6", "conn_2private_8h.html#a6a67379aef4d9f098c348f77ebfabea6", null ]
 ];

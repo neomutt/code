@@ -28,6 +28,7 @@ var nntp_2lib_8h =
     [ "nntp_path_probe", "nntp_2lib_8h.html#a0af5851670960cce257a6e5f9f9805ff", null ],
     [ "group_index_format_str", "nntp_2lib_8h.html#a23b0e33bd83d40e2e27d61c38c9fea39", null ],
     [ "nntp_complete", "nntp_2lib_8h.html#a052dfa40f5ab0fb5debbeaf06b628ae9", null ],
+    [ "config_init_nntp", "nntp_2lib_8h.html#a3422a322507be19c2a8a56a984b4caa5", null ],
     [ "C_CatchupNewsgroup", "nntp_2lib_8h.html#a2949a5819c0b254c751255ab7c9f02e4", null ],
     [ "C_FollowupToPoster", "nntp_2lib_8h.html#add99183e6f43e5abb0a033c63216a18a", null ],
     [ "C_GroupIndexFormat", "nntp_2lib_8h.html#aae474a51d5657b37cb9f3d0a14738034", null ],

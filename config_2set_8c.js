@@ -8,7 +8,7 @@ var config_2set_8c =
     [ "cs_get_base", "config_2set_8c.html#abc8977c3a4db023bfd5f5e8e93bd4cf9", null ],
     [ "cs_get_elem", "config_2set_8c.html#a6a48e8c12db6f64a6da6b219c3d987d9", null ],
     [ "cs_get_type_def", "config_2set_8c.html#a74b013e244b5a66aec376873a2c90194", null ],
-    [ "cs_register_type", "config_2set_8c.html#aad52d5fdffe84c6231aa06d541073a38", null ],
+    [ "cs_register_type", "config_2set_8c.html#adf0f17032f910c4234f6942e8329fbeb", null ],
     [ "cs_register_variables", "config_2set_8c.html#a9eb26df09d01dd6e0c47ceb1e44a740e", null ],
     [ "cs_inherit_variable", "config_2set_8c.html#a02909ed6e22b4c2c4cb5e588bec0941e", null ],
     [ "cs_uninherit_variable", "config_2set_8c.html#afc62808c51333fd2e3acb261a917b65c", null ],

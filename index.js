@@ -14,7 +14,7 @@ var index =
     [ "Definitions of user functions", "functions.html", null ],
     [ "Decide how to display email content", "handler.html", null ],
     [ "String processing routines to generate the mail index", "hdrline.html", null ],
-    [ "Generate the help-line and help-page and GUI display them", "help.html", null ],
+    [ "Generate the help-page and GUI display them", "help.html", null ],
     [ "Parse and execute user-defined hooks", "hook.html", null ],
     [ "Information commands", "icommands.html", null ],
     [ "GUI manage the main index (list of emails)", "index2.html", null ],

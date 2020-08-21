@@ -7,5 +7,5 @@ var config_2number_8c =
     [ "number_string_plus_equals", "config_2number_8c.html#a8d660979e628a6028b06e1fc7658f6dc", null ],
     [ "number_string_minus_equals", "config_2number_8c.html#a118b3ceca4da77fc7d33f6babc654969", null ],
     [ "number_reset", "config_2number_8c.html#a480e656188e4fdbae90a1aca70d2540c", null ],
-    [ "number_init", "config_2number_8c.html#a7f72ea5a6dcb2232432e67245ac099f6", null ]
+    [ "cst_number", "config_2number_8c.html#a6f9354c09d811ee2c211381c156f576a", null ]
 ];

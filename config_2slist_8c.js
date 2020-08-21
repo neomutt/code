@@ -6,5 +6,5 @@ var config_2slist_8c =
     [ "slist_native_set", "config_2slist_8c.html#a055775a6492a473ed984369f01e0eaea", null ],
     [ "slist_native_get", "config_2slist_8c.html#aa60cb81318682f31aef178530cc10712", null ],
     [ "slist_reset", "config_2slist_8c.html#afe767f31832058e2be31c95972e1b254", null ],
-    [ "slist_init", "config_2slist_8c.html#ac66a3c33e0d20b9bdfc1dc62dbd02c93", null ]
+    [ "cst_slist", "config_2slist_8c.html#af50c49b77fc7ebfc15a36a2c8dc5c814", null ]
 ];

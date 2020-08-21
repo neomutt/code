@@ -24,7 +24,6 @@ var searchData=
   ['reg_5fone_5fvar',['reg_one_var',['../config_2set_8c.html#a12b0e4cd101b1dd514242c109d324e19',1,'set.c']]],
   ['regex_5fdestroy',['regex_destroy',['../config_2regex_8c.html#a51745ca37912561b82be4b0560686d6c',1,'regex.c']]],
   ['regex_5ffree',['regex_free',['../config_2regex_8c.html#a9cda05f6cfcbbce2a2f73a6cbc606466',1,'regex_free(struct Regex **r):&#160;regex.c'],['../regex2_8h.html#aff2fb0be83daa0d421af71fe4a7af233',1,'regex_free(struct Regex **regex):&#160;regex.c']]],
-  ['regex_5finit',['regex_init',['../config_2regex_8c.html#a0eac3faaf8685546c79a7e648f15b6f7',1,'regex_init(struct ConfigSet *cs):&#160;regex.c'],['../regex2_8h.html#a0eac3faaf8685546c79a7e648f15b6f7',1,'regex_init(struct ConfigSet *cs):&#160;regex.c']]],
   ['regex_5fnative_5fget',['regex_native_get',['../config_2regex_8c.html#a68c106fe1c0b3a62f63458fb45e5e9da',1,'regex.c']]],
   ['regex_5fnative_5fset',['regex_native_set',['../config_2regex_8c.html#a7ecbccf08fd5cd85c8f3c734d91c853d',1,'regex.c']]],
   ['regex_5fnew',['regex_new',['../config_2regex_8c.html#adc80368774feb74430c17707477aae78',1,'regex_new(const char *str, int flags, struct Buffer *err):&#160;regex.c'],['../regex2_8h.html#adc80368774feb74430c17707477aae78',1,'regex_new(const char *str, int flags, struct Buffer *err):&#160;regex.c']]],

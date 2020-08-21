@@ -116,7 +116,7 @@ var searchData=
   ['gui_2eh',['gui.h',['../gui_8h.html',1,'']]],
   ['gui_20miscellaneous_20curses_20_28window_20drawing_29_20routines',['GUI miscellaneous curses (window drawing) routines',['../gui_curs_lib.html',1,'gui']]],
   ['gv_5fhide_5fcontext_5fcontents',['GV_HIDE_CONTEXT_CONTENTS',['../graphviz_8c.html#a65bd7454dece048c8424af2b630c9e2b',1,'graphviz.c']]],
-  ['generate_20the_20help_2dline_20and_20help_2dpage_20and_20gui_20display_20them',['Generate the help-line and help-page and GUI display them',['../help.html',1,'index']]],
+  ['generate_20the_20help_2dpage_20and_20gui_20display_20them',['Generate the help-page and GUI display them',['../help.html',1,'index']]],
   ['gui_20manage_20the_20main_20index_20_28list_20of_20emails_29',['GUI manage the main index (list of emails)',['../index2.html',1,'index']]],
   ['gui_20present_20the_20user_20with_20a_20selectable_20list',['GUI present the user with a selectable list',['../menu.html',1,'index']]],
   ['gui_20display_20a_20file_2femail_2fhelp_20in_20a_20viewport_20with_20paging',['GUI display a file/email/help in a viewport with paging',['../pager.html',1,'index']]],

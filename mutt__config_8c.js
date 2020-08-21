@@ -1,8 +1,11 @@
 var mutt__config_8c =
 [
     [ "ISPELL", "mutt__config_8c.html#aa4edd692877f894c7864779c8cdf767b", null ],
-    [ "CONFIG_INIT", "mutt__config_8c.html#a292fd26ad2ad61abb2732225e3f86f3e", null ],
-    [ "config_init_main", "mutt__config_8c.html#abc8e3bba4436fbcb1f47d0a04728f974", null ],
+    [ "CONFIG_INIT_TYPE", "mutt__config_8c.html#a46304032f260bb0781771795493e2f36", null ],
+    [ "CONFIG_INIT_VARS", "mutt__config_8c.html#a0eff39991a042bad67ff8f98c557e9d5", null ],
+    [ "config_init_main", "mutt__config_8c.html#ae972c9a26f29237eb516232b4a679a72", null ],
+    [ "init_types", "mutt__config_8c.html#a13cc00c229c3f0f0f30bb815e6ad730e", null ],
+    [ "init_variables", "mutt__config_8c.html#a9d070cc074d60b1a01a1f0f7bcb4d8ec", null ],
     [ "init_config", "mutt__config_8c.html#a010347bb26a5857fdac5430b85cfaab0", null ],
     [ "C_Escape", "mutt__config_8c.html#a99abdd736047e611da8a08f43e46e0ad", null ],
     [ "C_IgnoreLinearWhiteSpace", "mutt__config_8c.html#aed5db0cae87d60555ec8100feff6c154", null ],

@@ -1,5 +1,6 @@
 var structConfigSetType =
 [
+    [ "type", "structConfigSetType.html#a4bdee7778a8c43243d6f6002c1fee45f", null ],
     [ "name", "structConfigSetType.html#af600e498c50ed017bf0950a737af8d95", null ],
     [ "string_set", "structConfigSetType.html#aaab5c1abc281e7f906cccb7bf64d2554", null ],
     [ "string_get", "structConfigSetType.html#a4459745b328d5ff773741a53fccd5fc7", null ],
