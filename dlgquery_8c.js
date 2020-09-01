@@ -9,7 +9,5 @@ var dlgquery_8c =
     [ "dlg_select_query", "dlgquery_8c.html#a39df596d6572c965ad34bc62f4108d7b", null ],
     [ "query_complete", "dlgquery_8c.html#a20b5ce2715c14dede64ce7d81ffc4576", null ],
     [ "query_index", "dlgquery_8c.html#af0088d47def0b7ffbadcf4f635cfc904", null ],
-    [ "C_QueryCommand", "dlgquery_8c.html#aaf7c36122b4b95f7e0e75085e10ababd", null ],
-    [ "C_QueryFormat", "dlgquery_8c.html#a8c83e42fc8aaa7a2538423856f0602dc", null ],
     [ "QueryHelp", "dlgquery_8c.html#a12d28b03eb265706a3c03ee5ff42c82d", null ]
 ];

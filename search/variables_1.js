@@ -26,6 +26,7 @@ var searchData=
   ['alias',['alias',['../structEventAlias.html#a41feecc7a71d20e0a724b41ca52afb09',1,'EventAlias::alias()'],['../structAliasView.html#a0db3775dbf901fbd380681d2e806f601',1,'AliasView::alias()']]],
   ['aliases',['Aliases',['../alias_8c.html#a0831e7ca6080141051db5bde20cb45f7',1,'Aliases():&#160;alias.c'],['../alias_8h.html#a0831e7ca6080141051db5bde20cb45f7',1,'Aliases():&#160;alias.c']]],
   ['aliashelp',['AliasHelp',['../dlgalias_8c.html#a6d6625451ce0a0f293940778308c631d',1,'dlgalias.c']]],
+  ['aliasvars',['AliasVars',['../alias_2config_8c.html#afdb0e9d9303634ffd195c833daa8ab66',1,'config.c']]],
   ['all_5faddr',['all_addr',['../structPattern.html#a0e935f32aa9d8779c5578494f0e55805',1,'Pattern']]],
   ['alldialogswindow',['AllDialogsWindow',['../mutt__window_8c.html#aa379408e2d835c200c803b4d0f33b2d6',1,'AllDialogsWindow():&#160;mutt_window.c'],['../mutt__window_8h.html#aa379408e2d835c200c803b4d0f33b2d6',1,'AllDialogsWindow():&#160;mutt_window.c']]],
   ['allow_5fdups',['allow_dups',['../structHashTable.html#a83fb62bf52752ed76713079dd42fe5a2',1,'HashTable']]],
@@ -68,6 +69,5 @@ var searchData=
   ['autocryptvars',['AutocryptVars',['../autocrypt_2config_8c.html#acee37b1f22382a6ba6c4a35e016549d9',1,'config.c']]],
   ['autosubscribecache',['AutoSubscribeCache',['../globals_8c.html#a1de2e72a5a98bba257a6797327bd955d',1,'AutoSubscribeCache():&#160;globals.c'],['../globals_8h.html#a1de2e72a5a98bba257a6797327bd955d',1,'AutoSubscribeCache():&#160;globals.c']]],
   ['auxsort',['AuxSort',['../sort_8c.html#acf9001119e295f90b204c11c7137e4e9',1,'sort.c']]],
-  ['av',['av',['../structAliasMenuData.html#a4da8850cd0d99dafa4b145d0dfbbc160',1,'AliasMenuData']]],
   ['available',['available',['../structConnection.html#aa3ca1bfc7dba70f1eaf391eee9701330',1,'Connection']]]
 ];

@@ -9,7 +9,6 @@ var searchData=
   ['generic_5ftokenize_5fpush_5fstring',['generic_tokenize_push_string',['../keymap_8c.html#a56d5f105e35042e9701cc672eabd0f6c',1,'keymap.c']]],
   ['get_5fcandidates',['get_candidates',['../crypt__gpgme_8c.html#aef0516e3d7f7c2d43567034cb67c8e71',1,'crypt_gpgme.c']]],
   ['get_5fcharset',['get_charset',['../rfc2231_8c.html#adff03833afc464d04a290f5faed3bc5c',1,'rfc2231.c']]],
-  ['get_5fcolor',['get_color',['../menu_8c.html#a950cc3355862be82cbe07d94f6207fc5',1,'menu.c']]],
   ['get_5fconfig_5ftype',['get_config_type',['../debug_2notify_8c.html#a6ce9aff1b061b2403778e0ec4c31bed1',1,'notify.c']]],
   ['get_5fcontent_5fdisposition',['get_content_disposition',['../graphviz_8c.html#a09e6285015a687d79db8a2c159c36d0f',1,'get_content_disposition(enum ContentDisposition disp):&#160;graphviz.c'],['../debug_2lib_8h.html#a09e6285015a687d79db8a2c159c36d0f',1,'get_content_disposition(enum ContentDisposition disp):&#160;graphviz.c']]],
   ['get_5fcontent_5fencoding',['get_content_encoding',['../graphviz_8c.html#a357a369eb41a21a50cc1dc8ec21e06e8',1,'get_content_encoding(enum ContentEncoding enc):&#160;graphviz.c'],['../debug_2lib_8h.html#a357a369eb41a21a50cc1dc8ec21e06e8',1,'get_content_encoding(enum ContentEncoding enc):&#160;graphviz.c']]],
@@ -60,5 +59,6 @@ var searchData=
   ['group_5fadd_5fregex',['group_add_regex',['../group_8c.html#a3dec0dc31400b69197ffd45839e4b0df',1,'group.c']]],
   ['group_5findex_5fformat_5fstr',['group_index_format_str',['../nntp_2browse_8c.html#a23b0e33bd83d40e2e27d61c38c9fea39',1,'group_index_format_str(char *buf, size_t buflen, size_t col, int cols, char op, const char *src, const char *prec, const char *if_str, const char *else_str, intptr_t data, MuttFormatFlags flags):&#160;browse.c'],['../nntp_2lib_8h.html#a23b0e33bd83d40e2e27d61c38c9fea39',1,'group_index_format_str(char *buf, size_t buflen, size_t col, int cols, char op, const char *src, const char *prec, const char *if_str, const char *else_str, intptr_t data, MuttFormatFlags flags):&#160;browse.c']]],
   ['group_5fremove',['group_remove',['../group_8c.html#a3ad7cc65031fa1174d8fddb060095661',1,'group.c']]],
-  ['group_5fremove_5fregex',['group_remove_regex',['../group_8c.html#a9ce5c79bfae1e6c071f44f4770177fad',1,'group.c']]]
+  ['group_5fremove_5fregex',['group_remove_regex',['../group_8c.html#a9ce5c79bfae1e6c071f44f4770177fad',1,'group.c']]],
+  ['gt',['gt',['../mutt__array__api_8c.html#a48c3fb00e3bead64f2c0876d07975543',1,'mutt_array_api.c']]]
 ];

@@ -14,6 +14,7 @@ var searchData=
   ['hdr_5fcc',['HDR_CC',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefa5d6974e738d6caaa531c2f71bcf91818',1,'compose.c']]],
   ['hdr_5fcrypt',['HDR_CRYPT',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefa523859c2fa6df34616951b86d1a5b799',1,'compose.c']]],
   ['hdr_5fcryptinfo',['HDR_CRYPTINFO',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefae14d5f70a401bba6b13710ba5770a747',1,'compose.c']]],
+  ['hdr_5fcustom_5fheaders',['HDR_CUSTOM_HEADERS',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefa88ca78afc66383536a30e479eff87184',1,'compose.c']]],
   ['hdr_5ffcc',['HDR_FCC',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefa39910162978e49562d0647a81fbb1e3d',1,'compose.c']]],
   ['hdr_5ffollowupto',['HDR_FOLLOWUPTO',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefa899d1ee4207e6c72ffb51a80dfd2096d',1,'compose.c']]],
   ['hdr_5ffrom',['HDR_FROM',['../compose_8c.html#adaffad40d353965ad6b52804bc72afefae991ac64da53a06212cdfe54d66a43bf',1,'compose.c']]],

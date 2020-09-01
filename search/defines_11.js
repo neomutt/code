@@ -35,7 +35,6 @@ var searchData=
   ['redraw_5fmotion',['REDRAW_MOTION',['../mutt__menu_8h.html#a2cbe5a56bfd89f5bc04d61a756b2d053',1,'mutt_menu.h']]],
   ['redraw_5fmotion_5fresync',['REDRAW_MOTION_RESYNC',['../mutt__menu_8h.html#a3540f3fb484029dfd504f2fe7f216c44',1,'mutt_menu.h']]],
   ['redraw_5fno_5fflags',['REDRAW_NO_FLAGS',['../mutt__menu_8h.html#a1f96f27f798ffa90d7b8a37c5f5d963a',1,'mutt_menu.h']]],
-  ['redraw_5fsidebar',['REDRAW_SIDEBAR',['../mutt__menu_8h.html#a19f2512a50f5009e6d2980855d2d2284',1,'mutt_menu.h']]],
   ['redraw_5fstatus',['REDRAW_STATUS',['../mutt__menu_8h.html#a8a2fa08531cc0e55b095c555a79eadaa',1,'mutt_menu.h']]],
   ['reg_5fcomp',['REG_COMP',['../mutt_2regex3_8h.html#a349838a3143be1dd9b0500bfbe54d48f',1,'regex3.h']]],
   ['reg_5fwords',['REG_WORDS',['../mutt_2regex3_8h.html#acbf0cd6774750d7f48bd8a5dd466d1fa',1,'regex3.h']]],

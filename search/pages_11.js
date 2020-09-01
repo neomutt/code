@@ -28,6 +28,7 @@ var searchData=
   ['sidebar_20commands',['Sidebar commands',['../sidebar_commands.html',1,'sidebar']]],
   ['sidebar_20functions',['Sidebar functions',['../sidebar_functions.html',1,'sidebar']]],
   ['sidebar_20observers',['Sidebar observers',['../sidebar_observers.html',1,'sidebar']]],
+  ['sidebar_20sort_20functions',['Sidebar sort functions',['../sidebar_sort.html',1,'']]],
   ['sidebar_20window_20data',['Sidebar Window data',['../sidebar_wdata.html',1,'sidebar']]],
   ['signal_20handling',['Signal handling',['../signal.html',1,'mutt']]],
   ['store_3a_20key_20value_20store',['STORE: Key value store',['../store.html',1,'']]],

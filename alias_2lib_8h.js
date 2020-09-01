@@ -14,6 +14,8 @@ var alias_2lib_8h =
     [ "query_complete", "alias_2lib_8h.html#a20b5ce2715c14dede64ce7d81ffc4576", null ],
     [ "query_index", "alias_2lib_8h.html#af0088d47def0b7ffbadcf4f635cfc904", null ],
     [ "alias_reverse_lookup", "alias_2lib_8h.html#a8f5eca479605975d43e59cc8214cd2c9", null ],
+    [ "config_init_alias", "alias_2lib_8h.html#abeecb3c988acb9aa91ec8a680d328e6e", null ],
+    [ "C_AliasFile", "alias_2lib_8h.html#af28d495cff899a23b488f1b6e650afa1", null ],
     [ "C_AliasFormat", "alias_2lib_8h.html#a6e451f30cb8f80297fe6d7637ae4ae71", null ],
     [ "C_SortAlias", "alias_2lib_8h.html#a335df8614b6c905bd314bc60d8a033e2", null ],
     [ "C_QueryCommand", "alias_2lib_8h.html#aaf7c36122b4b95f7e0e75085e10ababd", null ],

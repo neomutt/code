@@ -1,6 +1,5 @@
 var mutt__config_8c =
 [
-    [ "ISPELL", "mutt__config_8c.html#aa4edd692877f894c7864779c8cdf767b", null ],
     [ "CONFIG_INIT_TYPE", "mutt__config_8c.html#a46304032f260bb0781771795493e2f36", null ],
     [ "CONFIG_INIT_VARS", "mutt__config_8c.html#a0eff39991a042bad67ff8f98c557e9d5", null ],
     [ "config_init_main", "mutt__config_8c.html#ae972c9a26f29237eb516232b4a679a72", null ],
@@ -9,5 +8,8 @@ var mutt__config_8c =
     [ "init_config", "mutt__config_8c.html#a010347bb26a5857fdac5430b85cfaab0", null ],
     [ "C_Escape", "mutt__config_8c.html#a99abdd736047e611da8a08f43e46e0ad", null ],
     [ "C_IgnoreLinearWhiteSpace", "mutt__config_8c.html#aed5db0cae87d60555ec8100feff6c154", null ],
+    [ "SortAuxMethods", "mutt__config_8c.html#ac7f3faefbd4de2a855ebe35e07867f95", null ],
+    [ "SortMethods", "mutt__config_8c.html#a212caaae7a78c55728bc774f190e8948", null ],
+    [ "SortBrowserMethods", "mutt__config_8c.html#a62d1200a7833a80c1b44631fc91ac874", null ],
     [ "MainVars", "mutt__config_8c.html#ac71e72a5f96e98af790df91b3ba25555", null ]
 ];

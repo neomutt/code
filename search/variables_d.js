@@ -47,7 +47,6 @@ var searchData=
   ['num_5femails',['num_emails',['../structEventEmail.html#a4b2a1b3e897ed10d908c31ba41c32e47',1,'EventEmail']]],
   ['num_5fhidden',['num_hidden',['../structEmail.html#a71f1e37390a5400b182e0724c1f61769',1,'Email']]],
   ['num_5fuser_5fcolors',['num_user_colors',['../structColors.html#ac2277f58c4330db2bf9624bf37815a84',1,'Colors']]],
-  ['num_5fviews',['num_views',['../structAliasMenuData.html#a11e413a30bf1148c30f54abb2b357ba3',1,'AliasMenuData']]],
   ['numalg',['numalg',['../structPgpKeyInfo.html#af6274f75bbf9a8609651c3d34a031128',1,'PgpKeyInfo']]],
   ['nummatched',['NumMatched',['../init_8c.html#af0b2139f9bc786e19a5df18e0f237496',1,'init.c']]],
   ['numoflogs',['NumOfLogs',['../mutt__logging_8c.html#a16142aa6408b6e19a850bb34b419ed7f',1,'mutt_logging.c']]]

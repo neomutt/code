@@ -25,6 +25,7 @@ var test_2config_2dump_8c =
     [ "VarNectarine", "test_2config_2dump_8c.html#a535c2ec3061df3c017bc0a8fe8ef66f8", null ],
     [ "VarOlive", "test_2config_2dump_8c.html#a7d0716414fc87f8a072bd9eee90b9f9f", null ],
     [ "MboxTypeMap", "test_2config_2dump_8c.html#a94a0b09f098d128751ea45d79c25cc65", null ],
+    [ "SortMangoMethods", "test_2config_2dump_8c.html#aa3b4562702607884a36056ee197a767b", null ],
     [ "MboxTypeDef", "test_2config_2dump_8c.html#a500988f3151cd7021ad1c1e1dea27a26", null ],
     [ "Vars", "test_2config_2dump_8c.html#a0ec6714905325f37533da49c4f419268", null ]
 ];

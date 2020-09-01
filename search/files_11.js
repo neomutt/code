@@ -39,7 +39,7 @@ var searchData=
   ['smtp_2eh',['smtp.h',['../smtp_8h.html',1,'']]],
   ['socket_2ec',['socket.c',['../socket_8c.html',1,'']]],
   ['socket_2eh',['socket.h',['../socket_8h.html',1,'']]],
-  ['sort_2ec',['sort.c',['../config_2sort_8c.html',1,'(Global Namespace)'],['../sort_8c.html',1,'(Global Namespace)'],['../test_2config_2sort_8c.html',1,'(Global Namespace)']]],
+  ['sort_2ec',['sort.c',['../config_2sort_8c.html',1,'(Global Namespace)'],['../sidebar_2sort_8c.html',1,'(Global Namespace)'],['../sort_8c.html',1,'(Global Namespace)'],['../test_2config_2sort_8c.html',1,'(Global Namespace)']]],
   ['sort_2eh',['sort.h',['../sort_8h.html',1,'(Global Namespace)'],['../test_2config_2sort_8h.html',1,'(Global Namespace)']]],
   ['sort2_2eh',['sort2.h',['../sort2_8h.html',1,'']]],
   ['ssl_2eh',['ssl.h',['../ssl_8h.html',1,'']]],

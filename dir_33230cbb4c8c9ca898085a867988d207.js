@@ -19,6 +19,8 @@ var dir_33230cbb4c8c9ca898085a867988d207 =
       [ "ImapEmailData", "structImapEmailData.html", "structImapEmailData" ],
       [ "ImapHeader", "structImapHeader.html", "structImapHeader" ]
     ] ],
+    [ "msn.c", "msn_8c.html", "msn_8c" ],
+    [ "msn.h", "msn_8h.html", "msn_8h" ],
     [ "private.h", "imap_2private_8h.html", "imap_2private_8h" ],
     [ "search.c", "search_8c.html", "search_8c" ],
     [ "utf7.c", "utf7_8c.html", "utf7_8c" ],

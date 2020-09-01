@@ -12,7 +12,7 @@ var structMxOps =
     [ "mbox_sync", "structMxOps.html#a6222971b7c4455ec5db897da762cd388", null ],
     [ "mbox_close", "structMxOps.html#acb1e9584ccbd356be24fbd8630f236d3", null ],
     [ "msg_open", "structMxOps.html#ab004e20c441741ce2b4d5cee457bb51b", null ],
-    [ "msg_open_new", "structMxOps.html#a7139f379801f0a247d7fe13956f66cc1", null ],
+    [ "msg_open_new", "structMxOps.html#a1c2349306e40a8f9838d57bd34cdce54", null ],
     [ "msg_commit", "structMxOps.html#ab59dadf81aec5575a1c690caa4822e37", null ],
     [ "msg_close", "structMxOps.html#ad53e3df1ff124eea52bc0488915e9ae4", null ],
     [ "msg_padding_size", "structMxOps.html#a784ae2e2b98208080a641974ce4df834", null ],

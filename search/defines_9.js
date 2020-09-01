@@ -64,7 +64,7 @@ var searchData=
   ['isattach',['IsAttach',['../pager_8c.html#a76b307f4371f26d624c2f21ffe558d0f',1,'pager.c']]],
   ['isemail',['IsEmail',['../pager_8c.html#a81095bef2f2345bfad08e37523b0ae90',1,'pager.c']]],
   ['ismsgattach',['IsMsgAttach',['../pager_8c.html#a01bd8ec885a42de5223bc0085c6c6984',1,'pager.c']]],
-  ['ispell',['ISPELL',['../mutt__config_8c.html#aa4edd692877f894c7864779c8cdf767b',1,'mutt_config.c']]],
+  ['ispell',['ISPELL',['../compose_2config_8c.html#aa4edd692877f894c7864779c8cdf767b',1,'config.c']]],
   ['isprint',['IsPrint',['../mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705',1,'mbyte.h']]],
   ['iswprint',['IsWPrint',['../mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d',1,'mbyte.h']]]
 ];

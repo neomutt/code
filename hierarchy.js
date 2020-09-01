@@ -10,7 +10,6 @@ var hierarchy =
     [ "AccountEntry", "structAccountEntry.html", null ],
     [ "Address", "structAddress.html", null ],
     [ "Alias", "structAlias.html", null ],
-    [ "AliasMenuData", "structAliasMenuData.html", null ],
     [ "AliasView", "structAliasView.html", null ],
     [ "AnsiAttr", "structAnsiAttr.html", null ],
     [ "AppendTest", "structAppendTest.html", null ],
@@ -57,6 +56,7 @@ var hierarchy =
     [ "CryptModuleSpecs", "structCryptModuleSpecs.html", null ],
     [ "CurrentEmail", "structCurrentEmail.html", null ],
     [ "DnArray", "structDnArray.html", null ],
+    [ "Dummy", "structDummy.html", null ],
     [ "Email", "structEmail.html", [
       [ "ImapEmailData", "structImapEmailData.html", null ],
       [ "MaildirEmailData", "structMaildirEmailData.html", null ],

@@ -20,7 +20,7 @@ var compmbox_2compress_8c =
     [ "comp_mbox_sync", "compmbox_2compress_8c.html#a186f83caeb64abb53f83cdf0e7811972", null ],
     [ "comp_mbox_close", "compmbox_2compress_8c.html#a616221215cd9a4dd6d750ae4235553ff", null ],
     [ "comp_msg_open", "compmbox_2compress_8c.html#a1570c091fe68f805495bcdd1c457b47a", null ],
-    [ "comp_msg_open_new", "compmbox_2compress_8c.html#abc0b3735cdb8088f6f13ebe4fe2561bd", null ],
+    [ "comp_msg_open_new", "compmbox_2compress_8c.html#a8ee2e7c8c528fd5338663badb7763d45", null ],
     [ "comp_msg_commit", "compmbox_2compress_8c.html#a449d225488040512f5696e4f76f36694", null ],
     [ "comp_msg_close", "compmbox_2compress_8c.html#a9cedad82abc13c823ff2d0e7bc1b66f9", null ],
     [ "comp_msg_padding_size", "compmbox_2compress_8c.html#a0e6812b4bba1845ea248f4df93c06fea", null ],

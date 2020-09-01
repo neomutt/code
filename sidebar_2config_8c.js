@@ -1,6 +1,7 @@
 var sidebar_2config_8c =
 [
     [ "config_init_sidebar", "sidebar_2config_8c.html#ae7634227027409303c7d244cb68cac49", null ],
+    [ "SortSidebarMethods", "sidebar_2config_8c.html#ae0911cae0349cea33d5f5ce960d22cef", null ],
     [ "C_SidebarComponentDepth", "sidebar_2config_8c.html#a76532f3c7b1b741803507888ceac4e76", null ],
     [ "C_SidebarDelimChars", "sidebar_2config_8c.html#a41e5afff98625fa8c648c9cdc4a35914", null ],
     [ "C_SidebarDividerChar", "sidebar_2config_8c.html#a272f5ccc3c1f33eee901b41b242172c1", null ],

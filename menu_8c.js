@@ -3,13 +3,12 @@ var menu_8c =
     [ "DIRECTION", "menu_8c.html#a1d692daf1ffadae2243a5ab556589629", null ],
     [ "MUTT_SEARCH_UP", "menu_8c.html#a7c629d8623387c7f913c6b160f9b32e2", null ],
     [ "MUTT_SEARCH_DOWN", "menu_8c.html#a54cbaf41671f4484bb2b3ad0611abc90", null ],
-    [ "get_color", "menu_8c.html#a950cc3355862be82cbe07d94f6207fc5", null ],
+    [ "ARRAY_HEAD", "menu_8c.html#a9e5b8ca1a118d87a55c87be8f2e90c90", null ],
     [ "print_enriched_string", "menu_8c.html#ae1b762f56b55783a43fab318cf996f0e", null ],
     [ "make_entry", "menu_8c.html#ae3ba949d0938f3ea01f2f78dfde632e3", null ],
     [ "menu_pad_string", "menu_8c.html#a817398faa8fdc8d02ddd64dc084a607a", null ],
     [ "menu_redraw_full", "menu_8c.html#a7416efe55303324c07e1515bec5697d2", null ],
     [ "menu_redraw_status", "menu_8c.html#a3581b1d404de8b9d6e4000d20fd316b2", null ],
-    [ "menu_redraw_sidebar", "menu_8c.html#a9ac53a1387658c04193745814be89345", null ],
     [ "menu_redraw_index", "menu_8c.html#a39b631a566b12a37364e82049e708dfa", null ],
     [ "menu_redraw_motion", "menu_8c.html#adb45718706531be131e704b8af873338", null ],
     [ "menu_redraw_current", "menu_8c.html#a2367fdbd574e0b041ed3382121696602", null ],
@@ -57,8 +56,5 @@ var menu_8c =
     [ "C_MenuContext", "menu_8c.html#a2ddf1f72232d3ee71b8fede3e0a32d35", null ],
     [ "C_MenuMoveOff", "menu_8c.html#a850109819abacb7b69160d471e2f4c2b", null ],
     [ "C_MenuScroll", "menu_8c.html#a02d0b21b8fca47b22153da27d5f3ffcf", null ],
-    [ "SearchBuffers", "menu_8c.html#ab58f1bcddaccf2bd2f0b040a1e01a16c", null ],
-    [ "MenuStackCount", "menu_8c.html#abb6ce6f4a4482aa56fe3e343c550bca2", null ],
-    [ "MenuStackLen", "menu_8c.html#ac7768375ceb4b9e51957a932b8961651", null ],
-    [ "MenuStack", "menu_8c.html#a2f67623f5ef5ad8e2f81bcb16b444698", null ]
+    [ "SearchBuffers", "menu_8c.html#ab58f1bcddaccf2bd2f0b040a1e01a16c", null ]
 ];

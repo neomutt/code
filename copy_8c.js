@@ -2,6 +2,8 @@ var copy_8c =
 [
     [ "address_header_decode", "copy_8c.html#a240d006c7a7b579c5e6c82836fc7917c", null ],
     [ "copy_delete_attach", "copy_8c.html#ac6c90c633bfed2accedbedf1e583a490", null ],
+    [ "ARRAY_HEAD", "copy_8c.html#a0551a3a8e7c77a811925297e9ccd869c", null ],
+    [ "add_one_header", "copy_8c.html#a4f193c4cf5886822eeb5b903b5d1efea", null ],
     [ "mutt_copy_hdr", "copy_8c.html#a52e9f9a52a91efbaeca673868cfc8b93", null ],
     [ "mutt_copy_header", "copy_8c.html#a468898ce77840c5f79455b1f95643ab4", null ],
     [ "count_delete_lines", "copy_8c.html#a74a2dcf752d01f4eb52502ca034d978a", null ],

@@ -20,6 +20,8 @@ var searchData=
   ['pop_5fport',['POP_PORT',['../pop_2private_8h.html#ac8bd6d29115abf7dcc47ae26f0cbb3d6',1,'private.h']]],
   ['pop_5fquery',['pop_query',['../pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f',1,'private.h']]],
   ['pop_5fssl_5fport',['POP_SSL_PORT',['../pop_2private_8h.html#a2e7c786c53a65d43284b8de44a98a5fc',1,'private.h']]],
+  ['prefix_5flast',['PREFIX_LAST',['../config_2sort_8c.html#ab46bc6b350e3c88c5b8d61d060752a42',1,'sort.c']]],
+  ['prefix_5freverse',['PREFIX_REVERSE',['../config_2sort_8c.html#a1b0cb48d9bf1a33177b94a344be2831b',1,'sort.c']]],
   ['prex_5fdow',['PREX_DOW',['../prex_8c.html#a62b36cd222fb65c5b9777db5b0d6d1c8',1,'prex.c']]],
   ['prex_5fdow_5fnocase',['PREX_DOW_NOCASE',['../prex_8c.html#a187af9207700c77f9bce74f39b3b4290',1,'prex.c']]],
   ['prex_5fmonth',['PREX_MONTH',['../prex_8c.html#a7f1d6e69661920424c3dab13811cf980',1,'prex.c']]],

@@ -10,12 +10,12 @@ var dir_9f351d46ce3cc29445a41dc3a31e6919 =
     [ "enum.h", "config_2enum_8h.html", [
       [ "EnumDef", "structEnumDef.html", "structEnumDef" ]
     ] ],
-    [ "helpers.c", "helpers_8c.html", "helpers_8c" ],
+    [ "helpers.c", "config_2helpers_8c.html", "config_2helpers_8c" ],
     [ "helpers.h", "helpers_8h.html", "helpers_8h" ],
     [ "inheritance.h", "inheritance_8h.html", [
       [ "Inheritance", "structInheritance.html", "structInheritance" ]
     ] ],
-    [ "lib.h", "config_2lib_8h.html", null ],
+    [ "lib.h", "config_2lib_8h.html", "config_2lib_8h" ],
     [ "long.c", "config_2long_8c.html", "config_2long_8c" ],
     [ "mbtable.c", "config_2mbtable_8c.html", "config_2mbtable_8c" ],
     [ "mbtable.h", "config_2mbtable_8h.html", "config_2mbtable_8h" ],

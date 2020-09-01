@@ -31,9 +31,9 @@ var test_2config_2sort_8c =
     [ "VarQuince", "test_2config_2sort_8c.html#ad226e7d8ba86e2076824aad5849b039d", null ],
     [ "VarRaspberry", "test_2config_2sort_8c.html#a65958380697e56c6cf8c8018f57b4ced", null ],
     [ "VarStrawberry", "test_2config_2sort_8c.html#a605fb2d323851b01a1b79a73c1d0f41d", null ],
+    [ "SortTestMethods", "test_2config_2sort_8c.html#a06eb4e9d8c67a9b82abc7db5eafaf42b", null ],
     [ "Vars", "test_2config_2sort_8c.html#a0ec6714905325f37533da49c4f419268", null ],
     [ "Vars2", "test_2config_2sort_8c.html#a4e38d1312b41b6bae44f5f81ee6f77e9", null ],
     [ "name_list", "test_2config_2sort_8c.html#a1eb437b781fc35012ac737dea989bac6", null ],
-    [ "var_list", "test_2config_2sort_8c.html#ad45d6b541ade166280ccf314ef163ee8", null ],
-    [ "sort_maps", "test_2config_2sort_8c.html#ac7845a07e40190d0b6dbcbd64c9fbb16", null ]
+    [ "var_list", "test_2config_2sort_8c.html#ad45d6b541ade166280ccf314ef163ee8", null ]
 ];

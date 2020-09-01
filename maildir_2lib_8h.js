@@ -2,7 +2,7 @@ var maildir_2lib_8h =
 [
     [ "maildir_check_empty", "maildir_2lib_8h.html#ac1193cf5991629c477975ee74c97a65a", null ],
     [ "maildir_gen_flags", "maildir_2lib_8h.html#ac1b43584aaf8f3ddc0ebf28da7cc2bfb", null ],
-    [ "maildir_msg_open_new", "maildir_2lib_8h.html#a708a4eeb60714f7ea72f594c753f584a", null ],
+    [ "maildir_msg_open_new", "maildir_2lib_8h.html#ae87ffa67156fad45fc687d8453fc384d", null ],
     [ "maildir_open_find_message", "maildir_2lib_8h.html#a8c1dd82fc41fced471926501135b95d4", null ],
     [ "maildir_parse_flags", "maildir_2lib_8h.html#afad70ac642ae3a3a925778412bb64097", null ],
     [ "maildir_parse_message", "maildir_2lib_8h.html#a8fc323eb62e562ccedcba11e29a39631", null ],

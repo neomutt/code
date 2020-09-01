@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['char_5fcmp',['char_cmp',['../mutt_2string_8c.html#af824248ee22dcc58dffc830a9a332aa6',1,'string.c']]],
   ['checkflags',['CheckFlags',['../index_8c.html#a0fbf75fa988aa37198039a83614ef2f8',1,'index.c']]],
   ['cliflags',['CliFlags',['../main_8c.html#a3ac5699e790cd4ce3bd7caafcee07311',1,'main.c']]],
   ['completionflags',['CompletionFlags',['../mutt_8h.html#aa551207529ef0be5a655fa2f471f070b',1,'CompletionFlags():&#160;mutt.h'],['../dummy_8c.html#aa551207529ef0be5a655fa2f471f070b',1,'CompletionFlags():&#160;dummy.c']]],

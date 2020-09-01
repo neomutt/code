@@ -1,5 +1,6 @@
 var structImapMboxData =
 [
+    [ "ARRAY_HEAD", "structImapMboxData.html#a67b95546029c7fc236c7423bd0977575", null ],
     [ "name", "structImapMboxData.html#ad16e4ff0444eceaf5cf6700d00cc5c9f", null ],
     [ "munge_name", "structImapMboxData.html#ac08c3acbb69452d9db121fddbbf1637a", null ],
     [ "real_name", "structImapMboxData.html#a3c6e05d5048bd093090211073ef69a4f", null ],
@@ -14,9 +15,6 @@ var structImapMboxData =
     [ "recent", "structImapMboxData.html#a577bf35b11a51ec0cf6a97f5928d02b5", null ],
     [ "unseen", "structImapMboxData.html#add06baf96fd584f61a318a84ccbd3bf1", null ],
     [ "uid_hash", "structImapMboxData.html#a5d4ade771376ea3dbb3fe5816ddeac84", null ],
-    [ "msn_index", "structImapMboxData.html#a55f0bd33712623073a0a0c54ce0db8c7", null ],
-    [ "msn_index_size", "structImapMboxData.html#a5a8d86c0542247e2ead340be23219afc", null ],
-    [ "max_msn", "structImapMboxData.html#a365640fdc3036ad769d8b81f892877c3", null ],
     [ "bcache", "structImapMboxData.html#a506e50b5acb8f79ac1a855cef7f4e6de", null ],
     [ "hcache", "structImapMboxData.html#a2201c72b20cba8bcd5cc42e7f395ae6a", null ]
 ];

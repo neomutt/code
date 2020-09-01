@@ -5,5 +5,6 @@ var sidebar =
     [ "Sidebar functions", "sidebar_functions.html", null ],
     [ "Sidebar observers", "sidebar_observers.html", null ],
     [ "GUI display the mailboxes in a side panel", "sidebar_sidebar.html", null ],
-    [ "Sidebar Window data", "sidebar_wdata.html", null ]
+    [ "Sidebar Window data", "sidebar_wdata.html", null ],
+    [ "Manage the Sidebar Window", "sidebar_window.html", null ]
 ];

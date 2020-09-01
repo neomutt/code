@@ -1,5 +1,6 @@
 var structMenu =
 [
+    [ "ARRAY_HEAD", "structMenu.html#a0856320f99b376435b1d4c0eec02039d", null ],
     [ "title", "structMenu.html#a1cf561ffb11a83698437c966fb8d54f0", null ],
     [ "mdata", "structMenu.html#adc6d277fec333aca5b57f1156e6dabfc", null ],
     [ "current", "structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1", null ],
@@ -11,8 +12,6 @@ var structMenu =
     [ "is_mailbox_list", "structMenu.html#a5074cc0f9fe1292ac13fedabc5cb553d", null ],
     [ "win_index", "structMenu.html#a8531d1210426e46689f8c08935b24df2", null ],
     [ "win_ibar", "structMenu.html#a95b073682bbe6ec7acdc2c80e8f1e8df", null ],
-    [ "dialog", "structMenu.html#a5e1f6c8b23dd0db60349536697e9d667", null ],
-    [ "dsize", "structMenu.html#afa47b420d61bdaeef4592f820b20fe58", null ],
     [ "prompt", "structMenu.html#a2965a6208bf420a927d8d687f46f2776", null ],
     [ "keys", "structMenu.html#a50b14c1b6315c41fc5032b964dd2ce5b", null ],
     [ "top", "structMenu.html#a9b6a0ee3837c582e8cf70e985cde69cc", null ],

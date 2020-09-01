@@ -7,6 +7,7 @@ var searchData=
   ['nntp_5fok',['NNTP_OK',['../nntp_2private_8h.html#a30e5c5a44ecbd929699e93d887f39f6faf2f388bc874e63dbdd37734a53e9ac03',1,'private.h']]],
   ['nt_5faccount',['NT_ACCOUNT',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a8ef73bad3a96e175f955bdd31762bbda',1,'notify_type.h']]],
   ['nt_5faccount_5fadd',['NT_ACCOUNT_ADD',['../account_8h.html#a19a9ad056d93491b610201fa644eef6ea2f33ec4035fcd1ed206ae564c3c54631',1,'account.h']]],
+  ['nt_5faccount_5fchanged',['NT_ACCOUNT_CHANGED',['../account_8h.html#a19a9ad056d93491b610201fa644eef6ea1990aab4f0681c10c4a2e5036c647b0d',1,'account.h']]],
   ['nt_5faccount_5fremove',['NT_ACCOUNT_REMOVE',['../account_8h.html#a19a9ad056d93491b610201fa644eef6ea0570a2408670a7e4865ab2f22b6f261c',1,'account.h']]],
   ['nt_5falias',['NT_ALIAS',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8aed9e9769f3355292b796eb7675411b04',1,'notify_type.h']]],
   ['nt_5falias_5fchanged',['NT_ALIAS_CHANGED',['../alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7ba158a633155fe2f31d2c8b1123db406e1',1,'alias.h']]],

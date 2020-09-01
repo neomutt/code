@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['d',['D',['../structMd5Ctx.html#a6be4b06ff54cc0b71d0be55d2d48ad5f',1,'Md5Ctx']]],
+  ['d',['D',['../structMd5Ctx.html#a6be4b06ff54cc0b71d0be55d2d48ad5f',1,'Md5Ctx::D()'],['../structDummy.html#af220ed20415c1d14cb6457e6e353a387',1,'Dummy::d()']]],
   ['d_5ffilename',['d_filename',['../structBody.html#a0a77f105609a64f37c359b9c81d1f263',1,'Body']]],
   ['data',['data',['../structConfigDef.html#a5125b3fa1932065447f5811dda756b05',1,'ConfigDef::data()'],['../structICommand.html#ad10b45d0cdd5a5db053da504cb37abf5',1,'ICommand::data()'],['../structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8',1,'Buffer::data()'],['../structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365',1,'HashElem::data()'],['../structListNode.html#aafe688d670318196766392d8235d00a7',1,'ListNode::data()'],['../structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f',1,'Command::data()']]],
   ['date',['date',['../structEnvelope.html#adb752a72d48a701571b3c1784bc4b59b',1,'Envelope::date()'],['../structNormalizeTest.html#a021396bbaeb827b9c4623c592f192156',1,'NormalizeTest::date()']]],
@@ -26,10 +26,10 @@ var searchData=
   ['description',['description',['../structBody.html#a90db5151872e23e56a8f31d68925c121',1,'Body']]],
   ['destroy',['destroy',['../structConfigSetType.html#ad7c535ff8033c38dbaffa7c14bb4412e',1,'ConfigSetType']]],
   ['dflt',['dflt',['../structCryptCache.html#a8dd12b5c42e7430529eb9f41807b9331',1,'CryptCache::dflt()'],['../structPgpCache.html#a27971ba1f4f97f5421cba3c374ccdb10',1,'PgpCache::dflt()']]],
-  ['dialog',['dialog',['../structMenu.html#a5e1f6c8b23dd0db60349536697e9d667',1,'Menu']]],
   ['dialog_5frow_5flen',['dialog_row_len',['../gnutls_8c.html#ac436d9226adef4197e094b1827199b1e',1,'gnutls.c']]],
   ['digestalg',['digestalg',['../structSmimeCommandContext.html#a3dee10ce395177b61300c96086c22ea4',1,'SmimeCommandContext']]],
   ['disp_5fsubj',['disp_subj',['../structEnvelope.html#ae3c4bc03d812ba86a40ec1044c5a2a00',1,'Envelope']]],
+  ['display',['display',['../structSbEntry.html#a4f049bac019ef39bfa793ef95c30e621',1,'SbEntry']]],
   ['display_5fsubject',['display_subject',['../structEmail.html#a1906966857aa61046b2eca2eeffaf603',1,'Email']]],
   ['disposition',['disposition',['../structBody.html#a99aff302b287a47c407a7412a99630f5',1,'Body']]],
   ['divider_5ftype',['divider_type',['../structSidebarWindowData.html#a95d4e41923a00c3969bad2c927bd7e70',1,'SidebarWindowData']]],
@@ -41,7 +41,7 @@ var searchData=
   ['down',['down',['../structSeqsetIterator.html#a49d324f002891ea71e91c11b3fb8d443',1,'SeqsetIterator::down()'],['../structQClass.html#a6ab9317e1fd7242902e1052e56d7c27d',1,'QClass::down()']]],
   ['dptr',['dptr',['../structBuffer.html#a058d67252184c2eeaf57059544f8cdcf',1,'Buffer']]],
   ['draft',['draft',['../structMessage.html#a7a53f3b9c450c29d93793c0d2b0608f7',1,'Message']]],
-  ['dsize',['dsize',['../structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995',1,'Buffer::dsize()'],['../structMenu.html#afa47b420d61bdaeef4592f820b20fe58',1,'Menu::dsize()']]],
+  ['dsize',['dsize',['../structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995',1,'Buffer']]],
   ['duplicate_5fthread',['duplicate_thread',['../structMuttThread.html#add9fafa2e72810244df9eee34eff25fa',1,'MuttThread']]],
   ['duration',['duration',['../structtest__detail__.html#a39cddb6e2a4f3067066354bd71307e59',1,'test_detail_']]],
   ['dynamic',['dynamic',['../structPattern.html#a7f4991ea8f62a8a90ec55dedaedc17ff',1,'Pattern']]]

@@ -12,7 +12,7 @@ var maildir_8c =
     [ "maildir_mbox_check", "maildir_8c.html#a5fc055d963f5721ea971b245c08e3403", null ],
     [ "maildir_mbox_check_stats", "maildir_8c.html#aefec80ce2f4a521a57f7f6a69935a5a4", null ],
     [ "maildir_msg_open", "maildir_8c.html#a1d06635ca69a9dd611411869e2970d1a", null ],
-    [ "maildir_msg_open_new", "maildir_8c.html#a708a4eeb60714f7ea72f594c753f584a", null ],
+    [ "maildir_msg_open_new", "maildir_8c.html#ae87ffa67156fad45fc687d8453fc384d", null ],
     [ "maildir_msg_commit", "maildir_8c.html#ae15bcdc3ac4efe23f002f2a1a67f54ee", null ],
     [ "maildir_msg_save_hcache", "maildir_8c.html#ab70335fde06bb79ef5f98c1e85a040b0", null ],
     [ "maildir_path_probe", "maildir_8c.html#a736c790541994662bc2ecb96d9deb626", null ],

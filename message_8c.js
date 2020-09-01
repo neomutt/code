@@ -13,7 +13,6 @@ var message_8c =
     [ "msg_fetch_header", "message_8c.html#a7ba4c5e23881cd48e34cddd0430d2bce", null ],
     [ "flush_buffer", "message_8c.html#a6d20c017931a27796e7462278f74defe", null ],
     [ "query_abort_header_download", "message_8c.html#aa881016bc7aba8e6c29a910459cfa260", null ],
-    [ "alloc_msn_index", "message_8c.html#a43f5e808c78e88b56d24c472b36dc91b", null ],
     [ "imap_alloc_uid_hash", "message_8c.html#af9494c020486cd243659caade6f555d2", null ],
     [ "imap_fetch_msn_seqset", "message_8c.html#a3c0f36a2c199ad42ce13fe65e014f9a2", null ],
     [ "set_changed_flag", "message_8c.html#aafd4d11d668ae9ea3af0a3c2b9aaa3a5", null ],

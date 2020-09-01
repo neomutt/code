@@ -1,5 +1,6 @@
 var mutt_2slist_8c =
 [
+    [ "slist_new", "mutt_2slist_8c.html#af779a2c5318dd880bb34fc2632fd0997", null ],
     [ "slist_add_list", "mutt_2slist_8c.html#a52e930a7c9662bda29b33e33b3768a1c", null ],
     [ "slist_add_string", "mutt_2slist_8c.html#a56a8eca5b8c63f928ae9944661a208bd", null ],
     [ "slist_compare", "mutt_2slist_8c.html#a63d0a7363816cc60c6af191b09039a55", null ],

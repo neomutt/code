@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['linear_20array_20api',['Linear array API',['../array.html',1,'mutt']]],
   ['lz4_20compression',['LZ4 compression',['../compress_lz4.html',1,'compress']]],
   ['low_2dlevel_20socket_20handling',['Low-level socket handling',['../conn_raw.html',1,'conn']]],
   ['low_2dlevel_20socket_20handling',['Low-level socket handling',['../conn_socket.html',1,'conn']]],

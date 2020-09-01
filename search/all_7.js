@@ -38,7 +38,7 @@ var searchData=
   ['filename',['filename',['../structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a',1,'Body']]],
   ['filename_5fsafe_5fchars',['filename_safe_chars',['../file_8c.html#a476ab3606a28b4cca8a7489e38d50151',1,'filename_safe_chars():&#160;file.c'],['../file_8h.html#a476ab3606a28b4cca8a7489e38d50151',1,'filename_safe_chars():&#160;file.c']]],
   ['fill_5fbuffer',['fill_buffer',['../pager_8c.html#a23a8aa1356e8b8fdcc34eab387136f93',1,'pager.c']]],
-  ['fill_5fempty_5fspace',['fill_empty_space',['../sidebar_8c.html#a170c92ace88b40e4afde3456023aff72',1,'sidebar.c']]],
+  ['fill_5fempty_5fspace',['fill_empty_space',['../sidebar_2window_8c.html#a170c92ace88b40e4afde3456023aff72',1,'window.c']]],
   ['fillbuf',['fillbuf',['../md5_8c.html#ae52952d1a1d91dcbd825d5f9cb980618',1,'md5.c']]],
   ['filter_2ec',['filter.c',['../filter_8c.html',1,'']]],
   ['filter_2eh',['filter.h',['../filter_8h.html',1,'']]],

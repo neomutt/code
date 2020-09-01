@@ -78,6 +78,7 @@ var searchData=
   ['order_5frange',['order_range',['../compile_8c.html#ac2f3c767660113e75cd54b1bb608e2ed',1,'compile.c']]],
   ['organization',['organization',['../structEnvelope.html#aba7ae50abf7721af736b33dbe29cb152',1,'Envelope']]],
   ['orient',['orient',['../structMuttWindow.html#a5b3418a2f98cc9588f1483c47079ce3f',1,'MuttWindow']]],
+  ['orig_5fseq',['orig_seq',['../structAliasView.html#a8fa9dd3de008e93b120dd3e79a3cd2a5',1,'AliasView']]],
   ['orig_5fstr',['orig_str',['../structMbTable.html#a1f60a5feb665dab352285830600b93a9',1,'MbTable']]],
   ['original',['original',['../structRfc2047TestData.html#ac00eeaf0ab8a5cffbfc20f1e977a5b5c',1,'Rfc2047TestData']]],
   ['out',['out',['../structTestData.html#ab14a9d2454b3818b224f54b5a96ccbf3',1,'TestData']]],

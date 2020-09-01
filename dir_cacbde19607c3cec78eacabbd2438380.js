@@ -11,6 +11,7 @@ var dir_cacbde19607c3cec78eacabbd2438380 =
     [ "dump.c", "test_2config_2dump_8c.html", "test_2config_2dump_8c" ],
     [ "enum.c", "test_2config_2enum_8c.html", "test_2config_2enum_8c" ],
     [ "enum.h", "test_2config_2enum_8h.html", "test_2config_2enum_8h" ],
+    [ "helpers.c", "test_2config_2helpers_8c.html", "test_2config_2helpers_8c" ],
     [ "initial.c", "initial_8c.html", "initial_8c" ],
     [ "initial.h", "initial_8h.html", "initial_8h" ],
     [ "long.c", "test_2config_2long_8c.html", "test_2config_2long_8c" ],

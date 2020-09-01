@@ -1,11 +1,7 @@
 var sort2_8h =
 [
-    [ "DT_SORT_INDEX", "sort2_8h.html#aac7d7d9e7962a7a804aa03a02bed9dc3", null ],
-    [ "DT_SORT_ALIAS", "sort2_8h.html#ac51e4e9b349bc689e1638a0f38989b58", null ],
-    [ "DT_SORT_BROWSER", "sort2_8h.html#adc4b0c17673f84679aa9ba24f6ace38e", null ],
-    [ "DT_SORT_KEYS", "sort2_8h.html#a2fefe2b273b6a929b84636ed67e1442e", null ],
-    [ "DT_SORT_AUX", "sort2_8h.html#ac4c69f3e893585cd3f6b91b9d927b193", null ],
-    [ "DT_SORT_SIDEBAR", "sort2_8h.html#ac8c291b64278724415a54db5a0420cf4", null ],
+    [ "DT_SORT_LAST", "sort2_8h.html#ad8d542141d76d995c5ad875e10e59313", null ],
+    [ "DT_SORT_REVERSE", "sort2_8h.html#a981f18a6fc9b6d7da7dfc1131130cace", null ],
     [ "SORT_MASK", "sort2_8h.html#a971f7b510c659c9c197c6c3f50714eb5", null ],
     [ "SORT_REVERSE", "sort2_8h.html#aed7fbab2a014eaeff33b71040530c48d", null ],
     [ "SORT_LAST", "sort2_8h.html#aa210f3e5da89d4845a268b51d1df95f9", null ],

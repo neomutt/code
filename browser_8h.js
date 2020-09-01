@@ -8,6 +8,7 @@ var browser_8h =
     [ "MUTT_SEL_MULTI", "browser_8h.html#a3c8fc96890e5df4412f83fbc2a87cc91", null ],
     [ "MUTT_SEL_FOLDER", "browser_8h.html#a3bdfd6d174ddcbbd6488554080d54889", null ],
     [ "SelectFileFlags", "browser_8h.html#afde6c0a2b0c99baa6b2ee3a0c855e966", null ],
+    [ "ARRAY_HEAD", "browser_8h.html#a8db6639602f80d4ef2305c51310f1a06", null ],
     [ "mutt_select_file", "browser_8h.html#a88c879366e92953daa03b631c39a035a", null ],
     [ "mutt_buffer_select_file", "browser_8h.html#a1b1aafefc53b33c690bc1fb659ec88db", null ],
     [ "mutt_browser_select_dir", "browser_8h.html#a9fbed4ed086e8d9c2907e8f43d6143f2", null ],

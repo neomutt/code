@@ -40,7 +40,7 @@ var imap_8c =
     [ "imap_mbox_open_append", "imap_8c.html#aea2adbe144d1d68db127bb3734a914af", null ],
     [ "imap_mbox_check", "imap_8c.html#a460a4cf43dbddbe46c5aaf7785bfbdbd", null ],
     [ "imap_mbox_close", "imap_8c.html#ae31c7a7de51b7ae1e8b99ceae2ba4974", null ],
-    [ "imap_msg_open_new", "imap_8c.html#aa3bb05bde539afae5e715cd75e9a4b2f", null ],
+    [ "imap_msg_open_new", "imap_8c.html#ac69cd5233018f209b79757be41bc0c57", null ],
     [ "imap_tags_edit", "imap_8c.html#ab61a50c1694e5e41511078202a902f77", null ],
     [ "imap_tags_commit", "imap_8c.html#a265946b35361966dfe4ff4aa3b27bc23", null ],
     [ "imap_path_probe", "imap_8c.html#ab4f27af8eb857a20834f445be3f498de", null ],

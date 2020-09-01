@@ -1,5 +1,6 @@
 var mutt =
 [
+    [ "Linear array API", "array.html", null ],
     [ "Conversion to/from base64 encoding", "base64.html", null ],
     [ "General purpose object for storing and parsing strings", "buffer.html", null ],
     [ "Conversion between different character encodings", "charset.html", null ],

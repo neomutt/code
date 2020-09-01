@@ -6,7 +6,7 @@ var searchData=
   ['eat_5frange',['eat_range',['../compile_8c.html#af87ec061f604dd69acc8c84330a97b96',1,'compile.c']]],
   ['eat_5frange_5fby_5fregex',['eat_range_by_regex',['../compile_8c.html#a2a12b20dc51f879eeb72a289878da9b7',1,'compile.c']]],
   ['eat_5fregex',['eat_regex',['../compile_8c.html#a5c8b5d38c73da21e67373c7450a1d4d1',1,'compile.c']]],
-  ['edit_5faddress_5flist',['edit_address_list',['../compose_8c.html#a215d1a44c42afaf43235fa300a3e48d6',1,'compose.c']]],
+  ['edit_5faddress_5flist',['edit_address_list',['../compose_8c.html#a995fe70fb321e85b2799e74e3e3322f0',1,'compose.c']]],
   ['edit_5fenvelope',['edit_envelope',['../send_8c.html#a9fb4ee964889bd118582f0938027a659',1,'send.c']]],
   ['el_5fadd_5ftagged',['el_add_tagged',['../context_8c.html#a543e45c288497e953332f7f20c761caf',1,'el_add_tagged(struct EmailList *el, struct Context *ctx, struct Email *e, bool use_tagged):&#160;context.c'],['../context_8h.html#a543e45c288497e953332f7f20c761caf',1,'el_add_tagged(struct EmailList *el, struct Context *ctx, struct Email *e, bool use_tagged):&#160;context.c']]],
   ['elem_5flist_5fsort',['elem_list_sort',['../config_2subset_8c.html#a25908dc92b9db7aaa9b81229ca2b1f95',1,'elem_list_sort(const void *a, const void *b):&#160;subset.c'],['../subset_8h.html#a25908dc92b9db7aaa9b81229ca2b1f95',1,'elem_list_sort(const void *a, const void *b):&#160;subset.c']]],

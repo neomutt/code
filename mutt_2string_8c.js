@@ -1,7 +1,6 @@
 var mutt_2string_8c =
 [
     [ "SysExits", "structSysExits.html", "structSysExits" ],
-    [ "char_cmp", "mutt_2string_8c.html#af824248ee22dcc58dffc830a9a332aa6", null ],
     [ "mutt_str_sysexit", "mutt_2string_8c.html#afd560115047cd5f811b8dda5ce369d6f", null ],
     [ "startswith", "mutt_2string_8c.html#a362a0656b6a1549ee4a4966d9aa732ce", null ],
     [ "mutt_str_startswith", "mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d", null ],

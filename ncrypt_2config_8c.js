@@ -1,6 +1,7 @@
 var ncrypt_2config_8c =
 [
     [ "config_init_ncrypt", "ncrypt_2config_8c.html#aee20f674efcb28599e8089818553e284", null ],
+    [ "SortKeyMethods", "ncrypt_2config_8c.html#ac7317ba9b6d4e63e5385d9d2fca6d461", null ],
     [ "C_CryptUsePka", "ncrypt_2config_8c.html#ae3d7a908a6140f4a09a1ff07781e2570", null ],
     [ "C_CryptConfirmhook", "ncrypt_2config_8c.html#af3552155ef754b8aaae6a2697726c241", null ],
     [ "C_CryptOpportunisticEncrypt", "ncrypt_2config_8c.html#a46584de01677931974f7401e7c7c8733", null ],
