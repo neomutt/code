@@ -1,7 +1,7 @@
 var dir_84d4ec99856759213102e4209c09c524 =
 [
     [ "backtrace.c", "backtrace_8c.html", "backtrace_8c" ],
-    [ "common.c", "debug_2common_8c.html", "debug_2common_8c" ],
+    [ "common.c", "common_8c.html", "common_8c" ],
     [ "graphviz.c", "graphviz_8c.html", "graphviz_8c" ],
     [ "lib.h", "debug_2lib_8h.html", "debug_2lib_8h" ],
     [ "notify.c", "debug_2notify_8c.html", "debug_2notify_8c" ],

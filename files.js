@@ -28,7 +28,6 @@ var files =
     [ "send", "dir_e3f18b510480d4e94b05ea05ec318313.html", "dir_e3f18b510480d4e94b05ea05ec318313" ],
     [ "sidebar", "dir_ba7605e090b236767558f9e165f3154f.html", "dir_ba7605e090b236767558f9e165f3154f" ],
     [ "store", "dir_a067212c9d0141ae09f64ef6d125d940.html", "dir_a067212c9d0141ae09f64ef6d125d940" ],
-    [ "test", "dir_13e138d54eb8818da29c3992edef070a.html", "dir_13e138d54eb8818da29c3992edef070a" ],
     [ "commands.c", "commands_8c.html", "commands_8c" ],
     [ "browser.c", "browser_8c.html", "browser_8c" ],
     [ "browser.h", "browser_8h.html", "browser_8h" ],

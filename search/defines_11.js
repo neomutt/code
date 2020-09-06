@@ -26,7 +26,7 @@ var searchData=
   ['range_5frel_5frx',['RANGE_REL_RX',['../pattern_2private_8h.html#af0f880e23674bfc827cc09ab8c0b639a',1,'private.h']]],
   ['range_5frel_5fslot_5frx',['RANGE_REL_SLOT_RX',['../pattern_2private_8h.html#ac11f19e4751ecaedb35e93072ac0cd50',1,'private.h']]],
   ['range_5frx_5fgroups',['RANGE_RX_GROUPS',['../pattern_2private_8h.html#a9b9b7a7ee786c0832ecdb0ee378cd1bb',1,'private.h']]],
-  ['rdbver',['RDBVER',['../store_2rocksdb_8c.html#a92d9878041c9c09243f41d6233df6a03',1,'rocksdb.c']]],
+  ['rdbver',['RDBVER',['../rocksdb_8c.html#a92d9878041c9c09243f41d6233df6a03',1,'rocksdb.c']]],
   ['redraw_5fbody',['REDRAW_BODY',['../mutt__menu_8h.html#ac9ef629d8b77ec35f04f52fae487e306',1,'mutt_menu.h']]],
   ['redraw_5fcurrent',['REDRAW_CURRENT',['../mutt__menu_8h.html#a3496434eacf006a8f10feeddd42f96f1',1,'mutt_menu.h']]],
   ['redraw_5fflow',['REDRAW_FLOW',['../mutt__menu_8h.html#af2bef4a166f1cc649eb20d8f5954a405',1,'mutt_menu.h']]],
@@ -36,8 +36,8 @@ var searchData=
   ['redraw_5fmotion_5fresync',['REDRAW_MOTION_RESYNC',['../mutt__menu_8h.html#a3540f3fb484029dfd504f2fe7f216c44',1,'mutt_menu.h']]],
   ['redraw_5fno_5fflags',['REDRAW_NO_FLAGS',['../mutt__menu_8h.html#a1f96f27f798ffa90d7b8a37c5f5d963a',1,'mutt_menu.h']]],
   ['redraw_5fstatus',['REDRAW_STATUS',['../mutt__menu_8h.html#a8a2fa08531cc0e55b095c555a79eadaa',1,'mutt_menu.h']]],
-  ['reg_5fcomp',['REG_COMP',['../mutt_2regex3_8h.html#a349838a3143be1dd9b0500bfbe54d48f',1,'regex3.h']]],
-  ['reg_5fwords',['REG_WORDS',['../mutt_2regex3_8h.html#acbf0cd6774750d7f48bd8a5dd466d1fa',1,'regex3.h']]],
+  ['reg_5fcomp',['REG_COMP',['../regex3_8h.html#a349838a3143be1dd9b0500bfbe54d48f',1,'regex3.h']]],
+  ['reg_5fwords',['REG_WORDS',['../regex3_8h.html#acbf0cd6774750d7f48bd8a5dd466d1fa',1,'regex3.h']]],
   ['rgb24',['RGB24',['../color_8c.html#a6da7eac8e659a98b512f4b81eee68c45',1,'color.c']]],
   ['rsort',['RSORT',['../gui_8c.html#a89ffac83aa53c9558af1f25adf995450',1,'gui.c']]]
 ];

@@ -3,8 +3,6 @@ var searchData=
   ['pager',['Pager',['../structPager.html',1,'']]],
   ['pagerredrawdata',['PagerRedrawData',['../structPagerRedrawData.html',1,'']]],
   ['parameter',['Parameter',['../structParameter.html',1,'']]],
-  ['parsedatetest',['ParseDateTest',['../structParseDateTest.html',1,'']]],
-  ['parseimaptest',['ParseImapTest',['../structParseImapTest.html',1,'']]],
   ['pattern',['Pattern',['../structPattern.html',1,'']]],
   ['patterncache',['PatternCache',['../structPatternCache.html',1,'']]],
   ['patternentry',['PatternEntry',['../structPatternEntry.html',1,'']]],

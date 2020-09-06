@@ -9,5 +9,6 @@ var mutt_2slist_8c =
     [ "slist_free", "mutt_2slist_8c.html#ac97fc48f98ea9286a7e58db0289725e0", null ],
     [ "slist_is_member", "mutt_2slist_8c.html#a7c69d305defed93b70403c325461ef9b", null ],
     [ "slist_parse", "mutt_2slist_8c.html#a1b92bcbee7fe26d262459c9fcf109c9f", null ],
-    [ "slist_remove_string", "mutt_2slist_8c.html#a8469647e63483c367daa8ce05b02de31", null ]
+    [ "slist_remove_string", "mutt_2slist_8c.html#a8469647e63483c367daa8ce05b02de31", null ],
+    [ "slist_to_buffer", "mutt_2slist_8c.html#a92e22106a8bd5410cc7efa26c892d863", null ]
 ];

@@ -17,7 +17,7 @@ var searchData=
   ['get_5fcurrent_5fmenu',['get_current_menu',['../menu_8c.html#ad24a3e98a973c3282301656dd6213a97',1,'menu.c']]],
   ['get_5fdate',['get_date',['../compile_8c.html#a6e05ff9ad02882ea8a969b1c3fc8ec09',1,'compile.c']]],
   ['get_5fdescription',['get_description',['../nntp_8c.html#aad1e29b1bda60fc87fa98dd0ff8b8539',1,'nntp.c']]],
-  ['get_5felem_5flist',['get_elem_list',['../config_2subset_8c.html#a9bdb65f8631a84b67ded8d0fa1744e31',1,'get_elem_list(struct ConfigSet *cs):&#160;subset.c'],['../subset_8h.html#a9bdb65f8631a84b67ded8d0fa1744e31',1,'get_elem_list(struct ConfigSet *cs):&#160;subset.c']]],
+  ['get_5felem_5flist',['get_elem_list',['../subset_8c.html#a9bdb65f8631a84b67ded8d0fa1744e31',1,'get_elem_list(struct ConfigSet *cs):&#160;subset.c'],['../subset_8h.html#a9bdb65f8631a84b67ded8d0fa1744e31',1,'get_elem_list(struct ConfigSet *cs):&#160;subset.c']]],
   ['get_5fevent_5ftype',['get_event_type',['../debug_2notify_8c.html#a0a3ac1dc17cbcca46df67fb7f664abb5',1,'notify.c']]],
   ['get_5ffield',['get_field',['../mailcap_8c.html#ae97f4a4b5d7ac7eba96619f47bfc6925',1,'mailcap.c']]],
   ['get_5ffield_5ftext',['get_field_text',['../mailcap_8c.html#a7df906e1b57347a19286cea26512b8f6',1,'mailcap.c']]],
@@ -44,7 +44,6 @@ var searchData=
   ['get_5fquote_5flevel',['get_quote_level',['../rfc3676_8c.html#aae9c55042003c431c7a004bab1f93860',1,'rfc3676.c']]],
   ['get_5fscheme',['get_scheme',['../url_8c.html#ad796afe1049dbe7c871b8030de155f70',1,'url.c']]],
   ['get_5fsort_5fstr',['get_sort_str',['../status_8c.html#ac8156953ab9d8f697ac86866bcd3b876',1,'status.c']]],
-  ['get_5ftest_5fdir',['get_test_dir',['../test_2common_8c.html#a8ca0199bbd1bbad30fed37fd2712b5c8',1,'common.c']]],
   ['get_5fthreads',['get_threads',['../notmuch_8c.html#adfecb2ef7d67ad1b5e08ea6c77591ee9',1,'notmuch.c']]],
   ['get_5ftoplevel_5fencoding',['get_toplevel_encoding',['../multipart_8c.html#a8d290c7ff9cbf2d3f5ef9e4ff67d3c73',1,'multipart.c']]],
   ['get_5fuser_5finfo',['get_user_info',['../main_8c.html#ab1ab96b05777c73f61c060778657ec38',1,'main.c']]],
@@ -59,6 +58,5 @@ var searchData=
   ['group_5fadd_5fregex',['group_add_regex',['../group_8c.html#a3dec0dc31400b69197ffd45839e4b0df',1,'group.c']]],
   ['group_5findex_5fformat_5fstr',['group_index_format_str',['../nntp_2browse_8c.html#a23b0e33bd83d40e2e27d61c38c9fea39',1,'group_index_format_str(char *buf, size_t buflen, size_t col, int cols, char op, const char *src, const char *prec, const char *if_str, const char *else_str, intptr_t data, MuttFormatFlags flags):&#160;browse.c'],['../nntp_2lib_8h.html#a23b0e33bd83d40e2e27d61c38c9fea39',1,'group_index_format_str(char *buf, size_t buflen, size_t col, int cols, char op, const char *src, const char *prec, const char *if_str, const char *else_str, intptr_t data, MuttFormatFlags flags):&#160;browse.c']]],
   ['group_5fremove',['group_remove',['../group_8c.html#a3ad7cc65031fa1174d8fddb060095661',1,'group.c']]],
-  ['group_5fremove_5fregex',['group_remove_regex',['../group_8c.html#a9ce5c79bfae1e6c071f44f4770177fad',1,'group.c']]],
-  ['gt',['gt',['../mutt__array__api_8c.html#a48c3fb00e3bead64f2c0876d07975543',1,'mutt_array_api.c']]]
+  ['group_5fremove_5fregex',['group_remove_regex',['../group_8c.html#a9ce5c79bfae1e6c071f44f4770177fad',1,'group.c']]]
 ];

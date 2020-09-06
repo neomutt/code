@@ -1,12 +1,5 @@
 var init_8h =
 [
-    [ "charset_validator", "init_8h.html#a2af01c740da7a35724ab4052aaf6abb8", null ],
-    [ "compress_method_validator", "init_8h.html#a56ce715aca1b473d0f1bbec685b9705f", null ],
-    [ "compress_level_validator", "init_8h.html#a05c677ad63d61d246ec589db50101da7", null ],
-    [ "hcache_validator", "init_8h.html#ae29b82f804730e46d47261bd6d4a3604", null ],
-    [ "multipart_validator", "init_8h.html#a60338bba8ddc85a92ca589cdbb174da3", null ],
-    [ "pager_validator", "init_8h.html#a015d25eea10195c886816e39503ca183", null ],
-    [ "reply_validator", "init_8h.html#a89b7ac9b14bd9007726ca035d36962be", null ],
     [ "init_config", "init_8h.html#a010347bb26a5857fdac5430b85cfaab0", null ],
     [ "mutt_command_complete", "init_8h.html#ad41f1b6fbd5aeeee1bfc56f620ff0f44", null ],
     [ "mutt_command_get", "init_8h.html#a6550391715386cf9f843992b97cd6165", null ],

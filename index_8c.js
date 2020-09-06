@@ -17,7 +17,7 @@ var index_8c =
     [ "mx_toggle_write", "index_8c.html#a42f979d608983d011147b38ca6b13227", null ],
     [ "resort_index", "index_8c.html#a7ac6db07f1defe65da501f9a28feacc4", null ],
     [ "update_index_threaded", "index_8c.html#ab11f673d8a7170263f0dfff7fc825776", null ],
-    [ "update_index_unthreaded", "index_8c.html#ad5723ec46771c7db3a4ad56fdc4f7b3b", null ],
+    [ "update_index_unthreaded", "index_8c.html#ad9121d6c0d956bc3a6f8c052c3c8ff4c", null ],
     [ "is_current_email", "index_8c.html#ae927817abdb5c378197802bd63af765c", null ],
     [ "set_current_email", "index_8c.html#a3754d9ea2fbedcd0f9b3fd3d97566dcc", null ],
     [ "update_index", "index_8c.html#a184ca604a157d7293b439a7ea9081850", null ],

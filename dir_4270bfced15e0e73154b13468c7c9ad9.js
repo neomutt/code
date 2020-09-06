@@ -1,6 +1,6 @@
 var dir_4270bfced15e0e73154b13468c7c9ad9 =
 [
-    [ "account.c", "core_2account_8c.html", "core_2account_8c" ],
+    [ "account.c", "account_8c.html", "account_8c" ],
     [ "account.h", "account_8h.html", "account_8h" ],
     [ "lib.h", "core_2lib_8h.html", null ],
     [ "mailbox.c", "mailbox_8c.html", "mailbox_8c" ],

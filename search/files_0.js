@@ -1,15 +1,9 @@
 var searchData=
 [
-  ['account_2ec',['account.c',['../core_2account_8c.html',1,'(Global Namespace)'],['../test_2config_2account_8c.html',1,'(Global Namespace)']]],
+  ['account_2ec',['account.c',['../account_8c.html',1,'']]],
   ['account_2eh',['account.h',['../account_8h.html',1,'']]],
-  ['account2_2eh',['account2.h',['../account2_8h.html',1,'']]],
-  ['account_5ffree_2ec',['account_free.c',['../account__free_8c.html',1,'']]],
-  ['account_5fmailbox_5fadd_2ec',['account_mailbox_add.c',['../account__mailbox__add_8c.html',1,'']]],
-  ['account_5fmailbox_5fremove_2ec',['account_mailbox_remove.c',['../account__mailbox__remove_8c.html',1,'']]],
-  ['account_5fnew_2ec',['account_new.c',['../account__new_8c.html',1,'']]],
-  ['acutest_2eh',['acutest.h',['../acutest_8h.html',1,'']]],
-  ['address_2ec',['address.c',['../address_2address_8c.html',1,'(Global Namespace)'],['../config_2address_8c.html',1,'(Global Namespace)'],['../test_2config_2address_8c.html',1,'(Global Namespace)']]],
-  ['address_2eh',['address.h',['../address_2address_8h.html',1,'(Global Namespace)'],['../config_2address_8h.html',1,'(Global Namespace)'],['../test_2config_2address_8h.html',1,'(Global Namespace)']]],
+  ['address_2ec',['address.c',['../address_2address_8c.html',1,'(Global Namespace)'],['../config_2address_8c.html',1,'(Global Namespace)']]],
+  ['address_2eh',['address.h',['../address_2address_8h.html',1,'(Global Namespace)'],['../config_2address_8h.html',1,'(Global Namespace)']]],
   ['alias_2ec',['alias.c',['../alias_8c.html',1,'']]],
   ['alias_2eh',['alias.h',['../alias_8h.html',1,'']]],
   ['array_2eh',['array.h',['../array_8h.html',1,'']]],

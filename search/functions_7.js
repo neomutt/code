@@ -5,7 +5,7 @@ var searchData=
   ['has_5fa_5fmessage',['has_a_message',['../recvattach_8c.html#a24d56034e98ac9dc0c2bef857afda02c',1,'recvattach.c']]],
   ['hash_5fnew',['hash_new',['../hash_8c.html#abb3f4f9c02823fad0d722a0d28b24259',1,'hash.c']]],
   ['hcache_5fper_5ffolder',['hcache_per_folder',['../hcache_8c.html#adb876190552b516c4e3a32c1ca92960f',1,'hcache.c']]],
-  ['hcache_5fvalidator',['hcache_validator',['../init_8c.html#ae29b82f804730e46d47261bd6d4a3604',1,'hcache_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c'],['../init_8h.html#ae29b82f804730e46d47261bd6d4a3604',1,'hcache_validator(const struct ConfigSet *cs, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err):&#160;init.c']]],
+  ['hcache_5fvalidator',['hcache_validator',['../hcache_2config_8c.html#ae29b82f804730e46d47261bd6d4a3604',1,'config.c']]],
   ['header_5fsize',['header_size',['../hcache_8c.html#ab0e95e8a30f666418f3f8205cecc0582',1,'hcache.c']]],
   ['help_5flookup_5ffunction',['help_lookup_function',['../help_8c.html#a7a2f5bef0066b2adc07678a164db63bc',1,'help.c']]],
   ['helpbar_5fbinding_5fobserver',['helpbar_binding_observer',['../helpbar_8c.html#ab0329ccef8dd2aef381a44436e4a2020',1,'helpbar.c']]],

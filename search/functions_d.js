@@ -27,7 +27,7 @@ var searchData=
   ['nm_5fdb_5frelease',['nm_db_release',['../notmuch_2db_8c.html#ab42f2a23cdaa9f6c5653fa7e9f9a8911',1,'nm_db_release(struct Mailbox *m):&#160;db.c'],['../notmuch_2private_8h.html#ab42f2a23cdaa9f6c5653fa7e9f9a8911',1,'nm_db_release(struct Mailbox *m):&#160;db.c']]],
   ['nm_5fdb_5ftrans_5fbegin',['nm_db_trans_begin',['../notmuch_2db_8c.html#a225b816f7deae709b7f98ed856eec996',1,'nm_db_trans_begin(struct Mailbox *m):&#160;db.c'],['../notmuch_2private_8h.html#a225b816f7deae709b7f98ed856eec996',1,'nm_db_trans_begin(struct Mailbox *m):&#160;db.c']]],
   ['nm_5fdb_5ftrans_5fend',['nm_db_trans_end',['../notmuch_2db_8c.html#afc7d9b81a6379ea5d80b84af5128b66d',1,'nm_db_trans_end(struct Mailbox *m):&#160;db.c'],['../notmuch_2private_8h.html#afc7d9b81a6379ea5d80b84af5128b66d',1,'nm_db_trans_end(struct Mailbox *m):&#160;db.c']]],
-  ['nm_5fedata_5ffree',['nm_edata_free',['../email_8c.html#a1745318ae90c43d78804c035531e697e',1,'nm_edata_free(void **ptr):&#160;notmuch.c'],['../notmuch_8c.html#a1745318ae90c43d78804c035531e697e',1,'nm_edata_free(void **ptr):&#160;notmuch.c'],['../notmuch_2private_8h.html#a1745318ae90c43d78804c035531e697e',1,'nm_edata_free(void **ptr):&#160;notmuch.c'],['../test_2email_2common_8c.html#a1745318ae90c43d78804c035531e697e',1,'nm_edata_free(void **ptr):&#160;common.c']]],
+  ['nm_5fedata_5ffree',['nm_edata_free',['../email_8c.html#a1745318ae90c43d78804c035531e697e',1,'nm_edata_free(void **ptr):&#160;notmuch.c'],['../notmuch_8c.html#a1745318ae90c43d78804c035531e697e',1,'nm_edata_free(void **ptr):&#160;notmuch.c'],['../notmuch_2private_8h.html#a1745318ae90c43d78804c035531e697e',1,'nm_edata_free(void **ptr):&#160;notmuch.c']]],
   ['nm_5fedata_5fget',['nm_edata_get',['../notmuch_8c.html#a04634c423c6b079175e33f5ec2ab6ef2',1,'nm_edata_get(struct Email *e):&#160;notmuch.c'],['../notmuch_2private_8h.html#a04634c423c6b079175e33f5ec2ab6ef2',1,'nm_edata_get(struct Email *e):&#160;notmuch.c']]],
   ['nm_5fedata_5fnew',['nm_edata_new',['../notmuch_8c.html#a72d74b3a6c98868abe52952c3bcfc6c1',1,'nm_edata_new(void):&#160;notmuch.c'],['../notmuch_2private_8h.html#a72d74b3a6c98868abe52952c3bcfc6c1',1,'nm_edata_new(void):&#160;notmuch.c']]],
   ['nm_5femail_5fget_5ffolder',['nm_email_get_folder',['../notmuch_2lib_8h.html#a7f54a204c0b9fb005283ee778d177085',1,'nm_email_get_folder(struct Email *e):&#160;notmuch.c'],['../notmuch_8c.html#a7f54a204c0b9fb005283ee778d177085',1,'nm_email_get_folder(struct Email *e):&#160;notmuch.c']]],
@@ -140,11 +140,11 @@ var searchData=
   ['notify_5fobserver_5fremove_5fall',['notify_observer_remove_all',['../mutt_2notify_8c.html#ac29450b4c099e670ca588a43e21212bd',1,'notify_observer_remove_all(struct Notify *notify):&#160;notify.c'],['../notify_8h.html#ac29450b4c099e670ca588a43e21212bd',1,'notify_observer_remove_all(struct Notify *notify):&#160;notify.c']]],
   ['notify_5fsend',['notify_send',['../mutt_2notify_8c.html#ade2f42f8e0d8a843e87816300799a8e1',1,'notify_send(struct Notify *notify, enum NotifyType event_type, int event_subtype, void *event_data):&#160;notify.c'],['../notify_8h.html#ade2f42f8e0d8a843e87816300799a8e1',1,'notify_send(struct Notify *notify, enum NotifyType event_type, int event_subtype, void *event_data):&#160;notify.c']]],
   ['notify_5fset_5fparent',['notify_set_parent',['../mutt_2notify_8c.html#ae467a73cac36feec67e38b695f67d0a5',1,'notify_set_parent(struct Notify *notify, struct Notify *parent):&#160;notify.c'],['../notify_8h.html#ae467a73cac36feec67e38b695f67d0a5',1,'notify_set_parent(struct Notify *notify, struct Notify *parent):&#160;notify.c']]],
-  ['number_5fnative_5fget',['number_native_get',['../config_2number_8c.html#a5b4ca2dec425a8360da1744477bb291c',1,'number.c']]],
-  ['number_5fnative_5fset',['number_native_set',['../config_2number_8c.html#a5bcf940a158f552c8866887c3f00bc95',1,'number.c']]],
-  ['number_5freset',['number_reset',['../config_2number_8c.html#a480e656188e4fdbae90a1aca70d2540c',1,'number.c']]],
-  ['number_5fstring_5fget',['number_string_get',['../config_2number_8c.html#a6de5fbd27f8b885e1c5bab48be4d7dba',1,'number.c']]],
-  ['number_5fstring_5fminus_5fequals',['number_string_minus_equals',['../config_2number_8c.html#a118b3ceca4da77fc7d33f6babc654969',1,'number.c']]],
-  ['number_5fstring_5fplus_5fequals',['number_string_plus_equals',['../config_2number_8c.html#a8d660979e628a6028b06e1fc7658f6dc',1,'number.c']]],
-  ['number_5fstring_5fset',['number_string_set',['../config_2number_8c.html#a32215db83b015d56b493195cfb092165',1,'number.c']]]
+  ['number_5fnative_5fget',['number_native_get',['../number_8c.html#a5b4ca2dec425a8360da1744477bb291c',1,'number.c']]],
+  ['number_5fnative_5fset',['number_native_set',['../number_8c.html#a5bcf940a158f552c8866887c3f00bc95',1,'number.c']]],
+  ['number_5freset',['number_reset',['../number_8c.html#a480e656188e4fdbae90a1aca70d2540c',1,'number.c']]],
+  ['number_5fstring_5fget',['number_string_get',['../number_8c.html#a6de5fbd27f8b885e1c5bab48be4d7dba',1,'number.c']]],
+  ['number_5fstring_5fminus_5fequals',['number_string_minus_equals',['../number_8c.html#a118b3ceca4da77fc7d33f6babc654969',1,'number.c']]],
+  ['number_5fstring_5fplus_5fequals',['number_string_plus_equals',['../number_8c.html#a8d660979e628a6028b06e1fc7658f6dc',1,'number.c']]],
+  ['number_5fstring_5fset',['number_string_set',['../number_8c.html#a32215db83b015d56b493195cfb092165',1,'number.c']]]
 ];

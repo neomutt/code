@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gdbm_2ec',['gdbm.c',['../store_2gdbm_8c.html',1,'(Global Namespace)'],['../test_2store_2gdbm_8c.html',1,'(Global Namespace)']]],
+  ['gdbm_2ec',['gdbm.c',['../gdbm_8c.html',1,'']]],
   ['getdomain_2ec',['getdomain.c',['../getdomain_8c.html',1,'']]],
   ['globals_2ec',['globals.c',['../globals_8c.html',1,'']]],
   ['globals_2eh',['globals.h',['../globals_8h.html',1,'']]],

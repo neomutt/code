@@ -52,7 +52,7 @@ var searchData=
   ['inotify_5fmask_5fdir',['INOTIFY_MASK_DIR',['../monitor_8c.html#a01b201be00156c44e634f4479e29a8f5',1,'monitor.c']]],
   ['inotify_5fmask_5ffile',['INOTIFY_MASK_FILE',['../monitor_8c.html#ac8f0dc7ad942fe1ee3986cf0d43cb8c7',1,'monitor.c']]],
   ['ins_5fsort_5fthreshold',['INS_SORT_THRESHOLD',['../shared_8c.html#a1513da3d670ae75ae13746092629afab',1,'shared.c']]],
-  ['ip',['IP',['../config_2set_8h.html#af00e4b63d736381e1c527ac5ef2c8f3c',1,'set.h']]],
+  ['ip',['IP',['../set_8h.html#af00e4b63d736381e1c527ac5ef2c8f3c',1,'set.h']]],
   ['ip_5fport_5fbuflen',['IP_PORT_BUFLEN',['../sasl_8c.html#a45e86b3d3f4e938588889a80a98da66e',1,'sasl.c']]],
   ['is_5fcommand',['IS_COMMAND',['../types_8h.html#aa106119dae02fb9897df68e57203b931',1,'types.h']]],
   ['is_5fheader',['IS_HEADER',['../pager_8c.html#a5e31b72a8ce0ae3a758b70d3b784ba39',1,'pager.c']]],

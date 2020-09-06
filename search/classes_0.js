@@ -6,7 +6,6 @@ var searchData=
   ['alias',['Alias',['../structAlias.html',1,'']]],
   ['aliasview',['AliasView',['../structAliasView.html',1,'']]],
   ['ansiattr',['AnsiAttr',['../structAnsiAttr.html',1,'']]],
-  ['appendtest',['AppendTest',['../structAppendTest.html',1,'']]],
   ['attachctx',['AttachCtx',['../structAttachCtx.html',1,'']]],
   ['attachmatch',['AttachMatch',['../structAttachMatch.html',1,'']]],
   ['attachptr',['AttachPtr',['../structAttachPtr.html',1,'']]],

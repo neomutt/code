@@ -8,8 +8,5 @@ var searchData=
   ['imapheader',['ImapHeader',['../structImapHeader.html',1,'']]],
   ['imaplist',['ImapList',['../structImapList.html',1,'']]],
   ['imapmboxdata',['ImapMboxData',['../structImapMboxData.html',1,'']]],
-  ['inheritance',['Inheritance',['../structInheritance.html',1,'']]],
-  ['inlinereplacetest',['InlineReplaceTest',['../structInlineReplaceTest.html',1,'']]],
-  ['isasciitest',['IsAsciiTest',['../structIsAsciiTest.html',1,'']]],
-  ['isfromtest',['IsFromTest',['../structIsFromTest.html',1,'']]]
+  ['inheritance',['Inheritance',['../structInheritance.html',1,'']]]
 ];

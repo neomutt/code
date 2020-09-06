@@ -45,6 +45,7 @@ var structEmail =
     [ "tree", "structEmail.html#a6ab0c038ad82a3771c419731c93398ce", null ],
     [ "thread", "structEmail.html#af7fd9d5febf878edc4b6965ec40f312e", null ],
     [ "attach_total", "structEmail.html#a94d0755d4002f3ea76b59512a70145a9", null ],
+    [ "sequence", "structEmail.html#ac24c1c974fee5ef8bbc2dc12146dfaaf", null ],
     [ "chain", "structEmail.html#a9a3c73dc042313773159d921a711c830", null ],
     [ "nm_edata", "structEmail.html#a677a6956d02a1df8b87751a6161109b5", null ],
     [ "tags", "structEmail.html#aaa992628043f7a89ba87b8ce24f8c1b1", null ],

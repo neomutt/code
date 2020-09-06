@@ -5,11 +5,8 @@ var searchData=
   ['regex',['Regex',['../structRegex.html',1,'']]],
   ['regexnode',['RegexNode',['../structRegexNode.html',1,'']]],
   ['remailer',['Remailer',['../structRemailer.html',1,'']]],
-  ['remalltest',['RemallTest',['../structRemallTest.html',1,'']]],
   ['replace',['Replace',['../structReplace.html',1,'']]],
   ['resize',['Resize',['../structResize.html',1,'']]],
-  ['rfc2047testdata',['Rfc2047TestData',['../structRfc2047TestData.html',1,'']]],
   ['rfc2231parameter',['Rfc2231Parameter',['../structRfc2231Parameter.html',1,'']]],
-  ['rocksdbctx',['RocksDbCtx',['../structRocksDbCtx.html',1,'']]],
-  ['rstrntest',['RstrnTest',['../structRstrnTest.html',1,'']]]
+  ['rocksdbctx',['RocksDbCtx',['../structRocksDbCtx.html',1,'']]]
 ];
