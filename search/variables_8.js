@@ -18,6 +18,7 @@ var searchData=
   ['imap',['imap',['../structFolderFile.html#a2bacd074d98036262520eea695f48a42',1,'FolderFile']]],
   ['imap_5fauthenticators',['imap_authenticators',['../imap_2auth_8c.html#a1dd7afdc3b5fb1e6fec127dae240b1dc',1,'auth.c']]],
   ['imap_5fbrowse',['imap_browse',['../structBrowserState.html#afe46fc676a2a691f2a4abbdde7c55c9b',1,'BrowserState']]],
+  ['imap_5fcommands',['imap_commands',['../imap_8c.html#aa4c20afa73454ac2b6bdcb2e7177868e',1,'imap.c']]],
   ['imapvars',['ImapVars',['../imap_2config_8c.html#ab56b7541d09cf736573e64462a184f83',1,'config.c']]],
   ['in_5frange',['in_range',['../structSeqsetIterator.html#a67d8bbc65a94a87bbad06059912069ff',1,'SeqsetIterator']]],
   ['in_5freply_5fto',['in_reply_to',['../structEnvelope.html#a9ae6d450b2f012c37d3350f4305fbb90',1,'Envelope']]],
@@ -60,8 +61,10 @@ var searchData=
   ['is_5fintl',['is_intl',['../structAddress.html#aed173c346bd8a8e002bdc5c1691fc3d2',1,'Address']]],
   ['is_5flocal',['is_local',['../structMxOps.html#a15a6d1b3b3a214b6e23a36e4b82e1353',1,'MxOps']]],
   ['is_5fmailbox_5flist',['is_mailbox_list',['../structMenu.html#a5074cc0f9fe1292ac13fedabc5cb553d',1,'Menu']]],
+  ['is_5fmatched',['is_matched',['../structAliasView.html#a2415ea4839d043b562c0a79d51618f3c',1,'AliasView']]],
   ['is_5fmulti',['is_multi',['../structPattern.html#ab200683a6bdf319ac4474907a1d82143',1,'Pattern']]],
   ['is_5foverridden',['is_overridden',['../structUserHdrsOverride.html#ac67b4b31c1e7260fd616541fac7612a1',1,'UserHdrsOverride']]],
+  ['is_5fsearched',['is_searched',['../structAliasView.html#a71a64de73888c57232ff738a1cf8dc91',1,'AliasView']]],
   ['is_5ftagged',['is_tagged',['../structAliasView.html#a683663ebafec086d5d253cd55fb7b209',1,'AliasView']]],
   ['isendwin',['IsEndwin',['../mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b',1,'mutt_signal.c']]],
   ['issuer',['issuer',['../structSmimeKey.html#a6921c2922bea84854b90eab1b7e90f1e',1,'SmimeKey']]]

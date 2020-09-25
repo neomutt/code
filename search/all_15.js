@@ -52,6 +52,7 @@ var searchData=
   ['update_5findex_5fthreaded',['update_index_threaded',['../index_8c.html#ab11f673d8a7170263f0dfff7fc825776',1,'index.c']]],
   ['update_5findex_5funthreaded',['update_index_unthreaded',['../index_8c.html#ad9121d6c0d956bc3a6f8c052c3c8ff4c',1,'index.c']]],
   ['update_5fmessage_5fpath',['update_message_path',['../notmuch_8c.html#aa667101acb4fa8caff3610d35875da18',1,'notmuch.c']]],
+  ['update_5ftables',['update_tables',['../context_8c.html#a92575db3c6672525f1e08a35c6112f07',1,'context.c']]],
   ['update_5ftags',['update_tags',['../notmuch_8c.html#a745c6210b7b6364f6b052e34f0cfcd2b',1,'notmuch.c']]],
   ['updatenumpostponed',['UpdateNumPostponed',['../postpone_8c.html#a8991434073950f6fc6d2e8d9061fdd75',1,'postpone.c']]],
   ['url',['Url',['../structUrl.html',1,'']]],

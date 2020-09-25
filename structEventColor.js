@@ -1,4 +1,4 @@
 var structEventColor =
 [
-    [ "set", "structEventColor.html#a6e9d71077dfe774e966f94aa4b8b0684", null ]
+    [ "color", "structEventColor.html#a49f2ee0ff7bc5e0f41e6d9dbfb661783", null ]
 ];

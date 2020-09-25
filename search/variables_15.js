@@ -16,6 +16,7 @@ var searchData=
   ['win_5fattach',['win_attach',['../structComposeRedrawData.html#ab839b025c4c87c59a173ebfcbec28cb3',1,'ComposeRedrawData']]],
   ['win_5fcbar',['win_cbar',['../structComposeRedrawData.html#ab35713d1f60b2c1d40ee975f579d0372',1,'ComposeRedrawData']]],
   ['win_5fenvelope',['win_envelope',['../structComposeRedrawData.html#a8c2c6d195d268c2dbfbe80fc9ed566b3',1,'ComposeRedrawData']]],
+  ['win_5ffocus',['win_focus',['../debug_2window_8c.html#aae3650542417263615edc3c8ecbb6098',1,'window.c']]],
   ['win_5fibar',['win_ibar',['../structMenu.html#a95b073682bbe6ec7acdc2c80e8f1e8df',1,'Menu::win_ibar()'],['../structPager.html#a16b272de86007b87a11bf0783f8b97db',1,'Pager::win_ibar()']]],
   ['win_5findex',['win_index',['../structMenu.html#a8531d1210426e46689f8c08935b24df2',1,'Menu::win_index()'],['../structPager.html#a27d323e1a9a5d344ac169e5b4938b4fa',1,'Pager::win_index()']]],
   ['win_5fpager',['win_pager',['../structPager.html#a1411062ee50b67bca9264cb6ed4ae4bf',1,'Pager']]],

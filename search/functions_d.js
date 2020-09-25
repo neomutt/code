@@ -35,6 +35,7 @@ var searchData=
   ['nm_5fget_5fdefault_5fdata',['nm_get_default_data',['../notmuch_8c.html#a884d5cc9390a4c7be4616c6e1657c186',1,'notmuch.c']]],
   ['nm_5fhcache_5fclose',['nm_hcache_close',['../notmuch_8c.html#a624cee6288d0ad565125b800c83bdf4d',1,'notmuch.c']]],
   ['nm_5fhcache_5fopen',['nm_hcache_open',['../notmuch_8c.html#a510f5d77650516cdaa69fd107baca758',1,'notmuch.c']]],
+  ['nm_5finit',['nm_init',['../notmuch_2lib_8h.html#ac14b20cce8965804b7da03772f8d6f0b',1,'nm_init(void):&#160;notmuch.c'],['../notmuch_8c.html#ac14b20cce8965804b7da03772f8d6f0b',1,'nm_init(void):&#160;notmuch.c']]],
   ['nm_5fmbox_5fcheck',['nm_mbox_check',['../notmuch_8c.html#ae2c154a416004ea9233a2f4a764e7bed',1,'notmuch.c']]],
   ['nm_5fmbox_5fcheck_5fstats',['nm_mbox_check_stats',['../notmuch_8c.html#aadf35f05822c83460a610fc08ee2711d',1,'notmuch.c']]],
   ['nm_5fmbox_5fclose',['nm_mbox_close',['../notmuch_8c.html#ae278dd986a29edd2fbd7aa8e7945049b',1,'notmuch.c']]],

@@ -39,6 +39,7 @@ var searchData=
   ['win_5fcbar',['win_cbar',['../structComposeRedrawData.html#ab35713d1f60b2c1d40ee975f579d0372',1,'ComposeRedrawData']]],
   ['win_5fdump',['win_dump',['../debug_2window_8c.html#a1f3f4dd27ac713dd5bccb6e2cf968147',1,'window.c']]],
   ['win_5fenvelope',['win_envelope',['../structComposeRedrawData.html#a8c2c6d195d268c2dbfbe80fc9ed566b3',1,'ComposeRedrawData']]],
+  ['win_5ffocus',['win_focus',['../debug_2window_8c.html#aae3650542417263615edc3c8ecbb6098',1,'window.c']]],
   ['win_5fibar',['win_ibar',['../structMenu.html#a95b073682bbe6ec7acdc2c80e8f1e8df',1,'Menu::win_ibar()'],['../structPager.html#a16b272de86007b87a11bf0783f8b97db',1,'Pager::win_ibar()']]],
   ['win_5findex',['win_index',['../structMenu.html#a8531d1210426e46689f8c08935b24df2',1,'Menu::win_index()'],['../structPager.html#a27d323e1a9a5d344ac169e5b4938b4fa',1,'Pager::win_index()']]],
   ['win_5fname',['win_name',['../common_8c.html#afe662c7f2a62dbfb76f8ec83696b7a63',1,'win_name(const struct MuttWindow *win):&#160;common.c'],['../debug_2lib_8h.html#afe662c7f2a62dbfb76f8ec83696b7a63',1,'win_name(const struct MuttWindow *win):&#160;common.c']]],

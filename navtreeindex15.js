@@ -1,5 +1,11 @@
 var NAVTREEINDEX15 =
 {
+"lib_mutt.html":[3,19],
+"lib_ncrypt.html":[3,20],
+"lib_nntp.html":[3,21],
+"lib_notmuch.html":[3,22],
+"lib_pattern.html":[3,23],
+"lib_pop.html":[3,24],
 "lib_send.html":[3,25],
 "lib_sidebar.html":[3,26],
 "lib_store.html":[3,27],
@@ -243,11 +249,5 @@ var NAVTREEINDEX15 =
 "maildir_2lib_8h.html#ac1193cf5991629c477975ee74c97a65a":[2,0,17,1,0],
 "maildir_2lib_8h.html#ac1b43584aaf8f3ddc0ebf28da7cc2bfb":[2,0,17,1,1],
 "maildir_2lib_8h.html#ae87ffa67156fad45fc687d8453fc384d":[2,0,17,1,2],
-"maildir_2lib_8h.html#afad70ac642ae3a3a925778412bb64097":[2,0,17,1,4],
-"maildir_2lib_8h_source.html":[2,0,17,1],
-"maildir_2private_8h.html":[2,0,17,4],
-"maildir_2private_8h.html#a02bc1414732ddb9065ef531bc7170fb6":[2,0,17,4,23],
-"maildir_2private_8h.html#a0f561136d8ba70bbe45ef4385d994bb3":[2,0,17,4,22],
-"maildir_2private_8h.html#a165a4e742c432037d9063fbe8afa97ce":[2,0,17,4,39],
-"maildir_2private_8h.html#a190273f5b4267c1f0bb24c13c71a72f7":[2,0,17,4,25]
+"maildir_2lib_8h.html#afad70ac642ae3a3a925778412bb64097":[2,0,17,1,4]
 };

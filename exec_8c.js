@@ -4,7 +4,9 @@ var exec_8c =
     [ "print_crypt_pattern_op_error", "exec_8c.html#a3f35cf1cbf2647adbe32c14bac385dcf", null ],
     [ "msg_search", "exec_8c.html#a34273d998f6620afb9efebbe0e325ad0", null ],
     [ "perform_and", "exec_8c.html#a25e3cd3c8af0fe6ce7a2c2df36b22f7a", null ],
+    [ "perform_alias_and", "exec_8c.html#a6a4e5bb7cc1df76c882d47542c194bc5", null ],
     [ "perform_or", "exec_8c.html#aba5d01796c5eb2def7cc5139da1532b5", null ],
+    [ "perform_alias_or", "exec_8c.html#a88d7705869a43f8e4d6c97a57cf3c7bb", null ],
     [ "match_addrlist", "exec_8c.html#a79b186a41db70f60a9d7b5b5e7d0c906", null ],
     [ "match_reference", "exec_8c.html#a74f564fa761dade9b0750ca5f1044fc1", null ],
     [ "mutt_is_predicate_recipient", "exec_8c.html#a08346d4d816f8e9438efc75103a9583a", null ],
@@ -21,5 +23,6 @@ var exec_8c =
     [ "get_pattern_cache_value", "exec_8c.html#a09126c13e8b0726f36f194cd5ffe6ff2", null ],
     [ "is_pattern_cache_set", "exec_8c.html#a87fc380b9026d97286e330b169ce16f4", null ],
     [ "msg_search_sendmode", "exec_8c.html#af19bf41d266bc5adc6815ed73dfe22e9", null ],
-    [ "mutt_pattern_exec", "exec_8c.html#a19019da905ed802ad656fbe8b2c8ca93", null ]
+    [ "mutt_pattern_exec", "exec_8c.html#a19019da905ed802ad656fbe8b2c8ca93", null ],
+    [ "mutt_pattern_alias_exec", "exec_8c.html#ad2c4f9f9ac723e27159f4b74a48bb844", null ]
 ];

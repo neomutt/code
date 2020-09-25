@@ -50,6 +50,7 @@ var searchData=
   ['color_5fquotes_5fmax',['COLOR_QUOTES_MAX',['../color_8c.html#a63ea394d94a4908ec5a204b85b0d7214',1,'color.c']]],
   ['color_5funset',['COLOR_UNSET',['../color_8c.html#a96eaea19b7c765121a85df132521c5a7',1,'color.c']]],
   ['comb_5fchar',['COMB_CHAR',['../enter_8c.html#a66372184a12fcfde34405660417b61b7',1,'enter.c']]],
+  ['commands_5fregister',['COMMANDS_REGISTER',['../mutt__commands_8h.html#ab11d3e73ef33f8740241999967f38580',1,'mutt_commands.h']]],
   ['compr_5fget_5fops',['compr_get_ops',['../hcache_8c.html#a36bb76ba7301af3ce5ec65758c907afd',1,'hcache.c']]],
   ['compress_5fops',['COMPRESS_OPS',['../compress_2private_8h.html#ab1ff8dc4176d4b51300f0df987e853d2',1,'private.h']]],
   ['config_5finit_5ftype',['CONFIG_INIT_TYPE',['../mutt__config_8c.html#a46304032f260bb0781771795493e2f36',1,'mutt_config.c']]],

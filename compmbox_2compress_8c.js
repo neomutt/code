@@ -1,5 +1,6 @@
 var compmbox_2compress_8c =
 [
+    [ "mutt_comp_init", "compmbox_2compress_8c.html#a8440ad71a5e3d43cd2c836c777bccded", null ],
     [ "lock_realpath", "compmbox_2compress_8c.html#a8c82fa05ac9a30a1cd0e5c5b472ae066", null ],
     [ "unlock_realpath", "compmbox_2compress_8c.html#aa35e239a0ed2772ae5824c317276f83a", null ],
     [ "setup_paths", "compmbox_2compress_8c.html#a60e1b3c821fbb441941a42b24149fbb3", null ],
@@ -31,5 +32,6 @@ var compmbox_2compress_8c =
     [ "comp_path_canon", "compmbox_2compress_8c.html#afc352b335c9a8dd1d6e89bcc566dba80", null ],
     [ "comp_path_pretty", "compmbox_2compress_8c.html#a164a2844f1899843274d6c80a194ca86", null ],
     [ "comp_path_parent", "compmbox_2compress_8c.html#ab807f84b5a28020a4250500f9fa7463c", null ],
+    [ "comp_commands", "compmbox_2compress_8c.html#a08818c1789d0341db65745d36f50f1b3", null ],
     [ "MxCompOps", "compmbox_2compress_8c.html#a69f737b0581952c0ef57f37af78ac6c7", null ]
 ];

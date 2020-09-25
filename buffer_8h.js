@@ -11,7 +11,7 @@ var buffer_8h =
     [ "mutt_buffer_len", "buffer_8h.html#a6929443fb5515bb2ab749f84769d9cc7", null ],
     [ "mutt_buffer_make", "buffer_8h.html#a0242aaa9a400d0722a99828776c0403b", null ],
     [ "mutt_buffer_reset", "buffer_8h.html#adb26acff5f6b9bb7c322669bcb7c48e3", null ],
-    [ "mutt_buffer_strdup", "buffer_8h.html#ae0cd8cf8070d3458fd9f3982d9e270f1", null ],
+    [ "mutt_buffer_strdup", "buffer_8h.html#aa43f3cb9584746ca0cf6720ac1fc38e7", null ],
     [ "mutt_buffer_addch", "buffer_8h.html#a819a9cb669c1a7e8e2218c672b794492", null ],
     [ "mutt_buffer_addstr", "buffer_8h.html#a958e87c1ae9de976eb76f759dbaaa601", null ],
     [ "mutt_buffer_addstr_n", "buffer_8h.html#a5e5f044f387e591627acfa6854416b71", null ],

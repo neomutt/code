@@ -5,6 +5,7 @@ var searchData=
   ['notifyaccount',['NotifyAccount',['../account_8h.html#a19a9ad056d93491b610201fa644eef6e',1,'account.h']]],
   ['notifyalias',['NotifyAlias',['../alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7b',1,'alias.h']]],
   ['notifybinding',['NotifyBinding',['../keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8',1,'keymap.h']]],
+  ['notifycolor',['NotifyColor',['../color_8h.html#a9c069540e46a95aff05c0b0d878ed66d',1,'color.h']]],
   ['notifyconfig',['NotifyConfig',['../subset_8h.html#a439e82194af78ebb1c24dabc16f068b7',1,'subset.h']]],
   ['notifycontext',['NotifyContext',['../context_8h.html#a4b12137da3b4327ecfe951e545f36d4c',1,'context.h']]],
   ['notifyemail',['NotifyEmail',['../email_8h.html#acc016ba3017237be6db0130216742d17',1,'email.h']]],

@@ -10,7 +10,6 @@ var context_8h =
     [ "ctx_mailbox_observer", "context_8h.html#ae00c71eb34e06ec9e34fa63aeb38824f", null ],
     [ "ctx_new", "context_8h.html#a277306cf26d4e75052d80cc100cbdbab", null ],
     [ "ctx_update", "context_8h.html#a9388581d0baec70c2962fdb99fd1a35c", null ],
-    [ "ctx_update_tables", "context_8h.html#afafe9a23e17b996960cd716209746bc4", null ],
     [ "ctx_has_limit", "context_8h.html#addeed4e3ed0c2c32b80d97831bfadcf3", null ],
     [ "message_is_tagged", "context_8h.html#aab50b1725a8314f589d3bbfb1edaa0d2", null ],
     [ "mutt_get_virt_email", "context_8h.html#a0882b6875e05115e47a09836c63b5bf9", null ],

@@ -8,8 +8,6 @@ var init_8c =
     [ "find_cfg", "init_8c.html#af874e486033a00a683c182f0debd8c04", null ],
     [ "getmailname", "init_8c.html#a0e6cd2649ac70cb4443c9d2c84452beb", null ],
     [ "get_hostname", "init_8c.html#accd8fc806fe125319f45c8cde5b898db", null ],
-    [ "mutt_command_get", "init_8c.html#a6550391715386cf9f843992b97cd6165", null ],
-    [ "mutt_commands_apply", "init_8c.html#a4946a635036d6bc6a8018624849855bb", null ],
     [ "mutt_extract_token", "init_8c.html#a0c8965a76cc79c02268a42a859968bcb", null ],
     [ "mutt_opts_free", "init_8c.html#aa49c5a3aa046da11a3df8924443c1732", null ],
     [ "mutt_get_hook_type", "init_8c.html#a2b5a9a2f2f93e047f07ee4d095e39b3e", null ],

@@ -1,5 +1,6 @@
 var notmuch_8c =
 [
+    [ "nm_init", "notmuch_8c.html#ac14b20cce8965804b7da03772f8d6f0b", null ],
     [ "nm_hcache_open", "notmuch_8c.html#a510f5d77650516cdaa69fd107baca758", null ],
     [ "nm_hcache_close", "notmuch_8c.html#a624cee6288d0ad565125b800c83bdf4d", null ],
     [ "string_to_query_type", "notmuch_8c.html#afa7e5955ac29942514fd4900a2cf1b01", null ],
@@ -75,6 +76,7 @@ var notmuch_8c =
     [ "nm_path_canon", "notmuch_8c.html#a74b88a57d928c52b022ae4f9c2964757", null ],
     [ "nm_path_pretty", "notmuch_8c.html#a20d34f068e9fee22a43689209af3d918", null ],
     [ "nm_path_parent", "notmuch_8c.html#ae4bef25c4fd9bfe27d4c375c21cf663f", null ],
+    [ "nm_commands", "notmuch_8c.html#a1e8ace52cc952a76afbb87d4d927317b", null ],
     [ "NmUrlProtocol", "notmuch_8c.html#af3142ba8f1a45d56da0e74227b5ccdb4", null ],
     [ "NmUrlProtocolLen", "notmuch_8c.html#a8ff34e2c5dba7a81ce5b877213be040f", null ],
     [ "MxNotmuchOps", "notmuch_8c.html#aeb8eaded43f46d1709e8174fccbe5004", null ]

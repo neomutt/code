@@ -84,6 +84,8 @@ var searchData=
   ['path_5ftidy',['path_tidy',['../config_2path_8c.html#a2c2a5e9964fa42c243a84d8e379e67ad',1,'path.c']]],
   ['patmatch',['patmatch',['../exec_8c.html#a844e83dec3ede73359894abb11917016',1,'exec.c']]],
   ['pattern_5fformat_5fstr',['pattern_format_str',['../dlgpattern_8c.html#ab8c8131fdfa871947413cf4b8c258e3f',1,'dlgpattern.c']]],
+  ['perform_5falias_5fand',['perform_alias_and',['../exec_8c.html#a6a4e5bb7cc1df76c882d47542c194bc5',1,'exec.c']]],
+  ['perform_5falias_5for',['perform_alias_or',['../exec_8c.html#a88d7705869a43f8e4d6c97a57cf3c7bb',1,'exec.c']]],
   ['perform_5fand',['perform_and',['../exec_8c.html#a25e3cd3c8af0fe6ce7a2c2df36b22f7a',1,'exec.c']]],
   ['perform_5fauxsort',['perform_auxsort',['../sort_8c.html#a1d69cc6b2dfd825821b49d541edf5ca1',1,'perform_auxsort(int retval, const void *a, const void *b):&#160;sort.c'],['../sort_8h.html#a1d69cc6b2dfd825821b49d541edf5ca1',1,'perform_auxsort(int retval, const void *a, const void *b):&#160;sort.c']]],
   ['perform_5for',['perform_or',['../exec_8c.html#aba5d01796c5eb2def7cc5139da1532b5',1,'exec.c']]],

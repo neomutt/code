@@ -19,6 +19,8 @@ var searchData=
   ['nt_5fbinding_5fdeleted',['NT_BINDING_DELETED',['../keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8a680b013af80cf7730611090fd38231f0',1,'keymap.h']]],
   ['nt_5fbinding_5fnew',['NT_BINDING_NEW',['../keymap_8h.html#a16cc241d9d21e873d82c7a7576547fa8a89a74e030aad5d617c29922a03beed0c',1,'keymap.h']]],
   ['nt_5fcolor',['NT_COLOR',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a2e99b9536d698981bbcf5cdce49c9d05',1,'notify_type.h']]],
+  ['nt_5fcolor_5freset',['NT_COLOR_RESET',['../color_8h.html#a9c069540e46a95aff05c0b0d878ed66da048face95b547d48c5a029a0cf32d863',1,'color.h']]],
+  ['nt_5fcolor_5fset',['NT_COLOR_SET',['../color_8h.html#a9c069540e46a95aff05c0b0d878ed66da18fa0fcbae55012a2dc0a7cfc4847e9b',1,'color.h']]],
   ['nt_5fcommand',['NT_COMMAND',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a7d03e2fa3fa1efd3c1b31da87a032b19',1,'notify_type.h']]],
   ['nt_5fconfig',['NT_CONFIG',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a279f8c4386a4e0efac638ac67e221e7f',1,'notify_type.h']]],
   ['nt_5fconfig_5finitial_5fset',['NT_CONFIG_INITIAL_SET',['../subset_8h.html#a439e82194af78ebb1c24dabc16f068b7a460c6b6d08f779422b13033c4fc67102',1,'subset.h']]],

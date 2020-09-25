@@ -15,8 +15,10 @@ var mutt__lua_8c =
     [ "luaopen_mutt_decl", "mutt__lua_8c.html#ae56f5cd7bf675c8c68d1094f7b0daea1", null ],
     [ "luaopen_mutt", "mutt__lua_8c.html#a20e0a7b39ac028cee6d59c8a7f3e68f1", null ],
     [ "lua_init", "mutt__lua_8c.html#a5383cb18959ca91373948507ba24e7f4", null ],
+    [ "mutt_lua_init", "mutt__lua_8c.html#a388809bb42b3e97c7af207cd5e86857f", null ],
     [ "mutt_lua_parse", "mutt__lua_8c.html#a30a8fdb8f724dca27311a5995d3a5502", null ],
     [ "mutt_lua_source_file", "mutt__lua_8c.html#a2fbb1877ee8061c006f252d153f233db", null ],
+    [ "lua_commands", "mutt__lua_8c.html#a46361ab5131292f64b4b4715648c8844", null ],
     [ "LuaState", "mutt__lua_8c.html#a8af176d3e7c60ee4905f03742bd621da", null ],
     [ "luaMuttDecl", "mutt__lua_8c.html#a21587ac7223df0df5a739cd225b09295", null ]
 ];

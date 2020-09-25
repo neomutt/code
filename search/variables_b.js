@@ -83,6 +83,7 @@ var searchData=
   ['mtime_5fcur',['mtime_cur',['../structMaildirMboxData.html#a432d4f7db70109845edca85319390763',1,'MaildirMboxData']]],
   ['multi_5fcases',['multi_cases',['../structPattern.html#a4e88c803a593a311d84fa34d6c634883',1,'Pattern']]],
   ['munge_5fname',['munge_name',['../structImapMboxData.html#ac08c3acbb69452d9db121fddbbf1637a',1,'ImapMboxData']]],
+  ['mutt_5fcommands',['mutt_commands',['../mutt__commands_8c.html#ae2bd38e1e582e9447ef25bd61ed6794a',1,'mutt_commands.c']]],
   ['muttgetchtimeout',['MuttGetchTimeout',['../curs__lib_8c.html#afa3734b90bcc46484d649aafe4c3b13f',1,'MuttGetchTimeout():&#160;curs_lib.c'],['../curs__lib_8h.html#afa3734b90bcc46484d649aafe4c3b13f',1,'MuttGetchTimeout():&#160;curs_lib.c']]],
   ['muttlogger',['MuttLogger',['../logging_8c.html#ab15f5a132f2eaa2304c2fe2c9fa9747a',1,'MuttLogger():&#160;logging.c'],['../logging_8h.html#ab15f5a132f2eaa2304c2fe2c9fa9747a',1,'MuttLogger():&#160;logging.c']]],
   ['muttrcstack',['MuttrcStack',['../command__parse_8c.html#a9606ade62612df075df6ae982722ed63',1,'command_parse.c']]],

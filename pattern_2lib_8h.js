@@ -57,6 +57,7 @@ var pattern_2lib_8h =
     ] ],
     [ "SLIST_HEAD", "pattern_2lib_8h.html#a2bfd0ca84e9773d600ef85243eeb4550", null ],
     [ "mutt_pattern_exec", "pattern_2lib_8h.html#a19019da905ed802ad656fbe8b2c8ca93", null ],
+    [ "mutt_pattern_alias_exec", "pattern_2lib_8h.html#ad2c4f9f9ac723e27159f4b74a48bb844", null ],
     [ "mutt_pattern_comp", "pattern_2lib_8h.html#ac2a8729662aa8d0b6cf21d7c5ab7826f", null ],
     [ "mutt_check_simple", "pattern_2lib_8h.html#a6cee22aa2e3cb0c24cbbcdcc175d7ac6", null ],
     [ "mutt_pattern_free", "pattern_2lib_8h.html#ae447e834babbe84bef7005199ec39962", null ],
@@ -66,6 +67,7 @@ var pattern_2lib_8h =
     [ "mutt_is_subscribed_list_recipient", "pattern_2lib_8h.html#a668a02e9879868145b1da7edbc8c4508", null ],
     [ "mutt_pattern_func", "pattern_2lib_8h.html#a828247b3a5ea339163835205d56d8f52", null ],
     [ "mutt_search_command", "pattern_2lib_8h.html#a8656dd8e803a66dc4b51935a96a0f9ba", null ],
+    [ "mutt_search_alias_command", "pattern_2lib_8h.html#a2136c3a5b62c48c3ba4dc14662c305dd", null ],
     [ "mutt_limit_current_thread", "pattern_2lib_8h.html#abde1e461fbc946bed0ce30f572fac6c8", null ],
     [ "config_init_pattern", "pattern_2lib_8h.html#a26be0435201fcac5a63233943cab92cf", null ],
     [ "C_ThoroughSearch", "pattern_2lib_8h.html#a190716c58fa4ce0df8441cb7b688ade3", null ]
