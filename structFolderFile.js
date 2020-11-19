@@ -18,5 +18,6 @@ var structFolderFile =
     [ "has_mailbox", "structFolderFile.html#a361a3034934f734ad32ee1ac7ae0cbfe", null ],
     [ "local", "structFolderFile.html#ab62ecba0220b65c661c637b0c77a1c6e", null ],
     [ "tagged", "structFolderFile.html#a4820cf6500387c1c2762ea022a94f784", null ],
-    [ "nd", "structFolderFile.html#a8d22576888567e6a9b8329c27352a2c9", null ]
+    [ "nd", "structFolderFile.html#a8d22576888567e6a9b8329c27352a2c9", null ],
+    [ "gen", "structFolderFile.html#ab22fa4a6e95437fcc5b9f5860ed13759", null ]
 ];

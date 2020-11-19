@@ -51,7 +51,7 @@ var searchData=
   ['attribute',['attribute',['../structParameter.html#a189338f8764ba916b15b6848d1d79420',1,'Parameter::attribute()'],['../structRfc2231Parameter.html#af246fdfa9c7122037fc3146d73e36c0a',1,'Rfc2231Parameter::attribute()']]],
   ['auth_5flist',['auth_list',['../structPopAccountData.html#afad08df13826f48c3943615f415a7cba',1,'PopAccountData']]],
   ['auth_5fmechs',['auth_mechs',['../structSmtpAccountData.html#aa83214af6dbc93ce7c7ba0487b26c355',1,'SmtpAccountData']]],
-  ['authenticate',['authenticate',['../structImapAuth.html#ae626ffacba170b0ca2744fbb3acc4029',1,'ImapAuth::authenticate()'],['../structPopAuth.html#aa2e5b577b8f1770de3f3ec70ac76ee97',1,'PopAuth::authenticate()']]],
+  ['authenticate',['authenticate',['../structImapAuth.html#ae626ffacba170b0ca2744fbb3acc4029',1,'ImapAuth::authenticate()'],['../structPopAuth.html#aa2e5b577b8f1770de3f3ec70ac76ee97',1,'PopAuth::authenticate()'],['../structSmtpAuth.html#a007f784ef797d89353cfc7be138231bd',1,'SmtpAuth::authenticate()']]],
   ['authenticators',['authenticators',['../structNntpAccountData.html#a31956518f4a223c885421a1315b79330',1,'NntpAccountData']]],
   ['autocrypt',['autocrypt',['../structEnvelope.html#a8888ccd1c0b1512c92dd00a9a3a059d8',1,'Envelope']]],
   ['autocrypt_5fgossip',['autocrypt_gossip',['../structEnvelope.html#a59c64138a508cd27c61dc719e7aab5a0',1,'Envelope']]],
@@ -66,5 +66,6 @@ var searchData=
   ['autocryptvars',['AutocryptVars',['../autocrypt_2config_8c.html#acee37b1f22382a6ba6c4a35e016549d9',1,'config.c']]],
   ['autosubscribecache',['AutoSubscribeCache',['../globals_8c.html#a1de2e72a5a98bba257a6797327bd955d',1,'AutoSubscribeCache():&#160;globals.c'],['../globals_8h.html#a1de2e72a5a98bba257a6797327bd955d',1,'AutoSubscribeCache():&#160;globals.c']]],
   ['auxsort',['AuxSort',['../sort_8c.html#acf9001119e295f90b204c11c7137e4e9',1,'sort.c']]],
+  ['ava',['ava',['../structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc',1,'AliasMenuData']]],
   ['available',['available',['../structConnection.html#aa3ca1bfc7dba70f1eaf391eee9701330',1,'Connection']]]
 ];

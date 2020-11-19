@@ -3,6 +3,7 @@ var sasl_8c =
     [ "SaslSockData", "structSaslSockData.html", "structSaslSockData" ],
     [ "MUTT_SASL_MAXBUF", "sasl_8c.html#a1ca034422dab598e155db6ac83ebefc2", null ],
     [ "IP_PORT_BUFLEN", "sasl_8c.html#a45e86b3d3f4e938588889a80a98da66e", null ],
+    [ "sasl_auth_validator", "sasl_8c.html#abdaa08c1752312da0be1ae5db613121b", null ],
     [ "getnameinfo_err", "sasl_8c.html#a897c43d98d043f19176a14adba6e465d", null ],
     [ "iptostring", "sasl_8c.html#abd06051d6bdbf9f011dbfa8df64c424c", null ],
     [ "mutt_sasl_cb_log", "sasl_8c.html#a6ad00b45fffbd1eef6b766e743e35ca7", null ],
@@ -19,6 +20,7 @@ var sasl_8c =
     [ "mutt_sasl_interact", "sasl_8c.html#a69d46ce6a265526da2e547529fe2d44b", null ],
     [ "mutt_sasl_setup_conn", "sasl_8c.html#af737590d183a661ad5cc6bd2de7fe280", null ],
     [ "mutt_sasl_done", "sasl_8c.html#a8a4397f981b925ca37de266fd43d45a8", null ],
+    [ "sasl_authenticators", "sasl_8c.html#a19c3688c37fc56800b64f982a0e41e28", null ],
     [ "MuttSaslCallbacks", "sasl_8c.html#ab02e9323fe900c1a21b2846b03a2d402", null ],
     [ "secret_ptr", "sasl_8c.html#a31945ebcc56eca548dc53917f31c0d4b", null ]
 ];

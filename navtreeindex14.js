@@ -1,5 +1,14 @@
 var NAVTREEINDEX14 =
 {
+"imap_imap.html":[3,16,11],
+"imap_message.html":[3,16,12],
+"imap_msn.html":[3,16,13],
+"imap_search.html":[3,16,14],
+"imap_utf7.html":[3,16,15],
+"imap_util.html":[3,16,16],
+"index.html":[],
+"index.html":[0],
+"index_8c.html":[2,0,58],
 "index_8c.html#a08eed13b52a7215baf26da80bb6ca870":[2,0,58,42],
 "index_8c.html#a0f36e86c8807a4b16579118134e178f5":[2,0,58,39],
 "index_8c.html#a0fbf75fa988aa37198039a83614ef2f8":[2,0,58,7],
@@ -240,14 +249,5 @@ var NAVTREEINDEX14 =
 "lib_compress.html":[3,6],
 "lib_config.html":[3,7],
 "lib_conn.html":[3,8],
-"lib_core.html":[3,9],
-"lib_debug.html":[3,10],
-"lib_email.html":[3,11],
-"lib_gui.html":[3,12],
-"lib_hcache.html":[3,13],
-"lib_helpbar.html":[3,14],
-"lib_history.html":[3,15],
-"lib_imap.html":[3,16],
-"lib_maildir.html":[3,17],
-"lib_mbox.html":[3,18]
+"lib_core.html":[3,9]
 };

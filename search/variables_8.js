@@ -44,7 +44,7 @@ var searchData=
   ['initial',['initial',['../structConfigDef.html#a669d58ec0f68946995b69af97333d71a',1,'ConfigDef']]],
   ['inlineallow',['InlineAllow',['../mutt__parse_8c.html#affb5faead9b165423a0e53140950574c',1,'InlineAllow():&#160;mutt_parse.c'],['../mutt__parse_8h.html#affb5faead9b165423a0e53140950574c',1,'InlineAllow():&#160;mutt_parse.c']]],
   ['inlineexclude',['InlineExclude',['../mutt__parse_8c.html#a5142b90ad6c777fc0f3273f006d2744d',1,'InlineExclude():&#160;mutt_parse.c'],['../mutt__parse_8h.html#a5142b90ad6c777fc0f3273f006d2744d',1,'InlineExclude():&#160;mutt_parse.c']]],
-  ['inode',['inode',['../structMaildir.html#a20755e5b471a1c6ef8d29aa1582ff355',1,'Maildir']]],
+  ['inode',['inode',['../structMdEmail.html#aa9130be962cf752ad7672ac362932808',1,'MdEmail']]],
   ['inotifyfd',['INotifyFd',['../monitor_8c.html#a31200638634da3b6d39dcacd1726f421',1,'monitor.c']]],
   ['inrepls',['inrepls',['../structFgetConv.html#abf98f002997a9985a4e82483ab9384bd',1,'FgetConv']]],
   ['intermediates',['intermediates',['../structSmimeCommandContext.html#a2bfac5bbad182bcb933d0dffcb1f9d43',1,'SmimeCommandContext']]],
@@ -66,6 +66,7 @@ var searchData=
   ['is_5foverridden',['is_overridden',['../structUserHdrsOverride.html#ac67b4b31c1e7260fd616541fac7612a1',1,'UserHdrsOverride']]],
   ['is_5fsearched',['is_searched',['../structAliasView.html#a71a64de73888c57232ff738a1cf8dc91',1,'AliasView']]],
   ['is_5ftagged',['is_tagged',['../structAliasView.html#a683663ebafec086d5d253cd55fb7b209',1,'AliasView']]],
+  ['is_5fvisible',['is_visible',['../structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4',1,'AliasView']]],
   ['isendwin',['IsEndwin',['../mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b',1,'mutt_signal.c']]],
   ['issuer',['issuer',['../structSmimeKey.html#a6921c2922bea84854b90eab1b7e90f1e',1,'SmimeKey']]]
 ];

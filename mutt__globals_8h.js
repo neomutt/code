@@ -79,6 +79,7 @@ var mutt__globals_8h =
     [ "C_Confirmappend", "mutt__globals_8h.html#ae40777fa871047d3a26a10ae85a53e5a", null ],
     [ "C_Confirmcreate", "mutt__globals_8h.html#a43a9ddc6ef1263c0cc8653b16a185e8c", null ],
     [ "C_CopyDecodeWeed", "mutt__globals_8h.html#a932ddbec4c40c8ccda09b4cac0f1a0fa", null ],
+    [ "C_CountAlternatives", "mutt__globals_8h.html#a35e965213996f2869c320ee639e6170a", null ],
     [ "C_DeleteUntag", "mutt__globals_8h.html#a37d5198c4c0e9bed06678422b8fa321b", null ],
     [ "C_FlagSafe", "mutt__globals_8h.html#addc0b6aeeddbab49ce0071aec36805a3", null ],
     [ "C_ForwardDecode", "mutt__globals_8h.html#ad82dea05c594940ff2788b2f44737a35", null ],

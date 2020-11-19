@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['gen',['gen',['../structFolderFile.html#ab22fa4a6e95437fcc5b9f5860ed13759',1,'FolderFile::gen()'],['../structMailbox.html#af8a0807a1ec429b12a10f3c2e0319b59',1,'Mailbox::gen()']]],
   ['gen_5fhash',['gen_hash',['../structHashTable.html#a07e7a7b1c42ebdfeb0128c443fe59422',1,'HashTable']]],
   ['gen_5ftime',['gen_time',['../structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd',1,'PgpKeyInfo']]],
   ['get_5ffield',['get_field',['../structConnAccount.html#ab6af33cde42120a828e3d37d0c67f863',1,'ConnAccount']]],

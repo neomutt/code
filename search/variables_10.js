@@ -40,7 +40,7 @@ var searchData=
   ['resp_5fcodes',['resp_codes',['../structPopAccountData.html#a2c36b41f042cd37b0f5091d79dca48d9',1,'PopAccountData']]],
   ['restore',['restore',['../structFetchCtx.html#a2fc01f0b6bca5a84734a9d9dbaedcd5b',1,'FetchCtx']]],
   ['return_5fpath',['return_path',['../structEnvelope.html#a1c204b091d782098fc1efa0c2f3b1e20',1,'Envelope']]],
-  ['reversealiases',['ReverseAliases',['../alias_2lib_8h.html#a91f1d4988876567a46a6b1291da267d9',1,'ReverseAliases():&#160;reverse.c'],['../reverse_8c.html#a91f1d4988876567a46a6b1291da267d9',1,'ReverseAliases():&#160;reverse.c']]],
+  ['reversealiases',['ReverseAliases',['../reverse_8c.html#a91f1d4988876567a46a6b1291da267d9',1,'reverse.c']]],
   ['rgrp',['rgrp',['../structRangeRegex.html#ac4e25ea4b622354a12208d2e8e0375b6',1,'RangeRegex']]],
   ['rights',['rights',['../structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73',1,'Mailbox']]],
   ['rootwindow',['RootWindow',['../mutt__window_8c.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow():&#160;mutt_window.c'],['../mutt__window_8h.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow():&#160;mutt_window.c']]],

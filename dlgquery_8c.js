@@ -5,9 +5,9 @@ var dlgquery_8c =
     [ "query_format_str", "dlgquery_8c.html#a170d2276b3e0f9c059498cff0c355d3d", null ],
     [ "query_make_entry", "dlgquery_8c.html#a4081ef04c1e90ab28b3279f8df6c3458", null ],
     [ "query_tag", "dlgquery_8c.html#a9be22e1702401b4845efffd8059a3605", null ],
-    [ "query_run", "dlgquery_8c.html#a70163198f1bfa9f5f6a15dd608bdd612", null ],
-    [ "dlg_select_query", "dlgquery_8c.html#a39df596d6572c965ad34bc62f4108d7b", null ],
-    [ "query_complete", "dlgquery_8c.html#a20b5ce2715c14dede64ce7d81ffc4576", null ],
-    [ "query_index", "dlgquery_8c.html#af0088d47def0b7ffbadcf4f635cfc904", null ],
+    [ "query_run", "dlgquery_8c.html#a35eea4925485d20ee477926b9420ca35", null ],
+    [ "dlg_select_query", "dlgquery_8c.html#a1b14278ee062936035f5b41babab18da", null ],
+    [ "query_complete", "dlgquery_8c.html#aed95bba2770f684ed0caadf42d924860", null ],
+    [ "query_index", "dlgquery_8c.html#a1205cb3b6c32c17817078da6a4666be5", null ],
     [ "QueryHelp", "dlgquery_8c.html#a12d28b03eb265706a3c03ee5ff42c82d", null ]
 ];

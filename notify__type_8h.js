@@ -9,6 +9,7 @@ var notify__type_8h =
       [ "NT_CONTEXT", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8afac49e664e83150f3f7c9086fe6cf63d", null ],
       [ "NT_EMAIL", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a42f0ca49f1334c4edded574f4267b34a", null ],
       [ "NT_GLOBAL", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8acce7b38b7377553781432765eb427d59", null ],
+      [ "NT_HEADER", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a827cf3ec3fa796b48315d5caf54a3bb9", null ],
       [ "NT_MAILBOX", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a69518e4247799dbc934e07163b747c03", null ],
       [ "NT_WINDOW", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a0effa043e3256fe597161d6fa95f7442", null ],
       [ "NT_ALIAS", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8aed9e9769f3355292b796eb7675411b04", null ],

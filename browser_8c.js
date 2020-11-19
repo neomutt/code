@@ -4,6 +4,7 @@ var browser_8c =
     [ "mutt_browser_cleanup", "browser_8c.html#ae57ac9cc2f16e09d897d2c37177da2cd", null ],
     [ "destroy_state", "browser_8c.html#a66083512f4b2523d4012b7f501eb1842", null ],
     [ "browser_compare_subject", "browser_8c.html#af9190b0147359661eacaa7266e2d9e1c", null ],
+    [ "browser_compare_order", "browser_8c.html#abdf5dbaae7c30284ac89f86bc33a8475", null ],
     [ "browser_compare_desc", "browser_8c.html#a1ec49102db5b09962963bf5ab5ae16d6", null ],
     [ "browser_compare_date", "browser_8c.html#af2bd47839eb605318281099a6101518f", null ],
     [ "browser_compare_size", "browser_8c.html#ade8f6a07437f80256f31fdae9b000a53", null ],

@@ -21,6 +21,7 @@ var pop_2private_8h =
       [ "POP_A_FAILURE", "pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc", null ],
       [ "POP_A_UNAVAIL", "pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739", null ]
     ] ],
+    [ "pop_auth_is_valid", "pop_2private_8h.html#a5eb151ec943ffae6dd2929174887fec3", null ],
     [ "pop_authenticate", "pop_2private_8h.html#aded3c1fc1a165e89168e4fb0117242d7", null ],
     [ "pop_apop_timestamp", "pop_2private_8h.html#ac4bb821b21dfbb249e4543f379a1707c", null ],
     [ "pop_parse_path", "pop_2private_8h.html#ab8cd4dc0b93aa958fc8611242e05df7b", null ],

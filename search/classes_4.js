@@ -14,6 +14,7 @@ var searchData=
   ['eventconfig',['EventConfig',['../structEventConfig.html',1,'']]],
   ['eventcontext',['EventContext',['../structEventContext.html',1,'']]],
   ['eventemail',['EventEmail',['../structEventEmail.html',1,'']]],
+  ['eventheader',['EventHeader',['../structEventHeader.html',1,'']]],
   ['eventmailbox',['EventMailbox',['../structEventMailbox.html',1,'']]],
   ['eventwindow',['EventWindow',['../structEventWindow.html',1,'']]]
 ];

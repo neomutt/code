@@ -9,6 +9,7 @@ var searchData=
   ['smimecommandcontext',['SmimeCommandContext',['../structSmimeCommandContext.html',1,'']]],
   ['smimekey',['SmimeKey',['../structSmimeKey.html',1,'']]],
   ['smtpaccountdata',['SmtpAccountData',['../structSmtpAccountData.html',1,'']]],
+  ['smtpauth',['SmtpAuth',['../structSmtpAuth.html',1,'']]],
   ['state',['State',['../structState.html',1,'']]],
   ['storedbctx',['StoreDbCtx',['../structStoreDbCtx.html',1,'']]],
   ['storelmdbctx',['StoreLmdbCtx',['../structStoreLmdbCtx.html',1,'']]],

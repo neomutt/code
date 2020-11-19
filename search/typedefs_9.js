@@ -1,7 +1,7 @@
 var searchData=
 [
   ['md5_5fuint32',['md5_uint32',['../md5_8h.html#a80ae801727f552c38e0e5b4338aa2e8d',1,'md5.h']]],
-  ['mhseqflags',['MhSeqFlags',['../maildir_2private_8h.html#ac6a1ef17d0d72f67fa4b5d56188bf1b6',1,'private.h']]],
+  ['mhseqflags',['MhSeqFlags',['../sequence_8h.html#ac6a1ef17d0d72f67fa4b5d56188bf1b6',1,'sequence.h']]],
   ['mixcapflags',['MixCapFlags',['../remailer_8h.html#af4908697bfee91b6ddacc8696aa1d7d7',1,'remailer.h']]],
   ['module_5finit_5fconfig_5ft',['module_init_config_t',['../config_2lib_8h.html#aef4d2692508aa7b2c018a2e53e177c0e',1,'lib.h']]],
   ['msgopenflags',['MsgOpenFlags',['../mx_8h.html#a3c2b592b42c4c70ba32b8fb9ce869750',1,'mx.h']]],

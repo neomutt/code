@@ -49,7 +49,7 @@ var mx_8h =
     [ "mx_ac_remove", "mx_8h.html#a0531a5f089718b745413a38ea8d5e2a6", null ],
     [ "mx_access", "mx_8h.html#a3a49664b99f8c9e57f94c02c922922cd", null ],
     [ "mx_alloc_memory", "mx_8h.html#acd0bf144d7c5ae05d86d8fb5e0058780", null ],
-    [ "mx_check_empty", "mx_8h.html#abfcb134b61319721a49a9b205a67b58c", null ],
+    [ "mx_path_is_empty", "mx_8h.html#a66865ad6eece3778bdd6558f1ba637ed", null ],
     [ "mx_fastclose_mailbox", "mx_8h.html#ac883dc0d1391457ac62efe762067a544", null ],
     [ "mx_get_ops", "mx_8h.html#a69fb97b5bdfa030216af32bccd9b6fed", null ],
     [ "mx_tags_is_supported", "mx_8h.html#aa5e9e28ca8461569523e2dbd90ee14b1", null ],

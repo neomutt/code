@@ -51,6 +51,7 @@ var notmuch_8c =
     [ "rename_filename", "notmuch_8c.html#a9007300d0a2336c11035d0d34f9458aa", null ],
     [ "count_query", "notmuch_8c.html#a4407eb83838cab3b1d14b9d22de269fc", null ],
     [ "nm_email_get_folder", "notmuch_8c.html#a7f54a204c0b9fb005283ee778d177085", null ],
+    [ "nm_email_get_folder_rel_db", "notmuch_8c.html#a4c16724879983f9b127cf1ec90e698bc", null ],
     [ "nm_read_entire_thread", "notmuch_8c.html#a8ac57cce7f11e7ce9b485d9fce4c2975", null ],
     [ "nm_parse_type_from_query", "notmuch_8c.html#a588e7bba17ab66fb16a532a1afd8d05e", null ],
     [ "nm_url_from_query", "notmuch_8c.html#af6a894a34eca1a263c572322a8d66da8", null ],

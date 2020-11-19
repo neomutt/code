@@ -8,7 +8,7 @@ var nntp_2lib_8h =
     [ "anum_t", "nntp_2lib_8h.html#afbe93ce95fbbf1758c93d4b123fc2246", null ],
     [ "ANUM", "nntp_2lib_8h.html#af213c68397b28d9da9d2aa988ebbfbde", null ],
     [ "NNTP_ACACHE_LEN", "nntp_2lib_8h.html#a1efe6072fe3f0f219d90675e1aa55f40", null ],
-    [ "nntp_select_server", "nntp_2lib_8h.html#a7ba29bbfa4543e780d0e49241bcd2496", null ],
+    [ "nntp_select_server", "nntp_2lib_8h.html#ac4e2953e3c6f9d6d57467cb5e2856d1e", null ],
     [ "mutt_newsgroup_subscribe", "nntp_2lib_8h.html#a74a7958486648b61d6ce1fe34318eed8", null ],
     [ "mutt_newsgroup_unsubscribe", "nntp_2lib_8h.html#aea2d7fb63b1b73a6815a0ad8cd8ae07e", null ],
     [ "mutt_newsgroup_catchup", "nntp_2lib_8h.html#a5f67ac08e3719a644d03b62e22127100", null ],

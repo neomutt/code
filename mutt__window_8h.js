@@ -79,7 +79,7 @@ var mutt__window_8h =
     [ "mutt_window_addnstr", "mutt__window_8h.html#a4c7adbdc51647b99630760743b964661", null ],
     [ "mutt_window_addstr", "mutt__window_8h.html#a6066d3d1f3ef4001aea575d0abe012b2", null ],
     [ "mutt_window_clearline", "mutt__window_8h.html#adb0d282e3a7b3cf644485c1aab14774f", null ],
-    [ "mutt_window_clrtobot", "mutt__window_8h.html#ab1765d2a853999ec3f8cdd78dfb94602", null ],
+    [ "mutt_window_clear", "mutt__window_8h.html#a02c050ebee8aa9a54a5bd2bab4855a94", null ],
     [ "mutt_window_clrtoeol", "mutt__window_8h.html#ae2ba61d0bc2413c09e6a12f1fe345ab4", null ],
     [ "mutt_window_move", "mutt__window_8h.html#a882e79c6c69caad2eb7588c1f542767b", null ],
     [ "mutt_window_move_abs", "mutt__window_8h.html#ae8b1536a61a5486bd43dcf324fe43c43", null ],

@@ -22,5 +22,6 @@ var structMxOps =
     [ "path_probe", "structMxOps.html#a625a6ea0abfdb6620542e26acc499177", null ],
     [ "path_canon", "structMxOps.html#ad7d938f02ba15c08d45128bc2ca00e28", null ],
     [ "path_pretty", "structMxOps.html#a3a85067a3d76652ec0014ce520c565db", null ],
-    [ "path_parent", "structMxOps.html#a0816dd26eb79c12783e9ac9e7b67ecd9", null ]
+    [ "path_parent", "structMxOps.html#a0816dd26eb79c12783e9ac9e7b67ecd9", null ],
+    [ "path_is_empty", "structMxOps.html#a6ef058630b8418ae080d17762c26a75d", null ]
 ];

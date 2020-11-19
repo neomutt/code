@@ -1,6 +1,7 @@
 var smtp_8c =
 [
     [ "SmtpAccountData", "structSmtpAccountData.html", "structSmtpAccountData" ],
+    [ "SmtpAuth", "structSmtpAuth.html", "structSmtpAuth" ],
     [ "smtp_success", "smtp_8c.html#a816bd1f7035855b6c4c4132b64571155", null ],
     [ "SMTP_READY", "smtp_8c.html#afdf1ea22475abe4ccfd36797e7be8436", null ],
     [ "SMTP_CONTINUE", "smtp_8c.html#ad64a81e227fb9991ddc51089f5dd5c81", null ],
@@ -28,9 +29,12 @@ var smtp_8c =
     [ "smtp_fill_account", "smtp_8c.html#a9ced651e593132d0ab32284da93fa013", null ],
     [ "smtp_helo", "smtp_8c.html#a65e028c1aba1dae80b1b9efe867a397d", null ],
     [ "smtp_auth_sasl", "smtp_8c.html#ac8a668c09177f520c90cfdb231ecdcf3", null ],
-    [ "smtp_auth_oauth", "smtp_8c.html#a522c47d3dfe6a67a6f5ef18b67bc2d01", null ],
-    [ "smtp_auth_plain", "smtp_8c.html#a97914ece130469eb9beb9193fa7add69", null ],
-    [ "smtp_auth", "smtp_8c.html#a1c7d42a5627a2e4f557651c70fb0e50b", null ],
+    [ "smtp_auth_oauth", "smtp_8c.html#aeddfb78789d9c2e7d5f25cad8c2cde5a", null ],
+    [ "smtp_auth_plain", "smtp_8c.html#ae9586a32d8891fcc4e849ca971141f45", null ],
+    [ "smtp_auth_login", "smtp_8c.html#ae80814f83efbe5e77a160a89e453ce2e", null ],
+    [ "smtp_auth_is_valid", "smtp_8c.html#a3fcb152107b812fff075ad5d08e71123", null ],
+    [ "smtp_authenticate", "smtp_8c.html#a262d1231007775a59de517dde48312be", null ],
     [ "smtp_open", "smtp_8c.html#af00197da7dca51e184b0e8c22ad91103", null ],
-    [ "mutt_smtp_send", "smtp_8c.html#ae59289bca751588d49e12337981f375d", null ]
+    [ "mutt_smtp_send", "smtp_8c.html#ae59289bca751588d49e12337981f375d", null ],
+    [ "smtp_authenticators", "smtp_8c.html#ad9e2b89b915f951b872fe74e668a13e0", null ]
 ];

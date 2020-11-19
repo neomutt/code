@@ -1,5 +1,6 @@
 var imap_2config_8c =
 [
+    [ "imap_auth_validator", "imap_2config_8c.html#aff241510f727899593234e49998f181c", null ],
     [ "config_init_imap", "imap_2config_8c.html#ac90197978126f55f7573ba629cd31a27", null ],
     [ "C_ImapAuthenticators", "imap_2config_8c.html#afd7dc8b625bae9d647f6a06887125c69", null ],
     [ "C_ImapCheckSubscribed", "imap_2config_8c.html#ae901b07e879b679cf92bc2aaa7b72a30", null ],

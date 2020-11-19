@@ -14,5 +14,6 @@ var structComposeRedrawData =
     [ "win_envelope", "structComposeRedrawData.html#a8c2c6d195d268c2dbfbe80fc9ed566b3", null ],
     [ "win_abar", "structComposeRedrawData.html#af7e3d45772314a13d14ab276cf8ad5c6", null ],
     [ "win_attach", "structComposeRedrawData.html#ab839b025c4c87c59a173ebfcbec28cb3", null ],
-    [ "win_cbar", "structComposeRedrawData.html#ab35713d1f60b2c1d40ee975f579d0372", null ]
+    [ "win_cbar", "structComposeRedrawData.html#ab35713d1f60b2c1d40ee975f579d0372", null ],
+    [ "sub", "structComposeRedrawData.html#a8f4fd6a9db4f5e0e6fc527d04ae32b9f", null ]
 ];

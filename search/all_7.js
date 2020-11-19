@@ -4,6 +4,7 @@ var searchData=
   ['gui_20parts_20of_20connection_20library',['GUI parts of Connection Library',['../conn_gui.html',1,'lib_conn']]],
   ['gpgme_20key_20selection_20dialog',['GPGME key selection dialog',['../crypt_dlggpgme.html',1,'lib_ncrypt']]],
   ['gdbm_2ec',['gdbm.c',['../gdbm_8c.html',1,'']]],
+  ['gen',['gen',['../structFolderFile.html#ab22fa4a6e95437fcc5b9f5860ed13759',1,'FolderFile::gen()'],['../structMailbox.html#af8a0807a1ec429b12a10f3c2e0319b59',1,'Mailbox::gen()']]],
   ['gen_5fcase_5fstring_5fhash',['gen_case_string_hash',['../hash_8c.html#a06edd29ca46927cfefe74fb8fb61bce6',1,'hash.c']]],
   ['gen_5fhash',['gen_hash',['../structHashTable.html#a07e7a7b1c42ebdfeb0128c443fe59422',1,'HashTable']]],
   ['gen_5fint_5fhash',['gen_int_hash',['../hash_8c.html#a6a2b6f83138b4cb2e811e7399086b2cb',1,'hash.c']]],

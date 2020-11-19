@@ -1,5 +1,6 @@
 var pop_2config_8c =
 [
+    [ "pop_auth_validator", "pop_2config_8c.html#a1a48f830a9203f551eff4a9532a1acda", null ],
     [ "config_init_pop", "pop_2config_8c.html#a51af99fa94746593ce0cdf071c224851", null ],
     [ "C_PopAuthTryAll", "pop_2config_8c.html#adfde6e3983f6413b7b21f360dd82f341", null ],
     [ "C_PopAuthenticators", "pop_2config_8c.html#ad0b3813f566af34fb60e8574fd48d2d0", null ],

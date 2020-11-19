@@ -46,7 +46,7 @@ var searchData=
   ['message_5fid',['message_id',['../structEnvelope.html#a50418c13a849bf27b22922bd5867e5e1',1,'Envelope']]],
   ['messages',['messages',['../structImapMboxData.html#a1c2e1c96d914106f9a2acb79b86e5acf',1,'ImapMboxData::messages()'],['../structFetchCtx.html#aed2eda9299c2676e6f68b3055782c61f',1,'FetchCtx::messages()']]],
   ['messagewindow',['MessageWindow',['../mutt__window_8c.html#a7eb4ef9fcb6abe51dff3a662710d396b',1,'MessageWindow():&#160;mutt_window.c'],['../mutt__window_8h.html#a7eb4ef9fcb6abe51dff3a662710d396b',1,'MessageWindow():&#160;mutt_window.c']]],
-  ['method',['method',['../structImapAuth.html#aecbb7e323413b2a52047335bea7c82ec',1,'ImapAuth::method()'],['../structPopAuth.html#a0668ff8697e909ecf02e1fbdb573b2e2',1,'PopAuth::method()']]],
+  ['method',['method',['../structImapAuth.html#aecbb7e323413b2a52047335bea7c82ec',1,'ImapAuth::method()'],['../structPopAuth.html#a0668ff8697e909ecf02e1fbdb573b2e2',1,'PopAuth::method()'],['../structSmtpAuth.html#afcbd7814f75226e276e3c9fc43cf932c',1,'SmtpAuth::method()']]],
   ['mh_5fbackup_5fpath',['mh_backup_path',['../structMonitor.html#ae37b4694491edb325c72827c242c2bda',1,'Monitor']]],
   ['mh_5fumask',['mh_umask',['../structMaildirMboxData.html#a39ffbc54fea24052432da6c27fa5bc96',1,'MaildirMboxData']]],
   ['mime',['mime',['../structEmail.html#a37098f0a269341bb2c30ab4425207ec5',1,'Email']]],

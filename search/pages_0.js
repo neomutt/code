@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['array_20of_20alias_20views',['Array of Alias Views',['../alias_array.html',1,'lib_alias']]],
   ['alias_20commands',['Alias commands',['../alias_commands.html',1,'lib_alias']]],
   ['address_20book_20handling_20aliases',['Address book handling aliases',['../alias_dlgalias.html',1,'lib_alias']]],
+  ['address_20book_20sorting_20functions',['Address book sorting functions',['../alias_sort.html',1,'lib_alias']]],
   ['autocrypt_20account_20menu',['Autocrypt account menu',['../autocrypt_account.html',1,'lib_autocrypt']]],
   ['autocrypt_20end_2dto_2dend_20encryption',['Autocrypt end-to-end encryption',['../autocrypt_autocrypt.html',1,'lib_autocrypt']]],
   ['autocrypt_20database_20handling',['Autocrypt database handling',['../autocrypt_db.html',1,'lib_autocrypt']]],

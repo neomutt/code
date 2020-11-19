@@ -40,5 +40,6 @@ var structMailbox =
     [ "flags", "structMailbox.html#a7e157e0d2e198c65e7471dba87fec387", null ],
     [ "mdata", "structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595", null ],
     [ "mdata_free", "structMailbox.html#a015fb45ad1a08cf8e44e3553202834fb", null ],
-    [ "notify", "structMailbox.html#a86c7dd0131cdc539dbbd979abc540337", null ]
+    [ "notify", "structMailbox.html#a86c7dd0131cdc539dbbd979abc540337", null ],
+    [ "gen", "structMailbox.html#af8a0807a1ec429b12a10f3c2e0319b59", null ]
 ];

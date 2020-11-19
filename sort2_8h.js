@@ -30,7 +30,6 @@ var sort2_8h =
       [ "SORT_MAX", "sort2_8h.html#ad7fca38b521558f128d4a566729f5803addafbcc634d624d82570dc1b0d887a0b", null ]
     ] ],
     [ "SortAliasMethods", "sort2_8h.html#a6accc5f32e32ca3daa7c85ceeb133106", null ],
-    [ "SortAuxMethods", "sort2_8h.html#ac7f3faefbd4de2a855ebe35e07867f95", null ],
     [ "SortBrowserMethods", "sort2_8h.html#a62d1200a7833a80c1b44631fc91ac874", null ],
     [ "SortKeyMethods", "sort2_8h.html#ac7317ba9b6d4e63e5385d9d2fca6d461", null ],
     [ "SortMethods", "sort2_8h.html#a212caaae7a78c55728bc774f190e8948", null ],

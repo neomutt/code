@@ -17,7 +17,7 @@ var mx_8c =
     [ "mx_msg_commit", "mx_8c.html#add0e192c5f27bf6bd096ae2eb7c0b67b", null ],
     [ "mx_msg_close", "mx_8c.html#a2172d90c08b5a2b293d22ed13ee0e7a8", null ],
     [ "mx_alloc_memory", "mx_8c.html#acd0bf144d7c5ae05d86d8fb5e0058780", null ],
-    [ "mx_check_empty", "mx_8c.html#abfcb134b61319721a49a9b205a67b58c", null ],
+    [ "mx_path_is_empty", "mx_8c.html#a66865ad6eece3778bdd6558f1ba637ed", null ],
     [ "mx_tags_edit", "mx_8c.html#a99a695f2b5d01cdda62c68693c347ce5", null ],
     [ "mx_tags_commit", "mx_8c.html#a38288bed1c5844da8860d94249ac5c6f", null ],
     [ "mx_tags_is_supported", "mx_8c.html#aa5e9e28ca8461569523e2dbd90ee14b1", null ],

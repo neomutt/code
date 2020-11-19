@@ -49,6 +49,7 @@ var imap_8c =
     [ "imap_expand_path", "imap_8c.html#ab2645aa08902090e5e29dff471d1bb0e", null ],
     [ "imap_path_pretty", "imap_8c.html#a77266ac5e79c4aede2cbb51bbd2f8f58", null ],
     [ "imap_path_parent", "imap_8c.html#a7d533f860d0f7109cfec59b860ff2e23", null ],
+    [ "imap_path_is_empty", "imap_8c.html#a49ced05770a208997c1580376dc4e380", null ],
     [ "imap_commands", "imap_8c.html#aa4c20afa73454ac2b6bdcb2e7177868e", null ],
     [ "MxImapOps", "imap_8c.html#a9cd881485b601b78cae25ade04b475c8", null ]
 ];

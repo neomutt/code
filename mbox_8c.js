@@ -33,6 +33,7 @@ var mbox_8c =
     [ "mbox_path_canon", "mbox_8c.html#a6139f60a0e30c81ce4433f6848ae4f4a", null ],
     [ "mbox_path_pretty", "mbox_8c.html#ac72863c90267f09a0a3362d454524fea", null ],
     [ "mbox_path_parent", "mbox_8c.html#a8fd4b20d8b344bcb409de4ea1acebd90", null ],
+    [ "mbox_path_is_empty", "mbox_8c.html#abce2cecf1fc968b3af6d8c2ace585f01", null ],
     [ "mmdf_msg_commit", "mbox_8c.html#ad2e9163058c555394def8ba457a57dc4", null ],
     [ "mmdf_msg_padding_size", "mbox_8c.html#a4b926e0929ad5f4be944bc73611210d8", null ],
     [ "mbox_mbox_check_stats", "mbox_8c.html#a9959e353148463d781eb78f5a87322e4", null ],
