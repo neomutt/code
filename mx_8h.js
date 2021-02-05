@@ -22,7 +22,7 @@ var mx_8h =
       [ "MUTT_FLAGS", "mx_8h.html#a51ec47adeb053fdc910f627a0ff47119a8cd6ec26f160bf917567cb43dec7921d", null ]
     ] ],
     [ "mx_mbox_check", "mx_8h.html#a52c7633872cb55b532094512888b759a", null ],
-    [ "mx_mbox_check_stats", "mx_8h.html#a4a2d32b0fd1c3392f16af141e46e0702", null ],
+    [ "mx_mbox_check_stats", "mx_8h.html#a325f934a6994d978aa8fe1204e9a9fa2", null ],
     [ "mx_mbox_close", "mx_8h.html#af565f09988150afe719a01227a260f88", null ],
     [ "mx_mbox_open", "mx_8h.html#a72efa68c4041905af8d9b38948580a56", null ],
     [ "mx_mbox_sync", "mx_8h.html#a3000049febcfd5ebe797f418edb58c68", null ],

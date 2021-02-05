@@ -20,5 +20,6 @@ var buffer_8c =
     [ "mutt_buffer_concat_path", "buffer_8c.html#affd1462724f24d56e9c928550fd903f6", null ],
     [ "mutt_buffer_concatn_path", "buffer_8c.html#abaa42a8848bf380318f04d300da28102", null ],
     [ "mutt_buffer_strdup", "buffer_8c.html#aa43f3cb9584746ca0cf6720ac1fc38e7", null ],
-    [ "mutt_buffer_copy", "buffer_8c.html#ad070cb0d30bde9c0069f8c8e27ed89a8", null ]
+    [ "mutt_buffer_copy", "buffer_8c.html#ad070cb0d30bde9c0069f8c8e27ed89a8", null ],
+    [ "mutt_buffer_seek", "buffer_8c.html#acc8e734c720c7ec2644d693702ec58e2", null ]
 ];

@@ -27,7 +27,7 @@ var pgp_8c =
     [ "pgp_class_find_keys", "pgp_8c.html#a32a1948b5d4d3cf41c817b98f7c445d0", null ],
     [ "pgp_class_encrypt_message", "pgp_8c.html#a670a77cb262550ce2a37b6eb3b5b5c88", null ],
     [ "pgp_class_traditional_encryptsign", "pgp_8c.html#ac131bc7b36afa45cd86e864a66baee6f", null ],
-    [ "pgp_class_send_menu", "pgp_8c.html#a563518f9cdac5ec697065b7c49ce37c6", null ],
+    [ "pgp_class_send_menu", "pgp_8c.html#a8b0a3fa1ac99d5701063bc472fec560b", null ],
     [ "PgpPass", "pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d", null ],
     [ "PgpExptime", "pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1", null ]
 ];

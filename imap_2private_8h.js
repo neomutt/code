@@ -72,7 +72,7 @@ var imap_2private_8h =
     ] ],
     [ "imap_create_mailbox", "imap_2private_8h.html#aee0bf2d345124a22054cbf217b6fb5f0", null ],
     [ "imap_rename_mailbox", "imap_2private_8h.html#a9f4b46b80a1dd0e00cc956c06d377464", null ],
-    [ "imap_exec_msgset", "imap_2private_8h.html#af6810581914b6099413173cb4996db1d", null ],
+    [ "imap_exec_msgset", "imap_2private_8h.html#a62497a1d8948e9172091840079ee3155", null ],
     [ "imap_open_connection", "imap_2private_8h.html#a93ed20ff163bf6a15c46071ba357d17a", null ],
     [ "imap_close_connection", "imap_2private_8h.html#a14b36ce07a1b1b0fbe046f9e0e192119", null ],
     [ "imap_read_literal", "imap_2private_8h.html#a5adc6a50d981b74f9210b202ca117861", null ],

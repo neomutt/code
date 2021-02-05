@@ -7,7 +7,7 @@ var group_8h =
     [ "STAILQ_HEAD", "group_8h.html#a629b769834e96d3c28367b9ac0e583d1", null ],
     [ "mutt_grouplist_add", "group_8h.html#a38b419a7a8c35f428b5be24f98a6c9d7", null ],
     [ "mutt_grouplist_add_addrlist", "group_8h.html#aad0433c7655effc83f411a3fa88120db", null ],
-    [ "mutt_grouplist_add_regex", "group_8h.html#a3c095f50ad6dc2f0744cb8dbcefd35eb", null ],
+    [ "mutt_grouplist_add_regex", "group_8h.html#a8b1dda79743b7552fd38c3097990bda2", null ],
     [ "mutt_grouplist_clear", "group_8h.html#ae224a573870bd20b8f3ff73a5241f2fd", null ],
     [ "mutt_grouplist_destroy", "group_8h.html#ad8aea720f44ace0cc95bcf55548dcc9f", null ],
     [ "mutt_grouplist_free", "group_8h.html#a3b21ce75f880ca73406dc3bdffd278f8", null ],

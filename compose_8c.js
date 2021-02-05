@@ -55,7 +55,7 @@ var compose_8c =
     [ "compose_format_str", "compose_8c.html#ac48dc934e7245d47d1a4feb8459ccb81", null ],
     [ "compose_config_observer", "compose_8c.html#a82dc12838cf57973070cdd4e9c554d41", null ],
     [ "compose_header_observer", "compose_8c.html#aeb0d87aee0853ff188ec505c7f3bb20c", null ],
-    [ "mutt_compose_menu", "compose_8c.html#acbb0d4100be90b597c9229f13cd7ef2b", null ],
+    [ "mutt_compose_menu", "compose_8c.html#a09d99dfacbc91114d784e7e769af5c4f", null ],
     [ "There_are_no_attachments", "compose_8c.html#ad560832702dd29552851dc3cc4b7e619", null ],
     [ "HeaderPadding", "compose_8c.html#a2dc7f233f069332ab5fd13ebb6a32934", null ],
     [ "MaxHeaderWidth", "compose_8c.html#aa57902c74e4b99785680a0bc4e263029", null ],

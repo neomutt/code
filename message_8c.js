@@ -15,7 +15,7 @@ var message_8c =
     [ "query_abort_header_download", "message_8c.html#aa881016bc7aba8e6c29a910459cfa260", null ],
     [ "imap_alloc_uid_hash", "message_8c.html#af9494c020486cd243659caade6f555d2", null ],
     [ "imap_fetch_msn_seqset", "message_8c.html#a3c0f36a2c199ad42ce13fe65e014f9a2", null ],
-    [ "set_changed_flag", "message_8c.html#aafd4d11d668ae9ea3af0a3c2b9aaa3a5", null ],
+    [ "set_changed_flag", "message_8c.html#ab39628ebf38249e5a9fb04dd5620b3c9", null ],
     [ "read_headers_normal_eval_cache", "message_8c.html#ac859b71390c6ecbcecbe5bf3627db566", null ],
     [ "read_headers_qresync_eval_cache", "message_8c.html#af545f01449bec3c12f4c2aa74bf22079", null ],
     [ "read_headers_condstore_qresync_updates", "message_8c.html#a917e82060d06f1a7efc11e13a6033d42", null ],

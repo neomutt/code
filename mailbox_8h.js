@@ -49,6 +49,7 @@ var mailbox_8h =
     [ "mailbox_find", "mailbox_8h.html#af136c4998f1122c79ec9769d9288175a", null ],
     [ "mailbox_find_name", "mailbox_8h.html#acfc4ad0910e3472a8c4bdb025e359687", null ],
     [ "mailbox_free", "mailbox_8h.html#aba915aae97477d1ecc6428a06f92dac9", null ],
+    [ "mailbox_gen", "mailbox_8h.html#a764a9d8daf2de305b5a3f777a76e4a41", null ],
     [ "mailbox_new", "mailbox_8h.html#a00d35da7a9295b471e9cf16aa4d01d55", null ],
     [ "mailbox_set_subset", "mailbox_8h.html#a183742dc7bb17663f2ca03f05b3b2328", null ],
     [ "mailbox_size_add", "mailbox_8h.html#a2c6a73f0789f1985d07f296537493cf0", null ],

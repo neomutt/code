@@ -37,7 +37,7 @@ var structMailbox =
     [ "label_hash", "structMailbox.html#ad3ce1409940ec031d15f8814a9c29112", null ],
     [ "account", "structMailbox.html#ab9a4528fcd39e61bdefd4dcfdbc6252f", null ],
     [ "opened", "structMailbox.html#adce1e1ca0f16e44647fe2156182336c2", null ],
-    [ "flags", "structMailbox.html#a7e157e0d2e198c65e7471dba87fec387", null ],
+    [ "flags", "structMailbox.html#af35ab91f4bcebac7a06a1b0aae9dc4e7", null ],
     [ "mdata", "structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595", null ],
     [ "mdata_free", "structMailbox.html#a015fb45ad1a08cf8e44e3553202834fb", null ],
     [ "notify", "structMailbox.html#a86c7dd0131cdc539dbbd979abc540337", null ],

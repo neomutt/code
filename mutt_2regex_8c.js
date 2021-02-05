@@ -1,9 +1,9 @@
 var mutt_2regex_8c =
 [
-    [ "mutt_regex_compile", "mutt_2regex_8c.html#a73c8d3ccb577177ae092d69d16b97daa", null ],
-    [ "mutt_regex_new", "mutt_2regex_8c.html#a9b4024e6d204d5df72a30b531a6e0b18", null ],
+    [ "mutt_regex_compile", "mutt_2regex_8c.html#ae177b084fd5c1da9d5e0791954989e32", null ],
+    [ "mutt_regex_new", "mutt_2regex_8c.html#a4d7ed3ad1d717c13ef83d2bf9e74e9eb", null ],
     [ "mutt_regex_free", "mutt_2regex_8c.html#aaff3892e138113fb1eaa76d65a58a308", null ],
-    [ "mutt_regexlist_add", "mutt_2regex_8c.html#ab1005f6776a35ae11d421c0006cbb19e", null ],
+    [ "mutt_regexlist_add", "mutt_2regex_8c.html#a305eb49ea76a2bc81bf89c1b5417c308", null ],
     [ "mutt_regexlist_free", "mutt_2regex_8c.html#a2c9214257c0c29629a4481d8937a8be3", null ],
     [ "mutt_regexlist_match", "mutt_2regex_8c.html#ab0efb83f9190881306c558339efb250a", null ],
     [ "mutt_regexlist_new", "mutt_2regex_8c.html#ac1d05fece1652b744d7c33c91629a71b", null ],

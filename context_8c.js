@@ -9,5 +9,6 @@ var context_8c =
     [ "message_is_tagged", "context_8c.html#aab50b1725a8314f589d3bbfb1edaa0d2", null ],
     [ "el_add_tagged", "context_8c.html#a543e45c288497e953332f7f20c761caf", null ],
     [ "mutt_get_virt_email", "context_8c.html#a0882b6875e05115e47a09836c63b5bf9", null ],
-    [ "ctx_has_limit", "context_8c.html#addeed4e3ed0c2c32b80d97831bfadcf3", null ]
+    [ "ctx_has_limit", "context_8c.html#addeed4e3ed0c2c32b80d97831bfadcf3", null ],
+    [ "ctx_mailbox", "context_8c.html#a3d99ae9e3203ce327227f9ab3f711427", null ]
 ];

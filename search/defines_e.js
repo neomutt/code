@@ -10,5 +10,6 @@ var searchData=
   ['ops_5fnotmuch',['OPS_NOTMUCH',['../opcodes_8h.html#afbe0451583de35d909258d05fbe374e5',1,'opcodes.h']]],
   ['ops_5fpgp',['OPS_PGP',['../opcodes_8h.html#a6e9b2ac2bb205f8c5ce71d5196404aca',1,'opcodes.h']]],
   ['ops_5fsidebar',['OPS_SIDEBAR',['../opcodes_8h.html#a5eae12cf8a02208854009b63647ee655',1,'opcodes.h']]],
-  ['ops_5fsmime',['OPS_SMIME',['../opcodes_8h.html#ab16cda2c4e8f6d8ac2e75f7f16805c53',1,'opcodes.h']]]
+  ['ops_5fsmime',['OPS_SMIME',['../opcodes_8h.html#ab16cda2c4e8f6d8ac2e75f7f16805c53',1,'opcodes.h']]],
+  ['opt_5fstring',['OPT_STRING',['../debug_2email_8c.html#a12ddac0ceb6198b4660c26da4847e7a9',1,'OPT_STRING():&#160;email.c'],['../debug_2email_8c.html#a12ddac0ceb6198b4660c26da4847e7a9',1,'OPT_STRING():&#160;email.c']]]
 ];

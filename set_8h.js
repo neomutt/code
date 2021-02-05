@@ -23,7 +23,7 @@ var set_8h =
     [ "cs_get_elem", "set_8h.html#a6a48e8c12db6f64a6da6b219c3d987d9", null ],
     [ "cs_get_type_def", "set_8h.html#a74b013e244b5a66aec376873a2c90194", null ],
     [ "cs_register_type", "set_8h.html#adf0f17032f910c4234f6942e8329fbeb", null ],
-    [ "cs_register_variables", "set_8h.html#a9eb26df09d01dd6e0c47ceb1e44a740e", null ],
+    [ "cs_register_variables", "set_8h.html#a0188dac9bcb3b80abfaada460b78a382", null ],
     [ "cs_inherit_variable", "set_8h.html#a02909ed6e22b4c2c4cb5e588bec0941e", null ],
     [ "cs_uninherit_variable", "set_8h.html#afc62808c51333fd2e3acb261a917b65c", null ],
     [ "cs_he_initial_get", "set_8h.html#adcbe5a0a3dbd9fb44afaaeb1546e6a6f", null ],

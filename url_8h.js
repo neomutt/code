@@ -2,6 +2,7 @@ var url_8h =
 [
     [ "UrlQuery", "structUrlQuery.html", "structUrlQuery" ],
     [ "Url", "structUrl.html", "structUrl" ],
+    [ "U_NO_FLAGS", "url_8h.html#a04ddf99a809afcc240e4b3d517c98d20", null ],
     [ "U_PATH", "url_8h.html#a2f7d340c7b07a0b212e6ba7c9d1c52fa", null ],
     [ "UrlScheme", "url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243", [
       [ "U_UNKNOWN", "url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e", null ],
@@ -23,6 +24,6 @@ var url_8h =
     [ "url_parse", "url_8h.html#a10d35f5553c8e443c38257b69ca91075", null ],
     [ "url_pct_decode", "url_8h.html#a04f548a80bf78fcc748e6dd70a0059b2", null ],
     [ "url_pct_encode", "url_8h.html#ad489a551217fd22a942ae19d009f3342", null ],
-    [ "url_tobuffer", "url_8h.html#a41aafd875d2e909169d65d4b8b959207", null ],
-    [ "url_tostring", "url_8h.html#a80bc2371d585dc0d086115ad9f217778", null ]
+    [ "url_tobuffer", "url_8h.html#af8cf93b4a923d8ae776623bb33736cf7", null ],
+    [ "url_tostring", "url_8h.html#a8b2aeef02a9aabe9ef62335a2450256a", null ]
 ];

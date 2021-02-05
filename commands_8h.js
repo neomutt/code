@@ -13,7 +13,7 @@ var commands_8h =
     [ "mutt_save_message_ctx", "commands_8h.html#a8640d6fc4382e7fe783d34f40393199e", null ],
     [ "mutt_save_message", "commands_8h.html#ae8344fc08f0dc93828501cc20ce56a27", null ],
     [ "mutt_select_sort", "commands_8h.html#a46f55db076fe1d038056bc59cc4aeaa9", null ],
-    [ "mutt_shell_escape", "commands_8h.html#a1d7e589609c99aec9285cdce17d0679e", null ],
+    [ "mutt_shell_escape", "commands_8h.html#a83a20586633321eab21727982a90e1ea", null ],
     [ "C_DisplayFilter", "commands_8h.html#adeb357fcd9a2f66205ced23bea756ec6", null ],
     [ "C_PipeDecode", "commands_8h.html#a9d50376776e9a6bb8bc85d98e18f0a5a", null ],
     [ "C_PipeSep", "commands_8h.html#afeca6ee60af4383c966c1393a307e4f1", null ],

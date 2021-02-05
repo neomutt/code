@@ -35,7 +35,7 @@ var nntp_8c =
     [ "nntp_check_msgid", "nntp_8c.html#a0e31da3560e7296a47d444775b42b8f3", null ],
     [ "nntp_check_children", "nntp_8c.html#a17459a2b096832129b7878bfea7300c9", null ],
     [ "nntp_compare_order", "nntp_8c.html#acf6d685f655accb6d65f8b5c702df262", null ],
-    [ "nntp_ac_find", "nntp_8c.html#a451aa3d6b4d6e9cf42a584fbfc64fa76", null ],
+    [ "nntp_ac_owns_path", "nntp_8c.html#a13b08716f53f8c41cf292cb93516c8ae", null ],
     [ "nntp_ac_add", "nntp_8c.html#abca336bcc3acb3dba5ee62d4e39e724b", null ],
     [ "nntp_mbox_open", "nntp_8c.html#a27e7c379cc70e5d6bd572608f7228d2f", null ],
     [ "nntp_mbox_check", "nntp_8c.html#ab3942cf1331a6e94f5f14b9906d43fc2", null ],

@@ -36,7 +36,7 @@ var mx_8c =
     [ "mx_resolve", "mx_8c.html#af87e44d20f29c0dd796e60b542cfa1f4", null ],
     [ "mx_ac_add", "mx_8c.html#a270e799776aa61a83f0da6a2ec58bde1", null ],
     [ "mx_ac_remove", "mx_8c.html#a0531a5f089718b745413a38ea8d5e2a6", null ],
-    [ "mx_mbox_check_stats", "mx_8c.html#a4a2d32b0fd1c3392f16af141e46e0702", null ],
+    [ "mx_mbox_check_stats", "mx_8c.html#a325f934a6994d978aa8fe1204e9a9fa2", null ],
     [ "mx_save_hcache", "mx_8c.html#ab564fbbf566928004b4564b9aa01a603", null ],
     [ "C_KeepFlagged", "mx_8c.html#abcd43c6340ac73eebf1ef272a8e51224", null ],
     [ "C_MboxType", "mx_8c.html#a06da03900810e5c8f98b09dc688cff1e", null ],

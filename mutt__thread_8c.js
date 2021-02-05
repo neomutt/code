@@ -21,7 +21,7 @@ var mutt__thread_8c =
     [ "mutt_parent_message", "mutt__thread_8c.html#ae021dae3b838ebc7f688d4c9204a2308", null ],
     [ "mutt_set_vnum", "mutt__thread_8c.html#ad208699eb4bc42837530572fbe4caf8d", null ],
     [ "mutt_traverse_thread", "mutt__thread_8c.html#a249d2b866bc0b7a8ef5c4954fd4c33b0", null ],
-    [ "mutt_messages_in_thread", "mutt__thread_8c.html#a49a7b4a99959beb66e7085b74dea9629", null ],
+    [ "mutt_messages_in_thread", "mutt__thread_8c.html#a7ea1d8cc762023c88ee9152f9d0a7ce0", null ],
     [ "mutt_make_id_hash", "mutt__thread_8c.html#a956d35c89142f8232d3b28bc3c696f0c", null ],
     [ "link_threads", "mutt__thread_8c.html#aeb0f13585d6ee005d688ac2579fb53a9", null ],
     [ "mutt_link_threads", "mutt__thread_8c.html#abef5e5f802352f610041671cd854c623", null ],

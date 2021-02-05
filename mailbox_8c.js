@@ -1,5 +1,6 @@
 var mailbox_8c =
 [
+    [ "mailbox_gen", "mailbox_8c.html#a764a9d8daf2de305b5a3f777a76e4a41", null ],
     [ "mailbox_new", "mailbox_8c.html#a00d35da7a9295b471e9cf16aa4d01d55", null ],
     [ "mailbox_free", "mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9", null ],
     [ "mailbox_find", "mailbox_8c.html#af136c4998f1122c79ec9769d9288175a", null ],

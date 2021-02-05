@@ -13,7 +13,7 @@ var compmbox_2compress_8c =
     [ "mutt_comp_can_append", "compmbox_2compress_8c.html#a9f3c7362d3b06ea8c32ce55d5c3db5f1", null ],
     [ "mutt_comp_can_read", "compmbox_2compress_8c.html#af5e4caf583046a535cf5fda9933d3c74", null ],
     [ "mutt_comp_valid_command", "compmbox_2compress_8c.html#ab77ea42f102d3aced8ea915e95a83bd4", null ],
-    [ "comp_ac_find", "compmbox_2compress_8c.html#a5a72d9df3a0aeedccf7bd6ac0fb4e12b", null ],
+    [ "comp_ac_owns_path", "compmbox_2compress_8c.html#add2c1f164cf3e15e8391110717418a3e", null ],
     [ "comp_ac_add", "compmbox_2compress_8c.html#ab1af5dae348409b32251325a3c91d890", null ],
     [ "comp_mbox_open", "compmbox_2compress_8c.html#a7ad6d8fff1d3afeb0ff6b88263a99725", null ],
     [ "comp_mbox_open_append", "compmbox_2compress_8c.html#a5c3fd55d08b7899a9010df6088a3c1ce", null ],

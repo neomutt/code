@@ -18,5 +18,5 @@ var pgp_8h =
     [ "pgp_class_traditional_encryptsign", "pgp_8h.html#ac131bc7b36afa45cd86e864a66baee6f", null ],
     [ "pgp_class_encrypt_message", "pgp_8h.html#a670a77cb262550ce2a37b6eb3b5b5c88", null ],
     [ "pgp_class_sign_message", "pgp_8h.html#aa81f893b89783abadf1ba1f9a59f31c7", null ],
-    [ "pgp_class_send_menu", "pgp_8h.html#a563518f9cdac5ec697065b7c49ce37c6", null ]
+    [ "pgp_class_send_menu", "pgp_8h.html#a8b0a3fa1ac99d5701063bc472fec560b", null ]
 ];

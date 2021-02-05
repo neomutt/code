@@ -11,7 +11,7 @@ var structCryptModuleSpecs =
     [ "find_keys", "structCryptModuleSpecs.html#a4e416a9641e0ff59d62f53cd1b9f258e", null ],
     [ "sign_message", "structCryptModuleSpecs.html#aa580b14417c03a5d05a2b87f6f6a3c96", null ],
     [ "verify_one", "structCryptModuleSpecs.html#a0a1d9c0eb016fb8f7cabc71e2f9f2398", null ],
-    [ "send_menu", "structCryptModuleSpecs.html#a5f1c1af91442b5aa9861a3980e916e8f", null ],
+    [ "send_menu", "structCryptModuleSpecs.html#aa5176c9adfe75f78d99e4c2bd7e6671c", null ],
     [ "set_sender", "structCryptModuleSpecs.html#a71465f373622ace78b4637eed9694f45", null ],
     [ "pgp_encrypt_message", "structCryptModuleSpecs.html#a1307534fb70babaa05e0c0966996839b", null ],
     [ "pgp_make_key_attachment", "structCryptModuleSpecs.html#a505fa888b6994755f055d202c339dbef", null ],

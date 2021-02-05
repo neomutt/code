@@ -7,7 +7,7 @@ var dir_1ac69099273185b8416dca0dba1f5766 =
     [ "content.h", "content_8h.html", [
       [ "Content", "structContent.html", "structContent" ]
     ] ],
-    [ "email.c", "email_8c.html", "email_8c" ],
+    [ "email.c", "email_2email_8c.html", "email_2email_8c" ],
     [ "email.h", "email_8h.html", "email_8h" ],
     [ "envelope.c", "envelope_8c.html", "envelope_8c" ],
     [ "envelope.h", "envelope_8h.html", "envelope_8h" ],

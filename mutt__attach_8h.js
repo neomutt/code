@@ -3,7 +3,8 @@ var mutt__attach_8h =
     [ "ViewAttachMode", "mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946", [
       [ "MUTT_VA_REGULAR", "mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946a805f2934d475a513bb1294baa8e5d00b", null ],
       [ "MUTT_VA_MAILCAP", "mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946a0dcfd8a67792775ae3506d2a99bf1b67", null ],
-      [ "MUTT_VA_AS_TEXT", "mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946ae2885fe7d47c03a1f0246d054739da79", null ]
+      [ "MUTT_VA_AS_TEXT", "mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946ae2885fe7d47c03a1f0246d054739da79", null ],
+      [ "MUTT_VA_PAGER", "mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946ab4f9fd68dbd70c2bd8f4e3795bed15cc", null ]
     ] ],
     [ "SaveAttach", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faa", [
       [ "MUTT_SAVE_NO_FLAGS", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaaed4c57bafee22c671cdc621feed0b224", null ],

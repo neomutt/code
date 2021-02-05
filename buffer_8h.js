@@ -1,7 +1,6 @@
 var buffer_8h =
 [
     [ "Buffer", "structBuffer.html", "structBuffer" ],
-    [ "mutt_b2s", "buffer_8h.html#a3ff22d8e8ae5af2a8c3dfebd8064b794", null ],
     [ "MoreArgs", "buffer_8h.html#a7d49d6e1f1a75e5c1ee281a8f8c242fa", null ],
     [ "mutt_buffer_alloc", "buffer_8h.html#aeb44bf37d6efc639ddfa124637f61d84", null ],
     [ "mutt_buffer_dealloc", "buffer_8h.html#a59b13bca38b1b314e2bc5ad142d2df49", null ],
@@ -12,6 +11,7 @@ var buffer_8h =
     [ "mutt_buffer_make", "buffer_8h.html#a0242aaa9a400d0722a99828776c0403b", null ],
     [ "mutt_buffer_reset", "buffer_8h.html#adb26acff5f6b9bb7c322669bcb7c48e3", null ],
     [ "mutt_buffer_strdup", "buffer_8h.html#aa43f3cb9584746ca0cf6720ac1fc38e7", null ],
+    [ "mutt_buffer_seek", "buffer_8h.html#acc8e734c720c7ec2644d693702ec58e2", null ],
     [ "mutt_buffer_addch", "buffer_8h.html#a819a9cb669c1a7e8e2218c672b794492", null ],
     [ "mutt_buffer_addstr", "buffer_8h.html#a958e87c1ae9de976eb76f759dbaaa601", null ],
     [ "mutt_buffer_addstr_n", "buffer_8h.html#a5e5f044f387e591627acfa6854416b71", null ],
@@ -22,5 +22,6 @@ var buffer_8h =
     [ "mutt_buffer_printf", "buffer_8h.html#ad057ee239ae5bcfd72cab3749036ab02", null ],
     [ "mutt_buffer_strcpy", "buffer_8h.html#a4bcc481586ae3af02645b4e23e48e0d7", null ],
     [ "mutt_buffer_strcpy_n", "buffer_8h.html#ae4b0e0b8586b9bde1186ff6c16acde86", null ],
-    [ "mutt_buffer_substrcpy", "buffer_8h.html#a8356dd9cbd5bf2e404ae50ff01d61300", null ]
+    [ "mutt_buffer_substrcpy", "buffer_8h.html#a8356dd9cbd5bf2e404ae50ff01d61300", null ],
+    [ "mutt_buffer_string", "buffer_8h.html#a4aca040fb75bc1dfc086cbfbf14ac8cd", null ]
 ];

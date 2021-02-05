@@ -1,7 +1,7 @@
 var structConfigDef =
 [
     [ "name", "structConfigDef.html#a0989d0984537827a221e7d699f72da27", null ],
-    [ "type", "structConfigDef.html#a7ef98523e839cd54edcdabdc8bcda148", null ],
+    [ "type", "structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a", null ],
     [ "var", "structConfigDef.html#aae05f3eb63e15f23140576510e4a6942", null ],
     [ "initial", "structConfigDef.html#a669d58ec0f68946995b69af97333d71a", null ],
     [ "data", "structConfigDef.html#a5125b3fa1932065447f5811dda756b05", null ],

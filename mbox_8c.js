@@ -15,7 +15,7 @@ var mbox_8c =
     [ "test_last_status_new", "mbox_8c.html#a715dc4cfe74f29fdaac4f2e76bf05d14", null ],
     [ "mbox_test_new_folder", "mbox_8c.html#ad2055d65f74e78611a366b1766d1e010", null ],
     [ "mbox_reset_atime", "mbox_8c.html#adb9d8c2e11532c0b952ad90a44f2b5f9", null ],
-    [ "mbox_ac_find", "mbox_8c.html#a58a0f8a187af6610d7f783e8a7755702", null ],
+    [ "mbox_ac_owns_path", "mbox_8c.html#a3ea6a4dc4f07e4f6ef762797023b4646", null ],
     [ "mbox_ac_add", "mbox_8c.html#a3c3453ce1ab88469415500a5289b261d", null ],
     [ "mbox_open_readwrite", "mbox_8c.html#a47b61940c5fac55300f6e3090b7a1456", null ],
     [ "mbox_open_readonly", "mbox_8c.html#a0349bdfa045d1372ca96e0464c1ea6f8", null ],
@@ -36,7 +36,7 @@ var mbox_8c =
     [ "mbox_path_is_empty", "mbox_8c.html#abce2cecf1fc968b3af6d8c2ace585f01", null ],
     [ "mmdf_msg_commit", "mbox_8c.html#ad2e9163058c555394def8ba457a57dc4", null ],
     [ "mmdf_msg_padding_size", "mbox_8c.html#a4b926e0929ad5f4be944bc73611210d8", null ],
-    [ "mbox_mbox_check_stats", "mbox_8c.html#a9959e353148463d781eb78f5a87322e4", null ],
+    [ "mbox_mbox_check_stats", "mbox_8c.html#a391b46026ab83645b078896de49a4029", null ],
     [ "MxMboxOps", "mbox_8c.html#aad6c863fc1a5e9df89b83c04c78ebadb", null ],
     [ "MxMmdfOps", "mbox_8c.html#a6f5aa20334c61002a91427dec14cc4e3", null ]
 ];

@@ -30,7 +30,7 @@ var searchData=
   ['max_5fline',['max_line',['../structPagerRedrawData.html#a13b6f5ebb6f266adfccbe4d50b0a0662',1,'PagerRedrawData']]],
   ['maxheaderwidth',['MaxHeaderWidth',['../compose_8c.html#aa57902c74e4b99785680a0bc4e263029',1,'compose.c']]],
   ['mbox_5fcheck',['mbox_check',['../structMxOps.html#a1724c9c0a6fdded37dc85c6e02892e45',1,'MxOps']]],
-  ['mbox_5fcheck_5fstats',['mbox_check_stats',['../structMxOps.html#a1ac2fb69ffba9d75c97fba86b113f130',1,'MxOps']]],
+  ['mbox_5fcheck_5fstats',['mbox_check_stats',['../structMxOps.html#ad92467d4405e87b741272bb480e9c887',1,'MxOps']]],
   ['mbox_5fclose',['mbox_close',['../structMxOps.html#acb1e9584ccbd356be24fbd8630f236d3',1,'MxOps']]],
   ['mbox_5fopen',['mbox_open',['../structMxOps.html#afeb0e3670299347367a17472a56a238d',1,'MxOps']]],
   ['mbox_5fopen_5fappend',['mbox_open_append',['../structMxOps.html#a25bfad683d37065e6229b6b423208b3a',1,'MxOps']]],

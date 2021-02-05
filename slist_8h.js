@@ -15,8 +15,8 @@ var slist_8h =
     [ "slist_empty", "slist_8h.html#a4b5f2f52bfd6861100d9da4fa653044a", null ],
     [ "slist_free", "slist_8h.html#ac97fc48f98ea9286a7e58db0289725e0", null ],
     [ "slist_is_member", "slist_8h.html#a7c69d305defed93b70403c325461ef9b", null ],
-    [ "slist_new", "slist_8h.html#af779a2c5318dd880bb34fc2632fd0997", null ],
-    [ "slist_parse", "slist_8h.html#a1b92bcbee7fe26d262459c9fcf109c9f", null ],
+    [ "slist_new", "slist_8h.html#a448e362888e50fe426a526600e6b8fff", null ],
+    [ "slist_parse", "slist_8h.html#ac7f30953f83f8cd049c1eecfc0b7e326", null ],
     [ "slist_remove_string", "slist_8h.html#a8469647e63483c367daa8ce05b02de31", null ],
     [ "slist_to_buffer", "slist_8h.html#a92e22106a8bd5410cc7efa26c892d863", null ]
 ];

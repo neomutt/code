@@ -2,6 +2,7 @@ var searchData=
 [
   ['dump_20all_20the_20config',['Dump all the config',['../config_dump.html',1,'lib_config']]],
   ['dns_20lookups',['DNS lookups',['../conn_getdomain.html',1,'lib_conn']]],
+  ['dump_20an_20email',['Dump an Email',['../debug_email.html',1,'lib_debug']]],
   ['dump_20all_20notifications',['Dump all notifications',['../debug_notify.html',1,'lib_debug']]],
   ['dump_20the_20details_20of_20the_20nested_20windows',['Dump the details of the nested Windows',['../debug_window.html',1,'lib_debug']]],
   ['determine_20who_20the_20email_20is_20from',['Determine who the email is from',['../email_from.html',1,'lib_email']]],

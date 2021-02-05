@@ -5,7 +5,7 @@ var cryptglue_8h =
     [ "crypt_pgp_invoke_import", "cryptglue_8h.html#a842ab48184b60e3b7b206536b7b78a61", null ],
     [ "crypt_pgp_set_sender", "cryptglue_8h.html#a9f42f50373941a87a03df3424ce1b7c4", null ],
     [ "crypt_pgp_sign_message", "cryptglue_8h.html#abb7ee2dc3d7dbc1ccb6a4986d9a9c92b", null ],
-    [ "crypt_pgp_traditional_encryptsign", "cryptglue_8h.html#a52255d60b8d24437af39c9271c9e15c9", null ],
+    [ "crypt_pgp_traditional_encryptsign", "cryptglue_8h.html#a18917d06dade2acda8b92af955f8663d", null ],
     [ "crypt_pgp_valid_passphrase", "cryptglue_8h.html#ad29ef155ee6ccc83b50614068bb5b597", null ],
     [ "crypt_pgp_verify_one", "cryptglue_8h.html#a9457dc1f6c58f46461c4866e08946b5c", null ],
     [ "crypt_pgp_void_passphrase", "cryptglue_8h.html#ab11bb907cc90bcd3aadecfd0000b5350", null ],

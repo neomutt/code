@@ -3,7 +3,7 @@ var searchData=
   ['edata_2ec',['edata.c',['../edata_8c.html',1,'']]],
   ['edata_2eh',['edata.h',['../edata_8h.html',1,'']]],
   ['editmsg_2ec',['editmsg.c',['../editmsg_8c.html',1,'']]],
-  ['email_2ec',['email.c',['../email_8c.html',1,'']]],
+  ['email_2ec',['email.c',['../debug_2email_8c.html',1,'(Global Namespace)'],['../email_2email_8c.html',1,'(Global Namespace)']]],
   ['email_2eh',['email.h',['../email_8h.html',1,'']]],
   ['enriched_2ec',['enriched.c',['../enriched_8c.html',1,'']]],
   ['enriched_2eh',['enriched.h',['../enriched_8h.html',1,'']]],

@@ -16,7 +16,7 @@ var pop_8c =
     [ "pop_fetch_headers", "pop_8c.html#aed296290f911b6522df2dd97ce554f65", null ],
     [ "pop_clear_cache", "pop_8c.html#a306deeb158f76bd338f04b1a5494d6a9", null ],
     [ "pop_fetch_mail", "pop_8c.html#ae41e43ca791955eb76c5709db39a21d7", null ],
-    [ "pop_ac_find", "pop_8c.html#a5c088533a3c9fff2f12c32e4e037295a", null ],
+    [ "pop_ac_owns_path", "pop_8c.html#a2eb1513bdfb94004dfbdab1e4ac4847f", null ],
     [ "pop_ac_add", "pop_8c.html#af00be472994755930e72b18eb1976f60", null ],
     [ "pop_mbox_open", "pop_8c.html#acdba1ee37ea546f48016d1cf3f7f512b", null ],
     [ "pop_mbox_check", "pop_8c.html#acc854b150d5fc2fbe01af6dea1ba61c4", null ],
