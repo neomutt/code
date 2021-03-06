@@ -21,7 +21,7 @@ var imap_2config_8c =
     [ "C_ImapPollTimeout", "imap_2config_8c.html#a442d469a67ef9be579d75f0b4dafbc23", null ],
     [ "C_ImapQresync", "imap_2config_8c.html#a4f32cf293a235fca773ab434b2ce4a9e", null ],
     [ "C_ImapRfc5161", "imap_2config_8c.html#a2cebfc74dae175661b0d287a8c430c51", null ],
-    [ "C_ImapServernoise", "imap_2config_8c.html#a048faf9a069b0a4b0f8274604c64e90b", null ],
+    [ "C_ImapServerNoise", "imap_2config_8c.html#aed6fcad1ac4937cf51b2c1ffc1bf4b12", null ],
     [ "C_ImapUser", "imap_2config_8c.html#a9406cb1e580ef9c91ae1b94461f1c758", null ],
     [ "ImapVars", "imap_2config_8c.html#ab56b7541d09cf736573e64462a184f83", null ]
 ];

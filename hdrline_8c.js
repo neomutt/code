@@ -1,5 +1,6 @@
 var hdrline_8c =
 [
+    [ "HdrFormatInfo", "structHdrFormatInfo.html", "structHdrFormatInfo" ],
     [ "FlagChars", "hdrline_8c.html#aebfbdabfaeec64a0270617ab29b75ab8", [
       [ "FLAG_CHAR_TAGGED", "hdrline_8c.html#aebfbdabfaeec64a0270617ab29b75ab8a658cd5e22f8d8d5bd25b089295f2e083", null ],
       [ "FLAG_CHAR_IMPORTANT", "hdrline_8c.html#aebfbdabfaeec64a0270617ab29b75ab8af5d367922568c7b2efbb50a0a620d1a9", null ],
@@ -39,8 +40,7 @@ var hdrline_8c =
     [ "thread_is_new", "hdrline_8c.html#aebca8cfe2272489be6f640a0643ec1df", null ],
     [ "thread_is_old", "hdrline_8c.html#aa520340bd3c4e1253ac4603229f2b026", null ],
     [ "index_format_str", "hdrline_8c.html#afa87b03d9a383088d6db0c417f79da92", null ],
-    [ "mutt_make_string_flags", "hdrline_8c.html#aeac86407c75d6618b3461b2a985ca209", null ],
-    [ "mutt_make_string_info", "hdrline_8c.html#a0ef54141e984065f57b563a4f6463a4d", null ],
+    [ "mutt_make_string", "hdrline_8c.html#a5ff2b7d1b1e2dbd345801cdda1e3af14", null ],
     [ "C_CryptChars", "hdrline_8c.html#a390e4bda640209317c138f652f4f65f8", null ],
     [ "C_FlagChars", "hdrline_8c.html#a302e9dc80513f4eab2233ca5818cfae0", null ],
     [ "C_FromChars", "hdrline_8c.html#aa791bd4c1754a5423911bf226c2b5bd7", null ],

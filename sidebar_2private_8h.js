@@ -20,19 +20,5 @@ var sidebar_2private_8h =
     [ "sb_wdata_new", "sidebar_2private_8h.html#a35d5b5d507e3a36202bc8aef9fd04985", null ],
     [ "sb_recalc", "sidebar_2private_8h.html#ae8fdf0a222141e5e18f6caa9a15f93f6", null ],
     [ "sb_repaint", "sidebar_2private_8h.html#a2c99e3fef7afb5a11d15e0fc49cd5469", null ],
-    [ "SidebarWhitelist", "sidebar_2private_8h.html#a8d6a181f7d84664a924c9eeb5d249302", null ],
-    [ "C_SidebarComponentDepth", "sidebar_2private_8h.html#a76532f3c7b1b741803507888ceac4e76", null ],
-    [ "C_SidebarDelimChars", "sidebar_2private_8h.html#a41e5afff98625fa8c648c9cdc4a35914", null ],
-    [ "C_SidebarDividerChar", "sidebar_2private_8h.html#a272f5ccc3c1f33eee901b41b242172c1", null ],
-    [ "C_SidebarFolderIndent", "sidebar_2private_8h.html#a7bcd5b32fedeb49fbd3cd205ccc771e3", null ],
-    [ "C_SidebarFormat", "sidebar_2private_8h.html#a02a08f83f04bda75a7b2df141fb21c22", null ],
-    [ "C_SidebarIndentString", "sidebar_2private_8h.html#abc94eea2876fb3f11c92fca0dbc0a5a3", null ],
-    [ "C_SidebarNewMailOnly", "sidebar_2private_8h.html#a7dfc7cb74ef9d9dbf4a5bf25cae965f2", null ],
-    [ "C_SidebarNextNewWrap", "sidebar_2private_8h.html#a053ae86400c4eca511bc1797ba98eafb", null ],
-    [ "C_SidebarNonEmptyMailboxOnly", "sidebar_2private_8h.html#a980e0d26659ae3ddd9d42a21533509ba", null ],
-    [ "C_SidebarOnRight", "sidebar_2private_8h.html#a455e8895313ec28d982a2251a98dbc9e", null ],
-    [ "C_SidebarShortPath", "sidebar_2private_8h.html#ad731459a294e8aebfb4e73a5a3e28c0c", null ],
-    [ "C_SidebarSortMethod", "sidebar_2private_8h.html#a4cd8c9788fd5d7641cadb0ccdd917a07", null ],
-    [ "C_SidebarVisible", "sidebar_2private_8h.html#aefb828af7f3384b226c2113618ada4ba", null ],
-    [ "C_SidebarWidth", "sidebar_2private_8h.html#a8f53d61d184cdbc902e8bc6117364124", null ]
+    [ "SidebarWhitelist", "sidebar_2private_8h.html#a8d6a181f7d84664a924c9eeb5d249302", null ]
 ];

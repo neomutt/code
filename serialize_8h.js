@@ -2,6 +2,7 @@ var serialize_8h =
 [
     [ "serial_dump_address", "serialize_8h.html#a2848bbf4c6324c8d236fcad6f55f264a", null ],
     [ "serial_dump_body", "serialize_8h.html#a6da871504dc1ce006a1ff36c2183fd89", null ],
+    [ "serial_dump_tags", "serialize_8h.html#a66d74d976b20db66d8193ab220db5409", null ],
     [ "serial_dump_buffer", "serialize_8h.html#adad130d9c29244b10a861631aac3f697", null ],
     [ "serial_dump_char", "serialize_8h.html#a7fa6bf18ed1915cdfb49d945b6c018d3", null ],
     [ "serial_dump_char_size", "serialize_8h.html#aa45c416053e87953f0cd015cfff5e556", null ],
@@ -12,6 +13,7 @@ var serialize_8h =
     [ "serial_dump_stailq", "serialize_8h.html#aef94d95a80f0ecef941afc5b02913345", null ],
     [ "serial_restore_address", "serialize_8h.html#adc782452c6a420898d453705f9e9581a", null ],
     [ "serial_restore_body", "serialize_8h.html#ad81529a7d4a01ecf7a6a289c625ffc36", null ],
+    [ "serial_restore_tags", "serialize_8h.html#a3e37a16e51f43a502e2af5c7f4b0923f", null ],
     [ "serial_restore_buffer", "serialize_8h.html#a4f25dbb1f5e8d183270f031bc478fda7", null ],
     [ "serial_restore_char", "serialize_8h.html#a43a280bdcd6ff4e026fbab74aa3f82c4", null ],
     [ "serial_restore_envelope", "serialize_8h.html#adf9a9b6ad3e890387bb7d793eef8d347", null ],

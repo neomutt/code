@@ -55,5 +55,7 @@ var mailbox_8h =
     [ "mailbox_size_add", "mailbox_8h.html#a2c6a73f0789f1985d07f296537493cf0", null ],
     [ "mailbox_size_sub", "mailbox_8h.html#a378083af760b6f24581c9be2be20f049", null ],
     [ "mailbox_update", "mailbox_8h.html#ab614961b6e97592c0e56c30b47f65f29", null ],
+    [ "mailbox_gc_add", "mailbox_8h.html#ab40999223fc7e7038d917ad6a451dc95", null ],
+    [ "mailbox_gc_run", "mailbox_8h.html#a1aded0bae910c51bc27f84a00445f9d8", null ],
     [ "mailbox_path", "mailbox_8h.html#a04aa11207205b6778388dfc8ed56ee0d", null ]
 ];

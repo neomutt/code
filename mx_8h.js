@@ -15,17 +15,24 @@ var mx_8h =
     [ "MUTT_SET_DRAFT", "mx_8h.html#ae766b38813f1364775c5160cc3802b9b", null ],
     [ "OpenMailboxFlags", "mx_8h.html#a12d50555671e01ef64b027974fc5acfa", null ],
     [ "MsgOpenFlags", "mx_8h.html#a3c2b592b42c4c70ba32b8fb9ce869750", null ],
-    [ "MxCheckReturns", "mx_8h.html#a51ec47adeb053fdc910f627a0ff47119", [
-      [ "MUTT_NEW_MAIL", "mx_8h.html#a51ec47adeb053fdc910f627a0ff47119adc177ed6346a61450047f8922ee9da77", null ],
-      [ "MUTT_LOCKED", "mx_8h.html#a51ec47adeb053fdc910f627a0ff47119ad95f779bf4bed6f992b8ec4b01121c01", null ],
-      [ "MUTT_REOPENED", "mx_8h.html#a51ec47adeb053fdc910f627a0ff47119ae906a979446be93e39ae043560c3aa64", null ],
-      [ "MUTT_FLAGS", "mx_8h.html#a51ec47adeb053fdc910f627a0ff47119a8cd6ec26f160bf917567cb43dec7921d", null ]
+    [ "MxStatus", "mx_8h.html#af414aea967025ea4ba10b86268488432", [
+      [ "MX_STATUS_ERROR", "mx_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160", null ],
+      [ "MX_STATUS_OK", "mx_8h.html#af414aea967025ea4ba10b86268488432acc30aaa1797601a158bcead39ef19a4b", null ],
+      [ "MX_STATUS_NEW_MAIL", "mx_8h.html#af414aea967025ea4ba10b86268488432af3d8ebc52b40a1f9f22b7b4366d0315b", null ],
+      [ "MX_STATUS_LOCKED", "mx_8h.html#af414aea967025ea4ba10b86268488432a2399001ba2822d6d9b1317e8dbe81f4b", null ],
+      [ "MX_STATUS_REOPENED", "mx_8h.html#af414aea967025ea4ba10b86268488432ad9cf54713c660db891b05384830e57f4", null ],
+      [ "MX_STATUS_FLAGS", "mx_8h.html#af414aea967025ea4ba10b86268488432ad3528e181f2bf299a5a598271c0059e6", null ]
     ] ],
-    [ "mx_mbox_check", "mx_8h.html#a52c7633872cb55b532094512888b759a", null ],
-    [ "mx_mbox_check_stats", "mx_8h.html#a325f934a6994d978aa8fe1204e9a9fa2", null ],
-    [ "mx_mbox_close", "mx_8h.html#af565f09988150afe719a01227a260f88", null ],
+    [ "MxOpenReturns", "mx_8h.html#a95aa6f9d458f82609e795a7f449f4cad", [
+      [ "MX_OPEN_OK", "mx_8h.html#a95aa6f9d458f82609e795a7f449f4cadac71ca3ece0dbda0bb22552738d80905b", null ],
+      [ "MX_OPEN_ERROR", "mx_8h.html#a95aa6f9d458f82609e795a7f449f4cada43d91ff11cb6a2631b235699bed738af", null ],
+      [ "MX_OPEN_ABORT", "mx_8h.html#a95aa6f9d458f82609e795a7f449f4cada87caee0e54f8b01a82878e69a37c1880", null ]
+    ] ],
+    [ "mx_mbox_check", "mx_8h.html#ae1a77c15ee90fe85716badfd92e856ba", null ],
+    [ "mx_mbox_check_stats", "mx_8h.html#a57093c6b257f41763f5f9d2633c003ed", null ],
+    [ "mx_mbox_close", "mx_8h.html#a22ae77c29429cbeb96fbe6156943d128", null ],
     [ "mx_mbox_open", "mx_8h.html#a72efa68c4041905af8d9b38948580a56", null ],
-    [ "mx_mbox_sync", "mx_8h.html#a3000049febcfd5ebe797f418edb58c68", null ],
+    [ "mx_mbox_sync", "mx_8h.html#ae31027d1219060a9dc2b2e6b82c1bf6c", null ],
     [ "mx_msg_close", "mx_8h.html#a2172d90c08b5a2b293d22ed13ee0e7a8", null ],
     [ "mx_msg_commit", "mx_8h.html#add0e192c5f27bf6bd096ae2eb7c0b67b", null ],
     [ "mx_msg_open_new", "mx_8h.html#aebf47a6cd2a8bc442aaf347124d2e18a", null ],
@@ -45,7 +52,7 @@ var mx_8h =
     [ "mx_mbox_find", "mx_8h.html#ac701cb363f8c39f9023a1d4e68d23e8b", null ],
     [ "mx_mbox_find2", "mx_8h.html#a84a2454384495994852f5c8c797070dc", null ],
     [ "mx_mbox_ac_link", "mx_8h.html#ac32b635494a705cc5828b7686b910834", null ],
-    [ "mx_ac_add", "mx_8h.html#a270e799776aa61a83f0da6a2ec58bde1", null ],
+    [ "mx_ac_add", "mx_8h.html#a86d7e5370a85bdc0895262350db09e16", null ],
     [ "mx_ac_remove", "mx_8h.html#a0531a5f089718b745413a38ea8d5e2a6", null ],
     [ "mx_access", "mx_8h.html#a3a49664b99f8c9e57f94c02c922922cd", null ],
     [ "mx_alloc_memory", "mx_8h.html#acd0bf144d7c5ae05d86d8fb5e0058780", null ],

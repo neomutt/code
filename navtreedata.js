@@ -1,3 +1,25 @@
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
+
+Copyright (C) 1997-2019 by Dimitri van Heesch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+@licend  The above is the entire license notice
+for the JavaScript code in this file
+*/
 var NAVTREE =
 [
   [ "NeoMutt", "index.html", [
@@ -12,8 +34,8 @@ var NAVTREE =
         [ "Variables", "functions_vars.html", "functions_vars" ]
       ] ]
     ] ],
-    [ "Files", null, [
-      [ "File List", "files.html", "files" ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", "globals_func" ],
@@ -42,13 +64,14 @@ var NAVTREE =
       [ "HELPBAR: One-liner Help", "lib_helpbar.html", "lib_helpbar" ],
       [ "HISTORY: Read/write command history from/to a file", "lib_history.html", "lib_history" ],
       [ "IMAP: Network Mailbox", "lib_imap.html", "lib_imap" ],
+      [ "INDEX: GUI manage the main index (list of emails)", "lib_index.html", "lib_index" ],
       [ "MAILDIR: Local mailbox type", "lib_maildir.html", "lib_maildir" ],
-      [ "MH Mailbox Sequences", "maildir_sequence.html", null ],
       [ "MBOX: Local mailbox type", "lib_mbox.html", "lib_mbox" ],
       [ "MUTT: Shared code for handling strings, files, dates, etc", "lib_mutt.html", "lib_mutt" ],
       [ "NCRYPT: Encrypt/decrypt/sign/verify emails", "lib_ncrypt.html", "lib_ncrypt" ],
       [ "NNTP: Usenet network mailbox type; talk to an NNTP server", "lib_nntp.html", "lib_nntp" ],
       [ "NOTMUCH: Virtual mailbox type", "lib_notmuch.html", "lib_notmuch" ],
+      [ "PAGER: GUI display contents of an email or help", "lib_pager.html", "lib_pager" ],
       [ "PATTERN: Match patterns to emails", "lib_pattern.html", "lib_pattern" ],
       [ "POP: Network mailbox", "lib_pop.html", "lib_pop" ],
       [ "SEND: Shared code for sending Emails", "lib_send.html", "lib_send" ],
@@ -62,47 +85,47 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "account_8c.html",
-"auth_8h.html#abd5fa696308aee8cc8d7ce03dffe5593",
-"browser_8c.html#a88c879366e92953daa03b631c39a035a",
-"command__parse_8c.html#a83a9d372ad20b86539f34b8b7b2c87a1",
-"compose_8c.html#adaffad40d353965ad6b52804bc72afefa050cfc849276a9e72a54c0035c867593",
-"context_8c.html#a3d99ae9e3203ce327227f9ab3f711427",
-"crypt__gpgme_8h.html#aedb110bc0a5b06622df514a7b1f9bca7a6c74ebab89ddf2395613214f1de91e10",
+"auth_8h.html#ac0d4ef7854b342279fb3175045fea0bd",
+"browser_8c.html#a9539f5a5517ab0467e3f1bd01e35c750",
+"command__parse_8c.html#a84bf2b09085394db9bbbfc6656914fbd",
+"compose_8c.html#ad560832702dd29552851dc3cc4b7e619",
+"content_8h_source.html",
+"crypt__gpgme_8h.html#abb291e3ef82be0b81dd87945790b1ab8",
 "date_8h.html#abf03771572f8244cb2d72e234d3a9e29",
-"edata_8c.html#a64d6c6eca4ddc56acc9157a876f07d63",
-"file_8c.html#ae1c0c19fec03274220b3ca065ad1e2e5",
-"globals_defs_k.html",
-"group_8h.html#a38b419a7a8c35f428b5be24f98a6c9d7",
-"header_8c.html#a400e83b7e5612f974ef543ff3cd237d8",
-"idna_8c_source.html",
-"imap_8c.html#a89efd830f8ce7703d4e83946c3ac8324",
-"keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270",
-"mailcap_8c.html#a49fd88d8bb73a7a56c4cc0fe28dfb645",
-"mbyte_8c.html#ac1cd90aaff468feb7e744aaee372ac57",
-"mime_8h.html#a6af4522fba27b690e849f0cfd22da751",
-"mutt_2string_8c.html#af448acd7385f3a3c6a52f1577246bcaa",
-"mutt__globals_8h.html#a9b298f87fa03ab048a41b77c2b44555b",
-"mutt__socket_8h.html#a3ec119fa5343d956e176976857e1de64",
-"mutt_date.html",
-"ncrypt_2config_8c.html#aa4aaed702cc9ecc6500075e1d916ad02",
-"neomutt_8c.html#a719e4995956628c3e2286051fd2448ee",
-"notmuch_2config_8c.html#ae754c9b2f96be9d508fb26181faf0258",
-"options_8h.html#a1301697a6664d40900be2c4761c192c7",
-"pattern_2lib_8h.html#a351dc5aa88481a949638aeb6cc5e6754aab37d0c8e991b8450b6c1d41cfcd3b74",
-"pgppacket_8h.html",
-"prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488add7a0cae072a86ed352d99b98e46a964",
-"queue_8h_source.html",
-"rfc2231_8h_source.html",
-"sendlib_8h.html#a99b5cff5076c9e25bce367f0bae45f4c",
-"sidebar_2sort_8c.html#a21940f0ae309c2f1b3a7892482bf5bfc",
-"sort2_8h.html#ad7fca38b521558f128d4a566729f5803aa564b58dba4ab707ebe41a3dd97f367a",
-"structAutocryptHeader.html#a7ab8a3aca782be141dfceb8dae5d6938",
-"structCryptEntry.html#a4363556c4ae4942326896b876615e9b8",
-"structHashElem.html#aafb6e3d6500e9f3dee67b7eab85f0480",
-"structMenu.html#a2965a6208bf420a927d8d687f46f2776",
-"structPagerRedrawData.html#ac212f16a62855fb6c25630b84ad190c1",
-"structState.html",
-"types_8h.html#a6b0322bdc77d5771e68a4ebd0cc0b6c4"
+"editmsg_8c.html",
+"file_8h.html#a0a6ff09a685fb6fa1120a582a5a6ef4a",
+"globals_defs_p.html",
+"group_8h.html#a8b1dda79743b7552fd38c3097990bda2",
+"header_8c.html#ac275db574e2761b5462827f74461db55",
+"imap_2auth_8c.html",
+"imap_8c.html#a5adc6a50d981b74f9210b202ca117861",
+"keymap_8h.html#a830fff42df69ae5c6e256eb03ce18892",
+"mailbox_8h.html#a1aded0bae910c51bc27f84a00445f9d8",
+"mbox_8c.html#a49be0897f8fb6c33c74a838b83f4ed46",
+"mh_8c.html#ab7cdabd2411f9704a83e58359212256a",
+"mutt_2slist_8c.html#ac7f30953f83f8cd049c1eecfc0b7e326",
+"mutt__globals_8h.html#a31fa61ed5e335b3c562c04a97c3656c4",
+"mutt__menu_8h.html#af77c14dc829023bf8cab50824fcedb59",
+"mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca47bb65598401cdb438a2768ca5d99eaa",
+"myvar_8c.html#a39eed018261397531567eafff81ba4b8",
+"neo_enter.html",
+"nntp_8c.html#a8247b21cffda7c4fa36e797820253e33",
+"number_8c.html#a5bcf940a158f552c8866887c3f00bc95",
+"path_8h.html#a731d4a3c9ba01bab26f8b85e39df8ed7",
+"pgpkey_8c.html#aa827774d3b566c1da76a2cf31bf09923",
+"prex_8h.html#a005ab1db40a47b6a4ee6be21d18b6ce5a356ed53c0b8d17c3be08fae3ed70aa4d",
+"queue_8h.html#a6cb12f27e7182bcb25c7dfdc9a8e83bf",
+"remailer_8h.html#adc3bfc78dd5fcda39be0a3dabeeb8a5c",
+"send_8h.html#a21bc6948879d93793ca7afac2c7964bb",
+"sidebar_2config_8c.html#ae7634227027409303c7d244cb68cac49",
+"smtp_8c.html#afdf1ea22475abe4ccfd36797e7be8436",
+"structAliasMenuData.html#aac5cd12bf3ffc99c48483b49209f4331",
+"structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca",
+"structFgetConv.html",
+"structMailbox.html#ae5d22739ec36d955fa4bae571452864b",
+"structNntpMboxData.html#a4eeac824a82fb5bb884aa9aab449ccf8",
+"structSbEntry.html#a23ebcead73d1691757fd66925cc24246",
+"terminal_8c.html#a9533eb947d6d1ab539960f93c8ddeb66"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

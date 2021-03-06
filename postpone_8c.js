@@ -2,8 +2,9 @@ var postpone_8c =
 [
     [ "mutt_num_postponed", "postpone_8c.html#a42853d2d4da10271644dc7083ae1c453", null ],
     [ "mutt_update_num_postponed", "postpone_8c.html#a6d6fb2f03b78be714443316f335c90ae", null ],
-    [ "post_make_entry", "postpone_8c.html#aa01b43994fbe7f55b98fd4cb7f4371bb", null ],
+    [ "post_make_entry", "postpone_8c.html#a5a5709ee95dc84b2956c2f43947b9dce", null ],
     [ "dlg_select_postponed_email", "postpone_8c.html#a7e615f7663c6f5ad1a789450cdb93f1f", null ],
+    [ "hardclose", "postpone_8c.html#a89ebe12c7c3cc42ba25cd5acad8168ea", null ],
     [ "mutt_get_postponed", "postpone_8c.html#a625a6f9a0389d9c1aa74e95dfe7df1ac", null ],
     [ "mutt_parse_crypt_hdr", "postpone_8c.html#a286933c50f193dd341ae2e6a015aeb67", null ],
     [ "mutt_prepare_template", "postpone_8c.html#aad14aaca518d6c005ec318f14114d5ec", null ],

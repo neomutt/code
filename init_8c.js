@@ -1,6 +1,5 @@
 var init_8c =
 [
-    [ "config_init_main", "init_8c.html#abc8e3bba4436fbcb1f47d0a04728f974", null ],
     [ "matches_ensure_morespace", "init_8c.html#a2f66c7c3b7477ce4c0654fa3bbf0ed90", null ],
     [ "candidate", "init_8c.html#a0276a7834461e2059b10a3eacf693432", null ],
     [ "complete_all_nm_tags", "init_8c.html#a60382d35e2f0edeb0b736323d76894fd", null ],

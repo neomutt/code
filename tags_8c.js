@@ -1,7 +1,7 @@
 var tags_8c =
 [
     [ "driver_tags_getter", "tags_8c.html#a178071121b8ba108b9922257048d4b0d", null ],
-    [ "driver_tags_add", "tags_8c.html#a0310fce6f8e688d4e4b2c520c3181269", null ],
+    [ "driver_tags_add", "tags_8c.html#ac3b15f715903df2c70acdf148757d152", null ],
     [ "driver_tags_free", "tags_8c.html#a67d055f6a46d752daad6495129027e03", null ],
     [ "driver_tags_get_transformed", "tags_8c.html#a95814b939791a1163fc9ca47ca49c6f3", null ],
     [ "driver_tags_get", "tags_8c.html#adc69dfc6061cf80ea20b25936ef29787", null ],

@@ -1,9 +1,5 @@
 var curs__lib_8h =
 [
-    [ "mutt_buffer_get_field", "curs__lib_8h.html#a841e4d1ee7f6c021d548cfaae0b08d20", null ],
-    [ "mutt_buffer_enter_fname", "curs__lib_8h.html#a667bedd2f7eac39d69400aa7b986324b", null ],
-    [ "mutt_get_field", "curs__lib_8h.html#ac62e9cb2ff75beb1f52e7a3882f293b8", null ],
-    [ "mutt_get_password", "curs__lib_8h.html#ac2850436a0c6eda151e44994063f18a8", null ],
     [ "FormatJustify", "curs__lib_8h.html#ac8fd1d468a4d7f8cecfd67ca34d3707d", [
       [ "JUSTIFY_LEFT", "curs__lib_8h.html#ac8fd1d468a4d7f8cecfd67ca34d3707da5c0dcf1a34bb6592b4a96c1c47150958", null ],
       [ "JUSTIFY_CENTER", "curs__lib_8h.html#ac8fd1d468a4d7f8cecfd67ca34d3707da84893d53d60143ed6b8215e58b14df7a", null ],
@@ -12,6 +8,8 @@ var curs__lib_8h =
     [ "mutt_addwch", "curs__lib_8h.html#a94c17b2160b1de3f07954bfa878aeeb5", null ],
     [ "mutt_any_key_to_continue", "curs__lib_8h.html#ab6a61cdfcf8c2c73ee59381c79c79774", null ],
     [ "mutt_beep", "curs__lib_8h.html#ad4d7b60fedea755304f7d72461d860ca", null ],
+    [ "mutt_buffer_enter_fname", "curs__lib_8h.html#a8323a2c35930da81a8f0c63545537839", null ],
+    [ "mutt_buffer_get_field", "curs__lib_8h.html#a89ddceeb9356040360c64ff0c9463480", null ],
     [ "mutt_do_pager", "curs__lib_8h.html#a2509f872a1986db92a5a2b7d2a7e9759", null ],
     [ "mutt_edit_file", "curs__lib_8h.html#a0590f11f42a6242002ea4c842438231b", null ],
     [ "mutt_endwin", "curs__lib_8h.html#acd14d074d8b9e6cb21e851dd573cdec2", null ],
@@ -23,7 +21,7 @@ var curs__lib_8h =
     [ "mutt_format_s_x", "curs__lib_8h.html#a88912605227f27641969f767bff26af5", null ],
     [ "mutt_getch_timeout", "curs__lib_8h.html#a07f104cc4b27d47d46f9a83993acc5ef", null ],
     [ "mutt_getch", "curs__lib_8h.html#a6bde4da049798871747b54bff8d83b4f", null ],
-    [ "mutt_get_field_full", "curs__lib_8h.html#ad68e96b0fa805c56398a89bee466cdcd", null ],
+    [ "mutt_get_field", "curs__lib_8h.html#ab5fab29957531e6df60881531c22e907", null ],
     [ "mutt_get_field_unbuffered", "curs__lib_8h.html#acfa4667194d147e49afcdf66f9ab0a79", null ],
     [ "mutt_multi_choice", "curs__lib_8h.html#a95d1cd189641185a743df0397ea072c8", null ],
     [ "mutt_need_hard_redraw", "curs__lib_8h.html#abbd51b0f01f2565da12fddf6716c7b9c", null ],
@@ -41,8 +39,6 @@ var curs__lib_8h =
     [ "mutt_wstr_trunc", "curs__lib_8h.html#a48a9fd66de2ef76e2b72704badd3c40b", null ],
     [ "mutt_yesorno", "curs__lib_8h.html#a67a4f6d2c21c9de420130089bb20505c", null ],
     [ "query_quadoption", "curs__lib_8h.html#ab02047769214ff014b9a8a1782babadc", null ],
-    [ "mutt_buffer_get_field_full", "curs__lib_8h.html#ab55d2a00617af6d56a7bca37991f1a23", null ],
-    [ "mutt_buffer_enter_fname_full", "curs__lib_8h.html#ad3db1a1fd479d43995c314ef152857f9", null ],
     [ "C_MetaKey", "curs__lib_8h.html#a5ae96c74d953ed6282da71b8d3752053", null ],
     [ "MuttGetchTimeout", "curs__lib_8h.html#afa3734b90bcc46484d649aafe4c3b13f", null ]
 ];

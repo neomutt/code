@@ -3,7 +3,7 @@ var dlgquery_8c =
     [ "alias_to_addrlist", "dlgquery_8c.html#acc8045bc53457262c16acba14aec09cc", null ],
     [ "query_search", "dlgquery_8c.html#a783bc0e7221defca6d72b304746e3aba", null ],
     [ "query_format_str", "dlgquery_8c.html#a170d2276b3e0f9c059498cff0c355d3d", null ],
-    [ "query_make_entry", "dlgquery_8c.html#a4081ef04c1e90ab28b3279f8df6c3458", null ],
+    [ "query_make_entry", "dlgquery_8c.html#a6c2e6a96f53f75829d1d04f80a9d010a", null ],
     [ "query_tag", "dlgquery_8c.html#a9be22e1702401b4845efffd8059a3605", null ],
     [ "query_run", "dlgquery_8c.html#a35eea4925485d20ee477926b9420ca35", null ],
     [ "dlg_select_query", "dlgquery_8c.html#a1b14278ee062936035f5b41babab18da", null ],

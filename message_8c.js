@@ -1,8 +1,5 @@
 var message_8c =
 [
-    [ "imap_edata_free", "message_8c.html#aca39a57c385f6fdc7aa1297b87c48085", null ],
-    [ "imap_edata_new", "message_8c.html#ae33437ff9ef7407d8c6ac170deeede0f", null ],
-    [ "imap_edata_get", "message_8c.html#a849b9e42b71ec60e252b9fdb9c8edfbc", null ],
     [ "msg_cache_open", "message_8c.html#a765ce1672ffd93151293512c28bbb1b9", null ],
     [ "msg_cache_get", "message_8c.html#af8842f3824481fe1303c5928324442ed", null ],
     [ "msg_cache_put", "message_8c.html#a0257d136f32eed740664990643872650", null ],
@@ -19,14 +16,15 @@ var message_8c =
     [ "read_headers_normal_eval_cache", "message_8c.html#ac859b71390c6ecbcecbe5bf3627db566", null ],
     [ "read_headers_qresync_eval_cache", "message_8c.html#af545f01449bec3c12f4c2aa74bf22079", null ],
     [ "read_headers_condstore_qresync_updates", "message_8c.html#a917e82060d06f1a7efc11e13a6033d42", null ],
+    [ "imap_verify_qresync", "message_8c.html#a67ffe8c706c64de2816fbfbe691a6fe9", null ],
     [ "read_headers_fetch_new", "message_8c.html#aba59bdd59b97344cb3827fb02ec616b1", null ],
     [ "imap_read_headers", "message_8c.html#abe57c68df95e87d0dbe1453903343042", null ],
     [ "imap_append_message", "message_8c.html#a72d92d03e0cb1862381a7ee22861360d", null ],
-    [ "imap_copy_messages", "message_8c.html#aa9385a09428c5a64e66e588255370360", null ],
+    [ "imap_copy_messages", "message_8c.html#a733c2961ff414db54d7259ab1387ca6c", null ],
     [ "imap_cache_del", "message_8c.html#aade70cfb183e32e948a40ba633fd711a", null ],
     [ "imap_cache_clean", "message_8c.html#a12bfed71f3ebb43d6a7dd014d079370f", null ],
     [ "imap_set_flags", "message_8c.html#a568e8aa0aa74d1941d68b571202aa5af", null ],
-    [ "imap_msg_open", "message_8c.html#a081d91e6a08785cf13de80ccddcc4171", null ],
+    [ "imap_msg_open", "message_8c.html#a3d1aada0974c1c85621a0aa3626a576b", null ],
     [ "imap_msg_commit", "message_8c.html#a1226858cc62e436a52cf0c64b97f6fdb", null ],
     [ "imap_msg_close", "message_8c.html#a976a007de492b4814274866632d62708", null ],
     [ "imap_msg_save_hcache", "message_8c.html#af92aa8eebe364d7a8d1f7e94a1d50d28", null ]

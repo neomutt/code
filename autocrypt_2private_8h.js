@@ -1,7 +1,7 @@
 var autocrypt_2private_8h =
 [
     [ "mutt_autocrypt_account_init", "autocrypt_2private_8h.html#aa6a1d41202dd88cfe7d34655352e437e", null ],
-    [ "mutt_autocrypt_scan_mailboxes", "autocrypt_2private_8h.html#ae662fb061f19856ae08ea6d9007d2aa2", null ],
+    [ "mutt_autocrypt_scan_mailboxes", "autocrypt_2private_8h.html#a6174c496ce0766e94e469a0a0a05b897", null ],
     [ "mutt_autocrypt_db_account_delete", "autocrypt_2private_8h.html#a1475a5c5e3f022694e685651289fb21a", null ],
     [ "mutt_autocrypt_db_account_free", "autocrypt_2private_8h.html#a68854efa33d1b0d6f63c2d34767b2f9e", null ],
     [ "mutt_autocrypt_db_account_get", "autocrypt_2private_8h.html#a46f8db1fe0e0066603a705689dec64c6", null ],
@@ -13,7 +13,7 @@ var autocrypt_2private_8h =
     [ "mutt_autocrypt_db_gossip_history_free", "autocrypt_2private_8h.html#ac64386ceb7551f4d92eb76cf750051ba", null ],
     [ "mutt_autocrypt_db_gossip_history_insert", "autocrypt_2private_8h.html#a3232f54bb8c81c043037aaf8454b5f4c", null ],
     [ "mutt_autocrypt_db_gossip_history_new", "autocrypt_2private_8h.html#a89d02546893521f4105eaacfbf3b81f3", null ],
-    [ "mutt_autocrypt_db_init", "autocrypt_2private_8h.html#ad641524d30b3714343d161c84049f788", null ],
+    [ "mutt_autocrypt_db_init", "autocrypt_2private_8h.html#a03dc32435dd0458aa57341c8bebc01a1", null ],
     [ "mutt_autocrypt_db_normalize_addr", "autocrypt_2private_8h.html#a7a1ba8370247983cbe31e79557e3e1e9", null ],
     [ "mutt_autocrypt_db_normalize_addrlist", "autocrypt_2private_8h.html#a06abfa5c13cc1c6ce053d63c5c692508", null ],
     [ "mutt_autocrypt_db_peer_free", "autocrypt_2private_8h.html#abd0f103cd6d4b96587348badc7492240", null ],

@@ -1,13 +1,7 @@
 var util_8c =
 [
-    [ "imap_adata_free", "util_8c.html#a9067b3d9d150797256089f14b2f364c3", null ],
-    [ "imap_adata_new", "util_8c.html#a9aa9b8023a54c022c721d647af6cf856", null ],
-    [ "imap_adata_get", "util_8c.html#a0ca70f0a790494cb3e6cbdaf3cb004a4", null ],
     [ "imap_adata_find", "util_8c.html#ac1109505626c478d320c9817315c372b", null ],
-    [ "imap_mdata_new", "util_8c.html#a0490552d417ad0d6ee160ab423a38112", null ],
     [ "imap_mdata_cache_reset", "util_8c.html#a584330f840a82b13da6b7bd730de68c1", null ],
-    [ "imap_mdata_free", "util_8c.html#af9402720638723993c57f16f8e84a398", null ],
-    [ "imap_mdata_get", "util_8c.html#acdbc54bfe42c13f551c58b0a9b9ba8ff", null ],
     [ "imap_get_parent", "util_8c.html#a5c25adc3a9cda9a494d747a928b6f522", null ],
     [ "imap_get_parent_path", "util_8c.html#a78c7437c0f185ed8ab37e666b8a69ec0", null ],
     [ "imap_clean_path", "util_8c.html#a7c4dbc9f84be00789935c291832b75b2", null ],

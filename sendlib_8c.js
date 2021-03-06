@@ -19,8 +19,8 @@ var sendlib_8c =
     [ "gen_msgid", "sendlib_8c.html#a73d572ce5f64fd507832a9eec3bcaa77", null ],
     [ "mutt_prepare_envelope", "sendlib_8c.html#ac35da3d19eb0d95d4f6260adab57b4c9", null ],
     [ "mutt_unprepare_envelope", "sendlib_8c.html#a99b5cff5076c9e25bce367f0bae45f4c", null ],
-    [ "bounce_message", "sendlib_8c.html#a2dfca9b6c2fbb8a7377fb3e6a0f3e707", null ],
-    [ "mutt_bounce_message", "sendlib_8c.html#abd4ad78e18cf5cd320f95237366cdd84", null ],
+    [ "bounce_message", "sendlib_8c.html#ae7871ca3c3ec4c32f93348ba08595dfc", null ],
+    [ "mutt_bounce_message", "sendlib_8c.html#a7848f294cb015bff75efc45e2d15494c", null ],
     [ "set_noconv_flags", "sendlib_8c.html#a31fd83b30e072d8a49049390853704f7", null ],
     [ "mutt_write_multiple_fcc", "sendlib_8c.html#a8957ce367f6683e839e4ddb7245d466c", null ],
     [ "mutt_write_fcc", "sendlib_8c.html#acd4f22db21ca81a6a845ffe6888d141f", null ]

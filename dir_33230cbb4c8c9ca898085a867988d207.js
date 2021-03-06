@@ -1,5 +1,7 @@
 var dir_33230cbb4c8c9ca898085a867988d207 =
 [
+    [ "adata.c", "imap_2adata_8c.html", "imap_2adata_8c" ],
+    [ "adata.h", "imap_2adata_8h.html", "imap_2adata_8h" ],
     [ "auth.c", "imap_2auth_8c.html", "imap_2auth_8c" ],
     [ "auth.h", "auth_8h.html", "auth_8h" ],
     [ "auth_anon.c", "auth__anon_8c.html", "auth__anon_8c" ],
@@ -12,11 +14,14 @@ var dir_33230cbb4c8c9ca898085a867988d207 =
     [ "browse.c", "imap_2browse_8c.html", "imap_2browse_8c" ],
     [ "command.c", "command_8c.html", "command_8c" ],
     [ "config.c", "imap_2config_8c.html", "imap_2config_8c" ],
+    [ "edata.c", "imap_2edata_8c.html", "imap_2edata_8c" ],
+    [ "edata.h", "imap_2edata_8h.html", "imap_2edata_8h" ],
     [ "imap.c", "imap_8c.html", "imap_8c" ],
     [ "lib.h", "imap_2lib_8h.html", "imap_2lib_8h" ],
+    [ "mdata.c", "imap_2mdata_8c.html", "imap_2mdata_8c" ],
+    [ "mdata.h", "imap_2mdata_8h.html", "imap_2mdata_8h" ],
     [ "message.c", "message_8c.html", "message_8c" ],
     [ "message.h", "imap_2message_8h.html", [
-      [ "ImapEmailData", "structImapEmailData.html", "structImapEmailData" ],
       [ "ImapHeader", "structImapHeader.html", "structImapHeader" ]
     ] ],
     [ "msn.c", "msn_8c.html", "msn_8c" ],

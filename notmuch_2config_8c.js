@@ -15,6 +15,6 @@ var notmuch_2config_8c =
     [ "C_NmRepliedTag", "notmuch_2config_8c.html#ad9e8d6cafea42eca59223b3eb4b9e12f", null ],
     [ "C_NmUnreadTag", "notmuch_2config_8c.html#a2ad0325556b729ec13e8771a76675282", null ],
     [ "C_VfolderFormat", "notmuch_2config_8c.html#a8e3f6a8cae7d09afa25083dfdabee344", null ],
-    [ "C_VirtualSpoolfile", "notmuch_2config_8c.html#a4fd16c814918a48ad225d9ff1dec7c01", null ],
+    [ "C_VirtualSpoolFile", "notmuch_2config_8c.html#a72ce34edb66744d66d4ee479c986b694", null ],
     [ "NotmuchVars", "notmuch_2config_8c.html#afc42f1f6e46d2d2aec473271f8a877d8", null ]
 ];

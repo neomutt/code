@@ -11,7 +11,6 @@ var hcache_2lib_8h =
     [ "mutt_hcache_fetch_raw", "hcache_2lib_8h.html#afafbb66bd655d35f263db1272440aeb1", null ],
     [ "mutt_hcache_free_raw", "hcache_2lib_8h.html#aa5d4bb535ed54cc8d4a8a4117ceff9fa", null ],
     [ "mutt_hcache_delete_record", "hcache_2lib_8h.html#a50c594f02ea355bcabfdad21dc655988", null ],
-    [ "config_init_hcache", "hcache_2lib_8h.html#afc15e7a5ea409e9f17f504bb58ad92c2", null ],
     [ "C_HeaderCache", "hcache_2lib_8h.html#a91c61a7ecc737c8f6316fd9827122d5a", null ],
     [ "C_HeaderCacheBackend", "hcache_2lib_8h.html#a2224a700997de24abfbaa63344a72969", null ],
     [ "C_HeaderCacheCompressLevel", "hcache_2lib_8h.html#a4b23771c7935aa5e619f1bbac6cc0197", null ],

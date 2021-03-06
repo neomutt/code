@@ -5,6 +5,5 @@ var sidebar_2lib_8h =
     [ "sb_change_mailbox", "sidebar_2lib_8h.html#a5b11b9b9cbde6d1a4131697279d1d247", null ],
     [ "sb_get_highlight", "sidebar_2lib_8h.html#a7108e7188ee63cf18e4dee92af2d80fe", null ],
     [ "sb_parse_unwhitelist", "sidebar_2lib_8h.html#a8f2bb3b173205a5b055df25cbd59d984", null ],
-    [ "sb_parse_whitelist", "sidebar_2lib_8h.html#a7d3a4db808135ebb02ebd2b5d2c5713a", null ],
-    [ "config_init_sidebar", "sidebar_2lib_8h.html#ae7634227027409303c7d244cb68cac49", null ]
+    [ "sb_parse_whitelist", "sidebar_2lib_8h.html#a7d3a4db808135ebb02ebd2b5d2c5713a", null ]
 ];

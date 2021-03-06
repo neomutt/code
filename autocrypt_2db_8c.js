@@ -1,7 +1,7 @@
 var autocrypt_2db_8c =
 [
     [ "autocrypt_db_create", "autocrypt_2db_8c.html#acf7b106265614277728d6aa0ece0dfd9", null ],
-    [ "mutt_autocrypt_db_init", "autocrypt_2db_8c.html#ad641524d30b3714343d161c84049f788", null ],
+    [ "mutt_autocrypt_db_init", "autocrypt_2db_8c.html#a03dc32435dd0458aa57341c8bebc01a1", null ],
     [ "mutt_autocrypt_db_close", "autocrypt_2db_8c.html#a278e65c7972b3237d176caeca0ca4a02", null ],
     [ "mutt_autocrypt_db_normalize_addr", "autocrypt_2db_8c.html#a7a1ba8370247983cbe31e79557e3e1e9", null ],
     [ "mutt_autocrypt_db_normalize_addrlist", "autocrypt_2db_8c.html#a06abfa5c13cc1c6ce053d63c5c692508", null ],

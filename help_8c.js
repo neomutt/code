@@ -8,5 +8,5 @@ var help_8c =
     [ "dump_menu", "help_8c.html#aad9991c3286c6cb9c0a98a495a9d3a26", null ],
     [ "is_bound", "help_8c.html#a3fe741379b821e5ebf472d1b823c7b01", null ],
     [ "dump_unbound", "help_8c.html#adb01d122101b3546bb78bf68f86ffcf6", null ],
-    [ "mutt_help", "help_8c.html#a1267fc376a554184b62d121718ef12c1", null ]
+    [ "mutt_help", "help_8c.html#ac6179843b87f01ba1a8dda459daca237", null ]
 ];

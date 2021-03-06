@@ -19,10 +19,10 @@ var structMenu =
     [ "search_dir", "structMenu.html#a103ef41d81b44ee5b7a280d660fbdf37", null ],
     [ "tagged", "structMenu.html#a2aee1b3bf835ab3deb8f042b9eb38419", null ],
     [ "custom_search", "structMenu.html#aeca263e57d98804d5fbcade232fa6c17", null ],
-    [ "make_entry", "structMenu.html#a5b8e7a81b1ad3299bf8271b8f41042a1", null ],
+    [ "make_entry", "structMenu.html#a218350a8b124833a4879f88e9e107a22", null ],
     [ "search", "structMenu.html#a8a45572a1ba92aedfb9327d3c203ccb7", null ],
     [ "tag", "structMenu.html#a9f56131f02aaece633d13c8b2007476a", null ],
-    [ "color", "structMenu.html#a862f12ecb4aa1f1122d8042a16518fb7", null ],
+    [ "color", "structMenu.html#a419421227e98158837c63bb056c2aab4", null ],
     [ "custom_redraw", "structMenu.html#a9c7e749aff3f46cb1224bdfac9a3990a", null ],
     [ "redraw_data", "structMenu.html#aee28479c5794b00ca361cfbe872516b0", null ]
 ];

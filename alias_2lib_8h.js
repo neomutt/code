@@ -14,6 +14,5 @@ var alias_2lib_8h =
     [ "query_complete", "alias_2lib_8h.html#aed95bba2770f684ed0caadf42d924860", null ],
     [ "query_index", "alias_2lib_8h.html#a1205cb3b6c32c17817078da6a4666be5", null ],
     [ "alias_reverse_lookup", "alias_2lib_8h.html#a8f5eca479605975d43e59cc8214cd2c9", null ],
-    [ "config_init_alias", "alias_2lib_8h.html#abeecb3c988acb9aa91ec8a680d328e6e", null ],
     [ "alias_array_sort", "alias_2lib_8h.html#a8bc2a37fada3aaa7c58cad015f43af16", null ]
 ];

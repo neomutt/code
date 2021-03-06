@@ -1,8 +1,6 @@
 var pop_2private_8h =
 [
     [ "PopCache", "structPopCache.html", "structPopCache" ],
-    [ "PopAccountData", "structPopAccountData.html", "structPopAccountData" ],
-    [ "PopEmailData", "structPopEmailData.html", "structPopEmailData" ],
     [ "PopAuth", "structPopAuth.html", "structPopAuth" ],
     [ "POP_PORT", "pop_2private_8h.html#ac8bd6d29115abf7dcc47ae26f0cbb3d6", null ],
     [ "POP_SSL_PORT", "pop_2private_8h.html#a2e7c786c53a65d43284b8de44a98a5fc", null ],
@@ -31,12 +29,10 @@ var pop_2private_8h =
     [ "pop_fetch_data", "pop_2private_8h.html#abc1591da707c3c85897c8b450e661dcf", null ],
     [ "pop_reconnect", "pop_2private_8h.html#af75fadb2503181ccec226915d3e1984f", null ],
     [ "pop_logout", "pop_2private_8h.html#aeb87c461c48395e38564034b64ec2d37", null ],
-    [ "pop_adata_get", "pop_2private_8h.html#ae2ba9262442cd65666aafbf191de30f4", null ],
-    [ "pop_edata_get", "pop_2private_8h.html#ad62316d343b8a8cc4724eb3af0d3ba09", null ],
     [ "pop_get_field", "pop_2private_8h.html#a02fea670debdd85f5fc42b27b50b7344", null ],
     [ "C_PopAuthTryAll", "pop_2private_8h.html#adfde6e3983f6413b7b21f360dd82f341", null ],
     [ "C_PopAuthenticators", "pop_2private_8h.html#ad0b3813f566af34fb60e8574fd48d2d0", null ],
-    [ "C_PopCheckinterval", "pop_2private_8h.html#ab790971917614127487f7ae6d2687abc", null ],
+    [ "C_PopCheckInterval", "pop_2private_8h.html#aa401f7731cbb468946d5968f51a38185", null ],
     [ "C_PopDelete", "pop_2private_8h.html#aab982ef48c984a5fa900a432929c000d", null ],
     [ "C_PopHost", "pop_2private_8h.html#ac2c2920d79d79010b662e655f07371a4", null ],
     [ "C_PopLast", "pop_2private_8h.html#a33a4ca217f4b2e4e7df69136b001fc7c", null ],

@@ -20,7 +20,7 @@ var conn_2private_8h =
     [ "C_SslUseTlsv12", "conn_2private_8h.html#aab2cec797d7636195d04dbad50fc71d5", null ],
     [ "C_SslUseTlsv13", "conn_2private_8h.html#a70e8dbd5f7583d00f104aa14b07f4f78", null ],
     [ "C_SslUseTlsv1", "conn_2private_8h.html#ae90e1890a586d10d4a321eb215974937", null ],
-    [ "C_SslUsesystemcerts", "conn_2private_8h.html#a98da67814ad6394236c3019eb2ccdf0d", null ],
+    [ "C_SslUseSystemCerts", "conn_2private_8h.html#a6bfd6aabdf0ae6d4fa35abc8fffd815f", null ],
     [ "C_SslVerifyDates", "conn_2private_8h.html#a9a013e08303a9368291a499a45da0819", null ],
     [ "C_SslVerifyHost", "conn_2private_8h.html#a2f9a2fb1935960af6e2c9b0361d633e4", null ],
     [ "C_SslVerifyPartialChains", "conn_2private_8h.html#a3a2450dba008d1337e88555620d91506", null ],

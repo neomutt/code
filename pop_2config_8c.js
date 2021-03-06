@@ -4,7 +4,7 @@ var pop_2config_8c =
     [ "config_init_pop", "pop_2config_8c.html#a51af99fa94746593ce0cdf071c224851", null ],
     [ "C_PopAuthTryAll", "pop_2config_8c.html#adfde6e3983f6413b7b21f360dd82f341", null ],
     [ "C_PopAuthenticators", "pop_2config_8c.html#ad0b3813f566af34fb60e8574fd48d2d0", null ],
-    [ "C_PopCheckinterval", "pop_2config_8c.html#ab790971917614127487f7ae6d2687abc", null ],
+    [ "C_PopCheckInterval", "pop_2config_8c.html#aa401f7731cbb468946d5968f51a38185", null ],
     [ "C_PopDelete", "pop_2config_8c.html#aab982ef48c984a5fa900a432929c000d", null ],
     [ "C_PopHost", "pop_2config_8c.html#ac2c2920d79d79010b662e655f07371a4", null ],
     [ "C_PopLast", "pop_2config_8c.html#a33a4ca217f4b2e4e7df69136b001fc7c", null ],

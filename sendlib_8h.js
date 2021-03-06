@@ -1,7 +1,7 @@
 var sendlib_8h =
 [
     [ "MUTT_RANDTAG_LEN", "sendlib_8h.html#a3eb2475f59b97dda306d28971399217a", null ],
-    [ "mutt_bounce_message", "sendlib_8h.html#abd4ad78e18cf5cd320f95237366cdd84", null ],
+    [ "mutt_bounce_message", "sendlib_8h.html#a7848f294cb015bff75efc45e2d15494c", null ],
     [ "mutt_fqdn", "sendlib_8h.html#a3214a4d6985ca1a64f72d21f6f8c252f", null ],
     [ "mutt_get_content_info", "sendlib_8h.html#a8621a45f0aa4aea9e2613207be4fa717", null ],
     [ "mutt_lookup_mime_type", "sendlib_8h.html#a1431e9401865165dfef92315f3ca7ae2", null ],

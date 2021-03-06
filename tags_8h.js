@@ -8,6 +8,7 @@ var tags_8h =
     [ "driver_tags_get_transformed_for", "tags_8h.html#ad21bfdcba9d44d221ed45218c18ac8f9", null ],
     [ "driver_tags_get_with_hidden", "tags_8h.html#a98ad754cf00b7de8eaf8e3a92d8766d0", null ],
     [ "driver_tags_replace", "tags_8h.html#a6537105664c2986d658d5a7325748f31", null ],
+    [ "driver_tags_add", "tags_8h.html#af7008a8faa159d9187bd04ea0fcfccd5", null ],
     [ "C_HiddenTags", "tags_8h.html#afe18297917619b6d01ff3303ddd7db8f", null ],
     [ "TagTransforms", "tags_8h.html#aadb38a7004cb2dfa0550d53004eb74d1", null ]
 ];

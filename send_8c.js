@@ -30,7 +30,7 @@ var send_8c =
     [ "mutt_set_followup_to", "send_8c.html#afa20b4cc93fe3d7cbc02675afeddcad4", null ],
     [ "set_reverse_name", "send_8c.html#ac5be3d670b1d7e5cddb605652e9aa859", null ],
     [ "mutt_default_from", "send_8c.html#aa93b7a6bc9e26176ebf17bf37c7d2a87", null ],
-    [ "invoke_mta", "send_8c.html#a3c2f8a3b1d5807cfaa6d216db3fbff61", null ],
+    [ "invoke_mta", "send_8c.html#a859ddbab5f9384328fd06bf9c18c02f2", null ],
     [ "mutt_encode_descriptions", "send_8c.html#a1ba9ce78a67261e872a264bc956ef857", null ],
     [ "decode_descriptions", "send_8c.html#af1b54154700865964598299ed1cf9a6a", null ],
     [ "fix_end_of_file", "send_8c.html#ad5e73f6a253107a7f55ee7388fbbf92f", null ],

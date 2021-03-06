@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keycode_5ft',['keycode_t',['../keymap_8h.html#aa19669081ba051c79ced78b2b7ea889c',1,'keymap.h']]],
-  ['keyflags',['KeyFlags',['../ncrypt_2lib_8h.html#a530487c28aacc2c2d50f12eefb8c5506',1,'lib.h']]]
+  ['list_5ffree_5ft_12347',['list_free_t',['../list_8h.html#a9629df33ebcaa5b6c7b42270d5f4e54e',1,'list.h']]],
+  ['log_5fdispatcher_5ft_12348',['log_dispatcher_t',['../logging_8h.html#aa929bcc3f2d699c585963dffd2a6244b',1,'logging.h']]]
 ];

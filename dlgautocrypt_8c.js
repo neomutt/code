@@ -2,11 +2,11 @@ var dlgautocrypt_8c =
 [
     [ "AccountEntry", "structAccountEntry.html", "structAccountEntry" ],
     [ "account_format_str", "dlgautocrypt_8c.html#aaf8fa7cc2af96601d880f3a9fc497f6a", null ],
-    [ "account_make_entry", "dlgautocrypt_8c.html#ad8b44baf475276e5104c26595a99e71a", null ],
+    [ "account_make_entry", "dlgautocrypt_8c.html#ae5a0129fb68515fa9f657762c17eb8b1", null ],
     [ "create_menu", "dlgautocrypt_8c.html#a15de923db519cd044a122592e9178918", null ],
     [ "menu_free", "dlgautocrypt_8c.html#ac9109890715305821c8599f1f3e853f1", null ],
     [ "toggle_active", "dlgautocrypt_8c.html#a1457d95507bf4ee7a4bd4a15e3545f32", null ],
     [ "toggle_prefer_encrypt", "dlgautocrypt_8c.html#afb946e389ae112c24e849bd35daa43f3", null ],
-    [ "dlg_select_autocrypt_account", "dlgautocrypt_8c.html#ab0cad601c656450a46c98e47197b8376", null ],
+    [ "dlg_select_autocrypt_account", "dlgautocrypt_8c.html#ae700836921b22ec363aae36dbd20a3c3", null ],
     [ "AutocryptAcctHelp", "dlgautocrypt_8c.html#a9cc214846a1e7807e67958bd0acce696", null ]
 ];

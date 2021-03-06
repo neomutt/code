@@ -22,7 +22,7 @@ var dlggpgme_8c =
     [ "crypt_key_abilities", "dlggpgme_8c.html#ac5c11cc740658856ab48026dd1318eae", null ],
     [ "crypt_flags", "dlggpgme_8c.html#a0f14ace36026a66f26de71c895e99cf2", null ],
     [ "crypt_format_str", "dlggpgme_8c.html#a0f917c383b09751f64bd6be090821acb", null ],
-    [ "crypt_make_entry", "dlggpgme_8c.html#ae22420abff25462d4022ed3508cb8b17", null ],
+    [ "crypt_make_entry", "dlggpgme_8c.html#ab68ae4c7ba626e0c248f9d06ff9db2a3", null ],
     [ "dlg_select_gpgme_key", "dlggpgme_8c.html#a5617f65588f988b6cafe9d1f3bf63edb", null ],
     [ "GpgmeHelp", "dlggpgme_8c.html#aef081963c1fd0287be5bfff4fc37912a", null ],
     [ "KeyInfoPrompts", "dlggpgme_8c.html#a382b63ab4c0e21cdee8b0e2763ad5c69", null ],

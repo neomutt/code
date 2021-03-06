@@ -9,5 +9,10 @@ var mailbox_8c =
     [ "mailbox_changed", "mailbox_8c.html#af09ac36728ca3255523cd3b0bfd1f172", null ],
     [ "mailbox_size_add", "mailbox_8c.html#a2c6a73f0789f1985d07f296537493cf0", null ],
     [ "mailbox_size_sub", "mailbox_8c.html#a378083af760b6f24581c9be2be20f049", null ],
-    [ "mailbox_set_subset", "mailbox_8c.html#a183742dc7bb17663f2ca03f05b3b2328", null ]
+    [ "mailbox_set_subset", "mailbox_8c.html#a183742dc7bb17663f2ca03f05b3b2328", null ],
+    [ "mailbox_gc_add", "mailbox_8c.html#ab40999223fc7e7038d917ad6a451dc95", null ],
+    [ "mailbox_gc_run", "mailbox_8c.html#a1aded0bae910c51bc27f84a00445f9d8", null ],
+    [ "arr", "mailbox_8c.html#a2bed5da613bfb71e4fb4dabcc8cbfcbe", null ],
+    [ "idx", "mailbox_8c.html#a103fe1fcacccda7d9cdacde44721faef", null ],
+    [ "gc", "mailbox_8c.html#a37728fd05c45c8232f84802302a8cad7", null ]
 ];

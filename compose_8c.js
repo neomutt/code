@@ -28,7 +28,7 @@ var compose_8c =
     [ "compose_status_line", "compose_8c.html#a1531d785d4faa4bc82cd8c43ff6e9f04", null ],
     [ "calc_header_width_padding", "compose_8c.html#aef0c67b5c00c17dd35738a4fdc6b65a3", null ],
     [ "init_header_padding", "compose_8c.html#afc34fec9cb024fbc4c2e4d1b72e90ac5", null ],
-    [ "snd_make_entry", "compose_8c.html#a7cd542de4349c167dd99566a9ce04a85", null ],
+    [ "snd_make_entry", "compose_8c.html#a05ce4ddceb77d35657ddd995494b7ff7", null ],
     [ "autocrypt_compose_menu", "compose_8c.html#ae51515965703068c13b684e949b0963b", null ],
     [ "draw_floating", "compose_8c.html#a3a2628773125cc354856c45fbffbb224", null ],
     [ "draw_header", "compose_8c.html#a1c8ed66a5996c5748a22515f6915d559", null ],
