@@ -34,6 +34,7 @@ var mutt__window_8c =
     [ "window_redraw", "mutt__window_8c.html#a1b258c88df82ef7046e56d00e67fa3ef", null ],
     [ "window_set_focus", "mutt__window_8c.html#ae98ff6a3448f406d31fcc314ccc6cffe", null ],
     [ "window_get_focus", "mutt__window_8c.html#a92dbdbe509e12d9059e2b2ee9f108608", null ],
+    [ "window_get_dialog", "mutt__window_8c.html#ae9d06536badf98b92e08622a1476309d", null ],
     [ "mutt_window_clear", "mutt__window_8c.html#a02c050ebee8aa9a54a5bd2bab4855a94", null ],
     [ "RootWindow", "mutt__window_8c.html#abac196af46545fe9bebd15dabb91a8b2", null ],
     [ "AllDialogsWindow", "mutt__window_8c.html#aa379408e2d835c200c803b4d0f33b2d6", null ],

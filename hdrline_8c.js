@@ -30,19 +30,14 @@ var hdrline_8c =
       [ "DISP_MAX", "hdrline_8c.html#aa01498a3ceb2fa74dc9536c16caef1daafa2c96bcd7f3591c6337ff79163b8ddd", null ]
     ] ],
     [ "add_index_color", "hdrline_8c.html#a568c4f0f4f3ddf4a144d8a64f355bff3", null ],
-    [ "get_nth_wchar", "hdrline_8c.html#ac62fc13453145bc7c875d1d8a4232c37", null ],
+    [ "get_nth_wchar", "hdrline_8c.html#a8cecd3acdf5b2b3ac4e7f7a3bc37c7f7", null ],
     [ "make_from_prefix", "hdrline_8c.html#a7673085b441abeb0cb20b7c637cff353", null ],
     [ "make_from", "hdrline_8c.html#adf6800cd4ee1a0975d8bb953265b1ba9", null ],
     [ "make_from_addr", "hdrline_8c.html#a36ab2658c08c1ccf8a77d7921fc32205", null ],
     [ "user_in_addr", "hdrline_8c.html#aebd2a18291349b0a08fc7fd743574073", null ],
     [ "user_is_recipient", "hdrline_8c.html#aa913a6fd0a95b43643b523e1b15b1482", null ],
-    [ "apply_subject_mods", "hdrline_8c.html#a8bbff0e56672b4d9f0e091a23e1ec59f", null ],
     [ "thread_is_new", "hdrline_8c.html#aebca8cfe2272489be6f640a0643ec1df", null ],
     [ "thread_is_old", "hdrline_8c.html#aa520340bd3c4e1253ac4603229f2b026", null ],
     [ "index_format_str", "hdrline_8c.html#afa87b03d9a383088d6db0c417f79da92", null ],
-    [ "mutt_make_string", "hdrline_8c.html#a5ff2b7d1b1e2dbd345801cdda1e3af14", null ],
-    [ "C_CryptChars", "hdrline_8c.html#a390e4bda640209317c138f652f4f65f8", null ],
-    [ "C_FlagChars", "hdrline_8c.html#a302e9dc80513f4eab2233ca5818cfae0", null ],
-    [ "C_FromChars", "hdrline_8c.html#aa791bd4c1754a5423911bf226c2b5bd7", null ],
-    [ "C_ToChars", "hdrline_8c.html#a0e73a65082bd712fae6a6e833c8c45f2", null ]
+    [ "mutt_make_string", "hdrline_8c.html#a5ff2b7d1b1e2dbd345801cdda1e3af14", null ]
 ];

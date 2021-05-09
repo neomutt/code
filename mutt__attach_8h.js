@@ -12,7 +12,7 @@ var mutt__attach_8h =
       [ "MUTT_SAVE_OVERWRITE", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaa854916bc31aae9f2f9afbc6e15309ae7", null ]
     ] ],
     [ "attach_tag", "mutt__attach_8h.html#a86305a7b86a230165ada61d110743699", null ],
-    [ "mutt_attach_display_loop", "mutt__attach_8h.html#a7de52ee0aa50d4f3933be6ebea7f7ba5", null ],
+    [ "mutt_attach_display_loop", "mutt__attach_8h.html#a72c9e19b893d8d4afc5593d9d2b399ff", null ],
     [ "mutt_save_attachment_list", "mutt__attach_8h.html#a2b47c498759b3b7d7d8b1e111a034df8", null ],
     [ "mutt_pipe_attachment_list", "mutt__attach_8h.html#a8ed2bd717b168fbcb6d7c65c0943ef34", null ],
     [ "mutt_print_attachment_list", "mutt__attach_8h.html#adf1dd9e8d7f5246ed4030d38a360b29b", null ],

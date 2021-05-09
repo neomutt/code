@@ -12,7 +12,7 @@ var context_8h =
     [ "ctx_update", "context_8h.html#a9388581d0baec70c2962fdb99fd1a35c", null ],
     [ "ctx_has_limit", "context_8h.html#addeed4e3ed0c2c32b80d97831bfadcf3", null ],
     [ "ctx_mailbox", "context_8h.html#a3d99ae9e3203ce327227f9ab3f711427", null ],
-    [ "message_is_tagged", "context_8h.html#aab50b1725a8314f589d3bbfb1edaa0d2", null ],
+    [ "message_is_tagged", "context_8h.html#abfba0f2643d1fa54927eb2257b7e7cd4", null ],
     [ "mutt_get_virt_email", "context_8h.html#a0882b6875e05115e47a09836c63b5bf9", null ],
     [ "el_add_tagged", "context_8h.html#a543e45c288497e953332f7f20c761caf", null ]
 ];

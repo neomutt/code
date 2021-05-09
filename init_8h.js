@@ -1,6 +1,6 @@
 var init_8h =
 [
-    [ "init_config", "init_8h.html#a010347bb26a5857fdac5430b85cfaab0", null ],
+    [ "init_config", "init_8h.html#a658814930c6efec504cc721154db865f", null ],
     [ "mutt_command_complete", "init_8h.html#ad41f1b6fbd5aeeee1bfc56f620ff0f44", null ],
     [ "mutt_extract_token", "init_8h.html#a0c8965a76cc79c02268a42a859968bcb", null ],
     [ "mutt_get_hook_type", "init_8h.html#a2b5a9a2f2f93e047f07ee4d095e39b3e", null ],

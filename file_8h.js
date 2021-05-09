@@ -55,6 +55,5 @@ var file_8h =
     [ "mutt_file_resolve_symlink", "file_8h.html#ab2b6d0cfae3b1a4038db5f44d06117c1", null ],
     [ "mutt_buffer_quote_filename", "file_8h.html#a52d932a8cfb110a123fef9eb096a84e0", null ],
     [ "mutt_buffer_file_expand_fmt_quote", "file_8h.html#aea349ade5677e5139606fdc8b44c8e00", null ],
-    [ "C_Tmpdir", "file_8h.html#a5da60391fcb9bade2768342dc86cfa49", null ],
     [ "filename_safe_chars", "file_8h.html#a476ab3606a28b4cca8a7489e38d50151", null ]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['readlineflags_12368',['ReadLineFlags',['../file_8h.html#ad87720c152fab801e9bbcf987057d317',1,'file.h']]]
+  ['observer_5ft',['observer_t',['../observer_8h.html#a9df067637aa2f77aef6a84ff05071c22',1,'observer.h']]],
+  ['openmailboxflags',['OpenMailboxFlags',['../mxapi_8h.html#a12d50555671e01ef64b027974fc5acfa',1,'mxapi.h']]]
 ];

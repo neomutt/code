@@ -1,8 +1,6 @@
 var color_8h =
 [
     [ "ColorLine", "structColorLine.html", "structColorLine" ],
-    [ "ColorList", "structColorList.html", "structColorList" ],
-    [ "Colors", "structColors.html", "structColors" ],
     [ "EventColor", "structEventColor.html", "structEventColor" ],
     [ "ColorId", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070d", [
       [ "MT_COLOR_NONE", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da4990a169a27221cdc41a77ed73b5c4e6", null ],
@@ -60,13 +58,28 @@ var color_8h =
       [ "NT_COLOR_RESET", "color_8h.html#a9c069540e46a95aff05c0b0d878ed66da048face95b547d48c5a029a0cf32d863", null ]
     ] ],
     [ "STAILQ_HEAD", "color_8h.html#a9469c7065a18f76bb90eee30ea8318c1", null ],
-    [ "mutt_color_alloc", "color_8h.html#aff9a966d3c6d614cc6578c293db6eb7c", null ],
-    [ "mutt_color_combine", "color_8h.html#a3f009b81359ee288ca9930ebc6d09d65", null ],
-    [ "mutt_color_free", "color_8h.html#a6decfe66d8615776049296a3b305930b", null ],
-    [ "mutt_colors_new", "color_8h.html#af293b9a93e73b1dab46bca3cc5b4a11e", null ],
-    [ "mutt_colors_free", "color_8h.html#af0ec14c3e096e102e319334939e5579a", null ],
+    [ "mutt_color_is_header", "color_8h.html#ab4943331c3f4cb7f05ebaeffd175ef08", null ],
+    [ "mutt_color_alloc", "color_8h.html#af4f23dc9fec09e072dc81901755a70f7", null ],
+    [ "mutt_color_combine", "color_8h.html#ae1f46c3ab8ecbcaeab360a9a2871fbfb", null ],
+    [ "mutt_color_free", "color_8h.html#aad0b4bcc9d26c5a1f7ed3c3e1dd2ff98", null ],
+    [ "mutt_colors_init", "color_8h.html#afe248e6914fc46bf06fa6d26aec80c78", null ],
+    [ "mutt_colors_cleanup", "color_8h.html#aa63f63339491ef7d230a8dedfe5c89bd", null ],
     [ "mutt_parse_color", "color_8h.html#a63082a057de4b1f08741c9a312157e00", null ],
     [ "mutt_parse_mono", "color_8h.html#a6001a5f58d1dcceec589a84a794efa6c", null ],
     [ "mutt_parse_uncolor", "color_8h.html#a6e42243b65a9fa38b497dac61ec6d5ca", null ],
-    [ "mutt_parse_unmono", "color_8h.html#a426cea032e47c0d0772003826f2bc980", null ]
+    [ "mutt_parse_unmono", "color_8h.html#a426cea032e47c0d0772003826f2bc980", null ],
+    [ "mutt_color", "color_8h.html#a5d5d695995398d14807f577bdd7f1944", null ],
+    [ "mutt_color_status_line", "color_8h.html#a058de0ab9fb66e37d0e5f1bb17e3bebc", null ],
+    [ "mutt_color_index", "color_8h.html#a4e8d22053de3b3a5f6ea31e0cc45882f", null ],
+    [ "mutt_color_headers", "color_8h.html#aff6e81f1a42759a4b853c20e168636ac", null ],
+    [ "mutt_color_body", "color_8h.html#a0f0bc92e13cab4c46c305eb44f9ae4f3", null ],
+    [ "mutt_color_attachments", "color_8h.html#a35179c4456a7425fc56f3575a60d4afa", null ],
+    [ "mutt_color_index_author", "color_8h.html#a7ef36f3e041e94bcb92ec21192d2416d", null ],
+    [ "mutt_color_index_flags", "color_8h.html#aecbd970dacec2bacf50ea333b3ce1ea4", null ],
+    [ "mutt_color_index_subject", "color_8h.html#a4ce6a14dff6fe1179b73de0388e72762", null ],
+    [ "mutt_color_index_tags", "color_8h.html#a7a3a07691de5f668fe2247caecae0d0a", null ],
+    [ "mutt_color_quote", "color_8h.html#a979ebab1adc464dce8364dab0d158bf8", null ],
+    [ "mutt_color_quotes_used", "color_8h.html#a0a18fa7a349ddf46103fcbfc15f83c5f", null ],
+    [ "mutt_color_observer_add", "color_8h.html#a6c41d69ce4087cce5053bad54b9e6e91", null ],
+    [ "mutt_color_observer_remove", "color_8h.html#a0a047d102aae8830a4e1edb4e2ad31d1", null ]
 ];

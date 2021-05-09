@@ -32,5 +32,5 @@ var gnutls_8c =
     [ "mutt_ssl_socket_setup", "gnutls_8c.html#ae6341b74ebed0751e68285e6bf379fab", null ],
     [ "mutt_ssl_starttls", "gnutls_8c.html#a23591e82bf992ceb5e62c459fd787b8a", null ],
     [ "dialog_row_len", "gnutls_8c.html#ac436d9226adef4197e094b1827199b1e", null ],
-    [ "protocol_priority", "gnutls_8c.html#a7f56a73fdd0524e03dc145eca68d3715", null ]
+    [ "protocol_priority", "gnutls_8c.html#a0e8144958fdd6e26e62494ae9744b28b", null ]
 ];

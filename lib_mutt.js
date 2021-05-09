@@ -25,5 +25,6 @@ var lib_mutt =
     [ "Manage regular expressions", "mutt_regex.html", null ],
     [ "A separated list of strings", "mutt_slist.html", null ],
     [ "Signal handling", "mutt_signal.html", null ],
+    [ "Keep track when processing files", "mutt_state.html", null ],
     [ "String manipulation functions", "mutt_string.html", null ]
 ];

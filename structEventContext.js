@@ -1,4 +1,4 @@
 var structEventContext =
 [
-    [ "context", "structEventContext.html#a4d5f5bc38bd4fc04bb1af89bef9529f1", null ]
+    [ "ctx", "structEventContext.html#ac4196ba3a370ca6560b89857a17b409f", null ]
 ];

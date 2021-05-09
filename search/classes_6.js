@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['group_7179',['Group',['../structGroup.html',1,'']]],
-  ['groupnode_7180',['GroupNode',['../structGroupNode.html',1,'']]]
+  ['greetinginfo',['GreetingInfo',['../structGreetingInfo.html',1,'']]],
+  ['group',['Group',['../structGroup.html',1,'']]],
+  ['groupnode',['GroupNode',['../structGroupNode.html',1,'']]]
 ];

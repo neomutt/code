@@ -10,5 +10,6 @@ var structMailcapEntry =
     [ "convert", "structMailcapEntry.html#af91c521a75699979b652fc4b319870ff", null ],
     [ "needsterminal", "structMailcapEntry.html#a4cc66616bac929499b83944fb8e2911d", null ],
     [ "copiousoutput", "structMailcapEntry.html#adcea89b25743514d268e8fde508d6295", null ],
-    [ "xneomuttkeep", "structMailcapEntry.html#af711c81e4798bf4790fb6dd58d739d68", null ]
+    [ "xneomuttkeep", "structMailcapEntry.html#af711c81e4798bf4790fb6dd58d739d68", null ],
+    [ "xneomuttnowrap", "structMailcapEntry.html#af97dc2368515b5451ce9212d681f30f4", null ]
 ];

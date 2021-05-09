@@ -10,10 +10,10 @@ var structComposeRedrawData =
     [ "bcc_rows", "structComposeRedrawData.html#a2c3cdd0936668bbbd8eba6e12660a808", null ],
     [ "sec_rows", "structComposeRedrawData.html#adf39a1da753a056646cb2952a584edc7", null ],
     [ "autocrypt_rec", "structComposeRedrawData.html#a385c02d787aeb7aa2b2d197e5ac9904d", null ],
-    [ "autocrypt_rec_override", "structComposeRedrawData.html#acc4669d6622f1bad64c1fb090ade5d24", null ],
-    [ "win_envelope", "structComposeRedrawData.html#a8c2c6d195d268c2dbfbe80fc9ed566b3", null ],
+    [ "win_env", "structComposeRedrawData.html#a08987ae5fd56ccf0bd62cc227b0dc7f7", null ],
     [ "win_abar", "structComposeRedrawData.html#af7e3d45772314a13d14ab276cf8ad5c6", null ],
     [ "win_attach", "structComposeRedrawData.html#ab839b025c4c87c59a173ebfcbec28cb3", null ],
     [ "win_cbar", "structComposeRedrawData.html#ab35713d1f60b2c1d40ee975f579d0372", null ],
+    [ "actx", "structComposeRedrawData.html#a09ac263e795ecef291a98350bdb6af4c", null ],
     [ "sub", "structComposeRedrawData.html#a8f4fd6a9db4f5e0e6fc527d04ae32b9f", null ]
 ];

@@ -12,5 +12,7 @@ var prex_8c =
     [ "FWS", "prex_8c.html#abaed18fdb8d16ec5925f09bb0a04af7a", null ],
     [ "C", "prex_8c.html#ac4cf4b2ab929bd23951a8676eeac086b", null ],
     [ "CFWS", "prex_8c.html#a31eb6a5c447368b05b57c2f5ec143460", null ],
-    [ "prex", "prex_8c.html#a95fe03366173eac74aa77aca91643aea", null ]
+    [ "prex", "prex_8c.html#a95fe03366173eac74aa77aca91643aea", null ],
+    [ "mutt_prex_capture", "prex_8c.html#a6d37a39ea94554b5ba057b72744384a4", null ],
+    [ "mutt_prex_free", "prex_8c.html#aaf6c562a2044cdf578fabea6a4fa85ce", null ]
 ];

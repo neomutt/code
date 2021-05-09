@@ -1,9 +1,6 @@
 var remailer_8c =
 [
     [ "Coord", "structCoord.html", "structCoord" ],
-    [ "MIX_HOFFSET", "remailer_8c.html#ab3c1ebaeffae6f83d883842a9f6b3749", null ],
-    [ "MIX_VOFFSET", "remailer_8c.html#ae3fe25304d54610f53b73a27bbadbcce", null ],
-    [ "MIX_MAXROW", "remailer_8c.html#a8c174dbaef54fb52a409dc4e69d67606", null ],
     [ "mix_get_caps", "remailer_8c.html#a03e8541ce7387bb1e0901cd71c8d23c9", null ],
     [ "mix_add_entry", "remailer_8c.html#a774d684af1a1257c59c004a45ce70b93", null ],
     [ "remailer_new", "remailer_8c.html#ac72a3f2de52cabdb78766c0de37b5e68", null ],
@@ -18,10 +15,9 @@ var remailer_8c =
     [ "mix_format_str", "remailer_8c.html#a718fa86ab6d391f0fe4fbe2c4a1831fb", null ],
     [ "mix_make_entry", "remailer_8c.html#ae0a04ebdaa3080e3142028b108c88870", null ],
     [ "mix_chain_add", "remailer_8c.html#a4783bd16f7a686bbb78afbf24be9eab0", null ],
-    [ "dlg_select_mixmaster_chain", "remailer_8c.html#adc3bfc78dd5fcda39be0a3dabeeb8a5c", null ],
+    [ "remailer_config_observer", "remailer_8c.html#a6cb60c768504cff05fe520d33f03af73", null ],
+    [ "dlg_select_mixmaster_chain", "remailer_8c.html#aa86fcf6b02bb948a49f037b8d8cf3236", null ],
     [ "mix_check_message", "remailer_8c.html#a0df3fbea97e2b0fc17a753640d20d92d", null ],
     [ "mix_send_message", "remailer_8c.html#a0b48fa9d9df7079340bb349c86635738", null ],
-    [ "C_MixEntryFormat", "remailer_8c.html#a57ce2295be2a0adc039d590dd4383cc8", null ],
-    [ "C_Mixmaster", "remailer_8c.html#a9e1af7b606bb190e11242ce57f3de147", null ],
     [ "RemailerHelp", "remailer_8c.html#add993060873690b1eea4383e8356a48a", null ]
 ];

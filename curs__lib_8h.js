@@ -10,7 +10,6 @@ var curs__lib_8h =
     [ "mutt_beep", "curs__lib_8h.html#ad4d7b60fedea755304f7d72461d860ca", null ],
     [ "mutt_buffer_enter_fname", "curs__lib_8h.html#a8323a2c35930da81a8f0c63545537839", null ],
     [ "mutt_buffer_get_field", "curs__lib_8h.html#a89ddceeb9356040360c64ff0c9463480", null ],
-    [ "mutt_do_pager", "curs__lib_8h.html#a2509f872a1986db92a5a2b7d2a7e9759", null ],
     [ "mutt_edit_file", "curs__lib_8h.html#a0590f11f42a6242002ea4c842438231b", null ],
     [ "mutt_endwin", "curs__lib_8h.html#acd14d074d8b9e6cb21e851dd573cdec2", null ],
     [ "mutt_flushinp", "curs__lib_8h.html#a31e6cf5a50bccf3cb75b6a7f2ecf1405", null ],
@@ -39,6 +38,5 @@ var curs__lib_8h =
     [ "mutt_wstr_trunc", "curs__lib_8h.html#a48a9fd66de2ef76e2b72704badd3c40b", null ],
     [ "mutt_yesorno", "curs__lib_8h.html#a67a4f6d2c21c9de420130089bb20505c", null ],
     [ "query_quadoption", "curs__lib_8h.html#ab02047769214ff014b9a8a1782babadc", null ],
-    [ "C_MetaKey", "curs__lib_8h.html#a5ae96c74d953ed6282da71b8d3752053", null ],
     [ "MuttGetchTimeout", "curs__lib_8h.html#afa3734b90bcc46484d649aafe4c3b13f", null ]
 ];

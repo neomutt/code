@@ -25,14 +25,6 @@ var nntp_2lib_8h =
     [ "nntp_path_probe", "nntp_2lib_8h.html#a0af5851670960cce257a6e5f9f9805ff", null ],
     [ "group_index_format_str", "nntp_2lib_8h.html#a23b0e33bd83d40e2e27d61c38c9fea39", null ],
     [ "nntp_complete", "nntp_2lib_8h.html#a052dfa40f5ab0fb5debbeaf06b628ae9", null ],
-    [ "C_CatchupNewsgroup", "nntp_2lib_8h.html#a2949a5819c0b254c751255ab7c9f02e4", null ],
-    [ "C_FollowupToPoster", "nntp_2lib_8h.html#add99183e6f43e5abb0a033c63216a18a", null ],
-    [ "C_GroupIndexFormat", "nntp_2lib_8h.html#aae474a51d5657b37cb9f3d0a14738034", null ],
-    [ "C_NewsServer", "nntp_2lib_8h.html#a817e3ca31e87a083177c3c7bea868f38", null ],
-    [ "C_NewsgroupsCharset", "nntp_2lib_8h.html#a7f7d6f28cf5fef9623b89beb9a085364", null ],
-    [ "C_PostModerated", "nntp_2lib_8h.html#ac3f79e3cb9f1dc2e1009a698103b6033", null ],
-    [ "C_ShowOnlyUnread", "nntp_2lib_8h.html#a045bf48150ffe84d749f934c2be390b3", null ],
-    [ "C_XCommentTo", "nntp_2lib_8h.html#a11a9eed32564c0b8eed2cfcefad71b32", null ],
     [ "CurrentNewsSrv", "nntp_2lib_8h.html#ae58e3a5dcd99b6bbd0354b133fc220ce", null ],
     [ "MxNntpOps", "nntp_2lib_8h.html#a94647e4d7fc43a4cbaa0f477545f478d", null ]
 ];

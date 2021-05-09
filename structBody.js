@@ -28,6 +28,7 @@ var structBody =
     [ "tagged", "structBody.html#aaaa97781986925aa1f10f24be18243ab", null ],
     [ "deleted", "structBody.html#a29ffe8992ab42e1821c3e63b419af0b3", null ],
     [ "noconv", "structBody.html#a2f795dc4337b500fbf2ae6682dc5360b", null ],
+    [ "nowrap", "structBody.html#abf4a6326b43363706a4731cbab976df6", null ],
     [ "force_charset", "structBody.html#ac64b7e1868a8d7115b9067e34c8e7aa8", null ],
     [ "goodsig", "structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e", null ],
     [ "warnsig", "structBody.html#af3cd45c954a643a57bba4dc5ff36e323", null ],

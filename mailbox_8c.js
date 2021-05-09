@@ -14,5 +14,5 @@ var mailbox_8c =
     [ "mailbox_gc_run", "mailbox_8c.html#a1aded0bae910c51bc27f84a00445f9d8", null ],
     [ "arr", "mailbox_8c.html#a2bed5da613bfb71e4fb4dabcc8cbfcbe", null ],
     [ "idx", "mailbox_8c.html#a103fe1fcacccda7d9cdacde44721faef", null ],
-    [ "gc", "mailbox_8c.html#a37728fd05c45c8232f84802302a8cad7", null ]
+    [ "gc", "mailbox_8c.html#ab7f3c333581cafc620f8f4ca2c5f72ee", null ]
 ];

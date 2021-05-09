@@ -1,7 +1,7 @@
 var pgp_8h =
 [
     [ "pgp_use_gpg_agent", "pgp_8h.html#ab97e1713bb20da422b5a71b68747edf9", null ],
-    [ "pgp_class_check_traditional", "pgp_8h.html#ac3696b27c886e803d5d249760aef9062", null ],
+    [ "pgp_class_check_traditional", "pgp_8h.html#a3216349cfeba9673dd310fdc76f2e8eb", null ],
     [ "pgp_this_keyid", "pgp_8h.html#a927e11bf8d412f23bbe265dde26da978", null ],
     [ "pgp_keyid", "pgp_8h.html#a7bdf66d17368047199f6fde6f75acb0a", null ],
     [ "pgp_short_keyid", "pgp_8h.html#ac3d880a312dfbc688f318f97212e18b5", null ],
@@ -18,5 +18,5 @@ var pgp_8h =
     [ "pgp_class_traditional_encryptsign", "pgp_8h.html#ac131bc7b36afa45cd86e864a66baee6f", null ],
     [ "pgp_class_encrypt_message", "pgp_8h.html#a670a77cb262550ce2a37b6eb3b5b5c88", null ],
     [ "pgp_class_sign_message", "pgp_8h.html#aa81f893b89783abadf1ba1f9a59f31c7", null ],
-    [ "pgp_class_send_menu", "pgp_8h.html#a8b0a3fa1ac99d5701063bc472fec560b", null ]
+    [ "pgp_class_send_menu", "pgp_8h.html#a08c07de1ba01b24365cd9ad064aaeba5", null ]
 ];

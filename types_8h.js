@@ -36,14 +36,11 @@ var types_8h =
     [ "R_RESORT_SUB", "types_8h.html#a5310c0e0138ab9304fe439ddee99882d", null ],
     [ "R_RESORT_INIT", "types_8h.html#aea18e2e69a6e43e07ac076996686f3b1", null ],
     [ "R_TREE", "types_8h.html#a4b69442624af3d7836f8f5ab28200be2", null ],
-    [ "R_REFLOW", "types_8h.html#acc2014760789c570f54db9e859e961b2", null ],
-    [ "R_SIDEBAR", "types_8h.html#abde901c12e19f4814ebfd7adc459c929", null ],
     [ "R_MENU", "types_8h.html#ad47193dc2f091a2f9a5e52cf9ba43334", null ],
     [ "R_REDRAW_MASK", "types_8h.html#a7e8cc578d0c2ba07d0d8a64c69381e96", null ],
     [ "DT_DEPRECATED", "types_8h.html#a5a7a524213c67888ff3f23cd414f200a", null ],
     [ "DT_INHERITED", "types_8h.html#ac87c549d134140e071675f3b871bb84a", null ],
     [ "DT_INITIAL_SET", "types_8h.html#a28e38eb4b5323c904f21142f27c2722e", null ],
     [ "DT_DISABLED", "types_8h.html#ae7e89be4c280203eae7913e86aeefce5", null ],
-    [ "DT_NO_VARIABLE", "types_8h.html#a509e1b19de15647003ed377cacc70a49", null ],
     [ "ConfigRedrawFlags", "types_8h.html#a539fbcf5926505ec22b9bc4026f2feda", null ]
 ];

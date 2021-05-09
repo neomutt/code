@@ -1,8 +1,6 @@
 var hcache_8c =
 [
     [ "RealKey", "structRealKey.html", "structRealKey" ],
-    [ "hcache_get_ops", "hcache_8c.html#a51511cd14787b537b38ed24431384743", null ],
-    [ "compr_get_ops", "hcache_8c.html#a36bb76ba7301af3ce5ec65758c907afd", null ],
     [ "header_size", "hcache_8c.html#ab0e95e8a30f666418f3f8205cecc0582", null ],
     [ "dump", "hcache_8c.html#a254d75f3530ef246dd982f9349e080a4", null ],
     [ "restore", "hcache_8c.html#ab8ce7457145c54b7efb24890404ac9d2", null ],

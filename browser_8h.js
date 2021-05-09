@@ -12,8 +12,5 @@ var browser_8h =
     [ "mutt_select_file", "browser_8h.html#a07499fa5cd1c0d96ae185e49b1eb9221", null ],
     [ "mutt_buffer_select_file", "browser_8h.html#ac628d370c55e56235108d9b8ef87c618", null ],
     [ "mutt_browser_select_dir", "browser_8h.html#a9fbed4ed086e8d9c2907e8f43d6143f2", null ],
-    [ "mutt_browser_cleanup", "browser_8h.html#ae57ac9cc2f16e09d897d2c37177da2cd", null ],
-    [ "C_BrowserAbbreviateMailboxes", "browser_8h.html#aefe07e5e1fe89e6390871eb878663257", null ],
-    [ "C_FolderFormat", "browser_8h.html#a9539f5a5517ab0467e3f1bd01e35c750", null ],
-    [ "C_SortBrowser", "browser_8h.html#acf2d7fcba7f5dcbea572a76427e0da0d", null ]
+    [ "mutt_browser_cleanup", "browser_8h.html#ae57ac9cc2f16e09d897d2c37177da2cd", null ]
 ];

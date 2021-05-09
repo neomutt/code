@@ -52,17 +52,5 @@ var mutt__thread_8h =
     [ "mutt_parent_message", "mutt__thread_8h.html#ae021dae3b838ebc7f688d4c9204a2308", null ],
     [ "mutt_set_vnum", "mutt__thread_8h.html#ad208699eb4bc42837530572fbe4caf8d", null ],
     [ "mutt_sort_subthreads", "mutt__thread_8h.html#a0d3eef1a26c00378308d7282c4c2c22e", null ],
-    [ "mutt_sort_threads", "mutt__thread_8h.html#ac7bcb788cdd39c241efce4af04d2f3dc", null ],
-    [ "C_CollapseFlagged", "mutt__thread_8h.html#a25293a41497524e5b006983c4d492973", null ],
-    [ "C_CollapseUnread", "mutt__thread_8h.html#ac4c581520fdf24ce8ff239fb42e0ac1a", null ],
-    [ "C_DuplicateThreads", "mutt__thread_8h.html#ab16603bbd1a63c92dd6d63e7dafa9e98", null ],
-    [ "C_HideLimited", "mutt__thread_8h.html#a7b37db48a7d96e4cc938e92e5fe556e1", null ],
-    [ "C_HideMissing", "mutt__thread_8h.html#a31157c12bc3c464a14f0a10feab43f75", null ],
-    [ "C_HideThreadSubject", "mutt__thread_8h.html#a1262a4fe2c40a728d5816bfe3e6ff62b", null ],
-    [ "C_HideTopLimited", "mutt__thread_8h.html#a0a2a651acd898a529e7f4a0c510f8bde", null ],
-    [ "C_HideTopMissing", "mutt__thread_8h.html#a4459727113007cabe09ba54e5e25550d", null ],
-    [ "C_NarrowTree", "mutt__thread_8h.html#acc2af3e2b4a922e0cd3706ef81cd92b6", null ],
-    [ "C_SortRe", "mutt__thread_8h.html#acc89b115b9eaf894369c500e04ed6b31", null ],
-    [ "C_StrictThreads", "mutt__thread_8h.html#a8076e4cee6e0154f3cf142f3fb0d0ca8", null ],
-    [ "C_ThreadReceived", "mutt__thread_8h.html#a8fcb5076ec571e00c2ff463c8b806d7a", null ]
+    [ "mutt_sort_threads", "mutt__thread_8h.html#ac7bcb788cdd39c241efce4af04d2f3dc", null ]
 ];

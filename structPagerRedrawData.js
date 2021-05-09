@@ -1,7 +1,6 @@
 var structPagerRedrawData =
 [
-    [ "flags", "structPagerRedrawData.html#ac7ac1a20cfc1a447a06e0522e3e7d39f", null ],
-    [ "extra", "structPagerRedrawData.html#ac212f16a62855fb6c25630b84ad190c1", null ],
+    [ "pview", "structPagerRedrawData.html#a117dedf31e82cd5d2fd7383c1329699d", null ],
     [ "indexlen", "structPagerRedrawData.html#aa4e5533c88b4ef0e913ff95c9cbd0bbf", null ],
     [ "indicator", "structPagerRedrawData.html#a6a98e0e35027fa1be10a04b6a60a5ef9", null ],
     [ "oldtopline", "structPagerRedrawData.html#a568e3e53223874e5f0af752fad9a4df5", null ],
@@ -22,8 +21,7 @@ var structPagerRedrawData =
     [ "search_compiled", "structPagerRedrawData.html#a42b36eee5457993f4d0fc9ef005a0c38", null ],
     [ "search_flag", "structPagerRedrawData.html#aaec826ff1610f460cadb714f7a2ddf64", null ],
     [ "search_back", "structPagerRedrawData.html#a18cda320297684c6a2ed70eb69c7d2cb", null ],
-    [ "banner", "structPagerRedrawData.html#a8f179bb1b14ee916c9afbb35d9ed83f8", null ],
-    [ "searchbuf", "structPagerRedrawData.html#a3fb155858d07ee049df9ec60f7d52e8d", null ],
+    [ "searchbuf", "structPagerRedrawData.html#a29b5ef4b63ab5cbd1bfb41c32faa16dd", null ],
     [ "line_info", "structPagerRedrawData.html#afa67e587ce4b0132bca893820520cc6c", null ],
     [ "fp", "structPagerRedrawData.html#afc5f665174e9a45ea78a45d028501ff3", null ],
     [ "sb", "structPagerRedrawData.html#a750ada4c98b342e172f9ddcad428552f", null ]

@@ -28,16 +28,5 @@ var mutt__thread_8c =
     [ "mutt_thread_collapse_collapsed", "mutt__thread_8c.html#a4e0a2823d87a6353ff855ea5ea581342", null ],
     [ "mutt_thread_collapse", "mutt__thread_8c.html#a344c76e215dd1974a684a6ed8d8e580f", null ],
     [ "mutt_thread_can_collapse", "mutt__thread_8c.html#add8cf6c27de9c8ef451a521b535e6f60", null ],
-    [ "C_CollapseFlagged", "mutt__thread_8c.html#a25293a41497524e5b006983c4d492973", null ],
-    [ "C_CollapseUnread", "mutt__thread_8c.html#ac4c581520fdf24ce8ff239fb42e0ac1a", null ],
-    [ "C_DuplicateThreads", "mutt__thread_8c.html#ab16603bbd1a63c92dd6d63e7dafa9e98", null ],
-    [ "C_HideLimited", "mutt__thread_8c.html#a7b37db48a7d96e4cc938e92e5fe556e1", null ],
-    [ "C_HideMissing", "mutt__thread_8c.html#a31157c12bc3c464a14f0a10feab43f75", null ],
-    [ "C_HideThreadSubject", "mutt__thread_8c.html#a1262a4fe2c40a728d5816bfe3e6ff62b", null ],
-    [ "C_HideTopLimited", "mutt__thread_8c.html#a0a2a651acd898a529e7f4a0c510f8bde", null ],
-    [ "C_HideTopMissing", "mutt__thread_8c.html#a4459727113007cabe09ba54e5e25550d", null ],
-    [ "C_NarrowTree", "mutt__thread_8c.html#acc2af3e2b4a922e0cd3706ef81cd92b6", null ],
-    [ "C_SortRe", "mutt__thread_8c.html#acc89b115b9eaf894369c500e04ed6b31", null ],
-    [ "C_StrictThreads", "mutt__thread_8c.html#a8076e4cee6e0154f3cf142f3fb0d0ca8", null ],
-    [ "C_ThreadReceived", "mutt__thread_8c.html#a8fcb5076ec571e00c2ff463c8b806d7a", null ]
+    [ "sort_func", "mutt__thread_8c.html#a212113e0aceb661143e21e9bc8e4c872", null ]
 ];

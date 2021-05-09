@@ -13,6 +13,10 @@ var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
     [ "mutt_window.h", "mutt__window_8h.html", "mutt__window_8h" ],
     [ "reflow.c", "reflow_8c.html", "reflow_8c" ],
     [ "reflow.h", "reflow_8h.html", "reflow_8h" ],
+    [ "sbar.c", "sbar_8c.html", "sbar_8c" ],
+    [ "sbar.h", "sbar_8h.html", "sbar_8h" ],
+    [ "simple.c", "simple_8c.html", "simple_8c" ],
+    [ "simple.h", "simple_8h.html", "simple_8h" ],
     [ "terminal.c", "terminal_8c.html", "terminal_8c" ],
     [ "terminal.h", "terminal_8h.html", "terminal_8h" ]
 ];

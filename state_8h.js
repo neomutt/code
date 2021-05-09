@@ -21,5 +21,7 @@ var state_8h =
     [ "state_prefix_put", "state_8h.html#a37eabf53d52cee8c9dadf63afc9336e4", null ],
     [ "state_prefix_putc", "state_8h.html#a4582904ace69cd419d5277d711de353d", null ],
     [ "state_printf", "state_8h.html#a274bd2d5df990d61848a6be9b18840f7", null ],
-    [ "state_putws", "state_8h.html#a1b3107c60f88171e9f156a27dacedc6d", null ]
+    [ "state_putws", "state_8h.html#a1b3107c60f88171e9f156a27dacedc6d", null ],
+    [ "state_attachment_marker", "state_8h.html#a820e4f44e016a91bd366c3076438d12f", null ],
+    [ "state_protected_header_marker", "state_8h.html#a68a4a7df5d461cd93f65ce5ad1029111", null ]
 ];

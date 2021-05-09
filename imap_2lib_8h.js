@@ -9,7 +9,7 @@ var imap_2lib_8h =
     [ "imap_mailbox_status", "imap_2lib_8h.html#a0b252c6e7f2cc646db9414ea27a11a55", null ],
     [ "imap_subscribe", "imap_2lib_8h.html#a36034876b5ce260ff6d70a435f8f36ca", null ],
     [ "imap_complete", "imap_2lib_8h.html#a768ec60d7525b728f5f1b1cd6789c8e8", null ],
-    [ "imap_fast_trash", "imap_2lib_8h.html#af182b942c92c298d0b1762e7c8a2660f", null ],
+    [ "imap_fast_trash", "imap_2lib_8h.html#ab243b759db9258fd8373a350b19ed0b8", null ],
     [ "imap_path_probe", "imap_2lib_8h.html#ab4f27af8eb857a20834f445be3f498de", null ],
     [ "imap_path_canon", "imap_2lib_8h.html#a45a0368f1fc09168bed51ec53ad91bb5", null ],
     [ "imap_notify_delete_email", "imap_2lib_8h.html#a12008dfceea99a26fa88f26b625637a8", null ],
@@ -27,9 +27,5 @@ var imap_2lib_8h =
     [ "imap_get_parent_path", "imap_2lib_8h.html#a78c7437c0f185ed8ab37e666b8a69ec0", null ],
     [ "imap_clean_path", "imap_2lib_8h.html#a7c4dbc9f84be00789935c291832b75b2", null ],
     [ "imap_search", "imap_2lib_8h.html#ac55dfb1446427e7f3cb17405877d585a", null ],
-    [ "C_ImapKeepalive", "imap_2lib_8h.html#a3b315c8b43b9269a068df233bf71cbce", null ],
-    [ "C_ImapListSubscribed", "imap_2lib_8h.html#a2daf4bae600b558dd6ab13e2bb5f9113", null ],
-    [ "C_ImapPassive", "imap_2lib_8h.html#a2e32bf37ee5ceae3c33fd42e7389b0ad", null ],
-    [ "C_ImapPeek", "imap_2lib_8h.html#a4da45448a26aa3deabc9c7647efcbcf0", null ],
     [ "MxImapOps", "imap_2lib_8h.html#a9cd881485b601b78cae25ade04b475c8", null ]
 ];

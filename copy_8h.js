@@ -42,6 +42,6 @@ var copy_8h =
     [ "mutt_copy_hdr", "copy_8h.html#a52e9f9a52a91efbaeca673868cfc8b93", null ],
     [ "mutt_copy_header", "copy_8h.html#a468898ce77840c5f79455b1f95643ab4", null ],
     [ "mutt_copy_message_fp", "copy_8h.html#ac158be102976481a9c8edc42fcd8cd09", null ],
-    [ "mutt_copy_message", "copy_8h.html#a97b697259c4e184811c68ff1a18886ab", null ],
-    [ "mutt_append_message", "copy_8h.html#a39b9ec9989d39d8fc4f05015dd261c37", null ]
+    [ "mutt_copy_message", "copy_8h.html#aa0dd608f4ed300454d97ac83ade160ac", null ],
+    [ "mutt_append_message", "copy_8h.html#a4711664e00c403a784e4a1b3f0acbc8b", null ]
 ];

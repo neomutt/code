@@ -42,7 +42,5 @@ var pattern_2private_8h =
     [ "lookup_tag", "pattern_2private_8h.html#ad74affc6a3ff7fa89a1bb4953f3c7006", null ],
     [ "eval_date_minmax", "pattern_2private_8h.html#a20e645effab0dbabefd7a5ff7970ad1e", null ],
     [ "range_regexes", "pattern_2private_8h.html#ae874bbe6a505a361ef27925d0e6e8f24", null ],
-    [ "Flags", "pattern_2private_8h.html#a669a98acfe6bfc0997fc263c94eab77b", null ],
-    [ "C_ExternalSearchCommand", "pattern_2private_8h.html#a8d02ddf1e8a9d04f2172362cb89924ae", null ],
-    [ "C_PatternFormat", "pattern_2private_8h.html#a65d455ca8775b9314f04881454be60b4", null ]
+    [ "Flags", "pattern_2private_8h.html#a669a98acfe6bfc0997fc263c94eab77b", null ]
 ];

@@ -31,6 +31,5 @@ var muttlib_8h =
     [ "mutt_sleep", "muttlib_8h.html#a6fbcbe533be7c4e05d99b0eb9cdb2581", null ],
     [ "mutt_str_pretty_size", "muttlib_8h.html#aad2fd68e85ca1e5f55e3bf1983b16933", null ],
     [ "add_to_stailq", "muttlib_8h.html#a2e3c864ac49cfb7bc862c32416baf81d", null ],
-    [ "remove_from_stailq", "muttlib_8h.html#a1b422ce225f4eb96e3ce8e276467ae9f", null ],
-    [ "C_GecosMask", "muttlib_8h.html#a810f68222fb6b25c11c551bf4c5c22d8", null ]
+    [ "remove_from_stailq", "muttlib_8h.html#a1b422ce225f4eb96e3ce8e276467ae9f", null ]
 ];

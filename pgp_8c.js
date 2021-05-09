@@ -15,8 +15,8 @@ var pgp_8c =
     [ "pgp_check_decryption_okay", "pgp_8c.html#ac53a734c897d0e372496a56c897d1bd6", null ],
     [ "pgp_copy_clearsigned", "pgp_8c.html#a59c0db4692828c75abc8bfb532f14c85", null ],
     [ "pgp_class_application_handler", "pgp_8c.html#aa55c76c8d08b0720d97cdb6360440f78", null ],
-    [ "pgp_check_traditional_one_body", "pgp_8c.html#a88d302145d6de54860223e5e2b726b21", null ],
-    [ "pgp_class_check_traditional", "pgp_8c.html#ac3696b27c886e803d5d249760aef9062", null ],
+    [ "pgp_check_traditional_one_body", "pgp_8c.html#ae84f9751f65e2c9f3d4d6c60e2d1905c", null ],
+    [ "pgp_class_check_traditional", "pgp_8c.html#a3216349cfeba9673dd310fdc76f2e8eb", null ],
     [ "pgp_class_verify_one", "pgp_8c.html#a2d07667a924f2576457cb64e4ec2bc64", null ],
     [ "pgp_extract_keys_from_attachment", "pgp_8c.html#a10cb14f685be6d705932b50a456ad5ce", null ],
     [ "pgp_class_extract_key_from_attachment", "pgp_8c.html#a9d568f942b2e467bbc94b89dd4ede4ac", null ],
@@ -27,7 +27,7 @@ var pgp_8c =
     [ "pgp_class_find_keys", "pgp_8c.html#a32a1948b5d4d3cf41c817b98f7c445d0", null ],
     [ "pgp_class_encrypt_message", "pgp_8c.html#a670a77cb262550ce2a37b6eb3b5b5c88", null ],
     [ "pgp_class_traditional_encryptsign", "pgp_8c.html#ac131bc7b36afa45cd86e864a66baee6f", null ],
-    [ "pgp_class_send_menu", "pgp_8c.html#a8b0a3fa1ac99d5701063bc472fec560b", null ],
+    [ "pgp_class_send_menu", "pgp_8c.html#a08c07de1ba01b24365cd9ad064aaeba5", null ],
     [ "PgpPass", "pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d", null ],
     [ "PgpExptime", "pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1", null ]
 ];

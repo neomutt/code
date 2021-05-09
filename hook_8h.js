@@ -35,8 +35,5 @@ var hook_8h =
     [ "mutt_parse_unhook", "hook_8h.html#adc980182d2656aa6d6169c7bff6800dc", null ],
     [ "mutt_select_fcc", "hook_8h.html#a6d228c86f5a1900b27af0fde26991a63", null ],
     [ "mutt_startup_shutdown_hook", "hook_8h.html#a346f2e985b8be4ee687b08eab1879561", null ],
-    [ "mutt_timeout_hook", "hook_8h.html#a1b93f7bc501b2c75f04350d3ba184885", null ],
-    [ "C_DefaultHook", "hook_8h.html#ae267efcdd4850ad846989ad681b350e0", null ],
-    [ "C_ForceName", "hook_8h.html#a8c942c1f06402cbaa14e3d08b9626442", null ],
-    [ "C_SaveName", "hook_8h.html#a3165c36713939fdeee7a8a3cee0f5b85", null ]
+    [ "mutt_timeout_hook", "hook_8h.html#a1b93f7bc501b2c75f04350d3ba184885", null ]
 ];

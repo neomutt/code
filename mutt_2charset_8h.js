@@ -30,8 +30,6 @@ var mutt_2charset_8h =
     [ "mutt_ch_lookup_add", "mutt_2charset_8h.html#a495d768c7996bc40c64980efbbb191c8", null ],
     [ "mutt_ch_lookup_remove", "mutt_2charset_8h.html#a1b4218535731ab6b94715522af613e00", null ],
     [ "mutt_ch_set_charset", "mutt_2charset_8h.html#a7bb46d6d31e21e8390de490c5894bfda", null ],
-    [ "C_AssumedCharset", "mutt_2charset_8h.html#a92590c7e4494684c3617b14b7078c62a", null ],
-    [ "C_Charset", "mutt_2charset_8h.html#ade738a376a12882f854dcc274a74732b", null ],
     [ "CharsetIsUtf8", "mutt_2charset_8h.html#a7bcd93869f482805be7e6d437d29f54d", null ],
     [ "ReplacementChar", "mutt_2charset_8h.html#ac31e11b5fb12abda40361188af9105ef", null ]
 ];

@@ -2,7 +2,6 @@ var structMenu =
 [
     [ "ARRAY_HEAD", "structMenu.html#a0856320f99b376435b1d4c0eec02039d", null ],
     [ "title", "structMenu.html#a1cf561ffb11a83698437c966fb8d54f0", null ],
-    [ "mdata", "structMenu.html#adc6d277fec333aca5b57f1156e6dabfc", null ],
     [ "current", "structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1", null ],
     [ "max", "structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b", null ],
     [ "redraw", "structMenu.html#a8fc369d344b2e43c9985803f84729dc9", null ],
@@ -24,5 +23,7 @@ var structMenu =
     [ "tag", "structMenu.html#a9f56131f02aaece633d13c8b2007476a", null ],
     [ "color", "structMenu.html#a419421227e98158837c63bb056c2aab4", null ],
     [ "custom_redraw", "structMenu.html#a9c7e749aff3f46cb1224bdfac9a3990a", null ],
-    [ "redraw_data", "structMenu.html#aee28479c5794b00ca361cfbe872516b0", null ]
+    [ "notify", "structMenu.html#ad6271c90dcf6508f56ac988a8fca2e39", null ],
+    [ "mdata", "structMenu.html#adc6d277fec333aca5b57f1156e6dabfc", null ],
+    [ "mdata_free", "structMenu.html#a450909329cef8c60a54509a2bf39d16f", null ]
 ];

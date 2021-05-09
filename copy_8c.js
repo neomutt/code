@@ -8,8 +8,8 @@ var copy_8c =
     [ "mutt_copy_header", "copy_8c.html#a468898ce77840c5f79455b1f95643ab4", null ],
     [ "count_delete_lines", "copy_8c.html#a74a2dcf752d01f4eb52502ca034d978a", null ],
     [ "mutt_copy_message_fp", "copy_8c.html#ac158be102976481a9c8edc42fcd8cd09", null ],
-    [ "mutt_copy_message", "copy_8c.html#a97b697259c4e184811c68ff1a18886ab", null ],
+    [ "mutt_copy_message", "copy_8c.html#aa0dd608f4ed300454d97ac83ade160ac", null ],
     [ "append_message", "copy_8c.html#a214e48440eac7f6b08a609e6ee5fbfb6", null ],
-    [ "mutt_append_message", "copy_8c.html#a39b9ec9989d39d8fc4f05015dd261c37", null ],
+    [ "mutt_append_message", "copy_8c.html#a4711664e00c403a784e4a1b3f0acbc8b", null ],
     [ "format_address_header", "copy_8c.html#aee298ff7661f33a3083d6e6c6563069a", null ]
 ];

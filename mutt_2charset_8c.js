@@ -27,8 +27,6 @@ var mutt_2charset_8c =
     [ "mutt_ch_fgetconvs", "mutt_2charset_8c.html#adc7c96edce3398e5b9707640d4056f49", null ],
     [ "mutt_ch_set_charset", "mutt_2charset_8c.html#a7bb46d6d31e21e8390de490c5894bfda", null ],
     [ "mutt_ch_choose", "mutt_2charset_8c.html#a3394111b8dc3677189e9c3ab41e7b20a", null ],
-    [ "C_AssumedCharset", "mutt_2charset_8c.html#a92590c7e4494684c3617b14b7078c62a", null ],
-    [ "C_Charset", "mutt_2charset_8c.html#ade738a376a12882f854dcc274a74732b", null ],
     [ "ReplacementChar", "mutt_2charset_8c.html#ac31e11b5fb12abda40361188af9105ef", null ],
     [ "CharsetIsUtf8", "mutt_2charset_8c.html#a7bcd93869f482805be7e6d437d29f54d", null ],
     [ "Lookups", "mutt_2charset_8c.html#a34621a4d59512ce0d1f14d66d2c6abde", null ],

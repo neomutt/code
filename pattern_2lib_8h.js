@@ -59,7 +59,7 @@ var pattern_2lib_8h =
     [ "SLIST_HEAD", "pattern_2lib_8h.html#a2bfd0ca84e9773d600ef85243eeb4550", null ],
     [ "mutt_pattern_exec", "pattern_2lib_8h.html#a19019da905ed802ad656fbe8b2c8ca93", null ],
     [ "mutt_pattern_alias_exec", "pattern_2lib_8h.html#ad2c4f9f9ac723e27159f4b74a48bb844", null ],
-    [ "mutt_pattern_comp", "pattern_2lib_8h.html#a61b7dde5f2ba4bed5d9ef7e52932da7f", null ],
+    [ "mutt_pattern_comp", "pattern_2lib_8h.html#a3a72cebbb79a27c1ec38c7f7d7f3110f", null ],
     [ "mutt_check_simple", "pattern_2lib_8h.html#a6cee22aa2e3cb0c24cbbcdcc175d7ac6", null ],
     [ "mutt_pattern_free", "pattern_2lib_8h.html#ae447e834babbe84bef7005199ec39962", null ],
     [ "dlg_select_pattern", "pattern_2lib_8h.html#a0a33d91a2e7d8c02e922003ea3d155f5", null ],
@@ -67,9 +67,8 @@ var pattern_2lib_8h =
     [ "mutt_is_list_recipient", "pattern_2lib_8h.html#aa406114bea99ec4cdb561d61b3813c6d", null ],
     [ "mutt_is_subscribed_list_recipient", "pattern_2lib_8h.html#a668a02e9879868145b1da7edbc8c4508", null ],
     [ "mutt_pattern_func", "pattern_2lib_8h.html#abc78c3a1496b1f6028001f6489c87683", null ],
-    [ "mutt_pattern_alias_func", "pattern_2lib_8h.html#aa19c0b1e3bcbd24d000098b1ee481457", null ],
-    [ "mutt_search_command", "pattern_2lib_8h.html#ae9ea41ba9e917a40a1e6b3ed801a0c79", null ],
-    [ "mutt_search_alias_command", "pattern_2lib_8h.html#a07efc28f751c206f87c896ba0a8d86d0", null ],
-    [ "mutt_limit_current_thread", "pattern_2lib_8h.html#afb90ed6dcff870f6df2dee3e5611a5d2", null ],
-    [ "C_ThoroughSearch", "pattern_2lib_8h.html#a190716c58fa4ce0df8441cb7b688ade3", null ]
+    [ "mutt_pattern_alias_func", "pattern_2lib_8h.html#a40bae5379145713977ac4c1eb9748b6a", null ],
+    [ "mutt_search_command", "pattern_2lib_8h.html#af063994c63c9000be972caa5dcee532e", null ],
+    [ "mutt_search_alias_command", "pattern_2lib_8h.html#a2136c3a5b62c48c3ba4dc14662c305dd", null ],
+    [ "mutt_limit_current_thread", "pattern_2lib_8h.html#afb90ed6dcff870f6df2dee3e5611a5d2", null ]
 ];

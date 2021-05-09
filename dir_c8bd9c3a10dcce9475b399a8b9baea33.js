@@ -52,6 +52,8 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "signal2.h", "signal2_8h.html", "signal2_8h" ],
     [ "slist.c", "mutt_2slist_8c.html", "mutt_2slist_8c" ],
     [ "slist.h", "slist_8h.html", "slist_8h" ],
+    [ "state.c", "state_8c.html", "state_8c" ],
+    [ "state.h", "state_8h.html", "state_8h" ],
     [ "string.c", "mutt_2string_8c.html", "mutt_2string_8c" ],
     [ "string2.h", "string2_8h.html", "string2_8h" ]
 ];

@@ -1,9 +1,9 @@
 var recvattach_8c =
 [
-    [ "CHECK_READONLY", "recvattach_8c.html#a9bb432bd5d6e9dd5a0a2ded079bc3238", null ],
-    [ "CUR_ATTACH", "recvattach_8c.html#a3de3b86ab6b21aee74c81d3b6d93cf45", null ],
-    [ "CHECK_ATTACH", "recvattach_8c.html#a397bc5725fce5f47f8019284280cc606", null ],
-    [ "mutt_update_recvattach_menu", "recvattach_8c.html#a41e1f27d31074d4a407fd7cade575794", null ],
+    [ "mutt_update_recvattach_menu", "recvattach_8c.html#a76602cf6b4baadeac47575081a8fd76e", null ],
+    [ "current_attachment", "recvattach_8c.html#a20214b4a23880e9b23ba3ff9eb6fdedf", null ],
+    [ "check_attach", "recvattach_8c.html#a2448685b1d4ccf11e1ceb55118775b9a", null ],
+    [ "check_readonly", "recvattach_8c.html#ac0088fa2a9f68e82d502399dd21054d7", null ],
     [ "mutt_update_v2r", "recvattach_8c.html#ada90cfca09573e1031de106fd88cad72", null ],
     [ "mutt_update_tree", "recvattach_8c.html#aa9845701586d190b83e575e9e1f89303", null ],
     [ "attach_format_str", "recvattach_8c.html#a15aa67845d7281e3b5263c24dcf75d0c", null ],
@@ -24,19 +24,11 @@ var recvattach_8c =
     [ "mutt_print_attachment_list", "recvattach_8c.html#adf1dd9e8d7f5246ed4030d38a360b29b", null ],
     [ "recvattach_extract_pgp_keys", "recvattach_8c.html#ad9fd4e0f66cfaae456b12604583b51de", null ],
     [ "recvattach_pgp_check_traditional", "recvattach_8c.html#a60d9fc9257f39e8ba116b6e683e16fae", null ],
-    [ "recvattach_edit_content_type", "recvattach_8c.html#a34cda97eb67b55c04c6badba1141ba00", null ],
-    [ "mutt_attach_display_loop", "recvattach_8c.html#a7de52ee0aa50d4f3933be6ebea7f7ba5", null ],
+    [ "recvattach_edit_content_type", "recvattach_8c.html#aaf526e8ee68249faedfcba0c417a0adc", null ],
+    [ "mutt_attach_display_loop", "recvattach_8c.html#a72c9e19b893d8d4afc5593d9d2b399ff", null ],
     [ "mutt_generate_recvattach_list", "recvattach_8c.html#a7688e395101baa5931494c883909d1da", null ],
     [ "mutt_attach_init", "recvattach_8c.html#aa21744623c750c6f114a93f06ac5e257", null ],
     [ "attach_collapse", "recvattach_8c.html#a5cf096fe71b24be736511d0f6291fe9b", null ],
-    [ "dlg_select_attachment", "recvattach_8c.html#a7bea02ad8971e507de4d94b0f7e87a62", null ],
-    [ "C_AttachSaveDir", "recvattach_8c.html#a04bcc22093de3415ac71326159b811a0", null ],
-    [ "C_AttachSaveWithoutPrompting", "recvattach_8c.html#abbeaadd477fc375248f1cd02818b4318", null ],
-    [ "C_AttachSep", "recvattach_8c.html#aee9ef3743bfbc7184db6e3a364c45f9d", null ],
-    [ "C_AttachSplit", "recvattach_8c.html#ad2db180cf6dcb64135698feb56c46e31", null ],
-    [ "C_DigestCollapse", "recvattach_8c.html#a78aa13dd16615623c622c6a328eb1438", null ],
-    [ "C_MessageFormat", "recvattach_8c.html#a2e4fa073f32fdd98a0bd153be8fd6bc8", null ],
-    [ "Mailbox_is_read_only", "recvattach_8c.html#a12ff66bc53a0f656ef581441f836aafe", null ],
-    [ "AttachHelp", "recvattach_8c.html#a9f5ef40654633b4cdf0d6e15ca3d040c", null ],
-    [ "Function_not_permitted", "recvattach_8c.html#a635121b82acf1f295cbdc471e9e1b21e", null ]
+    [ "dlg_select_attachment", "recvattach_8c.html#a5edc94d310a83795c8b872b724bc3e27", null ],
+    [ "AttachHelp", "recvattach_8c.html#a9f5ef40654633b4cdf0d6e15ca3d040c", null ]
 ];

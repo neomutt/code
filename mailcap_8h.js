@@ -12,6 +12,5 @@ var mailcap_8h =
     [ "mailcap_entry_new", "mailcap_8h.html#a3c151edde461a4a8fe44b3d7d64cab5e", null ],
     [ "mailcap_expand_command", "mailcap_8h.html#ac5eff1afc4d8341e095a90c3b9f68104", null ],
     [ "mailcap_expand_filename", "mailcap_8h.html#accb5ae6e2f507053e8436a2f00b834ea", null ],
-    [ "mailcap_lookup", "mailcap_8h.html#a412989a4828da86db98c88a087b2217c", null ],
-    [ "C_MailcapSanitize", "mailcap_8h.html#aa7b85c5ca45acfff98de19d3447423d1", null ]
+    [ "mailcap_lookup", "mailcap_8h.html#a412989a4828da86db98c88a087b2217c", null ]
 ];

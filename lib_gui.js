@@ -6,5 +6,7 @@ var lib_gui =
     [ "Wrapper functions around Curses/Slang", "gui_curses.html", null ],
     [ "Window management", "gui_window.html", null ],
     [ "Window reflowing", "gui_reflow.html", null ],
+    [ "Simple Bar (status)", "gui_sbar.html", null ],
+    [ "Simple Dialog Windows", "gui_simple.html", null ],
     [ "Set the terminal title/icon", "gui_terminal.html", null ]
 ];

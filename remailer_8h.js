@@ -11,7 +11,5 @@ var remailer_8h =
     [ "MixCapFlags", "remailer_8h.html#af4908697bfee91b6ddacc8696aa1d7d7", null ],
     [ "mix_send_message", "remailer_8h.html#a0b48fa9d9df7079340bb349c86635738", null ],
     [ "mix_check_message", "remailer_8h.html#a0df3fbea97e2b0fc17a753640d20d92d", null ],
-    [ "dlg_select_mixmaster_chain", "remailer_8h.html#adc3bfc78dd5fcda39be0a3dabeeb8a5c", null ],
-    [ "C_MixEntryFormat", "remailer_8h.html#a57ce2295be2a0adc039d590dd4383cc8", null ],
-    [ "C_Mixmaster", "remailer_8h.html#a9e1af7b606bb190e11242ce57f3de147", null ]
+    [ "dlg_select_mixmaster_chain", "remailer_8h.html#aa86fcf6b02bb948a49f037b8d8cf3236", null ]
 ];

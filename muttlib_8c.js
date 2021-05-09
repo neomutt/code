@@ -29,7 +29,6 @@ var muttlib_8c =
     [ "mutt_str_pretty_size", "muttlib_8c.html#aad2fd68e85ca1e5f55e3bf1983b16933", null ],
     [ "add_to_stailq", "muttlib_8c.html#a2e3c864ac49cfb7bc862c32416baf81d", null ],
     [ "remove_from_stailq", "muttlib_8c.html#a1b422ce225f4eb96e3ce8e276467ae9f", null ],
-    [ "C_GecosMask", "muttlib_8c.html#a810f68222fb6b25c11c551bf4c5c22d8", null ],
     [ "xdg_env_vars", "muttlib_8c.html#aa56f51d9542560ead857cd669e7081fe", null ],
     [ "xdg_defaults", "muttlib_8c.html#acc0475757fa09772b783f791f2c41a80", null ]
 ];

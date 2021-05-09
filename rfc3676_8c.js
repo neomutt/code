@@ -16,7 +16,5 @@ var rfc3676_8c =
     [ "mutt_rfc3676_space_stuff", "rfc3676_8c.html#ae80c6b55541960f57f67f4ea3e4467e8", null ],
     [ "mutt_rfc3676_space_unstuff", "rfc3676_8c.html#a47bfc67ef302e9b51cee14c713a70f35", null ],
     [ "mutt_rfc3676_space_unstuff_attachment", "rfc3676_8c.html#aafc5472c7687d8941a25999aa30d2be4", null ],
-    [ "mutt_rfc3676_space_stuff_attachment", "rfc3676_8c.html#a9cd1b3af0b88c1d0179e890b444c5be0", null ],
-    [ "C_ReflowSpaceQuotes", "rfc3676_8c.html#ae72a662cae766d5a2de536c96685f046", null ],
-    [ "C_ReflowWrap", "rfc3676_8c.html#a5be5171c37ea30b3ff53c2339daba4d2", null ]
+    [ "mutt_rfc3676_space_stuff_attachment", "rfc3676_8c.html#a9cd1b3af0b88c1d0179e890b444c5be0", null ]
 ];

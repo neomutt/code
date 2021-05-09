@@ -9,7 +9,6 @@ var enter_8c =
     [ "my_addwch", "enter_8c.html#a4f7fa064a349e26567a8f3daf392c813", null ],
     [ "replace_part", "enter_8c.html#aee2885e93ba4e712c261b65bf587dbb3", null ],
     [ "mutt_enter_state_new", "enter_8c.html#ad07b16f01560935e6b8ac5e681f12a2a", null ],
-    [ "mutt_enter_string", "enter_8c.html#a9403104dbe9d92375dcf1d3375d5d69f", null ],
     [ "mutt_enter_string_full", "enter_8c.html#ae45373a28b592394bdea7a2a4d9f0a5f", null ],
     [ "mutt_enter_state_free", "enter_8c.html#accd34f875b7f7c4b79d113b90de1850b", null ]
 ];

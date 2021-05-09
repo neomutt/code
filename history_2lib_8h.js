@@ -20,9 +20,5 @@ var history_2lib_8h =
     [ "mutt_hist_reset_state", "history_2lib_8h.html#a6197a536a3da0385551bac50a45d6a7a", null ],
     [ "mutt_hist_save_scratch", "history_2lib_8h.html#a2d26cab55cd51b83f6e2a45a8ce44799", null ],
     [ "mutt_hist_search", "history_2lib_8h.html#a40b0d1de2839ee28e60ab014fbe281be", null ],
-    [ "dlg_select_history", "history_2lib_8h.html#ab298aa27ba0aae5427f90a78f591d548", null ],
-    [ "C_History", "history_2lib_8h.html#a8dadefb318c2ee5694224068b4e9628c", null ],
-    [ "C_HistoryFile", "history_2lib_8h.html#aa388c99168c4672738e9a7b070555bdd", null ],
-    [ "C_HistoryRemoveDups", "history_2lib_8h.html#a2cd7093a15c4ebefbc8881daceea86e2", null ],
-    [ "C_SaveHistory", "history_2lib_8h.html#a0b965a98942066e593f0205fc282dc6f", null ]
+    [ "dlg_select_history", "history_2lib_8h.html#ab298aa27ba0aae5427f90a78f591d548", null ]
 ];

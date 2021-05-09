@@ -1,37 +1,13 @@
 var mx_8h =
 [
-    [ "Message", "structMessage.html", "structMessage" ],
-    [ "MxOps", "structMxOps.html", "structMxOps" ],
-    [ "MUTT_OPEN_NO_FLAGS", "mx_8h.html#ad32c5821121dddb7fa99ad0de0a9e719", null ],
-    [ "MUTT_NOSORT", "mx_8h.html#a9aa2964ccc101dbfdb11771b00b1de90", null ],
-    [ "MUTT_APPEND", "mx_8h.html#a6168431d3be24912b33a6c486fa11366", null ],
-    [ "MUTT_READONLY", "mx_8h.html#a11b97885a0fc04bcd13572076e8a17ab", null ],
-    [ "MUTT_QUIET", "mx_8h.html#a75f314042a266df29efcc524d35c4b2d", null ],
-    [ "MUTT_NEWFOLDER", "mx_8h.html#a3a651e08849ce73161750d86d4ac1ee6", null ],
-    [ "MUTT_PEEK", "mx_8h.html#a968f688cbe0d506670853e20a623c15c", null ],
-    [ "MUTT_APPENDNEW", "mx_8h.html#ac3c0a14560d66d5c3ae9c905d3b4bb26", null ],
     [ "MUTT_MSG_NO_FLAGS", "mx_8h.html#a4f461719ebd7d96d0b2f2492c595fc26", null ],
     [ "MUTT_ADD_FROM", "mx_8h.html#a49087f3940d59f9624011017e42d9444", null ],
     [ "MUTT_SET_DRAFT", "mx_8h.html#ae766b38813f1364775c5160cc3802b9b", null ],
-    [ "OpenMailboxFlags", "mx_8h.html#a12d50555671e01ef64b027974fc5acfa", null ],
     [ "MsgOpenFlags", "mx_8h.html#a3c2b592b42c4c70ba32b8fb9ce869750", null ],
-    [ "MxStatus", "mx_8h.html#af414aea967025ea4ba10b86268488432", [
-      [ "MX_STATUS_ERROR", "mx_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160", null ],
-      [ "MX_STATUS_OK", "mx_8h.html#af414aea967025ea4ba10b86268488432acc30aaa1797601a158bcead39ef19a4b", null ],
-      [ "MX_STATUS_NEW_MAIL", "mx_8h.html#af414aea967025ea4ba10b86268488432af3d8ebc52b40a1f9f22b7b4366d0315b", null ],
-      [ "MX_STATUS_LOCKED", "mx_8h.html#af414aea967025ea4ba10b86268488432a2399001ba2822d6d9b1317e8dbe81f4b", null ],
-      [ "MX_STATUS_REOPENED", "mx_8h.html#af414aea967025ea4ba10b86268488432ad9cf54713c660db891b05384830e57f4", null ],
-      [ "MX_STATUS_FLAGS", "mx_8h.html#af414aea967025ea4ba10b86268488432ad3528e181f2bf299a5a598271c0059e6", null ]
-    ] ],
-    [ "MxOpenReturns", "mx_8h.html#a95aa6f9d458f82609e795a7f449f4cad", [
-      [ "MX_OPEN_OK", "mx_8h.html#a95aa6f9d458f82609e795a7f449f4cadac71ca3ece0dbda0bb22552738d80905b", null ],
-      [ "MX_OPEN_ERROR", "mx_8h.html#a95aa6f9d458f82609e795a7f449f4cada43d91ff11cb6a2631b235699bed738af", null ],
-      [ "MX_OPEN_ABORT", "mx_8h.html#a95aa6f9d458f82609e795a7f449f4cada87caee0e54f8b01a82878e69a37c1880", null ]
-    ] ],
     [ "mx_mbox_check", "mx_8h.html#ae1a77c15ee90fe85716badfd92e856ba", null ],
     [ "mx_mbox_check_stats", "mx_8h.html#a57093c6b257f41763f5f9d2633c003ed", null ],
-    [ "mx_mbox_close", "mx_8h.html#a22ae77c29429cbeb96fbe6156943d128", null ],
-    [ "mx_mbox_open", "mx_8h.html#a72efa68c4041905af8d9b38948580a56", null ],
+    [ "mx_mbox_close", "mx_8h.html#af9e949965d56e69eb9a6a9aa640614bb", null ],
+    [ "mx_mbox_open", "mx_8h.html#a6c4f4c51fa0b086d86a8638197c40578", null ],
     [ "mx_mbox_sync", "mx_8h.html#ae31027d1219060a9dc2b2e6b82c1bf6c", null ],
     [ "mx_msg_close", "mx_8h.html#a2172d90c08b5a2b293d22ed13ee0e7a8", null ],
     [ "mx_msg_commit", "mx_8h.html#add0e192c5f27bf6bd096ae2eb7c0b67b", null ],
@@ -48,6 +24,7 @@ var mx_8h =
     [ "mx_resolve", "mx_8h.html#af87e44d20f29c0dd796e60b542cfa1f4", null ],
     [ "mx_tags_commit", "mx_8h.html#a38288bed1c5844da8860d94249ac5c6f", null ],
     [ "mx_tags_edit", "mx_8h.html#a99a695f2b5d01cdda62c68693c347ce5", null ],
+    [ "mx_type", "mx_8h.html#ad1b4348096500e4c8df39275b956ec1c", null ],
     [ "mx_ac_find", "mx_8h.html#ad776c3914edf339722c373004cd06a3f", null ],
     [ "mx_mbox_find", "mx_8h.html#ac701cb363f8c39f9023a1d4e68d23e8b", null ],
     [ "mx_mbox_find2", "mx_8h.html#a84a2454384495994852f5c8c797070dc", null ],
@@ -61,9 +38,5 @@ var mx_8h =
     [ "mx_get_ops", "mx_8h.html#a69fb97b5bdfa030216af32bccd9b6fed", null ],
     [ "mx_tags_is_supported", "mx_8h.html#aa5e9e28ca8461569523e2dbd90ee14b1", null ],
     [ "mx_ops", "mx_8h.html#ad9ba91c403384d3c18d57a8cabf86e26", null ],
-    [ "C_KeepFlagged", "mx_8h.html#abcd43c6340ac73eebf1ef272a8e51224", null ],
-    [ "C_MboxType", "mx_8h.html#a06da03900810e5c8f98b09dc688cff1e", null ],
-    [ "C_Move", "mx_8h.html#a2515116e9ee5e578bf065702dffb6eda", null ],
-    [ "C_Trash", "mx_8h.html#ac52946da71c8899693e80f091d7b51b7", null ],
     [ "MboxTypeDef", "mx_8h.html#a500988f3151cd7021ad1c1e1dea27a26", null ]
 ];

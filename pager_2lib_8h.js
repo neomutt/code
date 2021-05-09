@@ -1,6 +1,7 @@
 var pager_2lib_8h =
 [
-    [ "Pager", "structPager.html", "structPager" ],
+    [ "PagerData", "structPagerData.html", "structPagerData" ],
+    [ "PagerView", "structPagerView.html", "structPagerView" ],
     [ "MUTT_PAGER_NO_FLAGS", "pager_2lib_8h.html#a0a536da5cd7ad9b881a8079052853818", null ],
     [ "MUTT_SHOWFLAT", "pager_2lib_8h.html#a9de40b1f09f9cfecdf91e9caf90d76ae", null ],
     [ "MUTT_SHOWCOLOR", "pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2", null ],
@@ -14,10 +15,22 @@ var pager_2lib_8h =
     [ "MUTT_PAGER_ATTACHMENT", "pager_2lib_8h.html#aea42b8def2b025d157e3da6a1be2b20e", null ],
     [ "MUTT_PAGER_NOWRAP", "pager_2lib_8h.html#a325eecb6e92fd9ea24c0ea630a84df6f", null ],
     [ "MUTT_PAGER_LOGS", "pager_2lib_8h.html#a82c7ea12bf1e83aaa34ee1decdcab418", null ],
+    [ "MUTT_PAGER_BOTTOM", "pager_2lib_8h.html#a89146e0d0f65bb73de5923d240b93af9", null ],
     [ "MUTT_PAGER_MESSAGE", "pager_2lib_8h.html#ac14f9120c844296965a8a2c87dc5f541", null ],
     [ "MUTT_DISPLAYFLAGS", "pager_2lib_8h.html#a45c117fe5bfea2a2e42c6571eb637b38", null ],
     [ "PagerFlags", "pager_2lib_8h.html#a4b89dc870e3d48afbacfc74da0533898", null ],
-    [ "mutt_pager", "pager_2lib_8h.html#a4cc11143557f95ded6a80f3cffff4483", null ],
+    [ "PagerMode", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991a", [
+      [ "PAGER_MODE_UNKNOWN", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aaf9a6afe81885d3c882f0d8ba9130a006", null ],
+      [ "PAGER_MODE_EMAIL", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aae094a15e3553a2a1001a143e28e467fb", null ],
+      [ "PAGER_MODE_ATTACH", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aadd398541040aaa71d6e0c4cbb3d4bfa6", null ],
+      [ "PAGER_MODE_ATTACH_E", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aaeddb8c00493b15d27d49536bef22033d", null ],
+      [ "PAGER_MODE_HELP", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aabd98e8b316b04123b680bdb46f03efde", null ],
+      [ "PAGER_MODE_OTHER", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aa349af1aff604e50301670aff8a40c161", null ],
+      [ "PAGER_MODE_MAX", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aaf9b4f37f039824fb28899ec7bb6afe37", null ]
+    ] ],
+    [ "mutt_pager", "pager_2lib_8h.html#a98581fe70f86244edf90b80f6421fb7b", null ],
+    [ "mutt_do_pager", "pager_2lib_8h.html#ad796201423d00e3d91852bdbb4488846", null ],
     [ "mutt_buffer_strip_formatting", "pager_2lib_8h.html#a29a3939691dd7a49875fc11c290bdfe1", null ],
+    [ "add_panel_pager", "pager_2lib_8h.html#ad278728a5bd5fd06c907136287b69f9d", null ],
     [ "mutt_clear_pager_position", "pager_2lib_8h.html#a52cb29b8a518d62062551b6ff7a3cb4f", null ]
 ];

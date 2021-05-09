@@ -20,16 +20,5 @@ var nntp_2private_8h =
     [ "nntp_hcache_open", "nntp_2private_8h.html#ad8d95064a7efb66e51bfde2c8b12aff7", null ],
     [ "nntp_hcache_update", "nntp_2private_8h.html#a25f479090028437bbd1cc59a08942112", null ],
     [ "nntp_newsrc_gen_entries", "nntp_2private_8h.html#a21d6dfb74310c442a524deed9579395a", null ],
-    [ "nntp_open_connection", "nntp_2private_8h.html#abc4e8951366a6bf81d5d4d4ecf5ad4ba", null ],
-    [ "C_NewsCacheDir", "nntp_2private_8h.html#ab8ca1454d4243cb92da974ce0cd511d6", null ],
-    [ "C_Newsrc", "nntp_2private_8h.html#a63b8f0fd985de7a7f2e2a6b7dba546bb", null ],
-    [ "C_NntpAuthenticators", "nntp_2private_8h.html#a59d6757d25f7b40b001410531b7c64f4", null ],
-    [ "C_NntpContext", "nntp_2private_8h.html#a05de9e1596e04a530f34a0b7997a10c8", null ],
-    [ "C_NntpListgroup", "nntp_2private_8h.html#a893a90d7d4eacb7402a58cae9a91f6f2", null ],
-    [ "C_NntpLoadDescription", "nntp_2private_8h.html#a8c9395ec4844c8b7aed252b6815c6695", null ],
-    [ "C_NntpPass", "nntp_2private_8h.html#a03f65b47f9cfa7f07efac6b10a92020a", null ],
-    [ "C_NntpPoll", "nntp_2private_8h.html#a63056faf9f11d01dcf0ce711aefcf2d2", null ],
-    [ "C_NntpUser", "nntp_2private_8h.html#a888071a07b2203dc4d06a336b6cc4a1f", null ],
-    [ "C_SaveUnsubscribed", "nntp_2private_8h.html#aaa6d628b2366ef54ca5706174cac2a87", null ],
-    [ "C_ShowNewNews", "nntp_2private_8h.html#aae9b753ca0c6169942631482b2aaec79", null ]
+    [ "nntp_open_connection", "nntp_2private_8h.html#abc4e8951366a6bf81d5d4d4ecf5ad4ba", null ]
 ];

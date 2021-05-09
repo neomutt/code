@@ -12,7 +12,7 @@ var hook_8c =
     [ "mutt_folder_hook", "hook_8c.html#a6c1eb72c5e9a39b354d9c394f9116f50", null ],
     [ "mutt_find_hook", "hook_8c.html#a5b0861b9e36e5debdf8b6509a22e6738", null ],
     [ "mutt_message_hook", "hook_8c.html#af487ca5e3f7da21c86e3ad61fdb55faa", null ],
-    [ "addr_hook", "hook_8c.html#ae2a08bbc82777210610a0aea6c52cb9f", null ],
+    [ "addr_hook", "hook_8c.html#a03a5c472e42fecbca72071b8d55562e1", null ],
     [ "mutt_default_save", "hook_8c.html#a567b4b83522b84d353609dbdb265b8fa", null ],
     [ "mutt_select_fcc", "hook_8c.html#a6d228c86f5a1900b27af0fde26991a63", null ],
     [ "list_hook", "hook_8c.html#a51b4816c85f88551f21387049b2df4fe", null ],
@@ -21,9 +21,6 @@ var hook_8c =
     [ "mutt_timeout_hook", "hook_8c.html#a1b93f7bc501b2c75f04350d3ba184885", null ],
     [ "mutt_startup_shutdown_hook", "hook_8c.html#a346f2e985b8be4ee687b08eab1879561", null ],
     [ "mutt_idxfmt_hook", "hook_8c.html#a23f48f56f7a277b90c9e0c7e3a1ed867", null ],
-    [ "C_DefaultHook", "hook_8c.html#ae267efcdd4850ad846989ad681b350e0", null ],
-    [ "C_ForceName", "hook_8c.html#a8c942c1f06402cbaa14e3d08b9626442", null ],
-    [ "C_SaveName", "hook_8c.html#a3165c36713939fdeee7a8a3cee0f5b85", null ],
     [ "Hooks", "hook_8c.html#a972b6dffb799adc5f7e8d91438317d64", null ],
     [ "IdxFmtHooks", "hook_8c.html#a1ca53f19587562575952e7626c839056", null ],
     [ "current_hook_type", "hook_8c.html#af39c5b98ef339ba6f93dedfd414d13bb", null ]
