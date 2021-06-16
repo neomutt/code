@@ -12,6 +12,8 @@ var mailbox_8c =
     [ "mailbox_set_subset", "mailbox_8c.html#a183742dc7bb17663f2ca03f05b3b2328", null ],
     [ "mailbox_gc_add", "mailbox_8c.html#ab40999223fc7e7038d917ad6a451dc95", null ],
     [ "mailbox_gc_run", "mailbox_8c.html#a1aded0bae910c51bc27f84a00445f9d8", null ],
+    [ "mailbox_get_type_name", "mailbox_8c.html#ac59d5148a02f54559bfbc092ee79df24", null ],
+    [ "MailboxTypes", "mailbox_8c.html#ac562d476433c719b60e68426cf062c33", null ],
     [ "arr", "mailbox_8c.html#a2bed5da613bfb71e4fb4dabcc8cbfcbe", null ],
     [ "idx", "mailbox_8c.html#a103fe1fcacccda7d9cdacde44721faef", null ],
     [ "gc", "mailbox_8c.html#ab7f3c333581cafc620f8f4ca2c5f72ee", null ]

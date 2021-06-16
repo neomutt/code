@@ -42,7 +42,6 @@ var index =
     [ "Handling of personal config ('my' variables)", "neo_myvar.html", null ],
     [ "All user-callable functions", "neo_opcode.html", null ],
     [ "Save/restore and GUI list postponed emails", "neo_postpone.html", null ],
-    [ "Progress bar", "neo_progress.html", null ],
     [ "Routines for managing attachments", "neo_recvattach.html", null ],
     [ "Send/reply with an attachment", "neo_recvcmd.html", null ],
     [ "Support of Mixmaster anonymous remailer", "neo_remailer.html", null ],

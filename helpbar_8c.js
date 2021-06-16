@@ -8,5 +8,5 @@ var helpbar_8c =
     [ "helpbar_color_observer", "helpbar_8c.html#a40dca5830610c5304bea0d59e4d5f284", null ],
     [ "helpbar_config_observer", "helpbar_8c.html#af5bdd54ad5934b0056562ce7f07f38be", null ],
     [ "helpbar_window_observer", "helpbar_8c.html#ad9479d9b3325898cbe92e5856b2fcbc4", null ],
-    [ "helpbar_create", "helpbar_8c.html#a10bec635c4eb26b50c8df52e175bd82d", null ]
+    [ "helpbar_new", "helpbar_8c.html#adcc20871cd893944a9d9f138e13af701", null ]
 ];

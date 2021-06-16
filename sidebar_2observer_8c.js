@@ -11,5 +11,5 @@ var sidebar_2observer_8c =
     [ "sb_mailbox_observer", "sidebar_2observer_8c.html#a0f5bc69d8eb06b0bd5f33eb5b5a1e2fe", null ],
     [ "sb_window_observer", "sidebar_2observer_8c.html#a0722aa70bc2c6450daccb2651e0b61e7", null ],
     [ "sb_win_add_observers", "sidebar_2observer_8c.html#a0fd560324ae8201c55f425f7af5ad7ba", null ],
-    [ "sb_insertion_observer", "sidebar_2observer_8c.html#a5c4edd4474849312c4030c5df6f28a5f", null ]
+    [ "sb_insertion_window_observer", "sidebar_2observer_8c.html#a7d31ff1e2bcb8bbf9c32799d74c419cb", null ]
 ];

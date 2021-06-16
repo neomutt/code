@@ -11,10 +11,9 @@ var index_2lib_8h =
     [ "NotifyIndex", "index_2lib_8h.html#a46d350542f65b8ef5720eab7daf36a9a", null ],
     [ "index_color", "index_2lib_8h.html#a9939353c798dcfa5590f25a4589689e3", null ],
     [ "index_make_entry", "index_2lib_8h.html#ac8c48150ad44e16fefd22398589e1c8f", null ],
-    [ "mutt_draw_statusline", "index_2lib_8h.html#a180d846161e904fbcde10154790e49c4", null ],
+    [ "mutt_draw_statusline", "index_2lib_8h.html#a74ec708393189456506dcb292698f3e0", null ],
     [ "mutt_index_menu", "index_2lib_8h.html#a99aec648e9fb9eeee0d0154211b428da", null ],
     [ "mutt_set_header_color", "index_2lib_8h.html#a6566b9f6bf6671102a3330bee435ed8b", null ],
     [ "mutt_update_index", "index_2lib_8h.html#a86dba73400c4a9d6c6753e00f139ebca", null ],
-    [ "index_pager_init", "index_2lib_8h.html#af944024baa5ff339da372496e63fb69d", null ],
-    [ "index_pager_shutdown", "index_2lib_8h.html#ae93257bea6017b396d3b5ee8c3cbe611", null ]
+    [ "index_pager_init", "index_2lib_8h.html#af944024baa5ff339da372496e63fb69d", null ]
 ];

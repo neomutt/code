@@ -18,7 +18,16 @@ var pager_2lib_8h =
     [ "MUTT_PAGER_BOTTOM", "pager_2lib_8h.html#a89146e0d0f65bb73de5923d240b93af9", null ],
     [ "MUTT_PAGER_MESSAGE", "pager_2lib_8h.html#ac14f9120c844296965a8a2c87dc5f541", null ],
     [ "MUTT_DISPLAYFLAGS", "pager_2lib_8h.html#a45c117fe5bfea2a2e42c6571eb637b38", null ],
+    [ "NT_PAGER_NO_FLAGS", "pager_2lib_8h.html#a58bd079b9afe7af9a2c179e7f2f9050f", null ],
+    [ "NT_PAGER_CONFIG", "pager_2lib_8h.html#ae7c1ce04700d9d6c39060712d8e22780", null ],
+    [ "NT_PAGER_CONTEXT", "pager_2lib_8h.html#ae7999f6b16788b1af49e8657b92006e1", null ],
+    [ "NT_PAGER_ACCOUNT", "pager_2lib_8h.html#a4bd35361f2f19eb31f68dd4e6c8f0d47", null ],
+    [ "NT_PAGER_MAILBOX", "pager_2lib_8h.html#a84ef7b62fa5ee915f1d3dbe7aee85125", null ],
+    [ "NT_PAGER_EMAIL", "pager_2lib_8h.html#afb324cbe3d8800535e90bf25ad3dbdd7", null ],
+    [ "NT_PAGER_CLOSING", "pager_2lib_8h.html#a88246ec90a6046aa4c7c178fa3814d2b", null ],
+    [ "NT_PAGER_SUBSET", "pager_2lib_8h.html#a42bc37a98a13077a635e5927961b29f5", null ],
     [ "PagerFlags", "pager_2lib_8h.html#a4b89dc870e3d48afbacfc74da0533898", null ],
+    [ "NotifyPager", "pager_2lib_8h.html#a478c3d445c6b280b8d3585e3c44ddbf8", null ],
     [ "PagerMode", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991a", [
       [ "PAGER_MODE_UNKNOWN", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aaf9a6afe81885d3c882f0d8ba9130a006", null ],
       [ "PAGER_MODE_EMAIL", "pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aae094a15e3553a2a1001a143e28e467fb", null ],
@@ -31,6 +40,7 @@ var pager_2lib_8h =
     [ "mutt_pager", "pager_2lib_8h.html#a98581fe70f86244edf90b80f6421fb7b", null ],
     [ "mutt_do_pager", "pager_2lib_8h.html#ad796201423d00e3d91852bdbb4488846", null ],
     [ "mutt_buffer_strip_formatting", "pager_2lib_8h.html#a29a3939691dd7a49875fc11c290bdfe1", null ],
-    [ "add_panel_pager", "pager_2lib_8h.html#ad278728a5bd5fd06c907136287b69f9d", null ],
+    [ "ppanel_new", "pager_2lib_8h.html#a87d864ce9ddf73144e0757cf4fe3b2db", null ],
+    [ "pager_window_new", "pager_2lib_8h.html#a45c6395be73a312371a85bb8df9bf8f2", null ],
     [ "mutt_clear_pager_position", "pager_2lib_8h.html#a52cb29b8a518d62062551b6ff7a3cb4f", null ]
 ];

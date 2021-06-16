@@ -12,7 +12,7 @@ var searchData=
   ['fgbgattr_5fto_5fcolor',['fgbgattr_to_color',['../color_8c.html#a8512a741304ef76e99a9132485ae0ce8',1,'color.c']]],
   ['file_5ftag',['file_tag',['../browser_8c.html#af4d5441e6e33296a9fb742390153a099',1,'browser.c']]],
   ['file_5fto_5fdata_5fobject',['file_to_data_object',['../crypt__gpgme_8c.html#a9e4c3751a7e9290b83db346a58f9fc95',1,'crypt_gpgme.c']]],
-  ['fill_5fbuffer',['fill_buffer',['../pager_8c.html#a23a8aa1356e8b8fdcc34eab387136f93',1,'pager.c']]],
+  ['fill_5fbuffer',['fill_buffer',['../dlg__pager_8c.html#a23a8aa1356e8b8fdcc34eab387136f93',1,'dlg_pager.c']]],
   ['fill_5fempty_5fspace',['fill_empty_space',['../sidebar_2window_8c.html#a170c92ace88b40e4afde3456023aff72',1,'window.c']]],
   ['filter_5fcreate',['filter_create',['../filter_8c.html#a81a0bae52b713e896cc8b220cc119262',1,'filter_create(const char *cmd, FILE **fp_in, FILE **fp_out, FILE **fp_err):&#160;filter.c'],['../filter_8h.html#a81a0bae52b713e896cc8b220cc119262',1,'filter_create(const char *cmd, FILE **fp_in, FILE **fp_out, FILE **fp_err):&#160;filter.c']]],
   ['filter_5fcreate_5ffd',['filter_create_fd',['../filter_8c.html#ab135f1182014687e686263f6e9613be5',1,'filter_create_fd(const char *cmd, FILE **fp_in, FILE **fp_out, FILE **fp_err, int fdin, int fdout, int fderr):&#160;filter.c'],['../filter_8h.html#ab135f1182014687e686263f6e9613be5',1,'filter_create_fd(const char *cmd, FILE **fp_in, FILE **fp_out, FILE **fp_err, int fdin, int fdout, int fderr):&#160;filter.c']]],
@@ -36,7 +36,7 @@ var searchData=
   ['folder_5fformat_5fstr',['folder_format_str',['../browser_8c.html#a521fce142a7a9c2761988fcfebeceac0',1,'browser.c']]],
   ['folder_5fmake_5fentry',['folder_make_entry',['../browser_8c.html#ad8a7076789eaf1f37fa8902c16d58a7a',1,'browser.c']]],
   ['format_5faddress_5fheader',['format_address_header',['../copy_8c.html#aee298ff7661f33a3083d6e6c6563069a',1,'copy.c']]],
-  ['format_5fline',['format_line',['../help_8c.html#a5f69016fd555f40166b0b1e721519298',1,'format_line(FILE *fp, int ismacro, const char *t1, const char *t2, const char *t3, int wraplen):&#160;help.c'],['../pager_8c.html#ab3d610ae528f103462e8cb98ff2c9859',1,'format_line(struct Line **line_info, int n, unsigned char *buf, PagerFlags flags, struct AnsiAttr *pa, int cnt, int *pspace, int *pvch, int *pcol, int *pspecial, int width):&#160;pager.c']]],
-  ['free_5fpattern_5fmenu',['free_pattern_menu',['../dlgpattern_8c.html#a3caa87385d13b26a658925177d7f610d',1,'dlgpattern.c']]],
+  ['format_5fline',['format_line',['../help_8c.html#a5f69016fd555f40166b0b1e721519298',1,'format_line(FILE *fp, int ismacro, const char *t1, const char *t2, const char *t3, int wraplen):&#160;help.c'],['../dlg__pager_8c.html#aa776ad2f17c0c8d55b1f2a2a616743aa',1,'format_line(struct MuttWindow *win, struct Line **line_info, int n, unsigned char *buf, PagerFlags flags, struct AnsiAttr *pa, int cnt, int *pspace, int *pvch, int *pcol, int *pspecial, int width):&#160;dlg_pager.c']]],
+  ['free_5fpattern_5fmenu',['free_pattern_menu',['../dlgpattern_8c.html#ab2bca350171ac49b81ead22800a31fcd',1,'dlgpattern.c']]],
   ['fseek_5flast_5fmessage',['fseek_last_message',['../mbox_8c.html#a89487605aeb3fb71d2488fe976060ee5',1,'mbox.c']]]
 ];

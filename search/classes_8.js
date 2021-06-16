@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['ibarprivatedata',['IBarPrivateData',['../structIBarPrivateData.html',1,'']]],
   ['icommand',['ICommand',['../structICommand.html',1,'']]],
   ['imapaccountdata',['ImapAccountData',['../structImapAccountData.html',1,'']]],
   ['imapauth',['ImapAuth',['../structImapAuth.html',1,'']]],

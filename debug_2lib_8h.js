@@ -1,7 +1,6 @@
 var debug_2lib_8h =
 [
     [ "show_backtrace", "debug_2lib_8h.html#ad4e568bce6fff0e62266165aec83d7e6", null ],
-    [ "win_name", "debug_2lib_8h.html#afe662c7f2a62dbfb76f8ec83696b7a63", null ],
     [ "add_flag", "debug_2lib_8h.html#ab82482c6ec68c3e23afc717258ac008a", null ],
     [ "dump_addr_list", "debug_2lib_8h.html#aff451f45343f2cb954cccc093fea821f", null ],
     [ "dump_attach", "debug_2lib_8h.html#a78de4e2575296fcd476471893f4c95b7", null ],
@@ -16,7 +15,8 @@ var debug_2lib_8h =
     [ "dump_graphviz", "debug_2lib_8h.html#a4fb537f7633dcdd7d5d03e3b32765811", null ],
     [ "dump_graphviz_attach_ctx", "debug_2lib_8h.html#ad9580d8dcd7ecd744ed9786d804137b4", null ],
     [ "dump_graphviz_email", "debug_2lib_8h.html#afc4b43c22f15774f658191f43e0514d3", null ],
-    [ "debug_notify_observer", "debug_2lib_8h.html#adf2a000157beda65b4aa66978f8197a1", null ],
+    [ "debug_all_observer", "debug_2lib_8h.html#aa8b31bf9d0963d2c99a0c8f6d18664ad", null ],
+    [ "get_mailbox_type", "debug_2lib_8h.html#a568560e17cea73e420431ea9d2b20c31", null ],
     [ "test_parse_set", "debug_2lib_8h.html#a007a4c7d77e33978875be05a1fabcbea", null ],
     [ "debug_win_dump", "debug_2lib_8h.html#a3e949b6cf149926e285fbfdad1e94eb0", null ]
 ];

@@ -25,6 +25,7 @@ var color_8c =
     [ "parse_color_name", "color_8c.html#abca247e9c44913645cf9b5dcc28b0635", null ],
     [ "parse_object", "color_8c.html#abdec1e86d5a9b056b36c3618e39eec77", null ],
     [ "do_uncolor", "color_8c.html#a0af5c4112e9cb92a67921fcb7b92144c", null ],
+    [ "get_colorid_name", "color_8c.html#ac66edbd714c6d9a284a8d83ebefcce52", null ],
     [ "parse_uncolor", "color_8c.html#afc5ca3d357fa1ccff17544249c7f2905", null ],
     [ "mutt_parse_uncolor", "color_8c.html#a6e42243b65a9fa38b497dac61ec6d5ca", null ],
     [ "mutt_parse_unmono", "color_8c.html#a426cea032e47c0d0772003826f2bc980", null ],
@@ -67,6 +68,6 @@ var color_8c =
     [ "notify", "color_8c.html#a0b14a85267e9b9b07d25e12a6b2e8330", null ],
     [ "Colors", "color_8c.html#ab779b50cbc208bb79eb7c818ac59c743", null ],
     [ "ColorNames", "color_8c.html#a25fdf40f5b2aca2f5c006703f86d8b73", null ],
-    [ "Fields", "color_8c.html#aee5135c1f9da204c527959041ce8855c", null ],
-    [ "ComposeFields", "color_8c.html#af47ebccd58bf7198974c09f09a8df181", null ]
+    [ "ColorFields", "color_8c.html#a4476932702aa028f1fcdc565633c03cf", null ],
+    [ "ComposeColorFields", "color_8c.html#a35f1332269e545cf1ec7f30fc9424442", null ]
 ];

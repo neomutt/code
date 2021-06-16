@@ -6,6 +6,8 @@ var dlgquery_8c =
     [ "query_make_entry", "dlgquery_8c.html#a6c2e6a96f53f75829d1d04f80a9d010a", null ],
     [ "query_tag", "dlgquery_8c.html#a9be22e1702401b4845efffd8059a3605", null ],
     [ "query_run", "dlgquery_8c.html#a35eea4925485d20ee477926b9420ca35", null ],
+    [ "query_window_observer", "dlgquery_8c.html#ab901b316ef3ba1544aa6c5d9f4ba6ed4", null ],
+    [ "query_dialog_new", "dlgquery_8c.html#a8570257daf2489643478df08ec00b0e9", null ],
     [ "dlg_select_query", "dlgquery_8c.html#a1b14278ee062936035f5b41babab18da", null ],
     [ "query_complete", "dlgquery_8c.html#aed95bba2770f684ed0caadf42d924860", null ],
     [ "query_index", "dlgquery_8c.html#a1205cb3b6c32c17817078da6a4666be5", null ],

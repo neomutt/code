@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['cbar_2ec',['cbar.c',['../cbar_8c.html',1,'']]],
+  ['cbar_2eh',['cbar.h',['../cbar_8h.html',1,'']]],
+  ['cbar_5fdata_2ec',['cbar_data.c',['../cbar__data_8c.html',1,'']]],
+  ['cbar_5fdata_2eh',['cbar_data.h',['../cbar__data_8h.html',1,'']]],
   ['charset_2ec',['charset.c',['../config_2charset_8c.html',1,'(Global Namespace)'],['../mutt_2charset_8c.html',1,'(Global Namespace)']]],
   ['charset_2eh',['charset.h',['../config_2charset_8h.html',1,'(Global Namespace)'],['../mutt_2charset_8h.html',1,'(Global Namespace)']]],
   ['color_2ec',['color.c',['../color_8c.html',1,'']]],
@@ -9,7 +13,6 @@ var searchData=
   ['command_5fparse_2eh',['command_parse.h',['../command__parse_8h.html',1,'']]],
   ['commands_2ec',['commands.c',['../alias_2commands_8c.html',1,'(Global Namespace)'],['../commands_8c.html',1,'(Global Namespace)'],['../sidebar_2commands_8c.html',1,'(Global Namespace)']]],
   ['commands_2eh',['commands.h',['../commands_8h.html',1,'']]],
-  ['common_2ec',['common.c',['../common_8c.html',1,'']]],
   ['compile_2ec',['compile.c',['../compile_8c.html',1,'']]],
   ['complete_2ec',['complete.c',['../complete_8c.html',1,'(Global Namespace)'],['../nntp_2complete_8c.html',1,'(Global Namespace)']]],
   ['compose_2ec',['compose.c',['../compose_8c.html',1,'']]],

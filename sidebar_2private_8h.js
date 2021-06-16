@@ -12,7 +12,7 @@ var sidebar_2private_8h =
     [ "sb_set_current_mailbox", "sidebar_2private_8h.html#a704b8cebcb4eba2ed785c4440e60d4a4", null ],
     [ "select_next", "sidebar_2private_8h.html#a783b12db809f5b2b15fe8f52219f0aa0", null ],
     [ "select_prev", "sidebar_2private_8h.html#a20d03da9fb1f98af4f82061d90f31e41", null ],
-    [ "sb_insertion_observer", "sidebar_2private_8h.html#a5c4edd4474849312c4030c5df6f28a5f", null ],
+    [ "sb_insertion_window_observer", "sidebar_2private_8h.html#a7d31ff1e2bcb8bbf9c32799d74c419cb", null ],
     [ "sb_win_add_observers", "sidebar_2private_8h.html#a0fd560324ae8201c55f425f7af5ad7ba", null ],
     [ "sb_sort_entries", "sidebar_2private_8h.html#ada537dcc135747ea0f0d1a6eefdd5e54", null ],
     [ "sb_wdata_free", "sidebar_2private_8h.html#a0e4166aea7c9051f20c26fe1e5f3b2ba", null ],

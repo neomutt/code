@@ -12,5 +12,7 @@ var dir_a107a7d642c5039faa343a4d949f1542 =
     [ "notmuch.c", "notmuch_8c.html", "notmuch_8c" ],
     [ "private.h", "notmuch_2private_8h.html", "notmuch_2private_8h" ],
     [ "query.c", "query_8c.html", "query_8c" ],
-    [ "query.h", "query_8h.html", "query_8h" ]
+    [ "query.h", "query_8h.html", "query_8h" ],
+    [ "tag.c", "tag_8c.html", "tag_8c" ],
+    [ "tag.h", "tag_8h.html", "tag_8h" ]
 ];

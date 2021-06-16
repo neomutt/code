@@ -7,7 +7,7 @@ var date_8c =
     [ "mutt_date_local_tz", "date_8c.html#a82bd2f1fb214328612aa1900b731972b", null ],
     [ "mutt_date_make_time", "date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e", null ],
     [ "mutt_date_normalize_time", "date_8c.html#ae62f60a70955bfdf32b669f4cac02571", null ],
-    [ "mutt_date_make_date", "date_8c.html#ab2adff1bc752f1ad854d92eb6c9c16a5", null ],
+    [ "mutt_date_make_date", "date_8c.html#a394b85b0f5ce946eed457c6720611e0d", null ],
     [ "mutt_date_check_month", "date_8c.html#a58c8238ef7c9cc33ee04f5a88dbe5559", null ],
     [ "mutt_date_epoch", "date_8c.html#a97bacb1574ec0b1c69b6236fbacceccf", null ],
     [ "mutt_date_epoch_ms", "date_8c.html#af116b4ad52dd21a36ac701e7c376ecd1", null ],

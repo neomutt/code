@@ -1,7 +1,7 @@
 var debug_2notify_8c =
 [
     [ "get_event_type", "debug_2notify_8c.html#a0a3ac1dc17cbcca46df67fb7f664abb5", null ],
-    [ "get_mailbox_type", "debug_2notify_8c.html#ac52227e3df9e11f47ef478834ca5ef1a", null ],
+    [ "get_mailbox_type", "debug_2notify_8c.html#a568560e17cea73e420431ea9d2b20c31", null ],
     [ "get_global_event", "debug_2notify_8c.html#a3ec09e171293c6ff29c39b4861214692", null ],
     [ "get_config_type", "debug_2notify_8c.html#a6ce9aff1b061b2403778e0ec4c31bed1", null ],
     [ "get_mailbox_event", "debug_2notify_8c.html#a1d7a0ff33df9b639de7e0c09ce1b2531", null ],
@@ -16,7 +16,7 @@ var debug_2notify_8c =
     [ "notify_dump_mailbox", "debug_2notify_8c.html#acb3ead2d9f12110fa6c7bcf13e6a613f", null ],
     [ "notify_dump_window_state", "debug_2notify_8c.html#afea224275b7b400352a04317877218f7", null ],
     [ "notify_dump_window_focus", "debug_2notify_8c.html#ad766956bc33de5387af4d71172a52b0a", null ],
-    [ "debug_notify_observer", "debug_2notify_8c.html#adf2a000157beda65b4aa66978f8197a1", null ],
-    [ "Fields", "debug_2notify_8c.html#aee5135c1f9da204c527959041ce8855c", null ],
-    [ "ComposeFields", "debug_2notify_8c.html#af47ebccd58bf7198974c09f09a8df181", null ]
+    [ "debug_all_observer", "debug_2notify_8c.html#aa8b31bf9d0963d2c99a0c8f6d18664ad", null ],
+    [ "ColorFields", "debug_2notify_8c.html#a4476932702aa028f1fcdc565633c03cf", null ],
+    [ "ComposeColorFields", "debug_2notify_8c.html#a35f1332269e545cf1ec7f30fc9424442", null ]
 ];

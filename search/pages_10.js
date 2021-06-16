@@ -10,6 +10,7 @@ var searchData=
   ['representation_20of_20an_20email_20header_20_28envelope_29',['Representation of an email header (envelope)',['../email_envelope.html',1,'lib_email']]],
   ['rfc2047_20encoding_20_2f_20decoding_20functions',['RFC2047 encoding / decoding functions',['../email_rfc2047.html',1,'lib_email']]],
   ['rfc2231_20mime_20charset_20routines',['RFC2231 MIME Charset routines',['../email_rfc2231.html',1,'lib_email']]],
+  ['root_20window',['Root Window',['../gui_rootwin.html',1,'lib_gui']]],
   ['read_2fwrite_20command_20history_20from_2fto_20a_20file',['Read/write command history from/to a file',['../history_history.html',1,'lib_history']]],
   ['random_20number_2fstring_20functions',['Random number/string functions',['../mutt_random.html',1,'lib_mutt']]],
   ['rich_20text_20handler',['Rich text handler',['../neo_enriched.html',1,'index']]],

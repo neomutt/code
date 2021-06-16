@@ -1,7 +1,6 @@
 var lib_debug =
 [
     [ "Code backtrace", "debug_backtrace.html", null ],
-    [ "Shared debug code", "debug_common.html", null ],
     [ "Dump an Email", "debug_email.html", null ],
     [ "Create a GraphViz dot file", "debug_graphviz.html", null ],
     [ "Dump all notifications", "debug_notify.html", null ],

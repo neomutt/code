@@ -17,7 +17,7 @@ var searchData=
   ['helpbar_5fbinding_5fobserver',['helpbar_binding_observer',['../helpbar_8c.html#ab0329ccef8dd2aef381a44436e4a2020',1,'helpbar.c']]],
   ['helpbar_5fcolor_5fobserver',['helpbar_color_observer',['../helpbar_8c.html#a40dca5830610c5304bea0d59e4d5f284',1,'helpbar.c']]],
   ['helpbar_5fconfig_5fobserver',['helpbar_config_observer',['../helpbar_8c.html#af5bdd54ad5934b0056562ce7f07f38be',1,'helpbar.c']]],
-  ['helpbar_5fcreate',['helpbar_create',['../helpbar_8c.html#a10bec635c4eb26b50c8df52e175bd82d',1,'helpbar_create(void):&#160;helpbar.c'],['../helpbar_2lib_8h.html#a10bec635c4eb26b50c8df52e175bd82d',1,'helpbar_create(void):&#160;helpbar.c']]],
+  ['helpbar_5fnew',['helpbar_new',['../helpbar_8c.html#adcc20871cd893944a9d9f138e13af701',1,'helpbar_new(void):&#160;helpbar.c'],['../helpbar_2lib_8h.html#adcc20871cd893944a9d9f138e13af701',1,'helpbar_new(void):&#160;helpbar.c']]],
   ['helpbar_5frecalc',['helpbar_recalc',['../helpbar_8c.html#a5165a2f8ed1418aba9747d98572b104b',1,'helpbar.c']]],
   ['helpbar_5frepaint',['helpbar_repaint',['../helpbar_8c.html#a744700a753aeb8f87e50e57706bfb08d',1,'helpbar.c']]],
   ['helpbar_5fwdata_5ffree',['helpbar_wdata_free',['../helpbar_2private_8h.html#a593915c2b1e7db1c5711a28d4ef40ef2',1,'helpbar_wdata_free(struct MuttWindow *win, void **ptr):&#160;wdata.c'],['../helpbar_2wdata_8c.html#a593915c2b1e7db1c5711a28d4ef40ef2',1,'helpbar_wdata_free(struct MuttWindow *win, void **ptr):&#160;wdata.c']]],

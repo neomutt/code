@@ -6,12 +6,12 @@ var email_8h =
     [ "EventHeader", "structEventHeader.html", "structEventHeader" ],
     [ "NotifyEmail", "email_8h.html#acc016ba3017237be6db0130216742d17", [
       [ "NT_EMAIL_ADD", "email_8h.html#acc016ba3017237be6db0130216742d17a190192a70b0c559228cc51324a10a68b", null ],
-      [ "NT_EMAIL_REMOVE", "email_8h.html#acc016ba3017237be6db0130216742d17ad45113e9febe2b3931ccebafc3dabff5", null ]
+      [ "NT_EMAIL_DELETE", "email_8h.html#acc016ba3017237be6db0130216742d17a1be40ae94baebdae6bef59bc2fce6dc5", null ]
     ] ],
     [ "NotifyHeader", "email_8h.html#a32e989d0071364c3086b2f4b93beac1d", [
       [ "NT_HEADER_ADD", "email_8h.html#a32e989d0071364c3086b2f4b93beac1dade021951d390d8b9494522c6c88a80ba", null ],
-      [ "NT_HEADER_CHANGE", "email_8h.html#a32e989d0071364c3086b2f4b93beac1da93c6d5007a8a30a2b788561f3b76265f", null ],
-      [ "NT_HEADER_REMOVE", "email_8h.html#a32e989d0071364c3086b2f4b93beac1da2f12c3c79587ece24aacf60eeae6b799", null ]
+      [ "NT_HEADER_DELETE", "email_8h.html#a32e989d0071364c3086b2f4b93beac1dae734b19a94b55adb80cf6cffc2aa557e", null ],
+      [ "NT_HEADER_CHANGE", "email_8h.html#a32e989d0071364c3086b2f4b93beac1da93c6d5007a8a30a2b788561f3b76265f", null ]
     ] ],
     [ "STAILQ_HEAD", "email_8h.html#a1449bec531e1bfa8aee664aad7c6b6f2", null ],
     [ "email_cmp_strict", "email_8h.html#a3d20f2e3c0991425b91d9403a038a51e", null ],

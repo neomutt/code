@@ -1,9 +1,11 @@
 var progress_8c =
 [
-    [ "message_bar", "progress_8c.html#abc66f33c51ec84b979ae2e452945cd1f", null ],
-    [ "progress_choose_increment", "progress_8c.html#ae8ca53b385fc5bd67e1a8317b6c505b2", null ],
-    [ "progress_pos_needs_update", "progress_8c.html#a69bb55fa5f421a60ce9dbfdf7020882a", null ],
-    [ "progress_time_needs_update", "progress_8c.html#a3d1283d4e2d72acfc9ac22ea76183384", null ],
-    [ "mutt_progress_init", "progress_8c.html#a2f9d6047a03a3f33168cfda7eea9186e", null ],
-    [ "mutt_progress_update", "progress_8c.html#aaaac7791e7c6d01bba7e6d7d76a258d9", null ]
+    [ "Progress", "structProgress.html", "structProgress" ],
+    [ "message_bar", "progress_8c.html#ad52f62fcddb8233ea181bea374dc9a94", null ],
+    [ "choose_increment", "progress_8c.html#acd92e8710b026cf04443f6710656302a", null ],
+    [ "pos_needs_update", "progress_8c.html#a391f1ce771883d3a5375c3ab74d3643c", null ],
+    [ "time_needs_update", "progress_8c.html#a692496b490e3367e94158c0a2a58f536", null ],
+    [ "progress_update", "progress_8c.html#a7373bbf71548c41b082a305b3346727a", null ],
+    [ "progress_free", "progress_8c.html#ab4c7a63427cdcaae2b1147ff6f010af4", null ],
+    [ "progress_new", "progress_8c.html#aba05e74a07a772a1336c0a19ea174614", null ]
 ];

@@ -1,6 +1,6 @@
 var dir_1ac69099273185b8416dca0dba1f5766 =
 [
-    [ "attach.c", "attach_8c.html", "attach_8c" ],
+    [ "attach.c", "email_2attach_8c.html", "email_2attach_8c" ],
     [ "attach.h", "attach_8h.html", "attach_8h" ],
     [ "body.c", "email_2body_8c.html", "email_2body_8c" ],
     [ "body.h", "email_2body_8h.html", "email_2body_8h" ],
@@ -9,7 +9,7 @@ var dir_1ac69099273185b8416dca0dba1f5766 =
     ] ],
     [ "email.c", "email_2email_8c.html", "email_2email_8c" ],
     [ "email.h", "email_8h.html", "email_8h" ],
-    [ "envelope.c", "envelope_8c.html", "envelope_8c" ],
+    [ "envelope.c", "email_2envelope_8c.html", "email_2envelope_8c" ],
     [ "envelope.h", "envelope_8h.html", "envelope_8h" ],
     [ "from.c", "from_8c.html", "from_8c" ],
     [ "from.h", "from_8h.html", "from_8h" ],

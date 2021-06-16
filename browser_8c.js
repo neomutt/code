@@ -21,7 +21,7 @@ var browser_8c =
     [ "select_file_search", "browser_8c.html#a44aefdb8e3bc126b5fab29a8501499e2", null ],
     [ "folder_make_entry", "browser_8c.html#ad8a7076789eaf1f37fa8902c16d58a7a", null ],
     [ "browser_highlight_default", "browser_8c.html#a06ced7d8ff0eb01b5f17b23f73f76bfb", null ],
-    [ "init_menu", "browser_8c.html#ae293b195b902fc371a9b670370135815", null ],
+    [ "init_menu", "browser_8c.html#a3a994508919323e2f53f2326c8709855", null ],
     [ "file_tag", "browser_8c.html#af4d5441e6e33296a9fb742390153a099", null ],
     [ "mutt_browser_select_dir", "browser_8c.html#a9fbed4ed086e8d9c2907e8f43d6143f2", null ],
     [ "mutt_buffer_select_file", "browser_8c.html#ac628d370c55e56235108d9b8ef87c618", null ],

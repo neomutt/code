@@ -18,6 +18,7 @@ var searchData=
   ['mixchain',['MixChain',['../structMixChain.html',1,'']]],
   ['monitor',['Monitor',['../structMonitor.html',1,'']]],
   ['monitorinfo',['MonitorInfo',['../structMonitorInfo.html',1,'']]],
+  ['msgwinprivatedata',['MsgWinPrivateData',['../structMsgWinPrivateData.html',1,'']]],
   ['mupdate',['MUpdate',['../structMUpdate.html',1,'']]],
   ['muttfileiter',['MuttFileIter',['../structMuttFileIter.html',1,'']]],
   ['muttthread',['MuttThread',['../structMuttThread.html',1,'']]],

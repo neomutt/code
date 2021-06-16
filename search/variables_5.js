@@ -1,14 +1,13 @@
 var searchData=
 [
   ['fake_5fthread',['fake_thread',['../structMuttThread.html#a68156e7ac570e245272ba291dfd840fd',1,'MuttThread']]],
-  ['fcc',['fcc',['../structComposeRedrawData.html#aa8045334f18c4656d87d713f5ba2d69b',1,'ComposeRedrawData']]],
+  ['fcc',['fcc',['../structComposeEnvelopeData.html#a44cd8273001aa9ec184f3544e5c402db',1,'ComposeEnvelopeData']]],
   ['fd',['fd',['../structConnection.html#af805fad417c8fa7c5079ef741d8233e2',1,'Connection::fd()'],['../structStoreDbCtx.html#a37867e261a64b0eda72c53843fd96b1e',1,'StoreDbCtx::fd()']]],
   ['fd_5fread',['fd_read',['../structTunnelSockData.html#a18fb506beba61ce8f7d5938d0f76bd43',1,'TunnelSockData']]],
   ['fd_5fwrite',['fd_write',['../structTunnelSockData.html#a4e02ed7f3f09ed0df42e3528c89b19ed',1,'TunnelSockData']]],
   ['fetch',['fetch',['../structStoreOps.html#a79baa4aa28c857ddbefa9d2a4874ed53',1,'StoreOps']]],
   ['ff',['ff',['../structFolder.html#a37163d36b029dfee673d8c86c77eb3c0',1,'Folder']]],
   ['fg',['fg',['../structColorList.html#a8678716349b018ca73c5ae04355a8cbd',1,'ColorList::fg()'],['../structColorLine.html#ae0cf5fbdd9d7c980090492f6bb0da71e',1,'ColorLine::fg()'],['../structAnsiAttr.html#adb4ab54c8f829bd8cfaf094fdb476765',1,'AnsiAttr::fg()']]],
-  ['fields',['Fields',['../debug_2notify_8c.html#aee5135c1f9da204c527959041ce8855c',1,'Fields():&#160;color.c'],['../color_8c.html#aee5135c1f9da204c527959041ce8855c',1,'Fields():&#160;color.c']]],
   ['file',['file',['../structLogLine.html#a44d9b3cfcef5c1e93d6e45e7357e077b',1,'LogLine']]],
   ['filename',['filename',['../structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a',1,'Body']]],
   ['filename_5fsafe_5fchars',['filename_safe_chars',['../file_8c.html#a476ab3606a28b4cca8a7489e38d50151',1,'filename_safe_chars():&#160;file.c'],['../file_8h.html#a476ab3606a28b4cca8a7489e38d50151',1,'filename_safe_chars():&#160;file.c']]],
@@ -29,9 +28,9 @@ var searchData=
   ['foldernewshelp',['FolderNewsHelp',['../browser_8c.html#a4c2145b2c5c5bce768e8c77d335a45cc',1,'browser.c']]],
   ['followup_5fto',['followup_to',['../structEnvelope.html#a46a9e33786aa5394ad768cbcc2357d65',1,'Envelope']]],
   ['force_5fcharset',['force_charset',['../structBody.html#ac64b7e1868a8d7115b9067e34c8e7aa8',1,'Body']]],
-  ['force_5fredraw',['force_redraw',['../structPagerRedrawData.html#a8111399289423f4fd5decba6f7756303',1,'PagerRedrawData']]],
+  ['force_5fredraw',['force_redraw',['../structPagerPrivateData.html#a6a742df7f3c0f22c2ba26c496bf91537',1,'PagerPrivateData']]],
   ['form_5fname',['form_name',['../structBody.html#aea3b13e7e6b68ebf707532938601321a',1,'Body']]],
-  ['fp',['fp',['../structMessage.html#a11d53ee4319e8735c1677d8780a7b517',1,'Message::fp()'],['../structAttachPtr.html#a776ea6f490cedf7dc47accba055d964c',1,'AttachPtr::fp()'],['../structMboxAccountData.html#a5b98e08c3191fc9525c5785a68fd6281',1,'MboxAccountData::fp()'],['../structFgetConv.html#a483092f21edf7805e8bf9b3595d085c4',1,'FgetConv::fp()'],['../structFgetConvNot.html#a021de34c362c7a83def28a48a6385362',1,'FgetConvNot::fp()'],['../structPagerData.html#a75f5f2991771544bd5c9298eb5a4832d',1,'PagerData::fp()'],['../structPagerRedrawData.html#afc5f665174e9a45ea78a45d028501ff3',1,'PagerRedrawData::fp()']]],
+  ['fp',['fp',['../structMessage.html#a11d53ee4319e8735c1677d8780a7b517',1,'Message::fp()'],['../structAttachPtr.html#a776ea6f490cedf7dc47accba055d964c',1,'AttachPtr::fp()'],['../structMboxAccountData.html#a5b98e08c3191fc9525c5785a68fd6281',1,'MboxAccountData::fp()'],['../structFgetConv.html#a483092f21edf7805e8bf9b3595d085c4',1,'FgetConv::fp()'],['../structFgetConvNot.html#a021de34c362c7a83def28a48a6385362',1,'FgetConvNot::fp()'],['../structPagerData.html#a75f5f2991771544bd5c9298eb5a4832d',1,'PagerData::fp()'],['../structPagerPrivateData.html#afb5dbf89eff9e94e26674696e934dae0',1,'PagerPrivateData::fp()']]],
   ['fp_5fidx',['fp_idx',['../structAttachCtx.html#ace417205b7b51e4e1aecc9670ee8aa34',1,'AttachCtx']]],
   ['fp_5fin',['fp_in',['../structState.html#a9cf7e1f0c5c12399def5ca38b13054ae',1,'State']]],
   ['fp_5flen',['fp_len',['../structAttachCtx.html#a99439756ab72e5a9ca59b3ee74d0260e',1,'AttachCtx']]],
@@ -47,5 +46,5 @@ var searchData=
   ['fsl',['fsl',['../terminal_8c.html#a0ea32a7cd9fc2febfad2b695de432d79',1,'terminal.c']]],
   ['full_5fseqset',['full_seqset',['../structSeqsetIterator.html#a97689b86ad0b10f359b5fa5b423a824b',1,'SeqsetIterator']]],
   ['function',['function',['../structLogLine.html#a741044ae9cbe404a463a01dc42839ee1',1,'LogLine']]],
-  ['function_5fnot_5fpermitted_5fin_5fattach_5fmessage_5fmode',['Function_not_permitted_in_attach_message_mode',['../pager_8c.html#a902bce6ff62a5b8e0c4c05e0c10e8c2e',1,'pager.c']]]
+  ['function_5fnot_5fpermitted_5fin_5fattach_5fmessage_5fmode',['Function_not_permitted_in_attach_message_mode',['../dlg__pager_8c.html#a902bce6ff62a5b8e0c4c05e0c10e8c2e',1,'dlg_pager.c']]]
 ];

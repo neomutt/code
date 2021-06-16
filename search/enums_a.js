@@ -3,7 +3,7 @@ var searchData=
   ['mailboxtype',['MailboxType',['../mailbox_8h.html#af65addf714c28dd5d483cb426100921d',1,'mailbox.h']]],
   ['mailcaplookup',['MailcapLookup',['../mailcap_8h.html#a0716f6351a9229990024889ec22b33c1',1,'mailcap.h']]],
   ['mdbtxnmode',['MdbTxnMode',['../lmdb_8c.html#aeecdc6fc084a2a3646e242f0e0343514',1,'lmdb.c']]],
-  ['menutype',['MenuType',['../keymap_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4',1,'keymap.h']]],
+  ['menutype',['MenuType',['../type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4',1,'type.h']]],
   ['messageinthread',['MessageInThread',['../mutt__thread_8h.html#a7fd1879ba8179c12165019a4f005e1f4',1,'mutt_thread.h']]],
   ['messagesaveopt',['MessageSaveOpt',['../commands_8h.html#a92125cd8a2854aafc8c436ae8c79869b',1,'commands.h']]],
   ['messagetransformopt',['MessageTransformOpt',['../commands_8h.html#a43ad43eab306bcad26dd46d38f3516c6',1,'commands.h']]],

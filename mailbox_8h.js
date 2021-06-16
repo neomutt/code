@@ -35,8 +35,9 @@ var mailbox_8h =
     ] ],
     [ "NotifyMailbox", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4", [
       [ "NT_MAILBOX_ADD", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4af4301eba28d0776c6718b42b143e54df", null ],
-      [ "NT_MAILBOX_REMOVE", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4aa8014daf764a5636d76f565c15743973", null ],
-      [ "NT_MAILBOX_CHANGED", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4ac45e1f8e26630e0caa503ed933a1a76a", null ],
+      [ "NT_MAILBOX_DELETE", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4aa146b6ca59f6ad39fd676c0100d51bcb", null ],
+      [ "NT_MAILBOX_DELETE_ALL", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4acd732d948267202980d4ff37c8fef1ff", null ],
+      [ "NT_MAILBOX_CHANGE", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a14c74c903defbf207d7b6ce012c9092d", null ],
       [ "NT_MAILBOX_CLOSED", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a348eb9c5cce554ebf1da40ce739c2265", null ],
       [ "NT_MAILBOX_INVALID", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4aa2cbdb348633a2bc5926ba0efddf2e3a", null ],
       [ "NT_MAILBOX_RESORT", "mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a96d28ff20a133d31e2e6ce8bb4e8b78f", null ],
@@ -57,5 +58,6 @@ var mailbox_8h =
     [ "mailbox_update", "mailbox_8h.html#ab614961b6e97592c0e56c30b47f65f29", null ],
     [ "mailbox_gc_add", "mailbox_8h.html#ab40999223fc7e7038d917ad6a451dc95", null ],
     [ "mailbox_gc_run", "mailbox_8h.html#a1aded0bae910c51bc27f84a00445f9d8", null ],
+    [ "mailbox_get_type_name", "mailbox_8h.html#ac59d5148a02f54559bfbc092ee79df24", null ],
     [ "mailbox_path", "mailbox_8h.html#a04aa11207205b6778388dfc8ed56ee0d", null ]
 ];

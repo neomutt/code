@@ -13,6 +13,7 @@ var dlgpgp_8c =
     [ "pgp_flags", "dlgpgp_8c.html#a9cb50994cfe04867f6684f506930dff3", null ],
     [ "pgp_entry_format_str", "dlgpgp_8c.html#ad62c1620e97a88eed7cdd6d5a2e3661a", null ],
     [ "pgp_make_entry", "dlgpgp_8c.html#a3e16fe9e93e6d48cca53fa5acc37cc31", null ],
+    [ "pgp_key_table_free", "dlgpgp_8c.html#a512e0ba7415bfdef5c476f345693c97a", null ],
     [ "dlg_select_pgp_key", "dlgpgp_8c.html#a50a5ee4ba10a3dad62aacea16484df42", null ],
     [ "PgpHelp", "dlgpgp_8c.html#abd6f0798cfb6bcfd9903a72edc81f8bf", null ],
     [ "trust_flags", "dlgpgp_8c.html#a50b4d6ff4bf36e0d906905c4e10f8726", null ]

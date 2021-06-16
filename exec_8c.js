@@ -24,7 +24,7 @@ var exec_8c =
     [ "get_pattern_cache_value", "exec_8c.html#a09126c13e8b0726f36f194cd5ffe6ff2", null ],
     [ "is_pattern_cache_set", "exec_8c.html#a87fc380b9026d97286e330b169ce16f4", null ],
     [ "msg_search_sendmode", "exec_8c.html#af19bf41d266bc5adc6815ed73dfe22e9", null ],
-    [ "pattern_needs_msg", "exec_8c.html#a91bcb3210788be1e49aaf2f433fe493d", null ],
+    [ "pattern_needs_msg", "exec_8c.html#a10da3626af84082e22ee131ef793d677", null ],
     [ "mutt_pattern_exec", "exec_8c.html#a19019da905ed802ad656fbe8b2c8ca93", null ],
     [ "mutt_pattern_alias_exec", "exec_8c.html#ad2c4f9f9ac723e27159f4b74a48bb844", null ]
 ];

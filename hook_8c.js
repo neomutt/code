@@ -5,7 +5,7 @@ var hook_8c =
     [ "mutt_parse_hook", "hook_8c.html#a4b6e4f5a7cf7c50a1d32450735eba6f9", null ],
     [ "delete_hook", "hook_8c.html#aef64c959f7a4a6dbc02b9e8590bdf607", null ],
     [ "mutt_delete_hooks", "hook_8c.html#a3b113188a50152ee8ff8f54975ea5897", null ],
-    [ "delete_idxfmt_hooklist", "hook_8c.html#a5cf9caca44f920b4e565a05ad6e01afc", null ],
+    [ "idxfmt_hashelem_free", "hook_8c.html#a6c55d68e0ab13d9aaf342c1fd33f3399", null ],
     [ "delete_idxfmt_hooks", "hook_8c.html#a5158a12937ec41e078fe95c10d332217", null ],
     [ "mutt_parse_idxfmt_hook", "hook_8c.html#a006e34e81efbb903f3eba1c8887f0d87", null ],
     [ "mutt_parse_unhook", "hook_8c.html#adc980182d2656aa6d6169c7bff6800dc", null ],

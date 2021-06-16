@@ -17,5 +17,5 @@ var searchData=
   ['prexrfc5322datelax',['PrexRfc5322DateLax',['../prex_8h.html#a9d75076d3f3f40068483d55369fe5bb3',1,'prex.h']]],
   ['prexurlquerykeyvalmatch',['PrexUrlQueryKeyValMatch',['../prex_8h.html#a7f917f09659f2b9379abc89197501950',1,'prex.h']]],
   ['prexurlschemematch',['PrexUrlSchemeMatch',['../prex_8h.html#aa6ce7235f2865c37b6140c5deef44c7d',1,'prex.h']]],
-  ['progresstype',['ProgressType',['../progress_8h.html#a0a558d538b8742adf8b1251f2848ba75',1,'progress.h']]]
+  ['progresstype',['ProgressType',['../progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75',1,'lib.h']]]
 ];

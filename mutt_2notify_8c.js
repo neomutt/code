@@ -8,5 +8,6 @@ var mutt_2notify_8c =
     [ "notify_send", "mutt_2notify_8c.html#ade2f42f8e0d8a843e87816300799a8e1", null ],
     [ "notify_observer_add", "mutt_2notify_8c.html#a67c25689b9f61f36d922c2b8e21685be", null ],
     [ "notify_observer_remove", "mutt_2notify_8c.html#a244545a719099431dda975083aef827e", null ],
-    [ "notify_observer_remove_all", "mutt_2notify_8c.html#ac29450b4c099e670ca588a43e21212bd", null ]
+    [ "notify_observer_remove_all", "mutt_2notify_8c.html#ac29450b4c099e670ca588a43e21212bd", null ],
+    [ "NotifyTypeNames", "mutt_2notify_8c.html#ae355ba7036d8ba055817ce90353603d6", null ]
 ];

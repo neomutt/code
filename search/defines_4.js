@@ -2,7 +2,7 @@ var searchData=
 [
   ['define_5fhelp_5fmessage',['DEFINE_HELP_MESSAGE',['../opcodes_8c.html#a25e5aa6946427ebda3e8580a0970b748',1,'opcodes.c']]],
   ['define_5fops',['DEFINE_OPS',['../opcodes_8h.html#a1bf673fe27b714464aadda6edbb6d652',1,'opcodes.h']]],
-  ['direction',['DIRECTION',['../menu_8c.html#a1d692daf1ffadae2243a5ab556589629',1,'menu.c']]],
+  ['direction',['DIRECTION',['../move_8c.html#a1d692daf1ffadae2243a5ab556589629',1,'move.c']]],
   ['dt_5faddress',['DT_ADDRESS',['../types_8h.html#ab8406b382e7b74ef88ee739309cc4721',1,'types.h']]],
   ['dt_5fbool',['DT_BOOL',['../types_8h.html#a3e9b7756375768cd523e363a5594d4b4',1,'types.h']]],
   ['dt_5fcharset_5fsingle',['DT_CHARSET_SINGLE',['../config_2charset_8h.html#a6c50f5778b78ebb579d5d12af3a928c7',1,'charset.h']]],

@@ -6,5 +6,6 @@ var lib_notmuch =
     [ "Notmuch-specific Email data", "nm_edata.html", null ],
     [ "Notmuch-specific Mailbox data", "nm_mdata.html", null ],
     [ "Notmuch virtual mailbox type", "nm_notmuch.html", null ],
-    [ "Notmuch query functions", "nm_query.html", null ]
+    [ "Notmuch query functions", "nm_query.html", null ],
+    [ "Notmuch tag functions", "nm_tag.html", null ]
 ];

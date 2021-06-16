@@ -20,5 +20,6 @@ var subset_8c =
     [ "cs_subset_he_string_plus_equals", "subset_8c.html#abdb3a9b5c8876db2541cfa31e075b5f5", null ],
     [ "cs_subset_str_string_plus_equals", "subset_8c.html#a28038ae3e3e508802fdb3a0932d5ff9e", null ],
     [ "cs_subset_he_string_minus_equals", "subset_8c.html#a0d2424534e2280b6c0bf8ca06a6b421b", null ],
-    [ "cs_subset_str_string_minus_equals", "subset_8c.html#a60f7e66361309fdb276ea4458672abe5", null ]
+    [ "cs_subset_str_string_minus_equals", "subset_8c.html#a60f7e66361309fdb276ea4458672abe5", null ],
+    [ "ConfigEventNames", "subset_8c.html#ab59a02826031bae9f3688c2474e44af5", null ]
 ];

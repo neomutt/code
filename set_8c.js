@@ -1,6 +1,6 @@
 var set_8c =
 [
-    [ "destroy", "set_8c.html#af612051570ed31dd6bb88f0ebf086a78", null ],
+    [ "cs_hashelem_free", "set_8c.html#aed5e3a06b467a01713e2eb7246523ba4", null ],
     [ "create_synonym", "set_8c.html#a94c832681c45e7cde02f1856b83fe038", null ],
     [ "reg_one_var", "set_8c.html#a12b0e4cd101b1dd514242c109d324e19", null ],
     [ "cs_new", "set_8c.html#a782cae3ae2a644f227712ba2b9777f85", null ],

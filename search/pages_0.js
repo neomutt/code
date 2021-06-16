@@ -19,5 +19,6 @@ var searchData=
   ['all_20user_2dcallable_20functions',['All user-callable functions',['../neo_opcode.html',1,'index']]],
   ['assorted_20sorting_20methods',['Assorted sorting methods',['../neo_sort.html',1,'index']]],
   ['auto_2dcomplete_20nntp_20newsgroups',['Auto-complete NNTP newsgroups',['../nntp_complete.html',1,'lib_nntp']]],
-  ['a_20simple_20wrapper_20for_20the_20pager',['A simple wrapper for the Pager',['../pager_dopager.html',1,'lib_pager']]]
+  ['a_20simple_20wrapper_20for_20the_20pager',['A simple wrapper for the Pager',['../pager_dopager.html',1,'lib_pager']]],
+  ['ask_20the_20user_20a_20question',['Ask the user a question',['../question_question.html',1,'lib_question']]]
 ];

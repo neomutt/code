@@ -14,7 +14,7 @@ var date_8h =
     [ "mutt_date_localtime_format", "date_8h.html#a0fab1956f93fd1be1a2dbfb740788ef7", null ],
     [ "mutt_date_localtime", "date_8h.html#a0d0711d4e480f33786b1c936bf2fd6ba", null ],
     [ "mutt_date_local_tz", "date_8h.html#a82bd2f1fb214328612aa1900b731972b", null ],
-    [ "mutt_date_make_date", "date_8h.html#ab2adff1bc752f1ad854d92eb6c9c16a5", null ],
+    [ "mutt_date_make_date", "date_8h.html#a394b85b0f5ce946eed457c6720611e0d", null ],
     [ "mutt_date_make_imap", "date_8h.html#ab30120ea670e25b9f47ccc9c83eda66f", null ],
     [ "mutt_date_make_time", "date_8h.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e", null ],
     [ "mutt_date_make_tls", "date_8h.html#a8193091a9ad44eba4b0db60e950c57e6", null ],

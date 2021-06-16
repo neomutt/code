@@ -7,6 +7,7 @@ var structIndexPrivateData =
     [ "do_mailbox_notify", "structIndexPrivateData.html#a5c89672876da1e1500b5e7ed2a228bb7", null ],
     [ "attach_msg", "structIndexPrivateData.html#a585b384fb75f36c87c83fcd3b06aaa12", null ],
     [ "in_pager", "structIndexPrivateData.html#a72de3dcbcabba0ca55d2eb6d38915af9", null ],
+    [ "shared", "structIndexPrivateData.html#a2741546f849613d488b1e881cd091a19", null ],
     [ "menu", "structIndexPrivateData.html#ac048be60177ee054d7927631ab0d1f59", null ],
     [ "win_index", "structIndexPrivateData.html#a1c7b6cdce8620da00b71c4337f3b8131", null ],
     [ "win_ibar", "structIndexPrivateData.html#ab9c822e1ca6aa2c56e3978fd7c2d0400", null ],

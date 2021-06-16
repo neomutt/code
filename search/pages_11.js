@@ -9,7 +9,6 @@ var searchData=
   ['signing_2fencryption_20multiplexor',['Signing/encryption multiplexor',['../crypt_crypt.html',1,'lib_ncrypt']]],
   ['smime_20key_20selection_20dialog',['SMIME key selection dialog',['../crypt_dlgsmime.html',1,'lib_ncrypt']]],
   ['smime_20helper_20routines',['SMIME helper routines',['../crypt_smime.html',1,'lib_ncrypt']]],
-  ['shared_20debug_20code',['Shared debug code',['../debug_common.html',1,'lib_debug']]],
   ['store_20attributes_20associated_20with_20a_20mime_20part',['Store attributes associated with a MIME part',['../email_parameter.html',1,'lib_email']]],
   ['simple_20bar_20_28status_29',['Simple Bar (status)',['../gui_sbar.html',1,'lib_gui']]],
   ['simple_20dialog_20windows',['Simple Dialog Windows',['../gui_simple.html',1,'lib_gui']]],

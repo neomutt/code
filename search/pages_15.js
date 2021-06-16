@@ -10,6 +10,7 @@ var searchData=
   ['wrapper_20functions_20around_20curses_2fslang',['Wrapper functions around Curses/Slang',['../gui_curses.html',1,'lib_gui']]],
   ['window_20reflowing',['Window reflowing',['../gui_reflow.html',1,'lib_gui']]],
   ['window_20management',['Window management',['../gui_window.html',1,'lib_gui']]],
+  ['window_20wrapper_20around_20a_20menu',['Window wrapper around a Menu',['../menu_window.html',1,'lib_menu']]],
   ['write_20a_20mime_20email_20to_20a_20file',['Write a MIME Email to a file',['../send_body.html',1,'lib_send']]],
   ['write_20a_20mime_20email_20header_20to_20a_20file',['Write a MIME Email Header to a file',['../send_header.html',1,'lib_send']]]
 ];

@@ -1,6 +1,7 @@
 var simple_8c =
 [
-    [ "dialog_config_observer", "simple_8c.html#a13d00da9aacc6d05b2444c747244597e", null ],
-    [ "dialog_create_simple_index", "simple_8c.html#a2895714ba3b68db3551af1069e9ed79e", null ],
-    [ "dialog_destroy_simple_index", "simple_8c.html#a4f69c951431777334f8d18d38b9d643a", null ]
+    [ "simple_config_observer", "simple_8c.html#a2cfd80d7ebfde77725c79291395d3449", null ],
+    [ "simple_window_observer", "simple_8c.html#ae0ace52a1afee975fe951d22c35706c5", null ],
+    [ "simple_dialog_new", "simple_8c.html#a12bf318d3201650936ab7c3710869815", null ],
+    [ "simple_dialog_free", "simple_8c.html#a4b8e413b9970200cd75543dd09d38622", null ]
 ];

@@ -1,4 +1,4 @@
 var helpbar_2lib_8h =
 [
-    [ "helpbar_create", "helpbar_2lib_8h.html#a10bec635c4eb26b50c8df52e175bd82d", null ]
+    [ "helpbar_new", "helpbar_2lib_8h.html#adcc20871cd893944a9d9f138e13af701", null ]
 ];

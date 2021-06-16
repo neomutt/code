@@ -1,5 +1,6 @@
 var structProgress =
 [
+    [ "win", "structProgress.html#a642cdbe866307f4bd91d33d9a1e2c897", null ],
     [ "msg", "structProgress.html#a0531550061d69b584814994c3444837d", null ],
     [ "sizestr", "structProgress.html#a258e1bf53f7e38bb1c78d5c51015656c", null ],
     [ "pos", "structProgress.html#a18d444b946917d71ce41c14458a0d887", null ],

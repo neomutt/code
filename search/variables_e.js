@@ -2,11 +2,12 @@ var searchData=
 [
   ['p',['p',['../structFgetConv.html#a723a63c788d0a7f7d007da7a2c0e7ddb',1,'FgetConv::p()'],['../structPattern.html#a97de0b742c00569ef671c3fecdf50afd',1,'Pattern::p()']]],
   ['pagelen',['pagelen',['../structMenu.html#aaeccd09816a8432598225fcf326ce280',1,'Menu']]],
+  ['pager_5fformat',['pager_format',['../structPBarPrivateData.html#aae0e072d1515c5f1fe67e12822415e9c',1,'PBarPrivateData']]],
   ['pager_5fprogress',['pager_progress',['../structHdrFormatInfo.html#a7e9e3a904d834012a4269ff9b60c1280',1,'HdrFormatInfo']]],
-  ['pagerhelp',['PagerHelp',['../pager_8c.html#acf47b3ffd858fe087c093fd8bb2eac18',1,'pager.c']]],
-  ['pagerhelphelp',['PagerHelpHelp',['../pager_8c.html#aa28a1c2205b6faa48305586807d75a23',1,'pager.c']]],
-  ['pagernewshelp',['PagerNewsHelp',['../pager_8c.html#aa6187d937a0f4e3c2243780eb3fbe15d',1,'pager.c']]],
-  ['pagernormalhelp',['PagerNormalHelp',['../pager_8c.html#abe1f6fa814dc62f21af8f5e9370f9d88',1,'pager.c']]],
+  ['pagerhelp',['PagerHelp',['../dlg__pager_8c.html#acf47b3ffd858fe087c093fd8bb2eac18',1,'dlg_pager.c']]],
+  ['pagerhelphelp',['PagerHelpHelp',['../dlg__pager_8c.html#aa28a1c2205b6faa48305586807d75a23',1,'dlg_pager.c']]],
+  ['pagernewshelp',['PagerNewsHelp',['../dlg__pager_8c.html#aa6187d937a0f4e3c2243780eb3fbe15d',1,'dlg_pager.c']]],
+  ['pagernormalhelp',['PagerNormalHelp',['../dlg__pager_8c.html#abe1f6fa814dc62f21af8f5e9370f9d88',1,'dlg_pager.c']]],
   ['pagervars',['PagerVars',['../pager_2config_8c.html#a94777ed2c7430b3ba412ff22c99acf80',1,'config.c']]],
   ['pair',['pair',['../structEmail.html#aff41a69fc31315b170be1bc925a96880',1,'Email::pair()'],['../structColorLine.html#a2217a2e6fafca385395f3b53f9261609',1,'ColorLine::pair()'],['../structAnsiAttr.html#a7b35e9ab905f75615091259003a9a02f',1,'AnsiAttr::pair()']]],
   ['param',['param',['../structEnrichedState.html#a4302bc98504a6e715be8e5006833051c',1,'EnrichedState']]],
@@ -76,11 +77,11 @@ var searchData=
   ['prev_5fmailbox',['prev_mailbox',['../structImapAccountData.html#a1d1842d28b0455afee7ddd7f829f6c02',1,'ImapAccountData']]],
   ['previous_5fsort',['previous_sort',['../structSidebarWindowData.html#a02f4aa2fd0781fd1848bdf159da5946f',1,'SidebarWindowData']]],
   ['printcommand',['printcommand',['../structMailcapEntry.html#a90972f1dcf7a2510be293e77065e6108',1,'MailcapEntry']]],
-  ['progress',['progress',['../structFetchCtx.html#ae43defb96cfd6bb94b56575dad55761a',1,'FetchCtx::progress()'],['../structNmMboxData.html#a21035f965b108b1d31b7582a35a59afb',1,'NmMboxData::progress()']]],
-  ['progress_5fready',['progress_ready',['../structNmMboxData.html#a5431e6fcf301b45e1e74123bf4a38c21',1,'NmMboxData']]],
+  ['priv',['priv',['../structIBarPrivateData.html#ac338062c0728d027d695ef71f32ec9d9',1,'IBarPrivateData::priv()'],['../structPBarPrivateData.html#a81194611dac8e10365a30827cb0f7508',1,'PBarPrivateData::priv()']]],
+  ['progress',['progress',['../structFetchCtx.html#a1a6137dc7450052d589f8bdecf9b1be3',1,'FetchCtx::progress()'],['../structNmMboxData.html#a4b076b009cfbd704791dcb517c7e9edf',1,'NmMboxData::progress()']]],
   ['prompt',['prompt',['../structMenu.html#a2965a6208bf420a927d8d687f46f2776',1,'Menu']]],
-  ['prompts',['Prompts',['../compose_8c.html#a577b891ac761db94d93ff7d31e9670bb',1,'compose.c']]],
+  ['prompts',['Prompts',['../compose_8c.html#a577b891ac761db94d93ff7d31e9670bb',1,'Prompts():&#160;compose.c'],['../compose_2private_8h.html#a577b891ac761db94d93ff7d31e9670bb',1,'Prompts():&#160;compose.c']]],
   ['protocol_5fpriority',['protocol_priority',['../gnutls_8c.html#a0e8144958fdd6e26e62494ae9744b28b',1,'gnutls.c']]],
   ['purge',['purge',['../structEmail.html#a1e108ee29a0c6571211290457ab60756',1,'Email']]],
-  ['pview',['pview',['../structPagerRedrawData.html#a117dedf31e82cd5d2fd7383c1329699d',1,'PagerRedrawData']]]
+  ['pview',['pview',['../structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd',1,'PagerPrivateData']]]
 ];

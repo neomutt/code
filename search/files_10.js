@@ -23,5 +23,7 @@ var searchData=
   ['rfc2231_2eh',['rfc2231.h',['../rfc2231_8h.html',1,'']]],
   ['rfc3676_2ec',['rfc3676.c',['../rfc3676_8c.html',1,'']]],
   ['rfc3676_2eh',['rfc3676.h',['../rfc3676_8h.html',1,'']]],
-  ['rocksdb_2ec',['rocksdb.c',['../rocksdb_8c.html',1,'']]]
+  ['rocksdb_2ec',['rocksdb.c',['../rocksdb_8c.html',1,'']]],
+  ['rootwin_2ec',['rootwin.c',['../rootwin_8c.html',1,'']]],
+  ['rootwin_2eh',['rootwin.h',['../rootwin_8h.html',1,'']]]
 ];
