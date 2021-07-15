@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['key_5fcap_5fcan_5fcertify_0',['KEY_CAP_CAN_CERTIFY',['../crypt__gpgme_8h.html#aedb110bc0a5b06622df514a7b1f9bca7a6c74ebab89ddf2395613214f1de91e10',1,'crypt_gpgme.h']]],
+  ['key_5fcap_5fcan_5fencrypt_1',['KEY_CAP_CAN_ENCRYPT',['../crypt__gpgme_8h.html#aedb110bc0a5b06622df514a7b1f9bca7a75ebf9fda903040f7f471570de3b8007',1,'crypt_gpgme.h']]],
+  ['key_5fcap_5fcan_5fsign_2',['KEY_CAP_CAN_SIGN',['../crypt__gpgme_8h.html#aedb110bc0a5b06622df514a7b1f9bca7ae432daf7afa64983a95cfd196db416d4',1,'crypt_gpgme.h']]],
+  ['key_5fsort_5faddress_3',['KEY_SORT_ADDRESS',['../ncrypt_2sort_8h.html#ac1e53e04b767578d23d26ab4fe608690a4f1b4ada48ea760fe98f030dd628514f',1,'sort.h']]],
+  ['key_5fsort_5fdate_4',['KEY_SORT_DATE',['../ncrypt_2sort_8h.html#ac1e53e04b767578d23d26ab4fe608690a64edc368413b8b3a409c2bd485cf3710',1,'sort.h']]],
+  ['key_5fsort_5fkeyid_5',['KEY_SORT_KEYID',['../ncrypt_2sort_8h.html#ac1e53e04b767578d23d26ab4fe608690acf58a45901e637dbdc6bc2c6aaa3287e',1,'sort.h']]],
+  ['key_5fsort_5ftrust_6',['KEY_SORT_TRUST',['../ncrypt_2sort_8h.html#ac1e53e04b767578d23d26ab4fe608690a6b201a394e5719fdc86271be660f20d4',1,'sort.h']]],
+  ['kip_5faka_7',['KIP_AKA',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932a6a0cfc7c559872a881dbdf230df64e92',1,'crypt_gpgme.h']]],
+  ['kip_5ffingerprint_8',['KIP_FINGERPRINT',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932a0da1e6c50d13c2648463758263de92c6',1,'crypt_gpgme.h']]],
+  ['kip_5fissued_5fby_9',['KIP_ISSUED_BY',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932aed4a4ec5124569a1e1fd143946b44232',1,'crypt_gpgme.h']]],
+  ['kip_5fkey_5ftype_10',['KIP_KEY_TYPE',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932adc7d75a3f3369ca8d7c30e3a8e6bd8fb',1,'crypt_gpgme.h']]],
+  ['kip_5fkey_5fusage_11',['KIP_KEY_USAGE',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932af6c50e37275499258752781e4731eb7e',1,'crypt_gpgme.h']]],
+  ['kip_5fmax_12',['KIP_MAX',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932a700fbd5b564c8751c3faea909177ba83',1,'crypt_gpgme.h']]],
+  ['kip_5fname_13',['KIP_NAME',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932ae6d7f4454f0a9b2cacf589bad3e5f45d',1,'crypt_gpgme.h']]],
+  ['kip_5fserial_5fno_14',['KIP_SERIAL_NO',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932a376f702bcaacc8981b1eb6c7d62fa0ac',1,'crypt_gpgme.h']]],
+  ['kip_5fsubkey_15',['KIP_SUBKEY',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932a552fefec769b87d2bc1c4c86154fd6fc',1,'crypt_gpgme.h']]],
+  ['kip_5fvalid_5ffrom_16',['KIP_VALID_FROM',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932a6f2f2062a182a980f4aeff9f0a060286',1,'crypt_gpgme.h']]],
+  ['kip_5fvalid_5fto_17',['KIP_VALID_TO',['../crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932af886926cc6dc2d1ccc1a881bc3e20f7f',1,'crypt_gpgme.h']]]
+];

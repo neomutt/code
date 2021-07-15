@@ -1,0 +1,25 @@
+var lib_imap =
+[
+    [ "Account data", "imap_adata.html", null ],
+    [ "Authenticator multiplexor", "imap_auth.html", null ],
+    [ "Anonymous authentication", "imap_auth_anon.html", null ],
+    [ "CRAM-MD5 authentication", "imap_auth_cram.html", null ],
+    [ "GNU SASL authentication", "imap_auth_gsasl.html", null ],
+    [ "GSS authentication", "imap_auth_gss.html", null ],
+    [ "Login authentication", "imap_auth_login.html", null ],
+    [ "OAUTH authentication", "imap_auth_oauth.html", null ],
+    [ "Plain authentication", "imap_auth_plain.html", null ],
+    [ "SASL authentication", "imap_auth_sasl.html", null ],
+    [ "Mailbox browser", "imap_browse.html", null ],
+    [ "Send/receive commands", "imap_command.html", null ],
+    [ "Config used by IMAP", "imap_config.html", null ],
+    [ "Imap-specific Email data", "imap_edata.html", null ],
+    [ "IMAP network mailbox", "imap_imap.html", null ],
+    [ "Imap-specific Mailbox data", "imap_mdata.html", null ],
+    [ "IMAP messages", "imap_message.html", null ],
+    [ "IMAP Message Sets", "imap_msg_set.html", null ],
+    [ "MSN helper functions", "imap_msn.html", null ],
+    [ "Search routines", "imap_search.html", null ],
+    [ "UTF-7 Manipulation", "imap_utf7.html", null ],
+    [ "IMAP helper functions", "imap_util.html", null ]
+];
