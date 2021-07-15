@@ -1,0 +1,26 @@
+var dir_dd4f4d374fc1b1f6606a7c74ed1febd1 =
+[
+    [ "ansi.c", "ansi_8c.html", "ansi_8c" ],
+    [ "ansi.h", "ansi_8h.html", "ansi_8h" ],
+    [ "attr.c", "attr_8c.html", "attr_8c" ],
+    [ "attr.h", "attr_8h.html", "attr_8h" ],
+    [ "color.c", "color_8c.html", "color_8c" ],
+    [ "color.h", "color_8h.html", "color_8h" ],
+    [ "command.c", "color_2command_8c.html", "color_2command_8c" ],
+    [ "command2.h", "command2_8h.html", "command2_8h" ],
+    [ "curses.c", "curses_8c.html", "curses_8c" ],
+    [ "curses2.h", "curses2_8h.html", "curses2_8h" ],
+    [ "debug.c", "debug_8c.html", "debug_8c" ],
+    [ "debug.h", "debug_8h.html", "debug_8h" ],
+    [ "lib.h", "color_2lib_8h.html", null ],
+    [ "merged.c", "merged_8c.html", "merged_8c" ],
+    [ "merged.h", "merged_8h.html", "merged_8h" ],
+    [ "notify.c", "color_2notify_8c.html", "color_2notify_8c" ],
+    [ "notify2.h", "notify2_8h.html", "notify2_8h" ],
+    [ "quoted.c", "quoted_8c.html", "quoted_8c" ],
+    [ "quoted.h", "quoted_8h.html", "quoted_8h" ],
+    [ "regex.c", "color_2regex_8c.html", "color_2regex_8c" ],
+    [ "regex4.h", "regex4_8h.html", "regex4_8h" ],
+    [ "simple.c", "color_2simple_8c.html", "color_2simple_8c" ],
+    [ "simple2.h", "simple2_8h.html", "simple2_8h" ]
+];

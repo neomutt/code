@@ -1,0 +1,25 @@
+var recvattach_8c =
+[
+    [ "current_attachment", "recvattach_8c.html#a718168300f4a21fa0c1a28321aeaa6ee", null ],
+    [ "mutt_update_v2r", "recvattach_8c.html#ada90cfca09573e1031de106fd88cad72", null ],
+    [ "mutt_update_tree", "recvattach_8c.html#aa9845701586d190b83e575e9e1f89303", null ],
+    [ "prepend_savedir", "recvattach_8c.html#a7ead8fceb1c2b8c8c8a86b08e73a1191", null ],
+    [ "has_a_message", "recvattach_8c.html#a24d56034e98ac9dc0c2bef857afda02c", null ],
+    [ "save_attachment_flowed_helper", "recvattach_8c.html#a3c36223d243ef6b041baf6e0bb54533f", null ],
+    [ "query_save_attachment", "recvattach_8c.html#aad56960e0d22f0b6e36dbf18d120d84a", null ],
+    [ "save_without_prompting", "recvattach_8c.html#a999be3ce814a6a72a2a5c409b7583521", null ],
+    [ "mutt_save_attachment_list", "recvattach_8c.html#a2b47c498759b3b7d7d8b1e111a034df8", null ],
+    [ "query_pipe_attachment", "recvattach_8c.html#af3d9eba146519070da9cdc16cd6d92b7", null ],
+    [ "pipe_attachment", "recvattach_8c.html#aa18a07fb44233ba66b108e547049b0b4", null ],
+    [ "pipe_attachment_list", "recvattach_8c.html#a5966c1c4dd427e245631eb236129a5e2", null ],
+    [ "mutt_pipe_attachment_list", "recvattach_8c.html#a8ed2bd717b168fbcb6d7c65c0943ef34", null ],
+    [ "can_print", "recvattach_8c.html#aa65ac63b4bb9d0b83b6f4128736ad190", null ],
+    [ "print_attachment_list", "recvattach_8c.html#a54f776fcfc922681ca8c99d4aa497198", null ],
+    [ "mutt_print_attachment_list", "recvattach_8c.html#adf1dd9e8d7f5246ed4030d38a360b29b", null ],
+    [ "recvattach_edit_content_type", "recvattach_8c.html#afcd17795d6d83e3769c264607cfcc3a7", null ],
+    [ "mutt_attach_display_loop", "recvattach_8c.html#a72c9e19b893d8d4afc5593d9d2b399ff", null ],
+    [ "mutt_generate_recvattach_list", "recvattach_8c.html#a7688e395101baa5931494c883909d1da", null ],
+    [ "mutt_attach_init", "recvattach_8c.html#aa21744623c750c6f114a93f06ac5e257", null ],
+    [ "mutt_update_recvattach_menu", "recvattach_8c.html#a2ebb5a39bf8782104e464889b1d76b92", null ],
+    [ "ba_add_tagged", "recvattach_8c.html#afe651b768f8b166c7f6386a49f31bc25", null ]
+];
