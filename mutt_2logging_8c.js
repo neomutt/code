@@ -1,0 +1,28 @@
+var mutt_2logging_8c =
+[
+    [ "timestamp", "mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01", null ],
+    [ "log_file_close", "mutt_2logging_8c.html#ad17b384128d5803b107ecded67cc4077", null ],
+    [ "log_file_open", "mutt_2logging_8c.html#a04052a86613d16390be5add72eee7523", null ],
+    [ "log_file_set_filename", "mutt_2logging_8c.html#ae5764884f4e8cb6c8601216f24daf96f", null ],
+    [ "log_file_set_level", "mutt_2logging_8c.html#a33cfab3517292724699130f67acf6b78", null ],
+    [ "log_file_set_version", "mutt_2logging_8c.html#afe6265e8a5c8bede0a433a7e2ecef674", null ],
+    [ "log_file_running", "mutt_2logging_8c.html#a466c0ad8cf2298608b1054579ece0018", null ],
+    [ "log_disp_file", "group__logging__api.html#ga77c827a6376e12e19a71d9c36ca106da", null ],
+    [ "log_queue_add", "mutt_2logging_8c.html#aed09164ac096554d417545c4ffaeac5c", null ],
+    [ "log_queue_set_max_size", "mutt_2logging_8c.html#a22363e7b791fe93f8c17977850c5dfec", null ],
+    [ "log_queue_empty", "mutt_2logging_8c.html#a0f20ec32631fac9bf1f6fa2d1eb29da1", null ],
+    [ "log_queue_flush", "mutt_2logging_8c.html#a964e39fa7f189e7513aa05e9993a1c0b", null ],
+    [ "log_queue_get", "mutt_2logging_8c.html#af289d9795f65ea28887c56f6dd957021", null ],
+    [ "log_disp_queue", "group__logging__api.html#ga2edbe9483e89b1090b072e9d9e4de62f", null ],
+    [ "log_disp_terminal", "group__logging__api.html#gaa8db59bb1ae8a4901a2635a68367d477", null ],
+    [ "log_multiline_full", "mutt_2logging_8c.html#a8f8ee3672f4406de96665e96c256d989", null ],
+    [ "LogLevelAbbr", "mutt_2logging_8c.html#af94896f1854fb169508723823faa8a60", null ],
+    [ "MuttLogger", "group__logging__api.html#gab15f5a132f2eaa2304c2fe2c9fa9747a", null ],
+    [ "LogFileFP", "mutt_2logging_8c.html#a0e005c92eebfbd55427dbf8c0b6bec91", null ],
+    [ "LogFileName", "mutt_2logging_8c.html#acc2e01466efc986af91083a0a542ceb8", null ],
+    [ "LogFileLevel", "mutt_2logging_8c.html#a9cb7624dee487e97519bde4b1cccb57a", null ],
+    [ "LogFileVersion", "mutt_2logging_8c.html#a4e93541906ea4ed86aa70420b38133be", null ],
+    [ "LogQueue", "mutt_2logging_8c.html#a3ce51a82c3d66df78a1021f00dc5f1da", null ],
+    [ "LogQueueCount", "mutt_2logging_8c.html#a99702a8bcbf388e8d1d5df6f14bb0d05", null ],
+    [ "LogQueueMax", "mutt_2logging_8c.html#a671ea4460d4a9cc54296e003aa3378c6", null ]
+];

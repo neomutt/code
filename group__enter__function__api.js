@@ -1,0 +1,25 @@
+var group__enter__function__api =
+[
+    [ "op_editor_complete", "group__enter__function__api.html#ga612c9f9130f819f8e07915508d32b313", null ],
+    [ "op_editor_history_down", "group__enter__function__api.html#ga4209effdea420ec00885e49724fa3d05", null ],
+    [ "op_editor_history_search", "group__enter__function__api.html#ga43beaa3d0b84b55b20e71d23f6492469", null ],
+    [ "op_editor_history_up", "group__enter__function__api.html#ga65072ad0cddb0e9a1d8d0ff97bdc63a7", null ],
+    [ "op_editor_backspace", "group__enter__function__api.html#gac901abc2d4fe24cfa2b1ed54bdf0d2e3", null ],
+    [ "op_editor_backward_char", "group__enter__function__api.html#ga5f95f15d0a03c43a1fb332a1912158a2", null ],
+    [ "op_editor_backward_word", "group__enter__function__api.html#ga791f5fee4333ce1032607d29f09039a1", null ],
+    [ "op_editor_bol", "group__enter__function__api.html#gafd01fc014c3ba13321f7c8ade1f8c2ed", null ],
+    [ "op_editor_capitalize_word", "group__enter__function__api.html#gad8cb08416db65740c8cdf77724b43fa8", null ],
+    [ "op_editor_delete_char", "group__enter__function__api.html#ga33a2c9b6a94e9ecb636ac4b36b8853b1", null ],
+    [ "op_editor_eol", "group__enter__function__api.html#ga6c0a0b24661b440854986711519f7ac8", null ],
+    [ "op_editor_forward_char", "group__enter__function__api.html#gaaddad4438db72d905241178456f2e28b", null ],
+    [ "op_editor_forward_word", "group__enter__function__api.html#ga6c938a23072539ce36919cb2ed520e43", null ],
+    [ "op_editor_kill_eol", "group__enter__function__api.html#gacf4ce004c8ae5b505191857bb7f80159", null ],
+    [ "op_editor_kill_eow", "group__enter__function__api.html#ga69cca69699f24dab6b6d3085dd5ac41e", null ],
+    [ "op_editor_kill_line", "group__enter__function__api.html#ga03456a756da17e292d550b74fd41db28", null ],
+    [ "op_editor_kill_whole_line", "group__enter__function__api.html#gab61ca216105651ff93e0856fde66e90a", null ],
+    [ "op_editor_kill_word", "group__enter__function__api.html#ga7eaad84967c2cae12eff34b0aa1aab24", null ],
+    [ "op_editor_quote_char", "group__enter__function__api.html#ga990b35f536d6bd2c7dcf67a40e7533f6", null ],
+    [ "op_editor_transpose_chars", "group__enter__function__api.html#gac7d30b5576fb0da429f65cc546c01a95", null ],
+    [ "op_help", "group__enter__function__api.html#ga49d317c9dc52dca950db46277c7965b7", null ],
+    [ "op_redraw", "group__enter__function__api.html#gab5834175d71e5c13af056355b340c292", null ]
+];

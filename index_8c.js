@@ -1,0 +1,26 @@
+var index_8c =
+[
+    [ "sort_use_threads_warn", "index_8c.html#a8429e31e6be17ac1059ed08b832f13d4", null ],
+    [ "config_sort", "index_8c.html#a090b916274ea111af76bf86ce48f07b1", null ],
+    [ "config_use_threads", "index_8c.html#ab2fd24b89424e5849ac5176cfe134245", null ],
+    [ "index_adjust_sort_threads", "index_8c.html#a36ffc8b24dabb923a932c1b3e99c9c24", null ],
+    [ "config_reply_regex", "index_8c.html#a52f935218a7453cca540be383703ef29", null ],
+    [ "index_altern_observer", "group__observer__api.html#gac4e1312ed3c06ddefc6649a52d4e4a3e", null ],
+    [ "index_attach_observer", "group__observer__api.html#gaf28b830a05b0d5955f5a947feffb57ee", null ],
+    [ "index_color_observer", "group__observer__api.html#ga0a40f588d2ec2ed6c83cd18bc848443a", null ],
+    [ "config_check_sort", "index_8c.html#a9ec12855c22f8f361db37b50fb2d6ca1", null ],
+    [ "config_check_index", "index_8c.html#a539e17a34b66505a6eabf644194bcf90", null ],
+    [ "index_config_observer", "group__observer__api.html#ga17c3fffee9eb8ce99524f03251d10a74", null ],
+    [ "index_global_observer", "group__observer__api.html#gabb377b10c844bff4d9e58dc9a263d230", null ],
+    [ "index_index_observer", "group__observer__api.html#ga23f0ee4166ac9193386a3be2da0ab011", null ],
+    [ "index_menu_observer", "group__observer__api.html#ga2699fb39ea255b8c7b7ff43d2d460478", null ],
+    [ "index_score_observer", "group__observer__api.html#ga6e6c8b21682ed52ad1e9d8a4fc3859e1", null ],
+    [ "index_subjrx_observer", "group__observer__api.html#gae47f21781105d8627d091e4caf1a0d7d", null ],
+    [ "index_window_observer", "group__observer__api.html#gaff90e0bb8540ce8685f191b319000148", null ],
+    [ "index_recalc", "group__window__recalc.html#ga21327fe06863fb4547dae55df7b69eba", null ],
+    [ "index_repaint", "group__window__repaint.html#ga3a77e69451f3977b5f554d8d3aa08c0e", null ],
+    [ "index_window_new", "index_8c.html#a9eca6a0294598fb4f758bda818cb37cc", null ],
+    [ "get_current_mailbox_view", "index_8c.html#a5915d8b932eb86633f1d7d65a8c83289", null ],
+    [ "get_current_mailbox", "index_8c.html#a798c826c6ad972b975c8c51070008f99", null ],
+    [ "get_current_menu", "index_8c.html#a7e00402870b9fc83f95345e707f43d92", null ]
+];

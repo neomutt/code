@@ -1,0 +1,25 @@
+var crypt_8c =
+[
+    [ "crypt_current_time", "crypt_8c.html#ac85f3f9345f53423bce29d478a6d7aaa", null ],
+    [ "crypt_forget_passphrase", "crypt_8c.html#a8a09719065d14c27701c998b48883ac4", null ],
+    [ "crypt_valid_passphrase", "crypt_8c.html#a4ee7f1419a7e39b0e9f1f9d550f4de43", null ],
+    [ "mutt_protect", "crypt_8c.html#a896502d4448fefadaf8786a4f2d5556e", null ],
+    [ "mutt_is_multipart_signed", "crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37", null ],
+    [ "mutt_is_multipart_encrypted", "crypt_8c.html#a832e4b9f5a0e463876a3d8cfe852f12d", null ],
+    [ "mutt_is_valid_multipart_pgp_encrypted", "crypt_8c.html#a51806f872069460bb7f4fa16d1d92710", null ],
+    [ "mutt_is_malformed_multipart_pgp_encrypted", "crypt_8c.html#a9edb0262eaed7c522977a75b76c15770", null ],
+    [ "mutt_is_application_pgp", "crypt_8c.html#ad5ae8b8d4fea0b6aa61dc38312e99d15", null ],
+    [ "mutt_is_application_smime", "crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e", null ],
+    [ "crypt_query", "crypt_8c.html#af4ab2e337a2477fba687b1f710aa7a61", null ],
+    [ "crypt_write_signed", "crypt_8c.html#ab3dde2a67c95a70df3d498215427863b", null ],
+    [ "crypt_convert_to_7bit", "crypt_8c.html#ac8f7e9a0aff78e25866f228aca6862bd", null ],
+    [ "crypt_extract_keys_from_messages", "crypt_8c.html#a776fef61b47569d4c698411d5e733a0f", null ],
+    [ "crypt_get_keys", "crypt_8c.html#abb04ccb83d144391034d86704c52b987", null ],
+    [ "crypt_opportunistic_encrypt", "crypt_8c.html#a2afe38b474061773d69624018621ff1e", null ],
+    [ "crypt_fetch_signatures", "crypt_8c.html#a125731bc0d4f94974c4ccba4a6146c23", null ],
+    [ "mutt_should_hide_protected_subject", "crypt_8c.html#a52c65477f5b80ad3dc8028663653771d", null ],
+    [ "mutt_protected_headers_handler", "group__handler__api.html#ga7ccf06ce10b9aed658fcc6c7a40c64b8", null ],
+    [ "mutt_signed_handler", "group__handler__api.html#gad8f7563b8c9aba96de145d0e17e58437", null ],
+    [ "crypt_get_fingerprint_or_id", "crypt_8c.html#a94562053d94ca97e0c694987beda0fab", null ],
+    [ "crypt_is_numerical_keyid", "crypt_8c.html#a3230991ab72820135b5ba8fe94a5f43d", null ]
+];

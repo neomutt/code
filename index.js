@@ -1,0 +1,47 @@
+var index =
+[
+    [ "Alternate address handling", "neo_alternates.html", [
+      [ "Libraries", "index.html#autotoc_md84", null ],
+      [ "Miscellaneous files", "index.html#autotoc_md85", null ],
+      [ "Building these Docs", "index.html#autotoc_md86", null ],
+      [ "Installing the Docs", "index.html#autotoc_md87", [
+        [ "Data", "neo_alternates.html#autotoc_md656", null ],
+        [ "Functions", "neo_alternates.html#autotoc_md657", null ]
+      ] ]
+    ] ],
+    [ "Functions to parse commands in a config file", "neo_commands.html", null ],
+    [ "Duplicate the structure of an entire email", "neo_copy.html", null ],
+    [ "Prepare an email to be edited", "neo_editmsg.html", null ],
+    [ "Rich text handler", "neo_enriched.html", null ],
+    [ "Manage where the email is piped to external commands", "neo_external.html", null ],
+    [ "Manipulate the flags in an email header", "neo_flags.html", null ],
+    [ "Global variables", "neo_globals.html", null ],
+    [ "Decide how to display email content", "neo_handler.html", null ],
+    [ "Generate the help-page and GUI display it", "neo_help.html", null ],
+    [ "Parse and execute user-defined hooks", "neo_hook.html", null ],
+    [ "RFC1524 Mailcap routines", "neo_mailcap.html", null ],
+    [ "Handle mailing lists", "neo_maillist.html", null ],
+    [ "Command line processing", "neo_main.html", null ],
+    [ "Monitor files for changes", "neo_monitor.html", null ],
+    [ "Some miscellaneous functions", "neo_muttlib.html", null ],
+    [ "Representation of the body of an email", "neo_mutt_body.html", null ],
+    [ "Definitions of config variables", "neo_mutt_config.html", null ],
+    [ "Manipulate an email's header", "neo_mutt_header.html", null ],
+    [ "NeoMutt Logging", "neo_mutt_logging.html", null ],
+    [ "Integrated Lua scripting", "neo_mutt_lua.html", null ],
+    [ "Mailbox helper functions", "neo_mutt_mailbox.html", null ],
+    [ "Signal handling", "neo_mutt_signal.html", null ],
+    [ "NeoMutt connections", "neo_mutt_socket.html", null ],
+    [ "Create/manipulate threading in emails", "neo_mutt_thread.html", null ],
+    [ "View of a Mailbox", "neo_mview.html", null ],
+    [ "Mailbox multiplexor", "neo_mx.html", null ],
+    [ "Send/reply with an attachment", "neo_recvcmd.html", null ],
+    [ "RFC3676 Format Flowed routines", "neo_rfc3676.html", null ],
+    [ "Routines for adding user scores to emails", "neo_score.html", null ],
+    [ "Subject Regex handling", "neo_subjrx.html", null ],
+    [ "Execute external programs", "neo_system.html", null ],
+    [ "For systems lacking timegm()", "neo_timegm.html", null ],
+    [ "Display Usage Information for NeoMutt", "neo_usage.html", null ],
+    [ "Display version and copyright about NeoMutt", "neo_version.html", null ],
+    [ "For systems lacking wcscasecmp()", "neo_wcscasecmp.html", null ]
+];

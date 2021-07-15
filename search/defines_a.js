@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['key_5fis_5freturn_0',['key_is_return',['../mutt__curses_8h.html#a194d6fe3e69d98113371d791c4702bb9',1,'mutt_curses.h']]],
+  ['keyflag_5fabilities_1',['KEYFLAG_ABILITIES',['../ncrypt_2lib_8h.html#a71ddb5e69f239d16bdf6a6cc266072e4',1,'lib.h']]],
+  ['keyflag_5fcanencrypt_2',['KEYFLAG_CANENCRYPT',['../ncrypt_2lib_8h.html#a7254adf21a76d4ceea08bd931df4310f',1,'lib.h']]],
+  ['keyflag_5fcansign_3',['KEYFLAG_CANSIGN',['../ncrypt_2lib_8h.html#aee8e2da44282ca27f6a786cef781334f',1,'lib.h']]],
+  ['keyflag_5fcantuse_4',['KEYFLAG_CANTUSE',['../ncrypt_2lib_8h.html#a74b325469393092ed6d402f1ba78d7ba',1,'lib.h']]],
+  ['keyflag_5fcritical_5',['KEYFLAG_CRITICAL',['../ncrypt_2lib_8h.html#a8ffaa1a95f918db325d8d770f76a7f79',1,'lib.h']]],
+  ['keyflag_5fdisabled_6',['KEYFLAG_DISABLED',['../ncrypt_2lib_8h.html#a989f3449b764c6a8f5f5e0481569884a',1,'lib.h']]],
+  ['keyflag_5fexpired_7',['KEYFLAG_EXPIRED',['../ncrypt_2lib_8h.html#a20472f13517d60d40aa75287afc81c5d',1,'lib.h']]],
+  ['keyflag_5fisx509_8',['KEYFLAG_ISX509',['../ncrypt_2lib_8h.html#a52372a26134009ebc0f946abc8a6075c',1,'lib.h']]],
+  ['keyflag_5fno_5fflags_9',['KEYFLAG_NO_FLAGS',['../ncrypt_2lib_8h.html#a827146354c736ec416508944692e52b2',1,'lib.h']]],
+  ['keyflag_5fprefer_5fencryption_10',['KEYFLAG_PREFER_ENCRYPTION',['../ncrypt_2lib_8h.html#ae4067c9bae1c276c505b42265b70529e',1,'lib.h']]],
+  ['keyflag_5fprefer_5fsigning_11',['KEYFLAG_PREFER_SIGNING',['../ncrypt_2lib_8h.html#a88a54f7be16fc36441fafe14ee14ac0b',1,'lib.h']]],
+  ['keyflag_5frestrictions_12',['KEYFLAG_RESTRICTIONS',['../ncrypt_2lib_8h.html#a5b5753c8babedca24c31e8d2dbad8130',1,'lib.h']]],
+  ['keyflag_5frevoked_13',['KEYFLAG_REVOKED',['../ncrypt_2lib_8h.html#acb95b48318487d9eb8f9709e933d749e',1,'lib.h']]],
+  ['keyflag_5fsecret_14',['KEYFLAG_SECRET',['../ncrypt_2lib_8h.html#aacc955f91dd3fdc8b82246c140f023fa',1,'lib.h']]],
+  ['keyflag_5fsubkey_15',['KEYFLAG_SUBKEY',['../ncrypt_2lib_8h.html#a73a1ead56127b7fac407296e153c0967',1,'lib.h']]],
+  ['kilo_16',['KILO',['../pattern_2message_8c.html#a9d8f54c9e4c2990b9171d1c88119f454',1,'message.c']]]
+];

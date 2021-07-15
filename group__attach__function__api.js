@@ -1,0 +1,27 @@
+var group__attach__function__api =
+[
+    [ "op_attachment_collapse", "group__attach__function__api.html#ga23815ef71a7b1ca7a162d0a7d01cc47d", null ],
+    [ "op_attachment_delete", "group__attach__function__api.html#gaa0138c1673949fc9609d395b785da4ad", null ],
+    [ "op_attachment_edit_type", "group__attach__function__api.html#ga347d9032f5c5ff64afed80eed64d184d", null ],
+    [ "op_attachment_pipe", "group__attach__function__api.html#ga6e6340f041f9b8f3b8fabe4378efc150", null ],
+    [ "op_attachment_print", "group__attach__function__api.html#ga0c8dbc8cd402b8d3d3b805ec7bf5d1d0", null ],
+    [ "op_attachment_save", "group__attach__function__api.html#gac02fb83b7065b2fc0e80883da551990c", null ],
+    [ "op_attachment_undelete", "group__attach__function__api.html#ga845db467b5d2a19ae2b728bd58fadefd", null ],
+    [ "op_attachment_view", "group__attach__function__api.html#ga36c5596ecbc4e5f96633e8ff9bc21f08", null ],
+    [ "op_attachment_view_mailcap", "group__attach__function__api.html#ga6999deba4a98aaf54548f5f009e9803c", null ],
+    [ "op_attachment_view_pager", "group__attach__function__api.html#ga77269772b0cae6c020d9e8770d914b1e", null ],
+    [ "op_attachment_view_text", "group__attach__function__api.html#gacb9ebb675f2e74dee7af215cc10c8eb8", null ],
+    [ "op_bounce_message", "group__attach__function__api.html#ga279ca1d28e523570360eac6d80b6770d", null ],
+    [ "op_check_traditional", "group__attach__function__api.html#gadb42c7ee2457ffa4d950adfa11564987", null ],
+    [ "op_compose_to_sender", "group__attach__function__api.html#ga6b48db23d9a462f60290966051754308", null ],
+    [ "op_exit", "group__attach__function__api.html#ga4d9fbdc3f0f8c4855f678d150901934b", null ],
+    [ "op_extract_keys", "group__attach__function__api.html#ga34ff4ff5b70bdd72668b49c65e7ea760", null ],
+    [ "op_forget_passphrase", "group__attach__function__api.html#ga7a3e29cce055b9e4d414321eb1c724db", null ],
+    [ "op_forward_message", "group__attach__function__api.html#ga231e0bd8e42a2c06658bef71e111aca5", null ],
+    [ "op_list_subscribe", "group__attach__function__api.html#ga855a6f84bd7f6d641637af1b403827bc", null ],
+    [ "op_list_unsubscribe", "group__attach__function__api.html#gacbcdd09ba6a821b508d542d462e4f9e5", null ],
+    [ "op_reply", "group__attach__function__api.html#ga3641bf6cfbc15627d66191ff4410c190", null ],
+    [ "op_resend", "group__attach__function__api.html#gafc7dde70582b030a5b031781da2ec4cc", null ],
+    [ "op_followup", "group__attach__function__api.html#ga1f2fc4ee7da10e2016a516b1cd13f874", null ],
+    [ "op_forward_to_group", "group__attach__function__api.html#ga5d777925ef65e2aa1e9bf3cf7dbc6c6e", null ]
+];

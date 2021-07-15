@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['saslsockdata_0',['SaslSockData',['../structSaslSockData.html',1,'']]],
+  ['sbarprivatedata_1',['SBarPrivateData',['../structSBarPrivateData.html',1,'']]],
+  ['sbentry_2',['SbEntry',['../structSbEntry.html',1,'']]],
+  ['score_3',['Score',['../structScore.html',1,'']]],
+  ['searchstate_4',['SearchState',['../structSearchState.html',1,'']]],
+  ['seqsetiterator_5',['SeqsetIterator',['../structSeqsetIterator.html',1,'']]],
+  ['sidebardata_6',['SidebarData',['../structSidebarData.html',1,'']]],
+  ['sidebarfunction_7',['SidebarFunction',['../structSidebarFunction.html',1,'']]],
+  ['sidebarwindowdata_8',['SidebarWindowData',['../structSidebarWindowData.html',1,'']]],
+  ['simpledialogwindows_9',['SimpleDialogWindows',['../structSimpleDialogWindows.html',1,'']]],
+  ['slist_10',['Slist',['../structSlist.html',1,'']]],
+  ['smimecommandcontext_11',['SmimeCommandContext',['../structSmimeCommandContext.html',1,'']]],
+  ['smimedata_12',['SmimeData',['../structSmimeData.html',1,'']]],
+  ['smimefunction_13',['SmimeFunction',['../structSmimeFunction.html',1,'']]],
+  ['smimekey_14',['SmimeKey',['../structSmimeKey.html',1,'']]],
+  ['smtpaccountdata_15',['SmtpAccountData',['../structSmtpAccountData.html',1,'']]],
+  ['smtpauth_16',['SmtpAuth',['../structSmtpAuth.html',1,'']]],
+  ['state_17',['State',['../structState.html',1,'']]],
+  ['storeops_18',['StoreOps',['../structStoreOps.html',1,'']]],
+  ['sysexits_19',['SysExits',['../structSysExits.html',1,'']]]
+];
