@@ -89,7 +89,6 @@ var files_dup =
     [ "mutt_lua.h", "mutt__lua_8h.html", "mutt__lua_8h" ],
     [ "mutt_mailbox.c", "mutt__mailbox_8c.html", "mutt__mailbox_8c" ],
     [ "mutt_mailbox.h", "mutt__mailbox_8h.html", "mutt__mailbox_8h" ],
-    [ "mutt_options.h", "mutt__options_8h.html", "mutt__options_8h" ],
     [ "mutt_signal.c", "mutt__signal_8c.html", "mutt__signal_8c" ],
     [ "mutt_socket.c", "mutt__socket_8c.html", "mutt__socket_8c" ],
     [ "mutt_socket.h", "mutt__socket_8h.html", "mutt__socket_8h" ],

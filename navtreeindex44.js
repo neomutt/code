@@ -1,5 +1,15 @@
 var NAVTREEINDEX44 =
 {
+"structMuttThread.html#ae8aeb3656c0937883a1a0c955b12712c":[1,0,156,4],
+"structMuttThread.html#ae942fadad384d962155370650dd56890":[1,0,156,0],
+"structMuttThread.html#aecdc5e8e8fa0958dcc7fabd1de568752":[1,0,156,13],
+"structMuttThread.html#aee5a1652f34056b764d12844e15f4345":[1,0,156,10],
+"structMuttWindow.html":[1,0,157],
+"structMuttWindow.html#a0826671808d56e0b7a1b1e579654515d":[1,0,157,4],
+"structMuttWindow.html#a22e31684e6fd3b975477ff1843c50d9b":[1,0,157,13],
+"structMuttWindow.html#a3c981072a0027f9c1c96fdbee78ad05f":[1,0,157,18],
+"structMuttWindow.html#a3d852a60f45c3df06d64dc20114fa3df":[1,0,157,1],
+"structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f":[1,0,157,3],
 "structMuttWindow.html#a510c0f4f152bac0d2dd5526eadd28b85":[1,0,157,11],
 "structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc":[1,0,157,15],
 "structMuttWindow.html#a5b3418a2f98cc9588f1483c47079ce3f":[1,0,157,5],
@@ -239,15 +249,5 @@ var NAVTREEINDEX44 =
 "structPatternData.html#a6b336f66ac8cc32feaaede07906393e4":[1,0,182,3],
 "structPatternData.html#aad4ddc07c005b96965f07006442bc3ea":[1,0,182,1],
 "structPatternEntry.html":[1,0,183],
-"structPatternEntry.html#a1832bd0a97373b41a1a00a8f854224d3":[1,0,183,3],
-"structPatternEntry.html#a6f53011b5ccf9fe3ac294b2dc48a862c":[1,0,183,1],
-"structPatternEntry.html#a94a7a58f4618f28f6d32e47236d7a039":[1,0,183,0],
-"structPatternEntry.html#ab1260f8baedeff5ce0a8539d47143a52":[1,0,183,2],
-"structPatternFlags.html":[1,0,184],
-"structPatternFlags.html#a16103e8052a6ec92c5d7eabe87d3f3aa":[1,0,184,3],
-"structPatternFlags.html#a265c8e5d9d700896e688c9a19072c0b5":[1,0,184,0],
-"structPatternFlags.html#a59bdf829b129533bfd13702ef1020430":[1,0,184,4],
-"structPatternFlags.html#a758c5f34fb4c43120b7f5d3329da650a":[1,0,184,2],
-"structPatternFlags.html#a7c66a2e014cd7a8127695cefd740a3e5":[1,0,184,1],
-"structPatternFunction.html":[1,0,185]
+"structPatternEntry.html#a1832bd0a97373b41a1a00a8f854224d3":[1,0,183,3]
 };

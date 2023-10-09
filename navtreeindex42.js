@@ -1,5 +1,15 @@
 var NAVTREEINDEX42 =
 {
+"structEventEmail.html#a986bd9003cd8f876f7703e66c2023808":[1,0,78,1],
+"structEventHeader.html":[1,0,79],
+"structEventHeader.html#a403d7f2e474b30ca41a5c7cad319e8fd":[1,0,79,0],
+"structEventMailbox.html":[1,0,80],
+"structEventMailbox.html#aff5a546b3b43e7e68059645ec8230081":[1,0,80,0],
+"structEventMview.html":[1,0,81],
+"structEventMview.html#af8b9ad6ac52247a18498f601553b0b40":[1,0,81,0],
+"structEventWindow.html":[1,0,82],
+"structEventWindow.html#a545b1dac76875e0272f9f6cb741e31a1":[1,0,82,0],
+"structEventWindow.html#aea98dd74fef5d4f43d41ec6223a4a37d":[1,0,82,1],
 "structExtkey.html":[1,0,83],
 "structExtkey.html#a263d584b5b4ebc2942c733e6abf40a58":[1,0,83,1],
 "structExtkey.html#ae1bef9081fabd890c8bbda519b1d0f54":[1,0,83,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX42 =
 "structIndexSharedData.html#aa7abab2dad25953b83db01a0b9bc07f5":[1,0,120,8],
 "structIndexSharedData.html#aacdff43a63008930725106090504dee4":[1,0,120,0],
 "structIndexSharedData.html#ab30b071560cc7ec97596ec48b8820c43":[1,0,120,2],
-"structIndexSharedData.html#ad66e36d8ff5c18e9fd04c99838c44e80":[1,0,120,7],
-"structIndexSharedData.html#ae48d4a66308d0dd8461a3113e2ce0ed0":[1,0,120,6],
-"structInheritance.html":[1,0,121],
-"structInheritance.html#a1d073526691413092465c05038166f94":[1,0,121,0],
-"structInheritance.html#ad00f6ce81cd9ffe398dd5884f8c1a8ed":[1,0,121,1],
-"structInheritance.html#aff19023388f8862d18caeb727fd30c81":[1,0,121,2],
-"structKeyEvent.html":[1,0,122],
-"structKeyEvent.html#a80bbf4c02749c68c88723c13e73dc94d":[1,0,122,1],
-"structKeyEvent.html#acece69c3519a730c7105cdc96af1e105":[1,0,122,0],
-"structKeymap.html":[1,0,123],
-"structKeymap.html#a6e9753f45d5dbb60ba4f9328df9a6bc4":[1,0,123,6]
+"structIndexSharedData.html#ad66e36d8ff5c18e9fd04c99838c44e80":[1,0,120,7]
 };

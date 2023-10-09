@@ -1,5 +1,15 @@
 var NAVTREEINDEX40 =
 {
+"structAttachPtr.html#a73acc0edc4e77cd9c64ea0064dcf49a3":[1,0,12,4],
+"structAttachPtr.html#a776ea6f490cedf7dc47accba055d964c":[1,0,12,1],
+"structAttachPtr.html#a85722c8044f044e59047c3c8b12ef279":[1,0,12,6],
+"structAttachPtr.html#aaa628364b55eb6e0feff52b9916b4f94":[1,0,12,7],
+"structAttachPtr.html#acf17bc64e657348fe6b5fdcdf69880f4":[1,0,12,2],
+"structAttrColor.html":[1,0,13],
+"structAttrColor.html#a800d75b8ce01612fe4461b08118d5568":[1,0,13,0],
+"structAttrColor.html#aab1bf6379c9a9beaea262f46ce492ede":[1,0,13,3],
+"structAttrColor.html#ad6b237f9a9be9fc2b8b513f51ca5b2b4":[1,0,13,2],
+"structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9":[1,0,13,1],
 "structAutocryptAccount.html":[1,0,14],
 "structAutocryptAccount.html#a1491a84008983c09066e20941cae2171":[1,0,14,0],
 "structAutocryptAccount.html#a99412fab072ae203bca2fcbcaca18495":[1,0,14,2],
@@ -239,15 +249,5 @@ var NAVTREEINDEX40 =
 "structConnection.html#a7a40be1f125477cf01ced6817be10bbc":[1,0,49,11],
 "structConnection.html#aa3ca1bfc7dba70f1eaf391eee9701330":[1,0,49,5],
 "structConnection.html#ac3c39549b6611c8eaed2a25573b5c432":[1,0,49,0],
-"structConnection.html#ad015a1227002b6ae42d5ad0d3add33d2":[1,0,49,7],
-"structConnection.html#af805fad417c8fa7c5079ef741d8233e2":[1,0,49,4],
-"structConnection.html#afdd852b383b3926639ec9132c048590a":[1,0,49,8],
-"structContent.html":[1,0,50],
-"structContent.html#a32779c9ea1b511b6db6ff9434b06d832":[1,0,50,3],
-"structContent.html#a462631638a7f0de6f461df75fcd43b63":[1,0,50,0],
-"structContent.html#a5263d3fee6b86cfc454d73347fb4d337":[1,0,50,10],
-"structContent.html#a63dbba7efe98fef1797b0643b346be32":[1,0,50,6],
-"structContent.html#a6896ff99c84f66ffd051fb55c3dfcddf":[1,0,50,4],
-"structContent.html#a9b7fb2b72f01b83ee4e9b91213752120":[1,0,50,7],
-"structContent.html#ab0f45d80059bca9d8e33663866f641d0":[1,0,50,8]
+"structConnection.html#ad015a1227002b6ae42d5ad0d3add33d2":[1,0,49,7]
 };

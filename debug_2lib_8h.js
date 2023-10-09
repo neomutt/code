@@ -17,6 +17,7 @@ var debug_2lib_8h =
     [ "dump_graphviz_body", "debug_2lib_8h.html#a201965152e4ed08a1be21469f5753964", null ],
     [ "dump_graphviz_email", "debug_2lib_8h.html#aec7f857f0480db95db00ee8ec4256706", null ],
     [ "dump_keybindings", "debug_2lib_8h.html#abb476b24e8bea9ec4108b4f6c28f51da", null ],
+    [ "log_disp_debug", "group__logging__api.html#ga8b28ce95a9e7ec9d8b500e49eb97d0b2", null ],
     [ "name_content_disposition", "debug_2lib_8h.html#aa79e3349baca3ec7de77efe29b506020", null ],
     [ "name_content_encoding", "debug_2lib_8h.html#a213ff2ae2b2fec1b3dff92ef7a750a43", null ],
     [ "name_content_type", "debug_2lib_8h.html#a935857b19c48e5f691ed62d5adc9eacb", null ],
@@ -31,5 +32,8 @@ var debug_2lib_8h =
     [ "name_window_type", "debug_2lib_8h.html#a799a208febb17ef2dec92d4d114e5b44", null ],
     [ "debug_all_observer", "debug_2lib_8h.html#aa8b31bf9d0963d2c99a0c8f6d18664ad", null ],
     [ "dump_pager", "debug_2lib_8h.html#a75e96888d4dd459544387e360f631d21", null ],
-    [ "debug_win_dump", "debug_2lib_8h.html#a3e949b6cf149926e285fbfdad1e94eb0", null ]
+    [ "debug_win_dump", "debug_2lib_8h.html#a3e949b6cf149926e285fbfdad1e94eb0", null ],
+    [ "DebugLogColor", "debug_2lib_8h.html#a7af1f4419d3fa89569a0d87c63ec126b", null ],
+    [ "DebugLogLevel", "debug_2lib_8h.html#a610c94eb24e3f1da3f7456394a8fdaa5", null ],
+    [ "DebugLogTimestamp", "debug_2lib_8h.html#a8d6c0ee2a203f0f7fadbc81ea3d32696", null ]
 ];

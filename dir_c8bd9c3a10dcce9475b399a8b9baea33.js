@@ -25,7 +25,7 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "lib.h", "mutt_2lib_8h.html", null ],
     [ "list.c", "list_8c.html", "list_8c" ],
     [ "list.h", "list_8h.html", "list_8h" ],
-    [ "logging.c", "logging_8c.html", "logging_8c" ],
+    [ "logging.c", "mutt_2logging_8c.html", "mutt_2logging_8c" ],
     [ "logging2.h", "logging2_8h.html", "logging2_8h" ],
     [ "mapping.c", "mapping_8c.html", "mapping_8c" ],
     [ "mapping.h", "mapping_8h.html", "mapping_8h" ],

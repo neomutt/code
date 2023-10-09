@@ -1,5 +1,17 @@
 var NAVTREEINDEX9 =
 {
+"editor_2window_8c.html#a84ec6c7d17a7bfe2b334d144a554bf54":[2,0,16,8,0],
+"editor_2window_8c.html#ae97582af5919a128251070d8d67543dc":[2,0,16,8,1],
+"editor_2window_8c_source.html":[2,0,16,8],
+"editor_enter.html":[20,0],
+"editor_functions.html":[20,1],
+"editor_state.html":[20,2],
+"editor_window.html":[20,3],
+"email_2body_8c.html":[2,0,17,0],
+"email_2body_8c.html#a129af1c316fcbc26b55fb48957bab2cb":[2,0,17,0,1],
+"email_2body_8c.html#a37b346253e3b97aa64bb38ffc8d1ea0c":[2,0,17,0,0],
+"email_2body_8c.html#a4a63ed39ada6cca40f6890ef06950059":[2,0,17,0,3],
+"email_2body_8c.html#af8bf716dc11fb780a1d2492fe722e1ae":[2,0,17,0,2],
 "email_2body_8c_source.html":[2,0,17,0],
 "email_2body_8h.html":[2,0,17,1],
 "email_2body_8h.html#a129af1c316fcbc26b55fb48957bab2cb":[2,0,17,1,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX9 =
 "envelope_2window_8c.html#a3a2628773125cc354856c45fbffbb224":[2,0,18,6,8],
 "envelope_2window_8c.html#a3c9bc12d68fded497e05152905417fa1":[2,0,18,6,12],
 "envelope_2window_8c.html#a577b891ac761db94d93ff7d31e9670bb":[2,0,18,6,26],
-"envelope_2window_8c.html#a5d9bfff8fe9b32f6ffa8df2576ef0e88":[2,0,18,6,1],
-"envelope_2window_8c.html#a8a56f6b232fe25958b9f5cca61bc599e":[2,0,18,6,14],
-"envelope_2window_8c.html#a99e5972d260ada77dbf5e88459809306":[2,0,18,6,4],
-"envelope_2window_8c.html#aa48c162ddd86aad8444f441051033e8f":[2,0,18,6,23],
-"envelope_2window_8c.html#aa57902c74e4b99785680a0bc4e263029":[2,0,18,6,25],
-"envelope_2window_8c.html#ac18e99b6955d716c50b08f68e2b42890":[2,0,18,6,7],
-"envelope_2window_8c.html#ac4f2268c759c82af60b1be3013ca29a1":[2,0,18,6,10],
-"envelope_2window_8c.html#ad733535fb06b49e9cb6e55e865d6ca08":[2,0,18,6,6],
-"envelope_2window_8c.html#ad8a877791bfe53ca05c98d5fb6446618":[2,0,18,6,5],
-"envelope_2window_8c.html#ae0a35f3369b4cd706f92571c89a99b34":[2,0,18,6,0],
-"envelope_2window_8c.html#aef0c67b5c00c17dd35738a4fdc6b65a3":[2,0,18,6,2],
-"envelope_2window_8c.html#aef72fa3d71ea642fa8850c0f5df75a48":[2,0,18,6,11],
-"envelope_2window_8c.html#afc34fec9cb024fbc4c2e4d1b72e90ac5":[2,0,18,6,3]
+"envelope_2window_8c.html#a5d9bfff8fe9b32f6ffa8df2576ef0e88":[2,0,18,6,1]
 };

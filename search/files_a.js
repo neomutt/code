@@ -5,7 +5,7 @@ var searchData=
   ['list_2ec_2',['list.c',['../list_8c.html',1,'']]],
   ['list_2eh_3',['list.h',['../list_8h.html',1,'']]],
   ['lmdb_2ec_4',['lmdb.c',['../lmdb_8c.html',1,'']]],
-  ['logging_2ec_5',['logging.c',['../logging_8c.html',1,'']]],
+  ['logging_2ec_5',['logging.c',['../debug_2logging_8c.html',1,'(Global Namespace)'],['../mutt_2logging_8c.html',1,'(Global Namespace)']]],
   ['logging2_2eh_6',['logging2.h',['../logging2_8h.html',1,'']]],
   ['long_2ec_7',['long.c',['../long_8c.html',1,'']]],
   ['lz4_2ec_8',['lz4.c',['../lz4_8c.html',1,'']]]

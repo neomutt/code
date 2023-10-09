@@ -10,7 +10,7 @@ var searchData=
   ['thread_5fis_5fold_7',['thread_is_old',['../hdrline_8c.html#aa520340bd3c4e1253ac4603229f2b026',1,'hdrline.c']]],
   ['time_5fneeds_5fupdate_8',['time_needs_update',['../progress_2window_8c.html#ae1b01be868071529a138cc2537bbe956',1,'window.c']]],
   ['timegm_9',['timegm',['../timegm_8c.html#a4fd5240e99b2a9bf19bc0fe39f6ffc07',1,'timegm.c']]],
-  ['timestamp_10',['timestamp',['../logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01',1,'logging.c']]],
+  ['timestamp_10',['timestamp',['../mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01',1,'logging.c']]],
   ['tls_5fcheck_5fcertificate_11',['tls_check_certificate',['../gnutls_8c.html#a0b8141f6dc5a59f2080067f026b20860',1,'gnutls.c']]],
   ['tls_5fcheck_5fone_5fcertificate_12',['tls_check_one_certificate',['../gnutls_8c.html#ad2898199aadc914b669fbc3bab018ee2',1,'gnutls.c']]],
   ['tls_5fcheck_5fpreauth_13',['tls_check_preauth',['../gnutls_8c.html#a05268b51fa6e96dd8ac0e40630b2b316',1,'gnutls.c']]],

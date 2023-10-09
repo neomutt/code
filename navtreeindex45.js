@@ -1,5 +1,15 @@
 var NAVTREEINDEX45 =
 {
+"structPatternEntry.html#a6f53011b5ccf9fe3ac294b2dc48a862c":[1,0,183,1],
+"structPatternEntry.html#a94a7a58f4618f28f6d32e47236d7a039":[1,0,183,0],
+"structPatternEntry.html#ab1260f8baedeff5ce0a8539d47143a52":[1,0,183,2],
+"structPatternFlags.html":[1,0,184],
+"structPatternFlags.html#a16103e8052a6ec92c5d7eabe87d3f3aa":[1,0,184,3],
+"structPatternFlags.html#a265c8e5d9d700896e688c9a19072c0b5":[1,0,184,0],
+"structPatternFlags.html#a59bdf829b129533bfd13702ef1020430":[1,0,184,4],
+"structPatternFlags.html#a758c5f34fb4c43120b7f5d3329da650a":[1,0,184,2],
+"structPatternFlags.html#a7c66a2e014cd7a8127695cefd740a3e5":[1,0,184,1],
+"structPatternFunction.html":[1,0,185],
 "structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468":[1,0,185,0],
 "structPatternFunction.html#aaf5109d682a4213fb7da4434337112dd":[1,0,185,1],
 "structPgpCache.html":[1,0,187],
@@ -239,15 +249,5 @@ var NAVTREEINDEX45 =
 "structSmimeKey.html#ab9df91118c710284278ceaeb98769f7c":[1,0,225,2],
 "structSmimeKey.html#abc36d7072ad69579e39e26326eed39e0":[1,0,225,4],
 "structSmtpAccountData.html":[1,0,226],
-"structSmtpAccountData.html#a350fb7c13d72afddd3be614e4b3da1e9":[1,0,226,4],
-"structSmtpAccountData.html#a3e577fea311310820b352ecb56061c4d":[1,0,226,3],
-"structSmtpAccountData.html#a7f61c2d6ce07d3a64eb5b1ca02b5b11a":[1,0,226,2],
-"structSmtpAccountData.html#aa83214af6dbc93ce7c7ba0487b26c355":[1,0,226,0],
-"structSmtpAccountData.html#adea3a5a7703b7a9524dc445acbb3321a":[1,0,226,1],
-"structSmtpAuth.html":[1,0,227],
-"structSmtpAuth.html#a007f784ef797d89353cfc7be138231bd":[1,0,227,0],
-"structSmtpAuth.html#afcbd7814f75226e276e3c9fc43cf932c":[1,0,227,1],
-"structState.html":[1,0,228],
-"structState.html#a2c506e7d8513e59e6162cdc5d6f9f320":[1,0,228,4],
-"structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3":[1,0,228,3]
+"structSmtpAccountData.html#a350fb7c13d72afddd3be614e4b3da1e9":[1,0,226,4]
 };

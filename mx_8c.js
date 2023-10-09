@@ -13,6 +13,7 @@ var mx_8c =
     [ "mx_mbox_sync", "mx_8c.html#ae31027d1219060a9dc2b2e6b82c1bf6c", null ],
     [ "mx_msg_open_new", "mx_8c.html#ad7adbbda58c642107eadf33b1fbf0c13", null ],
     [ "mx_mbox_check", "mx_8c.html#ae1a77c15ee90fe85716badfd92e856ba", null ],
+    [ "mx_mbox_reset_check", "mx_8c.html#a96b021ef63f5b25f2e3da2879a568957", null ],
     [ "mx_msg_open", "mx_8c.html#a9b2902ecb2bebbd553a8ec733ca59886", null ],
     [ "mx_msg_commit", "mx_8c.html#add0e192c5f27bf6bd096ae2eb7c0b67b", null ],
     [ "mx_msg_close", "mx_8c.html#a2610a2afe8887bb874131a4ba092aa6a", null ],

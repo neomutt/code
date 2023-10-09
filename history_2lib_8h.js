@@ -1,13 +1,13 @@
 var history_2lib_8h =
 [
     [ "HistoryClass", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234", [
-      [ "HC_CMD", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aff1655e936d39511e2576e9eebd7aba3", null ],
+      [ "HC_EXT_COMMAND", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a350c302f5ffad1c98c763828089f37bd", null ],
       [ "HC_ALIAS", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a7087d625c6e65aa739171b10a68907c5", null ],
-      [ "HC_COMMAND", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a3cda685722d8561b4d28aa4fad865007", null ],
+      [ "HC_NEO_COMMAND", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aa533a2f0a847400c19e107e525889a5a", null ],
       [ "HC_FILE", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a313ffe25b1e9a86bb1f9afb44e15925c", null ],
       [ "HC_PATTERN", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b", null ],
       [ "HC_OTHER", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a", null ],
-      [ "HC_MBOX", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a268178c32488395d8afeac98117a88ee", null ],
+      [ "HC_MAILBOX", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a3747a064ce42a7f4357acb012d2455ba", null ],
       [ "HC_MAX", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234ac8174c35ca7e43a17e8f9b3e80cbb737", null ]
     ] ],
     [ "mutt_hist_add", "history_2lib_8h.html#a541c9c8be36706c87b62c896a897f680", null ],

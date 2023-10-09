@@ -1,11 +1,11 @@
 var searchData=
 [
   ['hc_5falias_0',['HC_ALIAS',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a7087d625c6e65aa739171b10a68907c5',1,'lib.h']]],
-  ['hc_5fcmd_1',['HC_CMD',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aff1655e936d39511e2576e9eebd7aba3',1,'lib.h']]],
-  ['hc_5fcommand_2',['HC_COMMAND',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a3cda685722d8561b4d28aa4fad865007',1,'lib.h']]],
-  ['hc_5ffile_3',['HC_FILE',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a313ffe25b1e9a86bb1f9afb44e15925c',1,'lib.h']]],
+  ['hc_5fext_5fcommand_1',['HC_EXT_COMMAND',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a350c302f5ffad1c98c763828089f37bd',1,'lib.h']]],
+  ['hc_5ffile_2',['HC_FILE',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a313ffe25b1e9a86bb1f9afb44e15925c',1,'lib.h']]],
+  ['hc_5fmailbox_3',['HC_MAILBOX',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a3747a064ce42a7f4357acb012d2455ba',1,'lib.h']]],
   ['hc_5fmax_4',['HC_MAX',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234ac8174c35ca7e43a17e8f9b3e80cbb737',1,'lib.h']]],
-  ['hc_5fmbox_5',['HC_MBOX',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a268178c32488395d8afeac98117a88ee',1,'lib.h']]],
+  ['hc_5fneo_5fcommand_5',['HC_NEO_COMMAND',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aa533a2f0a847400c19e107e525889a5a',1,'lib.h']]],
   ['hc_5fother_6',['HC_OTHER',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a',1,'lib.h']]],
   ['hc_5fpattern_7',['HC_PATTERN',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b',1,'lib.h']]],
   ['hdr_5fattach_5ftitle_8',['HDR_ATTACH_TITLE',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa43f7afec0cc5209a2b68bea401ec20f2',1,'private.h']]],
