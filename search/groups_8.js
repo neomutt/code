@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['index_20function_20api_0',['Index Function API',['../group__index__function__api.html',1,'']]],
-  ['init_28_29_1',['init()',['../group__crypto__init.html',1,'']]]
+  ['imap_20authenticaion_20api_0',['IMAP Authenticaion API',['../group__imap__authenticate.html',1,'']]],
+  ['index_20function_20api_1',['Index Function API',['../group__index__function__api.html',1,'']]],
+  ['init_28_29_2',['init()',['../group__crypto__init.html',1,'']]]
 ];

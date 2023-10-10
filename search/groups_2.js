@@ -12,6 +12,7 @@ var searchData=
   ['config_20definition_20api_9',['Config Definition API',['../group__cfg__def__api.html',1,'']]],
   ['config_20module_20api_10',['Config Module API',['../group__cfg__module__api.html',1,'']]],
   ['config_20type_20api_11',['Config Type API',['../group__cfg__type__api.html',1,'']]],
-  ['connection_20api_12',['Connection API',['../group__connection__api.html',1,'']]],
-  ['crypto_20api_13',['Crypto API',['../group__crypto__api.html',1,'']]]
+  ['connection_20account_20api_12',['Connection Account API',['../group__conn__account__get__field.html',1,'']]],
+  ['connection_20api_13',['Connection API',['../group__connection__api.html',1,'']]],
+  ['crypto_20api_14',['Crypto API',['../group__crypto__api.html',1,'']]]
 ];

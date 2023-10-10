@@ -40,6 +40,7 @@ var group__command__parse =
     [ "mutt_parse_hook", "group__command__parse.html#ga4b6e4f5a7cf7c50a1d32450735eba6f9", null ],
     [ "mutt_parse_idxfmt_hook", "group__command__parse.html#ga0d1e10e5a4673c6411b17cf8eef37a47", null ],
     [ "mutt_parse_unhook", "group__command__parse.html#ga08435414661f48483bb9739ffab9998a", null ],
+    [ "dump_bind_macro", "group__command__parse.html#gaf9686752b880e9db03c03d3c6b3124b2", null ],
     [ "mutt_parse_push", "group__command__parse.html#gaee353816c517466abb6a0fc6ab80be89", null ],
     [ "mutt_parse_bind", "group__command__parse.html#ga4a07241c2d4f2a55e4c669cd241fa07a", null ],
     [ "mutt_parse_unbind", "group__command__parse.html#ga8167d07caa2c08334e8f10405104046c", null ],

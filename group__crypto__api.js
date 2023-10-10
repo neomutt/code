@@ -22,5 +22,9 @@ var group__crypto__api =
     [ "smime_getkeys()", "group__crypto__smime__getkeys.html", "group__crypto__smime__getkeys" ],
     [ "smime_verify_sender()", "group__crypto__smime__verify__sender.html", "group__crypto__smime__verify__sender" ],
     [ "smime_build_smime_entity()", "group__crypto__smime__build__smime__entity.html", "group__crypto__smime__build__smime__entity" ],
-    [ "smime_invoke_import()", "group__crypto__smime__invoke__import.html", "group__crypto__smime__invoke__import" ]
+    [ "smime_invoke_import()", "group__crypto__smime__invoke__import.html", "group__crypto__smime__invoke__import" ],
+    [ "CryptModPgpClassic", "group__crypto__api.html#ga9938cbc74b33ff75be208a4d2d26121a", null ],
+    [ "CryptModPgpGpgme", "group__crypto__api.html#ga808d0d336f52e42a5b9da3762aff4f0c", null ],
+    [ "CryptModSmimeClassic", "group__crypto__api.html#ga499a72d2fd05f50e46774c5969964835", null ],
+    [ "CryptModSmimeGpgme", "group__crypto__api.html#ga25940e46039d9c3c99c4c95f064ef06c", null ]
 ];

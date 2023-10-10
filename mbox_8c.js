@@ -1,7 +1,7 @@
 var mbox_8c =
 [
     [ "MUpdate", "structMUpdate.html", "structMUpdate" ],
-    [ "mbox_adata_free", "mbox_8c.html#adcff03bdb66f7b5c48c4f4ff54df9cfd", null ],
+    [ "mbox_adata_free", "group__account__adata__free.html#gadcff03bdb66f7b5c48c4f4ff54df9cfd", null ],
     [ "mbox_adata_new", "mbox_8c.html#a168e7d01b553732de8aa25fed385a3dc", null ],
     [ "init_mailbox", "mbox_8c.html#a49be0897f8fb6c33c74a838b83f4ed46", null ],
     [ "mbox_adata_get", "mbox_8c.html#a2f989931e9117a9c6598b6c592f69be2", null ],

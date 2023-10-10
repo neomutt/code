@@ -29,5 +29,5 @@ var pop_2private_8h =
     [ "pop_fetch_data", "pop_2private_8h.html#abc1591da707c3c85897c8b450e661dcf", null ],
     [ "pop_reconnect", "pop_2private_8h.html#af75fadb2503181ccec226915d3e1984f", null ],
     [ "pop_logout", "pop_2private_8h.html#aeb87c461c48395e38564034b64ec2d37", null ],
-    [ "pop_get_field", "pop_2private_8h.html#a50ccf4f452e4e5a3630c44de452173a1", null ]
+    [ "pop_get_field", "group__conn__account__get__field.html#ga50ccf4f452e4e5a3630c44de452173a1", null ]
 ];

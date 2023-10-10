@@ -5,7 +5,7 @@ var util_8c =
     [ "imap_get_parent", "util_8c.html#a5c25adc3a9cda9a494d747a928b6f522", null ],
     [ "imap_get_parent_path", "util_8c.html#a78c7437c0f185ed8ab37e666b8a69ec0", null ],
     [ "imap_clean_path", "util_8c.html#a7c4dbc9f84be00789935c291832b75b2", null ],
-    [ "imap_get_field", "util_8c.html#a128456f763f6a459b48032545c062037", null ],
+    [ "imap_get_field", "group__conn__account__get__field.html#ga128456f763f6a459b48032545c062037", null ],
     [ "imap_msn_index_to_uid_seqset", "util_8c.html#ad409beef170c60f6ece722f948f452bd", null ],
     [ "imap_hcache_namer", "group__hcache__namer__api.html#ga19bc8f7fbeb48402994c77c1ad0a38de", null ],
     [ "imap_hcache_open", "util_8c.html#acd75897efa210794ca144cea1e3f7ca9", null ],

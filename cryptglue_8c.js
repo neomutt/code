@@ -36,8 +36,8 @@ var cryptglue_8c =
     [ "crypt_smime_verify_one", "cryptglue_8c.html#a9975fe28c5a04835ba19163c6b55554b", null ],
     [ "crypt_smime_send_menu", "cryptglue_8c.html#a7354df32a82355b8df8c38ea1afc06cc", null ],
     [ "crypt_smime_set_sender", "cryptglue_8c.html#a9f57744c7bcac595aa1a8838f83dc369", null ],
-    [ "CryptModPgpClassic", "cryptglue_8c.html#a9938cbc74b33ff75be208a4d2d26121a", null ],
-    [ "CryptModSmimeClassic", "cryptglue_8c.html#a499a72d2fd05f50e46774c5969964835", null ],
-    [ "CryptModPgpGpgme", "cryptglue_8c.html#a808d0d336f52e42a5b9da3762aff4f0c", null ],
-    [ "CryptModSmimeGpgme", "cryptglue_8c.html#a25940e46039d9c3c99c4c95f064ef06c", null ]
+    [ "CryptModPgpClassic", "group__crypto__api.html#ga9938cbc74b33ff75be208a4d2d26121a", null ],
+    [ "CryptModSmimeClassic", "group__crypto__api.html#ga499a72d2fd05f50e46774c5969964835", null ],
+    [ "CryptModPgpGpgme", "group__crypto__api.html#ga808d0d336f52e42a5b9da3762aff4f0c", null ],
+    [ "CryptModSmimeGpgme", "group__crypto__api.html#ga25940e46039d9c3c99c4c95f064ef06c", null ]
 ];

@@ -25,7 +25,7 @@ var smtp_8c =
     [ "smtp_get_resp", "smtp_8c.html#a09fbb923917c60bbd43df1394571d1bb", null ],
     [ "smtp_rcpt_to", "smtp_8c.html#aeeb441cbabf3e137ad7b8527d93fd36b", null ],
     [ "smtp_data", "smtp_8c.html#a890ee43751b32d172dc546e366afc151", null ],
-    [ "smtp_get_field", "smtp_8c.html#aabbed2b94b1502fb0faa4d5a7435e43c", null ],
+    [ "smtp_get_field", "group__conn__account__get__field.html#gaabbed2b94b1502fb0faa4d5a7435e43c", null ],
     [ "smtp_fill_account", "smtp_8c.html#a9ced651e593132d0ab32284da93fa013", null ],
     [ "smtp_helo", "smtp_8c.html#a65e028c1aba1dae80b1b9efe867a397d", null ],
     [ "smtp_auth_oauth_xoauth2", "smtp_8c.html#a52991ba19359eafc40245973e3d54a94", null ],

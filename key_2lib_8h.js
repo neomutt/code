@@ -45,7 +45,7 @@ var key_2lib_8h =
     [ "mutt_keys_cleanup", "key_2lib_8h.html#ae61198929e0c7cdf946ca0f9f9bfcbef", null ],
     [ "mw_what_key", "group__gui__mw.html#ga24de819c1b6837b59e35cbfdd0d827cf", null ],
     [ "alloc_keys", "key_2lib_8h.html#a305950180649656287fd8b2a3e1bb66c", null ],
-    [ "dump_bind_macro", "key_2lib_8h.html#af9686752b880e9db03c03d3c6b3124b2", null ],
+    [ "dump_bind_macro", "group__command__parse.html#gaf9686752b880e9db03c03d3c6b3124b2", null ],
     [ "generic_tokenize_push_string", "key_2lib_8h.html#a8bb58ca5f8df7fc3096df6ce64eb5c62", null ],
     [ "get_op", "key_2lib_8h.html#ac9d8ac1960bfc937ff6b6636826e2934", null ],
     [ "km_bindkey", "key_2lib_8h.html#ab32d3716e27e944ccc8e04182707b8db", null ],

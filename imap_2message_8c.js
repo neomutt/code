@@ -4,7 +4,7 @@ var imap_2message_8c =
     [ "msg_cache_get", "imap_2message_8c.html#aa21081ac533434552dce761ca3071277", null ],
     [ "msg_cache_put", "imap_2message_8c.html#a2091c9a0611550919380ad2f8594f7ff", null ],
     [ "msg_cache_commit", "imap_2message_8c.html#abff6bc396da8f9f4d8eb7f55587bfe7f", null ],
-    [ "msg_cache_clean_cb", "group__bcache__list__api.html#ga2cbef6ffe1a41695a2f341a4678203ba", null ],
+    [ "imap_bcache_delete", "group__bcache__list__api.html#gafabd22963f384f9a1d0f31b7f2a7c94a", null ],
     [ "msg_parse_flags", "imap_2message_8c.html#ada2a330d52c9d0a9bf9feab71e148d7a", null ],
     [ "msg_parse_fetch", "imap_2message_8c.html#a544caf6f7e206bfbd88069d4693443b3", null ],
     [ "msg_fetch_header", "imap_2message_8c.html#a7ba4c5e23881cd48e34cddd0430d2bce", null ],
