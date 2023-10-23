@@ -1,5 +1,14 @@
 var NAVTREEINDEX16 =
 {
+"group__logging__api.html#ga377d6ae04687e3cac3da87e05bc7de5d":[48,32,1],
+"group__logging__api.html#ga3891c2b87bfc2e0f1497e3d992a54e1e":[48,32,9],
+"group__logging__api.html#ga77c827a6376e12e19a71d9c36ca106da":[48,32,6],
+"group__logging__api.html#ga8b28ce95a9e7ec9d8b500e49eb97d0b2":[48,32,5],
+"group__logging__api.html#gaa8db59bb1ae8a4901a2635a68367d477":[48,32,8],
+"group__logging__api.html#gab15f5a132f2eaa2304c2fe2c9fa9747a":[48,32,11],
+"group__logging__api.html#gac747999bbd6c8f201f9ab87d81cc967c":[48,32,10],
+"group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4":[48,32,3],
+"group__logging__api.html#gae108f891125caafa9250cf0959c40c04":[48,32,2],
 "group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da":[48,32,0],
 "group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e":[48,32,4],
 "group__mailbox__mdata__free.html":[48,14],
@@ -240,14 +249,5 @@ var NAVTREEINDEX16 =
 "group__observer__api.html#ga1611d6070ce1d34e6e689756ad435464":[48,33,87],
 "group__observer__api.html#ga1789c09d1dc926bc055dff95cd6c4099":[48,33,83],
 "group__observer__api.html#ga17c3fffee9eb8ce99524f03251d10a74":[48,33,49],
-"group__observer__api.html#ga1961eae83ad90aa601387a1f5ab497ab":[48,33,58],
-"group__observer__api.html#ga1ff70da0ef343b7d81145774f14de2fe":[48,33,65],
-"group__observer__api.html#ga20673b5388fadcf7068f8d9a408e9a8a":[48,33,59],
-"group__observer__api.html#ga22f67e0fa0d0329d994c92b90721405e":[48,33,27],
-"group__observer__api.html#ga230376c620f1455b426ee0ed169899b1":[48,33,0],
-"group__observer__api.html#ga23f0ee4166ac9193386a3be2da0ab011":[48,33,51],
-"group__observer__api.html#ga26634bc03e8ec6d950173bff96278855":[48,33,12],
-"group__observer__api.html#ga2699fb39ea255b8c7b7ff43d2d460478":[48,33,52],
-"group__observer__api.html#ga2a9a5a2068ae8c2b217cb64cd679e498":[48,33,38],
-"group__observer__api.html#ga2cfd80d7ebfde77725c79291395d3449":[48,33,32]
+"group__observer__api.html#ga1961eae83ad90aa601387a1f5ab497ab":[48,33,58]
 };

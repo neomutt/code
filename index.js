@@ -5,8 +5,8 @@ var index =
       [ "Miscellaneous files", "index.html#autotoc_md82", null ],
       [ "Building these Docs", "index.html#autotoc_md83", null ],
       [ "Installing the Docs", "index.html#autotoc_md84", [
-        [ "Data", "neo_alternates.html#autotoc_md588", null ],
-        [ "Functions", "neo_alternates.html#autotoc_md589", null ]
+        [ "Data", "neo_alternates.html#autotoc_md591", null ],
+        [ "Functions", "neo_alternates.html#autotoc_md592", null ]
       ] ]
     ] ],
     [ "Functions to parse commands in a config file", "neo_commands.html", null ],

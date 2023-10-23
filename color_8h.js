@@ -1,7 +1,6 @@
 var color_8h =
 [
     [ "COLOR_DEFAULT", "color_8h.html#a56e1aea61ee305e3648158362333b3a8", null ],
-    [ "COLOR_UNSET", "color_8h.html#a96eaea19b7c765121a85df132521c5a7", null ],
     [ "ColorId", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070d", [
       [ "MT_COLOR_NONE", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da4990a169a27221cdc41a77ed73b5c4e6", null ],
       [ "MT_COLOR_ATTACHMENT", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dacf43dda3bfedc886aafc5ef3d71cfac4", null ],
@@ -61,7 +60,6 @@ var color_8h =
     [ "mutt_colors_cleanup", "color_8h.html#aa63f63339491ef7d230a8dedfe5c89bd", null ],
     [ "mutt_color_has_pattern", "color_8h.html#a8f62b76a0baef9936162697d43edddf3", null ],
     [ "colors_cleanup", "color_8h.html#a4446c94565fccfad7ca90b914bfe3ff5", null ],
-    [ "ColorNames", "color_8h.html#a25fdf40f5b2aca2f5c006703f86d8b73", null ],
     [ "ColorFields", "color_8h.html#a4476932702aa028f1fcdc565633c03cf", null ],
     [ "ComposeColorFields", "color_8h.html#a35f1332269e545cf1ec7f30fc9424442", null ]
 ];

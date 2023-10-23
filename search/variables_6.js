@@ -8,7 +8,7 @@ var searchData=
   ['fd_5fwrite_5',['fd_write',['../structTunnelSockData.html#a4e02ed7f3f09ed0df42e3528c89b19ed',1,'TunnelSockData']]],
   ['fetch_6',['fetch',['../structStoreOps.html#a7da2b2e67405eef3626561410faf5e48',1,'StoreOps']]],
   ['ff_7',['ff',['../structFolder.html#a37163d36b029dfee673d8c86c77eb3c0',1,'Folder']]],
-  ['fg_8',['fg',['../structAnsiColor.html#a35cbbed18aab1507d75fea0be41aaa7b',1,'AnsiColor::fg()'],['../structCursesColor.html#a549aad369883d03614497946e965c11d',1,'CursesColor::fg()']]],
+  ['fg_8',['fg',['../structAnsiColor.html#a8f3b2623888e56e6199f7dfc753ed0f8',1,'AnsiColor::fg()'],['../structCursesColor.html#a186f147b17189f1e9e6d03b57cd29816',1,'CursesColor::fg()']]],
   ['file_9',['file',['../structBrowserPrivateData.html#abeda5c2b33e4275e5ed22caf3e106448',1,'BrowserPrivateData::file()'],['../structLogLine.html#a44d9b3cfcef5c1e93d6e45e7357e077b',1,'LogLine::file()']]],
   ['filename_10',['filename',['../structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a',1,'Body']]],
   ['filenamesafechars_11',['FilenameSafeChars',['../file_8h.html#a1ec6495628a05a5e6aa1075558601290',1,'FilenameSafeChars():&#160;file.c'],['../file_8c.html#a1ec6495628a05a5e6aa1075558601290',1,'FilenameSafeChars():&#160;file.c']]],

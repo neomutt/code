@@ -1,10 +1,8 @@
 var debug_8h =
 [
-    [ "color_debug_log_color_attrs", "debug_8h.html#a7bce07e6aeeab3cb356555fcb8a066d5", null ],
-    [ "color_debug_log_name", "debug_8h.html#a564670370748ed56e0e179c150fb0f11", null ],
-    [ "color_debug_log_attrs_list", "debug_8h.html#a4fd7fa362b18322de0a74b39c93a012e", null ],
+    [ "color_dump", "debug_8h.html#a9e54556b8606046414319c7cb3923298", null ],
     [ "color_debug_log_attrs", "debug_8h.html#a84abb89a1ac137d93425923f268d3f49", null ],
-    [ "color_debug_log_color", "debug_8h.html#aaad397302e5fa7376b4b7e5111614fa5", null ],
+    [ "color_debug_log_color", "debug_8h.html#afcc2c5d01e27e4d0ee7522b235792cf9", null ],
     [ "attr_color_dump", "debug_8h.html#ac8ed214dfc0a584a9b3a30c13ecdeefc", null ],
     [ "attr_color_list_dump", "debug_8h.html#aa5750ab847062a5c84019747331ca318", null ],
     [ "curses_color_dump", "debug_8h.html#a142b90f7d17ab98549329b457f74c7bb", null ],

@@ -1,8 +1,8 @@
 var debug_8c =
 [
     [ "color_debug", "debug_8c.html#a303eb44c9843e6d75ad0faab32598dcf", null ],
-    [ "color_debug_log_color_attrs", "debug_8c.html#a7bce07e6aeeab3cb356555fcb8a066d5", null ],
-    [ "color_debug_log_color", "debug_8c.html#a450b466012404a26aa635c38f504ec9f", null ],
+    [ "color_debug_log_color_attrs", "debug_8c.html#a2076774794929970f34b855e429a7d88", null ],
+    [ "color_debug_log_color", "debug_8c.html#a10c1e10aa131c3ce85299f0eb5c5c45c", null ],
     [ "color_debug_log_attrs", "debug_8c.html#a172b81f9b5af29355d0b74bb30c096c0", null ],
     [ "color_debug_log_attrs_list", "debug_8c.html#a4fd7fa362b18322de0a74b39c93a012e", null ],
     [ "color_debug_log_name", "debug_8c.html#a564670370748ed56e0e179c150fb0f11", null ],
@@ -17,5 +17,24 @@ var debug_8c =
     [ "regex_colors_dump_all", "debug_8c.html#a13f025cb845c2b306edcef0522b8ccfe", null ],
     [ "simple_color_dump", "debug_8c.html#a6e6de9e8872b1b5f167adc5f201c2031", null ],
     [ "simple_colors_dump", "debug_8c.html#a67695af5f4318b8e9c378f1b9abf16c4", null ],
-    [ "merged_colors_dump", "debug_8c.html#ad9c688d5540a6b3ef57f77b669901d3c", null ]
+    [ "merged_colors_dump", "debug_8c.html#ad9c688d5540a6b3ef57f77b669901d3c", null ],
+    [ "color_dump", "debug_8c.html#aa119525cef96fe80ca15aea035c75fdf", null ],
+    [ "MergedColors", "debug_8c.html#ab27899f662b530750ec723e9928a3c39", null ],
+    [ "CursesColors", "debug_8c.html#adbeff3928afa757b430cd35ae5e77f83", null ],
+    [ "NumCursesColors", "debug_8c.html#a3224e4fb24b9a03567ef9ea6f57c8d79", null ],
+    [ "AttachList", "debug_8c.html#ab6d627257af91a38d3d437bb363ac51e", null ],
+    [ "BodyList", "debug_8c.html#a68dc9113140ad146746d18e8cedfd376", null ],
+    [ "HeaderList", "debug_8c.html#aa36442790e7628a85f9cbd5aedb49a07", null ],
+    [ "IndexAuthorList", "debug_8c.html#a19770f05e20969aa3d8d00bd9084aa77", null ],
+    [ "IndexCollapsedList", "debug_8c.html#a03ecb24e5af3ec1bb0523ff94d7ffa63", null ],
+    [ "IndexDateList", "debug_8c.html#ac6f774d2fda428b23a8ebc61e706bd75", null ],
+    [ "IndexFlagsList", "debug_8c.html#a07861c080c83be36736a1ed516ab3f8e", null ],
+    [ "IndexLabelList", "debug_8c.html#a3b438e1542b19271a0537e463c677342", null ],
+    [ "IndexList", "debug_8c.html#a609be864266e90c171dcfdf27945b1d1", null ],
+    [ "IndexNumberList", "debug_8c.html#ae5988f181a572cc7e2060c7271e4c7e2", null ],
+    [ "IndexSizeList", "debug_8c.html#aef70b1b6233b968b2f90589debe3279f", null ],
+    [ "IndexSubjectList", "debug_8c.html#a30e52a1f8bb4cecbdcc74db28a9d7b05", null ],
+    [ "IndexTagList", "debug_8c.html#a655923052374c7e60c8ff1ba9d0d75b3", null ],
+    [ "IndexTagsList", "debug_8c.html#a752e9e561bf891c1a5a6b342a785c236", null ],
+    [ "StatusList", "debug_8c.html#a5e0db8d55228f1fe8efe4b99f0d9a540", null ]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['colorid_0',['ColorId',['../color_8h.html#ac0dddfeb58e0f6855f22796d240b070d',1,'color.h']]],
-  ['colorprefix_1',['ColorPrefix',['../color_2command_8c.html#a4ee37284f288a9808428793858e1add2',1,'command.c']]],
+  ['colorprefix_1',['ColorPrefix',['../attr_8h.html#a4ee37284f288a9808428793858e1add2',1,'attr.h']]],
   ['commandresult_2',['CommandResult',['../command_8h.html#ab263ddf6663365ed434ab750bf339557',1,'command.h']]],
   ['configscope_3',['ConfigScope',['../subset_8h.html#ab22c0ffba2be3aee5b9d3d0af2997f8d',1,'subset.h']]],
   ['connaccountfield_4',['ConnAccountField',['../connaccount_8h.html#a25419e97b0149cb541a4f3906ce852fb',1,'connaccount.h']]],

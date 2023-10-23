@@ -8,6 +8,8 @@ var lib_color =
     [ "Colour Debugging", "color_debug.html", null ],
     [ "Merged colours", "color_merge.html", null ],
     [ "Colour notifications", "color_notify.html", null ],
+    [ "Parse ANSI Sequences", "color_parse_ansi.html", null ],
+    [ "Parse colours", "color_parse_color.html", null ],
     [ "Quoted-Email colours", "color_quote.html", null ],
     [ "Regex Colour", "color_regex.html", null ],
     [ "Simple colour", "color_simple.html", null ]
