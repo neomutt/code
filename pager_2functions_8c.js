@@ -18,6 +18,7 @@ var pager_2functions_8c =
     [ "op_pager_top", "group__pager__function__api.html#ga72952de57d89eea269040755772f7db6", null ],
     [ "op_exit", "group__pager__function__api.html#ga13d5d573939fca4eb0aacac86b75ecae", null ],
     [ "op_help", "group__pager__function__api.html#gaaeca0e3a7314a904ad910acebeb835c4", null ],
+    [ "op_save", "group__pager__function__api.html#ga8e988add81e576cda63e2a9f787df20f", null ],
     [ "op_search_toggle", "group__pager__function__api.html#ga62d5642951e315f4579842aceca20e6c", null ],
     [ "op_view_attachments", "group__pager__function__api.html#ga77b4b564d6f6aadf00053efa0b90105c", null ],
     [ "pager_function_dispatcher", "group__dispatcher__api.html#ga3fd22ccfecd4ae65557e0d400c647507", null ],

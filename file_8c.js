@@ -49,6 +49,7 @@ var file_8c =
     [ "mutt_file_stat_timespec_compare", "file_8c.html#acf5bbc5f63d75ef10f2d16f183de0de0", null ],
     [ "mutt_file_stat_compare", "file_8c.html#a29dfaf34f54e277c4ed513ba72a4b1d6", null ],
     [ "mutt_file_resolve_symlink", "file_8c.html#ab2b6d0cfae3b1a4038db5f44d06117c1", null ],
+    [ "mutt_file_save_str", "file_8c.html#af27dd517394cd25f1cb021c7a3629a74", null ],
     [ "RxSpecialChars", "file_8c.html#ab7dabb24458c5df2588d6cea769b8393", null ],
     [ "FilenameSafeChars", "file_8c.html#a1ec6495628a05a5e6aa1075558601290", null ]
 ];

@@ -38,6 +38,7 @@ var hierarchy =
     [ "ChainData", "structChainData.html", null ],
     [ "ChildCtx", "structChildCtx.html", null ],
     [ "CidMap", "structCidMap.html", null ],
+    [ "ColorElement", "structColorElement.html", null ],
     [ "Command", "structCommand.html", null ],
     [ "CompareData", "structCompareData.html", null ],
     [ "CompileOptions", "structCompileOptions.html", null ],

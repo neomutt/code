@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-10-06-20-g15d0d9</span>
+   &#160;<span id="projectnumber">2023-10-23-35-g7a3ce1</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -307,316 +307,326 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="display_8c_source.html#l01013">1013</a> of file <a class="el" href="display_8c_source.html">display.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1018</span>{</div>
-<div class="line"><span class="lineno"> 1019</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buf = NULL, *fmt = NULL;</div>
-<div class="line"><span class="lineno"> 1020</span>  <span class="keywordtype">size_t</span> buflen = 0;</div>
-<div class="line"><span class="lineno"> 1021</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buf_ptr = NULL;</div>
-<div class="line"><span class="lineno"> 1022</span>  <span class="keywordtype">int</span> ch, vch, col, cnt, b_read;</div>
-<div class="line"><span class="lineno"> 1023</span>  <span class="keywordtype">int</span> buf_ready = 0;</div>
-<div class="line"><span class="lineno"> 1024</span>  <span class="keywordtype">bool</span> change_last = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1025</span>  <span class="keywordtype">int</span> special;</div>
-<div class="line"><span class="lineno"> 1026</span>  <span class="keywordtype">int</span> offset;</div>
-<div class="line"><span class="lineno"> 1027</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAttrColor.html">AttrColor</a> *def_color = NULL;</div>
-<div class="line"><span class="lineno"> 1028</span>  <span class="keywordtype">int</span> m;</div>
-<div class="line"><span class="lineno"> 1029</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno"> 1030</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAnsiColor.html">AnsiColor</a> ansi = { NULL, 0, <a class="code hl_define" href="color_8h.html#a56e1aea61ee305e3648158362333b3a8">COLOR_DEFAULT</a>, <a class="code hl_define" href="color_8h.html#a56e1aea61ee305e3648158362333b3a8">COLOR_DEFAULT</a> };</div>
-<div class="line"><span class="lineno"> 1031</span>  regmatch_t pmatch[1];</div>
-<div class="line"><span class="lineno"> 1032</span> </div>
-<div class="line"><span class="lineno"> 1033</span>  <span class="keywordflow">if</span> (line_num == *lines_used)</div>
-<div class="line"><span class="lineno"> 1034</span>  {</div>
-<div class="line"><span class="lineno"> 1035</span>    (*lines_used)++;</div>
-<div class="line"><span class="lineno"> 1036</span>    change_last = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1037</span>  }</div>
-<div class="line"><span class="lineno"> 1038</span> </div>
-<div class="line"><span class="lineno"> 1039</span>  <span class="keywordflow">if</span> (*lines_used == *lines_max)</div>
-<div class="line"><span class="lineno"> 1040</span>  {</div>
-<div class="line"><span class="lineno"> 1041</span>    <a class="code hl_function" href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a>(lines, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structLine.html">Line</a>) * (*lines_max += LINES));</div>
-<div class="line"><span class="lineno"> 1042</span>    <span class="keywordflow">for</span> (ch = *lines_used; ch &lt; *lines_max; ch++)</div>
-<div class="line"><span class="lineno"> 1043</span>    {</div>
-<div class="line"><span class="lineno"> 1044</span>      memset(&amp;((*lines)[ch]), 0, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structLine.html">Line</a>));</div>
-<div class="line"><span class="lineno"> 1045</span>      (*lines)[ch].cid = -1;</div>
-<div class="line"><span class="lineno"> 1046</span>      (*lines)[ch].search_arr_size = -1;</div>
-<div class="line"><span class="lineno"> 1047</span>      (*lines)[ch].syntax = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structTextSyntax.html">TextSyntax</a>));</div>
-<div class="line"><span class="lineno"> 1048</span>      ((*lines)[ch].syntax)[0].first = -1;</div>
-<div class="line"><span class="lineno"> 1049</span>      ((*lines)[ch].syntax)[0].last = -1;</div>
-<div class="line"><span class="lineno"> 1050</span>    }</div>
-<div class="line"><span class="lineno"> 1051</span>  }</div>
-<div class="line"><span class="lineno"> 1052</span> </div>
-<div class="line"><span class="lineno"> 1053</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structLine.html">Line</a> *<span class="keyword">const</span> cur_line = &amp;(*lines)[line_num];</div>
-<div class="line"><span class="lineno"> 1054</span> </div>
-<div class="line"><span class="lineno"> 1055</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a82c7ea12bf1e83aaa34ee1decdcab418">MUTT_PAGER_LOGS</a>)</div>
-<div class="line"><span class="lineno"> 1056</span>  {</div>
-<div class="line"><span class="lineno"> 1057</span>    <span class="comment">/* determine the line class */</span></div>
-<div class="line"><span class="lineno"> 1058</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready) &lt; 0)</div>
-<div class="line"><span class="lineno"> 1059</span>    {</div>
-<div class="line"><span class="lineno"> 1060</span>      <span class="keywordflow">if</span> (change_last)</div>
-<div class="line"><span class="lineno"> 1061</span>        (*lines_used)--;</div>
-<div class="line"><span class="lineno"> 1062</span>      <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno"> 1063</span>    }</div>
-<div class="line"><span class="lineno"> 1064</span> </div>
-<div class="line"><span class="lineno"> 1065</span>    cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a> = <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070daac2c955f2e5158add372ed36589d9bbb">MT_COLOR_MESSAGE_LOG</a>;</div>
-<div class="line"><span class="lineno"> 1066</span>    <span class="keywordflow">if</span> (buf[11] == <span class="charliteral">&#39;M&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1067</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a> = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da1374263734b5fd5e14dd6111ab05120f">MT_COLOR_MESSAGE</a>);</div>
-<div class="line"><span class="lineno"> 1068</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buf[11] == <span class="charliteral">&#39;W&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1069</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a> = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dadba4651c9c60ef9dde917aab5ba7242a">MT_COLOR_WARNING</a>);</div>
-<div class="line"><span class="lineno"> 1070</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buf[11] == <span class="charliteral">&#39;E&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1071</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a> = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da448410fc66b1b4bb96d6a5934a606ce1">MT_COLOR_ERROR</a>);</div>
-<div class="line"><span class="lineno"> 1072</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1073</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a> = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>);</div>
-<div class="line"><span class="lineno"> 1074</span>  }</div>
-<div class="line"><span class="lineno"> 1075</span> </div>
-<div class="line"><span class="lineno"> 1076</span>  <span class="comment">/* only do color highlighting if we are viewing a message */</span></div>
-<div class="line"><span class="lineno"> 1077</span>  <span class="keywordflow">if</span> (flags &amp; (<a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a> | <a class="code hl_define" href="pager_2lib_8h.html#a3c0d5d14b66d13aaab3432324b66a92d">MUTT_TYPES</a>))</div>
-<div class="line"><span class="lineno"> 1078</span>  {</div>
-<div class="line"><span class="lineno"> 1079</span>    <span class="keywordflow">if</span> (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a> == -1)</div>
-<div class="line"><span class="lineno"> 1080</span>    {</div>
-<div class="line"><span class="lineno"> 1081</span>      <span class="comment">/* determine the line class */</span></div>
-<div class="line"><span class="lineno"> 1082</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready) &lt; 0)</div>
-<div class="line"><span class="lineno"> 1083</span>      {</div>
-<div class="line"><span class="lineno"> 1084</span>        <span class="keywordflow">if</span> (change_last)</div>
-<div class="line"><span class="lineno"> 1085</span>          (*lines_used)--;</div>
-<div class="line"><span class="lineno"> 1086</span>        <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno"> 1087</span>      }</div>
-<div class="line"><span class="lineno"> 1088</span> </div>
-<div class="line"><span class="lineno"> 1089</span>      <a class="code hl_function" href="display_8c.html#a9912e3b588ad5b08a8fd1cb0fa0df83e">resolve_types</a>(win_pager, (<span class="keywordtype">char</span> *) fmt, (<span class="keywordtype">char</span> *) buf, *lines, line_num, *lines_used,</div>
-<div class="line"><span class="lineno"> 1090</span>                    quote_list, q_level, force_redraw, flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>);</div>
-<div class="line"><span class="lineno"> 1091</span> </div>
-<div class="line"><span class="lineno"> 1092</span>      <span class="comment">/* avoid race condition for continuation lines when scrolling up */</span></div>
-<div class="line"><span class="lineno"> 1093</span>      <span class="keywordflow">for</span> (m = line_num + 1;</div>
-<div class="line"><span class="lineno"> 1094</span>           m &lt; *lines_used &amp;&amp; (*lines)[m].offset &amp;&amp; (*lines)[m].cont_line; m++)</div>
-<div class="line"><span class="lineno"> 1095</span>      {</div>
-<div class="line"><span class="lineno"> 1096</span>        (*lines)[m].cid = cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a>;</div>
-<div class="line"><span class="lineno"> 1097</span>      }</div>
-<div class="line"><span class="lineno"> 1098</span>    }</div>
-<div class="line"><span class="lineno"> 1099</span> </div>
-<div class="line"><span class="lineno"> 1100</span>    <span class="comment">/* this also prevents searching through the hidden lines */</span></div>
-<div class="line"><span class="lineno"> 1101</span>    <span class="keyword">const</span> <span class="keywordtype">short</span> c_toggle_quoted_show_levels = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;toggle_quoted_show_levels&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1102</span>    <span class="keywordflow">if</span> ((flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a3a522d77e5eb5a2535ee3f19eb9076b4">MUTT_HIDE</a>) &amp;&amp; (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a> == <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da16d9a4b13f291a7196a24b6fd5195e16">MT_COLOR_QUOTED</a>) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1103</span>        (!cur_line-&gt;<a class="code hl_variable" href="structLine.html#a38d88ce7a9fe1080082b9f7a1bbd8bfa">quote</a> || (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a38d88ce7a9fe1080082b9f7a1bbd8bfa">quote</a>-&gt;<a class="code hl_variable" href="structQuoteStyle.html#ae5bd5c03326667f06310f14b49c69fea">quote_n</a> &gt;= c_toggle_quoted_show_levels)))</div>
-<div class="line"><span class="lineno"> 1104</span>    {</div>
-<div class="line"><span class="lineno"> 1105</span>      flags = 0; <span class="comment">/* MUTT_NOSHOW */</span></div>
-<div class="line"><span class="lineno"> 1106</span>    }</div>
-<div class="line"><span class="lineno"> 1107</span>  }</div>
-<div class="line"><span class="lineno"> 1108</span> </div>
-<div class="line"><span class="lineno"> 1109</span>  <span class="comment">/* At this point, (*lines[line_num]).quote may still be undefined. We</span></div>
-<div class="line"><span class="lineno"> 1110</span><span class="comment">   * don&#39;t want to compute it every time MUTT_TYPES is set, since this</span></div>
-<div class="line"><span class="lineno"> 1111</span><span class="comment">   * would slow down the &quot;bottom&quot; function unacceptably. A compromise</span></div>
-<div class="line"><span class="lineno"> 1112</span><span class="comment">   * solution is hence to call regexec() again, just to find out the</span></div>
-<div class="line"><span class="lineno"> 1113</span><span class="comment">   * length of the quote prefix.  */</span></div>
-<div class="line"><span class="lineno"> 1114</span>  <span class="keywordflow">if</span> ((flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>) &amp;&amp; !cur_line-&gt;<a class="code hl_variable" href="structLine.html#a294fbb344c66e421dca2902425af11aa">cont_line</a> &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1115</span>      (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a> == <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da16d9a4b13f291a7196a24b6fd5195e16">MT_COLOR_QUOTED</a>) &amp;&amp; !cur_line-&gt;<a class="code hl_variable" href="structLine.html#a38d88ce7a9fe1080082b9f7a1bbd8bfa">quote</a>)</div>
-<div class="line"><span class="lineno"> 1116</span>  {</div>
-<div class="line"><span class="lineno"> 1117</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready) &lt; 0)</div>
-<div class="line"><span class="lineno"> 1118</span>    {</div>
-<div class="line"><span class="lineno"> 1119</span>      <span class="keywordflow">if</span> (change_last)</div>
-<div class="line"><span class="lineno"> 1120</span>        (*lines_used)--;</div>
-<div class="line"><span class="lineno"> 1121</span>      <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno"> 1122</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="display_8c_source.html#l01018">1018</a> of file <a class="el" href="display_8c_source.html">display.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1023</span>{</div>
+<div class="line"><span class="lineno"> 1024</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buf = NULL, *fmt = NULL;</div>
+<div class="line"><span class="lineno"> 1025</span>  <span class="keywordtype">size_t</span> buflen = 0;</div>
+<div class="line"><span class="lineno"> 1026</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buf_ptr = NULL;</div>
+<div class="line"><span class="lineno"> 1027</span>  <span class="keywordtype">int</span> ch, vch, col, cnt, b_read;</div>
+<div class="line"><span class="lineno"> 1028</span>  <span class="keywordtype">int</span> buf_ready = 0;</div>
+<div class="line"><span class="lineno"> 1029</span>  <span class="keywordtype">bool</span> change_last = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1030</span>  <span class="keywordtype">int</span> special;</div>
+<div class="line"><span class="lineno"> 1031</span>  <span class="keywordtype">int</span> offset;</div>
+<div class="line"><span class="lineno"> 1032</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAttrColor.html">AttrColor</a> *def_color = NULL;</div>
+<div class="line"><span class="lineno"> 1033</span>  <span class="keywordtype">int</span> m;</div>
+<div class="line"><span class="lineno"> 1034</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno"> 1035</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAnsiColor.html">AnsiColor</a> ansi = { { <a class="code hl_define" href="color_8h.html#a56e1aea61ee305e3648158362333b3a8">COLOR_DEFAULT</a>, 0, 0 }, { <a class="code hl_define" href="color_8h.html#a56e1aea61ee305e3648158362333b3a8">COLOR_DEFAULT</a>, 0, 0 }, 0, NULL };</div>
+<div class="line"><span class="lineno"> 1036</span>  regmatch_t pmatch[1];</div>
+<div class="line"><span class="lineno"> 1037</span> </div>
+<div class="line"><span class="lineno"> 1038</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPagerPrivateData.html">PagerPrivateData</a> *priv = win_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3">parent</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno"> 1039</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="pager_2lib_8h.html#a97661d5482310b15dc29f620e955991a">PagerMode</a> mode = priv-&gt;<a class="code hl_variable" href="structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd">pview</a>-&gt;<a class="code hl_variable" href="structPagerView.html#a4f7074be59cdcb518630e81e5ef8c3b7">mode</a>;</div>
+<div class="line"><span class="lineno"> 1040</span> </div>
+<div class="line"><span class="lineno"> 1041</span>  <span class="keywordflow">if</span> (line_num == *<a class="code hl_variable" href="structPagerPrivateData.html#a2d3eb826dfb787d6a0430a81456fc45e">lines_used</a>)</div>
+<div class="line"><span class="lineno"> 1042</span>  {</div>
+<div class="line"><span class="lineno"> 1043</span>    (*lines_used)++;</div>
+<div class="line"><span class="lineno"> 1044</span>    change_last = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1045</span>  }</div>
+<div class="line"><span class="lineno"> 1046</span> </div>
+<div class="line"><span class="lineno"> 1047</span>  <span class="keywordflow">if</span> (*<a class="code hl_variable" href="structPagerPrivateData.html#a2d3eb826dfb787d6a0430a81456fc45e">lines_used</a> == *<a class="code hl_variable" href="structPagerPrivateData.html#a462c56abf1f5d5f007a8b253d2b3166f">lines_max</a>)</div>
+<div class="line"><span class="lineno"> 1048</span>  {</div>
+<div class="line"><span class="lineno"> 1049</span>    <a class="code hl_function" href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a>(<a class="code hl_variable" href="structPagerPrivateData.html#a7111bf1687e6d93cd548d4fdd36ad98b">lines</a>, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structLine.html">Line</a>) * (*<a class="code hl_variable" href="structPagerPrivateData.html#a462c56abf1f5d5f007a8b253d2b3166f">lines_max</a> += LINES));</div>
+<div class="line"><span class="lineno"> 1050</span>    <span class="keywordflow">for</span> (ch = *<a class="code hl_variable" href="structPagerPrivateData.html#a2d3eb826dfb787d6a0430a81456fc45e">lines_used</a>; ch &lt; *<a class="code hl_variable" href="structPagerPrivateData.html#a462c56abf1f5d5f007a8b253d2b3166f">lines_max</a>; ch++)</div>
+<div class="line"><span class="lineno"> 1051</span>    {</div>
+<div class="line"><span class="lineno"> 1052</span>      memset(&amp;((*<a class="code hl_variable" href="structPagerPrivateData.html#a7111bf1687e6d93cd548d4fdd36ad98b">lines</a>)[ch]), 0, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structLine.html">Line</a>));</div>
+<div class="line"><span class="lineno"> 1053</span>      (*lines)[ch].cid = -1;</div>
+<div class="line"><span class="lineno"> 1054</span>      (*lines)[ch].search_arr_size = -1;</div>
+<div class="line"><span class="lineno"> 1055</span>      (*lines)[ch].syntax = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structTextSyntax.html">TextSyntax</a>));</div>
+<div class="line"><span class="lineno"> 1056</span>      ((*lines)[ch].syntax)[0].<a class="code hl_variable" href="structPagerPrivateData.html#ad327fdca21da2a92ac9a62e24ccde5bd">first</a> = -1;</div>
+<div class="line"><span class="lineno"> 1057</span>      ((*lines)[ch].syntax)[0].last = -1;</div>
+<div class="line"><span class="lineno"> 1058</span>    }</div>
+<div class="line"><span class="lineno"> 1059</span>  }</div>
+<div class="line"><span class="lineno"> 1060</span> </div>
+<div class="line"><span class="lineno"> 1061</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structLine.html">Line</a> *<span class="keyword">const</span> cur_line = &amp;(*lines)[line_num];</div>
+<div class="line"><span class="lineno"> 1062</span> </div>
+<div class="line"><span class="lineno"> 1063</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a82c7ea12bf1e83aaa34ee1decdcab418">MUTT_PAGER_LOGS</a>)</div>
+<div class="line"><span class="lineno"> 1064</span>  {</div>
+<div class="line"><span class="lineno"> 1065</span>    <span class="comment">/* determine the line class */</span></div>
+<div class="line"><span class="lineno"> 1066</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready) &lt; 0)</div>
+<div class="line"><span class="lineno"> 1067</span>    {</div>
+<div class="line"><span class="lineno"> 1068</span>      <span class="keywordflow">if</span> (change_last)</div>
+<div class="line"><span class="lineno"> 1069</span>        (*lines_used)--;</div>
+<div class="line"><span class="lineno"> 1070</span>      <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno"> 1071</span>    }</div>
+<div class="line"><span class="lineno"> 1072</span> </div>
+<div class="line"><span class="lineno"> 1073</span>    cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a> = <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070daac2c955f2e5158add372ed36589d9bbb">MT_COLOR_MESSAGE_LOG</a>;</div>
+<div class="line"><span class="lineno"> 1074</span>    <span class="keywordflow">if</span> (buf[11] == <span class="charliteral">&#39;M&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1075</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a> = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da1374263734b5fd5e14dd6111ab05120f">MT_COLOR_MESSAGE</a>);</div>
+<div class="line"><span class="lineno"> 1076</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buf[11] == <span class="charliteral">&#39;W&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1077</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a> = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dadba4651c9c60ef9dde917aab5ba7242a">MT_COLOR_WARNING</a>);</div>
+<div class="line"><span class="lineno"> 1078</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (buf[11] == <span class="charliteral">&#39;E&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1079</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a> = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da448410fc66b1b4bb96d6a5934a606ce1">MT_COLOR_ERROR</a>);</div>
+<div class="line"><span class="lineno"> 1080</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1081</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a> = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>);</div>
+<div class="line"><span class="lineno"> 1082</span>  }</div>
+<div class="line"><span class="lineno"> 1083</span> </div>
+<div class="line"><span class="lineno"> 1084</span>  <span class="comment">/* only do color highlighting if we are viewing a message */</span></div>
+<div class="line"><span class="lineno"> 1085</span>  <span class="keywordflow">if</span> (flags &amp; (<a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a> | <a class="code hl_define" href="pager_2lib_8h.html#a3c0d5d14b66d13aaab3432324b66a92d">MUTT_TYPES</a>))</div>
+<div class="line"><span class="lineno"> 1086</span>  {</div>
+<div class="line"><span class="lineno"> 1087</span>    <span class="keywordflow">if</span> (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a> == -1)</div>
+<div class="line"><span class="lineno"> 1088</span>    {</div>
+<div class="line"><span class="lineno"> 1089</span>      <span class="comment">/* determine the line class */</span></div>
+<div class="line"><span class="lineno"> 1090</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready) &lt; 0)</div>
+<div class="line"><span class="lineno"> 1091</span>      {</div>
+<div class="line"><span class="lineno"> 1092</span>        <span class="keywordflow">if</span> (change_last)</div>
+<div class="line"><span class="lineno"> 1093</span>          (*lines_used)--;</div>
+<div class="line"><span class="lineno"> 1094</span>        <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno"> 1095</span>      }</div>
+<div class="line"><span class="lineno"> 1096</span> </div>
+<div class="line"><span class="lineno"> 1097</span>      <span class="keywordflow">if</span> (mode == <a class="code hl_enumvalue" href="pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aae094a15e3553a2a1001a143e28e467fb">PAGER_MODE_EMAIL</a>)</div>
+<div class="line"><span class="lineno"> 1098</span>      {</div>
+<div class="line"><span class="lineno"> 1099</span>        <a class="code hl_function" href="display_8c.html#a9912e3b588ad5b08a8fd1cb0fa0df83e">resolve_types</a>(win_pager, (<span class="keywordtype">char</span> *) fmt, (<span class="keywordtype">char</span> *) buf, *lines, line_num, *lines_used,</div>
+<div class="line"><span class="lineno"> 1100</span>                      quote_list, q_level, force_redraw, flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>);</div>
+<div class="line"><span class="lineno"> 1101</span>      }</div>
+<div class="line"><span class="lineno"> 1102</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1103</span>      {</div>
+<div class="line"><span class="lineno"> 1104</span>        (*lines)[line_num].cid = <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>;</div>
+<div class="line"><span class="lineno"> 1105</span>      }</div>
+<div class="line"><span class="lineno"> 1106</span> </div>
+<div class="line"><span class="lineno"> 1107</span>      <span class="comment">/* avoid race condition for continuation lines when scrolling up */</span></div>
+<div class="line"><span class="lineno"> 1108</span>      <span class="keywordflow">for</span> (m = line_num + 1;</div>
+<div class="line"><span class="lineno"> 1109</span>           m &lt; *lines_used &amp;&amp; (*lines)[m].offset &amp;&amp; (*lines)[m].cont_line; m++)</div>
+<div class="line"><span class="lineno"> 1110</span>      {</div>
+<div class="line"><span class="lineno"> 1111</span>        (*lines)[m].cid = cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a>;</div>
+<div class="line"><span class="lineno"> 1112</span>      }</div>
+<div class="line"><span class="lineno"> 1113</span>    }</div>
+<div class="line"><span class="lineno"> 1114</span> </div>
+<div class="line"><span class="lineno"> 1115</span>    <span class="comment">/* this also prevents searching through the hidden lines */</span></div>
+<div class="line"><span class="lineno"> 1116</span>    <span class="keyword">const</span> <span class="keywordtype">short</span> c_toggle_quoted_show_levels = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;toggle_quoted_show_levels&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1117</span>    <span class="keywordflow">if</span> ((flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a3a522d77e5eb5a2535ee3f19eb9076b4">MUTT_HIDE</a>) &amp;&amp; (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a> == <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da16d9a4b13f291a7196a24b6fd5195e16">MT_COLOR_QUOTED</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1118</span>        (!cur_line-&gt;<a class="code hl_variable" href="structLine.html#a38d88ce7a9fe1080082b9f7a1bbd8bfa">quote</a> || (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a38d88ce7a9fe1080082b9f7a1bbd8bfa">quote</a>-&gt;<a class="code hl_variable" href="structQuoteStyle.html#ae5bd5c03326667f06310f14b49c69fea">quote_n</a> &gt;= c_toggle_quoted_show_levels)))</div>
+<div class="line"><span class="lineno"> 1119</span>    {</div>
+<div class="line"><span class="lineno"> 1120</span>      flags = 0; <span class="comment">/* MUTT_NOSHOW */</span></div>
+<div class="line"><span class="lineno"> 1121</span>    }</div>
+<div class="line"><span class="lineno"> 1122</span>  }</div>
 <div class="line"><span class="lineno"> 1123</span> </div>
-<div class="line"><span class="lineno"> 1124</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structRegex.html">Regex</a> *c_quote_regex = <a class="code hl_function" href="config_2helpers_8c.html#a1c788f1dbe7b04cec7721fc1c7680b48">cs_subset_regex</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;quote_regex&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1125</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(c_quote_regex, (<span class="keywordtype">char</span> *) fmt, 1, pmatch))</div>
-<div class="line"><span class="lineno"> 1126</span>    {</div>
-<div class="line"><span class="lineno"> 1127</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#a38d88ce7a9fe1080082b9f7a1bbd8bfa">quote</a> = <a class="code hl_function" href="quoted_8c.html#a36927b7a0276bafc8b179a0f7e76fe58">qstyle_classify</a>(quote_list, (<span class="keywordtype">char</span> *) fmt + pmatch[0].rm_so,</div>
-<div class="line"><span class="lineno"> 1128</span>                                        pmatch[0].rm_eo - pmatch[0].rm_so,</div>
-<div class="line"><span class="lineno"> 1129</span>                                        force_redraw, q_level);</div>
-<div class="line"><span class="lineno"> 1130</span>    }</div>
-<div class="line"><span class="lineno"> 1131</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1132</span>    {</div>
-<div class="line"><span class="lineno"> 1133</span>      <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno"> 1134</span>    }</div>
-<div class="line"><span class="lineno"> 1135</span>  }</div>
-<div class="line"><span class="lineno"> 1136</span> </div>
-<div class="line"><span class="lineno"> 1137</span>  <span class="keywordflow">if</span> ((flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a86dceb4c81c65f8932681c9ae415ac7b">MUTT_SEARCH</a>) &amp;&amp; !cur_line-&gt;<a class="code hl_variable" href="structLine.html#a294fbb344c66e421dca2902425af11aa">cont_line</a> &amp;&amp; (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> == -1))</div>
-<div class="line"><span class="lineno"> 1138</span>  {</div>
-<div class="line"><span class="lineno"> 1139</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready) &lt; 0)</div>
-<div class="line"><span class="lineno"> 1140</span>    {</div>
-<div class="line"><span class="lineno"> 1141</span>      <span class="keywordflow">if</span> (change_last)</div>
-<div class="line"><span class="lineno"> 1142</span>        (*lines_used)--;</div>
-<div class="line"><span class="lineno"> 1143</span>      <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno"> 1144</span>    }</div>
-<div class="line"><span class="lineno"> 1145</span> </div>
-<div class="line"><span class="lineno"> 1146</span>    offset = 0;</div>
-<div class="line"><span class="lineno"> 1147</span>    cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> = 0;</div>
-<div class="line"><span class="lineno"> 1148</span>    <span class="keywordflow">while</span> (regexec(search_re, (<span class="keywordtype">char</span> *) fmt + offset, 1, pmatch,</div>
-<div class="line"><span class="lineno"> 1149</span>                   (offset ? REG_NOTBOL : 0)) == 0)</div>
-<div class="line"><span class="lineno"> 1150</span>    {</div>
-<div class="line"><span class="lineno"> 1151</span>      <span class="keywordflow">if</span> (++(cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a>) &gt; 1)</div>
-<div class="line"><span class="lineno"> 1152</span>      {</div>
-<div class="line"><span class="lineno"> 1153</span>        <a class="code hl_function" href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a>(&amp;(cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>),</div>
-<div class="line"><span class="lineno"> 1154</span>                         (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a>) * <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structTextSyntax.html">TextSyntax</a>));</div>
-<div class="line"><span class="lineno"> 1155</span>        <span class="comment">// Zero the new entry</span></div>
-<div class="line"><span class="lineno"> 1156</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> index = cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> - 1;</div>
-<div class="line"><span class="lineno"> 1157</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structTextSyntax.html">TextSyntax</a> *ts = &amp;cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>[index];</div>
-<div class="line"><span class="lineno"> 1158</span>        memset(ts, 0, <span class="keyword">sizeof</span>(*ts));</div>
-<div class="line"><span class="lineno"> 1159</span>      }</div>
-<div class="line"><span class="lineno"> 1160</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1161</span>      {</div>
-<div class="line"><span class="lineno"> 1162</span>        cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a> = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structTextSyntax.html">TextSyntax</a>));</div>
-<div class="line"><span class="lineno"> 1163</span>      }</div>
-<div class="line"><span class="lineno"> 1164</span>      pmatch[0].rm_so += offset;</div>
-<div class="line"><span class="lineno"> 1165</span>      pmatch[0].rm_eo += offset;</div>
-<div class="line"><span class="lineno"> 1166</span>      (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>)[cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> - 1].first = pmatch[0].rm_so;</div>
-<div class="line"><span class="lineno"> 1167</span>      (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>)[cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> - 1].last = pmatch[0].rm_eo;</div>
-<div class="line"><span class="lineno"> 1168</span> </div>
-<div class="line"><span class="lineno"> 1169</span>      <span class="keywordflow">if</span> (pmatch[0].rm_eo == pmatch[0].rm_so)</div>
-<div class="line"><span class="lineno"> 1170</span>        offset++; <span class="comment">/* avoid degenerate cases */</span></div>
-<div class="line"><span class="lineno"> 1171</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1172</span>        offset = pmatch[0].rm_eo;</div>
-<div class="line"><span class="lineno"> 1173</span>      <span class="keywordflow">if</span> (!fmt[offset])</div>
-<div class="line"><span class="lineno"> 1174</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1175</span>    }</div>
-<div class="line"><span class="lineno"> 1176</span>  }</div>
-<div class="line"><span class="lineno"> 1177</span> </div>
-<div class="line"><span class="lineno"> 1178</span>  <span class="keywordflow">if</span> (!(flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#aea254a51f411edcf16a4c4a92c409709">MUTT_SHOW</a>) &amp;&amp; ((*lines)[line_num + 1].offset &gt; 0))</div>
-<div class="line"><span class="lineno"> 1179</span>  {</div>
-<div class="line"><span class="lineno"> 1180</span>    <span class="comment">/* we&#39;ve already scanned this line, so just exit */</span></div>
-<div class="line"><span class="lineno"> 1181</span>    rc = 0;</div>
-<div class="line"><span class="lineno"> 1182</span>    <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno"> 1183</span>  }</div>
-<div class="line"><span class="lineno"> 1184</span>  <span class="keywordflow">if</span> ((flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>) &amp;&amp; *force_redraw &amp;&amp; ((*lines)[line_num + 1].offset &gt; 0))</div>
-<div class="line"><span class="lineno"> 1185</span>  {</div>
-<div class="line"><span class="lineno"> 1186</span>    <span class="comment">/* no need to try to display this line... */</span></div>
-<div class="line"><span class="lineno"> 1187</span>    rc = 1;</div>
-<div class="line"><span class="lineno"> 1188</span>    <span class="keywordflow">goto</span> out; <span class="comment">/* fake display */</span></div>
-<div class="line"><span class="lineno"> 1189</span>  }</div>
-<div class="line"><span class="lineno"> 1190</span> </div>
-<div class="line"><span class="lineno"> 1191</span>  b_read = <a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready);</div>
-<div class="line"><span class="lineno"> 1192</span>  <span class="keywordflow">if</span> (b_read &lt; 0)</div>
-<div class="line"><span class="lineno"> 1193</span>  {</div>
-<div class="line"><span class="lineno"> 1194</span>    <span class="keywordflow">if</span> (change_last)</div>
-<div class="line"><span class="lineno"> 1195</span>      (*lines_used)--;</div>
-<div class="line"><span class="lineno"> 1196</span>    <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno"> 1197</span>  }</div>
-<div class="line"><span class="lineno"> 1198</span> </div>
-<div class="line"><span class="lineno"> 1199</span>  <span class="comment">/* now chose a good place to break the line */</span></div>
-<div class="line"><span class="lineno"> 1200</span>  cnt = <a class="code hl_function" href="display_8c.html#a09395942e7a1607668bfaf87009eb233">format_line</a>(win_pager, lines, line_num, buf, flags, NULL, b_read, &amp;ch,</div>
-<div class="line"><span class="lineno"> 1201</span>                    &amp;vch, &amp;col, &amp;special, win_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>, ansi_list);</div>
-<div class="line"><span class="lineno"> 1202</span>  buf_ptr = buf + cnt;</div>
-<div class="line"><span class="lineno"> 1203</span> </div>
-<div class="line"><span class="lineno"> 1204</span>  <span class="comment">/* move the break point only if smart_wrap is set */</span></div>
-<div class="line"><span class="lineno"> 1205</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_smart_wrap = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smart_wrap&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1206</span>  <span class="keywordflow">if</span> (c_smart_wrap)</div>
-<div class="line"><span class="lineno"> 1207</span>  {</div>
-<div class="line"><span class="lineno"> 1208</span>    <span class="keywordflow">if</span> ((cnt &lt; b_read) &amp;&amp; (ch != -1) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1209</span>        !<a class="code hl_function" href="color_2simple_8c.html#a7d3bb96386680adc5f9665c5c5ed7a53">simple_color_is_header</a>(cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a>) &amp;&amp; !isspace(buf[cnt]))</div>
-<div class="line"><span class="lineno"> 1210</span>    {</div>
-<div class="line"><span class="lineno"> 1211</span>      buf_ptr = buf + ch;</div>
-<div class="line"><span class="lineno"> 1212</span>      <span class="comment">/* skip trailing blanks */</span></div>
-<div class="line"><span class="lineno"> 1213</span>      <span class="keywordflow">while</span> (ch &amp;&amp; ((buf[ch] == <span class="charliteral">&#39; &#39;</span>) || (buf[ch] == <span class="charliteral">&#39;\t&#39;</span>) || (buf[ch] == <span class="charliteral">&#39;\r&#39;</span>)))</div>
-<div class="line"><span class="lineno"> 1214</span>        ch--;</div>
-<div class="line"><span class="lineno"> 1215</span>      <span class="comment">/* A very long word with leading spaces causes infinite</span></div>
-<div class="line"><span class="lineno"> 1216</span><span class="comment">       * wrapping when MUTT_PAGER_NSKIP is set.  A folded header</span></div>
-<div class="line"><span class="lineno"> 1217</span><span class="comment">       * with a single long word shouldn&#39;t be smartwrapped</span></div>
-<div class="line"><span class="lineno"> 1218</span><span class="comment">       * either.  So just disable smart_wrap if it would wrap at the</span></div>
-<div class="line"><span class="lineno"> 1219</span><span class="comment">       * beginning of the line. */</span></div>
-<div class="line"><span class="lineno"> 1220</span>      <span class="keywordflow">if</span> (ch == 0)</div>
-<div class="line"><span class="lineno"> 1221</span>        buf_ptr = buf + cnt;</div>
-<div class="line"><span class="lineno"> 1222</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1223</span>        cnt = ch + 1;</div>
-<div class="line"><span class="lineno"> 1224</span>    }</div>
-<div class="line"><span class="lineno"> 1225</span>    <span class="keywordflow">if</span> (!(flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a23ab9b0bfd87bca53161f920511d6f6d">MUTT_PAGER_NSKIP</a>))</div>
-<div class="line"><span class="lineno"> 1226</span>    {</div>
-<div class="line"><span class="lineno"> 1227</span>      <span class="comment">/* skip leading blanks on the next line too */</span></div>
-<div class="line"><span class="lineno"> 1228</span>      <span class="keywordflow">while</span> ((*buf_ptr == <span class="charliteral">&#39; &#39;</span>) || (*buf_ptr == <span class="charliteral">&#39;\t&#39;</span>))</div>
-<div class="line"><span class="lineno"> 1229</span>        buf_ptr++;</div>
-<div class="line"><span class="lineno"> 1230</span>    }</div>
-<div class="line"><span class="lineno"> 1231</span>  }</div>
-<div class="line"><span class="lineno"> 1232</span> </div>
-<div class="line"><span class="lineno"> 1233</span>  <span class="keywordflow">if</span> (*buf_ptr == <span class="charliteral">&#39;\r&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1234</span>    buf_ptr++;</div>
-<div class="line"><span class="lineno"> 1235</span>  <span class="keywordflow">if</span> (*buf_ptr == <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line"><span class="lineno"> 1236</span>    buf_ptr++;</div>
-<div class="line"><span class="lineno"> 1237</span> </div>
-<div class="line"><span class="lineno"> 1238</span>  <span class="keywordflow">if</span> (((<span class="keywordtype">int</span>) (buf_ptr - buf) &lt; b_read) &amp;&amp; !(*lines)[line_num + 1].cont_line)</div>
-<div class="line"><span class="lineno"> 1239</span>    <a class="code hl_function" href="display_8c.html#ada37f4a2d641159c3e96fb9842665f79">append_line</a>(*lines, line_num, (<span class="keywordtype">int</span>) (buf_ptr - buf));</div>
-<div class="line"><span class="lineno"> 1240</span>  (*lines)[line_num + 1].offset = cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a> + (long) (buf_ptr - buf);</div>
-<div class="line"><span class="lineno"> 1241</span> </div>
-<div class="line"><span class="lineno"> 1242</span>  <span class="comment">/* if we don&#39;t need to display the line we are done */</span></div>
-<div class="line"><span class="lineno"> 1243</span>  <span class="keywordflow">if</span> (!(flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#aea254a51f411edcf16a4c4a92c409709">MUTT_SHOW</a>))</div>
-<div class="line"><span class="lineno"> 1244</span>  {</div>
-<div class="line"><span class="lineno"> 1245</span>    rc = 0;</div>
-<div class="line"><span class="lineno"> 1246</span>    <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno"> 1247</span>  }</div>
-<div class="line"><span class="lineno"> 1248</span> </div>
-<div class="line"><span class="lineno"> 1249</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a5e8eebd7bad2d534e6a4b9064c55e898">MUTT_PAGER_STRIPES</a>)</div>
-<div class="line"><span class="lineno"> 1250</span>  {</div>
-<div class="line"><span class="lineno"> 1251</span>    <span class="keyword">const</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070d">ColorId</a> cid = ((line_num % 2) == 0) ? <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabdc992ce0a1a41f346a06662859ddb9b">MT_COLOR_STRIPE_ODD</a> : <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da3f7e11b21d4d93f5f39a0d4283e0c1d4">MT_COLOR_STRIPE_EVEN</a>;</div>
-<div class="line"><span class="lineno"> 1252</span>    <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(cid);</div>
-<div class="line"><span class="lineno"> 1253</span>  }</div>
-<div class="line"><span class="lineno"> 1254</span> </div>
-<div class="line"><span class="lineno"> 1255</span>  <span class="comment">/* display the line */</span></div>
-<div class="line"><span class="lineno"> 1256</span>  <a class="code hl_function" href="display_8c.html#a09395942e7a1607668bfaf87009eb233">format_line</a>(win_pager, lines, line_num, buf, flags, &amp;ansi, cnt, &amp;ch, &amp;vch,</div>
-<div class="line"><span class="lineno"> 1257</span>              &amp;col, &amp;special, win_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>, ansi_list);</div>
-<div class="line"><span class="lineno"> 1258</span> </div>
-<div class="line"><span class="lineno"> 1259</span>  <span class="comment">/* avoid a bug in ncurses... */</span></div>
-<div class="line"><span class="lineno"> 1260</span>  <span class="keywordflow">if</span> (col == 0)</div>
-<div class="line"><span class="lineno"> 1261</span>  {</div>
-<div class="line"><span class="lineno"> 1262</span>    <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a5e8eebd7bad2d534e6a4b9064c55e898">MUTT_PAGER_STRIPES</a>)</div>
-<div class="line"><span class="lineno"> 1263</span>    {</div>
-<div class="line"><span class="lineno"> 1264</span>      <span class="keyword">const</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070d">ColorId</a> cid = ((line_num % 2) == 0) ? <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabdc992ce0a1a41f346a06662859ddb9b">MT_COLOR_STRIPE_ODD</a> : <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da3f7e11b21d4d93f5f39a0d4283e0c1d4">MT_COLOR_STRIPE_EVEN</a>;</div>
-<div class="line"><span class="lineno"> 1265</span>      <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(cid);</div>
-<div class="line"><span class="lineno"> 1266</span>    }</div>
-<div class="line"><span class="lineno"> 1267</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1268</span>    {</div>
-<div class="line"><span class="lineno"> 1269</span>      <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>);</div>
-<div class="line"><span class="lineno"> 1270</span>    }</div>
-<div class="line"><span class="lineno"> 1271</span> </div>
-<div class="line"><span class="lineno"> 1272</span>    <a class="code hl_function" href="mutt__window_8c.html#afec02ae9b82d9c5e429a432f1d49e4c9">mutt_window_addch</a>(win_pager, <span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><span class="lineno"> 1273</span>  }</div>
-<div class="line"><span class="lineno"> 1274</span> </div>
-<div class="line"><span class="lineno"> 1275</span>  <span class="comment">/* Fill the blank space at the end of the line with the prevailing color.</span></div>
-<div class="line"><span class="lineno"> 1276</span><span class="comment">   * ncurses does an implicit clrtoeol() when you do mutt_window_addch(&#39;\n&#39;) so we have</span></div>
-<div class="line"><span class="lineno"> 1277</span><span class="comment">   * to make sure to reset the color *after* that */</span></div>
-<div class="line"><span class="lineno"> 1278</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>)</div>
-<div class="line"><span class="lineno"> 1279</span>  {</div>
-<div class="line"><span class="lineno"> 1280</span>    m = (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a294fbb344c66e421dca2902425af11aa">cont_line</a>) ? (cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>)[0].first : line_num;</div>
-<div class="line"><span class="lineno"> 1281</span>    <span class="keywordflow">if</span> ((*lines)[m].cid == <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da2cc57042e538276f7b3724078df82159">MT_COLOR_HEADER</a>)</div>
-<div class="line"><span class="lineno"> 1282</span>    {</div>
-<div class="line"><span class="lineno"> 1283</span>      def_color = ((*lines)[m].syntax)[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a>;</div>
-<div class="line"><span class="lineno"> 1284</span>    }</div>
-<div class="line"><span class="lineno"> 1285</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1286</span>    {</div>
-<div class="line"><span class="lineno"> 1287</span>      def_color = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>((*lines)[m].cid);</div>
-<div class="line"><span class="lineno"> 1288</span>    }</div>
-<div class="line"><span class="lineno"> 1289</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAttrColor.html">AttrColor</a> *ac_normal = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>);</div>
-<div class="line"><span class="lineno"> 1290</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAttrColor.html">AttrColor</a> *ac_eol = NULL;</div>
-<div class="line"><span class="lineno"> 1291</span>    <span class="keywordflow">if</span> (def_color)</div>
-<div class="line"><span class="lineno"> 1292</span>      ac_eol = <a class="code hl_function" href="merged_8c.html#aace2aea3edc76e90306eaa5c1a566699">merged_color_overlay</a>(ac_normal, def_color);</div>
-<div class="line"><span class="lineno"> 1293</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1294</span>      ac_eol = ac_normal;</div>
-<div class="line"><span class="lineno"> 1295</span>    <a class="code hl_function" href="mutt__curses_8c.html#ace3d1c8158361892817e8cc8000317b4">mutt_curses_set_color</a>(ac_eol);</div>
-<div class="line"><span class="lineno"> 1296</span>  }</div>
-<div class="line"><span class="lineno"> 1297</span> </div>
-<div class="line"><span class="lineno"> 1298</span>  <span class="keywordflow">if</span> (col &lt; win_pager-&gt;state.cols)</div>
-<div class="line"><span class="lineno"> 1299</span>  {</div>
-<div class="line"><span class="lineno"> 1300</span>    <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a5e8eebd7bad2d534e6a4b9064c55e898">MUTT_PAGER_STRIPES</a>)</div>
+<div class="line"><span class="lineno"> 1124</span>  <span class="comment">/* At this point, (*lines[line_num]).quote may still be undefined. We</span></div>
+<div class="line"><span class="lineno"> 1125</span><span class="comment">   * don&#39;t want to compute it every time MUTT_TYPES is set, since this</span></div>
+<div class="line"><span class="lineno"> 1126</span><span class="comment">   * would slow down the &quot;bottom&quot; function unacceptably. A compromise</span></div>
+<div class="line"><span class="lineno"> 1127</span><span class="comment">   * solution is hence to call regexec() again, just to find out the</span></div>
+<div class="line"><span class="lineno"> 1128</span><span class="comment">   * length of the quote prefix.  */</span></div>
+<div class="line"><span class="lineno"> 1129</span>  <span class="keywordflow">if</span> ((flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>) &amp;&amp; !cur_line-&gt;<a class="code hl_variable" href="structLine.html#a294fbb344c66e421dca2902425af11aa">cont_line</a> &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1130</span>      (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a> == <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da16d9a4b13f291a7196a24b6fd5195e16">MT_COLOR_QUOTED</a>) &amp;&amp; !cur_line-&gt;<a class="code hl_variable" href="structLine.html#a38d88ce7a9fe1080082b9f7a1bbd8bfa">quote</a>)</div>
+<div class="line"><span class="lineno"> 1131</span>  {</div>
+<div class="line"><span class="lineno"> 1132</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready) &lt; 0)</div>
+<div class="line"><span class="lineno"> 1133</span>    {</div>
+<div class="line"><span class="lineno"> 1134</span>      <span class="keywordflow">if</span> (change_last)</div>
+<div class="line"><span class="lineno"> 1135</span>        (*lines_used)--;</div>
+<div class="line"><span class="lineno"> 1136</span>      <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno"> 1137</span>    }</div>
+<div class="line"><span class="lineno"> 1138</span> </div>
+<div class="line"><span class="lineno"> 1139</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structRegex.html">Regex</a> *c_quote_regex = <a class="code hl_function" href="config_2helpers_8c.html#a1c788f1dbe7b04cec7721fc1c7680b48">cs_subset_regex</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;quote_regex&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1140</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(c_quote_regex, (<span class="keywordtype">char</span> *) fmt, 1, pmatch))</div>
+<div class="line"><span class="lineno"> 1141</span>    {</div>
+<div class="line"><span class="lineno"> 1142</span>      cur_line-&gt;<a class="code hl_variable" href="structLine.html#a38d88ce7a9fe1080082b9f7a1bbd8bfa">quote</a> = <a class="code hl_function" href="quoted_8c.html#a36927b7a0276bafc8b179a0f7e76fe58">qstyle_classify</a>(quote_list, (<span class="keywordtype">char</span> *) fmt + pmatch[0].rm_so,</div>
+<div class="line"><span class="lineno"> 1143</span>                                        pmatch[0].rm_eo - pmatch[0].rm_so,</div>
+<div class="line"><span class="lineno"> 1144</span>                                        force_redraw, q_level);</div>
+<div class="line"><span class="lineno"> 1145</span>    }</div>
+<div class="line"><span class="lineno"> 1146</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1147</span>    {</div>
+<div class="line"><span class="lineno"> 1148</span>      <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno"> 1149</span>    }</div>
+<div class="line"><span class="lineno"> 1150</span>  }</div>
+<div class="line"><span class="lineno"> 1151</span> </div>
+<div class="line"><span class="lineno"> 1152</span>  <span class="keywordflow">if</span> ((flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a86dceb4c81c65f8932681c9ae415ac7b">MUTT_SEARCH</a>) &amp;&amp; !cur_line-&gt;<a class="code hl_variable" href="structLine.html#a294fbb344c66e421dca2902425af11aa">cont_line</a> &amp;&amp; (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> == -1))</div>
+<div class="line"><span class="lineno"> 1153</span>  {</div>
+<div class="line"><span class="lineno"> 1154</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready) &lt; 0)</div>
+<div class="line"><span class="lineno"> 1155</span>    {</div>
+<div class="line"><span class="lineno"> 1156</span>      <span class="keywordflow">if</span> (change_last)</div>
+<div class="line"><span class="lineno"> 1157</span>        (*lines_used)--;</div>
+<div class="line"><span class="lineno"> 1158</span>      <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno"> 1159</span>    }</div>
+<div class="line"><span class="lineno"> 1160</span> </div>
+<div class="line"><span class="lineno"> 1161</span>    offset = 0;</div>
+<div class="line"><span class="lineno"> 1162</span>    cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> = 0;</div>
+<div class="line"><span class="lineno"> 1163</span>    <span class="keywordflow">while</span> (regexec(search_re, (<span class="keywordtype">char</span> *) fmt + offset, 1, pmatch,</div>
+<div class="line"><span class="lineno"> 1164</span>                   (offset ? REG_NOTBOL : 0)) == 0)</div>
+<div class="line"><span class="lineno"> 1165</span>    {</div>
+<div class="line"><span class="lineno"> 1166</span>      <span class="keywordflow">if</span> (++(cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a>) &gt; 1)</div>
+<div class="line"><span class="lineno"> 1167</span>      {</div>
+<div class="line"><span class="lineno"> 1168</span>        <a class="code hl_function" href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a>(&amp;(cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>),</div>
+<div class="line"><span class="lineno"> 1169</span>                         (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a>) * <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structTextSyntax.html">TextSyntax</a>));</div>
+<div class="line"><span class="lineno"> 1170</span>        <span class="comment">// Zero the new entry</span></div>
+<div class="line"><span class="lineno"> 1171</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> index = cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> - 1;</div>
+<div class="line"><span class="lineno"> 1172</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structTextSyntax.html">TextSyntax</a> *ts = &amp;cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>[index];</div>
+<div class="line"><span class="lineno"> 1173</span>        memset(ts, 0, <span class="keyword">sizeof</span>(*ts));</div>
+<div class="line"><span class="lineno"> 1174</span>      }</div>
+<div class="line"><span class="lineno"> 1175</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1176</span>      {</div>
+<div class="line"><span class="lineno"> 1177</span>        cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a> = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structTextSyntax.html">TextSyntax</a>));</div>
+<div class="line"><span class="lineno"> 1178</span>      }</div>
+<div class="line"><span class="lineno"> 1179</span>      pmatch[0].rm_so += offset;</div>
+<div class="line"><span class="lineno"> 1180</span>      pmatch[0].rm_eo += offset;</div>
+<div class="line"><span class="lineno"> 1181</span>      (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>)[cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> - 1].first = pmatch[0].rm_so;</div>
+<div class="line"><span class="lineno"> 1182</span>      (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>)[cur_line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a> - 1].last = pmatch[0].rm_eo;</div>
+<div class="line"><span class="lineno"> 1183</span> </div>
+<div class="line"><span class="lineno"> 1184</span>      <span class="keywordflow">if</span> (pmatch[0].rm_eo == pmatch[0].rm_so)</div>
+<div class="line"><span class="lineno"> 1185</span>        offset++; <span class="comment">/* avoid degenerate cases */</span></div>
+<div class="line"><span class="lineno"> 1186</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1187</span>        offset = pmatch[0].rm_eo;</div>
+<div class="line"><span class="lineno"> 1188</span>      <span class="keywordflow">if</span> (!fmt[offset])</div>
+<div class="line"><span class="lineno"> 1189</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1190</span>    }</div>
+<div class="line"><span class="lineno"> 1191</span>  }</div>
+<div class="line"><span class="lineno"> 1192</span> </div>
+<div class="line"><span class="lineno"> 1193</span>  <span class="keywordflow">if</span> (!(flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#aea254a51f411edcf16a4c4a92c409709">MUTT_SHOW</a>) &amp;&amp; ((*lines)[line_num + 1].offset &gt; 0))</div>
+<div class="line"><span class="lineno"> 1194</span>  {</div>
+<div class="line"><span class="lineno"> 1195</span>    <span class="comment">/* we&#39;ve already scanned this line, so just exit */</span></div>
+<div class="line"><span class="lineno"> 1196</span>    rc = 0;</div>
+<div class="line"><span class="lineno"> 1197</span>    <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno"> 1198</span>  }</div>
+<div class="line"><span class="lineno"> 1199</span>  <span class="keywordflow">if</span> ((flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>) &amp;&amp; *force_redraw &amp;&amp; ((*lines)[line_num + 1].offset &gt; 0))</div>
+<div class="line"><span class="lineno"> 1200</span>  {</div>
+<div class="line"><span class="lineno"> 1201</span>    <span class="comment">/* no need to try to display this line... */</span></div>
+<div class="line"><span class="lineno"> 1202</span>    rc = 1;</div>
+<div class="line"><span class="lineno"> 1203</span>    <span class="keywordflow">goto</span> out; <span class="comment">/* fake display */</span></div>
+<div class="line"><span class="lineno"> 1204</span>  }</div>
+<div class="line"><span class="lineno"> 1205</span> </div>
+<div class="line"><span class="lineno"> 1206</span>  b_read = <a class="code hl_function" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a>(fp, bytes_read, cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a>, &amp;buf, &amp;fmt, &amp;buflen, &amp;buf_ready);</div>
+<div class="line"><span class="lineno"> 1207</span>  <span class="keywordflow">if</span> (b_read &lt; 0)</div>
+<div class="line"><span class="lineno"> 1208</span>  {</div>
+<div class="line"><span class="lineno"> 1209</span>    <span class="keywordflow">if</span> (change_last)</div>
+<div class="line"><span class="lineno"> 1210</span>      (*lines_used)--;</div>
+<div class="line"><span class="lineno"> 1211</span>    <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno"> 1212</span>  }</div>
+<div class="line"><span class="lineno"> 1213</span> </div>
+<div class="line"><span class="lineno"> 1214</span>  <span class="comment">/* now chose a good place to break the line */</span></div>
+<div class="line"><span class="lineno"> 1215</span>  cnt = <a class="code hl_function" href="display_8c.html#a09395942e7a1607668bfaf87009eb233">format_line</a>(win_pager, lines, line_num, buf, flags, NULL, b_read, &amp;ch,</div>
+<div class="line"><span class="lineno"> 1216</span>                    &amp;vch, &amp;col, &amp;special, win_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>, ansi_list);</div>
+<div class="line"><span class="lineno"> 1217</span>  buf_ptr = buf + cnt;</div>
+<div class="line"><span class="lineno"> 1218</span> </div>
+<div class="line"><span class="lineno"> 1219</span>  <span class="comment">/* move the break point only if smart_wrap is set */</span></div>
+<div class="line"><span class="lineno"> 1220</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_smart_wrap = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smart_wrap&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1221</span>  <span class="keywordflow">if</span> (c_smart_wrap)</div>
+<div class="line"><span class="lineno"> 1222</span>  {</div>
+<div class="line"><span class="lineno"> 1223</span>    <span class="keywordflow">if</span> ((cnt &lt; b_read) &amp;&amp; (ch != -1) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1224</span>        !<a class="code hl_function" href="color_2simple_8c.html#a7d3bb96386680adc5f9665c5c5ed7a53">simple_color_is_header</a>(cur_line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a>) &amp;&amp; !isspace(buf[cnt]))</div>
+<div class="line"><span class="lineno"> 1225</span>    {</div>
+<div class="line"><span class="lineno"> 1226</span>      buf_ptr = buf + ch;</div>
+<div class="line"><span class="lineno"> 1227</span>      <span class="comment">/* skip trailing blanks */</span></div>
+<div class="line"><span class="lineno"> 1228</span>      <span class="keywordflow">while</span> (ch &amp;&amp; ((buf[ch] == <span class="charliteral">&#39; &#39;</span>) || (buf[ch] == <span class="charliteral">&#39;\t&#39;</span>) || (buf[ch] == <span class="charliteral">&#39;\r&#39;</span>)))</div>
+<div class="line"><span class="lineno"> 1229</span>        ch--;</div>
+<div class="line"><span class="lineno"> 1230</span>      <span class="comment">/* A very long word with leading spaces causes infinite</span></div>
+<div class="line"><span class="lineno"> 1231</span><span class="comment">       * wrapping when MUTT_PAGER_NSKIP is set.  A folded header</span></div>
+<div class="line"><span class="lineno"> 1232</span><span class="comment">       * with a single long word shouldn&#39;t be smartwrapped</span></div>
+<div class="line"><span class="lineno"> 1233</span><span class="comment">       * either.  So just disable smart_wrap if it would wrap at the</span></div>
+<div class="line"><span class="lineno"> 1234</span><span class="comment">       * beginning of the line. */</span></div>
+<div class="line"><span class="lineno"> 1235</span>      <span class="keywordflow">if</span> (ch == 0)</div>
+<div class="line"><span class="lineno"> 1236</span>        buf_ptr = buf + cnt;</div>
+<div class="line"><span class="lineno"> 1237</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1238</span>        cnt = ch + 1;</div>
+<div class="line"><span class="lineno"> 1239</span>    }</div>
+<div class="line"><span class="lineno"> 1240</span>    <span class="keywordflow">if</span> (!(flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a23ab9b0bfd87bca53161f920511d6f6d">MUTT_PAGER_NSKIP</a>))</div>
+<div class="line"><span class="lineno"> 1241</span>    {</div>
+<div class="line"><span class="lineno"> 1242</span>      <span class="comment">/* skip leading blanks on the next line too */</span></div>
+<div class="line"><span class="lineno"> 1243</span>      <span class="keywordflow">while</span> ((*buf_ptr == <span class="charliteral">&#39; &#39;</span>) || (*buf_ptr == <span class="charliteral">&#39;\t&#39;</span>))</div>
+<div class="line"><span class="lineno"> 1244</span>        buf_ptr++;</div>
+<div class="line"><span class="lineno"> 1245</span>    }</div>
+<div class="line"><span class="lineno"> 1246</span>  }</div>
+<div class="line"><span class="lineno"> 1247</span> </div>
+<div class="line"><span class="lineno"> 1248</span>  <span class="keywordflow">if</span> (*buf_ptr == <span class="charliteral">&#39;\r&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1249</span>    buf_ptr++;</div>
+<div class="line"><span class="lineno"> 1250</span>  <span class="keywordflow">if</span> (*buf_ptr == <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><span class="lineno"> 1251</span>    buf_ptr++;</div>
+<div class="line"><span class="lineno"> 1252</span> </div>
+<div class="line"><span class="lineno"> 1253</span>  <span class="keywordflow">if</span> (((<span class="keywordtype">int</span>) (buf_ptr - buf) &lt; b_read) &amp;&amp; !(*lines)[line_num + 1].cont_line)</div>
+<div class="line"><span class="lineno"> 1254</span>    <a class="code hl_function" href="display_8c.html#ada37f4a2d641159c3e96fb9842665f79">append_line</a>(*lines, line_num, (<span class="keywordtype">int</span>) (buf_ptr - buf));</div>
+<div class="line"><span class="lineno"> 1255</span>  (*lines)[line_num + 1].offset = cur_line-&gt;<a class="code hl_variable" href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">offset</a> + (long) (buf_ptr - buf);</div>
+<div class="line"><span class="lineno"> 1256</span> </div>
+<div class="line"><span class="lineno"> 1257</span>  <span class="comment">/* if we don&#39;t need to display the line we are done */</span></div>
+<div class="line"><span class="lineno"> 1258</span>  <span class="keywordflow">if</span> (!(flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#aea254a51f411edcf16a4c4a92c409709">MUTT_SHOW</a>))</div>
+<div class="line"><span class="lineno"> 1259</span>  {</div>
+<div class="line"><span class="lineno"> 1260</span>    rc = 0;</div>
+<div class="line"><span class="lineno"> 1261</span>    <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno"> 1262</span>  }</div>
+<div class="line"><span class="lineno"> 1263</span> </div>
+<div class="line"><span class="lineno"> 1264</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a5e8eebd7bad2d534e6a4b9064c55e898">MUTT_PAGER_STRIPES</a>)</div>
+<div class="line"><span class="lineno"> 1265</span>  {</div>
+<div class="line"><span class="lineno"> 1266</span>    <span class="keyword">const</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070d">ColorId</a> cid = ((line_num % 2) == 0) ? <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabdc992ce0a1a41f346a06662859ddb9b">MT_COLOR_STRIPE_ODD</a> : <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da3f7e11b21d4d93f5f39a0d4283e0c1d4">MT_COLOR_STRIPE_EVEN</a>;</div>
+<div class="line"><span class="lineno"> 1267</span>    <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(cid);</div>
+<div class="line"><span class="lineno"> 1268</span>  }</div>
+<div class="line"><span class="lineno"> 1269</span> </div>
+<div class="line"><span class="lineno"> 1270</span>  <span class="comment">/* display the line */</span></div>
+<div class="line"><span class="lineno"> 1271</span>  <a class="code hl_function" href="display_8c.html#a09395942e7a1607668bfaf87009eb233">format_line</a>(win_pager, lines, line_num, buf, flags, &amp;ansi, cnt, &amp;ch, &amp;vch,</div>
+<div class="line"><span class="lineno"> 1272</span>              &amp;col, &amp;special, win_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>, ansi_list);</div>
+<div class="line"><span class="lineno"> 1273</span> </div>
+<div class="line"><span class="lineno"> 1274</span>  <span class="comment">/* avoid a bug in ncurses... */</span></div>
+<div class="line"><span class="lineno"> 1275</span>  <span class="keywordflow">if</span> (col == 0)</div>
+<div class="line"><span class="lineno"> 1276</span>  {</div>
+<div class="line"><span class="lineno"> 1277</span>    <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a5e8eebd7bad2d534e6a4b9064c55e898">MUTT_PAGER_STRIPES</a>)</div>
+<div class="line"><span class="lineno"> 1278</span>    {</div>
+<div class="line"><span class="lineno"> 1279</span>      <span class="keyword">const</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070d">ColorId</a> cid = ((line_num % 2) == 0) ? <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabdc992ce0a1a41f346a06662859ddb9b">MT_COLOR_STRIPE_ODD</a> : <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da3f7e11b21d4d93f5f39a0d4283e0c1d4">MT_COLOR_STRIPE_EVEN</a>;</div>
+<div class="line"><span class="lineno"> 1280</span>      <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(cid);</div>
+<div class="line"><span class="lineno"> 1281</span>    }</div>
+<div class="line"><span class="lineno"> 1282</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1283</span>    {</div>
+<div class="line"><span class="lineno"> 1284</span>      <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>);</div>
+<div class="line"><span class="lineno"> 1285</span>    }</div>
+<div class="line"><span class="lineno"> 1286</span> </div>
+<div class="line"><span class="lineno"> 1287</span>    <a class="code hl_function" href="mutt__window_8c.html#afec02ae9b82d9c5e429a432f1d49e4c9">mutt_window_addch</a>(win_pager, <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><span class="lineno"> 1288</span>  }</div>
+<div class="line"><span class="lineno"> 1289</span> </div>
+<div class="line"><span class="lineno"> 1290</span>  <span class="comment">/* Fill the blank space at the end of the line with the prevailing color.</span></div>
+<div class="line"><span class="lineno"> 1291</span><span class="comment">   * ncurses does an implicit clrtoeol() when you do mutt_window_addch(&#39;\n&#39;) so we have</span></div>
+<div class="line"><span class="lineno"> 1292</span><span class="comment">   * to make sure to reset the color *after* that */</span></div>
+<div class="line"><span class="lineno"> 1293</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>)</div>
+<div class="line"><span class="lineno"> 1294</span>  {</div>
+<div class="line"><span class="lineno"> 1295</span>    m = (cur_line-&gt;<a class="code hl_variable" href="structLine.html#a294fbb344c66e421dca2902425af11aa">cont_line</a>) ? (cur_line-&gt;<a class="code hl_variable" href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">syntax</a>)[0].first : line_num;</div>
+<div class="line"><span class="lineno"> 1296</span>    <span class="keywordflow">if</span> ((*lines)[m].cid == <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da2cc57042e538276f7b3724078df82159">MT_COLOR_HEADER</a>)</div>
+<div class="line"><span class="lineno"> 1297</span>    {</div>
+<div class="line"><span class="lineno"> 1298</span>      def_color = ((*lines)[m].syntax)[0].<a class="code hl_variable" href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">attr_color</a>;</div>
+<div class="line"><span class="lineno"> 1299</span>    }</div>
+<div class="line"><span class="lineno"> 1300</span>    <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno"> 1301</span>    {</div>
-<div class="line"><span class="lineno"> 1302</span>      <span class="keyword">const</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070d">ColorId</a> cid = ((line_num % 2) == 0) ? <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabdc992ce0a1a41f346a06662859ddb9b">MT_COLOR_STRIPE_ODD</a> : <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da3f7e11b21d4d93f5f39a0d4283e0c1d4">MT_COLOR_STRIPE_EVEN</a>;</div>
-<div class="line"><span class="lineno"> 1303</span>      <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(cid);</div>
-<div class="line"><span class="lineno"> 1304</span>    }</div>
-<div class="line"><span class="lineno"> 1305</span>    <a class="code hl_function" href="mutt__window_8c.html#ae2ba61d0bc2413c09e6a12f1fe345ab4">mutt_window_clrtoeol</a>(win_pager);</div>
-<div class="line"><span class="lineno"> 1306</span>  }</div>
-<div class="line"><span class="lineno"> 1307</span> </div>
-<div class="line"><span class="lineno"> 1308</span>  <span class="comment">/* reset the color back to normal.  This *must* come after the</span></div>
-<div class="line"><span class="lineno"> 1309</span><span class="comment">   * clrtoeol, otherwise the color for this line will not be</span></div>
-<div class="line"><span class="lineno"> 1310</span><span class="comment">   * filled to the right margin.  */</span></div>
-<div class="line"><span class="lineno"> 1311</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>)</div>
-<div class="line"><span class="lineno"> 1312</span>    <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>);</div>
-<div class="line"><span class="lineno"> 1313</span> </div>
-<div class="line"><span class="lineno"> 1314</span>  <span class="comment">/* build a return code */</span></div>
-<div class="line"><span class="lineno"> 1315</span>  <span class="keywordflow">if</span> (!(flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#aea254a51f411edcf16a4c4a92c409709">MUTT_SHOW</a>))</div>
-<div class="line"><span class="lineno"> 1316</span>    flags = 0;</div>
-<div class="line"><span class="lineno"> 1317</span> </div>
-<div class="line"><span class="lineno"> 1318</span>  rc = flags;</div>
-<div class="line"><span class="lineno"> 1319</span> </div>
-<div class="line"><span class="lineno"> 1320</span>out:</div>
-<div class="line"><span class="lineno"> 1321</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
-<div class="line"><span class="lineno"> 1322</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;fmt);</div>
-<div class="line"><span class="lineno"> 1323</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1324</span>}</div>
-<div class="ttc" id="acolor_2simple_8c_html_a7d3bb96386680adc5f9665c5c5ed7a53"><div class="ttname"><a href="color_2simple_8c.html#a7d3bb96386680adc5f9665c5c5ed7a53">simple_color_is_header</a></div><div class="ttdeci">bool simple_color_is_header(enum ColorId cid)</div><div class="ttdoc">Colour is for an Email header.</div><div class="ttdef"><b>Definition:</b> <a href="color_2simple_8c_source.html#l00112">simple.c:112</a></div></div>
-<div class="ttc" id="acolor_2simple_8c_html_ae60958374804169f78021b5742e33f15"><div class="ttname"><a href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a></div><div class="ttdeci">struct AttrColor * simple_color_get(enum ColorId cid)</div><div class="ttdoc">Get the colour of an object by its ID.</div><div class="ttdef"><b>Definition:</b> <a href="color_2simple_8c_source.html#l00081">simple.c:81</a></div></div>
+<div class="line"><span class="lineno"> 1302</span>      def_color = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>((*lines)[m].cid);</div>
+<div class="line"><span class="lineno"> 1303</span>    }</div>
+<div class="line"><span class="lineno"> 1304</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAttrColor.html">AttrColor</a> *ac_normal = <a class="code hl_function" href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>);</div>
+<div class="line"><span class="lineno"> 1305</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAttrColor.html">AttrColor</a> *ac_eol = NULL;</div>
+<div class="line"><span class="lineno"> 1306</span>    <span class="keywordflow">if</span> (def_color)</div>
+<div class="line"><span class="lineno"> 1307</span>      ac_eol = <a class="code hl_function" href="merged_8c.html#aace2aea3edc76e90306eaa5c1a566699">merged_color_overlay</a>(ac_normal, def_color);</div>
+<div class="line"><span class="lineno"> 1308</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1309</span>      ac_eol = ac_normal;</div>
+<div class="line"><span class="lineno"> 1310</span>    <a class="code hl_function" href="mutt__curses_8c.html#ace3d1c8158361892817e8cc8000317b4">mutt_curses_set_color</a>(ac_eol);</div>
+<div class="line"><span class="lineno"> 1311</span>  }</div>
+<div class="line"><span class="lineno"> 1312</span> </div>
+<div class="line"><span class="lineno"> 1313</span>  <span class="keywordflow">if</span> (col &lt; win_pager-&gt;state.cols)</div>
+<div class="line"><span class="lineno"> 1314</span>  {</div>
+<div class="line"><span class="lineno"> 1315</span>    <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a5e8eebd7bad2d534e6a4b9064c55e898">MUTT_PAGER_STRIPES</a>)</div>
+<div class="line"><span class="lineno"> 1316</span>    {</div>
+<div class="line"><span class="lineno"> 1317</span>      <span class="keyword">const</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070d">ColorId</a> cid = ((line_num % 2) == 0) ? <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabdc992ce0a1a41f346a06662859ddb9b">MT_COLOR_STRIPE_ODD</a> : <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da3f7e11b21d4d93f5f39a0d4283e0c1d4">MT_COLOR_STRIPE_EVEN</a>;</div>
+<div class="line"><span class="lineno"> 1318</span>      <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(cid);</div>
+<div class="line"><span class="lineno"> 1319</span>    }</div>
+<div class="line"><span class="lineno"> 1320</span>    <a class="code hl_function" href="mutt__window_8c.html#ae2ba61d0bc2413c09e6a12f1fe345ab4">mutt_window_clrtoeol</a>(win_pager);</div>
+<div class="line"><span class="lineno"> 1321</span>  }</div>
+<div class="line"><span class="lineno"> 1322</span> </div>
+<div class="line"><span class="lineno"> 1323</span>  <span class="comment">/* reset the color back to normal.  This *must* come after the</span></div>
+<div class="line"><span class="lineno"> 1324</span><span class="comment">   * clrtoeol, otherwise the color for this line will not be</span></div>
+<div class="line"><span class="lineno"> 1325</span><span class="comment">   * filled to the right margin.  */</span></div>
+<div class="line"><span class="lineno"> 1326</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a>)</div>
+<div class="line"><span class="lineno"> 1327</span>    <a class="code hl_function" href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a>(<a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a>);</div>
+<div class="line"><span class="lineno"> 1328</span> </div>
+<div class="line"><span class="lineno"> 1329</span>  <span class="comment">/* build a return code */</span></div>
+<div class="line"><span class="lineno"> 1330</span>  <span class="keywordflow">if</span> (!(flags &amp; <a class="code hl_define" href="pager_2lib_8h.html#aea254a51f411edcf16a4c4a92c409709">MUTT_SHOW</a>))</div>
+<div class="line"><span class="lineno"> 1331</span>    flags = 0;</div>
+<div class="line"><span class="lineno"> 1332</span> </div>
+<div class="line"><span class="lineno"> 1333</span>  rc = flags;</div>
+<div class="line"><span class="lineno"> 1334</span> </div>
+<div class="line"><span class="lineno"> 1335</span>out:</div>
+<div class="line"><span class="lineno"> 1336</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
+<div class="line"><span class="lineno"> 1337</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;fmt);</div>
+<div class="line"><span class="lineno"> 1338</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1339</span>}</div>
+<div class="ttc" id="acolor_2simple_8c_html_a7d3bb96386680adc5f9665c5c5ed7a53"><div class="ttname"><a href="color_2simple_8c.html#a7d3bb96386680adc5f9665c5c5ed7a53">simple_color_is_header</a></div><div class="ttdeci">bool simple_color_is_header(enum ColorId cid)</div><div class="ttdoc">Colour is for an Email header.</div><div class="ttdef"><b>Definition:</b> <a href="color_2simple_8c_source.html#l00121">simple.c:121</a></div></div>
+<div class="ttc" id="acolor_2simple_8c_html_ae60958374804169f78021b5742e33f15"><div class="ttname"><a href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a></div><div class="ttdeci">struct AttrColor * simple_color_get(enum ColorId cid)</div><div class="ttdoc">Get the colour of an object by its ID.</div><div class="ttdef"><b>Definition:</b> <a href="color_2simple_8c_source.html#l00090">simple.c:90</a></div></div>
 <div class="ttc" id="acolor_8h_html_a56e1aea61ee305e3648158362333b3a8"><div class="ttname"><a href="color_8h.html#a56e1aea61ee305e3648158362333b3a8">COLOR_DEFAULT</a></div><div class="ttdeci">#define COLOR_DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="color_8h_source.html#l00101">color.h:101</a></div></div>
 <div class="ttc" id="acolor_8h_html_ac0dddfeb58e0f6855f22796d240b070d"><div class="ttname"><a href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070d">ColorId</a></div><div class="ttdeci">ColorId</div><div class="ttdoc">List of all colored objects.</div><div class="ttdef"><b>Definition:</b> <a href="color_8h_source.html#l00038">color.h:39</a></div></div>
 <div class="ttc" id="acolor_8h_html_ac0dddfeb58e0f6855f22796d240b070da1374263734b5fd5e14dd6111ab05120f"><div class="ttname"><a href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da1374263734b5fd5e14dd6111ab05120f">MT_COLOR_MESSAGE</a></div><div class="ttdeci">@ MT_COLOR_MESSAGE</div><div class="ttdoc">Informational message.</div><div class="ttdef"><b>Definition:</b> <a href="color_8h_source.html#l00056">color.h:56</a></div></div>
@@ -631,14 +641,14 @@ Functions</h2></td></tr>
 <div class="ttc" id="aconfig_2helpers_8c_html_a1c788f1dbe7b04cec7721fc1c7680b48"><div class="ttname"><a href="config_2helpers_8c.html#a1c788f1dbe7b04cec7721fc1c7680b48">cs_subset_regex</a></div><div class="ttdeci">const struct Regex * cs_subset_regex(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a regex config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00218">helpers.c:218</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a96039a9f8d37daad993ae7b490510339"><div class="ttname"><a href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a></div><div class="ttdeci">short cs_subset_number(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a number config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00144">helpers.c:144</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00048">helpers.c:48</a></div></div>
-<div class="ttc" id="adisplay_8c_html_a09395942e7a1607668bfaf87009eb233"><div class="ttname"><a href="display_8c.html#a09395942e7a1607668bfaf87009eb233">format_line</a></div><div class="ttdeci">static int format_line(struct MuttWindow *win, struct Line **lines, int line_num, unsigned char *buf, PagerFlags flags, struct AnsiColor *ansi, int cnt, int *pspace, int *pvch, int *pcol, int *pspecial, int width, struct AttrColorList *ansi_list)</div><div class="ttdoc">Display a line of text in the pager.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00812">display.c:812</a></div></div>
-<div class="ttc" id="adisplay_8c_html_a3a08ef3aa5940bc4550d19bd601894b5"><div class="ttname"><a href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a></div><div class="ttdeci">static int fill_buffer(FILE *fp, LOFF_T *bytes_read, LOFF_T offset, unsigned char **buf, unsigned char **fmt, size_t *blen, int *buf_ready)</div><div class="ttdoc">Fill a buffer from a file.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00757">display.c:757</a></div></div>
-<div class="ttc" id="adisplay_8c_html_a9912e3b588ad5b08a8fd1cb0fa0df83e"><div class="ttname"><a href="display_8c.html#a9912e3b588ad5b08a8fd1cb0fa0df83e">resolve_types</a></div><div class="ttdeci">static void resolve_types(struct MuttWindow *win, char *buf, char *raw, struct Line *lines, int line_num, int lines_used, struct QuoteStyle **quote_list, int *q_level, bool *force_redraw, bool q_classify)</div><div class="ttdoc">Determine the style for a line of text.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00368">display.c:368</a></div></div>
-<div class="ttc" id="adisplay_8c_html_ada37f4a2d641159c3e96fb9842665f79"><div class="ttname"><a href="display_8c.html#ada37f4a2d641159c3e96fb9842665f79">append_line</a></div><div class="ttdeci">static void append_line(struct Line *lines, int line_num, int cnt)</div><div class="ttdoc">Add a new Line to the array.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00255">display.c:255</a></div></div>
+<div class="ttc" id="adisplay_8c_html_a09395942e7a1607668bfaf87009eb233"><div class="ttname"><a href="display_8c.html#a09395942e7a1607668bfaf87009eb233">format_line</a></div><div class="ttdeci">static int format_line(struct MuttWindow *win, struct Line **lines, int line_num, unsigned char *buf, PagerFlags flags, struct AnsiColor *ansi, int cnt, int *pspace, int *pvch, int *pcol, int *pspecial, int width, struct AttrColorList *ansi_list)</div><div class="ttdoc">Display a line of text in the pager.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00813">display.c:813</a></div></div>
+<div class="ttc" id="adisplay_8c_html_a3a08ef3aa5940bc4550d19bd601894b5"><div class="ttname"><a href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5">fill_buffer</a></div><div class="ttdeci">static int fill_buffer(FILE *fp, LOFF_T *bytes_read, LOFF_T offset, unsigned char **buf, unsigned char **fmt, size_t *blen, int *buf_ready)</div><div class="ttdoc">Fill a buffer from a file.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00758">display.c:758</a></div></div>
+<div class="ttc" id="adisplay_8c_html_a9912e3b588ad5b08a8fd1cb0fa0df83e"><div class="ttname"><a href="display_8c.html#a9912e3b588ad5b08a8fd1cb0fa0df83e">resolve_types</a></div><div class="ttdeci">static void resolve_types(struct MuttWindow *win, char *buf, char *raw, struct Line *lines, int line_num, int lines_used, struct QuoteStyle **quote_list, int *q_level, bool *force_redraw, bool q_classify)</div><div class="ttdoc">Determine the style for a line of text.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00369">display.c:369</a></div></div>
+<div class="ttc" id="adisplay_8c_html_ada37f4a2d641159c3e96fb9842665f79"><div class="ttname"><a href="display_8c.html#ada37f4a2d641159c3e96fb9842665f79">append_line</a></div><div class="ttdeci">static void append_line(struct Line *lines, int line_num, int cnt)</div><div class="ttdoc">Add a new Line to the array.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00256">display.c:256</a></div></div>
 <div class="ttc" id="amemory_8c_html_a39469100e5b8ae30c8f6f21e206aefe8"><div class="ttname"><a href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a></div><div class="ttdeci">void * mutt_mem_calloc(size_t nmemb, size_t size)</div><div class="ttdoc">Allocate zeroed memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00050">memory.c:50</a></div></div>
 <div class="ttc" id="amemory_8c_html_af778eb8166966fc0666c64849f6c7c5b"><div class="ttname"><a href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a></div><div class="ttdeci">void mutt_mem_realloc(void *ptr, size_t size)</div><div class="ttdoc">Resize a block of memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00114">memory.c:114</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00045">memory.h:45</a></div></div>
-<div class="ttc" id="amerged_8c_html_aace2aea3edc76e90306eaa5c1a566699"><div class="ttname"><a href="merged_8c.html#aace2aea3edc76e90306eaa5c1a566699">merged_color_overlay</a></div><div class="ttdeci">const struct AttrColor * merged_color_overlay(const struct AttrColor *base, const struct AttrColor *over)</div><div class="ttdoc">Combine two colours.</div><div class="ttdef"><b>Definition:</b> <a href="merged_8c_source.html#l00108">merged.c:108</a></div></div>
+<div class="ttc" id="amerged_8c_html_aace2aea3edc76e90306eaa5c1a566699"><div class="ttname"><a href="merged_8c.html#aace2aea3edc76e90306eaa5c1a566699">merged_color_overlay</a></div><div class="ttdeci">const struct AttrColor * merged_color_overlay(const struct AttrColor *base, const struct AttrColor *over)</div><div class="ttdoc">Combine two colours.</div><div class="ttdef"><b>Definition:</b> <a href="merged_8c_source.html#l00107">merged.c:107</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a45a90a0b1de4365be463061b6ac0bc36"><div class="ttname"><a href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a></div><div class="ttdeci">bool mutt_regex_capture(const struct Regex *regex, const char *str, size_t nmatch, regmatch_t matches[])</div><div class="ttdoc">Match a regex against a string, with provided options.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2regex_8c_source.html#l00619">regex.c:619</a></div></div>
 <div class="ttc" id="amutt__curses_8c_html_a7936ee715d3fd52fed2b33ffb3570f45"><div class="ttname"><a href="mutt__curses_8c.html#a7936ee715d3fd52fed2b33ffb3570f45">mutt_curses_set_color_by_id</a></div><div class="ttdeci">const struct AttrColor * mutt_curses_set_color_by_id(enum ColorId cid)</div><div class="ttdoc">Set the colour and attributes by the colour id.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__curses_8c_source.html#l00081">mutt_curses.c:81</a></div></div>
 <div class="ttc" id="amutt__curses_8c_html_ace3d1c8158361892817e8cc8000317b4"><div class="ttname"><a href="mutt__curses_8c.html#ace3d1c8158361892817e8cc8000317b4">mutt_curses_set_color</a></div><div class="ttdeci">void mutt_curses_set_color(const struct AttrColor *ac)</div><div class="ttdoc">Set the colour and attributes for text.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__curses_8c_source.html#l00040">mutt_curses.c:40</a></div></div>
@@ -651,10 +661,12 @@ Functions</h2></td></tr>
 <div class="ttc" id="apager_2lib_8h_html_a6a24d55872e15f42b6dfcf7d560953e2"><div class="ttname"><a href="pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2">MUTT_SHOWCOLOR</a></div><div class="ttdeci">#define MUTT_SHOWCOLOR</div><div class="ttdoc">Show characters in color otherwise don't show characters.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2lib_8h_source.html#l00061">lib.h:61</a></div></div>
 <div class="ttc" id="apager_2lib_8h_html_a82c7ea12bf1e83aaa34ee1decdcab418"><div class="ttname"><a href="pager_2lib_8h.html#a82c7ea12bf1e83aaa34ee1decdcab418">MUTT_PAGER_LOGS</a></div><div class="ttdeci">#define MUTT_PAGER_LOGS</div><div class="ttdoc">Logview mode.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2lib_8h_source.html#l00073">lib.h:73</a></div></div>
 <div class="ttc" id="apager_2lib_8h_html_a86dceb4c81c65f8932681c9ae415ac7b"><div class="ttname"><a href="pager_2lib_8h.html#a86dceb4c81c65f8932681c9ae415ac7b">MUTT_SEARCH</a></div><div class="ttdeci">#define MUTT_SEARCH</div><div class="ttdoc">Resolve search patterns.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2lib_8h_source.html#l00063">lib.h:63</a></div></div>
+<div class="ttc" id="apager_2lib_8h_html_a97661d5482310b15dc29f620e955991a"><div class="ttname"><a href="pager_2lib_8h.html#a97661d5482310b15dc29f620e955991a">PagerMode</a></div><div class="ttdeci">PagerMode</div><div class="ttdoc">Determine the behaviour of the Pager.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2lib_8h_source.html#l00133">lib.h:134</a></div></div>
+<div class="ttc" id="apager_2lib_8h_html_a97661d5482310b15dc29f620e955991aae094a15e3553a2a1001a143e28e467fb"><div class="ttname"><a href="pager_2lib_8h.html#a97661d5482310b15dc29f620e955991aae094a15e3553a2a1001a143e28e467fb">PAGER_MODE_EMAIL</a></div><div class="ttdeci">@ PAGER_MODE_EMAIL</div><div class="ttdoc">Pager is invoked via 1st path. The mime part is selected automatically.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2lib_8h_source.html#l00137">lib.h:137</a></div></div>
 <div class="ttc" id="apager_2lib_8h_html_aea254a51f411edcf16a4c4a92c409709"><div class="ttname"><a href="pager_2lib_8h.html#aea254a51f411edcf16a4c4a92c409709">MUTT_SHOW</a></div><div class="ttdeci">#define MUTT_SHOW</div><div class="ttdef"><b>Definition:</b> <a href="pager_2lib_8h_source.html#l00065">lib.h:65</a></div></div>
-<div class="ttc" id="aquoted_8c_html_a36927b7a0276bafc8b179a0f7e76fe58"><div class="ttname"><a href="quoted_8c.html#a36927b7a0276bafc8b179a0f7e76fe58">qstyle_classify</a></div><div class="ttdeci">struct QuoteStyle * qstyle_classify(struct QuoteStyle **quote_list, const char *qptr, size_t length, bool *force_redraw, int *q_level)</div><div class="ttdoc">Find a style for a string.</div><div class="ttdef"><b>Definition:</b> <a href="quoted_8c_source.html#l00290">quoted.c:290</a></div></div>
+<div class="ttc" id="aquoted_8c_html_a36927b7a0276bafc8b179a0f7e76fe58"><div class="ttname"><a href="quoted_8c.html#a36927b7a0276bafc8b179a0f7e76fe58">qstyle_classify</a></div><div class="ttdeci">struct QuoteStyle * qstyle_classify(struct QuoteStyle **quote_list, const char *qptr, size_t length, bool *force_redraw, int *q_level)</div><div class="ttdoc">Find a style for a string.</div><div class="ttdef"><b>Definition:</b> <a href="quoted_8c_source.html#l00293">quoted.c:293</a></div></div>
 <div class="ttc" id="astructAnsiColor_html"><div class="ttname"><a href="structAnsiColor.html">AnsiColor</a></div><div class="ttdoc">An ANSI escape sequence.</div><div class="ttdef"><b>Definition:</b> <a href="ansi_8h_source.html#l00034">ansi.h:35</a></div></div>
-<div class="ttc" id="astructAttrColor_html"><div class="ttname"><a href="structAttrColor.html">AttrColor</a></div><div class="ttdoc">A curses colour and its attributes.</div><div class="ttdef"><b>Definition:</b> <a href="attr_8h_source.html#l00045">attr.h:46</a></div></div>
+<div class="ttc" id="astructAttrColor_html"><div class="ttname"><a href="structAttrColor.html">AttrColor</a></div><div class="ttdoc">A curses colour and its attributes.</div><div class="ttdef"><b>Definition:</b> <a href="attr_8h_source.html#l00065">attr.h:66</a></div></div>
 <div class="ttc" id="astructLine_html"><div class="ttname"><a href="structLine.html">Line</a></div><div class="ttdoc">A line of text in the pager.</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00050">display.h:51</a></div></div>
 <div class="ttc" id="astructLine_html_a06c569515dbea2ab6193429a9185f11b"><div class="ttname"><a href="structLine.html#a06c569515dbea2ab6193429a9185f11b">Line::search_arr_size</a></div><div class="ttdeci">short search_arr_size</div><div class="ttdoc">Number of items in search array.</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00060">display.h:60</a></div></div>
 <div class="ttc" id="astructLine_html_a0e3866d298de382819e1bcf2b9b70456"><div class="ttname"><a href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">Line::search</a></div><div class="ttdeci">struct TextSyntax * search</div><div class="ttdoc">Array of search text in the line.</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00061">display.h:61</a></div></div>
@@ -664,9 +676,18 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructLine_html_a3c41455efe1bd48f4b9a0a913d2b3097"><div class="ttname"><a href="structLine.html#a3c41455efe1bd48f4b9a0a913d2b3097">Line::offset</a></div><div class="ttdeci">LOFF_T offset</div><div class="ttdoc">Offset into Email file (PagerPrivateData-&gt;fp)</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00052">display.h:52</a></div></div>
 <div class="ttc" id="astructLine_html_ad89cb1dcff5ed4e5553943b254c31527"><div class="ttname"><a href="structLine.html#ad89cb1dcff5ed4e5553943b254c31527">Line::syntax</a></div><div class="ttdeci">struct TextSyntax * syntax</div><div class="ttdoc">Array of coloured text in the line.</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00058">display.h:58</a></div></div>
 <div class="ttc" id="astructMuttWindow_html_a406b976fc50b1cb5beca6c85e7a3be7f"><div class="ttname"><a href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">MuttWindow::state</a></div><div class="ttdeci">struct WindowState state</div><div class="ttdoc">Current state of the Window.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__window_8h_source.html#l00127">mutt_window.h:127</a></div></div>
+<div class="ttc" id="astructMuttWindow_html_a52d65bf614794e3385e279e71ac4fcbc"><div class="ttname"><a href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">MuttWindow::wdata</a></div><div class="ttdeci">void * wdata</div><div class="ttdoc">Private data.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__window_8h_source.html#l00145">mutt_window.h:145</a></div></div>
+<div class="ttc" id="astructMuttWindow_html_ac2567e0dca80d74afa6f36e0450195f3"><div class="ttname"><a href="structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3">MuttWindow::parent</a></div><div class="ttdeci">struct MuttWindow * parent</div><div class="ttdoc">Parent Window.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__window_8h_source.html#l00135">mutt_window.h:135</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00040">neomutt.h:41</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00045">neomutt.h:45</a></div></div>
-<div class="ttc" id="astructQuoteStyle_html_ae5bd5c03326667f06310f14b49c69fea"><div class="ttname"><a href="structQuoteStyle.html#ae5bd5c03326667f06310f14b49c69fea">QuoteStyle::quote_n</a></div><div class="ttdeci">int quote_n</div><div class="ttdoc">The quoteN colour index for this level.</div><div class="ttdef"><b>Definition:</b> <a href="quoted_8h_source.html#l00069">quoted.h:69</a></div></div>
+<div class="ttc" id="astructPagerPrivateData_html"><div class="ttname"><a href="structPagerPrivateData.html">PagerPrivateData</a></div><div class="ttdoc">Private state data for the Pager.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2private__data_8h_source.html#l00040">private_data.h:41</a></div></div>
+<div class="ttc" id="astructPagerPrivateData_html_a2d3eb826dfb787d6a0430a81456fc45e"><div class="ttname"><a href="structPagerPrivateData.html#a2d3eb826dfb787d6a0430a81456fc45e">PagerPrivateData::lines_used</a></div><div class="ttdeci">int lines_used</div><div class="ttdoc">Size of lines array (used entries)</div><div class="ttdef"><b>Definition:</b> <a href="pager_2private__data_8h_source.html#l00049">private_data.h:49</a></div></div>
+<div class="ttc" id="astructPagerPrivateData_html_a462c56abf1f5d5f007a8b253d2b3166f"><div class="ttname"><a href="structPagerPrivateData.html#a462c56abf1f5d5f007a8b253d2b3166f">PagerPrivateData::lines_max</a></div><div class="ttdeci">int lines_max</div><div class="ttdoc">Capacity of lines array (total entries)</div><div class="ttdef"><b>Definition:</b> <a href="pager_2private__data_8h_source.html#l00050">private_data.h:50</a></div></div>
+<div class="ttc" id="astructPagerPrivateData_html_a7111bf1687e6d93cd548d4fdd36ad98b"><div class="ttname"><a href="structPagerPrivateData.html#a7111bf1687e6d93cd548d4fdd36ad98b">PagerPrivateData::lines</a></div><div class="ttdeci">struct Line * lines</div><div class="ttdoc">Array of text lines in pager.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2private__data_8h_source.html#l00048">private_data.h:48</a></div></div>
+<div class="ttc" id="astructPagerPrivateData_html_ad327fdca21da2a92ac9a62e24ccde5bd"><div class="ttname"><a href="structPagerPrivateData.html#ad327fdca21da2a92ac9a62e24ccde5bd">PagerPrivateData::first</a></div><div class="ttdeci">bool first</div><div class="ttdoc">First time flag for toggle-new.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2private__data_8h_source.html#l00075">private_data.h:75</a></div></div>
+<div class="ttc" id="astructPagerPrivateData_html_ae0f12597ca245a9d8e0bdf8dabbd18cd"><div class="ttname"><a href="structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd">PagerPrivateData::pview</a></div><div class="ttdeci">struct PagerView * pview</div><div class="ttdoc">Object to view in the pager.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2private__data_8h_source.html#l00042">private_data.h:42</a></div></div>
+<div class="ttc" id="astructPagerView_html_a4f7074be59cdcb518630e81e5ef8c3b7"><div class="ttname"><a href="structPagerView.html#a4f7074be59cdcb518630e81e5ef8c3b7">PagerView::mode</a></div><div class="ttdeci">enum PagerMode mode</div><div class="ttdoc">Pager mode.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2lib_8h_source.html#l00173">lib.h:173</a></div></div>
+<div class="ttc" id="astructQuoteStyle_html_ae5bd5c03326667f06310f14b49c69fea"><div class="ttname"><a href="structQuoteStyle.html#ae5bd5c03326667f06310f14b49c69fea">QuoteStyle::quote_n</a></div><div class="ttdeci">int quote_n</div><div class="ttdoc">The quoteN colour index for this level.</div><div class="ttdef"><b>Definition:</b> <a href="quoted_8h_source.html#l00068">quoted.h:68</a></div></div>
 <div class="ttc" id="astructRegex_html"><div class="ttname"><a href="structRegex.html">Regex</a></div><div class="ttdoc">Cached regular expression.</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00088">regex3.h:89</a></div></div>
 <div class="ttc" id="astructTextSyntax_html"><div class="ttname"><a href="structTextSyntax.html">TextSyntax</a></div><div class="ttdoc">Highlighting for a piece of text.</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00039">display.h:40</a></div></div>
 <div class="ttc" id="astructTextSyntax_html_a1306d3b8fe92dd91f77022cc059e7245"><div class="ttname"><a href="structTextSyntax.html#a1306d3b8fe92dd91f77022cc059e7245">TextSyntax::attr_color</a></div><div class="ttdeci">const struct AttrColor * attr_color</div><div class="ttdoc">Curses colour of text.</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00041">display.h:41</a></div></div>

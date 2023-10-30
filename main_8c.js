@@ -16,6 +16,7 @@ var main_8c =
     [ "init_locale", "main_8c.html#a274eea3c14525423de529ba1b1e22c68", null ],
     [ "get_user_info", "main_8c.html#ab1ab96b05777c73f61c060778657ec38", null ],
     [ "log_translation", "main_8c.html#a41a06145ff14e9670f59c948c1628a88", null ],
+    [ "log_gui", "main_8c.html#a600dacf8dcda8b3d41c49158c5cfa729", null ],
     [ "main_timeout_observer", "group__observer__api.html#ga7f47d16f5c1dad6c825d946fec19fa95", null ],
     [ "main", "main_8c.html#adedb285b02c41bde2158ded9cc9fd7ac", null ],
     [ "StartupComplete", "main_8c.html#aaf8eacd4749948bf6d877a63eb886322", null ]

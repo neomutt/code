@@ -33,6 +33,7 @@ var annotated_dup =
     [ "ChainData", "structChainData.html", "structChainData" ],
     [ "ChildCtx", "structChildCtx.html", "structChildCtx" ],
     [ "CidMap", "structCidMap.html", "structCidMap" ],
+    [ "ColorElement", "structColorElement.html", "structColorElement" ],
     [ "Command", "structCommand.html", "structCommand" ],
     [ "CompareData", "structCompareData.html", "structCompareData" ],
     [ "CompileOptions", "structCompileOptions.html", "structCompileOptions" ],

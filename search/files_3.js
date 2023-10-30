@@ -31,6 +31,6 @@ var searchData=
   ['dlg_5fverifycert_2ec_28',['dlg_verifycert.c',['../dlg__verifycert_8c.html',1,'']]],
   ['do_5fpager_2ec_29',['do_pager.c',['../do__pager_8c.html',1,'']]],
   ['draw_2ec_30',['draw.c',['../draw_8c.html',1,'']]],
-  ['dump_2ec_31',['dump.c',['../key_2dump_8c.html',1,'(Global Namespace)'],['../config_2dump_8c.html',1,'(Global Namespace)']]],
-  ['dump_2eh_32',['dump.h',['../dump_8h.html',1,'']]]
+  ['dump_2ec_31',['dump.c',['../key_2dump_8c.html',1,'(Global Namespace)'],['../config_2dump_8c.html',1,'(Global Namespace)'],['../color_2dump_8c.html',1,'(Global Namespace)']]],
+  ['dump_2eh_32',['dump.h',['../config_2dump_8h.html',1,'(Global Namespace)'],['../color_2dump_8h.html',1,'(Global Namespace)']]]
 ];

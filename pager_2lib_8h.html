@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-10-06-20-g15d0d9</span>
+   &#160;<span id="projectnumber">2023-10-23-35-g7a3ce1</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -128,7 +128,7 @@ $(document).ready(function(){initNavTree('pager_2lib_8h.html',''); initResizable
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pager_2lib_8h__dep__incl.svg" width="2931" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pager_2lib_8h__dep__incl.svg" width="3034" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -1078,62 +1078,62 @@ Variables</h2></td></tr>
 <p>Removes ANSI and backspace formatting, and optionally markers. This is separated out so that it can be used both by the pager and the autoview handler.</p>
 <p>This logic is pulled from the pager <a class="el" href="display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5" title="Fill a buffer from a file.">fill_buffer()</a> function, for use in stripping reply-quoted autoview output of ansi sequences. </p>
 
-<p class="definition">Definition at line <a class="el" href="display_8c_source.html#l00696">696</a> of file <a class="el" href="display_8c_source.html">display.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  697</span>{</div>
-<div class="line"><span class="lineno">  698</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *s = src;</div>
-<div class="line"><span class="lineno">  699</span> </div>
-<div class="line"><span class="lineno">  700</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(dest);</div>
-<div class="line"><span class="lineno">  701</span> </div>
-<div class="line"><span class="lineno">  702</span>  <span class="keywordflow">if</span> (!s)</div>
-<div class="line"><span class="lineno">  703</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  704</span> </div>
-<div class="line"><span class="lineno">  705</span>  <span class="keywordflow">while</span> (s[0] != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  706</span>  {</div>
-<div class="line"><span class="lineno">  707</span>    <span class="keywordflow">if</span> ((s[0] == <span class="charliteral">&#39;\010&#39;</span>) &amp;&amp; (s &gt; src))</div>
-<div class="line"><span class="lineno">  708</span>    {</div>
-<div class="line"><span class="lineno">  709</span>      <span class="keywordflow">if</span> (s[1] == <span class="charliteral">&#39;_&#39;</span>) <span class="comment">/* underline */</span></div>
-<div class="line"><span class="lineno">  710</span>      {</div>
-<div class="line"><span class="lineno">  711</span>        s += 2;</div>
-<div class="line"><span class="lineno">  712</span>      }</div>
-<div class="line"><span class="lineno">  713</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s[1] &amp;&amp; <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(dest)) <span class="comment">/* bold or overstrike */</span></div>
-<div class="line"><span class="lineno">  714</span>      {</div>
-<div class="line"><span class="lineno">  715</span>        dest-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>--;</div>
-<div class="line"><span class="lineno">  716</span>        <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dest, s[1]);</div>
-<div class="line"><span class="lineno">  717</span>        s += 2;</div>
-<div class="line"><span class="lineno">  718</span>      }</div>
-<div class="line"><span class="lineno">  719</span>      <span class="keywordflow">else</span> <span class="comment">/* ^H */</span></div>
-<div class="line"><span class="lineno">  720</span>      {</div>
-<div class="line"><span class="lineno">  721</span>        <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dest, *s++);</div>
-<div class="line"><span class="lineno">  722</span>      }</div>
-<div class="line"><span class="lineno">  723</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  724</span>    }</div>
-<div class="line"><span class="lineno">  725</span> </div>
-<div class="line"><span class="lineno">  726</span>    <span class="keywordtype">int</span> len = <a class="code hl_function" href="ansi_8h.html#aefcaac086b01d2c1e7160024b0bc2283">ansi_color_seq_length</a>(s);</div>
-<div class="line"><span class="lineno">  727</span>    <span class="keywordflow">if</span> (len &gt; 0)</div>
-<div class="line"><span class="lineno">  728</span>    {</div>
-<div class="line"><span class="lineno">  729</span>      s += len;</div>
-<div class="line"><span class="lineno">  730</span>    }</div>
-<div class="line"><span class="lineno">  731</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strip_markers &amp;&amp; (s[0] == <span class="charliteral">&#39;\033&#39;</span>) &amp;&amp; (s[1] == <span class="charliteral">&#39;]&#39;</span>) &amp;&amp;</div>
-<div class="line"><span class="lineno">  732</span>             ((<a class="code hl_function" href="display_8c.html#a920c283cb82368914ae6de672b14194e">check_attachment_marker</a>(s) == 0) || (<a class="code hl_function" href="display_8c.html#a18e1fdb87db0cf8e9e0585a0b4b55c31">check_protected_header_marker</a>(s) == 0)))</div>
-<div class="line"><span class="lineno">  733</span>    {</div>
-<div class="line"><span class="lineno">  734</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Seen attachment marker\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  735</span>      <span class="keywordflow">while</span> (*s++ != <span class="charliteral">&#39;\a&#39;</span>)</div>
-<div class="line"><span class="lineno">  736</span>        ; <span class="comment">/* skip pseudo-ANSI sequence */</span></div>
-<div class="line"><span class="lineno">  737</span>    }</div>
-<div class="line"><span class="lineno">  738</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  739</span>    {</div>
-<div class="line"><span class="lineno">  740</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dest, *s++);</div>
-<div class="line"><span class="lineno">  741</span>    }</div>
-<div class="line"><span class="lineno">  742</span>  }</div>
-<div class="line"><span class="lineno">  743</span>}</div>
-<div class="ttc" id="aansi_8h_html_aefcaac086b01d2c1e7160024b0bc2283"><div class="ttname"><a href="ansi_8h.html#aefcaac086b01d2c1e7160024b0bc2283">ansi_color_seq_length</a></div><div class="ttdeci">int ansi_color_seq_length(const char *str)</div><div class="ttdoc">Is this an ANSI escape sequence?</div><div class="ttdef"><b>Definition:</b> <a href="parse__ansi_8c_source.html#l00079">parse_ansi.c:79</a></div></div>
+<p class="definition">Definition at line <a class="el" href="display_8c_source.html#l00697">697</a> of file <a class="el" href="display_8c_source.html">display.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  698</span>{</div>
+<div class="line"><span class="lineno">  699</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *s = src;</div>
+<div class="line"><span class="lineno">  700</span> </div>
+<div class="line"><span class="lineno">  701</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(dest);</div>
+<div class="line"><span class="lineno">  702</span> </div>
+<div class="line"><span class="lineno">  703</span>  <span class="keywordflow">if</span> (!s)</div>
+<div class="line"><span class="lineno">  704</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  705</span> </div>
+<div class="line"><span class="lineno">  706</span>  <span class="keywordflow">while</span> (s[0] != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  707</span>  {</div>
+<div class="line"><span class="lineno">  708</span>    <span class="keywordflow">if</span> ((s[0] == <span class="charliteral">&#39;\010&#39;</span>) &amp;&amp; (s &gt; src))</div>
+<div class="line"><span class="lineno">  709</span>    {</div>
+<div class="line"><span class="lineno">  710</span>      <span class="keywordflow">if</span> (s[1] == <span class="charliteral">&#39;_&#39;</span>) <span class="comment">/* underline */</span></div>
+<div class="line"><span class="lineno">  711</span>      {</div>
+<div class="line"><span class="lineno">  712</span>        s += 2;</div>
+<div class="line"><span class="lineno">  713</span>      }</div>
+<div class="line"><span class="lineno">  714</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s[1] &amp;&amp; <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(dest)) <span class="comment">/* bold or overstrike */</span></div>
+<div class="line"><span class="lineno">  715</span>      {</div>
+<div class="line"><span class="lineno">  716</span>        dest-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>--;</div>
+<div class="line"><span class="lineno">  717</span>        <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dest, s[1]);</div>
+<div class="line"><span class="lineno">  718</span>        s += 2;</div>
+<div class="line"><span class="lineno">  719</span>      }</div>
+<div class="line"><span class="lineno">  720</span>      <span class="keywordflow">else</span> <span class="comment">/* ^H */</span></div>
+<div class="line"><span class="lineno">  721</span>      {</div>
+<div class="line"><span class="lineno">  722</span>        <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dest, *s++);</div>
+<div class="line"><span class="lineno">  723</span>      }</div>
+<div class="line"><span class="lineno">  724</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  725</span>    }</div>
+<div class="line"><span class="lineno">  726</span> </div>
+<div class="line"><span class="lineno">  727</span>    <span class="keywordtype">int</span> len = <a class="code hl_function" href="parse__ansi_8c.html#aefcaac086b01d2c1e7160024b0bc2283">ansi_color_seq_length</a>(s);</div>
+<div class="line"><span class="lineno">  728</span>    <span class="keywordflow">if</span> (len &gt; 0)</div>
+<div class="line"><span class="lineno">  729</span>    {</div>
+<div class="line"><span class="lineno">  730</span>      s += len;</div>
+<div class="line"><span class="lineno">  731</span>    }</div>
+<div class="line"><span class="lineno">  732</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strip_markers &amp;&amp; (s[0] == <span class="charliteral">&#39;\033&#39;</span>) &amp;&amp; (s[1] == <span class="charliteral">&#39;]&#39;</span>) &amp;&amp;</div>
+<div class="line"><span class="lineno">  733</span>             ((<a class="code hl_function" href="display_8c.html#a920c283cb82368914ae6de672b14194e">check_attachment_marker</a>(s) == 0) || (<a class="code hl_function" href="display_8c.html#a18e1fdb87db0cf8e9e0585a0b4b55c31">check_protected_header_marker</a>(s) == 0)))</div>
+<div class="line"><span class="lineno">  734</span>    {</div>
+<div class="line"><span class="lineno">  735</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Seen attachment marker\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  736</span>      <span class="keywordflow">while</span> (*s++ != <span class="charliteral">&#39;\a&#39;</span>)</div>
+<div class="line"><span class="lineno">  737</span>        ; <span class="comment">/* skip pseudo-ANSI sequence */</span></div>
+<div class="line"><span class="lineno">  738</span>    }</div>
+<div class="line"><span class="lineno">  739</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  740</span>    {</div>
+<div class="line"><span class="lineno">  741</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dest, *s++);</div>
+<div class="line"><span class="lineno">  742</span>    }</div>
+<div class="line"><span class="lineno">  743</span>  }</div>
+<div class="line"><span class="lineno">  744</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a2914dc2d9a9d77e4c9970b4249be9370"><div class="ttname"><a href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a></div><div class="ttdeci">size_t buf_len(const struct Buffer *buf)</div><div class="ttdoc">Calculate the length of a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00466">buffer.c:466</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00088">buffer.c:88</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9765efbb7f2c32e46fb1cb271a02ba20"><div class="ttname"><a href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a></div><div class="ttdeci">size_t buf_addch(struct Buffer *buf, char c)</div><div class="ttdoc">Add a single character to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00253">buffer.c:253</a></div></div>
-<div class="ttc" id="adisplay_8c_html_a18e1fdb87db0cf8e9e0585a0b4b55c31"><div class="ttname"><a href="display_8c.html#a18e1fdb87db0cf8e9e0585a0b4b55c31">check_protected_header_marker</a></div><div class="ttdeci">static int check_protected_header_marker(const char *p)</div><div class="ttdoc">Check that the unique marker is present.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00306">display.c:306</a></div></div>
-<div class="ttc" id="adisplay_8c_html_a920c283cb82368914ae6de672b14194e"><div class="ttname"><a href="display_8c.html#a920c283cb82368914ae6de672b14194e">check_attachment_marker</a></div><div class="ttdeci">static int check_attachment_marker(const char *p)</div><div class="ttdoc">Check that the unique marker is present.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00296">display.c:296</a></div></div>
+<div class="ttc" id="adisplay_8c_html_a18e1fdb87db0cf8e9e0585a0b4b55c31"><div class="ttname"><a href="display_8c.html#a18e1fdb87db0cf8e9e0585a0b4b55c31">check_protected_header_marker</a></div><div class="ttdeci">static int check_protected_header_marker(const char *p)</div><div class="ttdoc">Check that the unique marker is present.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00307">display.c:307</a></div></div>
+<div class="ttc" id="adisplay_8c_html_a920c283cb82368914ae6de672b14194e"><div class="ttname"><a href="display_8c.html#a920c283cb82368914ae6de672b14194e">check_attachment_marker</a></div><div class="ttdeci">static int check_attachment_marker(const char *p)</div><div class="ttdoc">Check that the unique marker is present.</div><div class="ttdef"><b>Definition:</b> <a href="display_8c_source.html#l00297">display.c:297</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00089">logging2.h:89</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a></div><div class="ttdeci">@ LL_DEBUG2</div><div class="ttdoc">Log at debug level 2.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00044">logging2.h:44</a></div></div>
+<div class="ttc" id="aparse__ansi_8c_html_aefcaac086b01d2c1e7160024b0bc2283"><div class="ttname"><a href="parse__ansi_8c.html#aefcaac086b01d2c1e7160024b0bc2283">ansi_color_seq_length</a></div><div class="ttdeci">int ansi_color_seq_length(const char *str)</div><div class="ttdoc">Is this an ANSI escape sequence?</div><div class="ttdef"><b>Definition:</b> <a href="parse__ansi_8c_source.html#l00099">parse_ansi.c:99</a></div></div>
 <div class="ttc" id="astructBuffer_html_a058d67252184c2eeaf57059544f8cdcf"><div class="ttname"><a href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">Buffer::dptr</a></div><div class="ttdeci">char * dptr</div><div class="ttdoc">Current read/write position.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00036">buffer.h:36</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1721,40 +1721,40 @@ Variables</h2></td></tr>
 </dl>
 <p>Checks if line matches the <code>$quote_regex</code> and doesn't match <code>$smileys</code>. This is used by the pager for calling qstyle_classify. </p>
 
-<p class="definition">Definition at line <a class="el" href="display_8c_source.html#l00320">320</a> of file <a class="el" href="display_8c_source.html">display.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  321</span>{</div>
-<div class="line"><span class="lineno">  322</span>  <span class="keywordtype">bool</span> is_quote = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  323</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structRegex.html">Regex</a> *c_smileys = <a class="code hl_function" href="config_2helpers_8c.html#a1c788f1dbe7b04cec7721fc1c7680b48">cs_subset_regex</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smileys&quot;</span>);</div>
-<div class="line"><span class="lineno">  324</span>  regmatch_t pmatch_internal[1];</div>
-<div class="line"><span class="lineno">  325</span> </div>
-<div class="line"><span class="lineno">  326</span>  <span class="keywordflow">if</span> (!pmatch)</div>
-<div class="line"><span class="lineno">  327</span>    pmatch = pmatch_internal;</div>
-<div class="line"><span class="lineno">  328</span> </div>
-<div class="line"><span class="lineno">  329</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structRegex.html">Regex</a> *c_quote_regex = <a class="code hl_function" href="config_2helpers_8c.html#a1c788f1dbe7b04cec7721fc1c7680b48">cs_subset_regex</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;quote_regex&quot;</span>);</div>
-<div class="line"><span class="lineno">  330</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(c_quote_regex, line, 1, pmatch))</div>
-<div class="line"><span class="lineno">  331</span>  {</div>
-<div class="line"><span class="lineno">  332</span>    regmatch_t smatch[1];</div>
-<div class="line"><span class="lineno">  333</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(c_smileys, line, 1, smatch))</div>
-<div class="line"><span class="lineno">  334</span>    {</div>
-<div class="line"><span class="lineno">  335</span>      <span class="keywordflow">if</span> (smatch[0].rm_so &gt; 0)</div>
-<div class="line"><span class="lineno">  336</span>      {</div>
-<div class="line"><span class="lineno">  337</span>        <span class="keywordtype">char</span> c = line[smatch[0].rm_so];</div>
-<div class="line"><span class="lineno">  338</span>        line[smatch[0].rm_so] = 0;</div>
-<div class="line"><span class="lineno">  339</span> </div>
-<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(c_quote_regex, line, 1, pmatch))</div>
-<div class="line"><span class="lineno">  341</span>          is_quote = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  342</span> </div>
-<div class="line"><span class="lineno">  343</span>        line[smatch[0].rm_so] = c;</div>
-<div class="line"><span class="lineno">  344</span>      }</div>
-<div class="line"><span class="lineno">  345</span>    }</div>
-<div class="line"><span class="lineno">  346</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  347</span>    {</div>
-<div class="line"><span class="lineno">  348</span>      is_quote = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  349</span>    }</div>
-<div class="line"><span class="lineno">  350</span>  }</div>
-<div class="line"><span class="lineno">  351</span> </div>
-<div class="line"><span class="lineno">  352</span>  <span class="keywordflow">return</span> is_quote;</div>
-<div class="line"><span class="lineno">  353</span>}</div>
+<p class="definition">Definition at line <a class="el" href="display_8c_source.html#l00321">321</a> of file <a class="el" href="display_8c_source.html">display.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  322</span>{</div>
+<div class="line"><span class="lineno">  323</span>  <span class="keywordtype">bool</span> is_quote = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  324</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structRegex.html">Regex</a> *c_smileys = <a class="code hl_function" href="config_2helpers_8c.html#a1c788f1dbe7b04cec7721fc1c7680b48">cs_subset_regex</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smileys&quot;</span>);</div>
+<div class="line"><span class="lineno">  325</span>  regmatch_t pmatch_internal[1];</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>  <span class="keywordflow">if</span> (!pmatch)</div>
+<div class="line"><span class="lineno">  328</span>    pmatch = pmatch_internal;</div>
+<div class="line"><span class="lineno">  329</span> </div>
+<div class="line"><span class="lineno">  330</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structRegex.html">Regex</a> *c_quote_regex = <a class="code hl_function" href="config_2helpers_8c.html#a1c788f1dbe7b04cec7721fc1c7680b48">cs_subset_regex</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;quote_regex&quot;</span>);</div>
+<div class="line"><span class="lineno">  331</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(c_quote_regex, line, 1, pmatch))</div>
+<div class="line"><span class="lineno">  332</span>  {</div>
+<div class="line"><span class="lineno">  333</span>    regmatch_t smatch[1];</div>
+<div class="line"><span class="lineno">  334</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(c_smileys, line, 1, smatch))</div>
+<div class="line"><span class="lineno">  335</span>    {</div>
+<div class="line"><span class="lineno">  336</span>      <span class="keywordflow">if</span> (smatch[0].rm_so &gt; 0)</div>
+<div class="line"><span class="lineno">  337</span>      {</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keywordtype">char</span> c = line[smatch[0].rm_so];</div>
+<div class="line"><span class="lineno">  339</span>        line[smatch[0].rm_so] = 0;</div>
+<div class="line"><span class="lineno">  340</span> </div>
+<div class="line"><span class="lineno">  341</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(c_quote_regex, line, 1, pmatch))</div>
+<div class="line"><span class="lineno">  342</span>          is_quote = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>        line[smatch[0].rm_so] = c;</div>
+<div class="line"><span class="lineno">  345</span>      }</div>
+<div class="line"><span class="lineno">  346</span>    }</div>
+<div class="line"><span class="lineno">  347</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  348</span>    {</div>
+<div class="line"><span class="lineno">  349</span>      is_quote = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  350</span>    }</div>
+<div class="line"><span class="lineno">  351</span>  }</div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>  <span class="keywordflow">return</span> is_quote;</div>
+<div class="line"><span class="lineno">  354</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a1c788f1dbe7b04cec7721fc1c7680b48"><div class="ttname"><a href="config_2helpers_8c.html#a1c788f1dbe7b04cec7721fc1c7680b48">cs_subset_regex</a></div><div class="ttdeci">const struct Regex * cs_subset_regex(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a regex config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00218">helpers.c:218</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a45a90a0b1de4365be463061b6ac0bc36"><div class="ttname"><a href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a></div><div class="ttdeci">bool mutt_regex_capture(const struct Regex *regex, const char *str, size_t nmatch, regmatch_t matches[])</div><div class="ttdoc">Match a regex against a string, with provided options.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2regex_8c_source.html#l00619">regex.c:619</a></div></div>
 <div class="ttc" id="astructRegex_html"><div class="ttname"><a href="structRegex.html">Regex</a></div><div class="ttdoc">Cached regular expression.</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00088">regex3.h:89</a></div></div>
@@ -1896,14 +1896,14 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>    <span class="keywordflow">if</span> (cc)</div>
 <div class="line"><span class="lineno">   50</span>    {</div>
 <div class="line"><span class="lineno">   51</span>      <a class="code hl_variable" href="structCursesColor.html#a52a86065e6f848383df586b48699cf0a">index</a> = cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a52a86065e6f848383df586b48699cf0a">index</a>;</div>
-<div class="line"><span class="lineno">   52</span>      swatch = <a class="code hl_function" href="debug_8c.html#a10c1e10aa131c3ce85299f0eb5c5c45c">color_debug_log_color</a>(cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a186f147b17189f1e9e6d03b57cd29816">fg</a>, cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a2cb08234c6eb8b85179e81397be3886f">bg</a>);</div>
+<div class="line"><span class="lineno">   52</span>      swatch = <a class="code hl_function" href="debug_8c.html#a1f4036ab190345ccd7ec74b9fc771010">color_log_color</a>(cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a186f147b17189f1e9e6d03b57cd29816">fg</a>, cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a2cb08234c6eb8b85179e81397be3886f">bg</a>);</div>
 <div class="line"><span class="lineno">   53</span>    }</div>
 <div class="line"><span class="lineno">   54</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;\t\t%3d %4d %4d %s\n&quot;</span>, <a class="code hl_variable" href="structCursesColor.html#a52a86065e6f848383df586b48699cf0a">index</a>, ts[i].first, ts[i].last, swatch);</div>
 <div class="line"><span class="lineno">   55</span>  }</div>
 <div class="line"><span class="lineno">   56</span>}</div>
-<div class="ttc" id="adebug_8c_html_a10c1e10aa131c3ce85299f0eb5c5c45c"><div class="ttname"><a href="debug_8c.html#a10c1e10aa131c3ce85299f0eb5c5c45c">color_debug_log_color</a></div><div class="ttdeci">const char * color_debug_log_color(color_t fg, color_t bg)</div><div class="ttdoc">Get a colourful string to represent a colour in the log.</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00129">debug.c:129</a></div></div>
+<div class="ttc" id="adebug_8c_html_a1f4036ab190345ccd7ec74b9fc771010"><div class="ttname"><a href="debug_8c.html#a1f4036ab190345ccd7ec74b9fc771010">color_log_color</a></div><div class="ttdeci">const char * color_log_color(color_t fg, color_t bg)</div><div class="ttdoc">Get a colourful string to represent a colour in the log.</div><div class="ttdef"><b>Definition:</b> <a href="debug_8c_source.html#l00051">debug.c:51</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00043">logging2.h:43</a></div></div>
-<div class="ttc" id="astructAttrColor_html_ae01a75c89fbcfa08fd701afa9a8d61b9"><div class="ttname"><a href="structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9">AttrColor::curses_color</a></div><div class="ttdeci">struct CursesColor * curses_color</div><div class="ttdoc">Underlying Curses colour.</div><div class="ttdef"><b>Definition:</b> <a href="attr_8h_source.html#l00047">attr.h:47</a></div></div>
+<div class="ttc" id="astructAttrColor_html_ae01a75c89fbcfa08fd701afa9a8d61b9"><div class="ttname"><a href="structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9">AttrColor::curses_color</a></div><div class="ttdeci">struct CursesColor * curses_color</div><div class="ttdoc">Underlying Curses colour.</div><div class="ttdef"><b>Definition:</b> <a href="attr_8h_source.html#l00070">attr.h:70</a></div></div>
 <div class="ttc" id="astructCursesColor_html"><div class="ttname"><a href="structCursesColor.html">CursesColor</a></div><div class="ttdoc">Colour in the ncurses palette.</div><div class="ttdef"><b>Definition:</b> <a href="curses2_8h_source.html#l00040">curses2.h:41</a></div></div>
 <div class="ttc" id="astructCursesColor_html_a186f147b17189f1e9e6d03b57cd29816"><div class="ttname"><a href="structCursesColor.html#a186f147b17189f1e9e6d03b57cd29816">CursesColor::fg</a></div><div class="ttdeci">color_t fg</div><div class="ttdoc">Foreground colour.</div><div class="ttdef"><b>Definition:</b> <a href="curses2_8h_source.html#l00042">curses2.h:42</a></div></div>
 <div class="ttc" id="astructCursesColor_html_a2cb08234c6eb8b85179e81397be3886f"><div class="ttname"><a href="structCursesColor.html#a2cb08234c6eb8b85179e81397be3886f">CursesColor::bg</a></div><div class="ttdeci">color_t bg</div><div class="ttdoc">Background colour.</div><div class="ttdef"><b>Definition:</b> <a href="curses2_8h_source.html#l00043">curses2.h:43</a></div></div>
@@ -1914,7 +1914,7 @@ Variables</h2></td></tr>
 <div id="dynsection-19-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-19-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pager_2lib_8h_a1694de57ddab1d0171e39dbe9a9b2cda_cgraph.svg" width="355" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pager_2lib_8h_a1694de57ddab1d0171e39dbe9a9b2cda_cgraph.svg" width="308" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1968,7 +1968,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span> (ac &amp;&amp; ac-&gt;<a class="code hl_variable" href="structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9">curses_color</a>)</div>
 <div class="line"><span class="lineno">   70</span>    {</div>
 <div class="line"><span class="lineno">   71</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structCursesColor.html">CursesColor</a> *cc = ac-&gt;<a class="code hl_variable" href="structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9">curses_color</a>;</div>
-<div class="line"><span class="lineno">   72</span>      swatch = <a class="code hl_function" href="debug_8c.html#a10c1e10aa131c3ce85299f0eb5c5c45c">color_debug_log_color</a>(cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a186f147b17189f1e9e6d03b57cd29816">fg</a>, cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a2cb08234c6eb8b85179e81397be3886f">bg</a>);</div>
+<div class="line"><span class="lineno">   72</span>      swatch = <a class="code hl_function" href="debug_8c.html#a1f4036ab190345ccd7ec74b9fc771010">color_log_color</a>(cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a186f147b17189f1e9e6d03b57cd29816">fg</a>, cc-&gt;<a class="code hl_variable" href="structCursesColor.html#a2cb08234c6eb8b85179e81397be3886f">bg</a>);</div>
 <div class="line"><span class="lineno">   73</span>    }</div>
 <div class="line"><span class="lineno">   74</span> </div>
 <div class="line"><span class="lineno">   75</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;\tcolor: %d %s (%s)\n&quot;</span>, line-&gt;<a class="code hl_variable" href="structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef">cid</a>, swatch, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
@@ -1996,11 +1996,11 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   97</span>    <a class="code hl_function" href="debug_2pager_8c.html#a1694de57ddab1d0171e39dbe9a9b2cda">dump_text_syntax</a>(line-&gt;<a class="code hl_variable" href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">search</a>, line-&gt;<a class="code hl_variable" href="structLine.html#a06c569515dbea2ab6193429a9185f11b">search_arr_size</a>);</div>
 <div class="line"><span class="lineno">   98</span>  }</div>
 <div class="line"><span class="lineno">   99</span>}</div>
-<div class="ttc" id="acolor_2command_8c_html_a4223d5d1f0253f7ee4b4cf2e06041f1f"><div class="ttname"><a href="color_2command_8c.html#a4223d5d1f0253f7ee4b4cf2e06041f1f">get_colorid_name</a></div><div class="ttdeci">void get_colorid_name(unsigned int cid, struct Buffer *buf)</div><div class="ttdoc">Get the name of a color id.</div><div class="ttdef"><b>Definition:</b> <a href="color_2command_8c_source.html#l00125">command.c:125</a></div></div>
-<div class="ttc" id="acolor_2simple_8c_html_ae60958374804169f78021b5742e33f15"><div class="ttname"><a href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a></div><div class="ttdeci">struct AttrColor * simple_color_get(enum ColorId cid)</div><div class="ttdoc">Get the colour of an object by its ID.</div><div class="ttdef"><b>Definition:</b> <a href="color_2simple_8c_source.html#l00081">simple.c:81</a></div></div>
+<div class="ttc" id="acolor_2command_8c_html_a4223d5d1f0253f7ee4b4cf2e06041f1f"><div class="ttname"><a href="color_2command_8c.html#a4223d5d1f0253f7ee4b4cf2e06041f1f">get_colorid_name</a></div><div class="ttdeci">void get_colorid_name(unsigned int cid, struct Buffer *buf)</div><div class="ttdoc">Get the name of a color id.</div><div class="ttdef"><b>Definition:</b> <a href="color_2command_8c_source.html#l00127">command.c:127</a></div></div>
+<div class="ttc" id="acolor_2simple_8c_html_ae60958374804169f78021b5742e33f15"><div class="ttname"><a href="color_2simple_8c.html#ae60958374804169f78021b5742e33f15">simple_color_get</a></div><div class="ttdeci">struct AttrColor * simple_color_get(enum ColorId cid)</div><div class="ttdoc">Get the colour of an object by its ID.</div><div class="ttdef"><b>Definition:</b> <a href="color_2simple_8c_source.html#l00090">simple.c:90</a></div></div>
 <div class="ttc" id="acolor_8h_html_ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a"><div class="ttname"><a href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a">MT_COLOR_NORMAL</a></div><div class="ttdeci">@ MT_COLOR_NORMAL</div><div class="ttdoc">Plain text.</div><div class="ttdef"><b>Definition:</b> <a href="color_8h_source.html#l00058">color.h:58</a></div></div>
 <div class="ttc" id="adebug_2pager_8c_html_a1694de57ddab1d0171e39dbe9a9b2cda"><div class="ttname"><a href="debug_2pager_8c.html#a1694de57ddab1d0171e39dbe9a9b2cda">dump_text_syntax</a></div><div class="ttdeci">void dump_text_syntax(struct TextSyntax *ts, int num)</div><div class="ttdef"><b>Definition:</b> <a href="debug_2pager_8c_source.html#l00037">pager.c:37</a></div></div>
-<div class="ttc" id="astructAttrColor_html"><div class="ttname"><a href="structAttrColor.html">AttrColor</a></div><div class="ttdoc">A curses colour and its attributes.</div><div class="ttdef"><b>Definition:</b> <a href="attr_8h_source.html#l00045">attr.h:46</a></div></div>
+<div class="ttc" id="astructAttrColor_html"><div class="ttname"><a href="structAttrColor.html">AttrColor</a></div><div class="ttdoc">A curses colour and its attributes.</div><div class="ttdef"><b>Definition:</b> <a href="attr_8h_source.html#l00065">attr.h:66</a></div></div>
 <div class="ttc" id="astructLine_html_a06c569515dbea2ab6193429a9185f11b"><div class="ttname"><a href="structLine.html#a06c569515dbea2ab6193429a9185f11b">Line::search_arr_size</a></div><div class="ttdeci">short search_arr_size</div><div class="ttdoc">Number of items in search array.</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00060">display.h:60</a></div></div>
 <div class="ttc" id="astructLine_html_a0e3866d298de382819e1bcf2b9b70456"><div class="ttname"><a href="structLine.html#a0e3866d298de382819e1bcf2b9b70456">Line::search</a></div><div class="ttdeci">struct TextSyntax * search</div><div class="ttdoc">Array of search text in the line.</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00061">display.h:61</a></div></div>
 <div class="ttc" id="astructLine_html_a294fbb344c66e421dca2902425af11aa"><div class="ttname"><a href="structLine.html#a294fbb344c66e421dca2902425af11aa">Line::cont_line</a></div><div class="ttdeci">bool cont_line</div><div class="ttdoc">Continuation of a previous line (wrapped by NeoMutt)</div><div class="ttdef"><b>Definition:</b> <a href="display_8h_source.html#l00054">display.h:54</a></div></div>
@@ -2014,7 +2014,7 @@ Variables</h2></td></tr>
 <div id="dynsection-21-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-21-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pager_2lib_8h_ae5b4e3e6d5435298d70bfdc069888bb8_cgraph.svg" width="490" height="335"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pager_2lib_8h_ae5b4e3e6d5435298d70bfdc069888bb8_cgraph.svg" width="443" height="335"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

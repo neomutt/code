@@ -7,6 +7,7 @@ var logging2_8h =
     [ "mutt_message", "group__logging__api.html#gae108f891125caafa9250cf0959c40c04", null ],
     [ "mutt_error", "group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4", null ],
     [ "mutt_perror", "group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e", null ],
+    [ "log_multiline", "logging2_8h.html#a0e57bfb924929ad6e4fedfdb02a620ef", null ],
     [ "log_dispatcher_t", "logging2_8h.html#a1c158513b81df9b79b9a77b3520593c0", null ],
     [ "MuttLogger", "logging2_8h.html#a6db33de0f7da0088013ee90717734329", null ],
     [ "LogLevel", "logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9", [
@@ -23,6 +24,7 @@ var logging2_8h =
       [ "LL_MAX", "logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9af135b0bf5feb951e216c8252206b4c00", null ]
     ] ],
     [ "STAILQ_HEAD", "logging2_8h.html#a09642138e1caa03a22a357782112825d", null ],
+    [ "log_multiline_full", "logging2_8h.html#a8f8ee3672f4406de96665e96c256d989", null ],
     [ "log_disp_file", "logging2_8h.html#a0f94117388a03553ea59c8d80cc6f374", null ],
     [ "log_disp_null", "logging2_8h.html#a754e9b404b7859acfdd5ba7aaf6466ad", null ],
     [ "log_disp_queue", "logging2_8h.html#a0cf678d4a4a9ed1c7c3f44a0ebb82ef2", null ],

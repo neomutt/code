@@ -3,7 +3,7 @@ var zstd_8c =
     [ "ZstdComprData", "structZstdComprData.html", "structZstdComprData" ],
     [ "MIN_COMP_LEVEL", "zstd_8c.html#ad6fbd0304e4c99a963b8ede7a2b45009", null ],
     [ "MAX_COMP_LEVEL", "zstd_8c.html#aa6d6e294762302249e6996ab960a130a", null ],
-    [ "zstd_cdata_free", "zstd_8c.html#a9c8ef5dfdbb8c338dfd1191d1c831acb", null ],
+    [ "zstd_cdata_free", "zstd_8c.html#a4c2a94596b9d5fa5831b230cc0ae6821", null ],
     [ "zstd_cdata_new", "zstd_8c.html#a5b75cb645c920bba07a7913a3ae7d308", null ],
     [ "compr_zstd_open", "group__compress__open.html#ga39038c907c3387c8312aade992552ff0", null ],
     [ "compr_zstd_compress", "group__compress__compress.html#ga897cc850928d79869e4f9971e074fc19", null ],

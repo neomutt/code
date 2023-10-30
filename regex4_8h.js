@@ -9,7 +9,7 @@ var regex4_8h =
     [ "regex_colors_get_list", "regex4_8h.html#a3d4c28a452a17ae4e01d4154ddc01b54", null ],
     [ "regex_colors_init", "regex4_8h.html#a5f094eec32e3cc83f98c26375d01b739", null ],
     [ "regex_color_list_clear", "regex4_8h.html#ae963acd0744f5dfd000b03193d3d4a48", null ],
-    [ "regex_colors_parse_color_list", "regex4_8h.html#a0b339698b24b97737e119116d6cdcd8c", null ],
-    [ "regex_colors_parse_status_list", "regex4_8h.html#a3535dfe13972818405868e24a6d45c53", null ],
+    [ "regex_colors_parse_color_list", "regex4_8h.html#a5187f65585ac423b0da9b8d9da8c7fb5", null ],
+    [ "regex_colors_parse_status_list", "regex4_8h.html#a473f22f7766c6b9289368abb6183b71b", null ],
     [ "regex_colors_parse_uncolor", "regex4_8h.html#a7a5d3c94371f021316d5cd447d40dbdd", null ]
 ];

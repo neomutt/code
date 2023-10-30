@@ -12,6 +12,8 @@ var dir_dd4f4d374fc1b1f6606a7c74ed1febd1 =
     [ "curses2.h", "curses2_8h.html", "curses2_8h" ],
     [ "debug.c", "debug_8c.html", "debug_8c" ],
     [ "debug.h", "debug_8h.html", "debug_8h" ],
+    [ "dump.c", "color_2dump_8c.html", "color_2dump_8c" ],
+    [ "dump.h", "color_2dump_8h.html", "color_2dump_8h" ],
     [ "lib.h", "color_2lib_8h.html", null ],
     [ "merged.c", "merged_8c.html", "merged_8c" ],
     [ "merged.h", "merged_8h.html", "merged_8h" ],

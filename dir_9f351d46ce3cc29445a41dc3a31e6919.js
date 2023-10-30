@@ -5,7 +5,7 @@ var dir_9f351d46ce3cc29445a41dc3a31e6919 =
     [ "charset.c", "config_2charset_8c.html", "config_2charset_8c" ],
     [ "charset.h", "config_2charset_8h.html", "config_2charset_8h" ],
     [ "dump.c", "config_2dump_8c.html", "config_2dump_8c" ],
-    [ "dump.h", "dump_8h.html", "dump_8h" ],
+    [ "dump.h", "config_2dump_8h.html", "config_2dump_8h" ],
     [ "enum.c", "enum_8c.html", "enum_8c" ],
     [ "enum.h", "enum_8h.html", "enum_8h" ],
     [ "helpers.c", "config_2helpers_8c.html", "config_2helpers_8c" ],

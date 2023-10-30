@@ -6,6 +6,7 @@ var lib_color =
     [ "Parse colour commands", "color_command.html", null ],
     [ "Curses Colour", "color_curses.html", null ],
     [ "Colour Debugging", "color_debug.html", null ],
+    [ "Colour Dump Command", "color_dump.html", null ],
     [ "Merged colours", "color_merge.html", null ],
     [ "Colour notifications", "color_notify.html", null ],
     [ "Parse ANSI Sequences", "color_parse_ansi.html", null ],

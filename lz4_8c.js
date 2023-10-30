@@ -3,7 +3,7 @@ var lz4_8c =
     [ "Lz4ComprData", "structLz4ComprData.html", "structLz4ComprData" ],
     [ "MIN_COMP_LEVEL", "lz4_8c.html#ad6fbd0304e4c99a963b8ede7a2b45009", null ],
     [ "MAX_COMP_LEVEL", "lz4_8c.html#aa6d6e294762302249e6996ab960a130a", null ],
-    [ "lz4_cdata_free", "lz4_8c.html#a833b7ecb6a6e390d8a9e963c09429856", null ],
+    [ "lz4_cdata_free", "lz4_8c.html#a094a07e82fba64f39ee932a79a25eac9", null ],
     [ "lz4_cdata_new", "lz4_8c.html#adecf6822fc666a01c078f9f489cf0140", null ],
     [ "compr_lz4_open", "group__compress__open.html#ga089c3f6e001361279287abedae9a348a", null ],
     [ "compr_lz4_compress", "group__compress__compress.html#ga12394af19e80d42dc5461ce78422527f", null ],
