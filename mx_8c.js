@@ -25,7 +25,6 @@ var mx_8c =
     [ "mx_path_probe", "mx_8c.html#add36baf7d8410fb37158defdaebe9a5d", null ],
     [ "mx_path_canon", "mx_8c.html#a63121b2d79e6eb21b505e311b1541ddb", null ],
     [ "mx_path_canon2", "mx_8c.html#ae0f8710a0b85d6ebf96cbd2e4e0f6bc1", null ],
-    [ "mx_path_pretty", "mx_8c.html#a472e5b24aca9d7d5e56a0b5ea063772f", null ],
     [ "mx_path_parent", "mx_8c.html#ad3d87da3247341cc87a6da82e35db693", null ],
     [ "mx_msg_padding_size", "mx_8c.html#a4721eba787445b6c9ab9a6366b5e816d", null ],
     [ "mx_ac_find", "mx_8c.html#ac7293053abc93a865472b2a86729eafa", null ],

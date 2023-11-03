@@ -31,7 +31,6 @@ var mh_8c =
     [ "mh_msg_close", "group__mx__msg__close.html#ga332b2aca9b3bd38322f3f72d93c4d1d7", null ],
     [ "mh_path_canon", "group__mx__path__canon.html#gac1024c3ff7f8d177ebfc5bf3afdaa95b", null ],
     [ "mh_path_parent", "group__mx__path__parent.html#ga22ba7ae7af695ced6a032b4f7ed032a2", null ],
-    [ "mh_path_pretty", "group__mx__path__pretty.html#ga304334caa63663f5cca4d9a95c6567a7", null ],
     [ "mh_path_probe", "group__mx__path__probe.html#ga6d5988bb4154475a9d8cb94a4c7c77d4", null ],
     [ "MxMhOps", "group__mx__api.html#ga6ed664fd101a1e0e513910616c425918", null ]
 ];

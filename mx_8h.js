@@ -18,7 +18,6 @@ var mx_8h =
     [ "mx_path_canon", "mx_8h.html#a63121b2d79e6eb21b505e311b1541ddb", null ],
     [ "mx_path_canon2", "mx_8h.html#ae0f8710a0b85d6ebf96cbd2e4e0f6bc1", null ],
     [ "mx_path_parent", "mx_8h.html#ad3d87da3247341cc87a6da82e35db693", null ],
-    [ "mx_path_pretty", "mx_8h.html#a472e5b24aca9d7d5e56a0b5ea063772f", null ],
     [ "mx_path_probe", "mx_8h.html#add36baf7d8410fb37158defdaebe9a5d", null ],
     [ "mx_path_resolve", "mx_8h.html#addbeb100364d5be4dd89b74ac73ef067", null ],
     [ "mx_resolve", "mx_8h.html#a7afcd03fb06da48f81f48e04e6c5ea70", null ],

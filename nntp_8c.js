@@ -37,7 +37,6 @@ var nntp_8c =
     [ "nntp_msg_close", "group__mx__msg__close.html#gab50af5211064829ec664f0eab9d29d8c", null ],
     [ "nntp_path_probe", "group__mx__path__probe.html#ga0af5851670960cce257a6e5f9f9805ff", null ],
     [ "nntp_path_canon", "group__mx__path__canon.html#ga6b0863ccb0a3324447b728571db8d903", null ],
-    [ "nntp_path_pretty", "group__mx__path__pretty.html#ga072eb8823be680bdd8e8c2220b571917", null ],
     [ "nntp_path_parent", "group__mx__path__parent.html#ga14278fb846996347b72490a4f728e45e", null ],
     [ "CurrentNewsSrv", "nntp_8c.html#ae58e3a5dcd99b6bbd0354b133fc220ce", null ],
     [ "OverviewFmt", "nntp_8c.html#a2efeded3447a40360d5b6fd431b8ac56", null ],

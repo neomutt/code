@@ -30,7 +30,6 @@ var compmbox_2compress_8c =
     [ "comp_tags_commit", "group__mx__tags__commit.html#gac663a0b667d336d2010914f5f0be7c37", null ],
     [ "comp_path_probe", "group__mx__path__probe.html#gad886126ad1805be0c69f9b2fe138db10", null ],
     [ "comp_path_canon", "group__mx__path__canon.html#ga4ccac52345a9318ef488da005b4e578d", null ],
-    [ "comp_path_pretty", "group__mx__path__pretty.html#ga5166364bde0805708043796b2480e7b5", null ],
     [ "comp_path_parent", "group__mx__path__parent.html#ga9309bebe148d6b487f8e5ebb10ea22ca", null ],
     [ "CompCommands", "compmbox_2compress_8c.html#aa95fe1211fa05439ba1ab5fe9e638813", null ],
     [ "MxCompOps", "group__mx__api.html#gaa6a44181c588646a076abd5ba38e2c2d", null ]

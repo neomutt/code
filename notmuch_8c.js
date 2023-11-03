@@ -66,7 +66,6 @@ var notmuch_8c =
     [ "nm_tags_commit", "group__mx__tags__commit.html#gac0f4fdd35b61c036a56539d9fbfa07e7", null ],
     [ "nm_path_probe", "group__mx__path__probe.html#gad7557498adc7575505d1d53c70b64194", null ],
     [ "nm_path_canon", "group__mx__path__canon.html#ga423b1e01cacd7df329cd81741ada97a8", null ],
-    [ "nm_path_pretty", "group__mx__path__pretty.html#ga56861c9c7ff70895606f10a9dc2fb59f", null ],
     [ "nm_path_parent", "group__mx__path__parent.html#ga7e270e967a420b358f2f71e239dd6700", null ],
     [ "NmCommands", "notmuch_8c.html#a76c06f932aaddfae70f3c651c6974f71", null ],
     [ "NmUrlProtocol", "notmuch_8c.html#af3142ba8f1a45d56da0e74227b5ccdb4", null ],

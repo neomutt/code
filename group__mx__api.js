@@ -18,7 +18,6 @@ var group__mx__api =
     [ "tags_commit()", "group__mx__tags__commit.html", "group__mx__tags__commit" ],
     [ "path_probe()", "group__mx__path__probe.html", "group__mx__path__probe" ],
     [ "path_canon()", "group__mx__path__canon.html", "group__mx__path__canon" ],
-    [ "path_pretty()", "group__mx__path__pretty.html", "group__mx__path__pretty" ],
     [ "path_parent()", "group__mx__path__parent.html", "group__mx__path__parent" ],
     [ "path_is_empty()", "group__mx__path__is__empty.html", "group__mx__path__is__empty" ],
     [ "MxCompOps", "group__mx__api.html#gaa6a44181c588646a076abd5ba38e2c2d", null ],

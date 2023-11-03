@@ -40,7 +40,6 @@ var maildir_8c =
     [ "maildir_msg_save_hcache", "group__mx__msg__save__hcache.html#gab70335fde06bb79ef5f98c1e85a040b0", null ],
     [ "maildir_path_canon", "group__mx__path__canon.html#ga1e77e1421cb6edf963e01d5f25e4ee3c", null ],
     [ "maildir_path_parent", "group__mx__path__parent.html#ga4ebedc0d534ec93eaa4a6a7cd0e984a2", null ],
-    [ "maildir_path_pretty", "group__mx__path__pretty.html#ga52e4b4def62938180fcd65868fb159eb", null ],
     [ "maildir_path_probe", "group__mx__path__probe.html#ga736c790541994662bc2ecb96d9deb626", null ],
     [ "MxMaildirOps", "group__mx__api.html#gafa9beb2a1a521d3ea2a3b0ad8ba4b85a", null ]
 ];
