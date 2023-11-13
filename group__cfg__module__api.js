@@ -13,6 +13,7 @@ var group__cfg__module__api =
     [ "config_init_maildir", "group__cfg__module__api.html#ga6ef3e1ae79d5e93c50bf6d68b9b0d49b", null ],
     [ "config_init_mbox", "group__cfg__module__api.html#gaa6eea067eef486e8a34bb3673bf6861b", null ],
     [ "config_init_menu", "group__cfg__module__api.html#gafc92c85ca71c95e197119b3bb4e6a75e", null ],
+    [ "config_init_mh", "group__cfg__module__api.html#ga134b5bd8d1bda91f54b58e60a38a8728", null ],
     [ "config_init_main", "group__cfg__module__api.html#gae972c9a26f29237eb516232b4a679a72", null ],
     [ "config_init_ncrypt", "group__cfg__module__api.html#gaee20f674efcb28599e8089818553e284", null ],
     [ "config_init_nntp", "group__cfg__module__api.html#ga3422a322507be19c2a8a56a984b4caa5", null ],

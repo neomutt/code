@@ -6,7 +6,7 @@ var searchData=
   ['score_3',['Score',['../structScore.html',1,'']]],
   ['searchstate_4',['SearchState',['../structSearchState.html',1,'']]],
   ['seqsetiterator_5',['SeqsetIterator',['../structSeqsetIterator.html',1,'']]],
-  ['sidebarformatdata_6',['SidebarFormatData',['../structSidebarFormatData.html',1,'']]],
+  ['sidebardata_6',['SidebarData',['../structSidebarData.html',1,'']]],
   ['sidebarfunction_7',['SidebarFunction',['../structSidebarFunction.html',1,'']]],
   ['sidebarwindowdata_8',['SidebarWindowData',['../structSidebarWindowData.html',1,'']]],
   ['slist_9',['Slist',['../structSlist.html',1,'']]],

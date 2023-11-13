@@ -1,5 +1,6 @@
 var mbtable_8c =
 [
+    [ "mbtable_equal", "mbtable_8c.html#a3c20370c02953e2affa60050943cba5b", null ],
     [ "mbtable_parse", "mbtable_8c.html#a9bf00505177154436bedcea1cc0a1cd3", null ],
     [ "mbtable_destroy", "group__cfg__type__destroy.html#gaea3f143fe75aa40ffa14b2785120c3e0", null ],
     [ "mbtable_string_set", "group__cfg__type__string__set.html#ga9bcc1276c78746b69a8b410923c8b06c", null ],

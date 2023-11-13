@@ -10,8 +10,5 @@ var maildir_2lib_8h =
     [ "maildir_parse_stream", "maildir_2lib_8h.html#a47fde2bf7e98eb0601f599b2998d155f", null ],
     [ "maildir_sync_mailbox_message", "maildir_2lib_8h.html#aaab54af8091d9fc9b1d034295e5d2331", null ],
     [ "maildir_update_flags", "maildir_2lib_8h.html#a79713d04e839c3782ef9e0b7bc25e9c0", null ],
-    [ "mh_check_empty", "maildir_2lib_8h.html#a255adaa00e9d3d619b5752ce0456c63b", null ],
-    [ "mh_sync_mailbox_message", "maildir_2lib_8h.html#a9a6412540f5b990d8f82823d537ce824", null ],
-    [ "MxMaildirOps", "group__mx__api.html#gafa9beb2a1a521d3ea2a3b0ad8ba4b85a", null ],
-    [ "MxMhOps", "group__mx__api.html#ga6ed664fd101a1e0e513910616c425918", null ]
+    [ "MxMaildirOps", "group__mx__api.html#gafa9beb2a1a521d3ea2a3b0ad8ba4b85a", null ]
 ];

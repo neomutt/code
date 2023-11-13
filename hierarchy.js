@@ -121,6 +121,7 @@ var hierarchy =
     [ "HeaderCache", "structHeaderCache.html", null ],
     [ "History", "structHistory.html", null ],
     [ "HistoryData", "structHistoryData.html", null ],
+    [ "HistoryEntry", "structHistoryEntry.html", null ],
     [ "HistoryFunction", "structHistoryFunction.html", null ],
     [ "Hook", "structHook.html", null ],
     [ "IBarPrivateData", "structIBarPrivateData.html", null ],
@@ -144,6 +145,7 @@ var hierarchy =
     [ "Mailbox", "structMailbox.html", [
       [ "ImapMboxData", "structImapMboxData.html", null ],
       [ "MaildirMboxData", "structMaildirMboxData.html", null ],
+      [ "MhMboxData", "structMhMboxData.html", null ],
       [ "NmMboxData", "structNmMboxData.html", null ],
       [ "NntpMboxData", "structNntpMboxData.html", null ]
     ] ],
@@ -162,6 +164,7 @@ var hierarchy =
     [ "MenuOpSeq", "structMenuOpSeq.html", null ],
     [ "MenuStatusLineData", "structMenuStatusLineData.html", null ],
     [ "Message", "structMessage.html", null ],
+    [ "MhEmail", "structMhEmail.html", null ],
     [ "MhSequences", "structMhSequences.html", null ],
     [ "MimeNames", "structMimeNames.html", null ],
     [ "MixmasterFunction", "structMixmasterFunction.html", null ],
@@ -227,7 +230,7 @@ var hierarchy =
     [ "Score", "structScore.html", null ],
     [ "SearchState", "structSearchState.html", null ],
     [ "SeqsetIterator", "structSeqsetIterator.html", null ],
-    [ "SidebarFormatData", "structSidebarFormatData.html", null ],
+    [ "SidebarData", "structSidebarData.html", null ],
     [ "SidebarFunction", "structSidebarFunction.html", null ],
     [ "Slist", "structSlist.html", null ],
     [ "SmimeCommandContext", "structSmimeCommandContext.html", null ],

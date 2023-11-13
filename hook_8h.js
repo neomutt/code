@@ -26,7 +26,7 @@ var hook_8h =
     [ "mutt_parse_hook", "group__command__parse.html#ga4b6e4f5a7cf7c50a1d32450735eba6f9", null ],
     [ "mutt_account_hook", "hook_8h.html#a4d4e38013bebd1e23d668454609a3def", null ],
     [ "mutt_crypt_hook", "hook_8h.html#adce4d617e1b3ef99bec1a7969dd08a43", null ],
-    [ "mutt_default_save", "hook_8h.html#a567b4b83522b84d353609dbdb265b8fa", null ],
+    [ "mutt_default_save", "hook_8h.html#a13ff966ae261a7a9183d70d8d4da7c01", null ],
     [ "mutt_delete_hooks", "hook_8h.html#a3b113188a50152ee8ff8f54975ea5897", null ],
     [ "mutt_find_hook", "hook_8h.html#a306aa3cd20a4ac4d88255ced1bf6d87d", null ],
     [ "mutt_folder_hook", "hook_8h.html#a6c1eb72c5e9a39b354d9c394f9116f50", null ],

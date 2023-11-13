@@ -16,7 +16,7 @@ var muttlib_8h =
     [ "mutt_inbox_cmp", "group__sort__api.html#ga4ce75034c4c32b8ee744c255ce912159", null ],
     [ "mutt_is_text_part", "muttlib_8h.html#ab74b8ff8a0761cc4ef015c39a63f502d", null ],
     [ "mutt_make_version", "muttlib_8h.html#a69b9bf85b68576604d5356405ace86b6", null ],
-    [ "mutt_needs_mailcap", "muttlib_8h.html#a408880eb332fd5a312dcae1df22ff688", null ],
+    [ "mutt_needs_mailcap", "muttlib_8h.html#a8973b2e5185609bfc5e0ef136fcd3177", null ],
     [ "mutt_open_read", "muttlib_8h.html#af2015a9a442c4b2bed656f9c9ea20933", null ],
     [ "mutt_pretty_mailbox", "muttlib_8h.html#ab9cf3d06c285c7d21065ef96a32aa6c6", null ],
     [ "mutt_safe_path", "muttlib_8h.html#ae1bb3751c9223e85eae4889beaa03719", null ],

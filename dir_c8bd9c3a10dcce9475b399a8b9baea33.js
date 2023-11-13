@@ -22,7 +22,7 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "filter.h", "filter_8h.html", "filter_8h" ],
     [ "hash.c", "hash_8c.html", "hash_8c" ],
     [ "hash.h", "hash_8h.html", "hash_8h" ],
-    [ "lib.h", "mutt_2lib_8h.html", null ],
+    [ "lib.h", "mutt_2lib_8h.html", "mutt_2lib_8h" ],
     [ "list.c", "list_8c.html", "list_8c" ],
     [ "list.h", "list_8h.html", "list_8h" ],
     [ "logging.c", "mutt_2logging_8c.html", "mutt_2logging_8c" ],

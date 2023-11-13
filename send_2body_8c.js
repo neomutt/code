@@ -7,5 +7,5 @@ var send_2body_8c =
     [ "encode_8bit", "send_2body_8c.html#a8d189fcf351162f5698b641ac6ddd84f", null ],
     [ "encode_quoted", "send_2body_8c.html#a149912c44e0cca53e6896e54c323a199", null ],
     [ "write_as_text_part", "send_2body_8c.html#a55c55e2f50317ab8226c0c2768e01ad0", null ],
-    [ "mutt_write_mime_body", "send_2body_8c.html#a7ed09e9904a3693633204577be91f413", null ]
+    [ "mutt_write_mime_body", "send_2body_8c.html#a833ceeb9577d06bdb2b888190bba83ff", null ]
 ];

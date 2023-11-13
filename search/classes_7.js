@@ -11,6 +11,7 @@ var searchData=
   ['helpbarwindowdata_8',['HelpbarWindowData',['../structHelpbarWindowData.html',1,'']]],
   ['history_9',['History',['../structHistory.html',1,'']]],
   ['historydata_10',['HistoryData',['../structHistoryData.html',1,'']]],
-  ['historyfunction_11',['HistoryFunction',['../structHistoryFunction.html',1,'']]],
-  ['hook_12',['Hook',['../structHook.html',1,'']]]
+  ['historyentry_11',['HistoryEntry',['../structHistoryEntry.html',1,'']]],
+  ['historyfunction_12',['HistoryFunction',['../structHistoryFunction.html',1,'']]],
+  ['hook_13',['Hook',['../structHook.html',1,'']]]
 ];

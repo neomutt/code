@@ -13,7 +13,7 @@ var header_8c =
     [ "write_userhdrs", "header_8c.html#a914f4e2e1ee9198323ffecb32a936423", null ],
     [ "mutt_write_one_header", "header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441", null ],
     [ "mutt_write_references", "header_8c.html#ac900ec1645d409c8630eb698940c2fdf", null ],
-    [ "mutt_rfc822_write_header", "header_8c.html#a400e83b7e5612f974ef543ff3cd237d8", null ],
-    [ "mutt_write_mime_header", "header_8c.html#a8508813ef9f3b0de339ee10b1f788b32", null ],
+    [ "mutt_rfc822_write_header", "header_8c.html#a00c731e98afb40438296e6a0f47752e7", null ],
+    [ "mutt_write_mime_header", "header_8c.html#abe9abfb9bc01d4bd091f09ba7b49740b", null ],
     [ "UserhdrsOverrideHeaders", "header_8c.html#a520c5ce2825ef71a466e3f751bb5ac51", null ]
 ];

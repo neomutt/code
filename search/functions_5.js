@@ -28,7 +28,7 @@ var searchData=
   ['find_5fmatching_5fparen_25',['find_matching_paren',['../compile_8c.html#a5b85aadb96334f727c0449c38a585fcc',1,'compile.c']]],
   ['find_5fnext_5fmailbox_26',['find_next_mailbox',['../mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff',1,'mutt_mailbox.c']]],
   ['find_5fnext_5fundeleted_27',['find_next_undeleted',['../dlg__index_8c.html#a9dacfcb89fcd14cae6bdd61849220ea2',1,'find_next_undeleted(struct MailboxView *mv, int msgno, bool uncollapse):&#160;dlg_index.c'],['../index_2lib_8h.html#a9dacfcb89fcd14cae6bdd61849220ea2',1,'find_next_undeleted(struct MailboxView *mv, int msgno, bool uncollapse):&#160;dlg_index.c']]],
-  ['find_5fparent_28',['find_parent',['../recvcmd_8c.html#ac94df4a3f2c015b2c0ad148bf6ea0bac',1,'recvcmd.c']]],
+  ['find_5fparent_28',['find_parent',['../recvcmd_8c.html#a6cd6a1a69effe9a99eeede2dab8b02f8',1,'recvcmd.c']]],
   ['find_5fprevious_5fundeleted_29',['find_previous_undeleted',['../dlg__index_8c.html#af67a4bfc2e8e2781fa29baad634b6efc',1,'find_previous_undeleted(struct MailboxView *mv, int msgno, bool uncollapse):&#160;dlg_index.c'],['../index_2lib_8h.html#af67a4bfc2e8e2781fa29baad634b6efc',1,'find_previous_undeleted(struct MailboxView *mv, int msgno, bool uncollapse):&#160;dlg_index.c']]],
   ['find_5fsubject_30',['find_subject',['../mutt__thread_8c.html#ade53690995c9c0c41164aea914536fc7',1,'mutt_thread.c']]],
   ['find_5ftz_31',['find_tz',['../mutt_2date_8c.html#a6e3d63ce76dd4fc2a64fd8150f059ebb',1,'date.c']]],

@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-11-03-4-g992c79</span>
+   &#160;<span id="projectnumber">2023-11-03-56-g035498</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -496,7 +496,7 @@ $(document).ready(function(){initNavTree('enriched_8c_source.html',''); initResi
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>  }</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>}</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno"><a class="line" href="group__handler__api.html#gadb6c3be04fbc667d336aa179da42bfbe">  466</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__handler__api.html#gadb6c3be04fbc667d336aa179da42bfbe">text_enriched_handler</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structBody.html">Body</a> *a, <span class="keyword">struct</span> <a class="code hl_struct" href="structState.html">State</a> *state)</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno"><a class="line" href="group__handler__api.html#ga52988b26b8120b105355accebe501bee">  466</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__handler__api.html#ga52988b26b8120b105355accebe501bee">text_enriched_handler</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structBody.html">Body</a> *b_email, <span class="keyword">struct</span> <a class="code hl_struct" href="structState.html">State</a> *state)</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>{</div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>  <span class="keyword">enum</span></div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>  {</div>
@@ -509,7 +509,7 @@ $(document).ready(function(){initNavTree('enriched_8c_source.html',''); initResi
 <div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>    DONE</div>
 <div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>  } text_state = TEXT;</div>
 <div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span> </div>
-<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>  <span class="keywordtype">long</span> bytes = a-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>  <span class="keywordtype">long</span> bytes = b_email-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEnrichedState.html">EnrichedState</a> enriched = { 0 };</div>
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span>  wint_t wc = 0;</div>
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>  <span class="keywordtype">int</span> tag_len = 0;</div>
@@ -581,63 +581,64 @@ $(document).ready(function(){initNavTree('enriched_8c_source.html',''); initResi
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>          tag_len = 0;</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>          text_state = TAG;</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>        }</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>      <span class="comment">/* Yes, (it wasn&#39;t a &lt;&lt;, so this char is first in TAG) */</span></div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>      <span class="comment">/* fallthrough */</span></div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>      <span class="keywordflow">case</span> TAG:</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&gt;&#39;</span>)</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        {</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>          tag[tag_len] = (wchar_t) <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>          <a class="code hl_function" href="enriched_8c.html#a0671852d4e72755733eb2715cbdf87f8">enriched_set_flags</a>(tag, &amp;enriched);</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>          text_state = TEXT;</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>        }</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tag_len &lt; 1024) <span class="comment">/* ignore overly long tags */</span></div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        {</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>          tag[tag_len++] = wc;</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>        }</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        {</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>          text_state = BOGUS_TAG;</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>        }</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span> </div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>      <span class="keywordflow">case</span> BOGUS_TAG:</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&gt;&#39;</span>)</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>          text_state = TEXT;</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span> </div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>      <span class="keywordflow">case</span> NEWLINE:</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        {</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>          <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>        }</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>        {</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>          ungetwc(wc, <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>          bytes++;</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>          text_state = TEXT;</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>        }</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span> </div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>      <span class="keywordflow">case</span> ST_EOF:</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>        <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>((<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;\0&#39;</span>, &amp;enriched);</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>        <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>        text_state = DONE;</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span> </div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>        <span class="comment">/* not reached */</span></div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>    }</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>  }</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span> </div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  <a class="code hl_define" href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a>(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>, <span class="charliteral">&#39;\n&#39;</span>); <span class="comment">/* add a final newline */</span></div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span> </div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a24e444e4075e48ac58f72cff287f3c0f">buffer</a>));</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a5c98ee59229be04267e11585aa973684">line</a>));</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a4302bc98504a6e715be8e5006833051c">param</a>));</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>}</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        <span class="comment">/* Yes, (it wasn&#39;t a &lt;&lt;, so this char is first in TAG) */</span></div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span> </div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>      <span class="keywordflow">case</span> TAG:</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>        {</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>          tag[tag_len] = (wchar_t) <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>          <a class="code hl_function" href="enriched_8c.html#a0671852d4e72755733eb2715cbdf87f8">enriched_set_flags</a>(tag, &amp;enriched);</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>          text_state = TEXT;</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>        }</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tag_len &lt; 1024) <span class="comment">/* ignore overly long tags */</span></div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>          tag[tag_len++] = wc;</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        }</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        {</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>          text_state = BOGUS_TAG;</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>        }</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>      <span class="keywordflow">case</span> BOGUS_TAG:</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>          text_state = TEXT;</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>      <span class="keywordflow">case</span> NEWLINE:</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        {</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>          <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>        }</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>        {</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>          ungetwc(wc, <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>          bytes++;</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>          text_state = TEXT;</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>        }</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>      <span class="keywordflow">case</span> ST_EOF:</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>        <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>((<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;\0&#39;</span>, &amp;enriched);</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>        <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>        text_state = DONE;</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>        <span class="comment">/* not reached */</span></div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>    }</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>  }</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>  <a class="code hl_define" href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a>(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>, <span class="charliteral">&#39;\n&#39;</span>); <span class="comment">/* add a final newline */</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span> </div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a24e444e4075e48ac58f72cff287f3c0f">buffer</a>));</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a5c98ee59229be04267e11585aa973684">line</a>));</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a4302bc98504a6e715be8e5006833051c">param</a>));</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>}</div>
 <div class="ttc" id="aemail_2lib_8h_html"><div class="ttname"><a href="email_2lib_8h.html">lib.h</a></div><div class="ttdoc">Structs that make up an email.</div></div>
 <div class="ttc" id="aenriched_8c_html_a0671852d4e72755733eb2715cbdf87f8"><div class="ttname"><a href="enriched_8c.html#a0671852d4e72755733eb2715cbdf87f8">enriched_set_flags</a></div><div class="ttdeci">static void enriched_set_flags(const wchar_t *tag, struct EnrichedState *enriched)</div><div class="ttdoc">Set flags on the enriched text state.</div><div class="ttdef"><b>Definition:</b> <a href="enriched_8c_source.html#l00374">enriched.c:374</a></div></div>
 <div class="ttc" id="aenriched_8c_html_a164595d998d79366ec0f3331fa94504f"><div class="ttname"><a href="enriched_8c.html#a164595d998d79366ec0f3331fa94504f">enriched_wrap</a></div><div class="ttdeci">static void enriched_wrap(struct EnrichedState *enriched)</div><div class="ttdoc">Wrap enriched text.</div><div class="ttdef"><b>Definition:</b> <a href="enriched_8c_source.html#l00121">enriched.c:121</a></div></div>
@@ -661,11 +662,12 @@ $(document).ready(function(){initNavTree('enriched_8c_source.html',''); initResi
 <div class="ttc" id="aenriched_8c_html_ab669a4eb5f4606a93dc08e1226172cf1"><div class="ttname"><a href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a></div><div class="ttdeci">static void enriched_flush(struct EnrichedState *enriched, bool wrap)</div><div class="ttdoc">Write enriched text to the State.</div><div class="ttdef"><b>Definition:</b> <a href="enriched_8c_source.html#l00238">enriched.c:238</a></div></div>
 <div class="ttc" id="aenriched_8c_html_acffa34d8f9025d37fdecf03e1176964f"><div class="ttname"><a href="enriched_8c.html#acffa34d8f9025d37fdecf03e1176964f">enriched_puts</a></div><div class="ttdeci">static void enriched_puts(const char *s, struct EnrichedState *enriched)</div><div class="ttdoc">Write an enriched text string to the State.</div><div class="ttdef"><b>Definition:</b> <a href="enriched_8c_source.html#l00349">enriched.c:349</a></div></div>
 <div class="ttc" id="aenriched_8h_html"><div class="ttname"><a href="enriched_8h.html">enriched.h</a></div><div class="ttdoc">Rich text handler.</div></div>
-<div class="ttc" id="agroup__handler__api_html_gadb6c3be04fbc667d336aa179da42bfbe"><div class="ttname"><a href="group__handler__api.html#gadb6c3be04fbc667d336aa179da42bfbe">text_enriched_handler</a></div><div class="ttdeci">int text_enriched_handler(struct Body *a, struct State *state)</div><div class="ttdoc">Handler for enriched text - Implements handler_t -.</div><div class="ttdef"><b>Definition:</b> <a href="enriched_8c_source.html#l00466">enriched.c:466</a></div></div>
+<div class="ttc" id="agroup__handler__api_html_ga52988b26b8120b105355accebe501bee"><div class="ttname"><a href="group__handler__api.html#ga52988b26b8120b105355accebe501bee">text_enriched_handler</a></div><div class="ttdeci">int text_enriched_handler(struct Body *b_email, struct State *state)</div><div class="ttdoc">Handler for enriched text - Implements handler_t -.</div><div class="ttdef"><b>Definition:</b> <a href="enriched_8c_source.html#l00466">enriched.c:466</a></div></div>
 <div class="ttc" id="amemory_8c_html_a39469100e5b8ae30c8f6f21e206aefe8"><div class="ttname"><a href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a></div><div class="ttdeci">void * mutt_mem_calloc(size_t nmemb, size_t size)</div><div class="ttdoc">Allocate zeroed memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00050">memory.c:50</a></div></div>
 <div class="ttc" id="amemory_8c_html_af778eb8166966fc0666c64849f6c7c5b"><div class="ttname"><a href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a></div><div class="ttdeci">void mutt_mem_realloc(void *ptr, size_t size)</div><div class="ttdoc">Resize a block of memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00114">memory.c:114</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00045">memory.h:45</a></div></div>
 <div class="ttc" id="amutt_2lib_8h_html"><div class="ttname"><a href="mutt_2lib_8h.html">lib.h</a></div><div class="ttdoc">Convenience wrapper for the library headers.</div></div>
+<div class="ttc" id="amutt_2lib_8h_html_a0cf2d82c57a09723ab59e6f4dcc45b84"><div class="ttname"><a href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a></div><div class="ttdeci">#define FALLTHROUGH</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2lib_8h_source.html#l00111">lib.h:111</a></div></div>
 <div class="ttc" id="amutt_2state_8c_html_ab0a18cdb936e5b09f70aacf19d97fdec"><div class="ttname"><a href="mutt_2state_8c.html#ab0a18cdb936e5b09f70aacf19d97fdec">state_putws</a></div><div class="ttdeci">int state_putws(struct State *state, const wchar_t *ws)</div><div class="ttdoc">Write a wide string to the state.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2state_8c_source.html#l00145">state.c:145</a></div></div>
 <div class="ttc" id="amutt_2state_8h_html_a0ea44a0777d9d2712ba6db4350f1e671"><div class="ttname"><a href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a></div><div class="ttdeci">#define state_puts(STATE, STR)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2state_8h_source.html#l00057">state.h:57</a></div></div>
 <div class="ttc" id="amutt_2state_8h_html_a2a4ce653367a744f47960bc30b42f3a7"><div class="ttname"><a href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a></div><div class="ttdeci">#define STATE_DISPLAY</div><div class="ttdoc">Output is displayed to the user.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2state_8h_source.html#l00032">state.h:32</a></div></div>

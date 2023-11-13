@@ -11,7 +11,7 @@ var openssl_8c =
     [ "x509_get_part", "openssl_8c.html#a1599982dabbbc5933b587dbb07c95b15", null ],
     [ "x509_fingerprint", "openssl_8c.html#add87edd5fed87dd2b4845b43f4a588d3", null ],
     [ "asn1time_to_string", "openssl_8c.html#a16277434f03da3b852516c19d3de7cda", null ],
-    [ "compare_certificates", "openssl_8c.html#a4beebc53c57442012424fe2dcfcada63", null ],
+    [ "certificates_equal", "openssl_8c.html#a7f6abab1b060f3eb73d6455c90847e39", null ],
     [ "check_certificate_expiration", "openssl_8c.html#ad29824f6d037bbefe08d5551fafabe74", null ],
     [ "hostname_match", "openssl_8c.html#ae39adc817bff49725d338570174c4a0b", null ],
     [ "ssl_init", "openssl_8c.html#ac2e20046425bd97175be33f596af1511", null ],

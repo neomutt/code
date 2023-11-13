@@ -10,7 +10,7 @@ var mailcap_8h =
     ] ],
     [ "mailcap_entry_free", "mailcap_8h.html#a49fd88d8bb73a7a56c4cc0fe28dfb645", null ],
     [ "mailcap_entry_new", "mailcap_8h.html#a8114f2f64a9bf84055e0e1d624b8c050", null ],
-    [ "mailcap_expand_command", "mailcap_8h.html#ac5eff1afc4d8341e095a90c3b9f68104", null ],
+    [ "mailcap_expand_command", "mailcap_8h.html#ac95deddbed52214ab8797bf9d19c1b8b", null ],
     [ "mailcap_expand_filename", "mailcap_8h.html#accb5ae6e2f507053e8436a2f00b834ea", null ],
-    [ "mailcap_lookup", "mailcap_8h.html#a412989a4828da86db98c88a087b2217c", null ]
+    [ "mailcap_lookup", "mailcap_8h.html#af76f3b2c5819c22f1470723cc30a9ad1", null ]
 ];

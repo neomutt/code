@@ -7,8 +7,8 @@ var header_8h =
       [ "MUTT_WRITE_HEADER_EDITHDRS", "header_8h.html#a610db600447893b501a944c8e5dbb9f7ad0d457403d03e8b8a4f70d5b41bc55cc", null ],
       [ "MUTT_WRITE_HEADER_MIME", "header_8h.html#a610db600447893b501a944c8e5dbb9f7a9c9142b3d504a8adbbef76e4191a58bd", null ]
     ] ],
-    [ "mutt_rfc822_write_header", "header_8h.html#a400e83b7e5612f974ef543ff3cd237d8", null ],
-    [ "mutt_write_mime_header", "header_8h.html#a8508813ef9f3b0de339ee10b1f788b32", null ],
+    [ "mutt_rfc822_write_header", "header_8h.html#a00c731e98afb40438296e6a0f47752e7", null ],
+    [ "mutt_write_mime_header", "header_8h.html#abe9abfb9bc01d4bd091f09ba7b49740b", null ],
     [ "mutt_write_one_header", "header_8h.html#acb110e1fda6d0ddb3cdf8074ba439441", null ],
     [ "mutt_write_references", "header_8h.html#ac900ec1645d409c8630eb698940c2fdf", null ]
 ];

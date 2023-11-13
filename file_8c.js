@@ -2,7 +2,7 @@ var file_8c =
 [
     [ "MAX_LOCK_ATTEMPTS", "file_8c.html#a3703357f73aac7f0e1508977fdf9bd6a", null ],
     [ "O_NOFOLLOW", "file_8c.html#a82d4d551b214905742c9e045185d352a", null ],
-    [ "compare_stat", "file_8c.html#a8a0c70f425ea6727b5de4c3145ad4ab4", null ],
+    [ "stat_equal", "file_8c.html#a72dc039c8768837b1adaf98124823047", null ],
     [ "mkwrapdir", "file_8c.html#ac5c16c911e4df6ee6cfde64db1149ce3", null ],
     [ "put_file_in_place", "file_8c.html#aa95ff8a193b41efec928f6f3f70398c1", null ],
     [ "mutt_file_fclose", "file_8c.html#a31f49795ff5b9558db5476e5777e63b6", null ],

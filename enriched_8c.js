@@ -23,6 +23,6 @@ var enriched_8c =
     [ "enriched_putwc", "enriched_8c.html#a564da94635e771c599f27fb909577626", null ],
     [ "enriched_puts", "enriched_8c.html#acffa34d8f9025d37fdecf03e1176964f", null ],
     [ "enriched_set_flags", "enriched_8c.html#a0671852d4e72755733eb2715cbdf87f8", null ],
-    [ "text_enriched_handler", "group__handler__api.html#gadb6c3be04fbc667d336aa179da42bfbe", null ],
+    [ "text_enriched_handler", "group__handler__api.html#ga52988b26b8120b105355accebe501bee", null ],
     [ "EnrichedTags", "enriched_8c.html#a77e9a7e69c8df3b30ee30e850b7eba65", null ]
 ];

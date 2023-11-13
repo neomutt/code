@@ -10,7 +10,7 @@ var rfc3676_8c =
     [ "quote_width", "rfc3676_8c.html#a913f46e4f502935d3f107cf37f852e8a", null ],
     [ "print_flowed_line", "rfc3676_8c.html#accf0413501a69b46811870a88b3c2816", null ],
     [ "print_fixed_line", "rfc3676_8c.html#a03ce1fc38ef17fba59c40b9987022391", null ],
-    [ "rfc3676_handler", "group__handler__api.html#gad3a5661d86d023e8729305d2f7fb412d", null ],
+    [ "rfc3676_handler", "group__handler__api.html#gaadbb7eb9de333071b51c4ff88b45315b", null ],
     [ "mutt_rfc3676_is_format_flowed", "rfc3676_8c.html#adc6a5cc71d87432efb771f495c6efb9c", null ],
     [ "rfc3676_space_stuff", "rfc3676_8c.html#a2fb3e8d4c89f28fca07fe90b66adff6a", null ],
     [ "mutt_rfc3676_space_stuff", "rfc3676_8c.html#ae80c6b55541960f57f67f4ea3e4467e8", null ],

@@ -23,9 +23,9 @@ var group__mx__api =
     [ "MxCompOps", "group__mx__api.html#gaa6a44181c588646a076abd5ba38e2c2d", null ],
     [ "MxImapOps", "group__mx__api.html#ga912153a8bbf9626bfdac665eb3d74b19", null ],
     [ "MxMaildirOps", "group__mx__api.html#gafa9beb2a1a521d3ea2a3b0ad8ba4b85a", null ],
-    [ "MxMhOps", "group__mx__api.html#ga6ed664fd101a1e0e513910616c425918", null ],
     [ "MxMboxOps", "group__mx__api.html#ga258ad0f7a38429093419ee8d4bc0608d", null ],
     [ "MxMmdfOps", "group__mx__api.html#gab9d2d71d874944bf5de7af567ed9fa15", null ],
+    [ "MxMhOps", "group__mx__api.html#ga6ed664fd101a1e0e513910616c425918", null ],
     [ "MxNntpOps", "group__mx__api.html#ga24562d83c3ae18d95f817c611452ac87", null ],
     [ "MxNotmuchOps", "group__mx__api.html#ga62b13e448033a089b1de7f11d13836d5", null ],
     [ "MxPopOps", "group__mx__api.html#ga8ede1b6a1c37b799cbfc59bf98e9339c", null ]

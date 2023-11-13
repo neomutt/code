@@ -1,6 +1,6 @@
 var rfc3676_8h =
 [
-    [ "rfc3676_handler", "group__handler__api.html#gad3a5661d86d023e8729305d2f7fb412d", null ],
+    [ "rfc3676_handler", "group__handler__api.html#gaadbb7eb9de333071b51c4ff88b45315b", null ],
     [ "mutt_rfc3676_is_format_flowed", "rfc3676_8h.html#adc6a5cc71d87432efb771f495c6efb9c", null ],
     [ "mutt_rfc3676_space_stuff", "rfc3676_8h.html#ae80c6b55541960f57f67f4ea3e4467e8", null ],
     [ "mutt_rfc3676_space_unstuff", "rfc3676_8h.html#a47bfc67ef302e9b51cee14c713a70f35", null ],

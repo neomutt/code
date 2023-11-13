@@ -1,5 +1,5 @@
 var group__crypto__pgp__encrypt__message =
 [
-    [ "pgp_gpgme_encrypt_message", "group__crypto__pgp__encrypt__message.html#gad2020b86c484fe3c16c03299b502b52d", null ],
-    [ "pgp_class_encrypt_message", "group__crypto__pgp__encrypt__message.html#gaa35c0eabd144a1a56357e85c15b84aae", null ]
+    [ "pgp_gpgme_encrypt_message", "group__crypto__pgp__encrypt__message.html#ga584d50284fb41599fafdb6337f0faa6a", null ],
+    [ "pgp_class_encrypt_message", "group__crypto__pgp__encrypt__message.html#gafe8a926773c49bff3b9c1480150aa23f", null ]
 ];

@@ -1,5 +1,6 @@
 var config_2regex_8c =
 [
+    [ "regex_equal", "config_2regex_8c.html#a8ebad50fb3b76ed6bea1d8c7146611f4", null ],
     [ "regex_free", "config_2regex_8c.html#aeb6632e5ec38d9ec3dae0e99558cd6cb", null ],
     [ "regex_destroy", "group__cfg__type__destroy.html#ga51745ca37912561b82be4b0560686d6c", null ],
     [ "regex_new", "config_2regex_8c.html#a2514a6f801b90e662923176d32535b84", null ],

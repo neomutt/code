@@ -47,5 +47,7 @@ var config_2set_8h =
     [ "cs_str_string_minus_equals", "config_2set_8h.html#ae7fb6258054e01e79f06bdc64b705cd8", null ],
     [ "cs_str_string_plus_equals", "config_2set_8h.html#a651003f60b9d9882dd5c6cc31833927b", null ],
     [ "cs_str_string_set", "config_2set_8h.html#a5b6c4a72c38c2eca93569af53cc82eed", null ],
-    [ "cs_str_delete", "config_2set_8h.html#a5b7bbad5551e55a2330a2dd40111a0f5", null ]
+    [ "cs_str_delete", "config_2set_8h.html#a5b7bbad5551e55a2330a2dd40111a0f5", null ],
+    [ "startup_only", "config_2set_8h.html#a09a8cc6d80d0de8506c22effdaebef97", null ],
+    [ "StartupComplete", "config_2set_8h.html#aaf8eacd4749948bf6d877a63eb886322", null ]
 ];

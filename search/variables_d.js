@@ -48,7 +48,7 @@ var searchData=
   ['notmuchvars_45',['NotmuchVars',['../notmuch_2config_8c.html#afc42f1f6e46d2d2aec473271f8a877d8',1,'config.c']]],
   ['nowrap_46',['nowrap',['../structBody.html#abf4a6326b43363706a4731cbab976df6',1,'Body']]],
   ['nulbin_47',['nulbin',['../structContent.html#ae2a914f5ad69e35003f328f905279910',1,'Content']]],
-  ['num_48',['num',['../structCryptEntry.html#aa3757de68379ec3cb1abec30a1c1f91a',1,'CryptEntry::num()'],['../structAliasView.html#a7b805b55ebbaa9f08b4f6692c4ae33ab',1,'AliasView::num()'],['../structAttachPtr.html#a71db2d33eefd6c1f41f129f6943fe83a',1,'AttachPtr::num()'],['../structAccountEntry.html#a8b156271f95e8b9a2f44024b5a9b754a',1,'AccountEntry::num()'],['../structFolder.html#a356f20ebab3ead589035c5100911c791',1,'Folder::num()'],['../structRemailer.html#a54d1c42da77e9c7d49ef203f845b192c',1,'Remailer::num()'],['../structPgpEntry.html#afe81b58afeff1f2d70aba5621125487c',1,'PgpEntry::num()'],['../structChildCtx.html#a9ca2a8cf245455ac084610026f49d9dd',1,'ChildCtx::num()'],['../structPatternEntry.html#a94a7a58f4618f28f6d32e47236d7a039',1,'PatternEntry::num()']]],
+  ['num_48',['num',['../structRemailer.html#a54d1c42da77e9c7d49ef203f845b192c',1,'Remailer::num()'],['../structAliasView.html#a7b805b55ebbaa9f08b4f6692c4ae33ab',1,'AliasView::num()'],['../structAttachPtr.html#a71db2d33eefd6c1f41f129f6943fe83a',1,'AttachPtr::num()'],['../structAccountEntry.html#a8b156271f95e8b9a2f44024b5a9b754a',1,'AccountEntry::num()'],['../structFolder.html#a356f20ebab3ead589035c5100911c791',1,'Folder::num()'],['../structHistoryEntry.html#a32f24bb573abe5ea55040462275068f4',1,'HistoryEntry::num()'],['../structCryptEntry.html#aa3757de68379ec3cb1abec30a1c1f91a',1,'CryptEntry::num()'],['../structPgpEntry.html#afe81b58afeff1f2d70aba5621125487c',1,'PgpEntry::num()'],['../structChildCtx.html#a9ca2a8cf245455ac084610026f49d9dd',1,'ChildCtx::num()'],['../structPatternEntry.html#a94a7a58f4618f28f6d32e47236d7a039',1,'PatternEntry::num()']]],
   ['num_5felems_49',['num_elems',['../structHashTable.html#a85ac1a8f74a5b2d73de18c9e503a3c5e',1,'HashTable']]],
   ['num_5femails_50',['num_emails',['../structEventEmail.html#a4b2a1b3e897ed10d908c31ba41c32e47',1,'EventEmail']]],
   ['num_5fhidden_51',['num_hidden',['../structEmail.html#a71f1e37390a5400b182e0724c1f61769',1,'Email']]],
@@ -56,7 +56,7 @@ var searchData=
   ['num_5ftagged_53',['num_tagged',['../structMenu.html#a3b4aa1cc357ea62fec6e564ebcfe8799',1,'Menu']]],
   ['numalg_54',['numalg',['../structPgpKeyInfo.html#af6274f75bbf9a8609651c3d34a031128',1,'PgpKeyInfo']]],
   ['numcursescolors_55',['NumCursesColors',['../curses_8c.html#a3224e4fb24b9a03567ef9ea6f57c8d79',1,'curses.c']]],
-  ['numfiles_56',['numfiles',['../structFileCompletionData.html#afd6d6eeecfacd15fcaa566c27548600e',1,'FileCompletionData::numfiles()'],['../structBrowserPrivateData.html#a97d162638f5ce0230c081c115c1c5ed6',1,'BrowserPrivateData::numfiles()']]],
+  ['numfiles_56',['numfiles',['../structBrowserPrivateData.html#a97d162638f5ce0230c081c115c1c5ed6',1,'BrowserPrivateData::numfiles()'],['../structFileCompletionData.html#afd6d6eeecfacd15fcaa566c27548600e',1,'FileCompletionData::numfiles()']]],
   ['numoflogs_57',['NumOfLogs',['../mutt__logging_8c.html#a16142aa6408b6e19a850bb34b419ed7f',1,'mutt_logging.c']]],
   ['numquotedcolors_58',['NumQuotedColors',['../quoted_8c.html#a63372a7d9377459c27142554ff4c928a',1,'NumQuotedColors():&#160;quoted.c'],['../quoted_8h.html#a63372a7d9377459c27142554ff4c928a',1,'NumQuotedColors():&#160;quoted.c']]]
 ];

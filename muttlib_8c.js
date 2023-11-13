@@ -6,7 +6,7 @@ var muttlib_8c =
     [ "buf_expand_path", "muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3", null ],
     [ "mutt_expand_path_regex", "muttlib_8c.html#a03a356f3d8b7ef8613d50e188ebac7e7", null ],
     [ "mutt_gecos_name", "muttlib_8c.html#a23e2405002a60eaa1507f7f6d677f696", null ],
-    [ "mutt_needs_mailcap", "muttlib_8c.html#a408880eb332fd5a312dcae1df22ff688", null ],
+    [ "mutt_needs_mailcap", "muttlib_8c.html#a8973b2e5185609bfc5e0ef136fcd3177", null ],
     [ "mutt_is_text_part", "muttlib_8c.html#ab74b8ff8a0761cc4ef015c39a63f502d", null ],
     [ "mutt_pretty_mailbox", "muttlib_8c.html#ab9cf3d06c285c7d21065ef96a32aa6c6", null ],
     [ "buf_pretty_mailbox", "muttlib_8c.html#a777680c324667521d8c486051c22fe10", null ],

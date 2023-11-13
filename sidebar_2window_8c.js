@@ -1,6 +1,6 @@
 var sidebar_2window_8c =
 [
-    [ "SidebarFormatData", "structSidebarFormatData.html", "structSidebarFormatData" ],
+    [ "SidebarData", "structSidebarData.html", "structSidebarData" ],
     [ "imap_is_prefix", "sidebar_2window_8c.html#ab8ee9c3eeb900924234a2ad97d7c56b0", null ],
     [ "abbrev_folder", "sidebar_2window_8c.html#a7e0894fffb1f9e4b33183336dd60df68", null ],
     [ "abbrev_url", "sidebar_2window_8c.html#a09168752ea6a450a481d92b9cbfd40e7", null ],

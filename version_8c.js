@@ -17,7 +17,6 @@ var version_8c =
     [ "License", "version_8c.html#a289cfedeacecbae604e6ecc14a007b84", null ],
     [ "ReachingUs", "version_8c.html#a440c5f4913af8663a4d6c5626b44c11d", null ],
     [ "Notice", "version_8c.html#ad14b6ea1a185fff5feee38dddf4366e7", null ],
-    [ "CompOptsDefault", "version_8c.html#af249d600dbfb68973fd53aee17151c50", null ],
     [ "CompOpts", "version_8c.html#a7c40473f630f00cab6b972bdea08cbc1", null ],
     [ "DebugOpts", "version_8c.html#aa22cc73f7e2c4d2d832de75164f96aa9", null ]
 ];

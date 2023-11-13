@@ -17,6 +17,7 @@ var types_8h =
     [ "DT_MYVAR", "types_8h.html#a6afc094a785e1ebb6779a182313bdd75", null ],
     [ "DTYPE", "types_8h.html#a22d2993a00a91f4020b99ab8a50bfe73", null ],
     [ "DT_NO_FLAGS", "types_8h.html#ab061db804a66a88b935ab1bc1da34ebb", null ],
+    [ "DT_ON_STARTUP", "types_8h.html#a858b447d3a17b17dd4e7e46ac5135d66", null ],
     [ "DT_NOT_EMPTY", "types_8h.html#a757f4209460cc66a307289b244885a2f", null ],
     [ "DT_NOT_NEGATIVE", "types_8h.html#ab6cbe1d68a262d987b449efe7053ec81", null ],
     [ "DT_MAILBOX", "types_8h.html#a62e8bc9ef453815b2f704ef54f6639c2", null ],

@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-11-03-4-g992c79</span>
+   &#160;<span id="projectnumber">2023-11-03-56-g035498</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -151,65 +151,65 @@ Functions</h2></td></tr>
 
 <p>Generate a public key attachment - Implements <a class="el" href="structCryptModuleSpecs.html#a8331dbbb3603bed062e7e80342a97b4f">CryptModuleSpecs::pgp_make_key_attachment()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l03651">3651</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 3652</span>{</div>
-<div class="line"><span class="lineno"> 3653</span>  gpgme_ctx_t context = NULL;</div>
-<div class="line"><span class="lineno"> 3654</span>  gpgme_key_t export_keys[2] = { 0 };</div>
-<div class="line"><span class="lineno"> 3655</span>  gpgme_data_t keydata = NULL;</div>
-<div class="line"><span class="lineno"> 3656</span>  gpgme_error_t err;</div>
-<div class="line"><span class="lineno"> 3657</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *att = NULL;</div>
-<div class="line"><span class="lineno"> 3658</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l03649">3649</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 3650</span>{</div>
+<div class="line"><span class="lineno"> 3651</span>  gpgme_ctx_t context = NULL;</div>
+<div class="line"><span class="lineno"> 3652</span>  gpgme_key_t export_keys[2] = { 0 };</div>
+<div class="line"><span class="lineno"> 3653</span>  gpgme_data_t keydata = NULL;</div>
+<div class="line"><span class="lineno"> 3654</span>  gpgme_error_t err;</div>
+<div class="line"><span class="lineno"> 3655</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *att = NULL;</div>
+<div class="line"><span class="lineno"> 3656</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno"> 3657</span> </div>
+<div class="line"><span class="lineno"> 3658</span>  <a class="code hl_variable" href="globals_8c.html#a3cf441307286abc7db5e6b8213cfad98">OptPgpCheckTrust</a> = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno"> 3659</span> </div>
-<div class="line"><span class="lineno"> 3660</span>  <a class="code hl_variable" href="globals_8c.html#a3cf441307286abc7db5e6b8213cfad98">OptPgpCheckTrust</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 3661</span> </div>
-<div class="line"><span class="lineno"> 3662</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structCryptKeyInfo.html">CryptKeyInfo</a> *key = <a class="code hl_function" href="crypt__gpgme_8c.html#ab226a975408d15512af77f91c7191391">crypt_ask_for_key</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Please enter the key ID: &quot;</span>), NULL,</div>
-<div class="line"><span class="lineno"> 3663</span>                                               <a class="code hl_define" href="ncrypt_2lib_8h.html#a827146354c736ec416508944692e52b2">KEYFLAG_NO_FLAGS</a>, <a class="code hl_define" href="ncrypt_2lib_8h.html#a587e679a4c9cc44f11f0c467bb22b0af">APPLICATION_PGP</a>, NULL);</div>
-<div class="line"><span class="lineno"> 3664</span>  <span class="keywordflow">if</span> (!key)</div>
-<div class="line"><span class="lineno"> 3665</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 3666</span>  export_keys[0] = key-&gt;<a class="code hl_variable" href="structCryptKeyInfo.html#ae1f570089508f19aa36f6c1cdb31eca0">kobj</a>;</div>
-<div class="line"><span class="lineno"> 3667</span>  export_keys[1] = NULL;</div>
-<div class="line"><span class="lineno"> 3668</span> </div>
-<div class="line"><span class="lineno"> 3669</span>  context = <a class="code hl_function" href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 3670</span>  gpgme_set_armor(context, 1);</div>
-<div class="line"><span class="lineno"> 3671</span>  keydata = <a class="code hl_function" href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a>();</div>
-<div class="line"><span class="lineno"> 3672</span>  err = gpgme_op_export_keys(context, export_keys, 0, keydata);</div>
-<div class="line"><span class="lineno"> 3673</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
-<div class="line"><span class="lineno"> 3674</span>  {</div>
-<div class="line"><span class="lineno"> 3675</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error exporting key: %s&quot;</span>), gpgme_strerror(err));</div>
-<div class="line"><span class="lineno"> 3676</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 3677</span>  }</div>
-<div class="line"><span class="lineno"> 3678</span> </div>
-<div class="line"><span class="lineno"> 3679</span>  <span class="keywordtype">char</span> *tempf = <a class="code hl_function" href="crypt__gpgme_8c.html#aa6b240b5ee594de46af684f88b1ad05d">data_object_to_tempfile</a>(keydata, NULL);</div>
-<div class="line"><span class="lineno"> 3680</span>  <span class="keywordflow">if</span> (!tempf)</div>
-<div class="line"><span class="lineno"> 3681</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 3682</span> </div>
-<div class="line"><span class="lineno"> 3683</span>  att = <a class="code hl_function" href="email_2body_8c.html#a37b346253e3b97aa64bb38ffc8d1ea0c">mutt_body_new</a>();</div>
-<div class="line"><span class="lineno"> 3684</span>  <span class="comment">/* tempf is a newly allocated string, so this is correct: */</span></div>
-<div class="line"><span class="lineno"> 3685</span>  att-&gt;<a class="code hl_variable" href="structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a">filename</a> = tempf;</div>
-<div class="line"><span class="lineno"> 3686</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a47191eabf16d34d0deb412c898ed629b">unlink</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 3687</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a86721d1d557276cbc9cf69777af8c305">use_disp</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 3688</span>  att-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> = <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>;</div>
-<div class="line"><span class="lineno"> 3689</span>  att-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<span class="stringliteral">&quot;pgp-keys&quot;</span>);</div>
-<div class="line"><span class="lineno"> 3690</span>  <span class="comment">/* L10N: MIME description for exported (attached) keys.</span></div>
-<div class="line"><span class="lineno"> 3691</span><span class="comment">     You can translate this entry to a non-ASCII string (it will be encoded),</span></div>
-<div class="line"><span class="lineno"> 3692</span><span class="comment">     but it may be safer to keep it untranslated. */</span></div>
-<div class="line"><span class="lineno"> 3693</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;PGP Key 0x%s&quot;</span>), <a class="code hl_function" href="crypt__gpgme_8c.html#abc67bef5541f788bbc5f87f502514eed">crypt_keyid</a>(key));</div>
-<div class="line"><span class="lineno"> 3694</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a90db5151872e23e56a8f31d68925c121">description</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(buf);</div>
-<div class="line"><span class="lineno"> 3695</span>  <a class="code hl_function" href="sendlib_8c.html#ae4f3b3ef1863d9821af9f82d8963e5b8">mutt_update_encoding</a>(att, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 3660</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structCryptKeyInfo.html">CryptKeyInfo</a> *key = <a class="code hl_function" href="crypt__gpgme_8c.html#ab226a975408d15512af77f91c7191391">crypt_ask_for_key</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Please enter the key ID: &quot;</span>), NULL,</div>
+<div class="line"><span class="lineno"> 3661</span>                                               <a class="code hl_define" href="ncrypt_2lib_8h.html#a827146354c736ec416508944692e52b2">KEYFLAG_NO_FLAGS</a>, <a class="code hl_define" href="ncrypt_2lib_8h.html#a587e679a4c9cc44f11f0c467bb22b0af">APPLICATION_PGP</a>, NULL);</div>
+<div class="line"><span class="lineno"> 3662</span>  <span class="keywordflow">if</span> (!key)</div>
+<div class="line"><span class="lineno"> 3663</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 3664</span>  export_keys[0] = key-&gt;<a class="code hl_variable" href="structCryptKeyInfo.html#ae1f570089508f19aa36f6c1cdb31eca0">kobj</a>;</div>
+<div class="line"><span class="lineno"> 3665</span>  export_keys[1] = NULL;</div>
+<div class="line"><span class="lineno"> 3666</span> </div>
+<div class="line"><span class="lineno"> 3667</span>  context = <a class="code hl_function" href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 3668</span>  gpgme_set_armor(context, 1);</div>
+<div class="line"><span class="lineno"> 3669</span>  keydata = <a class="code hl_function" href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a>();</div>
+<div class="line"><span class="lineno"> 3670</span>  err = gpgme_op_export_keys(context, export_keys, 0, keydata);</div>
+<div class="line"><span class="lineno"> 3671</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
+<div class="line"><span class="lineno"> 3672</span>  {</div>
+<div class="line"><span class="lineno"> 3673</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error exporting key: %s&quot;</span>), gpgme_strerror(err));</div>
+<div class="line"><span class="lineno"> 3674</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 3675</span>  }</div>
+<div class="line"><span class="lineno"> 3676</span> </div>
+<div class="line"><span class="lineno"> 3677</span>  <span class="keywordtype">char</span> *tempf = <a class="code hl_function" href="crypt__gpgme_8c.html#aa6b240b5ee594de46af684f88b1ad05d">data_object_to_tempfile</a>(keydata, NULL);</div>
+<div class="line"><span class="lineno"> 3678</span>  <span class="keywordflow">if</span> (!tempf)</div>
+<div class="line"><span class="lineno"> 3679</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 3680</span> </div>
+<div class="line"><span class="lineno"> 3681</span>  att = <a class="code hl_function" href="email_2body_8c.html#a37b346253e3b97aa64bb38ffc8d1ea0c">mutt_body_new</a>();</div>
+<div class="line"><span class="lineno"> 3682</span>  <span class="comment">/* tempf is a newly allocated string, so this is correct: */</span></div>
+<div class="line"><span class="lineno"> 3683</span>  att-&gt;<a class="code hl_variable" href="structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a">filename</a> = tempf;</div>
+<div class="line"><span class="lineno"> 3684</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a47191eabf16d34d0deb412c898ed629b">unlink</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 3685</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a86721d1d557276cbc9cf69777af8c305">use_disp</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 3686</span>  att-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> = <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>;</div>
+<div class="line"><span class="lineno"> 3687</span>  att-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<span class="stringliteral">&quot;pgp-keys&quot;</span>);</div>
+<div class="line"><span class="lineno"> 3688</span>  <span class="comment">/* L10N: MIME description for exported (attached) keys.</span></div>
+<div class="line"><span class="lineno"> 3689</span><span class="comment">     You can translate this entry to a non-ASCII string (it will be encoded),</span></div>
+<div class="line"><span class="lineno"> 3690</span><span class="comment">     but it may be safer to keep it untranslated. */</span></div>
+<div class="line"><span class="lineno"> 3691</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;PGP Key 0x%s&quot;</span>), <a class="code hl_function" href="crypt__gpgme_8c.html#abc67bef5541f788bbc5f87f502514eed">crypt_keyid</a>(key));</div>
+<div class="line"><span class="lineno"> 3692</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a90db5151872e23e56a8f31d68925c121">description</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(buf);</div>
+<div class="line"><span class="lineno"> 3693</span>  <a class="code hl_function" href="sendlib_8c.html#a3360a74ad39f0bb8e7ae4f84cc52f3be">mutt_update_encoding</a>(att, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 3694</span> </div>
+<div class="line"><span class="lineno"> 3695</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = <a class="code hl_function" href="file_8c.html#a75f1c8024613a5e8c23f92d229f52101">mutt_file_get_size</a>(tempf);</div>
 <div class="line"><span class="lineno"> 3696</span> </div>
-<div class="line"><span class="lineno"> 3697</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = <a class="code hl_function" href="file_8c.html#a75f1c8024613a5e8c23f92d229f52101">mutt_file_get_size</a>(tempf);</div>
-<div class="line"><span class="lineno"> 3698</span> </div>
-<div class="line"><span class="lineno"> 3699</span>bail:</div>
-<div class="line"><span class="lineno"> 3700</span>  <a class="code hl_function" href="crypt__gpgme_8c.html#ae007f214cde6d7245c8a5ca70da0e4de">crypt_key_free</a>(&amp;key);</div>
-<div class="line"><span class="lineno"> 3701</span>  gpgme_data_release(keydata);</div>
-<div class="line"><span class="lineno"> 3702</span>  gpgme_release(context);</div>
-<div class="line"><span class="lineno"> 3703</span> </div>
-<div class="line"><span class="lineno"> 3704</span>  <span class="keywordflow">return</span> att;</div>
-<div class="line"><span class="lineno"> 3705</span>}</div>
+<div class="line"><span class="lineno"> 3697</span>bail:</div>
+<div class="line"><span class="lineno"> 3698</span>  <a class="code hl_function" href="crypt__gpgme_8c.html#ae007f214cde6d7245c8a5ca70da0e4de">crypt_key_free</a>(&amp;key);</div>
+<div class="line"><span class="lineno"> 3699</span>  gpgme_data_release(keydata);</div>
+<div class="line"><span class="lineno"> 3700</span>  gpgme_release(context);</div>
+<div class="line"><span class="lineno"> 3701</span> </div>
+<div class="line"><span class="lineno"> 3702</span>  <span class="keywordflow">return</span> att;</div>
+<div class="line"><span class="lineno"> 3703</span>}</div>
 <div class="ttc" id="acrypt__gpgme_8c_html_a433e35eb7b66902025d1a6eced7c17c8"><div class="ttname"><a href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a></div><div class="ttdeci">static gpgme_data_t create_gpgme_data(void)</div><div class="ttdoc">Create a new GPGME data object.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l00399">crypt_gpgme.c:399</a></div></div>
 <div class="ttc" id="acrypt__gpgme_8c_html_a54ca8638b13c6da904a48009a8bba358"><div class="ttname"><a href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a></div><div class="ttdeci">gpgme_ctx_t create_gpgme_context(bool for_smime)</div><div class="ttdoc">Create a new GPGME context.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l00360">crypt_gpgme.c:360</a></div></div>
 <div class="ttc" id="acrypt__gpgme_8c_html_aa6b240b5ee594de46af684f88b1ad05d"><div class="ttname"><a href="crypt__gpgme_8c.html#aa6b240b5ee594de46af684f88b1ad05d">data_object_to_tempfile</a></div><div class="ttdeci">static char * data_object_to_tempfile(gpgme_data_t data, FILE **fp_ret)</div><div class="ttdoc">Copy a data object to a temporary file.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l00560">crypt_gpgme.c:560</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_ab226a975408d15512af77f91c7191391"><div class="ttname"><a href="crypt__gpgme_8c.html#ab226a975408d15512af77f91c7191391">crypt_ask_for_key</a></div><div class="ttdeci">static struct CryptKeyInfo * crypt_ask_for_key(const char *tag, const char *whatfor, KeyFlags abilities, unsigned int app, bool *forced_valid)</div><div class="ttdoc">Ask the user for a key.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l03350">crypt_gpgme.c:3350</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_ab226a975408d15512af77f91c7191391"><div class="ttname"><a href="crypt__gpgme_8c.html#ab226a975408d15512af77f91c7191391">crypt_ask_for_key</a></div><div class="ttdeci">static struct CryptKeyInfo * crypt_ask_for_key(const char *tag, const char *whatfor, KeyFlags abilities, unsigned int app, bool *forced_valid)</div><div class="ttdoc">Ask the user for a key.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l03348">crypt_gpgme.c:3348</a></div></div>
 <div class="ttc" id="acrypt__gpgme_8c_html_abc67bef5541f788bbc5f87f502514eed"><div class="ttname"><a href="crypt__gpgme_8c.html#abc67bef5541f788bbc5f87f502514eed">crypt_keyid</a></div><div class="ttdeci">const char * crypt_keyid(struct CryptKeyInfo *k)</div><div class="ttdoc">Find the ID for the key.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l00137">crypt_gpgme.c:137</a></div></div>
 <div class="ttc" id="acrypt__gpgme_8c_html_ae007f214cde6d7245c8a5ca70da0e4de"><div class="ttname"><a href="crypt__gpgme_8c.html#ae007f214cde6d7245c8a5ca70da0e4de">crypt_key_free</a></div><div class="ttdeci">static void crypt_key_free(struct CryptKeyInfo **keylist)</div><div class="ttdoc">Release all the keys in a list.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l00252">crypt_gpgme.c:252</a></div></div>
 <div class="ttc" id="aemail_2body_8c_html_a37b346253e3b97aa64bb38ffc8d1ea0c"><div class="ttname"><a href="email_2body_8c.html#a37b346253e3b97aa64bb38ffc8d1ea0c">mutt_body_new</a></div><div class="ttdeci">struct Body * mutt_body_new(void)</div><div class="ttdoc">Create a new Body.</div><div class="ttdef"><b>Definition:</b> <a href="email_2body_8c_source.html#l00043">body.c:43</a></div></div>
@@ -221,7 +221,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00251">string.c:251</a></div></div>
 <div class="ttc" id="ancrypt_2lib_8h_html_a587e679a4c9cc44f11f0c467bb22b0af"><div class="ttname"><a href="ncrypt_2lib_8h.html#a587e679a4c9cc44f11f0c467bb22b0af">APPLICATION_PGP</a></div><div class="ttdeci">#define APPLICATION_PGP</div><div class="ttdoc">Use PGP to encrypt/sign.</div><div class="ttdef"><b>Definition:</b> <a href="ncrypt_2lib_8h_source.html#l00091">lib.h:91</a></div></div>
 <div class="ttc" id="ancrypt_2lib_8h_html_a827146354c736ec416508944692e52b2"><div class="ttname"><a href="ncrypt_2lib_8h.html#a827146354c736ec416508944692e52b2">KEYFLAG_NO_FLAGS</a></div><div class="ttdeci">#define KEYFLAG_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition:</b> <a href="ncrypt_2lib_8h_source.html#l00127">lib.h:127</a></div></div>
-<div class="ttc" id="asendlib_8c_html_ae4f3b3ef1863d9821af9f82d8963e5b8"><div class="ttname"><a href="sendlib_8c.html#ae4f3b3ef1863d9821af9f82d8963e5b8">mutt_update_encoding</a></div><div class="ttdeci">void mutt_update_encoding(struct Body *a, struct ConfigSubset *sub)</div><div class="ttdoc">Update the encoding type.</div><div class="ttdef"><b>Definition:</b> <a href="sendlib_8c_source.html#l00420">sendlib.c:420</a></div></div>
+<div class="ttc" id="asendlib_8c_html_a3360a74ad39f0bb8e7ae4f84cc52f3be"><div class="ttname"><a href="sendlib_8c.html#a3360a74ad39f0bb8e7ae4f84cc52f3be">mutt_update_encoding</a></div><div class="ttdeci">void mutt_update_encoding(struct Body *b, struct ConfigSubset *sub)</div><div class="ttdoc">Update the encoding type.</div><div class="ttdef"><b>Definition:</b> <a href="sendlib_8c_source.html#l00420">sendlib.c:420</a></div></div>
 <div class="ttc" id="astructBody_html"><div class="ttname"><a href="structBody.html">Body</a></div><div class="ttdoc">The body of an email.</div><div class="ttdef"><b>Definition:</b> <a href="email_2body_8h_source.html#l00035">body.h:36</a></div></div>
 <div class="ttc" id="astructBody_html_a47191eabf16d34d0deb412c898ed629b"><div class="ttname"><a href="structBody.html#a47191eabf16d34d0deb412c898ed629b">Body::unlink</a></div><div class="ttdeci">bool unlink</div><div class="ttdoc">If true, filename should be unlink()ed before free()ing this structure.</div><div class="ttdef"><b>Definition:</b> <a href="email_2body_8h_source.html#l00067">body.h:67</a></div></div>
 <div class="ttc" id="astructBody_html_a6f92d7ec8568ca04ae07931c56dd0790"><div class="ttname"><a href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">Body::length</a></div><div class="ttdeci">LOFF_T length</div><div class="ttdoc">length (in bytes) of attachment</div><div class="ttdef"><b>Definition:</b> <a href="email_2body_8h_source.html#l00053">body.h:53</a></div></div>
@@ -325,7 +325,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  299</span>  att-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<span class="stringliteral">&quot;pgp-keys&quot;</span>);</div>
 <div class="line"><span class="lineno">  300</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;PGP Key %s&quot;</span>), tmp);</div>
 <div class="line"><span class="lineno">  301</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a90db5151872e23e56a8f31d68925c121">description</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(buf);</div>
-<div class="line"><span class="lineno">  302</span>  <a class="code hl_function" href="sendlib_8c.html#ae4f3b3ef1863d9821af9f82d8963e5b8">mutt_update_encoding</a>(att, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno">  302</span>  <a class="code hl_function" href="sendlib_8c.html#a3360a74ad39f0bb8e7ae4f84cc52f3be">mutt_update_encoding</a>(att, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
 <div class="line"><span class="lineno">  303</span> </div>
 <div class="line"><span class="lineno">  304</span>  stat(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempf), &amp;st);</div>
 <div class="line"><span class="lineno">  305</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = st.st_size;</div>

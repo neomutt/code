@@ -6,7 +6,7 @@ var attachments_8c =
     [ "attach_cleanup", "attachments_8c.html#aaec97f5f9c7a89e5f86326bed4d44f47", null ],
     [ "attach_init", "attachments_8c.html#a9a5403dcb4fe0e73d316b14576b2d4a0", null ],
     [ "count_body_parts_check", "attachments_8c.html#ae889be949926fbab982395f3e0e791d0", null ],
-    [ "count_body_parts", "attachments_8c.html#a68ff4e1481945357c1c81b5c08d2f7e0", null ],
+    [ "count_body_parts", "attachments_8c.html#a4e1c51b3f753d501996cbc41138b0998", null ],
     [ "mutt_count_body_parts", "attachments_8c.html#a8598482e8c089a2942705c0215406724", null ],
     [ "mutt_attachments_reset", "attachments_8c.html#a534affba3d8096e72132edd9219d5303", null ],
     [ "parse_attach_list", "attachments_8c.html#afbf3fcb4f4e98aa1f1844c546cb145b5", null ],
