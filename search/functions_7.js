@@ -19,7 +19,7 @@ var searchData=
   ['hcache_5fvalidator_16',['hcache_validator',['../group__cfg__def__validator.html#ga1fe37a4f60050615642003f75b204983',1,'config.c']]],
   ['header_5fadd_17',['header_add',['../email_2email_8c.html#ad388addf64f1fc80598dd8cf70307ef9',1,'header_add(struct ListHead *hdrlist, const char *header):&#160;email.c'],['../email_8h.html#ad388addf64f1fc80598dd8cf70307ef9',1,'header_add(struct ListHead *hdrlist, const char *header):&#160;email.c']]],
   ['header_5ffind_18',['header_find',['../email_2email_8c.html#afe01890a3071413e9cc8e41f159720ad',1,'header_find(const struct ListHead *hdrlist, const char *header):&#160;email.c'],['../email_8h.html#afe01890a3071413e9cc8e41f159720ad',1,'header_find(const struct ListHead *hdrlist, const char *header):&#160;email.c']]],
-  ['header_5ffree_19',['header_free',['../email_2email_8c.html#a5703ece919269004eecd74af794b424b',1,'header_free(struct ListHead *hdrlist, struct ListNode *target):&#160;email.c'],['../email_8h.html#a5703ece919269004eecd74af794b424b',1,'header_free(struct ListHead *hdrlist, struct ListNode *target):&#160;email.c']]],
+  ['header_5ffree_19',['header_free',['../email_8h.html#a5703ece919269004eecd74af794b424b',1,'header_free(struct ListHead *hdrlist, struct ListNode *target):&#160;email.c'],['../email_2email_8c.html#a5703ece919269004eecd74af794b424b',1,'header_free(struct ListHead *hdrlist, struct ListNode *target):&#160;email.c']]],
   ['header_5fset_20',['header_set',['../email_2email_8c.html#acee41ce2426493da0af40829167f421b',1,'header_set(struct ListHead *hdrlist, const char *header):&#160;email.c'],['../email_8h.html#acee41ce2426493da0af40829167f421b',1,'header_set(struct ListHead *hdrlist, const char *header):&#160;email.c']]],
   ['header_5fsize_21',['header_size',['../hcache_8c.html#ab0e95e8a30f666418f3f8205cecc0582',1,'hcache.c']]],
   ['header_5fupdate_22',['header_update',['../email_2email_8c.html#ae587d1b64d09838f9344c68cb808bb2c',1,'header_update(struct ListNode *hdr, const char *header):&#160;email.c'],['../email_8h.html#a06f53fc5e3ac537d37110d149b9cb94f',1,'header_update(struct ListNode *hdrnode, const char *header):&#160;email.c']]],
@@ -38,6 +38,8 @@ var searchData=
   ['history_5ffunction_5fdispatcher_35',['history_function_dispatcher',['../group__dispatcher__api.html#gac49d2af85cb6599adffa13c50da14ac7',1,'history_function_dispatcher(struct MuttWindow *win, int op):&#160;functions.c'],['../group__dispatcher__api.html#gac49d2af85cb6599adffa13c50da14ac7',1,'history_function_dispatcher(struct MuttWindow *win, int op):&#160;functions.c']]],
   ['history_5fmake_5fentry_36',['history_make_entry',['../group__menu__make__entry.html#gad5be190a528d1d12b831bcfc22a5e648',1,'dlg_history.c']]],
   ['hmac_5fmd5_37',['hmac_md5',['../auth__cram_8c.html#a7491dc64781290870974d803a0dc6b75',1,'auth_cram.c']]],
-  ['hooks_5finit_38',['hooks_init',['../hook_8c.html#a8e0f55dad3dee3bf436ca00f95d902c0',1,'hooks_init(void):&#160;hook.c'],['../hook_8h.html#a8e0f55dad3dee3bf436ca00f95d902c0',1,'hooks_init(void):&#160;hook.c']]],
-  ['hostname_5fmatch_39',['hostname_match',['../openssl_8c.html#ae39adc817bff49725d338570174c4a0b',1,'openssl.c']]]
+  ['hook_5ffree_38',['hook_free',['../hook_8c.html#a687da69151e78719547e5b58de316089',1,'hook.c']]],
+  ['hook_5fnew_39',['hook_new',['../hook_8c.html#af03b03a2d048b4a3972e4737a025183b',1,'hook.c']]],
+  ['hooks_5finit_40',['hooks_init',['../hook_8c.html#a8e0f55dad3dee3bf436ca00f95d902c0',1,'hooks_init(void):&#160;hook.c'],['../hook_8h.html#a8e0f55dad3dee3bf436ca00f95d902c0',1,'hooks_init(void):&#160;hook.c']]],
+  ['hostname_5fmatch_41',['hostname_match',['../openssl_8c.html#ae39adc817bff49725d338570174c4a0b',1,'openssl.c']]]
 ];

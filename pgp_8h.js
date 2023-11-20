@@ -1,5 +1,6 @@
 var pgp_8h =
 [
+    [ "PgpCommandContext", "structPgpCommandContext.html", "structPgpCommandContext" ],
     [ "pgp_fpr_or_lkeyid", "pgp_8h.html#a692583986765bc89f4fb41de97b3d372", null ],
     [ "pgp_keyid", "pgp_8h.html#a67d96bbbe834f8d04190bc0a2ab462ca", null ],
     [ "pgp_long_keyid", "pgp_8h.html#a0594eb9847bb3efa4655f1e879965c67", null ],

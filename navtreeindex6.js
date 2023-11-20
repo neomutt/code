@@ -1,6 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"copy_8h.html#afffe25c64079f6ef8c10cacdc0380af4":[2,0,52,4],
 "copy_8h_source.html":[2,0,52],
 "core_2command_8c.html":[2,0,14,2],
 "core_2command_8c.html#a719f8984a58bda6f59c40e6c522fea9e":[2,0,14,2,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX6 =
 "cryptglue_8h.html#ae2ebaf8e03c2029af925d234447a74d9":[2,0,33,12,0],
 "cryptglue_8h_source.html":[2,0,33,12],
 "curs__lib_8c.html":[2,0,20,0],
-"curs__lib_8c.html#a0590f11f42a6242002ea4c842438231b":[2,0,20,0,3]
+"curs__lib_8c.html#a0590f11f42a6242002ea4c842438231b":[2,0,20,0,3],
+"curs__lib_8c.html#a065d0cc61c21f10fe6f4fc4fad8c7afe":[2,0,20,0,13]
 };

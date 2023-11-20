@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-11-03-56-g035498</span>
+   &#160;<span id="projectnumber">2023-11-03-72-g120d95</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -989,17 +989,15 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  745</span>  <span class="keywordflow">if</span> (!hc)</div>
 <div class="line"><span class="lineno">  746</span>    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">  747</span> </div>
-<div class="line"><span class="lineno">  748</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> path = <a class="code hl_function" href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a>(1024);</div>
+<div class="line"><span class="lineno">  748</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
 <div class="line"><span class="lineno">  749</span> </div>
-<div class="line"><span class="lineno">  750</span>  keylen = <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(&amp;path, <span class="stringliteral">&quot;%s%.*s&quot;</span>, hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95">folder</a>, (<span class="keywordtype">int</span>) keylen, key);</div>
-<div class="line"><span class="lineno">  751</span>  <span class="keywordtype">int</span> rc = hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#a70c1a9921a59f63eb065e43768e9e9b6">store_ops</a>-&gt;<a class="code hl_variable" href="structStoreOps.html#a2e8409df86a1c1b7c588f91e0b593736">store</a>(hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#aa3dbee309b4040e10348d089e0cfe9b8">store_handle</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;path), keylen, <a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, dlen);</div>
-<div class="line"><span class="lineno">  752</span>  <a class="code hl_function" href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  750</span>  keylen = <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(path, <span class="stringliteral">&quot;%s%.*s&quot;</span>, hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95">folder</a>, (<span class="keywordtype">int</span>) keylen, key);</div>
+<div class="line"><span class="lineno">  751</span>  <span class="keywordtype">int</span> rc = hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#a70c1a9921a59f63eb065e43768e9e9b6">store_ops</a>-&gt;<a class="code hl_variable" href="structStoreOps.html#a2e8409df86a1c1b7c588f91e0b593736">store</a>(hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#aa3dbee309b4040e10348d089e0cfe9b8">store_handle</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), keylen, <a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, dlen);</div>
+<div class="line"><span class="lineno">  752</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
 <div class="line"><span class="lineno">  753</span> </div>
 <div class="line"><span class="lineno">  754</span>  <span class="keywordflow">return</span> rc;</div>
 <div class="line"><span class="lineno">  755</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00173">buffer.c:173</a></div></div>
-<div class="ttc" id="abuffer_8c_html_a3847c69d3b333d1674043d7f5b7b112f"><div class="ttname"><a href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a></div><div class="ttdeci">void buf_dealloc(struct Buffer *buf)</div><div class="ttdoc">Release the memory allocated by a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00389">buffer.c:389</a></div></div>
-<div class="ttc" id="abuffer_8c_html_a48c7f6bcdda4a269001bb371d522a4ce"><div class="ttname"><a href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a></div><div class="ttdeci">struct Buffer buf_make(size_t size)</div><div class="ttdoc">Make a new buffer on the stack.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00070">buffer.c:70</a></div></div>
 <div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:35</a></div></div>
 <div class="ttc" id="astructStoreOps_html_a2e8409df86a1c1b7c588f91e0b593736"><div class="ttname"><a href="structStoreOps.html#a2e8409df86a1c1b7c588f91e0b593736">StoreOps::store</a></div><div class="ttdeci">int(* store)(StoreHandle *store, const char *key, size_t klen, void *value, size_t vlen)</div><div class="ttdef"><b>Definition:</b> <a href="store_2lib_8h_source.html#l00124">lib.h:124</a></div></div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1007,7 +1005,7 @@ Functions</h2></td></tr>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-13-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="hcache_2lib_8h_acca0b66c75e59b1400da46b646e6bb9c_cgraph.svg" width="282" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="hcache_2lib_8h_acca0b66c75e59b1400da46b646e6bb9c_cgraph.svg" width="316" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1076,21 +1074,20 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  762</span>  <span class="keywordflow">if</span> (!hc)</div>
 <div class="line"><span class="lineno">  763</span>    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">  764</span> </div>
-<div class="line"><span class="lineno">  765</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> path = <a class="code hl_function" href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a>(1024);</div>
+<div class="line"><span class="lineno">  765</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
 <div class="line"><span class="lineno">  766</span> </div>
-<div class="line"><span class="lineno">  767</span>  keylen = <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(&amp;path, <span class="stringliteral">&quot;%s%s&quot;</span>, hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95">folder</a>, key);</div>
-<div class="line"><span class="lineno">  768</span> </div>
-<div class="line"><span class="lineno">  769</span>  <span class="keywordtype">int</span> rc = hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#a70c1a9921a59f63eb065e43768e9e9b6">store_ops</a>-&gt;<a class="code hl_variable" href="structStoreOps.html#a3c7aa10fb16fc281a969a123136beff7">delete_record</a>(hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#aa3dbee309b4040e10348d089e0cfe9b8">store_handle</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;path), keylen);</div>
-<div class="line"><span class="lineno">  770</span>  <a class="code hl_function" href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a>(&amp;path);</div>
-<div class="line"><span class="lineno">  771</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  772</span>}</div>
+<div class="line"><span class="lineno">  767</span>  keylen = <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(path, <span class="stringliteral">&quot;%s%s&quot;</span>, hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95">folder</a>, key);</div>
+<div class="line"><span class="lineno">  768</span>  <span class="keywordtype">int</span> rc = hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#a70c1a9921a59f63eb065e43768e9e9b6">store_ops</a>-&gt;<a class="code hl_variable" href="structStoreOps.html#a3c7aa10fb16fc281a969a123136beff7">delete_record</a>(hc-&gt;<a class="code hl_variable" href="structHeaderCache.html#aa3dbee309b4040e10348d089e0cfe9b8">store_handle</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), keylen);</div>
+<div class="line"><span class="lineno">  769</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  770</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  771</span>}</div>
 <div class="ttc" id="astructStoreOps_html_a3c7aa10fb16fc281a969a123136beff7"><div class="ttname"><a href="structStoreOps.html#a3c7aa10fb16fc281a969a123136beff7">StoreOps::delete_record</a></div><div class="ttdeci">int(* delete_record)(StoreHandle *store, const char *key, size_t klen)</div><div class="ttdef"><b>Definition:</b> <a href="store_2lib_8h_source.html#l00137">lib.h:137</a></div></div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="hcache_2lib_8h_a95538f2fe30f92e1bfdc49d123c8e200_cgraph.svg" width="308" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="hcache_2lib_8h_a95538f2fe30f92e1bfdc49d123c8e200_cgraph.svg" width="343" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

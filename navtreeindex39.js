@@ -1,5 +1,8 @@
 var NAVTREEINDEX39 =
 {
+"smtp_8c.html#a65e028c1aba1dae80b1b9efe867a397d":[2,0,43,14,27],
+"smtp_8c.html#a74cea17e5a0ec95293604fd069761a7f":[2,0,43,14,7],
+"smtp_8c.html#a7a95907688e2bb0ff4fde65ff2a683dd":[2,0,43,14,17],
 "smtp_8c.html#a816bd1f7035855b6c4c4132b64571155":[2,0,43,14,2],
 "smtp_8c.html#a84d8e78e08aaa71820593b38ac4e88cb":[2,0,43,14,12],
 "smtp_8c.html#a889bb85475c1469a7e28ea9b4736f2bb":[2,0,43,14,15],
@@ -138,8 +141,8 @@ var NAVTREEINDEX39 =
 "store_qdbm.html":[48,5],
 "store_rocksdb.html":[48,6],
 "store_store.html":[48,0],
-"store_store.html#autotoc_md584":[1,0],
-"store_store.html#autotoc_md585":[1,1],
+"store_store.html#autotoc_md585":[1,0],
+"store_store.html#autotoc_md586":[1,1],
 "store_tc.html":[48,7],
 "store_tdb.html":[48,8],
 "string2_8h.html":[2,0,32,60],
@@ -246,8 +249,5 @@ var NAVTREEINDEX39 =
 "structAnsiColor.html#a87daadf84d4b6a20b6acc774cf95d7d6":[1,0,7,1],
 "structAnsiColor.html#ae8d76de12d91edfd3b0d52a83fa79c27":[1,0,7,0],
 "structAttachCtx.html":[1,0,8],
-"structAttachCtx.html#a0dfc8b92b72351536f7bd3cfbc08eb30":[1,0,8,6],
-"structAttachCtx.html#a2a640066cd23ee29a8608ff2755526fc":[1,0,8,11],
-"structAttachCtx.html#a6bd678fc233b795a978f78f786f89f1c":[1,0,8,1],
-"structAttachCtx.html#a7ccc5aab103dffe2142c01d9d2d8faed":[1,0,8,9]
+"structAttachCtx.html#a0dfc8b92b72351536f7bd3cfbc08eb30":[1,0,8,6]
 };

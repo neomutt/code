@@ -1,6 +1,6 @@
 var cbar_8c =
 [
-    [ "num_attachments", "cbar_8c.html#ace71804b46d68086a2a4e08f6f56821b", null ],
+    [ "num_attachments", "cbar_8c.html#a5a3d5fb4ca6e3fd831215516cfb6be5a", null ],
     [ "compose_format_str", "group__expando__api.html#ga446f53e2e5799af5ab4fd81cfef215c7", null ],
     [ "cbar_recalc", "group__window__recalc.html#ga45b6ef7a2b68a84c1d71816d97ec475a", null ],
     [ "cbar_repaint", "group__window__repaint.html#ga095a7f494315f82f45df5bf39a10cf94", null ],

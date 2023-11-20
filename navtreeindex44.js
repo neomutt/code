@@ -1,5 +1,8 @@
 var NAVTREEINDEX44 =
 {
+"structMhSequences.html":[1,0,151],
+"structMhSequences.html#a08f58e22514b81c92dd8731a98219af1":[1,0,151,1],
+"structMhSequences.html#a4f50dd478cc24d2af98b7d72d99f8f6f":[1,0,151,0],
 "structMimeNames.html":[1,0,152],
 "structMimeNames.html#a43266ef0b04e2d3bd3f7eb6df267aa6b":[1,0,152,0],
 "structMimeNames.html#aef49d21e1a319c25eab15f635200942c":[1,0,152,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX44 =
 "structPagerPrivateData.html#afb5dbf89eff9e94e26674696e934dae0":[1,0,181,1],
 "structPagerPrivateData.html#afd2063e9a724fe469e2379dfb32911c1":[1,0,181,15],
 "structPagerPrivateData.html#affde2b6eb6be4e569a73998a47e8eb48":[1,0,181,17],
-"structPagerView.html":[1,0,182],
-"structPagerView.html#a182ca407e5882d112f23e078b2980482":[1,0,182,4],
-"structPagerView.html#a29102d8862e5aabcfcfe86da4c8e3921":[1,0,182,0],
-"structPagerView.html#a4f7074be59cdcb518630e81e5ef8c3b7":[1,0,182,1]
+"structPagerView.html":[1,0,182]
 };

@@ -2,9 +2,10 @@ var hook_8c =
 [
     [ "Hook", "structHook.html", "structHook" ],
     [ "TAILQ_HEAD", "hook_8c.html#aa857d745d5811958667f1c5a807a5aed", null ],
+    [ "hook_free", "hook_8c.html#a687da69151e78719547e5b58de316089", null ],
+    [ "hook_new", "hook_8c.html#af03b03a2d048b4a3972e4737a025183b", null ],
     [ "mutt_parse_charset_iconv_hook", "group__command__parse.html#ga8768b26f6904ee40b9ff0eedd5b396e0", null ],
     [ "mutt_parse_hook", "group__command__parse.html#ga4b6e4f5a7cf7c50a1d32450735eba6f9", null ],
-    [ "delete_hook", "hook_8c.html#aef64c959f7a4a6dbc02b9e8590bdf607", null ],
     [ "mutt_delete_hooks", "hook_8c.html#a3b113188a50152ee8ff8f54975ea5897", null ],
     [ "idxfmt_hashelem_free", "group__hash__hdata__free__api.html#ga6c55d68e0ab13d9aaf342c1fd33f3399", null ],
     [ "delete_idxfmt_hooks", "hook_8c.html#a5158a12937ec41e078fe95c10d332217", null ],

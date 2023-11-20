@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-11-03-56-g035498</span>
+   &#160;<span id="projectnumber">2023-11-03-72-g120d95</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -233,55 +233,55 @@ cdef is not NULL </dd></dl>
 
 <p>Set an <a class="el" href="structAddress.html" title="An email address.">Address</a> by string - Implements <a class="el" href="structConfigSetType.html#aaab5c1abc281e7f906cccb7bf64d2554">ConfigSetType::string_set()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="config__type_8c_source.html#l00073">73</a> of file <a class="el" href="config__type_8c_source.html">config_type.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>{</div>
-<div class="line"><span class="lineno">   76</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *addr = NULL;</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>  <span class="comment">/* An empty address &quot;&quot; will be stored as NULL */</span></div>
-<div class="line"><span class="lineno">   79</span>  <span class="keywordflow">if</span> (var &amp;&amp; value &amp;&amp; (value[0] != <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">   80</span>  {</div>
-<div class="line"><span class="lineno">   81</span>    <span class="comment">// TODO - config can only store one</span></div>
-<div class="line"><span class="lineno">   82</span>    <span class="keyword">struct </span>AddressList al = <a class="code hl_define" href="queue_8h.html#ac269df7d4126ed9885156cbad2cbf8af">TAILQ_HEAD_INITIALIZER</a>(al);</div>
-<div class="line"><span class="lineno">   83</span>    <a class="code hl_function" href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a>(&amp;al, value);</div>
-<div class="line"><span class="lineno">   84</span>    addr = <a class="code hl_function" href="address_2address_8c.html#a8f8e4be1b71a169870ac10be5426af8d">mutt_addr_copy</a>(<a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;al));</div>
-<div class="line"><span class="lineno">   85</span>    <a class="code hl_function" href="address_2address_8c.html#a396bcf6adfff6663096fa6ae99c31c9a">mutt_addrlist_clear</a>(&amp;al);</div>
-<div class="line"><span class="lineno">   86</span>  }</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>  <span class="keywordtype">int</span> rc = <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">if</span> (var)</div>
-<div class="line"><span class="lineno">   91</span>  {</div>
-<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>)</div>
-<div class="line"><span class="lineno">   93</span>    {</div>
-<div class="line"><span class="lineno">   94</span>      rc = cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>(cs, cdef, (intptr_t) addr, err);</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a>(rc) != <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>)</div>
-<div class="line"><span class="lineno">   97</span>      {</div>
-<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="group__cfg__type__destroy.html#gabd2f53bded52356d4d0066d3558326df">address_destroy</a>(cs, &amp;addr, cdef);</div>
-<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">return</span> rc | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
-<div class="line"><span class="lineno">  100</span>      }</div>
-<div class="line"><span class="lineno">  101</span>    }</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>    <span class="comment">/* ordinary variable setting */</span></div>
-<div class="line"><span class="lineno">  104</span>    <a class="code hl_function" href="group__cfg__type__destroy.html#gabd2f53bded52356d4d0066d3558326df">address_destroy</a>(cs, var, cdef);</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>    *(<span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> **) var = addr;</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (!addr)</div>
-<div class="line"><span class="lineno">  109</span>      rc |= <a class="code hl_define" href="config_2set_8h.html#a9971268a32c4610646148829306cc8f5">CSR_SUC_EMPTY</a>;</div>
-<div class="line"><span class="lineno">  110</span>  }</div>
-<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  112</span>  {</div>
-<div class="line"><span class="lineno">  113</span>    <span class="comment">/* set the default/initial value */</span></div>
-<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a">type</a> &amp; <a class="code hl_define" href="types_8h.html#a28e38eb4b5323c904f21142f27c2722e">DT_INITIAL_SET</a>)</div>
-<div class="line"><span class="lineno">  115</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a669d58ec0f68946995b69af97333d71a">initial</a>);</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>    cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a">type</a> |= <a class="code hl_define" href="types_8h.html#a28e38eb4b5323c904f21142f27c2722e">DT_INITIAL_SET</a>;</div>
-<div class="line"><span class="lineno">  118</span>    cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a669d58ec0f68946995b69af97333d71a">initial</a> = (intptr_t) <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(value);</div>
-<div class="line"><span class="lineno">  119</span>  }</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  122</span>}</div>
+<p class="definition">Definition at line <a class="el" href="config__type_8c_source.html#l00074">74</a> of file <a class="el" href="config__type_8c_source.html">config_type.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *addr = NULL;</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>  <span class="comment">/* An empty address &quot;&quot; will be stored as NULL */</span></div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">if</span> (var &amp;&amp; value &amp;&amp; (value[0] != <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">   81</span>  {</div>
+<div class="line"><span class="lineno">   82</span>    <span class="comment">// TODO - config can only store one</span></div>
+<div class="line"><span class="lineno">   83</span>    <span class="keyword">struct </span>AddressList al = <a class="code hl_define" href="queue_8h.html#ac269df7d4126ed9885156cbad2cbf8af">TAILQ_HEAD_INITIALIZER</a>(al);</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_function" href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a>(&amp;al, value);</div>
+<div class="line"><span class="lineno">   85</span>    addr = <a class="code hl_function" href="address_2address_8c.html#a8f8e4be1b71a169870ac10be5426af8d">mutt_addr_copy</a>(<a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;al));</div>
+<div class="line"><span class="lineno">   86</span>    <a class="code hl_function" href="address_2address_8c.html#a396bcf6adfff6663096fa6ae99c31c9a">mutt_addrlist_clear</a>(&amp;al);</div>
+<div class="line"><span class="lineno">   87</span>  }</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordtype">int</span> rc = <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">if</span> (var)</div>
+<div class="line"><span class="lineno">   92</span>  {</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span> (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>)</div>
+<div class="line"><span class="lineno">   94</span>    {</div>
+<div class="line"><span class="lineno">   95</span>      rc = cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>(cs, cdef, (intptr_t) addr, err);</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a>(rc) != <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>)</div>
+<div class="line"><span class="lineno">   98</span>      {</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="group__cfg__type__destroy.html#gabd2f53bded52356d4d0066d3558326df">address_destroy</a>(cs, &amp;addr, cdef);</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">return</span> rc | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
+<div class="line"><span class="lineno">  101</span>      }</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="comment">/* ordinary variable setting */</span></div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_function" href="group__cfg__type__destroy.html#gabd2f53bded52356d4d0066d3558326df">address_destroy</a>(cs, var, cdef);</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    *(<span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> **) var = addr;</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">if</span> (!addr)</div>
+<div class="line"><span class="lineno">  110</span>      rc |= <a class="code hl_define" href="config_2set_8h.html#a9971268a32c4610646148829306cc8f5">CSR_SUC_EMPTY</a>;</div>
+<div class="line"><span class="lineno">  111</span>  }</div>
+<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  113</span>  {</div>
+<div class="line"><span class="lineno">  114</span>    <span class="comment">/* set the default/initial value */</span></div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a">type</a> &amp; <a class="code hl_define" href="types_8h.html#a28e38eb4b5323c904f21142f27c2722e">DT_INITIAL_SET</a>)</div>
+<div class="line"><span class="lineno">  116</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a669d58ec0f68946995b69af97333d71a">initial</a>);</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>    cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a">type</a> |= <a class="code hl_define" href="types_8h.html#a28e38eb4b5323c904f21142f27c2722e">DT_INITIAL_SET</a>;</div>
+<div class="line"><span class="lineno">  119</span>    cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a669d58ec0f68946995b69af97333d71a">initial</a> = (intptr_t) <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(value);</div>
+<div class="line"><span class="lineno">  120</span>  }</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  123</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a396bcf6adfff6663096fa6ae99c31c9a"><div class="ttname"><a href="address_2address_8c.html#a396bcf6adfff6663096fa6ae99c31c9a">mutt_addrlist_clear</a></div><div class="ttdeci">void mutt_addrlist_clear(struct AddressList *al)</div><div class="ttdoc">Unlink and free all Address in an AddressList.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l01461">address.c:1461</a></div></div>
 <div class="ttc" id="aaddress_2address_8c_html_a8f8e4be1b71a169870ac10be5426af8d"><div class="ttname"><a href="address_2address_8c.html#a8f8e4be1b71a169870ac10be5426af8d">mutt_addr_copy</a></div><div class="ttdeci">struct Address * mutt_addr_copy(const struct Address *addr)</div><div class="ttdoc">Copy the real address.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l00742">address.c:742</a></div></div>
 <div class="ttc" id="aaddress_2address_8c_html_a9bb4abe92405bac67f03e36936a29b6e"><div class="ttname"><a href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a></div><div class="ttdeci">int mutt_addrlist_parse(struct AddressList *al, const char *s)</div><div class="ttdoc">Parse a list of email addresses.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l00478">address.c:478</a></div></div>
@@ -289,7 +289,7 @@ cdef is not NULL </dd></dl>
 <div class="ttc" id="aconfig_2set_8h_html_a8c1bfe87f83706f7d397c257401504f4"><div class="ttname"><a href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a></div><div class="ttdeci">#define CSR_RESULT(x)</div><div class="ttdef"><b>Definition:</b> <a href="config_2set_8h_source.html#l00052">set.h:52</a></div></div>
 <div class="ttc" id="aconfig_2set_8h_html_a9971268a32c4610646148829306cc8f5"><div class="ttname"><a href="config_2set_8h.html#a9971268a32c4610646148829306cc8f5">CSR_SUC_EMPTY</a></div><div class="ttdeci">#define CSR_SUC_EMPTY</div><div class="ttdoc">Value is empty/unset.</div><div class="ttdef"><b>Definition:</b> <a href="config_2set_8h_source.html#l00042">set.h:42</a></div></div>
 <div class="ttc" id="aconfig_2set_8h_html_ac9999a70a5f8e7cf64053a5f0861d329"><div class="ttname"><a href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a></div><div class="ttdeci">#define CSR_SUCCESS</div><div class="ttdoc">Action completed successfully.</div><div class="ttdef"><b>Definition:</b> <a href="config_2set_8h_source.html#l00035">set.h:35</a></div></div>
-<div class="ttc" id="agroup__cfg__type__destroy_html_gabd2f53bded52356d4d0066d3558326df"><div class="ttname"><a href="group__cfg__type__destroy.html#gabd2f53bded52356d4d0066d3558326df">address_destroy</a></div><div class="ttdeci">static void address_destroy(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef)</div><div class="ttdoc">Destroy an Address object - Implements ConfigSetType::destroy() -.</div><div class="ttdef"><b>Definition:</b> <a href="config__type_8c_source.html#l00061">config_type.c:61</a></div></div>
+<div class="ttc" id="agroup__cfg__type__destroy_html_gabd2f53bded52356d4d0066d3558326df"><div class="ttname"><a href="group__cfg__type__destroy.html#gabd2f53bded52356d4d0066d3558326df">address_destroy</a></div><div class="ttdeci">static void address_destroy(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef)</div><div class="ttdoc">Destroy an Address object - Implements ConfigSetType::destroy() -.</div><div class="ttdef"><b>Definition:</b> <a href="config__type_8c_source.html#l00062">config_type.c:62</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00045">memory.h:45</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00251">string.c:251</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a7d6894360bd1c41e0e6f6d84998c1362"><div class="ttname"><a href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a></div><div class="ttdeci">#define TAILQ_FIRST(head)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00723">queue.h:723</a></div></div>

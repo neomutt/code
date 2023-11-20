@@ -1,6 +1,5 @@
 var smime_8c =
 [
-    [ "SmimeCommandContext", "structSmimeCommandContext.html", "structSmimeCommandContext" ],
     [ "smime_init", "smime_8c.html#a6f582853bd091e5fda82a82dc049a38d", null ],
     [ "smime_cleanup", "smime_8c.html#a7d3eec74fc4e57062dd82ab74beea573", null ],
     [ "smime_key_free", "smime_8c.html#ae8fc02f34e610b2f4d7cc6823fb41f3f", null ],

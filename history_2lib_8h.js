@@ -1,5 +1,6 @@
 var history_2lib_8h =
 [
+    [ "HistoryEntry", "structHistoryEntry.html", "structHistoryEntry" ],
     [ "HistoryClass", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234", [
       [ "HC_EXT_COMMAND", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a350c302f5ffad1c98c763828089f37bd", null ],
       [ "HC_ALIAS", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a7087d625c6e65aa739171b10a68907c5", null ],
