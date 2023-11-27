@@ -52,8 +52,7 @@ var searchData=
   ['private_20state_20data_20for_20attachments_49',['Private state data for Attachments',['../attach_private_data.html',1,'lib_attach']]],
   ['private_20state_20data_20for_20the_20pager_50',['Private state data for the Pager',['../pager_private_data.html',1,'lib_pager']]],
   ['process_20a_20message_20for_20display_20in_20the_20pager_51',['Process a message for display in the pager',['../pager_message.html',1,'lib_pager']]],
-  ['progress_52',['Progress',['../lib_progress.html',1,'']]],
-  ['progress_20bar_53',['Progress Bar',['../progress_progress.html',1,'lib_progress']]],
-  ['progress_20bar_20window_54',['Progress Bar Window',['../progress_window.html',1,'lib_progress']]],
-  ['progress_20bar_20window_20data_55',['Progress Bar Window Data',['../progress_wdata.html',1,'lib_progress']]]
+  ['progress_20bar_52',['Progress Bar',['../lib_progress.html',1,'(Global Namespace)'],['../progress_progress.html',1,'lib_progress']]],
+  ['progress_20bar_20window_53',['Progress Bar Window',['../progress_window.html',1,'lib_progress']]],
+  ['progress_20bar_20window_20data_54',['Progress Bar Window Data',['../progress_wdata.html',1,'lib_progress']]]
 ];

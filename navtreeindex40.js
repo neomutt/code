@@ -1,5 +1,12 @@
 var NAVTREEINDEX40 =
 {
+"structAnsiColor.html":[1,0,7],
+"structAnsiColor.html#a1df1703b32a0135ce19a01703d028a1e":[1,0,7,2],
+"structAnsiColor.html#a65d8fd137db785e473d421150d9a2503":[1,0,7,3],
+"structAnsiColor.html#a87daadf84d4b6a20b6acc774cf95d7d6":[1,0,7,1],
+"structAnsiColor.html#ae8d76de12d91edfd3b0d52a83fa79c27":[1,0,7,0],
+"structAttachCtx.html":[1,0,8],
+"structAttachCtx.html#a0dfc8b92b72351536f7bd3cfbc08eb30":[1,0,8,6],
 "structAttachCtx.html#a2a640066cd23ee29a8608ff2755526fc":[1,0,8,11],
 "structAttachCtx.html#a6bd678fc233b795a978f78f786f89f1c":[1,0,8,1],
 "structAttachCtx.html#a7ccc5aab103dffe2142c01d9d2d8faed":[1,0,8,9],
@@ -242,12 +249,5 @@ var NAVTREEINDEX40 =
 "structConfigDef.html#a0989d0984537827a221e7d699f72da27":[1,0,45,0],
 "structConfigDef.html#a2ce6465c0431046f6a4483ed15e77698":[1,0,45,6],
 "structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e":[1,0,45,4],
-"structConfigDef.html#a5125b3fa1932065447f5811dda756b05":[1,0,45,3],
-"structConfigDef.html#a669d58ec0f68946995b69af97333d71a":[1,0,45,2],
-"structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a":[1,0,45,1],
-"structConfigDef.html#aa892d688b347ab80a37a7b52a5f07ab7":[1,0,45,5],
-"structConfigSet.html":[1,0,46],
-"structConfigSet.html#ab04a207e405abc005c3f52ab602c7a5d":[1,0,46,1],
-"structConfigSet.html#ae2c68da3abf678c23b225df01161b249":[1,0,46,0],
-"structConfigSetType.html":[1,0,47]
+"structConfigDef.html#a5125b3fa1932065447f5811dda756b05":[1,0,45,3]
 };

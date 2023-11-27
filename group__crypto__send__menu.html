@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-11-03-72-g120d95</span>
+   &#160;<span id="projectnumber">2023-11-03-85-g512e01</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -460,196 +460,196 @@ Functions</h2></td></tr>
 
 <p>Ask the user whether to sign and/or encrypt the email - Implements <a class="el" href="structCryptModuleSpecs.html#aa5176c9adfe75f78d99e4c2bd7e6671c">CryptModuleSpecs::send_menu()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l02175">2175</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2176</span>{</div>
-<div class="line"><span class="lineno"> 2177</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSmimeKey.html">SmimeKey</a> *key = NULL;</div>
-<div class="line"><span class="lineno"> 2178</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *prompt = NULL;</div>
-<div class="line"><span class="lineno"> 2179</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *letters = NULL;</div>
-<div class="line"><span class="lineno"> 2180</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *choices = NULL;</div>
-<div class="line"><span class="lineno"> 2181</span>  <span class="keywordtype">int</span> choice;</div>
-<div class="line"><span class="lineno"> 2182</span> </div>
-<div class="line"><span class="lineno"> 2183</span>  <span class="keywordflow">if</span> (!(<a class="code hl_define" href="ncrypt_2lib_8h.html#ad980bff69bb614893ad8e7e1c28a5023">WithCrypto</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2">APPLICATION_SMIME</a>))</div>
-<div class="line"><span class="lineno"> 2184</span>    <span class="keywordflow">return</span> e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a>;</div>
-<div class="line"><span class="lineno"> 2185</span> </div>
-<div class="line"><span class="lineno"> 2186</span>  e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2">APPLICATION_SMIME</a>;</div>
-<div class="line"><span class="lineno"> 2187</span> </div>
-<div class="line"><span class="lineno"> 2188</span>  <span class="comment">/* Opportunistic encrypt is controlling encryption.</span></div>
-<div class="line"><span class="lineno"> 2189</span><span class="comment">   * NOTE: &quot;Signing&quot; and &quot;Clearing&quot; only adjust the sign bit, so we have different</span></div>
-<div class="line"><span class="lineno"> 2190</span><span class="comment">   *       letter choices for those.  */</span></div>
-<div class="line"><span class="lineno"> 2191</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_crypt_opportunistic_encrypt = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;crypt_opportunistic_encrypt&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2192</span>  <span class="keywordflow">if</span> (c_crypt_opportunistic_encrypt &amp;&amp; (e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#a2fb0b0aa796d8d79a746001d09c2a2c7">SEC_OPPENCRYPT</a>))</div>
-<div class="line"><span class="lineno"> 2193</span>  {</div>
-<div class="line"><span class="lineno"> 2194</span>    <span class="comment">/* L10N: S/MIME options (opportunistic encryption is on) */</span></div>
-<div class="line"><span class="lineno"> 2195</span>    prompt = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;S/MIME (s)ign, encrypt (w)ith, sign (a)s, (c)lear, or (o)ppenc mode off?&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2196</span>    <span class="comment">/* L10N: S/MIME options (opportunistic encryption is on) */</span></div>
-<div class="line"><span class="lineno"> 2197</span>    letters = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;swaco&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2198</span>    choices = <span class="stringliteral">&quot;SwaCo&quot;</span>;</div>
-<div class="line"><span class="lineno"> 2199</span>  }</div>
-<div class="line"><span class="lineno"> 2200</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c_crypt_opportunistic_encrypt)</div>
-<div class="line"><span class="lineno"> 2201</span>  {</div>
-<div class="line"><span class="lineno"> 2202</span>    <span class="comment">/* Opportunistic encryption option is set, but is toggled off</span></div>
-<div class="line"><span class="lineno"> 2203</span><span class="comment">     * for this message.  */</span></div>
-<div class="line"><span class="lineno"> 2204</span>    <span class="comment">/* L10N: S/MIME options (opportunistic encryption is off) */</span></div>
-<div class="line"><span class="lineno"> 2205</span>    prompt = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;S/MIME (e)ncrypt, (s)ign, encrypt (w)ith, sign (a)s, (b)oth, (c)lear, or (o)ppenc mode?&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2206</span>    <span class="comment">/* L10N: S/MIME options (opportunistic encryption is off) */</span></div>
-<div class="line"><span class="lineno"> 2207</span>    letters = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;eswabco&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2208</span>    choices = <span class="stringliteral">&quot;eswabcO&quot;</span>;</div>
-<div class="line"><span class="lineno"> 2209</span>  }</div>
-<div class="line"><span class="lineno"> 2210</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2211</span>  {</div>
-<div class="line"><span class="lineno"> 2212</span>    <span class="comment">/* Opportunistic encryption is unset */</span></div>
-<div class="line"><span class="lineno"> 2213</span>    <span class="comment">/* L10N: S/MIME options */</span></div>
-<div class="line"><span class="lineno"> 2214</span>    prompt = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;S/MIME (e)ncrypt, (s)ign, encrypt (w)ith, sign (a)s, (b)oth, or (c)lear?&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2215</span>    <span class="comment">/* L10N: S/MIME options */</span></div>
-<div class="line"><span class="lineno"> 2216</span>    letters = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;eswabc&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2217</span>    choices = <span class="stringliteral">&quot;eswabc&quot;</span>;</div>
-<div class="line"><span class="lineno"> 2218</span>  }</div>
-<div class="line"><span class="lineno"> 2219</span> </div>
-<div class="line"><span class="lineno"> 2220</span>  choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(prompt, letters);</div>
-<div class="line"><span class="lineno"> 2221</span>  <span class="keywordflow">if</span> (choice &gt; 0)</div>
-<div class="line"><span class="lineno"> 2222</span>  {</div>
-<div class="line"><span class="lineno"> 2223</span>    <span class="keywordflow">switch</span> (choices[choice - 1])</div>
-<div class="line"><span class="lineno"> 2224</span>    {</div>
-<div class="line"><span class="lineno"> 2225</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>: <span class="comment">/* sign (a)s */</span></div>
-<div class="line"><span class="lineno"> 2226</span>        key = <a class="code hl_function" href="smime_8c.html#adbbe006d5151a1d0f233c37279dc0d63">smime_ask_for_key</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Sign as: &quot;</span>), <a class="code hl_define" href="ncrypt_2lib_8h.html#aee8e2da44282ca27f6a786cef781334f">KEYFLAG_CANSIGN</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 2227</span>        <span class="keywordflow">if</span> (key)</div>
-<div class="line"><span class="lineno"> 2228</span>        {</div>
-<div class="line"><span class="lineno"> 2229</span>          <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_sign_as&quot;</span>, key-&gt;<a class="code hl_variable" href="structSmimeKey.html#a34c24c91867b2600f20b6d892ef156bb">hash</a>, NULL);</div>
-<div class="line"><span class="lineno"> 2230</span>          <a class="code hl_function" href="smime_8c.html#ae8fc02f34e610b2f4d7cc6823fb41f3f">smime_key_free</a>(&amp;key);</div>
-<div class="line"><span class="lineno"> 2231</span> </div>
-<div class="line"><span class="lineno"> 2232</span>          e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>;</div>
-<div class="line"><span class="lineno"> 2233</span> </div>
-<div class="line"><span class="lineno"> 2234</span>          <span class="comment">/* probably need a different passphrase */</span></div>
-<div class="line"><span class="lineno"> 2235</span>          <a class="code hl_function" href="cryptglue_8c.html#a84e2b083debe6ba85cf3deca3e0fe99a">crypt_smime_void_passphrase</a>();</div>
-<div class="line"><span class="lineno"> 2236</span>        }</div>
-<div class="line"><span class="lineno"> 2237</span> </div>
-<div class="line"><span class="lineno"> 2238</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2239</span> </div>
-<div class="line"><span class="lineno"> 2240</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>: <span class="comment">/* (b)oth */</span></div>
-<div class="line"><span class="lineno"> 2241</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= (<a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a> | <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>);</div>
-<div class="line"><span class="lineno"> 2242</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2243</span> </div>
-<div class="line"><span class="lineno"> 2244</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;c&#39;</span>: <span class="comment">/* (c)lear */</span></div>
-<div class="line"><span class="lineno"> 2245</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~(<a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a> | <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>);</div>
-<div class="line"><span class="lineno"> 2246</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2247</span> </div>
-<div class="line"><span class="lineno"> 2248</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>:</div>
-<div class="line"><span class="lineno"> 2249</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~SEC_SIGN;</div>
-<div class="line"><span class="lineno"> 2250</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2251</span> </div>
-<div class="line"><span class="lineno"> 2252</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>: <span class="comment">/* (e)ncrypt */</span></div>
-<div class="line"><span class="lineno"> 2253</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a>;</div>
-<div class="line"><span class="lineno"> 2254</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~SEC_SIGN;</div>
-<div class="line"><span class="lineno"> 2255</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2256</span> </div>
-<div class="line"><span class="lineno"> 2257</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>: <span class="comment">/* oppenc mode on */</span></div>
-<div class="line"><span class="lineno"> 2258</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#a2fb0b0aa796d8d79a746001d09c2a2c7">SEC_OPPENCRYPT</a>;</div>
-<div class="line"><span class="lineno"> 2259</span>        <a class="code hl_function" href="crypt_8c.html#a2afe38b474061773d69624018621ff1e">crypt_opportunistic_encrypt</a>(e);</div>
-<div class="line"><span class="lineno"> 2260</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2261</span> </div>
-<div class="line"><span class="lineno"> 2262</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>: <span class="comment">/* oppenc mode off */</span></div>
-<div class="line"><span class="lineno"> 2263</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~SEC_OPPENCRYPT;</div>
-<div class="line"><span class="lineno"> 2264</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2265</span> </div>
-<div class="line"><span class="lineno"> 2266</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;S&#39;</span>: <span class="comment">/* (s)ign in oppenc mode */</span></div>
-<div class="line"><span class="lineno"> 2267</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>;</div>
-<div class="line"><span class="lineno"> 2268</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2269</span> </div>
-<div class="line"><span class="lineno"> 2270</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>: <span class="comment">/* (s)ign */</span></div>
-<div class="line"><span class="lineno"> 2271</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~SEC_ENCRYPT;</div>
-<div class="line"><span class="lineno"> 2272</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>;</div>
-<div class="line"><span class="lineno"> 2273</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2274</span> </div>
-<div class="line"><span class="lineno"> 2275</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;w&#39;</span>: <span class="comment">/* encrypt (w)ith */</span></div>
-<div class="line"><span class="lineno"> 2276</span>      {</div>
-<div class="line"><span class="lineno"> 2277</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a>;</div>
-<div class="line"><span class="lineno"> 2278</span>        <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno"> 2279</span>        {</div>
-<div class="line"><span class="lineno"> 2280</span>          <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> errmsg = <a class="code hl_function" href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a>(0);</div>
-<div class="line"><span class="lineno"> 2281</span>          <span class="keywordtype">int</span> rc = <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno"> 2282</span>          <span class="keywordflow">switch</span> (<a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Choose algorithm family: (1) DES, (2) RC2, (3) AES, or (c)lear?&quot;</span>),</div>
-<div class="line"><span class="lineno"> 2283</span>                                  <span class="comment">// L10N: Options for: Choose algorithm family: (1) DES, (2) RC2, (3) AES, or (c)lear?</span></div>
-<div class="line"><span class="lineno"> 2284</span>                                  <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;123c&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 2285</span>          {</div>
-<div class="line"><span class="lineno"> 2286</span>            <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno"> 2287</span>              <span class="keywordflow">switch</span> (choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;(1) DES, (2) Triple-DES?&quot;</span>),</div>
-<div class="line"><span class="lineno"> 2288</span>                                               <span class="comment">// L10N: Options for: (1) DES, (2) Triple-DES</span></div>
-<div class="line"><span class="lineno"> 2289</span>                                               <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;12&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 2290</span>              {</div>
-<div class="line"><span class="lineno"> 2291</span>                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno"> 2292</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2293</span>                                                <span class="stringliteral">&quot;des&quot;</span>, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2294</span>                  <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2295</span>                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno"> 2296</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2297</span>                                                <span class="stringliteral">&quot;des3&quot;</span>, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2298</span>                  <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2299</span>              }</div>
-<div class="line"><span class="lineno"> 2300</span>              <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2301</span> </div>
-<div class="line"><span class="lineno"> 2302</span>            <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno"> 2303</span>              <span class="keywordflow">switch</span> (choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;(1) RC2-40, (2) RC2-64, (3) RC2-128?&quot;</span>),</div>
-<div class="line"><span class="lineno"> 2304</span>                                               <span class="comment">// L10N: Options for: (1) RC2-40, (2) RC2-64, (3) RC2-128</span></div>
-<div class="line"><span class="lineno"> 2305</span>                                               <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;123&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 2306</span>              {</div>
-<div class="line"><span class="lineno"> 2307</span>                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno"> 2308</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2309</span>                                                <span class="stringliteral">&quot;rc2-40&quot;</span>, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2310</span>                  <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2311</span>                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno"> 2312</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2313</span>                                                <span class="stringliteral">&quot;rc2-64&quot;</span>, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2314</span>                  <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2315</span>                <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno"> 2316</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2317</span>                                                <span class="stringliteral">&quot;rc2-128&quot;</span>, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2318</span>                  <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2319</span>              }</div>
-<div class="line"><span class="lineno"> 2320</span>              <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2321</span> </div>
-<div class="line"><span class="lineno"> 2322</span>            <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno"> 2323</span>              <span class="keywordflow">switch</span> (choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;(1) AES128, (2) AES192, (3) AES256?&quot;</span>),</div>
-<div class="line"><span class="lineno"> 2324</span>                                               <span class="comment">// L10N: Options for: (1) AES128, (2) AES192, (3) AES256</span></div>
-<div class="line"><span class="lineno"> 2325</span>                                               <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;123&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 2326</span>              {</div>
-<div class="line"><span class="lineno"> 2327</span>                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno"> 2328</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2329</span>                                                <span class="stringliteral">&quot;aes128&quot;</span>, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2330</span>                  <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2331</span>                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno"> 2332</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2333</span>                                                <span class="stringliteral">&quot;aes192&quot;</span>, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2334</span>                  <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2335</span>                <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno"> 2336</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2337</span>                                                <span class="stringliteral">&quot;aes256&quot;</span>, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2338</span>                  <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2339</span>              }</div>
-<div class="line"><span class="lineno"> 2340</span>              <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2341</span> </div>
-<div class="line"><span class="lineno"> 2342</span>            <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno"> 2343</span>              rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
-<div class="line"><span class="lineno"> 2344</span>                                            NULL, &amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2345</span>              <span class="comment">/* (c)lear */</span></div>
-<div class="line"><span class="lineno"> 2346</span>              <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
-<div class="line"><span class="lineno"> 2347</span> </div>
-<div class="line"><span class="lineno"> 2348</span>            <span class="keywordflow">case</span> -1: <span class="comment">/* Ctrl-G or Enter */</span></div>
-<div class="line"><span class="lineno"> 2349</span>              choice = 0;</div>
-<div class="line"><span class="lineno"> 2350</span>              <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2351</span>          }</div>
-<div class="line"><span class="lineno"> 2352</span> </div>
-<div class="line"><span class="lineno"> 2353</span>          <span class="keywordflow">if</span> ((<a class="code hl_define" href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a>(rc) != <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>) &amp;&amp; !<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(&amp;errmsg))</div>
-<div class="line"><span class="lineno"> 2354</span>            <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;errmsg));</div>
-<div class="line"><span class="lineno"> 2355</span> </div>
-<div class="line"><span class="lineno"> 2356</span>          <a class="code hl_function" href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a>(&amp;errmsg);</div>
-<div class="line"><span class="lineno"> 2357</span>        } <span class="keywordflow">while</span> (choice == -1);</div>
-<div class="line"><span class="lineno"> 2358</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2359</span>      }</div>
-<div class="line"><span class="lineno"> 2360</span>    }</div>
-<div class="line"><span class="lineno"> 2361</span>  }</div>
-<div class="line"><span class="lineno"> 2362</span> </div>
-<div class="line"><span class="lineno"> 2363</span>  <span class="keywordflow">return</span> e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a>;</div>
-<div class="line"><span class="lineno"> 2364</span>}</div>
+<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l02176">2176</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2177</span>{</div>
+<div class="line"><span class="lineno"> 2178</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSmimeKey.html">SmimeKey</a> *key = NULL;</div>
+<div class="line"><span class="lineno"> 2179</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *prompt = NULL;</div>
+<div class="line"><span class="lineno"> 2180</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *letters = NULL;</div>
+<div class="line"><span class="lineno"> 2181</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *choices = NULL;</div>
+<div class="line"><span class="lineno"> 2182</span>  <span class="keywordtype">int</span> choice;</div>
+<div class="line"><span class="lineno"> 2183</span> </div>
+<div class="line"><span class="lineno"> 2184</span>  <span class="keywordflow">if</span> (!(<a class="code hl_define" href="ncrypt_2lib_8h.html#ad980bff69bb614893ad8e7e1c28a5023">WithCrypto</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2">APPLICATION_SMIME</a>))</div>
+<div class="line"><span class="lineno"> 2185</span>    <span class="keywordflow">return</span> e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a>;</div>
+<div class="line"><span class="lineno"> 2186</span> </div>
+<div class="line"><span class="lineno"> 2187</span>  e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2">APPLICATION_SMIME</a>;</div>
+<div class="line"><span class="lineno"> 2188</span> </div>
+<div class="line"><span class="lineno"> 2189</span>  <span class="comment">/* Opportunistic encrypt is controlling encryption.</span></div>
+<div class="line"><span class="lineno"> 2190</span><span class="comment">   * NOTE: &quot;Signing&quot; and &quot;Clearing&quot; only adjust the sign bit, so we have different</span></div>
+<div class="line"><span class="lineno"> 2191</span><span class="comment">   *       letter choices for those.  */</span></div>
+<div class="line"><span class="lineno"> 2192</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_crypt_opportunistic_encrypt = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;crypt_opportunistic_encrypt&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2193</span>  <span class="keywordflow">if</span> (c_crypt_opportunistic_encrypt &amp;&amp; (e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#a2fb0b0aa796d8d79a746001d09c2a2c7">SEC_OPPENCRYPT</a>))</div>
+<div class="line"><span class="lineno"> 2194</span>  {</div>
+<div class="line"><span class="lineno"> 2195</span>    <span class="comment">/* L10N: S/MIME options (opportunistic encryption is on) */</span></div>
+<div class="line"><span class="lineno"> 2196</span>    prompt = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;S/MIME (s)ign, encrypt (w)ith, sign (a)s, (c)lear, or (o)ppenc mode off?&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2197</span>    <span class="comment">/* L10N: S/MIME options (opportunistic encryption is on) */</span></div>
+<div class="line"><span class="lineno"> 2198</span>    letters = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;swaco&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2199</span>    choices = <span class="stringliteral">&quot;SwaCo&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2200</span>  }</div>
+<div class="line"><span class="lineno"> 2201</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c_crypt_opportunistic_encrypt)</div>
+<div class="line"><span class="lineno"> 2202</span>  {</div>
+<div class="line"><span class="lineno"> 2203</span>    <span class="comment">/* Opportunistic encryption option is set, but is toggled off</span></div>
+<div class="line"><span class="lineno"> 2204</span><span class="comment">     * for this message.  */</span></div>
+<div class="line"><span class="lineno"> 2205</span>    <span class="comment">/* L10N: S/MIME options (opportunistic encryption is off) */</span></div>
+<div class="line"><span class="lineno"> 2206</span>    prompt = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;S/MIME (e)ncrypt, (s)ign, encrypt (w)ith, sign (a)s, (b)oth, (c)lear, or (o)ppenc mode?&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2207</span>    <span class="comment">/* L10N: S/MIME options (opportunistic encryption is off) */</span></div>
+<div class="line"><span class="lineno"> 2208</span>    letters = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;eswabco&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2209</span>    choices = <span class="stringliteral">&quot;eswabcO&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2210</span>  }</div>
+<div class="line"><span class="lineno"> 2211</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2212</span>  {</div>
+<div class="line"><span class="lineno"> 2213</span>    <span class="comment">/* Opportunistic encryption is unset */</span></div>
+<div class="line"><span class="lineno"> 2214</span>    <span class="comment">/* L10N: S/MIME options */</span></div>
+<div class="line"><span class="lineno"> 2215</span>    prompt = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;S/MIME (e)ncrypt, (s)ign, encrypt (w)ith, sign (a)s, (b)oth, or (c)lear?&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2216</span>    <span class="comment">/* L10N: S/MIME options */</span></div>
+<div class="line"><span class="lineno"> 2217</span>    letters = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;eswabc&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2218</span>    choices = <span class="stringliteral">&quot;eswabc&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2219</span>  }</div>
+<div class="line"><span class="lineno"> 2220</span> </div>
+<div class="line"><span class="lineno"> 2221</span>  choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(prompt, letters);</div>
+<div class="line"><span class="lineno"> 2222</span>  <span class="keywordflow">if</span> (choice &gt; 0)</div>
+<div class="line"><span class="lineno"> 2223</span>  {</div>
+<div class="line"><span class="lineno"> 2224</span>    <span class="keywordflow">switch</span> (choices[choice - 1])</div>
+<div class="line"><span class="lineno"> 2225</span>    {</div>
+<div class="line"><span class="lineno"> 2226</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;a&#39;</span>: <span class="comment">/* sign (a)s */</span></div>
+<div class="line"><span class="lineno"> 2227</span>        key = <a class="code hl_function" href="smime_8c.html#adbbe006d5151a1d0f233c37279dc0d63">smime_ask_for_key</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Sign as: &quot;</span>), <a class="code hl_define" href="ncrypt_2lib_8h.html#aee8e2da44282ca27f6a786cef781334f">KEYFLAG_CANSIGN</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2228</span>        <span class="keywordflow">if</span> (key)</div>
+<div class="line"><span class="lineno"> 2229</span>        {</div>
+<div class="line"><span class="lineno"> 2230</span>          <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_sign_as&quot;</span>, key-&gt;<a class="code hl_variable" href="structSmimeKey.html#a34c24c91867b2600f20b6d892ef156bb">hash</a>, NULL);</div>
+<div class="line"><span class="lineno"> 2231</span>          <a class="code hl_function" href="smime_8c.html#ae8fc02f34e610b2f4d7cc6823fb41f3f">smime_key_free</a>(&amp;key);</div>
+<div class="line"><span class="lineno"> 2232</span> </div>
+<div class="line"><span class="lineno"> 2233</span>          e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>;</div>
+<div class="line"><span class="lineno"> 2234</span> </div>
+<div class="line"><span class="lineno"> 2235</span>          <span class="comment">/* probably need a different passphrase */</span></div>
+<div class="line"><span class="lineno"> 2236</span>          <a class="code hl_function" href="cryptglue_8c.html#a84e2b083debe6ba85cf3deca3e0fe99a">crypt_smime_void_passphrase</a>();</div>
+<div class="line"><span class="lineno"> 2237</span>        }</div>
+<div class="line"><span class="lineno"> 2238</span> </div>
+<div class="line"><span class="lineno"> 2239</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2240</span> </div>
+<div class="line"><span class="lineno"> 2241</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;b&#39;</span>: <span class="comment">/* (b)oth */</span></div>
+<div class="line"><span class="lineno"> 2242</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= (<a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a> | <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>);</div>
+<div class="line"><span class="lineno"> 2243</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2244</span> </div>
+<div class="line"><span class="lineno"> 2245</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;c&#39;</span>: <span class="comment">/* (c)lear */</span></div>
+<div class="line"><span class="lineno"> 2246</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~(<a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a> | <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>);</div>
+<div class="line"><span class="lineno"> 2247</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2248</span> </div>
+<div class="line"><span class="lineno"> 2249</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;C&#39;</span>:</div>
+<div class="line"><span class="lineno"> 2250</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~SEC_SIGN;</div>
+<div class="line"><span class="lineno"> 2251</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2252</span> </div>
+<div class="line"><span class="lineno"> 2253</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>: <span class="comment">/* (e)ncrypt */</span></div>
+<div class="line"><span class="lineno"> 2254</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a>;</div>
+<div class="line"><span class="lineno"> 2255</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~SEC_SIGN;</div>
+<div class="line"><span class="lineno"> 2256</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2257</span> </div>
+<div class="line"><span class="lineno"> 2258</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>: <span class="comment">/* oppenc mode on */</span></div>
+<div class="line"><span class="lineno"> 2259</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#a2fb0b0aa796d8d79a746001d09c2a2c7">SEC_OPPENCRYPT</a>;</div>
+<div class="line"><span class="lineno"> 2260</span>        <a class="code hl_function" href="crypt_8c.html#a2afe38b474061773d69624018621ff1e">crypt_opportunistic_encrypt</a>(e);</div>
+<div class="line"><span class="lineno"> 2261</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2262</span> </div>
+<div class="line"><span class="lineno"> 2263</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>: <span class="comment">/* oppenc mode off */</span></div>
+<div class="line"><span class="lineno"> 2264</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~SEC_OPPENCRYPT;</div>
+<div class="line"><span class="lineno"> 2265</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2266</span> </div>
+<div class="line"><span class="lineno"> 2267</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;S&#39;</span>: <span class="comment">/* (s)ign in oppenc mode */</span></div>
+<div class="line"><span class="lineno"> 2268</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>;</div>
+<div class="line"><span class="lineno"> 2269</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2270</span> </div>
+<div class="line"><span class="lineno"> 2271</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>: <span class="comment">/* (s)ign */</span></div>
+<div class="line"><span class="lineno"> 2272</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp;= ~SEC_ENCRYPT;</div>
+<div class="line"><span class="lineno"> 2273</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>;</div>
+<div class="line"><span class="lineno"> 2274</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2275</span> </div>
+<div class="line"><span class="lineno"> 2276</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;w&#39;</span>: <span class="comment">/* encrypt (w)ith */</span></div>
+<div class="line"><span class="lineno"> 2277</span>      {</div>
+<div class="line"><span class="lineno"> 2278</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a>;</div>
+<div class="line"><span class="lineno"> 2279</span>        <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno"> 2280</span>        {</div>
+<div class="line"><span class="lineno"> 2281</span>          <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> errmsg = <a class="code hl_function" href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a>(0);</div>
+<div class="line"><span class="lineno"> 2282</span>          <span class="keywordtype">int</span> rc = <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno"> 2283</span>          <span class="keywordflow">switch</span> (<a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Choose algorithm family: (1) DES, (2) RC2, (3) AES, or (c)lear?&quot;</span>),</div>
+<div class="line"><span class="lineno"> 2284</span>                                  <span class="comment">// L10N: Options for: Choose algorithm family: (1) DES, (2) RC2, (3) AES, or (c)lear?</span></div>
+<div class="line"><span class="lineno"> 2285</span>                                  <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;123c&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 2286</span>          {</div>
+<div class="line"><span class="lineno"> 2287</span>            <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 2288</span>              <span class="keywordflow">switch</span> (choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;(1) DES, (2) Triple-DES?&quot;</span>),</div>
+<div class="line"><span class="lineno"> 2289</span>                                               <span class="comment">// L10N: Options for: (1) DES, (2) Triple-DES</span></div>
+<div class="line"><span class="lineno"> 2290</span>                                               <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;12&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 2291</span>              {</div>
+<div class="line"><span class="lineno"> 2292</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 2293</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2294</span>                                                <span class="stringliteral">&quot;des&quot;</span>, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2295</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2296</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 2297</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2298</span>                                                <span class="stringliteral">&quot;des3&quot;</span>, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2299</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2300</span>              }</div>
+<div class="line"><span class="lineno"> 2301</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2302</span> </div>
+<div class="line"><span class="lineno"> 2303</span>            <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 2304</span>              <span class="keywordflow">switch</span> (choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;(1) RC2-40, (2) RC2-64, (3) RC2-128?&quot;</span>),</div>
+<div class="line"><span class="lineno"> 2305</span>                                               <span class="comment">// L10N: Options for: (1) RC2-40, (2) RC2-64, (3) RC2-128</span></div>
+<div class="line"><span class="lineno"> 2306</span>                                               <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;123&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 2307</span>              {</div>
+<div class="line"><span class="lineno"> 2308</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 2309</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2310</span>                                                <span class="stringliteral">&quot;rc2-40&quot;</span>, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2311</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2312</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 2313</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2314</span>                                                <span class="stringliteral">&quot;rc2-64&quot;</span>, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2315</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2316</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 2317</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2318</span>                                                <span class="stringliteral">&quot;rc2-128&quot;</span>, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2319</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2320</span>              }</div>
+<div class="line"><span class="lineno"> 2321</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2322</span> </div>
+<div class="line"><span class="lineno"> 2323</span>            <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 2324</span>              <span class="keywordflow">switch</span> (choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;(1) AES128, (2) AES192, (3) AES256?&quot;</span>),</div>
+<div class="line"><span class="lineno"> 2325</span>                                               <span class="comment">// L10N: Options for: (1) AES128, (2) AES192, (3) AES256</span></div>
+<div class="line"><span class="lineno"> 2326</span>                                               <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;123&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 2327</span>              {</div>
+<div class="line"><span class="lineno"> 2328</span>                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><span class="lineno"> 2329</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2330</span>                                                <span class="stringliteral">&quot;aes128&quot;</span>, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2331</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2332</span>                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><span class="lineno"> 2333</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2334</span>                                                <span class="stringliteral">&quot;aes192&quot;</span>, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2335</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2336</span>                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><span class="lineno"> 2337</span>                  rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2338</span>                                                <span class="stringliteral">&quot;aes256&quot;</span>, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2339</span>                  <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2340</span>              }</div>
+<div class="line"><span class="lineno"> 2341</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2342</span> </div>
+<div class="line"><span class="lineno"> 2343</span>            <span class="keywordflow">case</span> 4:</div>
+<div class="line"><span class="lineno"> 2344</span>              rc = <a class="code hl_function" href="subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12">cs_subset_str_string_set</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_encrypt_with&quot;</span>,</div>
+<div class="line"><span class="lineno"> 2345</span>                                            NULL, &amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2346</span>              <span class="comment">/* (c)lear */</span></div>
+<div class="line"><span class="lineno"> 2347</span>              <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
+<div class="line"><span class="lineno"> 2348</span> </div>
+<div class="line"><span class="lineno"> 2349</span>            <span class="keywordflow">case</span> -1: <span class="comment">/* Ctrl-G or Enter */</span></div>
+<div class="line"><span class="lineno"> 2350</span>              choice = 0;</div>
+<div class="line"><span class="lineno"> 2351</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2352</span>          }</div>
+<div class="line"><span class="lineno"> 2353</span> </div>
+<div class="line"><span class="lineno"> 2354</span>          <span class="keywordflow">if</span> ((<a class="code hl_define" href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a>(rc) != <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>) &amp;&amp; !<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(&amp;errmsg))</div>
+<div class="line"><span class="lineno"> 2355</span>            <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;errmsg));</div>
+<div class="line"><span class="lineno"> 2356</span> </div>
+<div class="line"><span class="lineno"> 2357</span>          <a class="code hl_function" href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a>(&amp;errmsg);</div>
+<div class="line"><span class="lineno"> 2358</span>        } <span class="keywordflow">while</span> (choice == -1);</div>
+<div class="line"><span class="lineno"> 2359</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2360</span>      }</div>
+<div class="line"><span class="lineno"> 2361</span>    }</div>
+<div class="line"><span class="lineno"> 2362</span>  }</div>
+<div class="line"><span class="lineno"> 2363</span> </div>
+<div class="line"><span class="lineno"> 2364</span>  <span class="keywordflow">return</span> e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a>;</div>
+<div class="line"><span class="lineno"> 2365</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a3847c69d3b333d1674043d7f5b7b112f"><div class="ttname"><a href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a></div><div class="ttdeci">void buf_dealloc(struct Buffer *buf)</div><div class="ttdoc">Release the memory allocated by a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00389">buffer.c:389</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00303">buffer.c:303</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a48c7f6bcdda4a269001bb371d522a4ce"><div class="ttname"><a href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a></div><div class="ttdeci">struct Buffer buf_make(size_t size)</div><div class="ttdoc">Make a new buffer on the stack.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00070">buffer.c:70</a></div></div>

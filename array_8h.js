@@ -24,5 +24,6 @@ var array_8h =
     [ "ARRAY_REMOVE", "array_8h.html#a5a50ba3db41d864890c1a6f176c5b1a1", null ],
     [ "ARRAY_SORT", "array_8h.html#a3b58598337ec447421a317fa2f836ebd", null ],
     [ "ARRAY_SET_NORESERVE", "array_8h.html#a7e8bd3238e25d762f17dd0950001a13f", null ],
+    [ "__coverity_escape__", "array_8h.html#a9882b8b47eef4d380d07a70e9bfd1bf2", null ],
     [ "ARRAY_ADD_NORESERVE", "array_8h.html#a7d53783c015122a6eee10abe2c26aa5d", null ]
 ];

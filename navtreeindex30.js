@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"neomutt_8c.html#a895e0e956bc84568838024927aca5ce1":[2,0,14,14,3],
 "neomutt_8c.html#a97185791cb85d53c9283f32cfe52576a":[2,0,14,14,0],
 "neomutt_8c.html#af06ffebf075ceb3397d90d0501c83301":[2,0,14,14,1],
 "neomutt_8c.html#af4e00a7436ecc725b5a801685fadf3f4":[2,0,14,14,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "notmuch_2lib_8h.html":[2,0,35,7],
 "notmuch_2lib_8h.html#a117bd16ebdde574564b14e737dc1349e":[2,0,35,7,15],
 "notmuch_2lib_8h.html#a1a319609376f1dcd48dd3c75e7f75cf6":[2,0,35,7,12],
-"notmuch_2lib_8h.html#a424ba19f36b097c879ff65793c8ef1d9":[2,0,35,7,6],
-"notmuch_2lib_8h.html#a5ea3e33d475ed6242190666b7e70838e":[2,0,35,7,2]
+"notmuch_2lib_8h.html#a424ba19f36b097c879ff65793c8ef1d9":[2,0,35,7,6]
 };

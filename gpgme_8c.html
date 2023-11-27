@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-11-03-72-g120d95</span>
+   &#160;<span id="projectnumber">2023-11-03-85-g512e01</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -806,35 +806,36 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  319</span>  <span class="keywordtype">int</span> rc = -1;</div>
 <div class="line"><span class="lineno">  320</span>  gpgme_ctx_t ctx = NULL;</div>
 <div class="line"><span class="lineno">  321</span>  gpgme_data_t dh = NULL;</div>
-<div class="line"><span class="lineno">  322</span> </div>
-<div class="line"><span class="lineno">  323</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
-<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  325</span> </div>
-<div class="line"><span class="lineno">  326</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *raw_keydata = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  327</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a>(raw_keydata, keydata))</div>
-<div class="line"><span class="lineno">  328</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>  <span class="keywordflow">if</span> (gpgme_data_new_from_mem(&amp;dh, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(raw_keydata), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(raw_keydata), 0))</div>
-<div class="line"><span class="lineno">  331</span>  {</div>
-<div class="line"><span class="lineno">  332</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  333</span>  }</div>
-<div class="line"><span class="lineno">  334</span> </div>
-<div class="line"><span class="lineno">  335</span>  <span class="keywordflow">if</span> (gpgme_op_import(ctx, dh))</div>
-<div class="line"><span class="lineno">  336</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  337</span> </div>
-<div class="line"><span class="lineno">  338</span>  gpgme_import_result_t result = gpgme_op_import_result(ctx);</div>
-<div class="line"><span class="lineno">  339</span>  <span class="keywordflow">if</span> (!result-&gt;imports || !result-&gt;imports-&gt;fpr)</div>
-<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  341</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(keyid, result-&gt;imports-&gt;fpr);</div>
-<div class="line"><span class="lineno">  342</span> </div>
-<div class="line"><span class="lineno">  343</span>  rc = 0;</div>
-<div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>cleanup:</div>
-<div class="line"><span class="lineno">  346</span>  gpgme_data_release(dh);</div>
-<div class="line"><span class="lineno">  347</span>  gpgme_release(ctx);</div>
-<div class="line"><span class="lineno">  348</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;raw_keydata);</div>
-<div class="line"><span class="lineno">  349</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  350</span>}</div>
+<div class="line"><span class="lineno">  322</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *raw_keydata = NULL;</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
+<div class="line"><span class="lineno">  325</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>  raw_keydata = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  328</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a>(raw_keydata, keydata))</div>
+<div class="line"><span class="lineno">  329</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  330</span> </div>
+<div class="line"><span class="lineno">  331</span>  <span class="keywordflow">if</span> (gpgme_data_new_from_mem(&amp;dh, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(raw_keydata), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(raw_keydata), 0))</div>
+<div class="line"><span class="lineno">  332</span>  {</div>
+<div class="line"><span class="lineno">  333</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  334</span>  }</div>
+<div class="line"><span class="lineno">  335</span> </div>
+<div class="line"><span class="lineno">  336</span>  <span class="keywordflow">if</span> (gpgme_op_import(ctx, dh))</div>
+<div class="line"><span class="lineno">  337</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>  gpgme_import_result_t result = gpgme_op_import_result(ctx);</div>
+<div class="line"><span class="lineno">  340</span>  <span class="keywordflow">if</span> (!result-&gt;imports || !result-&gt;imports-&gt;fpr)</div>
+<div class="line"><span class="lineno">  341</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  342</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(keyid, result-&gt;imports-&gt;fpr);</div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>  rc = 0;</div>
+<div class="line"><span class="lineno">  345</span> </div>
+<div class="line"><span class="lineno">  346</span>cleanup:</div>
+<div class="line"><span class="lineno">  347</span>  gpgme_data_release(dh);</div>
+<div class="line"><span class="lineno">  348</span>  gpgme_release(ctx);</div>
+<div class="line"><span class="lineno">  349</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;raw_keydata);</div>
+<div class="line"><span class="lineno">  350</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  351</span>}</div>
 <div class="ttc" id="abase64_8c_html_a768e7c625e7318c12cfe37bc713d365c"><div class="ttname"><a href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a></div><div class="ttdeci">int mutt_b64_buffer_decode(struct Buffer *buf, const char *in)</div><div class="ttdoc">Convert null-terminated base64 string to raw bytes.</div><div class="ttdef"><b>Definition:</b> <a href="base64_8c_source.html#l00217">base64.c:217</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a2914dc2d9a9d77e4c9970b4249be9370"><div class="ttname"><a href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a></div><div class="ttdeci">size_t buf_len(const struct Buffer *buf)</div><div class="ttdoc">Calculate the length of a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00466">buffer.c:466</a></div></div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -886,30 +887,30 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00357">357</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  358</span>{</div>
-<div class="line"><span class="lineno">  359</span>  <span class="keywordtype">bool</span> rc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  360</span>  gpgme_ctx_t ctx = NULL;</div>
-<div class="line"><span class="lineno">  361</span>  gpgme_key_t key = NULL;</div>
-<div class="line"><span class="lineno">  362</span> </div>
-<div class="line"><span class="lineno">  363</span>  <span class="keywordflow">if</span> (!keyid)</div>
-<div class="line"><span class="lineno">  364</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  365</span> </div>
-<div class="line"><span class="lineno">  366</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
-<div class="line"><span class="lineno">  367</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  368</span> </div>
-<div class="line"><span class="lineno">  369</span>  <span class="keywordflow">if</span> (gpgme_get_key(ctx, keyid, &amp;key, 0))</div>
-<div class="line"><span class="lineno">  370</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  371</span> </div>
-<div class="line"><span class="lineno">  372</span>  rc = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  373</span>  <span class="keywordflow">if</span> (key-&gt;revoked || key-&gt;expired || key-&gt;disabled || key-&gt;invalid || !key-&gt;can_encrypt)</div>
-<div class="line"><span class="lineno">  374</span>    rc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  375</span> </div>
-<div class="line"><span class="lineno">  376</span>cleanup:</div>
-<div class="line"><span class="lineno">  377</span>  gpgme_key_unref(key);</div>
-<div class="line"><span class="lineno">  378</span>  gpgme_release(ctx);</div>
-<div class="line"><span class="lineno">  379</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  380</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00358">358</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  359</span>{</div>
+<div class="line"><span class="lineno">  360</span>  <span class="keywordtype">bool</span> rc = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  361</span>  gpgme_ctx_t ctx = NULL;</div>
+<div class="line"><span class="lineno">  362</span>  gpgme_key_t key = NULL;</div>
+<div class="line"><span class="lineno">  363</span> </div>
+<div class="line"><span class="lineno">  364</span>  <span class="keywordflow">if</span> (!keyid)</div>
+<div class="line"><span class="lineno">  365</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  366</span> </div>
+<div class="line"><span class="lineno">  367</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
+<div class="line"><span class="lineno">  368</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  369</span> </div>
+<div class="line"><span class="lineno">  370</span>  <span class="keywordflow">if</span> (gpgme_get_key(ctx, keyid, &amp;key, 0))</div>
+<div class="line"><span class="lineno">  371</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>  rc = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  374</span>  <span class="keywordflow">if</span> (key-&gt;revoked || key-&gt;expired || key-&gt;disabled || key-&gt;invalid || !key-&gt;can_encrypt)</div>
+<div class="line"><span class="lineno">  375</span>    rc = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  376</span> </div>
+<div class="line"><span class="lineno">  377</span>cleanup:</div>
+<div class="line"><span class="lineno">  378</span>  gpgme_key_unref(key);</div>
+<div class="line"><span class="lineno">  379</span>  gpgme_release(ctx);</div>
+<div class="line"><span class="lineno">  380</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  381</span>}</div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
