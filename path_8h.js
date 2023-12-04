@@ -6,7 +6,6 @@ var path_8h =
     [ "mutt_path_dirname", "path_8h.html#a6880d720953172694db126bf013bd86b", null ],
     [ "mutt_path_escape", "path_8h.html#a65bec3d7529d9678568ea768c599d21d", null ],
     [ "mutt_path_getcwd", "path_8h.html#ab6b2369f5c422eb15048173ef4b6694a", null ],
-    [ "mutt_path_parent", "path_8h.html#a8ec62db3afeb8809894cd1e892e4348d", null ],
     [ "mutt_path_realpath", "path_8h.html#a9424189920a8ffe184bc5ca68c7cc311", null ],
     [ "mutt_path_tidy", "path_8h.html#a5ab1c7e67015696230c62a80223bc752", null ],
     [ "mutt_path_tidy_dotdot", "path_8h.html#a11272305d911007887e69d3c9283b897", null ],

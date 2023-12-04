@@ -1,12 +1,12 @@
 var hash_8c =
 [
     [ "SOME_PRIME", "hash_8c.html#a50f000039b5766ad8ff2166e1dcb4ec2", null ],
-    [ "gen_string_hash", "group__hash__gen__hash__api.html#ga145bffd967cf163cb6f48dd0961faa28", null ],
-    [ "cmp_string_key", "group__hash__cmp__key__api.html#gaf725d05cd3ceef42e227b5ad563ba0eb", null ],
-    [ "gen_case_string_hash", "group__hash__gen__hash__api.html#ga06edd29ca46927cfefe74fb8fb61bce6", null ],
-    [ "cmp_case_string_key", "group__hash__cmp__key__api.html#gab4bb73821de24c67d5bbd408dd0b532d", null ],
-    [ "gen_int_hash", "group__hash__gen__hash__api.html#ga6a2b6f83138b4cb2e811e7399086b2cb", null ],
-    [ "cmp_int_key", "group__hash__cmp__key__api.html#ga8287cde4c4aa43ef7404db88f12e52e8", null ],
+    [ "gen_hash_string", "group__hash__gen__hash__api.html#ga80c5a0c5c4ab21e061a58d29c9f65451", null ],
+    [ "cmp_key_string", "group__hash__cmp__key__api.html#gaee804a15a8c5a69b80f651fb326af505", null ],
+    [ "gen_hash_case_string", "group__hash__gen__hash__api.html#gad41b9a23170c9fb4a6bb1c0b68576bb3", null ],
+    [ "cmp_key_case_string", "group__hash__cmp__key__api.html#ga78597163d626ec94b3cda6c6db8d39a0", null ],
+    [ "gen_hash_int", "group__hash__gen__hash__api.html#gaff54b4ddb68fadf7fdaaf9651d2f26d3", null ],
+    [ "cmp_key_int", "group__hash__cmp__key__api.html#gaa548070bd0ce07a41faf6a235d296798", null ],
     [ "hash_new", "hash_8c.html#a670c07cd234fb0ad437791fd2f02deb4", null ],
     [ "union_hash_insert", "hash_8c.html#a3fa177b5371f3f616af6fd84aba50ddd", null ],
     [ "union_hash_find_elem", "hash_8c.html#a20274605b815ff2bb8bd140a6293fcd9", null ],

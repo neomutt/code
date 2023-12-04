@@ -40,7 +40,6 @@ var key_2lib_8h =
     [ "init_extended_keys", "key_2lib_8h.html#ae6be8f34be875971676339bac0d726bd", null ],
     [ "main_config_observer", "group__observer__api.html#ga049ba4fc607d07b760a146a99bbc405e", null ],
     [ "mutt_flush_macro_to_endcond", "key_2lib_8h.html#aac5ad0a72c840ff5912ae61615321a5a", null ],
-    [ "mutt_flush_unget_to_endcond", "key_2lib_8h.html#aa6e4149468b3bcdafdccfa131cb3d941", null ],
     [ "mutt_init_abort_key", "key_2lib_8h.html#af8ffdc7a5202729727f64dc5a86a36b9", null ],
     [ "mutt_keys_cleanup", "key_2lib_8h.html#ae61198929e0c7cdf946ca0f9f9bfcbef", null ],
     [ "mw_what_key", "group__gui__mw.html#ga24de819c1b6837b59e35cbfdd0d827cf", null ],

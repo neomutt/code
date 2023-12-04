@@ -23,6 +23,5 @@ var pop_8c =
     [ "pop_msg_save_hcache", "group__mx__msg__save__hcache.html#gabcd55f0bb3f983b76ecbdc34253f1c05", null ],
     [ "pop_path_probe", "group__mx__path__probe.html#ga5b33b7c070124e656f1a4e8c67c039ad", null ],
     [ "pop_path_canon", "group__mx__path__canon.html#gad211511a1d563bfc66a8c38c5f9a184d", null ],
-    [ "pop_path_parent", "group__mx__path__parent.html#ga66ede6b41cf620ff03d67ec1194c740a", null ],
     [ "MxPopOps", "group__mx__api.html#ga8ede1b6a1c37b799cbfc59bf98e9339c", null ]
 ];

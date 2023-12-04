@@ -9,7 +9,6 @@ var mutt_2path_8c =
     [ "mutt_path_dirname", "mutt_2path_8c.html#a6880d720953172694db126bf013bd86b", null ],
     [ "mutt_path_to_absolute", "mutt_2path_8c.html#a5d142daacd414fd49951225192ac22e2", null ],
     [ "mutt_path_realpath", "mutt_2path_8c.html#a9424189920a8ffe184bc5ca68c7cc311", null ],
-    [ "mutt_path_parent", "mutt_2path_8c.html#a8ec62db3afeb8809894cd1e892e4348d", null ],
     [ "mutt_path_abbr_folder", "mutt_2path_8c.html#a82ce0f92a0a8f815a20ee9ea81b30aec", null ],
     [ "mutt_path_escape", "mutt_2path_8c.html#a65bec3d7529d9678568ea768c599d21d", null ],
     [ "mutt_path_getcwd", "mutt_2path_8c.html#ab6b2369f5c422eb15048173ef4b6694a", null ]

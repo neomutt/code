@@ -1,15 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"group__observer__api.html#ga452ee4e979c41bc88ffe3be8773edf8d":[49,33,92],
-"group__observer__api.html#ga45db352e9d9e44b51bcbad35c86627da":[49,33,78],
-"group__observer__api.html#ga47c346bee156d2f0b76a06dbdb1edf4a":[49,33,94],
-"group__observer__api.html#ga481fc754cfbeb58038e5cdd00d375aaa":[49,33,61],
-"group__observer__api.html#ga48e6f1039929465e15f67e5888802605":[49,33,13],
-"group__observer__api.html#ga4b2fb7a7d674be722de5e36f7208a618":[49,33,84],
-"group__observer__api.html#ga52b3469d5c98ef138b1ac3b7ec519b2f":[49,33,91],
-"group__observer__api.html#ga54e8e0b945c41063addf5dd717713cc5":[49,33,28],
-"group__observer__api.html#ga54f754d2069ae8378ae834d5dc09a5bd":[49,33,9],
-"group__observer__api.html#ga56af65dd29bdecb9f92fda3d07347a75":[49,33,17],
 "group__observer__api.html#ga584a1962b6528f11b058aedcae9aea76":[49,33,45],
 "group__observer__api.html#ga5f538f6126333e1ba077b2da2a96892a":[49,33,42],
 "group__observer__api.html#ga60525227e8b3575bd29dc36afb238c97":[49,33,75],
@@ -249,5 +239,15 @@ var NAVTREEINDEX17 =
 "group__store__version.html#ga451c00da87934c383ab9e49a230138f1":[49,41,6,7],
 "group__store__version.html#ga83f77d94894cb632024d8e2fe5e26e37":[49,41,6,6],
 "group__store__version.html#ga8433a4e637508dcc20bbbf6af2785058":[49,41,6,0],
-"group__store__version.html#gaa89629eaf340a4713f39acaf297de1c0":[49,41,6,2]
+"group__store__version.html#gaa89629eaf340a4713f39acaf297de1c0":[49,41,6,2],
+"group__store__version.html#gab1fc5b6ed8480844e7c4d63491f720be":[49,41,6,3],
+"group__window__api.html":[49,22],
+"group__window__recalc.html":[49,22,1],
+"group__window__recalc.html#ga05f270a58ed952d2a0adc246441190c5":[49,22,1,0],
+"group__window__recalc.html#ga0f2cf24711bdbc3c5704cf8cce07e1ea":[49,22,1,4],
+"group__window__recalc.html#ga21327fe06863fb4547dae55df7b69eba":[49,22,1,8],
+"group__window__recalc.html#ga2ac8b6e6ab2aa7c3c9d4d8e4041d7b67":[49,22,1,3],
+"group__window__recalc.html#ga3c7d93c3722aa11337b72a6cbee417ac":[49,22,1,13],
+"group__window__recalc.html#ga4252e9c1e1e5bf541ffebbeca1e2a8dd":[49,22,1,10],
+"group__window__recalc.html#ga45b6ef7a2b68a84c1d71816d97ec475a":[49,22,1,1]
 };

@@ -21,6 +21,5 @@ var structMxOps =
     [ "tags_commit", "structMxOps.html#a2c86bd6a85aefbb16701be00593013fb", null ],
     [ "path_probe", "structMxOps.html#a625a6ea0abfdb6620542e26acc499177", null ],
     [ "path_canon", "structMxOps.html#ae8d7490a00b551c9430cd45db3cd517a", null ],
-    [ "path_parent", "structMxOps.html#acaaddac310949a4530764a1daa0cd949", null ],
     [ "path_is_empty", "structMxOps.html#a07063a8022f96925c6bc170ddee07a19", null ]
 ];

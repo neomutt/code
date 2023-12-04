@@ -20,8 +20,6 @@ var string2_8h =
     [ "mutt_str_len", "string2_8h.html#acca6786b903b22a5924219f9db96e10d", null ],
     [ "mutt_str_lower", "string2_8h.html#a591e023cf2d3d5db11b34c7232c90325", null ],
     [ "mutt_str_lws_len", "string2_8h.html#a64aa5bd37494ee3cbc4285bd06d6c91c", null ],
-    [ "mutt_str_lws_rlen", "string2_8h.html#af8c92df8d61d015debbd2e719730cefc", null ],
-    [ "mutt_str_next_word", "string2_8h.html#adf968aa85a2dd9db77d20e80f9d0f88b", null ],
     [ "mutt_str_remove_trailing_ws", "string2_8h.html#a1d343dcbce0482f8979fe2a298913225", null ],
     [ "mutt_str_replace", "string2_8h.html#af8c32ffc64dd55e92001a974a4be6bbf", null ],
     [ "mutt_str_sep", "string2_8h.html#afbb529127e4b4fae6c8380db3786c858", null ],

@@ -9,7 +9,6 @@ var get_8c =
     [ "mutt_unget_string", "get_8c.html#a6ef7b1ace696713f403479e10c391642", null ],
     [ "mutt_push_macro_event", "get_8c.html#a6fb1a3233123b74771ce95c448b22b79", null ],
     [ "mutt_flush_macro_to_endcond", "get_8c.html#aac5ad0a72c840ff5912ae61615321a5a", null ],
-    [ "mutt_flush_unget_to_endcond", "get_8c.html#aa6e4149468b3bcdafdccfa131cb3d941", null ],
     [ "mutt_monitor_getch", "get_8c.html#ac2c152cda0ef919ae627ddde039dd12c", null ],
     [ "mutt_getch", "get_8c.html#a7d47b607e72adbec2c1963d6ae164a85", null ],
     [ "km_error_key", "get_8c.html#aeefc0780aa0cc9f81c8a257cab4f0979", null ],

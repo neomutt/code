@@ -46,7 +46,6 @@ var imap_8c =
     [ "imap_path_probe", "group__mx__path__probe.html#gab4f27af8eb857a20834f445be3f498de", null ],
     [ "imap_path_canon", "group__mx__path__canon.html#gadc4b0f0043918ecbd733e53aaab622fe", null ],
     [ "imap_expand_path", "imap_8c.html#a47ba293838732c653aea0b6815ba8577", null ],
-    [ "imap_path_parent", "group__mx__path__parent.html#gad3e1c08349340a4778640e61d875691e", null ],
     [ "imap_path_is_empty", "group__mx__path__is__empty.html#gac7bf0f8e6d46fa71f314ade50f594dbd", null ],
     [ "ImapCommands", "imap_8c.html#aed858dc8f9133f4a2c8505753b8ad97a", null ],
     [ "MxImapOps", "group__mx__api.html#ga912153a8bbf9626bfdac665eb3d74b19", null ]
