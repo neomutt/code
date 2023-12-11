@@ -1,7 +1,7 @@
 var NAVTREEINDEX6 =
 {
-"copy_8h.html#afffe25c64079f6ef8c10cacdc0380af4":[2,0,50,4],
-"copy_8h_source.html":[2,0,50],
+"copy_8h.html#afffe25c64079f6ef8c10cacdc0380af4":[2,0,51,4],
+"copy_8h_source.html":[2,0,51],
 "core_2command_8c.html":[2,0,14,2],
 "core_2command_8c.html#a719f8984a58bda6f59c40e6c522fea9e":[2,0,14,2,2],
 "core_2command_8c.html#a86659ac9629e148499d10b1968ff881c":[2,0,14,2,4],

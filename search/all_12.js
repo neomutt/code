@@ -103,7 +103,7 @@ var searchData=
   ['regex_100',['Regex',['../structRegex.html',1,'']]],
   ['regex_101',['regex',['../structRegexColor.html#a1a8315c08b1de382331d26c91b2ae326',1,'RegexColor::regex()'],['../structHook.html#a1c6336f4645125bf795ad741e925bd86',1,'Hook::regex()'],['../structRegex.html#af9ccc25da6324c9055e53966abe9a7b3',1,'Regex::regex()'],['../structRegexNode.html#a97d6fd7d9abfc7a78d892e27acc39dbb',1,'RegexNode::regex()'],['../structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb',1,'Replace::regex()'],['../structPattern.html#a31a5db2d7fccfc8eccb942932b4937b4',1,'Pattern::regex()']]],
   ['regex_20colour_102',['Regex Colour',['../color_regex.html',1,'lib_color']]],
-  ['regex_2ec_103',['regex.c',['../color_2regex_8c.html',1,'(Global Namespace)'],['../mutt_2regex_8c.html',1,'(Global Namespace)'],['../config_2regex_8c.html',1,'(Global Namespace)']]],
+  ['regex_2ec_103',['regex.c',['../mutt_2regex_8c.html',1,'(Global Namespace)'],['../config_2regex_8c.html',1,'(Global Namespace)'],['../color_2regex_8c.html',1,'(Global Namespace)']]],
   ['regex2_2eh_104',['regex2.h',['../regex2_8h.html',1,'']]],
   ['regex3_2eh_105',['regex3.h',['../regex3_8h.html',1,'']]],
   ['regex4_2eh_106',['regex4.h',['../regex4_8h.html',1,'']]],
