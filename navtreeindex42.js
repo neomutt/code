@@ -1,12 +1,5 @@
 var NAVTREEINDEX42 =
 {
-"structEnvelopeWindowData.html#aad19acf160c345173ce4baea5a4b5b4d":[1,0,72,0],
-"structEnvelopeWindowData.html#aaf04519aa428b1ce4e703ada6c440ead":[1,0,72,8],
-"structEnvelopeWindowData.html#ae274f686b3f5aef6663bc5029b6e5f4d":[1,0,72,3],
-"structEnvelopeWindowData.html#af283380f009609eb97676592cd29035a":[1,0,72,5],
-"structEtags.html":[1,0,73],
-"structEtags.html#a4dfb2c4b8941b7d6152f6de86d2a061c":[1,0,73,1],
-"structEtags.html#aea21780374e5741d70205a1efc9781ea":[1,0,73,0],
 "structEventAccount.html":[1,0,74],
 "structEventAccount.html#ac420c69e05c38e42e09e3dd88cf54c9f":[1,0,74,0],
 "structEventAlias.html":[1,0,75],
@@ -249,5 +242,12 @@ var NAVTREEINDEX42 =
 "structImapMboxData.html#a577bf35b11a51ec0cf6a97f5928d02b5":[1,0,119,12],
 "structImapMboxData.html#a5b7958aa356cbb9e73e5b95334613eb6":[1,0,119,6],
 "structImapMboxData.html#a5d4ade771376ea3dbb3fe5816ddeac84":[1,0,119,14],
-"structImapMboxData.html#a864a3d276c4282985b64c69e97ad82e4":[1,0,119,17]
+"structImapMboxData.html#a864a3d276c4282985b64c69e97ad82e4":[1,0,119,17],
+"structImapMboxData.html#a8efadd7049504cce68615397dfbf0f05":[1,0,119,10],
+"structImapMboxData.html#aabd21dc6c911b4b657865b36aafef6ca":[1,0,119,5],
+"structImapMboxData.html#ac08c3acbb69452d9db121fddbbf1637a":[1,0,119,2],
+"structImapMboxData.html#ad03723407a1adabc338541cae865fc82":[1,0,119,8],
+"structImapMboxData.html#ad16e4ff0444eceaf5cf6700d00cc5c9f":[1,0,119,1],
+"structImapMboxData.html#add06baf96fd584f61a318a84ccbd3bf1":[1,0,119,13],
+"structIndexFunction.html":[1,0,120]
 };

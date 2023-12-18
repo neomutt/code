@@ -24,6 +24,6 @@ var serialize_8c =
     [ "serial_restore_body", "serialize_8c.html#aac104d69a053bb4a598a923e90e42a89", null ],
     [ "serial_dump_envelope", "serialize_8c.html#a529ecb0a8c42d7f595ad3037e66bd550", null ],
     [ "serial_restore_envelope", "serialize_8c.html#a4f2a030800498c1d8bf3dc3fe01ae767", null ],
-    [ "serial_dump_tags", "serialize_8c.html#ae5dda6b4d2813b4f808f8b76c5a79351", null ],
-    [ "serial_restore_tags", "serialize_8c.html#a3e37a16e51f43a502e2af5c7f4b0923f", null ]
+    [ "serial_dump_tags", "serialize_8c.html#a2a3f3516ac8475877d5fbbc12d72e3fc", null ],
+    [ "serial_restore_tags", "serialize_8c.html#a3f5215a6c3393b3da564c1671f76b910", null ]
 ];

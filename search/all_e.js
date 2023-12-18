@@ -231,7 +231,7 @@ var searchData=
   ['notify_228',['notify',['../structMailbox.html#a86c7dd0131cdc539dbbd979abc540337',1,'Mailbox']]],
   ['notify_229',['Notify',['../structNotify.html',1,'']]],
   ['notify_230',['notify',['../structAccount.html#aa8008645fff7953e209aa6a3911969e0',1,'Account::notify()'],['../structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992',1,'ConfigSubset::notify()'],['../structPagerPrivateData.html#a81bf0d8523df2a351560b19d2f708c60',1,'PagerPrivateData::notify()'],['../structMailboxView.html#a56db84bb92494913b925e42e61e48fff',1,'MailboxView::notify()'],['../structMenu.html#ad6271c90dcf6508f56ac988a8fca2e39',1,'Menu::notify()'],['../structIndexSharedData.html#ae48d4a66308d0dd8461a3113e2ce0ed0',1,'IndexSharedData::notify()'],['../structMuttWindow.html#a5bf1302122ef2778be449cde2f1909e6',1,'MuttWindow::notify()'],['../structEmail.html#aacf5772e590568f9bda0373986775354',1,'Email::notify()'],['../structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b',1,'NeoMutt::notify()']]],
-  ['notify_2ec_231',['notify.c',['../debug_2notify_8c.html',1,'(Global Namespace)'],['../mutt_2notify_8c.html',1,'(Global Namespace)'],['../color_2notify_8c.html',1,'(Global Namespace)']]],
+  ['notify_2ec_231',['notify.c',['../color_2notify_8c.html',1,'(Global Namespace)'],['../debug_2notify_8c.html',1,'(Global Namespace)'],['../mutt_2notify_8c.html',1,'(Global Namespace)']]],
   ['notify_2eh_232',['notify.h',['../notify_8h.html',1,'']]],
   ['notify2_2eh_233',['notify2.h',['../notify2_8h.html',1,'']]],
   ['notify_5fcrypto_234',['notify_crypto',['../pager_2message_8c.html#a97e1621c452bf67d798d882bbe0c2998',1,'message.c']]],

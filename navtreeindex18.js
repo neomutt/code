@@ -1,15 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"group__window__recalc.html#ga4d07fedbd4d41432c9c1777ce0f0a27c":[49,22,1,9],
-"group__window__recalc.html#ga5165a2f8ed1418aba9747d98572b104b":[49,22,1,6],
-"group__window__recalc.html#gaa78d5c0a5171d61d1afbced56404ce72":[49,22,1,2],
-"group__window__recalc.html#gac7b0f8bab69aef9ee6f87881bc03eed8":[49,22,1,11],
-"group__window__recalc.html#gad5da1f46db353b9022654f5d929f3c58":[49,22,1,7],
-"group__window__recalc.html#gadbe367a85dfc3d77c137839ce555eab2":[49,22,1,12],
-"group__window__recalc.html#gae8fdf0a222141e5e18f6caa9a15f93f6":[49,22,1,14],
-"group__window__recalc.html#gaf4ad1527459c4c39f28ebdee0f3e61a9":[49,22,1,5],
-"group__window__recursor.html":[49,22,3],
-"group__window__recursor.html#ga22b41a8bd90a86fa88a68e7e74d20cf2":[49,22,3,1],
 "group__window__recursor.html#gaef0db34b6e221fe219a89b7030aee190":[49,22,3,0],
 "group__window__repaint.html":[49,22,2],
 "group__window__repaint.html#ga095a7f494315f82f45df5bf39a10cf94":[49,22,2,0],
@@ -249,5 +239,15 @@ var NAVTREEINDEX18 =
 "hdrline_8c.html#aebd2a18291349b0a08fc7fd743574073":[2,0,63,6],
 "hdrline_8c_source.html":[2,0,63],
 "hdrline_8h.html":[2,0,64],
-"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824":[2,0,64,2]
+"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824":[2,0,64,2],
+"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824a1a85b221f690d434a7ce87f3904e0ecc":[2,0,64,2,4],
+"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824a3e8456950dd4004c873b382bd6a800e5":[2,0,64,2,1],
+"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824a45593b08e3ccabfdb542d87a6c02bbed":[2,0,64,2,0],
+"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824a5252b8b6bb165d3ac8ecae7f42adf48c":[2,0,64,2,2],
+"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824a8d83ce41f0592319142b0f0512165b9a":[2,0,64,2,3],
+"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824aa2a3e550b7845d0e4e2ce1bf81e8d074":[2,0,64,2,6],
+"hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824ab0431d479192fbb2c0c1f32193d18220":[2,0,64,2,5],
+"hdrline_8h.html#a2b8451170b3a2869f0d6c3a0cedccbac":[2,0,64,1],
+"hdrline_8h.html#a2b8451170b3a2869f0d6c3a0cedccbaca1af044cbb8ba6396e2bba0cc5124a61b":[2,0,64,1,3],
+"hdrline_8h.html#a2b8451170b3a2869f0d6c3a0cedccbaca7c8a74686b329cc02c9053d1e49cbee0":[2,0,64,1,2]
 };

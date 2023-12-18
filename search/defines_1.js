@@ -5,7 +5,7 @@ var searchData=
   ['addr_5flist_2',['ADDR_LIST',['../debug_2email_8c.html#a34aade36b1400490484d77e6bc9a0559',1,'ADDR_LIST():&#160;email.c'],['../graphviz_8c.html#a34aade36b1400490484d77e6bc9a0559',1,'ADDR_LIST():&#160;graphviz.c']]],
   ['address_5fspecial_5fmask_3',['ADDRESS_SPECIAL_MASK',['../address_2address_8c.html#a9b0a500482eea16ed97e57a9ec4369b5',1,'address.c']]],
   ['alignof_4',['alignof',['../md5_8c.html#aca526298ed34ef6fe2b1b11a8280fdd6',1,'md5.c']]],
-  ['anum_5',['ANUM',['../nntp_2lib_8h.html#af213c68397b28d9da9d2aa988ebbfbde',1,'lib.h']]],
+  ['anum_5ffmt_5',['ANUM_FMT',['../nntp_2lib_8h.html#a9d3ef937cceedd7b24520f69c5191d68',1,'lib.h']]],
   ['anum_5ft_6',['anum_t',['../nntp_2lib_8h.html#afbe93ce95fbbf1758c93d4b123fc2246',1,'lib.h']]],
   ['application_5fpgp_7',['APPLICATION_PGP',['../ncrypt_2lib_8h.html#a587e679a4c9cc44f11f0c467bb22b0af',1,'lib.h']]],
   ['application_5fsmime_8',['APPLICATION_SMIME',['../ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2',1,'lib.h']]],

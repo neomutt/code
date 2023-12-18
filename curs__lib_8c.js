@@ -6,7 +6,6 @@ var curs__lib_8c =
     [ "mutt_edit_file", "curs__lib_8c.html#a0590f11f42a6242002ea4c842438231b", null ],
     [ "mutt_query_exit", "curs__lib_8c.html#ac7ca868e51ee14c92ab7a7b09487258e", null ],
     [ "mutt_endwin", "curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2", null ],
-    [ "mutt_perror_debug", "curs__lib_8c.html#af00d506bbe9c2c8c4e077e2a55f44466", null ],
     [ "mutt_any_key_to_continue", "curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774", null ],
     [ "mw_enter_fname", "group__gui__mw.html#ga7074d808675e21370b1cef98d55e75ca", null ],
     [ "mutt_addwch", "curs__lib_8c.html#aa8f482f652cc7a117eb2c3f732a3cd74", null ],

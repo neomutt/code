@@ -1,15 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"group__observer__api.html#ga584a1962b6528f11b058aedcae9aea76":[49,33,45],
-"group__observer__api.html#ga5f538f6126333e1ba077b2da2a96892a":[49,33,42],
-"group__observer__api.html#ga60525227e8b3575bd29dc36afb238c97":[49,33,75],
-"group__observer__api.html#ga637566459600c5b19360a6921120f3a1":[49,33,88],
-"group__observer__api.html#ga6cb60c768504cff05fe520d33f03af73":[49,33,67],
-"group__observer__api.html#ga6d238d2ce26ab9532b5c86f38ccdb8ea":[49,33,89],
-"group__observer__api.html#ga6e6c8b21682ed52ad1e9d8a4fc3859e1":[49,33,53],
-"group__observer__api.html#ga71980ec0ff9bbe4cfb49a11d52a2b778":[49,33,64],
-"group__observer__api.html#ga72b8f4ad5d9b7371431a909c989bd383":[49,33,2],
-"group__observer__api.html#ga7759908cb82aa254ec40a38c3a3675ae":[49,33,70],
 "group__observer__api.html#ga7be0fe8d970ae11592df9e1007d4b5b1":[49,33,90],
 "group__observer__api.html#ga7d31ff1e2bcb8bbf9c32799d74c419cb":[49,33,101],
 "group__observer__api.html#ga7f47d16f5c1dad6c825d946fec19fa95":[49,33,63],
@@ -249,5 +239,15 @@ var NAVTREEINDEX17 =
 "group__window__recalc.html#ga2ac8b6e6ab2aa7c3c9d4d8e4041d7b67":[49,22,1,3],
 "group__window__recalc.html#ga3c7d93c3722aa11337b72a6cbee417ac":[49,22,1,13],
 "group__window__recalc.html#ga4252e9c1e1e5bf541ffebbeca1e2a8dd":[49,22,1,10],
-"group__window__recalc.html#ga45b6ef7a2b68a84c1d71816d97ec475a":[49,22,1,1]
+"group__window__recalc.html#ga45b6ef7a2b68a84c1d71816d97ec475a":[49,22,1,1],
+"group__window__recalc.html#ga4d07fedbd4d41432c9c1777ce0f0a27c":[49,22,1,9],
+"group__window__recalc.html#ga5165a2f8ed1418aba9747d98572b104b":[49,22,1,6],
+"group__window__recalc.html#gaa78d5c0a5171d61d1afbced56404ce72":[49,22,1,2],
+"group__window__recalc.html#gac7b0f8bab69aef9ee6f87881bc03eed8":[49,22,1,11],
+"group__window__recalc.html#gad5da1f46db353b9022654f5d929f3c58":[49,22,1,7],
+"group__window__recalc.html#gadbe367a85dfc3d77c137839ce555eab2":[49,22,1,12],
+"group__window__recalc.html#gae8fdf0a222141e5e18f6caa9a15f93f6":[49,22,1,14],
+"group__window__recalc.html#gaf4ad1527459c4c39f28ebdee0f3e61a9":[49,22,1,5],
+"group__window__recursor.html":[49,22,3],
+"group__window__recursor.html#ga22b41a8bd90a86fa88a68e7e74d20cf2":[49,22,3,1]
 };

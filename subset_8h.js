@@ -25,14 +25,9 @@ var subset_8h =
     [ "cs_subset_he_string_plus_equals", "subset_8h.html#abdb3a9b5c8876db2541cfa31e075b5f5", null ],
     [ "cs_subset_he_string_set", "subset_8h.html#a8a31ecbb31d116ffc29cbf2b5645a375", null ],
     [ "cs_subset_he_delete", "subset_8h.html#a79429bb7c2b73456b14b2dd9680e6af8", null ],
-    [ "cs_subset_str_native_get", "subset_8h.html#ac43bd842a2754ed35821aad9929f795c", null ],
     [ "cs_subset_str_native_set", "subset_8h.html#a6ee598a96defed645b11cad6e6cb6512", null ],
-    [ "cs_subset_str_reset", "subset_8h.html#a514631d91f223e8b716b2d1eb159be78", null ],
     [ "cs_subset_str_string_get", "subset_8h.html#a7e8ecc401fed4ef7d076bc377ec8b80a", null ],
-    [ "cs_subset_str_string_minus_equals", "subset_8h.html#a60f7e66361309fdb276ea4458672abe5", null ],
-    [ "cs_subset_str_string_plus_equals", "subset_8h.html#a28038ae3e3e508802fdb3a0932d5ff9e", null ],
     [ "cs_subset_str_string_set", "subset_8h.html#a8d7d5e60bd8f7f0f8ffd8522de126b12", null ],
-    [ "cs_subset_str_delete", "subset_8h.html#ad12b122529ec0e6b88b3e5a6c7a741c2", null ],
     [ "elem_list_sort", "group__sort__api.html#ga6f4b8e74fdd8c97c64ed424fc8183db1", null ],
     [ "get_elem_list", "subset_8h.html#a7b29db6a8801c474a1c24dfb32246e09", null ]
 ];

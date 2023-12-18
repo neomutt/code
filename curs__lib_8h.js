@@ -11,7 +11,6 @@ var curs__lib_8h =
     [ "mutt_getch", "curs__lib_8h.html#a7d47b607e72adbec2c1963d6ae164a85", null ],
     [ "mutt_need_hard_redraw", "curs__lib_8h.html#abbd51b0f01f2565da12fddf6716c7b9c", null ],
     [ "mutt_paddstr", "curs__lib_8h.html#a861e3d2f47099563f8c21a1bb0eb2092", null ],
-    [ "mutt_perror_debug", "curs__lib_8h.html#af00d506bbe9c2c8c4e077e2a55f44466", null ],
     [ "mutt_push_macro_event", "curs__lib_8h.html#a6fb1a3233123b74771ce95c448b22b79", null ],
     [ "mutt_query_exit", "curs__lib_8h.html#ac7ca868e51ee14c92ab7a7b09487258e", null ],
     [ "mutt_refresh", "curs__lib_8h.html#a99dc8e687f3d5688695d0d7a1bab3c3f", null ],

@@ -3,7 +3,7 @@ var nntp_2lib_8h =
     [ "NntpAcache", "structNntpAcache.html", "structNntpAcache" ],
     [ "NewsrcEntry", "structNewsrcEntry.html", "structNewsrcEntry" ],
     [ "anum_t", "nntp_2lib_8h.html#afbe93ce95fbbf1758c93d4b123fc2246", null ],
-    [ "ANUM", "nntp_2lib_8h.html#af213c68397b28d9da9d2aa988ebbfbde", null ],
+    [ "ANUM_FMT", "nntp_2lib_8h.html#a9d3ef937cceedd7b24520f69c5191d68", null ],
     [ "NNTP_ACACHE_LEN", "nntp_2lib_8h.html#a1efe6072fe3f0f219d90675e1aa55f40", null ],
     [ "nntp_select_server", "nntp_2lib_8h.html#ae9ee1cc132aa482531fdc2463200e492", null ],
     [ "mutt_newsgroup_subscribe", "nntp_2lib_8h.html#a8116259f1259f7d6a96240cff0e9fa9e", null ],

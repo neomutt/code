@@ -35,6 +35,5 @@ var buffer_8h =
     [ "buf_substrcpy", "buffer_8h.html#af1ca165104451f7e0b00aa684cd93d37", null ],
     [ "buf_dequote_comment", "buffer_8h.html#a4e7d6d490671b9c43c65297f2fbef401", null ],
     [ "buf_lower", "buffer_8h.html#adb0a54db83f68bc183a8c66eaf985b61", null ],
-    [ "buf_upper", "buffer_8h.html#a85f6f9ffa8cb60e0cf85e3e2aa8fcf03", null ],
     [ "buf_string", "buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab", null ]
 ];

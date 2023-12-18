@@ -15,7 +15,6 @@ var mutt_2logging_8c =
     [ "log_queue_save", "mutt_2logging_8c.html#acad0c0b307a231e25494dc8cfa0f2f37", null ],
     [ "log_disp_queue", "group__logging__api.html#ga2edbe9483e89b1090b072e9d9e4de62f", null ],
     [ "log_disp_terminal", "group__logging__api.html#gaa8db59bb1ae8a4901a2635a68367d477", null ],
-    [ "log_disp_null", "group__logging__api.html#ga3891c2b87bfc2e0f1497e3d992a54e1e", null ],
     [ "log_multiline_full", "mutt_2logging_8c.html#a8f8ee3672f4406de96665e96c256d989", null ],
     [ "LevelAbbr", "mutt_2logging_8c.html#a9299ab2ea31c4c836f9b2af13f35fec8", null ],
     [ "MuttLogger", "group__logging__api.html#gab15f5a132f2eaa2304c2fe2c9fa9747a", null ],

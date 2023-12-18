@@ -17,10 +17,8 @@ var file_8h =
       [ "MUTT_OPENDIR_CREATE", "file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba279decdd0165f19ffc7d35736615f499", null ]
     ] ],
     [ "mutt_file_check_empty", "file_8h.html#a417087adf70a53897756794b6562c511", null ],
-    [ "mutt_file_chmod", "file_8h.html#a7929b183ece88d13fd82ecf6ce957a10", null ],
     [ "mutt_file_chmod_add", "file_8h.html#ada903307ff33738359dd9add40bc5c6a", null ],
     [ "mutt_file_chmod_add_stat", "file_8h.html#aa1bd6ffb17f4e4ec58385f9cc1512b6f", null ],
-    [ "mutt_file_chmod_rm", "file_8h.html#a58dc6ce9fcab65c54ae6af175d641e47", null ],
     [ "mutt_file_chmod_rm_stat", "file_8h.html#af719d4d5344641aa1b525f803f6ebb46", null ],
     [ "mutt_file_copy_bytes", "file_8h.html#a2bafa45ca3c8ce7d96303377d860e2db", null ],
     [ "mutt_file_copy_stream", "file_8h.html#a0a6ff09a685fb6fa1120a582a5a6ef4a", null ],

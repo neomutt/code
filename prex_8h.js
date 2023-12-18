@@ -10,6 +10,7 @@ var prex_8h =
       [ "PREX_MBOX_FROM", "prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488a28f2d81149877a064b0b5fb443a1a383", null ],
       [ "PREX_MBOX_FROM_LAX", "prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488a12e3c35ad5940b3889b2cc36f788d366", null ],
       [ "PREX_ACCOUNT_CMD", "prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488a744884a9dd9de6c9365b3a2b427ee62f", null ],
+      [ "PREX_ALIAS_TAGS", "prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488a79cdc474a2419ff0e923607afb6e0143", null ],
       [ "PREX_MAX", "prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488add7a0cae072a86ed352d99b98e46a964", null ]
     ] ],
     [ "PrexUrlSchemeMatch", "prex_8h.html#aa6ce7235f2865c37b6140c5deef44c7d", [
@@ -128,6 +129,14 @@ var prex_8h =
       [ "PREX_ACCOUNT_CMD_MATCH_KEY", "prex_8h.html#a4bbe73518d5aa200e3129011cfe147ccae41eba830186d929c8d719ca6e587f52", null ],
       [ "PREX_ACCOUNT_CMD_MATCH_VALUE", "prex_8h.html#a4bbe73518d5aa200e3129011cfe147ccaec43ed86657231b42c369ae94c3871e6", null ],
       [ "PREX_ACCOUNT_CMD_MATCH_MAX", "prex_8h.html#a4bbe73518d5aa200e3129011cfe147cca8156eba2d50f254585e87139a801cdc6", null ]
+    ] ],
+    [ "PrexAliasTags", "prex_8h.html#af63297811bdef043af560d437dbc2d8c", [
+      [ "PREX_ALIAS_TAGS_MATCH_FULL", "prex_8h.html#af63297811bdef043af560d437dbc2d8ca065689f152c392820f7a81043c4d1c1f", null ],
+      [ "PREX_ALIAS_TAGS_MATCH_PRE", "prex_8h.html#af63297811bdef043af560d437dbc2d8ca516912239895d10bf40766b588a0dd6d", null ],
+      [ "PREX_ALIAS_TAGS_MATCH_KEY", "prex_8h.html#af63297811bdef043af560d437dbc2d8ca64f0edbb55f106ca3aa807eeeff15e22", null ],
+      [ "PREX_ALIAS_TAGS_MATCH_TAGS", "prex_8h.html#af63297811bdef043af560d437dbc2d8caaac64201dd188339ebaadddecd7455c8", null ],
+      [ "PREX_ALIAS_TAGS_MATCH_POST", "prex_8h.html#af63297811bdef043af560d437dbc2d8ca34e3a3488f90aa699b735c0e64f7ea33", null ],
+      [ "PREX_ALIAS_TAGS_MATCH_MAX", "prex_8h.html#af63297811bdef043af560d437dbc2d8caa5d13551959e54593f40f7dcaa6dc03c", null ]
     ] ],
     [ "mutt_prex_capture", "prex_8h.html#a204aa135b8b80f39730506b82385612d", null ],
     [ "mutt_prex_cleanup", "prex_8h.html#ace512d3a339810772edaf83f3a2b4425", null ]

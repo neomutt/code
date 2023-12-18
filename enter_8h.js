@@ -20,9 +20,5 @@ var enter_8h =
     [ "editor_kill_whole_line", "enter_8h.html#af54ec3094216a0368c7179b13e3a3e75", null ],
     [ "editor_kill_word", "enter_8h.html#a96a74633f9162486a7d78304e4fc417e", null ],
     [ "editor_transpose_chars", "enter_8h.html#ad13ff75bb2027d0071ab973bbae26aab", null ],
-    [ "editor_buffer_get_cursor", "enter_8h.html#a92abec5f3b5fafed4c696699087c1413", null ],
-    [ "editor_buffer_get_lastchar", "enter_8h.html#a04e2243cafd49dd1d7bb3a377abbe8ba", null ],
-    [ "editor_buffer_is_empty", "enter_8h.html#a4de697156d8edee0eaf74cb370679ed0", null ],
-    [ "editor_buffer_set", "enter_8h.html#a1eec80e7964f008b3daa1fe141be16b2", null ],
-    [ "editor_buffer_set_cursor", "enter_8h.html#aa50e45baf01159e12c08eb2eb4fa12aa", null ]
+    [ "editor_buffer_is_empty", "enter_8h.html#a4de697156d8edee0eaf74cb370679ed0", null ]
 ];
