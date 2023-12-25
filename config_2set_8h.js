@@ -40,14 +40,9 @@ var config_2set_8h =
     [ "cs_he_delete", "config_2set_8h.html#a568925711287812c04a3b48097d30668", null ],
     [ "cs_str_initial_get", "config_2set_8h.html#a1bc435f8e505a9274333899fa70250ce", null ],
     [ "cs_str_initial_set", "config_2set_8h.html#a2923b046583690255351a486a6a7a0c6", null ],
-    [ "cs_str_native_get", "config_2set_8h.html#aa24d0f20de3cddc0e486772a303b07cc", null ],
     [ "cs_str_native_set", "config_2set_8h.html#a6eec066d228f0ded678c35ed8aa9ac28", null ],
     [ "cs_str_reset", "config_2set_8h.html#a2c2cb475e50df247e8c88dab8c123534", null ],
-    [ "cs_str_string_get", "config_2set_8h.html#a6fd54e2cfa94fb1157988cebc135ef67", null ],
-    [ "cs_str_string_minus_equals", "config_2set_8h.html#ae7fb6258054e01e79f06bdc64b705cd8", null ],
-    [ "cs_str_string_plus_equals", "config_2set_8h.html#a651003f60b9d9882dd5c6cc31833927b", null ],
     [ "cs_str_string_set", "config_2set_8h.html#a5b6c4a72c38c2eca93569af53cc82eed", null ],
-    [ "cs_str_delete", "config_2set_8h.html#a5b7bbad5551e55a2330a2dd40111a0f5", null ],
     [ "startup_only", "config_2set_8h.html#a09a8cc6d80d0de8506c22effdaebef97", null ],
     [ "StartupComplete", "config_2set_8h.html#aaf8eacd4749948bf6d877a63eb886322", null ]
 ];

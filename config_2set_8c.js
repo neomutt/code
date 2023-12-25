@@ -22,15 +22,10 @@ var config_2set_8c =
     [ "cs_he_string_set", "config_2set_8c.html#a6c9cf00df6994a9cef7caf5d9f0f01c6", null ],
     [ "cs_str_string_set", "config_2set_8c.html#a5b6c4a72c38c2eca93569af53cc82eed", null ],
     [ "cs_he_string_get", "config_2set_8c.html#aae8bc50e36b926998d926687f97c8b48", null ],
-    [ "cs_str_string_get", "config_2set_8c.html#a6fd54e2cfa94fb1157988cebc135ef67", null ],
     [ "cs_he_native_set", "config_2set_8c.html#a81e8688ba324bf79fdb467df153028b1", null ],
     [ "cs_str_native_set", "config_2set_8c.html#a6eec066d228f0ded678c35ed8aa9ac28", null ],
     [ "cs_he_native_get", "config_2set_8c.html#a86307a07e4994514634a1658ec0cfe66", null ],
-    [ "cs_str_native_get", "config_2set_8c.html#aa24d0f20de3cddc0e486772a303b07cc", null ],
     [ "cs_he_string_plus_equals", "config_2set_8c.html#a2962bf134043ca7a65ce8c5a9d8b33f2", null ],
-    [ "cs_str_string_plus_equals", "config_2set_8c.html#a651003f60b9d9882dd5c6cc31833927b", null ],
     [ "cs_he_string_minus_equals", "config_2set_8c.html#afb22f304def10b645bb397b6b8b29641", null ],
-    [ "cs_str_string_minus_equals", "config_2set_8c.html#ae7fb6258054e01e79f06bdc64b705cd8", null ],
-    [ "cs_he_delete", "config_2set_8c.html#a568925711287812c04a3b48097d30668", null ],
-    [ "cs_str_delete", "config_2set_8c.html#a5b7bbad5551e55a2330a2dd40111a0f5", null ]
+    [ "cs_he_delete", "config_2set_8c.html#a568925711287812c04a3b48097d30668", null ]
 ];

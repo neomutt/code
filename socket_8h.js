@@ -21,7 +21,6 @@ var socket_8h =
     [ "mutt_socket_read", "socket_8h.html#aada5be45f75196ab6f4f3f89908ab5d9", null ],
     [ "mutt_socket_readchar", "socket_8h.html#a8c8e2c0db6bc26a505c9a5d8c46c139e", null ],
     [ "mutt_socket_readln_d", "socket_8h.html#af3cf9e32b156de3acf7902b59db117f9", null ],
-    [ "mutt_socket_write", "socket_8h.html#af3c3b7df05fdd28eea0e8561dcd8c3ee", null ],
     [ "mutt_socket_write_d", "socket_8h.html#a87f83ee37ae23a8833e6ac297247795f", null ],
     [ "mutt_socket_buffer_readln_d", "socket_8h.html#a665e2e73929e957aadba683abc60f9b0", null ]
 ];

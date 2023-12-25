@@ -11,6 +11,7 @@ var mutt_2date_8c =
     [ "mutt_date_check_month", "mutt_2date_8c.html#a58c8238ef7c9cc33ee04f5a88dbe5559", null ],
     [ "mutt_date_now", "mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe", null ],
     [ "mutt_date_now_ms", "mutt_2date_8c.html#a101dfcb381a53d5bc3191347566be53b", null ],
+    [ "mutt_time_now", "mutt_2date_8c.html#ae098e85ce5035180d82f99c5e5358d18", null ],
     [ "parse_small_uint", "mutt_2date_8c.html#a45e62c4330ad244849f9214984371a34", null ],
     [ "mutt_date_parse_rfc5322_strict", "mutt_2date_8c.html#aad4023e562d394d9f7e2d13afe5f6c9a", null ],
     [ "mutt_date_parse_date", "mutt_2date_8c.html#ad8aaf5118148ed8f6708f32bfab3146f", null ],

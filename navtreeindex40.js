@@ -1,15 +1,5 @@
 var NAVTREEINDEX40 =
 {
-"structAttachPrivateData.html#a1567f41cde32b4e2b44aad729d6d076e":[1,0,11,4],
-"structAttachPrivateData.html#a1cca70ad111c9bee242f5b112a5fc338":[1,0,11,0],
-"structAttachPrivateData.html#a6bbbbcab09705417a767782eeee2848a":[1,0,11,2],
-"structAttachPrivateData.html#a86963a15a6a667b6fc8a7d6eefbac38c":[1,0,11,1],
-"structAttachPrivateData.html#aa225f5b079947ecc219fffc93ba2b6eb":[1,0,11,5],
-"structAttachPrivateData.html#abccc6b67e0700e85a897bd119eed0b32":[1,0,11,3],
-"structAttachPtr.html":[1,0,12],
-"structAttachPtr.html#a0546c0753a6155ae9555c290b80d0356":[1,0,12,0],
-"structAttachPtr.html#a494e67d5ddc4dab3f16b1c99bf40309f":[1,0,12,8],
-"structAttachPtr.html#a675e3442ea87e4479649a58c20f68aa7":[1,0,12,3],
 "structAttachPtr.html#a71db2d33eefd6c1f41f129f6943fe83a":[1,0,12,5],
 "structAttachPtr.html#a73acc0edc4e77cd9c64ea0064dcf49a3":[1,0,12,4],
 "structAttachPtr.html#a776ea6f490cedf7dc47accba055d964c":[1,0,12,1],
@@ -249,5 +239,15 @@ var NAVTREEINDEX40 =
 "structConnAccount.html#a45280c267b6a42682643c0b3b135a75d":[1,0,49,1],
 "structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca":[1,0,49,2],
 "structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037":[1,0,49,3],
-"structConnAccount.html#a86102cb75ff512603a5559d4908b1ba4":[1,0,49,7]
+"structConnAccount.html#a86102cb75ff512603a5559d4908b1ba4":[1,0,49,7],
+"structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a":[1,0,49,0],
+"structConnAccount.html#ae69871442c1135a06b359011104f630b":[1,0,49,8],
+"structConnAccount.html#aefc6c0b647de43e60472000102a0e208":[1,0,49,5],
+"structConnAccount.html#af674ed2969fc29ff7d99f8b4cff6c92b":[1,0,49,6],
+"structConnAccount.html#af8038540105baf4da84d15bcb6bffa61":[1,0,49,9],
+"structConnAccount.html#aff0fc77d9a388c80c347c5c2c925086d":[1,0,49,4],
+"structConnection.html":[1,0,50],
+"structConnection.html#a2baa91d494f612c8bf43302bb96543f0":[1,0,50,6],
+"structConnection.html#a2c850105a80e13d82a096b27d19586bf":[1,0,50,2],
+"structConnection.html#a2fcded23739f26da564cdb378c8b0a4f":[1,0,50,10]
 };

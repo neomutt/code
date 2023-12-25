@@ -1,15 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"copy_8h.html#ae7154a5a053fd40c25562fea5f932b1f":[2,0,51,36],
-"copy_8h.html#aec2bde892a19ba76eaa455107321f342":[2,0,51,35],
-"copy_8h.html#af310a44d7c96b22de90934cb18634b58":[2,0,51,14],
-"copy_8h.html#afc69635c366eaeddf0eb2367ee3837c0":[2,0,51,27],
-"copy_8h.html#afffe25c64079f6ef8c10cacdc0380af4":[2,0,51,4],
-"copy_8h_source.html":[2,0,51],
-"core_2command_8c.html":[2,0,14,2],
-"core_2command_8c.html#a719f8984a58bda6f59c40e6c522fea9e":[2,0,14,2,2],
-"core_2command_8c.html#a86659ac9629e148499d10b1968ff881c":[2,0,14,2,4],
-"core_2command_8c.html#a9da3c14b35d0ddc4c149809d7d1f5a17":[2,0,14,2,0],
 "core_2command_8c.html#ac28718bcef21252385234091d140d57e":[2,0,14,2,3],
 "core_2command_8c.html#ac5aa91ef32fc4a7164da421b1bd41295":[2,0,14,2,6],
 "core_2command_8c.html#ad96aeb9f4fc7510f9180b42423fa37eb":[2,0,14,2,5],
@@ -249,5 +239,15 @@ var NAVTREEINDEX6 =
 "cryptglue_8h.html#ab11bb907cc90bcd3aadecfd0000b5350":[2,0,33,12,8],
 "cryptglue_8h.html#ab433b7b833d669dc625429fd6753ba85":[2,0,33,12,10],
 "cryptglue_8h.html#ad29ef155ee6ccc83b50614068bb5b597":[2,0,33,12,6],
-"cryptglue_8h.html#ad4a89b47b43715de8ee481c21cbb8df1":[2,0,33,12,7]
+"cryptglue_8h.html#ad4a89b47b43715de8ee481c21cbb8df1":[2,0,33,12,7],
+"cryptglue_8h.html#ae2ebaf8e03c2029af925d234447a74d9":[2,0,33,12,0],
+"cryptglue_8h_source.html":[2,0,33,12],
+"curs__lib_8c.html":[2,0,20,0],
+"curs__lib_8c.html#a0590f11f42a6242002ea4c842438231b":[2,0,20,0,3],
+"curs__lib_8c.html#a065d0cc61c21f10fe6f4fc4fad8c7afe":[2,0,20,0,12],
+"curs__lib_8c.html#a48a9fd66de2ef76e2b72704badd3c40b":[2,0,20,0,10],
+"curs__lib_8c.html#a861e3d2f47099563f8c21a1bb0eb2092":[2,0,20,0,9],
+"curs__lib_8c.html#a99dc8e687f3d5688695d0d7a1bab3c3f":[2,0,20,0,1],
+"curs__lib_8c.html#aa8f482f652cc7a117eb2c3f732a3cd74":[2,0,20,0,8],
+"curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774":[2,0,20,0,6]
 };

@@ -1,14 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"group__encoder__api.html#gad424be4019f3940ef8e1f14b10c6d594":[49,18,1],
-"group__enter__function__api.html":[49,16],
-"group__enter__function__api.html#ga03456a756da17e292d550b74fd41db28":[49,16,15],
-"group__enter__function__api.html#ga33a2c9b6a94e9ecb636ac4b36b8853b1":[49,16,9],
-"group__enter__function__api.html#ga4209effdea420ec00885e49724fa3d05":[49,16,1],
-"group__enter__function__api.html#ga43beaa3d0b84b55b20e71d23f6492469":[49,16,2],
-"group__enter__function__api.html#ga49d317c9dc52dca950db46277c7965b7":[49,16,20],
-"group__enter__function__api.html#ga5f95f15d0a03c43a1fb332a1912158a2":[49,16,5],
-"group__enter__function__api.html#ga612c9f9130f819f8e07915508d32b313":[49,16,0],
 "group__enter__function__api.html#ga65072ad0cddb0e9a1d8d0ff97bdc63a7":[49,16,3],
 "group__enter__function__api.html#ga69cca69699f24dab6b6d3085dd5ac41e":[49,16,14],
 "group__enter__function__api.html#ga6c0a0b24661b440854986711519f7ac8":[49,16,10],
@@ -249,5 +240,14 @@ var NAVTREEINDEX15 =
 "group__mailbox__mdata__free.html#ga749311930ce075f401b0d6482cdf75fc":[49,14,2],
 "group__mailbox__mdata__free.html#ga830794ef4d5dc483adad59833e24c4ce":[49,14,3],
 "group__mailbox__mdata__free.html#gaf9402720638723993c57f16f8e84a398":[49,14,0],
-"group__menu__api.html":[49,26]
+"group__menu__api.html":[49,26],
+"group__menu__color.html":[49,26,3],
+"group__menu__color.html#ga4eee58fec6fb73fda50ee303853dfbe3":[49,26,3,1],
+"group__menu__color.html#ga8227ef1e013f8256d0ace9f4fefb1d8e":[49,26,3,0],
+"group__menu__color.html#ga92cbe3009ab17549a412a58d7116376c":[49,26,3,2],
+"group__menu__function__api.html":[49,13,8],
+"group__menu__function__api.html#ga09cf8144d7cf94a55321c28d80d7e680":[49,13,8,2],
+"group__menu__function__api.html#ga39111aca7a811078eb154cfdf9760c45":[49,13,8,1],
+"group__menu__function__api.html#ga5db0f6428668ef6f3867b1ac1687ab7a":[49,13,8,3],
+"group__menu__function__api.html#ga5fd35d132d012739ff8e98896e37f026":[49,13,8,0]
 };

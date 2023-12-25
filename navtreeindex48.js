@@ -1,15 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"win__chain_8h.html#a5ff7c16f3d958a420b1aeb2d4b19d3a7":[2,0,31,11,8],
-"win__chain_8h.html#a6874606a2f71721cee319a210d6d8027":[2,0,31,11,7],
-"win__chain_8h.html#a690b348f746ed8760fc8ab6e47419198":[2,0,31,11,4],
-"win__chain_8h.html#a931577d43cc3dd1d1d97d09de88d7fad":[2,0,31,11,1],
-"win__chain_8h.html#a96bbb76edf0f14c7414246d3ad9fcd10":[2,0,31,11,9],
-"win__chain_8h.html#ad95010195371e161983e62a903a9ee89":[2,0,31,11,6],
-"win__chain_8h.html#aecd7e976de61fd4d84c60fea653dc473":[2,0,31,11,3],
-"win__chain_8h_source.html":[2,0,31,11],
-"win__hosts_8c.html":[2,0,31,12],
-"win__hosts_8c.html#a0af1476d3d817ed62522535b5d36b0eb":[2,0,31,12,3],
 "win__hosts_8c.html#a392442f5b9d03dd04a6b517a97a99325":[2,0,31,12,4],
 "win__hosts_8c.html#a79c635b2d8114d0d0cea669682824c28":[2,0,31,12,0],
 "win__hosts_8c_source.html":[2,0,31,12],

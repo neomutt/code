@@ -21,5 +21,6 @@ var date_8h =
     [ "mutt_date_normalize_time", "date_8h.html#ae62f60a70955bfdf32b669f4cac02571", null ],
     [ "mutt_date_parse_date", "date_8h.html#ad8aaf5118148ed8f6708f32bfab3146f", null ],
     [ "mutt_date_parse_imap", "date_8h.html#adf19e8285681d19c7858a66cd0eba84d", null ],
-    [ "mutt_date_sleep_ms", "date_8h.html#a4a5d6b65c8b5b0a07811ef64dc60c1a3", null ]
+    [ "mutt_date_sleep_ms", "date_8h.html#a4a5d6b65c8b5b0a07811ef64dc60c1a3", null ],
+    [ "mutt_time_now", "date_8h.html#ae098e85ce5035180d82f99c5e5358d18", null ]
 ];
