@@ -8,7 +8,6 @@ var string2_8h =
     [ "terminate_string", "string2_8h.html#a89435fb2d02747769361525891c832c9", null ],
     [ "terminate_buffer", "string2_8h.html#aaebedb0586e8649bb6ad54123a6de9d5", null ],
     [ "mutt_str_adjust", "string2_8h.html#aa413e39e802d1748408fcc8509844411", null ],
-    [ "mutt_str_append_item", "string2_8h.html#a673fcef2fe2e918e036d01afa7486873", null ],
     [ "mutt_str_asprintf", "string2_8h.html#a51804523442c072745bf8cdef6a43938", null ],
     [ "mutt_str_coll", "string2_8h.html#a7d1e7d6b0d1ab35338725c8ade519ba2", null ],
     [ "mutt_str_dequote_comment", "string2_8h.html#a2ea8bbf72bf36ba2ea7c8c7802bd671f", null ],

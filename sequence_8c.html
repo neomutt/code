@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-3-g8e3ea6</span>
+   &#160;<span id="projectnumber">2023-12-21-14-g71cf46</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -516,7 +516,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  132</span>  snprintf(seq_flagged, <span class="keyword">sizeof</span>(seq_flagged), <span class="stringliteral">&quot;%s:&quot;</span>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_mh_seq_flagged));</div>
 <div class="line"><span class="lineno">  133</span> </div>
 <div class="line"><span class="lineno">  134</span>  snprintf(sequences, <span class="keyword">sizeof</span>(sequences), <span class="stringliteral">&quot;%s/.mh_sequences&quot;</span>, <a class="code hl_function" href="mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  135</span>  FILE *fp_old = fopen(sequences, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  135</span>  FILE *fp_old = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(sequences, <span class="stringliteral">&quot;r&quot;</span>);</div>
 <div class="line"><span class="lineno">  136</span>  <span class="keywordflow">if</span> (fp_old)</div>
 <div class="line"><span class="lineno">  137</span>  {</div>
 <div class="line"><span class="lineno">  138</span>    <span class="keywordflow">while</span> ((buf = <a class="code hl_function" href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a>(buf, &amp;sz, fp_old, NULL, <a class="code hl_define" href="file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa">MUTT_RL_NO_FLAGS</a>)))</div>
@@ -542,7 +542,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  158</span>      }</div>
 <div class="line"><span class="lineno">  159</span>    }</div>
 <div class="line"><span class="lineno">  160</span>  }</div>
-<div class="line"><span class="lineno">  161</span>  <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_old);</div>
+<div class="line"><span class="lineno">  161</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_old);</div>
 <div class="line"><span class="lineno">  162</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
 <div class="line"><span class="lineno">  163</span> </div>
 <div class="line"><span class="lineno">  164</span>  <span class="keywordflow">if</span> (!unseen_done &amp;&amp; unseen)</div>
@@ -552,7 +552,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  168</span>  <span class="keywordflow">if</span> (!replied_done &amp;&amp; replied)</div>
 <div class="line"><span class="lineno">  169</span>    fprintf(fp_new, <span class="stringliteral">&quot;%s: %d\n&quot;</span>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_mh_seq_replied), n);</div>
 <div class="line"><span class="lineno">  170</span> </div>
-<div class="line"><span class="lineno">  171</span>  <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_new);</div>
+<div class="line"><span class="lineno">  171</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_new);</div>
 <div class="line"><span class="lineno">  172</span> </div>
 <div class="line"><span class="lineno">  173</span>  unlink(sequences);</div>
 <div class="line"><span class="lineno">  174</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8c.html#a1cdf183d05e03b173070aa506d192822">mutt_file_safe_rename</a>(tmpfname, sequences) != 0)</div>
@@ -561,13 +561,14 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  177</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;tmpfname);</div>
 <div class="line"><span class="lineno">  178</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a6b1589ee93ff51ef31f1d9324e138078"><div class="ttname"><a href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a></div><div class="ttdeci">const char * cs_subset_string(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a string config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00292">helpers.c:292</a></div></div>
-<div class="ttc" id="afile_8c_html_a1ad76f956147154f16128b7761dadd58"><div class="ttname"><a href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a></div><div class="ttdeci">char * mutt_file_read_line(char *line, size_t *size, FILE *fp, int *line_num, ReadLineFlags flags)</div><div class="ttdoc">Read a line from a file.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00767">file.c:767</a></div></div>
-<div class="ttc" id="afile_8c_html_a1cdf183d05e03b173070aa506d192822"><div class="ttname"><a href="file_8c.html#a1cdf183d05e03b173070aa506d192822">mutt_file_safe_rename</a></div><div class="ttdeci">int mutt_file_safe_rename(const char *src, const char *target)</div><div class="ttdoc">NFS-safe renaming of files.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00350">file.c:350</a></div></div>
-<div class="ttc" id="afile_8c_html_a31f49795ff5b9558db5476e5777e63b6"><div class="ttname"><a href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a></div><div class="ttdeci">int mutt_file_fclose(FILE **fp)</div><div class="ttdoc">Close a FILE handle (and NULL the pointer)</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00156">file.c:156</a></div></div>
+<div class="ttc" id="afile_8c_html_a1ad76f956147154f16128b7761dadd58"><div class="ttname"><a href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a></div><div class="ttdeci">char * mutt_file_read_line(char *line, size_t *size, FILE *fp, int *line_num, ReadLineFlags flags)</div><div class="ttdoc">Read a line from a file.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00796">file.c:796</a></div></div>
+<div class="ttc" id="afile_8c_html_a1cdf183d05e03b173070aa506d192822"><div class="ttname"><a href="file_8c.html#a1cdf183d05e03b173070aa506d192822">mutt_file_safe_rename</a></div><div class="ttdeci">int mutt_file_safe_rename(const char *src, const char *target)</div><div class="ttdoc">NFS-safe renaming of files.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00361">file.c:361</a></div></div>
+<div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00147">file.h:147</a></div></div>
+<div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00146">file.h:146</a></div></div>
 <div class="ttc" id="afile_8h_html_abb6d0dccab49bda4ed23948c7f5d0eaa"><div class="ttname"><a href="file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa">MUTT_RL_NO_FLAGS</a></div><div class="ttdeci">#define MUTT_RL_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00039">file.h:39</a></div></div>
 <div class="ttc" id="amailbox_8h_html_a7e9739eb3e94344633f7051c2fb9453e"><div class="ttname"><a href="mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a></div><div class="ttdeci">static const char * mailbox_path(const struct Mailbox *m)</div><div class="ttdoc">Get the Mailbox's path string.</div><div class="ttdef"><b>Definition:</b> <a href="mailbox_8h_source.html#l00210">mailbox.h:210</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00497">string.c:497</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00568">string.c:568</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00472">string.c:472</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00543">string.c:543</a></div></div>
 <div class="ttc" id="amutt_8h_html_ae688d728e1acdfe5988c7db45d6f0166"><div class="ttname"><a href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a></div><div class="ttdeci">#define PATH_MAX</div><div class="ttdef"><b>Definition:</b> <a href="mutt_8h_source.html#l00041">mutt.h:41</a></div></div>
 <div class="ttc" id="ashared_8c_html_a7e127a63a4d213e3bf15efce2460e818"><div class="ttname"><a href="shared_8c.html#a7e127a63a4d213e3bf15efce2460e818">mh_mkstemp</a></div><div class="ttdeci">bool mh_mkstemp(struct Mailbox *m, FILE **fp, char **tgt)</div><div class="ttdoc">Create a temporary file.</div><div class="ttdef"><b>Definition:</b> <a href="shared_8c_source.html#l00076">shared.c:76</a></div></div>
 <div class="ttc" id="astring2_8h_html_a7e0481bed27661ea2679f256b24e0283"><div class="ttname"><a href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a></div><div class="ttdeci">#define NONULL(x)</div><div class="ttdef"><b>Definition:</b> <a href="string2_8h_source.html#l00037">string2.h:37</a></div></div>
@@ -578,7 +579,7 @@ Functions</h2></td></tr>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="sequence_8c_a47f98d56123f5b70ed90af9120e6f06c_cgraph.svg" width="503" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="sequence_8c_a47f98d56123f5b70ed90af9120e6f06c_cgraph.svg" width="503" height="335"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -768,7 +769,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  266</span>  snprintf(sequences, <span class="keyword">sizeof</span>(sequences), <span class="stringliteral">&quot;%s/.mh_sequences&quot;</span>, <a class="code hl_function" href="mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
 <div class="line"><span class="lineno">  267</span> </div>
 <div class="line"><span class="lineno">  268</span>  <span class="comment">/* first, copy unknown sequences */</span></div>
-<div class="line"><span class="lineno">  269</span>  FILE *fp_old = fopen(sequences, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  269</span>  FILE *fp_old = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(sequences, <span class="stringliteral">&quot;r&quot;</span>);</div>
 <div class="line"><span class="lineno">  270</span>  <span class="keywordflow">if</span> (fp_old)</div>
 <div class="line"><span class="lineno">  271</span>  {</div>
 <div class="line"><span class="lineno">  272</span>    <span class="keywordflow">while</span> ((buf = <a class="code hl_function" href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a>(buf, &amp;s, fp_old, NULL, <a class="code hl_define" href="file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa">MUTT_RL_NO_FLAGS</a>)))</div>
@@ -782,7 +783,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  280</span>      fprintf(fp_new, <span class="stringliteral">&quot;%s\n&quot;</span>, buf);</div>
 <div class="line"><span class="lineno">  281</span>    }</div>
 <div class="line"><span class="lineno">  282</span>  }</div>
-<div class="line"><span class="lineno">  283</span>  <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_old);</div>
+<div class="line"><span class="lineno">  283</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_old);</div>
 <div class="line"><span class="lineno">  284</span> </div>
 <div class="line"><span class="lineno">  285</span>  <span class="comment">/* now, update our unseen, flagged, and replied sequences */</span></div>
 <div class="line"><span class="lineno">  286</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
@@ -831,7 +832,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  329</span>  <a class="code hl_function" href="sequence_8c.html#a86fe1d2831cdac159da58fba06a69349">mh_seq_free</a>(&amp;mhs);</div>
 <div class="line"><span class="lineno">  330</span> </div>
 <div class="line"><span class="lineno">  331</span>  <span class="comment">/* try to commit the changes - no guarantee here */</span></div>
-<div class="line"><span class="lineno">  332</span>  <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_new);</div>
+<div class="line"><span class="lineno">  332</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_new);</div>
 <div class="line"><span class="lineno">  333</span> </div>
 <div class="line"><span class="lineno">  334</span>  unlink(sequences);</div>
 <div class="line"><span class="lineno">  335</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8c.html#a1cdf183d05e03b173070aa506d192822">mutt_file_safe_rename</a>(tmpfname, sequences) != 0)</div>
@@ -863,7 +864,7 @@ Functions</h2></td></tr>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-11-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="sequence_8c_acb1cb62fd7fae352276a1ea321568dd8_cgraph.svg" width="494" height="483"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="sequence_8c_acb1cb62fd7fae352276a1ea321568dd8_cgraph.svg" width="494" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1015,7 +1016,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  385</span>  <span class="keywordtype">char</span> pathname[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
 <div class="line"><span class="lineno">  386</span>  snprintf(pathname, <span class="keyword">sizeof</span>(pathname), <span class="stringliteral">&quot;%s/.mh_sequences&quot;</span>, path);</div>
 <div class="line"><span class="lineno">  387</span> </div>
-<div class="line"><span class="lineno">  388</span>  FILE *fp = fopen(pathname, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  388</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(pathname, <span class="stringliteral">&quot;r&quot;</span>);</div>
 <div class="line"><span class="lineno">  389</span>  <span class="keywordflow">if</span> (!fp)</div>
 <div class="line"><span class="lineno">  390</span>    <span class="keywordflow">return</span> 0; <span class="comment">/* yes, ask callers to silently ignore the error */</span></div>
 <div class="line"><span class="lineno">  391</span> </div>
@@ -1054,10 +1055,10 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  424</span> </div>
 <div class="line"><span class="lineno">  425</span>out:</div>
 <div class="line"><span class="lineno">  426</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  427</span>  <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp);</div>
+<div class="line"><span class="lineno">  427</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
 <div class="line"><span class="lineno">  428</span>  <span class="keywordflow">return</span> rc;</div>
 <div class="line"><span class="lineno">  429</span>}</div>
-<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00763">string.c:763</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00738">string.c:738</a></div></div>
 <div class="ttc" id="asequence_8c_html_aa998d4247d08dc053f90c43483aae12b"><div class="ttname"><a href="sequence_8c.html#aa998d4247d08dc053f90c43483aae12b">mh_seq_read_token</a></div><div class="ttdeci">static int mh_seq_read_token(char *t, int *first, int *last)</div><div class="ttdoc">Parse a number, or number range.</div><div class="ttdef"><b>Definition:</b> <a href="sequence_8c_source.html#l00352">sequence.c:352</a></div></div>
 <div class="ttc" id="asequence_8h_html_ac6a1ef17d0d72f67fa4b5d56188bf1b6"><div class="ttname"><a href="sequence_8h.html#ac6a1ef17d0d72f67fa4b5d56188bf1b6">MhSeqFlags</a></div><div class="ttdeci">uint8_t MhSeqFlags</div><div class="ttdoc">Flags, e.g. MH_SEQ_UNSEEN.</div><div class="ttdef"><b>Definition:</b> <a href="sequence_8h_source.html#l00031">sequence.h:31</a></div></div>
 </div><!-- fragment --><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1065,7 +1066,7 @@ Functions</h2></td></tr>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-14-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="sequence_8c_ad5089c5888bb5f8fba2348be50c943dc_cgraph.svg" width="310" height="332"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="sequence_8c_ad5089c5888bb5f8fba2348be50c943dc_cgraph.svg" width="310" height="283"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1123,7 +1124,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  447</span>  }</div>
 <div class="line"><span class="lineno">  448</span>  <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">  449</span>}</div>
-<div class="ttc" id="afile_8c_html_acf5bbc5f63d75ef10f2d16f183de0de0"><div class="ttname"><a href="file_8c.html#acf5bbc5f63d75ef10f2d16f183de0de0">mutt_file_stat_timespec_compare</a></div><div class="ttdeci">int mutt_file_stat_timespec_compare(struct stat *st, enum MuttStatType type, struct timespec *b)</div><div class="ttdoc">Compare stat info with a time value.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01626">file.c:1626</a></div></div>
+<div class="ttc" id="afile_8c_html_acf5bbc5f63d75ef10f2d16f183de0de0"><div class="ttname"><a href="file_8c.html#acf5bbc5f63d75ef10f2d16f183de0de0">mutt_file_stat_timespec_compare</a></div><div class="ttdeci">int mutt_file_stat_timespec_compare(struct stat *st, enum MuttStatType type, struct timespec *b)</div><div class="ttdoc">Compare stat info with a time value.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01655">file.c:1655</a></div></div>
 <div class="ttc" id="afile_8h_html_ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df"><div class="ttname"><a href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df">MUTT_STAT_MTIME</a></div><div class="ttdeci">@ MUTT_STAT_MTIME</div><div class="ttdoc">File/dir's mtime - last modified time.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00064">file.h:64</a></div></div>
 <div class="ttc" id="astructMailbox_html_ae355489c17bcccdd40768ef3f42dfb39"><div class="ttname"><a href="structMailbox.html#ae355489c17bcccdd40768ef3f42dfb39">Mailbox::last_visited</a></div><div class="ttdeci">struct timespec last_visited</div><div class="ttdoc">Time of last exit from this mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="mailbox_8h_source.html#l00104">mailbox.h:104</a></div></div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

@@ -24,6 +24,7 @@ var envelope_8h =
     [ "mutt_env_merge", "envelope_8h.html#a16aeda1ab6739eac80327f1ef797ffc7", null ],
     [ "mutt_env_new", "envelope_8h.html#a406e6f76001e7604ce65ffe972fc19c1", null ],
     [ "mutt_env_notify_send", "envelope_8h.html#ad0241decff4e270a16c8f39fb55addce", null ],
+    [ "mutt_env_set_subject", "envelope_8h.html#a91c00f700ee3ca43aa33487591b0d317", null ],
     [ "mutt_env_to_intl", "envelope_8h.html#a0108f989ca58622df272cf31b610395e", null ],
     [ "mutt_env_to_local", "envelope_8h.html#afd00cc8d84947cbd55e082420b5732f1", null ],
     [ "mutt_autocrypthdr_new", "envelope_8h.html#ae9775769d2a2c71c04649e2bd5eab7af", null ],

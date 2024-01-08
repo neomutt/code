@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-3-g8e3ea6</span>
+   &#160;<span id="projectnumber">2023-12-21-14-g71cf46</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -350,7 +350,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pgp__functions_8c_source.html#l00117">117</a> of file <a class="el" href="pgp__functions_8c_source.html">pgp_functions.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
-<div class="line"><span class="lineno">  119</span>  FILE *fp_null = fopen(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">  119</span>  FILE *fp_null = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
 <div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span> (!fp_null)</div>
 <div class="line"><span class="lineno">  121</span>  {</div>
 <div class="line"><span class="lineno">  122</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t open /dev/null&quot;</span>));</div>
@@ -359,11 +359,11 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  125</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempfile = NULL;</div>
 <div class="line"><span class="lineno">  126</span>  tempfile = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
 <div class="line"><span class="lineno">  127</span>  <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempfile);</div>
-<div class="line"><span class="lineno">  128</span>  FILE *fp_tmp = <a class="code hl_function" href="file_8c.html#a1cd484089a0a5e38ac2c134c3d86abf9">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile), <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">  128</span>  FILE *fp_tmp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile), <span class="stringliteral">&quot;w&quot;</span>);</div>
 <div class="line"><span class="lineno">  129</span>  <span class="keywordflow">if</span> (!fp_tmp)</div>
 <div class="line"><span class="lineno">  130</span>  {</div>
 <div class="line"><span class="lineno">  131</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno">  132</span>    <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_null);</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_null);</div>
 <div class="line"><span class="lineno">  133</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfile);</div>
 <div class="line"><span class="lineno">  134</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
 <div class="line"><span class="lineno">  135</span>  }</div>
@@ -382,13 +382,13 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  148</span>  {</div>
 <div class="line"><span class="lineno">  149</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create filter&quot;</span>));</div>
 <div class="line"><span class="lineno">  150</span>    unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
-<div class="line"><span class="lineno">  151</span>    <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_tmp);</div>
-<div class="line"><span class="lineno">  152</span>    <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_null);</div>
+<div class="line"><span class="lineno">  151</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
+<div class="line"><span class="lineno">  152</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_null);</div>
 <div class="line"><span class="lineno">  153</span>  }</div>
 <div class="line"><span class="lineno">  154</span> </div>
 <div class="line"><span class="lineno">  155</span>  <a class="code hl_function" href="filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
-<div class="line"><span class="lineno">  156</span>  <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_tmp);</div>
-<div class="line"><span class="lineno">  157</span>  <a class="code hl_function" href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a>(&amp;fp_null);</div>
+<div class="line"><span class="lineno">  156</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
+<div class="line"><span class="lineno">  157</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_null);</div>
 <div class="line"><span class="lineno">  158</span>  <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
 <div class="line"><span class="lineno">  159</span>  <span class="keywordtype">char</span> title[1024] = { 0 };</div>
 <div class="line"><span class="lineno">  160</span>  snprintf(title, <span class="keyword">sizeof</span>(title), <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Key ID: 0x%s&quot;</span>),</div>
@@ -408,10 +408,10 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  174</span>  <a class="code hl_function" href="menu_2lib_8h.html#a5a9733924cc01176ee916515a3683268">menu_queue_redraw</a>(pd-&gt;<a class="code hl_variable" href="structPgpData.html#a847cdcf199374abccac5c83488ef84b8">menu</a>, <a class="code hl_define" href="menu_2lib_8h.html#a073caf105025cd1e03e766c7e4e9ec2f">MENU_REDRAW_FULL</a>);</div>
 <div class="line"><span class="lineno">  175</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
 <div class="line"><span class="lineno">  176</span>}</div>
-<div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00092">buffer.h:92</a></div></div>
+<div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00093">buffer.h:93</a></div></div>
 <div class="ttc" id="ado__pager_8c_html_a9d3af21b7fdf24249c261a9a1aa9f3be"><div class="ttname"><a href="do__pager_8c.html#a9d3af21b7fdf24249c261a9a1aa9f3be">mutt_do_pager</a></div><div class="ttdeci">int mutt_do_pager(struct PagerView *pview, struct Email *e)</div><div class="ttdoc">Display some page-able text to the user (help or attachment)</div><div class="ttdef"><b>Definition:</b> <a href="do__pager_8c_source.html#l00123">do_pager.c:123</a></div></div>
-<div class="ttc" id="afile_8c_html_a1cd484089a0a5e38ac2c134c3d86abf9"><div class="ttname"><a href="file_8c.html#a1cd484089a0a5e38ac2c134c3d86abf9">mutt_file_fopen</a></div><div class="ttdeci">FILE * mutt_file_fopen(const char *path, const char *mode)</div><div class="ttdoc">Call fopen() safely.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00640">file.c:640</a></div></div>
-<div class="ttc" id="afile_8c_html_a31f49795ff5b9558db5476e5777e63b6"><div class="ttname"><a href="file_8c.html#a31f49795ff5b9558db5476e5777e63b6">mutt_file_fclose</a></div><div class="ttdeci">int mutt_file_fclose(FILE **fp)</div><div class="ttdoc">Close a FILE handle (and NULL the pointer)</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00156">file.c:156</a></div></div>
+<div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00147">file.h:147</a></div></div>
+<div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00146">file.h:146</a></div></div>
 <div class="ttc" id="afilter_8c_html_a22c6912b837b1114c3276c990e73dca3"><div class="ttname"><a href="filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a></div><div class="ttdeci">int filter_wait(pid_t pid)</div><div class="ttdoc">Wait for the exit of a process and return its status.</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00218">filter.c:218</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
@@ -439,7 +439,7 @@ Functions</h2></td></tr>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__pgp__function__api_ga0241e3d4120317df306a6c10cd26ec8c_cgraph.svg" width="503" height="676"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__pgp__function__api_ga0241e3d4120317df306a6c10cd26ec8c_cgraph.svg" width="503" height="576"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

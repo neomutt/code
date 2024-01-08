@@ -24,7 +24,7 @@ var config_2set_8h =
     [ "cs_get_type_def", "config_2set_8h.html#a5608cff71fd8a5ddb2b3409a075fac87", null ],
     [ "cs_register_type", "config_2set_8h.html#adf0f17032f910c4234f6942e8329fbeb", null ],
     [ "cs_register_variable", "config_2set_8h.html#abe4fc025f55c84d4014248f85a4c6c04", null ],
-    [ "cs_register_variables", "config_2set_8h.html#a0188dac9bcb3b80abfaada460b78a382", null ],
+    [ "cs_register_variables", "config_2set_8h.html#aa45f10fa8d9dc8fa21a3ae722ac309fe", null ],
     [ "cs_create_variable", "config_2set_8h.html#a4c668f1e41990933a17b063b863903a9", null ],
     [ "cs_inherit_variable", "config_2set_8h.html#a8d0bceb02369ef09175338f6e83a9aa8", null ],
     [ "cs_uninherit_variable", "config_2set_8h.html#afc62808c51333fd2e3acb261a917b65c", null ],

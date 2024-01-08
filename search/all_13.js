@@ -764,7 +764,7 @@ var searchData=
   ['sub_5fall_761',['sub_all',['../structPatternCache.html#a9047078083d93c33a4241e76381b5895',1,'PatternCache']]],
   ['sub_5fone_762',['sub_one',['../structPatternCache.html#afcd9a6448e72a9a4ee6f65bcbd11f4cd',1,'PatternCache']]],
   ['subj_5fhash_763',['subj_hash',['../structMailbox.html#a6fedaadfa93f600be8db87684ca631d7',1,'Mailbox']]],
-  ['subject_764',['subject',['../structEnvelope.html#aa3d22c82ed26a0727508d26363e98ea7',1,'Envelope']]],
+  ['subject_764',['subject',['../structEnvelope.html#a20d5ccf675db375e011a7791151fa09d',1,'Envelope']]],
   ['subject_20regex_20handling_765',['Subject Regex handling',['../neo_subjrx.html',1,'index']]],
   ['subject_5fchanged_766',['subject_changed',['../structEmail.html#a6067344fac1be8e00a770303a13974a2',1,'Email']]],
   ['subjectregexlist_767',['SubjectRegexList',['../subjectrx_8c.html#ac5ee57652ba13d90bddb8417180cebbf',1,'subjectrx.c']]],

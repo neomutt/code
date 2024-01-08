@@ -6,6 +6,7 @@ var envelope_8c =
     [ "MOVE_BUFFER", "envelope_8c.html#aa3f6a39659650d1ebb164d75d449635a", null ],
     [ "H_TO_INTL", "envelope_8c.html#a9ddc5b683d5a87677c1756fe44ff4217", null ],
     [ "mutt_env_new", "envelope_8c.html#a406e6f76001e7604ce65ffe972fc19c1", null ],
+    [ "mutt_env_set_subject", "envelope_8c.html#a91c00f700ee3ca43aa33487591b0d317", null ],
     [ "mutt_autocrypthdr_new", "envelope_8c.html#ae9775769d2a2c71c04649e2bd5eab7af", null ],
     [ "mutt_autocrypthdr_free", "envelope_8c.html#aeb4e0ebb67680c74374f046bce5bc84a", null ],
     [ "mutt_env_free", "envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f", null ],

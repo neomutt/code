@@ -8,6 +8,8 @@ var index_8c =
     [ "index_altern_observer", "group__observer__api.html#gac4e1312ed3c06ddefc6649a52d4e4a3e", null ],
     [ "index_attach_observer", "group__observer__api.html#gaf28b830a05b0d5955f5a947feffb57ee", null ],
     [ "index_color_observer", "group__observer__api.html#ga0a40f588d2ec2ed6c83cd18bc848443a", null ],
+    [ "config_check_sort", "index_8c.html#a9ec12855c22f8f361db37b50fb2d6ca1", null ],
+    [ "config_check_index", "index_8c.html#a539e17a34b66505a6eabf644194bcf90", null ],
     [ "index_config_observer", "group__observer__api.html#ga17c3fffee9eb8ce99524f03251d10a74", null ],
     [ "index_global_observer", "group__observer__api.html#gabb377b10c844bff4d9e58dc9a263d230", null ],
     [ "index_index_observer", "group__observer__api.html#ga23f0ee4166ac9193386a3be2da0ab011", null ],

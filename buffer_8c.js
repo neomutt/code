@@ -35,5 +35,6 @@ var buffer_8c =
     [ "buf_startswith", "buffer_8c.html#ae8e586b7c7917645a4a65952f3b89ab2", null ],
     [ "buf_coll", "buffer_8c.html#a022216eee0ef2c8d030cc5394c842f90", null ],
     [ "buf_lower", "buffer_8c.html#adb0a54db83f68bc183a8c66eaf985b61", null ],
+    [ "buf_join_str", "buffer_8c.html#a9c6d8fc1e15c23966ee2ca28180e11d5", null ],
     [ "BufferStepSize", "buffer_8c.html#ae86a9aea4125cce2d02dec5cba07d815", null ]
 ];

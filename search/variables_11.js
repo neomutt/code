@@ -13,7 +13,7 @@ var searchData=
   ['readonly_10',['readonly',['../structMailbox.html#ae55237419d0e842cd6efeed0c41d27e8',1,'Mailbox']]],
   ['ready_11',['ready',['../structRangeRegex.html#ade9d650ab197a02af46745256da9c921',1,'RangeRegex']]],
   ['real_5fname_12',['real_name',['../structImapMboxData.html#a3c6e05d5048bd093090211073ef69a4f',1,'ImapMboxData']]],
-  ['real_5fsubj_13',['real_subj',['../structEnvelope.html#adea069c71a9e00c79e1233f0fb51f824',1,'Envelope']]],
+  ['real_5fsubj_13',['real_subj',['../structEnvelope.html#ad7dc5e8dd9356bb5266787bf647a4031',1,'Envelope']]],
   ['realpath_14',['realpath',['../structMailbox.html#a1f36c27b2c78a6c7c216e3aca9f0c89f',1,'Mailbox']]],
   ['recalc_15',['recalc',['../structMuttWindow.html#a6fab13b319ae04d592fdc7eed5a33339',1,'MuttWindow']]],
   ['received_16',['received',['../structMessage.html#aa586337aebc4a460be8ae0f676cd0ff6',1,'Message::received()'],['../structImapHeader.html#a18937a689b628b43ac8d7718eb951544',1,'ImapHeader::received()'],['../structEmail.html#af64bcf33ccd8b0ba248fc8d427c21264',1,'Email::received()']]],

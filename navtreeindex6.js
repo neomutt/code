@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"core_2command_8c.html#a86659ac9629e148499d10b1968ff881c":[2,0,14,2,4],
+"core_2command_8c.html#a9da3c14b35d0ddc4c149809d7d1f5a17":[2,0,14,2,0],
 "core_2command_8c.html#ac28718bcef21252385234091d140d57e":[2,0,14,2,3],
 "core_2command_8c.html#ac5aa91ef32fc4a7164da421b1bd41295":[2,0,14,2,6],
 "core_2command_8c.html#ad96aeb9f4fc7510f9180b42423fa37eb":[2,0,14,2,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "curs__lib_8c.html#a065d0cc61c21f10fe6f4fc4fad8c7afe":[2,0,20,0,12],
 "curs__lib_8c.html#a48a9fd66de2ef76e2b72704badd3c40b":[2,0,20,0,10],
 "curs__lib_8c.html#a861e3d2f47099563f8c21a1bb0eb2092":[2,0,20,0,9],
-"curs__lib_8c.html#a99dc8e687f3d5688695d0d7a1bab3c3f":[2,0,20,0,1],
-"curs__lib_8c.html#aa8f482f652cc7a117eb2c3f732a3cd74":[2,0,20,0,8],
-"curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774":[2,0,20,0,6]
+"curs__lib_8c.html#a99dc8e687f3d5688695d0d7a1bab3c3f":[2,0,20,0,1]
 };

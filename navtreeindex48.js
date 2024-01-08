@@ -1,9 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"win__hosts_8c.html#a392442f5b9d03dd04a6b517a97a99325":[2,0,31,12,4],
-"win__hosts_8c.html#a79c635b2d8114d0d0cea669682824c28":[2,0,31,12,0],
-"win__hosts_8c_source.html":[2,0,31,12],
-"win__hosts_8h.html":[2,0,31,13],
 "win__hosts_8h.html#a0af1476d3d817ed62522535b5d36b0eb":[2,0,31,13,1],
 "win__hosts_8h.html#a392442f5b9d03dd04a6b517a97a99325":[2,0,31,13,0],
 "win__hosts_8h_source.html":[2,0,31,13],
