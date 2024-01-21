@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gc_0',['GC',['../mailbox_8c.html#ae8b6979b57fced8046a7e91396f7e820',1,'mailbox.c']]],
+  ['gc_0',['GC',['../core_2mailbox_8c.html#ae8b6979b57fced8046a7e91396f7e820',1,'mailbox.c']]],
   ['gdbm_2ec_1',['gdbm.c',['../gdbm_8c.html',1,'']]],
   ['gen_2',['gen',['../structMailbox.html#af8a0807a1ec429b12a10f3c2e0319b59',1,'Mailbox::gen()'],['../structFolderFile.html#ab22fa4a6e95437fcc5b9f5860ed13759',1,'FolderFile::gen()']]],
   ['gen_5fattach_5flist_3',['gen_attach_list',['../dlg__compose_8c.html#a26c85658a833eeebe97b7b0438b1b9ab',1,'dlg_compose.c']]],
@@ -13,7 +13,7 @@ var searchData=
   ['gen_5ftime_10',['gen_time',['../structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd',1,'PgpKeyInfo']]],
   ['generate_20the_20help_2dpage_20and_20gui_20display_20it_11',['Generate the help-page and GUI display it',['../neo_help.html',1,'index']]],
   ['generate_5fbody_12',['generate_body',['../send_8c.html#a5f6595bb450dfd3e7f3b8b01e45396cd',1,'send.c']]],
-  ['generate_5fhcachever_13',['generate_hcachever',['../hcache_8c.html#a92af5c18e373eace42e9f0bb948f723f',1,'hcache.c']]],
+  ['generate_5fhcachever_13',['generate_hcachever',['../hcache_2hcache_8c.html#a92af5c18e373eace42e9f0bb948f723f',1,'hcache.c']]],
   ['generic_5fsearch_14',['generic_search',['../group__menu__search.html#ga0d240f13bc1269e8946046a28014c1bc',1,'menu.c']]],
   ['generic_5ftokenize_5fpush_5fstring_15',['generic_tokenize_push_string',['../key_2lib_8h.html#a1f157e0ebacb030d667f47135a76210a',1,'generic_tokenize_push_string(char *s):&#160;lib.c'],['../key_2lib_8c.html#a1f157e0ebacb030d667f47135a76210a',1,'generic_tokenize_push_string(char *s):&#160;lib.c']]],
   ['genericdefaultbindings_16',['GenericDefaultBindings',['../gui_2functions_8c.html#a6f702c62b2c9a61ee1c6f859a99782c5',1,'GenericDefaultBindings():&#160;functions.c'],['../gui_2functions_8h.html#a6f702c62b2c9a61ee1c6f859a99782c5',1,'GenericDefaultBindings():&#160;functions.c']]],
@@ -34,7 +34,7 @@ var searchData=
   ['get_5ffield_5ftext_31',['get_field_text',['../mailcap_8c.html#a7df906e1b57347a19286cea26512b8f6',1,'mailcap.c']]],
   ['get_5fflags_32',['get_flags',['../imap_8c.html#ad0c94b5dea653ee8d1b5974a80c772a3',1,'imap.c']]],
   ['get_5ffolder_5ffrom_5fpath_33',['get_folder_from_path',['../notmuch_8c.html#abf60a7d578968ef9a84a0e9dc1f7999a',1,'notmuch.c']]],
-  ['get_5ffoldername_34',['get_foldername',['../hcache_8c.html#af04125825e118cd83296f4d9dae9cb05',1,'hcache.c']]],
+  ['get_5ffoldername_34',['get_foldername',['../hcache_2hcache_8c.html#af04125825e118cd83296f4d9dae9cb05',1,'hcache.c']]],
   ['get_5fhistory_35',['get_history',['../history_8c.html#a517d4e87a0bb925504a3f683897e87e9',1,'history.c']]],
   ['get_5fhostname_36',['get_hostname',['../init_8c.html#accd8fc806fe125319f45c8cde5b898db',1,'init.c']]],
   ['get_5flimit_37',['get_limit',['../notmuch_8c.html#a686a65345db081f8d66accfc760e909b',1,'notmuch.c']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gc_0',['GC',['../mailbox_8c.html#ae8b6979b57fced8046a7e91396f7e820',1,'mailbox.c']]],
+  ['gc_0',['GC',['../core_2mailbox_8c.html#ae8b6979b57fced8046a7e91396f7e820',1,'mailbox.c']]],
   ['gen_1',['gen',['../structMailbox.html#af8a0807a1ec429b12a10f3c2e0319b59',1,'Mailbox::gen()'],['../structFolderFile.html#ab22fa4a6e95437fcc5b9f5860ed13759',1,'FolderFile::gen()']]],
   ['gen_5fhash_2',['gen_hash',['../structHashTable.html#a07e7a7b1c42ebdfeb0128c443fe59422',1,'HashTable']]],
   ['gen_5ftime_3',['gen_time',['../structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd',1,'PgpKeyInfo']]],

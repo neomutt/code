@@ -21,6 +21,7 @@ var buffer_8h =
     [ "buf_istr_equal", "buffer_8h.html#a07ec860b2ebee26a8e4e998bd856e931", null ],
     [ "buf_coll", "buffer_8h.html#a022216eee0ef2c8d030cc5394c842f90", null ],
     [ "buf_startswith", "buffer_8h.html#ae8e586b7c7917645a4a65952f3b89ab2", null ],
+    [ "buf_rfind", "buffer_8h.html#ab154f6e625578ddcb0f831d19c47c9fc", null ],
     [ "buf_addch", "buffer_8h.html#a9765efbb7f2c32e46fb1cb271a02ba20", null ],
     [ "buf_addstr", "buffer_8h.html#a9924e74ddcb5280ab380e4627d1fba99", null ],
     [ "buf_addstr_n", "buffer_8h.html#a2881936af4a3e3b45079cb9af0cdb3e8", null ],
@@ -36,5 +37,6 @@ var buffer_8h =
     [ "buf_substrcpy", "buffer_8h.html#af1ca165104451f7e0b00aa684cd93d37", null ],
     [ "buf_dequote_comment", "buffer_8h.html#a4e7d6d490671b9c43c65297f2fbef401", null ],
     [ "buf_lower", "buffer_8h.html#adb0a54db83f68bc183a8c66eaf985b61", null ],
+    [ "buf_inline_replace", "buffer_8h.html#a634b5b13a64e52df6fb085adafdd14f4", null ],
     [ "buf_string", "buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab", null ]
 ];

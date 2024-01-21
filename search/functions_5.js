@@ -43,5 +43,5 @@ var searchData=
   ['format_5fattribution_40',['format_attribution',['../send_8c.html#a6acd0e4e056ee4a84b4164cb4d1cd279',1,'send.c']]],
   ['format_5fline_41',['format_line',['../help_8c.html#a5f69016fd555f40166b0b1e721519298',1,'format_line(FILE *fp, int ismacro, const char *t1, const char *t2, const char *t3, int wraplen):&#160;help.c'],['../display_8c.html#a09395942e7a1607668bfaf87009eb233',1,'format_line(struct MuttWindow *win, struct Line **lines, int line_num, unsigned char *buf, PagerFlags flags, struct AnsiColor *ansi, int cnt, int *pspace, int *pvch, int *pcol, int *pspecial, int width, struct AttrColorList *ansi_list):&#160;display.c']]],
   ['free_5fpattern_5fmenu_42',['free_pattern_menu',['../group__menu__mdata__free.html#gab2bca350171ac49b81ead22800a31fcd',1,'dlg_pattern.c']]],
-  ['free_5fraw_43',['free_raw',['../hcache_8c.html#a82a990727c9f0e254d510805919890c1',1,'hcache.c']]]
+  ['free_5fraw_43',['free_raw',['../hcache_2hcache_8c.html#a82a990727c9f0e254d510805919890c1',1,'hcache.c']]]
 ];

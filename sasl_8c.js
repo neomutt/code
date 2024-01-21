@@ -7,7 +7,7 @@ var sasl_8c =
     [ "getnameinfo_err", "sasl_8c.html#a691680adf1d3b7d37d7dfa319d25095f", null ],
     [ "iptostring", "sasl_8c.html#abd06051d6bdbf9f011dbfa8df64c424c", null ],
     [ "mutt_sasl_cb_log", "sasl_8c.html#a6ad00b45fffbd1eef6b766e743e35ca7", null ],
-    [ "mutt_sasl_start", "sasl_8c.html#a6a905ca367f178fe5a8a04b390b71d27", null ],
+    [ "mutt_sasl_start", "sasl_8c.html#a5829ee19af928505fa6d7bd1e5de045e", null ],
     [ "mutt_sasl_cb_authname", "sasl_8c.html#a27f79aa92f9ee0eff38ba8ba9b783c15", null ],
     [ "mutt_sasl_cb_pass", "sasl_8c.html#a187170c6d889153e49321cc01ee59dab", null ],
     [ "mutt_sasl_get_callbacks", "sasl_8c.html#aa648fa90dac2b199f97ed62610cfa3ed", null ],

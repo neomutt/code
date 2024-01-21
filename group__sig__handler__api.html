@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-14-g71cf46</span>
+   &#160;<span id="projectnumber">2023-12-21-33-g4b5f9e</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -159,53 +159,53 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt__signal_8c_source.html#l00052">52</a> of file <a class="el" href="mutt__signal_8c_source.html">mutt_signal.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>{</div>
-<div class="line"><span class="lineno">   54</span>  <span class="keywordtype">int</span> save_errno = errno;</div>
-<div class="line"><span class="lineno">   55</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961d">MuttCursorState</a> old_cursor = <a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>;</div>
-<div class="line"><span class="lineno">   56</span> </div>
-<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">switch</span> (sig)</div>
-<div class="line"><span class="lineno">   58</span>  {</div>
-<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">case</span> SIGTSTP: <span class="comment">/* user requested a suspend */</span></div>
-<div class="line"><span class="lineno">   60</span>    {</div>
-<div class="line"><span class="lineno">   61</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> c_suspend = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;suspend&quot;</span>);</div>
-<div class="line"><span class="lineno">   62</span>      <span class="keywordflow">if</span> (!c_suspend)</div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   64</span>      <a class="code hl_variable" href="mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b">IsEndwin</a> = isendwin();</div>
-<div class="line"><span class="lineno">   65</span>      old_cursor = <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>);</div>
-<div class="line"><span class="lineno">   66</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b">IsEndwin</a>)</div>
-<div class="line"><span class="lineno">   67</span>        endwin();</div>
-<div class="line"><span class="lineno">   68</span>      kill(0, SIGSTOP);</div>
-<div class="line"><span class="lineno">   69</span>    }</div>
-<div class="line"><span class="lineno">   70</span>      <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">case</span> SIGCONT:</div>
-<div class="line"><span class="lineno">   73</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b">IsEndwin</a>)</div>
-<div class="line"><span class="lineno">   74</span>        refresh();</div>
-<div class="line"><span class="lineno">   75</span>      <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(old_cursor);</div>
-<div class="line"><span class="lineno">   76</span>      <span class="comment">/* We don&#39;t receive SIGWINCH when suspended; however, no harm is done by</span></div>
-<div class="line"><span class="lineno">   77</span><span class="comment">       * just assuming we received one, and triggering the &#39;resize&#39; anyway. */</span></div>
-<div class="line"><span class="lineno">   78</span>      <a class="code hl_variable" href="globals_8c.html#aa2b9ada250a9e22ac7d7c23d9957e669">SigWinch</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   79</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">case</span> SIGWINCH:</div>
-<div class="line"><span class="lineno">   82</span>      <a class="code hl_variable" href="globals_8c.html#aa2b9ada250a9e22ac7d7c23d9957e669">SigWinch</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   83</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">case</span> SIGINT:</div>
-<div class="line"><span class="lineno">   86</span>      <a class="code hl_variable" href="globals_8c.html#adcb8b382c321dff7bb8b87b75e492d1c">SigInt</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   87</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   88</span>  }</div>
-<div class="line"><span class="lineno">   89</span>  errno = save_errno;</div>
-<div class="line"><span class="lineno">   90</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt__signal_8c_source.html#l00051">51</a> of file <a class="el" href="mutt__signal_8c_source.html">mutt_signal.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordtype">int</span> save_errno = errno;</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961d">MuttCursorState</a> old_cursor = <a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>;</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">switch</span> (sig)</div>
+<div class="line"><span class="lineno">   57</span>  {</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">case</span> SIGTSTP: <span class="comment">/* user requested a suspend */</span></div>
+<div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>      <span class="keyword">const</span> <span class="keywordtype">bool</span> c_suspend = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;suspend&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>      <span class="keywordflow">if</span> (!c_suspend)</div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   63</span>      <a class="code hl_variable" href="mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b">IsEndwin</a> = isendwin();</div>
+<div class="line"><span class="lineno">   64</span>      old_cursor = <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>);</div>
+<div class="line"><span class="lineno">   65</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b">IsEndwin</a>)</div>
+<div class="line"><span class="lineno">   66</span>        endwin();</div>
+<div class="line"><span class="lineno">   67</span>      kill(0, SIGSTOP);</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span>      <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">case</span> SIGCONT:</div>
+<div class="line"><span class="lineno">   72</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b">IsEndwin</a>)</div>
+<div class="line"><span class="lineno">   73</span>        refresh();</div>
+<div class="line"><span class="lineno">   74</span>      <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(old_cursor);</div>
+<div class="line"><span class="lineno">   75</span>      <span class="comment">/* We don&#39;t receive SIGWINCH when suspended; however, no harm is done by</span></div>
+<div class="line"><span class="lineno">   76</span><span class="comment">       * just assuming we received one, and triggering the &#39;resize&#39; anyway. */</span></div>
+<div class="line"><span class="lineno">   77</span>      <a class="code hl_variable" href="signal_8c.html#aa2b9ada250a9e22ac7d7c23d9957e669">SigWinch</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">case</span> SIGWINCH:</div>
+<div class="line"><span class="lineno">   81</span>      <a class="code hl_variable" href="signal_8c.html#aa2b9ada250a9e22ac7d7c23d9957e669">SigWinch</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   82</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">case</span> SIGINT:</div>
+<div class="line"><span class="lineno">   85</span>      <a class="code hl_variable" href="signal_8c.html#adcb8b382c321dff7bb8b87b75e492d1c">SigInt</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   86</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   87</span>  }</div>
+<div class="line"><span class="lineno">   88</span>  errno = save_errno;</div>
+<div class="line"><span class="lineno">   89</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00048">helpers.c:48</a></div></div>
-<div class="ttc" id="aglobals_8c_html_aa2b9ada250a9e22ac7d7c23d9957e669"><div class="ttname"><a href="globals_8c.html#aa2b9ada250a9e22ac7d7c23d9957e669">SigWinch</a></div><div class="ttdeci">SIG_ATOMIC_VOLATILE_T SigWinch</div><div class="ttdoc">true after SIGWINCH is received</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00060">globals.c:60</a></div></div>
-<div class="ttc" id="aglobals_8c_html_adcb8b382c321dff7bb8b87b75e492d1c"><div class="ttname"><a href="globals_8c.html#adcb8b382c321dff7bb8b87b75e492d1c">SigInt</a></div><div class="ttdeci">SIG_ATOMIC_VOLATILE_T SigInt</div><div class="ttdoc">true after SIGINT is received</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00059">globals.c:59</a></div></div>
 <div class="ttc" id="amutt_2lib_8h_html_a0cf2d82c57a09723ab59e6f4dcc45b84"><div class="ttname"><a href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a></div><div class="ttdeci">#define FALLTHROUGH</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2lib_8h_source.html#l00111">lib.h:111</a></div></div>
 <div class="ttc" id="amutt__curses_8c_html_a5b14a8ded6f47a2c518890c9ff70c76f"><div class="ttname"><a href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a></div><div class="ttdeci">enum MuttCursorState mutt_curses_set_cursor(enum MuttCursorState state)</div><div class="ttdoc">Set the cursor state.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__curses_8c_source.html#l00096">mutt_curses.c:96</a></div></div>
 <div class="ttc" id="amutt__curses_8h_html_ab62e44dc1b12206d36e97cb12b5f961d"><div class="ttname"><a href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961d">MuttCursorState</a></div><div class="ttdeci">MuttCursorState</div><div class="ttdoc">Cursor states for mutt_curses_set_cursor()</div><div class="ttdef"><b>Definition:</b> <a href="mutt__curses_8h_source.html#l00057">mutt_curses.h:58</a></div></div>
 <div class="ttc" id="amutt__curses_8h_html_ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e"><div class="ttname"><a href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a></div><div class="ttdeci">@ MUTT_CURSOR_VISIBLE</div><div class="ttdoc">Display a normal cursor.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__curses_8h_source.html#l00060">mutt_curses.h:60</a></div></div>
-<div class="ttc" id="amutt__signal_8c_html_a242f85b7efe910d09a27a0743b14e42b"><div class="ttname"><a href="mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b">IsEndwin</a></div><div class="ttdeci">static int IsEndwin</div><div class="ttdoc">Ncurses function isendwin() has been called.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__signal_8c_source.html#l00046">mutt_signal.c:46</a></div></div>
+<div class="ttc" id="amutt__signal_8c_html_a242f85b7efe910d09a27a0743b14e42b"><div class="ttname"><a href="mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b">IsEndwin</a></div><div class="ttdeci">static int IsEndwin</div><div class="ttdoc">Ncurses function isendwin() has been called.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__signal_8c_source.html#l00045">mutt_signal.c:45</a></div></div>
+<div class="ttc" id="asignal_8c_html_aa2b9ada250a9e22ac7d7c23d9957e669"><div class="ttname"><a href="signal_8c.html#aa2b9ada250a9e22ac7d7c23d9957e669">SigWinch</a></div><div class="ttdeci">SIG_ATOMIC_VOLATILE_T SigWinch</div><div class="ttdoc">true after SIGWINCH is received</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00064">signal.c:64</a></div></div>
+<div class="ttc" id="asignal_8c_html_adcb8b382c321dff7bb8b87b75e492d1c"><div class="ttname"><a href="signal_8c.html#adcb8b382c321dff7bb8b87b75e492d1c">SigInt</a></div><div class="ttdeci">SIG_ATOMIC_VOLATILE_T SigInt</div><div class="ttdoc">true after SIGINT is received</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00063">signal.c:63</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00040">neomutt.h:41</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00045">neomutt.h:45</a></div></div>
 </div><!-- fragment --><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -259,15 +259,15 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt__signal_8c_source.html#l00096">96</a> of file <a class="el" href="mutt__signal_8c_source.html">mutt_signal.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>{</div>
-<div class="line"><span class="lineno">   98</span>  <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>);</div>
-<div class="line"><span class="lineno">   99</span>  endwin(); <span class="comment">/* just to be safe */</span></div>
-<div class="line"><span class="lineno">  100</span>  <a class="code hl_function" href="mutt__attach_8c.html#a6276b87d132d5b4e7590eb3d9265c0f8">mutt_temp_attachments_cleanup</a>();</div>
-<div class="line"><span class="lineno">  101</span>  <a class="code hl_function" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a>(sig); <span class="comment">/* DOES NOT RETURN */</span></div>
-<div class="line"><span class="lineno">  102</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt__signal_8c_source.html#l00095">95</a> of file <a class="el" href="mutt__signal_8c_source.html">mutt_signal.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   96</span>{</div>
+<div class="line"><span class="lineno">   97</span>  <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>);</div>
+<div class="line"><span class="lineno">   98</span>  endwin(); <span class="comment">/* just to be safe */</span></div>
+<div class="line"><span class="lineno">   99</span>  <a class="code hl_function" href="mutt__attach_8c.html#a6276b87d132d5b4e7590eb3d9265c0f8">mutt_temp_attachments_cleanup</a>();</div>
+<div class="line"><span class="lineno">  100</span>  <a class="code hl_function" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a>(sig); <span class="comment">/* DOES NOT RETURN */</span></div>
+<div class="line"><span class="lineno">  101</span>}</div>
 <div class="ttc" id="amutt__attach_8c_html_a6276b87d132d5b4e7590eb3d9265c0f8"><div class="ttname"><a href="mutt__attach_8c.html#a6276b87d132d5b4e7590eb3d9265c0f8">mutt_temp_attachments_cleanup</a></div><div class="ttdeci">void mutt_temp_attachments_cleanup(void)</div><div class="ttdoc">Delete all temporary attachments.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__attach_8c_source.html#l01304">mutt_attach.c:1304</a></div></div>
-<div class="ttc" id="asignal_8c_html_af1e9e97dcf8b15c143401cdd8cbfcb92"><div class="ttname"><a href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a></div><div class="ttdeci">void mutt_sig_exit_handler(int sig)</div><div class="ttdoc">Notify the user and shutdown gracefully.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00078">signal.c:78</a></div></div>
+<div class="ttc" id="asignal_8c_html_af1e9e97dcf8b15c143401cdd8cbfcb92"><div class="ttname"><a href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a></div><div class="ttdeci">void mutt_sig_exit_handler(int sig)</div><div class="ttdoc">Notify the user and shutdown gracefully.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00081">signal.c:81</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -319,27 +319,27 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt__signal_8c_source.html#l00108">108</a> of file <a class="el" href="mutt__signal_8c_source.html">mutt_signal.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  109</span>{</div>
-<div class="line"><span class="lineno">  110</span>  <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>);</div>
-<div class="line"><span class="lineno">  111</span>  endwin(); <span class="comment">/* just to be safe */</span></div>
-<div class="line"><span class="lineno">  112</span><span class="preprocessor">#ifdef USE_DEBUG_BACKTRACE</span></div>
-<div class="line"><span class="lineno">  113</span>  <a class="code hl_function" href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a>();</div>
-<div class="line"><span class="lineno">  114</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  115</span><span class="preprocessor">#ifdef USE_DEBUG_GRAPHVIZ</span></div>
-<div class="line"><span class="lineno">  116</span>  <a class="code hl_function" href="graphviz_8c.html#a54eabafd4cc8fe92175f85be7b7a8df8">dump_graphviz</a>(<span class="stringliteral">&quot;segfault&quot;</span>, NULL);</div>
-<div class="line"><span class="lineno">  117</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>  <span class="keyword">struct </span>sigaction act = { 0 };</div>
-<div class="line"><span class="lineno">  120</span>  sigemptyset(&amp;act.sa_mask);</div>
-<div class="line"><span class="lineno">  121</span>  act.sa_flags = 0;</div>
-<div class="line"><span class="lineno">  122</span>  act.sa_handler = SIG_DFL;</div>
-<div class="line"><span class="lineno">  123</span>  sigaction(sig, &amp;act, NULL);</div>
-<div class="line"><span class="lineno">  124</span>  <span class="comment">// Re-raise the signal to give outside handlers a chance to deal with it</span></div>
-<div class="line"><span class="lineno">  125</span>  raise(sig);</div>
-<div class="line"><span class="lineno">  126</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt__signal_8c_source.html#l00107">107</a> of file <a class="el" href="mutt__signal_8c_source.html">mutt_signal.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>{</div>
+<div class="line"><span class="lineno">  109</span>  <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>);</div>
+<div class="line"><span class="lineno">  110</span>  endwin(); <span class="comment">/* just to be safe */</span></div>
+<div class="line"><span class="lineno">  111</span><span class="preprocessor">#ifdef USE_DEBUG_BACKTRACE</span></div>
+<div class="line"><span class="lineno">  112</span>  <a class="code hl_function" href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a>();</div>
+<div class="line"><span class="lineno">  113</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  114</span><span class="preprocessor">#ifdef USE_DEBUG_GRAPHVIZ</span></div>
+<div class="line"><span class="lineno">  115</span>  <a class="code hl_function" href="graphviz_8c.html#a54eabafd4cc8fe92175f85be7b7a8df8">dump_graphviz</a>(<span class="stringliteral">&quot;segfault&quot;</span>, NULL);</div>
+<div class="line"><span class="lineno">  116</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>  <span class="keyword">struct </span>sigaction act = { 0 };</div>
+<div class="line"><span class="lineno">  119</span>  sigemptyset(&amp;act.sa_mask);</div>
+<div class="line"><span class="lineno">  120</span>  act.sa_flags = 0;</div>
+<div class="line"><span class="lineno">  121</span>  act.sa_handler = SIG_DFL;</div>
+<div class="line"><span class="lineno">  122</span>  sigaction(sig, &amp;act, NULL);</div>
+<div class="line"><span class="lineno">  123</span>  <span class="comment">// Re-raise the signal to give outside handlers a chance to deal with it</span></div>
+<div class="line"><span class="lineno">  124</span>  raise(sig);</div>
+<div class="line"><span class="lineno">  125</span>}</div>
 <div class="ttc" id="abacktrace_8c_html_ad4e568bce6fff0e62266165aec83d7e6"><div class="ttname"><a href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a></div><div class="ttdeci">void show_backtrace(void)</div><div class="ttdoc">Log the program's call stack.</div><div class="ttdef"><b>Definition:</b> <a href="backtrace_8c_source.html#l00039">backtrace.c:39</a></div></div>
-<div class="ttc" id="agraphviz_8c_html_a54eabafd4cc8fe92175f85be7b7a8df8"><div class="ttname"><a href="graphviz_8c.html#a54eabafd4cc8fe92175f85be7b7a8df8">dump_graphviz</a></div><div class="ttdeci">void dump_graphviz(const char *title, struct MailboxView *mv)</div><div class="ttdef"><b>Definition:</b> <a href="graphviz_8c_source.html#l00879">graphviz.c:879</a></div></div>
+<div class="ttc" id="agraphviz_8c_html_a54eabafd4cc8fe92175f85be7b7a8df8"><div class="ttname"><a href="graphviz_8c.html#a54eabafd4cc8fe92175f85be7b7a8df8">dump_graphviz</a></div><div class="ttdeci">void dump_graphviz(const char *title, struct MailboxView *mv)</div><div class="ttdef"><b>Definition:</b> <a href="graphviz_8c_source.html#l00878">graphviz.c:878</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">

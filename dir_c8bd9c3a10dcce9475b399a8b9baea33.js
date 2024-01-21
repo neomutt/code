@@ -41,7 +41,7 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "notify_type.h", "notify__type_8h.html", "notify__type_8h" ],
     [ "observer.h", "observer_8h.html", "observer_8h" ],
     [ "path.c", "mutt_2path_8c.html", "mutt_2path_8c" ],
-    [ "path.h", "path_8h.html", "path_8h" ],
+    [ "path.h", "mutt_2path_8h.html", "mutt_2path_8h" ],
     [ "pool.c", "pool_8c.html", "pool_8c" ],
     [ "pool.h", "pool_8h.html", "pool_8h" ],
     [ "prex.c", "prex_8c.html", "prex_8c" ],

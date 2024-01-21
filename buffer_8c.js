@@ -36,5 +36,7 @@ var buffer_8c =
     [ "buf_coll", "buffer_8c.html#a022216eee0ef2c8d030cc5394c842f90", null ],
     [ "buf_lower", "buffer_8c.html#adb0a54db83f68bc183a8c66eaf985b61", null ],
     [ "buf_join_str", "buffer_8c.html#a9c6d8fc1e15c23966ee2ca28180e11d5", null ],
+    [ "buf_inline_replace", "buffer_8c.html#a634b5b13a64e52df6fb085adafdd14f4", null ],
+    [ "buf_rfind", "buffer_8c.html#ab154f6e625578ddcb0f831d19c47c9fc", null ],
     [ "BufferStepSize", "buffer_8c.html#ae86a9aea4125cce2d02dec5cba07d815", null ]
 ];

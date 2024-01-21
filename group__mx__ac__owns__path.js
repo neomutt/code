@@ -2,7 +2,7 @@ var group__mx__ac__owns__path =
 [
     [ "comp_ac_owns_path", "group__mx__ac__owns__path.html#gadd2c1f164cf3e15e8391110717418a3e", null ],
     [ "imap_ac_owns_path", "group__mx__ac__owns__path.html#ga591dc58a8d2d06bfeef77452864bbb01", null ],
-    [ "maildir_ac_owns_path", "group__mx__ac__owns__path.html#gad88161e05521761620379c8eaaf21ffc", null ],
+    [ "maildir_ac_owns_path", "group__mx__ac__owns__path.html#ga158b4b4a0e5c11e37547b88faf665345", null ],
     [ "mbox_ac_owns_path", "group__mx__ac__owns__path.html#ga3ea6a4dc4f07e4f6ef762797023b4646", null ],
     [ "mh_ac_owns_path", "group__mx__ac__owns__path.html#ga9a8caacacc10895af8a175387ae4a808", null ],
     [ "nntp_ac_owns_path", "group__mx__ac__owns__path.html#ga13b08716f53f8c41cf292cb93516c8ae", null ],

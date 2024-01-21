@@ -155,7 +155,7 @@ var searchData=
   ['free_28_29_152',['free()',['../group__store__free.html',1,'']]],
   ['free_5fmatch_5fstrings_153',['free_match_strings',['../structCompletionData.html#a3545eef7154b6e4aea4b355ea5bf9525',1,'CompletionData']]],
   ['free_5fpattern_5fmenu_154',['free_pattern_menu',['../group__menu__mdata__free.html#gab2bca350171ac49b81ead22800a31fcd',1,'dlg_pattern.c']]],
-  ['free_5fraw_155',['free_raw',['../hcache_8c.html#a82a990727c9f0e254d510805919890c1',1,'hcache.c']]],
+  ['free_5fraw_155',['free_raw',['../hcache_2hcache_8c.html#a82a990727c9f0e254d510805919890c1',1,'hcache.c']]],
   ['from_156',['from',['../structContent.html#ab0f45d80059bca9d8e33663866f641d0',1,'Content::from()'],['../structContentState.html#a7c0938679ad00987c0337eeaac95724d',1,'ContentState::from()'],['../structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8',1,'Envelope::from()']]],
   ['from_2ec_157',['from.c',['../from_8c.html',1,'']]],
   ['from_2eh_158',['from.h',['../from_8h.html',1,'']]],

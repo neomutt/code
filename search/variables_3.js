@@ -100,7 +100,7 @@ var searchData=
   ['compressops_97',['CompressOps',['../compress_2compress_8c.html#ac1ab56359de28cb7ff89de6d7531bd53',1,'compress.c']]],
   ['configeventnames_98',['ConfigEventNames',['../subset_8c.html#ab59a02826031bae9f3688c2474e44af5',1,'subset.c']]],
   ['configure_5foptions_99',['configure_options',['../version_8c.html#a8e0c7339e5959bb3259f117830bf3683',1,'version.c']]],
-  ['conn_100',['conn',['../structSmtpAccountData.html#a7f61c2d6ce07d3a64eb5b1ca02b5b11a',1,'SmtpAccountData::conn()'],['../structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18',1,'PopAccountData::conn()'],['../structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a',1,'NntpAccountData::conn()'],['../structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4',1,'ImapAccountData::conn()']]],
+  ['conn_100',['conn',['../structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a',1,'NntpAccountData::conn()'],['../structSmtpAccountData.html#a7f61c2d6ce07d3a64eb5b1ca02b5b11a',1,'SmtpAccountData::conn()'],['../structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18',1,'PopAccountData::conn()'],['../structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4',1,'ImapAccountData::conn()']]],
   ['conn_5feof_101',['conn_eof',['../structZstrmDirection.html#a4c7437f1836874f8abc24a77626deafb',1,'ZstrmDirection']]],
   ['connvars_102',['ConnVars',['../conn_2config_8c.html#a8ec57748425ff01157045416d4512fc5',1,'config.c']]],
   ['connvarsgetaddr_103',['ConnVarsGetaddr',['../conn_2config_8c.html#ab645204fa9183ea08b88f04865bb8750',1,'config.c']]],
@@ -144,7 +144,7 @@ var searchData=
   ['cur_141',['cur',['../structHistory.html#a1d6f19dfb70d55a01f7238903eb7c0e7',1,'History']]],
   ['cur_5fline_142',['cur_line',['../structPagerPrivateData.html#a0a88330d9ce2ceb938c39cd49f6912f4',1,'PagerPrivateData']]],
   ['curpos_143',['curpos',['../structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8',1,'EnterState']]],
-  ['current_144',['current',['../structNotifyCallback.html#a57897b62a6e0ee7307cfc66674041411',1,'NotifyCallback::current()'],['../structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1',1,'Menu::current()']]],
+  ['current_144',['current',['../structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1',1,'Menu::current()'],['../structNotifyCallback.html#a57897b62a6e0ee7307cfc66674041411',1,'NotifyCallback::current()']]],
   ['currentfile_145',['CurrentFile',['../mutt__logging_8c.html#ad04ed06de1bf40839fd6c1d51178161b',1,'mutt_logging.c']]],
   ['currentfolder_146',['CurrentFolder',['../globals_8c.html#a972299f89841a17ed8c5e6e3f283660c',1,'CurrentFolder():&#160;globals.c'],['../globals_8h.html#a972299f89841a17ed8c5e6e3f283660c',1,'CurrentFolder():&#160;globals.c']]],
   ['currenthooktype_147',['CurrentHookType',['../hook_8c.html#ab90443315a10e3e42b94f6e512da2863',1,'hook.c']]],
@@ -152,5 +152,6 @@ var searchData=
   ['currentnewssrv_149',['CurrentNewsSrv',['../nntp_2lib_8h.html#ae58e3a5dcd99b6bbd0354b133fc220ce',1,'CurrentNewsSrv():&#160;nntp.c'],['../nntp_8c.html#ae58e3a5dcd99b6bbd0354b133fc220ce',1,'CurrentNewsSrv():&#160;nntp.c']]],
   ['currentsender_150',['CurrentSender',['../crypt__gpgme_8c.html#a207ccb2973780138ea42cf90754e29cc',1,'crypt_gpgme.c']]],
   ['curses_5fcolor_151',['curses_color',['../structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9',1,'AttrColor']]],
-  ['cursescolors_152',['CursesColors',['../curses_8c.html#adbeff3928afa757b430cd35ae5e77f83',1,'CursesColors():&#160;curses.c'],['../debug_8c.html#adbeff3928afa757b430cd35ae5e77f83',1,'CursesColors():&#160;curses.c']]]
+  ['cursescolors_152',['CursesColors',['../curses_8c.html#adbeff3928afa757b430cd35ae5e77f83',1,'CursesColors():&#160;curses.c'],['../debug_8c.html#adbeff3928afa757b430cd35ae5e77f83',1,'CursesColors():&#160;curses.c']]],
+  ['custom_5fflags_153',['custom_flags',['../structMaildirEmailData.html#ad30ba2d02862be9fdc092574efe58607',1,'MaildirEmailData']]]
 ];

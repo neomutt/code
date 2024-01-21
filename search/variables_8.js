@@ -21,7 +21,7 @@ var searchData=
   ['hcachevarscomp_18',['HcacheVarsComp',['../hcache_2config_8c.html#a9c9f451bf18f00e0f707ed2c120b061f',1,'config.c']]],
   ['hcachevarscomp2_19',['HcacheVarsComp2',['../hcache_2config_8c.html#ab56872f9ec3ab62075fb6637729c2d94',1,'config.c']]],
   ['hcachevarspage_20',['HcacheVarsPage',['../hcache_2config_8c.html#a10014b4dc0fdf2ca04cfee2d5bbc4cb3',1,'config.c']]],
-  ['hcachever_21',['HcacheVer',['../hcache_8c.html#a1b15c2ded777ad141f333765bdf1827c',1,'hcache.c']]],
+  ['hcachever_21',['HcacheVer',['../hcache_2hcache_8c.html#a1b15c2ded777ad141f333765bdf1827c',1,'hcache.c']]],
   ['hclass_22',['hclass',['../structEnterWindowData.html#af8c83670ffb679676ca485c6a94084f6',1,'EnterWindowData']]],
   ['hdata_23',['hdata',['../structHashTable.html#aa39b1c65faa040b7eb42621a4cbfa740',1,'HashTable']]],
   ['hdata_5ffree_24',['hdata_free',['../structHashTable.html#ae11badc2b75fe1263cca41be88c6216e',1,'HashTable']]],

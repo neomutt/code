@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mailboxtype_0',['MailboxType',['../mailbox_8h.html#af65addf714c28dd5d483cb426100921d',1,'mailbox.h']]],
+  ['mailboxtype_0',['MailboxType',['../core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921d',1,'mailbox.h']]],
   ['mailcaplookup_1',['MailcapLookup',['../mailcap_8h.html#a0716f6351a9229990024889ec22b33c1',1,'mailcap.h']]],
   ['menutype_2',['MenuType',['../type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4',1,'type.h']]],
   ['messageinthread_3',['MessageInThread',['../mutt__thread_8h.html#a7fd1879ba8179c12165019a4f005e1f4',1,'mutt_thread.h']]],

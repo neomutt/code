@@ -16,5 +16,7 @@ var signal_8c =
     [ "SysSignalsBlocked", "signal_8c.html#a1eade47ee05fcf5997945cd11734ca75", null ],
     [ "SigHandler", "signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4", null ],
     [ "ExitHandler", "signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407", null ],
-    [ "SegvHandler", "signal_8c.html#ac0b20aa051ab69871cf4487066324d78", null ]
+    [ "SegvHandler", "signal_8c.html#ac0b20aa051ab69871cf4487066324d78", null ],
+    [ "SigInt", "signal_8c.html#adcb8b382c321dff7bb8b87b75e492d1c", null ],
+    [ "SigWinch", "signal_8c.html#aa2b9ada250a9e22ac7d7c23d9957e669", null ]
 ];

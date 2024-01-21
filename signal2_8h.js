@@ -8,5 +8,7 @@ var signal2_8h =
     [ "mutt_sig_exit_handler", "signal2_8h.html#af1e9e97dcf8b15c143401cdd8cbfcb92", null ],
     [ "mutt_sig_init", "signal2_8h.html#a079bd657ae3ccdcf07507d85097abfd8", null ],
     [ "mutt_sig_unblock", "signal2_8h.html#aa9356c41baa1b35d3a7719f90570e6b7", null ],
-    [ "mutt_sig_unblock_system", "signal2_8h.html#ad44b8fd5380fa4749911e9f1792af99d", null ]
+    [ "mutt_sig_unblock_system", "signal2_8h.html#ad44b8fd5380fa4749911e9f1792af99d", null ],
+    [ "SigInt", "signal2_8h.html#adcb8b382c321dff7bb8b87b75e492d1c", null ],
+    [ "SigWinch", "signal2_8h.html#aa2b9ada250a9e22ac7d7c23d9957e669", null ]
 ];

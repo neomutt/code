@@ -9,6 +9,6 @@ var dir_9787aee6b318e7158c982fb5567cbd8b =
     [ "mhemail.h", "mhemail_8h.html", "mhemail_8h" ],
     [ "sequence.c", "sequence_8c.html", "sequence_8c" ],
     [ "sequence.h", "sequence_8h.html", "sequence_8h" ],
-    [ "shared.c", "shared_8c.html", "shared_8c" ],
-    [ "shared.h", "shared_8h.html", "shared_8h" ]
+    [ "shared.c", "mh_2shared_8c.html", "mh_2shared_8c" ],
+    [ "shared.h", "mh_2shared_8h.html", "mh_2shared_8h" ]
 ];
