@@ -17,7 +17,6 @@ var pattern_2private_8h =
     [ "RANGE_DOLLAR", "pattern_2private_8h.html#a3da86193e8538884e2a15adbc6b22a2e", null ],
     [ "RANGE_LT", "pattern_2private_8h.html#af72c0ae663c8d5978fa323433a526d27", null ],
     [ "RANGE_GT", "pattern_2private_8h.html#a41338a4d56de949ba39abed015cd22e1", null ],
-    [ "EMSG", "pattern_2private_8h.html#aaa5cbcbe0103cbab07d9fc4314e5a0b3", null ],
     [ "MUTT_MAXRANGE", "pattern_2private_8h.html#a704b31bafbefd8857fce3bc1f9bb5ba8", null ],
     [ "PatternEat", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966", [
       [ "EAT_NONE", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966a36ef5be3f8cce865f85ad9478e9cdfa9", null ],
@@ -39,6 +38,7 @@ var pattern_2private_8h =
       [ "RANGE_S_LEFT", "pattern_2private_8h.html#a09872fe8f93087d0e0eeb65513bd8c79a2aab5b0eb8251f394868ac49946a69f9", null ],
       [ "RANGE_S_RIGHT", "pattern_2private_8h.html#a09872fe8f93087d0e0eeb65513bd8c79a80690079348238ef323cfa89591f58d5", null ]
     ] ],
+    [ "email_msgno", "pattern_2private_8h.html#af6dff9c00f2c48b69936c04ba0aa0455", null ],
     [ "lookup_op", "pattern_2private_8h.html#aa98636f6060577ad270a6891822e4de4", null ],
     [ "lookup_tag", "pattern_2private_8h.html#a73ac7860e4cbee77e1810d972957c3eb", null ],
     [ "eval_date_minmax", "pattern_2private_8h.html#a20e645effab0dbabefd7a5ff7970ad1e", null ],
