@@ -1,7 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"core_2account_8h.html#afa1f48d391eddc3e994c5e0e64decb82":[2,0,14,1,4],
-"core_2account_8h_source.html":[2,0,14,1],
 "core_2command_8c.html":[2,0,14,2],
 "core_2command_8c.html#a719f8984a58bda6f59c40e6c522fea9e":[2,0,14,2,2],
 "core_2command_8c.html#a86659ac9629e148499d10b1968ff881c":[2,0,14,2,4],
@@ -249,5 +247,7 @@ var NAVTREEINDEX6 =
 "crypt_crypt_mod_pgp.html":[36,4],
 "crypt_crypt_mod_pgp_gpgme.html":[36,5],
 "crypt_crypt_mod_smime.html":[36,6],
-"crypt_crypt_mod_smime_gpgme.html":[36,7]
+"crypt_crypt_mod_smime_gpgme.html":[36,7],
+"crypt_cryptglue.html":[36,8],
+"crypt_dlg_gpgme.html":[36,9]
 };

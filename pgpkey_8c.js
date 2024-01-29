@@ -10,6 +10,7 @@ var pgpkey_8c =
     [ "PgpKeyValidFlags", "pgpkey_8c.html#afa1aa4d0dec2040afc7e3d72d3ffc6b3", null ],
     [ "pgp_principal_key", "pgpkey_8c.html#afeb400f3575d05ef0aadc9a6c064a4d0", null ],
     [ "pgp_key_is_valid", "pgpkey_8c.html#aad0a99e470d5d329e7cfa07f703d64b7", null ],
+    [ "pgp_keys_are_valid", "pgpkey_8c.html#a6f3ff50b73993524cde060dcf542bc1b", null ],
     [ "pgp_id_is_strong", "pgpkey_8c.html#a87be30a9047f2566816892e7ffc68b88", null ],
     [ "pgp_id_is_valid", "pgpkey_8c.html#a0a2d46a37ed92125eed6c9cea5543909", null ],
     [ "pgp_id_matches_addr", "pgpkey_8c.html#a4fe2cc5b3f19da4aeb934e2c781664c1", null ],

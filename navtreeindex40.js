@@ -1,16 +1,5 @@
 var NAVTREEINDEX40 =
 {
-"structAliasMenuData.html#a80c31195ea34deeb083d2a044b98d1ca":[1,0,5,3],
-"structAliasMenuData.html#aac5de712e06fcb42cea41aae0adcc62a":[1,0,5,4],
-"structAliasMenuData.html#ac168f872d43329c8e4ca9295425ed06d":[1,0,5,7],
-"structAliasMenuData.html#ad7c01e0347c52feccf50c5db673ae679":[1,0,5,1],
-"structAliasMenuData.html#af100c948f81ce4d95ec10ea660437827":[1,0,5,2],
-"structAliasView.html":[1,0,6],
-"structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4":[1,0,6,6],
-"structAliasView.html#a0db3775dbf901fbd380681d2e806f601":[1,0,6,7],
-"structAliasView.html#a2415ea4839d043b562c0a79d51618f3c":[1,0,6,3],
-"structAliasView.html#a5be64feabac1222706a5555845e285cc":[1,0,6,5],
-"structAliasView.html#a683663ebafec086d5d253cd55fb7b209":[1,0,6,4],
 "structAliasView.html#a71a64de73888c57232ff738a1cf8dc91":[1,0,6,2],
 "structAliasView.html#a7b805b55ebbaa9f08b4f6692c4ae33ab":[1,0,6,0],
 "structAliasView.html#a8fa9dd3de008e93b120dd3e79a3cd2a5":[1,0,6,1],
@@ -249,5 +238,16 @@ var NAVTREEINDEX40 =
 "structComprOps.html#a840192d536030cfc27f47675d23fc074":[1,0,44,2],
 "structComprOps.html#aa81c7f0b7164bdc47fafad9d191f0a8e":[1,0,44,5],
 "structComprOps.html#abf598bd81ed7c964c32c09a03b40099d":[1,0,44,4],
-"structComprOps.html#ac3121f9b8d9f6059972597315a559f44":[1,0,44,1]
+"structComprOps.html#ac3121f9b8d9f6059972597315a559f44":[1,0,44,1],
+"structComprOps.html#adba0c7a5be5b03f182bad1ef8513503f":[1,0,44,6],
+"structCompressInfo.html":[1,0,43],
+"structCompressInfo.html#a1d1c42dfa8e29b4da9f437e798978668":[1,0,43,0],
+"structCompressInfo.html#a2aca1d78a4d745a6a795dab05279f8db":[1,0,43,6],
+"structCompressInfo.html#a7a06ea5f92a47b87b787e36aa46437a6":[1,0,43,2],
+"structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472":[1,0,43,4],
+"structCompressInfo.html#aac3530ca93433b36ec7118f2278f8280":[1,0,43,5],
+"structCompressInfo.html#add645ff00c6cd32a44a1aae65cb7d7f2":[1,0,43,1],
+"structCompressInfo.html#ae92bc129b9825e39e42d7737197c3297":[1,0,43,3],
+"structConfigDef.html":[1,0,45],
+"structConfigDef.html#a0989d0984537827a221e7d699f72da27":[1,0,45,0]
 };

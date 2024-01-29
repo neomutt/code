@@ -1,7 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"neo_globals.html":[0,7],
-"neo_handler.html":[0,8],
 "neo_hdrline.html":[0,9],
 "neo_help.html":[0,10],
 "neo_hook.html":[0,11],
@@ -249,5 +247,7 @@ var NAVTREEINDEX30 =
 "notmuch_2adata_8h.html#ae2d899bdab5267ef63dc1b3bc6dad115":[2,0,35,1,2],
 "notmuch_2adata_8h_source.html":[2,0,35,1],
 "notmuch_2complete_8c.html":[2,0,35,2],
-"notmuch_2complete_8c.html#a859ec89a92fa6582c414dcaf2bd2dfff":[2,0,35,2,0]
+"notmuch_2complete_8c.html#a859ec89a92fa6582c414dcaf2bd2dfff":[2,0,35,2,0],
+"notmuch_2complete_8c.html#a91c2850c66aa738cc70346ab923a802b":[2,0,35,2,1],
+"notmuch_2complete_8c.html#aa3e8d3e0fd9188868c9ea63d4aa810ba":[2,0,35,2,6]
 };

@@ -36,6 +36,5 @@ var mx_8h =
     [ "mx_get_ops", "mx_8h.html#aa5b819072a9b84aee79c29a5738c3139", null ],
     [ "mx_tags_is_supported", "mx_8h.html#aa5e9e28ca8461569523e2dbd90ee14b1", null ],
     [ "mx_toggle_write", "mx_8h.html#ad9772f30292be237af605c682e8f0777", null ],
-    [ "mx_mbox_reset_check", "mx_8h.html#a96b021ef63f5b25f2e3da2879a568957", null ],
     [ "MboxTypeDef", "mx_8h.html#a40d3e8712d691e71402abcc47e259881", null ]
 ];

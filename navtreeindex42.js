@@ -1,16 +1,5 @@
 var NAVTREEINDEX42 =
 {
-"structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7":[1,0,70,2],
-"structEnvelope.html#a3e2b8b426bb895a4817f9bebff11bbcc":[1,0,70,30],
-"structEnvelope.html#a46a9e33786aa5394ad768cbcc2357d65":[1,0,70,22],
-"structEnvelope.html#a4b75ab1853f95878dec079371bb0d799":[1,0,70,6],
-"structEnvelope.html#a50418c13a849bf27b22922bd5867e5e1":[1,0,70,15],
-"structEnvelope.html#a52153c6e4fdb551233e26d4fdb48fb78":[1,0,70,23],
-"structEnvelope.html#a525bd5213606067d5c2be2e17fbe956b":[1,0,70,8],
-"structEnvelope.html#a59c64138a508cd27c61dc719e7aab5a0":[1,0,70,29],
-"structEnvelope.html#a5f680f60f1713477a879877dcbd21a5c":[1,0,70,20],
-"structEnvelope.html#a6044b60220b8029a6a505e5b61f1cadc":[1,0,70,7],
-"structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6":[1,0,70,3],
 "structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611":[1,0,70,5],
 "structEnvelope.html#a832eec73356a806761e26f0bc40d9083":[1,0,70,25],
 "structEnvelope.html#a8888ccd1c0b1512c92dd00a9a3a059d8":[1,0,70,28],
@@ -249,5 +238,16 @@ var NAVTREEINDEX42 =
 "structImapAuth.html":[1,0,114],
 "structImapAuth.html#ae626ffacba170b0ca2744fbb3acc4029":[1,0,114,0],
 "structImapAuth.html#aecbb7e323413b2a52047335bea7c82ec":[1,0,114,1],
-"structImapCommand.html":[1,0,115]
+"structImapCommand.html":[1,0,115],
+"structImapCommand.html#abbbd89e5b7364a52b2b2c67535007b06":[1,0,115,1],
+"structImapCommand.html#afb06c6cd37cd8562ce79dd6e01647d56":[1,0,115,0],
+"structImapEmailData.html":[1,0,116],
+"structImapEmailData.html#a51e50c468a502ec7b3ea9f5dfa09e2f0":[1,0,116,5],
+"structImapEmailData.html#a64e9b3c8a5b91a1102fa09e26be67794":[1,0,116,6],
+"structImapEmailData.html#a8c77eb4bff1b0e97039cfc97ac898835":[1,0,116,7],
+"structImapEmailData.html#aa942cde9ad6b90d7353e448578c8f3e8":[1,0,116,9],
+"structImapEmailData.html#ac0a8cf12be3069914cc0d4288d2124ed":[1,0,116,2],
+"structImapEmailData.html#ac846056c32aa31d97ce6b9a2c7d2c299":[1,0,116,1],
+"structImapEmailData.html#adbcc9070eab67c69d1d2fcd48aa04021":[1,0,116,0],
+"structImapEmailData.html#addcfe8f2eb993fbd3de89041f090a090":[1,0,116,3]
 };

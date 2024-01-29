@@ -1,7 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"crypt_cryptglue.html":[36,8],
-"crypt_dlg_gpgme.html":[36,9],
 "crypt_dlg_pgp.html":[36,10],
 "crypt_dlg_smime.html":[36,11],
 "crypt_functions.html":[36,12],
@@ -165,11 +163,11 @@ var NAVTREEINDEX7 =
 "debug_2email_8c.html#a78de4e2575296fcd476471893f4c95b7":[2,0,15,2,14],
 "debug_2email_8c.html#a86c498d7daa5e33808eec1af804852df":[2,0,15,2,12],
 "debug_2email_8c.html#a98358cb7a1c569c8b99d6740a287e2cb":[2,0,15,2,10],
-"debug_2email_8c.html#ab9e3f5474db927be2d0f0fee22b32976":[2,0,15,2,0],
 "debug_2email_8c.html#ab9e3f5474db927be2d0f0fee22b32976":[2,0,15,2,3],
 "debug_2email_8c.html#ab9e3f5474db927be2d0f0fee22b32976":[2,0,15,2,4],
 "debug_2email_8c.html#ab9e3f5474db927be2d0f0fee22b32976":[2,0,15,2,5],
 "debug_2email_8c.html#ab9e3f5474db927be2d0f0fee22b32976":[2,0,15,2,7],
+"debug_2email_8c.html#ab9e3f5474db927be2d0f0fee22b32976":[2,0,15,2,0],
 "debug_2email_8c.html#abdc384544da8cfc9b2cc7e19008f7bcf":[2,0,15,2,17],
 "debug_2email_8c.html#ae1a348549c5d4aec7107a4ae9748e74e":[2,0,15,2,15],
 "debug_2email_8c.html#af21f5d17c5110205e184d8f117ec2080":[2,0,15,2,13],
@@ -249,5 +247,7 @@ var NAVTREEINDEX7 =
 "debug_8c.html#a1f4036ab190345ccd7ec74b9fc771010":[2,0,6,10,0],
 "debug_8c.html#a3feaffa913f4a1b489753b16c154c69b":[2,0,6,10,1],
 "debug_8c.html#a6644ee02d4f9e25179016d98f6d6b02e":[2,0,6,10,2],
-"debug_8c.html#a9e36e62f2dc4ba10ce42c89fa992df0e":[2,0,6,10,3]
+"debug_8c.html#a9e36e62f2dc4ba10ce42c89fa992df0e":[2,0,6,10,3],
+"debug_8c.html#ab27899f662b530750ec723e9928a3c39":[2,0,6,10,5],
+"debug_8c.html#adbeff3928afa757b430cd35ae5e77f83":[2,0,6,10,6]
 };

@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-35-g8e897d</span>
+   &#160;<span id="projectnumber">2023-12-21-72-gad8d0f</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -135,8 +135,9 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>GUI handle the resizing of the screen. </p>
 <dl class="section author"><dt>Authors</dt><dd><ul>
-<li>Michael R. Elkins</li>
+<li>Richard Russon</li>
 <li>Ivan J.</li>
+<li>Pietro Cerutti</li>
 </ul>
 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.</dd></dl>
@@ -177,22 +178,22 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="resize_8c_source.html#l00054">54</a> of file <a class="el" href="resize_8c_source.html">resize.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>{</div>
-<div class="line"><span class="lineno">   56</span>  <span class="keyword">struct </span>winsize w = { 0 };</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>  <span class="keywordtype">int</span> fd = open(<span class="stringliteral">&quot;/dev/tty&quot;</span>, O_RDONLY);</div>
-<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">if</span> (fd != -1)</div>
-<div class="line"><span class="lineno">   60</span>  {</div>
-<div class="line"><span class="lineno">   61</span><span class="preprocessor">#ifdef HAVE_TCGETWINSIZE</span></div>
-<div class="line"><span class="lineno">   62</span>    tcgetwinsize(fd, &amp;w);</div>
-<div class="line"><span class="lineno">   63</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">   64</span>    ioctl(fd, TIOCGWINSZ, &amp;w);</div>
-<div class="line"><span class="lineno">   65</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   66</span>    close(fd);</div>
-<div class="line"><span class="lineno">   67</span>  }</div>
-<div class="line"><span class="lineno">   68</span>  <span class="keywordflow">return</span> w;</div>
-<div class="line"><span class="lineno">   69</span>}</div>
+<p class="definition">Definition at line <a class="el" href="resize_8c_source.html#l00055">55</a> of file <a class="el" href="resize_8c_source.html">resize.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>{</div>
+<div class="line"><span class="lineno">   57</span>  <span class="keyword">struct </span>winsize w = { 0 };</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordtype">int</span> fd = open(<span class="stringliteral">&quot;/dev/tty&quot;</span>, O_RDONLY);</div>
+<div class="line"><span class="lineno">   60</span>  <span class="keywordflow">if</span> (fd != -1)</div>
+<div class="line"><span class="lineno">   61</span>  {</div>
+<div class="line"><span class="lineno">   62</span><span class="preprocessor">#ifdef HAVE_TCGETWINSIZE</span></div>
+<div class="line"><span class="lineno">   63</span>    tcgetwinsize(fd, &amp;w);</div>
+<div class="line"><span class="lineno">   64</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">   65</span>    ioctl(fd, TIOCGWINSZ, &amp;w);</div>
+<div class="line"><span class="lineno">   66</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   67</span>    close(fd);</div>
+<div class="line"><span class="lineno">   68</span>  }</div>
+<div class="line"><span class="lineno">   69</span>  <span class="keywordflow">return</span> w;</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -222,34 +223,34 @@ Functions</h2></td></tr>
 
 <p>Update <a class="el" href="structNeoMutt.html" title="Container for Accounts, Notifications.">NeoMutt</a>'s opinion about the window size. </p>
 
-<p class="definition">Definition at line <a class="el" href="resize_8c_source.html#l00074">74</a> of file <a class="el" href="resize_8c_source.html">resize.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   75</span>{</div>
-<div class="line"><span class="lineno">   76</span>  <span class="keyword">struct </span>winsize w = <a class="code hl_function" href="resize_8c.html#a8d99fe6b2da016d237243f31e9403bf6">mutt_get_winsize</a>();</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>  <span class="keywordtype">int</span> screenrows = w.ws_row;</div>
-<div class="line"><span class="lineno">   79</span>  <span class="keywordtype">int</span> screencols = w.ws_col;</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">if</span> (screenrows &lt;= 0)</div>
-<div class="line"><span class="lineno">   82</span>  {</div>
-<div class="line"><span class="lineno">   83</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *cp = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<span class="stringliteral">&quot;LINES&quot;</span>);</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (cp &amp;&amp; !mutt_str_atoi_full(cp, &amp;screenrows))</div>
-<div class="line"><span class="lineno">   85</span>      screenrows = 24;</div>
-<div class="line"><span class="lineno">   86</span>  }</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">if</span> (screencols &lt;= 0)</div>
-<div class="line"><span class="lineno">   89</span>  {</div>
-<div class="line"><span class="lineno">   90</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *cp = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<span class="stringliteral">&quot;COLUMNS&quot;</span>);</div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span> (cp &amp;&amp; !mutt_str_atoi_full(cp, &amp;screencols))</div>
-<div class="line"><span class="lineno">   92</span>      screencols = 80;</div>
-<div class="line"><span class="lineno">   93</span>  }</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>  resizeterm(screenrows, screencols);</div>
-<div class="line"><span class="lineno">   96</span>  <a class="code hl_function" href="rootwin_8c.html#a5fe9277d98e2d8a476afc4e9ff5a36df">rootwin_set_size</a>(screencols, screenrows);</div>
-<div class="line"><span class="lineno">   97</span>  <a class="code hl_function" href="mutt__window_8c.html#a182bdee15eddac41d849c7b2a5896554">window_notify_all</a>(NULL);</div>
-<div class="line"><span class="lineno">   98</span>}</div>
-<div class="ttc" id="amutt_2string_8c_html_a954e319c94dafe57f48ea9b847269127"><div class="ttname"><a href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a></div><div class="ttdeci">const char * mutt_str_getenv(const char *name)</div><div class="ttdoc">Get an environment variable.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00773">string.c:773</a></div></div>
+<p class="definition">Definition at line <a class="el" href="resize_8c_source.html#l00075">75</a> of file <a class="el" href="resize_8c_source.html">resize.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keyword">struct </span>winsize w = <a class="code hl_function" href="resize_8c.html#a8d99fe6b2da016d237243f31e9403bf6">mutt_get_winsize</a>();</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>  <span class="keywordtype">int</span> screenrows = w.ws_row;</div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordtype">int</span> screencols = w.ws_col;</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">if</span> (screenrows &lt;= 0)</div>
+<div class="line"><span class="lineno">   83</span>  {</div>
+<div class="line"><span class="lineno">   84</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *cp = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<span class="stringliteral">&quot;LINES&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (cp &amp;&amp; !mutt_str_atoi_full(cp, &amp;screenrows))</div>
+<div class="line"><span class="lineno">   86</span>      screenrows = 24;</div>
+<div class="line"><span class="lineno">   87</span>  }</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">if</span> (screencols &lt;= 0)</div>
+<div class="line"><span class="lineno">   90</span>  {</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *cp = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<span class="stringliteral">&quot;COLUMNS&quot;</span>);</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (cp &amp;&amp; !mutt_str_atoi_full(cp, &amp;screencols))</div>
+<div class="line"><span class="lineno">   93</span>      screencols = 80;</div>
+<div class="line"><span class="lineno">   94</span>  }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>  resizeterm(screenrows, screencols);</div>
+<div class="line"><span class="lineno">   97</span>  <a class="code hl_function" href="rootwin_8c.html#a5fe9277d98e2d8a476afc4e9ff5a36df">rootwin_set_size</a>(screencols, screenrows);</div>
+<div class="line"><span class="lineno">   98</span>  <a class="code hl_function" href="mutt__window_8c.html#a182bdee15eddac41d849c7b2a5896554">window_notify_all</a>(NULL);</div>
+<div class="line"><span class="lineno">   99</span>}</div>
+<div class="ttc" id="amutt_2string_8c_html_a954e319c94dafe57f48ea9b847269127"><div class="ttname"><a href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a></div><div class="ttdeci">const char * mutt_str_getenv(const char *name)</div><div class="ttdoc">Get an environment variable.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00775">string.c:775</a></div></div>
 <div class="ttc" id="amutt__window_8c_html_a182bdee15eddac41d849c7b2a5896554"><div class="ttname"><a href="mutt__window_8c.html#a182bdee15eddac41d849c7b2a5896554">window_notify_all</a></div><div class="ttdeci">void window_notify_all(struct MuttWindow *win)</div><div class="ttdoc">Notify observers of changes to a Window and its children.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__window_8c_source.html#l00145">mutt_window.c:145</a></div></div>
-<div class="ttc" id="aresize_8c_html_a8d99fe6b2da016d237243f31e9403bf6"><div class="ttname"><a href="resize_8c.html#a8d99fe6b2da016d237243f31e9403bf6">mutt_get_winsize</a></div><div class="ttdeci">static struct winsize mutt_get_winsize(void)</div><div class="ttdoc">Get the window size.</div><div class="ttdef"><b>Definition:</b> <a href="resize_8c_source.html#l00054">resize.c:54</a></div></div>
+<div class="ttc" id="aresize_8c_html_a8d99fe6b2da016d237243f31e9403bf6"><div class="ttname"><a href="resize_8c.html#a8d99fe6b2da016d237243f31e9403bf6">mutt_get_winsize</a></div><div class="ttdeci">static struct winsize mutt_get_winsize(void)</div><div class="ttdoc">Get the window size.</div><div class="ttdef"><b>Definition:</b> <a href="resize_8c_source.html#l00055">resize.c:55</a></div></div>
 <div class="ttc" id="arootwin_8c_html_a5fe9277d98e2d8a476afc4e9ff5a36df"><div class="ttname"><a href="rootwin_8c.html#a5fe9277d98e2d8a476afc4e9ff5a36df">rootwin_set_size</a></div><div class="ttdeci">void rootwin_set_size(int cols, int rows)</div><div class="ttdoc">Set the dimensions of the Root Window.</div><div class="ttdef"><b>Definition:</b> <a href="rootwin_8c_source.html#l00253">rootwin.c:253</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

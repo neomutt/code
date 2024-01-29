@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-35-g8e897d</span>
+   &#160;<span id="projectnumber">2023-12-21-72-gad8d0f</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -151,6 +151,7 @@ Variables</h2></td></tr>
 <div class="textblock"><p><a class="el" href="structMonitor.html" title="A watch on a file.">Monitor</a> files for changes. </p>
 <dl class="section author"><dt>Authors</dt><dd><ul>
 <li>Gero Treuner</li>
+<li>Richard Russon</li>
 </ul>
 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.</dd></dl>
@@ -191,59 +192,59 @@ Variables</h2></td></tr>
 </dl>
 <p>If m is NULL, try to get the current mailbox from the Index. </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00480">480</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  481</span>{</div>
-<div class="line"><span class="lineno">  482</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMonitorInfo.html">MonitorInfo</a> info = { 0 };</div>
-<div class="line"><span class="lineno">  483</span> </div>
-<div class="line"><span class="lineno">  484</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno">  485</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580">ResolveResult</a> desc = <a class="code hl_function" href="monitor_8c.html#a3db43a0a973394f0fedebe382ea430e8">monitor_resolve</a>(&amp;info, m);</div>
-<div class="line"><span class="lineno">  486</span>  <span class="keywordflow">if</span> (desc != <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580a96eae9f5d2a0f8f1e4a9a5263a0d9b86">RESOLVE_RES_OK_NOTEXISTING</a>)</div>
-<div class="line"><span class="lineno">  487</span>  {</div>
-<div class="line"><span class="lineno">  488</span>    <span class="keywordflow">if</span> (!m &amp;&amp; (desc == <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a>))</div>
-<div class="line"><span class="lineno">  489</span>      <a class="code hl_variable" href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a> = info.<a class="code hl_variable" href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">monitor</a>-&gt;<a class="code hl_variable" href="structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf">desc</a>;</div>
-<div class="line"><span class="lineno">  490</span>    rc = (desc == <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a>) ? 0 : -1;</div>
-<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  492</span>  }</div>
-<div class="line"><span class="lineno">  493</span> </div>
-<div class="line"><span class="lineno">  494</span>  uint32_t mask = info.<a class="code hl_variable" href="structMonitorInfo.html#ab3fe8bfc126c8ab275f7b88ba5cb13e0">is_dir</a> ? <a class="code hl_define" href="monitor_8c.html#a01b201be00156c44e634f4479e29a8f5">INOTIFY_MASK_DIR</a> : <a class="code hl_define" href="monitor_8c.html#ac8f0dc7ad942fe1ee3986cf0d43cb8c7">INOTIFY_MASK_FILE</a>;</div>
-<div class="line"><span class="lineno">  495</span>  <span class="keywordflow">if</span> (((<a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a> == -1) &amp;&amp; (<a class="code hl_function" href="monitor_8c.html#a87d7892546c97dcd2198c8f521dca4f0">monitor_init</a>() == -1)) ||</div>
-<div class="line"><span class="lineno">  496</span>      ((desc = inotify_add_watch(<a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a>, info.<a class="code hl_variable" href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">path</a>, mask)) == -1))</div>
-<div class="line"><span class="lineno">  497</span>  {</div>
-<div class="line"><span class="lineno">  498</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;inotify_add_watch failed for &#39;%s&#39;, errno=%d %s\n&quot;</span>,</div>
-<div class="line"><span class="lineno">  499</span>               info.<a class="code hl_variable" href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">path</a>, errno, strerror(errno));</div>
-<div class="line"><span class="lineno">  500</span>    rc = -1;</div>
-<div class="line"><span class="lineno">  501</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  502</span>  }</div>
-<div class="line"><span class="lineno">  503</span> </div>
-<div class="line"><span class="lineno">  504</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;inotify_add_watch descriptor=%d for &#39;%s&#39;\n&quot;</span>, desc, info.<a class="code hl_variable" href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">path</a>);</div>
-<div class="line"><span class="lineno">  505</span>  <span class="keywordflow">if</span> (!m)</div>
-<div class="line"><span class="lineno">  506</span>    <a class="code hl_variable" href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a> = desc;</div>
-<div class="line"><span class="lineno">  507</span> </div>
-<div class="line"><span class="lineno">  508</span>  <a class="code hl_function" href="monitor_8c.html#a4595138cb164a4358979f09ff3ef3546">monitor_new</a>(&amp;info, desc);</div>
-<div class="line"><span class="lineno">  509</span> </div>
-<div class="line"><span class="lineno">  510</span>cleanup:</div>
-<div class="line"><span class="lineno">  511</span>  <a class="code hl_function" href="monitor_8c.html#ae79b08e701ac15a92323a771b8d1066f">monitor_info_free</a>(&amp;info);</div>
-<div class="line"><span class="lineno">  512</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  513</span>}</div>
+<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00483">483</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  484</span>{</div>
+<div class="line"><span class="lineno">  485</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMonitorInfo.html">MonitorInfo</a> info = { 0 };</div>
+<div class="line"><span class="lineno">  486</span> </div>
+<div class="line"><span class="lineno">  487</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno">  488</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580">ResolveResult</a> desc = <a class="code hl_function" href="monitor_8c.html#a3db43a0a973394f0fedebe382ea430e8">monitor_resolve</a>(&amp;info, m);</div>
+<div class="line"><span class="lineno">  489</span>  <span class="keywordflow">if</span> (desc != <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580a96eae9f5d2a0f8f1e4a9a5263a0d9b86">RESOLVE_RES_OK_NOTEXISTING</a>)</div>
+<div class="line"><span class="lineno">  490</span>  {</div>
+<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">if</span> (!m &amp;&amp; (desc == <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a>))</div>
+<div class="line"><span class="lineno">  492</span>      <a class="code hl_variable" href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a> = info.<a class="code hl_variable" href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">monitor</a>-&gt;<a class="code hl_variable" href="structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf">desc</a>;</div>
+<div class="line"><span class="lineno">  493</span>    rc = (desc == <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a>) ? 0 : -1;</div>
+<div class="line"><span class="lineno">  494</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  495</span>  }</div>
+<div class="line"><span class="lineno">  496</span> </div>
+<div class="line"><span class="lineno">  497</span>  uint32_t mask = info.<a class="code hl_variable" href="structMonitorInfo.html#ab3fe8bfc126c8ab275f7b88ba5cb13e0">is_dir</a> ? <a class="code hl_define" href="monitor_8c.html#a01b201be00156c44e634f4479e29a8f5">INOTIFY_MASK_DIR</a> : <a class="code hl_define" href="monitor_8c.html#ac8f0dc7ad942fe1ee3986cf0d43cb8c7">INOTIFY_MASK_FILE</a>;</div>
+<div class="line"><span class="lineno">  498</span>  <span class="keywordflow">if</span> (((<a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a> == -1) &amp;&amp; (<a class="code hl_function" href="monitor_8c.html#a87d7892546c97dcd2198c8f521dca4f0">monitor_init</a>() == -1)) ||</div>
+<div class="line"><span class="lineno">  499</span>      ((desc = inotify_add_watch(<a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a>, info.<a class="code hl_variable" href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">path</a>, mask)) == -1))</div>
+<div class="line"><span class="lineno">  500</span>  {</div>
+<div class="line"><span class="lineno">  501</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;inotify_add_watch failed for &#39;%s&#39;, errno=%d %s\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  502</span>               info.<a class="code hl_variable" href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">path</a>, errno, strerror(errno));</div>
+<div class="line"><span class="lineno">  503</span>    rc = -1;</div>
+<div class="line"><span class="lineno">  504</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  505</span>  }</div>
+<div class="line"><span class="lineno">  506</span> </div>
+<div class="line"><span class="lineno">  507</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;inotify_add_watch descriptor=%d for &#39;%s&#39;\n&quot;</span>, desc, info.<a class="code hl_variable" href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">path</a>);</div>
+<div class="line"><span class="lineno">  508</span>  <span class="keywordflow">if</span> (!m)</div>
+<div class="line"><span class="lineno">  509</span>    <a class="code hl_variable" href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a> = desc;</div>
+<div class="line"><span class="lineno">  510</span> </div>
+<div class="line"><span class="lineno">  511</span>  <a class="code hl_function" href="monitor_8c.html#a4595138cb164a4358979f09ff3ef3546">monitor_new</a>(&amp;info, desc);</div>
+<div class="line"><span class="lineno">  512</span> </div>
+<div class="line"><span class="lineno">  513</span>cleanup:</div>
+<div class="line"><span class="lineno">  514</span>  <a class="code hl_function" href="monitor_8c.html#ae79b08e701ac15a92323a771b8d1066f">monitor_info_free</a>(&amp;info);</div>
+<div class="line"><span class="lineno">  515</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  516</span>}</div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00089">logging2.h:89</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a></div><div class="ttdeci">@ LL_DEBUG3</div><div class="ttdoc">Log at debug level 3.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a></div><div class="ttdeci">@ LL_DEBUG2</div><div class="ttdoc">Log at debug level 2.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00044">logging2.h:44</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a01b201be00156c44e634f4479e29a8f5"><div class="ttname"><a href="monitor_8c.html#a01b201be00156c44e634f4479e29a8f5">INOTIFY_MASK_DIR</a></div><div class="ttdeci">#define INOTIFY_MASK_DIR</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00066">monitor.c:66</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a31200638634da3b6d39dcacd1726f421"><div class="ttname"><a href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a></div><div class="ttdeci">static int INotifyFd</div><div class="ttdoc">Inotify file descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00054">monitor.c:54</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a3d92d456e847a2832759030e5da2fefc"><div class="ttname"><a href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a></div><div class="ttdeci">static int MonitorCurMboxDescriptor</div><div class="ttdoc">Monitor file descriptor of the current mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00064">monitor.c:64</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a3db43a0a973394f0fedebe382ea430e8"><div class="ttname"><a href="monitor_8c.html#a3db43a0a973394f0fedebe382ea430e8">monitor_resolve</a></div><div class="ttdeci">static enum ResolveResult monitor_resolve(struct MonitorInfo *info, struct Mailbox *m)</div><div class="ttdoc">Get the monitor for a mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00328">monitor.c:328</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a4595138cb164a4358979f09ff3ef3546"><div class="ttname"><a href="monitor_8c.html#a4595138cb164a4358979f09ff3ef3546">monitor_new</a></div><div class="ttdeci">static struct Monitor * monitor_new(struct MonitorInfo *info, int descriptor)</div><div class="ttdoc">Create a new file monitor.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00213">monitor.c:213</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a687aed9f23f0f38376d8b7dd57372580"><div class="ttname"><a href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580">ResolveResult</a></div><div class="ttdeci">ResolveResult</div><div class="ttdoc">Results for the Monitor functions.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00074">monitor.c:75</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a687aed9f23f0f38376d8b7dd57372580a96eae9f5d2a0f8f1e4a9a5263a0d9b86"><div class="ttname"><a href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580a96eae9f5d2a0f8f1e4a9a5263a0d9b86">RESOLVE_RES_OK_NOTEXISTING</a></div><div class="ttdeci">@ RESOLVE_RES_OK_NOTEXISTING</div><div class="ttdoc">File exists, no monitor is attached.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00079">monitor.c:79</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16"><div class="ttname"><a href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a></div><div class="ttdeci">@ RESOLVE_RES_OK_EXISTING</div><div class="ttdoc">File exists, monitor is already attached.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00080">monitor.c:80</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a87d7892546c97dcd2198c8f521dca4f0"><div class="ttname"><a href="monitor_8c.html#a87d7892546c97dcd2198c8f521dca4f0">monitor_init</a></div><div class="ttdeci">static int monitor_init(void)</div><div class="ttdoc">Set up file monitoring.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00164">monitor.c:164</a></div></div>
-<div class="ttc" id="amonitor_8c_html_ac8f0dc7ad942fe1ee3986cf0d43cb8c7"><div class="ttname"><a href="monitor_8c.html#ac8f0dc7ad942fe1ee3986cf0d43cb8c7">INOTIFY_MASK_FILE</a></div><div class="ttdeci">#define INOTIFY_MASK_FILE</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00067">monitor.c:67</a></div></div>
-<div class="ttc" id="amonitor_8c_html_ae79b08e701ac15a92323a771b8d1066f"><div class="ttname"><a href="monitor_8c.html#ae79b08e701ac15a92323a771b8d1066f">monitor_info_free</a></div><div class="ttdeci">static void monitor_info_free(struct MonitorInfo *info)</div><div class="ttdoc">Shutdown a file monitor.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00233">monitor.c:233</a></div></div>
-<div class="ttc" id="astructMonitorInfo_html"><div class="ttname"><a href="structMonitorInfo.html">MonitorInfo</a></div><div class="ttdoc">Information about a monitored file.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00099">monitor.c:100</a></div></div>
-<div class="ttc" id="astructMonitorInfo_html_aaad9b451ab8c62fc5a0e8ee947ed5477"><div class="ttname"><a href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">MonitorInfo::monitor</a></div><div class="ttdeci">struct Monitor * monitor</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00106">monitor.c:106</a></div></div>
-<div class="ttc" id="astructMonitorInfo_html_ab3fe8bfc126c8ab275f7b88ba5cb13e0"><div class="ttname"><a href="structMonitorInfo.html#ab3fe8bfc126c8ab275f7b88ba5cb13e0">MonitorInfo::is_dir</a></div><div class="ttdeci">bool is_dir</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00102">monitor.c:102</a></div></div>
-<div class="ttc" id="astructMonitorInfo_html_afd6dd11497df4111c4eaa21ac75113ab"><div class="ttname"><a href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">MonitorInfo::path</a></div><div class="ttdeci">const char * path</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00103">monitor.c:103</a></div></div>
-<div class="ttc" id="astructMonitor_html_a5dd04ce30d4f595518db86dffe0645bf"><div class="ttname"><a href="structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf">Monitor::desc</a></div><div class="ttdeci">int desc</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00093">monitor.c:93</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a01b201be00156c44e634f4479e29a8f5"><div class="ttname"><a href="monitor_8c.html#a01b201be00156c44e634f4479e29a8f5">INOTIFY_MASK_DIR</a></div><div class="ttdeci">#define INOTIFY_MASK_DIR</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00069">monitor.c:69</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a31200638634da3b6d39dcacd1726f421"><div class="ttname"><a href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a></div><div class="ttdeci">static int INotifyFd</div><div class="ttdoc">Inotify file descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00057">monitor.c:57</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a3d92d456e847a2832759030e5da2fefc"><div class="ttname"><a href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a></div><div class="ttdeci">static int MonitorCurMboxDescriptor</div><div class="ttdoc">Monitor file descriptor of the current mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00067">monitor.c:67</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a3db43a0a973394f0fedebe382ea430e8"><div class="ttname"><a href="monitor_8c.html#a3db43a0a973394f0fedebe382ea430e8">monitor_resolve</a></div><div class="ttdeci">static enum ResolveResult monitor_resolve(struct MonitorInfo *info, struct Mailbox *m)</div><div class="ttdoc">Get the monitor for a mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00331">monitor.c:331</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a4595138cb164a4358979f09ff3ef3546"><div class="ttname"><a href="monitor_8c.html#a4595138cb164a4358979f09ff3ef3546">monitor_new</a></div><div class="ttdeci">static struct Monitor * monitor_new(struct MonitorInfo *info, int descriptor)</div><div class="ttdoc">Create a new file monitor.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00216">monitor.c:216</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a687aed9f23f0f38376d8b7dd57372580"><div class="ttname"><a href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580">ResolveResult</a></div><div class="ttdeci">ResolveResult</div><div class="ttdoc">Results for the Monitor functions.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00077">monitor.c:78</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a687aed9f23f0f38376d8b7dd57372580a96eae9f5d2a0f8f1e4a9a5263a0d9b86"><div class="ttname"><a href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580a96eae9f5d2a0f8f1e4a9a5263a0d9b86">RESOLVE_RES_OK_NOTEXISTING</a></div><div class="ttdeci">@ RESOLVE_RES_OK_NOTEXISTING</div><div class="ttdoc">File exists, no monitor is attached.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00082">monitor.c:82</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16"><div class="ttname"><a href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a></div><div class="ttdeci">@ RESOLVE_RES_OK_EXISTING</div><div class="ttdoc">File exists, monitor is already attached.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00083">monitor.c:83</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a87d7892546c97dcd2198c8f521dca4f0"><div class="ttname"><a href="monitor_8c.html#a87d7892546c97dcd2198c8f521dca4f0">monitor_init</a></div><div class="ttdeci">static int monitor_init(void)</div><div class="ttdoc">Set up file monitoring.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00167">monitor.c:167</a></div></div>
+<div class="ttc" id="amonitor_8c_html_ac8f0dc7ad942fe1ee3986cf0d43cb8c7"><div class="ttname"><a href="monitor_8c.html#ac8f0dc7ad942fe1ee3986cf0d43cb8c7">INOTIFY_MASK_FILE</a></div><div class="ttdeci">#define INOTIFY_MASK_FILE</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00070">monitor.c:70</a></div></div>
+<div class="ttc" id="amonitor_8c_html_ae79b08e701ac15a92323a771b8d1066f"><div class="ttname"><a href="monitor_8c.html#ae79b08e701ac15a92323a771b8d1066f">monitor_info_free</a></div><div class="ttdeci">static void monitor_info_free(struct MonitorInfo *info)</div><div class="ttdoc">Shutdown a file monitor.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00236">monitor.c:236</a></div></div>
+<div class="ttc" id="astructMonitorInfo_html"><div class="ttname"><a href="structMonitorInfo.html">MonitorInfo</a></div><div class="ttdoc">Information about a monitored file.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00102">monitor.c:103</a></div></div>
+<div class="ttc" id="astructMonitorInfo_html_aaad9b451ab8c62fc5a0e8ee947ed5477"><div class="ttname"><a href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">MonitorInfo::monitor</a></div><div class="ttdeci">struct Monitor * monitor</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00109">monitor.c:109</a></div></div>
+<div class="ttc" id="astructMonitorInfo_html_ab3fe8bfc126c8ab275f7b88ba5cb13e0"><div class="ttname"><a href="structMonitorInfo.html#ab3fe8bfc126c8ab275f7b88ba5cb13e0">MonitorInfo::is_dir</a></div><div class="ttdeci">bool is_dir</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00105">monitor.c:105</a></div></div>
+<div class="ttc" id="astructMonitorInfo_html_afd6dd11497df4111c4eaa21ac75113ab"><div class="ttname"><a href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">MonitorInfo::path</a></div><div class="ttdeci">const char * path</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00106">monitor.c:106</a></div></div>
+<div class="ttc" id="astructMonitor_html_a5dd04ce30d4f595518db86dffe0645bf"><div class="ttname"><a href="structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf">Monitor::desc</a></div><div class="ttdeci">int desc</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00096">monitor.c:96</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -296,67 +297,67 @@ Variables</h2></td></tr>
 </dl>
 <p>If m is NULL, try to get the current mailbox from the Index. </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00524">524</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  525</span>{</div>
-<div class="line"><span class="lineno">  526</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMonitorInfo.html">MonitorInfo</a> info = { 0 };</div>
-<div class="line"><span class="lineno">  527</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMonitorInfo.html">MonitorInfo</a> info2 = { 0 };</div>
-<div class="line"><span class="lineno">  528</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno">  529</span> </div>
-<div class="line"><span class="lineno">  530</span>  <span class="keywordflow">if</span> (!m)</div>
-<div class="line"><span class="lineno">  531</span>  {</div>
-<div class="line"><span class="lineno">  532</span>    <a class="code hl_variable" href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a> = -1;</div>
-<div class="line"><span class="lineno">  533</span>    <a class="code hl_variable" href="monitor_8c.html#aa9e22d715c7468a084e0f73b04d0e38c">MonitorCurMboxChanged</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  534</span>  }</div>
-<div class="line"><span class="lineno">  535</span> </div>
-<div class="line"><span class="lineno">  536</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="monitor_8c.html#a3db43a0a973394f0fedebe382ea430e8">monitor_resolve</a>(&amp;info, m) != <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a>)</div>
-<div class="line"><span class="lineno">  537</span>  {</div>
-<div class="line"><span class="lineno">  538</span>    rc = 2;</div>
-<div class="line"><span class="lineno">  539</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  540</span>  }</div>
-<div class="line"><span class="lineno">  541</span> </div>
-<div class="line"><span class="lineno">  542</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_cur = <a class="code hl_function" href="index_8c.html#a798c826c6ad972b975c8c51070008f99">get_current_mailbox</a>();</div>
-<div class="line"><span class="lineno">  543</span>  <span class="keywordflow">if</span> (m_cur)</div>
-<div class="line"><span class="lineno">  544</span>  {</div>
-<div class="line"><span class="lineno">  545</span>    <span class="keywordflow">if</span> (m)</div>
-<div class="line"><span class="lineno">  546</span>    {</div>
-<div class="line"><span class="lineno">  547</span>      <span class="keywordflow">if</span> ((<a class="code hl_function" href="monitor_8c.html#a3db43a0a973394f0fedebe382ea430e8">monitor_resolve</a>(&amp;info2, NULL) == <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a>) &amp;&amp;</div>
-<div class="line"><span class="lineno">  548</span>          (info.<a class="code hl_variable" href="structMonitorInfo.html#ae9aac81f1d509d84fc23b3b8ce299023">st_ino</a> == info2.<a class="code hl_variable" href="structMonitorInfo.html#ae9aac81f1d509d84fc23b3b8ce299023">st_ino</a>) &amp;&amp; (info.<a class="code hl_variable" href="structMonitorInfo.html#a01ed854597916f96b4395d1da320bf91">st_dev</a> == info2.<a class="code hl_variable" href="structMonitorInfo.html#a01ed854597916f96b4395d1da320bf91">st_dev</a>))</div>
-<div class="line"><span class="lineno">  549</span>      {</div>
-<div class="line"><span class="lineno">  550</span>        rc = 1;</div>
-<div class="line"><span class="lineno">  551</span>        <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  552</span>      }</div>
-<div class="line"><span class="lineno">  553</span>    }</div>
-<div class="line"><span class="lineno">  554</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  555</span>    {</div>
-<div class="line"><span class="lineno">  556</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570">mailbox_find</a>(m_cur-&gt;<a class="code hl_variable" href="structMailbox.html#a1f36c27b2c78a6c7c216e3aca9f0c89f">realpath</a>))</div>
-<div class="line"><span class="lineno">  557</span>      {</div>
-<div class="line"><span class="lineno">  558</span>        rc = 1;</div>
-<div class="line"><span class="lineno">  559</span>        <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  560</span>      }</div>
-<div class="line"><span class="lineno">  561</span>    }</div>
-<div class="line"><span class="lineno">  562</span>  }</div>
-<div class="line"><span class="lineno">  563</span> </div>
-<div class="line"><span class="lineno">  564</span>  inotify_rm_watch(info.<a class="code hl_variable" href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">monitor</a>-&gt;<a class="code hl_variable" href="structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf">desc</a>, <a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a>);</div>
-<div class="line"><span class="lineno">  565</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;inotify_rm_watch for &#39;%s&#39; descriptor=%d\n&quot;</span>, info.<a class="code hl_variable" href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">path</a>,</div>
-<div class="line"><span class="lineno">  566</span>             info.<a class="code hl_variable" href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">monitor</a>-&gt;<a class="code hl_variable" href="structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf">desc</a>);</div>
-<div class="line"><span class="lineno">  567</span> </div>
-<div class="line"><span class="lineno">  568</span>  <a class="code hl_function" href="monitor_8c.html#a1b22f514ea11e70fb20d8f2c9498902e">monitor_delete</a>(info.<a class="code hl_variable" href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">monitor</a>);</div>
-<div class="line"><span class="lineno">  569</span>  <a class="code hl_function" href="monitor_8c.html#abec4c7734b9983d9382aedf00e5bdf6e">monitor_check_cleanup</a>();</div>
+<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00527">527</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  528</span>{</div>
+<div class="line"><span class="lineno">  529</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMonitorInfo.html">MonitorInfo</a> info = { 0 };</div>
+<div class="line"><span class="lineno">  530</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMonitorInfo.html">MonitorInfo</a> info2 = { 0 };</div>
+<div class="line"><span class="lineno">  531</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno">  532</span> </div>
+<div class="line"><span class="lineno">  533</span>  <span class="keywordflow">if</span> (!m)</div>
+<div class="line"><span class="lineno">  534</span>  {</div>
+<div class="line"><span class="lineno">  535</span>    <a class="code hl_variable" href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a> = -1;</div>
+<div class="line"><span class="lineno">  536</span>    <a class="code hl_variable" href="monitor_8c.html#aa9e22d715c7468a084e0f73b04d0e38c">MonitorCurMboxChanged</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  537</span>  }</div>
+<div class="line"><span class="lineno">  538</span> </div>
+<div class="line"><span class="lineno">  539</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="monitor_8c.html#a3db43a0a973394f0fedebe382ea430e8">monitor_resolve</a>(&amp;info, m) != <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a>)</div>
+<div class="line"><span class="lineno">  540</span>  {</div>
+<div class="line"><span class="lineno">  541</span>    rc = 2;</div>
+<div class="line"><span class="lineno">  542</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  543</span>  }</div>
+<div class="line"><span class="lineno">  544</span> </div>
+<div class="line"><span class="lineno">  545</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_cur = <a class="code hl_function" href="index_8c.html#a798c826c6ad972b975c8c51070008f99">get_current_mailbox</a>();</div>
+<div class="line"><span class="lineno">  546</span>  <span class="keywordflow">if</span> (m_cur)</div>
+<div class="line"><span class="lineno">  547</span>  {</div>
+<div class="line"><span class="lineno">  548</span>    <span class="keywordflow">if</span> (m)</div>
+<div class="line"><span class="lineno">  549</span>    {</div>
+<div class="line"><span class="lineno">  550</span>      <span class="keywordflow">if</span> ((<a class="code hl_function" href="monitor_8c.html#a3db43a0a973394f0fedebe382ea430e8">monitor_resolve</a>(&amp;info2, NULL) == <a class="code hl_enumvalue" href="monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580aedaed8b090865c900d27297e6437dd16">RESOLVE_RES_OK_EXISTING</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno">  551</span>          (info.<a class="code hl_variable" href="structMonitorInfo.html#ae9aac81f1d509d84fc23b3b8ce299023">st_ino</a> == info2.<a class="code hl_variable" href="structMonitorInfo.html#ae9aac81f1d509d84fc23b3b8ce299023">st_ino</a>) &amp;&amp; (info.<a class="code hl_variable" href="structMonitorInfo.html#a01ed854597916f96b4395d1da320bf91">st_dev</a> == info2.<a class="code hl_variable" href="structMonitorInfo.html#a01ed854597916f96b4395d1da320bf91">st_dev</a>))</div>
+<div class="line"><span class="lineno">  552</span>      {</div>
+<div class="line"><span class="lineno">  553</span>        rc = 1;</div>
+<div class="line"><span class="lineno">  554</span>        <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  555</span>      }</div>
+<div class="line"><span class="lineno">  556</span>    }</div>
+<div class="line"><span class="lineno">  557</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  558</span>    {</div>
+<div class="line"><span class="lineno">  559</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570">mailbox_find</a>(m_cur-&gt;<a class="code hl_variable" href="structMailbox.html#a1f36c27b2c78a6c7c216e3aca9f0c89f">realpath</a>))</div>
+<div class="line"><span class="lineno">  560</span>      {</div>
+<div class="line"><span class="lineno">  561</span>        rc = 1;</div>
+<div class="line"><span class="lineno">  562</span>        <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  563</span>      }</div>
+<div class="line"><span class="lineno">  564</span>    }</div>
+<div class="line"><span class="lineno">  565</span>  }</div>
+<div class="line"><span class="lineno">  566</span> </div>
+<div class="line"><span class="lineno">  567</span>  inotify_rm_watch(info.<a class="code hl_variable" href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">monitor</a>-&gt;<a class="code hl_variable" href="structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf">desc</a>, <a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a>);</div>
+<div class="line"><span class="lineno">  568</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;inotify_rm_watch for &#39;%s&#39; descriptor=%d\n&quot;</span>, info.<a class="code hl_variable" href="structMonitorInfo.html#afd6dd11497df4111c4eaa21ac75113ab">path</a>,</div>
+<div class="line"><span class="lineno">  569</span>             info.<a class="code hl_variable" href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">monitor</a>-&gt;<a class="code hl_variable" href="structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf">desc</a>);</div>
 <div class="line"><span class="lineno">  570</span> </div>
-<div class="line"><span class="lineno">  571</span>cleanup:</div>
-<div class="line"><span class="lineno">  572</span>  <a class="code hl_function" href="monitor_8c.html#ae79b08e701ac15a92323a771b8d1066f">monitor_info_free</a>(&amp;info);</div>
-<div class="line"><span class="lineno">  573</span>  <a class="code hl_function" href="monitor_8c.html#ae79b08e701ac15a92323a771b8d1066f">monitor_info_free</a>(&amp;info2);</div>
-<div class="line"><span class="lineno">  574</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  575</span>}</div>
+<div class="line"><span class="lineno">  571</span>  <a class="code hl_function" href="monitor_8c.html#a1b22f514ea11e70fb20d8f2c9498902e">monitor_delete</a>(info.<a class="code hl_variable" href="structMonitorInfo.html#aaad9b451ab8c62fc5a0e8ee947ed5477">monitor</a>);</div>
+<div class="line"><span class="lineno">  572</span>  <a class="code hl_function" href="monitor_8c.html#abec4c7734b9983d9382aedf00e5bdf6e">monitor_check_cleanup</a>();</div>
+<div class="line"><span class="lineno">  573</span> </div>
+<div class="line"><span class="lineno">  574</span>cleanup:</div>
+<div class="line"><span class="lineno">  575</span>  <a class="code hl_function" href="monitor_8c.html#ae79b08e701ac15a92323a771b8d1066f">monitor_info_free</a>(&amp;info);</div>
+<div class="line"><span class="lineno">  576</span>  <a class="code hl_function" href="monitor_8c.html#ae79b08e701ac15a92323a771b8d1066f">monitor_info_free</a>(&amp;info2);</div>
+<div class="line"><span class="lineno">  577</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  578</span>}</div>
 <div class="ttc" id="acore_2mailbox_8c_html_afa6e5cc34622044961308aa23da3b570"><div class="ttname"><a href="core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570">mailbox_find</a></div><div class="ttdeci">struct Mailbox * mailbox_find(const char *path)</div><div class="ttdoc">Find the mailbox with a given path.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8c_source.html#l00143">mailbox.c:143</a></div></div>
-<div class="ttc" id="aindex_8c_html_a798c826c6ad972b975c8c51070008f99"><div class="ttname"><a href="index_8c.html#a798c826c6ad972b975c8c51070008f99">get_current_mailbox</a></div><div class="ttdeci">struct Mailbox * get_current_mailbox(void)</div><div class="ttdoc">Get the current Mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="index_8c_source.html#l00713">index.c:713</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a1b22f514ea11e70fb20d8f2c9498902e"><div class="ttname"><a href="monitor_8c.html#a1b22f514ea11e70fb20d8f2c9498902e">monitor_delete</a></div><div class="ttdeci">static void monitor_delete(struct Monitor *monitor)</div><div class="ttdoc">Free a file monitor.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00242">monitor.c:242</a></div></div>
-<div class="ttc" id="amonitor_8c_html_aa9e22d715c7468a084e0f73b04d0e38c"><div class="ttname"><a href="monitor_8c.html#aa9e22d715c7468a084e0f73b04d0e38c">MonitorCurMboxChanged</a></div><div class="ttdeci">bool MonitorCurMboxChanged</div><div class="ttdoc">Set to true when the current mailbox has changed.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00051">monitor.c:51</a></div></div>
-<div class="ttc" id="amonitor_8c_html_abec4c7734b9983d9382aedf00e5bdf6e"><div class="ttname"><a href="monitor_8c.html#abec4c7734b9983d9382aedf00e5bdf6e">monitor_check_cleanup</a></div><div class="ttdeci">static void monitor_check_cleanup(void)</div><div class="ttdoc">Close down file monitoring.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00196">monitor.c:196</a></div></div>
+<div class="ttc" id="aindex_8c_html_a798c826c6ad972b975c8c51070008f99"><div class="ttname"><a href="index_8c.html#a798c826c6ad972b975c8c51070008f99">get_current_mailbox</a></div><div class="ttdeci">struct Mailbox * get_current_mailbox(void)</div><div class="ttdoc">Get the current Mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="index_8c_source.html#l00715">index.c:715</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a1b22f514ea11e70fb20d8f2c9498902e"><div class="ttname"><a href="monitor_8c.html#a1b22f514ea11e70fb20d8f2c9498902e">monitor_delete</a></div><div class="ttdeci">static void monitor_delete(struct Monitor *monitor)</div><div class="ttdoc">Free a file monitor.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00245">monitor.c:245</a></div></div>
+<div class="ttc" id="amonitor_8c_html_aa9e22d715c7468a084e0f73b04d0e38c"><div class="ttname"><a href="monitor_8c.html#aa9e22d715c7468a084e0f73b04d0e38c">MonitorCurMboxChanged</a></div><div class="ttdeci">bool MonitorCurMboxChanged</div><div class="ttdoc">Set to true when the current mailbox has changed.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00054">monitor.c:54</a></div></div>
+<div class="ttc" id="amonitor_8c_html_abec4c7734b9983d9382aedf00e5bdf6e"><div class="ttname"><a href="monitor_8c.html#abec4c7734b9983d9382aedf00e5bdf6e">monitor_check_cleanup</a></div><div class="ttdeci">static void monitor_check_cleanup(void)</div><div class="ttdoc">Close down file monitoring.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00199">monitor.c:199</a></div></div>
 <div class="ttc" id="astructMailbox_html"><div class="ttname"><a href="structMailbox.html">Mailbox</a></div><div class="ttdoc">A mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00078">mailbox.h:79</a></div></div>
 <div class="ttc" id="astructMailbox_html_a1f36c27b2c78a6c7c216e3aca9f0c89f"><div class="ttname"><a href="structMailbox.html#a1f36c27b2c78a6c7c216e3aca9f0c89f">Mailbox::realpath</a></div><div class="ttdeci">char * realpath</div><div class="ttdoc">Used for duplicate detection, context comparison, and the sidebar.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00081">mailbox.h:81</a></div></div>
-<div class="ttc" id="astructMonitorInfo_html_a01ed854597916f96b4395d1da320bf91"><div class="ttname"><a href="structMonitorInfo.html#a01ed854597916f96b4395d1da320bf91">MonitorInfo::st_dev</a></div><div class="ttdeci">dev_t st_dev</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00104">monitor.c:104</a></div></div>
-<div class="ttc" id="astructMonitorInfo_html_ae9aac81f1d509d84fc23b3b8ce299023"><div class="ttname"><a href="structMonitorInfo.html#ae9aac81f1d509d84fc23b3b8ce299023">MonitorInfo::st_ino</a></div><div class="ttdeci">ino_t st_ino</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00105">monitor.c:105</a></div></div>
+<div class="ttc" id="astructMonitorInfo_html_a01ed854597916f96b4395d1da320bf91"><div class="ttname"><a href="structMonitorInfo.html#a01ed854597916f96b4395d1da320bf91">MonitorInfo::st_dev</a></div><div class="ttdeci">dev_t st_dev</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00107">monitor.c:107</a></div></div>
+<div class="ttc" id="astructMonitorInfo_html_ae9aac81f1d509d84fc23b3b8ce299023"><div class="ttname"><a href="structMonitorInfo.html#ae9aac81f1d509d84fc23b3b8ce299023">MonitorInfo::st_ino</a></div><div class="ttdeci">ino_t st_ino</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00108">monitor.c:108</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -406,85 +407,85 @@ Variables</h2></td></tr>
 <p>MonitorFilesChanged also reflects changes to monitored files.</p>
 <p>Only STDIN and INotify file handles currently expected/supported. More would ask for common infrastructure (sockets?). </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00397">397</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  398</span>{</div>
-<div class="line"><span class="lineno">  399</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno">  400</span>  <span class="keywordtype">char</span> buf[<a class="code hl_define" href="monitor_8c.html#ae2d7a76eb11489d0a687c36a3af81a90">EVENT_BUFLEN</a>]</div>
-<div class="line"><span class="lineno">  401</span>      __attribute__((aligned(__alignof__(<span class="keyword">struct</span> inotify_event)))) = { 0 };</div>
-<div class="line"><span class="lineno">  402</span> </div>
-<div class="line"><span class="lineno">  403</span>  <a class="code hl_variable" href="monitor_8c.html#a6b418517d254a8e3dd1a92152c255f37">MonitorFilesChanged</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  404</span> </div>
-<div class="line"><span class="lineno">  405</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a> != -1)</div>
-<div class="line"><span class="lineno">  406</span>  {</div>
-<div class="line"><span class="lineno">  407</span>    <span class="keywordtype">int</span> fds = poll(<a class="code hl_variable" href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a>, <a class="code hl_variable" href="monitor_8c.html#a4eb5149c506907b76dd7b9112a21598e">PollFdsCount</a>, 1000); <span class="comment">// 1 Second</span></div>
-<div class="line"><span class="lineno">  408</span> </div>
-<div class="line"><span class="lineno">  409</span>    <span class="keywordflow">if</span> (fds == -1)</div>
-<div class="line"><span class="lineno">  410</span>    {</div>
-<div class="line"><span class="lineno">  411</span>      rc = -1;</div>
-<div class="line"><span class="lineno">  412</span>      <span class="keywordflow">if</span> (errno != EINTR)</div>
-<div class="line"><span class="lineno">  413</span>      {</div>
-<div class="line"><span class="lineno">  414</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;poll() failed, errno=%d %s\n&quot;</span>, errno, strerror(errno));</div>
-<div class="line"><span class="lineno">  415</span>      }</div>
-<div class="line"><span class="lineno">  416</span>    }</div>
-<div class="line"><span class="lineno">  417</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  418</span>    {</div>
-<div class="line"><span class="lineno">  419</span>      <span class="keywordtype">bool</span> input_ready = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  420</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; fds &amp;&amp; (i &lt; <a class="code hl_variable" href="monitor_8c.html#a4eb5149c506907b76dd7b9112a21598e">PollFdsCount</a>); i++)</div>
-<div class="line"><span class="lineno">  421</span>      {</div>
-<div class="line"><span class="lineno">  422</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a>[i].revents)</div>
-<div class="line"><span class="lineno">  423</span>        {</div>
-<div class="line"><span class="lineno">  424</span>          fds--;</div>
-<div class="line"><span class="lineno">  425</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a>[i].fd == 0)</div>
-<div class="line"><span class="lineno">  426</span>          {</div>
-<div class="line"><span class="lineno">  427</span>            input_ready = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  428</span>          }</div>
-<div class="line"><span class="lineno">  429</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a>[i].fd == <a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a>)</div>
-<div class="line"><span class="lineno">  430</span>          {</div>
-<div class="line"><span class="lineno">  431</span>            <a class="code hl_variable" href="monitor_8c.html#a6b418517d254a8e3dd1a92152c255f37">MonitorFilesChanged</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  432</span>            <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;file change(s) detected\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  433</span>            <span class="keywordtype">char</span> *ptr = buf;</div>
-<div class="line"><span class="lineno">  434</span>            <span class="keyword">const</span> <span class="keyword">struct </span>inotify_event *<span class="keyword">event</span> = NULL;</div>
-<div class="line"><span class="lineno">  435</span> </div>
-<div class="line"><span class="lineno">  436</span>            <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">  437</span>            {</div>
-<div class="line"><span class="lineno">  438</span>              <span class="keywordtype">int</span> len = read(<a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a>, buf, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  439</span>              <span class="keywordflow">if</span> (len == -1)</div>
-<div class="line"><span class="lineno">  440</span>              {</div>
-<div class="line"><span class="lineno">  441</span>                <span class="keywordflow">if</span> (errno != EAGAIN)</div>
-<div class="line"><span class="lineno">  442</span>                {</div>
-<div class="line"><span class="lineno">  443</span>                  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;read inotify events failed, errno=%d %s\n&quot;</span>,</div>
-<div class="line"><span class="lineno">  444</span>                             errno, strerror(errno));</div>
-<div class="line"><span class="lineno">  445</span>                }</div>
-<div class="line"><span class="lineno">  446</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  447</span>              }</div>
-<div class="line"><span class="lineno">  448</span> </div>
-<div class="line"><span class="lineno">  449</span>              <span class="keywordflow">while</span> (ptr &lt; (buf + len))</div>
-<div class="line"><span class="lineno">  450</span>              {</div>
-<div class="line"><span class="lineno">  451</span>                <span class="keyword">event</span> = (<span class="keyword">const</span> <span class="keyword">struct </span>inotify_event *) ptr;</div>
-<div class="line"><span class="lineno">  452</span>                <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;+ detail: descriptor=%d mask=0x%x\n&quot;</span>,</div>
-<div class="line"><span class="lineno">  453</span>                           event-&gt;wd, event-&gt;mask);</div>
-<div class="line"><span class="lineno">  454</span>                <span class="keywordflow">if</span> (event-&gt;mask &amp; IN_IGNORED)</div>
-<div class="line"><span class="lineno">  455</span>                  <a class="code hl_function" href="monitor_8c.html#a3982749625ed9ac96ede655d1aba3664">monitor_handle_ignore</a>(event-&gt;wd);</div>
-<div class="line"><span class="lineno">  456</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event-&gt;wd == <a class="code hl_variable" href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a>)</div>
-<div class="line"><span class="lineno">  457</span>                  <a class="code hl_variable" href="monitor_8c.html#aa9e22d715c7468a084e0f73b04d0e38c">MonitorCurMboxChanged</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  458</span>                ptr += <span class="keyword">sizeof</span>(<span class="keyword">struct </span>inotify_event) + event-&gt;len;</div>
-<div class="line"><span class="lineno">  459</span>              }</div>
-<div class="line"><span class="lineno">  460</span>            }</div>
-<div class="line"><span class="lineno">  461</span>          }</div>
-<div class="line"><span class="lineno">  462</span>        }</div>
-<div class="line"><span class="lineno">  463</span>      }</div>
-<div class="line"><span class="lineno">  464</span>      <span class="keywordflow">if</span> (!input_ready)</div>
-<div class="line"><span class="lineno">  465</span>        rc = <a class="code hl_variable" href="monitor_8c.html#a6b418517d254a8e3dd1a92152c255f37">MonitorFilesChanged</a> ? -2 : -3;</div>
-<div class="line"><span class="lineno">  466</span>    }</div>
-<div class="line"><span class="lineno">  467</span>  }</div>
-<div class="line"><span class="lineno">  468</span> </div>
-<div class="line"><span class="lineno">  469</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  470</span>}</div>
-<div class="ttc" id="amonitor_8c_html_a3982749625ed9ac96ede655d1aba3664"><div class="ttname"><a href="monitor_8c.html#a3982749625ed9ac96ede655d1aba3664">monitor_handle_ignore</a></div><div class="ttdeci">static int monitor_handle_ignore(int desc)</div><div class="ttdoc">Listen for when a backup file is closed.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00270">monitor.c:270</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a4eb5149c506907b76dd7b9112a21598e"><div class="ttname"><a href="monitor_8c.html#a4eb5149c506907b76dd7b9112a21598e">PollFdsCount</a></div><div class="ttdeci">static size_t PollFdsCount</div><div class="ttdoc">Number of used entries in the PollFds array.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00058">monitor.c:58</a></div></div>
-<div class="ttc" id="amonitor_8c_html_a6b418517d254a8e3dd1a92152c255f37"><div class="ttname"><a href="monitor_8c.html#a6b418517d254a8e3dd1a92152c255f37">MonitorFilesChanged</a></div><div class="ttdeci">bool MonitorFilesChanged</div><div class="ttdoc">Set to true when a monitored file has changed.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00049">monitor.c:49</a></div></div>
-<div class="ttc" id="amonitor_8c_html_ae2d7a76eb11489d0a687c36a3af81a90"><div class="ttname"><a href="monitor_8c.html#ae2d7a76eb11489d0a687c36a3af81a90">EVENT_BUFLEN</a></div><div class="ttdeci">#define EVENT_BUFLEN</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00069">monitor.c:69</a></div></div>
-<div class="ttc" id="amonitor_8c_html_af93fff8e74109748383a6942523f9404"><div class="ttname"><a href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a></div><div class="ttdeci">static struct pollfd * PollFds</div><div class="ttdoc">Array of monitored file descriptors.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00062">monitor.c:62</a></div></div>
+<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00400">400</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  401</span>{</div>
+<div class="line"><span class="lineno">  402</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno">  403</span>  <span class="keywordtype">char</span> buf[<a class="code hl_define" href="monitor_8c.html#ae2d7a76eb11489d0a687c36a3af81a90">EVENT_BUFLEN</a>]</div>
+<div class="line"><span class="lineno">  404</span>      __attribute__((aligned(__alignof__(<span class="keyword">struct</span> inotify_event)))) = { 0 };</div>
+<div class="line"><span class="lineno">  405</span> </div>
+<div class="line"><span class="lineno">  406</span>  <a class="code hl_variable" href="monitor_8c.html#a6b418517d254a8e3dd1a92152c255f37">MonitorFilesChanged</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  407</span> </div>
+<div class="line"><span class="lineno">  408</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a> != -1)</div>
+<div class="line"><span class="lineno">  409</span>  {</div>
+<div class="line"><span class="lineno">  410</span>    <span class="keywordtype">int</span> fds = poll(<a class="code hl_variable" href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a>, <a class="code hl_variable" href="monitor_8c.html#a4eb5149c506907b76dd7b9112a21598e">PollFdsCount</a>, 1000); <span class="comment">// 1 Second</span></div>
+<div class="line"><span class="lineno">  411</span> </div>
+<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">if</span> (fds == -1)</div>
+<div class="line"><span class="lineno">  413</span>    {</div>
+<div class="line"><span class="lineno">  414</span>      rc = -1;</div>
+<div class="line"><span class="lineno">  415</span>      <span class="keywordflow">if</span> (errno != EINTR)</div>
+<div class="line"><span class="lineno">  416</span>      {</div>
+<div class="line"><span class="lineno">  417</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;poll() failed, errno=%d %s\n&quot;</span>, errno, strerror(errno));</div>
+<div class="line"><span class="lineno">  418</span>      }</div>
+<div class="line"><span class="lineno">  419</span>    }</div>
+<div class="line"><span class="lineno">  420</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  421</span>    {</div>
+<div class="line"><span class="lineno">  422</span>      <span class="keywordtype">bool</span> input_ready = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  423</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; fds &amp;&amp; (i &lt; <a class="code hl_variable" href="monitor_8c.html#a4eb5149c506907b76dd7b9112a21598e">PollFdsCount</a>); i++)</div>
+<div class="line"><span class="lineno">  424</span>      {</div>
+<div class="line"><span class="lineno">  425</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a>[i].revents)</div>
+<div class="line"><span class="lineno">  426</span>        {</div>
+<div class="line"><span class="lineno">  427</span>          fds--;</div>
+<div class="line"><span class="lineno">  428</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a>[i].fd == 0)</div>
+<div class="line"><span class="lineno">  429</span>          {</div>
+<div class="line"><span class="lineno">  430</span>            input_ready = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  431</span>          }</div>
+<div class="line"><span class="lineno">  432</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a>[i].fd == <a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a>)</div>
+<div class="line"><span class="lineno">  433</span>          {</div>
+<div class="line"><span class="lineno">  434</span>            <a class="code hl_variable" href="monitor_8c.html#a6b418517d254a8e3dd1a92152c255f37">MonitorFilesChanged</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  435</span>            <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;file change(s) detected\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  436</span>            <span class="keywordtype">char</span> *ptr = buf;</div>
+<div class="line"><span class="lineno">  437</span>            <span class="keyword">const</span> <span class="keyword">struct </span>inotify_event *<span class="keyword">event</span> = NULL;</div>
+<div class="line"><span class="lineno">  438</span> </div>
+<div class="line"><span class="lineno">  439</span>            <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  440</span>            {</div>
+<div class="line"><span class="lineno">  441</span>              <span class="keywordtype">int</span> len = read(<a class="code hl_variable" href="monitor_8c.html#a31200638634da3b6d39dcacd1726f421">INotifyFd</a>, buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  442</span>              <span class="keywordflow">if</span> (len == -1)</div>
+<div class="line"><span class="lineno">  443</span>              {</div>
+<div class="line"><span class="lineno">  444</span>                <span class="keywordflow">if</span> (errno != EAGAIN)</div>
+<div class="line"><span class="lineno">  445</span>                {</div>
+<div class="line"><span class="lineno">  446</span>                  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;read inotify events failed, errno=%d %s\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  447</span>                             errno, strerror(errno));</div>
+<div class="line"><span class="lineno">  448</span>                }</div>
+<div class="line"><span class="lineno">  449</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  450</span>              }</div>
+<div class="line"><span class="lineno">  451</span> </div>
+<div class="line"><span class="lineno">  452</span>              <span class="keywordflow">while</span> (ptr &lt; (buf + len))</div>
+<div class="line"><span class="lineno">  453</span>              {</div>
+<div class="line"><span class="lineno">  454</span>                <span class="keyword">event</span> = (<span class="keyword">const</span> <span class="keyword">struct </span>inotify_event *) ptr;</div>
+<div class="line"><span class="lineno">  455</span>                <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;+ detail: descriptor=%d mask=0x%x\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  456</span>                           event-&gt;wd, event-&gt;mask);</div>
+<div class="line"><span class="lineno">  457</span>                <span class="keywordflow">if</span> (event-&gt;mask &amp; IN_IGNORED)</div>
+<div class="line"><span class="lineno">  458</span>                  <a class="code hl_function" href="monitor_8c.html#a3982749625ed9ac96ede655d1aba3664">monitor_handle_ignore</a>(event-&gt;wd);</div>
+<div class="line"><span class="lineno">  459</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event-&gt;wd == <a class="code hl_variable" href="monitor_8c.html#a3d92d456e847a2832759030e5da2fefc">MonitorCurMboxDescriptor</a>)</div>
+<div class="line"><span class="lineno">  460</span>                  <a class="code hl_variable" href="monitor_8c.html#aa9e22d715c7468a084e0f73b04d0e38c">MonitorCurMboxChanged</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  461</span>                ptr += <span class="keyword">sizeof</span>(<span class="keyword">struct </span>inotify_event) + event-&gt;len;</div>
+<div class="line"><span class="lineno">  462</span>              }</div>
+<div class="line"><span class="lineno">  463</span>            }</div>
+<div class="line"><span class="lineno">  464</span>          }</div>
+<div class="line"><span class="lineno">  465</span>        }</div>
+<div class="line"><span class="lineno">  466</span>      }</div>
+<div class="line"><span class="lineno">  467</span>      <span class="keywordflow">if</span> (!input_ready)</div>
+<div class="line"><span class="lineno">  468</span>        rc = <a class="code hl_variable" href="monitor_8c.html#a6b418517d254a8e3dd1a92152c255f37">MonitorFilesChanged</a> ? -2 : -3;</div>
+<div class="line"><span class="lineno">  469</span>    }</div>
+<div class="line"><span class="lineno">  470</span>  }</div>
+<div class="line"><span class="lineno">  471</span> </div>
+<div class="line"><span class="lineno">  472</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  473</span>}</div>
+<div class="ttc" id="amonitor_8c_html_a3982749625ed9ac96ede655d1aba3664"><div class="ttname"><a href="monitor_8c.html#a3982749625ed9ac96ede655d1aba3664">monitor_handle_ignore</a></div><div class="ttdeci">static int monitor_handle_ignore(int desc)</div><div class="ttdoc">Listen for when a backup file is closed.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00273">monitor.c:273</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a4eb5149c506907b76dd7b9112a21598e"><div class="ttname"><a href="monitor_8c.html#a4eb5149c506907b76dd7b9112a21598e">PollFdsCount</a></div><div class="ttdeci">static size_t PollFdsCount</div><div class="ttdoc">Number of used entries in the PollFds array.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00061">monitor.c:61</a></div></div>
+<div class="ttc" id="amonitor_8c_html_a6b418517d254a8e3dd1a92152c255f37"><div class="ttname"><a href="monitor_8c.html#a6b418517d254a8e3dd1a92152c255f37">MonitorFilesChanged</a></div><div class="ttdeci">bool MonitorFilesChanged</div><div class="ttdoc">Set to true when a monitored file has changed.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00052">monitor.c:52</a></div></div>
+<div class="ttc" id="amonitor_8c_html_ae2d7a76eb11489d0a687c36a3af81a90"><div class="ttname"><a href="monitor_8c.html#ae2d7a76eb11489d0a687c36a3af81a90">EVENT_BUFLEN</a></div><div class="ttdeci">#define EVENT_BUFLEN</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00072">monitor.c:72</a></div></div>
+<div class="ttc" id="amonitor_8c_html_af93fff8e74109748383a6942523f9404"><div class="ttname"><a href="monitor_8c.html#af93fff8e74109748383a6942523f9404">PollFds</a></div><div class="ttdeci">static struct pollfd * PollFds</div><div class="ttdoc">Array of monitored file descriptors.</div><div class="ttdef"><b>Definition:</b> <a href="monitor_8c_source.html#l00065">monitor.c:65</a></div></div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -528,7 +529,7 @@ Variables</h2></td></tr>
 <p>true after a monitored file has changed </p>
 <p>true after a monitored file has changed </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00049">49</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00052">52</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
 
 </div>
 </div>
@@ -555,7 +556,7 @@ Variables</h2></td></tr>
 <p>true after the current mailbox has changed </p>
 <p>true after the current mailbox has changed </p>
 
-<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00051">51</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monitor_8c_source.html#l00054">54</a> of file <a class="el" href="monitor_8c_source.html">monitor.c</a>.</p>
 
 </div>
 </div>

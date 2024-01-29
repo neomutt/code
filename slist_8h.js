@@ -1,13 +1,6 @@
 var slist_8h =
 [
     [ "Slist", "structSlist.html", "structSlist" ],
-    [ "SLIST_SEP_SPACE", "slist_8h.html#a15ed84274a221ae53e0adc4f19afb518", null ],
-    [ "SLIST_SEP_COMMA", "slist_8h.html#a56598a63201de1cf31bcb5e923cfa559", null ],
-    [ "SLIST_SEP_COLON", "slist_8h.html#a991d9009fbd5219e4a7f9e6bf734be5c", null ],
-    [ "SLIST_SEP_MASK", "slist_8h.html#ac26d16eba28e60fb4d235f1caa69179e", null ],
-    [ "SLIST_ALLOW_DUPES", "slist_8h.html#aeedf7a8a4003a7645ad3515fba3594b2", null ],
-    [ "SLIST_ALLOW_EMPTY", "slist_8h.html#acdd9f3bc93397381cb04e5c2ae936220", null ],
-    [ "SLIST_CASE_SENSITIVE", "slist_8h.html#a03c4f7ebc8a9671200c6666ec38ff79b", null ],
     [ "slist_add_string", "slist_8h.html#a799d6d86b73336ef2d7a41f0033dcd21", null ],
     [ "slist_dup", "slist_8h.html#a861dfa2571fdc7ff02605ca4df6a377a", null ],
     [ "slist_equal", "slist_8h.html#a785bf6a85847cc6a372b34f025070aeb", null ],

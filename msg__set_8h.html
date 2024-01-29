@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-35-g8e897d</span>
+   &#160;<span id="projectnumber">2023-12-21-72-gad8d0f</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -142,9 +142,10 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>IMAP <a class="el" href="structMessage.html" title="A local copy of an email.">Message</a> Sets. </p>
-<ul>
+<dl class="section author"><dt>Authors</dt><dd><ul>
 <li>Richard Russon</li>
 </ul>
+</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.</dd></dl>
 <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>. </p>
@@ -232,56 +233,56 @@ Functions</h2></td></tr>
 <li><code>1,2,3,4,6,8,9,10</code> becomes <code>1:4,6,8:10</code> </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="msg__set_8c_source.html#l00072">72</a> of file <a class="el" href="msg__set_8c_source.html">msg_set.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
-<div class="line"><span class="lineno">   74</span>  <span class="keywordflow">if</span> (!uida || !buf || !pos)</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> array_size = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(uida);</div>
-<div class="line"><span class="lineno">   78</span>  <span class="keywordflow">if</span> ((array_size == 0) || (*pos &gt;= array_size))</div>
-<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>  <span class="keywordtype">int</span> count = 1; <span class="comment">// Number of UIDs added to the set</span></div>
-<div class="line"><span class="lineno">   82</span>  <span class="keywordtype">size_t</span> i = *pos;</div>
-<div class="line"><span class="lineno">   83</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> start = *<a class="code hl_define" href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a>(uida, i);</div>
-<div class="line"><span class="lineno">   84</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> prev = start;</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">for</span> (i++; (i &lt; array_size) &amp;&amp; (<a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf) &lt; <a class="code hl_variable" href="msg__set_8c.html#a8657e23ffa303671f7eb550e5be918a8">ImapMaxCmdlen</a>); i++, count++)</div>
-<div class="line"><span class="lineno">   87</span>  {</div>
-<div class="line"><span class="lineno">   88</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uid = *<a class="code hl_define" href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a>(uida, i);</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>    <span class="comment">// Keep adding to current set</span></div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">if</span> (uid == (prev + 1))</div>
-<div class="line"><span class="lineno">   92</span>    {</div>
-<div class="line"><span class="lineno">   93</span>      prev = uid;</div>
-<div class="line"><span class="lineno">   94</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>    <span class="comment">// End the current set</span></div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">if</span> (start == prev)</div>
-<div class="line"><span class="lineno">   99</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%u,&quot;</span>, start);</div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  101</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%u:%u,&quot;</span>, start, prev);</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>    <span class="comment">// Start a new set</span></div>
-<div class="line"><span class="lineno">  104</span>    start = uid;</div>
-<div class="line"><span class="lineno">  105</span>    prev = uid;</div>
-<div class="line"><span class="lineno">  106</span>  }</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">if</span> (start == prev)</div>
-<div class="line"><span class="lineno">  109</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%u&quot;</span>, start);</div>
-<div class="line"><span class="lineno">  110</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  111</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%u:%u&quot;</span>, start, prev);</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>  *pos = i;</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  116</span>}</div>
-<div class="ttc" id="aarray_8h_html_a7f1bf469a48c0a2618c94b7b8281c5bf"><div class="ttname"><a href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a></div><div class="ttdeci">#define ARRAY_SIZE(head)</div><div class="ttdoc">The number of elements stored.</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00086">array.h:86</a></div></div>
-<div class="ttc" id="aarray_8h_html_aebd057bb37aec75b6bdbed9e76715803"><div class="ttname"><a href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a></div><div class="ttdeci">#define ARRAY_GET(head, idx)</div><div class="ttdoc">Return the element at index.</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00108">array.h:108</a></div></div>
-<div class="ttc" id="abuffer_8c_html_a0849b79217aad19e4bf9381d532d59d1"><div class="ttname"><a href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a></div><div class="ttdeci">int buf_add_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string appending a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00219">buffer.c:219</a></div></div>
-<div class="ttc" id="abuffer_8c_html_a2914dc2d9a9d77e4c9970b4249be9370"><div class="ttname"><a href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a></div><div class="ttdeci">size_t buf_len(const struct Buffer *buf)</div><div class="ttdoc">Calculate the length of a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00488">buffer.c:488</a></div></div>
-<div class="ttc" id="amsg__set_8c_html_a8657e23ffa303671f7eb550e5be918a8"><div class="ttname"><a href="msg__set_8c.html#a8657e23ffa303671f7eb550e5be918a8">ImapMaxCmdlen</a></div><div class="ttdeci">int ImapMaxCmdlen</div><div class="ttdoc">Maximum length of IMAP commands before they must be split.</div><div class="ttdef"><b>Definition:</b> <a href="msg__set_8c_source.html#l00049">msg_set.c:49</a></div></div>
+<p class="definition">Definition at line <a class="el" href="msg__set_8c_source.html#l00073">73</a> of file <a class="el" href="msg__set_8c_source.html">msg_set.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
+<div class="line"><span class="lineno">   75</span>  <span class="keywordflow">if</span> (!uida || !buf || !pos)</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> array_size = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(uida);</div>
+<div class="line"><span class="lineno">   79</span>  <span class="keywordflow">if</span> ((array_size == 0) || (*pos &gt;= array_size))</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>  <span class="keywordtype">int</span> count = 1; <span class="comment">// Number of UIDs added to the set</span></div>
+<div class="line"><span class="lineno">   83</span>  <span class="keywordtype">size_t</span> i = *pos;</div>
+<div class="line"><span class="lineno">   84</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> start = *<a class="code hl_define" href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a>(uida, i);</div>
+<div class="line"><span class="lineno">   85</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> prev = start;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>  <span class="keywordflow">for</span> (i++; (i &lt; array_size) &amp;&amp; (<a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf) &lt; <a class="code hl_variable" href="msg__set_8c.html#a8657e23ffa303671f7eb550e5be918a8">ImapMaxCmdlen</a>); i++, count++)</div>
+<div class="line"><span class="lineno">   88</span>  {</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uid = *<a class="code hl_define" href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a>(uida, i);</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <span class="comment">// Keep adding to current set</span></div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">if</span> (uid == (prev + 1))</div>
+<div class="line"><span class="lineno">   93</span>    {</div>
+<div class="line"><span class="lineno">   94</span>      prev = uid;</div>
+<div class="line"><span class="lineno">   95</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    <span class="comment">// End the current set</span></div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">if</span> (start == prev)</div>
+<div class="line"><span class="lineno">  100</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%u,&quot;</span>, start);</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  102</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%u:%u,&quot;</span>, start, prev);</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="comment">// Start a new set</span></div>
+<div class="line"><span class="lineno">  105</span>    start = uid;</div>
+<div class="line"><span class="lineno">  106</span>    prev = uid;</div>
+<div class="line"><span class="lineno">  107</span>  }</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">if</span> (start == prev)</div>
+<div class="line"><span class="lineno">  110</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%u&quot;</span>, start);</div>
+<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  112</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%u:%u&quot;</span>, start, prev);</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>  *pos = i;</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  117</span>}</div>
+<div class="ttc" id="aarray_8h_html_a7f1bf469a48c0a2618c94b7b8281c5bf"><div class="ttname"><a href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a></div><div class="ttdeci">#define ARRAY_SIZE(head)</div><div class="ttdoc">The number of elements stored.</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00087">array.h:87</a></div></div>
+<div class="ttc" id="aarray_8h_html_aebd057bb37aec75b6bdbed9e76715803"><div class="ttname"><a href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a></div><div class="ttdeci">#define ARRAY_GET(head, idx)</div><div class="ttdoc">Return the element at index.</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00109">array.h:109</a></div></div>
+<div class="ttc" id="abuffer_8c_html_a0849b79217aad19e4bf9381d532d59d1"><div class="ttname"><a href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a></div><div class="ttdeci">int buf_add_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string appending a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00221">buffer.c:221</a></div></div>
+<div class="ttc" id="abuffer_8c_html_a2914dc2d9a9d77e4c9970b4249be9370"><div class="ttname"><a href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a></div><div class="ttdeci">size_t buf_len(const struct Buffer *buf)</div><div class="ttdoc">Calculate the length of a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00490">buffer.c:490</a></div></div>
+<div class="ttc" id="amsg__set_8c_html_a8657e23ffa303671f7eb550e5be918a8"><div class="ttname"><a href="msg__set_8c.html#a8657e23ffa303671f7eb550e5be918a8">ImapMaxCmdlen</a></div><div class="ttdeci">int ImapMaxCmdlen</div><div class="ttdoc">Maximum length of IMAP commands before they must be split.</div><div class="ttdef"><b>Definition:</b> <a href="msg__set_8c_source.html#l00050">msg_set.c:50</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -359,46 +360,46 @@ Functions</h2></td></tr>
 <p>Commands are of the form: TAG PRE MESSAGE-SET POST e.g. <code>A01 UID COPY 1:4 MAILBOX</code></p>
 <dl class="section note"><dt>Note</dt><dd>Must be flushed with <a class="el" href="imap_2command_8c.html#adeef1f9ecc4cb80dbddee9264200d7bd" title="Execute a command and wait for the response from the server.">imap_exec()</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="msg__set_8c_source.html#l00132">132</a> of file <a class="el" href="msg__set_8c_source.html">msg_set.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>{</div>
-<div class="line"><span class="lineno">  135</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> cmd = <a class="code hl_function" href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a>(<a class="code hl_variable" href="msg__set_8c.html#a8657e23ffa303671f7eb550e5be918a8">ImapMaxCmdlen</a>);</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>  <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno">  138</span>  <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><span class="lineno">  139</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  142</span>  {</div>
-<div class="line"><span class="lineno">  143</span>    <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(&amp;cmd);</div>
-<div class="line"><span class="lineno">  144</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(&amp;cmd, <span class="stringliteral">&quot;%s &quot;</span>, pre);</div>
-<div class="line"><span class="lineno">  145</span>    rc = <a class="code hl_function" href="msg__set_8c.html#ac5d045a71a14cc5a7cc1ce24b7005174">imap_make_msg_set</a>(uida, &amp;cmd, &amp;pos);</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">if</span> (rc &gt; 0)</div>
-<div class="line"><span class="lineno">  147</span>    {</div>
-<div class="line"><span class="lineno">  148</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(&amp;cmd, <span class="stringliteral">&quot; %s&quot;</span>, post);</div>
-<div class="line"><span class="lineno">  149</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="imap_2command_8c.html#adeef1f9ecc4cb80dbddee9264200d7bd">imap_exec</a>(adata, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;cmd), <a class="code hl_define" href="imap_2private_8h.html#af5a1e8e10143cb70e9af987686df4108">IMAP_CMD_QUEUE</a>) != <a class="code hl_enumvalue" href="imap_2private_8h.html#a7d2237d34a8faf227e075b550e768a8ba5fa631101ee3d1ae330868c967e67a05">IMAP_EXEC_SUCCESS</a>)</div>
-<div class="line"><span class="lineno">  150</span>      {</div>
-<div class="line"><span class="lineno">  151</span>        rc = -1;</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno">  153</span>      }</div>
-<div class="line"><span class="lineno">  154</span>      count += rc;</div>
-<div class="line"><span class="lineno">  155</span>    }</div>
-<div class="line"><span class="lineno">  156</span>  } <span class="keywordflow">while</span> (rc &gt; 0);</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>  rc = count;</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>out:</div>
-<div class="line"><span class="lineno">  161</span>  <a class="code hl_function" href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a>(&amp;cmd);</div>
-<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  163</span>}</div>
-<div class="ttc" id="abuffer_8c_html_a3847c69d3b333d1674043d7f5b7b112f"><div class="ttname"><a href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a></div><div class="ttdeci">void buf_dealloc(struct Buffer *buf)</div><div class="ttdoc">Release the memory allocated by a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00392">buffer.c:392</a></div></div>
-<div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00091">buffer.c:91</a></div></div>
-<div class="ttc" id="abuffer_8c_html_a48c7f6bcdda4a269001bb371d522a4ce"><div class="ttname"><a href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a></div><div class="ttdeci">struct Buffer buf_make(size_t size)</div><div class="ttdoc">Make a new buffer on the stack.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00073">buffer.c:73</a></div></div>
-<div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00095">buffer.h:95</a></div></div>
-<div class="ttc" id="aimap_2command_8c_html_adeef1f9ecc4cb80dbddee9264200d7bd"><div class="ttname"><a href="imap_2command_8c.html#adeef1f9ecc4cb80dbddee9264200d7bd">imap_exec</a></div><div class="ttdeci">int imap_exec(struct ImapAccountData *adata, const char *cmdstr, ImapCmdFlags flags)</div><div class="ttdoc">Execute a command and wait for the response from the server.</div><div class="ttdef"><b>Definition:</b> <a href="imap_2command_8c_source.html#l01302">command.c:1302</a></div></div>
+<p class="definition">Definition at line <a class="el" href="msg__set_8c_source.html#l00133">133</a> of file <a class="el" href="msg__set_8c_source.html">msg_set.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>{</div>
+<div class="line"><span class="lineno">  136</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> cmd = <a class="code hl_function" href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a>(<a class="code hl_variable" href="msg__set_8c.html#a8657e23ffa303671f7eb550e5be918a8">ImapMaxCmdlen</a>);</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>  <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><span class="lineno">  140</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  143</span>  {</div>
+<div class="line"><span class="lineno">  144</span>    <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(&amp;cmd);</div>
+<div class="line"><span class="lineno">  145</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(&amp;cmd, <span class="stringliteral">&quot;%s &quot;</span>, pre);</div>
+<div class="line"><span class="lineno">  146</span>    rc = <a class="code hl_function" href="msg__set_8c.html#ac5d045a71a14cc5a7cc1ce24b7005174">imap_make_msg_set</a>(uida, &amp;cmd, &amp;pos);</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">if</span> (rc &gt; 0)</div>
+<div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(&amp;cmd, <span class="stringliteral">&quot; %s&quot;</span>, post);</div>
+<div class="line"><span class="lineno">  150</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="imap_2command_8c.html#adeef1f9ecc4cb80dbddee9264200d7bd">imap_exec</a>(adata, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;cmd), <a class="code hl_define" href="imap_2private_8h.html#af5a1e8e10143cb70e9af987686df4108">IMAP_CMD_QUEUE</a>) != <a class="code hl_enumvalue" href="imap_2private_8h.html#a7d2237d34a8faf227e075b550e768a8ba5fa631101ee3d1ae330868c967e67a05">IMAP_EXEC_SUCCESS</a>)</div>
+<div class="line"><span class="lineno">  151</span>      {</div>
+<div class="line"><span class="lineno">  152</span>        rc = -1;</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno">  154</span>      }</div>
+<div class="line"><span class="lineno">  155</span>      count += rc;</div>
+<div class="line"><span class="lineno">  156</span>    }</div>
+<div class="line"><span class="lineno">  157</span>  } <span class="keywordflow">while</span> (rc &gt; 0);</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>  rc = count;</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>out:</div>
+<div class="line"><span class="lineno">  162</span>  <a class="code hl_function" href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a>(&amp;cmd);</div>
+<div class="line"><span class="lineno">  163</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  164</span>}</div>
+<div class="ttc" id="abuffer_8c_html_a3847c69d3b333d1674043d7f5b7b112f"><div class="ttname"><a href="buffer_8c.html#a3847c69d3b333d1674043d7f5b7b112f">buf_dealloc</a></div><div class="ttdeci">void buf_dealloc(struct Buffer *buf)</div><div class="ttdoc">Release the memory allocated by a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00394">buffer.c:394</a></div></div>
+<div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00093">buffer.c:93</a></div></div>
+<div class="ttc" id="abuffer_8c_html_a48c7f6bcdda4a269001bb371d522a4ce"><div class="ttname"><a href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a></div><div class="ttdeci">struct Buffer buf_make(size_t size)</div><div class="ttdoc">Make a new buffer on the stack.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00075">buffer.c:75</a></div></div>
+<div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00097">buffer.h:97</a></div></div>
+<div class="ttc" id="aimap_2command_8c_html_adeef1f9ecc4cb80dbddee9264200d7bd"><div class="ttname"><a href="imap_2command_8c.html#adeef1f9ecc4cb80dbddee9264200d7bd">imap_exec</a></div><div class="ttdeci">int imap_exec(struct ImapAccountData *adata, const char *cmdstr, ImapCmdFlags flags)</div><div class="ttdoc">Execute a command and wait for the response from the server.</div><div class="ttdef"><b>Definition:</b> <a href="imap_2command_8c_source.html#l01307">command.c:1307</a></div></div>
 <div class="ttc" id="aimap_2private_8h_html_a7d2237d34a8faf227e075b550e768a8ba5fa631101ee3d1ae330868c967e67a05"><div class="ttname"><a href="imap_2private_8h.html#a7d2237d34a8faf227e075b550e768a8ba5fa631101ee3d1ae330868c967e67a05">IMAP_EXEC_SUCCESS</a></div><div class="ttdeci">@ IMAP_EXEC_SUCCESS</div><div class="ttdoc">Imap command executed or queued successfully.</div><div class="ttdef"><b>Definition:</b> <a href="imap_2private_8h_source.html#l00082">private.h:82</a></div></div>
 <div class="ttc" id="aimap_2private_8h_html_af5a1e8e10143cb70e9af987686df4108"><div class="ttname"><a href="imap_2private_8h.html#af5a1e8e10143cb70e9af987686df4108">IMAP_CMD_QUEUE</a></div><div class="ttdeci">#define IMAP_CMD_QUEUE</div><div class="ttdoc">Queue a command, do not execute.</div><div class="ttdef"><b>Definition:</b> <a href="imap_2private_8h_source.html#l00073">private.h:73</a></div></div>
-<div class="ttc" id="amsg__set_8c_html_ac5d045a71a14cc5a7cc1ce24b7005174"><div class="ttname"><a href="msg__set_8c.html#ac5d045a71a14cc5a7cc1ce24b7005174">imap_make_msg_set</a></div><div class="ttdeci">int imap_make_msg_set(struct UidArray *uida, struct Buffer *buf, int *pos)</div><div class="ttdoc">Generate a compressed message set of UIDs.</div><div class="ttdef"><b>Definition:</b> <a href="msg__set_8c_source.html#l00072">msg_set.c:72</a></div></div>
-<div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00033">buffer.h:34</a></div></div>
+<div class="ttc" id="amsg__set_8c_html_ac5d045a71a14cc5a7cc1ce24b7005174"><div class="ttname"><a href="msg__set_8c.html#ac5d045a71a14cc5a7cc1ce24b7005174">imap_make_msg_set</a></div><div class="ttdeci">int imap_make_msg_set(struct UidArray *uida, struct Buffer *buf, int *pos)</div><div class="ttdoc">Generate a compressed message set of UIDs.</div><div class="ttdef"><b>Definition:</b> <a href="msg__set_8c_source.html#l00073">msg_set.c:73</a></div></div>
+<div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">

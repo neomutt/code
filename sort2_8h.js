@@ -1,7 +1,5 @@
 var sort2_8h =
 [
-    [ "DT_SORT_LAST", "sort2_8h.html#ad8d542141d76d995c5ad875e10e59313", null ],
-    [ "DT_SORT_REVERSE", "sort2_8h.html#a981f18a6fc9b6d7da7dfc1131130cace", null ],
     [ "SORT_MASK", "sort2_8h.html#a971f7b510c659c9c197c6c3f50714eb5", null ],
     [ "SORT_REVERSE", "sort2_8h.html#aed7fbab2a014eaeff33b71040530c48d", null ],
     [ "SORT_LAST", "sort2_8h.html#aa210f3e5da89d4845a268b51d1df95f9", null ],

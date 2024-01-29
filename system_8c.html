@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-35-g8e897d</span>
+   &#160;<span id="projectnumber">2023-12-21-72-gad8d0f</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -136,6 +136,7 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Execute external programs. </p>
 <dl class="section author"><dt>Authors</dt><dd><ul>
 <li>Michael R. Elkins</li>
+<li>Richard Russon</li>
 </ul>
 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.</dd></dl>
@@ -177,65 +178,65 @@ Functions</h2></td></tr>
 <p>Fork and run an external command with arguments.</p>
 <dl class="section note"><dt>Note</dt><dd>This function won't return until the command finishes. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="system_8c_source.html#l00050">50</a> of file <a class="el" href="system_8c_source.html">system.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
-<div class="line"><span class="lineno">   52</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">   53</span>  <span class="keyword">struct </span>sigaction act = { 0 };</div>
-<div class="line"><span class="lineno">   54</span>  <span class="keyword">struct </span>sigaction oldtstp = { 0 };</div>
-<div class="line"><span class="lineno">   55</span>  <span class="keyword">struct </span>sigaction oldcont = { 0 };</div>
-<div class="line"><span class="lineno">   56</span>  pid_t pid;</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">if</span> (!cmd || (*cmd == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>  <span class="comment">/* must ignore SIGINT and SIGQUIT */</span></div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>  <a class="code hl_function" href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a>();</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>  act.sa_handler = SIG_DFL;</div>
-<div class="line"><span class="lineno">   66</span><span class="comment">/* we want to restart the waitpid() below */</span></div>
-<div class="line"><span class="lineno">   67</span><span class="preprocessor">#ifdef SA_RESTART</span></div>
-<div class="line"><span class="lineno">   68</span>  act.sa_flags = SA_RESTART;</div>
-<div class="line"><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   70</span>  sigemptyset(&amp;act.sa_mask);</div>
-<div class="line"><span class="lineno">   71</span>  sigaction(SIGTSTP, &amp;act, &amp;oldtstp);</div>
-<div class="line"><span class="lineno">   72</span>  sigaction(SIGCONT, &amp;act, &amp;oldcont);</div>
-<div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span>  pid = fork();</div>
-<div class="line"><span class="lineno">   75</span>  <span class="keywordflow">if</span> (pid == 0)</div>
-<div class="line"><span class="lineno">   76</span>  {</div>
-<div class="line"><span class="lineno">   77</span>    act.sa_flags = 0;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>    <span class="comment">/* reset signals for the child; not really needed, but... */</span></div>
-<div class="line"><span class="lineno">   80</span>    <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   81</span>    act.sa_handler = SIG_DFL;</div>
-<div class="line"><span class="lineno">   82</span>    act.sa_flags = 0;</div>
-<div class="line"><span class="lineno">   83</span>    sigemptyset(&amp;act.sa_mask);</div>
-<div class="line"><span class="lineno">   84</span>    sigaction(SIGTERM, &amp;act, NULL);</div>
-<div class="line"><span class="lineno">   85</span>    sigaction(SIGTSTP, &amp;act, NULL);</div>
-<div class="line"><span class="lineno">   86</span>    sigaction(SIGCONT, &amp;act, NULL);</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>    execle(<a class="code hl_define" href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a>, <span class="stringliteral">&quot;sh&quot;</span>, <span class="stringliteral">&quot;-c&quot;</span>, cmd, NULL, <a class="code hl_variable" href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a>);</div>
-<div class="line"><span class="lineno">   89</span>    _exit(127); <span class="comment">/* execl error */</span></div>
-<div class="line"><span class="lineno">   90</span>  }</div>
-<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pid != -1)</div>
-<div class="line"><span class="lineno">   92</span>  {</div>
-<div class="line"><span class="lineno">   93</span>    rc = <a class="code hl_function" href="imap_2lib_8h.html#a78151df1dc862cfee3b988719873aae2">imap_wait_keep_alive</a>(pid);</div>
-<div class="line"><span class="lineno">   94</span>  }</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>  sigaction(SIGCONT, &amp;oldcont, NULL);</div>
-<div class="line"><span class="lineno">   97</span>  sigaction(SIGTSTP, &amp;oldtstp, NULL);</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>  <span class="comment">/* reset SIGINT, SIGQUIT and SIGCHLD */</span></div>
-<div class="line"><span class="lineno">  100</span>  <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>  rc = (pid != -1) ? (WIFEXITED(rc) ? WEXITSTATUS(rc) : -1) : -1;</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  105</span>}</div>
-<div class="ttc" id="afilter_8h_html_aa80fd382830d66c094a29009aba96b6f"><div class="ttname"><a href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a></div><div class="ttdeci">#define EXEC_SHELL</div><div class="ttdef"><b>Definition:</b> <a href="filter_8h_source.html#l00027">filter.h:27</a></div></div>
+<p class="definition">Definition at line <a class="el" href="system_8c_source.html#l00051">51</a> of file <a class="el" href="system_8c_source.html">system.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keyword">struct </span>sigaction act = { 0 };</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keyword">struct </span>sigaction oldtstp = { 0 };</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keyword">struct </span>sigaction oldcont = { 0 };</div>
+<div class="line"><span class="lineno">   57</span>  pid_t pid;</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">if</span> (!cmd || (*cmd == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  <span class="comment">/* must ignore SIGINT and SIGQUIT */</span></div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>  <a class="code hl_function" href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a>();</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>  act.sa_handler = SIG_DFL;</div>
+<div class="line"><span class="lineno">   67</span><span class="comment">/* we want to restart the waitpid() below */</span></div>
+<div class="line"><span class="lineno">   68</span><span class="preprocessor">#ifdef SA_RESTART</span></div>
+<div class="line"><span class="lineno">   69</span>  act.sa_flags = SA_RESTART;</div>
+<div class="line"><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   71</span>  sigemptyset(&amp;act.sa_mask);</div>
+<div class="line"><span class="lineno">   72</span>  sigaction(SIGTSTP, &amp;act, &amp;oldtstp);</div>
+<div class="line"><span class="lineno">   73</span>  sigaction(SIGCONT, &amp;act, &amp;oldcont);</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>  pid = fork();</div>
+<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">if</span> (pid == 0)</div>
+<div class="line"><span class="lineno">   77</span>  {</div>
+<div class="line"><span class="lineno">   78</span>    act.sa_flags = 0;</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>    <span class="comment">/* reset signals for the child; not really needed, but... */</span></div>
+<div class="line"><span class="lineno">   81</span>    <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   82</span>    act.sa_handler = SIG_DFL;</div>
+<div class="line"><span class="lineno">   83</span>    act.sa_flags = 0;</div>
+<div class="line"><span class="lineno">   84</span>    sigemptyset(&amp;act.sa_mask);</div>
+<div class="line"><span class="lineno">   85</span>    sigaction(SIGTERM, &amp;act, NULL);</div>
+<div class="line"><span class="lineno">   86</span>    sigaction(SIGTSTP, &amp;act, NULL);</div>
+<div class="line"><span class="lineno">   87</span>    sigaction(SIGCONT, &amp;act, NULL);</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>    execle(<a class="code hl_define" href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a>, <span class="stringliteral">&quot;sh&quot;</span>, <span class="stringliteral">&quot;-c&quot;</span>, cmd, NULL, <a class="code hl_variable" href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a>);</div>
+<div class="line"><span class="lineno">   90</span>    _exit(127); <span class="comment">/* execl error */</span></div>
+<div class="line"><span class="lineno">   91</span>  }</div>
+<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pid != -1)</div>
+<div class="line"><span class="lineno">   93</span>  {</div>
+<div class="line"><span class="lineno">   94</span>    rc = <a class="code hl_function" href="imap_2lib_8h.html#a78151df1dc862cfee3b988719873aae2">imap_wait_keep_alive</a>(pid);</div>
+<div class="line"><span class="lineno">   95</span>  }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>  sigaction(SIGCONT, &amp;oldcont, NULL);</div>
+<div class="line"><span class="lineno">   98</span>  sigaction(SIGTSTP, &amp;oldtstp, NULL);</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>  <span class="comment">/* reset SIGINT, SIGQUIT and SIGCHLD */</span></div>
+<div class="line"><span class="lineno">  101</span>  <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  rc = (pid != -1) ? (WIFEXITED(rc) ? WEXITSTATUS(rc) : -1) : -1;</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+<div class="ttc" id="afilter_8h_html_aa80fd382830d66c094a29009aba96b6f"><div class="ttname"><a href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a></div><div class="ttdeci">#define EXEC_SHELL</div><div class="ttdef"><b>Definition:</b> <a href="filter_8h_source.html#l00028">filter.h:28</a></div></div>
 <div class="ttc" id="aglobals_8c_html_ae45378328cf8b407e63b6d53eaf61a01"><div class="ttname"><a href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a></div><div class="ttdeci">char ** EnvList</div><div class="ttdoc">Private copy of the environment variables.</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00078">globals.c:78</a></div></div>
-<div class="ttc" id="aimap_2lib_8h_html_a78151df1dc862cfee3b988719873aae2"><div class="ttname"><a href="imap_2lib_8h.html#a78151df1dc862cfee3b988719873aae2">imap_wait_keep_alive</a></div><div class="ttdeci">int imap_wait_keep_alive(pid_t pid)</div><div class="ttdoc">Wait for a process to change state.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00977">util.c:977</a></div></div>
+<div class="ttc" id="aimap_2lib_8h_html_a78151df1dc862cfee3b988719873aae2"><div class="ttname"><a href="imap_2lib_8h.html#a78151df1dc862cfee3b988719873aae2">imap_wait_keep_alive</a></div><div class="ttdeci">int imap_wait_keep_alive(pid_t pid)</div><div class="ttdoc">Wait for a process to change state.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00979">util.c:979</a></div></div>
 <div class="ttc" id="asignal_8c_html_a8f760c89850a7fdab70f3e084dae29ea"><div class="ttname"><a href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a></div><div class="ttdeci">void mutt_sig_block_system(void)</div><div class="ttdoc">Block signals before calling exec()</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00199">signal.c:199</a></div></div>
 <div class="ttc" id="asignal_8c_html_ad44b8fd5380fa4749911e9f1792af99d"><div class="ttname"><a href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a></div><div class="ttdeci">void mutt_sig_unblock_system(bool restore)</div><div class="ttdoc">Restore previously blocked signals.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00223">signal.c:223</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

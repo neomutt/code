@@ -1,5 +1,6 @@
 var mutt__curses_8h =
 [
+    [ "A_ITALIC", "mutt__curses_8h.html#a963a6981d0e18750a13f185e5f4ffdc8", null ],
     [ "ctrl", "mutt__curses_8h.html#a9c9be04d10032182290f931273c63e8b", null ],
     [ "key_is_return", "mutt__curses_8h.html#a194d6fe3e69d98113371d791c4702bb9", null ],
     [ "MuttCursorState", "mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961d", [

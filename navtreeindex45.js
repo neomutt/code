@@ -1,15 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"structPagerPrivateData.html#a7111bf1687e6d93cd548d4fdd36ad98b":[1,0,181,4],
-"structPagerPrivateData.html#a7256afe5ceb318903bbb92e57653ed9f":[1,0,181,21],
-"structPagerPrivateData.html#a77d4a1d106a058519cbfbcf4ac3d43a5":[1,0,181,11],
-"structPagerPrivateData.html#a81bf0d8523df2a351560b19d2f708c60":[1,0,181,23],
-"structPagerPrivateData.html#aaa3bd178c2849f17c98a09085ab46e0f":[1,0,181,3],
-"structPagerPrivateData.html#ac2cd2e12c2a1ece038a7018f62522c19":[1,0,181,10],
-"structPagerPrivateData.html#ad139fa401f234ebff812f2b25610df37":[1,0,181,2],
-"structPagerPrivateData.html#ad327fdca21da2a92ac9a62e24ccde5bd":[1,0,181,26],
-"structPagerPrivateData.html#ad7c650de77a14afc73455f7177f78f3a":[1,0,181,19],
-"structPagerPrivateData.html#ad8bcd0088f080aa11c4edfdc676636ee":[1,0,181,12],
 "structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd":[1,0,181,0],
 "structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,181,22],
 "structPagerPrivateData.html#ae448f18ad03d4c47cf38b84c106b79da":[1,0,181,25],
@@ -249,5 +239,15 @@ var NAVTREEINDEX45 =
 "structSbEntry.html#a23ebcead73d1691757fd66925cc24246":[1,0,218,2],
 "structSbEntry.html#a4f049bac019ef39bfa793ef95c30e621":[1,0,218,1],
 "structSbEntry.html#a8f1f561608dc65d7b08168845bdef308":[1,0,218,3],
-"structSbEntry.html#aa4faa51dd7c10cc0a3951e1116403d07":[1,0,218,4]
+"structSbEntry.html#aa4faa51dd7c10cc0a3951e1116403d07":[1,0,218,4],
+"structSbEntry.html#af089f49dfeb56395261cd284a79fdf2d":[1,0,218,0],
+"structScore.html":[1,0,219],
+"structScore.html#a02333cc6a0f497e57f189dafb8f8b3ff":[1,0,219,3],
+"structScore.html#ab722ce707a5813b0e5abfcf20191e4fc":[1,0,219,0],
+"structScore.html#ac24a9ee49947c02e77b95d47181e3371":[1,0,219,1],
+"structScore.html#acff8f0b67774525bb1be99a13ac62cd8":[1,0,219,2],
+"structScore.html#aeef44b6720e850cc7044cb325dab6bc6":[1,0,219,4],
+"structSearchState.html":[1,0,220],
+"structSearchState.html#a09b871630482499d27724fb324864273":[1,0,220,1],
+"structSearchState.html#a10ed9ec626b19daf21013cead8d19218":[1,0,220,2]
 };

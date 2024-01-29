@@ -26,7 +26,7 @@ var searchData=
   ['attachments_2eh_23',['attachments.h',['../attachments_8h.html',1,'']]],
   ['attr_2ec_24',['attr.c',['../attr_8c.html',1,'']]],
   ['attr_2eh_25',['attr.h',['../attr_8h.html',1,'']]],
-  ['auth_2ec_26',['auth.c',['../imap_2auth_8c.html',1,'(Global Namespace)'],['../pop_2auth_8c.html',1,'(Global Namespace)']]],
+  ['auth_2ec_26',['auth.c',['../pop_2auth_8c.html',1,'(Global Namespace)'],['../imap_2auth_8c.html',1,'(Global Namespace)']]],
   ['auth_2eh_27',['auth.h',['../auth_8h.html',1,'']]],
   ['auth_5fanon_2ec_28',['auth_anon.c',['../auth__anon_8c.html',1,'']]],
   ['auth_5fcram_2ec_29',['auth_cram.c',['../auth__cram_8c.html',1,'']]],

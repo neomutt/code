@@ -13,7 +13,6 @@ var mx_8c =
     [ "mx_mbox_sync", "mx_8c.html#ae31027d1219060a9dc2b2e6b82c1bf6c", null ],
     [ "mx_msg_open_new", "mx_8c.html#ad7adbbda58c642107eadf33b1fbf0c13", null ],
     [ "mx_mbox_check", "mx_8c.html#ae1a77c15ee90fe85716badfd92e856ba", null ],
-    [ "mx_mbox_reset_check", "mx_8c.html#a96b021ef63f5b25f2e3da2879a568957", null ],
     [ "mx_msg_open", "mx_8c.html#a9b2902ecb2bebbd553a8ec733ca59886", null ],
     [ "mx_msg_commit", "mx_8c.html#add0e192c5f27bf6bd096ae2eb7c0b67b", null ],
     [ "mx_msg_close", "mx_8c.html#a2610a2afe8887bb874131a4ba092aa6a", null ],
@@ -39,7 +38,6 @@ var mx_8c =
     [ "mx_save_hcache", "mx_8c.html#ab564fbbf566928004b4564b9aa01a603", null ],
     [ "mx_type", "mx_8c.html#ad1b4348096500e4c8df39275b956ec1c", null ],
     [ "mx_toggle_write", "mx_8c.html#ad9772f30292be237af605c682e8f0777", null ],
-    [ "MailboxTime", "mx_8c.html#aeb7307ad9fd4cae39c95358e38484fb0", null ],
     [ "MboxTypeMap", "mx_8c.html#ac2035653a21eb8784cd537ef4fe83203", null ],
     [ "MboxTypeDef", "mx_8c.html#a40d3e8712d691e71402abcc47e259881", null ],
     [ "MxOps", "mx_8c.html#a974efa43a7ee276f939bbaae26f3f170", null ]

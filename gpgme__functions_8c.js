@@ -10,6 +10,7 @@ var gpgme__functions_8c =
     [ "print_key_info", "gpgme__functions_8c.html#a66639b373a3cc1f57f1526dad35085a7", null ],
     [ "verify_key", "gpgme__functions_8c.html#abf137f94451de251c8179788615f4b74", null ],
     [ "crypt_key_is_valid", "gpgme__functions_8c.html#a9cb16b08108f16a623ed75e5f27f6863", null ],
+    [ "crypt_keys_are_valid", "gpgme__functions_8c.html#aa7b96e2629c94717b93b650d91d34d35", null ],
     [ "op_exit", "group__gpgme__function__api.html#ga1dadb5c51e70d2b291a1cc2dbcdf0fff", null ],
     [ "op_generic_select_entry", "group__gpgme__function__api.html#ga686511543da4164983c5bd707df3f8a9", null ],
     [ "op_verify_key", "group__gpgme__function__api.html#gad2b641ff97954f3386ad570325b5a6ca", null ],

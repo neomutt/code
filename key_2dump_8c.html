@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-35-g8e897d</span>
+   &#160;<span id="projectnumber">2023-12-21-72-gad8d0f</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -150,6 +150,7 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Dump key bindings. </p>
 <dl class="section author"><dt>Authors</dt><dd><ul>
 <li>Richard Russon</li>
+<li>Dennis Schön</li>
 </ul>
 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.</dd></dl>
@@ -215,61 +216,61 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2dump_8c_source.html#l00050">50</a> of file <a class="el" href="key_2dump_8c_source.html">dump.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
-<div class="line"><span class="lineno">   52</span>  <span class="keywordtype">bool</span> empty = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   53</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *map = NULL;</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(map, &amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[menu], entries)</div>
-<div class="line"><span class="lineno">   56</span>  {</div>
-<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_MACRO)</div>
-<div class="line"><span class="lineno">   58</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordtype">char</span> key_binding[128] = { 0 };</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *fn_name = NULL;</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>    <a class="code hl_function" href="key_2lib_8c.html#a830fff42df69ae5c6e256eb03ce18892">km_expand_key</a>(key_binding, <span class="keyword">sizeof</span>(key_binding), map);</div>
-<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_NULL)</div>
-<div class="line"><span class="lineno">   65</span>    {</div>
-<div class="line"><span class="lineno">   66</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;bind %s %s noop\n&quot;</span>, name, key_binding);</div>
-<div class="line"><span class="lineno">   67</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>    <span class="comment">/* The pager and editor menus don&#39;t use the generic map,</span></div>
-<div class="line"><span class="lineno">   71</span><span class="comment">     * however for other menus try generic first. */</span></div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">if</span> ((menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a>) &amp;&amp; (menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a>) &amp;&amp; (menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a>))</div>
-<div class="line"><span class="lineno">   73</span>    {</div>
-<div class="line"><span class="lineno">   74</span>      fn_name = <a class="code hl_function" href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a>(<a class="code hl_variable" href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a>, map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>);</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>    <span class="comment">/* if it&#39;s one of the menus above or generic doesn&#39;t find</span></div>
-<div class="line"><span class="lineno">   78</span><span class="comment">     * the function, try with its own menu. */</span></div>
-<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span> (!fn_name)</div>
-<div class="line"><span class="lineno">   80</span>    {</div>
-<div class="line"><span class="lineno">   81</span>      <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structMenuFuncOp.html">MenuFuncOp</a> *funcs = <a class="code hl_function" href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a>(menu);</div>
-<div class="line"><span class="lineno">   82</span>      <span class="keywordflow">if</span> (!funcs)</div>
-<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>      fn_name = <a class="code hl_function" href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a>(funcs, map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>);</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;bind %s %s %s\n&quot;</span>, <a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>, key_binding, fn_name);</div>
-<div class="line"><span class="lineno">   89</span>    empty = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   90</span>  }</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">return</span> empty;</div>
-<div class="line"><span class="lineno">   93</span>}</div>
-<div class="ttc" id="abuffer_8c_html_a0849b79217aad19e4bf9381d532d59d1"><div class="ttname"><a href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a></div><div class="ttdeci">int buf_add_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string appending a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00219">buffer.c:219</a></div></div>
-<div class="ttc" id="agui_2functions_8c_html_a3457ad68df60a03b25a1a85b71a22822"><div class="ttname"><a href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a></div><div class="ttdeci">const struct MenuFuncOp OpGeneric[]</div><div class="ttdoc">Functions for the Generic Menu.</div><div class="ttdef"><b>Definition:</b> <a href="gui_2functions_8c_source.html#l00067">functions.c:67</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_a786f5d70631dfcec23d9e9439304d52e"><div class="ttname"><a href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a></div><div class="ttdeci">struct KeymapList Keymaps[MENU_MAX]</div><div class="ttdoc">Array of key mappings, one for each MenuType.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00129">lib.c:129</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_a830fff42df69ae5c6e256eb03ce18892"><div class="ttname"><a href="key_2lib_8c.html#a830fff42df69ae5c6e256eb03ce18892">km_expand_key</a></div><div class="ttdeci">int km_expand_key(char *s, size_t len, struct Keymap *map)</div><div class="ttdoc">Get the key string bound to a Keymap.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00461">lib.c:461</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_a8d253bf595636e08c076cb3a56f8bd71"><div class="ttname"><a href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a></div><div class="ttdeci">const char * mutt_get_func(const struct MenuFuncOp *funcs, int op)</div><div class="ttdoc">Get the name of a function.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00325">lib.c:325</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_ac73ba4b4de1642f905738d2da0e79d91"><div class="ttname"><a href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a></div><div class="ttdeci">const struct MenuFuncOp * km_get_table(enum MenuType mtype)</div><div class="ttdoc">Lookup a Menu's functions.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00529">lib.c:529</a></div></div>
+<p class="definition">Definition at line <a class="el" href="key_2dump_8c_source.html#l00051">51</a> of file <a class="el" href="key_2dump_8c_source.html">dump.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordtype">bool</span> empty = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *map = NULL;</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(map, &amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[menu], entries)</div>
+<div class="line"><span class="lineno">   57</span>  {</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_MACRO)</div>
+<div class="line"><span class="lineno">   59</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordtype">char</span> key_binding[128] = { 0 };</div>
+<div class="line"><span class="lineno">   62</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *fn_name = NULL;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <a class="code hl_function" href="key_2lib_8c.html#a830fff42df69ae5c6e256eb03ce18892">km_expand_key</a>(key_binding, <span class="keyword">sizeof</span>(key_binding), map);</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_NULL)</div>
+<div class="line"><span class="lineno">   66</span>    {</div>
+<div class="line"><span class="lineno">   67</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;bind %s %s noop\n&quot;</span>, name, key_binding);</div>
+<div class="line"><span class="lineno">   68</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   69</span>    }</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="comment">/* The pager and editor menus don&#39;t use the generic map,</span></div>
+<div class="line"><span class="lineno">   72</span><span class="comment">     * however for other menus try generic first. */</span></div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span> ((menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a>) &amp;&amp; (menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a>) &amp;&amp; (menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a>))</div>
+<div class="line"><span class="lineno">   74</span>    {</div>
+<div class="line"><span class="lineno">   75</span>      fn_name = <a class="code hl_function" href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a>(<a class="code hl_variable" href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a>, map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>);</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>    <span class="comment">/* if it&#39;s one of the menus above or generic doesn&#39;t find</span></div>
+<div class="line"><span class="lineno">   79</span><span class="comment">     * the function, try with its own menu. */</span></div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span> (!fn_name)</div>
+<div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>      <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structMenuFuncOp.html">MenuFuncOp</a> *funcs = <a class="code hl_function" href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a>(menu);</div>
+<div class="line"><span class="lineno">   83</span>      <span class="keywordflow">if</span> (!funcs)</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>      fn_name = <a class="code hl_function" href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a>(funcs, map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>);</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;bind %s %s %s\n&quot;</span>, <a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>, key_binding, fn_name);</div>
+<div class="line"><span class="lineno">   90</span>    empty = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   91</span>  }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">return</span> empty;</div>
+<div class="line"><span class="lineno">   94</span>}</div>
+<div class="ttc" id="abuffer_8c_html_a0849b79217aad19e4bf9381d532d59d1"><div class="ttname"><a href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a></div><div class="ttdeci">int buf_add_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string appending a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00221">buffer.c:221</a></div></div>
+<div class="ttc" id="agui_2functions_8c_html_a3457ad68df60a03b25a1a85b71a22822"><div class="ttname"><a href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a></div><div class="ttdeci">const struct MenuFuncOp OpGeneric[]</div><div class="ttdoc">Functions for the Generic Menu.</div><div class="ttdef"><b>Definition:</b> <a href="gui_2functions_8c_source.html#l00068">functions.c:68</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_a786f5d70631dfcec23d9e9439304d52e"><div class="ttname"><a href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a></div><div class="ttdeci">struct KeymapList Keymaps[MENU_MAX]</div><div class="ttdoc">Array of key mappings, one for each MenuType.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00128">lib.c:128</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_a830fff42df69ae5c6e256eb03ce18892"><div class="ttname"><a href="key_2lib_8c.html#a830fff42df69ae5c6e256eb03ce18892">km_expand_key</a></div><div class="ttdeci">int km_expand_key(char *s, size_t len, struct Keymap *map)</div><div class="ttdoc">Get the key string bound to a Keymap.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00460">lib.c:460</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_a8d253bf595636e08c076cb3a56f8bd71"><div class="ttname"><a href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a></div><div class="ttdeci">const char * mutt_get_func(const struct MenuFuncOp *funcs, int op)</div><div class="ttdoc">Get the name of a function.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00324">lib.c:324</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_ac73ba4b4de1642f905738d2da0e79d91"><div class="ttname"><a href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a></div><div class="ttdeci">const struct MenuFuncOp * km_get_table(enum MenuType mtype)</div><div class="ttdoc">Lookup a Menu's functions.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00528">lib.c:528</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a77999ebdf5aaf7af8b8ea22bf208c432"><div class="ttname"><a href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a></div><div class="ttdeci">#define STAILQ_FOREACH(var, head, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00352">queue.h:352</a></div></div>
-<div class="ttc" id="astructKeymap_html"><div class="ttname"><a href="structKeymap.html">Keymap</a></div><div class="ttdoc">A keyboard mapping.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00065">lib.h:66</a></div></div>
-<div class="ttc" id="astructKeymap_html_ae0f1f33eb69b7ee89188039d50d49145"><div class="ttname"><a href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">Keymap::op</a></div><div class="ttdeci">short op</div><div class="ttdoc">Operation to perform.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00069">lib.h:69</a></div></div>
-<div class="ttc" id="astructMenuFuncOp_html"><div class="ttname"><a href="structMenuFuncOp.html">MenuFuncOp</a></div><div class="ttdoc">Mapping between a function and an operation.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00101">lib.h:102</a></div></div>
-<div class="ttc" id="astructMenuFuncOp_html_a4afbddbb2e7ed64c63061458ca62130d"><div class="ttname"><a href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">MenuFuncOp::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">Name of the function.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00103">lib.h:103</a></div></div>
+<div class="ttc" id="astructKeymap_html"><div class="ttname"><a href="structKeymap.html">Keymap</a></div><div class="ttdoc">A keyboard mapping.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00064">lib.h:65</a></div></div>
+<div class="ttc" id="astructKeymap_html_ae0f1f33eb69b7ee89188039d50d49145"><div class="ttname"><a href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">Keymap::op</a></div><div class="ttdeci">short op</div><div class="ttdoc">Operation to perform.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00068">lib.h:68</a></div></div>
+<div class="ttc" id="astructMenuFuncOp_html"><div class="ttname"><a href="structMenuFuncOp.html">MenuFuncOp</a></div><div class="ttdoc">Mapping between a function and an operation.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00100">lib.h:101</a></div></div>
+<div class="ttc" id="astructMenuFuncOp_html_a4afbddbb2e7ed64c63061458ca62130d"><div class="ttname"><a href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">MenuFuncOp::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">Name of the function.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00102">lib.h:102</a></div></div>
 <div class="ttc" id="atype_8h_html_ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b"><div class="ttname"><a href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a></div><div class="ttdeci">@ MENU_GENERIC</div><div class="ttdoc">Generic selection list.</div><div class="ttdef"><b>Definition:</b> <a href="type_8h_source.html#l00046">type.h:46</a></div></div>
 <div class="ttc" id="atype_8h_html_ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929"><div class="ttname"><a href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a></div><div class="ttdeci">@ MENU_PAGER</div><div class="ttdoc">Pager pager (email viewer)</div><div class="ttdef"><b>Definition:</b> <a href="type_8h_source.html#l00055">type.h:55</a></div></div>
 <div class="ttc" id="atype_8h_html_ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270"><div class="ttname"><a href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a></div><div class="ttdeci">@ MENU_EDITOR</div><div class="ttdoc">Text entry area.</div><div class="ttdef"><b>Definition:</b> <a href="type_8h_source.html#l00044">type.h:44</a></div></div>
@@ -324,19 +325,19 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2dump_8c_source.html#l00099">99</a> of file <a class="el" href="key_2dump_8c_source.html">dump.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>{</div>
-<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">for</span> (<span class="keyword">enum</span> <a class="code hl_enumeration" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> i = 1; i &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>; i++)</div>
-<div class="line"><span class="lineno">  102</span>  {</div>
-<div class="line"><span class="lineno">  103</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> empty = <a class="code hl_function" href="key_2dump_8c.html#ae17577b8448d6754dc11b9e18f62693a">dump_bind</a>(buf, i, <a class="code hl_function" href="mapping_8c.html#ae52d375da6dc3039d2341ae4ace4f557">mutt_map_get_name</a>(i, <a class="code hl_variable" href="type_8c.html#aec7b36115a7f7b0ba3e11eae75b229f5">MenuNames</a>));</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>    <span class="comment">/* Add a new line for readability between menus. */</span></div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">if</span> (!empty &amp;&amp; (i &lt; (<a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a> - 1)))</div>
-<div class="line"><span class="lineno">  107</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, <span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><span class="lineno">  108</span>  }</div>
-<div class="line"><span class="lineno">  109</span>}</div>
-<div class="ttc" id="abuffer_8c_html_a9765efbb7f2c32e46fb1cb271a02ba20"><div class="ttname"><a href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a></div><div class="ttdeci">size_t buf_addch(struct Buffer *buf, char c)</div><div class="ttdoc">Add a single character to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00256">buffer.c:256</a></div></div>
-<div class="ttc" id="akey_2dump_8c_html_ae17577b8448d6754dc11b9e18f62693a"><div class="ttname"><a href="key_2dump_8c.html#ae17577b8448d6754dc11b9e18f62693a">dump_bind</a></div><div class="ttdeci">static bool dump_bind(struct Buffer *buf, enum MenuType menu, const char *name)</div><div class="ttdoc">Dumps all the binds maps of a menu into a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="key_2dump_8c_source.html#l00050">dump.c:50</a></div></div>
+<p class="definition">Definition at line <a class="el" href="key_2dump_8c_source.html#l00100">100</a> of file <a class="el" href="key_2dump_8c_source.html">dump.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>{</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">for</span> (<span class="keyword">enum</span> <a class="code hl_enumeration" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> i = 1; i &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>; i++)</div>
+<div class="line"><span class="lineno">  103</span>  {</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> empty = <a class="code hl_function" href="key_2dump_8c.html#ae17577b8448d6754dc11b9e18f62693a">dump_bind</a>(buf, i, <a class="code hl_function" href="mapping_8c.html#ae52d375da6dc3039d2341ae4ace4f557">mutt_map_get_name</a>(i, <a class="code hl_variable" href="type_8c.html#aec7b36115a7f7b0ba3e11eae75b229f5">MenuNames</a>));</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>    <span class="comment">/* Add a new line for readability between menus. */</span></div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span> (!empty &amp;&amp; (i &lt; (<a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a> - 1)))</div>
+<div class="line"><span class="lineno">  108</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><span class="lineno">  109</span>  }</div>
+<div class="line"><span class="lineno">  110</span>}</div>
+<div class="ttc" id="abuffer_8c_html_a9765efbb7f2c32e46fb1cb271a02ba20"><div class="ttname"><a href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a></div><div class="ttdeci">size_t buf_addch(struct Buffer *buf, char c)</div><div class="ttdoc">Add a single character to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00258">buffer.c:258</a></div></div>
+<div class="ttc" id="akey_2dump_8c_html_ae17577b8448d6754dc11b9e18f62693a"><div class="ttname"><a href="key_2dump_8c.html#ae17577b8448d6754dc11b9e18f62693a">dump_bind</a></div><div class="ttdeci">static bool dump_bind(struct Buffer *buf, enum MenuType menu, const char *name)</div><div class="ttdoc">Dumps all the binds maps of a menu into a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="key_2dump_8c_source.html#l00051">dump.c:51</a></div></div>
 <div class="ttc" id="amapping_8c_html_ae52d375da6dc3039d2341ae4ace4f557"><div class="ttname"><a href="mapping_8c.html#ae52d375da6dc3039d2341ae4ace4f557">mutt_map_get_name</a></div><div class="ttdeci">const char * mutt_map_get_name(int val, const struct Mapping *map)</div><div class="ttdoc">Lookup a string for a constant.</div><div class="ttdef"><b>Definition:</b> <a href="mapping_8c_source.html#l00042">mapping.c:42</a></div></div>
 <div class="ttc" id="atype_8c_html_aec7b36115a7f7b0ba3e11eae75b229f5"><div class="ttname"><a href="type_8c.html#aec7b36115a7f7b0ba3e11eae75b229f5">MenuNames</a></div><div class="ttdeci">const struct Mapping MenuNames[]</div><div class="ttdoc">Menu name lookup table.</div><div class="ttdef"><b>Definition:</b> <a href="type_8c_source.html#l00037">type.c:37</a></div></div>
 <div class="ttc" id="atype_8h_html_ae5c7b6b4f6e696391cd7faaea6571bb4"><div class="ttname"><a href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a></div><div class="ttdeci">MenuType</div><div class="ttdoc">Types of GUI selections.</div><div class="ttdef"><b>Definition:</b> <a href="type_8h_source.html#l00035">type.h:36</a></div></div>
@@ -417,45 +418,45 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2dump_8c_source.html#l00119">119</a> of file <a class="el" href="key_2dump_8c_source.html">dump.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>{</div>
-<div class="line"><span class="lineno">  121</span>  <span class="keywordtype">bool</span> empty = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  122</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *map = NULL;</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(map, &amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[menu], entries)</div>
-<div class="line"><span class="lineno">  125</span>  {</div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> != OP_MACRO)</div>
-<div class="line"><span class="lineno">  127</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>    <span class="keywordtype">char</span> key_binding[128] = { 0 };</div>
-<div class="line"><span class="lineno">  130</span>    <a class="code hl_function" href="key_2lib_8c.html#a830fff42df69ae5c6e256eb03ce18892">km_expand_key</a>(key_binding, <span class="keyword">sizeof</span>(key_binding), map);</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  133</span>    <a class="code hl_function" href="config_2dump_8c.html#a03edb5012f9f0894b258ab6a6cb6ed11">escape_string</a>(tmp, map-&gt;<a class="code hl_variable" href="structKeymap.html#a7dba6084f1e86314eaac281a75b179ab">macro</a>);</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f">desc</a>)</div>
-<div class="line"><span class="lineno">  136</span>    {</div>
-<div class="line"><span class="lineno">  137</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;macro %s %s \&quot;%s\&quot; \&quot;%s\&quot;\n&quot;</span>, name, key_binding,</div>
-<div class="line"><span class="lineno">  138</span>                     tmp-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, map-&gt;<a class="code hl_variable" href="structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f">desc</a>);</div>
-<div class="line"><span class="lineno">  139</span>    }</div>
-<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  141</span>    {</div>
-<div class="line"><span class="lineno">  142</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;macro %s %s \&quot;%s\&quot;\n&quot;</span>, name, key_binding, tmp-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>);</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
-<div class="line"><span class="lineno">  146</span>    empty = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  147</span>  }</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>  <span class="keywordflow">return</span> empty;</div>
-<div class="line"><span class="lineno">  150</span>}</div>
-<div class="ttc" id="aconfig_2dump_8c_html_a03edb5012f9f0894b258ab6a6cb6ed11"><div class="ttname"><a href="config_2dump_8c.html#a03edb5012f9f0894b258ab6a6cb6ed11">escape_string</a></div><div class="ttdeci">size_t escape_string(struct Buffer *buf, const char *src)</div><div class="ttdoc">Write a string to a buffer, escaping special characters.</div><div class="ttdef"><b>Definition:</b> <a href="config_2dump_8c_source.html#l00046">dump.c:46</a></div></div>
+<p class="definition">Definition at line <a class="el" href="key_2dump_8c_source.html#l00120">120</a> of file <a class="el" href="key_2dump_8c_source.html">dump.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>{</div>
+<div class="line"><span class="lineno">  122</span>  <span class="keywordtype">bool</span> empty = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  123</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *map = NULL;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(map, &amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[menu], entries)</div>
+<div class="line"><span class="lineno">  126</span>  {</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> != OP_MACRO)</div>
+<div class="line"><span class="lineno">  128</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordtype">char</span> key_binding[128] = { 0 };</div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_function" href="key_2lib_8c.html#a830fff42df69ae5c6e256eb03ce18892">km_expand_key</a>(key_binding, <span class="keyword">sizeof</span>(key_binding), map);</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_function" href="config_2dump_8c.html#a03edb5012f9f0894b258ab6a6cb6ed11">escape_string</a>(tmp, map-&gt;<a class="code hl_variable" href="structKeymap.html#a7dba6084f1e86314eaac281a75b179ab">macro</a>);</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f">desc</a>)</div>
+<div class="line"><span class="lineno">  137</span>    {</div>
+<div class="line"><span class="lineno">  138</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;macro %s %s \&quot;%s\&quot; \&quot;%s\&quot;\n&quot;</span>, name, key_binding,</div>
+<div class="line"><span class="lineno">  139</span>                     tmp-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, map-&gt;<a class="code hl_variable" href="structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f">desc</a>);</div>
+<div class="line"><span class="lineno">  140</span>    }</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  142</span>    {</div>
+<div class="line"><span class="lineno">  143</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;macro %s %s \&quot;%s\&quot;\n&quot;</span>, name, key_binding, tmp-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>);</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
+<div class="line"><span class="lineno">  147</span>    empty = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  148</span>  }</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>  <span class="keywordflow">return</span> empty;</div>
+<div class="line"><span class="lineno">  151</span>}</div>
+<div class="ttc" id="aconfig_2dump_8c_html_a03edb5012f9f0894b258ab6a6cb6ed11"><div class="ttname"><a href="config_2dump_8c.html#a03edb5012f9f0894b258ab6a6cb6ed11">escape_string</a></div><div class="ttdeci">size_t escape_string(struct Buffer *buf, const char *src)</div><div class="ttdoc">Write a string to a buffer, escaping special characters.</div><div class="ttdef"><b>Definition:</b> <a href="config_2dump_8c_source.html#l00048">dump.c:48</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00081">pool.c:81</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00094">pool.c:94</a></div></div>
-<div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00033">buffer.h:34</a></div></div>
-<div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:35</a></div></div>
-<div class="ttc" id="astructKeymap_html_a7dba6084f1e86314eaac281a75b179ab"><div class="ttname"><a href="structKeymap.html#a7dba6084f1e86314eaac281a75b179ab">Keymap::macro</a></div><div class="ttdeci">char * macro</div><div class="ttdoc">Macro expansion (op == OP_MACRO)</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00067">lib.h:67</a></div></div>
-<div class="ttc" id="astructKeymap_html_abffcc8161b8a5a31eba06dea5fca163f"><div class="ttname"><a href="structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f">Keymap::desc</a></div><div class="ttdeci">char * desc</div><div class="ttdoc">Description of a macro for the help menu.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00068">lib.h:68</a></div></div>
+<div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
+<div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00037">buffer.h:37</a></div></div>
+<div class="ttc" id="astructKeymap_html_a7dba6084f1e86314eaac281a75b179ab"><div class="ttname"><a href="structKeymap.html#a7dba6084f1e86314eaac281a75b179ab">Keymap::macro</a></div><div class="ttdeci">char * macro</div><div class="ttdoc">Macro expansion (op == OP_MACRO)</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00066">lib.h:66</a></div></div>
+<div class="ttc" id="astructKeymap_html_abffcc8161b8a5a31eba06dea5fca163f"><div class="ttname"><a href="structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f">Keymap::desc</a></div><div class="ttdeci">char * desc</div><div class="ttdoc">Description of a macro for the help menu.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00067">lib.h:67</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -507,18 +508,18 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2dump_8c_source.html#l00156">156</a> of file <a class="el" href="key_2dump_8c_source.html">dump.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>{</div>
-<div class="line"><span class="lineno">  158</span>  <span class="keywordflow">for</span> (<span class="keyword">enum</span> <a class="code hl_enumeration" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> i = 1; i &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>; i++)</div>
-<div class="line"><span class="lineno">  159</span>  {</div>
-<div class="line"><span class="lineno">  160</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> empty = <a class="code hl_function" href="key_2dump_8c.html#af97920661de1f774a09ebfe8dc0e62f4">dump_macro</a>(buf, i, <a class="code hl_function" href="mapping_8c.html#ae52d375da6dc3039d2341ae4ace4f557">mutt_map_get_name</a>(i, <a class="code hl_variable" href="type_8c.html#aec7b36115a7f7b0ba3e11eae75b229f5">MenuNames</a>));</div>
-<div class="line"><span class="lineno">  161</span> </div>
-<div class="line"><span class="lineno">  162</span>    <span class="comment">/* Add a new line for legibility between menus. */</span></div>
-<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">if</span> (!empty &amp;&amp; (i &lt; (<a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a> - 1)))</div>
-<div class="line"><span class="lineno">  164</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, <span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><span class="lineno">  165</span>  }</div>
-<div class="line"><span class="lineno">  166</span>}</div>
-<div class="ttc" id="akey_2dump_8c_html_af97920661de1f774a09ebfe8dc0e62f4"><div class="ttname"><a href="key_2dump_8c.html#af97920661de1f774a09ebfe8dc0e62f4">dump_macro</a></div><div class="ttdeci">static bool dump_macro(struct Buffer *buf, enum MenuType menu, const char *name)</div><div class="ttdoc">Dumps all the macros maps of a menu into a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="key_2dump_8c_source.html#l00119">dump.c:119</a></div></div>
+<p class="definition">Definition at line <a class="el" href="key_2dump_8c_source.html#l00157">157</a> of file <a class="el" href="key_2dump_8c_source.html">dump.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>{</div>
+<div class="line"><span class="lineno">  159</span>  <span class="keywordflow">for</span> (<span class="keyword">enum</span> <a class="code hl_enumeration" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> i = 1; i &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>; i++)</div>
+<div class="line"><span class="lineno">  160</span>  {</div>
+<div class="line"><span class="lineno">  161</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> empty = <a class="code hl_function" href="key_2dump_8c.html#af97920661de1f774a09ebfe8dc0e62f4">dump_macro</a>(buf, i, <a class="code hl_function" href="mapping_8c.html#ae52d375da6dc3039d2341ae4ace4f557">mutt_map_get_name</a>(i, <a class="code hl_variable" href="type_8c.html#aec7b36115a7f7b0ba3e11eae75b229f5">MenuNames</a>));</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>    <span class="comment">/* Add a new line for legibility between menus. */</span></div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">if</span> (!empty &amp;&amp; (i &lt; (<a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a> - 1)))</div>
+<div class="line"><span class="lineno">  165</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><span class="lineno">  166</span>  }</div>
+<div class="line"><span class="lineno">  167</span>}</div>
+<div class="ttc" id="akey_2dump_8c_html_af97920661de1f774a09ebfe8dc0e62f4"><div class="ttname"><a href="key_2dump_8c.html#af97920661de1f774a09ebfe8dc0e62f4">dump_macro</a></div><div class="ttdeci">static bool dump_macro(struct Buffer *buf, enum MenuType menu, const char *name)</div><div class="ttdoc">Dumps all the macros maps of a menu into a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="key_2dump_8c_source.html#l00120">dump.c:120</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">

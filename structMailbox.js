@@ -20,6 +20,7 @@ var structMailbox =
     [ "type", "structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174", null ],
     [ "newly_created", "structMailbox.html#a64e988bd2f8f1c9a27f4193523f4a336", null ],
     [ "last_visited", "structMailbox.html#ae355489c17bcccdd40768ef3f42dfb39", null ],
+    [ "last_checked", "structMailbox.html#a33e4255d7389497757f7a51a94f8afc5", null ],
     [ "mx_ops", "structMailbox.html#a2c5e67541744b5af56003971b9803131", null ],
     [ "append", "structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79", null ],
     [ "changed", "structMailbox.html#a12ba98c349220ae172753f4f3294ed59", null ],

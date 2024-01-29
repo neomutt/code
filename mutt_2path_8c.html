@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2023-12-21-35-g8e897d</span>
+   &#160;<span id="projectnumber">2023-12-21-72-gad8d0f</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -174,7 +174,10 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Path manipulation functions. </p>
 <dl class="section author"><dt>Authors</dt><dd><ul>
+<li>Ian Zimmerman</li>
 <li>Richard Russon</li>
+<li>Pietro Cerutti</li>
+<li>Dennis Schön</li>
 </ul>
 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.</dd></dl>
@@ -225,49 +228,49 @@ Functions</h2></td></tr>
 </dl>
 <p>Collapse repeated '//' and '/./' </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00054">54</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>{</div>
-<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">if</span> (!buf)</div>
-<div class="line"><span class="lineno">   57</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>  <span class="keywordtype">char</span> *r = buf;</div>
-<div class="line"><span class="lineno">   60</span>  <span class="keywordtype">char</span> *w = buf;</div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00057">57</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">if</span> (!buf)</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">while</span> (*r != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">   63</span>  {</div>
-<div class="line"><span class="lineno">   64</span>    *w++ = *r++;</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> (r[-1] == <span class="charliteral">&#39;/&#39;</span>) <span class="comment">/* After a &#39;/&#39; ... */</span></div>
-<div class="line"><span class="lineno">   67</span>    {</div>
-<div class="line"><span class="lineno">   68</span>      <span class="keywordflow">for</span> (; (r[0] == <span class="charliteral">&#39;/&#39;</span>) || (r[0] == <span class="charliteral">&#39;.&#39;</span>); r++)</div>
-<div class="line"><span class="lineno">   69</span>      {</div>
-<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">if</span> (r[0] == <span class="charliteral">&#39;/&#39;</span>) <span class="comment">/* skip multiple /s */</span></div>
-<div class="line"><span class="lineno">   71</span>          <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span> (r[0] == <span class="charliteral">&#39;.&#39;</span>)</div>
-<div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>          <span class="keywordflow">if</span> (r[1] == <span class="charliteral">&#39;/&#39;</span>) <span class="comment">/* skip /./ */</span></div>
-<div class="line"><span class="lineno">   75</span>          {</div>
-<div class="line"><span class="lineno">   76</span>            r++;</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   78</span>          }</div>
-<div class="line"><span class="lineno">   79</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (r[1] == <span class="charliteral">&#39;\0&#39;</span>) <span class="comment">/* skip /.$ */</span></div>
-<div class="line"><span class="lineno">   80</span>          {</div>
-<div class="line"><span class="lineno">   81</span>            r[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">   82</span>          }</div>
-<div class="line"><span class="lineno">   83</span>          <span class="keywordflow">break</span>; <span class="comment">/* dot-anything-else isn&#39;t special */</span></div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="line"><span class="lineno">   85</span>      }</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-<div class="line"><span class="lineno">   87</span>  }</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>  <span class="comment">/* Strip a trailing / as long as it&#39;s not the only character */</span></div>
-<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">if</span> (is_dir &amp;&amp; (w &gt; (buf + 1)) &amp;&amp; (w[-1] == <span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno">   91</span>    w--;</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>  *w = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   96</span>}</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordtype">char</span> *r = buf;</div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordtype">char</span> *w = buf;</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">while</span> (*r != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">   66</span>  {</div>
+<div class="line"><span class="lineno">   67</span>    *w++ = *r++;</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">if</span> (r[-1] == <span class="charliteral">&#39;/&#39;</span>) <span class="comment">/* After a &#39;/&#39; ... */</span></div>
+<div class="line"><span class="lineno">   70</span>    {</div>
+<div class="line"><span class="lineno">   71</span>      <span class="keywordflow">for</span> (; (r[0] == <span class="charliteral">&#39;/&#39;</span>) || (r[0] == <span class="charliteral">&#39;.&#39;</span>); r++)</div>
+<div class="line"><span class="lineno">   72</span>      {</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">if</span> (r[0] == <span class="charliteral">&#39;/&#39;</span>) <span class="comment">/* skip multiple /s */</span></div>
+<div class="line"><span class="lineno">   74</span>          <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (r[0] == <span class="charliteral">&#39;.&#39;</span>)</div>
+<div class="line"><span class="lineno">   76</span>        {</div>
+<div class="line"><span class="lineno">   77</span>          <span class="keywordflow">if</span> (r[1] == <span class="charliteral">&#39;/&#39;</span>) <span class="comment">/* skip /./ */</span></div>
+<div class="line"><span class="lineno">   78</span>          {</div>
+<div class="line"><span class="lineno">   79</span>            r++;</div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   81</span>          }</div>
+<div class="line"><span class="lineno">   82</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (r[1] == <span class="charliteral">&#39;\0&#39;</span>) <span class="comment">/* skip /.$ */</span></div>
+<div class="line"><span class="lineno">   83</span>          {</div>
+<div class="line"><span class="lineno">   84</span>            r[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   85</span>          }</div>
+<div class="line"><span class="lineno">   86</span>          <span class="keywordflow">break</span>; <span class="comment">/* dot-anything-else isn&#39;t special */</span></div>
+<div class="line"><span class="lineno">   87</span>        }</div>
+<div class="line"><span class="lineno">   88</span>      }</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span>  }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>  <span class="comment">/* Strip a trailing / as long as it&#39;s not the only character */</span></div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">if</span> (is_dir &amp;&amp; (w &gt; (buf + 1)) &amp;&amp; (w[-1] == <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">   94</span>    w--;</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>  *w = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   99</span>}</div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -310,57 +313,57 @@ Functions</h2></td></tr>
 </dl>
 <p>Collapse dot-dot patterns, like '/dir/../' </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00105">105</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>{</div>
-<div class="line"><span class="lineno">  107</span>  <span class="keywordflow">if</span> (!buf || (buf[0] != <span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>  <span class="keywordtype">char</span> *dd = buf;</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Collapse path: %s\n&quot;</span>, buf);</div>
-<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">while</span> ((dd = strstr(dd, <span class="stringliteral">&quot;/..&quot;</span>)))</div>
-<div class="line"><span class="lineno">  114</span>  {</div>
-<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (dd[3] == <span class="charliteral">&#39;/&#39;</span>) <span class="comment">/* paths follow dots */</span></div>
-<div class="line"><span class="lineno">  116</span>    {</div>
-<div class="line"><span class="lineno">  117</span>      <span class="keywordtype">char</span> *dest = NULL;</div>
-<div class="line"><span class="lineno">  118</span>      <span class="keywordflow">if</span> (dd != buf) <span class="comment">/* not at start of string */</span></div>
-<div class="line"><span class="lineno">  119</span>      {</div>
-<div class="line"><span class="lineno">  120</span>        dd[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  121</span>        dest = strrchr(buf, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  122</span>      }</div>
-<div class="line"><span class="lineno">  123</span>      <span class="keywordflow">if</span> (!dest)</div>
-<div class="line"><span class="lineno">  124</span>        dest = buf;</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>      memmove(dest, dd + 3, strlen(dd + 3) + 1);</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dd[3] == <span class="charliteral">&#39;\0&#39;</span>) <span class="comment">/* dots at end of string */</span></div>
-<div class="line"><span class="lineno">  129</span>    {</div>
-<div class="line"><span class="lineno">  130</span>      <span class="keywordflow">if</span> (dd == buf) <span class="comment">/* at start of string */</span></div>
-<div class="line"><span class="lineno">  131</span>      {</div>
-<div class="line"><span class="lineno">  132</span>        dd[1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  133</span>      }</div>
-<div class="line"><span class="lineno">  134</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  135</span>      {</div>
-<div class="line"><span class="lineno">  136</span>        dd[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  137</span>        <span class="keywordtype">char</span> *s = strrchr(buf, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">if</span> (s == buf)</div>
-<div class="line"><span class="lineno">  139</span>          s[1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  140</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s)</div>
-<div class="line"><span class="lineno">  141</span>          s[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  142</span>      }</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  145</span>    {</div>
-<div class="line"><span class="lineno">  146</span>      dd += 3; <span class="comment">/* skip over &#39;/..dir/&#39; */</span></div>
-<div class="line"><span class="lineno">  147</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-<div class="line"><span class="lineno">  149</span> </div>
-<div class="line"><span class="lineno">  150</span>    dd = buf; <span class="comment">/* restart at the beginning */</span></div>
-<div class="line"><span class="lineno">  151</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00108">108</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>{</div>
+<div class="line"><span class="lineno">  110</span>  <span class="keywordflow">if</span> (!buf || (buf[0] != <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordtype">char</span> *dd = buf;</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Collapse path: %s\n&quot;</span>, buf);</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">while</span> ((dd = strstr(dd, <span class="stringliteral">&quot;/..&quot;</span>)))</div>
+<div class="line"><span class="lineno">  117</span>  {</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">if</span> (dd[3] == <span class="charliteral">&#39;/&#39;</span>) <span class="comment">/* paths follow dots */</span></div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>      <span class="keywordtype">char</span> *dest = NULL;</div>
+<div class="line"><span class="lineno">  121</span>      <span class="keywordflow">if</span> (dd != buf) <span class="comment">/* not at start of string */</span></div>
+<div class="line"><span class="lineno">  122</span>      {</div>
+<div class="line"><span class="lineno">  123</span>        dd[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  124</span>        dest = strrchr(buf, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  125</span>      }</div>
+<div class="line"><span class="lineno">  126</span>      <span class="keywordflow">if</span> (!dest)</div>
+<div class="line"><span class="lineno">  127</span>        dest = buf;</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>      memmove(dest, dd + 3, strlen(dd + 3) + 1);</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (dd[3] == <span class="charliteral">&#39;\0&#39;</span>) <span class="comment">/* dots at end of string */</span></div>
+<div class="line"><span class="lineno">  132</span>    {</div>
+<div class="line"><span class="lineno">  133</span>      <span class="keywordflow">if</span> (dd == buf) <span class="comment">/* at start of string */</span></div>
+<div class="line"><span class="lineno">  134</span>      {</div>
+<div class="line"><span class="lineno">  135</span>        dd[1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  136</span>      }</div>
+<div class="line"><span class="lineno">  137</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  138</span>      {</div>
+<div class="line"><span class="lineno">  139</span>        dd[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  140</span>        <span class="keywordtype">char</span> *s = strrchr(buf, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  141</span>        <span class="keywordflow">if</span> (s == buf)</div>
+<div class="line"><span class="lineno">  142</span>          s[1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s)</div>
+<div class="line"><span class="lineno">  144</span>          s[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  145</span>      }</div>
+<div class="line"><span class="lineno">  146</span>    }</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  148</span>    {</div>
+<div class="line"><span class="lineno">  149</span>      dd += 3; <span class="comment">/* skip over &#39;/..dir/&#39; */</span></div>
+<div class="line"><span class="lineno">  150</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
 <div class="line"><span class="lineno">  152</span> </div>
-<div class="line"><span class="lineno">  153</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Collapsed to:  %s\n&quot;</span>, buf);</div>
-<div class="line"><span class="lineno">  154</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  155</span>}</div>
+<div class="line"><span class="lineno">  153</span>    dd = buf; <span class="comment">/* restart at the beginning */</span></div>
+<div class="line"><span class="lineno">  154</span>  }</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Collapsed to:  %s\n&quot;</span>, buf);</div>
+<div class="line"><span class="lineno">  157</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  158</span>}</div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00089">logging2.h:89</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a></div><div class="ttdeci">@ LL_DEBUG3</div><div class="ttdoc">Log at debug level 3.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -416,25 +419,25 @@ Functions</h2></td></tr>
 </dl>
 <p>Remove unnecessary dots and slashes from a path </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00165">165</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>{</div>
-<div class="line"><span class="lineno">  167</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path) || (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 0) != <span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2path_8c.html#a731d4a3c9ba01bab26f8b85e39df8ed7">mutt_path_tidy_slash</a>(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, is_dir))</div>
-<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// LCOV_EXCL_LINE</span></div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00168">168</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  169</span>{</div>
+<div class="line"><span class="lineno">  170</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path) || (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 0) != <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  172</span> </div>
-<div class="line"><span class="lineno">  173</span>  <a class="code hl_function" href="mutt_2path_8c.html#a11272305d911007887e69d3c9283b897">mutt_path_tidy_dotdot</a>(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>);</div>
-<div class="line"><span class="lineno">  174</span>  <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(path);</div>
+<div class="line"><span class="lineno">  173</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2path_8c.html#a731d4a3c9ba01bab26f8b85e39df8ed7">mutt_path_tidy_slash</a>(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, is_dir))</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// LCOV_EXCL_LINE</span></div>
 <div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  177</span>}</div>
-<div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00306">buffer.c:306</a></div></div>
-<div class="ttc" id="abuffer_8c_html_a4964d146427002ec3b52e121513b6078"><div class="ttname"><a href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a></div><div class="ttdeci">void buf_fix_dptr(struct Buffer *buf)</div><div class="ttdoc">Move the dptr to end of the Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00197">buffer.c:197</a></div></div>
-<div class="ttc" id="abuffer_8c_html_a52e24da79941dc16d5577dac9dfc2698"><div class="ttname"><a href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a></div><div class="ttdeci">char buf_at(const struct Buffer *buf, size_t offset)</div><div class="ttdoc">Return the character at the given offset.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00660">buffer.c:660</a></div></div>
-<div class="ttc" id="amutt_2path_8c_html_a11272305d911007887e69d3c9283b897"><div class="ttname"><a href="mutt_2path_8c.html#a11272305d911007887e69d3c9283b897">mutt_path_tidy_dotdot</a></div><div class="ttdeci">bool mutt_path_tidy_dotdot(char *buf)</div><div class="ttdoc">Remove dot-dot-slash from a path.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00105">path.c:105</a></div></div>
-<div class="ttc" id="amutt_2path_8c_html_a731d4a3c9ba01bab26f8b85e39df8ed7"><div class="ttname"><a href="mutt_2path_8c.html#a731d4a3c9ba01bab26f8b85e39df8ed7">mutt_path_tidy_slash</a></div><div class="ttdeci">bool mutt_path_tidy_slash(char *buf, bool is_dir)</div><div class="ttdoc">Remove unnecessary slashes and dots.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00054">path.c:54</a></div></div>
-<div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:35</a></div></div>
+<div class="line"><span class="lineno">  176</span>  <a class="code hl_function" href="mutt_2path_8c.html#a11272305d911007887e69d3c9283b897">mutt_path_tidy_dotdot</a>(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>);</div>
+<div class="line"><span class="lineno">  177</span>  <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(path);</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  180</span>}</div>
+<div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00308">buffer.c:308</a></div></div>
+<div class="ttc" id="abuffer_8c_html_a4964d146427002ec3b52e121513b6078"><div class="ttname"><a href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a></div><div class="ttdeci">void buf_fix_dptr(struct Buffer *buf)</div><div class="ttdoc">Move the dptr to end of the Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00199">buffer.c:199</a></div></div>
+<div class="ttc" id="abuffer_8c_html_a52e24da79941dc16d5577dac9dfc2698"><div class="ttname"><a href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a></div><div class="ttdeci">char buf_at(const struct Buffer *buf, size_t offset)</div><div class="ttdoc">Return the character at the given offset.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00662">buffer.c:662</a></div></div>
+<div class="ttc" id="amutt_2path_8c_html_a11272305d911007887e69d3c9283b897"><div class="ttname"><a href="mutt_2path_8c.html#a11272305d911007887e69d3c9283b897">mutt_path_tidy_dotdot</a></div><div class="ttdeci">bool mutt_path_tidy_dotdot(char *buf)</div><div class="ttdoc">Remove dot-dot-slash from a path.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00108">path.c:108</a></div></div>
+<div class="ttc" id="amutt_2path_8c_html_a731d4a3c9ba01bab26f8b85e39df8ed7"><div class="ttname"><a href="mutt_2path_8c.html#a731d4a3c9ba01bab26f8b85e39df8ed7">mutt_path_tidy_slash</a></div><div class="ttdeci">bool mutt_path_tidy_slash(char *buf, bool is_dir)</div><div class="ttdoc">Remove unnecessary slashes and dots.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00057">path.c:57</a></div></div>
+<div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00037">buffer.h:37</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -500,55 +503,55 @@ Functions</h2></td></tr>
 <li><code>~nonuser/dir</code> (~nonuser not changed) </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00190">190</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>{</div>
-<div class="line"><span class="lineno">  192</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path) || (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 0) != <span class="charliteral">&#39;~&#39;</span>))</div>
-<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  194</span> </div>
-<div class="line"><span class="lineno">  195</span>  <span class="keywordtype">char</span> result[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">  196</span>  <span class="keywordtype">char</span> *dir = NULL;</div>
-<div class="line"><span class="lineno">  197</span>  <span class="keywordtype">size_t</span> len = 0;</div>
-<div class="line"><span class="lineno">  198</span> </div>
-<div class="line"><span class="lineno">  199</span>  <span class="keywordflow">if</span> ((<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 1) == <span class="charliteral">&#39;/&#39;</span>) || (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 1) == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">  200</span>  {</div>
-<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">if</span> (!homedir)</div>
-<div class="line"><span class="lineno">  202</span>    {</div>
-<div class="line"><span class="lineno">  203</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;no homedir\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  204</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  205</span>    }</div>
-<div class="line"><span class="lineno">  206</span> </div>
-<div class="line"><span class="lineno">  207</span>    len = <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(result, homedir, <span class="keyword">sizeof</span>(result));</div>
-<div class="line"><span class="lineno">  208</span>    dir = path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1;</div>
-<div class="line"><span class="lineno">  209</span>  }</div>
-<div class="line"><span class="lineno">  210</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  211</span>  {</div>
-<div class="line"><span class="lineno">  212</span>    <span class="keywordtype">char</span> user[128] = { 0 };</div>
-<div class="line"><span class="lineno">  213</span>    dir = strchr(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">if</span> (dir)</div>
-<div class="line"><span class="lineno">  215</span>      <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(user, path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1, <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(dir - path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, (<span class="keywordtype">unsigned</span>) <span class="keyword">sizeof</span>(user)));</div>
-<div class="line"><span class="lineno">  216</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  217</span>      <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(user, path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1, <span class="keyword">sizeof</span>(user));</div>
-<div class="line"><span class="lineno">  218</span> </div>
-<div class="line"><span class="lineno">  219</span>    <span class="keyword">struct </span>passwd *pw = getpwnam(user);</div>
-<div class="line"><span class="lineno">  220</span>    <span class="keywordflow">if</span> (!pw || !pw-&gt;pw_dir)</div>
-<div class="line"><span class="lineno">  221</span>    {</div>
-<div class="line"><span class="lineno">  222</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;no such user: %s\n&quot;</span>, user);</div>
-<div class="line"><span class="lineno">  223</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  224</span>    }</div>
-<div class="line"><span class="lineno">  225</span> </div>
-<div class="line"><span class="lineno">  226</span>    len = <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(result, pw-&gt;pw_dir, <span class="keyword">sizeof</span>(result));</div>
-<div class="line"><span class="lineno">  227</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00193">193</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>{</div>
+<div class="line"><span class="lineno">  195</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path) || (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 0) != <span class="charliteral">&#39;~&#39;</span>))</div>
+<div class="line"><span class="lineno">  196</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>  <span class="keywordtype">char</span> result[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno">  199</span>  <span class="keywordtype">char</span> *dir = NULL;</div>
+<div class="line"><span class="lineno">  200</span>  <span class="keywordtype">size_t</span> len = 0;</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>  <span class="keywordflow">if</span> ((<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 1) == <span class="charliteral">&#39;/&#39;</span>) || (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 1) == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">  203</span>  {</div>
+<div class="line"><span class="lineno">  204</span>    <span class="keywordflow">if</span> (!homedir)</div>
+<div class="line"><span class="lineno">  205</span>    {</div>
+<div class="line"><span class="lineno">  206</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;no homedir\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  207</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  208</span>    }</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>    len = <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(result, homedir, <span class="keyword">sizeof</span>(result));</div>
+<div class="line"><span class="lineno">  211</span>    dir = path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1;</div>
+<div class="line"><span class="lineno">  212</span>  }</div>
+<div class="line"><span class="lineno">  213</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  214</span>  {</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordtype">char</span> user[128] = { 0 };</div>
+<div class="line"><span class="lineno">  216</span>    dir = strchr(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">if</span> (dir)</div>
+<div class="line"><span class="lineno">  218</span>      <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(user, path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1, <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(dir - path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, (<span class="keywordtype">unsigned</span>) <span class="keyword">sizeof</span>(user)));</div>
+<div class="line"><span class="lineno">  219</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  220</span>      <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(user, path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1, <span class="keyword">sizeof</span>(user));</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    <span class="keyword">struct </span>passwd *pw = getpwnam(user);</div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> (!pw || !pw-&gt;pw_dir)</div>
+<div class="line"><span class="lineno">  224</span>    {</div>
+<div class="line"><span class="lineno">  225</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;no such user: %s\n&quot;</span>, user);</div>
+<div class="line"><span class="lineno">  226</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  227</span>    }</div>
 <div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(result + len, dir, <span class="keyword">sizeof</span>(result) - len);</div>
-<div class="line"><span class="lineno">  230</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, result);</div>
+<div class="line"><span class="lineno">  229</span>    len = <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(result, pw-&gt;pw_dir, <span class="keyword">sizeof</span>(result));</div>
+<div class="line"><span class="lineno">  230</span>  }</div>
 <div class="line"><span class="lineno">  231</span> </div>
-<div class="line"><span class="lineno">  232</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  233</span>}</div>
-<div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00410">buffer.c:410</a></div></div>
+<div class="line"><span class="lineno">  232</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(result + len, dir, <span class="keyword">sizeof</span>(result) - len);</div>
+<div class="line"><span class="lineno">  233</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, result);</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  236</span>}</div>
+<div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00412">buffer.c:412</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00043">logging2.h:43</a></div></div>
 <div class="ttc" id="amemory_8h_html_a3acffbd305ee72dcd4593c0d8af64a4f"><div class="ttname"><a href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a></div><div class="ttdeci">#define MIN(a, b)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00032">memory.h:32</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_ad20e00309de897a1e882fc7400335b83"><div class="ttname"><a href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a></div><div class="ttdeci">size_t mutt_str_copy(char *dest, const char *src, size_t dsize)</div><div class="ttdoc">Copy a string into a buffer (guaranteeing NUL-termination)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00628">string.c:628</a></div></div>
-<div class="ttc" id="amutt_8h_html_ae688d728e1acdfe5988c7db45d6f0166"><div class="ttname"><a href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a></div><div class="ttdeci">#define PATH_MAX</div><div class="ttdef"><b>Definition:</b> <a href="mutt_8h_source.html#l00041">mutt.h:41</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_ad20e00309de897a1e882fc7400335b83"><div class="ttname"><a href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a></div><div class="ttdeci">size_t mutt_str_copy(char *dest, const char *src, size_t dsize)</div><div class="ttdoc">Copy a string into a buffer (guaranteeing NUL-termination)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00630">string.c:630</a></div></div>
+<div class="ttc" id="amutt_8h_html_ae688d728e1acdfe5988c7db45d6f0166"><div class="ttname"><a href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a></div><div class="ttdeci">#define PATH_MAX</div><div class="ttdef"><b>Definition:</b> <a href="mutt_8h_source.html#l00042">mutt.h:42</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -617,36 +620,36 @@ Functions</h2></td></tr>
 </dl>
 <p>Remove unnecessary dots and slashes from a path and expand '~'. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00244">244</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>{</div>
-<div class="line"><span class="lineno">  246</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path))</div>
-<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  248</span> </div>
-<div class="line"><span class="lineno">  249</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 0) == <span class="charliteral">&#39;~&#39;</span>)</div>
-<div class="line"><span class="lineno">  250</span>  {</div>
-<div class="line"><span class="lineno">  251</span>    <a class="code hl_function" href="mutt_2path_8c.html#aa51eaec92f9803ff9e11e442efa5aff9">mutt_path_tilde</a>(path, homedir);</div>
-<div class="line"><span class="lineno">  252</span>  }</div>
-<div class="line"><span class="lineno">  253</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 0) != <span class="charliteral">&#39;/&#39;</span>)</div>
-<div class="line"><span class="lineno">  254</span>  {</div>
-<div class="line"><span class="lineno">  255</span>    <span class="keywordtype">char</span> cwd[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">if</span> (!getcwd(cwd, <span class="keyword">sizeof</span>(cwd)))</div>
-<div class="line"><span class="lineno">  257</span>    {</div>
-<div class="line"><span class="lineno">  258</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;getcwd failed: %s (%d)\n&quot;</span>, strerror(errno), errno); <span class="comment">// LCOV_EXCL_LINE</span></div>
-<div class="line"><span class="lineno">  259</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// LCOV_EXCL_LINE</span></div>
-<div class="line"><span class="lineno">  260</span>    }</div>
-<div class="line"><span class="lineno">  261</span> </div>
-<div class="line"><span class="lineno">  262</span>    <span class="keywordtype">size_t</span> cwd_len = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(cwd);</div>
-<div class="line"><span class="lineno">  263</span>    cwd[cwd_len] = <span class="charliteral">&#39;/&#39;</span>;</div>
-<div class="line"><span class="lineno">  264</span>    cwd[cwd_len + 1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  265</span>    <a class="code hl_function" href="buffer_8c.html#ad68cbd296b1d1bd5f734c36ce827bc86">buf_insert</a>(path, 0, cwd);</div>
-<div class="line"><span class="lineno">  266</span>  }</div>
-<div class="line"><span class="lineno">  267</span> </div>
-<div class="line"><span class="lineno">  268</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2path_8c.html#a5ab1c7e67015696230c62a80223bc752">mutt_path_tidy</a>(path, is_dir);</div>
-<div class="line"><span class="lineno">  269</span>}</div>
-<div class="ttc" id="abuffer_8c_html_ad68cbd296b1d1bd5f734c36ce827bc86"><div class="ttname"><a href="buffer_8c.html#ad68cbd296b1d1bd5f734c36ce827bc86">buf_insert</a></div><div class="ttdeci">size_t buf_insert(struct Buffer *buf, size_t offset, const char *s)</div><div class="ttdoc">Add a string in the middle of a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00271">buffer.c:271</a></div></div>
-<div class="ttc" id="amutt_2path_8c_html_a5ab1c7e67015696230c62a80223bc752"><div class="ttname"><a href="mutt_2path_8c.html#a5ab1c7e67015696230c62a80223bc752">mutt_path_tidy</a></div><div class="ttdeci">bool mutt_path_tidy(struct Buffer *path, bool is_dir)</div><div class="ttdoc">Remove unnecessary parts of a path.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00165">path.c:165</a></div></div>
-<div class="ttc" id="amutt_2path_8c_html_aa51eaec92f9803ff9e11e442efa5aff9"><div class="ttname"><a href="mutt_2path_8c.html#aa51eaec92f9803ff9e11e442efa5aff9">mutt_path_tilde</a></div><div class="ttdeci">bool mutt_path_tilde(struct Buffer *path, const char *homedir)</div><div class="ttdoc">Expand '~' in a path.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00190">path.c:190</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00543">string.c:543</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00247">247</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>{</div>
+<div class="line"><span class="lineno">  249</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path))</div>
+<div class="line"><span class="lineno">  250</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 0) == <span class="charliteral">&#39;~&#39;</span>)</div>
+<div class="line"><span class="lineno">  253</span>  {</div>
+<div class="line"><span class="lineno">  254</span>    <a class="code hl_function" href="mutt_2path_8c.html#aa51eaec92f9803ff9e11e442efa5aff9">mutt_path_tilde</a>(path, homedir);</div>
+<div class="line"><span class="lineno">  255</span>  }</div>
+<div class="line"><span class="lineno">  256</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, 0) != <span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><span class="lineno">  257</span>  {</div>
+<div class="line"><span class="lineno">  258</span>    <span class="keywordtype">char</span> cwd[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">if</span> (!getcwd(cwd, <span class="keyword">sizeof</span>(cwd)))</div>
+<div class="line"><span class="lineno">  260</span>    {</div>
+<div class="line"><span class="lineno">  261</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;getcwd failed: %s (%d)\n&quot;</span>, strerror(errno), errno); <span class="comment">// LCOV_EXCL_LINE</span></div>
+<div class="line"><span class="lineno">  262</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// LCOV_EXCL_LINE</span></div>
+<div class="line"><span class="lineno">  263</span>    }</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span>    <span class="keywordtype">size_t</span> cwd_len = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(cwd);</div>
+<div class="line"><span class="lineno">  266</span>    cwd[cwd_len] = <span class="charliteral">&#39;/&#39;</span>;</div>
+<div class="line"><span class="lineno">  267</span>    cwd[cwd_len + 1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  268</span>    <a class="code hl_function" href="buffer_8c.html#ad68cbd296b1d1bd5f734c36ce827bc86">buf_insert</a>(path, 0, cwd);</div>
+<div class="line"><span class="lineno">  269</span>  }</div>
+<div class="line"><span class="lineno">  270</span> </div>
+<div class="line"><span class="lineno">  271</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2path_8c.html#a5ab1c7e67015696230c62a80223bc752">mutt_path_tidy</a>(path, is_dir);</div>
+<div class="line"><span class="lineno">  272</span>}</div>
+<div class="ttc" id="abuffer_8c_html_ad68cbd296b1d1bd5f734c36ce827bc86"><div class="ttname"><a href="buffer_8c.html#ad68cbd296b1d1bd5f734c36ce827bc86">buf_insert</a></div><div class="ttdeci">size_t buf_insert(struct Buffer *buf, size_t offset, const char *s)</div><div class="ttdoc">Add a string in the middle of a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00273">buffer.c:273</a></div></div>
+<div class="ttc" id="amutt_2path_8c_html_a5ab1c7e67015696230c62a80223bc752"><div class="ttname"><a href="mutt_2path_8c.html#a5ab1c7e67015696230c62a80223bc752">mutt_path_tidy</a></div><div class="ttdeci">bool mutt_path_tidy(struct Buffer *path, bool is_dir)</div><div class="ttdoc">Remove unnecessary parts of a path.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00168">path.c:168</a></div></div>
+<div class="ttc" id="amutt_2path_8c_html_aa51eaec92f9803ff9e11e442efa5aff9"><div class="ttname"><a href="mutt_2path_8c.html#aa51eaec92f9803ff9e11e442efa5aff9">mutt_path_tilde</a></div><div class="ttdeci">bool mutt_path_tilde(struct Buffer *path, const char *homedir)</div><div class="ttdoc">Expand '~' in a path.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00193">path.c:193</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00545">string.c:545</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -697,22 +700,22 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Basename of / is / </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00278">278</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  279</span>{</div>
-<div class="line"><span class="lineno">  280</span>  <span class="keywordflow">if</span> (!path)</div>
-<div class="line"><span class="lineno">  281</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  282</span> </div>
-<div class="line"><span class="lineno">  283</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *p = strrchr(path, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  284</span>  <span class="keywordflow">if</span> (p)</div>
-<div class="line"><span class="lineno">  285</span>  {</div>
-<div class="line"><span class="lineno">  286</span>    <span class="keywordflow">if</span> (p[1] == <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  287</span>      <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  288</span> </div>
-<div class="line"><span class="lineno">  289</span>    <span class="keywordflow">return</span> p + 1;</div>
-<div class="line"><span class="lineno">  290</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00281">281</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  282</span>{</div>
+<div class="line"><span class="lineno">  283</span>  <span class="keywordflow">if</span> (!path)</div>
+<div class="line"><span class="lineno">  284</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  285</span> </div>
+<div class="line"><span class="lineno">  286</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *p = strrchr(path, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  287</span>  <span class="keywordflow">if</span> (p)</div>
+<div class="line"><span class="lineno">  288</span>  {</div>
+<div class="line"><span class="lineno">  289</span>    <span class="keywordflow">if</span> (p[1] == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  290</span>      <span class="keywordflow">return</span> path;</div>
 <div class="line"><span class="lineno">  291</span> </div>
-<div class="line"><span class="lineno">  292</span>  <span class="keywordflow">return</span> path;</div>
-<div class="line"><span class="lineno">  293</span>}</div>
+<div class="line"><span class="lineno">  292</span>    <span class="keywordflow">return</span> p + 1;</div>
+<div class="line"><span class="lineno">  293</span>  }</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>  <span class="keywordflow">return</span> path;</div>
+<div class="line"><span class="lineno">  296</span>}</div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
@@ -758,16 +761,16 @@ Functions</h2></td></tr>
 <dd>
 The caller must free the returned string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00308">308</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  309</span>{</div>
-<div class="line"><span class="lineno">  310</span>  <span class="keywordflow">if</span> (!path)</div>
-<div class="line"><span class="lineno">  311</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  312</span> </div>
-<div class="line"><span class="lineno">  313</span>  <span class="keywordtype">char</span> buf[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">  314</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, path, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  315</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(dirname(buf));</div>
-<div class="line"><span class="lineno">  316</span>}</div>
-<div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00251">string.c:251</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00311">311</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  312</span>{</div>
+<div class="line"><span class="lineno">  313</span>  <span class="keywordflow">if</span> (!path)</div>
+<div class="line"><span class="lineno">  314</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  315</span> </div>
+<div class="line"><span class="lineno">  316</span>  <span class="keywordtype">char</span> buf[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno">  317</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, path, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  318</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(dirname(buf));</div>
+<div class="line"><span class="lineno">  319</span>}</div>
+<div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00253">string.c:253</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -831,43 +834,43 @@ The caller must free the returned string </dd></dl>
 <p>Use POSIX functions to convert a path to absolute, relatively to another path</p>
 <dl class="section note"><dt>Note</dt><dd><em>path</em> should be at least of PATH_MAX length </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00329">329</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  330</span>{</div>
-<div class="line"><span class="lineno">  331</span>  <span class="keywordflow">if</span> (!path || !reference)</div>
-<div class="line"><span class="lineno">  332</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  333</span> </div>
-<div class="line"><span class="lineno">  334</span>  <span class="keywordtype">char</span> abs_path[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">  335</span>  <span class="keywordtype">int</span> path_len;</div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00332">332</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  333</span>{</div>
+<div class="line"><span class="lineno">  334</span>  <span class="keywordflow">if</span> (!path || !reference)</div>
+<div class="line"><span class="lineno">  335</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  336</span> </div>
-<div class="line"><span class="lineno">  337</span>  <span class="comment">/* if path is already absolute, don&#39;t do anything */</span></div>
-<div class="line"><span class="lineno">  338</span>  <span class="keywordflow">if</span> ((strlen(path) &gt; 1) &amp;&amp; (path[0] == <span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno">  339</span>  {</div>
-<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  341</span>  }</div>
-<div class="line"><span class="lineno">  342</span> </div>
-<div class="line"><span class="lineno">  343</span>  <span class="keywordtype">char</span> *dirpath = <a class="code hl_function" href="mutt_2path_8c.html#a6880d720953172694db126bf013bd86b">mutt_path_dirname</a>(reference);</div>
-<div class="line"><span class="lineno">  344</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(abs_path, dirpath, <span class="keyword">sizeof</span>(abs_path));</div>
-<div class="line"><span class="lineno">  345</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;dirpath);</div>
-<div class="line"><span class="lineno">  346</span>  <a class="code hl_function" href="mutt_2string_8c.html#a86bd900db15a215e2437c360fcbc9242">mutt_strn_cat</a>(abs_path, <span class="keyword">sizeof</span>(abs_path), <span class="stringliteral">&quot;/&quot;</span>, 1); <span class="comment">/* append a / at the end of the path */</span></div>
-<div class="line"><span class="lineno">  347</span> </div>
-<div class="line"><span class="lineno">  348</span>  path_len = <span class="keyword">sizeof</span>(abs_path) - strlen(path);</div>
-<div class="line"><span class="lineno">  349</span> </div>
-<div class="line"><span class="lineno">  350</span>  <a class="code hl_function" href="mutt_2string_8c.html#a86bd900db15a215e2437c360fcbc9242">mutt_strn_cat</a>(abs_path, <span class="keyword">sizeof</span>(abs_path), path, (path_len &gt; 0) ? path_len : 0);</div>
-<div class="line"><span class="lineno">  351</span> </div>
-<div class="line"><span class="lineno">  352</span>  path = realpath(abs_path, path);</div>
-<div class="line"><span class="lineno">  353</span>  <span class="keywordflow">if</span> (!path &amp;&amp; (errno != ENOENT))</div>
-<div class="line"><span class="lineno">  354</span>  {</div>
-<div class="line"><span class="lineno">  355</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: converting path to absolute&quot;</span>));</div>
-<div class="line"><span class="lineno">  356</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  357</span>  }</div>
-<div class="line"><span class="lineno">  358</span> </div>
-<div class="line"><span class="lineno">  359</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  360</span>}</div>
+<div class="line"><span class="lineno">  337</span>  <span class="keywordtype">char</span> abs_path[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno">  338</span>  <span class="keywordtype">int</span> path_len;</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>  <span class="comment">/* if path is already absolute, don&#39;t do anything */</span></div>
+<div class="line"><span class="lineno">  341</span>  <span class="keywordflow">if</span> ((strlen(path) &gt; 1) &amp;&amp; (path[0] == <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">  342</span>  {</div>
+<div class="line"><span class="lineno">  343</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  344</span>  }</div>
+<div class="line"><span class="lineno">  345</span> </div>
+<div class="line"><span class="lineno">  346</span>  <span class="keywordtype">char</span> *dirpath = <a class="code hl_function" href="mutt_2path_8c.html#a6880d720953172694db126bf013bd86b">mutt_path_dirname</a>(reference);</div>
+<div class="line"><span class="lineno">  347</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(abs_path, dirpath, <span class="keyword">sizeof</span>(abs_path));</div>
+<div class="line"><span class="lineno">  348</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;dirpath);</div>
+<div class="line"><span class="lineno">  349</span>  <a class="code hl_function" href="mutt_2string_8c.html#a86bd900db15a215e2437c360fcbc9242">mutt_strn_cat</a>(abs_path, <span class="keyword">sizeof</span>(abs_path), <span class="stringliteral">&quot;/&quot;</span>, 1); <span class="comment">/* append a / at the end of the path */</span></div>
+<div class="line"><span class="lineno">  350</span> </div>
+<div class="line"><span class="lineno">  351</span>  path_len = <span class="keyword">sizeof</span>(abs_path) - strlen(path);</div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>  <a class="code hl_function" href="mutt_2string_8c.html#a86bd900db15a215e2437c360fcbc9242">mutt_strn_cat</a>(abs_path, <span class="keyword">sizeof</span>(abs_path), path, (path_len &gt; 0) ? path_len : 0);</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>  path = realpath(abs_path, path);</div>
+<div class="line"><span class="lineno">  356</span>  <span class="keywordflow">if</span> (!path &amp;&amp; (errno != ENOENT))</div>
+<div class="line"><span class="lineno">  357</span>  {</div>
+<div class="line"><span class="lineno">  358</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: converting path to absolute&quot;</span>));</div>
+<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  360</span>  }</div>
+<div class="line"><span class="lineno">  361</span> </div>
+<div class="line"><span class="lineno">  362</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  363</span>}</div>
 <div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00045">memory.h:45</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
-<div class="ttc" id="amutt_2path_8c_html_a6880d720953172694db126bf013bd86b"><div class="ttname"><a href="mutt_2path_8c.html#a6880d720953172694db126bf013bd86b">mutt_path_dirname</a></div><div class="ttdeci">char * mutt_path_dirname(const char *path)</div><div class="ttdoc">Return a path up to, but not including, the final '/'.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00308">path.c:308</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a86bd900db15a215e2437c360fcbc9242"><div class="ttname"><a href="mutt_2string_8c.html#a86bd900db15a215e2437c360fcbc9242">mutt_strn_cat</a></div><div class="ttdeci">char * mutt_strn_cat(char *d, size_t l, const char *s, size_t sl)</div><div class="ttdoc">Concatenate two strings.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00295">string.c:295</a></div></div>
+<div class="ttc" id="amutt_2path_8c_html_a6880d720953172694db126bf013bd86b"><div class="ttname"><a href="mutt_2path_8c.html#a6880d720953172694db126bf013bd86b">mutt_path_dirname</a></div><div class="ttdeci">char * mutt_path_dirname(const char *path)</div><div class="ttdoc">Return a path up to, but not including, the final '/'.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00311">path.c:311</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a86bd900db15a215e2437c360fcbc9242"><div class="ttname"><a href="mutt_2string_8c.html#a86bd900db15a215e2437c360fcbc9242">mutt_strn_cat</a></div><div class="ttdeci">char * mutt_strn_cat(char *d, size_t l, const char *s, size_t sl)</div><div class="ttdoc">Concatenate two strings.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00297">string.c:297</a></div></div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -919,19 +922,19 @@ The caller must free the returned string </dd></dl>
 </dl>
 <p>Resolve and overwrite the path in buf. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00370">370</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  371</span>{</div>
-<div class="line"><span class="lineno">  372</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path))</div>
-<div class="line"><span class="lineno">  373</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  374</span> </div>
-<div class="line"><span class="lineno">  375</span>  <span class="keywordtype">char</span> s[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">  376</span> </div>
-<div class="line"><span class="lineno">  377</span>  <span class="keywordflow">if</span> (!realpath(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), s))</div>
-<div class="line"><span class="lineno">  378</span>    <span class="keywordflow">return</span> 0;</div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00373">373</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  374</span>{</div>
+<div class="line"><span class="lineno">  375</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path))</div>
+<div class="line"><span class="lineno">  376</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  377</span> </div>
+<div class="line"><span class="lineno">  378</span>  <span class="keywordtype">char</span> s[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
 <div class="line"><span class="lineno">  379</span> </div>
-<div class="line"><span class="lineno">  380</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, s);</div>
-<div class="line"><span class="lineno">  381</span>}</div>
-<div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00095">buffer.h:95</a></div></div>
+<div class="line"><span class="lineno">  380</span>  <span class="keywordflow">if</span> (!realpath(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), s))</div>
+<div class="line"><span class="lineno">  381</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, s);</div>
+<div class="line"><span class="lineno">  384</span>}</div>
+<div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00097">buffer.h:97</a></div></div>
 </div><!-- fragment --><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -993,33 +996,33 @@ The caller must free the returned string </dd></dl>
 </dl>
 <p>Abbreviate a path using '=' to represent the 'folder'. If the folder path is passed, it won't be abbreviated to just '=' </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00392">392</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  393</span>{</div>
-<div class="line"><span class="lineno">  394</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path) || !folder)</div>
-<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  396</span> </div>
-<div class="line"><span class="lineno">  397</span>  <span class="keywordtype">size_t</span> flen = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(folder);</div>
-<div class="line"><span class="lineno">  398</span>  <span class="keywordflow">if</span> (flen &lt; 2)</div>
-<div class="line"><span class="lineno">  399</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  400</span> </div>
-<div class="line"><span class="lineno">  401</span>  <span class="keywordflow">if</span> (folder[flen - 1] == <span class="charliteral">&#39;/&#39;</span>)</div>
-<div class="line"><span class="lineno">  402</span>    flen--;</div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00395">395</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  396</span>{</div>
+<div class="line"><span class="lineno">  397</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(path) || !folder)</div>
+<div class="line"><span class="lineno">  398</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  399</span> </div>
+<div class="line"><span class="lineno">  400</span>  <span class="keywordtype">size_t</span> flen = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(folder);</div>
+<div class="line"><span class="lineno">  401</span>  <span class="keywordflow">if</span> (flen &lt; 2)</div>
+<div class="line"><span class="lineno">  402</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  403</span> </div>
-<div class="line"><span class="lineno">  404</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), folder, flen))</div>
-<div class="line"><span class="lineno">  405</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  404</span>  <span class="keywordflow">if</span> (folder[flen - 1] == <span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><span class="lineno">  405</span>    flen--;</div>
 <div class="line"><span class="lineno">  406</span> </div>
-<div class="line"><span class="lineno">  407</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, flen + 1) == <span class="charliteral">&#39;\0&#39;</span>) <span class="comment">// Don&#39;t abbreviate to &#39;=/&#39;</span></div>
+<div class="line"><span class="lineno">  407</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), folder, flen))</div>
 <div class="line"><span class="lineno">  408</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  409</span> </div>
-<div class="line"><span class="lineno">  410</span>  <span class="keywordtype">size_t</span> rlen = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + flen + 1);</div>
-<div class="line"><span class="lineno">  411</span> </div>
-<div class="line"><span class="lineno">  412</span>  path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>[0] = <span class="charliteral">&#39;=&#39;</span>;</div>
-<div class="line"><span class="lineno">  413</span>  memmove(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1, path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + flen + 1, rlen + 1);</div>
-<div class="line"><span class="lineno">  414</span>  <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(path);</div>
-<div class="line"><span class="lineno">  415</span> </div>
-<div class="line"><span class="lineno">  416</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  417</span>}</div>
-<div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00472">string.c:472</a></div></div>
+<div class="line"><span class="lineno">  410</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(path, flen + 1) == <span class="charliteral">&#39;\0&#39;</span>) <span class="comment">// Don&#39;t abbreviate to &#39;=/&#39;</span></div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  412</span> </div>
+<div class="line"><span class="lineno">  413</span>  <span class="keywordtype">size_t</span> rlen = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + flen + 1);</div>
+<div class="line"><span class="lineno">  414</span> </div>
+<div class="line"><span class="lineno">  415</span>  path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>[0] = <span class="charliteral">&#39;=&#39;</span>;</div>
+<div class="line"><span class="lineno">  416</span>  memmove(path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + 1, path-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + flen + 1, rlen + 1);</div>
+<div class="line"><span class="lineno">  417</span>  <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(path);</div>
+<div class="line"><span class="lineno">  418</span> </div>
+<div class="line"><span class="lineno">  419</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  420</span>}</div>
+<div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00474">string.c:474</a></div></div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -1062,43 +1065,43 @@ The caller must free the returned string </dd></dl>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Do not free the returned string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00426">426</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  427</span>{</div>
-<div class="line"><span class="lineno">  428</span>  <span class="keywordflow">if</span> (!src)</div>
-<div class="line"><span class="lineno">  429</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  430</span> </div>
-<div class="line"><span class="lineno">  431</span>  <span class="keyword">static</span> <span class="keywordtype">char</span> dest[<a class="code hl_define" href="string2_8h.html#a8f64b8071f8cd3a1776578dbf49495f7">STR_COMMAND</a>];</div>
-<div class="line"><span class="lineno">  432</span>  <span class="keywordtype">char</span> *destp = dest;</div>
-<div class="line"><span class="lineno">  433</span>  <span class="keywordtype">int</span> destsize = 0;</div>
-<div class="line"><span class="lineno">  434</span> </div>
-<div class="line"><span class="lineno">  435</span>  <span class="keywordflow">while</span> (*src &amp;&amp; (destsize &lt; <span class="keyword">sizeof</span>(dest) - 1))</div>
-<div class="line"><span class="lineno">  436</span>  {</div>
-<div class="line"><span class="lineno">  437</span>    <span class="keywordflow">if</span> (*src != <span class="charliteral">&#39;\&#39;&#39;</span>)</div>
-<div class="line"><span class="lineno">  438</span>    {</div>
-<div class="line"><span class="lineno">  439</span>      *destp++ = *src++;</div>
-<div class="line"><span class="lineno">  440</span>      destsize++;</div>
-<div class="line"><span class="lineno">  441</span>    }</div>
-<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  443</span>    {</div>
-<div class="line"><span class="lineno">  444</span>      <span class="comment">/* convert &#39; into &#39;\&#39;&#39; */</span></div>
-<div class="line"><span class="lineno">  445</span>      <span class="keywordflow">if</span> ((destsize + 4) &lt; <span class="keyword">sizeof</span>(dest))</div>
-<div class="line"><span class="lineno">  446</span>      {</div>
-<div class="line"><span class="lineno">  447</span>        *destp++ = *src++;</div>
-<div class="line"><span class="lineno">  448</span>        *destp++ = <span class="charliteral">&#39;\\&#39;</span>;</div>
-<div class="line"><span class="lineno">  449</span>        *destp++ = <span class="charliteral">&#39;\&#39;&#39;</span>;</div>
-<div class="line"><span class="lineno">  450</span>        *destp++ = <span class="charliteral">&#39;\&#39;&#39;</span>;</div>
-<div class="line"><span class="lineno">  451</span>        destsize += 4;</div>
-<div class="line"><span class="lineno">  452</span>      }</div>
-<div class="line"><span class="lineno">  453</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  454</span>      {</div>
-<div class="line"><span class="lineno">  455</span>        <span class="keywordflow">break</span>; <span class="comment">// LCOV_EXCL_LINE</span></div>
-<div class="line"><span class="lineno">  456</span>      }</div>
-<div class="line"><span class="lineno">  457</span>    }</div>
-<div class="line"><span class="lineno">  458</span>  }</div>
-<div class="line"><span class="lineno">  459</span>  *destp = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  460</span> </div>
-<div class="line"><span class="lineno">  461</span>  <span class="keywordflow">return</span> dest;</div>
-<div class="line"><span class="lineno">  462</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00429">429</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  430</span>{</div>
+<div class="line"><span class="lineno">  431</span>  <span class="keywordflow">if</span> (!src)</div>
+<div class="line"><span class="lineno">  432</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  433</span> </div>
+<div class="line"><span class="lineno">  434</span>  <span class="keyword">static</span> <span class="keywordtype">char</span> dest[<a class="code hl_define" href="string2_8h.html#a8f64b8071f8cd3a1776578dbf49495f7">STR_COMMAND</a>];</div>
+<div class="line"><span class="lineno">  435</span>  <span class="keywordtype">char</span> *destp = dest;</div>
+<div class="line"><span class="lineno">  436</span>  <span class="keywordtype">int</span> destsize = 0;</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>  <span class="keywordflow">while</span> (*src &amp;&amp; (destsize &lt; <span class="keyword">sizeof</span>(dest) - 1))</div>
+<div class="line"><span class="lineno">  439</span>  {</div>
+<div class="line"><span class="lineno">  440</span>    <span class="keywordflow">if</span> (*src != <span class="charliteral">&#39;\&#39;&#39;</span>)</div>
+<div class="line"><span class="lineno">  441</span>    {</div>
+<div class="line"><span class="lineno">  442</span>      *destp++ = *src++;</div>
+<div class="line"><span class="lineno">  443</span>      destsize++;</div>
+<div class="line"><span class="lineno">  444</span>    }</div>
+<div class="line"><span class="lineno">  445</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  446</span>    {</div>
+<div class="line"><span class="lineno">  447</span>      <span class="comment">/* convert &#39; into &#39;\&#39;&#39; */</span></div>
+<div class="line"><span class="lineno">  448</span>      <span class="keywordflow">if</span> ((destsize + 4) &lt; <span class="keyword">sizeof</span>(dest))</div>
+<div class="line"><span class="lineno">  449</span>      {</div>
+<div class="line"><span class="lineno">  450</span>        *destp++ = *src++;</div>
+<div class="line"><span class="lineno">  451</span>        *destp++ = <span class="charliteral">&#39;\\&#39;</span>;</div>
+<div class="line"><span class="lineno">  452</span>        *destp++ = <span class="charliteral">&#39;\&#39;&#39;</span>;</div>
+<div class="line"><span class="lineno">  453</span>        *destp++ = <span class="charliteral">&#39;\&#39;&#39;</span>;</div>
+<div class="line"><span class="lineno">  454</span>        destsize += 4;</div>
+<div class="line"><span class="lineno">  455</span>      }</div>
+<div class="line"><span class="lineno">  456</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  457</span>      {</div>
+<div class="line"><span class="lineno">  458</span>        <span class="keywordflow">break</span>; <span class="comment">// LCOV_EXCL_LINE</span></div>
+<div class="line"><span class="lineno">  459</span>      }</div>
+<div class="line"><span class="lineno">  460</span>    }</div>
+<div class="line"><span class="lineno">  461</span>  }</div>
+<div class="line"><span class="lineno">  462</span>  *destp = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  463</span> </div>
+<div class="line"><span class="lineno">  464</span>  <span class="keywordflow">return</span> dest;</div>
+<div class="line"><span class="lineno">  465</span>}</div>
 <div class="ttc" id="astring2_8h_html_a8f64b8071f8cd3a1776578dbf49495f7"><div class="ttname"><a href="string2_8h.html#a8f64b8071f8cd3a1776578dbf49495f7">STR_COMMAND</a></div><div class="ttdeci">#define STR_COMMAND</div><div class="ttdoc">Enough space for a long command line.</div><div class="ttdef"><b>Definition:</b> <a href="string2_8h_source.html#l00035">string2.h:35</a></div></div>
 </div><!-- fragment --><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1141,28 +1144,28 @@ The caller must free the returned string </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00469">469</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  470</span>{</div>
-<div class="line"><span class="lineno">  471</span>  <span class="keywordflow">if</span> (!cwd)</div>
-<div class="line"><span class="lineno">  472</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  473</span> </div>
-<div class="line"><span class="lineno">  474</span>  <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(cwd, <a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>);</div>
-<div class="line"><span class="lineno">  475</span>  <span class="keywordtype">char</span> *rc = getcwd(cwd-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, cwd-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>);</div>
-<div class="line"><span class="lineno">  476</span>  <span class="keywordflow">while</span> (!rc &amp;&amp; (errno == ERANGE))</div>
-<div class="line"><span class="lineno">  477</span>  {</div>
-<div class="line"><span class="lineno">  478</span>    <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(cwd, cwd-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> + 256);   <span class="comment">// LCOV_EXCL_LINE</span></div>
-<div class="line"><span class="lineno">  479</span>    rc = getcwd(cwd-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, cwd-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>); <span class="comment">// LCOV_EXCL_LINE</span></div>
-<div class="line"><span class="lineno">  480</span>  }</div>
-<div class="line"><span class="lineno">  481</span>  <span class="keywordflow">if</span> (rc)</div>
-<div class="line"><span class="lineno">  482</span>    <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(cwd);</div>
-<div class="line"><span class="lineno">  483</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  484</span>    <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(cwd); <span class="comment">// LCOV_EXCL_LINE</span></div>
-<div class="line"><span class="lineno">  485</span> </div>
-<div class="line"><span class="lineno">  486</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  487</span>}</div>
-<div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00091">buffer.c:91</a></div></div>
-<div class="ttc" id="abuffer_8c_html_ae144a736bd5f9de289bdc8f27fecf96a"><div class="ttname"><a href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a></div><div class="ttdeci">void buf_alloc(struct Buffer *buf, size_t new_size)</div><div class="ttdoc">Make sure a buffer can store at least new_size bytes.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00352">buffer.c:352</a></div></div>
-<div class="ttc" id="astructBuffer_html_a1d9ee60bcf94de702b15ec2b5d811995"><div class="ttname"><a href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">Buffer::dsize</a></div><div class="ttdeci">size_t dsize</div><div class="ttdoc">Length of data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00037">buffer.h:37</a></div></div>
+<p class="definition">Definition at line <a class="el" href="mutt_2path_8c_source.html#l00472">472</a> of file <a class="el" href="mutt_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  473</span>{</div>
+<div class="line"><span class="lineno">  474</span>  <span class="keywordflow">if</span> (!cwd)</div>
+<div class="line"><span class="lineno">  475</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>  <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(cwd, <a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>);</div>
+<div class="line"><span class="lineno">  478</span>  <span class="keywordtype">char</span> *rc = getcwd(cwd-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, cwd-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>);</div>
+<div class="line"><span class="lineno">  479</span>  <span class="keywordflow">while</span> (!rc &amp;&amp; (errno == ERANGE))</div>
+<div class="line"><span class="lineno">  480</span>  {</div>
+<div class="line"><span class="lineno">  481</span>    <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(cwd, cwd-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> + 256);   <span class="comment">// LCOV_EXCL_LINE</span></div>
+<div class="line"><span class="lineno">  482</span>    rc = getcwd(cwd-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, cwd-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>); <span class="comment">// LCOV_EXCL_LINE</span></div>
+<div class="line"><span class="lineno">  483</span>  }</div>
+<div class="line"><span class="lineno">  484</span>  <span class="keywordflow">if</span> (rc)</div>
+<div class="line"><span class="lineno">  485</span>    <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(cwd);</div>
+<div class="line"><span class="lineno">  486</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  487</span>    <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(cwd); <span class="comment">// LCOV_EXCL_LINE</span></div>
+<div class="line"><span class="lineno">  488</span> </div>
+<div class="line"><span class="lineno">  489</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  490</span>}</div>
+<div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00093">buffer.c:93</a></div></div>
+<div class="ttc" id="abuffer_8c_html_ae144a736bd5f9de289bdc8f27fecf96a"><div class="ttname"><a href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a></div><div class="ttdeci">void buf_alloc(struct Buffer *buf, size_t new_size)</div><div class="ttdoc">Make sure a buffer can store at least new_size bytes.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00354">buffer.c:354</a></div></div>
+<div class="ttc" id="astructBuffer_html_a1d9ee60bcf94de702b15ec2b5d811995"><div class="ttname"><a href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">Buffer::dsize</a></div><div class="ttdeci">size_t dsize</div><div class="ttdoc">Length of data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00039">buffer.h:39</a></div></div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
