@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-02-01-1-ge31108</span>
+   &#160;<span id="projectnumber">2024-02-01-9-g811c97</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -575,35 +575,35 @@ Functions</h2></td></tr>
 </dl>
 <p>Full status flags are not supported by nntp, but we can fake some of them: Read = a read message number is in the .newsrc New = not read and not cached Old = not read but cached </p>
 
-<p class="definition">Definition at line <a class="el" href="newsrc_8c_source.html#l01215">1215</a> of file <a class="el" href="newsrc_8c_source.html">newsrc.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1216</span>{</div>
-<div class="line"><span class="lineno"> 1217</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structNntpMboxData.html">NntpMboxData</a> *<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = m-&gt;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>;</div>
-<div class="line"><span class="lineno"> 1218</span> </div>
-<div class="line"><span class="lineno"> 1219</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="structNntpMboxData.html#a4eeac824a82fb5bb884aa9aab449ccf8">group</a>)</div>
-<div class="line"><span class="lineno"> 1220</span>    <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = <a class="code hl_function" href="hash_8c.html#a21cfc2c56db496fc57d3d85a71c03215">mutt_hash_find</a>(<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;adata-&gt;groups_hash, <a class="code hl_variable" href="structNntpMboxData.html#a4eeac824a82fb5bb884aa9aab449ccf8">group</a>);</div>
-<div class="line"><span class="lineno"> 1221</span> </div>
-<div class="line"><span class="lineno"> 1222</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>)</div>
-<div class="line"><span class="lineno"> 1223</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1224</span> </div>
-<div class="line"><span class="lineno"> 1225</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;newsrc_len; i++)</div>
-<div class="line"><span class="lineno"> 1226</span>  {</div>
-<div class="line"><span class="lineno"> 1227</span>    <span class="keywordflow">if</span> ((anum &gt;= <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;newsrc_ent[i].first) &amp;&amp; (anum &lt;= mdata-&gt;<a class="code hl_variable" href="structNntpMboxData.html#a9747475877d94ec69209a43352cf25cb">newsrc_ent</a>[i].<a class="code hl_variable" href="structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565">last</a>))</div>
-<div class="line"><span class="lineno"> 1228</span>    {</div>
-<div class="line"><span class="lineno"> 1229</span>      <span class="comment">/* can&#39;t use mutt_set_flag() because mview_update() didn&#39;t get called yet */</span></div>
-<div class="line"><span class="lineno"> 1230</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a0bd79550be901d44e50953fb43614e10">read</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1231</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1232</span>    }</div>
-<div class="line"><span class="lineno"> 1233</span>  }</div>
-<div class="line"><span class="lineno"> 1234</span> </div>
-<div class="line"><span class="lineno"> 1235</span>  <span class="comment">/* article was not cached yet, it&#39;s new */</span></div>
-<div class="line"><span class="lineno"> 1236</span>  <span class="keywordflow">if</span> (anum &gt; <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;last_cached)</div>
-<div class="line"><span class="lineno"> 1237</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno"> 1238</span> </div>
-<div class="line"><span class="lineno"> 1239</span>  <span class="comment">/* article isn&#39;t read but cached, it&#39;s old */</span></div>
-<div class="line"><span class="lineno"> 1240</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_mark_old = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;mark_old&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1241</span>  <span class="keywordflow">if</span> (c_mark_old)</div>
-<div class="line"><span class="lineno"> 1242</span>    e-&gt;<a class="code hl_variable" href="structEmail.html#a6d9062408a8c89b19cf25584dd2ffb57">old</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1243</span>}</div>
+<p class="definition">Definition at line <a class="el" href="newsrc_8c_source.html#l01216">1216</a> of file <a class="el" href="newsrc_8c_source.html">newsrc.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1217</span>{</div>
+<div class="line"><span class="lineno"> 1218</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structNntpMboxData.html">NntpMboxData</a> *<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = m-&gt;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>;</div>
+<div class="line"><span class="lineno"> 1219</span> </div>
+<div class="line"><span class="lineno"> 1220</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="structNntpMboxData.html#a4eeac824a82fb5bb884aa9aab449ccf8">group</a>)</div>
+<div class="line"><span class="lineno"> 1221</span>    <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = <a class="code hl_function" href="hash_8c.html#a21cfc2c56db496fc57d3d85a71c03215">mutt_hash_find</a>(<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;adata-&gt;groups_hash, <a class="code hl_variable" href="structNntpMboxData.html#a4eeac824a82fb5bb884aa9aab449ccf8">group</a>);</div>
+<div class="line"><span class="lineno"> 1222</span> </div>
+<div class="line"><span class="lineno"> 1223</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>)</div>
+<div class="line"><span class="lineno"> 1224</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1225</span> </div>
+<div class="line"><span class="lineno"> 1226</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;newsrc_len; i++)</div>
+<div class="line"><span class="lineno"> 1227</span>  {</div>
+<div class="line"><span class="lineno"> 1228</span>    <span class="keywordflow">if</span> ((anum &gt;= <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;newsrc_ent[i].first) &amp;&amp; (anum &lt;= mdata-&gt;<a class="code hl_variable" href="structNntpMboxData.html#a9747475877d94ec69209a43352cf25cb">newsrc_ent</a>[i].<a class="code hl_variable" href="structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565">last</a>))</div>
+<div class="line"><span class="lineno"> 1229</span>    {</div>
+<div class="line"><span class="lineno"> 1230</span>      <span class="comment">/* can&#39;t use mutt_set_flag() because mview_update() didn&#39;t get called yet */</span></div>
+<div class="line"><span class="lineno"> 1231</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a0bd79550be901d44e50953fb43614e10">read</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1232</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1233</span>    }</div>
+<div class="line"><span class="lineno"> 1234</span>  }</div>
+<div class="line"><span class="lineno"> 1235</span> </div>
+<div class="line"><span class="lineno"> 1236</span>  <span class="comment">/* article was not cached yet, it&#39;s new */</span></div>
+<div class="line"><span class="lineno"> 1237</span>  <span class="keywordflow">if</span> (anum &gt; <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;last_cached)</div>
+<div class="line"><span class="lineno"> 1238</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno"> 1239</span> </div>
+<div class="line"><span class="lineno"> 1240</span>  <span class="comment">/* article isn&#39;t read but cached, it&#39;s old */</span></div>
+<div class="line"><span class="lineno"> 1241</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_mark_old = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;mark_old&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1242</span>  <span class="keywordflow">if</span> (c_mark_old)</div>
+<div class="line"><span class="lineno"> 1243</span>    e-&gt;<a class="code hl_variable" href="structEmail.html#a6d9062408a8c89b19cf25584dd2ffb57">old</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1244</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00048">helpers.c:48</a></div></div>
 <div class="ttc" id="ahash_8c_html_a21cfc2c56db496fc57d3d85a71c03215"><div class="ttname"><a href="hash_8c.html#a21cfc2c56db496fc57d3d85a71c03215">mutt_hash_find</a></div><div class="ttdeci">void * mutt_hash_find(const struct HashTable *table, const char *strkey)</div><div class="ttdoc">Find the HashElem data in a Hash Table element using a key.</div><div class="ttdef"><b>Definition:</b> <a href="hash_8c_source.html#l00362">hash.c:362</a></div></div>
 <div class="ttc" id="astructEmail_html_a0bd79550be901d44e50953fb43614e10"><div class="ttname"><a href="structEmail.html#a0bd79550be901d44e50953fb43614e10">Email::read</a></div><div class="ttdeci">bool read</div><div class="ttdoc">Email is read.</div><div class="ttdef"><b>Definition:</b> <a href="email_8h_source.html#l00050">email.h:50</a></div></div>
@@ -1548,7 +1548,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="agnutls_8c_html_a23591e82bf992ceb5e62c459fd787b8a"><div class="ttname"><a href="gnutls_8c.html#a23591e82bf992ceb5e62c459fd787b8a">mutt_ssl_starttls</a></div><div class="ttdeci">int mutt_ssl_starttls(struct Connection *conn)</div><div class="ttdoc">Negotiate TLS over an already opened connection.</div><div class="ttdef"><b>Definition:</b> <a href="gnutls_8c_source.html#l01144">gnutls.c:1144</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a1d343dcbce0482f8979fe2a298913225"><div class="ttname"><a href="mutt_2string_8c.html#a1d343dcbce0482f8979fe2a298913225">mutt_str_remove_trailing_ws</a></div><div class="ttdeci">void mutt_str_remove_trailing_ws(char *s)</div><div class="ttdoc">Trim trailing whitespace from a string.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00614">string.c:614</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a9bf968304f4f9b49e24215cb2e28d22d"><div class="ttname"><a href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a></div><div class="ttdeci">size_t mutt_str_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00230">string.c:230</a></div></div>
-<div class="ttc" id="amuttlib_8c_html_a6fbcbe533be7c4e05d99b0eb9cdb2581"><div class="ttname"><a href="muttlib_8c.html#a6fbcbe533be7c4e05d99b0eb9cdb2581">mutt_sleep</a></div><div class="ttdeci">void mutt_sleep(short s)</div><div class="ttdoc">Sleep for a while.</div><div class="ttdef"><b>Definition:</b> <a href="muttlib_8c_source.html#l01419">muttlib.c:1419</a></div></div>
+<div class="ttc" id="amuttlib_8c_html_a6fbcbe533be7c4e05d99b0eb9cdb2581"><div class="ttname"><a href="muttlib_8c.html#a6fbcbe533be7c4e05d99b0eb9cdb2581">mutt_sleep</a></div><div class="ttdeci">void mutt_sleep(short s)</div><div class="ttdoc">Sleep for a while.</div><div class="ttdef"><b>Definition:</b> <a href="muttlib_8c_source.html#l01421">muttlib.c:1421</a></div></div>
 <div class="ttc" id="anntp_8c_html_a1c9cc18654661195df4df904c2918625"><div class="ttname"><a href="nntp_8c.html#a1c9cc18654661195df4df904c2918625">nntp_auth</a></div><div class="ttdeci">static int nntp_auth(struct NntpAccountData *adata)</div><div class="ttdoc">Get login, password and authenticate.</div><div class="ttdef"><b>Definition:</b> <a href="nntp_8c_source.html#l00435">nntp.c:435</a></div></div>
 <div class="ttc" id="anntp_8c_html_a5a3c5628bd86b68f2d4b3a1cc21f2cd9"><div class="ttname"><a href="nntp_8c.html#a5a3c5628bd86b68f2d4b3a1cc21f2cd9">nntp_capabilities</a></div><div class="ttdeci">static int nntp_capabilities(struct NntpAccountData *adata)</div><div class="ttdoc">Get capabilities.</div><div class="ttdef"><b>Definition:</b> <a href="nntp_8c_source.html#l00141">nntp.c:141</a></div></div>
 <div class="ttc" id="anntp_8c_html_a8247b21cffda7c4fa36e797820253e33"><div class="ttname"><a href="nntp_8c.html#a8247b21cffda7c4fa36e797820253e33">nntp_connect_error</a></div><div class="ttdeci">static int nntp_connect_error(struct NntpAccountData *adata)</div><div class="ttdoc">Signal a failed connection.</div><div class="ttdef"><b>Definition:</b> <a href="nntp_8c_source.html#l00127">nntp.c:127</a></div></div>

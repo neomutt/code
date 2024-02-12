@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-02-01-1-ge31108</span>
+   &#160;<span id="projectnumber">2024-02-01-9-g811c97</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -498,38 +498,38 @@ Variables</h2></td></tr>
 </dl>
 <p>Process an XDG environment variable or its fallback. </p>
 
-<p class="definition">Definition at line <a class="el" href="muttlib_8c_source.html#l01473">1473</a> of file <a class="el" href="muttlib_8c_source.html">muttlib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1474</span>{</div>
-<div class="line"><span class="lineno"> 1475</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *xdg_env = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<a class="code hl_variable" href="muttlib_8c.html#aba682f487dd08b9a7bc7e579a0cada07">XdgEnvVars</a>[type]);</div>
-<div class="line"><span class="lineno"> 1476</span>  <span class="keywordtype">char</span> *xdg = xdg_env ? <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(xdg_env) : <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<a class="code hl_variable" href="muttlib_8c.html#aeb5382a9fd36c9df9e15a8bb5f9287da">XdgDefaults</a>[type]);</div>
-<div class="line"><span class="lineno"> 1477</span>  <span class="keywordtype">char</span> *x = xdg; <span class="comment">/* mutt_str_sep() changes xdg, so free x instead later */</span></div>
-<div class="line"><span class="lineno"> 1478</span>  <span class="keywordtype">char</span> *token = NULL;</div>
-<div class="line"><span class="lineno"> 1479</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno"> 1480</span> </div>
-<div class="line"><span class="lineno"> 1481</span>  <span class="keywordflow">while</span> ((token = <a class="code hl_function" href="mutt_2string_8c.html#afbb529127e4b4fae6c8380db3786c858">mutt_str_sep</a>(&amp;xdg, <span class="stringliteral">&quot;:&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 1482</span>  {</div>
-<div class="line"><span class="lineno"> 1483</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%s/%s/neomuttrc&quot;</span>, token, PACKAGE) &lt; 0)</div>
-<div class="line"><span class="lineno"> 1484</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1485</span>    <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(buf);</div>
-<div class="line"><span class="lineno"> 1486</span>    <span class="keywordflow">if</span> (access(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), F_OK) == 0)</div>
-<div class="line"><span class="lineno"> 1487</span>    {</div>
-<div class="line"><span class="lineno"> 1488</span>      rc = 1;</div>
-<div class="line"><span class="lineno"> 1489</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1490</span>    }</div>
-<div class="line"><span class="lineno"> 1491</span> </div>
-<div class="line"><span class="lineno"> 1492</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%s/%s/Muttrc&quot;</span>, token, PACKAGE) &lt; 0)</div>
-<div class="line"><span class="lineno"> 1493</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1494</span>    <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(buf);</div>
-<div class="line"><span class="lineno"> 1495</span>    <span class="keywordflow">if</span> (access(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), F_OK) == 0)</div>
-<div class="line"><span class="lineno"> 1496</span>    {</div>
-<div class="line"><span class="lineno"> 1497</span>      rc = 1;</div>
-<div class="line"><span class="lineno"> 1498</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1499</span>    }</div>
-<div class="line"><span class="lineno"> 1500</span>  }</div>
-<div class="line"><span class="lineno"> 1501</span> </div>
-<div class="line"><span class="lineno"> 1502</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;x);</div>
-<div class="line"><span class="lineno"> 1503</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1504</span>}</div>
+<p class="definition">Definition at line <a class="el" href="muttlib_8c_source.html#l01475">1475</a> of file <a class="el" href="muttlib_8c_source.html">muttlib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1476</span>{</div>
+<div class="line"><span class="lineno"> 1477</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *xdg_env = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<a class="code hl_variable" href="muttlib_8c.html#aba682f487dd08b9a7bc7e579a0cada07">XdgEnvVars</a>[type]);</div>
+<div class="line"><span class="lineno"> 1478</span>  <span class="keywordtype">char</span> *xdg = xdg_env ? <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(xdg_env) : <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<a class="code hl_variable" href="muttlib_8c.html#aeb5382a9fd36c9df9e15a8bb5f9287da">XdgDefaults</a>[type]);</div>
+<div class="line"><span class="lineno"> 1479</span>  <span class="keywordtype">char</span> *x = xdg; <span class="comment">/* mutt_str_sep() changes xdg, so free x instead later */</span></div>
+<div class="line"><span class="lineno"> 1480</span>  <span class="keywordtype">char</span> *token = NULL;</div>
+<div class="line"><span class="lineno"> 1481</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno"> 1482</span> </div>
+<div class="line"><span class="lineno"> 1483</span>  <span class="keywordflow">while</span> ((token = <a class="code hl_function" href="mutt_2string_8c.html#afbb529127e4b4fae6c8380db3786c858">mutt_str_sep</a>(&amp;xdg, <span class="stringliteral">&quot;:&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 1484</span>  {</div>
+<div class="line"><span class="lineno"> 1485</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%s/%s/neomuttrc&quot;</span>, token, PACKAGE) &lt; 0)</div>
+<div class="line"><span class="lineno"> 1486</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1487</span>    <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(buf);</div>
+<div class="line"><span class="lineno"> 1488</span>    <span class="keywordflow">if</span> (access(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), F_OK) == 0)</div>
+<div class="line"><span class="lineno"> 1489</span>    {</div>
+<div class="line"><span class="lineno"> 1490</span>      rc = 1;</div>
+<div class="line"><span class="lineno"> 1491</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1492</span>    }</div>
+<div class="line"><span class="lineno"> 1493</span> </div>
+<div class="line"><span class="lineno"> 1494</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%s/%s/Muttrc&quot;</span>, token, PACKAGE) &lt; 0)</div>
+<div class="line"><span class="lineno"> 1495</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1496</span>    <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(buf);</div>
+<div class="line"><span class="lineno"> 1497</span>    <span class="keywordflow">if</span> (access(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), F_OK) == 0)</div>
+<div class="line"><span class="lineno"> 1498</span>    {</div>
+<div class="line"><span class="lineno"> 1499</span>      rc = 1;</div>
+<div class="line"><span class="lineno"> 1500</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1501</span>    }</div>
+<div class="line"><span class="lineno"> 1502</span>  }</div>
+<div class="line"><span class="lineno"> 1503</span> </div>
+<div class="line"><span class="lineno"> 1504</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;x);</div>
+<div class="line"><span class="lineno"> 1505</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1506</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00178">buffer.c:178</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00097">buffer.h:97</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00045">memory.h:45</a></div></div>

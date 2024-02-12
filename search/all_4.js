@@ -59,7 +59,7 @@ var searchData=
   ['data_5fobject_5fto_5fstream_56',['data_object_to_stream',['../crypt__gpgme_8c.html#a85ea55200935f18e5e9f04190670038d',1,'crypt_gpgme.c']]],
   ['data_5fobject_5fto_5ftempfile_57',['data_object_to_tempfile',['../crypt__gpgme_8c.html#aa6b240b5ee594de46af684f88b1ad05d',1,'crypt_gpgme.c']]],
   ['date_58',['date',['../structEnvelope.html#adb752a72d48a701571b3c1784bc4b59b',1,'Envelope']]],
-  ['date_2ec_59',['date.c',['../fuzz_2date_8c.html',1,'(Global Namespace)'],['../mutt_2date_8c.html',1,'(Global Namespace)']]],
+  ['date_2ec_59',['date.c',['../mutt_2date_8c.html',1,'(Global Namespace)'],['../fuzz_2date_8c.html',1,'(Global Namespace)']]],
   ['date_2eh_60',['date.h',['../date_8h.html',1,'']]],
   ['date_5fsent_61',['date_sent',['../structEmail.html#a9e3cda5dab6d53f68cad95d28068d962',1,'Email']]],
   ['db_62',['db',['../structRocksDbStoreData.html#a46019b575b6df81ed81ecdbd83f271eb',1,'RocksDbStoreData::db()'],['../structLmdbStoreData.html#a91cc6b5301d64e9cd6d5bdebdd97568f',1,'LmdbStoreData::db()'],['../structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd',1,'BdbStoreData::db()'],['../structNmAccountData.html#a76f9a37a987a8e6057f4d89cdd27ea36',1,'NmAccountData::db()']]],

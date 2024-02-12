@@ -18,7 +18,7 @@ var searchData=
   ['array_2eh_15',['array.h',['../array_8h.html',1,'']]],
   ['atoi_2ec_16',['atoi.c',['../atoi_8c.html',1,'']]],
   ['atoi_2eh_17',['atoi.h',['../atoi_8h.html',1,'']]],
-  ['attach_2ec_18',['attach.c',['../attach_2attach_8c.html',1,'(Global Namespace)'],['../compose_2attach_8c.html',1,'(Global Namespace)']]],
+  ['attach_2ec_18',['attach.c',['../compose_2attach_8c.html',1,'(Global Namespace)'],['../attach_2attach_8c.html',1,'(Global Namespace)']]],
   ['attach_2eh_19',['attach.h',['../attach_8h.html',1,'']]],
   ['attach_5fdata_2ec_20',['attach_data.c',['../attach__data_8c.html',1,'']]],
   ['attach_5fdata_2eh_21',['attach_data.h',['../attach__data_8h.html',1,'']]],
