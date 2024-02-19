@@ -20,7 +20,7 @@ var searchData=
   ['mainvarsmixmaster_17',['MainVarsMixmaster',['../mutt__config_8c.html#a20e8992ac003c3b8ba0c3d6c0b868269',1,'mutt_config.c']]],
   ['major_18',['major',['../structAttachMatch.html#a7a0a5228fe4b58b7c09fe2cc20c1da20',1,'AttachMatch']]],
   ['major_5fint_19',['major_int',['../structAttachMatch.html#ae06ba0ffd41f43ad62d80f844cb16e61',1,'AttachMatch']]],
-  ['make_5fentry_20',['make_entry',['../structMenu.html#a218350a8b124833a4879f88e9e107a22',1,'Menu']]],
+  ['make_5fentry_20',['make_entry',['../structMenu.html#ae2e57ec676ef2430723d404e644d05ba',1,'Menu']]],
   ['match_21',['match',['../structRegexColor.html#aa7fb19968f0529bc3294e91cdf5919dc',1,'RegexColor']]],
   ['match_5fcount_22',['match_count',['../structHistoryData.html#ab5172fb89c0fd674ac6754bb9ed26c01',1,'HistoryData']]],
   ['match_5flist_23',['match_list',['../structCompletionData.html#ab9497ed215f2a456de8f2fe9f2195b82',1,'CompletionData']]],

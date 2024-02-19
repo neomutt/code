@@ -1,10 +1,5 @@
 var NAVTREEINDEX43 =
 {
-"structImapEmailData.html#ae8e6d36ffbdfd91493fb6bf45ee6bfa5":[1,0,116,4],
-"structImapEmailData.html#af3d57aed1b74390358fe594de497b8f1":[1,0,116,8],
-"structImapHeader.html":[1,0,117],
-"structImapHeader.html#a18937a689b628b43ac8d7718eb951544":[1,0,117,1],
-"structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50":[1,0,117,0],
 "structImapHeader.html#ae53cb16ef576e34ad7ad0a684a0d77ad":[1,0,117,2],
 "structImapList.html":[1,0,118],
 "structImapList.html#a18ef4b7bcc281c4f69370bc73b97b6af":[1,0,118,2],
@@ -212,7 +207,6 @@ var NAVTREEINDEX43 =
 "structMenu.html":[1,0,143],
 "structMenu.html#a03edef68cc4422dea828bc89332f3020":[1,0,143,6],
 "structMenu.html#a103ef41d81b44ee5b7a280d660fbdf37":[1,0,143,10],
-"structMenu.html#a218350a8b124833a4879f88e9e107a22":[1,0,143,12],
 "structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1":[1,0,143,0],
 "structMenu.html#a2e02ccc18cd3265087d281ec02ad127a":[1,0,143,15],
 "structMenu.html#a3b4aa1cc357ea62fec6e564ebcfe8799":[1,0,143,11],
@@ -225,6 +219,7 @@ var NAVTREEINDEX43 =
 "structMenu.html#acb934ac63ef71f6efe720281b2e6bb1b":[1,0,143,7],
 "structMenu.html#ad6271c90dcf6508f56ac988a8fca2e39":[1,0,143,16],
 "structMenu.html#adc6d277fec333aca5b57f1156e6dabfc":[1,0,143,17],
+"structMenu.html#ae2e57ec676ef2430723d404e644d05ba":[1,0,143,12],
 "structMenu.html#ae3e67808ddefbe6fb0052de6c3019882":[1,0,143,5],
 "structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b":[1,0,143,1],
 "structMenu.html#aef983750ad6113420634d1ba2544faf4":[1,0,143,4],
@@ -249,5 +244,10 @@ var NAVTREEINDEX43 =
 "structMessage.html#a817c2e03ff60bae58f117fc3391d3d62":[1,0,148,2],
 "structMessage.html#aa586337aebc4a460be8ae0f676cd0ff6":[1,0,148,9],
 "structMessage.html#aa97affe6dd666261890aee8ec004c26c":[1,0,148,3],
-"structMessage.html#aaa255a41e07cb4277d457c0db894a47a":[1,0,148,5]
+"structMessage.html#aaa255a41e07cb4277d457c0db894a47a":[1,0,148,5],
+"structMessage.html#ace4606e8dc8aa0c35738e9f788f47705":[1,0,148,4],
+"structMessage.html#af789382bf4127b5b8c784bbae1c04241":[1,0,148,8],
+"structMhEmail.html":[1,0,149],
+"structMhEmail.html#a0d4a5cfe0f8a2086e3791f02b352b0af":[1,0,149,2],
+"structMhEmail.html#a2c4f25588fb9aa0ef67fa98c9cf90a50":[1,0,149,0]
 };

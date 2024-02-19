@@ -12,7 +12,7 @@ var structMenu =
     [ "old_current", "structMenu.html#af392ff2cb4f7d2ed90156bda32dbfe8a", null ],
     [ "search_dir", "structMenu.html#a103ef41d81b44ee5b7a280d660fbdf37", null ],
     [ "num_tagged", "structMenu.html#a3b4aa1cc357ea62fec6e564ebcfe8799", null ],
-    [ "make_entry", "structMenu.html#a218350a8b124833a4879f88e9e107a22", null ],
+    [ "make_entry", "structMenu.html#ae2e57ec676ef2430723d404e644d05ba", null ],
     [ "search", "structMenu.html#a8a45572a1ba92aedfb9327d3c203ccb7", null ],
     [ "tag", "structMenu.html#a9f56131f02aaece633d13c8b2007476a", null ],
     [ "color", "structMenu.html#a2e02ccc18cd3265087d281ec02ad127a", null ],

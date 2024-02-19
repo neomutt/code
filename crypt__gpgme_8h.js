@@ -1,6 +1,7 @@
 var crypt__gpgme_8h =
 [
     [ "CryptKeyInfo", "structCryptKeyInfo.html", "structCryptKeyInfo" ],
+    [ "CryptEntry", "structCryptEntry.html", "structCryptEntry" ],
     [ "KeyInfo", "crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932", [
       [ "KIP_NAME", "crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932ae6d7f4454f0a9b2cacf589bad3e5f45d", null ],
       [ "KIP_AKA", "crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932a6a0cfc7c559872a881dbdf230df64e92", null ],

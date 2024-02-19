@@ -9,7 +9,7 @@ var dlg__browser_8c =
     [ "examine_directory", "dlg__browser_8c.html#a0e7e4cda55c641a3da1c1c8cdee7be31", null ],
     [ "examine_mailboxes", "dlg__browser_8c.html#afc25fcd384d9e469e6d68d3f4bf5641e", null ],
     [ "select_file_search", "group__menu__search.html#ga44aefdb8e3bc126b5fab29a8501499e2", null ],
-    [ "folder_make_entry", "group__menu__make__entry.html#gad8a7076789eaf1f37fa8902c16d58a7a", null ],
+    [ "folder_make_entry", "group__menu__make__entry.html#gaa90cd34957ab9a90b45d1992578f2adf", null ],
     [ "browser_highlight_default", "dlg__browser_8c.html#aeeaf086f04f00f0d0c691b6275f2ae22", null ],
     [ "init_menu", "dlg__browser_8c.html#a1b38f971f4dd2d4223f08a2e40277cc6", null ],
     [ "file_tag", "group__menu__tag.html#gaf4d5441e6e33296a9fb742390153a099", null ],

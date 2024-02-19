@@ -1,10 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"neo_hdrline.html":[0,9],
-"neo_help.html":[0,10],
-"neo_hook.html":[0,11],
-"neo_init.html":[0,12],
-"neo_mailcap.html":[0,13],
 "neo_maillist.html":[0,14],
 "neo_main.html":[0,15],
 "neo_monitor.html":[0,16],
@@ -249,5 +244,10 @@ var NAVTREEINDEX30 =
 "notmuch_2complete_8c.html":[2,0,35,2],
 "notmuch_2complete_8c.html#a859ec89a92fa6582c414dcaf2bd2dfff":[2,0,35,2,0],
 "notmuch_2complete_8c.html#a91c2850c66aa738cc70346ab923a802b":[2,0,35,2,1],
-"notmuch_2complete_8c.html#aa3e8d3e0fd9188868c9ea63d4aa810ba":[2,0,35,2,6]
+"notmuch_2complete_8c.html#aa3e8d3e0fd9188868c9ea63d4aa810ba":[2,0,35,2,6],
+"notmuch_2complete_8c.html#aaf3b71b049d0d15abe95056914e245d2":[2,0,35,2,2],
+"notmuch_2complete_8c.html#ab0641f59f837a67c4137aa9946c4f29e":[2,0,35,2,5],
+"notmuch_2complete_8c_source.html":[2,0,35,2],
+"notmuch_2config_8c.html":[2,0,35,3],
+"notmuch_2config_8c.html#a504134ea1c1e6b8bdb24a83539a3bf34":[2,0,35,3,0]
 };

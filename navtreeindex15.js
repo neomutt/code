@@ -1,10 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"group__crypto__send__menu.html#ga95da8ee8b6073935efb814164ff9ee78":[49,36,10,3],
-"group__crypto__send__menu.html#gaf6bacfca0a7821fb11394b0469c37709":[49,36,10,1],
-"group__crypto__set__sender.html":[49,36,11],
-"group__crypto__set__sender.html#ga192c41e1923f64fd284a130d27328cb2":[49,36,11,0],
-"group__crypto__sign__message.html":[49,36,8],
 "group__crypto__sign__message.html#ga4b65a3544c6b5557c5ef6d7670c31e34":[49,36,8,2],
 "group__crypto__sign__message.html#ga55f07d68e357e30d78443c9bf658403e":[49,36,8,1],
 "group__crypto__sign__message.html#ga8b92663dcfebcf295d41d9837985801a":[49,36,8,3],
@@ -249,5 +244,10 @@ var NAVTREEINDEX15 =
 "group__index__function__api.html#ga70175f4c851396f65be12b2f18d94bcd":[49,13,7,77],
 "group__index__function__api.html#ga73d09ede613eef878304430e37e8af1b":[49,13,7,56],
 "group__index__function__api.html#ga74c6828bfdc5e442fef109160fe87627":[49,13,7,15],
-"group__index__function__api.html#ga79803bd878e2a2c7ec7d08c4de92a29b":[49,13,7,70]
+"group__index__function__api.html#ga79803bd878e2a2c7ec7d08c4de92a29b":[49,13,7,70],
+"group__index__function__api.html#ga798c90a2641500b4f070ad648641bb06":[49,13,7,40],
+"group__index__function__api.html#ga79a2ce1636045c0caf2695ea4302d37a":[49,13,7,55],
+"group__index__function__api.html#ga7b6e6ede76315a771d222535f5e8c3db":[49,13,7,72],
+"group__index__function__api.html#ga7f941170e4f691695ca4c460b43e424b":[49,13,7,64],
+"group__index__function__api.html#ga816f9da63d9350cfb8a14c426aa1a7b6":[49,13,7,58]
 };

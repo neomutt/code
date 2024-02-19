@@ -1,10 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"structMessage.html#ace4606e8dc8aa0c35738e9f788f47705":[1,0,148,4],
-"structMessage.html#af789382bf4127b5b8c784bbae1c04241":[1,0,148,8],
-"structMhEmail.html":[1,0,149],
-"structMhEmail.html#a0d4a5cfe0f8a2086e3791f02b352b0af":[1,0,149,2],
-"structMhEmail.html#a2c4f25588fb9aa0ef67fa98c9cf90a50":[1,0,149,0],
 "structMhEmail.html#a34bec8eb69452e1092e8781e8da0c4b9":[1,0,149,1],
 "structMhEmail.html#aab7e0d8736bf006563e1a87bcc6578e4":[1,0,149,3],
 "structMhMboxData.html":[1,0,150],
@@ -249,5 +244,10 @@ var NAVTREEINDEX44 =
 "structPagerPrivateData.html#ad139fa401f234ebff812f2b25610df37":[1,0,181,2],
 "structPagerPrivateData.html#ad327fdca21da2a92ac9a62e24ccde5bd":[1,0,181,26],
 "structPagerPrivateData.html#ad7c650de77a14afc73455f7177f78f3a":[1,0,181,19],
-"structPagerPrivateData.html#ad8bcd0088f080aa11c4edfdc676636ee":[1,0,181,12]
+"structPagerPrivateData.html#ad8bcd0088f080aa11c4edfdc676636ee":[1,0,181,12],
+"structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd":[1,0,181,0],
+"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,181,22],
+"structPagerPrivateData.html#ae448f18ad03d4c47cf38b84c106b79da":[1,0,181,25],
+"structPagerPrivateData.html#ae85cad304a17fbe3fc3a0bc126bd1411":[1,0,181,18],
+"structPagerPrivateData.html#ae8aca194ad702e2e716ecb08172a3a53":[1,0,181,9]
 };

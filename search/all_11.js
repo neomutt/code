@@ -47,7 +47,7 @@ var searchData=
   ['query_5fdialog_5fnew_44',['query_dialog_new',['../dlg__query_8c.html#ab83d1815eaa9b85a3573723cfe59e893',1,'dlg_query.c']]],
   ['query_5fformat_5fstr_45',['query_format_str',['../group__expando__api.html#ga0c698aa3392f76c16e7a88b32901da4d',1,'dlg_query.c']]],
   ['query_5findex_46',['query_index',['../dlg__query_8c.html#acdfc08deb336296bc49da8c2916f4cde',1,'query_index(struct Mailbox *m, struct ConfigSubset *sub):&#160;dlg_query.c'],['../alias_2lib_8h.html#acdfc08deb336296bc49da8c2916f4cde',1,'query_index(struct Mailbox *m, struct ConfigSubset *sub):&#160;dlg_query.c']]],
-  ['query_5fmake_5fentry_47',['query_make_entry',['../group__menu__make__entry.html#ga6c2e6a96f53f75829d1d04f80a9d010a',1,'dlg_query.c']]],
+  ['query_5fmake_5fentry_47',['query_make_entry',['../group__menu__make__entry.html#ga09707dc3a67b0ecb3f1fb66fdd279955',1,'dlg_query.c']]],
   ['query_5fpart_48',['QUERY_PART',['../prex_8c.html#a77db7ffb949a0b492b7548eff099d020',1,'prex.c']]],
   ['query_5fpipe_5fattachment_49',['query_pipe_attachment',['../recvattach_8c.html#a4cb34359488b00180f9cfe3858c42677',1,'recvattach.c']]],
   ['query_5fquadoption_50',['query_quadoption',['../question_2lib_8h.html#a8ba883bf53e8ab425a03d17368de84b4',1,'query_quadoption(const char *prompt, struct ConfigSubset *sub, const char *name):&#160;question.c'],['../question_8c.html#a8ba883bf53e8ab425a03d17368de84b4',1,'query_quadoption(const char *prompt, struct ConfigSubset *sub, const char *name):&#160;question.c']]],

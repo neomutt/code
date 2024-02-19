@@ -30,7 +30,7 @@ var index_2lib_8h =
     [ "get_current_menu", "index_2lib_8h.html#a7e00402870b9fc83f95345e707f43d92", null ],
     [ "index_change_folder", "index_2lib_8h.html#a79bba17b676af37c3a7f120a714c3e62", null ],
     [ "index_color", "group__menu__color.html#ga8227ef1e013f8256d0ace9f4fefb1d8e", null ],
-    [ "index_make_entry", "group__menu__make__entry.html#gac8c48150ad44e16fefd22398589e1c8f", null ],
+    [ "index_make_entry", "group__menu__make__entry.html#ga624c1c8b2e2fb1d70ae37be0a58fc16b", null ],
     [ "index_pager_init", "index_2lib_8h.html#af8efcd0ce3952702bc60f84abc828f3c", null ],
     [ "mutt_dlgindex_observer", "index_2lib_8h.html#acde55b5814852d0713f23d4880fcfc7d", null ],
     [ "mutt_draw_statusline", "index_2lib_8h.html#a74ec708393189456506dcb292698f3e0", null ],

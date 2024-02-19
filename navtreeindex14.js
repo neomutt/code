@@ -1,10 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"group__cfg__type__string__get.html#gadcc1fd1ca971eacff907f8e5f08e6a15":[49,8,1,1],
-"group__cfg__type__string__get.html#gaf458194ca4d2919a626af268cb81cd0f":[49,8,1,11],
-"group__cfg__type__string__get.html#gaf7c02093f19f42a947d9f18ff2139ca6":[49,8,1,3],
-"group__cfg__type__string__minus__equals.html":[49,8,5],
-"group__cfg__type__string__minus__equals.html#ga118b3ceca4da77fc7d33f6babc654969":[49,8,5,1],
 "group__cfg__type__string__minus__equals.html#ga138201e31e9ea0d582b2b8a4cc915b29":[49,8,5,2],
 "group__cfg__type__string__minus__equals.html#ga1c9c9d14e91536d29b5c4f583337dcbc":[49,8,5,0],
 "group__cfg__type__string__plus__equals.html":[49,8,4],
@@ -249,5 +244,10 @@ var NAVTREEINDEX14 =
 "group__crypto__pgp__traditional__encryptsign.html#gaaa1aedb09184862e99651bd5cde64d41":[49,36,15,0],
 "group__crypto__send__menu.html":[49,36,10],
 "group__crypto__send__menu.html#ga8b0a3fa1ac99d5701063bc472fec560b":[49,36,10,2],
-"group__crypto__send__menu.html#ga939ad66d8be64cb462a1d225c7e78b76":[49,36,10,0]
+"group__crypto__send__menu.html#ga939ad66d8be64cb462a1d225c7e78b76":[49,36,10,0],
+"group__crypto__send__menu.html#ga95da8ee8b6073935efb814164ff9ee78":[49,36,10,3],
+"group__crypto__send__menu.html#gaf6bacfca0a7821fb11394b0469c37709":[49,36,10,1],
+"group__crypto__set__sender.html":[49,36,11],
+"group__crypto__set__sender.html#ga192c41e1923f64fd284a130d27328cb2":[49,36,11,0],
+"group__crypto__sign__message.html":[49,36,8]
 };

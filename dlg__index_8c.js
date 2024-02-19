@@ -14,7 +14,7 @@ var dlg__index_8c =
     [ "change_folder_mailbox", "dlg__index_8c.html#a2f01349e640f3de95d4477b256148cc7", null ],
     [ "change_folder_notmuch", "dlg__index_8c.html#a38c0b435d8faefbb863bbb0d6860cc7e", null ],
     [ "change_folder_string", "dlg__index_8c.html#add72c0d04cf5de2184826b4cba8cdf5e", null ],
-    [ "index_make_entry", "group__menu__make__entry.html#gac8c48150ad44e16fefd22398589e1c8f", null ],
+    [ "index_make_entry", "group__menu__make__entry.html#ga624c1c8b2e2fb1d70ae37be0a58fc16b", null ],
     [ "index_color", "group__menu__color.html#ga8227ef1e013f8256d0ace9f4fefb1d8e", null ],
     [ "mutt_draw_statusline", "dlg__index_8c.html#a74ec708393189456506dcb292698f3e0", null ],
     [ "dlg_index", "group__gui__dlg.html#gaf4266da82ada988b3b2482b910ddb15a", null ],

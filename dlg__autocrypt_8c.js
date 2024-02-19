@@ -1,7 +1,7 @@
 var dlg__autocrypt_8c =
 [
     [ "autocrypt_format_str", "group__expando__api.html#ga906325bd827879739b95c13e42e9d427", null ],
-    [ "autocrypt_make_entry", "group__menu__make__entry.html#gaae1e9538c5cdc557c389c82052537ed5", null ],
+    [ "autocrypt_make_entry", "group__menu__make__entry.html#ga9c930f83c221f69cfd9b71d2a31ff1ec", null ],
     [ "autocrypt_menu_free", "group__menu__mdata__free.html#gae14bd22a760581ec0b7eb7d737c4ef8f", null ],
     [ "populate_menu", "dlg__autocrypt_8c.html#ad24c7e95a9f01bed3d6d38b54aff24b2", null ],
     [ "autocrypt_config_observer", "group__observer__api.html#ga9bd67f27cc64aa06cd7c88bfadadf47c", null ],

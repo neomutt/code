@@ -39,7 +39,7 @@ var searchData=
   ['flush_5fpar_36',['flush_par',['../rfc3676_8c.html#ad360747b800996106c85eceac62ff7ab',1,'rfc3676.c']]],
   ['fold_5fone_5fheader_37',['fold_one_header',['../header_8c.html#a05f309b54c36fe2f7121cb91b2d202d0',1,'header.c']]],
   ['folder_5fformat_5fstr_38',['folder_format_str',['../group__expando__api.html#gac86b0996be53dfa1bf8187e46608d198',1,'dlg_browser.c']]],
-  ['folder_5fmake_5fentry_39',['folder_make_entry',['../group__menu__make__entry.html#gad8a7076789eaf1f37fa8902c16d58a7a',1,'dlg_browser.c']]],
+  ['folder_5fmake_5fentry_39',['folder_make_entry',['../group__menu__make__entry.html#gaa90cd34957ab9a90b45d1992578f2adf',1,'dlg_browser.c']]],
   ['format_5fattribution_40',['format_attribution',['../send_8c.html#a6acd0e4e056ee4a84b4164cb4d1cd279',1,'send.c']]],
   ['format_5fline_41',['format_line',['../help_8c.html#a5f69016fd555f40166b0b1e721519298',1,'format_line(FILE *fp, int ismacro, const char *t1, const char *t2, const char *t3, int wraplen):&#160;help.c'],['../display_8c.html#a09395942e7a1607668bfaf87009eb233',1,'format_line(struct MuttWindow *win, struct Line **lines, int line_num, unsigned char *buf, PagerFlags flags, struct AnsiColor *ansi, int cnt, int *pspace, int *pvch, int *pcol, int *pspecial, int width, struct AttrColorList *ansi_list):&#160;display.c']]],
   ['free_5fpattern_5fmenu_42',['free_pattern_menu',['../group__menu__mdata__free.html#gab2bca350171ac49b81ead22800a31fcd',1,'dlg_pattern.c']]],

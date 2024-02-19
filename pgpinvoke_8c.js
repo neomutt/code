@@ -1,7 +1,7 @@
 var pgpinvoke_8c =
 [
     [ "pgp_command_format_str", "group__expando__api.html#ga601234c8efa7b060f47ee96705f24756", null ],
-    [ "mutt_pgp_command", "pgpinvoke_8c.html#a678575e9a2c4c11d950da5ed1ba03740", null ],
+    [ "mutt_pgp_command", "pgpinvoke_8c.html#a893e3abc97c5af26e20a6460b7eac567", null ],
     [ "pgp_invoke", "pgpinvoke_8c.html#a02757286e56ae36d0d9a29d5e814e1f2", null ],
     [ "pgp_invoke_decode", "pgpinvoke_8c.html#a407b2ceab1cb744122e3cb5e9e9b0fd5", null ],
     [ "pgp_invoke_verify", "pgpinvoke_8c.html#a65bfacfc8067ed58d224aeefc6f99905", null ],

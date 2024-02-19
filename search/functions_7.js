@@ -37,7 +37,7 @@ var searchData=
   ['helpbar_5fwindow_5fobserver_34',['helpbar_window_observer',['../group__observer__api.html#gad9479d9b3325898cbe92e5856b2fcbc4',1,'helpbar.c']]],
   ['history_5fformat_5fstr_35',['history_format_str',['../group__expando__api.html#ga4bd18aaaba4bb46e1eaaf495ba5d20d0',1,'dlg_history.c']]],
   ['history_5ffunction_5fdispatcher_36',['history_function_dispatcher',['../group__dispatcher__api.html#gac49d2af85cb6599adffa13c50da14ac7',1,'history_function_dispatcher(struct MuttWindow *win, int op):&#160;functions.c'],['../group__dispatcher__api.html#gac49d2af85cb6599adffa13c50da14ac7',1,'history_function_dispatcher(struct MuttWindow *win, int op):&#160;functions.c']]],
-  ['history_5fmake_5fentry_37',['history_make_entry',['../group__menu__make__entry.html#gad5be190a528d1d12b831bcfc22a5e648',1,'dlg_history.c']]],
+  ['history_5fmake_5fentry_37',['history_make_entry',['../group__menu__make__entry.html#ga89b64ed4c9c36565892cbe28edc45be3',1,'dlg_history.c']]],
   ['hmac_5fmd5_38',['hmac_md5',['../auth__cram_8c.html#a7491dc64781290870974d803a0dc6b75',1,'auth_cram.c']]],
   ['hook_5ffree_39',['hook_free',['../hook_8c.html#a687da69151e78719547e5b58de316089',1,'hook.c']]],
   ['hook_5fnew_40',['hook_new',['../hook_8c.html#af03b03a2d048b4a3972e4737a025183b',1,'hook.c']]],

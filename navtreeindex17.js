@@ -1,10 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"group__mx__path__probe.html#ga178c909c1383be5bf6fa8b5b2efacbfa":[49,15,16,2],
-"group__mx__path__probe.html#ga5b33b7c070124e656f1a4e8c67c039ad":[49,15,16,7],
-"group__mx__path__probe.html#ga6d5988bb4154475a9d8cb94a4c7c77d4":[49,15,16,4],
-"group__mx__path__probe.html#ga927a5f75f0840e1f5aa18ab4e1446a3e":[49,15,16,3],
-"group__mx__path__probe.html#gab4f27af8eb857a20834f445be3f498de":[49,15,16,1],
 "group__mx__path__probe.html#gad7557498adc7575505d1d53c70b64194":[49,15,16,6],
 "group__mx__path__probe.html#gad886126ad1805be0c69f9b2fe138db10":[49,15,16,0],
 "group__mx__tags__commit.html":[49,15,15],
@@ -249,5 +244,10 @@ var NAVTREEINDEX17 =
 "group__store__delete__record.html#ga9f4f92cc440381a0cb27f9a044c82d0a":[49,41,4,4],
 "group__store__delete__record.html#gaaf7f9c2934f8490ffad60f87f0ebc2e1":[49,41,4,5],
 "group__store__delete__record.html#gab36c6d4fd9882e62ede62b7ba504ed4c":[49,41,4,0],
-"group__store__delete__record.html#gab540c3885adae6d0d8c1b4779160d04e":[49,41,4,6]
+"group__store__delete__record.html#gab540c3885adae6d0d8c1b4779160d04e":[49,41,4,6],
+"group__store__delete__record.html#gab70c65dd6998f00f70ae0eb80b10627e":[49,41,4,2],
+"group__store__delete__record.html#gad9b5ab9d33c9f9f52e46897ccf858507":[49,41,4,3],
+"group__store__delete__record.html#gaff6cb98e54db6764bd2859dec31a336e":[49,41,4,1],
+"group__store__fetch.html":[49,41,1],
+"group__store__fetch.html#ga3300961a24e9a1a58bee0a0864bf0382":[49,41,1,4]
 };

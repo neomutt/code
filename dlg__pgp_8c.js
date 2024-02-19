@@ -7,7 +7,7 @@ var dlg__pgp_8c =
     [ "pgp_key_abilities", "dlg__pgp_8c.html#adb7b3bd022fa0618a7b3d057360fae5d", null ],
     [ "pgp_flags", "dlg__pgp_8c.html#a9cb50994cfe04867f6684f506930dff3", null ],
     [ "pgp_entry_format_str", "group__expando__api.html#ga14e97c0d9c4dab6f38584984fa31aea7", null ],
-    [ "pgp_make_entry", "group__menu__make__entry.html#ga3e16fe9e93e6d48cca53fa5acc37cc31", null ],
+    [ "pgp_make_entry", "group__menu__make__entry.html#gab3d66b71d103fa5234a92983e706f45b", null ],
     [ "pgp_key_table_free", "group__menu__mdata__free.html#ga512e0ba7415bfdef5c476f345693c97a", null ],
     [ "pgp_key_config_observer", "group__observer__api.html#gaedfd966a29c6fd47c65cf4cf15e3911b", null ],
     [ "pgp_key_window_observer", "group__observer__api.html#ga4004e54c13e4c25545b561d1bf7b95ab", null ],

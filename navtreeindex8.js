@@ -1,6 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"debug_8c.html#af671009363f610edbb80d4daea0f2b82":[2,0,6,10,4],
 "debug_8c_source.html":[2,0,6,10],
 "debug_8h.html":[2,0,6,11],
 "debug_8h.html#a142b90f7d17ab98549329b457f74c7bb":[2,0,6,11,1],
@@ -152,9 +151,9 @@ var NAVTREEINDEX8 =
 "dlg__compose_8c.html#ad694d73a9d8ed13b02bc90ebe38cb0a3":[2,0,9,8,5],
 "dlg__compose_8c_source.html":[2,0,9,8],
 "dlg__gpgme_8c.html":[2,0,33,13],
-"dlg__gpgme_8c.html#a0f14ace36026a66f26de71c895e99cf2":[2,0,33,13,6],
-"dlg__gpgme_8c.html#a186ae1e7b3f6c127f86802a76f8b15f2":[2,0,33,13,5],
-"dlg__gpgme_8c.html#aef081963c1fd0287be5bfff4fc37912a":[2,0,33,13,13],
+"dlg__gpgme_8c.html#a0f14ace36026a66f26de71c895e99cf2":[2,0,33,13,5],
+"dlg__gpgme_8c.html#a186ae1e7b3f6c127f86802a76f8b15f2":[2,0,33,13,4],
+"dlg__gpgme_8c.html#aef081963c1fd0287be5bfff4fc37912a":[2,0,33,13,12],
 "dlg__gpgme_8c_source.html":[2,0,33,13],
 "dlg__history_8c.html":[2,0,23,1],
 "dlg__history_8c.html#a842f535e4ed4d6bc1f93473aee06a085":[2,0,23,1,3],
@@ -234,9 +233,9 @@ var NAVTREEINDEX8 =
 "draw_8c.html#a2c9ac04bb60a20248165aa9671972b1d":[2,0,29,1,0],
 "draw_8c.html#a39b631a566b12a37364e82049e708dfa":[2,0,29,1,4],
 "draw_8c.html#a3da31793ff9ae935dccab75ae653a064":[2,0,29,1,7],
-"draw_8c.html#a435f9d6d8bc5f5a731f2685e57400360":[2,0,29,1,1],
 "draw_8c.html#a7416efe55303324c07e1515bec5697d2":[2,0,29,1,3],
-"draw_8c.html#a817398faa8fdc8d02ddd64dc084a607a":[2,0,29,1,2],
+"draw_8c.html#ab12b78dbc6189a87e40d6d6fe1b1a53d":[2,0,29,1,2],
+"draw_8c.html#aba12b05761d6bd8857ac9d8ab112e29d":[2,0,29,1,1],
 "draw_8c.html#adb45718706531be131e704b8af873338":[2,0,29,1,5],
 "draw_8c_source.html":[2,0,29,1],
 "editmsg_8c.html":[2,0,53],
@@ -249,5 +248,6 @@ var NAVTREEINDEX8 =
 "editor_2functions_8c.html#ac9afed5146fe8ba8b7310248920e408a":[2,0,16,2,26],
 "editor_2functions_8c.html#ad2f6f39bb1405a4a86c08f04b5102b27":[2,0,16,2,0],
 "editor_2functions_8c_source.html":[2,0,16,2],
-"editor_2functions_8h.html":[2,0,16,3]
+"editor_2functions_8h.html":[2,0,16,3],
+"editor_2functions_8h.html#a41f5d1755c8fb422c9090b90f71c2fd8":[2,0,16,3,2]
 };

@@ -10,7 +10,7 @@ var recvcmd_8c =
     [ "find_common_parent", "recvcmd_8c.html#a7ac37f1ca00505bd0a4741bb81e01411", null ],
     [ "is_parent", "recvcmd_8c.html#ab652eac4f094f01a62e4581f9a498696", null ],
     [ "find_parent", "recvcmd_8c.html#a6cd6a1a69effe9a99eeede2dab8b02f8", null ],
-    [ "include_header", "recvcmd_8c.html#a6e898062c3b6c2c8f6701cb4595f37b4", null ],
+    [ "include_header", "recvcmd_8c.html#ab4a0e33515ff785e8b33b582be32e595", null ],
     [ "copy_problematic_attachments", "recvcmd_8c.html#a1b64902867787077cfae7edcedb10f66", null ],
     [ "attach_forward_bodies", "recvcmd_8c.html#a3174612ef64b7c263b5c745b052d2d59", null ],
     [ "attach_forward_msgs", "recvcmd_8c.html#a5b3658fb64b0827e4f7b88cc2a3e1870", null ],

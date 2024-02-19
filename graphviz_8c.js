@@ -21,7 +21,7 @@ var graphviz_8c =
     [ "dot_type_umask", "graphviz_8c.html#a699428e8bc8a5b52fcf52da829910a50", null ],
     [ "dot_ptr_name", "graphviz_8c.html#a0eeac268d75aeff4da14aa0b08b38176", null ],
     [ "dot_ptr", "graphviz_8c.html#ac6d908028efc2f211e55a6883cb013de", null ],
-    [ "dot_add_link", "graphviz_8c.html#aef4b6af5bdffa758a2e2125367a93dc0", null ],
+    [ "dot_add_link", "graphviz_8c.html#acc02aef238b4d9d7c599b328a952224a", null ],
     [ "dot_graph_header", "graphviz_8c.html#a1b581c94c7f6185b4f7269240c570bc1", null ],
     [ "dot_graph_footer", "graphviz_8c.html#a69c157ef083586c36085b9f6da16b2ab", null ],
     [ "dot_object_header", "graphviz_8c.html#ad0b3a63a65a8d1f17e1ac79d30f6942f", null ],

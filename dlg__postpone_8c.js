@@ -1,6 +1,6 @@
 var dlg__postpone_8c =
 [
-    [ "post_make_entry", "group__menu__make__entry.html#ga5a5709ee95dc84b2956c2f43947b9dce", null ],
+    [ "post_make_entry", "group__menu__make__entry.html#gaec8de8251065105e59f78e1a211d69e3", null ],
     [ "postponed_config_observer", "group__observer__api.html#ga452ee4e979c41bc88ffe3be8773edf8d", null ],
     [ "postponed_window_observer", "group__observer__api.html#ga06a52beb9e52bee0d471f74976dc0cba", null ],
     [ "post_color", "group__menu__color.html#ga92cbe3009ab17549a412a58d7116376c", null ],

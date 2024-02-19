@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-02-01-9-g811c97</span>
+   &#160;<span id="projectnumber">2024-02-01-23-g345d7b</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -198,7 +198,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructFolderFile_html"><div class="ttname"><a href="structFolderFile.html">FolderFile</a></div><div class="ttdoc">Browser entry representing a folder/dir.</div><div class="ttdef"><b>Definition:</b> <a href="browser_2lib_8h_source.html#l00077">lib.h:78</a></div></div>
 <div class="ttc" id="astructFolderFile_html_a3c2e39b044a6cdb272601604579d3355"><div class="ttname"><a href="structFolderFile.html#a3c2e39b044a6cdb272601604579d3355">FolderFile::name</a></div><div class="ttdeci">char * name</div><div class="ttdoc">Name of file/dir/mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="browser_2lib_8h_source.html#l00086">lib.h:86</a></div></div>
 <div class="ttc" id="astructFolderFile_html_a862ba1521b82421e7b7261e86cbd232b"><div class="ttname"><a href="structFolderFile.html#a862ba1521b82421e7b7261e86cbd232b">FolderFile::desc</a></div><div class="ttdeci">char * desc</div><div class="ttdoc">Description of mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="browser_2lib_8h_source.html#l00087">lib.h:87</a></div></div>
-<div class="ttc" id="astructMenu_html_adc6d277fec333aca5b57f1156e6dabfc"><div class="ttname"><a href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">Menu::mdata</a></div><div class="ttdeci">void * mdata</div><div class="ttdoc">Private data.</div><div class="ttdef"><b>Definition:</b> <a href="menu_2lib_8h_source.html#l00137">lib.h:137</a></div></div>
+<div class="ttc" id="astructMenu_html_adc6d277fec333aca5b57f1156e6dabfc"><div class="ttname"><a href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">Menu::mdata</a></div><div class="ttdeci">void * mdata</div><div class="ttdoc">Private data.</div><div class="ttdef"><b>Definition:</b> <a href="menu_2lib_8h_source.html#l00135">lib.h:135</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -254,17 +254,32 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="menu_8c_source.html#l00055">55</a> of file <a class="el" href="menu_8c_source.html">menu.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   56</span>{</div>
-<div class="line"><span class="lineno">   57</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno">   57</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
 <div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>  menu-&gt;<a class="code hl_variable" href="structMenu.html#a218350a8b124833a4879f88e9e107a22">make_entry</a>(menu, buf, <span class="keyword">sizeof</span>(buf), line);</div>
-<div class="line"><span class="lineno">   60</span>  <span class="keywordflow">return</span> regexec(rx, buf, 0, NULL, 0);</div>
-<div class="line"><span class="lineno">   61</span>}</div>
-<div class="ttc" id="astructMenu_html_a218350a8b124833a4879f88e9e107a22"><div class="ttname"><a href="structMenu.html#a218350a8b124833a4879f88e9e107a22">Menu::make_entry</a></div><div class="ttdeci">void(* make_entry)(struct Menu *menu, char *buf, size_t buflen, int line)</div><div class="ttdef"><b>Definition:</b> <a href="menu_2lib_8h_source.html#l00096">lib.h:96</a></div></div>
+<div class="line"><span class="lineno">   59</span>  menu-&gt;<a class="code hl_variable" href="structMenu.html#ae2e57ec676ef2430723d404e644d05ba">make_entry</a>(menu, line, buf);</div>
+<div class="line"><span class="lineno">   60</span>  <span class="keywordtype">int</span> rc = regexec(rx, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, 0, NULL, 0);</div>
+<div class="line"><span class="lineno">   61</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">   64</span>}</div>
+<div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00081">pool.c:81</a></div></div>
+<div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00094">pool.c:94</a></div></div>
+<div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
+<div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00037">buffer.h:37</a></div></div>
+<div class="ttc" id="astructMenu_html_ae2e57ec676ef2430723d404e644d05ba"><div class="ttname"><a href="structMenu.html#ae2e57ec676ef2430723d404e644d05ba">Menu::make_entry</a></div><div class="ttdeci">void(* make_entry)(struct Menu *menu, int line, struct Buffer *buf)</div><div class="ttdef"><b>Definition:</b> <a href="menu_2lib_8h_source.html#l00094">lib.h:94</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__menu__search_ga0d240f13bc1269e8946046a28014c1bc_cgraph.svg" width="300" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="group__menu__search_ga0d240f13bc1269e8946046a28014c1bc_icgraph.svg" width="263" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>

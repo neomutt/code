@@ -80,7 +80,7 @@ var searchData=
   ['envlist_5finit_77',['envlist_init',['../envlist_8c.html#a4d0e1cfbe8dba635bb61b6f014708516',1,'envlist_init(char **envp):&#160;envlist.c'],['../envlist_8h.html#a4d0e1cfbe8dba635bb61b6f014708516',1,'envlist_init(char **envp):&#160;envlist.c']]],
   ['envlist_5fset_78',['envlist_set',['../envlist_8c.html#a8643dfebf12ab95f38021cf7fac716cc',1,'envlist_set(char ***envp, const char *name, const char *value, bool overwrite):&#160;envlist.c'],['../envlist_8h.html#a8643dfebf12ab95f38021cf7fac716cc',1,'envlist_set(char ***envp, const char *name, const char *value, bool overwrite):&#160;envlist.c']]],
   ['envlist_5fsort_79',['envlist_sort',['../group__sort__api.html#ga387c03d3ad5d586efbe4cb66900ca57f',1,'commands.c']]],
-  ['envlist_5funset_80',['envlist_unset',['../envlist_8c.html#adfd13ffecec0c62acf36151a8ea41ac2',1,'envlist_unset(char ***envp, const char *name):&#160;envlist.c'],['../envlist_8h.html#adfd13ffecec0c62acf36151a8ea41ac2',1,'envlist_unset(char ***envp, const char *name):&#160;envlist.c']]],
+  ['envlist_5funset_80',['envlist_unset',['../envlist_8h.html#adfd13ffecec0c62acf36151a8ea41ac2',1,'envlist_unset(char ***envp, const char *name):&#160;envlist.c'],['../envlist_8c.html#adfd13ffecec0c62acf36151a8ea41ac2',1,'envlist_unset(char ***envp, const char *name):&#160;envlist.c']]],
   ['eqi1_81',['eqi1',['../eqi_8h.html#ac47f5057417a54f3e1381bc4bc3ee6a0',1,'eqi.h']]],
   ['eqi10_82',['eqi10',['../eqi_8h.html#a1e423a9614c78387b06a96ec36322fc5',1,'eqi.h']]],
   ['eqi11_83',['eqi11',['../eqi_8h.html#a22b741d063082522db4cb1790ceb149a',1,'eqi.h']]],
@@ -97,7 +97,7 @@ var searchData=
   ['eqi8_94',['eqi8',['../eqi_8h.html#a21bf6a5ca5c452fcba8e508f6330a28e',1,'eqi.h']]],
   ['eqi9_95',['eqi9',['../eqi_8h.html#a0b48b9a2c86d85301e1d32c0e8627f83',1,'eqi.h']]],
   ['error_5fpause_96',['error_pause',['../mutt__logging_8c.html#abcfbeac77028256b94618b1ebdac6891',1,'mutt_logging.c']]],
-  ['escape_5fstring_97',['escape_string',['../config_2dump_8h.html#a03edb5012f9f0894b258ab6a6cb6ed11',1,'escape_string(struct Buffer *buf, const char *src):&#160;dump.c'],['../config_2dump_8c.html#a03edb5012f9f0894b258ab6a6cb6ed11',1,'escape_string(struct Buffer *buf, const char *src):&#160;dump.c']]],
+  ['escape_5fstring_97',['escape_string',['../config_2dump_8c.html#a03edb5012f9f0894b258ab6a6cb6ed11',1,'escape_string(struct Buffer *buf, const char *src):&#160;dump.c'],['../config_2dump_8h.html#a03edb5012f9f0894b258ab6a6cb6ed11',1,'escape_string(struct Buffer *buf, const char *src):&#160;dump.c']]],
   ['ev_5fmessage_98',['ev_message',['../editmsg_8c.html#a8cccfe84ab7389c624becc6f5f14d13f',1,'editmsg.c']]],
   ['eval_5fdate_5fminmax_99',['eval_date_minmax',['../compile_8c.html#a20e645effab0dbabefd7a5ff7970ad1e',1,'eval_date_minmax(struct Pattern *pat, const char *s, struct Buffer *err):&#160;compile.c'],['../pattern_2private_8h.html#a20e645effab0dbabefd7a5ff7970ad1e',1,'eval_date_minmax(struct Pattern *pat, const char *s, struct Buffer *err):&#160;compile.c']]],
   ['examine_5fdirectory_100',['examine_directory',['../dlg__browser_8c.html#a0e7e4cda55c641a3da1c1c8cdee7be31',1,'examine_directory(struct Mailbox *m, struct Menu *menu, struct BrowserState *state, const char *dirname, const char *prefix):&#160;dlg_browser.c'],['../browser_2lib_8h.html#ac93c8374cd1bff600e3b75ffe7c800fd',1,'examine_directory(struct Mailbox *m, struct Menu *menu, struct BrowserState *state, const char *d, const char *prefix):&#160;dlg_browser.c']]],
@@ -105,10 +105,9 @@ var searchData=
   ['execute_5fcommand_102',['execute_command',['../compmbox_2compress_8c.html#aab0614a8cdeea758a9412d7e61b5ce84',1,'compress.c']]],
   ['execute_5fcommands_103',['execute_commands',['../init_8c.html#a5c6987a6a83075ae55893a5dda1f9256',1,'init.c']]],
   ['expand_5faliases_5fr_104',['expand_aliases_r',['../alias_8c.html#afa6db199eab0d4f151c52b3712facae8',1,'alias.c']]],
-  ['expand_5fcommand_5fstr_105',['expand_command_str',['../compmbox_2compress_8c.html#abec93f40f46e453d46cb9d7181ae39f9',1,'compress.c']]],
-  ['expand_5findex_5fpanel_106',['expand_index_panel',['../pager_2message_8c.html#a2586c965807e93c2a3169311a001df29',1,'message.c']]],
-  ['export_5fkeydata_107',['export_keydata',['../gpgme_8c.html#ac62789dd0851fe61080dee55a587649d',1,'gpgme.c']]],
-  ['external_5fbody_5fhandler_108',['external_body_handler',['../group__handler__api.html#ga8a838ae7b50e8ffa147203c5cfaa3272',1,'handler.c']]],
-  ['external_5fcleanup_109',['external_cleanup',['../external_8c.html#a90a9f2dbed02e1442ce33c654f2cb620',1,'external_cleanup(void):&#160;external.c'],['../external_8h.html#a90a9f2dbed02e1442ce33c654f2cb620',1,'external_cleanup(void):&#160;external.c']]],
-  ['external_5fpager_110',['external_pager',['../pager_2lib_8h.html#ad081e1099ae8f2f467644023b0f1470c',1,'external_pager(struct MailboxView *mv, struct Email *e, const char *command):&#160;message.c'],['../pager_2message_8c.html#ad081e1099ae8f2f467644023b0f1470c',1,'external_pager(struct MailboxView *mv, struct Email *e, const char *command):&#160;message.c']]]
+  ['expand_5findex_5fpanel_105',['expand_index_panel',['../pager_2message_8c.html#a2586c965807e93c2a3169311a001df29',1,'message.c']]],
+  ['export_5fkeydata_106',['export_keydata',['../gpgme_8c.html#ac62789dd0851fe61080dee55a587649d',1,'gpgme.c']]],
+  ['external_5fbody_5fhandler_107',['external_body_handler',['../group__handler__api.html#ga8a838ae7b50e8ffa147203c5cfaa3272',1,'handler.c']]],
+  ['external_5fcleanup_108',['external_cleanup',['../external_8c.html#a90a9f2dbed02e1442ce33c654f2cb620',1,'external_cleanup(void):&#160;external.c'],['../external_8h.html#a90a9f2dbed02e1442ce33c654f2cb620',1,'external_cleanup(void):&#160;external.c']]],
+  ['external_5fpager_109',['external_pager',['../pager_2lib_8h.html#ad081e1099ae8f2f467644023b0f1470c',1,'external_pager(struct MailboxView *mv, struct Email *e, const char *command):&#160;message.c'],['../pager_2message_8c.html#ad081e1099ae8f2f467644023b0f1470c',1,'external_pager(struct MailboxView *mv, struct Email *e, const char *command):&#160;message.c']]]
 ];

@@ -12,7 +12,7 @@ var searchData=
   ['header_2eh_9',['header.h',['../header_8h.html',1,'']]],
   ['help_2ec_10',['help.c',['../help_8c.html',1,'']]],
   ['helpbar_2ec_11',['helpbar.c',['../helpbar_8c.html',1,'']]],
-  ['helpers_2ec_12',['helpers.c',['../complete_2helpers_8c.html',1,'(Global Namespace)'],['../config_2helpers_8c.html',1,'(Global Namespace)']]],
+  ['helpers_2ec_12',['helpers.c',['../config_2helpers_8c.html',1,'(Global Namespace)'],['../complete_2helpers_8c.html',1,'(Global Namespace)']]],
   ['helpers_2eh_13',['helpers.h',['../helpers_8h.html',1,'']]],
   ['history_2ec_14',['history.c',['../history_8c.html',1,'']]],
   ['hook_2ec_15',['hook.c',['../hook_8c.html',1,'']]],

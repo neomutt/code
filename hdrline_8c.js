@@ -18,5 +18,5 @@ var hdrline_8c =
     [ "thread_is_new", "hdrline_8c.html#aebca8cfe2272489be6f640a0643ec1df", null ],
     [ "thread_is_old", "hdrline_8c.html#aa520340bd3c4e1253ac4603229f2b026", null ],
     [ "index_format_str", "group__expando__api.html#ga9dfc719f961c9cb9dc212d10ea8123ab", null ],
-    [ "mutt_make_string", "hdrline_8c.html#a5ff2b7d1b1e2dbd345801cdda1e3af14", null ]
+    [ "mutt_make_string", "hdrline_8c.html#ab97c7b6e97e13807c4bac1080d3132a5", null ]
 ];

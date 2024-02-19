@@ -7,7 +7,7 @@ var smime_8c =
     [ "smime_class_void_passphrase", "group__crypto__void__passphrase.html#gadb364b3c8158f09603b981b70bbee2eb", null ],
     [ "smime_class_valid_passphrase", "group__crypto__valid__passphrase.html#gaaa50dd72a9aae26aa62d0510121d41f9", null ],
     [ "smime_command_format_str", "group__expando__api.html#ga803177506522ce84e37fce97d2256a48", null ],
-    [ "smime_command", "smime_8c.html#a61cdf32d1db4e2725b27a3576505eaef", null ],
+    [ "smime_command", "smime_8c.html#ae62f5f4c85258c59d397199f75dbcd00", null ],
     [ "smime_invoke", "smime_8c.html#aee830a36c5114c8737a196fc888eb015", null ],
     [ "smime_parse_key", "smime_8c.html#a87e30ca8724474468609c9defc0f99bf", null ],
     [ "smime_get_candidates", "smime_8c.html#a9d0f081748b9e72a7355c87730919647", null ],

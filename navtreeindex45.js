@@ -1,10 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd":[1,0,181,0],
-"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,181,22],
-"structPagerPrivateData.html#ae448f18ad03d4c47cf38b84c106b79da":[1,0,181,25],
-"structPagerPrivateData.html#ae85cad304a17fbe3fc3a0bc126bd1411":[1,0,181,18],
-"structPagerPrivateData.html#ae8aca194ad702e2e716ecb08172a3a53":[1,0,181,9],
 "structPagerPrivateData.html#af5416e43311ef0ec6c3057946294ac07":[1,0,181,8],
 "structPagerPrivateData.html#afb5dbf89eff9e94e26674696e934dae0":[1,0,181,1],
 "structPagerPrivateData.html#afd2063e9a724fe469e2379dfb32911c1":[1,0,181,15],
@@ -249,5 +244,10 @@ var NAVTREEINDEX45 =
 "structScore.html#aeef44b6720e850cc7044cb325dab6bc6":[1,0,219,4],
 "structSearchState.html":[1,0,220],
 "structSearchState.html#a09b871630482499d27724fb324864273":[1,0,220,1],
-"structSearchState.html#a10ed9ec626b19daf21013cead8d19218":[1,0,220,2]
+"structSearchState.html#a10ed9ec626b19daf21013cead8d19218":[1,0,220,2],
+"structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada":[1,0,220,3],
+"structSearchState.html#a9ae675072a20827591b01a54becd5832":[1,0,220,0],
+"structSeqsetIterator.html":[1,0,221],
+"structSeqsetIterator.html#a26751cac5a01df780c75aad85206a8da":[1,0,221,1],
+"structSeqsetIterator.html#a340ee7f234de9bbb56e5d317e7f824b4":[1,0,221,7]
 };
