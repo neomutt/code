@@ -12,7 +12,7 @@ var searchData=
   ['wcscasecmp_9',['wcscasecmp',['../wcscasecmp_8c.html#aece8f8a0bf2359e8f8cfc6b7c9f6303f',1,'wcscasecmp(const wchar_t *a, const wchar_t *b):&#160;wcscasecmp.c'],['../protos_8h.html#aece8f8a0bf2359e8f8cfc6b7c9f6303f',1,'wcscasecmp(const wchar_t *a, const wchar_t *b):&#160;wcscasecmp.c']]],
   ['wcscasecmp_2ec_10',['wcscasecmp.c',['../wcscasecmp_8c.html',1,'']]],
   ['wdata_11',['wdata',['../structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc',1,'MuttWindow']]],
-  ['wdata_2ec_12',['wdata.c',['../helpbar_2wdata_8c.html',1,'(Global Namespace)'],['../sidebar_2wdata_8c.html',1,'(Global Namespace)'],['../progress_2wdata_8c.html',1,'(Global Namespace)'],['../envelope_2wdata_8c.html',1,'(Global Namespace)']]],
+  ['wdata_2ec_12',['wdata.c',['../sidebar_2wdata_8c.html',1,'(Global Namespace)'],['../progress_2wdata_8c.html',1,'(Global Namespace)'],['../helpbar_2wdata_8c.html',1,'(Global Namespace)'],['../envelope_2wdata_8c.html',1,'(Global Namespace)']]],
   ['wdata_2eh_13',['wdata.h',['../progress_2wdata_8h.html',1,'(Global Namespace)'],['../envelope_2wdata_8h.html',1,'(Global Namespace)'],['../editor_2wdata_8h.html',1,'(Global Namespace)']]],
   ['wdata_5ffree_14',['wdata_free',['../structMuttWindow.html#a78011dd7f37a6a39f0d404a76d133a5d',1,'MuttWindow']]],
   ['wdata_5ffree_28_29_15',['wdata_free()',['../group__window__wdata__free.html',1,'']]],
