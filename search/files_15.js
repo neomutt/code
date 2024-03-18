@@ -1,7 +1,7 @@
 var searchData=
 [
   ['wcscasecmp_2ec_0',['wcscasecmp.c',['../wcscasecmp_8c.html',1,'']]],
-  ['wdata_2ec_1',['wdata.c',['../sidebar_2wdata_8c.html',1,'(Global Namespace)'],['../envelope_2wdata_8c.html',1,'(Global Namespace)'],['../helpbar_2wdata_8c.html',1,'(Global Namespace)'],['../progress_2wdata_8c.html',1,'(Global Namespace)']]],
+  ['wdata_2ec_1',['wdata.c',['../envelope_2wdata_8c.html',1,'(Global Namespace)'],['../helpbar_2wdata_8c.html',1,'(Global Namespace)'],['../progress_2wdata_8c.html',1,'(Global Namespace)'],['../sidebar_2wdata_8c.html',1,'(Global Namespace)']]],
   ['wdata_2eh_2',['wdata.h',['../envelope_2wdata_8h.html',1,'(Global Namespace)'],['../progress_2wdata_8h.html',1,'(Global Namespace)'],['../editor_2wdata_8h.html',1,'(Global Namespace)']]],
   ['win_5fchain_2ec_3',['win_chain.c',['../win__chain_8c.html',1,'']]],
   ['win_5fchain_2eh_4',['win_chain.h',['../win__chain_8h.html',1,'']]],

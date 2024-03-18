@@ -13,6 +13,6 @@ var group__menu__make__entry =
     [ "crypt_make_entry", "group__menu__make__entry.html#ga9d4a514a39b08c37cf7b6c7a84f7fe90", null ],
     [ "pgp_make_entry", "group__menu__make__entry.html#gab3d66b71d103fa5234a92983e706f45b", null ],
     [ "smime_make_entry", "group__menu__make__entry.html#ga11c343db7478f03c75c21c682d94e190", null ],
-    [ "make_pattern_entry", "group__menu__make__entry.html#ga6aaf4d894b61026f9d3acc73f2f5ac8c", null ],
+    [ "pattern_make_entry", "group__menu__make__entry.html#gac23b8558b966b2358e6b309e9336b873", null ],
     [ "post_make_entry", "group__menu__make__entry.html#gaec8de8251065105e59f78e1a211d69e3", null ]
 ];
