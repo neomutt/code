@@ -2,6 +2,23 @@ var sidebar_2private_8h =
 [
     [ "SbEntry", "structSbEntry.html", "structSbEntry" ],
     [ "SidebarWindowData", "structSidebarWindowData.html", "structSidebarWindowData" ],
+    [ "ExpandoDataSidebar", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774", [
+      [ "ED_SID_DELETED_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774adf59196953f3988b1516f2a6962310ef", null ],
+      [ "ED_SID_DESCRIPTION", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a4601a035b54d3c4706b9674897114267", null ],
+      [ "ED_SID_FLAGGED", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774af8875cb772b222f40807b563ec2bae5c", null ],
+      [ "ED_SID_FLAGGED_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a0cc40ae52d2d820d7606c2aa6cd9d772", null ],
+      [ "ED_SID_LIMITED_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774aa5784487e235b22f06654d896104dcbe", null ],
+      [ "ED_SID_MESSAGE_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a9aed0ab8a1eb4e0005ff951385148e90", null ],
+      [ "ED_SID_NAME", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774ad2838abcc405a23c9046f33c9f5fbe54", null ],
+      [ "ED_SID_NEW_MAIL", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a5ccb7f7dd5cc8acd67dca31f60c82890", null ],
+      [ "ED_SID_NOTIFY", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774acb9234bf068fa03203e67710b7dc1089", null ],
+      [ "ED_SID_OLD_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a92f4836d3746861cfb009dfdf57c0be9", null ],
+      [ "ED_SID_POLL", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a90cc9e95fa2aa302cfc74f7194b72b92", null ],
+      [ "ED_SID_READ_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a423c18e8c05ea6184eed0b1f58e3158f", null ],
+      [ "ED_SID_TAGGED_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774abccfd1e5f8a4f4dffee168a9d5d214c8", null ],
+      [ "ED_SID_UNREAD_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774ab1bb93a0d35a94bbc30d88180d336f5b", null ],
+      [ "ED_SID_UNSEEN_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a6266043f41307858cf264034a98eb36b", null ]
+    ] ],
     [ "DivType", "sidebar_2private_8h.html#a1df81cd29a17636099f97add487c0b7d", [
       [ "SB_DIV_USER", "sidebar_2private_8h.html#a1df81cd29a17636099f97add487c0b7dae4e23eeb1efcfe8750f5313ca54f1ae4", null ],
       [ "SB_DIV_ASCII", "sidebar_2private_8h.html#a1df81cd29a17636099f97add487c0b7dac250c60ac8b34ef8bcc751c44138fc0f", null ]

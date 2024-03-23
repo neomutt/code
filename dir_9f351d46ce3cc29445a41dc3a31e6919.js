@@ -9,7 +9,7 @@ var dir_9f351d46ce3cc29445a41dc3a31e6919 =
     [ "enum.c", "enum_8c.html", "enum_8c" ],
     [ "enum.h", "enum_8h.html", "enum_8h" ],
     [ "helpers.c", "config_2helpers_8c.html", "config_2helpers_8c" ],
-    [ "helpers.h", "helpers_8h.html", "helpers_8h" ],
+    [ "helpers.h", "config_2helpers_8h.html", "config_2helpers_8h" ],
     [ "inheritance.h", "inheritance_8h.html", "inheritance_8h" ],
     [ "lib.h", "config_2lib_8h.html", "config_2lib_8h" ],
     [ "long.c", "long_8c.html", "long_8c" ],

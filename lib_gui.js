@@ -2,7 +2,6 @@ var lib_gui =
 [
     [ "Window drawing code", "gui_curs_lib.html", null ],
     [ "Dialog Windows", "gui_dialog.html", null ],
-    [ "Simple string formatting", "gui_format.html", null ],
     [ "Definitions of user functions", "gui_functions.html", null ],
     [ "Global functions", "gui_global.html", null ],
     [ "Message Container", "gui_msgcont.html", null ],

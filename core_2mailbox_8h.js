@@ -31,6 +31,11 @@ var core_2mailbox_8h =
       [ "MUTT_POP", "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da3b55e432fcbfdbd550d0aea5b03679de", null ],
       [ "MUTT_COMPRESSED", "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dabe3e473aa651d6b7030b5ef08953eb4e", null ]
     ] ],
+    [ "ExpandoDataMailbox", "core_2mailbox_8h.html#a37de3f1244a5121c3902e9213bed58b7", [
+      [ "ED_MBX_MAILBOX_NAME", "core_2mailbox_8h.html#a37de3f1244a5121c3902e9213bed58b7a415838fd47a7d885032d69346e6f5d9a", null ],
+      [ "ED_MBX_MESSAGE_COUNT", "core_2mailbox_8h.html#a37de3f1244a5121c3902e9213bed58b7a09ec09431cbfcd750ed7ee2618586492", null ],
+      [ "ED_MBX_PERCENTAGE", "core_2mailbox_8h.html#a37de3f1244a5121c3902e9213bed58b7a2e4e20ef31b77a9624217e8ac3269eb7", null ]
+    ] ],
     [ "NotifyMailbox", "core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4", [
       [ "NT_MAILBOX_ADD", "core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4af4301eba28d0776c6718b42b143e54df", null ],
       [ "NT_MAILBOX_DELETE", "core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4aa146b6ca59f6ad39fd676c0100d51bcb", null ],

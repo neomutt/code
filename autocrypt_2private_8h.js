@@ -1,6 +1,13 @@
 var autocrypt_2private_8h =
 [
     [ "AccountEntry", "structAccountEntry.html", "structAccountEntry" ],
+    [ "ExpandoDataAutocrypt", "autocrypt_2private_8h.html#a011d2ca4289f1cb2fb764df0f1929973", [
+      [ "ED_AUT_ENABLED", "autocrypt_2private_8h.html#a011d2ca4289f1cb2fb764df0f1929973a6c6a27c528e5b29297bfe55582ca93c2", null ],
+      [ "ED_AUT_KEYID", "autocrypt_2private_8h.html#a011d2ca4289f1cb2fb764df0f1929973a3d07d829c6873c303ec94571d0371b47", null ],
+      [ "ED_AUT_ADDRESS", "autocrypt_2private_8h.html#a011d2ca4289f1cb2fb764df0f1929973a317cea6d82154e780599102282fb0499", null ],
+      [ "ED_AUT_NUMBER", "autocrypt_2private_8h.html#a011d2ca4289f1cb2fb764df0f1929973a50434486cd457d41c630e5ce05d6cc9e", null ],
+      [ "ED_AUT_PREFER_ENCRYPT", "autocrypt_2private_8h.html#a011d2ca4289f1cb2fb764df0f1929973aa8e28e4082841bb9f1941d2d9b78ff39", null ]
+    ] ],
     [ "mutt_autocrypt_account_init", "autocrypt_2private_8h.html#aa6a1d41202dd88cfe7d34655352e437e", null ],
     [ "mutt_autocrypt_scan_mailboxes", "autocrypt_2private_8h.html#ae662fb061f19856ae08ea6d9007d2aa2", null ],
     [ "mutt_autocrypt_db_account_delete", "autocrypt_2private_8h.html#a1475a5c5e3f022694e685651289fb21a", null ],

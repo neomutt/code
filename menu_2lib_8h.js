@@ -7,6 +7,9 @@ var menu_2lib_8h =
     [ "MENU_REDRAW_CURRENT", "menu_2lib_8h.html#ada2a150b4a42da80d12b7e3be6d396f9", null ],
     [ "MENU_REDRAW_FULL", "menu_2lib_8h.html#a073caf105025cd1e03e766c7e4e9ec2f", null ],
     [ "MenuRedrawFlags", "menu_2lib_8h.html#a82f105585171a6bd277a5edcb3496318", null ],
+    [ "ExpandoDataMenu", "menu_2lib_8h.html#a39da8e47030c620e81ed4ac988fcc8dd", [
+      [ "ED_MEN_PERCENTAGE", "menu_2lib_8h.html#a39da8e47030c620e81ed4ac988fcc8dda378ecf7d1dbb4b5463ac5f2e4676d711", null ]
+    ] ],
     [ "menu_bottom_page", "menu_2lib_8h.html#a0e75fc88416ebf7ce753040aac4ea817", null ],
     [ "menu_current_bottom", "menu_2lib_8h.html#a2badb6bb00128012370d4f6dcdfc7306", null ],
     [ "menu_current_middle", "menu_2lib_8h.html#a394f52d4b1baa730e572a5ddcd9a5ef5", null ],

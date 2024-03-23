@@ -1,18 +1,18 @@
 var group__menu__make__entry =
 [
-    [ "alias_make_entry", "group__menu__make__entry.html#ga91bfc808bf386f76b79e21de964bcd0e", null ],
-    [ "query_make_entry", "group__menu__make__entry.html#ga09707dc3a67b0ecb3f1fb66fdd279955", null ],
-    [ "attach_make_entry", "group__menu__make__entry.html#gaef33a57cec406c3440d498c1b354cd37", null ],
-    [ "autocrypt_make_entry", "group__menu__make__entry.html#ga9c930f83c221f69cfd9b71d2a31ff1ec", null ],
-    [ "folder_make_entry", "group__menu__make__entry.html#gaa90cd34957ab9a90b45d1992578f2adf", null ],
-    [ "compose_make_entry", "group__menu__make__entry.html#ga2e905d6aa6bb23395f7f0b050d3b95cd", null ],
-    [ "cert_make_entry", "group__menu__make__entry.html#gab0ad5b2d5fdad1bd52093238e750a956", null ],
-    [ "history_make_entry", "group__menu__make__entry.html#ga89b64ed4c9c36565892cbe28edc45be3", null ],
-    [ "index_make_entry", "group__menu__make__entry.html#ga624c1c8b2e2fb1d70ae37be0a58fc16b", null ],
-    [ "mix_make_entry", "group__menu__make__entry.html#ga0a9933e682408b787dcb7bffd5e2c4f9", null ],
-    [ "crypt_make_entry", "group__menu__make__entry.html#ga9d4a514a39b08c37cf7b6c7a84f7fe90", null ],
-    [ "pgp_make_entry", "group__menu__make__entry.html#gab3d66b71d103fa5234a92983e706f45b", null ],
-    [ "smime_make_entry", "group__menu__make__entry.html#ga11c343db7478f03c75c21c682d94e190", null ],
-    [ "pattern_make_entry", "group__menu__make__entry.html#gac23b8558b966b2358e6b309e9336b873", null ],
-    [ "post_make_entry", "group__menu__make__entry.html#gaec8de8251065105e59f78e1a211d69e3", null ]
+    [ "alias_make_entry", "group__menu__make__entry.html#ga432ca9412f7a04966465a4b21d4dcea6", null ],
+    [ "query_make_entry", "group__menu__make__entry.html#gadfd9b4b27dab6dad997f5b55be71f8fd", null ],
+    [ "attach_make_entry", "group__menu__make__entry.html#gab81d49cdf17c766adcf02d351c778dd2", null ],
+    [ "autocrypt_make_entry", "group__menu__make__entry.html#ga250408ee0d73a201052792587a440acd", null ],
+    [ "folder_make_entry", "group__menu__make__entry.html#ga9e6cfcfb157b226650356f8faf2ce96f", null ],
+    [ "compose_make_entry", "group__menu__make__entry.html#gac105e6062eaff4d1fdb12018ed3240fe", null ],
+    [ "cert_make_entry", "group__menu__make__entry.html#ga54426e7c96b9c31cc09e77ff982fbce6", null ],
+    [ "history_make_entry", "group__menu__make__entry.html#ga9249c08cccfb4df603237c1a0eb98281", null ],
+    [ "index_make_entry", "group__menu__make__entry.html#ga3fe3f5bd655d5d45e9c814eb0ff75005", null ],
+    [ "mix_make_entry", "group__menu__make__entry.html#ga3261550e4d294d2e28f56275bd453f76", null ],
+    [ "crypt_make_entry", "group__menu__make__entry.html#ga1b475b036b99c9860b06fac0caa4f568", null ],
+    [ "pgp_make_entry", "group__menu__make__entry.html#ga3fa9a61672824b8e7b310137b3cf8888", null ],
+    [ "smime_make_entry", "group__menu__make__entry.html#gaa795d473459ac19d687817265650dc59", null ],
+    [ "pattern_make_entry", "group__menu__make__entry.html#gaac0a7c78db96bda190d98b1a16d0e639", null ],
+    [ "post_make_entry", "group__menu__make__entry.html#ga2b964391515e462e4b35620cbba9fb7f", null ]
 ];

@@ -11,6 +11,10 @@ var history_2lib_8h =
       [ "HC_MAILBOX", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a3747a064ce42a7f4357acb012d2455ba", null ],
       [ "HC_MAX", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234ac8174c35ca7e43a17e8f9b3e80cbb737", null ]
     ] ],
+    [ "ExpandoDataHistory", "history_2lib_8h.html#aaaa49dee7cdbca5fe0d736b831838405", [
+      [ "ED_HIS_MATCH", "history_2lib_8h.html#aaaa49dee7cdbca5fe0d736b831838405a930b25e7d034b8e3ce1799c17641add8", null ],
+      [ "ED_HIS_NUMBER", "history_2lib_8h.html#aaaa49dee7cdbca5fe0d736b831838405ac5c466c2895a558c20e40708692273b9", null ]
+    ] ],
     [ "mutt_hist_add", "history_2lib_8h.html#a541c9c8be36706c87b62c896a897f680", null ],
     [ "mutt_hist_at_scratch", "history_2lib_8h.html#a493d2064e68bab2fe5cee4b4769c2d49", null ],
     [ "mutt_hist_cleanup", "history_2lib_8h.html#aff6eb2b4dc96f0d63aff49733a640999", null ],

@@ -17,7 +17,7 @@ var dir_1ac69099273185b8416dca0dba1f5766 =
     [ "parameter.c", "parameter_8c.html", "parameter_8c" ],
     [ "parameter.h", "parameter_8h.html", "parameter_8h" ],
     [ "parse.c", "email_2parse_8c.html", "email_2parse_8c" ],
-    [ "parse.h", "parse_8h.html", "parse_8h" ],
+    [ "parse.h", "email_2parse_8h.html", "email_2parse_8h" ],
     [ "rfc2047.c", "rfc2047_8c.html", "rfc2047_8c" ],
     [ "rfc2047.h", "rfc2047_8h.html", "rfc2047_8h" ],
     [ "rfc2231.c", "rfc2231_8c.html", "rfc2231_8c" ],

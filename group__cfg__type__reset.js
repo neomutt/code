@@ -12,5 +12,6 @@ var group__cfg__type__reset =
     [ "regex_reset", "group__cfg__type__reset.html#gad7344b1ac14714c2e96844a49f454e58", null ],
     [ "slist_reset", "group__cfg__type__reset.html#gafe767f31832058e2be31c95972e1b254", null ],
     [ "sort_reset", "group__cfg__type__reset.html#ga46f3b85af79f492736ace05a9665986a", null ],
-    [ "string_reset", "group__cfg__type__reset.html#ga63c7f945e37eec859151937510577717", null ]
+    [ "string_reset", "group__cfg__type__reset.html#ga63c7f945e37eec859151937510577717", null ],
+    [ "expando_reset", "group__cfg__type__reset.html#gaf2db367e2e189e7dd40639643d4f65d2", null ]
 ];

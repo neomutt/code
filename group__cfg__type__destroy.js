@@ -6,5 +6,6 @@ var group__cfg__type__destroy =
     [ "path_destroy", "group__cfg__type__destroy.html#ga550f8f42ea47fdc252201cdd189674b6", null ],
     [ "regex_destroy", "group__cfg__type__destroy.html#ga51745ca37912561b82be4b0560686d6c", null ],
     [ "slist_destroy", "group__cfg__type__destroy.html#ga4d0991f0c7ea664efcd83f406209f32a", null ],
-    [ "string_destroy", "group__cfg__type__destroy.html#ga02e912517ad66b0b9f74cf9726ab3ede", null ]
+    [ "string_destroy", "group__cfg__type__destroy.html#ga02e912517ad66b0b9f74cf9726ab3ede", null ],
+    [ "expando_destroy", "group__cfg__type__destroy.html#gaf6330e899b7e7d96a2d8440b8f1ea06c", null ]
 ];

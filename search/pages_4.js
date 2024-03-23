@@ -18,5 +18,7 @@ var searchData=
   ['envelope_20window_20data_15',['Envelope Window Data',['../envelope_wdata.html',1,'lib_envelope']]],
   ['envelope_2dediting_20window_16',['Envelope-editing Window',['../lib_envelope.html',1,'']]],
   ['execute_20a_20pattern_17',['Execute a Pattern',['../pattern_exec.html',1,'lib_pattern']]],
-  ['execute_20external_20programs_18',['Execute external programs',['../neo_system.html',1,'index']]]
+  ['execute_20external_20programs_18',['Execute external programs',['../neo_system.html',1,'index']]],
+  ['expando_20node_19',['Expando Node',['../expando_node_expando.html',1,'lib_expando']]],
+  ['expando_20parsing_20',['Expando Parsing',['../expando_parse.html',1,'lib_expando']]]
 ];

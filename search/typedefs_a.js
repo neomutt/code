@@ -10,7 +10,7 @@ var searchData=
   ['msgopenflags_7',['MsgOpenFlags',['../mx_8h.html#a3c2b592b42c4c70ba32b8fb9ce869750',1,'mx.h']]],
   ['mutt_5ffile_5fmap_5ft_8',['mutt_file_map_t',['../file_8h.html#aaaf529d5bd4c473f5be88b45cbed18a2',1,'file.h']]],
   ['muttaccountflags_9',['MuttAccountFlags',['../connaccount_8h.html#a25025c559ef26ae8bbd9349cfea83d49',1,'connaccount.h']]],
-  ['muttformatflags_10',['MuttFormatFlags',['../format__flags_8h.html#ad2734d319d795141616e1b5f241be1b2',1,'format_flags.h']]],
+  ['muttformatflags_10',['MuttFormatFlags',['../render_8h.html#ad2734d319d795141616e1b5f241be1b2',1,'render.h']]],
   ['muttlogger_11',['MuttLogger',['../logging2_8h.html#a6db33de0f7da0088013ee90717734329',1,'logging2.h']]],
   ['muttthreadflags_12',['MuttThreadFlags',['../mutt__thread_8h.html#a13d89de5f6b408671d0e624de135ea8a',1,'mutt_thread.h']]]
 ];

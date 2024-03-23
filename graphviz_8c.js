@@ -11,6 +11,7 @@ var graphviz_8c =
     [ "dot_email", "graphviz_8c.html#a35f62ee6485b48766f8f4136f08db637", null ],
     [ "dot_envelope", "graphviz_8c.html#ad1984a750f6a0fb848156823109ef288", null ],
     [ "dot_patternlist", "graphviz_8c.html#a687aa468737f33777bbc874f4a45a4bb", null ],
+    [ "dot_expando_node_tree", "graphviz_8c.html#a790b9e46014b685182aa9628cf1a02f9", null ],
     [ "dot_type_bool", "graphviz_8c.html#a5dd13108e798e7523e0b18666ffd6fee", null ],
     [ "dot_type_char", "graphviz_8c.html#a366fb594d80a8e168327bd7343b74119", null ],
     [ "dot_type_date", "graphviz_8c.html#a2fb5a84f0b769c2111b6409f7b110d2f", null ],
@@ -69,5 +70,16 @@ var graphviz_8c =
     [ "dump_graphviz_attach_ctx", "graphviz_8c.html#ad9580d8dcd7ecd744ed9786d804137b4", null ],
     [ "pattern_type_name", "graphviz_8c.html#ace04d4a6b9b2b9e46e7222d8ac2453e7", null ],
     [ "dot_pattern", "graphviz_8c.html#ab19e66f4f8b1ef4bdeeb5c3c5b72440c", null ],
-    [ "dump_graphviz_patternlist", "graphviz_8c.html#ad14c84b9ec6bb528da099815f6354ef7", null ]
+    [ "dump_graphviz_patternlist", "graphviz_8c.html#ad14c84b9ec6bb528da099815f6354ef7", null ],
+    [ "dot_expando_node_empty", "graphviz_8c.html#a26a4318f0d6b3a120934999c8e42ac3f", null ],
+    [ "dot_expando_node_text", "graphviz_8c.html#adf2eb1b1d8bc5c5e6b7594f2f8cb1dd4", null ],
+    [ "dot_expando_node_pad", "graphviz_8c.html#a32f80ffd90b74273c34d832a698601a5", null ],
+    [ "dot_expando_node_condition", "graphviz_8c.html#ae0b38176ddb1c0fa1fa3bc4722b8e277", null ],
+    [ "dot_expando_node_conditional_bool", "graphviz_8c.html#ad9917dee85d7839eeecbffa80b78e2ec", null ],
+    [ "dot_expando_node_conditional_date", "graphviz_8c.html#ad449e475e08a7ed92375e068c492f021", null ],
+    [ "dot_format", "graphviz_8c.html#a5ad4d62bcc4e751242361de79783a2f5", null ],
+    [ "dot_expando_node_container", "graphviz_8c.html#aa8a8c2633b82fb0e6fbc6043c483232f", null ],
+    [ "dot_expando_node_expando", "graphviz_8c.html#ae12b51639e6c429c03e8c209a7df7b45", null ],
+    [ "dot_expando_node", "graphviz_8c.html#a7ad2408dafbf0db200b8284df9fedbb0", null ],
+    [ "dump_graphviz_expando_node", "graphviz_8c.html#a7b9b32b9bd9decc597d2e65b094536c7", null ]
 ];

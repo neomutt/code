@@ -12,5 +12,6 @@ var group__cfg__type__string__set =
     [ "regex_string_set", "group__cfg__type__string__set.html#ga8aa6e89df1126458626f7217c9c6747a", null ],
     [ "slist_string_set", "group__cfg__type__string__set.html#ga038de06121ff19dcea9bb18d34df4ad9", null ],
     [ "sort_string_set", "group__cfg__type__string__set.html#gac9cb1b1a69665a0b25f880c16d786730", null ],
-    [ "string_string_set", "group__cfg__type__string__set.html#ga1836b567baead24f9ae06e3abb1cf01b", null ]
+    [ "string_string_set", "group__cfg__type__string__set.html#ga1836b567baead24f9ae06e3abb1cf01b", null ],
+    [ "expando_string_set", "group__cfg__type__string__set.html#ga9669c389b5fec80c77b92e4007063641", null ]
 ];

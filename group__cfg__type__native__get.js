@@ -12,5 +12,7 @@ var group__cfg__type__native__get =
     [ "regex_native_get", "group__cfg__type__native__get.html#ga68c106fe1c0b3a62f63458fb45e5e9da", null ],
     [ "slist_native_get", "group__cfg__type__native__get.html#gaa60cb81318682f31aef178530cc10712", null ],
     [ "sort_native_get", "group__cfg__type__native__get.html#ga18be22df2e15ec86a710d846e548a8b6", null ],
-    [ "string_native_get", "group__cfg__type__native__get.html#gab5bb6eaa20eb0bc40f0e2fa305a0ad90", null ]
+    [ "string_native_get", "group__cfg__type__native__get.html#gab5bb6eaa20eb0bc40f0e2fa305a0ad90", null ],
+    [ "expando_native_set", "group__cfg__type__native__get.html#ga30520c3bb2fd2ecff50b1b3dec464d4e", null ],
+    [ "expando_native_get", "group__cfg__type__native__get.html#ga638e0537047db27dd0d94655e5d43d97", null ]
 ];

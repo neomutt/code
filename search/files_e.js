@@ -3,8 +3,8 @@ var searchData=
   ['pager_2ec_0',['pager.c',['../debug_2pager_8c.html',1,'(Global Namespace)'],['../pager_2pager_8c.html',1,'(Global Namespace)']]],
   ['parameter_2ec_1',['parameter.c',['../parameter_8c.html',1,'']]],
   ['parameter_2eh_2',['parameter.h',['../parameter_8h.html',1,'']]],
-  ['parse_2ec_3',['parse.c',['../key_2parse_8c.html',1,'(Global Namespace)'],['../email_2parse_8c.html',1,'(Global Namespace)']]],
-  ['parse_2eh_4',['parse.h',['../parse_8h.html',1,'']]],
+  ['parse_2ec_3',['parse.c',['../email_2parse_8c.html',1,'(Global Namespace)'],['../expando_2parse_8c.html',1,'(Global Namespace)'],['../key_2parse_8c.html',1,'(Global Namespace)']]],
+  ['parse_2eh_4',['parse.h',['../expando_2parse_8h.html',1,'(Global Namespace)'],['../email_2parse_8h.html',1,'(Global Namespace)']]],
   ['parse_5fansi_2ec_5',['parse_ansi.c',['../parse__ansi_8c.html',1,'']]],
   ['parse_5fansi_2eh_6',['parse_ansi.h',['../parse__ansi_8h.html',1,'']]],
   ['parse_5fcolor_2ec_7',['parse_color.c',['../parse__color_8c.html',1,'']]],
@@ -35,9 +35,9 @@ var searchData=
   ['ppanel_2ec_32',['ppanel.c',['../ppanel_8c.html',1,'']]],
   ['prex_2ec_33',['prex.c',['../prex_8c.html',1,'']]],
   ['prex_2eh_34',['prex.h',['../prex_8h.html',1,'']]],
-  ['private_2eh_35',['private.h',['../compress_2private_8h.html',1,'(Global Namespace)'],['../pattern_2private_8h.html',1,'(Global Namespace)'],['../notmuch_2private_8h.html',1,'(Global Namespace)'],['../nntp_2private_8h.html',1,'(Global Namespace)'],['../ncrypt_2private_8h.html',1,'(Global Namespace)'],['../menu_2private_8h.html',1,'(Global Namespace)'],['../index_2private_8h.html',1,'(Global Namespace)'],['../imap_2private_8h.html',1,'(Global Namespace)'],['../helpbar_2private_8h.html',1,'(Global Namespace)'],['../envelope_2private_8h.html',1,'(Global Namespace)'],['../conn_2private_8h.html',1,'(Global Namespace)'],['../compose_2private_8h.html',1,'(Global Namespace)'],['../autocrypt_2private_8h.html',1,'(Global Namespace)'],['../pop_2private_8h.html',1,'(Global Namespace)'],['../sidebar_2private_8h.html',1,'(Global Namespace)']]],
-  ['private_5fdata_2ec_36',['private_data.c',['../attach_2private__data_8c.html',1,'(Global Namespace)'],['../browser_2private__data_8c.html',1,'(Global Namespace)'],['../index_2private__data_8c.html',1,'(Global Namespace)'],['../pager_2private__data_8c.html',1,'(Global Namespace)']]],
-  ['private_5fdata_2eh_37',['private_data.h',['../attach_2private__data_8h.html',1,'(Global Namespace)'],['../pager_2private__data_8h.html',1,'(Global Namespace)'],['../mixmaster_2private__data_8h.html',1,'(Global Namespace)'],['../index_2private__data_8h.html',1,'(Global Namespace)'],['../browser_2private__data_8h.html',1,'(Global Namespace)']]],
+  ['private_2eh_35',['private.h',['../compose_2private_8h.html',1,'(Global Namespace)'],['../pattern_2private_8h.html',1,'(Global Namespace)'],['../notmuch_2private_8h.html',1,'(Global Namespace)'],['../nntp_2private_8h.html',1,'(Global Namespace)'],['../ncrypt_2private_8h.html',1,'(Global Namespace)'],['../menu_2private_8h.html',1,'(Global Namespace)'],['../index_2private_8h.html',1,'(Global Namespace)'],['../imap_2private_8h.html',1,'(Global Namespace)'],['../helpbar_2private_8h.html',1,'(Global Namespace)'],['../envelope_2private_8h.html',1,'(Global Namespace)'],['../conn_2private_8h.html',1,'(Global Namespace)'],['../compress_2private_8h.html',1,'(Global Namespace)'],['../autocrypt_2private_8h.html',1,'(Global Namespace)'],['../sidebar_2private_8h.html',1,'(Global Namespace)'],['../pop_2private_8h.html',1,'(Global Namespace)']]],
+  ['private_5fdata_2ec_36',['private_data.c',['../pager_2private__data_8c.html',1,'(Global Namespace)'],['../attach_2private__data_8c.html',1,'(Global Namespace)'],['../browser_2private__data_8c.html',1,'(Global Namespace)'],['../index_2private__data_8c.html',1,'(Global Namespace)']]],
+  ['private_5fdata_2eh_37',['private_data.h',['../pager_2private__data_8h.html',1,'(Global Namespace)'],['../attach_2private__data_8h.html',1,'(Global Namespace)'],['../browser_2private__data_8h.html',1,'(Global Namespace)'],['../index_2private__data_8h.html',1,'(Global Namespace)'],['../mixmaster_2private__data_8h.html',1,'(Global Namespace)']]],
   ['progress_2ec_38',['progress.c',['../progress_8c.html',1,'']]],
   ['protos_2eh_39',['protos.h',['../protos_8h.html',1,'']]]
 ];

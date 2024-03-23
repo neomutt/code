@@ -29,5 +29,5 @@ var hdrline_8h =
       [ "FLAG_CHAR_TO_SUBSCRIBED_LIST", "hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824ab0431d479192fbb2c0c1f32193d18220", null ],
       [ "FLAG_CHAR_TO_REPLY_TO", "hdrline_8h.html#a1dc1f13fafabbf343eccee712c5c2824aa2a3e550b7845d0e4e2ce1bf81e8d074", null ]
     ] ],
-    [ "mutt_make_string", "hdrline_8h.html#ab97c7b6e97e13807c4bac1080d3132a5", null ]
+    [ "mutt_make_string", "hdrline_8h.html#ae150a6b0d1c7e5ffa3ad1705072ca048", null ]
 ];

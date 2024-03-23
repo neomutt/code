@@ -18,6 +18,11 @@ var pattern_2private_8h =
     [ "RANGE_LT", "pattern_2private_8h.html#af72c0ae663c8d5978fa323433a526d27", null ],
     [ "RANGE_GT", "pattern_2private_8h.html#a41338a4d56de949ba39abed015cd22e1", null ],
     [ "MUTT_MAXRANGE", "pattern_2private_8h.html#a704b31bafbefd8857fce3bc1f9bb5ba8", null ],
+    [ "ExpandoDataPattern", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7", [
+      [ "ED_PAT_DESCRIPTION", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7a5f3f9a62a5cd384320d4ca4af208f64e", null ],
+      [ "ED_PAT_EXPRESION", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7a8f29140dbafc6ef400e85dd8f835ffe5", null ],
+      [ "ED_PAT_NUMBER", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7aec81da68b1100b3e664b73665656199c", null ]
+    ] ],
     [ "PatternEat", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966", [
       [ "EAT_NONE", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966a36ef5be3f8cce865f85ad9478e9cdfa9", null ],
       [ "EAT_REGEX", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966af21308a01a872a0400fc564160bf2d13", null ],

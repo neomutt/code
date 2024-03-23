@@ -12,10 +12,12 @@ var send_8c =
     [ "mutt_forward_trailer", "send_8c.html#ad951cc16f636045622b313f89278627a", null ],
     [ "include_forward", "send_8c.html#a5e533b7adb511ebbadbd637e3264fb05", null ],
     [ "inline_forward_attachments", "send_8c.html#ae0accb8ca6f488f8a6d77cd9fac7672b", null ],
-    [ "format_attribution", "send_8c.html#a6acd0e4e056ee4a84b4164cb4d1cd279", null ],
+    [ "format_attribution", "send_8c.html#a98117235d1c6eb0c923b1114b6f3ff85", null ],
     [ "mutt_make_attribution_intro", "send_8c.html#a23d9e167b5a86151993349839cc4eaf0", null ],
     [ "mutt_make_attribution_trailer", "send_8c.html#af2a449fb243514b7945f71808d689d9b", null ],
-    [ "greeting_format_str", "group__expando__api.html#ga12054b73f57ede82edd4e67fa5a5ef0c", null ],
+    [ "greeting_n", "group__expando__get__string__api.html#ga41426e8a2d5bd68f61cb4d61ec6d47e1", null ],
+    [ "greeting_u", "group__expando__get__string__api.html#gae75131636c4e05544c1d63ab3ca5e555", null ],
+    [ "greeting_v", "group__expando__get__string__api.html#gaf306b188d28c8a45d9ce0d3ae8139e2f", null ],
     [ "mutt_make_greeting", "send_8c.html#a83f702d9e8d2f453b99a29cc6afe57e1", null ],
     [ "include_reply", "send_8c.html#a133621f63fdff19b66d2b833f29a7c0f", null ],
     [ "choose_default_to", "send_8c.html#a4bd501aa5eb91b97bc7c0ec116b76baa", null ],
@@ -47,5 +49,6 @@ var send_8c =
     [ "mutt_send_message", "send_8c.html#ad9c2899c7c3a76d2ce3b911221705a30", null ],
     [ "send_simple_email", "send_8c.html#aa9b94334fee20d86baa8355c9b8379b4", null ],
     [ "mutt_send_list_subscribe", "send_8c.html#aeb49acb8f5aeb91227ad946786970111", null ],
-    [ "mutt_send_list_unsubscribe", "send_8c.html#a9567485020b1fd8c30be9b06382cc7d9", null ]
+    [ "mutt_send_list_unsubscribe", "send_8c.html#a9567485020b1fd8c30be9b06382cc7d9", null ],
+    [ "GreetingRenderData", "send_8c.html#ad827552c6e0d1799a86488f024fdc8da", null ]
 ];

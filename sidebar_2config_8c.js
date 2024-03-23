@@ -2,5 +2,6 @@ var sidebar_2config_8c =
 [
     [ "config_init_sidebar", "group__cfg__module__api.html#gae7634227027409303c7d244cb68cac49", null ],
     [ "SortSidebarMethods", "sidebar_2config_8c.html#ae0911cae0349cea33d5f5ce960d22cef", null ],
+    [ "SidebarFormatDef", "sidebar_2config_8c.html#ae948a7abdd9e34a69ffb8daf88672fcf", null ],
     [ "SidebarVars", "sidebar_2config_8c.html#a73a25e3160850b7cb067e031967ca1bb", null ]
 ];

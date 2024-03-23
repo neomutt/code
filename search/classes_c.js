@@ -10,6 +10,9 @@ var searchData=
   ['nntpaccountdata_7',['NntpAccountData',['../structNntpAccountData.html',1,'']]],
   ['nntpemaildata_8',['NntpEmailData',['../structNntpEmailData.html',1,'']]],
   ['nntpmboxdata_9',['NntpMboxData',['../structNntpMboxData.html',1,'']]],
-  ['notify_10',['Notify',['../structNotify.html',1,'']]],
-  ['notifycallback_11',['NotifyCallback',['../structNotifyCallback.html',1,'']]]
+  ['nodeconddateprivate_10',['NodeCondDatePrivate',['../structNodeCondDatePrivate.html',1,'']]],
+  ['nodeexpandoprivate_11',['NodeExpandoPrivate',['../structNodeExpandoPrivate.html',1,'']]],
+  ['nodepaddingprivate_12',['NodePaddingPrivate',['../structNodePaddingPrivate.html',1,'']]],
+  ['notify_13',['Notify',['../structNotify.html',1,'']]],
+  ['notifycallback_14',['NotifyCallback',['../structNotifyCallback.html',1,'']]]
 ];

@@ -30,7 +30,7 @@ var hook_8h =
     [ "mutt_delete_hooks", "hook_8h.html#a3b113188a50152ee8ff8f54975ea5897", null ],
     [ "mutt_find_hook", "hook_8h.html#a306aa3cd20a4ac4d88255ced1bf6d87d", null ],
     [ "mutt_folder_hook", "hook_8h.html#a6c1eb72c5e9a39b354d9c394f9116f50", null ],
-    [ "mutt_idxfmt_hook", "hook_8h.html#a53bd394718d82ead5755497e23fd94a3", null ],
+    [ "mutt_idxfmt_hook", "hook_8h.html#a80917be2e7aeae0a2bcbc801d5762a6e", null ],
     [ "mutt_message_hook", "hook_8h.html#af487ca5e3f7da21c86e3ad61fdb55faa", null ],
     [ "mutt_parse_charset_iconv_hook", "group__command__parse.html#ga8768b26f6904ee40b9ff0eedd5b396e0", null ],
     [ "mutt_select_fcc", "hook_8h.html#a6d228c86f5a1900b27af0fde26991a63", null ],
