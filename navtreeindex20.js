@@ -1,5 +1,7 @@
 var NAVTREEINDEX20 =
 {
+"group__sort__api.html#ga7b754967c2a0877e3b9f0238f1a9aa79":[50,36,9],
+"group__sort__api.html#ga8523615d4c083e7ad6eb7e4a179679c4":[50,36,36],
 "group__sort__api.html#ga8bc7bcb66e2f977fbcced7be5c08c45a":[50,36,4],
 "group__sort__api.html#ga9c02c64fd439b825ae26c7def124c07a":[50,36,1],
 "group__sort__api.html#ga9d6f67139b343f8a5c583c86c1d795af":[50,36,27],
@@ -227,10 +229,10 @@ var NAVTREEINDEX20 =
 "handler_8c.html#aac25f3e996b8633b1ee447360b4f4398":[2,0,61,4],
 "handler_8c.html#aad826a02aca1883b9747a603a5c0b54d":[2,0,61,1],
 "handler_8c.html#ad22fd154121f61ea75ac8bd4946eac7d":[2,0,61,12],
+"handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2":[2,0,61,30],
 "handler_8c.html#ad9dfa15d279adb0b36f48b69960b73f0":[2,0,61,10],
 "handler_8c.html#ada2d5290a26fe0a595f7c0560c291a58":[2,0,61,11],
 "handler_8c.html#ae05b9d67c488b0b7da0c946688ff9b68":[2,0,61,8],
-"handler_8c.html#ae4766ce7789cb13bef43c7b6833c3bf0":[2,0,61,30],
 "handler_8c.html#af5f495f5053bf85394ccb3499315d2fb":[2,0,61,14],
 "handler_8c.html#af95ca3b052e2bba361d247bcf658f58b":[2,0,61,9],
 "handler_8c_source.html":[2,0,61],
@@ -239,7 +241,7 @@ var NAVTREEINDEX20 =
 "handler_8h.html#a3cc6312b687436c5023e476461662e8e":[2,0,62,1],
 "handler_8h.html#a3e520d3004995a6c0cf0696edfd209fb":[2,0,62,0],
 "handler_8h.html#a7834668eb7e41062c0d6aa80589de5be":[2,0,62,3],
-"handler_8h.html#ae4766ce7789cb13bef43c7b6833c3bf0":[2,0,62,2],
+"handler_8h.html#ad6e9c66285fee73e4d9553c565e10fa2":[2,0,62,2],
 "handler_8h_source.html":[2,0,62],
 "hash_8c.html":[2,0,33,20],
 "hash_8c.html#a10bd305a8183db9829caee9ea1bac2f5":[2,0,33,20,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX20 =
 "hash_8c.html#a20274605b815ff2bb8bd140a6293fcd9":[2,0,33,20,9],
 "hash_8c.html#a21cfc2c56db496fc57d3d85a71c03215":[2,0,33,20,18],
 "hash_8c.html#a3066b79cc7a360017f7bb973fc019727":[2,0,33,20,10],
-"hash_8c.html#a3d3e3db8d8717bb83b71e157d8cc24ec":[2,0,33,20,23],
-"hash_8c.html#a3fa177b5371f3f616af6fd84aba50ddd":[2,0,33,20,8],
-"hash_8c.html#a45a0f9c9f31792cbbce7c4cc44c545aa":[2,0,33,20,21]
+"hash_8c.html#a3d3e3db8d8717bb83b71e157d8cc24ec":[2,0,33,20,23]
 };

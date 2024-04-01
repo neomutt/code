@@ -1,5 +1,8 @@
 var NAVTREEINDEX44 =
 {
+"structComposeSharedData.html":[1,0,42],
+"structComposeSharedData.html#a006eb690dabd44be23dfe3516c45670a":[1,0,42,9],
+"structComposeSharedData.html#a2588f4fa2f7bffbdf9efa8975ea22e74":[1,0,42,0],
 "structComposeSharedData.html#a2c07cd726149be67e01ff9fc10fe3991":[1,0,42,1],
 "structComposeSharedData.html#a2d8969480d015ea5dff79d185cbea0b1":[1,0,42,4],
 "structComposeSharedData.html#a3f5fccb990e70469ff4d6a609987ea1d":[1,0,42,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX44 =
 "structEnterWindowData.html#a5c5d2444bc66cbfd855e3e05e6373d9d":[1,0,68,0],
 "structEnterWindowData.html#a5d0c386d80f440203c40a5292771e7d6":[1,0,68,14],
 "structEnterWindowData.html#a6044c62125d48dd3bd17be05e29470f7":[1,0,68,9],
-"structEnterWindowData.html#a9251443e204c7e5e3d64983b8f729498":[1,0,68,17],
-"structEnterWindowData.html#aa8608298046d7544e0e38e116ecd1f05":[1,0,68,10],
-"structEnterWindowData.html#ab20f7d1d7eb6c6fc47744fa4d18d2416":[1,0,68,4],
-"structEnterWindowData.html#ac25e13397a505a62d198c027394e177b":[1,0,68,6]
+"structEnterWindowData.html#a9251443e204c7e5e3d64983b8f729498":[1,0,68,17]
 };

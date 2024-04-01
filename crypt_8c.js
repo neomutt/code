@@ -8,7 +8,7 @@ var crypt_8c =
     [ "mutt_is_multipart_encrypted", "crypt_8c.html#a832e4b9f5a0e463876a3d8cfe852f12d", null ],
     [ "mutt_is_valid_multipart_pgp_encrypted", "crypt_8c.html#a51806f872069460bb7f4fa16d1d92710", null ],
     [ "mutt_is_malformed_multipart_pgp_encrypted", "crypt_8c.html#a9edb0262eaed7c522977a75b76c15770", null ],
-    [ "mutt_is_application_pgp", "crypt_8c.html#a159d0d34a10b662acb2cc80099e5ecc7", null ],
+    [ "mutt_is_application_pgp", "crypt_8c.html#ad5ae8b8d4fea0b6aa61dc38312e99d15", null ],
     [ "mutt_is_application_smime", "crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e", null ],
     [ "crypt_query", "crypt_8c.html#af4ab2e337a2477fba687b1f710aa7a61", null ],
     [ "crypt_write_signed", "crypt_8c.html#ab3dde2a67c95a70df3d498215427863b", null ],

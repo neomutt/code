@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-23-gec7045</span>
+   &#160;<span id="projectnumber">2024-03-23-94-g1a53c4</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -536,26 +536,29 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="expando_2helpers_8c_source.html#l00144">144</a> of file <a class="el" href="expando_2helpers_8c_source.html">helpers.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  145</span>{</div>
-<div class="line"><span class="lineno">  146</span>  assert(*str != <span class="charliteral">&#39;\0&#39;</span>);</div>
-<div class="line"><span class="lineno">  147</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoDefinition.html">ExpandoDefinition</a> *definitions = defs;</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>  <span class="keywordflow">while</span> (definitions &amp;&amp; definitions-&gt;<a class="code hl_variable" href="structExpandoDefinition.html#af13dbf9a047dc18edc3fc1248ed69903">short_name</a>)</div>
-<div class="line"><span class="lineno">  150</span>  {</div>
-<div class="line"><span class="lineno">  151</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_two_char = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(definitions-&gt;<a class="code hl_variable" href="structExpandoDefinition.html#af13dbf9a047dc18edc3fc1248ed69903">short_name</a>) == 2;</div>
-<div class="line"><span class="lineno">  152</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *name = definitions-&gt;<a class="code hl_variable" href="structExpandoDefinition.html#af13dbf9a047dc18edc3fc1248ed69903">short_name</a>;</div>
-<div class="line"><span class="lineno">  153</span> </div>
-<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">if</span> (is_two_char &amp;&amp; (name[0] == *str) &amp;&amp; (name[1] == *(str + 1)))</div>
-<div class="line"><span class="lineno">  155</span>    {</div>
-<div class="line"><span class="lineno">  156</span>      str++;</div>
-<div class="line"><span class="lineno">  157</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  158</span>    }</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>    definitions++;</div>
-<div class="line"><span class="lineno">  161</span>  }</div>
+<div class="line"><span class="lineno">  146</span>  assert(str);</div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">if</span> (*str == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">return</span> str;</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoDefinition.html">ExpandoDefinition</a> *definitions = defs;</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">while</span> (definitions &amp;&amp; definitions-&gt;<a class="code hl_variable" href="structExpandoDefinition.html#af13dbf9a047dc18edc3fc1248ed69903">short_name</a>)</div>
+<div class="line"><span class="lineno">  153</span>  {</div>
+<div class="line"><span class="lineno">  154</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> is_two_char = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(definitions-&gt;<a class="code hl_variable" href="structExpandoDefinition.html#af13dbf9a047dc18edc3fc1248ed69903">short_name</a>) == 2;</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *name = definitions-&gt;<a class="code hl_variable" href="structExpandoDefinition.html#af13dbf9a047dc18edc3fc1248ed69903">short_name</a>;</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span> (is_two_char &amp;&amp; (name[0] == *str) &amp;&amp; (name[1] == *(str + 1)))</div>
+<div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>      str++;</div>
+<div class="line"><span class="lineno">  160</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  161</span>    }</div>
 <div class="line"><span class="lineno">  162</span> </div>
-<div class="line"><span class="lineno">  163</span>  str++;</div>
-<div class="line"><span class="lineno">  164</span>  <span class="keywordflow">return</span> str;</div>
-<div class="line"><span class="lineno">  165</span>}</div>
+<div class="line"><span class="lineno">  163</span>    definitions++;</div>
+<div class="line"><span class="lineno">  164</span>  }</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>  str++;</div>
+<div class="line"><span class="lineno">  167</span>  <span class="keywordflow">return</span> str;</div>
+<div class="line"><span class="lineno">  168</span>}</div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00545">string.c:545</a></div></div>
 <div class="ttc" id="astructExpandoDefinition_html"><div class="ttname"><a href="structExpandoDefinition.html">ExpandoDefinition</a></div><div class="ttdoc">Definition of a format string.</div><div class="ttdef"><b>Definition:</b> <a href="definition_8h_source.html#l00051">definition.h:52</a></div></div>
 <div class="ttc" id="astructExpandoDefinition_html_af13dbf9a047dc18edc3fc1248ed69903"><div class="ttname"><a href="structExpandoDefinition.html#af13dbf9a047dc18edc3fc1248ed69903">ExpandoDefinition::short_name</a></div><div class="ttdeci">const char * short_name</div><div class="ttdoc">Short Expando name, e.g. &quot;n&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="definition_8h_source.html#l00053">definition.h:53</a></div></div>

@@ -50,7 +50,7 @@ var ncrypt_2lib_8h =
     [ "crypt_opportunistic_encrypt", "ncrypt_2lib_8h.html#a2afe38b474061773d69624018621ff1e", null ],
     [ "crypt_query", "ncrypt_2lib_8h.html#af4ab2e337a2477fba687b1f710aa7a61", null ],
     [ "crypt_valid_passphrase", "ncrypt_2lib_8h.html#a4ee7f1419a7e39b0e9f1f9d550f4de43", null ],
-    [ "mutt_is_application_pgp", "ncrypt_2lib_8h.html#a159d0d34a10b662acb2cc80099e5ecc7", null ],
+    [ "mutt_is_application_pgp", "ncrypt_2lib_8h.html#ad5ae8b8d4fea0b6aa61dc38312e99d15", null ],
     [ "mutt_is_application_smime", "ncrypt_2lib_8h.html#a4073ce5b5fcec6e245dbfa9369016b8e", null ],
     [ "mutt_is_malformed_multipart_pgp_encrypted", "ncrypt_2lib_8h.html#a9edb0262eaed7c522977a75b76c15770", null ],
     [ "mutt_is_multipart_encrypted", "ncrypt_2lib_8h.html#a832e4b9f5a0e463876a3d8cfe852f12d", null ],

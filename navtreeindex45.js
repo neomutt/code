@@ -1,5 +1,8 @@
 var NAVTREEINDEX45 =
 {
+"structEnterWindowData.html#aa8608298046d7544e0e38e116ecd1f05":[1,0,68,10],
+"structEnterWindowData.html#ab20f7d1d7eb6c6fc47744fa4d18d2416":[1,0,68,4],
+"structEnterWindowData.html#ac25e13397a505a62d198c027394e177b":[1,0,68,6],
 "structEnterWindowData.html#ad6f870ce494237ba80298ced36b51f29":[1,0,68,2],
 "structEnterWindowData.html#ad7cb4cda6adedcfccb6e3420367ce8c3":[1,0,68,7],
 "structEnterWindowData.html#ae34b74b8af8974e50bebcf616eb33f79":[1,0,68,12],
@@ -246,8 +249,5 @@ var NAVTREEINDEX45 =
 "structHistoryData.html":[1,0,113],
 "structHistoryData.html#a02d1bbc6e94d0129d652609c00f9c8f9":[1,0,113,3],
 "structHistoryData.html#a12b26bc712033c012fe7eb945ff48679":[1,0,113,4],
-"structHistoryData.html#a272eff0f35f9b5dbd22980add1777abd":[1,0,113,5],
-"structHistoryData.html#aa1a31c239a303ae0aa5ee9f525eeb12d":[1,0,113,0],
-"structHistoryData.html#ab180d868b84afeebb4bb1c8e570a5883":[1,0,113,2],
-"structHistoryData.html#ab5172fb89c0fd674ac6754bb9ed26c01":[1,0,113,6]
+"structHistoryData.html#a272eff0f35f9b5dbd22980add1777abd":[1,0,113,5]
 };

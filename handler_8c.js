@@ -30,5 +30,5 @@ var handler_8c =
     [ "mutt_body_handler", "handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb", null ],
     [ "mutt_prefer_as_attachment", "handler_8c.html#a0f1d59623c3dea670f7f5b4c17bf24a8", null ],
     [ "mutt_can_decode", "handler_8c.html#a3cc6312b687436c5023e476461662e8e", null ],
-    [ "mutt_decode_attachment", "handler_8c.html#ae4766ce7789cb13bef43c7b6833c3bf0", null ]
+    [ "mutt_decode_attachment", "handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2", null ]
 ];

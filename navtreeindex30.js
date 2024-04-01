@@ -1,5 +1,7 @@
 var NAVTREEINDEX30 =
 {
+"mutt__socket_8c.html#a7de988b1f0286a570538c03f419622be":[2,0,92,0],
+"mutt__socket_8c.html#ab79e92d0c88e3061f590cb1874b8b59d":[2,0,92,1],
 "mutt__socket_8c_source.html":[2,0,92],
 "mutt__socket_8h.html":[2,0,93],
 "mutt__socket_8h.html#a6fb6b2634c15a663b74efcfa91b56481":[2,0,93,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX30 =
 "mutt_notify.html":[36,18],
 "mutt_path.html":[36,19],
 "mutt_pool.html":[36,20],
-"mutt_prex.html":[36,21],
-"mutt_qsort_r.html":[36,22],
-"mutt_random.html":[36,23]
+"mutt_prex.html":[36,21]
 };

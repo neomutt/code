@@ -4,5 +4,6 @@ var sort_8h =
     [ "sort_mail_t", "sort_8h.html#a45f9a5b856cafe34e0bfbc1b3b61ab02", null ],
     [ "mutt_compare_emails", "group__sort__api.html#gaaec1ad688d9afbf919f199df5e55f106", null ],
     [ "mutt_sort_headers", "sort_8h.html#ac1d3dc1cd44f9b45eb265c9fa1447319", null ],
+    [ "mutt_sort_order", "sort_8h.html#a96a8ff96b1cdc8f185e1159cac379ad0", null ],
     [ "mutt_get_name", "sort_8h.html#a2e20b923e21514eff962dfbde7ec1955", null ]
 ];

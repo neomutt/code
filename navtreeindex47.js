@@ -1,5 +1,8 @@
 var NAVTREEINDEX47 =
 {
+"structMapping.html#af58a0487d1578953f5ee067a311877b1":[1,0,144,0],
+"structMbTable.html":[1,0,146],
+"structMbTable.html#a1f60a5feb665dab352285830600b93a9":[1,0,146,0],
 "structMbTable.html#ab064cc5344fd4ad067a5cebcda202641":[1,0,146,1],
 "structMbTable.html#acb12736f2eddca89562affcb0612f14b":[1,0,146,2],
 "structMbTable.html#ad9c44fbff018a01fd45d0194e2d75f65":[1,0,146,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX47 =
 "structNntpEmailData.html#a664cb7fd06434c6a0769467038b99f8a":[1,0,179,0],
 "structNntpEmailData.html#ac49b13d2c360909942f177f0af5626d1":[1,0,179,1],
 "structNntpMboxData.html":[1,0,180],
-"structNntpMboxData.html#a2869a3060aa018d6c8e8e2b6ab6cfa21":[1,0,180,5],
-"structNntpMboxData.html#a2b27ff6bf080a892ab903b1504e72d5b":[1,0,180,10],
-"structNntpMboxData.html#a31c64fba641fa5ea247c33e7c563f0bd":[1,0,180,9],
-"structNntpMboxData.html#a3792d3aacd074ccb3cd92fcf686fa4e6":[1,0,180,3]
+"structNntpMboxData.html#a2869a3060aa018d6c8e8e2b6ab6cfa21":[1,0,180,5]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX49 =
 {
+"structQuoteStyle.html#ad45fd52ffaee99798ca602278e1ebb43":[1,0,215,7],
+"structQuoteStyle.html#ae5bd5c03326667f06310f14b49c69fea":[1,0,215,0],
+"structRangeRegex.html":[1,0,216],
 "structRangeRegex.html#a979dcf4a66592658b38e66f92c239c51":[1,0,216,1],
 "structRangeRegex.html#ac4e25ea4b622354a12208d2e8e0375b6":[1,0,216,2],
 "structRangeRegex.html#ad1e6dd8b3906f8fdf53d47ad13d7d876":[1,0,216,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX49 =
 "subset_8c.html":[2,0,11,28],
 "subset_8c.html#a0d2424534e2280b6c0bf8ca06a6b421b":[2,0,11,28,16],
 "subset_8c.html#a2226e4ab6c7e6a8099844c7ab927dd5b":[2,0,11,28,11],
-"subset_8c.html#a62bcdcf36d0013c7c18131e4db133ff3":[2,0,11,28,8],
-"subset_8c.html#a6ee598a96defed645b11cad6e6cb6512":[2,0,11,28,9],
-"subset_8c.html#a7417f52ec93f2ea2ddddc4051944064c":[2,0,11,28,7],
-"subset_8c.html#a79429bb7c2b73456b14b2dd9680e6af8":[2,0,11,28,17]
+"subset_8c.html#a62bcdcf36d0013c7c18131e4db133ff3":[2,0,11,28,8]
 };

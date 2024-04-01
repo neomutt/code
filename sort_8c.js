@@ -15,5 +15,6 @@ var sort_8c =
     [ "compare_label", "group__sort__mail__api.html#ga2d669de8b5eccbb3f440a1b6f7a318b1", null ],
     [ "get_sort_func", "sort_8c.html#a9550b5997c80d756cd886d4ee633e1e2", null ],
     [ "mutt_compare_emails", "group__sort__api.html#gaaec1ad688d9afbf919f199df5e55f106", null ],
-    [ "mutt_sort_headers", "sort_8c.html#ac1d3dc1cd44f9b45eb265c9fa1447319", null ]
+    [ "mutt_sort_headers", "sort_8c.html#ac1d3dc1cd44f9b45eb265c9fa1447319", null ],
+    [ "mutt_sort_order", "sort_8c.html#a96a8ff96b1cdc8f185e1159cac379ad0", null ]
 ];

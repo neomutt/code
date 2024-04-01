@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"group__imap__authenticate.html":[50,27],
+"group__imap__authenticate.html#ga203bd1c72cb86256613c10cb0c8e1c82":[50,27,3],
 "group__imap__authenticate.html#ga2fe43890cdcb3e8cf4c4dbbc8b3e2fda":[50,27,4],
 "group__imap__authenticate.html#ga3762b33b5a55cc430c5feb8faeafcaf9":[50,27,2],
 "group__imap__authenticate.html#ga54b2d394d72e8119c3d217fa64d5598e":[50,27,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "group__mx__msg__close.html#gab50af5211064829ec664f0eab9d29d8c":[50,15,11,5],
 "group__mx__msg__close.html#gac0fa0fcade68b9c6216cb1c08baa24da":[50,15,11,2],
 "group__mx__msg__close.html#gac8114a1b39313cf9d098b94aefcef468":[50,15,11,6],
-"group__mx__msg__commit.html":[50,15,10],
-"group__mx__msg__commit.html#ga1226858cc62e436a52cf0c64b97f6fdb":[50,15,10,1],
-"group__mx__msg__commit.html#ga449d225488040512f5696e4f76f36694":[50,15,10,0]
+"group__mx__msg__commit.html":[50,15,10]
 };

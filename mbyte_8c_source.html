@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-23-gec7045</span>
+   &#160;<span id="projectnumber">2024-03-23-94-g1a53c4</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -354,76 +354,79 @@ $(document).ready(function(){initNavTree('mbyte_8c_source.html',''); initResizab
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>  <span class="keywordtype">size_t</span> l;</div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>  memset(&amp;mbstate, 0, <span class="keyword">sizeof</span>(mbstate));</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  <span class="keywordflow">for</span> (; (l = mbrtowc(&amp;wc, s, MB_CUR_MAX, &amp;mbstate)) != 0; s += l)</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>  {</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <span class="keywordflow">if</span> (l == <a class="code hl_define" href="mutt_2charset_8h.html#a4563ada344f551c4f386fc42127579a7">ICONV_BUF_TOO_SMALL</a>)</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>      <span class="keywordflow">continue</span>; <span class="comment">/* shift sequences */</span></div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordflow">if</span> (l == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>)</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keywordflow">if</span> (iswalpha((wint_t) wc) &amp;&amp; iswupper((wint_t) wc))</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>  }</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>}</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno"><a class="line" href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">  386</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a>(<span class="keywordtype">wchar_t</span> wc)</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>{</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>  <span class="keywordflow">if</span> ((wc == (<span class="keywordtype">wchar_t</span>) 0x00ad) || <span class="comment">/* soft hyphen */</span></div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      (wc == (<span class="keywordtype">wchar_t</span>) 0x200e) || <span class="comment">/* left-to-right mark */</span></div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>      (wc == (<span class="keywordtype">wchar_t</span>) 0x200f) || <span class="comment">/* right-to-left mark */</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>      (wc == (<span class="keywordtype">wchar_t</span>) 0xfeff))   <span class="comment">/* zero width no-break space */</span></div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>  {</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>  }</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>  <span class="comment">/* left-to-right isolate, right-to-left isolate, first strong isolate,</span></div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="comment">   * pop directional isolate */</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>  <span class="keywordflow">if</span> ((wc &gt;= (<span class="keywordtype">wchar_t</span>) 0x2066) &amp;&amp; (wc &lt;= (<span class="keywordtype">wchar_t</span>) 0x2069))</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>  <span class="comment">/* left-to-right embedding, right-to-left embedding, pop directional formatting,</span></div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="comment">   * left-to-right override, right-to-left override */</span></div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>  <span class="keywordflow">if</span> ((wc &gt;= (<span class="keywordtype">wchar_t</span>) 0x202a) &amp;&amp; (wc &lt;= (<span class="keywordtype">wchar_t</span>) 0x202e))</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span> </div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>}</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>  <span class="keywordtype">size_t</span> n = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(s);</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>  <span class="keywordflow">for</span> (; (n &gt; 0) &amp;&amp; (*s != <span class="charliteral">&#39;\0&#39;</span>) &amp;&amp; (l = mbrtowc(&amp;wc, s, n, &amp;mbstate)) != 0; s += l, n -= l)</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>  {</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keywordflow">if</span> ((l == <a class="code hl_define" href="mutt_2charset_8h.html#a4563ada344f551c4f386fc42127579a7">ICONV_BUF_TOO_SMALL</a>) || (l == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>))</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// error; assume upper-case</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="keywordflow">if</span> (iswalpha((wint_t) wc) &amp;&amp; iswupper((wint_t) wc))</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// upper-case</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  }</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">// lower-case</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>}</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno"><a class="line" href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">  385</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a>(<span class="keywordtype">wchar_t</span> wc)</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>{</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>  <span class="keywordflow">if</span> ((wc == (<span class="keywordtype">wchar_t</span>) 0x00ad) || <span class="comment">/* soft hyphen */</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>      (wc == (<span class="keywordtype">wchar_t</span>) 0x200e) || <span class="comment">/* left-to-right mark */</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      (wc == (<span class="keywordtype">wchar_t</span>) 0x200f) || <span class="comment">/* right-to-left mark */</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>      (wc == (<span class="keywordtype">wchar_t</span>) 0xfeff))   <span class="comment">/* zero width no-break space */</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>  {</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>  }</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>  <span class="comment">/* left-to-right isolate, right-to-left isolate, first strong isolate,</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="comment">   * pop directional isolate */</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>  <span class="keywordflow">if</span> ((wc &gt;= (<span class="keywordtype">wchar_t</span>) 0x2066) &amp;&amp; (wc &lt;= (<span class="keywordtype">wchar_t</span>) 0x2069))</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>  <span class="comment">/* left-to-right embedding, right-to-left embedding, pop directional formatting,</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="comment">   * left-to-right override, right-to-left override */</span></div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>  <span class="keywordflow">if</span> ((wc &gt;= (<span class="keywordtype">wchar_t</span>) 0x202a) &amp;&amp; (wc &lt;= (<span class="keywordtype">wchar_t</span>) 0x202e))</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>  <span class="comment">/* arabic letter mark */</span></div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) 0x061c)</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno"><a class="line" href="mbyte_8c.html#a2ff7f0c0693d59c4fbb25cff5198a208">  420</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mbyte_8c.html#a2ff7f0c0693d59c4fbb25cff5198a208">mutt_mb_filter_unprintable</a>(<span class="keywordtype">char</span> **s)</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>{</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>  <span class="keywordflow">if</span> (!s || !*s)</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span> </div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>  <span class="keywordtype">wchar_t</span> wc = 0;</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>  <span class="keywordtype">size_t</span> k, k2;</div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>  <span class="keywordtype">char</span> scratch[MB_LEN_MAX + 1];</div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>  <span class="keywordtype">char</span> *p = *s;</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>  mbstate_t mbstate1 = { 0 };</div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>  mbstate_t mbstate2 = { 0 };</div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span> </div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> buf = <a class="code hl_function" href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a>(0);</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>  <span class="keywordflow">for</span> (; (k = mbrtowc(&amp;wc, p, MB_LEN_MAX, &amp;mbstate1)); p += k)</div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>  {</div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    <span class="keywordflow">if</span> ((k == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>) || (k == <a class="code hl_define" href="mutt_2charset_8h.html#a4563ada344f551c4f386fc42127579a7">ICONV_BUF_TOO_SMALL</a>))</div>
-<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    {</div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>      k = 1;</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>      memset(&amp;mbstate1, 0, <span class="keyword">sizeof</span>(mbstate1));</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>      wc = <a class="code hl_variable" href="mutt_2charset_8c.html#ac31e11b5fb12abda40361188af9105ef">ReplacementChar</a>;</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>    }</div>
-<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    <span class="keywordflow">if</span> (!<a class="code hl_define" href="mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d">IsWPrint</a>(wc))</div>
-<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>      wc = <span class="charliteral">&#39;?&#39;</span>;</div>
-<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="mutt_2charset_8c.html#a7bcd93869f482805be7e6d437d29f54d">CharsetIsUtf8</a> &amp;&amp; <a class="code hl_function" href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a>(wc))</div>
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>    k2 = wcrtomb(scratch, wc, &amp;mbstate2);</div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    scratch[k2] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(&amp;buf, scratch);</div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>  }</div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(s);</div>
-<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>  *s = buf.<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> ? buf.<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> : <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, 1);</div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>}</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>}</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span> </div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno"><a class="line" href="mbyte_8c.html#a2ff7f0c0693d59c4fbb25cff5198a208">  423</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mbyte_8c.html#a2ff7f0c0693d59c4fbb25cff5198a208">mutt_mb_filter_unprintable</a>(<span class="keywordtype">char</span> **s)</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>{</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>  <span class="keywordflow">if</span> (!s || !*s)</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span> </div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>  <span class="keywordtype">wchar_t</span> wc = 0;</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>  <span class="keywordtype">size_t</span> k, k2;</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>  <span class="keywordtype">char</span> scratch[MB_LEN_MAX + 1];</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>  <span class="keywordtype">char</span> *p = *s;</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>  mbstate_t mbstate1 = { 0 };</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>  mbstate_t mbstate2 = { 0 };</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> buf = <a class="code hl_function" href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a>(0);</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>  <span class="keywordflow">for</span> (; (k = mbrtowc(&amp;wc, p, MB_LEN_MAX, &amp;mbstate1)); p += k)</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>  {</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>    <span class="keywordflow">if</span> ((k == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>) || (k == <a class="code hl_define" href="mutt_2charset_8h.html#a4563ada344f551c4f386fc42127579a7">ICONV_BUF_TOO_SMALL</a>))</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    {</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>      k = 1;</div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>      memset(&amp;mbstate1, 0, <span class="keyword">sizeof</span>(mbstate1));</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>      wc = <a class="code hl_variable" href="mutt_2charset_8c.html#ac31e11b5fb12abda40361188af9105ef">ReplacementChar</a>;</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    }</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>    <span class="keywordflow">if</span> (!<a class="code hl_define" href="mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d">IsWPrint</a>(wc))</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>      wc = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="mutt_2charset_8c.html#a7bcd93869f482805be7e6d437d29f54d">CharsetIsUtf8</a> &amp;&amp; <a class="code hl_function" href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a>(wc))</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>    k2 = wcrtomb(scratch, wc, &amp;mbstate2);</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>    scratch[k2] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(&amp;buf, scratch);</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>  }</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(s);</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>  *s = buf.<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> ? buf.<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> : <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, 1);</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a48c7f6bcdda4a269001bb371d522a4ce"><div class="ttname"><a href="buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce">buf_make</a></div><div class="ttdeci">struct Buffer buf_make(size_t size)</div><div class="ttdoc">Make a new buffer on the stack.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00075">buffer.c:75</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a4964d146427002ec3b52e121513b6078"><div class="ttname"><a href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a></div><div class="ttdeci">void buf_fix_dptr(struct Buffer *buf)</div><div class="ttdoc">Move the dptr to end of the Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00199">buffer.c:199</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9924e74ddcb5280ab380e4627d1fba99"><div class="ttname"><a href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a></div><div class="ttdeci">size_t buf_addstr(struct Buffer *buf, const char *s)</div><div class="ttdoc">Add a string to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00243">buffer.c:243</a></div></div>
@@ -431,11 +434,11 @@ $(document).ready(function(){initNavTree('mbyte_8c_source.html',''); initResizab
 <div class="ttc" id="abuffer_8h_html"><div class="ttname"><a href="buffer_8h.html">buffer.h</a></div><div class="ttdoc">General purpose object for storing and parsing strings.</div></div>
 <div class="ttc" id="ambyte_8c_html_a165139f7a1f06cfcbc1fc377d5236f8b"><div class="ttname"><a href="mbyte_8c.html#a165139f7a1f06cfcbc1fc377d5236f8b">mutt_mb_charlen</a></div><div class="ttdeci">int mutt_mb_charlen(const char *s, int *width)</div><div class="ttdoc">Count the bytes in a (multibyte) character.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00055">mbyte.c:55</a></div></div>
 <div class="ttc" id="ambyte_8c_html_a277cca96e7362df5105c3d4d225b8421"><div class="ttname"><a href="mbyte_8c.html#a277cca96e7362df5105c3d4d225b8421">mutt_mb_is_shell_char</a></div><div class="ttdeci">bool mutt_mb_is_shell_char(wchar_t ch)</div><div class="ttdoc">Is character not typically part of a pathname.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00340">mbyte.c:340</a></div></div>
-<div class="ttc" id="ambyte_8c_html_a2ff7f0c0693d59c4fbb25cff5198a208"><div class="ttname"><a href="mbyte_8c.html#a2ff7f0c0693d59c4fbb25cff5198a208">mutt_mb_filter_unprintable</a></div><div class="ttdeci">int mutt_mb_filter_unprintable(char **s)</div><div class="ttdoc">Replace unprintable characters.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00420">mbyte.c:420</a></div></div>
+<div class="ttc" id="ambyte_8c_html_a2ff7f0c0693d59c4fbb25cff5198a208"><div class="ttname"><a href="mbyte_8c.html#a2ff7f0c0693d59c4fbb25cff5198a208">mutt_mb_filter_unprintable</a></div><div class="ttdeci">int mutt_mb_filter_unprintable(char **s)</div><div class="ttdoc">Replace unprintable characters.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00423">mbyte.c:423</a></div></div>
 <div class="ttc" id="ambyte_8c_html_a6b9ecc962be914e12b3f35ef88dff1ad"><div class="ttname"><a href="mbyte_8c.html#a6b9ecc962be914e12b3f35ef88dff1ad">mutt_mb_width_ceiling</a></div><div class="ttdeci">size_t mutt_mb_width_ceiling(const wchar_t *s, size_t n, int w1)</div><div class="ttdoc">Keep the end of the string on-screen.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00237">mbyte.c:237</a></div></div>
 <div class="ttc" id="ambyte_8c_html_a82f8a6a3adff040ee79e734db05b61b1"><div class="ttname"><a href="mbyte_8c.html#a82f8a6a3adff040ee79e734db05b61b1">OptLocales</a></div><div class="ttdeci">bool OptLocales</div><div class="ttdoc">(pseudo) set if user has valid locale definition</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00044">mbyte.c:44</a></div></div>
 <div class="ttc" id="ambyte_8c_html_a877da38f06afd8673f82b2bc418ed3fd"><div class="ttname"><a href="mbyte_8c.html#a877da38f06afd8673f82b2bc418ed3fd">mutt_mb_get_initials</a></div><div class="ttdeci">bool mutt_mb_get_initials(const char *name, char *buf, size_t buflen)</div><div class="ttdoc">Turn a name into initials.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00082">mbyte.c:82</a></div></div>
-<div class="ttc" id="ambyte_8c_html_a8b3655b8b6b2c470b95071f06e2b7a64"><div class="ttname"><a href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a></div><div class="ttdeci">bool mutt_mb_is_display_corrupting_utf8(wchar_t wc)</div><div class="ttdoc">Will this character corrupt the display?</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00386">mbyte.c:386</a></div></div>
+<div class="ttc" id="ambyte_8c_html_a8b3655b8b6b2c470b95071f06e2b7a64"><div class="ttname"><a href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a></div><div class="ttdeci">bool mutt_mb_is_display_corrupting_utf8(wchar_t wc)</div><div class="ttdoc">Will this character corrupt the display?</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00385">mbyte.c:385</a></div></div>
 <div class="ttc" id="ambyte_8c_html_a8c94bd5ff6c53cfe02ed45f2e7955117"><div class="ttname"><a href="mbyte_8c.html#a8c94bd5ff6c53cfe02ed45f2e7955117">mutt_mb_mbstowcs</a></div><div class="ttdeci">size_t mutt_mb_mbstowcs(wchar_t **pwbuf, size_t *pwbuflen, size_t i, const char *buf)</div><div class="ttdoc">Convert a string from multibyte to wide characters.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00291">mbyte.c:291</a></div></div>
 <div class="ttc" id="ambyte_8c_html_ac1cd90aaff468feb7e744aaee372ac57"><div class="ttname"><a href="mbyte_8c.html#ac1cd90aaff468feb7e744aaee372ac57">mutt_mb_wcswidth</a></div><div class="ttdeci">int mutt_mb_wcswidth(const wchar_t *s, size_t n)</div><div class="ttdoc">Measure the screen width of a string.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00216">mbyte.c:216</a></div></div>
 <div class="ttc" id="ambyte_8c_html_ac501dbdcd18344eeab59157ccb3b91f5"><div class="ttname"><a href="mbyte_8c.html#ac501dbdcd18344eeab59157ccb3b91f5">mutt_mb_is_lower</a></div><div class="ttdeci">bool mutt_mb_is_lower(const char *s)</div><div class="ttdoc">Does a multi-byte string contain only lowercase characters?</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00354">mbyte.c:354</a></div></div>

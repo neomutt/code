@@ -21,6 +21,7 @@ var email_2parse_8c =
     [ "mutt_rfc822_read_header", "email_2parse_8c.html#a709f7f23d8a54a0f75abc28a0b365ace", null ],
     [ "mutt_read_mime_header", "email_2parse_8c.html#a2cfe061d82e6381b14e355c0937ecfc1", null ],
     [ "mutt_is_message_type", "email_2parse_8c.html#adcc90fb584fec1be116777c533e9b3d4", null ],
+    [ "mailto_header_allowed", "email_2parse_8c.html#a779380b3b7d9a2948d1b21b99f2f9532", null ],
     [ "mutt_parse_mailto", "email_2parse_8c.html#a85f5f11a70b04f611f3e131f67644fbf", null ],
     [ "mutt_parse_part", "email_2parse_8c.html#a0b38ac4f44b3414d0e18d26324861369", null ],
     [ "mutt_rfc822_parse_message", "email_2parse_8c.html#a0a62f0f03006788df8c7bdd6f687457f", null ],
