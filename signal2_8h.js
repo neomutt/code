@@ -7,6 +7,7 @@ var signal2_8h =
     [ "mutt_sig_empty_handler", "signal2_8h.html#a3c47b4b55af72c2a31cce3db2a19d70b", null ],
     [ "mutt_sig_exit_handler", "signal2_8h.html#af1e9e97dcf8b15c143401cdd8cbfcb92", null ],
     [ "mutt_sig_init", "signal2_8h.html#a079bd657ae3ccdcf07507d85097abfd8", null ],
+    [ "mutt_sig_reset_child_signals", "signal2_8h.html#a6747c4aea06d3fceb2dd568124ffa67d", null ],
     [ "mutt_sig_unblock", "signal2_8h.html#aa9356c41baa1b35d3a7719f90570e6b7", null ],
     [ "mutt_sig_unblock_system", "signal2_8h.html#ad44b8fd5380fa4749911e9f1792af99d", null ],
     [ "SigInt", "signal2_8h.html#a85c069643781da758ffa8281db66e8f0", null ],

@@ -1,7 +1,6 @@
 var buffer_8c =
 [
     [ "buf_init", "buffer_8c.html#a6ffb5cf731a68033766b9a084d8b2dc2", null ],
-    [ "buf_make", "buffer_8c.html#a48c7f6bcdda4a269001bb371d522a4ce", null ],
     [ "buf_reset", "buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05", null ],
     [ "buf_addstr_n", "buffer_8c.html#a2881936af4a3e3b45079cb9af0cdb3e8", null ],
     [ "buf_vaprintf", "buffer_8c.html#a4bf845c9336c262734fef11238d74f20", null ],

@@ -15,7 +15,7 @@ var mutt_2date_8c =
     [ "parse_small_uint", "mutt_2date_8c.html#a45e62c4330ad244849f9214984371a34", null ],
     [ "mutt_date_parse_rfc5322_strict", "mutt_2date_8c.html#aad4023e562d394d9f7e2d13afe5f6c9a", null ],
     [ "mutt_date_parse_date", "mutt_2date_8c.html#ad8aaf5118148ed8f6708f32bfab3146f", null ],
-    [ "mutt_date_make_imap", "mutt_2date_8c.html#ab30120ea670e25b9f47ccc9c83eda66f", null ],
+    [ "mutt_date_make_imap", "mutt_2date_8c.html#a871b4f63007a26f13156262ff04f0286", null ],
     [ "mutt_date_make_tls", "mutt_2date_8c.html#a8193091a9ad44eba4b0db60e950c57e6", null ],
     [ "mutt_date_parse_imap", "mutt_2date_8c.html#adf19e8285681d19c7858a66cd0eba84d", null ],
     [ "mutt_date_add_timeout", "mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329", null ],

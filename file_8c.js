@@ -23,7 +23,6 @@ var file_8c =
     [ "mutt_file_read_line", "file_8c.html#a1ad76f956147154f16128b7761dadd58", null ],
     [ "mutt_file_iter_line", "file_8c.html#a88f230f289bda8ad257c1995c0c9e220", null ],
     [ "mutt_file_map_lines", "file_8c.html#a62299deb1d754491d984313ff720b2d2", null ],
-    [ "mutt_file_quote_filename", "file_8c.html#a662195d3d55532f7ee180f3837fae437", null ],
     [ "buf_quote_filename", "file_8c.html#a0da2bc91bbaabcf0c3c403a1d61c8526", null ],
     [ "mutt_file_mkdir", "file_8c.html#a42b89c4ae9ca386c22de502b37cdf45e", null ],
     [ "mutt_file_decrease_mtime", "file_8c.html#a61b50c8615492662cbc27ebbf83090ce", null ],

@@ -11,10 +11,11 @@ var searchData=
   ['smime_5fgetkeys_28_29_8',['smime_getkeys()',['../group__crypto__smime__getkeys.html',1,'']]],
   ['smime_5finvoke_5fimport_28_29_9',['smime_invoke_import()',['../group__crypto__smime__invoke__import.html',1,'']]],
   ['smime_5fverify_5fsender_28_29_10',['smime_verify_sender()',['../group__crypto__smime__verify__sender.html',1,'']]],
-  ['sorting_20api_11',['Sorting API',['../group__sort__api.html',1,'']]],
-  ['store_28_29_12',['store()',['../group__store__store.html',1,'']]],
-  ['string_5fget_28_29_13',['string_get()',['../group__cfg__type__string__get.html',1,'']]],
-  ['string_5fminus_5fequals_28_29_14',['string_minus_equals()',['../group__cfg__type__string__minus__equals.html',1,'']]],
-  ['string_5fplus_5fequals_28_29_15',['string_plus_equals()',['../group__cfg__type__string__plus__equals.html',1,'']]],
-  ['string_5fset_28_29_16',['string_set()',['../group__cfg__type__string__set.html',1,'']]]
+  ['smtp_20authentication_20api_11',['SMTP Authentication API',['../group__smtp__authenticate.html',1,'']]],
+  ['sorting_20api_12',['Sorting API',['../group__sort__api.html',1,'']]],
+  ['store_28_29_13',['store()',['../group__store__store.html',1,'']]],
+  ['string_5fget_28_29_14',['string_get()',['../group__cfg__type__string__get.html',1,'']]],
+  ['string_5fminus_5fequals_28_29_15',['string_minus_equals()',['../group__cfg__type__string__minus__equals.html',1,'']]],
+  ['string_5fplus_5fequals_28_29_16',['string_plus_equals()',['../group__cfg__type__string__plus__equals.html',1,'']]],
+  ['string_5fset_28_29_17',['string_set()',['../group__cfg__type__string__set.html',1,'']]]
 ];

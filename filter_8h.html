@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-94-g1a53c4</span>
+   &#160;<span id="projectnumber">2024-03-23-142-g2b2e76</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -235,10 +235,10 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="filter_8c_source.html#l00208">208</a> of file <a class="el" href="filter_8c_source.html">filter.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>{</div>
-<div class="line"><span class="lineno">  210</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="filter_8c.html#a8b8175018aa96307b2cf569d719ca6dc">filter_create_fd</a>(cmd, fp_in, fp_out, fp_err, -1, -1, -1, envlist);</div>
-<div class="line"><span class="lineno">  211</span>}</div>
+<p class="definition">Definition at line <a class="el" href="filter_8c_source.html#l00209">209</a> of file <a class="el" href="filter_8c_source.html">filter.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>{</div>
+<div class="line"><span class="lineno">  211</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="filter_8c.html#a8b8175018aa96307b2cf569d719ca6dc">filter_create_fd</a>(cmd, fp_in, fp_out, fp_err, -1, -1, -1, envlist);</div>
+<div class="line"><span class="lineno">  212</span>}</div>
 <div class="ttc" id="afilter_8c_html_a8b8175018aa96307b2cf569d719ca6dc"><div class="ttname"><a href="filter_8c.html#a8b8175018aa96307b2cf569d719ca6dc">filter_create_fd</a></div><div class="ttdeci">pid_t filter_create_fd(const char *cmd, FILE **fp_in, FILE **fp_out, FILE **fp_err, int fdin, int fdout, int fderr, char **envlist)</div><div class="ttdoc">Run a command on a pipe (optionally connect stdin/stdout)</div><div class="ttdef"><b>Definition:</b> <a href="filter_8c_source.html#l00062">filter.c:62</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -396,92 +396,94 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  110</span>  <span class="keywordflow">if</span> (pid == 0)</div>
 <div class="line"><span class="lineno">  111</span>  {</div>
 <div class="line"><span class="lineno">  112</span>    <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  113</span> </div>
-<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (fp_in)</div>
-<div class="line"><span class="lineno">  115</span>    {</div>
-<div class="line"><span class="lineno">  116</span>      close(pin[1]);</div>
-<div class="line"><span class="lineno">  117</span>      dup2(pin[0], 0);</div>
-<div class="line"><span class="lineno">  118</span>      close(pin[0]);</div>
-<div class="line"><span class="lineno">  119</span>    }</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fdin != -1)</div>
-<div class="line"><span class="lineno">  121</span>    {</div>
-<div class="line"><span class="lineno">  122</span>      dup2(fdin, 0);</div>
-<div class="line"><span class="lineno">  123</span>      close(fdin);</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">if</span> (fp_out)</div>
-<div class="line"><span class="lineno">  127</span>    {</div>
-<div class="line"><span class="lineno">  128</span>      close(pout[0]);</div>
-<div class="line"><span class="lineno">  129</span>      dup2(pout[1], 1);</div>
-<div class="line"><span class="lineno">  130</span>      close(pout[1]);</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
-<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fdout != -1)</div>
-<div class="line"><span class="lineno">  133</span>    {</div>
-<div class="line"><span class="lineno">  134</span>      dup2(fdout, 1);</div>
-<div class="line"><span class="lineno">  135</span>      close(fdout);</div>
-<div class="line"><span class="lineno">  136</span>    }</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">if</span> (fp_err)</div>
-<div class="line"><span class="lineno">  139</span>    {</div>
-<div class="line"><span class="lineno">  140</span>      close(perr[0]);</div>
-<div class="line"><span class="lineno">  141</span>      dup2(perr[1], 2);</div>
-<div class="line"><span class="lineno">  142</span>      close(perr[1]);</div>
-<div class="line"><span class="lineno">  143</span>    }</div>
-<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fderr != -1)</div>
-<div class="line"><span class="lineno">  145</span>    {</div>
-<div class="line"><span class="lineno">  146</span>      dup2(fderr, 2);</div>
-<div class="line"><span class="lineno">  147</span>      close(fderr);</div>
-<div class="line"><span class="lineno">  148</span>    }</div>
-<div class="line"><span class="lineno">  149</span> </div>
-<div class="line"><span class="lineno">  150</span>    execle(<a class="code hl_define" href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a>, <span class="stringliteral">&quot;sh&quot;</span>, <span class="stringliteral">&quot;-c&quot;</span>, cmd, NULL, envlist);</div>
-<div class="line"><span class="lineno">  151</span>    _exit(127);</div>
-<div class="line"><span class="lineno">  152</span>  }</div>
-<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pid == -1)</div>
-<div class="line"><span class="lineno">  154</span>  {</div>
-<div class="line"><span class="lineno">  155</span>    <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  156</span> </div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span> (fp_in)</div>
-<div class="line"><span class="lineno">  158</span>    {</div>
-<div class="line"><span class="lineno">  159</span>      close(pin[0]);</div>
-<div class="line"><span class="lineno">  160</span>      close(pin[1]);</div>
-<div class="line"><span class="lineno">  161</span>    }</div>
-<div class="line"><span class="lineno">  162</span> </div>
-<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">if</span> (fp_out)</div>
-<div class="line"><span class="lineno">  164</span>    {</div>
-<div class="line"><span class="lineno">  165</span>      close(pout[0]);</div>
-<div class="line"><span class="lineno">  166</span>      close(pout[1]);</div>
-<div class="line"><span class="lineno">  167</span>    }</div>
-<div class="line"><span class="lineno">  168</span> </div>
-<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">if</span> (fp_err)</div>
-<div class="line"><span class="lineno">  170</span>    {</div>
-<div class="line"><span class="lineno">  171</span>      close(perr[0]);</div>
-<div class="line"><span class="lineno">  172</span>      close(perr[1]);</div>
-<div class="line"><span class="lineno">  173</span>    }</div>
-<div class="line"><span class="lineno">  174</span> </div>
-<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  176</span>  }</div>
-<div class="line"><span class="lineno">  177</span> </div>
-<div class="line"><span class="lineno">  178</span>  <span class="keywordflow">if</span> (fp_out)</div>
-<div class="line"><span class="lineno">  179</span>  {</div>
-<div class="line"><span class="lineno">  180</span>    close(pout[1]);</div>
-<div class="line"><span class="lineno">  181</span>    *fp_out = fdopen(pout[0], <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno">  182</span>  }</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>  <span class="keywordflow">if</span> (fp_in)</div>
-<div class="line"><span class="lineno">  185</span>  {</div>
-<div class="line"><span class="lineno">  186</span>    close(pin[0]);</div>
-<div class="line"><span class="lineno">  187</span>    *fp_in = fdopen(pin[1], <span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><span class="lineno">  188</span>  }</div>
-<div class="line"><span class="lineno">  189</span> </div>
-<div class="line"><span class="lineno">  190</span>  <span class="keywordflow">if</span> (fp_err)</div>
-<div class="line"><span class="lineno">  191</span>  {</div>
-<div class="line"><span class="lineno">  192</span>    close(perr[1]);</div>
-<div class="line"><span class="lineno">  193</span>    *fp_err = fdopen(perr[0], <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno">  194</span>  }</div>
-<div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>  <span class="keywordflow">return</span> pid;</div>
-<div class="line"><span class="lineno">  197</span>}</div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_function" href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a>();</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (fp_in)</div>
+<div class="line"><span class="lineno">  116</span>    {</div>
+<div class="line"><span class="lineno">  117</span>      close(pin[1]);</div>
+<div class="line"><span class="lineno">  118</span>      dup2(pin[0], 0);</div>
+<div class="line"><span class="lineno">  119</span>      close(pin[0]);</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fdin != -1)</div>
+<div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>      dup2(fdin, 0);</div>
+<div class="line"><span class="lineno">  124</span>      close(fdin);</div>
+<div class="line"><span class="lineno">  125</span>    }</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">if</span> (fp_out)</div>
+<div class="line"><span class="lineno">  128</span>    {</div>
+<div class="line"><span class="lineno">  129</span>      close(pout[0]);</div>
+<div class="line"><span class="lineno">  130</span>      dup2(pout[1], 1);</div>
+<div class="line"><span class="lineno">  131</span>      close(pout[1]);</div>
+<div class="line"><span class="lineno">  132</span>    }</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fdout != -1)</div>
+<div class="line"><span class="lineno">  134</span>    {</div>
+<div class="line"><span class="lineno">  135</span>      dup2(fdout, 1);</div>
+<div class="line"><span class="lineno">  136</span>      close(fdout);</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">if</span> (fp_err)</div>
+<div class="line"><span class="lineno">  140</span>    {</div>
+<div class="line"><span class="lineno">  141</span>      close(perr[0]);</div>
+<div class="line"><span class="lineno">  142</span>      dup2(perr[1], 2);</div>
+<div class="line"><span class="lineno">  143</span>      close(perr[1]);</div>
+<div class="line"><span class="lineno">  144</span>    }</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fderr != -1)</div>
+<div class="line"><span class="lineno">  146</span>    {</div>
+<div class="line"><span class="lineno">  147</span>      dup2(fderr, 2);</div>
+<div class="line"><span class="lineno">  148</span>      close(fderr);</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    execle(<a class="code hl_define" href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a>, <span class="stringliteral">&quot;sh&quot;</span>, <span class="stringliteral">&quot;-c&quot;</span>, cmd, NULL, envlist);</div>
+<div class="line"><span class="lineno">  152</span>    _exit(127);</div>
+<div class="line"><span class="lineno">  153</span>  }</div>
+<div class="line"><span class="lineno">  154</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pid == -1)</div>
+<div class="line"><span class="lineno">  155</span>  {</div>
+<div class="line"><span class="lineno">  156</span>    <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">if</span> (fp_in)</div>
+<div class="line"><span class="lineno">  159</span>    {</div>
+<div class="line"><span class="lineno">  160</span>      close(pin[0]);</div>
+<div class="line"><span class="lineno">  161</span>      close(pin[1]);</div>
+<div class="line"><span class="lineno">  162</span>    }</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">if</span> (fp_out)</div>
+<div class="line"><span class="lineno">  165</span>    {</div>
+<div class="line"><span class="lineno">  166</span>      close(pout[0]);</div>
+<div class="line"><span class="lineno">  167</span>      close(pout[1]);</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">if</span> (fp_err)</div>
+<div class="line"><span class="lineno">  171</span>    {</div>
+<div class="line"><span class="lineno">  172</span>      close(perr[0]);</div>
+<div class="line"><span class="lineno">  173</span>      close(perr[1]);</div>
+<div class="line"><span class="lineno">  174</span>    }</div>
+<div class="line"><span class="lineno">  175</span> </div>
+<div class="line"><span class="lineno">  176</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  177</span>  }</div>
+<div class="line"><span class="lineno">  178</span> </div>
+<div class="line"><span class="lineno">  179</span>  <span class="keywordflow">if</span> (fp_out)</div>
+<div class="line"><span class="lineno">  180</span>  {</div>
+<div class="line"><span class="lineno">  181</span>    close(pout[1]);</div>
+<div class="line"><span class="lineno">  182</span>    *fp_out = fdopen(pout[0], <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  183</span>  }</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>  <span class="keywordflow">if</span> (fp_in)</div>
+<div class="line"><span class="lineno">  186</span>  {</div>
+<div class="line"><span class="lineno">  187</span>    close(pin[0]);</div>
+<div class="line"><span class="lineno">  188</span>    *fp_in = fdopen(pin[1], <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">  189</span>  }</div>
+<div class="line"><span class="lineno">  190</span> </div>
+<div class="line"><span class="lineno">  191</span>  <span class="keywordflow">if</span> (fp_err)</div>
+<div class="line"><span class="lineno">  192</span>  {</div>
+<div class="line"><span class="lineno">  193</span>    close(perr[1]);</div>
+<div class="line"><span class="lineno">  194</span>    *fp_err = fdopen(perr[0], <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  195</span>  }</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>  <span class="keywordflow">return</span> pid;</div>
+<div class="line"><span class="lineno">  198</span>}</div>
 <div class="ttc" id="afilter_8h_html_aa80fd382830d66c094a29009aba96b6f"><div class="ttname"><a href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a></div><div class="ttdeci">#define EXEC_SHELL</div><div class="ttdef"><b>Definition:</b> <a href="filter_8h_source.html#l00028">filter.h:28</a></div></div>
+<div class="ttc" id="asignal_8c_html_a6747c4aea06d3fceb2dd568124ffa67d"><div class="ttname"><a href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a></div><div class="ttdeci">void mutt_sig_reset_child_signals(void)</div><div class="ttdoc">Reset ignored signals back to the default.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00275">signal.c:275</a></div></div>
 <div class="ttc" id="asignal_8c_html_a8f760c89850a7fdab70f3e084dae29ea"><div class="ttname"><a href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a></div><div class="ttdeci">void mutt_sig_block_system(void)</div><div class="ttdoc">Block signals before calling exec()</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00199">signal.c:199</a></div></div>
 <div class="ttc" id="asignal_8c_html_ad44b8fd5380fa4749911e9f1792af99d"><div class="ttname"><a href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a></div><div class="ttdeci">void mutt_sig_unblock_system(bool restore)</div><div class="ttdoc">Restore previously blocked signals.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00223">signal.c:223</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -489,7 +491,7 @@ Functions</h2></td></tr>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_8h_a8b8175018aa96307b2cf569d719ca6dc_cgraph.svg" width="354" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="filter_8h_a8b8175018aa96307b2cf569d719ca6dc_cgraph.svg" width="354" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -534,16 +536,16 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="filter_8c_source.html#l00219">219</a> of file <a class="el" href="filter_8c_source.html">filter.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  220</span>{</div>
-<div class="line"><span class="lineno">  221</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno">  222</span> </div>
-<div class="line"><span class="lineno">  223</span>  waitpid(pid, &amp;rc, 0);</div>
-<div class="line"><span class="lineno">  224</span>  <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  225</span>  rc = WIFEXITED(rc) ? WEXITSTATUS(rc) : -1;</div>
-<div class="line"><span class="lineno">  226</span> </div>
-<div class="line"><span class="lineno">  227</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  228</span>}</div>
+<p class="definition">Definition at line <a class="el" href="filter_8c_source.html#l00220">220</a> of file <a class="el" href="filter_8c_source.html">filter.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>{</div>
+<div class="line"><span class="lineno">  222</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno">  223</span> </div>
+<div class="line"><span class="lineno">  224</span>  waitpid(pid, &amp;rc, 0);</div>
+<div class="line"><span class="lineno">  225</span>  <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  226</span>  rc = WIFEXITED(rc) ? WEXITSTATUS(rc) : -1;</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  229</span>}</div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">

@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-94-g1a53c4</span>
+   &#160;<span id="projectnumber">2024-03-23-142-g2b2e76</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -207,36 +207,31 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   77</span>  {</div>
 <div class="line"><span class="lineno">   78</span>    act.sa_flags = 0;</div>
 <div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>    <span class="comment">/* reset signals for the child; not really needed, but... */</span></div>
-<div class="line"><span class="lineno">   81</span>    <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">   82</span>    act.sa_handler = SIG_DFL;</div>
-<div class="line"><span class="lineno">   83</span>    act.sa_flags = 0;</div>
-<div class="line"><span class="lineno">   84</span>    sigemptyset(&amp;act.sa_mask);</div>
-<div class="line"><span class="lineno">   85</span>    sigaction(SIGTERM, &amp;act, NULL);</div>
-<div class="line"><span class="lineno">   86</span>    sigaction(SIGTSTP, &amp;act, NULL);</div>
-<div class="line"><span class="lineno">   87</span>    sigaction(SIGCONT, &amp;act, NULL);</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>    execle(<a class="code hl_define" href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a>, <span class="stringliteral">&quot;sh&quot;</span>, <span class="stringliteral">&quot;-c&quot;</span>, cmd, NULL, <a class="code hl_variable" href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a>);</div>
-<div class="line"><span class="lineno">   90</span>    _exit(127); <span class="comment">/* execl error */</span></div>
-<div class="line"><span class="lineno">   91</span>  }</div>
-<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pid != -1)</div>
-<div class="line"><span class="lineno">   93</span>  {</div>
-<div class="line"><span class="lineno">   94</span>    rc = <a class="code hl_function" href="imap_2lib_8h.html#a78151df1dc862cfee3b988719873aae2">imap_wait_keep_alive</a>(pid);</div>
-<div class="line"><span class="lineno">   95</span>  }</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   81</span>    <a class="code hl_function" href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a>();</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    execle(<a class="code hl_define" href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a>, <span class="stringliteral">&quot;sh&quot;</span>, <span class="stringliteral">&quot;-c&quot;</span>, cmd, NULL, <a class="code hl_variable" href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a>);</div>
+<div class="line"><span class="lineno">   84</span>    _exit(127); <span class="comment">/* execl error */</span></div>
+<div class="line"><span class="lineno">   85</span>  }</div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pid != -1)</div>
+<div class="line"><span class="lineno">   87</span>  {</div>
+<div class="line"><span class="lineno">   88</span>    rc = <a class="code hl_function" href="imap_2lib_8h.html#a78151df1dc862cfee3b988719873aae2">imap_wait_keep_alive</a>(pid);</div>
+<div class="line"><span class="lineno">   89</span>  }</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>  sigaction(SIGCONT, &amp;oldcont, NULL);</div>
+<div class="line"><span class="lineno">   92</span>  sigaction(SIGTSTP, &amp;oldtstp, NULL);</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>  <span class="comment">/* reset SIGINT, SIGQUIT and SIGCHLD */</span></div>
+<div class="line"><span class="lineno">   95</span>  <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">true</span>);</div>
 <div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>  sigaction(SIGCONT, &amp;oldcont, NULL);</div>
-<div class="line"><span class="lineno">   98</span>  sigaction(SIGTSTP, &amp;oldtstp, NULL);</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>  <span class="comment">/* reset SIGINT, SIGQUIT and SIGCHLD */</span></div>
-<div class="line"><span class="lineno">  101</span>  <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>  rc = (pid != -1) ? (WIFEXITED(rc) ? WEXITSTATUS(rc) : -1) : -1;</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  106</span>}</div>
+<div class="line"><span class="lineno">   97</span>  rc = (pid != -1) ? (WIFEXITED(rc) ? WEXITSTATUS(rc) : -1) : -1;</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  100</span>}</div>
 <div class="ttc" id="afilter_8h_html_aa80fd382830d66c094a29009aba96b6f"><div class="ttname"><a href="filter_8h.html#aa80fd382830d66c094a29009aba96b6f">EXEC_SHELL</a></div><div class="ttdeci">#define EXEC_SHELL</div><div class="ttdef"><b>Definition:</b> <a href="filter_8h_source.html#l00028">filter.h:28</a></div></div>
 <div class="ttc" id="aglobals_8c_html_ae45378328cf8b407e63b6d53eaf61a01"><div class="ttname"><a href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a></div><div class="ttdeci">char ** EnvList</div><div class="ttdoc">Private copy of the environment variables.</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00078">globals.c:78</a></div></div>
 <div class="ttc" id="aimap_2lib_8h_html_a78151df1dc862cfee3b988719873aae2"><div class="ttname"><a href="imap_2lib_8h.html#a78151df1dc862cfee3b988719873aae2">imap_wait_keep_alive</a></div><div class="ttdeci">int imap_wait_keep_alive(pid_t pid)</div><div class="ttdoc">Wait for a process to change state.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00979">util.c:979</a></div></div>
+<div class="ttc" id="asignal_8c_html_a6747c4aea06d3fceb2dd568124ffa67d"><div class="ttname"><a href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a></div><div class="ttdeci">void mutt_sig_reset_child_signals(void)</div><div class="ttdoc">Reset ignored signals back to the default.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00275">signal.c:275</a></div></div>
 <div class="ttc" id="asignal_8c_html_a8f760c89850a7fdab70f3e084dae29ea"><div class="ttname"><a href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a></div><div class="ttdeci">void mutt_sig_block_system(void)</div><div class="ttdoc">Block signals before calling exec()</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00199">signal.c:199</a></div></div>
 <div class="ttc" id="asignal_8c_html_ad44b8fd5380fa4749911e9f1792af99d"><div class="ttname"><a href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a></div><div class="ttdeci">void mutt_sig_unblock_system(bool restore)</div><div class="ttdoc">Restore previously blocked signals.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00223">signal.c:223</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -244,7 +239,7 @@ Functions</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="system_8c_aa1d4ad04b000036513ca3f741059942c_cgraph.svg" width="340" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="system_8c_aa1d4ad04b000036513ca3f741059942c_cgraph.svg" width="340" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

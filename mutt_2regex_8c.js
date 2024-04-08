@@ -9,7 +9,7 @@ var mutt_2regex_8c =
     [ "mutt_regexlist_new", "mutt_2regex_8c.html#a23c398c13758ae5559468bc491e138a5", null ],
     [ "mutt_regexlist_remove", "mutt_2regex_8c.html#a4fd9f92b6c20e595b9487f874cb75f02", null ],
     [ "mutt_replacelist_add", "mutt_2regex_8c.html#a7b0b955eaca9b1208ff025f30a98aef0", null ],
-    [ "mutt_replacelist_apply", "mutt_2regex_8c.html#a2a24de5fe6dfc7cb61c1331aaeb12b22", null ],
+    [ "mutt_replacelist_apply", "mutt_2regex_8c.html#a6e784023fdfd5e862afd7cbfa50a6129", null ],
     [ "mutt_replacelist_free", "mutt_2regex_8c.html#a4cd5feab8463aea0a18d195f6c3a704d", null ],
     [ "mutt_replacelist_match", "mutt_2regex_8c.html#a5c1dc418529747116226ffa8f97e9e88", null ],
     [ "mutt_replacelist_new", "mutt_2regex_8c.html#a7751f72364d5429f22e535f63f5282f3", null ],

@@ -119,6 +119,7 @@ var group__expando__get__string__api =
     [ "pgp_entry_pgp_F", "group__expando__get__string__api.html#ga7108e334dcc5d445c401ace90245a8d3", null ],
     [ "pgp_entry_pgp_k", "group__expando__get__string__api.html#ga1072aa7fa81ab9bd85aaddf8fb4bdb0e", null ],
     [ "pgp_entry_pgp_K", "group__expando__get__string__api.html#gab2cd08f378696f1e3e6b44b7c5fe9e3a", null ],
+    [ "pgp_entry_ignore", "group__expando__get__string__api.html#gadcce4863f6dc21420110965b683bfc13", null ],
     [ "pgp_command_a", "group__expando__get__string__api.html#gaa85ed31fcd2e4094d78bc4e6a5d96ea7", null ],
     [ "pgp_command_f", "group__expando__get__string__api.html#ga304ef27664b15bf09b8a6afe7cc298c4", null ],
     [ "pgp_command_p", "group__expando__get__string__api.html#gaa9f9d782129089f256fe2ad55a19bf7b", null ],

@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-94-g1a53c4</span>
+   &#160;<span id="projectnumber">2024-03-23-142-g2b2e76</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -281,6 +281,24 @@ $(document).ready(function(){initNavTree('signal_8c_source.html',''); initResiza
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  sigaction(SIGINT, &amp;sa, NULL);</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>}</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">  275</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>{</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <span class="keyword">struct </span>sigaction sa = { 0 };</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  sa.sa_handler = SIG_DFL;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  sa.sa_flags = 0;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  sigemptyset(&amp;sa.sa_mask);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <span class="comment">/* These signals are set to SIG_IGN and must be reset */</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  sigaction(SIGPIPE, &amp;sa, NULL);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  <span class="comment">/* These technically don&#39;t need to be reset, but the code has been</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="comment">   * doing so for a long time. */</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  sigaction(SIGTERM, &amp;sa, NULL);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  sigaction(SIGTSTP, &amp;sa, NULL);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  sigaction(SIGCONT, &amp;sa, NULL);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>}</div>
 <div class="ttc" id="amutt_2message_8h_html"><div class="ttname"><a href="mutt_2message_8h.html">message.h</a></div><div class="ttdoc">Message logging.</div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 <div class="ttc" id="asignal2_8h_html"><div class="ttname"><a href="signal2_8h.html">signal2.h</a></div><div class="ttdoc">Signal handling.</div></div>
@@ -293,6 +311,7 @@ $(document).ready(function(){initNavTree('signal_8c_source.html',''); initResiza
 <div class="ttc" id="asignal_8c_html_a2f2118f9e6616e782f74bda2a52a1d30"><div class="ttname"><a href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a></div><div class="ttdeci">static struct sigaction SysOldQuit</div><div class="ttdoc">Backup of SIGQUIT handler, when mutt_sig_block_system() is called.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00046">signal.c:46</a></div></div>
 <div class="ttc" id="asignal_8c_html_a3c47b4b55af72c2a31cce3db2a19d70b"><div class="ttname"><a href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a></div><div class="ttdeci">void mutt_sig_empty_handler(int sig)</div><div class="ttdoc">Dummy signal handler.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00073">signal.c:73</a></div></div>
 <div class="ttc" id="asignal_8c_html_a610de2c59847bf7ea2b60e18c8a8989b"><div class="ttname"><a href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a></div><div class="ttdeci">static sigset_t Sigset</div><div class="ttdoc">A set of signals used by mutt_sig_block(), mutt_sig_unblock()</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00039">signal.c:39</a></div></div>
+<div class="ttc" id="asignal_8c_html_a6747c4aea06d3fceb2dd568124ffa67d"><div class="ttname"><a href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a></div><div class="ttdeci">void mutt_sig_reset_child_signals(void)</div><div class="ttdoc">Reset ignored signals back to the default.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00275">signal.c:275</a></div></div>
 <div class="ttc" id="asignal_8c_html_a85c069643781da758ffa8281db66e8f0"><div class="ttname"><a href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a></div><div class="ttdeci">volatile sig_atomic_t SigInt</div><div class="ttdoc">true after SIGINT is received</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00063">signal.c:63</a></div></div>
 <div class="ttc" id="asignal_8c_html_a8f760c89850a7fdab70f3e084dae29ea"><div class="ttname"><a href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a></div><div class="ttdeci">void mutt_sig_block_system(void)</div><div class="ttdoc">Block signals before calling exec()</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00199">signal.c:199</a></div></div>
 <div class="ttc" id="asignal_8c_html_aa6c49e5535cdffeffd2cd4eee28bc96b"><div class="ttname"><a href="signal_8c.html#aa6c49e5535cdffeffd2cd4eee28bc96b">mutt_sig_block</a></div><div class="ttdeci">void mutt_sig_block(void)</div><div class="ttdoc">Block signals during critical operations.</div><div class="ttdef"><b>Definition:</b> <a href="signal_8c_source.html#l00166">signal.c:166</a></div></div>

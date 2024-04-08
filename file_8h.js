@@ -39,7 +39,6 @@ var file_8h =
     [ "mutt_file_mkdir", "file_8h.html#a42b89c4ae9ca386c22de502b37cdf45e", null ],
     [ "mutt_file_open", "file_8h.html#a19e7688227f4eea96b9aff180bd0a904", null ],
     [ "mutt_file_opendir", "file_8h.html#a69da918c66c3f22815d6e4aed88b6122", null ],
-    [ "mutt_file_quote_filename", "file_8h.html#a662195d3d55532f7ee180f3837fae437", null ],
     [ "mutt_file_read_keyword", "file_8h.html#a322b3819fa7a44209b89d7b009af4336", null ],
     [ "mutt_file_read_line", "file_8h.html#a1ad76f956147154f16128b7761dadd58", null ],
     [ "mutt_file_rename", "file_8h.html#a8154bfd014904ca57b0ba2cfb31e26bc", null ],

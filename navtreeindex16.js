@@ -1,7 +1,5 @@
 var NAVTREEINDEX16 =
 {
-"group__crypto__api.html#ga25940e46039d9c3c99c4c95f064ef06c":[50,38,26],
-"group__crypto__api.html#ga499a72d2fd05f50e46774c5969964835":[50,38,25],
 "group__crypto__api.html#ga808d0d336f52e42a5b9da3762aff4f0c":[50,38,24],
 "group__crypto__api.html#ga9938cbc74b33ff75be208a4d2d26121a":[50,38,23],
 "group__crypto__application__handler.html":[50,38,5],
@@ -10,6 +8,7 @@ var NAVTREEINDEX16 =
 "group__crypto__application__handler.html#ga77eef2288f13097abdd210ac1ed1e4d1":[50,38,5,3],
 "group__crypto__application__handler.html#ga7ed9631c02f51e9793120adc5f45fa71":[50,38,5,1],
 "group__crypto__cleanup.html":[50,38,1],
+"group__crypto__cleanup.html#ga4b0af56c30e08583b70d01f56d9707c9":[50,38,1,0],
 "group__crypto__decrypt__mime.html":[50,38,4],
 "group__crypto__decrypt__mime.html#ga39216817eb4b7b519272d5198409019e":[50,38,4,1],
 "group__crypto__decrypt__mime.html#ga43e8362aa45c7f09b13383545fa7a647":[50,38,4,2],
@@ -26,6 +25,7 @@ var NAVTREEINDEX16 =
 "group__crypto__init.html":[50,38,0],
 "group__crypto__init.html#ga19bf09fde57098f4d77a85b4b73ca90e":[50,38,0,1],
 "group__crypto__init.html#ga7061521ecb51237cbbc557440353af39":[50,38,0,0],
+"group__crypto__init.html#gaa0ca059bb8ea215761401dfaae5100b4":[50,38,0,2],
 "group__crypto__pgp__check__traditional.html":[50,38,14],
 "group__crypto__pgp__check__traditional.html#ga3216349cfeba9673dd310fdc76f2e8eb":[50,38,14,1],
 "group__crypto__pgp__check__traditional.html#ga5ecb76917f272ca7a569bf0e14104c95":[50,38,14,0],
@@ -241,7 +241,7 @@ var NAVTREEINDEX16 =
 "group__expando__get__number__api.html#gaf78b11da49254114f98a350a0a275c7f":[50,21,1,39],
 "group__expando__get__string__api.html":[50,21,0],
 "group__expando__get__string__api.html#ga006f02eea38230f7131388cf3cc09a08":[50,21,0,6],
-"group__expando__get__string__api.html#ga02d22d6eba105c414c9f8715a5dca86c":[50,21,0,123],
+"group__expando__get__string__api.html#ga02d22d6eba105c414c9f8715a5dca86c":[50,21,0,124],
 "group__expando__get__string__api.html#ga0592a862e0bb7bc93342b6b008e7751e":[50,21,0,36],
 "group__expando__get__string__api.html#ga0a968a8170272a79d76592862713acba":[50,21,0,115],
 "group__expando__get__string__api.html#ga1072aa7fa81ab9bd85aaddf8fb4bdb0e":[50,21,0,117],

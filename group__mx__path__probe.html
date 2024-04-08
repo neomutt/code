@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-94-g1a53c4</span>
+   &#160;<span id="projectnumber">2024-03-23-142-g2b2e76</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -356,73 +356,73 @@ Functions</h2></td></tr>
 
 <p>Is this an mbox <a class="el" href="structMailbox.html" title="A mailbox.">Mailbox</a>? - Implements <a class="el" href="structMxOps.html#a625a6ea0abfdb6620542e26acc499177">MxOps::path_probe()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="mbox_8c_source.html#l01542">1542</a> of file <a class="el" href="mbox_8c_source.html">mbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1543</span>{</div>
-<div class="line"><span class="lineno"> 1544</span>  <span class="keywordflow">if</span> (!st)</div>
-<div class="line"><span class="lineno"> 1545</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno"> 1546</span> </div>
-<div class="line"><span class="lineno"> 1547</span>  <span class="keywordflow">if</span> (S_ISDIR(st-&gt;st_mode))</div>
-<div class="line"><span class="lineno"> 1548</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno"> 1549</span> </div>
-<div class="line"><span class="lineno"> 1550</span>  <span class="keywordflow">if</span> (st-&gt;st_size == 0)</div>
-<div class="line"><span class="lineno"> 1551</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525">MUTT_MBOX</a>;</div>
-<div class="line"><span class="lineno"> 1552</span> </div>
-<div class="line"><span class="lineno"> 1553</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(path, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1554</span>  <span class="keywordflow">if</span> (!fp)</div>
-<div class="line"><span class="lineno"> 1555</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno"> 1556</span> </div>
-<div class="line"><span class="lineno"> 1557</span>  <span class="keywordtype">int</span> ch;</div>
-<div class="line"><span class="lineno"> 1558</span>  <span class="keywordflow">while</span> ((ch = fgetc(fp)) != EOF)</div>
-<div class="line"><span class="lineno"> 1559</span>  {</div>
-<div class="line"><span class="lineno"> 1560</span>    <span class="comment">/* Some mailbox creation tools erroneously append a blank line to</span></div>
-<div class="line"><span class="lineno"> 1561</span><span class="comment">     * a file before appending a mail message.  This allows neomutt to</span></div>
-<div class="line"><span class="lineno"> 1562</span><span class="comment">     * detect type for and thus open those files. */</span></div>
-<div class="line"><span class="lineno"> 1563</span>    <span class="keywordflow">if</span> ((ch != <span class="charliteral">&#39;\n&#39;</span>) &amp;&amp; (ch != <span class="charliteral">&#39;\r&#39;</span>))</div>
-<div class="line"><span class="lineno"> 1564</span>    {</div>
-<div class="line"><span class="lineno"> 1565</span>      ungetc(ch, fp);</div>
-<div class="line"><span class="lineno"> 1566</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1567</span>    }</div>
-<div class="line"><span class="lineno"> 1568</span>  }</div>
-<div class="line"><span class="lineno"> 1569</span> </div>
-<div class="line"><span class="lineno"> 1570</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921d">MailboxType</a> type = <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno"> 1571</span>  <span class="keywordtype">char</span> tmp[256] = { 0 };</div>
-<div class="line"><span class="lineno"> 1572</span>  <span class="keywordflow">if</span> (fgets(tmp, <span class="keyword">sizeof</span>(tmp), fp))</div>
-<div class="line"><span class="lineno"> 1573</span>  {</div>
-<div class="line"><span class="lineno"> 1574</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(tmp, <span class="stringliteral">&quot;From &quot;</span>))</div>
-<div class="line"><span class="lineno"> 1575</span>      type = <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525">MUTT_MBOX</a>;</div>
-<div class="line"><span class="lineno"> 1576</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(tmp, <a class="code hl_define" href="mbox_2lib_8h.html#a02e41ebb72c6ab451fed824a9c41283c">MMDF_SEP</a>))</div>
-<div class="line"><span class="lineno"> 1577</span>      type = <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da09cef4c4e3dc42c9137860413dcdb374">MUTT_MMDF</a>;</div>
-<div class="line"><span class="lineno"> 1578</span>  }</div>
-<div class="line"><span class="lineno"> 1579</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
-<div class="line"><span class="lineno"> 1580</span> </div>
-<div class="line"><span class="lineno"> 1581</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_check_mbox_size = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;check_mbox_size&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1582</span>  <span class="keywordflow">if</span> (!c_check_mbox_size)</div>
-<div class="line"><span class="lineno"> 1583</span>  {</div>
-<div class="line"><span class="lineno"> 1584</span>    <span class="comment">/* need to restore the times here, the file was not really accessed,</span></div>
-<div class="line"><span class="lineno"> 1585</span><span class="comment">     * only the type was accessed.  This is important, because detection</span></div>
-<div class="line"><span class="lineno"> 1586</span><span class="comment">     * of &quot;new mail&quot; depends on those times set correctly.  */</span></div>
-<div class="line"><span class="lineno"> 1587</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
-<div class="line"><span class="lineno"> 1588</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structtimespec.html">timespec</a> ts[2] = { { 0 }, { 0 } };</div>
-<div class="line"><span class="lineno"> 1589</span>    <a class="code hl_function" href="file_8c.html#a0a1a67cd697cb0074317215d4ce6c9e3">mutt_file_get_stat_timespec</a>(&amp;ts[0], &amp;st, <a class="code hl_enumvalue" href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139aaebe13aad5970939f4383a8ed082201f">MUTT_STAT_ATIME</a>);</div>
-<div class="line"><span class="lineno"> 1590</span>    <a class="code hl_function" href="file_8c.html#a0a1a67cd697cb0074317215d4ce6c9e3">mutt_file_get_stat_timespec</a>(&amp;ts[1], &amp;st, <a class="code hl_enumvalue" href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df">MUTT_STAT_MTIME</a>);</div>
-<div class="line"><span class="lineno"> 1591</span>    utimensat(AT_FDCWD, path, ts, 0);</div>
-<div class="line"><span class="lineno"> 1592</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno"> 1593</span>    <span class="keyword">struct </span>utimbuf times = { 0 };</div>
-<div class="line"><span class="lineno"> 1594</span>    times.actime = st-&gt;st_atime;</div>
-<div class="line"><span class="lineno"> 1595</span>    times.modtime = st-&gt;st_mtime;</div>
-<div class="line"><span class="lineno"> 1596</span>    utime(path, &amp;times);</div>
-<div class="line"><span class="lineno"> 1597</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno"> 1598</span>  }</div>
-<div class="line"><span class="lineno"> 1599</span> </div>
-<div class="line"><span class="lineno"> 1600</span>  <span class="keywordflow">return</span> type;</div>
-<div class="line"><span class="lineno"> 1601</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mbox_8c_source.html#l01541">1541</a> of file <a class="el" href="mbox_8c_source.html">mbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1542</span>{</div>
+<div class="line"><span class="lineno"> 1543</span>  <span class="keywordflow">if</span> (!st)</div>
+<div class="line"><span class="lineno"> 1544</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno"> 1545</span> </div>
+<div class="line"><span class="lineno"> 1546</span>  <span class="keywordflow">if</span> (S_ISDIR(st-&gt;st_mode))</div>
+<div class="line"><span class="lineno"> 1547</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno"> 1548</span> </div>
+<div class="line"><span class="lineno"> 1549</span>  <span class="keywordflow">if</span> (st-&gt;st_size == 0)</div>
+<div class="line"><span class="lineno"> 1550</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525">MUTT_MBOX</a>;</div>
+<div class="line"><span class="lineno"> 1551</span> </div>
+<div class="line"><span class="lineno"> 1552</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(path, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1553</span>  <span class="keywordflow">if</span> (!fp)</div>
+<div class="line"><span class="lineno"> 1554</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno"> 1555</span> </div>
+<div class="line"><span class="lineno"> 1556</span>  <span class="keywordtype">int</span> ch;</div>
+<div class="line"><span class="lineno"> 1557</span>  <span class="keywordflow">while</span> ((ch = fgetc(fp)) != EOF)</div>
+<div class="line"><span class="lineno"> 1558</span>  {</div>
+<div class="line"><span class="lineno"> 1559</span>    <span class="comment">/* Some mailbox creation tools erroneously append a blank line to</span></div>
+<div class="line"><span class="lineno"> 1560</span><span class="comment">     * a file before appending a mail message.  This allows neomutt to</span></div>
+<div class="line"><span class="lineno"> 1561</span><span class="comment">     * detect type for and thus open those files. */</span></div>
+<div class="line"><span class="lineno"> 1562</span>    <span class="keywordflow">if</span> ((ch != <span class="charliteral">&#39;\n&#39;</span>) &amp;&amp; (ch != <span class="charliteral">&#39;\r&#39;</span>))</div>
+<div class="line"><span class="lineno"> 1563</span>    {</div>
+<div class="line"><span class="lineno"> 1564</span>      ungetc(ch, fp);</div>
+<div class="line"><span class="lineno"> 1565</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1566</span>    }</div>
+<div class="line"><span class="lineno"> 1567</span>  }</div>
+<div class="line"><span class="lineno"> 1568</span> </div>
+<div class="line"><span class="lineno"> 1569</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921d">MailboxType</a> type = <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno"> 1570</span>  <span class="keywordtype">char</span> tmp[256] = { 0 };</div>
+<div class="line"><span class="lineno"> 1571</span>  <span class="keywordflow">if</span> (fgets(tmp, <span class="keyword">sizeof</span>(tmp), fp))</div>
+<div class="line"><span class="lineno"> 1572</span>  {</div>
+<div class="line"><span class="lineno"> 1573</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(tmp, <span class="stringliteral">&quot;From &quot;</span>))</div>
+<div class="line"><span class="lineno"> 1574</span>      type = <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525">MUTT_MBOX</a>;</div>
+<div class="line"><span class="lineno"> 1575</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(tmp, <a class="code hl_define" href="mbox_2lib_8h.html#a02e41ebb72c6ab451fed824a9c41283c">MMDF_SEP</a>))</div>
+<div class="line"><span class="lineno"> 1576</span>      type = <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da09cef4c4e3dc42c9137860413dcdb374">MUTT_MMDF</a>;</div>
+<div class="line"><span class="lineno"> 1577</span>  }</div>
+<div class="line"><span class="lineno"> 1578</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
+<div class="line"><span class="lineno"> 1579</span> </div>
+<div class="line"><span class="lineno"> 1580</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_check_mbox_size = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;check_mbox_size&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1581</span>  <span class="keywordflow">if</span> (!c_check_mbox_size)</div>
+<div class="line"><span class="lineno"> 1582</span>  {</div>
+<div class="line"><span class="lineno"> 1583</span>    <span class="comment">/* need to restore the times here, the file was not really accessed,</span></div>
+<div class="line"><span class="lineno"> 1584</span><span class="comment">     * only the type was accessed.  This is important, because detection</span></div>
+<div class="line"><span class="lineno"> 1585</span><span class="comment">     * of &quot;new mail&quot; depends on those times set correctly.  */</span></div>
+<div class="line"><span class="lineno"> 1586</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
+<div class="line"><span class="lineno"> 1587</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structtimespec.html">timespec</a> ts[2] = { { 0 }, { 0 } };</div>
+<div class="line"><span class="lineno"> 1588</span>    <a class="code hl_function" href="file_8c.html#a0a1a67cd697cb0074317215d4ce6c9e3">mutt_file_get_stat_timespec</a>(&amp;ts[0], &amp;st, <a class="code hl_enumvalue" href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139aaebe13aad5970939f4383a8ed082201f">MUTT_STAT_ATIME</a>);</div>
+<div class="line"><span class="lineno"> 1589</span>    <a class="code hl_function" href="file_8c.html#a0a1a67cd697cb0074317215d4ce6c9e3">mutt_file_get_stat_timespec</a>(&amp;ts[1], &amp;st, <a class="code hl_enumvalue" href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df">MUTT_STAT_MTIME</a>);</div>
+<div class="line"><span class="lineno"> 1590</span>    utimensat(AT_FDCWD, path, ts, 0);</div>
+<div class="line"><span class="lineno"> 1591</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno"> 1592</span>    <span class="keyword">struct </span>utimbuf times = { 0 };</div>
+<div class="line"><span class="lineno"> 1593</span>    times.actime = st-&gt;st_atime;</div>
+<div class="line"><span class="lineno"> 1594</span>    times.modtime = st-&gt;st_mtime;</div>
+<div class="line"><span class="lineno"> 1595</span>    utime(path, &amp;times);</div>
+<div class="line"><span class="lineno"> 1596</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno"> 1597</span>  }</div>
+<div class="line"><span class="lineno"> 1598</span> </div>
+<div class="line"><span class="lineno"> 1599</span>  <span class="keywordflow">return</span> type;</div>
+<div class="line"><span class="lineno"> 1600</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00048">helpers.c:48</a></div></div>
 <div class="ttc" id="acore_2mailbox_8h_html_af65addf714c28dd5d483cb426100921d"><div class="ttname"><a href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921d">MailboxType</a></div><div class="ttdeci">MailboxType</div><div class="ttdoc">Supported mailbox formats.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00040">mailbox.h:41</a></div></div>
 <div class="ttc" id="acore_2mailbox_8h_html_af65addf714c28dd5d483cb426100921da09cef4c4e3dc42c9137860413dcdb374"><div class="ttname"><a href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da09cef4c4e3dc42c9137860413dcdb374">MUTT_MMDF</a></div><div class="ttdeci">@ MUTT_MMDF</div><div class="ttdoc">'mmdf' Mailbox type</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00046">mailbox.h:46</a></div></div>
 <div class="ttc" id="acore_2mailbox_8h_html_af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525"><div class="ttname"><a href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525">MUTT_MBOX</a></div><div class="ttdeci">@ MUTT_MBOX</div><div class="ttdoc">'mbox' Mailbox type</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00045">mailbox.h:45</a></div></div>
-<div class="ttc" id="afile_8c_html_a0a1a67cd697cb0074317215d4ce6c9e3"><div class="ttname"><a href="file_8c.html#a0a1a67cd697cb0074317215d4ce6c9e3">mutt_file_get_stat_timespec</a></div><div class="ttdeci">void mutt_file_get_stat_timespec(struct timespec *dest, struct stat *st, enum MuttStatType type)</div><div class="ttdoc">Read the stat() time into a time value.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01624">file.c:1624</a></div></div>
-<div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00148">file.h:148</a></div></div>
-<div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00147">file.h:147</a></div></div>
+<div class="ttc" id="afile_8c_html_a0a1a67cd697cb0074317215d4ce6c9e3"><div class="ttname"><a href="file_8c.html#a0a1a67cd697cb0074317215d4ce6c9e3">mutt_file_get_stat_timespec</a></div><div class="ttdeci">void mutt_file_get_stat_timespec(struct timespec *dest, struct stat *st, enum MuttStatType type)</div><div class="ttdoc">Read the stat() time into a time value.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01576">file.c:1576</a></div></div>
+<div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00147">file.h:147</a></div></div>
+<div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00146">file.h:146</a></div></div>
 <div class="ttc" id="afile_8h_html_ad852389693b4c5a8d79c25e84b2d1139aaebe13aad5970939f4383a8ed082201f"><div class="ttname"><a href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139aaebe13aad5970939f4383a8ed082201f">MUTT_STAT_ATIME</a></div><div class="ttdeci">@ MUTT_STAT_ATIME</div><div class="ttdoc">File/dir's atime - last accessed time.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00064">file.h:64</a></div></div>
 <div class="ttc" id="afile_8h_html_ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df"><div class="ttname"><a href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df">MUTT_STAT_MTIME</a></div><div class="ttdeci">@ MUTT_STAT_MTIME</div><div class="ttdoc">File/dir's mtime - last modified time.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00065">file.h:65</a></div></div>
 <div class="ttc" id="ambox_2lib_8h_html_a02e41ebb72c6ab451fed824a9c41283c"><div class="ttname"><a href="mbox_2lib_8h.html#a02e41ebb72c6ab451fed824a9c41283c">MMDF_SEP</a></div><div class="ttdeci">#define MMDF_SEP</div><div class="ttdef"><b>Definition:</b> <a href="mbox_2lib_8h_source.html#l00062">lib.h:62</a></div></div>
@@ -478,42 +478,42 @@ Functions</h2></td></tr>
 
 <p>Is this an mh <a class="el" href="structMailbox.html" title="A mailbox.">Mailbox</a>? - Implements <a class="el" href="structMxOps.html#a625a6ea0abfdb6620542e26acc499177">MxOps::path_probe()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="mh_8c_source.html#l01197">1197</a> of file <a class="el" href="mh_8c_source.html">mh.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1198</span>{</div>
-<div class="line"><span class="lineno"> 1199</span>  <span class="keywordflow">if</span> (!st || !S_ISDIR(st-&gt;st_mode))</div>
-<div class="line"><span class="lineno"> 1200</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno"> 1201</span> </div>
-<div class="line"><span class="lineno"> 1202</span>  <span class="keywordtype">char</span> tmp[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<p class="definition">Definition at line <a class="el" href="mh_8c_source.html#l01199">1199</a> of file <a class="el" href="mh_8c_source.html">mh.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1200</span>{</div>
+<div class="line"><span class="lineno"> 1201</span>  <span class="keywordflow">if</span> (!st || !S_ISDIR(st-&gt;st_mode))</div>
+<div class="line"><span class="lineno"> 1202</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
 <div class="line"><span class="lineno"> 1203</span> </div>
-<div class="line"><span class="lineno"> 1204</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.mh_sequences&quot;</span>, path);</div>
-<div class="line"><span class="lineno"> 1205</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
-<div class="line"><span class="lineno"> 1206</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
-<div class="line"><span class="lineno"> 1207</span> </div>
-<div class="line"><span class="lineno"> 1208</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.xmhcache&quot;</span>, path);</div>
-<div class="line"><span class="lineno"> 1209</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
-<div class="line"><span class="lineno"> 1210</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
-<div class="line"><span class="lineno"> 1211</span> </div>
-<div class="line"><span class="lineno"> 1212</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.mew_cache&quot;</span>, path);</div>
-<div class="line"><span class="lineno"> 1213</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
-<div class="line"><span class="lineno"> 1214</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
-<div class="line"><span class="lineno"> 1215</span> </div>
-<div class="line"><span class="lineno"> 1216</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.mew-cache&quot;</span>, path);</div>
-<div class="line"><span class="lineno"> 1217</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
-<div class="line"><span class="lineno"> 1218</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
-<div class="line"><span class="lineno"> 1219</span> </div>
-<div class="line"><span class="lineno"> 1220</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.sylpheed_cache&quot;</span>, path);</div>
-<div class="line"><span class="lineno"> 1221</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
-<div class="line"><span class="lineno"> 1222</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
-<div class="line"><span class="lineno"> 1223</span> </div>
-<div class="line"><span class="lineno"> 1224</span>  <span class="comment">/* ok, this isn&#39;t an mh folder, but mh mode can be used to read</span></div>
-<div class="line"><span class="lineno"> 1225</span><span class="comment">   * Usenet news from the spool.  */</span></div>
-<div class="line"><span class="lineno"> 1226</span> </div>
-<div class="line"><span class="lineno"> 1227</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.overview&quot;</span>, path);</div>
-<div class="line"><span class="lineno"> 1228</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
-<div class="line"><span class="lineno"> 1229</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
-<div class="line"><span class="lineno"> 1230</span> </div>
-<div class="line"><span class="lineno"> 1231</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno"> 1232</span>}</div>
+<div class="line"><span class="lineno"> 1204</span>  <span class="keywordtype">char</span> tmp[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno"> 1205</span> </div>
+<div class="line"><span class="lineno"> 1206</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.mh_sequences&quot;</span>, path);</div>
+<div class="line"><span class="lineno"> 1207</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
+<div class="line"><span class="lineno"> 1208</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
+<div class="line"><span class="lineno"> 1209</span> </div>
+<div class="line"><span class="lineno"> 1210</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.xmhcache&quot;</span>, path);</div>
+<div class="line"><span class="lineno"> 1211</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
+<div class="line"><span class="lineno"> 1212</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
+<div class="line"><span class="lineno"> 1213</span> </div>
+<div class="line"><span class="lineno"> 1214</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.mew_cache&quot;</span>, path);</div>
+<div class="line"><span class="lineno"> 1215</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
+<div class="line"><span class="lineno"> 1216</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
+<div class="line"><span class="lineno"> 1217</span> </div>
+<div class="line"><span class="lineno"> 1218</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.mew-cache&quot;</span>, path);</div>
+<div class="line"><span class="lineno"> 1219</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
+<div class="line"><span class="lineno"> 1220</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
+<div class="line"><span class="lineno"> 1221</span> </div>
+<div class="line"><span class="lineno"> 1222</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.sylpheed_cache&quot;</span>, path);</div>
+<div class="line"><span class="lineno"> 1223</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
+<div class="line"><span class="lineno"> 1224</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
+<div class="line"><span class="lineno"> 1225</span> </div>
+<div class="line"><span class="lineno"> 1226</span>  <span class="comment">/* ok, this isn&#39;t an mh folder, but mh mode can be used to read</span></div>
+<div class="line"><span class="lineno"> 1227</span><span class="comment">   * Usenet news from the spool.  */</span></div>
+<div class="line"><span class="lineno"> 1228</span> </div>
+<div class="line"><span class="lineno"> 1229</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/.overview&quot;</span>, path);</div>
+<div class="line"><span class="lineno"> 1230</span>  <span class="keywordflow">if</span> (access(tmp, F_OK) == 0)</div>
+<div class="line"><span class="lineno"> 1231</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a>;</div>
+<div class="line"><span class="lineno"> 1232</span> </div>
+<div class="line"><span class="lineno"> 1233</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno"> 1234</span>}</div>
 <div class="ttc" id="acore_2mailbox_8h_html_af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89"><div class="ttname"><a href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89">MUTT_MH</a></div><div class="ttdeci">@ MUTT_MH</div><div class="ttdoc">'MH' Mailbox type</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00047">mailbox.h:47</a></div></div>
 </div><!-- fragment -->
 </div>

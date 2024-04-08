@@ -3,7 +3,7 @@ var alias_8c =
     [ "write_safe_address", "alias_8c.html#af8cc43e54efdfb7703a350bbfea5c013", null ],
     [ "expand_aliases_r", "alias_8c.html#afa6db199eab0d4f151c52b3712facae8", null ],
     [ "recode_buf", "alias_8c.html#a820641a8c720f0b94102e62b18569739", null ],
-    [ "check_alias_name", "alias_8c.html#a298053b358ffc2bb79c2d48ba893dc75", null ],
+    [ "check_alias_name", "alias_8c.html#a18372c1fbfd0cb8ed8f2ce72d4eeb066", null ],
     [ "string_is_address", "alias_8c.html#a207a8105a441657885093d91f6dadcb2", null ],
     [ "alias_lookup", "alias_8c.html#a7a4df76d0f95394e6f02fd3fa8fee709", null ],
     [ "mutt_expand_aliases", "alias_8c.html#a7c57d5376e9a1cf5e1f504a452996b86", null ],

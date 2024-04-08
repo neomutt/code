@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-94-g1a53c4</span>
+   &#160;<span id="projectnumber">2024-03-23-142-g2b2e76</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -343,7 +343,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   96</span>  exp-&gt;<a class="code hl_variable" href="structExpando.html#a08d151b9aeb6d7efe76903a4f2fc2468">tree</a> = root;</div>
 <div class="line"><span class="lineno">   97</span>  <span class="keywordflow">return</span> exp;</div>
 <div class="line"><span class="lineno">   98</span>}</div>
-<div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00412">buffer.c:412</a></div></div>
+<div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00394">buffer.c:394</a></div></div>
 <div class="ttc" id="aexpando_2parse_8c_html_a93fdac2509cb79ea6e545970c91ad3cb"><div class="ttname"><a href="expando_2parse_8c.html#a93fdac2509cb79ea6e545970c91ad3cb">node_tree_parse</a></div><div class="ttdeci">void node_tree_parse(struct ExpandoNode **root, const char *string, const struct ExpandoDefinition *defs, struct ExpandoParseError *error)</div><div class="ttdoc">Parse a format string into ExpandoNodes.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2parse_8c_source.html#l00300">parse.c:300</a></div></div>
 <div class="ttc" id="aexpando_8c_html_a090f798de6f36c5d9e2b3c616243316f"><div class="ttname"><a href="expando_8c.html#a090f798de6f36c5d9e2b3c616243316f">expando_new</a></div><div class="ttdeci">struct Expando * expando_new(const char *format)</div><div class="ttdoc">Create an Expando from a string.</div><div class="ttdef"><b>Definition:</b> <a href="expando_8c_source.html#l00044">expando.c:44</a></div></div>
 <div class="ttc" id="aexpando_8c_html_a949d8a4d7721966b8f8fdba9e9db10b3"><div class="ttname"><a href="expando_8c.html#a949d8a4d7721966b8f8fdba9e9db10b3">expando_free</a></div><div class="ttdeci">void expando_free(struct Expando **ptr)</div><div class="ttdoc">Free an Expando object.</div><div class="ttdef"><b>Definition:</b> <a href="expando_8c_source.html#l00055">expando.c:55</a></div></div>
@@ -444,12 +444,13 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  113</span>  <span class="keywordflow">if</span> (!exp || !exp-&gt;<a class="code hl_variable" href="structExpando.html#a08d151b9aeb6d7efe76903a4f2fc2468">tree</a> || !rdata)</div>
 <div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">if</span> (max_cols == -1)</div>
-<div class="line"><span class="lineno">  117</span>    max_cols = INT_MAX;</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *root = exp-&gt;<a class="code hl_variable" href="structExpando.html#a08d151b9aeb6d7efe76903a4f2fc2468">tree</a>;</div>
-<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="render_8c.html#a73e60e28446a998b0603feb1872533e2">node_tree_render</a>(root, rdata, buf, max_cols, data, flags);</div>
-<div class="line"><span class="lineno">  121</span>}</div>
+<div class="line"><span class="lineno">  116</span>  <span class="comment">// Give enough space for a long command line</span></div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">if</span> (max_cols == -1)</div>
+<div class="line"><span class="lineno">  118</span>    max_cols = 8192;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *root = exp-&gt;<a class="code hl_variable" href="structExpando.html#a08d151b9aeb6d7efe76903a4f2fc2468">tree</a>;</div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="render_8c.html#a73e60e28446a998b0603feb1872533e2">node_tree_render</a>(root, rdata, buf, max_cols, data, flags);</div>
+<div class="line"><span class="lineno">  122</span>}</div>
 <div class="ttc" id="arender_8c_html_a73e60e28446a998b0603feb1872533e2"><div class="ttname"><a href="render_8c.html#a73e60e28446a998b0603feb1872533e2">node_tree_render</a></div><div class="ttdeci">int node_tree_render(const struct ExpandoNode *node, const struct ExpandoRenderData *rdata, struct Buffer *buf, int max_cols, void *data, MuttFormatFlags flags)</div><div class="ttdoc">Render a tree of ExpandoNodes into a string.</div><div class="ttdef"><b>Definition:</b> <a href="render_8c_source.html#l00045">render.c:45</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -511,15 +512,15 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="expando_8c_source.html#l00129">129</a> of file <a class="el" href="expando_8c_source.html">expando.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>{</div>
-<div class="line"><span class="lineno">  131</span>  <span class="keywordflow">if</span> (!a &amp;&amp; !b) <span class="comment">/* both empty */</span></div>
-<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">if</span> (!a ^ !b) <span class="comment">/* one is empty, but not the other */</span></div>
-<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(a-&gt;<a class="code hl_variable" href="structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a">string</a>, b-&gt;<a class="code hl_variable" href="structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a">string</a>);</div>
-<div class="line"><span class="lineno">  137</span>}</div>
+<p class="definition">Definition at line <a class="el" href="expando_8c_source.html#l00130">130</a> of file <a class="el" href="expando_8c_source.html">expando.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>{</div>
+<div class="line"><span class="lineno">  132</span>  <span class="keywordflow">if</span> (!a &amp;&amp; !b) <span class="comment">/* both empty */</span></div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  134</span>  <span class="keywordflow">if</span> (!a ^ !b) <span class="comment">/* one is empty, but not the other */</span></div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(a-&gt;<a class="code hl_variable" href="structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a">string</a>, b-&gt;<a class="code hl_variable" href="structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a">string</a>);</div>
+<div class="line"><span class="lineno">  138</span>}</div>
 <div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00709">string.c:709</a></div></div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

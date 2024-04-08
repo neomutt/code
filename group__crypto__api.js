@@ -1,7 +1,7 @@
 var group__crypto__api =
 [
     [ "init()", "group__crypto__init.html", "group__crypto__init" ],
-    [ "cleanup()", "group__crypto__cleanup.html", null ],
+    [ "cleanup()", "group__crypto__cleanup.html", "group__crypto__cleanup" ],
     [ "void_passphrase()", "group__crypto__void__passphrase.html", "group__crypto__void__passphrase" ],
     [ "valid_passphrase()", "group__crypto__valid__passphrase.html", "group__crypto__valid__passphrase" ],
     [ "decrypt_mime()", "group__crypto__decrypt__mime.html", "group__crypto__decrypt__mime" ],

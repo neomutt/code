@@ -42,6 +42,7 @@ var modules =
     [ "Parse a pattern API", "group__eat__arg__api.html", "group__eat__arg__api" ],
     [ "POP Authenticaion API", "group__pop__authenticate.html", "group__pop__authenticate" ],
     [ "POP Response Parser API", "group__pop__fetch__api.html", "group__pop__fetch__api" ],
+    [ "SMTP Authentication API", "group__smtp__authenticate.html", "group__smtp__authenticate" ],
     [ "Mail Sorting API", "group__sort__mail__api.html", "group__sort__mail__api" ],
     [ "Key Value Store API", "group__store__api.html", "group__store__api" ]
 ];

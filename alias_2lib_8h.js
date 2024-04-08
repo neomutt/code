@@ -17,7 +17,7 @@ var alias_2lib_8h =
     [ "alias_dialog", "alias_2lib_8h.html#a978ee8044c2c57864acad6488031cf3d", null ],
     [ "query_complete", "alias_2lib_8h.html#a93393632c1b6302a6c2db4c8fe4be8ee", null ],
     [ "query_index", "alias_2lib_8h.html#acdfc08deb336296bc49da8c2916f4cde", null ],
-    [ "complete_alias", "group__complete__api.html#gad2863df705c70e16973db521cb925f99", null ],
+    [ "complete_alias", "group__compapi__complete.html#gad2863df705c70e16973db521cb925f99", null ],
     [ "alias_reverse_lookup", "alias_2lib_8h.html#ad84f260167dd1100a7208b59bde8a953", null ],
     [ "CompleteAliasOps", "alias_2lib_8h.html#a88ecc4c4cbc99cdba5fed7e26b8b65e9", null ]
 ];

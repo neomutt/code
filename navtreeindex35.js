@@ -1,5 +1,12 @@
 var NAVTREEINDEX35 =
 {
+"pager_2message_8c.html#a97e1621c452bf67d798d882bbe0c2998":[2,0,37,8,3],
+"pager_2message_8c.html#ac80bfd31d0ddf828da7a9b2be87f159b":[2,0,37,8,4],
+"pager_2message_8c.html#ad081e1099ae8f2f467644023b0f1470c":[2,0,37,8,2],
+"pager_2message_8c_source.html":[2,0,37,8],
+"pager_2pager_8c.html":[2,0,37,9],
+"pager_2pager_8c.html#a5cbb42666cadab7f13f444411d060373":[2,0,37,9,0],
+"pager_2pager_8c.html#abf21b27a76f5a810df02db52dc542144":[2,0,37,9,9],
 "pager_2pager_8c_source.html":[2,0,37,9],
 "pager_2private__data_8c.html":[2,0,37,13],
 "pager_2private__data_8c.html#aac0bfec1cf459305edda49134f448413":[2,0,37,13,1],
@@ -242,12 +249,5 @@ var NAVTREEINDEX35 =
 "pattern_complete.html":[42,1],
 "pattern_config.html":[42,2],
 "pattern_dlg_pattern.html":[42,3],
-"pattern_exec.html":[42,4],
-"pattern_flags.html":[42,5],
-"pattern_functions.html":[42,6],
-"pattern_message.html":[42,7],
-"pattern_pattern.html":[42,8],
-"pattern_search_state.html":[42,9],
-"pbar_8c.html":[2,0,37,10],
-"pbar_8c.html#a0f7f43da96bade21b0ee932586e9cdc0":[2,0,37,10,10]
+"pattern_exec.html":[42,4]
 };

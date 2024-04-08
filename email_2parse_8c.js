@@ -4,6 +4,8 @@ var email_2parse_8c =
     [ "parse_part", "email_2parse_8c.html#aa9d682d64619becd7ca5e03de02f6f18", null ],
     [ "rfc822_parse_message", "email_2parse_8c.html#a6f9e27e3cd898ef0935029da9c3dcefd", null ],
     [ "parse_multipart", "email_2parse_8c.html#ac20b6c54dff7929453167e30d9dcc1a3", null ],
+    [ "mutt_filter_commandline_header_tag", "email_2parse_8c.html#aa024a4cce886fe1fb4a32ed8f1b8d9b9", null ],
+    [ "mutt_filter_commandline_header_value", "email_2parse_8c.html#aeb759563267cc1a4ee017738d8ee3013", null ],
     [ "mutt_auto_subscribe", "email_2parse_8c.html#a2a830caa65e6f462ab0ecae77bce746b", null ],
     [ "parse_parameters", "email_2parse_8c.html#af286c6b467329705cc1ca7d92f9ad954", null ],
     [ "parse_content_disposition", "email_2parse_8c.html#a870232070405e395193a6c7e00e2df60", null ],

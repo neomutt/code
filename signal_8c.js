@@ -8,6 +8,7 @@ var signal_8c =
     [ "mutt_sig_block_system", "signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea", null ],
     [ "mutt_sig_unblock_system", "signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d", null ],
     [ "mutt_sig_allow_interrupt", "signal_8c.html#af00bed52276317e59f6ae7bb13b0322b", null ],
+    [ "mutt_sig_reset_child_signals", "signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d", null ],
     [ "Sigset", "signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b", null ],
     [ "SigsetSys", "signal_8c.html#ad42f2065add33be177e19d2882f7238f", null ],
     [ "SysOldInt", "signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3", null ],

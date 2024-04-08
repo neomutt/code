@@ -19,7 +19,7 @@ var regex3_8h =
     [ "mutt_regexlist_new", "regex3_8h.html#a23c398c13758ae5559468bc491e138a5", null ],
     [ "mutt_regexlist_remove", "regex3_8h.html#a4fd9f92b6c20e595b9487f874cb75f02", null ],
     [ "mutt_replacelist_add", "regex3_8h.html#a7b0b955eaca9b1208ff025f30a98aef0", null ],
-    [ "mutt_replacelist_apply", "regex3_8h.html#a2a24de5fe6dfc7cb61c1331aaeb12b22", null ],
+    [ "mutt_replacelist_apply", "regex3_8h.html#a6e784023fdfd5e862afd7cbfa50a6129", null ],
     [ "mutt_replacelist_free", "regex3_8h.html#a4cd5feab8463aea0a18d195f6c3a704d", null ],
     [ "mutt_replacelist_match", "regex3_8h.html#a5c1dc418529747116226ffa8f97e9e88", null ],
     [ "mutt_replacelist_new", "regex3_8h.html#a7751f72364d5429f22e535f63f5282f3", null ],

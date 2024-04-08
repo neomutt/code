@@ -9,7 +9,6 @@ var buffer_8h =
     [ "buf_init", "buffer_8h.html#a6ffb5cf731a68033766b9a084d8b2dc2", null ],
     [ "buf_is_empty", "buffer_8h.html#a4245e227baa2a9beb6991917404aab0d", null ],
     [ "buf_len", "buffer_8h.html#a2914dc2d9a9d77e4c9970b4249be9370", null ],
-    [ "buf_make", "buffer_8h.html#a48c7f6bcdda4a269001bb371d522a4ce", null ],
     [ "buf_reset", "buffer_8h.html#a3b1f80652b37dc26046f9acdd85a0b05", null ],
     [ "buf_strdup", "buffer_8h.html#ad76477cc0c660bc50162393e997233eb", null ],
     [ "buf_dup", "buffer_8h.html#ab296398f56fc0978434a621f4cf3b31c", null ],
