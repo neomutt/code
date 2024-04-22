@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-147-g885fbc</span>
+   &#160;<span id="projectnumber">2024-04-16-36-g75b6fb</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('gpgme_8c.html',''); initResizable(); }
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;config.h&quot;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;gpg-error.h&gt;</code><br />
 <code>#include &lt;gpgme.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="autocrypt_2private_8h_source.html">private.h</a>&quot;</code><br />
@@ -122,7 +123,7 @@ $(document).ready(function(){initNavTree('gpgme_8c.html',''); initResizable(); }
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="gpgme_8c__incl.svg" width="978" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="gpgme_8c__incl.svg" width="1096" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -208,20 +209,20 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00050">50</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
-<div class="line"><span class="lineno">   52</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_autocrypt_dir = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;autocrypt_dir&quot;</span>);</div>
-<div class="line"><span class="lineno">   53</span>  gpgme_error_t err = gpgme_new(ctx);</div>
-<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">if</span> (!err)</div>
-<div class="line"><span class="lineno">   55</span>    err = gpgme_ctx_set_engine_info(*ctx, GPGME_PROTOCOL_OpenPGP, NULL, c_autocrypt_dir);</div>
-<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">if</span> (err)</div>
-<div class="line"><span class="lineno">   57</span>  {</div>
-<div class="line"><span class="lineno">   58</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;error creating GPGME context: %s&quot;</span>), gpgme_strerror(err));</div>
-<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   60</span>  }</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   63</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00051">51</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_autocrypt_dir = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;autocrypt_dir&quot;</span>);</div>
+<div class="line"><span class="lineno">   54</span>  gpgme_error_t err = gpgme_new(ctx);</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">if</span> (err == GPG_ERR_NO_ERROR)</div>
+<div class="line"><span class="lineno">   56</span>    err = gpgme_ctx_set_engine_info(*ctx, GPGME_PROTOCOL_OpenPGP, NULL, c_autocrypt_dir);</div>
+<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
+<div class="line"><span class="lineno">   58</span>  {</div>
+<div class="line"><span class="lineno">   59</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;error creating GPGME context: %s&quot;</span>), gpgme_strerror(err));</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   61</span>  }</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   64</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a9f184e61342916799259930333f4205f"><div class="ttname"><a href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a></div><div class="ttdeci">const char * cs_subset_path(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a path config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00169">helpers.c:169</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00092">logging2.h:92</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
@@ -270,12 +271,12 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00069">69</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>{</div>
-<div class="line"><span class="lineno">   71</span>  <a class="code hl_function" href="group__crypto__init.html#ga7061521ecb51237cbbc557440353af39">pgp_gpgme_init</a>();</div>
-<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   73</span>}</div>
-<div class="ttc" id="agroup__crypto__init_html_ga7061521ecb51237cbbc557440353af39"><div class="ttname"><a href="group__crypto__init.html#ga7061521ecb51237cbbc557440353af39">pgp_gpgme_init</a></div><div class="ttdeci">void pgp_gpgme_init(void)</div><div class="ttdoc">Initialise the crypto module - Implements CryptModuleSpecs::init() -.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l03820">crypt_gpgme.c:3820</a></div></div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00070">70</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
+<div class="line"><span class="lineno">   72</span>  <a class="code hl_function" href="group__crypto__init.html#ga7061521ecb51237cbbc557440353af39">pgp_gpgme_init</a>();</div>
+<div class="line"><span class="lineno">   73</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   74</span>}</div>
+<div class="ttc" id="agroup__crypto__init_html_ga7061521ecb51237cbbc557440353af39"><div class="ttname"><a href="group__crypto__init.html#ga7061521ecb51237cbbc557440353af39">pgp_gpgme_init</a></div><div class="ttdeci">void pgp_gpgme_init(void)</div><div class="ttdoc">Initialise the crypto module - Implements CryptModuleSpecs::init() -.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l03823">crypt_gpgme.c:3823</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -352,40 +353,40 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00083">83</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>{</div>
-<div class="line"><span class="lineno">   85</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">   86</span>  gpgme_data_t dh = NULL;</div>
-<div class="line"><span class="lineno">   87</span>  gpgme_key_t export_keys[2] = { 0 };</div>
-<div class="line"><span class="lineno">   88</span>  <span class="keywordtype">size_t</span> export_data_len;</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">if</span> (gpgme_data_new(&amp;dh))</div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>    <span class="comment">/* This doesn&#39;t seem to work */</span></div>
-<div class="line"><span class="lineno">   94</span><span class="preprocessor">#if 0</span></div>
-<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">if</span> (gpgme_data_set_encoding (dh, GPGME_DATA_ENCODING_BASE64))</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>  export_keys[0] = key;</div>
-<div class="line"><span class="lineno">  100</span>  export_keys[1] = NULL;</div>
-<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">if</span> (gpgme_op_export_keys(ctx, export_keys, GPGME_EXPORT_MODE_MINIMAL, dh))</div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  103</span> </div>
-<div class="line"><span class="lineno">  104</span>  <span class="keywordtype">char</span> *export_data = gpgme_data_release_and_get_mem(dh, &amp;export_data_len);</div>
-<div class="line"><span class="lineno">  105</span>  dh = NULL;</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>  <a class="code hl_function" href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a>(keydata, export_data, export_data_len);</div>
-<div class="line"><span class="lineno">  108</span>  gpgme_free(export_data);</div>
-<div class="line"><span class="lineno">  109</span>  export_data = NULL;</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>  rc = 0;</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>cleanup:</div>
-<div class="line"><span class="lineno">  114</span>  gpgme_data_release(dh);</div>
-<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  116</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00084">84</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>{</div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">   87</span>  gpgme_data_t dh = NULL;</div>
+<div class="line"><span class="lineno">   88</span>  gpgme_key_t export_keys[2] = { 0 };</div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordtype">size_t</span> export_data_len;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">if</span> (gpgme_data_new(&amp;dh))</div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">/* This doesn&#39;t seem to work */</span></div>
+<div class="line"><span class="lineno">   95</span><span class="preprocessor">#if 0</span></div>
+<div class="line"><span class="lineno">   96</span>  <span class="keywordflow">if</span> (gpgme_data_set_encoding (dh, GPGME_DATA_ENCODING_BASE64))</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">   98</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>  export_keys[0] = key;</div>
+<div class="line"><span class="lineno">  101</span>  export_keys[1] = NULL;</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">if</span> (gpgme_op_export_keys(ctx, export_keys, GPGME_EXPORT_MODE_MINIMAL, dh))</div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordtype">char</span> *export_data = gpgme_data_release_and_get_mem(dh, &amp;export_data_len);</div>
+<div class="line"><span class="lineno">  106</span>  dh = NULL;</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>  <a class="code hl_function" href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a>(keydata, export_data, export_data_len);</div>
+<div class="line"><span class="lineno">  109</span>  gpgme_free(export_data);</div>
+<div class="line"><span class="lineno">  110</span>  export_data = NULL;</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>  rc = 0;</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>cleanup:</div>
+<div class="line"><span class="lineno">  115</span>  gpgme_data_release(dh);</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  117</span>}</div>
 <div class="ttc" id="abase64_8c_html_a3465fa1b0c7205634eb87bb505264c60"><div class="ttname"><a href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a></div><div class="ttdeci">size_t mutt_b64_buffer_encode(struct Buffer *buf, const char *in, size_t len)</div><div class="ttdoc">Convert raw bytes to null-terminated base64 string.</div><div class="ttdef"><b>Definition:</b> <a href="base64_8c_source.html#l00198">base64.c:198</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -455,79 +456,79 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00157">157</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>{</div>
-<div class="line"><span class="lineno">  160</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">  161</span>  gpgme_ctx_t ctx = NULL;</div>
-<div class="line"><span class="lineno">  162</span>  gpgme_genkey_result_t keyresult = NULL;</div>
-<div class="line"><span class="lineno">  163</span>  gpgme_key_t primary_key = NULL;</div>
-<div class="line"><span class="lineno">  164</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  165</span> </div>
-<div class="line"><span class="lineno">  166</span>  <span class="comment">/* GPGME says addresses should not be in idna form */</span></div>
-<div class="line"><span class="lineno">  167</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *copy = <a class="code hl_function" href="address_2address_8c.html#a8f8e4be1b71a169870ac10be5426af8d">mutt_addr_copy</a>(addr);</div>
-<div class="line"><span class="lineno">  168</span>  <a class="code hl_function" href="address_2address_8c.html#a95bcf9ec8be0b69b33fadde85800b559">mutt_addr_to_local</a>(copy);</div>
-<div class="line"><span class="lineno">  169</span>  <a class="code hl_function" href="address_2address_8c.html#a4e3a6705fd8f479444e5202a593587c3">mutt_addr_write</a>(buf, copy, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  170</span>  <a class="code hl_function" href="address_2address_8c.html#a40eda06e6e64ff9d9f1e7d3b69e7c846">mutt_addr_free</a>(&amp;copy);</div>
-<div class="line"><span class="lineno">  171</span> </div>
-<div class="line"><span class="lineno">  172</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
-<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  174</span> </div>
-<div class="line"><span class="lineno">  175</span>  <span class="comment">/* L10N: Message displayed just before a GPG key is generated for a created</span></div>
-<div class="line"><span class="lineno">  176</span><span class="comment">     autocrypt account.  */</span></div>
-<div class="line"><span class="lineno">  177</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Generating autocrypt key...&quot;</span>));</div>
-<div class="line"><span class="lineno">  178</span> </div>
-<div class="line"><span class="lineno">  179</span>  <span class="comment">/* Primary key */</span></div>
-<div class="line"><span class="lineno">  180</span>  gpgme_error_t err = gpgme_op_createkey(ctx, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="stringliteral">&quot;ed25519&quot;</span>, 0, 0, NULL,</div>
-<div class="line"><span class="lineno">  181</span>                                         GPGME_CREATE_NOPASSWD | GPGME_CREATE_FORCE |</div>
-<div class="line"><span class="lineno">  182</span>                                             GPGME_CREATE_NOEXPIRE);</div>
-<div class="line"><span class="lineno">  183</span>  <span class="keywordflow">if</span> (err)</div>
-<div class="line"><span class="lineno">  184</span>  {</div>
-<div class="line"><span class="lineno">  185</span>    <span class="comment">/* L10N: GPGME was unable to generate a key for some reason.</span></div>
-<div class="line"><span class="lineno">  186</span><span class="comment">       %s is the error message returned by GPGME.  */</span></div>
-<div class="line"><span class="lineno">  187</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error creating autocrypt key: %s&quot;</span>), gpgme_strerror(err));</div>
-<div class="line"><span class="lineno">  188</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  189</span>  }</div>
-<div class="line"><span class="lineno">  190</span>  keyresult = gpgme_op_genkey_result(ctx);</div>
-<div class="line"><span class="lineno">  191</span>  <span class="keywordflow">if</span> (!keyresult-&gt;fpr)</div>
-<div class="line"><span class="lineno">  192</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  193</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(keyid, keyresult-&gt;fpr);</div>
-<div class="line"><span class="lineno">  194</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Generated key with id %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keyid));</div>
-<div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>  <span class="comment">/* Get gpgme_key_t to create the secondary key and export keydata */</span></div>
-<div class="line"><span class="lineno">  197</span>  err = gpgme_get_key(ctx, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keyid), &amp;primary_key, 0);</div>
-<div class="line"><span class="lineno">  198</span>  <span class="keywordflow">if</span> (err)</div>
-<div class="line"><span class="lineno">  199</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>  <span class="comment">/* Secondary key */</span></div>
-<div class="line"><span class="lineno">  202</span>  err = gpgme_op_createsubkey(ctx, primary_key, <span class="stringliteral">&quot;cv25519&quot;</span>, 0, 0,</div>
-<div class="line"><span class="lineno">  203</span>                              GPGME_CREATE_NOPASSWD | GPGME_CREATE_NOEXPIRE);</div>
-<div class="line"><span class="lineno">  204</span>  <span class="keywordflow">if</span> (err)</div>
-<div class="line"><span class="lineno">  205</span>  {</div>
-<div class="line"><span class="lineno">  206</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error creating autocrypt key: %s&quot;</span>), gpgme_strerror(err));</div>
-<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  208</span>  }</div>
-<div class="line"><span class="lineno">  209</span> </div>
-<div class="line"><span class="lineno">  210</span>  <span class="comment">/* get keydata */</span></div>
-<div class="line"><span class="lineno">  211</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#ac62789dd0851fe61080dee55a587649d">export_keydata</a>(ctx, primary_key, keydata))</div>
-<div class="line"><span class="lineno">  212</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  213</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;key has keydata *%s*\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keydata));</div>
-<div class="line"><span class="lineno">  214</span> </div>
-<div class="line"><span class="lineno">  215</span>  rc = 0;</div>
-<div class="line"><span class="lineno">  216</span> </div>
-<div class="line"><span class="lineno">  217</span>cleanup:</div>
-<div class="line"><span class="lineno">  218</span>  gpgme_key_unref(primary_key);</div>
-<div class="line"><span class="lineno">  219</span>  gpgme_release(ctx);</div>
-<div class="line"><span class="lineno">  220</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  221</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  222</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00158">158</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>{</div>
+<div class="line"><span class="lineno">  161</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">  162</span>  gpgme_ctx_t ctx = NULL;</div>
+<div class="line"><span class="lineno">  163</span>  gpgme_genkey_result_t keyresult = NULL;</div>
+<div class="line"><span class="lineno">  164</span>  gpgme_key_t primary_key = NULL;</div>
+<div class="line"><span class="lineno">  165</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  166</span> </div>
+<div class="line"><span class="lineno">  167</span>  <span class="comment">/* GPGME says addresses should not be in idna form */</span></div>
+<div class="line"><span class="lineno">  168</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *copy = <a class="code hl_function" href="address_2address_8c.html#a8f8e4be1b71a169870ac10be5426af8d">mutt_addr_copy</a>(addr);</div>
+<div class="line"><span class="lineno">  169</span>  <a class="code hl_function" href="address_2address_8c.html#a95bcf9ec8be0b69b33fadde85800b559">mutt_addr_to_local</a>(copy);</div>
+<div class="line"><span class="lineno">  170</span>  <a class="code hl_function" href="address_2address_8c.html#a4e3a6705fd8f479444e5202a593587c3">mutt_addr_write</a>(buf, copy, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  171</span>  <a class="code hl_function" href="address_2address_8c.html#a40eda06e6e64ff9d9f1e7d3b69e7c846">mutt_addr_free</a>(&amp;copy);</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  175</span> </div>
+<div class="line"><span class="lineno">  176</span>  <span class="comment">/* L10N: Message displayed just before a GPG key is generated for a created</span></div>
+<div class="line"><span class="lineno">  177</span><span class="comment">     autocrypt account.  */</span></div>
+<div class="line"><span class="lineno">  178</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Generating autocrypt key...&quot;</span>));</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>  <span class="comment">/* Primary key */</span></div>
+<div class="line"><span class="lineno">  181</span>  gpgme_error_t err = gpgme_op_createkey(ctx, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="stringliteral">&quot;ed25519&quot;</span>, 0, 0, NULL,</div>
+<div class="line"><span class="lineno">  182</span>                                         GPGME_CREATE_NOPASSWD | GPGME_CREATE_FORCE |</div>
+<div class="line"><span class="lineno">  183</span>                                             GPGME_CREATE_NOEXPIRE);</div>
+<div class="line"><span class="lineno">  184</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
+<div class="line"><span class="lineno">  185</span>  {</div>
+<div class="line"><span class="lineno">  186</span>    <span class="comment">/* L10N: GPGME was unable to generate a key for some reason.</span></div>
+<div class="line"><span class="lineno">  187</span><span class="comment">       %s is the error message returned by GPGME.  */</span></div>
+<div class="line"><span class="lineno">  188</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error creating autocrypt key: %s&quot;</span>), gpgme_strerror(err));</div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  190</span>  }</div>
+<div class="line"><span class="lineno">  191</span>  keyresult = gpgme_op_genkey_result(ctx);</div>
+<div class="line"><span class="lineno">  192</span>  <span class="keywordflow">if</span> (!keyresult-&gt;fpr)</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  194</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(keyid, keyresult-&gt;fpr);</div>
+<div class="line"><span class="lineno">  195</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Generated key with id %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keyid));</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>  <span class="comment">/* Get gpgme_key_t to create the secondary key and export keydata */</span></div>
+<div class="line"><span class="lineno">  198</span>  err = gpgme_get_key(ctx, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keyid), &amp;primary_key, 0);</div>
+<div class="line"><span class="lineno">  199</span>  <span class="keywordflow">if</span> (err)</div>
+<div class="line"><span class="lineno">  200</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>  <span class="comment">/* Secondary key */</span></div>
+<div class="line"><span class="lineno">  203</span>  err = gpgme_op_createsubkey(ctx, primary_key, <span class="stringliteral">&quot;cv25519&quot;</span>, 0, 0,</div>
+<div class="line"><span class="lineno">  204</span>                              GPGME_CREATE_NOPASSWD | GPGME_CREATE_NOEXPIRE);</div>
+<div class="line"><span class="lineno">  205</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
+<div class="line"><span class="lineno">  206</span>  {</div>
+<div class="line"><span class="lineno">  207</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error creating autocrypt key: %s&quot;</span>), gpgme_strerror(err));</div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  209</span>  }</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>  <span class="comment">/* get keydata */</span></div>
+<div class="line"><span class="lineno">  212</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#ac62789dd0851fe61080dee55a587649d">export_keydata</a>(ctx, primary_key, keydata))</div>
+<div class="line"><span class="lineno">  213</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  214</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;key has keydata *%s*\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keydata));</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>  rc = 0;</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>cleanup:</div>
+<div class="line"><span class="lineno">  219</span>  gpgme_key_unref(primary_key);</div>
+<div class="line"><span class="lineno">  220</span>  gpgme_release(ctx);</div>
+<div class="line"><span class="lineno">  221</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  222</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  223</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a40eda06e6e64ff9d9f1e7d3b69e7c846"><div class="ttname"><a href="address_2address_8c.html#a40eda06e6e64ff9d9f1e7d3b69e7c846">mutt_addr_free</a></div><div class="ttdeci">void mutt_addr_free(struct Address **ptr)</div><div class="ttdoc">Free a single Address.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l00462">address.c:462</a></div></div>
 <div class="ttc" id="aaddress_2address_8c_html_a4e3a6705fd8f479444e5202a593587c3"><div class="ttname"><a href="address_2address_8c.html#a4e3a6705fd8f479444e5202a593587c3">mutt_addr_write</a></div><div class="ttdeci">size_t mutt_addr_write(struct Buffer *buf, struct Address *addr, bool display)</div><div class="ttdoc">Write a single Address to a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l01050">address.c:1050</a></div></div>
 <div class="ttc" id="aaddress_2address_8c_html_a8f8e4be1b71a169870ac10be5426af8d"><div class="ttname"><a href="address_2address_8c.html#a8f8e4be1b71a169870ac10be5426af8d">mutt_addr_copy</a></div><div class="ttdeci">struct Address * mutt_addr_copy(const struct Address *addr)</div><div class="ttdoc">Copy the real address.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l00745">address.c:745</a></div></div>
 <div class="ttc" id="aaddress_2address_8c_html_a95bcf9ec8be0b69b33fadde85800b559"><div class="ttname"><a href="address_2address_8c.html#a95bcf9ec8be0b69b33fadde85800b559">mutt_addr_to_local</a></div><div class="ttdeci">bool mutt_addr_to_local(struct Address *a)</div><div class="ttdoc">Convert an Address from Punycode.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l01340">address.c:1340</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00394">buffer.c:394</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
-<div class="ttc" id="agpgme_8c_html_aa667cdd7c0982ff566f8e521849e2341"><div class="ttname"><a href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a></div><div class="ttdeci">static int create_gpgme_context(gpgme_ctx_t *ctx)</div><div class="ttdoc">Create a GPGME context.</div><div class="ttdef"><b>Definition:</b> <a href="gpgme_8c_source.html#l00050">gpgme.c:50</a></div></div>
-<div class="ttc" id="agpgme_8c_html_ac62789dd0851fe61080dee55a587649d"><div class="ttname"><a href="gpgme_8c.html#ac62789dd0851fe61080dee55a587649d">export_keydata</a></div><div class="ttdeci">static int export_keydata(gpgme_ctx_t ctx, gpgme_key_t key, struct Buffer *keydata)</div><div class="ttdoc">Export Key data from GPGME into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="gpgme_8c_source.html#l00083">gpgme.c:83</a></div></div>
+<div class="ttc" id="agpgme_8c_html_aa667cdd7c0982ff566f8e521849e2341"><div class="ttname"><a href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a></div><div class="ttdeci">static int create_gpgme_context(gpgme_ctx_t *ctx)</div><div class="ttdoc">Create a GPGME context.</div><div class="ttdef"><b>Definition:</b> <a href="gpgme_8c_source.html#l00051">gpgme.c:51</a></div></div>
+<div class="ttc" id="agpgme_8c_html_ac62789dd0851fe61080dee55a587649d"><div class="ttname"><a href="gpgme_8c.html#ac62789dd0851fe61080dee55a587649d">export_keydata</a></div><div class="ttdeci">static int export_keydata(gpgme_ctx_t ctx, gpgme_key_t key, struct Buffer *keydata)</div><div class="ttdoc">Export Key data from GPGME into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="gpgme_8c_source.html#l00084">gpgme.c:84</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00089">logging2.h:89</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00043">logging2.h:43</a></div></div>
@@ -596,45 +597,45 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00231">231</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  232</span>{</div>
-<div class="line"><span class="lineno">  233</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">  234</span>  gpgme_ctx_t ctx = NULL;</div>
-<div class="line"><span class="lineno">  235</span>  gpgme_key_t key = NULL;</div>
-<div class="line"><span class="lineno">  236</span> </div>
-<div class="line"><span class="lineno">  237</span>  <a class="code hl_variable" href="globals_8c.html#a1137c8074e2a6ff941529fc8e64fbca5">OptAutocryptGpgme</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  238</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt__gpgme_8c.html#a2e8df329d00791c453eb6b3f60eabfdf">mutt_gpgme_select_secret_key</a>(keyid))</div>
-<div class="line"><span class="lineno">  239</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
-<div class="line"><span class="lineno">  242</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>  <span class="keywordflow">if</span> (gpgme_get_key(ctx, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keyid), &amp;key, 0))</div>
-<div class="line"><span class="lineno">  245</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  246</span> </div>
-<div class="line"><span class="lineno">  247</span>  <span class="keywordflow">if</span> (key-&gt;revoked || key-&gt;expired || key-&gt;disabled || key-&gt;invalid ||</div>
-<div class="line"><span class="lineno">  248</span>      !key-&gt;can_encrypt || !key-&gt;can_sign)</div>
-<div class="line"><span class="lineno">  249</span>  {</div>
-<div class="line"><span class="lineno">  250</span>    <span class="comment">/* L10N: After selecting a key for an autocrypt account,</span></div>
-<div class="line"><span class="lineno">  251</span><span class="comment">       this is displayed if the key was revoked/expired/disabled/invalid</span></div>
-<div class="line"><span class="lineno">  252</span><span class="comment">       or can&#39;t be used for both signing and encryption.</span></div>
-<div class="line"><span class="lineno">  253</span><span class="comment">       %s is the key fingerprint.  */</span></div>
-<div class="line"><span class="lineno">  254</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;The key %s is not usable for autocrypt&quot;</span>), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keyid));</div>
-<div class="line"><span class="lineno">  255</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  256</span>  }</div>
-<div class="line"><span class="lineno">  257</span> </div>
-<div class="line"><span class="lineno">  258</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#ac62789dd0851fe61080dee55a587649d">export_keydata</a>(ctx, key, keydata))</div>
-<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  260</span> </div>
-<div class="line"><span class="lineno">  261</span>  rc = 0;</div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>cleanup:</div>
-<div class="line"><span class="lineno">  264</span>  <a class="code hl_variable" href="globals_8c.html#a1137c8074e2a6ff941529fc8e64fbca5">OptAutocryptGpgme</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  265</span>  gpgme_key_unref(key);</div>
-<div class="line"><span class="lineno">  266</span>  gpgme_release(ctx);</div>
-<div class="line"><span class="lineno">  267</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  268</span>}</div>
-<div class="ttc" id="acrypt__gpgme_8c_html_a2e8df329d00791c453eb6b3f60eabfdf"><div class="ttname"><a href="crypt__gpgme_8c.html#a2e8df329d00791c453eb6b3f60eabfdf">mutt_gpgme_select_secret_key</a></div><div class="ttdeci">int mutt_gpgme_select_secret_key(struct Buffer *keyid)</div><div class="ttdoc">Select a private Autocrypt key for a new account.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l03639">crypt_gpgme.c:3639</a></div></div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00232">232</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  233</span>{</div>
+<div class="line"><span class="lineno">  234</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">  235</span>  gpgme_ctx_t ctx = NULL;</div>
+<div class="line"><span class="lineno">  236</span>  gpgme_key_t key = NULL;</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>  <a class="code hl_variable" href="globals_8c.html#a1137c8074e2a6ff941529fc8e64fbca5">OptAutocryptGpgme</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  239</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt__gpgme_8c.html#a2e8df329d00791c453eb6b3f60eabfdf">mutt_gpgme_select_secret_key</a>(keyid))</div>
+<div class="line"><span class="lineno">  240</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  241</span> </div>
+<div class="line"><span class="lineno">  242</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>  <span class="keywordflow">if</span> (gpgme_get_key(ctx, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keyid), &amp;key, 0))</div>
+<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>  <span class="keywordflow">if</span> (key-&gt;revoked || key-&gt;expired || key-&gt;disabled || key-&gt;invalid ||</div>
+<div class="line"><span class="lineno">  249</span>      !key-&gt;can_encrypt || !key-&gt;can_sign)</div>
+<div class="line"><span class="lineno">  250</span>  {</div>
+<div class="line"><span class="lineno">  251</span>    <span class="comment">/* L10N: After selecting a key for an autocrypt account,</span></div>
+<div class="line"><span class="lineno">  252</span><span class="comment">       this is displayed if the key was revoked/expired/disabled/invalid</span></div>
+<div class="line"><span class="lineno">  253</span><span class="comment">       or can&#39;t be used for both signing and encryption.</span></div>
+<div class="line"><span class="lineno">  254</span><span class="comment">       %s is the key fingerprint.  */</span></div>
+<div class="line"><span class="lineno">  255</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;The key %s is not usable for autocrypt&quot;</span>), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(keyid));</div>
+<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  257</span>  }</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#ac62789dd0851fe61080dee55a587649d">export_keydata</a>(ctx, key, keydata))</div>
+<div class="line"><span class="lineno">  260</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  261</span> </div>
+<div class="line"><span class="lineno">  262</span>  rc = 0;</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>cleanup:</div>
+<div class="line"><span class="lineno">  265</span>  <a class="code hl_variable" href="globals_8c.html#a1137c8074e2a6ff941529fc8e64fbca5">OptAutocryptGpgme</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  266</span>  gpgme_key_unref(key);</div>
+<div class="line"><span class="lineno">  267</span>  gpgme_release(ctx);</div>
+<div class="line"><span class="lineno">  268</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  269</span>}</div>
+<div class="ttc" id="acrypt__gpgme_8c_html_a2e8df329d00791c453eb6b3f60eabfdf"><div class="ttname"><a href="crypt__gpgme_8c.html#a2e8df329d00791c453eb6b3f60eabfdf">mutt_gpgme_select_secret_key</a></div><div class="ttdeci">int mutt_gpgme_select_secret_key(struct Buffer *keyid)</div><div class="ttdoc">Select a private Autocrypt key for a new account.</div><div class="ttdef"><b>Definition:</b> <a href="crypt__gpgme_8c_source.html#l03643">crypt_gpgme.c:3643</a></div></div>
 <div class="ttc" id="aglobals_8c_html_a1137c8074e2a6ff941529fc8e64fbca5"><div class="ttname"><a href="globals_8c.html#a1137c8074e2a6ff941529fc8e64fbca5">OptAutocryptGpgme</a></div><div class="ttdeci">bool OptAutocryptGpgme</div><div class="ttdoc">(pseudo) use Autocrypt context inside ncrypt/crypt_gpgme.c</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00062">globals.c:62</a></div></div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -704,40 +705,40 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00278">278</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  280</span>{</div>
-<div class="line"><span class="lineno">  281</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">  282</span> </div>
-<div class="line"><span class="lineno">  283</span>  <span class="comment">/* L10N: During autocrypt account creation, this prompt asks the</span></div>
-<div class="line"><span class="lineno">  284</span><span class="comment">     user whether they want to create a new GPG key for the account,</span></div>
-<div class="line"><span class="lineno">  285</span><span class="comment">     or select an existing account from the keyring.  */</span></div>
-<div class="line"><span class="lineno">  286</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *prompt = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;(c)reate new, or (s)elect existing GPG key?&quot;</span>);</div>
-<div class="line"><span class="lineno">  287</span>  <span class="comment">/* L10N: The letters corresponding to the</span></div>
-<div class="line"><span class="lineno">  288</span><span class="comment">     &quot;(c)reate new, or (s)elect existing GPG key?&quot; prompt.  */</span></div>
-<div class="line"><span class="lineno">  289</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *letters = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;cs&quot;</span>);</div>
-<div class="line"><span class="lineno">  290</span> </div>
-<div class="line"><span class="lineno">  291</span>  <span class="keywordtype">int</span> choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(prompt, letters);</div>
-<div class="line"><span class="lineno">  292</span>  <span class="keywordflow">switch</span> (choice)</div>
-<div class="line"><span class="lineno">  293</span>  {</div>
-<div class="line"><span class="lineno">  294</span>    <span class="keywordflow">case</span> 2: <span class="comment">/* select existing */</span></div>
-<div class="line"><span class="lineno">  295</span>      rc = <a class="code hl_function" href="gpgme_8c.html#a2894737dbf5865d40fa9807c20d9a51f">mutt_autocrypt_gpgme_select_key</a>(keyid, keydata);</div>
-<div class="line"><span class="lineno">  296</span>      <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  297</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  298</span> </div>
-<div class="line"><span class="lineno">  299</span>      <span class="comment">/* L10N: During autocrypt account creation, if selecting an existing key fails</span></div>
-<div class="line"><span class="lineno">  300</span><span class="comment">         for some reason, we prompt to see if they want to create a key instead.  */</span></div>
-<div class="line"><span class="lineno">  301</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="question_2lib_8h.html#ae359ab94312d9ae6bcad5ab5b52bd529">query_yesorno</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Create a new GPG key for this account, instead?&quot;</span>), <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a>) != <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a>)</div>
-<div class="line"><span class="lineno">  302</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  303</span>      <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
-<div class="line"><span class="lineno">  304</span> </div>
-<div class="line"><span class="lineno">  305</span>    <span class="keywordflow">case</span> 1: <span class="comment">/* create new */</span></div>
-<div class="line"><span class="lineno">  306</span>      rc = <a class="code hl_function" href="gpgme_8c.html#a183f2f1eff311c4f49f5552966804fdf">mutt_autocrypt_gpgme_create_key</a>(addr, keyid, keydata);</div>
-<div class="line"><span class="lineno">  307</span>  }</div>
-<div class="line"><span class="lineno">  308</span> </div>
-<div class="line"><span class="lineno">  309</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  310</span>}</div>
-<div class="ttc" id="agpgme_8c_html_a183f2f1eff311c4f49f5552966804fdf"><div class="ttname"><a href="gpgme_8c.html#a183f2f1eff311c4f49f5552966804fdf">mutt_autocrypt_gpgme_create_key</a></div><div class="ttdeci">int mutt_autocrypt_gpgme_create_key(struct Address *addr, struct Buffer *keyid, struct Buffer *keydata)</div><div class="ttdoc">Create a GPGME key.</div><div class="ttdef"><b>Definition:</b> <a href="gpgme_8c_source.html#l00157">gpgme.c:157</a></div></div>
-<div class="ttc" id="agpgme_8c_html_a2894737dbf5865d40fa9807c20d9a51f"><div class="ttname"><a href="gpgme_8c.html#a2894737dbf5865d40fa9807c20d9a51f">mutt_autocrypt_gpgme_select_key</a></div><div class="ttdeci">int mutt_autocrypt_gpgme_select_key(struct Buffer *keyid, struct Buffer *keydata)</div><div class="ttdoc">Select a Autocrypt key.</div><div class="ttdef"><b>Definition:</b> <a href="gpgme_8c_source.html#l00231">gpgme.c:231</a></div></div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00279">279</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>{</div>
+<div class="line"><span class="lineno">  282</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">  283</span> </div>
+<div class="line"><span class="lineno">  284</span>  <span class="comment">/* L10N: During autocrypt account creation, this prompt asks the</span></div>
+<div class="line"><span class="lineno">  285</span><span class="comment">     user whether they want to create a new GPG key for the account,</span></div>
+<div class="line"><span class="lineno">  286</span><span class="comment">     or select an existing account from the keyring.  */</span></div>
+<div class="line"><span class="lineno">  287</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *prompt = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;(c)reate new, or (s)elect existing GPG key?&quot;</span>);</div>
+<div class="line"><span class="lineno">  288</span>  <span class="comment">/* L10N: The letters corresponding to the</span></div>
+<div class="line"><span class="lineno">  289</span><span class="comment">     &quot;(c)reate new, or (s)elect existing GPG key?&quot; prompt.  */</span></div>
+<div class="line"><span class="lineno">  290</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *letters = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;cs&quot;</span>);</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>  <span class="keywordtype">int</span> choice = <a class="code hl_function" href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a>(prompt, letters);</div>
+<div class="line"><span class="lineno">  293</span>  <span class="keywordflow">switch</span> (choice)</div>
+<div class="line"><span class="lineno">  294</span>  {</div>
+<div class="line"><span class="lineno">  295</span>    <span class="keywordflow">case</span> 2: <span class="comment">/* select existing */</span></div>
+<div class="line"><span class="lineno">  296</span>      rc = <a class="code hl_function" href="gpgme_8c.html#a2894737dbf5865d40fa9807c20d9a51f">mutt_autocrypt_gpgme_select_key</a>(keyid, keydata);</div>
+<div class="line"><span class="lineno">  297</span>      <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  298</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  299</span> </div>
+<div class="line"><span class="lineno">  300</span>      <span class="comment">/* L10N: During autocrypt account creation, if selecting an existing key fails</span></div>
+<div class="line"><span class="lineno">  301</span><span class="comment">         for some reason, we prompt to see if they want to create a key instead.  */</span></div>
+<div class="line"><span class="lineno">  302</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="question_2lib_8h.html#ae359ab94312d9ae6bcad5ab5b52bd529">query_yesorno</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Create a new GPG key for this account, instead?&quot;</span>), <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a>) != <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a>)</div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  304</span>      <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
+<div class="line"><span class="lineno">  305</span> </div>
+<div class="line"><span class="lineno">  306</span>    <span class="keywordflow">case</span> 1: <span class="comment">/* create new */</span></div>
+<div class="line"><span class="lineno">  307</span>      rc = <a class="code hl_function" href="gpgme_8c.html#a183f2f1eff311c4f49f5552966804fdf">mutt_autocrypt_gpgme_create_key</a>(addr, keyid, keydata);</div>
+<div class="line"><span class="lineno">  308</span>  }</div>
+<div class="line"><span class="lineno">  309</span> </div>
+<div class="line"><span class="lineno">  310</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  311</span>}</div>
+<div class="ttc" id="agpgme_8c_html_a183f2f1eff311c4f49f5552966804fdf"><div class="ttname"><a href="gpgme_8c.html#a183f2f1eff311c4f49f5552966804fdf">mutt_autocrypt_gpgme_create_key</a></div><div class="ttdeci">int mutt_autocrypt_gpgme_create_key(struct Address *addr, struct Buffer *keyid, struct Buffer *keydata)</div><div class="ttdoc">Create a GPGME key.</div><div class="ttdef"><b>Definition:</b> <a href="gpgme_8c_source.html#l00158">gpgme.c:158</a></div></div>
+<div class="ttc" id="agpgme_8c_html_a2894737dbf5865d40fa9807c20d9a51f"><div class="ttname"><a href="gpgme_8c.html#a2894737dbf5865d40fa9807c20d9a51f">mutt_autocrypt_gpgme_select_key</a></div><div class="ttdeci">int mutt_autocrypt_gpgme_select_key(struct Buffer *keyid, struct Buffer *keydata)</div><div class="ttdoc">Select a Autocrypt key.</div><div class="ttdef"><b>Definition:</b> <a href="gpgme_8c_source.html#l00232">gpgme.c:232</a></div></div>
 <div class="ttc" id="agroup__gui__mw_html_gad530cebf7d9c54c55a609509acc56f70"><div class="ttname"><a href="group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70">mw_multi_choice</a></div><div class="ttdeci">int mw_multi_choice(const char *prompt, const char *letters)</div><div class="ttdoc">Offer the user a multiple choice question -.</div><div class="ttdef"><b>Definition:</b> <a href="question_8c_source.html#l00064">question.c:64</a></div></div>
 <div class="ttc" id="amutt_2lib_8h_html_a0cf2d82c57a09723ab59e6f4dcc45b84"><div class="ttname"><a href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a></div><div class="ttdeci">#define FALLTHROUGH</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2lib_8h_source.html#l00111">lib.h:111</a></div></div>
 <div class="ttc" id="aquad_8h_html_a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7"><div class="ttname"><a href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a></div><div class="ttdeci">@ MUTT_YES</div><div class="ttdoc">User answered 'Yes', or assume 'Yes'.</div><div class="ttdef"><b>Definition:</b> <a href="quad_8h_source.html#l00039">quad.h:39</a></div></div>
@@ -803,41 +804,41 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00319">319</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  320</span>{</div>
-<div class="line"><span class="lineno">  321</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">  322</span>  gpgme_ctx_t ctx = NULL;</div>
-<div class="line"><span class="lineno">  323</span>  gpgme_data_t dh = NULL;</div>
-<div class="line"><span class="lineno">  324</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *raw_keydata = NULL;</div>
-<div class="line"><span class="lineno">  325</span> </div>
-<div class="line"><span class="lineno">  326</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
-<div class="line"><span class="lineno">  327</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  328</span> </div>
-<div class="line"><span class="lineno">  329</span>  raw_keydata = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  330</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a>(raw_keydata, keydata))</div>
-<div class="line"><span class="lineno">  331</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>  <span class="keywordflow">if</span> (gpgme_data_new_from_mem(&amp;dh, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(raw_keydata), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(raw_keydata), 0))</div>
-<div class="line"><span class="lineno">  334</span>  {</div>
-<div class="line"><span class="lineno">  335</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  336</span>  }</div>
-<div class="line"><span class="lineno">  337</span> </div>
-<div class="line"><span class="lineno">  338</span>  <span class="keywordflow">if</span> (gpgme_op_import(ctx, dh))</div>
-<div class="line"><span class="lineno">  339</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  340</span> </div>
-<div class="line"><span class="lineno">  341</span>  gpgme_import_result_t result = gpgme_op_import_result(ctx);</div>
-<div class="line"><span class="lineno">  342</span>  <span class="keywordflow">if</span> (!result-&gt;imports || !result-&gt;imports-&gt;fpr)</div>
-<div class="line"><span class="lineno">  343</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  344</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(keyid, result-&gt;imports-&gt;fpr);</div>
-<div class="line"><span class="lineno">  345</span> </div>
-<div class="line"><span class="lineno">  346</span>  rc = 0;</div>
-<div class="line"><span class="lineno">  347</span> </div>
-<div class="line"><span class="lineno">  348</span>cleanup:</div>
-<div class="line"><span class="lineno">  349</span>  gpgme_data_release(dh);</div>
-<div class="line"><span class="lineno">  350</span>  gpgme_release(ctx);</div>
-<div class="line"><span class="lineno">  351</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;raw_keydata);</div>
-<div class="line"><span class="lineno">  352</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  353</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00320">320</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  321</span>{</div>
+<div class="line"><span class="lineno">  322</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">  323</span>  gpgme_ctx_t ctx = NULL;</div>
+<div class="line"><span class="lineno">  324</span>  gpgme_data_t dh = NULL;</div>
+<div class="line"><span class="lineno">  325</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *raw_keydata = NULL;</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
+<div class="line"><span class="lineno">  328</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  329</span> </div>
+<div class="line"><span class="lineno">  330</span>  raw_keydata = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  331</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a>(raw_keydata, keydata))</div>
+<div class="line"><span class="lineno">  332</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  333</span> </div>
+<div class="line"><span class="lineno">  334</span>  <span class="keywordflow">if</span> (gpgme_data_new_from_mem(&amp;dh, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(raw_keydata), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(raw_keydata), 0))</div>
+<div class="line"><span class="lineno">  335</span>  {</div>
+<div class="line"><span class="lineno">  336</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  337</span>  }</div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>  <span class="keywordflow">if</span> (gpgme_op_import(ctx, dh))</div>
+<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>  gpgme_import_result_t result = gpgme_op_import_result(ctx);</div>
+<div class="line"><span class="lineno">  343</span>  <span class="keywordflow">if</span> (!result-&gt;imports || !result-&gt;imports-&gt;fpr)</div>
+<div class="line"><span class="lineno">  344</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  345</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(keyid, result-&gt;imports-&gt;fpr);</div>
+<div class="line"><span class="lineno">  346</span> </div>
+<div class="line"><span class="lineno">  347</span>  rc = 0;</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>cleanup:</div>
+<div class="line"><span class="lineno">  350</span>  gpgme_data_release(dh);</div>
+<div class="line"><span class="lineno">  351</span>  gpgme_release(ctx);</div>
+<div class="line"><span class="lineno">  352</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;raw_keydata);</div>
+<div class="line"><span class="lineno">  353</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  354</span>}</div>
 <div class="ttc" id="abase64_8c_html_a768e7c625e7318c12cfe37bc713d365c"><div class="ttname"><a href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a></div><div class="ttdeci">int mutt_b64_buffer_decode(struct Buffer *buf, const char *in)</div><div class="ttdoc">Convert null-terminated base64 string to raw bytes.</div><div class="ttdef"><b>Definition:</b> <a href="base64_8c_source.html#l00216">base64.c:216</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a2914dc2d9a9d77e4c9970b4249be9370"><div class="ttname"><a href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a></div><div class="ttdeci">size_t buf_len(const struct Buffer *buf)</div><div class="ttdoc">Calculate the length of a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00490">buffer.c:490</a></div></div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -889,30 +890,30 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00360">360</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  361</span>{</div>
-<div class="line"><span class="lineno">  362</span>  <span class="keywordtype">bool</span> rc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  363</span>  gpgme_ctx_t ctx = NULL;</div>
-<div class="line"><span class="lineno">  364</span>  gpgme_key_t key = NULL;</div>
-<div class="line"><span class="lineno">  365</span> </div>
-<div class="line"><span class="lineno">  366</span>  <span class="keywordflow">if</span> (!keyid)</div>
-<div class="line"><span class="lineno">  367</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  368</span> </div>
-<div class="line"><span class="lineno">  369</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
-<div class="line"><span class="lineno">  370</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  371</span> </div>
-<div class="line"><span class="lineno">  372</span>  <span class="keywordflow">if</span> (gpgme_get_key(ctx, keyid, &amp;key, 0))</div>
-<div class="line"><span class="lineno">  373</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  374</span> </div>
-<div class="line"><span class="lineno">  375</span>  rc = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  376</span>  <span class="keywordflow">if</span> (key-&gt;revoked || key-&gt;expired || key-&gt;disabled || key-&gt;invalid || !key-&gt;can_encrypt)</div>
-<div class="line"><span class="lineno">  377</span>    rc = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  378</span> </div>
-<div class="line"><span class="lineno">  379</span>cleanup:</div>
-<div class="line"><span class="lineno">  380</span>  gpgme_key_unref(key);</div>
-<div class="line"><span class="lineno">  381</span>  gpgme_release(ctx);</div>
-<div class="line"><span class="lineno">  382</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  383</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gpgme_8c_source.html#l00361">361</a> of file <a class="el" href="gpgme_8c_source.html">gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  362</span>{</div>
+<div class="line"><span class="lineno">  363</span>  <span class="keywordtype">bool</span> rc = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  364</span>  gpgme_ctx_t ctx = NULL;</div>
+<div class="line"><span class="lineno">  365</span>  gpgme_key_t key = NULL;</div>
+<div class="line"><span class="lineno">  366</span> </div>
+<div class="line"><span class="lineno">  367</span>  <span class="keywordflow">if</span> (!keyid)</div>
+<div class="line"><span class="lineno">  368</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  369</span> </div>
+<div class="line"><span class="lineno">  370</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="gpgme_8c.html#aa667cdd7c0982ff566f8e521849e2341">create_gpgme_context</a>(&amp;ctx))</div>
+<div class="line"><span class="lineno">  371</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>  <span class="keywordflow">if</span> (gpgme_get_key(ctx, keyid, &amp;key, 0))</div>
+<div class="line"><span class="lineno">  374</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>  rc = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  377</span>  <span class="keywordflow">if</span> (key-&gt;revoked || key-&gt;expired || key-&gt;disabled || key-&gt;invalid || !key-&gt;can_encrypt)</div>
+<div class="line"><span class="lineno">  378</span>    rc = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  379</span> </div>
+<div class="line"><span class="lineno">  380</span>cleanup:</div>
+<div class="line"><span class="lineno">  381</span>  gpgme_key_unref(key);</div>
+<div class="line"><span class="lineno">  382</span>  gpgme_release(ctx);</div>
+<div class="line"><span class="lineno">  383</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  384</span>}</div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">

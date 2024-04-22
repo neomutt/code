@@ -14,7 +14,7 @@ var gnutls_8c =
     [ "gnutls_protocol_set_priority", "gnutls_8c.html#a523d86c3823a89ce24cd298ca3c6cb5b", null ],
     [ "tls_init", "gnutls_8c.html#a7fb79e9e2b622f5f50deb486d5efe0d4", null ],
     [ "tls_verify_peers", "gnutls_8c.html#a3d0c68a01f6632452a1d0fb8346634a7", null ],
-    [ "tls_fingerprint", "gnutls_8c.html#a8239964b8dfceb6044efcd2e7d782460", null ],
+    [ "tls_fingerprint", "gnutls_8c.html#a7d8f351e701bfe0e99522b510d6c482e", null ],
     [ "tls_check_stored_hostname", "gnutls_8c.html#a2e7613e6664e42d7fbc4cc7dea6a0de6", null ],
     [ "tls_compare_certificates", "gnutls_8c.html#a5f83fcf416e283f9cb51ed8e2187b0ba", null ],
     [ "tls_check_preauth", "gnutls_8c.html#a05268b51fa6e96dd8ac0e40630b2b316", null ],

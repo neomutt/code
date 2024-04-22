@@ -1,5 +1,7 @@
 var NAVTREEINDEX25 =
 {
+"lib_store.html":[49],
+"lib_store.html#autotoc_md130":[0],
 "lib_store.html#autotoc_md131":[1],
 "list_8c.html":[2,0,33,23],
 "list_8c.html#a47252e2b00de607c64a5fec8dc16058d":[2,0,33,23,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX25 =
 "mapping_8c_source.html":[2,0,33,27],
 "mapping_8h.html":[2,0,33,28],
 "mapping_8h.html#a346975e1ede6cea364b532b3a5a0e488":[2,0,33,28,3],
-"mapping_8h.html#a7fbce597ae32241423b64dad5a0173a3":[2,0,33,28,2],
-"mapping_8h.html#ae52d375da6dc3039d2341ae4ace4f557":[2,0,33,28,1],
-"mapping_8h_source.html":[2,0,33,28]
+"mapping_8h.html#a7fbce597ae32241423b64dad5a0173a3":[2,0,33,28,2]
 };

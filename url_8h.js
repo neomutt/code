@@ -24,6 +24,6 @@ var url_8h =
     [ "url_parse", "url_8h.html#a3030b91052fa1a5fee0ca7b1d4d94f93", null ],
     [ "url_pct_decode", "url_8h.html#a04f548a80bf78fcc748e6dd70a0059b2", null ],
     [ "url_pct_encode", "url_8h.html#ad489a551217fd22a942ae19d009f3342", null ],
-    [ "url_tobuffer", "url_8h.html#af8cf93b4a923d8ae776623bb33736cf7", null ],
-    [ "url_tostring", "url_8h.html#a8b2aeef02a9aabe9ef62335a2450256a", null ]
+    [ "url_tobuffer", "url_8h.html#afe5b6afac9808f35417e66bde1144cdd", null ],
+    [ "url_tostring", "url_8h.html#a7e27c7f574978cd687aa470ef40ba240", null ]
 ];

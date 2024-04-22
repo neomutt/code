@@ -8,7 +8,7 @@ var url_8c =
     [ "url_pct_decode", "url_8c.html#a04f548a80bf78fcc748e6dd70a0059b2", null ],
     [ "url_check_scheme", "url_8c.html#a8f42b58bf1296286da36c329472f135f", null ],
     [ "url_parse", "url_8c.html#a3030b91052fa1a5fee0ca7b1d4d94f93", null ],
-    [ "url_tobuffer", "url_8c.html#a5de0b39762cd0581effe6cdbc21b6a31", null ],
-    [ "url_tostring", "url_8c.html#a4cdc82c89b3fa52b384a16ef0e971d68", null ],
+    [ "url_tobuffer", "url_8c.html#acd1ba16c11584d69dc3f5ba285c67b1c", null ],
+    [ "url_tostring", "url_8c.html#aa114f683b940e0773ca758b49a18a2a7", null ],
     [ "UrlMap", "url_8c.html#a9ba3af95d58f8c1dc200b25aa6283732", null ]
 ];

@@ -1,7 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"structNntpEmailData.html":[1,0,179],
-"structNntpEmailData.html#a664cb7fd06434c6a0769467038b99f8a":[1,0,179,0],
 "structNntpEmailData.html#ac49b13d2c360909942f177f0af5626d1":[1,0,179,1],
 "structNntpMboxData.html":[1,0,180],
 "structNntpMboxData.html#a2869a3060aa018d6c8e8e2b6ab6cfa21":[1,0,180,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX48 =
 "structProgressWindowData.html#ad91e1ea582fc38283e8c123a2efd24a8":[1,0,214,9],
 "structProgressWindowData.html#aef0e91d4874573bf5a646ec672e00677":[1,0,214,2],
 "structQuoteStyle.html":[1,0,215],
-"structQuoteStyle.html#a11387de886749fd8b7611388c94ef53d":[1,0,215,1]
+"structQuoteStyle.html#a11387de886749fd8b7611388c94ef53d":[1,0,215,1],
+"structQuoteStyle.html#a29a9027fbdb4c775169c25ec144ea5f9":[1,0,215,5],
+"structQuoteStyle.html#a3af6cc0eb9033d74b08a87bc2a50cba2":[1,0,215,6]
 };

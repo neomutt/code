@@ -3,7 +3,7 @@ var imap_8c =
     [ "imap_init", "imap_8c.html#afa7993bff64be4e3f095e7644493c902", null ],
     [ "check_capabilities", "imap_8c.html#aaecd74a7bdcaae43f8a404d59607bb0b", null ],
     [ "get_flags", "imap_8c.html#ad0c94b5dea653ee8d1b5974a80c772a3", null ],
-    [ "set_flag", "imap_8c.html#a17330aae0c21116a3dc7ff5eff621284", null ],
+    [ "set_flag", "imap_8c.html#ae14b10a5f378e027cc7024701d5486f9", null ],
     [ "compare_flags_for_copy", "imap_8c.html#afb984879ac7f2ebaef80791fdf7e7adb", null ],
     [ "select_email_uids", "imap_8c.html#ac30d8241e3cfecce5ba3eb4baf7644c1", null ],
     [ "sync_helper", "imap_8c.html#a9cc2c6a5a8293ccac3d34317d12a75fd", null ],

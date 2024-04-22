@@ -24,6 +24,7 @@ var commands_8c =
     [ "parse_ignore", "group__command__parse.html#ga7e13ee60b25270bae0f1fed40024ef35", null ],
     [ "parse_lists", "group__command__parse.html#gad0b14a11196da1956b1e8501563710e0", null ],
     [ "mailbox_add", "commands_8c.html#a17165848d4e2e997a3e7ee73ab38b17e", null ],
+    [ "mailbox_add_simple", "commands_8c.html#ac986cda38f3082d420d4056efc824ac3", null ],
     [ "parse_mailboxes", "group__command__parse.html#ga8769157e701120c7855feed61fa6741f", null ],
     [ "parse_my_hdr", "group__command__parse.html#gadd5dbbf0bd35a9aa93a19537a939aafe", null ],
     [ "set_dump", "commands_8c.html#a11120414f38e09be3cd3c29a72893f4f", null ],

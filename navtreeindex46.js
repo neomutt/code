@@ -1,7 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"structHistory.html#a586cfe2bee4f1b7ee52280a147a419b1":[1,0,112,0],
-"structHistoryData.html":[1,0,113],
 "structHistoryData.html#a02d1bbc6e94d0129d652609c00f9c8f9":[1,0,113,3],
 "structHistoryData.html#a12b26bc712033c012fe7eb945ff48679":[1,0,113,4],
 "structHistoryData.html#a272eff0f35f9b5dbd22980add1777abd":[1,0,113,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX46 =
 "structMailcapEntry.html#af97dc2368515b5451ce9212d681f30f4":[1,0,141,11],
 "structMaildirEmailData.html":[1,0,142],
 "structMaildirEmailData.html#ad30ba2d02862be9fdc092574efe58607":[1,0,142,0],
-"structMaildirMboxData.html":[1,0,143]
+"structMaildirMboxData.html":[1,0,143],
+"structMaildirMboxData.html#a432d4f7db70109845edca85319390763":[1,0,143,1],
+"structMaildirMboxData.html#a5488c7ef8ecc266e14a131ba450c73e3":[1,0,143,2]
 };

@@ -9,7 +9,7 @@ var openssl_8c =
     [ "ssl_passwd_cb", "openssl_8c.html#a68682ecd35358cb52878d8bcf0724e93", null ],
     [ "ssl_socket_open_err", "group__connection__open.html#ga6c36f9660a30f073893f32139a8bfa04", null ],
     [ "x509_get_part", "openssl_8c.html#a1599982dabbbc5933b587dbb07c95b15", null ],
-    [ "x509_fingerprint", "openssl_8c.html#add87edd5fed87dd2b4845b43f4a588d3", null ],
+    [ "x509_fingerprint", "openssl_8c.html#a5693f6c49d75be39538f705796656511", null ],
     [ "asn1time_to_string", "openssl_8c.html#a16277434f03da3b852516c19d3de7cda", null ],
     [ "certificates_equal", "openssl_8c.html#a7f6abab1b060f3eb73d6455c90847e39", null ],
     [ "check_certificate_expiration", "openssl_8c.html#ad29824f6d037bbefe08d5551fafabe74", null ],

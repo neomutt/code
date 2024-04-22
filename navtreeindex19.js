@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"group__mx__msg__close.html#gac0fa0fcade68b9c6216cb1c08baa24da":[50,15,11,2],
+"group__mx__msg__close.html#gac8114a1b39313cf9d098b94aefcef468":[50,15,11,6],
 "group__mx__msg__commit.html":[50,15,10],
 "group__mx__msg__commit.html#ga1226858cc62e436a52cf0c64b97f6fdb":[50,15,10,1],
 "group__mx__msg__commit.html#ga449d225488040512f5696e4f76f36694":[50,15,10,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "group__sort__api.html#ga4883a664f974b472e5314f41826835ad":[50,36,37],
 "group__sort__api.html#ga4927fda82940de1da3085a1bbeaa0219":[50,36,29],
 "group__sort__api.html#ga4ce75034c4c32b8ee744c255ce912159":[50,36,21],
-"group__sort__api.html#ga558fbf1950586f392f095904b968e8fb":[50,36,32],
-"group__sort__api.html#ga5f6c0952882d55be931576a09c8d8367":[50,36,25],
-"group__sort__api.html#ga651db178badbd268c4b8742ab3a8ba6d":[50,36,28]
+"group__sort__api.html#ga558fbf1950586f392f095904b968e8fb":[50,36,32]
 };

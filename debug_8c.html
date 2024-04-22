@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-03-23-147-g885fbc</span>
+   &#160;<span id="projectnumber">2024-04-16-36-g75b6fb</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -516,34 +516,40 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Dump all the Merged colours. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td><a class="el" href="structBuffer.html" title="String manipulation buffer.">Buffer</a> for result </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00176">176</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  177</span>{</div>
-<div class="line"><span class="lineno">  178</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="queue_8h.html#ac3c9da7ac712eacbbad5cc54d7a3477e">TAILQ_EMPTY</a>(&amp;<a class="code hl_variable" href="debug_8c.html#ab27899f662b530750ec723e9928a3c39">MergedColors</a>))</div>
-<div class="line"><span class="lineno">  179</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *swatch = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  182</span>  <span class="keywordtype">char</span> color_fg[64] = { 0 };</div>
-<div class="line"><span class="lineno">  183</span>  <span class="keywordtype">char</span> color_bg[64] = { 0 };</div>
-<div class="line"><span class="lineno">  184</span> </div>
-<div class="line"><span class="lineno">  185</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;# Merged Colors\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  186</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAttrColor.html">AttrColor</a> *ac = NULL;</div>
-<div class="line"><span class="lineno">  187</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(ac, &amp;<a class="code hl_variable" href="debug_8c.html#ab27899f662b530750ec723e9928a3c39">MergedColors</a>, entries)</div>
-<div class="line"><span class="lineno">  188</span>  {</div>
-<div class="line"><span class="lineno">  189</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structCursesColor.html">CursesColor</a> *cc = ac-&gt;<a class="code hl_variable" href="structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9">curses_color</a>;</div>
-<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">if</span> (!cc)</div>
-<div class="line"><span class="lineno">  191</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  192</span> </div>
-<div class="line"><span class="lineno">  193</span>    <a class="code hl_function" href="color_2dump_8c.html#a5250f3ed62ecfbd2f086045b249aa341">color_log_color_attrs</a>(ac, swatch);</div>
-<div class="line"><span class="lineno">  194</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;# %-30s %-16s %-16s # %s\n&quot;</span>, <a class="code hl_function" href="color_2dump_8c.html#aa6eb8ddd98d29bf3fe5f95a5ed3fec70">color_log_attrs_list</a>(ac-&gt;<a class="code hl_variable" href="structAttrColor.html#ad6b237f9a9be9fc2b8b513f51ca5b2b4">attrs</a>),</div>
-<div class="line"><span class="lineno">  195</span>                   <a class="code hl_function" href="color_2dump_8c.html#a668b7cab04f7e8894606daa911c5d488">color_log_name</a>(color_fg, <span class="keyword">sizeof</span>(color_fg), &amp;ac-&gt;<a class="code hl_variable" href="structAttrColor.html#a6a3d8e5239742c70675addea01049535">fg</a>),</div>
-<div class="line"><span class="lineno">  196</span>                   <a class="code hl_function" href="color_2dump_8c.html#a668b7cab04f7e8894606daa911c5d488">color_log_name</a>(color_bg, <span class="keyword">sizeof</span>(color_bg), &amp;ac-&gt;<a class="code hl_variable" href="structAttrColor.html#a1d8b663b7d66d895ff1ec911ca7e9d2d">bg</a>),</div>
-<div class="line"><span class="lineno">  197</span>                   <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(swatch));</div>
-<div class="line"><span class="lineno">  198</span>  }</div>
-<div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  201</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;swatch);</div>
-<div class="line"><span class="lineno">  202</span>}</div>
+<p class="definition">Definition at line <a class="el" href="debug_8c_source.html#l00177">177</a> of file <a class="el" href="debug_8c_source.html">debug.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>{</div>
+<div class="line"><span class="lineno">  179</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="queue_8h.html#ac3c9da7ac712eacbbad5cc54d7a3477e">TAILQ_EMPTY</a>(&amp;<a class="code hl_variable" href="debug_8c.html#ab27899f662b530750ec723e9928a3c39">MergedColors</a>))</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *swatch = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  183</span>  <span class="keywordtype">char</span> color_fg[64] = { 0 };</div>
+<div class="line"><span class="lineno">  184</span>  <span class="keywordtype">char</span> color_bg[64] = { 0 };</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;# Merged Colors\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  187</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAttrColor.html">AttrColor</a> *ac = NULL;</div>
+<div class="line"><span class="lineno">  188</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(ac, &amp;<a class="code hl_variable" href="debug_8c.html#ab27899f662b530750ec723e9928a3c39">MergedColors</a>, entries)</div>
+<div class="line"><span class="lineno">  189</span>  {</div>
+<div class="line"><span class="lineno">  190</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structCursesColor.html">CursesColor</a> *cc = ac-&gt;<a class="code hl_variable" href="structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9">curses_color</a>;</div>
+<div class="line"><span class="lineno">  191</span>    <span class="keywordflow">if</span> (!cc)</div>
+<div class="line"><span class="lineno">  192</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>    <a class="code hl_function" href="color_2dump_8c.html#a5250f3ed62ecfbd2f086045b249aa341">color_log_color_attrs</a>(ac, swatch);</div>
+<div class="line"><span class="lineno">  195</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;# %-30s %-16s %-16s # %s\n&quot;</span>, <a class="code hl_function" href="color_2dump_8c.html#aa6eb8ddd98d29bf3fe5f95a5ed3fec70">color_log_attrs_list</a>(ac-&gt;<a class="code hl_variable" href="structAttrColor.html#ad6b237f9a9be9fc2b8b513f51ca5b2b4">attrs</a>),</div>
+<div class="line"><span class="lineno">  196</span>                   <a class="code hl_function" href="color_2dump_8c.html#a668b7cab04f7e8894606daa911c5d488">color_log_name</a>(color_fg, <span class="keyword">sizeof</span>(color_fg), &amp;ac-&gt;<a class="code hl_variable" href="structAttrColor.html#a6a3d8e5239742c70675addea01049535">fg</a>),</div>
+<div class="line"><span class="lineno">  197</span>                   <a class="code hl_function" href="color_2dump_8c.html#a668b7cab04f7e8894606daa911c5d488">color_log_name</a>(color_bg, <span class="keyword">sizeof</span>(color_bg), &amp;ac-&gt;<a class="code hl_variable" href="structAttrColor.html#a1d8b663b7d66d895ff1ec911ca7e9d2d">bg</a>),</div>
+<div class="line"><span class="lineno">  198</span>                   <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(swatch));</div>
+<div class="line"><span class="lineno">  199</span>  }</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  202</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;swatch);</div>
+<div class="line"><span class="lineno">  203</span>}</div>
 <div class="ttc" id="adebug_8c_html_ab27899f662b530750ec723e9928a3c39"><div class="ttname"><a href="debug_8c.html#ab27899f662b530750ec723e9928a3c39">MergedColors</a></div><div class="ttdeci">struct AttrColorList MergedColors</div><div class="ttdoc">Array of user colours.</div><div class="ttdef"><b>Definition:</b> <a href="merged_8c_source.html#l00039">merged.c:39</a></div></div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

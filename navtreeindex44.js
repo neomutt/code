@@ -1,7 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"structComposeBarData.html":[1,0,40],
-"structComposeBarData.html#aaafa399158993b44bd02a851d52374b2":[1,0,40,0],
 "structComposeFunction.html":[1,0,41],
 "structComposeFunction.html#a3e038466b9f4bc6f6066eb9aa9de7cd2":[1,0,41,0],
 "structComposeFunction.html#ae3c55b1212608e09e4df2198389a52b5":[1,0,41,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX44 =
 "structEnterWindowData.html#a0a288cf2947dfc2983a21990622db2a0":[1,0,68,13],
 "structEnterWindowData.html#a0d1d16a2433c03ec4d57120213be5a4b":[1,0,68,5],
 "structEnterWindowData.html#a45c3629783dc9dde8f9ba4d30b86f1b0":[1,0,68,1],
-"structEnterWindowData.html#a46bc2b27c9f2c17d0d560f77eeac62ca":[1,0,68,16]
+"structEnterWindowData.html#a46bc2b27c9f2c17d0d560f77eeac62ca":[1,0,68,16],
+"structEnterWindowData.html#a566590e090c8d820a17ea62cee1dc2f7":[1,0,68,15],
+"structEnterWindowData.html#a5c5d2444bc66cbfd855e3e05e6373d9d":[1,0,68,0]
 };
