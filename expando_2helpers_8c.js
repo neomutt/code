@@ -5,5 +5,6 @@ var expando_2helpers_8c =
     [ "skip_until_ch", "expando_2helpers_8c.html#a1f2ace18285efd6b5743267f71e1a673", null ],
     [ "is_valid_classic_expando", "expando_2helpers_8c.html#a6b97cebbc2495ab4b53fba5ed616dcd1", null ],
     [ "skip_until_classic_expando", "expando_2helpers_8c.html#a4a71878fe0913f77d5edeba400fe2cbb", null ],
-    [ "skip_classic_expando", "expando_2helpers_8c.html#a449cba02a091894b108135021636e65a", null ]
+    [ "skip_classic_expando", "expando_2helpers_8c.html#a449cba02a091894b108135021636e65a", null ],
+    [ "buf_lower_special", "expando_2helpers_8c.html#ad8593bfe60a41ea67368b10cb48ae820", null ]
 ];

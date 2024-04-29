@@ -5,6 +5,8 @@ var dir_da89c73ec01786166a3e0981c39282fb =
     [ "domain.h", "domain_8h.html", "domain_8h" ],
     [ "expando.c", "expando_8c.html", "expando_8c" ],
     [ "expando.h", "expando_8h.html", "expando_8h" ],
+    [ "filter.c", "expando_2filter_8c.html", "expando_2filter_8c" ],
+    [ "filter.h", "expando_2filter_8h.html", "expando_2filter_8h" ],
     [ "format.c", "format_8c.html", "format_8c" ],
     [ "format.h", "format_8h.html", "format_8h" ],
     [ "helpers.c", "expando_2helpers_8c.html", "expando_2helpers_8c" ],

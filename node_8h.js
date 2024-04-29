@@ -18,5 +18,7 @@ var node_8h =
     [ "node_tree_free", "node_8h.html#a849256dabbfa0959894d2bcdd162af2d", null ],
     [ "node_append", "node_8h.html#abb957887ad483993f9ef1eec7f705eb6", null ],
     [ "node_get_child", "node_8h.html#aaa1e964bc329276199079846c89efb65", null ],
-    [ "node_set_child", "node_8h.html#a7c8ff098ea7b5f5fca7968ae9b516855", null ]
+    [ "node_set_child", "node_8h.html#a7c8ff098ea7b5f5fca7968ae9b516855", null ],
+    [ "node_first", "node_8h.html#aa76af1beb7c7c027be14ee65a39f39ec", null ],
+    [ "node_last", "node_8h.html#ac59492f20e56ef399ea23b0742dd814d", null ]
 ];

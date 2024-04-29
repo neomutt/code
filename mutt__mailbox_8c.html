@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-04-16-36-g75b6fb</span>
+   &#160;<span id="projectnumber">2024-04-25-1-g3de005</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -707,42 +707,46 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  255</span>  <span class="keyword">struct </span>MailboxList ml = <a class="code hl_define" href="queue_8h.html#a3d41ce2c3f1dd21c0d4051d13204c321">STAILQ_HEAD_INITIALIZER</a>(ml);</div>
 <div class="line"><span class="lineno">  256</span>  <a class="code hl_function" href="neomutt_8c.html#a74862fb7702c895aaacaebb097af8bb2">neomutt_mailboxlist_get_all</a>(&amp;ml, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dab19ce39e3d79c72a2988457640553489">MUTT_MAILBOX_ANY</a>);</div>
 <div class="line"><span class="lineno">  257</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxNode.html">MailboxNode</a> *np = NULL;</div>
-<div class="line"><span class="lineno">  258</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;ml, entries)</div>
-<div class="line"><span class="lineno">  259</span>  {</div>
-<div class="line"><span class="lineno">  260</span>    <span class="comment">/* Is there new mail in this mailbox? */</span></div>
-<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#a185d46a268fdf1e34ee061a28d51414e">has_new</a> || (have_unnotified &amp;&amp; np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c">notified</a>))</div>
-<div class="line"><span class="lineno">  262</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  263</span> </div>
-<div class="line"><span class="lineno">  264</span>    <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>));</div>
-<div class="line"><span class="lineno">  265</span>    <a class="code hl_function" href="muttlib_8c.html#a777680c324667521d8c486051c22fe10">buf_pretty_mailbox</a>(path);</div>
-<div class="line"><span class="lineno">  266</span> </div>
-<div class="line"><span class="lineno">  267</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(mailboxlist))</div>
-<div class="line"><span class="lineno">  268</span>      <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(mailboxlist, <span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span>    <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c">notified</a>)</div>
-<div class="line"><span class="lineno">  271</span>    {</div>
-<div class="line"><span class="lineno">  272</span>      np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c">notified</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  273</span>      <a class="code hl_variable" href="mutt__mailbox_8c.html#a3851e970bf769f3ed8baedc7def6ffcc">MailboxNotify</a>--;</div>
-<div class="line"><span class="lineno">  274</span>    }</div>
-<div class="line"><span class="lineno">  275</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(mailboxlist, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
-<div class="line"><span class="lineno">  276</span>  }</div>
-<div class="line"><span class="lineno">  277</span>  <a class="code hl_function" href="neomutt_8c.html#a124116674adb30d3bceef08eeaad6905">neomutt_mailboxlist_clear</a>(&amp;ml);</div>
-<div class="line"><span class="lineno">  278</span> </div>
-<div class="line"><span class="lineno">  279</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
-<div class="line"><span class="lineno">  280</span> </div>
-<div class="line"><span class="lineno">  281</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(mailboxlist))</div>
-<div class="line"><span class="lineno">  282</span>  {</div>
-<div class="line"><span class="lineno">  283</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(mailboxlist));</div>
-<div class="line"><span class="lineno">  284</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;mailboxlist);</div>
-<div class="line"><span class="lineno">  285</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  286</span>  }</div>
-<div class="line"><span class="lineno">  287</span> </div>
-<div class="line"><span class="lineno">  288</span>  <span class="comment">/* there were no mailboxes needing to be notified, so clean up since</span></div>
-<div class="line"><span class="lineno">  289</span><span class="comment">    * MailboxNotify has somehow gotten out of sync */</span></div>
-<div class="line"><span class="lineno">  290</span>  <a class="code hl_variable" href="mutt__mailbox_8c.html#a3851e970bf769f3ed8baedc7def6ffcc">MailboxNotify</a> = 0;</div>
-<div class="line"><span class="lineno">  291</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;mailboxlist);</div>
-<div class="line"><span class="lineno">  292</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  293</span>}</div>
+<div class="line"><span class="lineno">  258</span>  <span class="keywordtype">bool</span> any_new = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  259</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;ml, entries)</div>
+<div class="line"><span class="lineno">  260</span>  {</div>
+<div class="line"><span class="lineno">  261</span>    <span class="comment">/* Is there new mail in this mailbox? */</span></div>
+<div class="line"><span class="lineno">  262</span>    <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#a185d46a268fdf1e34ee061a28d51414e">has_new</a> || (have_unnotified &amp;&amp; np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c">notified</a>))</div>
+<div class="line"><span class="lineno">  263</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span>    <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>));</div>
+<div class="line"><span class="lineno">  266</span>    <a class="code hl_function" href="muttlib_8c.html#a777680c324667521d8c486051c22fe10">buf_pretty_mailbox</a>(path);</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>    <span class="keywordflow">if</span> (any_new)</div>
+<div class="line"><span class="lineno">  269</span>    {</div>
+<div class="line"><span class="lineno">  270</span>      <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(mailboxlist, <span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><span class="lineno">  271</span>    }</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c">notified</a>)</div>
+<div class="line"><span class="lineno">  274</span>    {</div>
+<div class="line"><span class="lineno">  275</span>      np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c">notified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  276</span>      <a class="code hl_variable" href="mutt__mailbox_8c.html#a3851e970bf769f3ed8baedc7def6ffcc">MailboxNotify</a>--;</div>
+<div class="line"><span class="lineno">  277</span>    }</div>
+<div class="line"><span class="lineno">  278</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(mailboxlist, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
+<div class="line"><span class="lineno">  279</span>    any_new = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  280</span>  }</div>
+<div class="line"><span class="lineno">  281</span>  <a class="code hl_function" href="neomutt_8c.html#a124116674adb30d3bceef08eeaad6905">neomutt_mailboxlist_clear</a>(&amp;ml);</div>
+<div class="line"><span class="lineno">  282</span> </div>
+<div class="line"><span class="lineno">  283</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>  <span class="keywordflow">if</span> (any_new)</div>
+<div class="line"><span class="lineno">  286</span>  {</div>
+<div class="line"><span class="lineno">  287</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(mailboxlist));</div>
+<div class="line"><span class="lineno">  288</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;mailboxlist);</div>
+<div class="line"><span class="lineno">  289</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  290</span>  }</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>  <span class="comment">/* there were no mailboxes needing to be notified, so clean up since</span></div>
+<div class="line"><span class="lineno">  293</span><span class="comment">    * MailboxNotify has somehow gotten out of sync */</span></div>
+<div class="line"><span class="lineno">  294</span>  <a class="code hl_variable" href="mutt__mailbox_8c.html#a3851e970bf769f3ed8baedc7def6ffcc">MailboxNotify</a> = 0;</div>
+<div class="line"><span class="lineno">  295</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;mailboxlist);</div>
+<div class="line"><span class="lineno">  296</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  297</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a9924e74ddcb5280ab380e4627d1fba99"><div class="ttname"><a href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a></div><div class="ttdeci">size_t buf_addstr(struct Buffer *buf, const char *s)</div><div class="ttdoc">Add a string to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00225">buffer.c:225</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00394">buffer.c:394</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
@@ -757,7 +761,7 @@ Variables</h2></td></tr>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="mutt__mailbox_8c_ab9927df6282aeabd032cfca3332f4907_cgraph.svg" width="472" height="499"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="mutt__mailbox_8c_ab9927df6282aeabd032cfca3332f4907_cgraph.svg" width="472" height="447"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -795,14 +799,14 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00299">299</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  300</span>{</div>
-<div class="line"><span class="lineno">  301</span>  <span class="keywordflow">if</span> (!m)</div>
-<div class="line"><span class="lineno">  302</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  303</span> </div>
-<div class="line"><span class="lineno">  304</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c">notified</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  305</span>  <a class="code hl_function" href="mutt_2date_8c.html#ae098e85ce5035180d82f99c5e5358d18">mutt_time_now</a>(&amp;m-&gt;<a class="code hl_variable" href="structMailbox.html#ae355489c17bcccdd40768ef3f42dfb39">last_visited</a>);</div>
-<div class="line"><span class="lineno">  306</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00303">303</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  304</span>{</div>
+<div class="line"><span class="lineno">  305</span>  <span class="keywordflow">if</span> (!m)</div>
+<div class="line"><span class="lineno">  306</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  307</span> </div>
+<div class="line"><span class="lineno">  308</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#ac1915d0b0ff602ec1d219b979bfda59c">notified</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  309</span>  <a class="code hl_function" href="mutt_2date_8c.html#ae098e85ce5035180d82f99c5e5358d18">mutt_time_now</a>(&amp;m-&gt;<a class="code hl_variable" href="structMailbox.html#ae355489c17bcccdd40768ef3f42dfb39">last_visited</a>);</div>
+<div class="line"><span class="lineno">  310</span>}</div>
 <div class="ttc" id="amutt_2date_8c_html_ae098e85ce5035180d82f99c5e5358d18"><div class="ttname"><a href="mutt_2date_8c.html#ae098e85ce5035180d82f99c5e5358d18">mutt_time_now</a></div><div class="ttdeci">void mutt_time_now(struct timespec *tp)</div><div class="ttdoc">Set the provided time field to the current time.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2date_8c_source.html#l00479">date.c:479</a></div></div>
 <div class="ttc" id="astructMailbox_html_ae355489c17bcccdd40768ef3f42dfb39"><div class="ttname"><a href="structMailbox.html#ae355489c17bcccdd40768ef3f42dfb39">Mailbox::last_visited</a></div><div class="ttdeci">struct timespec last_visited</div><div class="ttdoc">Time of last exit from this mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00104">mailbox.h:104</a></div></div>
 </div><!-- fragment --><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -874,35 +878,35 @@ Variables</h2></td></tr>
 </dl>
 <p>Given a folder name, find the next incoming folder with new or unread mail. The <a class="el" href="structMailbox.html" title="A mailbox.">Mailbox</a> will be returned and a pretty version of the path put into s. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00317">317</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>{</div>
-<div class="line"><span class="lineno">  319</span>  <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  320</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pass = 0; pass &lt; 2; pass++)</div>
-<div class="line"><span class="lineno">  321</span>  {</div>
-<div class="line"><span class="lineno">  322</span>    <span class="keyword">struct </span>MailboxList ml = <a class="code hl_define" href="queue_8h.html#a3d41ce2c3f1dd21c0d4051d13204c321">STAILQ_HEAD_INITIALIZER</a>(ml);</div>
-<div class="line"><span class="lineno">  323</span>    <a class="code hl_function" href="neomutt_8c.html#a74862fb7702c895aaacaebb097af8bb2">neomutt_mailboxlist_get_all</a>(&amp;ml, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dab19ce39e3d79c72a2988457640553489">MUTT_MAILBOX_ANY</a>);</div>
-<div class="line"><span class="lineno">  324</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxNode.html">MailboxNode</a> *np = NULL;</div>
-<div class="line"><span class="lineno">  325</span>    <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;ml, entries)</div>
-<div class="line"><span class="lineno">  326</span>    {</div>
-<div class="line"><span class="lineno">  327</span>      <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(&amp;np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#aa44c1232018ddd1953039aa857b23ab5">pathbuf</a>);</div>
-<div class="line"><span class="lineno">  328</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_cur = np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>;</div>
-<div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>      <span class="keywordflow">if</span> ((found || (pass &gt; 0)) &amp;&amp; (find_new ? m_cur-&gt;<a class="code hl_variable" href="structMailbox.html#a185d46a268fdf1e34ee061a28d51414e">has_new</a> : m_cur-&gt;<a class="code hl_variable" href="structMailbox.html#af2632307a08699cf251e6599c8a84cac">msg_unread</a> &gt; 0))</div>
-<div class="line"><span class="lineno">  331</span>      {</div>
-<div class="line"><span class="lineno">  332</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(s, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>));</div>
-<div class="line"><span class="lineno">  333</span>        <a class="code hl_function" href="muttlib_8c.html#a777680c324667521d8c486051c22fe10">buf_pretty_mailbox</a>(s);</div>
-<div class="line"><span class="lineno">  334</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_result = np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>;</div>
-<div class="line"><span class="lineno">  335</span>        <a class="code hl_function" href="neomutt_8c.html#a124116674adb30d3bceef08eeaad6905">neomutt_mailboxlist_clear</a>(&amp;ml);</div>
-<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">return</span> m_result;</div>
-<div class="line"><span class="lineno">  337</span>      }</div>
-<div class="line"><span class="lineno">  338</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(s), <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>)))</div>
-<div class="line"><span class="lineno">  339</span>        found = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  340</span>    }</div>
-<div class="line"><span class="lineno">  341</span>    <a class="code hl_function" href="neomutt_8c.html#a124116674adb30d3bceef08eeaad6905">neomutt_mailboxlist_clear</a>(&amp;ml);</div>
-<div class="line"><span class="lineno">  342</span>  }</div>
-<div class="line"><span class="lineno">  343</span> </div>
-<div class="line"><span class="lineno">  344</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  345</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00321">321</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  322</span>{</div>
+<div class="line"><span class="lineno">  323</span>  <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  324</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> pass = 0; pass &lt; 2; pass++)</div>
+<div class="line"><span class="lineno">  325</span>  {</div>
+<div class="line"><span class="lineno">  326</span>    <span class="keyword">struct </span>MailboxList ml = <a class="code hl_define" href="queue_8h.html#a3d41ce2c3f1dd21c0d4051d13204c321">STAILQ_HEAD_INITIALIZER</a>(ml);</div>
+<div class="line"><span class="lineno">  327</span>    <a class="code hl_function" href="neomutt_8c.html#a74862fb7702c895aaacaebb097af8bb2">neomutt_mailboxlist_get_all</a>(&amp;ml, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dab19ce39e3d79c72a2988457640553489">MUTT_MAILBOX_ANY</a>);</div>
+<div class="line"><span class="lineno">  328</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxNode.html">MailboxNode</a> *np = NULL;</div>
+<div class="line"><span class="lineno">  329</span>    <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;ml, entries)</div>
+<div class="line"><span class="lineno">  330</span>    {</div>
+<div class="line"><span class="lineno">  331</span>      <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(&amp;np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#aa44c1232018ddd1953039aa857b23ab5">pathbuf</a>);</div>
+<div class="line"><span class="lineno">  332</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_cur = np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>;</div>
+<div class="line"><span class="lineno">  333</span> </div>
+<div class="line"><span class="lineno">  334</span>      <span class="keywordflow">if</span> ((found || (pass &gt; 0)) &amp;&amp; (find_new ? m_cur-&gt;<a class="code hl_variable" href="structMailbox.html#a185d46a268fdf1e34ee061a28d51414e">has_new</a> : m_cur-&gt;<a class="code hl_variable" href="structMailbox.html#af2632307a08699cf251e6599c8a84cac">msg_unread</a> &gt; 0))</div>
+<div class="line"><span class="lineno">  335</span>      {</div>
+<div class="line"><span class="lineno">  336</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(s, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>));</div>
+<div class="line"><span class="lineno">  337</span>        <a class="code hl_function" href="muttlib_8c.html#a777680c324667521d8c486051c22fe10">buf_pretty_mailbox</a>(s);</div>
+<div class="line"><span class="lineno">  338</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_result = np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>;</div>
+<div class="line"><span class="lineno">  339</span>        <a class="code hl_function" href="neomutt_8c.html#a124116674adb30d3bceef08eeaad6905">neomutt_mailboxlist_clear</a>(&amp;ml);</div>
+<div class="line"><span class="lineno">  340</span>        <span class="keywordflow">return</span> m_result;</div>
+<div class="line"><span class="lineno">  341</span>      }</div>
+<div class="line"><span class="lineno">  342</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(s), <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(np-&gt;<a class="code hl_variable" href="structMailboxNode.html#a01fd253428c6c8c3112711af2eae67f0">mailbox</a>)))</div>
+<div class="line"><span class="lineno">  343</span>        found = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  344</span>    }</div>
+<div class="line"><span class="lineno">  345</span>    <a class="code hl_function" href="neomutt_8c.html#a124116674adb30d3bceef08eeaad6905">neomutt_mailboxlist_clear</a>(&amp;ml);</div>
+<div class="line"><span class="lineno">  346</span>  }</div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  349</span>}</div>
 <div class="ttc" id="amuttlib_8c_html_adde3990a0490dfba609fc94dbdbfd6b3"><div class="ttname"><a href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a></div><div class="ttdeci">void buf_expand_path(struct Buffer *buf)</div><div class="ttdoc">Create the canonical path.</div><div class="ttdef"><b>Definition:</b> <a href="muttlib_8c_source.html#l00328">muttlib.c:328</a></div></div>
 <div class="ttc" id="astructMailbox_html_af2632307a08699cf251e6599c8a84cac"><div class="ttname"><a href="structMailbox.html#af2632307a08699cf251e6599c8a84cac">Mailbox::msg_unread</a></div><div class="ttdeci">int msg_unread</div><div class="ttdoc">Number of unread messages.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00089">mailbox.h:89</a></div></div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -966,24 +970,24 @@ Variables</h2></td></tr>
 </dl>
 <p>Given a folder name, find the next incoming folder with new mail. The <a class="el" href="structMailbox.html" title="A mailbox.">Mailbox</a> will be returned and a pretty version of the path put into s. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00356">356</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  357</span>{</div>
-<div class="line"><span class="lineno">  358</span>  <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(s);</div>
-<div class="line"><span class="lineno">  359</span> </div>
-<div class="line"><span class="lineno">  360</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt__mailbox_8c.html#a46384c63734d157785c2f9db5c9d40f5">mutt_mailbox_check</a>(m_cur, <a class="code hl_define" href="mxapi_8h.html#a20db67a082f406914d798b8caa9686a3">MUTT_MAILBOX_CHECK_NO_FLAGS</a>) &gt; 0)</div>
-<div class="line"><span class="lineno">  361</span>  {</div>
-<div class="line"><span class="lineno">  362</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_res = <a class="code hl_function" href="mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff">find_next_mailbox</a>(s, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  363</span>    <span class="keywordflow">if</span> (m_res)</div>
-<div class="line"><span class="lineno">  364</span>      <span class="keywordflow">return</span> m_res;</div>
-<div class="line"><span class="lineno">  365</span> </div>
-<div class="line"><span class="lineno">  366</span>    <a class="code hl_function" href="mutt__mailbox_8c.html#a46384c63734d157785c2f9db5c9d40f5">mutt_mailbox_check</a>(m_cur, <a class="code hl_define" href="mxapi_8h.html#ae62751826fa9f9b4ea0502a8595ea235">MUTT_MAILBOX_CHECK_FORCE</a>); <span class="comment">/* mailbox was wrong - resync things */</span></div>
-<div class="line"><span class="lineno">  367</span>  }</div>
-<div class="line"><span class="lineno">  368</span> </div>
-<div class="line"><span class="lineno">  369</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(s); <span class="comment">// no folders with new mail</span></div>
-<div class="line"><span class="lineno">  370</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  371</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00360">360</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  361</span>{</div>
+<div class="line"><span class="lineno">  362</span>  <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(s);</div>
+<div class="line"><span class="lineno">  363</span> </div>
+<div class="line"><span class="lineno">  364</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt__mailbox_8c.html#a46384c63734d157785c2f9db5c9d40f5">mutt_mailbox_check</a>(m_cur, <a class="code hl_define" href="mxapi_8h.html#a20db67a082f406914d798b8caa9686a3">MUTT_MAILBOX_CHECK_NO_FLAGS</a>) &gt; 0)</div>
+<div class="line"><span class="lineno">  365</span>  {</div>
+<div class="line"><span class="lineno">  366</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_res = <a class="code hl_function" href="mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff">find_next_mailbox</a>(s, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  367</span>    <span class="keywordflow">if</span> (m_res)</div>
+<div class="line"><span class="lineno">  368</span>      <span class="keywordflow">return</span> m_res;</div>
+<div class="line"><span class="lineno">  369</span> </div>
+<div class="line"><span class="lineno">  370</span>    <a class="code hl_function" href="mutt__mailbox_8c.html#a46384c63734d157785c2f9db5c9d40f5">mutt_mailbox_check</a>(m_cur, <a class="code hl_define" href="mxapi_8h.html#ae62751826fa9f9b4ea0502a8595ea235">MUTT_MAILBOX_CHECK_FORCE</a>); <span class="comment">/* mailbox was wrong - resync things */</span></div>
+<div class="line"><span class="lineno">  371</span>  }</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(s); <span class="comment">// no folders with new mail</span></div>
+<div class="line"><span class="lineno">  374</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  375</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00075">buffer.c:75</a></div></div>
-<div class="ttc" id="amutt__mailbox_8c_html_ae8e833b5ab27ac153c581115f39712ff"><div class="ttname"><a href="mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff">find_next_mailbox</a></div><div class="ttdeci">static struct Mailbox * find_next_mailbox(struct Buffer *s, bool find_new)</div><div class="ttdoc">Find the next mailbox with new or unread mail.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__mailbox_8c_source.html#l00317">mutt_mailbox.c:317</a></div></div>
+<div class="ttc" id="amutt__mailbox_8c_html_ae8e833b5ab27ac153c581115f39712ff"><div class="ttname"><a href="mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff">find_next_mailbox</a></div><div class="ttdeci">static struct Mailbox * find_next_mailbox(struct Buffer *s, bool find_new)</div><div class="ttdoc">Find the next mailbox with new or unread mail.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__mailbox_8c_source.html#l00321">mutt_mailbox.c:321</a></div></div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -1045,17 +1049,17 @@ Variables</h2></td></tr>
 </dl>
 <p>Given a folder name, find the next mailbox with unread mail. The <a class="el" href="structMailbox.html" title="A mailbox.">Mailbox</a> will be returned and a pretty version of the path put into s. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00382">382</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  383</span>{</div>
-<div class="line"><span class="lineno">  384</span>  <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(s);</div>
-<div class="line"><span class="lineno">  385</span> </div>
-<div class="line"><span class="lineno">  386</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_res = <a class="code hl_function" href="mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff">find_next_mailbox</a>(s, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  387</span>  <span class="keywordflow">if</span> (m_res)</div>
-<div class="line"><span class="lineno">  388</span>    <span class="keywordflow">return</span> m_res;</div>
+<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00386">386</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  387</span>{</div>
+<div class="line"><span class="lineno">  388</span>  <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(s);</div>
 <div class="line"><span class="lineno">  389</span> </div>
-<div class="line"><span class="lineno">  390</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(s); <span class="comment">// no folders with new mail</span></div>
-<div class="line"><span class="lineno">  391</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  392</span>}</div>
+<div class="line"><span class="lineno">  390</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_res = <a class="code hl_function" href="mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff">find_next_mailbox</a>(s, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  391</span>  <span class="keywordflow">if</span> (m_res)</div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">return</span> m_res;</div>
+<div class="line"><span class="lineno">  393</span> </div>
+<div class="line"><span class="lineno">  394</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(s); <span class="comment">// no folders with new mail</span></div>
+<div class="line"><span class="lineno">  395</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  396</span>}</div>
 </div><!-- fragment --><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -1111,52 +1115,52 @@ Variables</h2></td></tr>
 </dl>
 <p>Fix up the atime and mtime after mbox/mmdf mailbox was modified according to stat() info taken before a modification. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00402">402</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  403</span>{</div>
-<div class="line"><span class="lineno">  404</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
-<div class="line"><span class="lineno">  405</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structtimespec.html">timespec</a> ts[2] = { { 0 }, { 0 } };</div>
-<div class="line"><span class="lineno">  406</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  407</span>  <span class="keyword">struct </span>utimbuf ut = { 0 };</div>
-<div class="line"><span class="lineno">  408</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  409</span> </div>
-<div class="line"><span class="lineno">  410</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_check_mbox_size = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;check_mbox_size&quot;</span>);</div>
-<div class="line"><span class="lineno">  411</span>  <span class="keywordflow">if</span> (c_check_mbox_size)</div>
-<div class="line"><span class="lineno">  412</span>  {</div>
-<div class="line"><span class="lineno">  413</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = <a class="code hl_function" href="core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570">mailbox_find</a>(path);</div>
-<div class="line"><span class="lineno">  414</span>    <span class="keywordflow">if</span> (m &amp;&amp; !m-&gt;<a class="code hl_variable" href="structMailbox.html#a185d46a268fdf1e34ee061a28d51414e">has_new</a>)</div>
-<div class="line"><span class="lineno">  415</span>      <a class="code hl_function" href="core_2mailbox_8c.html#ab614961b6e97592c0e56c30b47f65f29">mailbox_update</a>(m);</div>
-<div class="line"><span class="lineno">  416</span>  }</div>
-<div class="line"><span class="lineno">  417</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  418</span>  {</div>
-<div class="line"><span class="lineno">  419</span>    <span class="comment">/* fix up the times so mailbox won&#39;t get confused */</span></div>
-<div class="line"><span class="lineno">  420</span>    <span class="keywordflow">if</span> (st-&gt;st_mtime &gt; st-&gt;st_atime)</div>
-<div class="line"><span class="lineno">  421</span>    {</div>
-<div class="line"><span class="lineno">  422</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
-<div class="line"><span class="lineno">  423</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
-<div class="line"><span class="lineno">  424</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_OMIT;</div>
-<div class="line"><span class="lineno">  425</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
-<div class="line"><span class="lineno">  426</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
-<div class="line"><span class="lineno">  427</span>      utimensat(AT_FDCWD, buf, ts, 0);</div>
-<div class="line"><span class="lineno">  428</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  429</span>      ut.actime = st-&gt;st_atime;</div>
-<div class="line"><span class="lineno">  430</span>      ut.modtime = <a class="code hl_function" href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a>();</div>
-<div class="line"><span class="lineno">  431</span>      utime(path, &amp;ut);</div>
-<div class="line"><span class="lineno">  432</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  433</span>    }</div>
-<div class="line"><span class="lineno">  434</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  435</span>    {</div>
-<div class="line"><span class="lineno">  436</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
-<div class="line"><span class="lineno">  437</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
-<div class="line"><span class="lineno">  438</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
-<div class="line"><span class="lineno">  439</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
-<div class="line"><span class="lineno">  440</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
-<div class="line"><span class="lineno">  441</span>      utimensat(AT_FDCWD, buf, ts, 0);</div>
-<div class="line"><span class="lineno">  442</span><span class="preprocessor">#else</span></div>
-<div class="line"><span class="lineno">  443</span>      utime(path, NULL);</div>
-<div class="line"><span class="lineno">  444</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  445</span>    }</div>
-<div class="line"><span class="lineno">  446</span>  }</div>
-<div class="line"><span class="lineno">  447</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00406">406</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  407</span>{</div>
+<div class="line"><span class="lineno">  408</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
+<div class="line"><span class="lineno">  409</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structtimespec.html">timespec</a> ts[2] = { { 0 }, { 0 } };</div>
+<div class="line"><span class="lineno">  410</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  411</span>  <span class="keyword">struct </span>utimbuf ut = { 0 };</div>
+<div class="line"><span class="lineno">  412</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  413</span> </div>
+<div class="line"><span class="lineno">  414</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_check_mbox_size = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;check_mbox_size&quot;</span>);</div>
+<div class="line"><span class="lineno">  415</span>  <span class="keywordflow">if</span> (c_check_mbox_size)</div>
+<div class="line"><span class="lineno">  416</span>  {</div>
+<div class="line"><span class="lineno">  417</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = <a class="code hl_function" href="core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570">mailbox_find</a>(path);</div>
+<div class="line"><span class="lineno">  418</span>    <span class="keywordflow">if</span> (m &amp;&amp; !m-&gt;<a class="code hl_variable" href="structMailbox.html#a185d46a268fdf1e34ee061a28d51414e">has_new</a>)</div>
+<div class="line"><span class="lineno">  419</span>      <a class="code hl_function" href="core_2mailbox_8c.html#ab614961b6e97592c0e56c30b47f65f29">mailbox_update</a>(m);</div>
+<div class="line"><span class="lineno">  420</span>  }</div>
+<div class="line"><span class="lineno">  421</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  422</span>  {</div>
+<div class="line"><span class="lineno">  423</span>    <span class="comment">/* fix up the times so mailbox won&#39;t get confused */</span></div>
+<div class="line"><span class="lineno">  424</span>    <span class="keywordflow">if</span> (st-&gt;st_mtime &gt; st-&gt;st_atime)</div>
+<div class="line"><span class="lineno">  425</span>    {</div>
+<div class="line"><span class="lineno">  426</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
+<div class="line"><span class="lineno">  427</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
+<div class="line"><span class="lineno">  428</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_OMIT;</div>
+<div class="line"><span class="lineno">  429</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
+<div class="line"><span class="lineno">  430</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
+<div class="line"><span class="lineno">  431</span>      utimensat(AT_FDCWD, buf, ts, 0);</div>
+<div class="line"><span class="lineno">  432</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  433</span>      ut.actime = st-&gt;st_atime;</div>
+<div class="line"><span class="lineno">  434</span>      ut.modtime = <a class="code hl_function" href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a>();</div>
+<div class="line"><span class="lineno">  435</span>      utime(path, &amp;ut);</div>
+<div class="line"><span class="lineno">  436</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  437</span>    }</div>
+<div class="line"><span class="lineno">  438</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  439</span>    {</div>
+<div class="line"><span class="lineno">  440</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
+<div class="line"><span class="lineno">  441</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
+<div class="line"><span class="lineno">  442</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
+<div class="line"><span class="lineno">  443</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
+<div class="line"><span class="lineno">  444</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
+<div class="line"><span class="lineno">  445</span>      utimensat(AT_FDCWD, buf, ts, 0);</div>
+<div class="line"><span class="lineno">  446</span><span class="preprocessor">#else</span></div>
+<div class="line"><span class="lineno">  447</span>      utime(path, NULL);</div>
+<div class="line"><span class="lineno">  448</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  449</span>    }</div>
+<div class="line"><span class="lineno">  450</span>  }</div>
+<div class="line"><span class="lineno">  451</span>}</div>
 <div class="ttc" id="acore_2mailbox_8c_html_ab614961b6e97592c0e56c30b47f65f29"><div class="ttname"><a href="core_2mailbox_8c.html#ab614961b6e97592c0e56c30b47f65f29">mailbox_update</a></div><div class="ttdeci">void mailbox_update(struct Mailbox *m)</div><div class="ttdoc">Get the mailbox's current size.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8c_source.html#l00216">mailbox.c:216</a></div></div>
 <div class="ttc" id="acore_2mailbox_8c_html_afa6e5cc34622044961308aa23da3b570"><div class="ttname"><a href="core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570">mailbox_find</a></div><div class="ttdeci">struct Mailbox * mailbox_find(const char *path)</div><div class="ttdoc">Find the mailbox with a given path.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8c_source.html#l00151">mailbox.c:151</a></div></div>
 <div class="ttc" id="astructtimespec_html"><div class="ttname"><a href="structtimespec.html">timespec</a></div><div class="ttdoc">Time value with nanosecond precision.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00050">file.h:51</a></div></div>

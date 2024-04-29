@@ -2,6 +2,7 @@ var lib_expando =
 [
     [ "Type: Expando", "expando_config_type.html", null ],
     [ "Parsed Expando", "expando_expando.html", null ],
+    [ "Expando filtering", "expando_filter.html", null ],
     [ "Simple string formatting", "expando_format.html", null ],
     [ "Shared code", "expando_helpers.html", null ],
     [ "Basic Expando Node", "expando_node.html", null ],

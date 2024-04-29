@@ -1,5 +1,16 @@
 var NAVTREEINDEX30 =
 {
+"mutt__mailbox_8c.html#aeb0c6f2ef39e76435783c4f975b7fdcc":[2,0,88,1],
+"mutt__mailbox_8c.html#aeb7307ad9fd4cae39c95358e38484fb0":[2,0,88,10],
+"mutt__mailbox_8c.html#afa60f2a531e9ede8365732e146a7b3f9":[2,0,88,9],
+"mutt__mailbox_8c_source.html":[2,0,88],
+"mutt__mailbox_8h.html":[2,0,89],
+"mutt__mailbox_8h.html#a46384c63734d157785c2f9db5c9d40f5":[2,0,89,0],
+"mutt__mailbox_8h.html#a7b979f11bcd9c44ae5779c0a432fcb8f":[2,0,89,6],
+"mutt__mailbox_8h.html#a8f806bcfdbc1f01cb85a5d29ff4f6d27":[2,0,89,4],
+"mutt__mailbox_8h.html#a9e2e89628d0b2ac8cb68e6a07e0e04f3":[2,0,89,5],
+"mutt__mailbox_8h.html#aaa63cce0d13314b09e8a0824ba8fb234":[2,0,89,3],
+"mutt__mailbox_8h.html#ab9927df6282aeabd032cfca3332f4907":[2,0,89,2],
 "mutt__mailbox_8h.html#afa60f2a531e9ede8365732e146a7b3f9":[2,0,89,1],
 "mutt__mailbox_8h_source.html":[2,0,89],
 "mutt__signal_8c.html":[2,0,90],
@@ -238,16 +249,5 @@ var NAVTREEINDEX30 =
 "mutt_array.html":[36,0],
 "mutt_atoi.html":[36,1],
 "mutt_base64.html":[36,2],
-"mutt_buffer.html":[36,3],
-"mutt_charset.html":[36,4],
-"mutt_date.html":[36,5],
-"mutt_envlist.html":[36,6],
-"mutt_eqi.html":[36,7],
-"mutt_exit.html":[36,8],
-"mutt_file.html":[36,9],
-"mutt_filter.html":[36,10],
-"mutt_hash.html":[36,11],
-"mutt_list.html":[36,12],
-"mutt_logging.html":[36,13],
-"mutt_mapping.html":[36,14]
+"mutt_buffer.html":[36,3]
 };
