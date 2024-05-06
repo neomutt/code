@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff":[2,0,88,6],
 "mutt__mailbox_8c.html#aeb0c6f2ef39e76435783c4f975b7fdcc":[2,0,88,1],
 "mutt__mailbox_8c.html#aeb7307ad9fd4cae39c95358e38484fb0":[2,0,88,10],
 "mutt__mailbox_8c.html#afa60f2a531e9ede8365732e146a7b3f9":[2,0,88,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "mutt__window_8h_source.html":[2,0,21,18],
 "mutt_array.html":[36,0],
 "mutt_atoi.html":[36,1],
-"mutt_base64.html":[36,2],
-"mutt_buffer.html":[36,3]
+"mutt_base64.html":[36,2]
 };

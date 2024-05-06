@@ -1,6 +1,7 @@
 var neomutt_8h =
 [
     [ "NeoMutt", "structNeoMutt.html", "structNeoMutt" ],
+    [ "mutt_file_fopen_masked", "neomutt_8h.html#a32de36debf7caa2f77cbd94d576bd380", null ],
     [ "NotifyGlobal", "neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5d", [
       [ "NT_GLOBAL_STARTUP", "neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5da9f79a70fee6c93084e8b6d081bbd96b8", null ],
       [ "NT_GLOBAL_SHUTDOWN", "neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5dae3ff642cd6e8bb088da0176c55a4675c", null ],

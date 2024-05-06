@@ -1,5 +1,8 @@
 var signal_8c =
 [
+    [ "exit_print_uint", "signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a", null ],
+    [ "exit_print_int", "signal_8c.html#abdbf54979fbd4394419ee38c99342788", null ],
+    [ "exit_print_string", "signal_8c.html#aec7898d818fcdfde24359d55af521579", null ],
     [ "mutt_sig_empty_handler", "signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b", null ],
     [ "mutt_sig_exit_handler", "signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92", null ],
     [ "mutt_sig_init", "signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX47 =
 {
+"structMailboxView.html#a70895c79d8ff4b64bb360e98aa2cb7d5":[1,0,140,3],
+"structMailboxView.html#aa24d1c8b1433d1c9a9d5898a5d747ae4":[1,0,140,4],
+"structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280":[1,0,140,7],
+"structMailboxView.html#af8fca3e8597f3f4fd45d49666e2772d3":[1,0,140,1],
+"structMailcapEntry.html":[1,0,141],
+"structMailcapEntry.html#a365aee1471f7897abec0c347e43426e1":[1,0,141,2],
 "structMailcapEntry.html#a4cc66616bac929499b83944fb8e2911d":[1,0,141,8],
 "structMailcapEntry.html#a545b63069c50022f46b179e77c312a0f":[1,0,141,1],
 "structMailcapEntry.html#a85835d27aa930e64eef4eae5f9498401":[1,0,141,6],
@@ -207,6 +213,7 @@ var NAVTREEINDEX47 =
 "structNeoMutt.html#a29f4831264d622680eb43c7ee691f22f":[1,0,171,2],
 "structNeoMutt.html#a49906a21787be2a36fd08fccb54d8911":[1,0,171,1],
 "structNeoMutt.html#a6d954f6370463364dbd5b78db333fbfd":[1,0,171,4],
+"structNeoMutt.html#a8ee01c265189481c68e70799425e7f97":[1,0,171,6],
 "structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b":[1,0,171,0],
 "structNeoMutt.html#af98065e32243ce9331f93b7f30247d47":[1,0,171,3],
 "structNeoMutt.html#afd5cdbd92e7d707ccb91240702ae36b2":[1,0,171,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX47 =
 "structNntpAccountData.html#a07329147457f52f9d362d7dc69bb0d68":[1,0,178,12],
 "structNntpAccountData.html#a0c47d705c8553a61127b79839399607d":[1,0,178,24],
 "structNntpAccountData.html#a12f478749b5ab10135a81d90ed0dc797":[1,0,178,17],
-"structNntpAccountData.html#a158b6bdd5a8be673e51ce25946709052":[1,0,178,8],
-"structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a":[1,0,178,25],
-"structNntpAccountData.html#a2a1c6e75563a61693936d8d82acc1321":[1,0,178,10],
-"structNntpAccountData.html#a31956518f4a223c885421a1315b79330":[1,0,178,15],
-"structNntpAccountData.html#a32bf65f5dcf8d90460fec390cf91c18d":[1,0,178,16],
-"structNntpAccountData.html#a3393113ea121bf0985f5600aed3587d2":[1,0,178,4],
-"structNntpAccountData.html#a37bf5f2141a2488012a0441694bae9bf":[1,0,178,21],
-"structNntpAccountData.html#a42d89a9578e0c3d14d57d5049082c1f9":[1,0,178,0]
+"structNntpAccountData.html#a158b6bdd5a8be673e51ce25946709052":[1,0,178,8]
 };

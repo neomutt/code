@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['uid_0',['uid',['../structExpandoDefinition.html#a4450ea6bb5fb80766cffc58c101fc323',1,'ExpandoDefinition::uid()'],['../structFolderFile.html#a4089e42b43bfa065d6189b2b32a05323',1,'FolderFile::uid()'],['../structPopEmailData.html#acf6966ff72e2807416df5d2003e25858',1,'PopEmailData::uid()'],['../structPgpEntry.html#aa9f944e5223742a1f7fb4427155f678d',1,'PgpEntry::uid()'],['../structCryptKeyInfo.html#ad919b2d8bdd41f9d972b1325c88934d8',1,'CryptKeyInfo::uid()'],['../structExpandoRenderData.html#ad936e5b2394d248d72e2551e433f0708',1,'ExpandoRenderData::uid()'],['../structExpandoNode.html#a02967970072f58c78b1d3e8277613d3d',1,'ExpandoNode::uid()'],['../structImapEmailData.html#a64e9b3c8a5b91a1102fa09e26be67794',1,'ImapEmailData::uid()']]],
+  ['uid_0',['uid',['../structExpandoDefinition.html#a4450ea6bb5fb80766cffc58c101fc323',1,'ExpandoDefinition::uid()'],['../structFolderFile.html#a4089e42b43bfa065d6189b2b32a05323',1,'FolderFile::uid()'],['../structPopEmailData.html#acf6966ff72e2807416df5d2003e25858',1,'PopEmailData::uid()'],['../structPgpEntry.html#aa9f944e5223742a1f7fb4427155f678d',1,'PgpEntry::uid()'],['../structCryptKeyInfo.html#ad919b2d8bdd41f9d972b1325c88934d8',1,'CryptKeyInfo::uid()'],['../structImapEmailData.html#a64e9b3c8a5b91a1102fa09e26be67794',1,'ImapEmailData::uid()'],['../structExpandoRenderData.html#ad936e5b2394d248d72e2551e433f0708',1,'ExpandoRenderData::uid()'],['../structExpandoNode.html#a02967970072f58c78b1d3e8277613d3d',1,'ExpandoNode::uid()']]],
   ['uid_5fhash_1',['uid_hash',['../structImapMboxData.html#a5d4ade771376ea3dbb3fe5816ddeac84',1,'ImapMboxData']]],
   ['uid_5fnext_2',['uid_next',['../structImapMboxData.html#a07a8887ba1a079dd0d5079e0df523f97',1,'ImapMboxData']]],
   ['uidvalidity_3',['uidvalidity',['../structHCacheEntry.html#a3fe94462fcd58503d7b0fa880c79ca22',1,'HCacheEntry::uidvalidity()'],['../structImapMboxData.html#ad03723407a1adabc338541cae865fc82',1,'ImapMboxData::uidvalidity()']]],
-  ['umask_4',['umask',['../structMhMboxData.html#a379d00adbfc0301ebcacd3b133778e3b',1,'MhMboxData::umask()'],['../structMaildirMboxData.html#a5488c7ef8ecc266e14a131ba450c73e3',1,'MaildirMboxData::umask()']]],
+  ['umask_4',['umask',['../structMaildirMboxData.html#a5488c7ef8ecc266e14a131ba450c73e3',1,'MaildirMboxData::umask()'],['../structMhMboxData.html#a379d00adbfc0301ebcacd3b133778e3b',1,'MhMboxData::umask()']]],
   ['unalternates_5',['UnAlternates',['../alternates_8c.html#ada803e44ab2a6eb78904482e46d6b1f7',1,'alternates.c']]],
   ['ungetkeyevents_6',['UngetKeyEvents',['../get_8c.html#a373b5ab01bae42f52b0d60a972ce110c',1,'get.c']]],
   ['unicode_7',['unicode',['../structImapAccountData.html#a9ce6191c36074e9613d78e22851119d0',1,'ImapAccountData']]],
-  ['unignore_8',['UnIgnore',['../email_2globals_8h.html#aedead725975fc1c761da7aba127d2586',1,'UnIgnore():&#160;globals.c'],['../email_2globals_8c.html#aedead725975fc1c761da7aba127d2586',1,'UnIgnore():&#160;globals.c']]],
+  ['unignore_8',['UnIgnore',['../email_2globals_8c.html#aedead725975fc1c761da7aba127d2586',1,'UnIgnore():&#160;globals.c'],['../email_2globals_8h.html#aedead725975fc1c761da7aba127d2586',1,'UnIgnore():&#160;globals.c']]],
   ['unlink_9',['unlink',['../structBody.html#a47191eabf16d34d0deb412c898ed629b',1,'Body']]],
   ['unmaillists_10',['UnMailLists',['../email_2globals_8h.html#a4604400f5d21502c96623074740c892d',1,'UnMailLists():&#160;globals.c'],['../email_2globals_8c.html#a4604400f5d21502c96623074740c892d',1,'UnMailLists():&#160;globals.c']]],
   ['unowned_11',['unowned',['../structAttachPtr.html#a85722c8044f044e59047c3c8b12ef279',1,'AttachPtr']]],
@@ -25,11 +25,12 @@ var searchData=
   ['use_5fstls_22',['use_stls',['../structPopAccountData.html#af6dd63565eb444277cd6c4c51f693a0f',1,'PopAccountData']]],
   ['use_5ftls_23',['use_tls',['../structNntpAccountData.html#aa1190c4a54a3b733533e3f34cd199ec8',1,'NntpAccountData']]],
   ['user_24',['user',['../structUrl.html#a18db9f379a95b00dc4f4ae7e4ac8698b',1,'Url::user()'],['../structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca',1,'ConnAccount::user()']]],
-  ['user_5ftyped_25',['user_typed',['../structCompletionData.html#a76655a797e574f519462c8c05875927f',1,'CompletionData']]],
-  ['userhdrs_26',['userhdrs',['../structEnvelope.html#a005f4bd665ae1ae362add27948753fe1',1,'Envelope']]],
-  ['userhdrsoverrideheaders_27',['UserhdrsOverrideHeaders',['../header_8c.html#a520c5ce2825ef71a466e3f751bb5ac51',1,'header.c']]],
-  ['userheader_28',['UserHeader',['../globals_8c.html#aa6af9b507b7033a8a1226c0c1946116d',1,'UserHeader():&#160;globals.c'],['../globals_8h.html#aa6af9b507b7033a8a1226c0c1946116d',1,'UserHeader():&#160;globals.c']]],
-  ['username_29',['Username',['../globals_8c.html#ab8e2fef8236168bd41c60e16d4c72d72',1,'Username():&#160;globals.c'],['../globals_8h.html#ab8e2fef8236168bd41c60e16d4c72d72',1,'Username():&#160;globals.c']]],
-  ['usethreadsmethods_30',['UseThreadsMethods',['../mutt__thread_8c.html#a5c2a82bc1766950548a5d97a7dbd8d2a',1,'mutt_thread.c']]],
-  ['usethreadstypedef_31',['UseThreadsTypeDef',['../mutt__thread_8c.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef():&#160;mutt_thread.c'],['../mutt__thread_8h.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef():&#160;mutt_thread.c']]]
+  ['user_5fdefault_5fumask_25',['user_default_umask',['../structNeoMutt.html#a8ee01c265189481c68e70799425e7f97',1,'NeoMutt']]],
+  ['user_5ftyped_26',['user_typed',['../structCompletionData.html#a76655a797e574f519462c8c05875927f',1,'CompletionData']]],
+  ['userhdrs_27',['userhdrs',['../structEnvelope.html#a005f4bd665ae1ae362add27948753fe1',1,'Envelope']]],
+  ['userhdrsoverrideheaders_28',['UserhdrsOverrideHeaders',['../header_8c.html#a520c5ce2825ef71a466e3f751bb5ac51',1,'header.c']]],
+  ['userheader_29',['UserHeader',['../globals_8c.html#aa6af9b507b7033a8a1226c0c1946116d',1,'UserHeader():&#160;globals.c'],['../globals_8h.html#aa6af9b507b7033a8a1226c0c1946116d',1,'UserHeader():&#160;globals.c']]],
+  ['username_30',['Username',['../globals_8c.html#ab8e2fef8236168bd41c60e16d4c72d72',1,'Username():&#160;globals.c'],['../globals_8h.html#ab8e2fef8236168bd41c60e16d4c72d72',1,'Username():&#160;globals.c']]],
+  ['usethreadsmethods_31',['UseThreadsMethods',['../mutt__thread_8c.html#a5c2a82bc1766950548a5d97a7dbd8d2a',1,'mutt_thread.c']]],
+  ['usethreadstypedef_32',['UseThreadsTypeDef',['../mutt__thread_8c.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef():&#160;mutt_thread.c'],['../mutt__thread_8h.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef():&#160;mutt_thread.c']]]
 ];

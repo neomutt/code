@@ -10,7 +10,7 @@ var structBrowserPrivateData =
     [ "multiple", "structBrowserPrivateData.html#acaa0beb20f878bf7342df51fd755a277", null ],
     [ "folder", "structBrowserPrivateData.html#a94aaff56faa65882faf2277b27ad3133", null ],
     [ "goto_swapper", "structBrowserPrivateData.html#afed0a0fa4ab04df470c1ee6773dd050c", null ],
-    [ "OldLastDir", "structBrowserPrivateData.html#a88c0e6bc095568414786e7df8c6dda20", null ],
+    [ "old_last_dir", "structBrowserPrivateData.html#a22d2ede0528e515016945d8b7cca64cc", null ],
     [ "prefix", "structBrowserPrivateData.html#a1581eb8723dd0e6ee89c8b89f6775185", null ],
     [ "last_selected_mailbox", "structBrowserPrivateData.html#a95020548084b3d4d0bff5ecd6d368a3e", null ],
     [ "sbar", "structBrowserPrivateData.html#ad19970e1c2bc867514be35eb09e2ae1e", null ],

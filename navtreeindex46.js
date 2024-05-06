@@ -1,5 +1,11 @@
 var NAVTREEINDEX46 =
 {
+"structHashWalkState.html#aff744f61e1660b26610b35b87001ec8c":[1,0,107,1],
+"structHdrFormatInfo.html":[1,0,109],
+"structHdrFormatInfo.html#a1cfe9e18b8e861f7c9173ba8c858edee":[1,0,109,2],
+"structHdrFormatInfo.html#a4b1646deb7336e7cc4e1d55217ca73cd":[1,0,109,1],
+"structHdrFormatInfo.html#a712e67341c9c7a66156c3c2e26a9cdd6":[1,0,109,0],
+"structHdrFormatInfo.html#a7e9e3a904d834012a4269ff9b60c1280":[1,0,109,3],
 "structHeaderCache.html":[1,0,110],
 "structHeaderCache.html#a11a84f4577509d7a782b8f695886a1c0":[1,0,110,5],
 "structHeaderCache.html#a48bc8a680626d25eb1e2e10438e89271":[1,0,110,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX46 =
 "structMailboxView.html#a2efe2819897e8e007aeeb9eabd233082":[1,0,140,5],
 "structMailboxView.html#a3bcbce2c2279478256f0bcc98f2b8ec4":[1,0,140,0],
 "structMailboxView.html#a56db84bb92494913b925e42e61e48fff":[1,0,140,8],
-"structMailboxView.html#a5f6b9a232c6e56c58b33ad05f912f6c1":[1,0,140,2],
-"structMailboxView.html#a70895c79d8ff4b64bb360e98aa2cb7d5":[1,0,140,3],
-"structMailboxView.html#aa24d1c8b1433d1c9a9d5898a5d747ae4":[1,0,140,4],
-"structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280":[1,0,140,7],
-"structMailboxView.html#af8fca3e8597f3f4fd45d49666e2772d3":[1,0,140,1],
-"structMailcapEntry.html":[1,0,141],
-"structMailcapEntry.html#a365aee1471f7897abec0c347e43426e1":[1,0,141,2]
+"structMailboxView.html#a5f6b9a232c6e56c58b33ad05f912f6c1":[1,0,140,2]
 };

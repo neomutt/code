@@ -1,5 +1,12 @@
 var NAVTREEINDEX48 =
 {
+"structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a":[1,0,178,25],
+"structNntpAccountData.html#a2a1c6e75563a61693936d8d82acc1321":[1,0,178,10],
+"structNntpAccountData.html#a31956518f4a223c885421a1315b79330":[1,0,178,15],
+"structNntpAccountData.html#a32bf65f5dcf8d90460fec390cf91c18d":[1,0,178,16],
+"structNntpAccountData.html#a3393113ea121bf0985f5600aed3587d2":[1,0,178,4],
+"structNntpAccountData.html#a37bf5f2141a2488012a0441694bae9bf":[1,0,178,21],
+"structNntpAccountData.html#a42d89a9578e0c3d14d57d5049082c1f9":[1,0,178,0],
 "structNntpAccountData.html#a5c9a3b821b5983affecbcefb3a9c4e81":[1,0,178,1],
 "structNntpAccountData.html#a5cda21ab25c25194ff43c4c6f188fe33":[1,0,178,6],
 "structNntpAccountData.html#a68b41ff885dd90f05aec9c882f245a75":[1,0,178,20],
@@ -242,12 +249,5 @@ var NAVTREEINDEX48 =
 "structPostponeFunction.html#a6d99519a80e00ccf5e6c36f877e6fe6d":[1,0,212,1],
 "structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6":[1,0,212,0],
 "structPrexStorage.html":[1,0,213],
-"structPrexStorage.html#a1cd500ad9bddb81ab67add35283c7fd3":[1,0,213,2],
-"structPrexStorage.html#a72b2059fbefb9e89c0d5b7912f8b52f0":[1,0,213,0],
-"structPrexStorage.html#a8011462211411de7a7e89af23ceccbd1":[1,0,213,1],
-"structPrexStorage.html#aa92ecca35e86301c0d93d8607aba281d":[1,0,213,3],
-"structPrexStorage.html#aaa337527edf626ffda0c7baf8c43178f":[1,0,213,4],
-"structProgressWindowData.html":[1,0,214],
-"structProgressWindowData.html#a0723cbefd810e9aab76f90e14ff3567d":[1,0,214,12],
-"structProgressWindowData.html#a1716a3f5d2e4cd0fbdab80588e15ff2e":[1,0,214,1]
+"structPrexStorage.html#a1cd500ad9bddb81ab67add35283c7fd3":[1,0,213,2]
 };

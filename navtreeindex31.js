@@ -1,5 +1,6 @@
 var NAVTREEINDEX31 =
 {
+"mutt_buffer.html":[36,3],
 "mutt_charset.html":[36,4],
 "mutt_date.html":[36,5],
 "mutt_envlist.html":[36,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX31 =
 "names__expando_8c.html#a4abccbe03bdde6a81fc214fe32c727bf":[2,0,15,8,19],
 "names__expando_8c.html#a5e97e6aad91c815f00a83989c5daba12":[2,0,15,8,17],
 "names__expando_8c.html#a62ac22ac54080ee5690c91931d94614c":[2,0,15,8,7],
-"names__expando_8c.html#a6f338e5c5b8d581447e5fbcca2af71da":[2,0,15,8,13],
-"names__expando_8c.html#a744033ffa7f87277e0f53eacde4af2cd":[2,0,15,8,2]
+"names__expando_8c.html#a6f338e5c5b8d581447e5fbcca2af71da":[2,0,15,8,13]
 };
