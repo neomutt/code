@@ -1,5 +1,14 @@
 var NAVTREEINDEX49 =
 {
+"structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6":[1,0,211,4],
+"structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6":[1,0,211,3],
+"structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91":[1,0,211,0],
+"structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a":[1,0,211,1],
+"structPostponeFunction.html":[1,0,212],
+"structPostponeFunction.html#a6d99519a80e00ccf5e6c36f877e6fe6d":[1,0,212,1],
+"structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6":[1,0,212,0],
+"structPrexStorage.html":[1,0,213],
+"structPrexStorage.html#a1cd500ad9bddb81ab67add35283c7fd3":[1,0,213,2],
 "structPrexStorage.html#a72b2059fbefb9e89c0d5b7912f8b52f0":[1,0,213,0],
 "structPrexStorage.html#a8011462211411de7a7e89af23ceccbd1":[1,0,213,1],
 "structPrexStorage.html#aa92ecca35e86301c0d93d8607aba281d":[1,0,213,3],
@@ -240,14 +249,5 @@ var NAVTREEINDEX49 =
 "structZstdComprData.html#aadf45da33e967650bbfe5ef9bdf65e60":[1,0,256,2],
 "structZstdComprData.html#ab2c52a954b07b73ac4c0ab51a2b1559d":[1,0,256,3],
 "structZstdComprData.html#ac55ba35312b467029c2f9d73641f5cd3":[1,0,256,0],
-"structZstrmContext.html":[1,0,257],
-"structZstrmContext.html#a4694ccace39f253ce6191e80d88f435f":[1,0,257,0],
-"structZstrmContext.html#a83f56498421caa65ebe34386cc21b58b":[1,0,257,1],
-"structZstrmContext.html#adf24ef9ed1bb47413d7460b921cd4a5b":[1,0,257,2],
-"structZstrmDirection.html":[1,0,258],
-"structZstrmDirection.html#a27976968579b017dc4cd4a76030d08e2":[1,0,258,3],
-"structZstrmDirection.html#a4c7437f1836874f8abc24a77626deafb":[1,0,258,4],
-"structZstrmDirection.html#a6e1305ced59f86eaef8305876cf91942":[1,0,258,2],
-"structZstrmDirection.html#a771415b53524bad27006db570ecb1850":[1,0,258,0],
-"structZstrmDirection.html#a9dfab9c149d4455f2a02e5bbfd407d50":[1,0,258,1]
+"structZstrmContext.html":[1,0,257]
 };

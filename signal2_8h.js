@@ -1,6 +1,10 @@
 var signal2_8h =
 [
+    [ "ASSERT_STOP", "signal2_8h.html#a61516ab527b30c0e5adc84a6fc695198", null ],
+    [ "ASSERT", "signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99", null ],
     [ "sig_handler_t", "signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1", null ],
+    [ "show_backtrace", "signal2_8h.html#aedbf6c025e5c09cfc32d1900085cda25", null ],
+    [ "assertion_dump", "signal2_8h.html#a1b3ea57ac15456dd9ebe3a02b136cb42", null ],
     [ "mutt_sig_allow_interrupt", "signal2_8h.html#af00bed52276317e59f6ae7bb13b0322b", null ],
     [ "mutt_sig_block", "signal2_8h.html#aa6c49e5535cdffeffd2cd4eee28bc96b", null ],
     [ "mutt_sig_block_system", "signal2_8h.html#a8f760c89850a7fdab70f3e084dae29ea", null ],

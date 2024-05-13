@@ -46,6 +46,8 @@ var crypt__gpgme_8c =
     [ "show_fingerprint", "crypt__gpgme_8c.html#a537b23583894a4e6569cff4ee1c971ef", null ],
     [ "show_one_sig_validity", "crypt__gpgme_8c.html#aa9f161dd6a9437bda37858d054c5719c", null ],
     [ "print_smime_keyinfo", "crypt__gpgme_8c.html#a6189fb85d5ca9edbf02a63e9bebed27b", null ],
+    [ "show_one_recipient", "crypt__gpgme_8c.html#a6bf0600ea470d5d5c5c075f0925fceb7", null ],
+    [ "show_encryption_info", "crypt__gpgme_8c.html#a3879c3921ab31de008d3383587d6fa83", null ],
     [ "show_one_sig_status", "crypt__gpgme_8c.html#af1694fde35a32f9a89d9a97a82f3a221", null ],
     [ "verify_one", "crypt__gpgme_8c.html#a1f787f6ad8763801ccc1e03d03c28681", null ],
     [ "pgp_gpgme_verify_one", "group__crypto__verify__one.html#ga1cf44d3ad1e1aa1e54dd3b78c8403773", null ],

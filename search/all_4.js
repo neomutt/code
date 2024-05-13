@@ -238,7 +238,7 @@ var searchData=
   ['dot_5fexpando_5fnode_5fexpando_235',['dot_expando_node_expando',['../graphviz_8c.html#ae12b51639e6c429c03e8c209a7df7b45',1,'graphviz.c']]],
   ['dot_5fexpando_5fnode_5fpad_236',['dot_expando_node_pad',['../graphviz_8c.html#a32f80ffd90b74273c34d832a698601a5',1,'graphviz.c']]],
   ['dot_5fexpando_5fnode_5ftext_237',['dot_expando_node_text',['../graphviz_8c.html#adf2eb1b1d8bc5c5e6b7594f2f8cb1dd4',1,'graphviz.c']]],
-  ['dot_5fexpando_5fnode_5ftree_238',['dot_expando_node_tree',['../graphviz_8c.html#a790b9e46014b685182aa9628cf1a02f9',1,'graphviz.c']]],
+  ['dot_5fexpando_5fnode_5funknown_238',['dot_expando_node_unknown',['../graphviz_8c.html#a17743f344265614987e4d90c5bc427f0',1,'graphviz.c']]],
   ['dot_5fformat_239',['dot_format',['../graphviz_8c.html#a5ad4d62bcc4e751242361de79783a2f5',1,'graphviz.c']]],
   ['dot_5fgraph_5ffooter_240',['dot_graph_footer',['../graphviz_8c.html#a69c157ef083586c36085b9f6da16b2ab',1,'graphviz.c']]],
   ['dot_5fgraph_5fheader_241',['dot_graph_header',['../graphviz_8c.html#a1b581c94c7f6185b4f7269240c570bc1',1,'graphviz.c']]],

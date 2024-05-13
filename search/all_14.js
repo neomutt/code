@@ -160,7 +160,7 @@ var searchData=
   ['trash_157',['trash',['../structEmail.html#ad14bdb707d3b5811734782cfb570d9eb',1,'Email']]],
   ['trash_5fappend_158',['trash_append',['../mx_8c.html#a4384d774c74bb9e8b8065e6aeb6b483f',1,'mx.c']]],
   ['trashit_159',['TRASHIT',['../queue_8h.html#adee7bf054da0ade68bb853732c665a2b',1,'queue.h']]],
-  ['tree_160',['tree',['../structAttachPtr.html#a675e3442ea87e4479649a58c20f68aa7',1,'AttachPtr::tree()'],['../structThreadsContext.html#a0c499ca77a266daf0af9c659fc41de9f',1,'ThreadsContext::tree()'],['../structExpando.html#a08d151b9aeb6d7efe76903a4f2fc2468',1,'Expando::tree()'],['../structEmail.html#a6ab0c038ad82a3771c419731c93398ce',1,'Email::tree()']]],
+  ['tree_160',['tree',['../structEmail.html#a6ab0c038ad82a3771c419731c93398ce',1,'Email::tree()'],['../structThreadsContext.html#a0c499ca77a266daf0af9c659fc41de9f',1,'ThreadsContext::tree()'],['../structAttachPtr.html#a675e3442ea87e4479649a58c20f68aa7',1,'AttachPtr::tree()']]],
   ['treechar_161',['TreeChar',['../mutt__thread_8h.html#af79cb849efb74c3d732652b647bacb85',1,'mutt_thread.h']]],
   ['tribool_162',['TriBool',['../commands_8c.html#ac5b9e412e210f45a19bec2bcbfbb0b8a',1,'commands.c']]],
   ['trivial_20database_20_28tdb_29_163',['Trivial DataBase (TDB)',['../store_tdb.html',1,'lib_store']]],

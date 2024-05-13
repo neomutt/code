@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-04-25-34-g585158</span>
+   &#160;<span id="projectnumber">2024-04-25-76-g20fe7b</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('editor_2functions_8c.html',''); initRe
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;config.h&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;wchar.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="mutt_2lib_8h_source.html">mutt/lib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="config_2lib_8h_source.html">config/lib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="core_2lib_8h_source.html">core/lib.h</a>&quot;</code><br />
@@ -126,7 +127,7 @@ $(document).ready(function(){initNavTree('editor_2functions_8c.html',''); initRe
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="editor_2functions_8c__incl.svg" width="1263" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="editor_2functions_8c__incl.svg" width="1368" height="330"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -273,40 +274,40 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00132">132</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>{</div>
-<div class="line"><span class="lineno">  134</span>  <span class="comment">/* Save the suffix */</span></div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordtype">size_t</span> savelen = es-&gt;<a class="code hl_variable" href="structEnterState.html#ab94327a0300b5c132e37416c87d44699">lastchar</a> - es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a>;</div>
-<div class="line"><span class="lineno">  136</span>  <span class="keywordtype">wchar_t</span> *savebuf = NULL;</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>  <span class="keywordflow">if</span> (savelen)</div>
-<div class="line"><span class="lineno">  139</span>  {</div>
-<div class="line"><span class="lineno">  140</span>    savebuf = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(savelen, <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>));</div>
-<div class="line"><span class="lineno">  141</span>    memcpy(savebuf, es-&gt;<a class="code hl_variable" href="structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012">wbuf</a> + es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a>, savelen * <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>));</div>
-<div class="line"><span class="lineno">  142</span>  }</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>  <span class="comment">/* Convert to wide characters */</span></div>
-<div class="line"><span class="lineno">  145</span>  es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a> = <a class="code hl_function" href="mbyte_8c.html#a8c94bd5ff6c53cfe02ed45f2e7955117">mutt_mb_mbstowcs</a>(&amp;es-&gt;<a class="code hl_variable" href="structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012">wbuf</a>, &amp;es-&gt;<a class="code hl_variable" href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">wbuflen</a>, from, buf);</div>
-<div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">if</span> (savelen)</div>
-<div class="line"><span class="lineno">  148</span>  {</div>
-<div class="line"><span class="lineno">  149</span>    <span class="comment">/* Make space for suffix */</span></div>
-<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">if</span> (es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a> + savelen &gt; es-&gt;<a class="code hl_variable" href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">wbuflen</a>)</div>
-<div class="line"><span class="lineno">  151</span>    {</div>
-<div class="line"><span class="lineno">  152</span>      es-&gt;<a class="code hl_variable" href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">wbuflen</a> = es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a> + savelen;</div>
-<div class="line"><span class="lineno">  153</span>      <a class="code hl_function" href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a>(&amp;es-&gt;<a class="code hl_variable" href="structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012">wbuf</a>, es-&gt;<a class="code hl_variable" href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">wbuflen</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>));</div>
-<div class="line"><span class="lineno">  154</span>    }</div>
-<div class="line"><span class="lineno">  155</span> </div>
-<div class="line"><span class="lineno">  156</span>    <span class="comment">/* Restore suffix */</span></div>
-<div class="line"><span class="lineno">  157</span>    memcpy(es-&gt;<a class="code hl_variable" href="structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012">wbuf</a> + es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a>, savebuf, savelen * <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>));</div>
-<div class="line"><span class="lineno">  158</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;savebuf);</div>
-<div class="line"><span class="lineno">  159</span>  }</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>  es-&gt;<a class="code hl_variable" href="structEnterState.html#ab94327a0300b5c132e37416c87d44699">lastchar</a> = es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a> + savelen;</div>
-<div class="line"><span class="lineno">  162</span>}</div>
+<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00133">133</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>{</div>
+<div class="line"><span class="lineno">  135</span>  <span class="comment">/* Save the suffix */</span></div>
+<div class="line"><span class="lineno">  136</span>  <span class="keywordtype">size_t</span> savelen = es-&gt;<a class="code hl_variable" href="structEnterState.html#ab94327a0300b5c132e37416c87d44699">lastchar</a> - es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a>;</div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordtype">wchar_t</span> *savebuf = NULL;</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">if</span> (savelen)</div>
+<div class="line"><span class="lineno">  140</span>  {</div>
+<div class="line"><span class="lineno">  141</span>    savebuf = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(savelen, <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>));</div>
+<div class="line"><span class="lineno">  142</span>    wmemcpy(savebuf, es-&gt;<a class="code hl_variable" href="structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012">wbuf</a> + es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a>, savelen);</div>
+<div class="line"><span class="lineno">  143</span>  }</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>  <span class="comment">/* Convert to wide characters */</span></div>
+<div class="line"><span class="lineno">  146</span>  es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a> = <a class="code hl_function" href="mbyte_8c.html#a8c94bd5ff6c53cfe02ed45f2e7955117">mutt_mb_mbstowcs</a>(&amp;es-&gt;<a class="code hl_variable" href="structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012">wbuf</a>, &amp;es-&gt;<a class="code hl_variable" href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">wbuflen</a>, from, buf);</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">if</span> (savelen)</div>
+<div class="line"><span class="lineno">  149</span>  {</div>
+<div class="line"><span class="lineno">  150</span>    <span class="comment">/* Make space for suffix */</span></div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">if</span> (es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a> + savelen &gt; es-&gt;<a class="code hl_variable" href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">wbuflen</a>)</div>
+<div class="line"><span class="lineno">  152</span>    {</div>
+<div class="line"><span class="lineno">  153</span>      es-&gt;<a class="code hl_variable" href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">wbuflen</a> = es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a> + savelen;</div>
+<div class="line"><span class="lineno">  154</span>      <a class="code hl_function" href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a>(&amp;es-&gt;<a class="code hl_variable" href="structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012">wbuf</a>, es-&gt;<a class="code hl_variable" href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">wbuflen</a> * <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>));</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>    <span class="comment">/* Restore suffix */</span></div>
+<div class="line"><span class="lineno">  158</span>    wmemcpy(es-&gt;<a class="code hl_variable" href="structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012">wbuf</a> + es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a>, savebuf, savelen);</div>
+<div class="line"><span class="lineno">  159</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;savebuf);</div>
+<div class="line"><span class="lineno">  160</span>  }</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>  es-&gt;<a class="code hl_variable" href="structEnterState.html#ab94327a0300b5c132e37416c87d44699">lastchar</a> = es-&gt;<a class="code hl_variable" href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">curpos</a> + savelen;</div>
+<div class="line"><span class="lineno">  163</span>}</div>
 <div class="ttc" id="ambyte_8c_html_a8c94bd5ff6c53cfe02ed45f2e7955117"><div class="ttname"><a href="mbyte_8c.html#a8c94bd5ff6c53cfe02ed45f2e7955117">mutt_mb_mbstowcs</a></div><div class="ttdeci">size_t mutt_mb_mbstowcs(wchar_t **pwbuf, size_t *pwbuflen, size_t i, const char *buf)</div><div class="ttdoc">Convert a string from multibyte to wide characters.</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00291">mbyte.c:291</a></div></div>
-<div class="ttc" id="amemory_8c_html_a39469100e5b8ae30c8f6f21e206aefe8"><div class="ttname"><a href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a></div><div class="ttdeci">void * mutt_mem_calloc(size_t nmemb, size_t size)</div><div class="ttdoc">Allocate zeroed memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00052">memory.c:52</a></div></div>
-<div class="ttc" id="amemory_8c_html_af778eb8166966fc0666c64849f6c7c5b"><div class="ttname"><a href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a></div><div class="ttdeci">void mutt_mem_realloc(void *ptr, size_t size)</div><div class="ttdoc">Resize a block of memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00116">memory.c:116</a></div></div>
+<div class="ttc" id="amemory_8c_html_a39469100e5b8ae30c8f6f21e206aefe8"><div class="ttname"><a href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a></div><div class="ttdeci">void * mutt_mem_calloc(size_t nmemb, size_t size)</div><div class="ttdoc">Allocate zeroed memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00051">memory.c:51</a></div></div>
+<div class="ttc" id="amemory_8c_html_af778eb8166966fc0666c64849f6c7c5b"><div class="ttname"><a href="memory_8c.html#af778eb8166966fc0666c64849f6c7c5b">mutt_mem_realloc</a></div><div class="ttdeci">void mutt_mem_realloc(void *ptr, size_t size)</div><div class="ttdoc">Resize a block of memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00115">memory.c:115</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00045">memory.h:45</a></div></div>
 <div class="ttc" id="astructEnterState_html_a1f5daab31c407100c8ed9266b4d8e5f8"><div class="ttname"><a href="structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8">EnterState::curpos</a></div><div class="ttdeci">size_t curpos</div><div class="ttdoc">Position of the cursor.</div><div class="ttdef"><b>Definition:</b> <a href="editor_2state_8h_source.html#l00036">state.h:36</a></div></div>
 <div class="ttc" id="astructEnterState_html_a5d9c1199297f13de8875dbf00d4fb5f6"><div class="ttname"><a href="structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6">EnterState::wbuflen</a></div><div class="ttdeci">size_t wbuflen</div><div class="ttdoc">Length of buffer.</div><div class="ttdef"><b>Definition:</b> <a href="editor_2state_8h_source.html#l00034">state.h:34</a></div></div>
@@ -346,7 +347,7 @@ Variables</h2></td></tr>
 
 <p>Functions for the Editor <a class="el" href="structMenu.html">Menu</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00053">53</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00054">54</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -364,7 +365,7 @@ Variables</h2></td></tr>
 
 <p>Key bindings for the Editor <a class="el" href="structMenu.html">Menu</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00088">88</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00089">89</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>
@@ -390,7 +391,7 @@ Variables</h2></td></tr>
 
 <p>All the <a class="el" href="structNeoMutt.html" title="Container for Accounts, Notifications.">NeoMutt</a> functions that Enter supports. </p>
 
-<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00447">447</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00448">448</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
 
 </div>
 </div>

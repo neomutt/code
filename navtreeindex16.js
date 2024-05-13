@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"group__connection__write.html#gaea266b86c800530b1aa9b91e359e75f5":[50,10,2,0],
+"group__connection__write.html#gaeaee0ad1c8ca07fa3c66198a219d5241":[50,10,2,5],
 "group__crypto__api.html":[50,38],
 "group__crypto__api.html#ga25940e46039d9c3c99c4c95f064ef06c":[50,38,26],
 "group__crypto__api.html#ga499a72d2fd05f50e46774c5969964835":[50,38,25],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "group__expando__get__string__api.html#ga02d22d6eba105c414c9f8715a5dca86c":[50,21,0,124],
 "group__expando__get__string__api.html#ga0592a862e0bb7bc93342b6b008e7751e":[50,21,0,36],
 "group__expando__get__string__api.html#ga0a968a8170272a79d76592862713acba":[50,21,0,115],
-"group__expando__get__string__api.html#ga1072aa7fa81ab9bd85aaddf8fb4bdb0e":[50,21,0,117],
-"group__expando__get__string__api.html#ga10932d1a82fb8bdc329ec6edc174f078":[50,21,0,10],
-"group__expando__get__string__api.html#ga11146b339493a4654448887782a4bd49":[50,21,0,4]
+"group__expando__get__string__api.html#ga1072aa7fa81ab9bd85aaddf8fb4bdb0e":[50,21,0,117]
 };

@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-04-25-34-g585158</span>
+   &#160;<span id="projectnumber">2024-04-25-76-g20fe7b</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('list_8c.html',''); initResizable(); })
 <div class="textblock"><code>#include &quot;config.h&quot;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="buffer_8h_source.html">buffer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="memory_8h_source.html">memory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="queue_8h_source.html">queue.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="string2_8h_source.html">string2.h</a>&quot;</code><br />
@@ -116,7 +117,7 @@ $(document).ready(function(){initNavTree('list_8c.html',''); initResizable(); })
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="list_8c__incl.svg" width="442" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8c__incl.svg" width="440" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -154,6 +155,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a8452a5e19043ca17f9b80b4443399e3b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#a8452a5e19043ca17f9b80b4443399e3b">mutt_list_str_split</a> (struct ListHead *head, const char *src, char sep)</td></tr>
 <tr class="memdesc:a8452a5e19043ca17f9b80b4443399e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split a string into a list using a separator char.  <br /></td></tr>
 <tr class="separator:a8452a5e19043ca17f9b80b4443399e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df8a4dc742babace631d82e71321678"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#a3df8a4dc742babace631d82e71321678">mutt_list_copy_tail</a> (struct ListHead *dst, const struct ListHead *src)</td></tr>
+<tr class="memdesc:a3df8a4dc742babace631d82e71321678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a list into another list.  <br /></td></tr>
+<tr class="separator:a3df8a4dc742babace631d82e71321678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f04ca102be20813d8c3ab0776a2786b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#a5f04ca102be20813d8c3ab0776a2786b">mutt_list_write</a> (const struct ListHead *h, struct <a class="el" href="structBuffer.html">Buffer</a> *buf)</td></tr>
+<tr class="memdesc:a5f04ca102be20813d8c3ab0776a2786b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a list to a buffer.  <br /></td></tr>
+<tr class="separator:a5f04ca102be20813d8c3ab0776a2786b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Singly-linked list type. </p>
@@ -210,20 +217,20 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The inserted string isn't strdup()d </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00045">45</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>{</div>
-<div class="line"><span class="lineno">   47</span>  <span class="keywordflow">if</span> (!h)</div>
-<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structListNode.html">ListNode</a>));</div>
-<div class="line"><span class="lineno">   51</span>  np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a> = s;</div>
-<div class="line"><span class="lineno">   52</span>  <a class="code hl_define" href="queue_8h.html#aad3b1fb87b675bae75334acd958b57dc">STAILQ_INSERT_HEAD</a>(h, np, entries);</div>
-<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">return</span> np;</div>
-<div class="line"><span class="lineno">   54</span>}</div>
-<div class="ttc" id="amemory_8c_html_a39469100e5b8ae30c8f6f21e206aefe8"><div class="ttname"><a href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a></div><div class="ttdeci">void * mutt_mem_calloc(size_t nmemb, size_t size)</div><div class="ttdoc">Allocate zeroed memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00052">memory.c:52</a></div></div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00046">46</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
+<div class="line"><span class="lineno">   48</span>  <span class="keywordflow">if</span> (!h)</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structListNode.html">ListNode</a>));</div>
+<div class="line"><span class="lineno">   52</span>  np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a> = s;</div>
+<div class="line"><span class="lineno">   53</span>  <a class="code hl_define" href="queue_8h.html#aad3b1fb87b675bae75334acd958b57dc">STAILQ_INSERT_HEAD</a>(h, np, entries);</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">return</span> np;</div>
+<div class="line"><span class="lineno">   55</span>}</div>
+<div class="ttc" id="amemory_8c_html_a39469100e5b8ae30c8f6f21e206aefe8"><div class="ttname"><a href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a></div><div class="ttdeci">void * mutt_mem_calloc(size_t nmemb, size_t size)</div><div class="ttdoc">Allocate zeroed memory on the heap.</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00051">memory.c:51</a></div></div>
 <div class="ttc" id="aqueue_8h_html_aad3b1fb87b675bae75334acd958b57dc"><div class="ttname"><a href="queue_8h.html#aad3b1fb87b675bae75334acd958b57dc">STAILQ_INSERT_HEAD</a></div><div class="ttdeci">#define STAILQ_INSERT_HEAD(head, elm, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00383">queue.h:383</a></div></div>
-<div class="ttc" id="astructListNode_html"><div class="ttname"><a href="structListNode.html">ListNode</a></div><div class="ttdoc">A List node for strings.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00034">list.h:35</a></div></div>
-<div class="ttc" id="astructListNode_html_aafe688d670318196766392d8235d00a7"><div class="ttname"><a href="structListNode.html#aafe688d670318196766392d8235d00a7">ListNode::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00036">list.h:36</a></div></div>
+<div class="ttc" id="astructListNode_html"><div class="ttname"><a href="structListNode.html">ListNode</a></div><div class="ttdoc">A List node for strings.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00035">list.h:36</a></div></div>
+<div class="ttc" id="astructListNode_html_aafe688d670318196766392d8235d00a7"><div class="ttname"><a href="structListNode.html#aafe688d670318196766392d8235d00a7">ListNode::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">String.</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00037">list.h:37</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -285,16 +292,16 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The inserted string isn't strdup()d </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00064">64</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>{</div>
-<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">if</span> (!h)</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structListNode.html">ListNode</a>));</div>
-<div class="line"><span class="lineno">   70</span>  np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a> = s;</div>
-<div class="line"><span class="lineno">   71</span>  <a class="code hl_define" href="queue_8h.html#a7bc9a31418b55c5698be3e54e10bb484">STAILQ_INSERT_TAIL</a>(h, np, entries);</div>
-<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">return</span> np;</div>
-<div class="line"><span class="lineno">   73</span>}</div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00065">65</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>{</div>
+<div class="line"><span class="lineno">   67</span>  <span class="keywordflow">if</span> (!h)</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structListNode.html">ListNode</a>));</div>
+<div class="line"><span class="lineno">   71</span>  np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a> = s;</div>
+<div class="line"><span class="lineno">   72</span>  <a class="code hl_define" href="queue_8h.html#a7bc9a31418b55c5698be3e54e10bb484">STAILQ_INSERT_TAIL</a>(h, np, entries);</div>
+<div class="line"><span class="lineno">   73</span>  <span class="keywordflow">return</span> np;</div>
+<div class="line"><span class="lineno">   74</span>}</div>
 <div class="ttc" id="aqueue_8h_html_a7bc9a31418b55c5698be3e54e10bb484"><div class="ttname"><a href="queue_8h.html#a7bc9a31418b55c5698be3e54e10bb484">STAILQ_INSERT_TAIL</a></div><div class="ttdeci">#define STAILQ_INSERT_TAIL(head, elm, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00389">queue.h:389</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -309,7 +316,7 @@ Functions</h2></td></tr>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="list_8c_a47252e2b00de607c64a5fec8dc16058d_icgraph.svg" width="748" height="1650"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8c_a47252e2b00de607c64a5fec8dc16058d_icgraph.svg" width="723" height="1600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -364,16 +371,16 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The inserted string isn't strdup()d </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00084">84</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>{</div>
-<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">if</span> (!h || !n)</div>
-<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structListNode.html">ListNode</a>));</div>
-<div class="line"><span class="lineno">   90</span>  np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a> = s;</div>
-<div class="line"><span class="lineno">   91</span>  <a class="code hl_define" href="queue_8h.html#af6ebdaf4ccbde5e464273b8079e832b3">STAILQ_INSERT_AFTER</a>(h, n, np, entries);</div>
-<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">return</span> np;</div>
-<div class="line"><span class="lineno">   93</span>}</div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00085">85</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{</div>
+<div class="line"><span class="lineno">   87</span>  <span class="keywordflow">if</span> (!h || !n)</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = <a class="code hl_function" href="memory_8c.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(1, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code hl_struct" href="structListNode.html">ListNode</a>));</div>
+<div class="line"><span class="lineno">   91</span>  np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a> = s;</div>
+<div class="line"><span class="lineno">   92</span>  <a class="code hl_define" href="queue_8h.html#af6ebdaf4ccbde5e464273b8079e832b3">STAILQ_INSERT_AFTER</a>(h, n, np, entries);</div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">return</span> np;</div>
+<div class="line"><span class="lineno">   94</span>}</div>
 <div class="ttc" id="aqueue_8h_html_af6ebdaf4ccbde5e464273b8079e832b3"><div class="ttname"><a href="queue_8h.html#af6ebdaf4ccbde5e464273b8079e832b3">STAILQ_INSERT_AFTER</a></div><div class="ttdeci">#define STAILQ_INSERT_AFTER(head, tqelm, elm, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00377">queue.h:377</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -436,22 +443,22 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00102">102</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>{</div>
-<div class="line"><span class="lineno">  104</span>  <span class="keywordflow">if</span> (!h)</div>
-<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
-<div class="line"><span class="lineno">  108</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, h, entries)</div>
-<div class="line"><span class="lineno">  109</span>  {</div>
-<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>, <a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
-<div class="line"><span class="lineno">  111</span>    {</div>
-<div class="line"><span class="lineno">  112</span>      <span class="keywordflow">return</span> np;</div>
-<div class="line"><span class="lineno">  113</span>    }</div>
-<div class="line"><span class="lineno">  114</span>  }</div>
-<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  116</span>}</div>
-<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00661">string.c:661</a></div></div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00103">103</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>{</div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">if</span> (!h)</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
+<div class="line"><span class="lineno">  109</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, h, entries)</div>
+<div class="line"><span class="lineno">  110</span>  {</div>
+<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>, <a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
+<div class="line"><span class="lineno">  112</span>    {</div>
+<div class="line"><span class="lineno">  113</span>      <span class="keywordflow">return</span> np;</div>
+<div class="line"><span class="lineno">  114</span>    }</div>
+<div class="line"><span class="lineno">  115</span>  }</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  117</span>}</div>
+<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00660">string.c:660</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a77999ebdf5aaf7af8b8ea22bf208c432"><div class="ttname"><a href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a></div><div class="ttdeci">#define STAILQ_FOREACH(var, head, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00352">queue.h:352</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -496,21 +503,21 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00122">122</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
-<div class="line"><span class="lineno">  124</span>  <span class="keywordflow">if</span> (!h)</div>
-<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL, *tmp = NULL;</div>
-<div class="line"><span class="lineno">  128</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, h, entries, tmp)</div>
-<div class="line"><span class="lineno">  129</span>  {</div>
-<div class="line"><span class="lineno">  130</span>    <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(h, np, <a class="code hl_struct" href="structListNode.html">ListNode</a>, entries);</div>
-<div class="line"><span class="lineno">  131</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
-<div class="line"><span class="lineno">  132</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
-<div class="line"><span class="lineno">  133</span>  }</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>  <a class="code hl_define" href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a>(h);</div>
-<div class="line"><span class="lineno">  136</span>}</div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00123">123</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
+<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">if</span> (!h)</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL, *tmp = NULL;</div>
+<div class="line"><span class="lineno">  129</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, h, entries, tmp)</div>
+<div class="line"><span class="lineno">  130</span>  {</div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(h, np, <a class="code hl_struct" href="structListNode.html">ListNode</a>, entries);</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
+<div class="line"><span class="lineno">  134</span>  }</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>  <a class="code hl_define" href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a>(h);</div>
+<div class="line"><span class="lineno">  137</span>}</div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00045">memory.h:45</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a2a0d6665f277f80bf301a16e6ab2403c"><div class="ttname"><a href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a></div><div class="ttdeci">#define STAILQ_REMOVE(head, elm, type, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00402">queue.h:402</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a3b508a1c06ded6b4ce4b1feea7643c28"><div class="ttname"><a href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a></div><div class="ttdeci">#define STAILQ_INIT(head)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00372">queue.h:372</a></div></div>
@@ -561,21 +568,21 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00143">143</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  144</span>{</div>
-<div class="line"><span class="lineno">  145</span>  <span class="keywordflow">if</span> (!h || !fn)</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL, *tmp = NULL;</div>
-<div class="line"><span class="lineno">  149</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, h, entries, tmp)</div>
-<div class="line"><span class="lineno">  150</span>  {</div>
-<div class="line"><span class="lineno">  151</span>    <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(h, np, <a class="code hl_struct" href="structListNode.html">ListNode</a>, entries);</div>
-<div class="line"><span class="lineno">  152</span>    fn((<span class="keywordtype">void</span> **) &amp;np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
-<div class="line"><span class="lineno">  153</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
-<div class="line"><span class="lineno">  154</span>  }</div>
-<div class="line"><span class="lineno">  155</span> </div>
-<div class="line"><span class="lineno">  156</span>  <a class="code hl_define" href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a>(h);</div>
-<div class="line"><span class="lineno">  157</span>}</div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00144">144</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>{</div>
+<div class="line"><span class="lineno">  146</span>  <span class="keywordflow">if</span> (!h || !fn)</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL, *tmp = NULL;</div>
+<div class="line"><span class="lineno">  150</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, h, entries, tmp)</div>
+<div class="line"><span class="lineno">  151</span>  {</div>
+<div class="line"><span class="lineno">  152</span>    <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(h, np, <a class="code hl_struct" href="structListNode.html">ListNode</a>, entries);</div>
+<div class="line"><span class="lineno">  153</span>    fn((<span class="keywordtype">void</span> **) &amp;np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
+<div class="line"><span class="lineno">  155</span>  }</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>  <a class="code hl_define" href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a>(h);</div>
+<div class="line"><span class="lineno">  158</span>}</div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -612,20 +619,20 @@ Functions</h2></td></tr>
 </dl>
 <p>This can be used when the strings have a different lifetime to the List. </p>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00165">165</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  166</span>{</div>
-<div class="line"><span class="lineno">  167</span>  <span class="keywordflow">if</span> (!h)</div>
-<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL, *tmp = NULL;</div>
-<div class="line"><span class="lineno">  171</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, h, entries, tmp)</div>
-<div class="line"><span class="lineno">  172</span>  {</div>
-<div class="line"><span class="lineno">  173</span>    <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(h, np, <a class="code hl_struct" href="structListNode.html">ListNode</a>, entries);</div>
-<div class="line"><span class="lineno">  174</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
-<div class="line"><span class="lineno">  175</span>  }</div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>  <a class="code hl_define" href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a>(h);</div>
-<div class="line"><span class="lineno">  178</span>}</div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00166">166</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>{</div>
+<div class="line"><span class="lineno">  168</span>  <span class="keywordflow">if</span> (!h)</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  170</span> </div>
+<div class="line"><span class="lineno">  171</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL, *tmp = NULL;</div>
+<div class="line"><span class="lineno">  172</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, h, entries, tmp)</div>
+<div class="line"><span class="lineno">  173</span>  {</div>
+<div class="line"><span class="lineno">  174</span>    <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(h, np, <a class="code hl_struct" href="structListNode.html">ListNode</a>, entries);</div>
+<div class="line"><span class="lineno">  175</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
+<div class="line"><span class="lineno">  176</span>  }</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>  <a class="code hl_define" href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a>(h);</div>
+<div class="line"><span class="lineno">  179</span>}</div>
 </div><!-- fragment --><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -682,20 +689,20 @@ Functions</h2></td></tr>
 <dd>
 The case of the strings is ignored. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00193">193</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>{</div>
-<div class="line"><span class="lineno">  195</span>  <span class="keywordflow">if</span> (!h)</div>
-<div class="line"><span class="lineno">  196</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
-<div class="line"><span class="lineno">  199</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, h, entries)</div>
-<div class="line"><span class="lineno">  200</span>  {</div>
-<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">if</span> ((*np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a> == <span class="charliteral">&#39;*&#39;</span>) || <a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(s, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
-<div class="line"><span class="lineno">  202</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  203</span>  }</div>
-<div class="line"><span class="lineno">  204</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  205</span>}</div>
-<div class="ttc" id="amutt_2string_8c_html_aebd2a8a3f8a30062c31fa1474d87cc41"><div class="ttname"><a href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a></div><div class="ttdeci">size_t mutt_istr_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix, ignoring case.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00243">string.c:243</a></div></div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00194">194</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>{</div>
+<div class="line"><span class="lineno">  196</span>  <span class="keywordflow">if</span> (!h)</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
+<div class="line"><span class="lineno">  200</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, h, entries)</div>
+<div class="line"><span class="lineno">  201</span>  {</div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">if</span> ((*np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a> == <span class="charliteral">&#39;*&#39;</span>) || <a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(s, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
+<div class="line"><span class="lineno">  203</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  204</span>  }</div>
+<div class="line"><span class="lineno">  205</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  206</span>}</div>
+<div class="ttc" id="amutt_2string_8c_html_aebd2a8a3f8a30062c31fa1474d87cc41"><div class="ttname"><a href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a></div><div class="ttdeci">size_t mutt_istr_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix, ignoring case.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00242">string.c:242</a></div></div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -757,27 +764,27 @@ The case of the strings is ignored. </dd></dl>
 </dl>
 <p>To be identical, the lists must both be the same length and contain the same strings. Two empty lists are identical. </p>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00216">216</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>{</div>
-<div class="line"><span class="lineno">  218</span>  <span class="keywordflow">if</span> (!ah || !bh)</div>
-<div class="line"><span class="lineno">  219</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *a = <a class="code hl_define" href="queue_8h.html#a3e2eb7535019a2829399b24744dd1a66">STAILQ_FIRST</a>(ah);</div>
-<div class="line"><span class="lineno">  222</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *b = <a class="code hl_define" href="queue_8h.html#a3e2eb7535019a2829399b24744dd1a66">STAILQ_FIRST</a>(bh);</div>
-<div class="line"><span class="lineno">  223</span> </div>
-<div class="line"><span class="lineno">  224</span>  <span class="keywordflow">while</span> (a &amp;&amp; b)</div>
-<div class="line"><span class="lineno">  225</span>  {</div>
-<div class="line"><span class="lineno">  226</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(a-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>, b-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
-<div class="line"><span class="lineno">  227</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>    a = <a class="code hl_define" href="queue_8h.html#ad89ac472696d006112dface9c2d75e47">STAILQ_NEXT</a>(a, entries);</div>
-<div class="line"><span class="lineno">  230</span>    b = <a class="code hl_define" href="queue_8h.html#ad89ac472696d006112dface9c2d75e47">STAILQ_NEXT</a>(b, entries);</div>
-<div class="line"><span class="lineno">  231</span>  }</div>
-<div class="line"><span class="lineno">  232</span>  <span class="keywordflow">if</span> (a || b)</div>
-<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  234</span> </div>
-<div class="line"><span class="lineno">  235</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  236</span>}</div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00217">217</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>{</div>
+<div class="line"><span class="lineno">  219</span>  <span class="keywordflow">if</span> (!ah || !bh)</div>
+<div class="line"><span class="lineno">  220</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *a = <a class="code hl_define" href="queue_8h.html#a3e2eb7535019a2829399b24744dd1a66">STAILQ_FIRST</a>(ah);</div>
+<div class="line"><span class="lineno">  223</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *b = <a class="code hl_define" href="queue_8h.html#a3e2eb7535019a2829399b24744dd1a66">STAILQ_FIRST</a>(bh);</div>
+<div class="line"><span class="lineno">  224</span> </div>
+<div class="line"><span class="lineno">  225</span>  <span class="keywordflow">while</span> (a &amp;&amp; b)</div>
+<div class="line"><span class="lineno">  226</span>  {</div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(a-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>, b-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
+<div class="line"><span class="lineno">  228</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  229</span> </div>
+<div class="line"><span class="lineno">  230</span>    a = <a class="code hl_define" href="queue_8h.html#ad89ac472696d006112dface9c2d75e47">STAILQ_NEXT</a>(a, entries);</div>
+<div class="line"><span class="lineno">  231</span>    b = <a class="code hl_define" href="queue_8h.html#ad89ac472696d006112dface9c2d75e47">STAILQ_NEXT</a>(b, entries);</div>
+<div class="line"><span class="lineno">  232</span>  }</div>
+<div class="line"><span class="lineno">  233</span>  <span class="keywordflow">if</span> (a || b)</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  237</span>}</div>
 <div class="ttc" id="aqueue_8h_html_a3e2eb7535019a2829399b24744dd1a66"><div class="ttname"><a href="queue_8h.html#a3e2eb7535019a2829399b24744dd1a66">STAILQ_FIRST</a></div><div class="ttdeci">#define STAILQ_FIRST(head)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00350">queue.h:350</a></div></div>
 <div class="ttc" id="aqueue_8h_html_ad89ac472696d006112dface9c2d75e47"><div class="ttname"><a href="queue_8h.html#ad89ac472696d006112dface9c2d75e47">STAILQ_NEXT</a></div><div class="ttdeci">#define STAILQ_NEXT(elm, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00400">queue.h:400</a></div></div>
 </div><!-- fragment --><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -847,31 +854,31 @@ The case of the strings is ignored. </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00245">245</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  246</span>{</div>
-<div class="line"><span class="lineno">  247</span>  <span class="keywordflow">if</span> (!src || (*src == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">  248</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  249</span> </div>
-<div class="line"><span class="lineno">  250</span>  <span class="keywordtype">size_t</span> count = 0;</div>
-<div class="line"><span class="lineno">  251</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">  252</span>  {</div>
-<div class="line"><span class="lineno">  253</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *start = src;</div>
-<div class="line"><span class="lineno">  254</span>    <span class="keywordflow">while</span> ((*src != <span class="charliteral">&#39;\0&#39;</span>) &amp;&amp; (*src != sep))</div>
-<div class="line"><span class="lineno">  255</span>      src++;</div>
-<div class="line"><span class="lineno">  256</span> </div>
-<div class="line"><span class="lineno">  257</span>    <a class="code hl_function" href="list_8c.html#a47252e2b00de607c64a5fec8dc16058d">mutt_list_insert_tail</a>(head, <a class="code hl_function" href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a>(start, src - start));</div>
-<div class="line"><span class="lineno">  258</span>    count++;</div>
-<div class="line"><span class="lineno">  259</span> </div>
-<div class="line"><span class="lineno">  260</span>    <span class="keywordflow">if</span> ((*src == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">  261</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>    src++;</div>
-<div class="line"><span class="lineno">  264</span>  }</div>
-<div class="line"><span class="lineno">  265</span> </div>
-<div class="line"><span class="lineno">  266</span>  <span class="keywordflow">return</span> count;</div>
-<div class="line"><span class="lineno">  267</span>}</div>
-<div class="ttc" id="alist_8c_html_a47252e2b00de607c64a5fec8dc16058d"><div class="ttname"><a href="list_8c.html#a47252e2b00de607c64a5fec8dc16058d">mutt_list_insert_tail</a></div><div class="ttdeci">struct ListNode * mutt_list_insert_tail(struct ListHead *h, char *s)</div><div class="ttdoc">Append a string to the end of a List.</div><div class="ttdef"><b>Definition:</b> <a href="list_8c_source.html#l00064">list.c:64</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a116d1d2391bc57f2ba3a9d9cfb15db76"><div class="ttname"><a href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a></div><div class="ttdeci">char * mutt_strn_dup(const char *begin, size_t len)</div><div class="ttdoc">Duplicate a sub-string.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00381">string.c:381</a></div></div>
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00246">246</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>{</div>
+<div class="line"><span class="lineno">  248</span>  <span class="keywordflow">if</span> (!src || (*src == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>  <span class="keywordtype">size_t</span> count = 0;</div>
+<div class="line"><span class="lineno">  252</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  253</span>  {</div>
+<div class="line"><span class="lineno">  254</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *start = src;</div>
+<div class="line"><span class="lineno">  255</span>    <span class="keywordflow">while</span> ((*src != <span class="charliteral">&#39;\0&#39;</span>) &amp;&amp; (*src != sep))</div>
+<div class="line"><span class="lineno">  256</span>      src++;</div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>    <a class="code hl_function" href="list_8c.html#a47252e2b00de607c64a5fec8dc16058d">mutt_list_insert_tail</a>(head, <a class="code hl_function" href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a>(start, src - start));</div>
+<div class="line"><span class="lineno">  259</span>    count++;</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">if</span> ((*src == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">  262</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>    src++;</div>
+<div class="line"><span class="lineno">  265</span>  }</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>  <span class="keywordflow">return</span> count;</div>
+<div class="line"><span class="lineno">  268</span>}</div>
+<div class="ttc" id="alist_8c_html_a47252e2b00de607c64a5fec8dc16058d"><div class="ttname"><a href="list_8c.html#a47252e2b00de607c64a5fec8dc16058d">mutt_list_insert_tail</a></div><div class="ttdeci">struct ListNode * mutt_list_insert_tail(struct ListHead *h, char *s)</div><div class="ttdoc">Append a string to the end of a List.</div><div class="ttdef"><b>Definition:</b> <a href="list_8c_source.html#l00065">list.c:65</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a116d1d2391bc57f2ba3a9d9cfb15db76"><div class="ttname"><a href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a></div><div class="ttdeci">char * mutt_strn_dup(const char *begin, size_t len)</div><div class="ttdoc">Duplicate a sub-string.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00380">string.c:380</a></div></div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -886,6 +893,142 @@ The case of the strings is ignored. </dd></dl>
 </div>
 <div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="list_8c_a8452a5e19043ca17f9b80b4443399e3b_icgraph.svg" width="331" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a3df8a4dc742babace631d82e71321678" name="a3df8a4dc742babace631d82e71321678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df8a4dc742babace631d82e71321678">&#9670;&#160;</a></span>mutt_list_copy_tail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mutt_list_copy_tail </td>
+          <td>(</td>
+          <td class="paramtype">struct ListHead *&#160;</td>
+          <td class="paramname"><em>dst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct ListHead *&#160;</td>
+          <td class="paramname"><em>src</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy a list into another list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>Destination list </td></tr>
+    <tr><td class="paramname">src</td><td>Source list </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00275">275</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  276</span>{</div>
+<div class="line"><span class="lineno">  277</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, src, entries)</div>
+<div class="line"><span class="lineno">  280</span>  {</div>
+<div class="line"><span class="lineno">  281</span>    <a class="code hl_function" href="list_8c.html#a47252e2b00de607c64a5fec8dc16058d">mutt_list_insert_tail</a>(dst, <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>));</div>
+<div class="line"><span class="lineno">  282</span>  }</div>
+<div class="line"><span class="lineno">  283</span>}</div>
+<div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00253">string.c:253</a></div></div>
+</div><!-- fragment --><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8c_a3df8a4dc742babace631d82e71321678_cgraph.svg" width="335" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8c_a3df8a4dc742babace631d82e71321678_icgraph.svg" width="312" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5f04ca102be20813d8c3ab0776a2786b" name="a5f04ca102be20813d8c3ab0776a2786b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f04ca102be20813d8c3ab0776a2786b">&#9670;&#160;</a></span>mutt_list_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t mutt_list_write </td>
+          <td>(</td>
+          <td class="paramtype">const struct ListHead *&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structBuffer.html">Buffer</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a list to a buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>List to write </td></tr>
+    <tr><td class="paramname">buf</td><td><a class="el" href="structBuffer.html" title="String manipulation buffer.">Buffer</a> for the list</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Elements separated by a space. References, and In-Reply-To, use this format. </p>
+
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00293">293</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>{</div>
+<div class="line"><span class="lineno">  295</span>  <span class="keywordflow">if</span> (!buf || !h)</div>
+<div class="line"><span class="lineno">  296</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  297</span> </div>
+<div class="line"><span class="lineno">  298</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
+<div class="line"><span class="lineno">  299</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, h, entries)</div>
+<div class="line"><span class="lineno">  300</span>  {</div>
+<div class="line"><span class="lineno">  301</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
+<div class="line"><span class="lineno">  302</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="queue_8h.html#ad89ac472696d006112dface9c2d75e47">STAILQ_NEXT</a>(np, entries))</div>
+<div class="line"><span class="lineno">  303</span>      <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><span class="lineno">  304</span>  }</div>
+<div class="line"><span class="lineno">  305</span> </div>
+<div class="line"><span class="lineno">  306</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf);</div>
+<div class="line"><span class="lineno">  307</span>}</div>
+<div class="ttc" id="abuffer_8c_html_a2914dc2d9a9d77e4c9970b4249be9370"><div class="ttname"><a href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a></div><div class="ttdeci">size_t buf_len(const struct Buffer *buf)</div><div class="ttdoc">Calculate the length of a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00491">buffer.c:491</a></div></div>
+<div class="ttc" id="abuffer_8c_html_a9924e74ddcb5280ab380e4627d1fba99"><div class="ttname"><a href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a></div><div class="ttdeci">size_t buf_addstr(struct Buffer *buf, const char *s)</div><div class="ttdoc">Add a string to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00226">buffer.c:226</a></div></div>
+</div><!-- fragment --><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8c_a5f04ca102be20813d8c3ab0776a2786b_cgraph.svg" width="262" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8c_a5f04ca102be20813d8c3ab0776a2786b_icgraph.svg" width="348" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

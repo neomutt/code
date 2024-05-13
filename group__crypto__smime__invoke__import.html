@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-04-25-34-g585158</span>
+   &#160;<span id="projectnumber">2024-04-25-76-g20fe7b</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -158,85 +158,85 @@ Functions</h2></td></tr>
 
 <p>Add a certificate and update index file (externally) - Implements <a class="el" href="structCryptModuleSpecs.html#ad5b7c9666d4927379aaffcd74bf24bb9">CryptModuleSpecs::smime_invoke_import()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l01129">1129</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1130</span>{</div>
-<div class="line"><span class="lineno"> 1131</span>  <span class="keywordtype">char</span> *certfile = NULL;</div>
-<div class="line"><span class="lineno"> 1132</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = NULL;</div>
-<div class="line"><span class="lineno"> 1133</span> </div>
-<div class="line"><span class="lineno"> 1134</span>  FILE *fp_out = NULL;</div>
-<div class="line"><span class="lineno"> 1135</span>  FILE *fp_err = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 1136</span>  <span class="keywordflow">if</span> (!fp_err)</div>
-<div class="line"><span class="lineno"> 1137</span>  {</div>
-<div class="line"><span class="lineno"> 1138</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1139</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno"> 1140</span>  }</div>
-<div class="line"><span class="lineno"> 1141</span> </div>
-<div class="line"><span class="lineno"> 1142</span>  fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 1143</span>  <span class="keywordflow">if</span> (!fp_out)</div>
-<div class="line"><span class="lineno"> 1144</span>  {</div>
-<div class="line"><span class="lineno"> 1145</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1146</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno"> 1147</span>  }</div>
-<div class="line"><span class="lineno"> 1148</span> </div>
-<div class="line"><span class="lineno"> 1149</span>  buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno"> 1150</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_smime_ask_cert_label = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_ask_cert_label&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1151</span>  <span class="keywordflow">if</span> (c_smime_ask_cert_label)</div>
-<div class="line"><span class="lineno"> 1152</span>  {</div>
-<div class="line"><span class="lineno"> 1153</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Label for certificate: &quot;</span>), buf, <a class="code hl_define" href="mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2">MUTT_COMP_NO_FLAGS</a>,</div>
-<div class="line"><span class="lineno"> 1154</span>                      <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL) != 0) ||</div>
-<div class="line"><span class="lineno"> 1155</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
-<div class="line"><span class="lineno"> 1156</span>    {</div>
-<div class="line"><span class="lineno"> 1157</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno"> 1158</span>    }</div>
-<div class="line"><span class="lineno"> 1159</span>  }</div>
-<div class="line"><span class="lineno"> 1160</span> </div>
-<div class="line"><span class="lineno"> 1161</span>  <a class="code hl_function" href="curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2">mutt_endwin</a>();</div>
-<div class="line"><span class="lineno"> 1162</span>  certfile = <a class="code hl_function" href="smime_8c.html#ab03fce542ee9a7967437403be572d34e">smime_extract_certificate</a>(infile);</div>
-<div class="line"><span class="lineno"> 1163</span>  <span class="keywordflow">if</span> (certfile)</div>
-<div class="line"><span class="lineno"> 1164</span>  {</div>
-<div class="line"><span class="lineno"> 1165</span>    <a class="code hl_function" href="curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2">mutt_endwin</a>();</div>
-<div class="line"><span class="lineno"> 1166</span> </div>
-<div class="line"><span class="lineno"> 1167</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structExpando.html">Expando</a> *c_smime_import_cert_command =</div>
-<div class="line"><span class="lineno"> 1168</span>        <a class="code hl_function" href="config_2helpers_8h.html#afadba3dd7a0ec53c70d047005b2efcef">cs_subset_expando</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_import_cert_command&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1169</span>    FILE *fp_smime_in = NULL;</div>
-<div class="line"><span class="lineno"> 1170</span>    pid_t pid = <a class="code hl_function" href="smime_8c.html#ad1ab503f8f55cd15916f08d31b3c94ab">smime_invoke</a>(&amp;fp_smime_in, NULL, NULL, -1, fileno(fp_out),</div>
-<div class="line"><span class="lineno"> 1171</span>                             fileno(fp_err), certfile, NULL, NULL, NULL, NULL,</div>
-<div class="line"><span class="lineno"> 1172</span>                             NULL, NULL, c_smime_import_cert_command);</div>
-<div class="line"><span class="lineno"> 1173</span>    <span class="keywordflow">if</span> (pid == -1)</div>
-<div class="line"><span class="lineno"> 1174</span>    {</div>
-<div class="line"><span class="lineno"> 1175</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: unable to create OpenSSL subprocess&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1176</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno"> 1177</span>    }</div>
-<div class="line"><span class="lineno"> 1178</span>    fputs(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), fp_smime_in);</div>
-<div class="line"><span class="lineno"> 1179</span>    fputc(<span class="charliteral">&#39;\n&#39;</span>, fp_smime_in);</div>
-<div class="line"><span class="lineno"> 1180</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_smime_in);</div>
-<div class="line"><span class="lineno"> 1181</span> </div>
-<div class="line"><span class="lineno"> 1182</span>    <a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
-<div class="line"><span class="lineno"> 1183</span> </div>
-<div class="line"><span class="lineno"> 1184</span>    <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(certfile);</div>
-<div class="line"><span class="lineno"> 1185</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;certfile);</div>
-<div class="line"><span class="lineno"> 1186</span>  }</div>
-<div class="line"><span class="lineno"> 1187</span> </div>
-<div class="line"><span class="lineno"> 1188</span>  fflush(fp_out);</div>
-<div class="line"><span class="lineno"> 1189</span>  rewind(fp_out);</div>
-<div class="line"><span class="lineno"> 1190</span>  fflush(fp_err);</div>
-<div class="line"><span class="lineno"> 1191</span>  rewind(fp_err);</div>
-<div class="line"><span class="lineno"> 1192</span> </div>
-<div class="line"><span class="lineno"> 1193</span>  <a class="code hl_function" href="file_8c.html#a0a6ff09a685fb6fa1120a582a5a6ef4a">mutt_file_copy_stream</a>(fp_out, stdout);</div>
-<div class="line"><span class="lineno"> 1194</span>  <a class="code hl_function" href="file_8c.html#a0a6ff09a685fb6fa1120a582a5a6ef4a">mutt_file_copy_stream</a>(fp_err, stdout);</div>
-<div class="line"><span class="lineno"> 1195</span> </div>
-<div class="line"><span class="lineno"> 1196</span>done:</div>
-<div class="line"><span class="lineno"> 1197</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
-<div class="line"><span class="lineno"> 1198</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_err);</div>
-<div class="line"><span class="lineno"> 1199</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno"> 1200</span>}</div>
+<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l01130">1130</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1131</span>{</div>
+<div class="line"><span class="lineno"> 1132</span>  <span class="keywordtype">char</span> *certfile = NULL;</div>
+<div class="line"><span class="lineno"> 1133</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = NULL;</div>
+<div class="line"><span class="lineno"> 1134</span> </div>
+<div class="line"><span class="lineno"> 1135</span>  FILE *fp_out = NULL;</div>
+<div class="line"><span class="lineno"> 1136</span>  FILE *fp_err = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 1137</span>  <span class="keywordflow">if</span> (!fp_err)</div>
+<div class="line"><span class="lineno"> 1138</span>  {</div>
+<div class="line"><span class="lineno"> 1139</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1140</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno"> 1141</span>  }</div>
+<div class="line"><span class="lineno"> 1142</span> </div>
+<div class="line"><span class="lineno"> 1143</span>  fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 1144</span>  <span class="keywordflow">if</span> (!fp_out)</div>
+<div class="line"><span class="lineno"> 1145</span>  {</div>
+<div class="line"><span class="lineno"> 1146</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1147</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno"> 1148</span>  }</div>
+<div class="line"><span class="lineno"> 1149</span> </div>
+<div class="line"><span class="lineno"> 1150</span>  buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno"> 1151</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_smime_ask_cert_label = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_ask_cert_label&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1152</span>  <span class="keywordflow">if</span> (c_smime_ask_cert_label)</div>
+<div class="line"><span class="lineno"> 1153</span>  {</div>
+<div class="line"><span class="lineno"> 1154</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Label for certificate: &quot;</span>), buf, <a class="code hl_define" href="mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2">MUTT_COMP_NO_FLAGS</a>,</div>
+<div class="line"><span class="lineno"> 1155</span>                      <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL) != 0) ||</div>
+<div class="line"><span class="lineno"> 1156</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
+<div class="line"><span class="lineno"> 1157</span>    {</div>
+<div class="line"><span class="lineno"> 1158</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno"> 1159</span>    }</div>
+<div class="line"><span class="lineno"> 1160</span>  }</div>
+<div class="line"><span class="lineno"> 1161</span> </div>
+<div class="line"><span class="lineno"> 1162</span>  <a class="code hl_function" href="curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2">mutt_endwin</a>();</div>
+<div class="line"><span class="lineno"> 1163</span>  certfile = <a class="code hl_function" href="smime_8c.html#ab03fce542ee9a7967437403be572d34e">smime_extract_certificate</a>(infile);</div>
+<div class="line"><span class="lineno"> 1164</span>  <span class="keywordflow">if</span> (certfile)</div>
+<div class="line"><span class="lineno"> 1165</span>  {</div>
+<div class="line"><span class="lineno"> 1166</span>    <a class="code hl_function" href="curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2">mutt_endwin</a>();</div>
+<div class="line"><span class="lineno"> 1167</span> </div>
+<div class="line"><span class="lineno"> 1168</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structExpando.html">Expando</a> *c_smime_import_cert_command =</div>
+<div class="line"><span class="lineno"> 1169</span>        <a class="code hl_function" href="config_2helpers_8h.html#afadba3dd7a0ec53c70d047005b2efcef">cs_subset_expando</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_import_cert_command&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1170</span>    FILE *fp_smime_in = NULL;</div>
+<div class="line"><span class="lineno"> 1171</span>    pid_t pid = <a class="code hl_function" href="smime_8c.html#ad1ab503f8f55cd15916f08d31b3c94ab">smime_invoke</a>(&amp;fp_smime_in, NULL, NULL, -1, fileno(fp_out),</div>
+<div class="line"><span class="lineno"> 1172</span>                             fileno(fp_err), certfile, NULL, NULL, NULL, NULL,</div>
+<div class="line"><span class="lineno"> 1173</span>                             NULL, NULL, c_smime_import_cert_command);</div>
+<div class="line"><span class="lineno"> 1174</span>    <span class="keywordflow">if</span> (pid == -1)</div>
+<div class="line"><span class="lineno"> 1175</span>    {</div>
+<div class="line"><span class="lineno"> 1176</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: unable to create OpenSSL subprocess&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1177</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno"> 1178</span>    }</div>
+<div class="line"><span class="lineno"> 1179</span>    fputs(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), fp_smime_in);</div>
+<div class="line"><span class="lineno"> 1180</span>    fputc(<span class="charliteral">&#39;\n&#39;</span>, fp_smime_in);</div>
+<div class="line"><span class="lineno"> 1181</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_smime_in);</div>
+<div class="line"><span class="lineno"> 1182</span> </div>
+<div class="line"><span class="lineno"> 1183</span>    <a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
+<div class="line"><span class="lineno"> 1184</span> </div>
+<div class="line"><span class="lineno"> 1185</span>    <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(certfile);</div>
+<div class="line"><span class="lineno"> 1186</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;certfile);</div>
+<div class="line"><span class="lineno"> 1187</span>  }</div>
+<div class="line"><span class="lineno"> 1188</span> </div>
+<div class="line"><span class="lineno"> 1189</span>  fflush(fp_out);</div>
+<div class="line"><span class="lineno"> 1190</span>  rewind(fp_out);</div>
+<div class="line"><span class="lineno"> 1191</span>  fflush(fp_err);</div>
+<div class="line"><span class="lineno"> 1192</span>  rewind(fp_err);</div>
+<div class="line"><span class="lineno"> 1193</span> </div>
+<div class="line"><span class="lineno"> 1194</span>  <a class="code hl_function" href="file_8c.html#a0a6ff09a685fb6fa1120a582a5a6ef4a">mutt_file_copy_stream</a>(fp_out, stdout);</div>
+<div class="line"><span class="lineno"> 1195</span>  <a class="code hl_function" href="file_8c.html#a0a6ff09a685fb6fa1120a582a5a6ef4a">mutt_file_copy_stream</a>(fp_err, stdout);</div>
+<div class="line"><span class="lineno"> 1196</span> </div>
+<div class="line"><span class="lineno"> 1197</span>done:</div>
+<div class="line"><span class="lineno"> 1198</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
+<div class="line"><span class="lineno"> 1199</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_err);</div>
+<div class="line"><span class="lineno"> 1200</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno"> 1201</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00291">buffer.c:291</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
-<div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00048">helpers.c:48</a></div></div>
-<div class="ttc" id="aconfig_2helpers_8h_html_afadba3dd7a0ec53c70d047005b2efcef"><div class="ttname"><a href="config_2helpers_8h.html#afadba3dd7a0ec53c70d047005b2efcef">cs_subset_expando</a></div><div class="ttdeci">const struct Expando * cs_subset_expando(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get an Expando config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2config__type_8c_source.html#l00358">config_type.c:358</a></div></div>
+<div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00047">helpers.c:47</a></div></div>
+<div class="ttc" id="aconfig_2helpers_8h_html_afadba3dd7a0ec53c70d047005b2efcef"><div class="ttname"><a href="config_2helpers_8h.html#afadba3dd7a0ec53c70d047005b2efcef">cs_subset_expando</a></div><div class="ttdeci">const struct Expando * cs_subset_expando(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get an Expando config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2config__type_8c_source.html#l00357">config_type.c:357</a></div></div>
 <div class="ttc" id="acurs__lib_8c_html_acd14d074d8b9e6cb21e851dd573cdec2"><div class="ttname"><a href="curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2">mutt_endwin</a></div><div class="ttdeci">void mutt_endwin(void)</div><div class="ttdoc">Shutdown curses.</div><div class="ttdef"><b>Definition:</b> <a href="curs__lib_8c_source.html#l00151">curs_lib.c:151</a></div></div>
-<div class="ttc" id="afile_8c_html_a0a6ff09a685fb6fa1120a582a5a6ef4a"><div class="ttname"><a href="file_8c.html#a0a6ff09a685fb6fa1120a582a5a6ef4a">mutt_file_copy_stream</a></div><div class="ttdeci">int mutt_file_copy_stream(FILE *fp_in, FILE *fp_out)</div><div class="ttdoc">Copy the contents of one file into another.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00286">file.c:286</a></div></div>
-<div class="ttc" id="afile_8c_html_ae57463c2854c006a3c67b78736e9056e"><div class="ttname"><a href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a></div><div class="ttdeci">void mutt_file_unlink(const char *s)</div><div class="ttdoc">Delete a file, carefully.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00220">file.c:220</a></div></div>
+<div class="ttc" id="afile_8c_html_a0a6ff09a685fb6fa1120a582a5a6ef4a"><div class="ttname"><a href="file_8c.html#a0a6ff09a685fb6fa1120a582a5a6ef4a">mutt_file_copy_stream</a></div><div class="ttdeci">int mutt_file_copy_stream(FILE *fp_in, FILE *fp_out)</div><div class="ttdoc">Copy the contents of one file into another.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00287">file.c:287</a></div></div>
+<div class="ttc" id="afile_8c_html_ae57463c2854c006a3c67b78736e9056e"><div class="ttname"><a href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a></div><div class="ttdeci">void mutt_file_unlink(const char *s)</div><div class="ttdoc">Delete a file, carefully.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00221">file.c:221</a></div></div>
 <div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00149">file.h:149</a></div></div>
 <div class="ttc" id="agroup__gui__mw_html_gabcbd2498b412e9f8e9d953cafc01989c"><div class="ttname"><a href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a></div><div class="ttdeci">int mw_get_field(const char *prompt, struct Buffer *buf, CompletionFlags complete, enum HistoryClass hclass, const struct CompleteOps *comp_api, void *cdata)</div><div class="ttdoc">Ask the user for a string -.</div><div class="ttdef"><b>Definition:</b> <a href="editor_2window_8c_source.html#l00274">window.c:274</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
@@ -248,12 +248,12 @@ Functions</h2></td></tr>
 <div class="ttc" id="amutt_8h_html_ab0d3fda521b45dec654ff46bac59c8c2"><div class="ttname"><a href="mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2">MUTT_COMP_NO_FLAGS</a></div><div class="ttdeci">#define MUTT_COMP_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_8h_source.html#l00056">mutt.h:56</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00081">pool.c:81</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00094">pool.c:94</a></div></div>
-<div class="ttc" id="asmime_8c_html_ab03fce542ee9a7967437403be572d34e"><div class="ttname"><a href="smime_8c.html#ab03fce542ee9a7967437403be572d34e">smime_extract_certificate</a></div><div class="ttdeci">static char * smime_extract_certificate(const char *infile)</div><div class="ttdoc">Extract an SMIME certificate from a file.</div><div class="ttdef"><b>Definition:</b> <a href="smime_8c_source.html#l00946">smime.c:946</a></div></div>
-<div class="ttc" id="asmime_8c_html_ad1ab503f8f55cd15916f08d31b3c94ab"><div class="ttname"><a href="smime_8c.html#ad1ab503f8f55cd15916f08d31b3c94ab">smime_invoke</a></div><div class="ttdeci">static pid_t smime_invoke(FILE **fp_smime_in, FILE **fp_smime_out, FILE **fp_smime_err, int fp_smime_infd, int fp_smime_outfd, int fp_smime_errfd, const char *fname, const char *sig_fname, const char *cryptalg, const char *digestalg, const char *key, const char *certificates, const char *intermediates, const struct Expando *exp)</div><div class="ttdoc">Run an SMIME command.</div><div class="ttdef"><b>Definition:</b> <a href="smime_8c_source.html#l00367">smime.c:367</a></div></div>
+<div class="ttc" id="asmime_8c_html_ab03fce542ee9a7967437403be572d34e"><div class="ttname"><a href="smime_8c.html#ab03fce542ee9a7967437403be572d34e">smime_extract_certificate</a></div><div class="ttdeci">static char * smime_extract_certificate(const char *infile)</div><div class="ttdoc">Extract an SMIME certificate from a file.</div><div class="ttdef"><b>Definition:</b> <a href="smime_8c_source.html#l00947">smime.c:947</a></div></div>
+<div class="ttc" id="asmime_8c_html_ad1ab503f8f55cd15916f08d31b3c94ab"><div class="ttname"><a href="smime_8c.html#ad1ab503f8f55cd15916f08d31b3c94ab">smime_invoke</a></div><div class="ttdeci">static pid_t smime_invoke(FILE **fp_smime_in, FILE **fp_smime_out, FILE **fp_smime_err, int fp_smime_infd, int fp_smime_outfd, int fp_smime_errfd, const char *fname, const char *sig_fname, const char *cryptalg, const char *digestalg, const char *key, const char *certificates, const char *intermediates, const struct Expando *exp)</div><div class="ttdoc">Run an SMIME command.</div><div class="ttdef"><b>Definition:</b> <a href="smime_8c_source.html#l00368">smime.c:368</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
 <div class="ttc" id="astructExpando_html"><div class="ttname"><a href="structExpando.html">Expando</a></div><div class="ttdoc">Parsed Expando trees.</div><div class="ttdef"><b>Definition:</b> <a href="expando_8h_source.html#l00040">expando.h:41</a></div></div>
-<div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00040">neomutt.h:41</a></div></div>
-<div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00045">neomutt.h:45</a></div></div>
+<div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00041">neomutt.h:42</a></div></div>
+<div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00046">neomutt.h:46</a></div></div>
 <div class="ttc" id="atmp_8h_html_a4ad1bdd71a5077a9e7dfc4890e1089f6"><div class="ttname"><a href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a></div><div class="ttdeci">#define mutt_file_mkstemp()</div><div class="ttdef"><b>Definition:</b> <a href="tmp_8h_source.html#l00036">tmp.h:36</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

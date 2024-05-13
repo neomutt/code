@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-04-25-34-g585158</span>
+   &#160;<span id="projectnumber">2024-04-25-76-g20fe7b</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -184,81 +184,81 @@ Functions</h2></td></tr>
 
 <p>Open a connection to a Store - Implements <a class="el" href="structStoreOps.html#a09395642085d77d66fa3d0fe74a08315">StoreOps::open()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="bdb_8c_source.html#l00114">114</a> of file <a class="el" href="bdb_8c_source.html">bdb.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>{</div>
-<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">if</span> (!path)</div>
-<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBdbStoreData.html">BdbStoreData</a> *sdata = <a class="code hl_function" href="bdb_8c.html#afff1696e94ba9bc9fdeed881d84f7c50">bdb_sdata_new</a>();</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> pagesize = 512;</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a81870ec05640c5033b781e7b15a437d4">lockfile</a>, <span class="stringliteral">&quot;%s-lock-hack&quot;</span>, path);</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>  sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a> = open(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a81870ec05640c5033b781e7b15a437d4">lockfile</a>), O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);</div>
-<div class="line"><span class="lineno">  126</span>  <span class="keywordflow">if</span> (sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a> &lt; 0)</div>
-<div class="line"><span class="lineno">  127</span>  {</div>
-<div class="line"><span class="lineno">  128</span>    <a class="code hl_function" href="bdb_8c.html#aec9c80b6e6cb9786d37bc016e228061e">bdb_sdata_free</a>(&amp;sdata);</div>
-<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  130</span>  }</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8c.html#a4cdd1f9b1b370cbf5a8348f63cfe67cf">mutt_file_lock</a>(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a>, <span class="keyword">true</span>, <span class="keyword">true</span>))</div>
-<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">goto</span> fail_close;</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordtype">int</span> rc = db_env_create(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>, 0);</div>
-<div class="line"><span class="lineno">  136</span>  <span class="keywordflow">if</span> (rc)</div>
-<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">goto</span> fail_unlock;</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>  rc = (*sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>-&gt;open)(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>, NULL, DB_INIT_MPOOL | DB_CREATE | DB_PRIVATE, 0600);</div>
-<div class="line"><span class="lineno">  140</span>  <span class="keywordflow">if</span> (rc)</div>
-<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">goto</span> fail_env;</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>  sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a> = NULL;</div>
-<div class="line"><span class="lineno">  144</span>  rc = db_create(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>, sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>, 0);</div>
-<div class="line"><span class="lineno">  145</span>  <span class="keywordflow">if</span> (rc)</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">goto</span> fail_env;</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>  uint32_t createflags = DB_CREATE;</div>
-<div class="line"><span class="lineno">  149</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>  <span class="keywordflow">if</span> ((stat(path, &amp;st) != 0) &amp;&amp; (errno == ENOENT))</div>
-<div class="line"><span class="lineno">  152</span>  {</div>
-<div class="line"><span class="lineno">  153</span>    createflags |= DB_EXCL;</div>
-<div class="line"><span class="lineno">  154</span>    sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>-&gt;set_pagesize(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>, pagesize);</div>
-<div class="line"><span class="lineno">  155</span>  }</div>
-<div class="line"><span class="lineno">  156</span> </div>
-<div class="line"><span class="lineno">  157</span>  rc = (*sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>-&gt;open)(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>, NULL, path, NULL, DB_BTREE, createflags, 0600);</div>
-<div class="line"><span class="lineno">  158</span>  <span class="keywordflow">if</span> (rc)</div>
-<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">goto</span> fail_db;</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>  <span class="comment">// Return an opaque pointer</span></div>
-<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">return</span> (<a class="code hl_typedef" href="store_2lib_8h.html#a133e01db5910ecff5422a38b2764a398">StoreHandle</a> *) sdata;</div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>fail_db:</div>
-<div class="line"><span class="lineno">  165</span>  sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>-&gt;close(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>, 0);</div>
-<div class="line"><span class="lineno">  166</span>fail_env:</div>
-<div class="line"><span class="lineno">  167</span>  sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>-&gt;close(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>, 0);</div>
-<div class="line"><span class="lineno">  168</span>fail_unlock:</div>
-<div class="line"><span class="lineno">  169</span>  <a class="code hl_function" href="file_8c.html#a58563edc1ad32b074fb2425a929b0f39">mutt_file_unlock</a>(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a>);</div>
-<div class="line"><span class="lineno">  170</span>fail_close:</div>
-<div class="line"><span class="lineno">  171</span>  close(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a>);</div>
-<div class="line"><span class="lineno">  172</span>  unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a81870ec05640c5033b781e7b15a437d4">lockfile</a>));</div>
-<div class="line"><span class="lineno">  173</span>  <a class="code hl_function" href="bdb_8c.html#aec9c80b6e6cb9786d37bc016e228061e">bdb_sdata_free</a>(&amp;sdata);</div>
-<div class="line"><span class="lineno">  174</span> </div>
-<div class="line"><span class="lineno">  175</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  176</span>}</div>
-<div class="ttc" id="abdb_8c_html_aec9c80b6e6cb9786d37bc016e228061e"><div class="ttname"><a href="bdb_8c.html#aec9c80b6e6cb9786d37bc016e228061e">bdb_sdata_free</a></div><div class="ttdeci">static void bdb_sdata_free(struct BdbStoreData **ptr)</div><div class="ttdoc">Free Bdb Store Data.</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00057">bdb.c:57</a></div></div>
-<div class="ttc" id="abdb_8c_html_afff1696e94ba9bc9fdeed881d84f7c50"><div class="ttname"><a href="bdb_8c.html#afff1696e94ba9bc9fdeed881d84f7c50">bdb_sdata_new</a></div><div class="ttdeci">static struct BdbStoreData * bdb_sdata_new(void)</div><div class="ttdoc">Create new Bdb Store Data.</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00072">bdb.c:72</a></div></div>
+<p class="definition">Definition at line <a class="el" href="bdb_8c_source.html#l00115">115</a> of file <a class="el" href="bdb_8c_source.html">bdb.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">if</span> (!path)</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBdbStoreData.html">BdbStoreData</a> *sdata = <a class="code hl_function" href="bdb_8c.html#afff1696e94ba9bc9fdeed881d84f7c50">bdb_sdata_new</a>();</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> pagesize = 512;</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a81870ec05640c5033b781e7b15a437d4">lockfile</a>, <span class="stringliteral">&quot;%s-lock-hack&quot;</span>, path);</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>  sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a> = open(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a81870ec05640c5033b781e7b15a437d4">lockfile</a>), O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);</div>
+<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">if</span> (sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a> &lt; 0)</div>
+<div class="line"><span class="lineno">  128</span>  {</div>
+<div class="line"><span class="lineno">  129</span>    <a class="code hl_function" href="bdb_8c.html#aec9c80b6e6cb9786d37bc016e228061e">bdb_sdata_free</a>(&amp;sdata);</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  131</span>  }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8c.html#a4cdd1f9b1b370cbf5a8348f63cfe67cf">mutt_file_lock</a>(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a>, <span class="keyword">true</span>, <span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">goto</span> fail_close;</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>  <span class="keywordtype">int</span> rc = db_env_create(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>, 0);</div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">if</span> (rc)</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">goto</span> fail_unlock;</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>  rc = (*sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>-&gt;open)(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>, NULL, DB_INIT_MPOOL | DB_CREATE | DB_PRIVATE, 0600);</div>
+<div class="line"><span class="lineno">  141</span>  <span class="keywordflow">if</span> (rc)</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">goto</span> fail_env;</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>  sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a> = NULL;</div>
+<div class="line"><span class="lineno">  145</span>  rc = db_create(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>, sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>, 0);</div>
+<div class="line"><span class="lineno">  146</span>  <span class="keywordflow">if</span> (rc)</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">goto</span> fail_env;</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>  uint32_t createflags = DB_CREATE;</div>
+<div class="line"><span class="lineno">  150</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">if</span> ((stat(path, &amp;st) != 0) &amp;&amp; (errno == ENOENT))</div>
+<div class="line"><span class="lineno">  153</span>  {</div>
+<div class="line"><span class="lineno">  154</span>    createflags |= DB_EXCL;</div>
+<div class="line"><span class="lineno">  155</span>    sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>-&gt;set_pagesize(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>, pagesize);</div>
+<div class="line"><span class="lineno">  156</span>  }</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>  rc = (*sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>-&gt;open)(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>, NULL, path, NULL, DB_BTREE, createflags, 0600);</div>
+<div class="line"><span class="lineno">  159</span>  <span class="keywordflow">if</span> (rc)</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">goto</span> fail_db;</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>  <span class="comment">// Return an opaque pointer</span></div>
+<div class="line"><span class="lineno">  163</span>  <span class="keywordflow">return</span> (<a class="code hl_typedef" href="store_2lib_8h.html#a133e01db5910ecff5422a38b2764a398">StoreHandle</a> *) sdata;</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>fail_db:</div>
+<div class="line"><span class="lineno">  166</span>  sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>-&gt;close(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">db</a>, 0);</div>
+<div class="line"><span class="lineno">  167</span>fail_env:</div>
+<div class="line"><span class="lineno">  168</span>  sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>-&gt;close(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">env</a>, 0);</div>
+<div class="line"><span class="lineno">  169</span>fail_unlock:</div>
+<div class="line"><span class="lineno">  170</span>  <a class="code hl_function" href="file_8c.html#a58563edc1ad32b074fb2425a929b0f39">mutt_file_unlock</a>(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a>);</div>
+<div class="line"><span class="lineno">  171</span>fail_close:</div>
+<div class="line"><span class="lineno">  172</span>  close(sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">fd</a>);</div>
+<div class="line"><span class="lineno">  173</span>  unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(&amp;sdata-&gt;<a class="code hl_variable" href="structBdbStoreData.html#a81870ec05640c5033b781e7b15a437d4">lockfile</a>));</div>
+<div class="line"><span class="lineno">  174</span>  <a class="code hl_function" href="bdb_8c.html#aec9c80b6e6cb9786d37bc016e228061e">bdb_sdata_free</a>(&amp;sdata);</div>
+<div class="line"><span class="lineno">  175</span> </div>
+<div class="line"><span class="lineno">  176</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  177</span>}</div>
+<div class="ttc" id="abdb_8c_html_aec9c80b6e6cb9786d37bc016e228061e"><div class="ttname"><a href="bdb_8c.html#aec9c80b6e6cb9786d37bc016e228061e">bdb_sdata_free</a></div><div class="ttdeci">static void bdb_sdata_free(struct BdbStoreData **ptr)</div><div class="ttdoc">Free Bdb Store Data.</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00058">bdb.c:58</a></div></div>
+<div class="ttc" id="abdb_8c_html_afff1696e94ba9bc9fdeed881d84f7c50"><div class="ttname"><a href="bdb_8c.html#afff1696e94ba9bc9fdeed881d84f7c50">bdb_sdata_new</a></div><div class="ttdeci">static struct BdbStoreData * bdb_sdata_new(void)</div><div class="ttdoc">Create new Bdb Store Data.</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00073">bdb.c:73</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00161">buffer.c:161</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
-<div class="ttc" id="afile_8c_html_a4cdd1f9b1b370cbf5a8348f63cfe67cf"><div class="ttname"><a href="file_8c.html#a4cdd1f9b1b370cbf5a8348f63cfe67cf">mutt_file_lock</a></div><div class="ttdeci">int mutt_file_lock(int fd, bool excl, bool timeout)</div><div class="ttdoc">(Try to) Lock a file using fcntl()</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01201">file.c:1201</a></div></div>
-<div class="ttc" id="afile_8c_html_a58563edc1ad32b074fb2425a929b0f39"><div class="ttname"><a href="file_8c.html#a58563edc1ad32b074fb2425a929b0f39">mutt_file_unlock</a></div><div class="ttdeci">int mutt_file_unlock(int fd)</div><div class="ttdoc">Unlock a file previously locked by mutt_file_lock()</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01248">file.c:1248</a></div></div>
+<div class="ttc" id="afile_8c_html_a4cdd1f9b1b370cbf5a8348f63cfe67cf"><div class="ttname"><a href="file_8c.html#a4cdd1f9b1b370cbf5a8348f63cfe67cf">mutt_file_lock</a></div><div class="ttdeci">int mutt_file_lock(int fd, bool excl, bool timeout)</div><div class="ttdoc">(Try to) Lock a file using fcntl()</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01202">file.c:1202</a></div></div>
+<div class="ttc" id="afile_8c_html_a58563edc1ad32b074fb2425a929b0f39"><div class="ttname"><a href="file_8c.html#a58563edc1ad32b074fb2425a929b0f39">mutt_file_unlock</a></div><div class="ttdeci">int mutt_file_unlock(int fd)</div><div class="ttdoc">Unlock a file previously locked by mutt_file_lock()</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01249">file.c:1249</a></div></div>
 <div class="ttc" id="astore_2lib_8h_html_a133e01db5910ecff5422a38b2764a398"><div class="ttname"><a href="store_2lib_8h.html#a133e01db5910ecff5422a38b2764a398">StoreHandle</a></div><div class="ttdeci">void StoreHandle</div><div class="ttdoc">Opaque type for store backend.</div><div class="ttdef"><b>Definition:</b> <a href="store_2lib_8h_source.html#l00061">lib.h:61</a></div></div>
-<div class="ttc" id="astructBdbStoreData_html"><div class="ttname"><a href="structBdbStoreData.html">BdbStoreData</a></div><div class="ttdoc">Berkeley DB Store.</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00045">bdb.c:46</a></div></div>
-<div class="ttc" id="astructBdbStoreData_html_a2b7e1c73764eb22c628ed83e3b0e65cd"><div class="ttname"><a href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">BdbStoreData::db</a></div><div class="ttdeci">DB * db</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00048">bdb.c:48</a></div></div>
-<div class="ttc" id="astructBdbStoreData_html_a2d506eff52e67f0f485d3b9da6135646"><div class="ttname"><a href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">BdbStoreData::env</a></div><div class="ttdeci">DB_ENV * env</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00047">bdb.c:47</a></div></div>
-<div class="ttc" id="astructBdbStoreData_html_a72977340d8fe51cd813ef83081c398fd"><div class="ttname"><a href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">BdbStoreData::fd</a></div><div class="ttdeci">int fd</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00049">bdb.c:49</a></div></div>
-<div class="ttc" id="astructBdbStoreData_html_a81870ec05640c5033b781e7b15a437d4"><div class="ttname"><a href="structBdbStoreData.html#a81870ec05640c5033b781e7b15a437d4">BdbStoreData::lockfile</a></div><div class="ttdeci">struct Buffer lockfile</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00050">bdb.c:50</a></div></div>
+<div class="ttc" id="astructBdbStoreData_html"><div class="ttname"><a href="structBdbStoreData.html">BdbStoreData</a></div><div class="ttdoc">Berkeley DB Store.</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00046">bdb.c:47</a></div></div>
+<div class="ttc" id="astructBdbStoreData_html_a2b7e1c73764eb22c628ed83e3b0e65cd"><div class="ttname"><a href="structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd">BdbStoreData::db</a></div><div class="ttdeci">DB * db</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00049">bdb.c:49</a></div></div>
+<div class="ttc" id="astructBdbStoreData_html_a2d506eff52e67f0f485d3b9da6135646"><div class="ttname"><a href="structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646">BdbStoreData::env</a></div><div class="ttdeci">DB_ENV * env</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00048">bdb.c:48</a></div></div>
+<div class="ttc" id="astructBdbStoreData_html_a72977340d8fe51cd813ef83081c398fd"><div class="ttname"><a href="structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd">BdbStoreData::fd</a></div><div class="ttdeci">int fd</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00050">bdb.c:50</a></div></div>
+<div class="ttc" id="astructBdbStoreData_html_a81870ec05640c5033b781e7b15a437d4"><div class="ttname"><a href="structBdbStoreData.html#a81870ec05640c5033b781e7b15a437d4">BdbStoreData::lockfile</a></div><div class="ttdeci">struct Buffer lockfile</div><div class="ttdef"><b>Definition:</b> <a href="bdb_8c_source.html#l00051">bdb.c:51</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">

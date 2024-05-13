@@ -1,5 +1,14 @@
 var NAVTREEINDEX48 =
 {
+"structNntpAcache.html":[1,0,177],
+"structNntpAcache.html#a33c62982769726fafeb4e89d6c92905c":[1,0,177,1],
+"structNntpAcache.html#a3d753a73325217475df2a93b0ec56ea0":[1,0,177,0],
+"structNntpAccountData.html":[1,0,178],
+"structNntpAccountData.html#a001b86788ccf66b12160431cbbb6e0bf":[1,0,178,19],
+"structNntpAccountData.html#a07329147457f52f9d362d7dc69bb0d68":[1,0,178,12],
+"structNntpAccountData.html#a0c47d705c8553a61127b79839399607d":[1,0,178,24],
+"structNntpAccountData.html#a12f478749b5ab10135a81d90ed0dc797":[1,0,178,17],
+"structNntpAccountData.html#a158b6bdd5a8be673e51ce25946709052":[1,0,178,8],
 "structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a":[1,0,178,25],
 "structNntpAccountData.html#a2a1c6e75563a61693936d8d82acc1321":[1,0,178,10],
 "structNntpAccountData.html#a31956518f4a223c885421a1315b79330":[1,0,178,15],
@@ -240,14 +249,5 @@ var NAVTREEINDEX48 =
 "structPopEmailData.html#a1de16443ed1e8b4152f38d654c89c4f1":[1,0,210,1],
 "structPopEmailData.html#acf6966ff72e2807416df5d2003e25858":[1,0,210,0],
 "structPostponeData.html":[1,0,211],
-"structPostponeData.html#a10c3536efabab61b4ef602d9225fe37e":[1,0,211,2],
-"structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6":[1,0,211,4],
-"structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6":[1,0,211,3],
-"structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91":[1,0,211,0],
-"structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a":[1,0,211,1],
-"structPostponeFunction.html":[1,0,212],
-"structPostponeFunction.html#a6d99519a80e00ccf5e6c36f877e6fe6d":[1,0,212,1],
-"structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6":[1,0,212,0],
-"structPrexStorage.html":[1,0,213],
-"structPrexStorage.html#a1cd500ad9bddb81ab67add35283c7fd3":[1,0,213,2]
+"structPostponeData.html#a10c3536efabab61b4ef602d9225fe37e":[1,0,211,2]
 };

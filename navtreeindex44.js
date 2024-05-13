@@ -1,5 +1,14 @@
 var NAVTREEINDEX44 =
 {
+"structCidMap.html#ab47616f19d709b6aeb616bc1c9083a58":[1,0,32,0],
+"structColorElement.html":[1,0,33],
+"structColorElement.html#a2729cac8adf35a90eda6a47559fc93ee":[1,0,33,1],
+"structColorElement.html#a48ef3921eaed2dc76820a742870a8641":[1,0,33,0],
+"structColorElement.html#a527527072e0d7c465e56e89f7970e2c0":[1,0,33,2],
+"structCommand.html":[1,0,34],
+"structCommand.html#a2bb4670a44e6bdf1d09a36868a9e19e7":[1,0,34,1],
+"structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f":[1,0,34,2],
+"structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3":[1,0,34,0],
 "structCompareData.html":[1,0,35],
 "structCompareData.html#a494fd1e791a53e404330531678597e00":[1,0,35,0],
 "structCompareData.html#aca9552167a3e5bdc72ba533b6e7cbf4c":[1,0,35,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX44 =
 "structEmailNode.html#a812e5a33b27b12a78daacbe246089abb":[1,0,64,1],
 "structEnrichedState.html":[1,0,65],
 "structEnrichedState.html#a24e444e4075e48ac58f72cff287f3c0f":[1,0,65,0],
-"structEnrichedState.html#a25b2b5e283b091dc6bfb6ce3cb3f4025":[1,0,65,3],
-"structEnrichedState.html#a3def386a556bda9d870e9b44bd2407e0":[1,0,65,10],
-"structEnrichedState.html#a4302bc98504a6e715be8e5006833051c":[1,0,65,2],
-"structEnrichedState.html#a5c98ee59229be04267e11585aa973684":[1,0,65,1],
-"structEnrichedState.html#a7003e363f1bd2f53eded1dffd3dd51d3":[1,0,65,12],
-"structEnrichedState.html#a7bb708aafd980deba0ec3c02570dc599":[1,0,65,9],
-"structEnrichedState.html#aadd5d9d9dca68deb9860d698492a09a4":[1,0,65,5],
-"structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4":[1,0,65,14],
-"structEnrichedState.html#acb9ee0793e0aff2f26e4845a1161f46e":[1,0,65,8],
-"structEnrichedState.html#ad6e42cbea8841c7ddff457cb8c63693e":[1,0,65,11]
+"structEnrichedState.html#a25b2b5e283b091dc6bfb6ce3cb3f4025":[1,0,65,3]
 };

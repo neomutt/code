@@ -9,5 +9,5 @@ var render_8h =
     [ "MUTT_FORMAT_INDEX", "render_8h.html#a668cd2bae84a41915a1ca2c7608de704", null ],
     [ "MUTT_FORMAT_PLAIN", "render_8h.html#acb5a64e4f8546e73796d2d31988221ac", null ],
     [ "MuttFormatFlags", "render_8h.html#ad2734d319d795141616e1b5f241be1b2", null ],
-    [ "node_tree_render", "render_8h.html#a73e60e28446a998b0603feb1872533e2", null ]
+    [ "node_render", "render_8h.html#a3bf17d8602a59496e70325b2ff3a9410", null ]
 ];
