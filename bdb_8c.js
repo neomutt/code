@@ -5,7 +5,7 @@ var bdb_8c =
     [ "bdb_sdata_new", "bdb_8c.html#afff1696e94ba9bc9fdeed881d84f7c50", null ],
     [ "dbt_init", "bdb_8c.html#ac0d858225d9c67a81344e4fdb79ef132", null ],
     [ "dbt_empty_init", "bdb_8c.html#a8ba0de880d78ebd26fb9c0e2f793d75d", null ],
-    [ "store_bdb_open", "group__store__open.html#gab56324ac61ef52d8c302711d2a55ca3e", null ],
+    [ "store_bdb_open", "group__store__open.html#ga1664c0edbe9cf361b0ff4dd5864d9a6e", null ],
     [ "store_bdb_fetch", "group__store__fetch.html#gaf4881fe6e64bcf98d794ef345dcccbf7", null ],
     [ "store_bdb_free", "group__store__free.html#ga1cc13d08a9299ebab2af3e535d489a09", null ],
     [ "store_bdb_store", "group__store__store.html#gaeb5741b9a0eec0c867f0fe93f2514858", null ],

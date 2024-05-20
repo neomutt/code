@@ -96,7 +96,7 @@ var imap_2private_8h =
     [ "imap_msg_close", "group__mx__msg__close.html#ga976a007de492b4814274866632d62708", null ],
     [ "imap_msg_commit", "group__mx__msg__commit.html#ga1226858cc62e436a52cf0c64b97f6fdb", null ],
     [ "imap_msg_save_hcache", "group__mx__msg__save__hcache.html#gaf92aa8eebe364d7a8d1f7e94a1d50d28", null ],
-    [ "imap_hcache_open", "imap_2private_8h.html#acd75897efa210794ca144cea1e3f7ca9", null ],
+    [ "imap_hcache_open", "imap_2private_8h.html#a37398fb77c2abaa0860c24621d4d17bb", null ],
     [ "imap_hcache_close", "imap_2private_8h.html#aac4c4b05fb952889e950219e16098099", null ],
     [ "imap_hcache_get", "imap_2private_8h.html#a6f76ef213448fd032944cbd618b2ee40", null ],
     [ "imap_hcache_put", "imap_2private_8h.html#a4b04cf064a1da9c217a9650f0fd60e68", null ],

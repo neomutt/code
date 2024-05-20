@@ -8,8 +8,6 @@ var muttlib_8h =
     [ "buf_save_path", "muttlib_8h.html#a7e8640905c600bdfdfc68bf3fcee5e1a", null ],
     [ "mutt_check_overwrite", "muttlib_8h.html#ae34cbb3670824b1838c0973c88aab15b", null ],
     [ "mutt_encode_path", "muttlib_8h.html#aeac015518fd637e7822d8e679dc3d18f", null ],
-    [ "mutt_expand_path", "muttlib_8h.html#adbe94d5152a02b35a6dda39ca9bf4663", null ],
-    [ "mutt_expand_path_regex", "muttlib_8h.html#a03a356f3d8b7ef8613d50e188ebac7e7", null ],
     [ "mutt_gecos_name", "muttlib_8h.html#a23e2405002a60eaa1507f7f6d677f696", null ],
     [ "mutt_get_parent_path", "muttlib_8h.html#a18edb91c53ec5ae71e0dad16f14eef27", null ],
     [ "mutt_inbox_cmp", "group__sort__api.html#ga4ce75034c4c32b8ee744c255ce912159", null ],

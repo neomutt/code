@@ -10,7 +10,7 @@ var lmdb_8c =
     [ "lmdb_sdata_new", "lmdb_8c.html#a0328614050088eef2e04a60d4cbb60d3", null ],
     [ "lmdb_get_read_txn", "lmdb_8c.html#ad388eb346fe7bbf36030e19187f1cf9c", null ],
     [ "lmdb_get_write_txn", "lmdb_8c.html#abc8ded9d7aaa85011e215a6c0fd23ded", null ],
-    [ "store_lmdb_open", "group__store__open.html#gaf352a34b0e2868f34826ba3494be8755", null ],
+    [ "store_lmdb_open", "group__store__open.html#ga9abc0c99802b4b8412fd8cddad236199", null ],
     [ "store_lmdb_fetch", "group__store__fetch.html#gae275607f571a9b1b20b64be021efd39f", null ],
     [ "store_lmdb_free", "group__store__free.html#gab0a44f3a23191f3b233661efdeb61041", null ],
     [ "store_lmdb_store", "group__store__store.html#ga6c9008ffeb81121ef3fe43b654803a62", null ],

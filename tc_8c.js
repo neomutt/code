@@ -1,6 +1,6 @@
 var tc_8c =
 [
-    [ "store_tokyocabinet_open", "group__store__open.html#gab948ab3ed8003416107ba9ca47416b68", null ],
+    [ "store_tokyocabinet_open", "group__store__open.html#gacccadde5086e899c2372f757b6f2cde7", null ],
     [ "store_tokyocabinet_fetch", "group__store__fetch.html#gad4954ea287c16ca9f1ddf4694c4fa138", null ],
     [ "store_tokyocabinet_free", "group__store__free.html#ga5c8f9355b57f51be483a682c6197a772", null ],
     [ "store_tokyocabinet_store", "group__store__store.html#gad448115b95de68ae05ee8e471cc65ded", null ],

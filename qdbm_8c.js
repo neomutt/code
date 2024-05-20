@@ -1,6 +1,6 @@
 var qdbm_8c =
 [
-    [ "store_qdbm_open", "group__store__open.html#gab0971efd695c3f302ed209144820572b", null ],
+    [ "store_qdbm_open", "group__store__open.html#ga52f133ff4048941c890653bb2ca8b35e", null ],
     [ "store_qdbm_fetch", "group__store__fetch.html#ga3300961a24e9a1a58bee0a0864bf0382", null ],
     [ "store_qdbm_free", "group__store__free.html#ga73a4444553d67dc5164d8f59d53fe4a2", null ],
     [ "store_qdbm_store", "group__store__store.html#gaf0733e1bfd0cf7184308755e54b281d8", null ],

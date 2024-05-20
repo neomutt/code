@@ -16,7 +16,7 @@ var hcache_2hcache_8c =
     [ "get_foldername", "hcache_2hcache_8c.html#af04125825e118cd83296f4d9dae9cb05", null ],
     [ "free_raw", "hcache_2hcache_8c.html#a82a990727c9f0e254d510805919890c1", null ],
     [ "generate_hcachever", "hcache_2hcache_8c.html#a92af5c18e373eace42e9f0bb948f723f", null ],
-    [ "hcache_open", "hcache_2hcache_8c.html#a57f1523e1b10b066044b1027071c9e49", null ],
+    [ "hcache_open", "hcache_2hcache_8c.html#a5691b8a075665d48c570eb105a472556", null ],
     [ "hcache_close", "hcache_2hcache_8c.html#a791c8437997aca5d8747271ff4c75e98", null ],
     [ "hcache_fetch_email", "hcache_2hcache_8c.html#a8ef10068ab1140db0955929b282525f6", null ],
     [ "hcache_fetch_raw_obj_full", "hcache_2hcache_8c.html#aa068289d3f49d30384735351739541f2", null ],

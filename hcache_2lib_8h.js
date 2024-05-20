@@ -4,7 +4,7 @@ var hcache_2lib_8h =
     [ "HCacheEntry", "structHCacheEntry.html", "structHCacheEntry" ],
     [ "hcache_fetch_raw_obj", "hcache_2lib_8h.html#a9aaef64bb7b1970be7882ce2b51afbb1", null ],
     [ "hcache_namer_t", "hcache_2lib_8h.html#a8a057dcdc29771b3f30457651fd523d5", null ],
-    [ "hcache_open", "hcache_2lib_8h.html#a57f1523e1b10b066044b1027071c9e49", null ],
+    [ "hcache_open", "hcache_2lib_8h.html#a5691b8a075665d48c570eb105a472556", null ],
     [ "hcache_close", "hcache_2lib_8h.html#a791c8437997aca5d8747271ff4c75e98", null ],
     [ "hcache_store_email", "hcache_2lib_8h.html#a9e0172956ca278dc113eefc10baef638", null ],
     [ "hcache_fetch_email", "hcache_2lib_8h.html#a8ef10068ab1140db0955929b282525f6", null ],

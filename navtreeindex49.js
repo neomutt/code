@@ -1,10 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6":[1,0,211,4],
-"structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6":[1,0,211,3],
-"structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91":[1,0,211,0],
-"structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a":[1,0,211,1],
-"structPostponeFunction.html":[1,0,212],
 "structPostponeFunction.html#a6d99519a80e00ccf5e6c36f877e6fe6d":[1,0,212,1],
 "structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6":[1,0,212,0],
 "structPrexStorage.html":[1,0,213],
@@ -183,11 +178,11 @@ var NAVTREEINDEX49 =
 "structState.html#ac92c06846530ad9f3cde7e23d5789d76":[1,0,241,2],
 "structStoreOps.html":[1,0,242],
 "structStoreOps.html#a04ca00d60c243af0cefe9a5c191e64e9":[1,0,242,7],
-"structStoreOps.html#a09395642085d77d66fa3d0fe74a08315":[1,0,242,1],
 "structStoreOps.html#a1fe12316bda9cb585a91e6c455796513":[1,0,242,6],
 "structStoreOps.html#a2e8409df86a1c1b7c588f91e0b593736":[1,0,242,4],
 "structStoreOps.html#a31887c67d59f60859f03682bbbc9d3b9":[1,0,242,0],
 "structStoreOps.html#a3c7aa10fb16fc281a969a123136beff7":[1,0,242,5],
+"structStoreOps.html#a793be54df22d7266703844479afb7af8":[1,0,242,1],
 "structStoreOps.html#a7da2b2e67405eef3626561410faf5e48":[1,0,242,2],
 "structStoreOps.html#aaaea6054d70f2111126be8903b1330bc":[1,0,242,3],
 "structSysExits.html":[1,0,243],
@@ -249,5 +244,10 @@ var NAVTREEINDEX49 =
 "structZstdComprData.html#aadf45da33e967650bbfe5ef9bdf65e60":[1,0,256,2],
 "structZstdComprData.html#ab2c52a954b07b73ac4c0ab51a2b1559d":[1,0,256,3],
 "structZstdComprData.html#ac55ba35312b467029c2f9d73641f5cd3":[1,0,256,0],
-"structZstrmContext.html":[1,0,257]
+"structZstrmContext.html":[1,0,257],
+"structZstrmContext.html#a4694ccace39f253ce6191e80d88f435f":[1,0,257,0],
+"structZstrmContext.html#a83f56498421caa65ebe34386cc21b58b":[1,0,257,1],
+"structZstrmContext.html#adf24ef9ed1bb47413d7460b921cd4a5b":[1,0,257,2],
+"structZstrmDirection.html":[1,0,258],
+"structZstrmDirection.html#a27976968579b017dc4cd4a76030d08e2":[1,0,258,3]
 };

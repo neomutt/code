@@ -28,7 +28,7 @@ var imap_8c =
     [ "imap_mbox_check_stats", "group__mx__mbox__check__stats.html#gabd37b3c43aada06f0be371fae6cae953", null ],
     [ "imap_path_status", "imap_8c.html#a0d5f24d9ba8d3ef9e95134cae1198408", null ],
     [ "imap_mailbox_status", "imap_8c.html#a0b252c6e7f2cc646db9414ea27a11a55", null ],
-    [ "imap_subscribe", "imap_8c.html#a36034876b5ce260ff6d70a435f8f36ca", null ],
+    [ "imap_subscribe", "imap_8c.html#a6f4e11266212cfbe82f0a123bfd27a8f", null ],
     [ "imap_complete", "imap_8c.html#a62122ec7ec3d9da81be09a650bf27977", null ],
     [ "imap_fast_trash", "imap_8c.html#ab243b759db9258fd8373a350b19ed0b8", null ],
     [ "imap_sync_mailbox", "imap_8c.html#ac964d627e8a2fad2b74d00096594d0ed", null ],

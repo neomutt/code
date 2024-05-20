@@ -7,7 +7,7 @@ var imap_2lib_8h =
     [ "imap_sync_mailbox", "imap_2lib_8h.html#ac964d627e8a2fad2b74d00096594d0ed", null ],
     [ "imap_path_status", "imap_2lib_8h.html#a0d5f24d9ba8d3ef9e95134cae1198408", null ],
     [ "imap_mailbox_status", "imap_2lib_8h.html#a0b252c6e7f2cc646db9414ea27a11a55", null ],
-    [ "imap_subscribe", "imap_2lib_8h.html#a36034876b5ce260ff6d70a435f8f36ca", null ],
+    [ "imap_subscribe", "imap_2lib_8h.html#a6f4e11266212cfbe82f0a123bfd27a8f", null ],
     [ "imap_complete", "imap_2lib_8h.html#a62122ec7ec3d9da81be09a650bf27977", null ],
     [ "imap_fast_trash", "imap_2lib_8h.html#ab243b759db9258fd8373a350b19ed0b8", null ],
     [ "imap_path_probe", "group__mx__path__probe.html#gab4f27af8eb857a20834f445be3f498de", null ],

@@ -1,6 +1,6 @@
 var kc_8c =
 [
-    [ "store_kyotocabinet_open", "group__store__open.html#ga503956fe87d49b3382a7c75d548c9e7a", null ],
+    [ "store_kyotocabinet_open", "group__store__open.html#ga948de68eb578bc8ecd711b0659a33ea8", null ],
     [ "store_kyotocabinet_fetch", "group__store__fetch.html#gaf6192dbfc776b6606565ffa6461e47d7", null ],
     [ "store_kyotocabinet_free", "group__store__free.html#ga780c438ee81296688ea83f5d42c60246", null ],
     [ "store_kyotocabinet_store", "group__store__store.html#gae20bcd3117295ec7a5a6f68c06e9e91f", null ],
