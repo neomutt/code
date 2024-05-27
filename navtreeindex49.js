@@ -1,6 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"structPostponeFunction.html#a6d99519a80e00ccf5e6c36f877e6fe6d":[1,0,212,1],
 "structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6":[1,0,212,0],
 "structPrexStorage.html":[1,0,213],
 "structPrexStorage.html#a1cd500ad9bddb81ab67add35283c7fd3":[1,0,213,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX49 =
 "structZstrmContext.html#a83f56498421caa65ebe34386cc21b58b":[1,0,257,1],
 "structZstrmContext.html#adf24ef9ed1bb47413d7460b921cd4a5b":[1,0,257,2],
 "structZstrmDirection.html":[1,0,258],
-"structZstrmDirection.html#a27976968579b017dc4cd4a76030d08e2":[1,0,258,3]
+"structZstrmDirection.html#a27976968579b017dc4cd4a76030d08e2":[1,0,258,3],
+"structZstrmDirection.html#a4c7437f1836874f8abc24a77626deafb":[1,0,258,4]
 };
