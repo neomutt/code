@@ -10,7 +10,6 @@ var group__window__recalc =
     [ "ibar_recalc", "group__window__recalc.html#gad5da1f46db353b9022654f5d929f3c58", null ],
     [ "index_recalc", "group__window__recalc.html#ga21327fe06863fb4547dae55df7b69eba", null ],
     [ "menu_recalc", "group__window__recalc.html#ga4d07fedbd4d41432c9c1777ce0f0a27c", null ],
-    [ "win_chain_recalc", "group__window__recalc.html#ga4252e9c1e1e5bf541ffebbeca1e2a8dd", null ],
     [ "pager_recalc", "group__window__recalc.html#gac7b0f8bab69aef9ee6f87881bc03eed8", null ],
     [ "pbar_recalc", "group__window__recalc.html#gadbe367a85dfc3d77c137839ce555eab2", null ],
     [ "progress_window_recalc", "group__window__recalc.html#ga3c7d93c3722aa11337b72a6cbee417ac", null ],

@@ -12,7 +12,6 @@ var type_8h =
       [ "MENU_KEY_SELECT_PGP", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a09b1c3405845537c65ba5f14190dbd96", null ],
       [ "MENU_KEY_SELECT_SMIME", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a4c3ea204f083b74a45ce05fc3f151634", null ],
       [ "MENU_INDEX", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a0afea51eb66be4c2e856b047b0db4cd7", null ],
-      [ "MENU_MIXMASTER", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a3e9889b435db5067ef3435f56e2db9d9", null ],
       [ "MENU_PAGER", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929", null ],
       [ "MENU_PGP", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4abde0a6cb18588a44a6d0a63828f1c603", null ],
       [ "MENU_POSTPONED", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af632c49a67e5e048d46556ec28c8c958", null ],

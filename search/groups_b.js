@@ -15,11 +15,10 @@ var searchData=
   ['menu_20function_20api_12',['Menu Function API',['../group__menu__function__api.html',1,'']]],
   ['mime_20encoder_20api_13',['Mime Encoder API',['../group__encoder__api.html',1,'']]],
   ['mime_20handler_20api_14',['Mime Handler API',['../group__handler__api.html',1,'']]],
-  ['mixmaster_20function_20api_15',['Mixmaster Function API',['../group__mixmaster__function__api.html',1,'']]],
-  ['msg_5fclose_28_29_16',['msg_close()',['../group__mx__msg__close.html',1,'']]],
-  ['msg_5fcommit_28_29_17',['msg_commit()',['../group__mx__msg__commit.html',1,'']]],
-  ['msg_5fopen_28_29_18',['msg_open()',['../group__mx__msg__open.html',1,'']]],
-  ['msg_5fopen_5fnew_28_29_19',['msg_open_new()',['../group__mx__msg__open__new.html',1,'']]],
-  ['msg_5fpadding_5fsize_28_29_20',['msg_padding_size()',['../group__mx__msg__padding__size.html',1,'']]],
-  ['msg_5fsave_5fhcache_28_29_21',['msg_save_hcache()',['../group__mx__msg__save__hcache.html',1,'']]]
+  ['msg_5fclose_28_29_15',['msg_close()',['../group__mx__msg__close.html',1,'']]],
+  ['msg_5fcommit_28_29_16',['msg_commit()',['../group__mx__msg__commit.html',1,'']]],
+  ['msg_5fopen_28_29_17',['msg_open()',['../group__mx__msg__open.html',1,'']]],
+  ['msg_5fopen_5fnew_28_29_18',['msg_open_new()',['../group__mx__msg__open__new.html',1,'']]],
+  ['msg_5fpadding_5fsize_28_29_19',['msg_padding_size()',['../group__mx__msg__padding__size.html',1,'']]],
+  ['msg_5fsave_5fhcache_28_29_20',['msg_save_hcache()',['../group__mx__msg__save__hcache.html',1,'']]]
 ];

@@ -31,7 +31,6 @@ var debug_2lib_8h =
     [ "name_expando_uid_index", "debug_2lib_8h.html#ae5fd931933cf4319bf1963900533e037", null ],
     [ "name_expando_uid_mailbox", "debug_2lib_8h.html#a5e97e6aad91c815f00a83989c5daba12", null ],
     [ "name_expando_uid_menu", "debug_2lib_8h.html#acf26dd7d32f7f9f0e392ac27c9c59bcc", null ],
-    [ "name_expando_uid_mixmaster", "debug_2lib_8h.html#a4abccbe03bdde6a81fc214fe32c727bf", null ],
     [ "name_expando_uid_nntp", "debug_2lib_8h.html#af9a081316760a9678cbc5f3877ec769c", null ],
     [ "name_expando_uid_pattern", "debug_2lib_8h.html#a9cb7727852bec510da67f3e4b9599ee4", null ],
     [ "name_expando_uid_pgp", "debug_2lib_8h.html#a1fcd662d58e99f7f09118c6f3953d8be", null ],

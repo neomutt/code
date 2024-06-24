@@ -18,10 +18,9 @@ var searchData=
   ['hdr_5ffcc_15',['HDR_FCC',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa39910162978e49562d0647a81fbb1e3d',1,'private.h']]],
   ['hdr_5ffollowupto_16',['HDR_FOLLOWUPTO',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa899d1ee4207e6c72ffb51a80dfd2096d',1,'private.h']]],
   ['hdr_5ffrom_17',['HDR_FROM',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefae991ac64da53a06212cdfe54d66a43bf',1,'private.h']]],
-  ['hdr_5fmix_18',['HDR_MIX',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa62728120899d075ec6494f9d63581a77',1,'private.h']]],
-  ['hdr_5fnewsgroups_19',['HDR_NEWSGROUPS',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefac1c0836c481768b0029d6726172713fa',1,'private.h']]],
-  ['hdr_5freplyto_20',['HDR_REPLYTO',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa1f4a6698e7ff2a6b492f1b92e8c3620f',1,'private.h']]],
-  ['hdr_5fsubject_21',['HDR_SUBJECT',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa050cfc849276a9e72a54c0035c867593',1,'private.h']]],
-  ['hdr_5fto_22',['HDR_TO',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa75f62356b04e1e2f84c7a5d7ac9871fb',1,'private.h']]],
-  ['hdr_5fxcommentto_23',['HDR_XCOMMENTTO',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa94aacb3c16ece8df6abc9f1bf5b4ac4e',1,'private.h']]]
+  ['hdr_5fnewsgroups_18',['HDR_NEWSGROUPS',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefac1c0836c481768b0029d6726172713fa',1,'private.h']]],
+  ['hdr_5freplyto_19',['HDR_REPLYTO',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa1f4a6698e7ff2a6b492f1b92e8c3620f',1,'private.h']]],
+  ['hdr_5fsubject_20',['HDR_SUBJECT',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa050cfc849276a9e72a54c0035c867593',1,'private.h']]],
+  ['hdr_5fto_21',['HDR_TO',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa75f62356b04e1e2f84c7a5d7ac9871fb',1,'private.h']]],
+  ['hdr_5fxcommentto_22',['HDR_XCOMMENTTO',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa94aacb3c16ece8df6abc9f1bf5b4ac4e',1,'private.h']]]
 ];

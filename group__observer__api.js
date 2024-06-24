@@ -67,8 +67,6 @@ var group__observer__api =
     [ "menu_color_observer", "group__observer__api.html#ga71980ec0ff9bbe4cfb49a11d52a2b778", null ],
     [ "menu_config_observer", "group__observer__api.html#ga1ff70da0ef343b7d81145774f14de2fe", null ],
     [ "menu_window_observer", "group__observer__api.html#ga11f9d36da5fd7be43e2fb5e28559e86f", null ],
-    [ "remailer_config_observer", "group__observer__api.html#ga6cb60c768504cff05fe520d33f03af73", null ],
-    [ "remailer_window_observer", "group__observer__api.html#ga92a36b837e3017c1d6b3b01aa1eecd2d", null ],
     [ "main_log_observer", "group__observer__api.html#gaf98c6ba45ec913e5d090791dea996e4c", null ],
     [ "mview_mailbox_observer", "group__observer__api.html#ga7759908cb82aa254ec40a38c3a3675ae", null ],
     [ "gpgme_key_config_observer", "group__observer__api.html#ga0a86978773047112bee0fbf6a7b6ca1a", null ],

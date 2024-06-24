@@ -39,7 +39,6 @@ var envelope_8h =
       [ "NT_ENVELOPE_FCC", "envelope_8h.html#a4344892727c804ab1e45e1bd0a33deeaa4956ce05789a3a25c71c89f18c437ab8", null ],
       [ "NT_ENVELOPE_FOLLOWUP_TO", "envelope_8h.html#a4344892727c804ab1e45e1bd0a33deeaae7ec1291dcfbea19455860d91cafec0c", null ],
       [ "NT_ENVELOPE_FROM", "envelope_8h.html#a4344892727c804ab1e45e1bd0a33deeaaa16d0944549cb21f807016fff5bcd1b2", null ],
-      [ "NT_ENVELOPE_MIXMASTER", "envelope_8h.html#a4344892727c804ab1e45e1bd0a33deeaa75aaebb0e0666b7d78523fc8e97542d6", null ],
       [ "NT_ENVELOPE_NEWSGROUPS", "envelope_8h.html#a4344892727c804ab1e45e1bd0a33deeaafc93e86863fe02b047275b89426fcae7", null ],
       [ "NT_ENVELOPE_REPLY_TO", "envelope_8h.html#a4344892727c804ab1e45e1bd0a33deeaa95f18ddd76c241331f0075d23ca163ac", null ],
       [ "NT_ENVELOPE_SUBJECT", "envelope_8h.html#a4344892727c804ab1e45e1bd0a33deeaa03c3463df91e71db164cf9315402c86f", null ],

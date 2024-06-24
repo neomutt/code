@@ -12,7 +12,6 @@ var envelope_2window_8c =
     [ "draw_header", "envelope_2window_8c.html#a1c8ed66a5996c5748a22515f6915d559", null ],
     [ "draw_header_content", "envelope_2window_8c.html#ac4f2268c759c82af60b1be3013ca29a1", null ],
     [ "draw_crypt_lines", "envelope_2window_8c.html#aef72fa3d71ea642fa8850c0f5df75a48", null ],
-    [ "draw_mix_line", "envelope_2window_8c.html#a3c9bc12d68fded497e05152905417fa1", null ],
     [ "draw_envelope_addr", "envelope_2window_8c.html#a094c42d2adc33086bf5e51684819cd24", null ],
     [ "draw_envelope_user_hdrs", "envelope_2window_8c.html#a8a56f6b232fe25958b9f5cca61bc599e", null ],
     [ "draw_envelope", "envelope_2window_8c.html#a31f5fb751d5ead76029ca70c497b9d49", null ],

@@ -42,15 +42,8 @@ var searchData=
   ['mh_2dspecific_20mailbox_20data_39',['Mh-specific Mailbox data',['../mh_mdata.html',1,'lib_mh']]],
   ['misc_20pgp_20helper_20routines_40',['Misc PGP helper routines',['../crypt_pgplib.html',1,'lib_ncrypt']]],
   ['miscellaneous_20functions_20for_20sending_20an_20email_41',['Miscellaneous functions for sending an email',['../send_sendlib.html',1,'lib_send']]],
-  ['mixmaster_42',['Mixmaster',['../lib_mixmaster.html',1,'']]],
-  ['mixmaster_20chain_20data_43',['Mixmaster Chain Data',['../mixmaster_chain_data.html',1,'lib_mixmaster']]],
-  ['mixmaster_20chain_20window_44',['Mixmaster Chain Window',['../mixmaster_win_chain.html',1,'lib_mixmaster']]],
-  ['mixmaster_20functions_45',['Mixmaster functions',['../mixmaster_functions.html',1,'lib_mixmaster']]],
-  ['mixmaster_20hosts_20window_46',['Mixmaster Hosts Window',['../mixmaster_win_hosts.html',1,'lib_mixmaster']]],
-  ['mixmaster_20remailer_47',['Mixmaster Remailer',['../mixmaster_mixmaster.html',1,'lib_mixmaster'],['../mixmaster_remailer.html',1,'lib_mixmaster']]],
-  ['mixmaster_20remailer_20dialog_48',['Mixmaster Remailer Dialog',['../mixmaster_dlg_mixmaster.html',1,'lib_mixmaster']]],
-  ['monitor_20files_20for_20changes_49',['Monitor files for changes',['../neo_monitor.html',1,'index']]],
-  ['msn_20helper_20functions_50',['MSN helper functions',['../imap_msn.html',1,'lib_imap']]],
-  ['multi_2dbyte_20string_20manipulation_20functions_51',['Multi-byte String manipulation functions',['../mutt_mbyte.html',1,'lib_mutt']]],
-  ['mutt_52',['Mutt',['../lib_mutt.html',1,'']]]
+  ['monitor_20files_20for_20changes_42',['Monitor files for changes',['../neo_monitor.html',1,'index']]],
+  ['msn_20helper_20functions_43',['MSN helper functions',['../imap_msn.html',1,'lib_imap']]],
+  ['multi_2dbyte_20string_20manipulation_20functions_44',['Multi-byte String manipulation functions',['../mutt_mbyte.html',1,'lib_mutt']]],
+  ['mutt_45',['Mutt',['../lib_mutt.html',1,'']]]
 ];

@@ -8,7 +8,6 @@ var envelope_2private_8h =
       [ "HDR_SUBJECT", "envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa050cfc849276a9e72a54c0035c867593", null ],
       [ "HDR_REPLYTO", "envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa1f4a6698e7ff2a6b492f1b92e8c3620f", null ],
       [ "HDR_FCC", "envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa39910162978e49562d0647a81fbb1e3d", null ],
-      [ "HDR_MIX", "envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa62728120899d075ec6494f9d63581a77", null ],
       [ "HDR_CRYPT", "envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa523859c2fa6df34616951b86d1a5b799", null ],
       [ "HDR_CRYPTINFO", "envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefae14d5f70a401bba6b13710ba5770a747", null ],
       [ "HDR_AUTOCRYPT", "envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa26271ff4de69905731ba0156d7585460", null ],

@@ -12,6 +12,5 @@ var group__envelope__function__api =
     [ "op_compose_autocrypt_menu", "group__envelope__function__api.html#ga5a857a3314714e521647c5b9f2760422", null ],
     [ "op_envelope_edit_followup_to", "group__envelope__function__api.html#ga56b77680619bf651a0d46d60823b7b2f", null ],
     [ "op_envelope_edit_newsgroups", "group__envelope__function__api.html#gacfaac9d2021d6fdeb21646ad328521b3", null ],
-    [ "op_envelope_edit_x_comment_to", "group__envelope__function__api.html#gaa1d15e47e6cae5df2797d7a65c149a23", null ],
-    [ "op_compose_mix", "group__envelope__function__api.html#ga64456fa9d4474494d0c2bf56aad03a7b", null ]
+    [ "op_envelope_edit_x_comment_to", "group__envelope__function__api.html#gaa1d15e47e6cae5df2797d7a65c149a23", null ]
 ];

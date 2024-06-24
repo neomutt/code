@@ -42,7 +42,6 @@ var group__expando__get__number__api =
     [ "index_N_num", "group__expando__get__number__api.html#gaf78b11da49254114f98a350a0a275c7f", null ],
     [ "index_X_num", "group__expando__get__number__api.html#ga64ec3cb5562609ce5e9b9696e5ac21e7", null ],
     [ "history_C_num", "group__expando__get__number__api.html#gabd1ea27a2eeeaf85ad527446f94fc09d", null ],
-    [ "mix_n_num", "group__expando__get__number__api.html#gaa9d87da014ff56b3ec529858f298bd40", null ],
     [ "pgp_entry_gpgme_date_num", "group__expando__get__number__api.html#ga23cdec669f26e0a73610cb74e6bba562", null ],
     [ "pgp_entry_gpgme_n_num", "group__expando__get__number__api.html#ga6d01d21f9bcc1b71e181bb65376c35f4", null ],
     [ "pgp_entry_gpgme_l_num", "group__expando__get__number__api.html#gab6a434c5565c7f305e168bae2d3b6f8e", null ],

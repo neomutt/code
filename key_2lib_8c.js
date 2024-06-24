@@ -21,7 +21,6 @@ var key_2lib_8c =
     [ "OpCompose", "key_2lib_8c.html#a3a00602ccff1ed66fd784dee4218bd74", null ],
     [ "OpEditor", "key_2lib_8c.html#a8cbd587896ed4a4ddc932bf15bb8f188", null ],
     [ "OpIndex", "key_2lib_8c.html#a2680735dfe321d9c8ecfab713c1a8fd1", null ],
-    [ "OpMixmaster", "key_2lib_8c.html#a41358e60e274514ce7892ce187a58ffa", null ],
     [ "OpPager", "key_2lib_8c.html#a73fb1c9b00778f4e3b5a2471de4021ed", null ],
     [ "OpPgp", "key_2lib_8c.html#aa5c6f7d7fdadc007f235a9139df2f251", null ],
     [ "OpPostponed", "key_2lib_8c.html#a240855c58bbffa263b1806022902ab61", null ],

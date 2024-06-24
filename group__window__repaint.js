@@ -9,7 +9,6 @@ var group__window__repaint =
     [ "ibar_repaint", "group__window__repaint.html#gaf6f41d2558a333c1bc37b842c312db3c", null ],
     [ "index_repaint", "group__window__repaint.html#ga3a77e69451f3977b5f554d8d3aa08c0e", null ],
     [ "menu_repaint", "group__window__repaint.html#ga188dbb43b5a473e5c8ba698b442f7ea2", null ],
-    [ "win_chain_repaint", "group__window__repaint.html#gaa00baa0011311244226b02aa59aad24a", null ],
     [ "pager_repaint", "group__window__repaint.html#gae4c423e4c5bb859e3bd4ef3b43dd3278", null ],
     [ "pbar_repaint", "group__window__repaint.html#ga265aabbb8187152bf23d33a2cc7f57c5", null ],
     [ "progress_window_repaint", "group__window__repaint.html#ga5b0dcb3aa430404dd56270549a4264c5", null ],

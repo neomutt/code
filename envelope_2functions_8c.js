@@ -16,7 +16,6 @@ var envelope_2functions_8c =
     [ "op_envelope_edit_followup_to", "group__envelope__function__api.html#ga56b77680619bf651a0d46d60823b7b2f", null ],
     [ "op_envelope_edit_newsgroups", "group__envelope__function__api.html#gacfaac9d2021d6fdeb21646ad328521b3", null ],
     [ "op_envelope_edit_x_comment_to", "group__envelope__function__api.html#gaa1d15e47e6cae5df2797d7a65c149a23", null ],
-    [ "op_compose_mix", "group__envelope__function__api.html#ga64456fa9d4474494d0c2bf56aad03a7b", null ],
     [ "env_function_dispatcher", "group__dispatcher__api.html#ga8b68e7d67291b124de9b1c01f9a40a27", null ],
     [ "EnvelopeFunctions", "envelope_2functions_8c.html#a3bde6f847604f59c535f69e8d0ca4e6a", null ]
 ];

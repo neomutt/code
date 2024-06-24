@@ -2,7 +2,6 @@ var mutt__config_8c =
 [
     [ "CONFIG_INIT_TYPE", "mutt__config_8c.html#a46304032f260bb0781771795493e2f36", null ],
     [ "CONFIG_INIT_VARS", "mutt__config_8c.html#a0eff39991a042bad67ff8f98c557e9d5", null ],
-    [ "MIXMASTER_DEFAULT", "mutt__config_8c.html#a59a5c2546e2344c733e335a2e2f5040e", null ],
     [ "multipart_validator", "group__cfg__def__validator.html#ga7734e4d740ff40c7ee7660c59b40c883", null ],
     [ "parse_index_date_recv_local", "group__expando__parse__api.html#ga4ec0bf658d73c4ea56692e6f90588673", null ],
     [ "parse_index_date_local", "group__expando__parse__api.html#ga2143cf7ad6dd4c3d376c7a0d2ed7f0b9", null ],
@@ -22,7 +21,5 @@ var mutt__config_8c =
     [ "StatusFormatDef", "mutt__config_8c.html#a44f783fe72392aa9a0569081b4147dcc", null ],
     [ "StatusFormatDefNoPadding", "mutt__config_8c.html#a9b690a40e3fcd22a0c29aee47a4739a2", null ],
     [ "MainVars", "mutt__config_8c.html#ac71e72a5f96e98af790df91b3ba25555", null ],
-    [ "MixFormatDef", "mutt__config_8c.html#a4f3109788f9b95562b40d73eb8592644", null ],
-    [ "MainVarsMixmaster", "mutt__config_8c.html#a20e8992ac003c3b8ba0c3d6c0b868269", null ],
     [ "MainVarsIdn", "mutt__config_8c.html#a7ddc861ca117158c331ffbcdfb64cfd3", null ]
 ];

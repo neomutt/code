@@ -16,7 +16,6 @@ var key_2init_8c =
     [ "ComposeDefaultBindings", "key_2init_8c.html#ad47746953723123b042d5fd6d6719ec8", null ],
     [ "EditorDefaultBindings", "key_2init_8c.html#a28c252222e94e35df4ecd1f90c50174d", null ],
     [ "IndexDefaultBindings", "key_2init_8c.html#aaa03f8f82b66fb9a6a44315d518cb348", null ],
-    [ "MixmasterDefaultBindings", "key_2init_8c.html#aad01ad16a71736aba7ed6424d29f4a21", null ],
     [ "PagerDefaultBindings", "key_2init_8c.html#a6beda52096305ada8ac945f21e3f02b4", null ],
     [ "PgpDefaultBindings", "key_2init_8c.html#ac34ba5661fc49da744196b10ac4fb60c", null ],
     [ "PostponedDefaultBindings", "key_2init_8c.html#a43fe9838c367b8164c0c9242355f34ef", null ],

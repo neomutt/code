@@ -45,7 +45,6 @@ var mutt__window_8h =
       [ "WT_DLG_PGP", "mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509a77f7ba0495d26e88f31fa6fa8b4e90c0", null ],
       [ "WT_DLG_POSTPONED", "mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509ad8c04a31388f160566eb80292dd2c94c", null ],
       [ "WT_DLG_QUERY", "mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509a5bf5f1cff4a237722e93bac6da7e631b", null ],
-      [ "WT_DLG_MIXMASTER", "mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509ad58508ca7b1ce46a2adc5d720f6a18e9", null ],
       [ "WT_DLG_SMIME", "mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509a5163ed19880e0e6ba62a75338ce5bd85", null ],
       [ "WT_CUSTOM", "mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509a24596ae46bc0b956cecca03eab3ec682", null ],
       [ "WT_HELP_BAR", "mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509acf1ccffa40b13de688f1902f8a1de140", null ],

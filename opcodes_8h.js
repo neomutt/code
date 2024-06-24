@@ -9,7 +9,6 @@ var opcodes_8h =
     [ "OPS_CORE", "opcodes_8h.html#a02f0daf9d5f73550e2978678f8ada319", null ],
     [ "OPS_CRYPT", "opcodes_8h.html#a10dc02264bc5e92c86f14516e6165760", null ],
     [ "OPS_ENVELOPE", "opcodes_8h.html#a4b882274b120d6b16b6b50ea4fdadbd6", null ],
-    [ "OPS_MIX", "opcodes_8h.html#a17de7be8a7158e9b62c2ad34c619a4d1", null ],
     [ "OPS_NOTMUCH", "opcodes_8h.html#afbe0451583de35d909258d05fbe374e5", null ],
     [ "OPS_PGP", "opcodes_8h.html#a6e9b2ac2bb205f8c5ce71d5196404aca", null ],
     [ "OPS_SIDEBAR", "opcodes_8h.html#a5eae12cf8a02208854009b63647ee655", null ],

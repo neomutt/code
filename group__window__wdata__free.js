@@ -11,7 +11,6 @@ var group__window__wdata__free =
     [ "index_private_data_free", "group__window__wdata__free.html#ga1ec4487e0522141faefc4ae14000423b", null ],
     [ "index_shared_data_free", "group__window__wdata__free.html#ga74485b146faf61e6b8e5b5fe9f8db903", null ],
     [ "menu_wdata_free", "group__window__wdata__free.html#ga7d8d382cf6b73b453f48b95d101bfe22", null ],
-    [ "chain_data_free", "group__window__wdata__free.html#gaaf2e13a6fd2d57d02bd8c69f85d7109a", null ],
     [ "pbar_data_free", "group__window__wdata__free.html#ga96409209a83829b0aa276fc5167de4fb", null ],
     [ "progress_wdata_free", "group__window__wdata__free.html#gaae3ad2cb1c319adf7ec9038d061de181", null ],
     [ "sb_wdata_free", "group__window__wdata__free.html#ga0e4166aea7c9051f20c26fe1e5f3b2ba", null ]

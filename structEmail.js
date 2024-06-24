@@ -28,7 +28,6 @@ var structEmail =
     [ "deleted", "structEmail.html#ac5db33e3d6d9723d8e496078d5769567", null ],
     [ "purge", "structEmail.html#a1e108ee29a0c6571211290457ab60756", null ],
     [ "edata_free", "structEmail.html#a781551eba730fd251226081727ae74bb", null ],
-    [ "chain", "structEmail.html#a9a3c73dc042313773159d921a711c830", null ],
     [ "nm_edata", "structEmail.html#a677a6956d02a1df8b87751a6161109b5", null ],
     [ "attach_del", "structEmail.html#a8d4df03be101c132581352d182ae99ae", null ],
     [ "attach_valid", "structEmail.html#a33e9e6bd4eda721034d75e6052c94e18", null ],
