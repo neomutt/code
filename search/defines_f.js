@@ -28,7 +28,8 @@ var searchData=
   ['prex_5fdow_25',['PREX_DOW',['../prex_8c.html#a62b36cd222fb65c5b9777db5b0d6d1c8',1,'prex.c']]],
   ['prex_5fdow_5fnocase_26',['PREX_DOW_NOCASE',['../prex_8c.html#a187af9207700c77f9bce74f39b3b4290',1,'prex.c']]],
   ['prex_5fmonth_27',['PREX_MONTH',['../prex_8c.html#a7f1d6e69661920424c3dab13811cf980',1,'prex.c']]],
-  ['prex_5ftime_28',['PREX_TIME',['../prex_8c.html#a764a49e2052d6153d8d48ab29a8d826c',1,'prex.c']]],
-  ['prex_5fyear_29',['PREX_YEAR',['../prex_8c.html#ab22a780ee67ee6a818fcc4d34c0da3a7',1,'prex.c']]],
-  ['public_5fkey_5fblock_30',['PUBLIC_KEY_BLOCK',['../crypt__gpgme_8c.html#aa313b6df071b5718005a87f7e33d2da6',1,'crypt_gpgme.c']]]
+  ['prex_5fmonth_5flax_28',['PREX_MONTH_LAX',['../prex_8c.html#a535da68402d2e838fa94d08140b22165',1,'prex.c']]],
+  ['prex_5ftime_29',['PREX_TIME',['../prex_8c.html#a764a49e2052d6153d8d48ab29a8d826c',1,'prex.c']]],
+  ['prex_5fyear_30',['PREX_YEAR',['../prex_8c.html#ab22a780ee67ee6a818fcc4d34c0da3a7',1,'prex.c']]],
+  ['public_5fkey_5fblock_31',['PUBLIC_KEY_BLOCK',['../crypt__gpgme_8c.html#aa313b6df071b5718005a87f7e33d2da6',1,'crypt_gpgme.c']]]
 ];

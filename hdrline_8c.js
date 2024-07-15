@@ -9,6 +9,11 @@ var hdrline_8c =
       [ "DISP_PLAIN", "hdrline_8c.html#aa01498a3ceb2fa74dc9536c16caef1daa13d0042d122bd0b2b9b2863b87e1422c", null ],
       [ "DISP_MAX", "hdrline_8c.html#aa01498a3ceb2fa74dc9536c16caef1daafa2c96bcd7f3591c6337ff79163b8ddd", null ]
     ] ],
+    [ "IndexDateChoice", "hdrline_8c.html#ad6d2b829cf2433997dec678baa50941b", [
+      [ "SENT_SENDER", "hdrline_8c.html#ad6d2b829cf2433997dec678baa50941bae45938ee3af4c44f682b2ad9b663eed5", null ],
+      [ "SENT_LOCAL", "hdrline_8c.html#ad6d2b829cf2433997dec678baa50941ba6e8fdc23677dee5966b7b24379806efb", null ],
+      [ "RECV_LOCAL", "hdrline_8c.html#ad6d2b829cf2433997dec678baa50941bab65f399a4fc711abdd2cea38badd8203", null ]
+    ] ],
     [ "make_from_prefix", "hdrline_8c.html#a07d76881897ead4f4ddd9c1d07ff3c23", null ],
     [ "make_from", "hdrline_8c.html#adf6800cd4ee1a0975d8bb953265b1ba9", null ],
     [ "make_from_addr", "hdrline_8c.html#a36ab2658c08c1ccf8a77d7921fc32205", null ],
@@ -17,6 +22,7 @@ var hdrline_8c =
     [ "thread_is_new", "hdrline_8c.html#aebca8cfe2272489be6f640a0643ec1df", null ],
     [ "thread_is_old", "hdrline_8c.html#aa520340bd3c4e1253ac4603229f2b026", null ],
     [ "index_date_recv_local_num", "group__expando__get__number__api.html#ga0347275779464c414bc8455b736e2d45", null ],
+    [ "index_email_date", "hdrline_8c.html#aafe2abeaba6206162a51ac7114834b53", null ],
     [ "index_date_recv_local", "group__expando__get__string__api.html#ga425f0ffb50b5e003872a4bc6ec973963", null ],
     [ "index_date_local_num", "group__expando__get__number__api.html#ga45b9e03c32a91309b44a2fd2f4e14466", null ],
     [ "index_date_local", "group__expando__get__string__api.html#gac69ade4f4353de478cacfd56ff2826d5", null ],
@@ -33,8 +39,8 @@ var hdrline_8c =
     [ "index_C_num", "group__expando__get__number__api.html#ga1bcdf8de1d29dc07cb673d2328222169", null ],
     [ "index_d_num", "group__expando__get__number__api.html#ga510c80e0d38078400894317c0c340a2b", null ],
     [ "index_d", "group__expando__get__string__api.html#ga405f82379416dc7d04fef2eea4824d5a", null ],
-    [ "index_D_num", "group__expando__get__number__api.html#ga4b84795a9f4247288fde573c4e5725cb", null ],
     [ "index_D", "group__expando__get__string__api.html#gaf403f45086ad820ba2b17bded623c7a0", null ],
+    [ "index_D_num", "group__expando__get__number__api.html#ga4b84795a9f4247288fde573c4e5725cb", null ],
     [ "index_e_num", "group__expando__get__number__api.html#gab5e0f723564467d3a6f8f72bd04d838f", null ],
     [ "index_E_num", "group__expando__get__number__api.html#ga779de053fcb02a1afcf5452f8b1a7143", null ],
     [ "index_f", "group__expando__get__string__api.html#ga615319a9037e49dfbc108c9eb5d6502d", null ],

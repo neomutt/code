@@ -1,5 +1,11 @@
 var NAVTREEINDEX44 =
 {
+"structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db":[1,0,49,9],
+"structConnection.html#a577e30cca37f125532cc73d4cbf51dcb":[1,0,49,1],
+"structConnection.html#a6c86ddad667d9db254dff142ceed42dd":[1,0,49,3],
+"structConnection.html#a7a40be1f125477cf01ced6817be10bbc":[1,0,49,11],
+"structConnection.html#aa3ca1bfc7dba70f1eaf391eee9701330":[1,0,49,5],
+"structConnection.html#ac3c39549b6611c8eaed2a25573b5c432":[1,0,49,0],
 "structConnection.html#ad015a1227002b6ae42d5ad0d3add33d2":[1,0,49,7],
 "structConnection.html#af805fad417c8fa7c5079ef741d8233e2":[1,0,49,4],
 "structConnection.html#afdd852b383b3926639ec9132c048590a":[1,0,49,8],
@@ -243,11 +249,5 @@ var NAVTREEINDEX44 =
 "structEventColor.html#a944299806d9ebd09fa12892dd156f191":[1,0,75,0],
 "structEventConfig.html":[1,0,76],
 "structEventConfig.html#a8ad167d2ac2710a3d9f17203524e23f6":[1,0,76,0],
-"structEventConfig.html#ab3120e9fe21cdf94bc417c31dc8e4a1b":[1,0,76,1],
-"structEventConfig.html#ad357e11c6045fd7146490c9abce91c03":[1,0,76,2],
-"structEventEmail.html":[1,0,77],
-"structEventEmail.html#a4b2a1b3e897ed10d908c31ba41c32e47":[1,0,77,0],
-"structEventEmail.html#a986bd9003cd8f876f7703e66c2023808":[1,0,77,1],
-"structEventHeader.html":[1,0,78],
-"structEventHeader.html#a403d7f2e474b30ca41a5c7cad319e8fd":[1,0,78,0]
+"structEventConfig.html#ab3120e9fe21cdf94bc417c31dc8e4a1b":[1,0,76,1]
 };
