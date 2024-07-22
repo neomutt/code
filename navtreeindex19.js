@@ -1,7 +1,5 @@
 var NAVTREEINDEX19 =
 {
-"group__mx__msg__save__hcache.html#ga2f448cf00acc38982a76ff090483a483":[49,15,13,2],
-"group__mx__msg__save__hcache.html#ga2f4a396cede56e0868a6ecd48385b696":[49,15,13,3],
 "group__mx__msg__save__hcache.html#gabcd55f0bb3f983b76ecbdc34253f1c05":[49,15,13,4],
 "group__mx__msg__save__hcache.html#gac329588156f6dfd55072cc812ff043cd":[49,15,13,0],
 "group__mx__msg__save__hcache.html#gaf92aa8eebe364d7a8d1f7e94a1d50d28":[49,15,13,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX19 =
 "group__sort__mail__api.html#ga1fe327b2048f5a2c6e0c9878edb5f8e4":[49,43,0],
 "group__sort__mail__api.html#ga2d669de8b5eccbb3f440a1b6f7a318b1":[49,43,10],
 "group__sort__mail__api.html#ga3113d060a994bd422d30da60d6bfbf21":[49,43,9],
-"group__sort__mail__api.html#ga3b9856eb0641218e47cea7bb0e78450a":[49,43,8]
+"group__sort__mail__api.html#ga3b9856eb0641218e47cea7bb0e78450a":[49,43,8],
+"group__sort__mail__api.html#ga5ea1b00f83ab600ec76f69093e782cc4":[49,43,3],
+"group__sort__mail__api.html#ga6c132a64c5352af5047e75542e453ae2":[49,43,4]
 };

@@ -15,7 +15,6 @@ var globals_8h =
     [ "Muttrc", "globals_8h.html#ab643e119be235279423098b7e2cfe8fb", null ],
     [ "TempAttachmentsList", "globals_8h.html#a29415171c9dd4ed4f41456275cddf672", null ],
     [ "UserHeader", "globals_8h.html#aa6af9b507b7033a8a1226c0c1946116d", null ],
-    [ "CurrentMenu", "globals_8h.html#aa7a5a14caede049320c3c381453ce22b", null ],
     [ "OptAutocryptGpgme", "globals_8h.html#a1137c8074e2a6ff941529fc8e64fbca5", null ],
     [ "OptDontHandlePgpKeys", "globals_8h.html#a06fbffcecad5ed6656ea2948927b26b8", null ],
     [ "OptForceRefresh", "globals_8h.html#a7b478140982b38a32d3121b0b3fb5238", null ],

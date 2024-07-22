@@ -1,7 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"muttlib_8h.html#a3ffd45805a0aa4478b3f176602f3082f":[2,0,97,2],
-"muttlib_8h.html#a69b9bf85b68576604d5356405ace86b6":[2,0,97,12],
 "muttlib_8h.html#a6fbcbe533be7c4e05d99b0eb9cdb2581":[2,0,97,19],
 "muttlib_8h.html#a712bb5e0a580467b5aedc08afea40b92":[2,0,97,11],
 "muttlib_8h.html#a7e8640905c600bdfdfc68bf3fcee5e1a":[2,0,97,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX31 =
 "ncrypt_2lib_8h.html#a530487c28aacc2c2d50f12eefb8c5506":[2,0,33,21,43],
 "ncrypt_2lib_8h.html#a587e679a4c9cc44f11f0c467bb22b0af":[2,0,33,21,12],
 "ncrypt_2lib_8h.html#a5959b6797c94b22a7d391cbb5fd2fa33":[2,0,33,21,65],
-"ncrypt_2lib_8h.html#a5b5753c8babedca24c31e8d2dbad8130":[2,0,33,21,40]
+"ncrypt_2lib_8h.html#a5b5753c8babedca24c31e8d2dbad8130":[2,0,33,21,40],
+"ncrypt_2lib_8h.html#a626ef0840a8870758022db54646c12ae":[2,0,33,21,77],
+"ncrypt_2lib_8h.html#a6522a5e7af7f8624b8a3bbc94d8efb1e":[2,0,33,21,6]
 };
