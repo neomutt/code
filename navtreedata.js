@@ -151,8 +151,8 @@ var NAVTREEINDEX =
 "structMhMboxData.html#a379d00adbfc0301ebcacd3b133778e3b",
 "structPagerPrivateData.html#af5416e43311ef0ec6c3057946294ac07",
 "structSidebarData.html",
-"tags_8h.html#a676a847d317568daf9ebe7397581ba8c",
-"util_8c.html#a7c4dbc9f84be00789935c291832b75b2"
+"tags_8h.html#a9133a330145f3c459022833c74cdc65d",
+"util_8c.html#a95b870498ac3b923dc276a18c8c5add8"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

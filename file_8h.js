@@ -1,6 +1,5 @@
 var file_8h =
 [
-    [ "timespec", "structtimespec.html", "structtimespec" ],
     [ "MuttFileIter", "structMuttFileIter.html", "structMuttFileIter" ],
     [ "MUTT_RL_NO_FLAGS", "file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa", null ],
     [ "MUTT_RL_CONT", "file_8h.html#a3f3715ab3aa19a4c3ac0d90eb99ccf08", null ],

@@ -249,7 +249,6 @@ var hierarchy =
     [ "Tag", "structTag.html", null ],
     [ "TextSyntax", "structTextSyntax.html", null ],
     [ "ThreadsContext", "structThreadsContext.html", null ],
-    [ "timespec", "structtimespec.html", null ],
     [ "TunnelSockData", "structTunnelSockData.html", null ],
     [ "Tz", "structTz.html", null ],
     [ "Url", "structUrl.html", null ],

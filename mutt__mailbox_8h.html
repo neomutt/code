@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-04-25-102-g19653a</span>
+   &#160;<span id="projectnumber">2024-04-25-103-g5a12fb</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -357,7 +357,7 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="mutt__mailbox_8c_source.html#l00407">407</a> of file <a class="el" href="mutt__mailbox_8c_source.html">mutt_mailbox.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  408</span>{</div>
 <div class="line"><span class="lineno">  409</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
-<div class="line"><span class="lineno">  410</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structtimespec.html">timespec</a> ts[2] = { { 0 }, { 0 } };</div>
+<div class="line"><span class="lineno">  410</span>  <span class="keyword">struct </span>timespec ts[2] = { { 0 }, { 0 } };</div>
 <div class="line"><span class="lineno">  411</span><span class="preprocessor">#else</span></div>
 <div class="line"><span class="lineno">  412</span>  <span class="keyword">struct </span>utimbuf ut = { 0 };</div>
 <div class="line"><span class="lineno">  413</span><span class="preprocessor">#endif</span></div>
@@ -375,10 +375,10 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  425</span>    <span class="keywordflow">if</span> (st-&gt;st_mtime &gt; st-&gt;st_atime)</div>
 <div class="line"><span class="lineno">  426</span>    {</div>
 <div class="line"><span class="lineno">  427</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
-<div class="line"><span class="lineno">  428</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
-<div class="line"><span class="lineno">  429</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_OMIT;</div>
-<div class="line"><span class="lineno">  430</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
-<div class="line"><span class="lineno">  431</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
+<div class="line"><span class="lineno">  428</span>      ts[0].tv_sec = 0;</div>
+<div class="line"><span class="lineno">  429</span>      ts[0].tv_nsec = UTIME_OMIT;</div>
+<div class="line"><span class="lineno">  430</span>      ts[1].tv_sec = 0;</div>
+<div class="line"><span class="lineno">  431</span>      ts[1].tv_nsec = UTIME_NOW;</div>
 <div class="line"><span class="lineno">  432</span>      utimensat(AT_FDCWD, buf, ts, 0);</div>
 <div class="line"><span class="lineno">  433</span><span class="preprocessor">#else</span></div>
 <div class="line"><span class="lineno">  434</span>      ut.actime = st-&gt;st_atime;</div>
@@ -389,10 +389,10 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  439</span>    <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  440</span>    {</div>
 <div class="line"><span class="lineno">  441</span><span class="preprocessor">#ifdef HAVE_UTIMENSAT</span></div>
-<div class="line"><span class="lineno">  442</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
-<div class="line"><span class="lineno">  443</span>      ts[0].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
-<div class="line"><span class="lineno">  444</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">tv_sec</a> = 0;</div>
-<div class="line"><span class="lineno">  445</span>      ts[1].<a class="code hl_variable" href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">tv_nsec</a> = UTIME_NOW;</div>
+<div class="line"><span class="lineno">  442</span>      ts[0].tv_sec = 0;</div>
+<div class="line"><span class="lineno">  443</span>      ts[0].tv_nsec = UTIME_NOW;</div>
+<div class="line"><span class="lineno">  444</span>      ts[1].tv_sec = 0;</div>
+<div class="line"><span class="lineno">  445</span>      ts[1].tv_nsec = UTIME_NOW;</div>
 <div class="line"><span class="lineno">  446</span>      utimensat(AT_FDCWD, buf, ts, 0);</div>
 <div class="line"><span class="lineno">  447</span><span class="preprocessor">#else</span></div>
 <div class="line"><span class="lineno">  448</span>      utime(path, NULL);</div>
@@ -402,9 +402,6 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  452</span>}</div>
 <div class="ttc" id="acore_2mailbox_8c_html_ab614961b6e97592c0e56c30b47f65f29"><div class="ttname"><a href="core_2mailbox_8c.html#ab614961b6e97592c0e56c30b47f65f29">mailbox_update</a></div><div class="ttdeci">void mailbox_update(struct Mailbox *m)</div><div class="ttdoc">Get the mailbox's current size.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8c_source.html#l00215">mailbox.c:215</a></div></div>
 <div class="ttc" id="acore_2mailbox_8c_html_afa6e5cc34622044961308aa23da3b570"><div class="ttname"><a href="core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570">mailbox_find</a></div><div class="ttdeci">struct Mailbox * mailbox_find(const char *path)</div><div class="ttdoc">Find the mailbox with a given path.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8c_source.html#l00150">mailbox.c:150</a></div></div>
-<div class="ttc" id="astructtimespec_html"><div class="ttname"><a href="structtimespec.html">timespec</a></div><div class="ttdoc">Time value with nanosecond precision.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00050">file.h:51</a></div></div>
-<div class="ttc" id="astructtimespec_html_ae3c7510dafa8cbcaede866ed13c99683"><div class="ttname"><a href="structtimespec.html#ae3c7510dafa8cbcaede866ed13c99683">timespec::tv_nsec</a></div><div class="ttdeci">long tv_nsec</div><div class="ttdoc">Number of nanosecond, on top.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00053">file.h:53</a></div></div>
-<div class="ttc" id="astructtimespec_html_afc3302668d7cb5952f590da69fdd4955"><div class="ttname"><a href="structtimespec.html#afc3302668d7cb5952f590da69fdd4955">timespec::tv_sec</a></div><div class="ttdeci">time_t tv_sec</div><div class="ttdoc">Number of seconds since the epoch.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00052">file.h:52</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">

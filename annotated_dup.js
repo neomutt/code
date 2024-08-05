@@ -242,7 +242,6 @@ var annotated_dup =
     [ "Tag", "structTag.html", "structTag" ],
     [ "TextSyntax", "structTextSyntax.html", "structTextSyntax" ],
     [ "ThreadsContext", "structThreadsContext.html", "structThreadsContext" ],
-    [ "timespec", "structtimespec.html", "structtimespec" ],
     [ "TlsSockData", "structTlsSockData.html", "structTlsSockData" ],
     [ "TunnelSockData", "structTunnelSockData.html", "structTunnelSockData" ],
     [ "Tz", "structTz.html", "structTz" ],
