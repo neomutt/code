@@ -58,10 +58,11 @@ var searchData=
   ['ip_55',['IP',['../config_2set_8h.html#af00e4b63d736381e1c527ac5ef2c8f3c',1,'set.h']]],
   ['ip_5fport_5fbuflen_56',['IP_PORT_BUFLEN',['../sasl_8c.html#a45e86b3d3f4e938588889a80a98da66e',1,'sasl.c']]],
   ['is_5fcommand_57',['IS_COMMAND',['../types_8h.html#ad0a2162583b263cbe8e7788da4aa1db2',1,'types.h']]],
-  ['is_5fmailbox_58',['IS_MAILBOX',['../types_8h.html#a0fb5dbb0eb019a3889836deb991aae7b',1,'types.h']]],
-  ['is_5fmultipart_59',['is_multipart',['../mime_8h.html#aeaf0dc750233c21ac5b499082c6ff62f',1,'mime.h']]],
-  ['is_5fspecial_60',['is_special',['../address_2address_8c.html#abd3dab3876f09438368ece04594cd9f5',1,'address.c']]],
-  ['ispell_61',['ISPELL',['../compose_2config_8c.html#aa4edd692877f894c7864779c8cdf767b',1,'config.c']]],
-  ['isprint_62',['IsPrint',['../mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705',1,'mbyte.h']]],
-  ['iswprint_63',['IsWPrint',['../mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d',1,'mbyte.h']]]
+  ['is_5finbox_58',['IS_INBOX',['../mutt_2string_8c.html#ab9478e5b8879a485f1aa405e03986fdc',1,'string.c']]],
+  ['is_5fmailbox_59',['IS_MAILBOX',['../types_8h.html#a0fb5dbb0eb019a3889836deb991aae7b',1,'types.h']]],
+  ['is_5fmultipart_60',['is_multipart',['../mime_8h.html#aeaf0dc750233c21ac5b499082c6ff62f',1,'mime.h']]],
+  ['is_5fspecial_61',['is_special',['../address_2address_8c.html#abd3dab3876f09438368ece04594cd9f5',1,'address.c']]],
+  ['ispell_62',['ISPELL',['../compose_2config_8c.html#aa4edd692877f894c7864779c8cdf767b',1,'config.c']]],
+  ['isprint_63',['IsPrint',['../mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705',1,'mbyte.h']]],
+  ['iswprint_64',['IsWPrint',['../mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d',1,'mbyte.h']]]
 ];

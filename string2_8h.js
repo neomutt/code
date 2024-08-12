@@ -37,6 +37,7 @@ var string2_8h =
     [ "mutt_istr_find", "string2_8h.html#a98e1b08634aeded6d93f91dbc7ceb38d", null ],
     [ "mutt_istr_remall", "string2_8h.html#a919421befc6f0f0b4c5c1b6558c039cc", null ],
     [ "mutt_istr_startswith", "string2_8h.html#aebd2a8a3f8a30062c31fa1474d87cc41", null ],
+    [ "mutt_str_inbox_cmp", "group__sort__api.html#ga4b21fa92aed3a2a6ebcee6b35b17dc50", null ],
     [ "mutt_istrn_cmp", "string2_8h.html#a1334ed6ce9fa35f33f7d200ec945f0a7", null ],
     [ "mutt_istrn_equal", "string2_8h.html#aefa17bf84a5a1cb4b41afb08cd91ceff", null ],
     [ "mutt_istrn_rfind", "string2_8h.html#a609e4f93eff5a422679bfb34c30a0a1a", null ],

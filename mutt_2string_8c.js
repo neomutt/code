@@ -1,6 +1,8 @@
 var mutt_2string_8c =
 [
     [ "SysExits", "structSysExits.html", "structSysExits" ],
+    [ "IS_INBOX", "mutt_2string_8c.html#ab9478e5b8879a485f1aa405e03986fdc", null ],
+    [ "CMP_INBOX", "mutt_2string_8c.html#a52fb96158fc9b71717c0561b97247c78", null ],
     [ "strcasestr", "mutt_2string_8c.html#adebc49c90480778733e1a9dc3c4dcfaf", null ],
     [ "strsep", "mutt_2string_8c.html#a808572a0f89435b3146e7c7c40588ce7", null ],
     [ "mutt_str_sysexit", "mutt_2string_8c.html#af77242e74cdc4862619cc97faf40427f", null ],
@@ -37,5 +39,6 @@ var mutt_2string_8c =
     [ "mutt_istr_remall", "mutt_2string_8c.html#a919421befc6f0f0b4c5c1b6558c039cc", null ],
     [ "mutt_str_asprintf", "mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595", null ],
     [ "mutt_str_hyphenate", "mutt_2string_8c.html#a9cb41e346ba2d579f1b3057f8faab7da", null ],
+    [ "mutt_str_inbox_cmp", "group__sort__api.html#ga4b21fa92aed3a2a6ebcee6b35b17dc50", null ],
     [ "SysExits", "mutt_2string_8c.html#a665ca76b0df4c4fd511240fdb87b86f1", null ]
 ];

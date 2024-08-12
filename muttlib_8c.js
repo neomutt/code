@@ -19,7 +19,6 @@ var muttlib_8c =
     [ "mutt_encode_path", "muttlib_8c.html#aeac015518fd637e7822d8e679dc3d18f", null ],
     [ "mutt_set_xdg_path", "muttlib_8c.html#aaa27303d43dc65ef87fa448ddd08c41f", null ],
     [ "mutt_get_parent_path", "muttlib_8c.html#a18edb91c53ec5ae71e0dad16f14eef27", null ],
-    [ "mutt_inbox_cmp", "group__sort__api.html#ga4ce75034c4c32b8ee744c255ce912159", null ],
     [ "buf_sanitize_filename", "muttlib_8c.html#ac104d843cb36fbb5e37cd24faa65dac0", null ],
     [ "mutt_str_pretty_size", "muttlib_8c.html#aad2fd68e85ca1e5f55e3bf1983b16933", null ],
     [ "add_to_stailq", "muttlib_8c.html#a2e3c864ac49cfb7bc862c32416baf81d", null ],

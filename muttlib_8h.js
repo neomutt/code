@@ -10,7 +10,6 @@ var muttlib_8h =
     [ "mutt_encode_path", "muttlib_8h.html#aeac015518fd637e7822d8e679dc3d18f", null ],
     [ "mutt_gecos_name", "muttlib_8h.html#a23e2405002a60eaa1507f7f6d677f696", null ],
     [ "mutt_get_parent_path", "muttlib_8h.html#a18edb91c53ec5ae71e0dad16f14eef27", null ],
-    [ "mutt_inbox_cmp", "group__sort__api.html#ga4ce75034c4c32b8ee744c255ce912159", null ],
     [ "mutt_is_text_part", "muttlib_8h.html#a712bb5e0a580467b5aedc08afea40b92", null ],
     [ "mutt_make_version", "muttlib_8h.html#a69b9bf85b68576604d5356405ace86b6", null ],
     [ "mutt_needs_mailcap", "muttlib_8h.html#a8973b2e5185609bfc5e0ef136fcd3177", null ],
