@@ -8,6 +8,7 @@ var exec_8c =
     [ "perform_alias_and", "exec_8c.html#a6a4e5bb7cc1df76c882d47542c194bc5", null ],
     [ "perform_or", "exec_8c.html#abacd562f004233b8224c4f73bebf9ffc", null ],
     [ "perform_alias_or", "exec_8c.html#a88d7705869a43f8e4d6c97a57cf3c7bb", null ],
+    [ "match_tags", "exec_8c.html#a9363665b0ab17dcc60515f41850f0dc7", null ],
     [ "match_addrlist", "exec_8c.html#a79b186a41db70f60a9d7b5b5e7d0c906", null ],
     [ "match_reference", "exec_8c.html#a74f564fa761dade9b0750ca5f1044fc1", null ],
     [ "mutt_is_predicate_recipient", "exec_8c.html#a7bd639e34144e52be3c345c5fabb600b", null ],

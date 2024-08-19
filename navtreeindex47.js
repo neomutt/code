@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"structMhEmail.html#a34bec8eb69452e1092e8781e8da0c4b9":[1,0,153,1],
 "structMhEmail.html#aab7e0d8736bf006563e1a87bcc6578e4":[1,0,153,3],
 "structMhMboxData.html":[1,0,154],
 "structMhMboxData.html#a379d00adbfc0301ebcacd3b133778e3b":[1,0,154,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "structPagerPrivateData.html#ad7c650de77a14afc73455f7177f78f3a":[1,0,186,19],
 "structPagerPrivateData.html#ad8bcd0088f080aa11c4edfdc676636ee":[1,0,186,12],
 "structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd":[1,0,186,0],
-"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,186,22],
-"structPagerPrivateData.html#ae448f18ad03d4c47cf38b84c106b79da":[1,0,186,25]
+"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,186,22]
 };

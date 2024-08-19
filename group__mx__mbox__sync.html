@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-04-25-104-g1c5c53</span>
+   &#160;<span id="projectnumber">2024-04-25-106-g8fea8f</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -277,67 +277,67 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The flag retvals come from a call to a backend sync function </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="maildir_2mailbox_8c_source.html#l00839">839</a> of file <a class="el" href="maildir_2mailbox_8c_source.html">mailbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  840</span>{</div>
-<div class="line"><span class="lineno">  841</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432">MxStatus</a> check = <a class="code hl_function" href="maildir_2mailbox_8c.html#a0a574fe0e1b5e2b5fb122b1cf4335824">maildir_check</a>(m);</div>
-<div class="line"><span class="lineno">  842</span>  <span class="keywordflow">if</span> (check == <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160">MX_STATUS_ERROR</a>)</div>
-<div class="line"><span class="lineno">  843</span>    <span class="keywordflow">return</span> check;</div>
-<div class="line"><span class="lineno">  844</span> </div>
-<div class="line"><span class="lineno">  845</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHeaderCache.html">HeaderCache</a> *hc = <a class="code hl_function" href="maildir_2hcache_8c.html#a55f606d07015638dfc6e43bef6202270">maildir_hcache_open</a>(m);</div>
-<div class="line"><span class="lineno">  846</span> </div>
-<div class="line"><span class="lineno">  847</span>  <span class="keyword">struct </span>Progress *progress = NULL;</div>
-<div class="line"><span class="lineno">  848</span>  <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#af1ff47b8f14a4503c9b8473582b13d5a">verbose</a>)</div>
-<div class="line"><span class="lineno">  849</span>  {</div>
-<div class="line"><span class="lineno">  850</span>    progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75ae89b45d8e4dad79ccfd4fc6df66c6bfe">MUTT_PROGRESS_WRITE</a>, m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>);</div>
-<div class="line"><span class="lineno">  851</span>    <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Writing %s...&quot;</span>), <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  852</span>  }</div>
-<div class="line"><span class="lineno">  853</span> </div>
-<div class="line"><span class="lineno">  854</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
-<div class="line"><span class="lineno">  855</span>  {</div>
-<div class="line"><span class="lineno">  856</span>    <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, i, -1);</div>
-<div class="line"><span class="lineno">  857</span> </div>
-<div class="line"><span class="lineno">  858</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i];</div>
-<div class="line"><span class="lineno">  859</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="maildir_2message_8c.html#aaab54af8091d9fc9b1d034295e5d2331">maildir_sync_mailbox_message</a>(m, e, hc))</div>
-<div class="line"><span class="lineno">  860</span>    {</div>
-<div class="line"><span class="lineno">  861</span>      <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
-<div class="line"><span class="lineno">  862</span>      <span class="keywordflow">goto</span> err;</div>
-<div class="line"><span class="lineno">  863</span>    }</div>
-<div class="line"><span class="lineno">  864</span>  }</div>
-<div class="line"><span class="lineno">  865</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
-<div class="line"><span class="lineno">  866</span>  <a class="code hl_function" href="maildir_2hcache_8c.html#a61490c082944273676e7439df8ce1511">maildir_hcache_close</a>(&amp;hc);</div>
-<div class="line"><span class="lineno">  867</span> </div>
-<div class="line"><span class="lineno">  868</span>  <span class="comment">/* XXX race condition? */</span></div>
-<div class="line"><span class="lineno">  869</span> </div>
-<div class="line"><span class="lineno">  870</span>  <a class="code hl_function" href="maildir_2mailbox_8c.html#a5c65f6a672a0bb2b822e2d2fbcc662df">maildir_update_mtime</a>(m);</div>
-<div class="line"><span class="lineno">  871</span> </div>
-<div class="line"><span class="lineno">  872</span>  <span class="comment">/* adjust indices */</span></div>
-<div class="line"><span class="lineno">  873</span> </div>
-<div class="line"><span class="lineno">  874</span>  <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#ab5863d8f516c6db52e2fadb531bf8557">msg_deleted</a>)</div>
-<div class="line"><span class="lineno">  875</span>  {</div>
-<div class="line"><span class="lineno">  876</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> c_maildir_trash = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;maildir_trash&quot;</span>);</div>
-<div class="line"><span class="lineno">  877</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, j = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
-<div class="line"><span class="lineno">  878</span>    {</div>
-<div class="line"><span class="lineno">  879</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i];</div>
-<div class="line"><span class="lineno">  880</span>      <span class="keywordflow">if</span> (!e)</div>
-<div class="line"><span class="lineno">  881</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  882</span> </div>
-<div class="line"><span class="lineno">  883</span>      <span class="keywordflow">if</span> (!e-&gt;<a class="code hl_variable" href="structEmail.html#ac5db33e3d6d9723d8e496078d5769567">deleted</a> || c_maildir_trash)</div>
-<div class="line"><span class="lineno">  884</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#ace0e20a11dbdc84ca9ea63497c05b603">index</a> = j++;</div>
-<div class="line"><span class="lineno">  885</span>    }</div>
-<div class="line"><span class="lineno">  886</span>  }</div>
-<div class="line"><span class="lineno">  887</span> </div>
-<div class="line"><span class="lineno">  888</span>  <span class="keywordflow">return</span> check;</div>
-<div class="line"><span class="lineno">  889</span> </div>
-<div class="line"><span class="lineno">  890</span>err:</div>
-<div class="line"><span class="lineno">  891</span>  <a class="code hl_function" href="maildir_2hcache_8c.html#a61490c082944273676e7439df8ce1511">maildir_hcache_close</a>(&amp;hc);</div>
-<div class="line"><span class="lineno">  892</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160">MX_STATUS_ERROR</a>;</div>
-<div class="line"><span class="lineno">  893</span>}</div>
+<p class="definition">Definition at line <a class="el" href="maildir_2mailbox_8c_source.html#l00838">838</a> of file <a class="el" href="maildir_2mailbox_8c_source.html">mailbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  839</span>{</div>
+<div class="line"><span class="lineno">  840</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432">MxStatus</a> check = <a class="code hl_function" href="maildir_2mailbox_8c.html#a0a574fe0e1b5e2b5fb122b1cf4335824">maildir_check</a>(m);</div>
+<div class="line"><span class="lineno">  841</span>  <span class="keywordflow">if</span> (check == <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160">MX_STATUS_ERROR</a>)</div>
+<div class="line"><span class="lineno">  842</span>    <span class="keywordflow">return</span> check;</div>
+<div class="line"><span class="lineno">  843</span> </div>
+<div class="line"><span class="lineno">  844</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHeaderCache.html">HeaderCache</a> *hc = <a class="code hl_function" href="maildir_2hcache_8c.html#a55f606d07015638dfc6e43bef6202270">maildir_hcache_open</a>(m);</div>
+<div class="line"><span class="lineno">  845</span> </div>
+<div class="line"><span class="lineno">  846</span>  <span class="keyword">struct </span>Progress *progress = NULL;</div>
+<div class="line"><span class="lineno">  847</span>  <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#af1ff47b8f14a4503c9b8473582b13d5a">verbose</a>)</div>
+<div class="line"><span class="lineno">  848</span>  {</div>
+<div class="line"><span class="lineno">  849</span>    progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75ae89b45d8e4dad79ccfd4fc6df66c6bfe">MUTT_PROGRESS_WRITE</a>, m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>);</div>
+<div class="line"><span class="lineno">  850</span>    <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Writing %s...&quot;</span>), <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  851</span>  }</div>
+<div class="line"><span class="lineno">  852</span> </div>
+<div class="line"><span class="lineno">  853</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
+<div class="line"><span class="lineno">  854</span>  {</div>
+<div class="line"><span class="lineno">  855</span>    <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, i, -1);</div>
+<div class="line"><span class="lineno">  856</span> </div>
+<div class="line"><span class="lineno">  857</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i];</div>
+<div class="line"><span class="lineno">  858</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="maildir_2message_8c.html#aaab54af8091d9fc9b1d034295e5d2331">maildir_sync_mailbox_message</a>(m, e, hc))</div>
+<div class="line"><span class="lineno">  859</span>    {</div>
+<div class="line"><span class="lineno">  860</span>      <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
+<div class="line"><span class="lineno">  861</span>      <span class="keywordflow">goto</span> err;</div>
+<div class="line"><span class="lineno">  862</span>    }</div>
+<div class="line"><span class="lineno">  863</span>  }</div>
+<div class="line"><span class="lineno">  864</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
+<div class="line"><span class="lineno">  865</span>  <a class="code hl_function" href="maildir_2hcache_8c.html#a61490c082944273676e7439df8ce1511">maildir_hcache_close</a>(&amp;hc);</div>
+<div class="line"><span class="lineno">  866</span> </div>
+<div class="line"><span class="lineno">  867</span>  <span class="comment">/* XXX race condition? */</span></div>
+<div class="line"><span class="lineno">  868</span> </div>
+<div class="line"><span class="lineno">  869</span>  <a class="code hl_function" href="maildir_2mailbox_8c.html#a5c65f6a672a0bb2b822e2d2fbcc662df">maildir_update_mtime</a>(m);</div>
+<div class="line"><span class="lineno">  870</span> </div>
+<div class="line"><span class="lineno">  871</span>  <span class="comment">/* adjust indices */</span></div>
+<div class="line"><span class="lineno">  872</span> </div>
+<div class="line"><span class="lineno">  873</span>  <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#ab5863d8f516c6db52e2fadb531bf8557">msg_deleted</a>)</div>
+<div class="line"><span class="lineno">  874</span>  {</div>
+<div class="line"><span class="lineno">  875</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> c_maildir_trash = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;maildir_trash&quot;</span>);</div>
+<div class="line"><span class="lineno">  876</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0, j = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
+<div class="line"><span class="lineno">  877</span>    {</div>
+<div class="line"><span class="lineno">  878</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i];</div>
+<div class="line"><span class="lineno">  879</span>      <span class="keywordflow">if</span> (!e)</div>
+<div class="line"><span class="lineno">  880</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  881</span> </div>
+<div class="line"><span class="lineno">  882</span>      <span class="keywordflow">if</span> (!e-&gt;<a class="code hl_variable" href="structEmail.html#ac5db33e3d6d9723d8e496078d5769567">deleted</a> || c_maildir_trash)</div>
+<div class="line"><span class="lineno">  883</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#ace0e20a11dbdc84ca9ea63497c05b603">index</a> = j++;</div>
+<div class="line"><span class="lineno">  884</span>    }</div>
+<div class="line"><span class="lineno">  885</span>  }</div>
+<div class="line"><span class="lineno">  886</span> </div>
+<div class="line"><span class="lineno">  887</span>  <span class="keywordflow">return</span> check;</div>
+<div class="line"><span class="lineno">  888</span> </div>
+<div class="line"><span class="lineno">  889</span>err:</div>
+<div class="line"><span class="lineno">  890</span>  <a class="code hl_function" href="maildir_2hcache_8c.html#a61490c082944273676e7439df8ce1511">maildir_hcache_close</a>(&amp;hc);</div>
+<div class="line"><span class="lineno">  891</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160">MX_STATUS_ERROR</a>;</div>
+<div class="line"><span class="lineno">  892</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00047">helpers.c:47</a></div></div>
 <div class="ttc" id="acore_2mailbox_8h_html_a7e9739eb3e94344633f7051c2fb9453e"><div class="ttname"><a href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a></div><div class="ttdeci">static const char * mailbox_path(const struct Mailbox *m)</div><div class="ttdoc">Get the Mailbox's path string.</div><div class="ttdef"><b>Definition:</b> <a href="core_2mailbox_8h_source.html#l00223">mailbox.h:223</a></div></div>
 <div class="ttc" id="amaildir_2hcache_8c_html_a55f606d07015638dfc6e43bef6202270"><div class="ttname"><a href="maildir_2hcache_8c.html#a55f606d07015638dfc6e43bef6202270">maildir_hcache_open</a></div><div class="ttdeci">struct HeaderCache * maildir_hcache_open(struct Mailbox *m)</div><div class="ttdoc">Open the Header Cache.</div><div class="ttdef"><b>Definition:</b> <a href="maildir_2hcache_8c_source.html#l00096">hcache.c:96</a></div></div>
 <div class="ttc" id="amaildir_2hcache_8c_html_a61490c082944273676e7439df8ce1511"><div class="ttname"><a href="maildir_2hcache_8c.html#a61490c082944273676e7439df8ce1511">maildir_hcache_close</a></div><div class="ttdeci">void maildir_hcache_close(struct HeaderCache **ptr)</div><div class="ttdoc">Close the Header Cache.</div><div class="ttdef"><b>Definition:</b> <a href="maildir_2hcache_8c_source.html#l00069">hcache.c:69</a></div></div>
 <div class="ttc" id="amaildir_2mailbox_8c_html_a0a574fe0e1b5e2b5fb122b1cf4335824"><div class="ttname"><a href="maildir_2mailbox_8c.html#a0a574fe0e1b5e2b5fb122b1cf4335824">maildir_check</a></div><div class="ttdeci">static enum MxStatus maildir_check(struct Mailbox *m)</div><div class="ttdoc">Check for new mail.</div><div class="ttdef"><b>Definition:</b> <a href="maildir_2mailbox_8c_source.html#l00539">mailbox.c:539</a></div></div>
-<div class="ttc" id="amaildir_2mailbox_8c_html_a5c65f6a672a0bb2b822e2d2fbcc662df"><div class="ttname"><a href="maildir_2mailbox_8c.html#a5c65f6a672a0bb2b822e2d2fbcc662df">maildir_update_mtime</a></div><div class="ttdeci">void maildir_update_mtime(struct Mailbox *m)</div><div class="ttdoc">Update our record of the Maildir modification time.</div><div class="ttdef"><b>Definition:</b> <a href="maildir_2mailbox_8c_source.html#l00717">mailbox.c:717</a></div></div>
+<div class="ttc" id="amaildir_2mailbox_8c_html_a5c65f6a672a0bb2b822e2d2fbcc662df"><div class="ttname"><a href="maildir_2mailbox_8c.html#a5c65f6a672a0bb2b822e2d2fbcc662df">maildir_update_mtime</a></div><div class="ttdeci">void maildir_update_mtime(struct Mailbox *m)</div><div class="ttdoc">Update our record of the Maildir modification time.</div><div class="ttdef"><b>Definition:</b> <a href="maildir_2mailbox_8c_source.html#l00716">mailbox.c:716</a></div></div>
 <div class="ttc" id="amaildir_2message_8c_html_aaab54af8091d9fc9b1d034295e5d2331"><div class="ttname"><a href="maildir_2message_8c.html#aaab54af8091d9fc9b1d034295e5d2331">maildir_sync_mailbox_message</a></div><div class="ttdeci">bool maildir_sync_mailbox_message(struct Mailbox *m, struct Email *e, struct HeaderCache *hc)</div><div class="ttdoc">Save changes to the mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="maildir_2message_8c_source.html#l00312">message.c:312</a></div></div>
 <div class="ttc" id="aprogress_2lib_8h_html_a0a558d538b8742adf8b1251f2848ba75ae89b45d8e4dad79ccfd4fc6df66c6bfe"><div class="ttname"><a href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75ae89b45d8e4dad79ccfd4fc6df66c6bfe">MUTT_PROGRESS_WRITE</a></div><div class="ttdeci">@ MUTT_PROGRESS_WRITE</div><div class="ttdoc">Progress tracks elements, according to $write_inc</div><div class="ttdef"><b>Definition:</b> <a href="progress_2lib_8h_source.html#l00083">lib.h:83</a></div></div>
 <div class="ttc" id="aprogress_2lib_8h_html_a551a8d9e844532e2851d6bee121c09b3"><div class="ttname"><a href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a></div><div class="ttdeci">struct Progress * progress_new(enum ProgressType type, size_t size)</div><div class="ttdoc">Create a new Progress Bar.</div><div class="ttdef"><b>Definition:</b> <a href="progress_8c_source.html#l00139">progress.c:139</a></div></div>
