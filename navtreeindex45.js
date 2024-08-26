@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"structEventConfig.html":[1,0,76],
+"structEventConfig.html#a8ad167d2ac2710a3d9f17203524e23f6":[1,0,76,0],
 "structEventConfig.html#ab3120e9fe21cdf94bc417c31dc8e4a1b":[1,0,76,1],
 "structEventConfig.html#ad357e11c6045fd7146490c9abce91c03":[1,0,76,2],
 "structEventEmail.html":[1,0,77],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "structImapEmailData.html#addcfe8f2eb993fbd3de89041f090a090":[1,0,120,3],
 "structImapEmailData.html#ae8e6d36ffbdfd91493fb6bf45ee6bfa5":[1,0,120,4],
 "structImapEmailData.html#af3d57aed1b74390358fe594de497b8f1":[1,0,120,8],
-"structImapHeader.html":[1,0,121],
-"structImapHeader.html#a18937a689b628b43ac8d7718eb951544":[1,0,121,1],
-"structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50":[1,0,121,0]
+"structImapHeader.html":[1,0,121]
 };

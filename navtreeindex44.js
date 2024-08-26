@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"structConnection.html#a2baa91d494f612c8bf43302bb96543f0":[1,0,49,6],
+"structConnection.html#a2c850105a80e13d82a096b27d19586bf":[1,0,49,2],
 "structConnection.html#a2fcded23739f26da564cdb378c8b0a4f":[1,0,49,10],
 "structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db":[1,0,49,9],
 "structConnection.html#a577e30cca37f125532cc73d4cbf51dcb":[1,0,49,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "structEventBinding.html#ac556bc4621c935cd9f01036e7f4e666f":[1,0,74,0],
 "structEventColor.html":[1,0,75],
 "structEventColor.html#a17afac9b22ed6fada873bdaa25aa9578":[1,0,75,1],
-"structEventColor.html#a944299806d9ebd09fa12892dd156f191":[1,0,75,0],
-"structEventConfig.html":[1,0,76],
-"structEventConfig.html#a8ad167d2ac2710a3d9f17203524e23f6":[1,0,76,0]
+"structEventColor.html#a944299806d9ebd09fa12892dd156f191":[1,0,75,0]
 };

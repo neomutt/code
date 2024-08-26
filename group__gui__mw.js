@@ -5,5 +5,5 @@ var group__gui__mw =
     [ "mw_enter_fname", "group__gui__mw.html#ga7074d808675e21370b1cef98d55e75ca", null ],
     [ "mw_what_key", "group__gui__mw.html#ga24de819c1b6837b59e35cbfdd0d827cf", null ],
     [ "mw_multi_choice", "group__gui__mw.html#gad530cebf7d9c54c55a609509acc56f70", null ],
-    [ "mw_yesorno", "group__gui__mw.html#ga59ddc95c01c1ba8fb9ac37837800d66e", null ]
+    [ "mw_yesorno", "group__gui__mw.html#gacb783a5ffbda61856cf32fa5f1ca637c", null ]
 ];
