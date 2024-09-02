@@ -1,6 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"muttlib_8h.html#a2e3c864ac49cfb7bc862c32416baf81d":[2,0,96,20],
 "muttlib_8h.html#a3ffd45805a0aa4478b3f176602f3082f":[2,0,96,2],
 "muttlib_8h.html#a69b9bf85b68576604d5356405ace86b6":[2,0,96,11],
 "muttlib_8h.html#a6fbcbe533be7c4e05d99b0eb9cdb2581":[2,0,96,18],
@@ -249,5 +248,6 @@ var NAVTREEINDEX31 =
 "ncrypt_2lib_8h.html#a52c65477f5b80ad3dc8028663653771d":[2,0,33,21,58],
 "ncrypt_2lib_8h.html#a530487c28aacc2c2d50f12eefb8c5506":[2,0,33,21,43],
 "ncrypt_2lib_8h.html#a587e679a4c9cc44f11f0c467bb22b0af":[2,0,33,21,12],
-"ncrypt_2lib_8h.html#a5959b6797c94b22a7d391cbb5fd2fa33":[2,0,33,21,65]
+"ncrypt_2lib_8h.html#a5959b6797c94b22a7d391cbb5fd2fa33":[2,0,33,21,65],
+"ncrypt_2lib_8h.html#a5b5753c8babedca24c31e8d2dbad8130":[2,0,33,21,40]
 };

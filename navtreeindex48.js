@@ -1,6 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd":[1,0,186,0],
 "structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,186,22],
 "structPagerPrivateData.html#ae448f18ad03d4c47cf38b84c106b79da":[1,0,186,25],
 "structPagerPrivateData.html#ae85cad304a17fbe3fc3a0bc126bd1411":[1,0,186,18],
@@ -249,5 +248,6 @@ var NAVTREEINDEX48 =
 "structSeqsetIterator.html":[1,0,225],
 "structSeqsetIterator.html#a26751cac5a01df780c75aad85206a8da":[1,0,225,1],
 "structSeqsetIterator.html#a340ee7f234de9bbb56e5d317e7f824b4":[1,0,225,7],
-"structSeqsetIterator.html#a40cdf6884f007351960e5c7fbce96fd8":[1,0,225,5]
+"structSeqsetIterator.html#a40cdf6884f007351960e5c7fbce96fd8":[1,0,225,5],
+"structSeqsetIterator.html#a49d324f002891ea71e91c11b3fb8d443":[1,0,225,3]
 };
