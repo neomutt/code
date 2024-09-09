@@ -318,7 +318,7 @@ var searchData=
   ['dump_20key_20bindings_315',['Dump key bindings',['../key_dump.html',1,'lib_key']]],
   ['dump_20keybindings_316',['Dump keybindings',['../debug_keymap.html',1,'lib_debug']]],
   ['dump_20the_20windows_317',['Dump the Windows',['../debug_window.html',1,'lib_debug']]],
-  ['dump_2ec_318',['dump.c',['../key_2dump_8c.html',1,'(Global Namespace)'],['../color_2dump_8c.html',1,'(Global Namespace)'],['../config_2dump_8c.html',1,'(Global Namespace)']]],
+  ['dump_2ec_318',['dump.c',['../config_2dump_8c.html',1,'(Global Namespace)'],['../key_2dump_8c.html',1,'(Global Namespace)'],['../color_2dump_8c.html',1,'(Global Namespace)']]],
   ['dump_2eh_319',['dump.h',['../color_2dump_8h.html',1,'(Global Namespace)'],['../config_2dump_8h.html',1,'(Global Namespace)']]],
   ['dump_5faddr_5flist_320',['dump_addr_list',['../debug_2lib_8h.html#aff451f45343f2cb954cccc093fea821f',1,'dump_addr_list(char *buf, size_t buflen, const struct AddressList *al, const char *name):&#160;email.c'],['../debug_2email_8c.html#aff451f45343f2cb954cccc093fea821f',1,'dump_addr_list(char *buf, size_t buflen, const struct AddressList *al, const char *name):&#160;email.c']]],
   ['dump_5fall_5fbinds_321',['dump_all_binds',['../key_2dump_8c.html#ad972007e59815d64188e269637cbd255',1,'dump.c']]],
