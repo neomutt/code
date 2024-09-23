@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"structAttachPrivateData.html#a1cca70ad111c9bee242f5b112a5fc338":[1,0,11,0],
 "structAttachPrivateData.html#a6bbbbcab09705417a767782eeee2848a":[1,0,11,2],
 "structAttachPrivateData.html#a86963a15a6a667b6fc8a7d6eefbac38c":[1,0,11,1],
 "structAttachPrivateData.html#aa225f5b079947ecc219fffc93ba2b6eb":[1,0,11,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "structConnAccount.html#af674ed2969fc29ff7d99f8b4cff6c92b":[1,0,48,6],
 "structConnAccount.html#af8038540105baf4da84d15bcb6bffa61":[1,0,48,9],
 "structConnAccount.html#aff0fc77d9a388c80c347c5c2c925086d":[1,0,48,4],
-"structConnection.html":[1,0,49],
-"structConnection.html#a2baa91d494f612c8bf43302bb96543f0":[1,0,49,6]
+"structConnection.html":[1,0,49]
 };

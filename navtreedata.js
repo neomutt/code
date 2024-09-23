@@ -142,17 +142,17 @@ var NAVTREEINDEX =
 "query_8c.html#a005246432ee7301cb450cbc25cf9f71a",
 "recvcmd_8c.html#abfcbdaa23e31b52663a8360589aab574",
 "search__state_8c_source.html",
-"serialize_8h.html#adc782452c6a420898d453705f9e9581a",
-"smtp_8c.html#ad64a81e227fb9991ddc51089f5dd5c81",
-"structAttachPrivateData.html#a6bbbbcab09705417a767782eeee2848a",
-"structConnection.html#a2c850105a80e13d82a096b27d19586bf",
-"structEventConfig.html#a8ad167d2ac2710a3d9f17203524e23f6",
-"structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50",
-"structMhEmail.html#a2c4f25588fb9aa0ef67fa98c9cf90a50",
-"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1",
-"structSeqsetIterator.html#a6030b074be74df4c97c5bf07004fde19",
-"tags_8h.html#a64ec0d1051857364de25e3f5830553ec",
-"util_8c.html#a7b7c68a3163c79c2a1dcbe20275563e4"
+"serialize_8h.html#ad0b0d6069b6cf97cc02c704c0d8bdbe5",
+"smtp_8c.html#ad5710a8a817a00dd0f84f5458e882b60",
+"structAttachPrivateData.html#a1cca70ad111c9bee242f5b112a5fc338",
+"structConnection.html#a2baa91d494f612c8bf43302bb96543f0",
+"structEventConfig.html",
+"structImapHeader.html#a18937a689b628b43ac8d7718eb951544",
+"structMhEmail.html#a0d4a5cfe0f8a2086e3791f02b352b0af",
+"structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd",
+"structSeqsetIterator.html#a49d324f002891ea71e91c11b3fb8d443",
+"tags_8h.html#a21dae0ba6f2fcede05fbd0bc89acb351",
+"util_8c.html#a78c7437c0f185ed8ab37e666b8a69ec0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
