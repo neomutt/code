@@ -7,6 +7,6 @@ var node__padding_8c =
     [ "node_padding_render_hard", "group__expando__render.html#ga88ef20d2eeef178ae79c7ecef63844af", null ],
     [ "node_padding_render_soft", "group__expando__render.html#ga96d03767fe875cc8c71e4d854cb93d41", null ],
     [ "node_padding_new", "node__padding_8c.html#af9f6a9e344729c3e90f3b1f99a12f6bc", null ],
-    [ "node_padding_parse", "group__expando__parse__api.html#ga7b5fe61effc3dcfd32251a8150fc8a4a", null ],
+    [ "node_padding_parse", "group__expando__parse__api.html#ga00e095be2c84c101bb57d485320c798e", null ],
     [ "node_padding_repad", "node__padding_8c.html#a088ae6286a941d4860637f756c3ed013", null ]
 ];

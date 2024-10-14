@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-10-02-7-gd3e66a</span>
+   &#160;<span id="projectnumber">2024-10-02-19-gb00cc4</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -939,64 +939,60 @@ cdef is not NULL </dd></dl>
 
 <p>Set a Number by string - Implements <a class="el" href="structConfigSetType.html#aaab5c1abc281e7f906cccb7bf64d2554">ConfigSetType::string_set()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00047">47</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>{</div>
-<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">if</span> (!value || (value[0] == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">   51</span>  {</div>
-<div class="line"><span class="lineno">   52</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Option %s may not be empty&quot;</span>), cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a0989d0984537827a221e7d699f72da27">name</a>);</div>
-<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a3f971a05f55756597a0128c1181fa671">CSR_INV_TYPE</a>;</div>
-<div class="line"><span class="lineno">   54</span>  }</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>  <span class="keywordtype">int</span> num = 0;</div>
-<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">if</span> (!mutt_str_atoi_full(value, &amp;num))</div>
-<div class="line"><span class="lineno">   58</span>  {</div>
-<div class="line"><span class="lineno">   59</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid number: %s&quot;</span>), value);</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a3f971a05f55756597a0128c1181fa671">CSR_INV_TYPE</a>;</div>
-<div class="line"><span class="lineno">   61</span>  }</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">if</span> ((num &lt; SHRT_MIN) || (num &gt; SHRT_MAX))</div>
-<div class="line"><span class="lineno">   64</span>  {</div>
-<div class="line"><span class="lineno">   65</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Number is too big: %s&quot;</span>), value);</div>
-<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a3f971a05f55756597a0128c1181fa671">CSR_INV_TYPE</a>;</div>
-<div class="line"><span class="lineno">   67</span>  }</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>  <span class="keywordflow">if</span> ((num &lt; 0) &amp;&amp; (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a">type</a> &amp; <a class="code hl_define" href="types_8h.html#aeb6c1359aa19f6624531844082b284c1">D_INTEGER_NOT_NEGATIVE</a>))</div>
-<div class="line"><span class="lineno">   70</span>  {</div>
-<div class="line"><span class="lineno">   71</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Option %s may not be negative&quot;</span>), cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a0989d0984537827a221e7d699f72da27">name</a>);</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
-<div class="line"><span class="lineno">   73</span>  }</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>  <span class="keywordflow">if</span> (var)</div>
-<div class="line"><span class="lineno">   76</span>  {</div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (num == (*(<span class="keywordtype">short</span> *) var))</div>
-<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a> | <a class="code hl_define" href="config_2set_8h.html#a8460db195cfcca17759dae5ae0791dbc">CSR_SUC_NO_CHANGE</a>;</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span> (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>)</div>
-<div class="line"><span class="lineno">   81</span>    {</div>
-<div class="line"><span class="lineno">   82</span>      <span class="keywordtype">int</span> rc = cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>(cs, cdef, (intptr_t) num, err);</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a>(rc) != <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>)</div>
-<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> rc | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="config_2set_8h.html#a09a8cc6d80d0de8506c22effdaebef97">startup_only</a>(cdef, err))</div>
-<div class="line"><span class="lineno">   89</span>      <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
+<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00075">75</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>{</div>
+<div class="line"><span class="lineno">   78</span>  <span class="keywordtype">int</span> num = 0;</div>
+<div class="line"><span class="lineno">   79</span>  <span class="keywordflow">if</span> (value &amp;&amp; *value &amp;&amp; !mutt_str_atoi_full(value, &amp;num))</div>
+<div class="line"><span class="lineno">   80</span>  {</div>
+<div class="line"><span class="lineno">   81</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid number: %s&quot;</span>), value);</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a3f971a05f55756597a0128c1181fa671">CSR_INV_TYPE</a>;</div>
+<div class="line"><span class="lineno">   83</span>  }</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>  <span class="keywordflow">if</span> ((num &lt; SHRT_MIN) || (num &gt; SHRT_MAX))</div>
+<div class="line"><span class="lineno">   86</span>  {</div>
+<div class="line"><span class="lineno">   87</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Number is too big: %s&quot;</span>), value);</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a3f971a05f55756597a0128c1181fa671">CSR_INV_TYPE</a>;</div>
+<div class="line"><span class="lineno">   89</span>  }</div>
 <div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    *(<span class="keywordtype">short</span> *) var = num;</div>
-<div class="line"><span class="lineno">   92</span>  }</div>
-<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   94</span>  {</div>
-<div class="line"><span class="lineno">   95</span>    cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a669d58ec0f68946995b69af97333d71a">initial</a> = num;</div>
-<div class="line"><span class="lineno">   96</span>  }</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">   99</span>}</div>
+<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">if</span> ((num &lt; 0) &amp;&amp; (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a">type</a> &amp; <a class="code hl_define" href="types_8h.html#aeb6c1359aa19f6624531844082b284c1">D_INTEGER_NOT_NEGATIVE</a>))</div>
+<div class="line"><span class="lineno">   92</span>  {</div>
+<div class="line"><span class="lineno">   93</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Option %s may not be negative&quot;</span>), cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a0989d0984537827a221e7d699f72da27">name</a>);</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
+<div class="line"><span class="lineno">   95</span>  }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> (var)</div>
+<div class="line"><span class="lineno">   98</span>  {</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">if</span> (num == <a class="code hl_function" href="number_8c.html#a65eed72aebcf5b494f649e9db3168640">native_get</a>(var))</div>
+<div class="line"><span class="lineno">  100</span>      <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a> | <a class="code hl_define" href="config_2set_8h.html#a8460db195cfcca17759dae5ae0791dbc">CSR_SUC_NO_CHANGE</a>;</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>)</div>
+<div class="line"><span class="lineno">  103</span>    {</div>
+<div class="line"><span class="lineno">  104</span>      <span class="keywordtype">int</span> rc = cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>(cs, cdef, (intptr_t) num, err);</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a>(rc) != <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>)</div>
+<div class="line"><span class="lineno">  107</span>        <span class="keywordflow">return</span> rc | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="config_2set_8h.html#a09a8cc6d80d0de8506c22effdaebef97">startup_only</a>(cdef, err))</div>
+<div class="line"><span class="lineno">  111</span>      <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_function" href="number_8c.html#a262527b65d66a569b56f715488b14907">native_set</a>(var, num);</div>
+<div class="line"><span class="lineno">  114</span>  }</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  116</span>  {</div>
+<div class="line"><span class="lineno">  117</span>    cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a669d58ec0f68946995b69af97333d71a">initial</a> = num;</div>
+<div class="line"><span class="lineno">  118</span>  }</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+<div class="ttc" id="anumber_8c_html_a262527b65d66a569b56f715488b14907"><div class="ttname"><a href="number_8c.html#a262527b65d66a569b56f715488b14907">native_set</a></div><div class="ttdeci">static void native_set(void *var, intptr_t val)</div><div class="ttdoc">Set an int into a Number config item.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00058">number.c:58</a></div></div>
+<div class="ttc" id="anumber_8c_html_a65eed72aebcf5b494f649e9db3168640"><div class="ttname"><a href="number_8c.html#a65eed72aebcf5b494f649e9db3168640">native_get</a></div><div class="ttdeci">static intptr_t native_get(void *var)</div><div class="ttdoc">Get an int from a Number config item.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00050">number.c:50</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__cfg__type__string__set_ga32215db83b015d56b493195cfb092165_cgraph.svg" width="428" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__cfg__type__string__set_ga32215db83b015d56b493195cfb092165_cgraph.svg" width="428" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1343,8 +1339,8 @@ cdef is not NULL </dd></dl>
 <div class="ttc" id="aconfig_2regex_8c_html_a2514a6f801b90e662923176d32535b84"><div class="ttname"><a href="config_2regex_8c.html#a2514a6f801b90e662923176d32535b84">regex_new</a></div><div class="ttdeci">struct Regex * regex_new(const char *str, uint32_t flags, struct Buffer *err)</div><div class="ttdoc">Create an Regex from a string.</div><div class="ttdef"><b>Definition:</b> <a href="config_2regex_8c_source.html#l00102">regex.c:102</a></div></div>
 <div class="ttc" id="aconfig_2regex_8c_html_aeb6632e5ec38d9ec3dae0e99558cd6cb"><div class="ttname"><a href="config_2regex_8c.html#aeb6632e5ec38d9ec3dae0e99558cd6cb">regex_free</a></div><div class="ttdeci">void regex_free(struct Regex **ptr)</div><div class="ttdoc">Free a Regex object.</div><div class="ttdef"><b>Definition:</b> <a href="config_2regex_8c_source.html#l00068">regex.c:68</a></div></div>
 <div class="ttc" id="agroup__cfg__type__destroy_html_ga51745ca37912561b82be4b0560686d6c"><div class="ttname"><a href="group__cfg__type__destroy.html#ga51745ca37912561b82be4b0560686d6c">regex_destroy</a></div><div class="ttdeci">static void regex_destroy(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef)</div><div class="ttdoc">Destroy a Regex object - Implements ConfigSetType::destroy() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2regex_8c_source.html#l00085">regex.c:85</a></div></div>
-<div class="ttc" id="astructRegex_html"><div class="ttname"><a href="structRegex.html">Regex</a></div><div class="ttdoc">Cached regular expression.</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00084">regex3.h:85</a></div></div>
-<div class="ttc" id="astructRegex_html_a91a347ac006d49f161382d291f0edd99"><div class="ttname"><a href="structRegex.html#a91a347ac006d49f161382d291f0edd99">Regex::pattern</a></div><div class="ttdeci">char * pattern</div><div class="ttdoc">printable version</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00086">regex3.h:86</a></div></div>
+<div class="ttc" id="astructRegex_html"><div class="ttname"><a href="structRegex.html">Regex</a></div><div class="ttdoc">Cached regular expression.</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00085">regex3.h:86</a></div></div>
+<div class="ttc" id="astructRegex_html_a91a347ac006d49f161382d291f0edd99"><div class="ttname"><a href="structRegex.html#a91a347ac006d49f161382d291f0edd99">Regex::pattern</a></div><div class="ttdeci">char * pattern</div><div class="ttdoc">printable version</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00087">regex3.h:87</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">

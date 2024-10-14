@@ -1,6 +1,6 @@
 var browser_2config_8c =
 [
-    [ "parse_folder_date", "group__expando__parse__api.html#ga1daa07a5051ccbda815a594d7f556e11", null ],
+    [ "parse_folder_date", "group__expando__parse__api.html#ga73d98200d8a99a6f345f16e97d74d3ea", null ],
     [ "config_init_browser", "group__cfg__module__api.html#gad71d98b342df156006392cfa4d609ff2", null ],
     [ "SortBrowserMethods", "browser_2config_8c.html#a62d1200a7833a80c1b44631fc91ac874", null ],
     [ "FolderFormatDef", "browser_2config_8c.html#a734503a55fdecf1b9569427f255b7b26", null ],

@@ -1,6 +1,6 @@
 var ncrypt_2config_8c =
 [
-    [ "parse_pgp_date", "group__expando__parse__api.html#gadf5a98705598d744b7379fc94214cdda", null ],
+    [ "parse_pgp_date", "group__expando__parse__api.html#ga947d953f04350f7eae87bf0191481d38", null ],
     [ "config_init_ncrypt", "group__cfg__module__api.html#gaee20f674efcb28599e8089818553e284", null ],
     [ "SortKeyMethods", "ncrypt_2config_8c.html#ac7317ba9b6d4e63e5385d9d2fca6d461", null ],
     [ "PgpEntryFormatDef", "ncrypt_2config_8c.html#a5301a0b4718c155e18bb8b5516176fed", null ],

@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-10-02-7-gd3e66a</span>
+   &#160;<span id="projectnumber">2024-10-02-19-gb00cc4</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -812,43 +812,45 @@ cdef is not NULL </dd></dl>
 
 <p>Set a Number config item by int - Implements <a class="el" href="structConfigSetType.html#a96efeb892d4c223281181587a50d002b">ConfigSetType::native_set()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00121">121</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
-<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">if</span> ((value &lt; SHRT_MIN) || (value &gt; SHRT_MAX))</div>
-<div class="line"><span class="lineno">  126</span>  {</div>
-<div class="line"><span class="lineno">  127</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid number: %ld&quot;</span>), (<span class="keywordtype">long</span>) value);</div>
-<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a3f971a05f55756597a0128c1181fa671">CSR_INV_TYPE</a>;</div>
-<div class="line"><span class="lineno">  129</span>  }</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>  <span class="keywordflow">if</span> ((value &lt; 0) &amp;&amp; (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a">type</a> &amp; <a class="code hl_define" href="types_8h.html#aeb6c1359aa19f6624531844082b284c1">D_INTEGER_NOT_NEGATIVE</a>))</div>
-<div class="line"><span class="lineno">  132</span>  {</div>
-<div class="line"><span class="lineno">  133</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Option %s may not be negative&quot;</span>), cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a0989d0984537827a221e7d699f72da27">name</a>);</div>
-<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
-<div class="line"><span class="lineno">  135</span>  }</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">if</span> (value == (*(<span class="keywordtype">short</span> *) var))</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a> | <a class="code hl_define" href="config_2set_8h.html#a8460db195cfcca17759dae5ae0791dbc">CSR_SUC_NO_CHANGE</a>;</div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>  <span class="keywordflow">if</span> (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>)</div>
-<div class="line"><span class="lineno">  141</span>  {</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordtype">int</span> rc = cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>(cs, cdef, value, err);</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a>(rc) != <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>)</div>
-<div class="line"><span class="lineno">  145</span>      <span class="keywordflow">return</span> rc | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
-<div class="line"><span class="lineno">  146</span>  }</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="config_2set_8h.html#a09a8cc6d80d0de8506c22effdaebef97">startup_only</a>(cdef, err))</div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>  *(<span class="keywordtype">short</span> *) var = value;</div>
-<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  153</span>}</div>
+<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00143">143</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  146</span>{</div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">if</span> ((value &lt; SHRT_MIN) || (value &gt; SHRT_MAX))</div>
+<div class="line"><span class="lineno">  148</span>  {</div>
+<div class="line"><span class="lineno">  149</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid number: %ld&quot;</span>), (<span class="keywordtype">long</span>) value);</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a3f971a05f55756597a0128c1181fa671">CSR_INV_TYPE</a>;</div>
+<div class="line"><span class="lineno">  151</span>  }</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">if</span> ((value &lt; 0) &amp;&amp; (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a79dbdd3764ecd83a3ab5cc9fc07fce8a">type</a> &amp; <a class="code hl_define" href="types_8h.html#aeb6c1359aa19f6624531844082b284c1">D_INTEGER_NOT_NEGATIVE</a>))</div>
+<div class="line"><span class="lineno">  154</span>  {</div>
+<div class="line"><span class="lineno">  155</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Option %s may not be negative&quot;</span>), cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a0989d0984537827a221e7d699f72da27">name</a>);</div>
+<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
+<div class="line"><span class="lineno">  157</span>  }</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>  <span class="keywordflow">if</span> (value == <a class="code hl_function" href="number_8c.html#a65eed72aebcf5b494f649e9db3168640">native_get</a>(var))</div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a> | <a class="code hl_define" href="config_2set_8h.html#a8460db195cfcca17759dae5ae0791dbc">CSR_SUC_NO_CHANGE</a>;</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">if</span> (cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>)</div>
+<div class="line"><span class="lineno">  163</span>  {</div>
+<div class="line"><span class="lineno">  164</span>    <span class="keywordtype">int</span> rc = cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a3c86af76a7eb00bdc94be575d61a1e1e">validator</a>(cs, cdef, value, err);</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4">CSR_RESULT</a>(rc) != <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>)</div>
+<div class="line"><span class="lineno">  167</span>      <span class="keywordflow">return</span> rc | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
+<div class="line"><span class="lineno">  168</span>  }</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="config_2set_8h.html#a09a8cc6d80d0de8506c22effdaebef97">startup_only</a>(cdef, err))</div>
+<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a2c2b34fde4ac049597dc730cbd228139">CSR_ERR_INVALID</a> | <a class="code hl_define" href="config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6">CSR_INV_VALIDATOR</a>;</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>  <a class="code hl_function" href="number_8c.html#a262527b65d66a569b56f715488b14907">native_set</a>(var, value);</div>
+<div class="line"><span class="lineno">  174</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  175</span>}</div>
+<div class="ttc" id="anumber_8c_html_a262527b65d66a569b56f715488b14907"><div class="ttname"><a href="number_8c.html#a262527b65d66a569b56f715488b14907">native_set</a></div><div class="ttdeci">static void native_set(void *var, intptr_t val)</div><div class="ttdoc">Set an int into a Number config item.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00058">number.c:58</a></div></div>
+<div class="ttc" id="anumber_8c_html_a65eed72aebcf5b494f649e9db3168640"><div class="ttname"><a href="number_8c.html#a65eed72aebcf5b494f649e9db3168640">native_get</a></div><div class="ttdeci">static intptr_t native_get(void *var)</div><div class="ttdoc">Get an int from a Number config item.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00050">number.c:50</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__cfg__type__native__set_ga5bcf940a158f552c8866887c3f00bc95_cgraph.svg" width="431" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__cfg__type__native__set_ga5bcf940a158f552c8866887c3f00bc95_cgraph.svg" width="431" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1154,9 +1156,9 @@ cdef is not NULL </dd></dl>
 <div class="ttc" id="aconfig_2regex_8c_html_a2514a6f801b90e662923176d32535b84"><div class="ttname"><a href="config_2regex_8c.html#a2514a6f801b90e662923176d32535b84">regex_new</a></div><div class="ttdeci">struct Regex * regex_new(const char *str, uint32_t flags, struct Buffer *err)</div><div class="ttdoc">Create an Regex from a string.</div><div class="ttdef"><b>Definition:</b> <a href="config_2regex_8c_source.html#l00102">regex.c:102</a></div></div>
 <div class="ttc" id="aconfig_2regex_8c_html_a8ebad50fb3b76ed6bea1d8c7146611f4"><div class="ttname"><a href="config_2regex_8c.html#a8ebad50fb3b76ed6bea1d8c7146611f4">regex_equal</a></div><div class="ttdeci">bool regex_equal(const struct Regex *a, const struct Regex *b)</div><div class="ttdoc">Compare two regexes.</div><div class="ttdef"><b>Definition:</b> <a href="config_2regex_8c_source.html#l00052">regex.c:52</a></div></div>
 <div class="ttc" id="aconfig_2regex_8c_html_aeb6632e5ec38d9ec3dae0e99558cd6cb"><div class="ttname"><a href="config_2regex_8c.html#aeb6632e5ec38d9ec3dae0e99558cd6cb">regex_free</a></div><div class="ttdeci">void regex_free(struct Regex **ptr)</div><div class="ttdoc">Free a Regex object.</div><div class="ttdef"><b>Definition:</b> <a href="config_2regex_8c_source.html#l00068">regex.c:68</a></div></div>
-<div class="ttc" id="astructRegex_html"><div class="ttname"><a href="structRegex.html">Regex</a></div><div class="ttdoc">Cached regular expression.</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00084">regex3.h:85</a></div></div>
-<div class="ttc" id="astructRegex_html_a91a347ac006d49f161382d291f0edd99"><div class="ttname"><a href="structRegex.html#a91a347ac006d49f161382d291f0edd99">Regex::pattern</a></div><div class="ttdeci">char * pattern</div><div class="ttdoc">printable version</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00086">regex3.h:86</a></div></div>
-<div class="ttc" id="astructRegex_html_adf40b2d25dabe5abb853946f35fe7c44"><div class="ttname"><a href="structRegex.html#adf40b2d25dabe5abb853946f35fe7c44">Regex::pat_not</a></div><div class="ttdeci">bool pat_not</div><div class="ttdoc">do not match</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00088">regex3.h:88</a></div></div>
+<div class="ttc" id="astructRegex_html"><div class="ttname"><a href="structRegex.html">Regex</a></div><div class="ttdoc">Cached regular expression.</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00085">regex3.h:86</a></div></div>
+<div class="ttc" id="astructRegex_html_a91a347ac006d49f161382d291f0edd99"><div class="ttname"><a href="structRegex.html#a91a347ac006d49f161382d291f0edd99">Regex::pattern</a></div><div class="ttdeci">char * pattern</div><div class="ttdoc">printable version</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00087">regex3.h:87</a></div></div>
+<div class="ttc" id="astructRegex_html_adf40b2d25dabe5abb853946f35fe7c44"><div class="ttname"><a href="structRegex.html#adf40b2d25dabe5abb853946f35fe7c44">Regex::pat_not</a></div><div class="ttdeci">bool pat_not</div><div class="ttdoc">do not match</div><div class="ttdef"><b>Definition:</b> <a href="regex3_8h_source.html#l00089">regex3.h:89</a></div></div>
 <div class="ttc" id="atypes_8h_html_a6705f03fff3a772e131740874afdeb80"><div class="ttname"><a href="types_8h.html#a6705f03fff3a772e131740874afdeb80">D_REGEX_ALLOW_NOT</a></div><div class="ttdeci">#define D_REGEX_ALLOW_NOT</div><div class="ttdoc">Regex can begin with '!'.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00107">types.h:107</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

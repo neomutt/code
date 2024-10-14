@@ -99,7 +99,11 @@ var hierarchy =
     [ "Expando", "structExpando.html", null ],
     [ "ExpandoDefinition", "structExpandoDefinition.html", null ],
     [ "ExpandoFormat", "structExpandoFormat.html", null ],
-    [ "ExpandoNode", "structExpandoNode.html", null ],
+    [ "ExpandoNode", "structExpandoNode.html", [
+      [ "NodeCondDatePrivate", "structNodeCondDatePrivate.html", null ],
+      [ "NodeExpandoPrivate", "structNodeExpandoPrivate.html", null ],
+      [ "NodePaddingPrivate", "structNodePaddingPrivate.html", null ]
+    ] ],
     [ "ExpandoParseError", "structExpandoParseError.html", null ],
     [ "ExpandoRenderData", "structExpandoRenderData.html", null ],
     [ "Extkey", "structExtkey.html", null ],
@@ -188,9 +192,6 @@ var hierarchy =
     [ "NewsrcEntry", "structNewsrcEntry.html", null ],
     [ "NmTags", "structNmTags.html", null ],
     [ "NntpAcache", "structNntpAcache.html", null ],
-    [ "NodeCondDatePrivate", "structNodeCondDatePrivate.html", null ],
-    [ "NodeExpandoPrivate", "structNodeExpandoPrivate.html", null ],
-    [ "NodePaddingPrivate", "structNodePaddingPrivate.html", null ],
     [ "Notify", "structNotify.html", null ],
     [ "NotifyCallback", "structNotifyCallback.html", null ],
     [ "Observer", "structObserver.html", null ],

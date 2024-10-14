@@ -16,7 +16,7 @@ var searchData=
   ['pgp_5fmake_5fkey_5fattachment_28_29_13',['pgp_make_key_attachment()',['../group__crypto__pgp__make__key__attachment.html',1,'']]],
   ['pgp_5ftraditional_5fencryptsign_28_29_14',['pgp_traditional_encryptsign()',['../group__crypto__pgp__traditional__encryptsign.html',1,'']]],
   ['poll_28_29_15',['poll()',['../group__connection__poll.html',1,'']]],
-  ['pop_20authenticaion_20api_16',['POP Authenticaion API',['../group__pop__authenticate.html',1,'']]],
+  ['pop_20authentication_20api_16',['POP Authentication API',['../group__pop__authenticate.html',1,'']]],
   ['pop_20response_20parser_20api_17',['POP Response Parser API',['../group__pop__fetch__api.html',1,'']]],
   ['postpone_20function_20api_18',['Postpone Function API',['../group__postpone__function__api.html',1,'']]]
 ];

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['edata_2ec_0',['edata.c',['../notmuch_2edata_8c.html',1,'(Global Namespace)'],['../nntp_2edata_8c.html',1,'(Global Namespace)'],['../maildir_2edata_8c.html',1,'(Global Namespace)'],['../imap_2edata_8c.html',1,'(Global Namespace)'],['../pop_2edata_8c.html',1,'(Global Namespace)']]],
-  ['edata_2eh_1',['edata.h',['../pop_2edata_8h.html',1,'(Global Namespace)'],['../notmuch_2edata_8h.html',1,'(Global Namespace)'],['../nntp_2edata_8h.html',1,'(Global Namespace)'],['../maildir_2edata_8h.html',1,'(Global Namespace)'],['../imap_2edata_8h.html',1,'(Global Namespace)']]],
+  ['edata_2ec_0',['edata.c',['../nntp_2edata_8c.html',1,'(Global Namespace)'],['../maildir_2edata_8c.html',1,'(Global Namespace)'],['../imap_2edata_8c.html',1,'(Global Namespace)'],['../notmuch_2edata_8c.html',1,'(Global Namespace)'],['../pop_2edata_8c.html',1,'(Global Namespace)']]],
+  ['edata_2eh_1',['edata.h',['../pop_2edata_8h.html',1,'(Global Namespace)'],['../imap_2edata_8h.html',1,'(Global Namespace)'],['../maildir_2edata_8h.html',1,'(Global Namespace)'],['../nntp_2edata_8h.html',1,'(Global Namespace)'],['../notmuch_2edata_8h.html',1,'(Global Namespace)']]],
   ['editmsg_2ec_2',['editmsg.c',['../editmsg_8c.html',1,'']]],
-  ['email_2ec_3',['email.c',['../debug_2email_8c.html',1,'(Global Namespace)'],['../email_2email_8c.html',1,'(Global Namespace)']]],
+  ['email_2ec_3',['email.c',['../email_2email_8c.html',1,'(Global Namespace)'],['../debug_2email_8c.html',1,'(Global Namespace)']]],
   ['email_2eh_4',['email.h',['../email_8h.html',1,'']]],
   ['enriched_2ec_5',['enriched.c',['../enriched_8c.html',1,'']]],
   ['enriched_2eh_6',['enriched.h',['../enriched_8h.html',1,'']]],

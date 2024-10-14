@@ -27,5 +27,6 @@ var searchData=
   ['notify2_2eh_24',['notify2.h',['../notify2_8h.html',1,'']]],
   ['notify_5ftype_2eh_25',['notify_type.h',['../notify__type_8h.html',1,'']]],
   ['notmuch_2ec_26',['notmuch.c',['../notmuch_8c.html',1,'']]],
-  ['number_2ec_27',['number.c',['../number_8c.html',1,'']]]
+  ['number_2ec_27',['number.c',['../number_8c.html',1,'']]],
+  ['number_2eh_28',['number.h',['../number_8h.html',1,'']]]
 ];

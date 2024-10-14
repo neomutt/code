@@ -17,6 +17,7 @@ var dir_9f351d46ce3cc29445a41dc3a31e6919 =
     [ "mbtable.h", "mbtable_8h.html", "mbtable_8h" ],
     [ "myvar.c", "myvar_8c.html", "myvar_8c" ],
     [ "number.c", "number_8c.html", "number_8c" ],
+    [ "number.h", "number_8h.html", "number_8h" ],
     [ "path.c", "config_2path_8c.html", "config_2path_8c" ],
     [ "quad.c", "quad_8c.html", "quad_8c" ],
     [ "quad.h", "quad_8h.html", "quad_8h" ],

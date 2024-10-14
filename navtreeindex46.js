@@ -1,5 +1,13 @@
 var NAVTREEINDEX46 =
 {
+"structImapEmailData.html#aa942cde9ad6b90d7353e448578c8f3e8":[1,0,120,9],
+"structImapEmailData.html#ac0a8cf12be3069914cc0d4288d2124ed":[1,0,120,2],
+"structImapEmailData.html#ac846056c32aa31d97ce6b9a2c7d2c299":[1,0,120,1],
+"structImapEmailData.html#adbcc9070eab67c69d1d2fcd48aa04021":[1,0,120,0],
+"structImapEmailData.html#addcfe8f2eb993fbd3de89041f090a090":[1,0,120,3],
+"structImapEmailData.html#ae8e6d36ffbdfd91493fb6bf45ee6bfa5":[1,0,120,4],
+"structImapEmailData.html#af3d57aed1b74390358fe594de497b8f1":[1,0,120,8],
+"structImapHeader.html":[1,0,121],
 "structImapHeader.html#a18937a689b628b43ac8d7718eb951544":[1,0,121,1],
 "structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50":[1,0,121,0],
 "structImapHeader.html#ae53cb16ef576e34ad7ad0a684a0d77ad":[1,0,121,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX46 =
 "structMessage.html":[1,0,152],
 "structMessage.html#a11d53ee4319e8735c1677d8780a7b517":[1,0,152,0],
 "structMessage.html#a668759f9813e882a9cfcf3ac725b6200":[1,0,152,1],
-"structMessage.html#a7a53f3b9c450c29d93793c0d2b0608f7":[1,0,152,7],
-"structMessage.html#a7fb38cfeca11b8aee9cd598475100dfb":[1,0,152,6],
-"structMessage.html#a817c2e03ff60bae58f117fc3391d3d62":[1,0,152,2],
-"structMessage.html#aa586337aebc4a460be8ae0f676cd0ff6":[1,0,152,9],
-"structMessage.html#aa97affe6dd666261890aee8ec004c26c":[1,0,152,3],
-"structMessage.html#aaa255a41e07cb4277d457c0db894a47a":[1,0,152,5],
-"structMessage.html#ace4606e8dc8aa0c35738e9f788f47705":[1,0,152,4],
-"structMessage.html#af789382bf4127b5b8c784bbae1c04241":[1,0,152,8],
-"structMhEmail.html":[1,0,153]
+"structMessage.html#a7a53f3b9c450c29d93793c0d2b0608f7":[1,0,152,7]
 };
