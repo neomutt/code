@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-10-02-19-gb00cc4</span>
+   &#160;<span id="projectnumber">2024-10-02-24-gaf3843</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -6682,28 +6682,42 @@ nc-&gt;current is not NULL </dd></dl>
 <div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">   98</span>  <span class="keywordflow">if</span> (!nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a7c321c2d13dc78888dbd478128224acb">global_data</a> || !nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a08fb4baa3870315c80e1a1a2c0d2a354">event_data</a>)</div>
 <div class="line"><span class="lineno">   99</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  100</span>  <span class="keywordflow">if</span> (nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a73db338abce1e44355fb42b9c2224d34">event_subtype</a> != <a class="code hl_enumvalue" href="mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca8d3b770dfc438ed96cbd7f16ba462c0a">NT_WINDOW_DELETE</a>)</div>
-<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *panel_pager = nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a7c321c2d13dc78888dbd478128224acb">global_data</a>;</div>
-<div class="line"><span class="lineno">  104</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEventWindow.html">EventWindow</a> *ev_w = nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a08fb4baa3870315c80e1a1a2c0d2a354">event_data</a>;</div>
-<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">if</span> (ev_w-&gt;<a class="code hl_variable" href="structEventWindow.html#a545b1dac76875e0272f9f6cb741e31a1">win</a> != panel_pager)</div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>  <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>-&gt;<a class="code hl_variable" href="structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga637566459600c5b19360a6921120f3a1">ppanel_config_observer</a>, panel_pager);</div>
-<div class="line"><span class="lineno">  109</span>  <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(panel_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#a5bf1302122ef2778be449cde2f1909e6">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga6d238d2ce26ab9532b5c86f38ccdb8ea">ppanel_window_observer</a>, panel_pager);</div>
-<div class="line"><span class="lineno">  110</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;window delete done\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  111</span> </div>
-<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  113</span>}</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *panel_pager = nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a7c321c2d13dc78888dbd478128224acb">global_data</a>;</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">if</span> (nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a73db338abce1e44355fb42b9c2224d34">event_subtype</a> == <a class="code hl_enumvalue" href="mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca47bb65598401cdb438a2768ca5d99eaa">NT_WINDOW_STATE</a>)</div>
+<div class="line"><span class="lineno">  103</span>  {</div>
+<div class="line"><span class="lineno">  104</span>    panel_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253">actions</a> |= <a class="code hl_define" href="mutt__window_8h.html#a1c63edd01ae46fc9b7a7d71214ee5dce">WA_RECALC</a> | <a class="code hl_define" href="mutt__window_8h.html#a9b5cac268fc124bcc4a3eff7e8cddaa2">WA_REPAINT</a>;</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structPagerPrivateData.html">PagerPrivateData</a> *priv = panel_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span> (priv-&gt;<a class="code hl_variable" href="structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd">pview</a>)</div>
+<div class="line"><span class="lineno">  108</span>      <a class="code hl_function" href="dlg__pager_8c.html#ab5a6fd984a1197ca4c0ede476ff2b325">pager_queue_redraw</a>(priv, <a class="code hl_define" href="pager_2lib_8h.html#a9bc93df97895244b2247fab28e18f782">PAGER_REDRAW_PAGER</a>);</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ae42597be1ed1040ef128b6367d17bb73">LL_NOTIFY</a>, <span class="stringliteral">&quot;window state done, request WA_RECALC\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  111</span>  }</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">if</span> (nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a73db338abce1e44355fb42b9c2224d34">event_subtype</a> != <a class="code hl_enumvalue" href="mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138ca8d3b770dfc438ed96cbd7f16ba462c0a">NT_WINDOW_DELETE</a>)</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEventWindow.html">EventWindow</a> *ev_w = nc-&gt;<a class="code hl_variable" href="structNotifyCallback.html#a08fb4baa3870315c80e1a1a2c0d2a354">event_data</a>;</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">if</span> (ev_w-&gt;<a class="code hl_variable" href="structEventWindow.html#a545b1dac76875e0272f9f6cb741e31a1">win</a> != panel_pager)</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>  <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>-&gt;<a class="code hl_variable" href="structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga637566459600c5b19360a6921120f3a1">ppanel_config_observer</a>, panel_pager);</div>
+<div class="line"><span class="lineno">  121</span>  <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(panel_pager-&gt;<a class="code hl_variable" href="structMuttWindow.html#a5bf1302122ef2778be449cde2f1909e6">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga6d238d2ce26ab9532b5c86f38ccdb8ea">ppanel_window_observer</a>, panel_pager);</div>
+<div class="line"><span class="lineno">  122</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;window delete done\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  125</span>}</div>
+<div class="ttc" id="adlg__pager_8c_html_ab5a6fd984a1197ca4c0ede476ff2b325"><div class="ttname"><a href="dlg__pager_8c.html#ab5a6fd984a1197ca4c0ede476ff2b325">pager_queue_redraw</a></div><div class="ttdeci">void pager_queue_redraw(struct PagerPrivateData *priv, PagerRedrawFlags redraw)</div><div class="ttdoc">Queue a request for a redraw.</div><div class="ttdef"><b>Definition:</b> <a href="dlg__pager_8c_source.html#l00127">dlg_pager.c:127</a></div></div>
 <div class="ttc" id="agroup__observer__api_html_ga637566459600c5b19360a6921120f3a1"><div class="ttname"><a href="group__observer__api.html#ga637566459600c5b19360a6921120f3a1">ppanel_config_observer</a></div><div class="ttdeci">static int ppanel_config_observer(struct NotifyCallback *nc)</div><div class="ttdoc">Notification that a Config Variable has changed - Implements observer_t -.</div><div class="ttdef"><b>Definition:</b> <a href="ppanel_8c_source.html#l00072">ppanel.c:72</a></div></div>
 <div class="ttc" id="agroup__observer__api_html_ga6d238d2ce26ab9532b5c86f38ccdb8ea"><div class="ttname"><a href="group__observer__api.html#ga6d238d2ce26ab9532b5c86f38ccdb8ea">ppanel_window_observer</a></div><div class="ttdeci">static int ppanel_window_observer(struct NotifyCallback *nc)</div><div class="ttdoc">Notification that a Window has changed - Implements observer_t -.</div><div class="ttdef"><b>Definition:</b> <a href="ppanel_8c_source.html#l00094">ppanel.c:94</a></div></div>
+<div class="ttc" id="apager_2lib_8h_html_a9bc93df97895244b2247fab28e18f782"><div class="ttname"><a href="pager_2lib_8h.html#a9bc93df97895244b2247fab28e18f782">PAGER_REDRAW_PAGER</a></div><div class="ttdeci">#define PAGER_REDRAW_PAGER</div><div class="ttdoc">Redraw the pager.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2lib_8h_source.html#l00191">lib.h:191</a></div></div>
 </div><!-- fragment --><div id="dynsection-157" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-157-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-157-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-157-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__observer__api_ga6d238d2ce26ab9532b5c86f38ccdb8ea_cgraph.svg" width="414" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__observer__api_ga6d238d2ce26ab9532b5c86f38ccdb8ea_cgraph.svg" width="414" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-158" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
