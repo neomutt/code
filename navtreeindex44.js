@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca":[1,0,48,2],
+"structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037":[1,0,48,3],
 "structConnAccount.html#a86102cb75ff512603a5559d4908b1ba4":[1,0,48,7],
 "structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a":[1,0,48,0],
 "structConnAccount.html#ae69871442c1135a06b359011104f630b":[1,0,48,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "structEtags.html":[1,0,71],
 "structEtags.html#a4dfb2c4b8941b7d6152f6de86d2a061c":[1,0,71,1],
 "structEtags.html#aea21780374e5741d70205a1efc9781ea":[1,0,71,0],
-"structEventAccount.html":[1,0,72],
-"structEventAccount.html#ac420c69e05c38e42e09e3dd88cf54c9f":[1,0,72,0],
-"structEventAlias.html":[1,0,73]
+"structEventAccount.html":[1,0,72]
 };

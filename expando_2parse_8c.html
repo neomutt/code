@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-10-02-24-gaf3843</span>
+   &#160;<span id="projectnumber">2024-10-02-34-g9dd811</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -115,15 +115,15 @@ $(document).ready(function(){initNavTree('expando_2parse_8c.html',''); initResiz
 <code>#include &quot;<a class="el" href="node_8h_source.html">node.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="node__condbool_8h_source.html">node_condbool.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="node__condition_8h_source.html">node_condition.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="node__container_8h_source.html">node_container.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="node__expando_8h_source.html">node_expando.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="node__padding_8h_source.html">node_padding.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="node__text_8h_source.html">node_text.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for parse.c:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expando_2parse_8c__incl.svg" width="1291" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="expando_2parse_8c__incl.svg" width="1178" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -140,9 +140,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a8e9234e8bbc9e40f144b7e48b6c41e62"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structExpandoNode.html">ExpandoNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a> (const char *str, const char *end, enum <a class="el" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4a">ExpandoConditionStart</a> condition_start, const char **parsed_until, const struct <a class="el" href="structExpandoDefinition.html">ExpandoDefinition</a> *defs, struct <a class="el" href="structExpandoParseError.html">ExpandoParseError</a> *err)</td></tr>
 <tr class="memdesc:a8e9234e8bbc9e40f144b7e48b6c41e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a format string into ExpandoNodes.  <br /></td></tr>
 <tr class="separator:a8e9234e8bbc9e40f144b7e48b6c41e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f5ee7cadf596095eb6a307e6ec53e07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expando_2parse_8c.html#a8f5ee7cadf596095eb6a307e6ec53e07">node_tree_parse</a> (struct <a class="el" href="structExpandoNode.html">ExpandoNode</a> **root, const char *string, const struct <a class="el" href="structExpandoDefinition.html">ExpandoDefinition</a> *defs, struct <a class="el" href="structExpandoParseError.html">ExpandoParseError</a> *err)</td></tr>
-<tr class="memdesc:a8f5ee7cadf596095eb6a307e6ec53e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a format string into ExpandoNodes.  <br /></td></tr>
-<tr class="separator:a8f5ee7cadf596095eb6a307e6ec53e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structExpando.html" title="Parsed Expando trees.">Expando</a> Parsing. </p>
@@ -404,169 +401,164 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="expando_2parse_8c_source.html#l00124">124</a> of file <a class="el" href="expando_2parse_8c_source.html">parse.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
-<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">while</span> (*str &amp;&amp; (end ? (str &lt;= end) : 1))</div>
-<div class="line"><span class="lineno">  131</span>  {</div>
-<div class="line"><span class="lineno">  132</span>    <span class="comment">// %X -&gt; expando</span></div>
-<div class="line"><span class="lineno">  133</span>    <span class="comment">// if there is condition like &lt;X..., the `%` is implicit</span></div>
-<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">if</span> ((*str == <span class="charliteral">&#39;%&#39;</span>) ||</div>
-<div class="line"><span class="lineno">  135</span>        ((condition_start == <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa6cf41e893895f135c2cc0785ae7454cb">CON_START</a>) &amp;&amp; ((*str == <span class="charliteral">&#39;?&#39;</span>) || (*str == <span class="charliteral">&#39;&lt;&#39;</span>))))</div>
-<div class="line"><span class="lineno">  136</span>    {</div>
-<div class="line"><span class="lineno">  137</span>      str++;</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>      <span class="comment">// %% -&gt; &quot;%&quot;s</span></div>
-<div class="line"><span class="lineno">  140</span>      <span class="keywordflow">if</span> (*str == <span class="charliteral">&#39;%&#39;</span>)</div>
-<div class="line"><span class="lineno">  141</span>      {</div>
-<div class="line"><span class="lineno">  142</span>        *parsed_until = str + 1;</div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="node__text_8c.html#a270e422730751fcb42f1de462c80f153">node_text_new</a>(str, str + 1);</div>
-<div class="line"><span class="lineno">  144</span>      }</div>
-<div class="line"><span class="lineno">  145</span>      <span class="comment">// conditional</span></div>
-<div class="line"><span class="lineno">  146</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((*str == <span class="charliteral">&#39;?&#39;</span>) || (*str == <span class="charliteral">&#39;&lt;&#39;</span>))</div>
-<div class="line"><span class="lineno">  147</span>      {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keywordtype">bool</span> old_style = (*str == <span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordtype">char</span> end_terminator = old_style ? <span class="charliteral">&#39;?&#39;</span> : <span class="charliteral">&#39;&gt;&#39;</span>;</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *cond_end = <a class="code hl_function" href="expando_2helpers_8c.html#a1f2ace18285efd6b5743267f71e1a673">skip_until_ch</a>(str, <span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno">  152</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *next = NULL;</div>
-<div class="line"><span class="lineno">  153</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_cond = <a class="code hl_function" href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a>(str, cond_end, <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa6cf41e893895f135c2cc0785ae7454cb">CON_START</a>,</div>
-<div class="line"><span class="lineno">  154</span>                                                   &amp;<a class="code hl_variable" href="structExpandoNode.html#a515bef18c37c1997d72f83999733e1fd">next</a>, defs, err);</div>
-<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">if</span> (!node_cond)</div>
-<div class="line"><span class="lineno">  156</span>          <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (*<a class="code hl_variable" href="structExpandoNode.html#a515bef18c37c1997d72f83999733e1fd">next</a> != <span class="charliteral">&#39;?&#39;</span>)</div>
-<div class="line"><span class="lineno">  159</span>        {</div>
-<div class="line"><span class="lineno">  160</span>          err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">position</a> = <a class="code hl_variable" href="structExpandoNode.html#a515bef18c37c1997d72f83999733e1fd">next</a>;</div>
-<div class="line"><span class="lineno">  161</span>          snprintf(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>, <span class="keyword">sizeof</span>(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>),</div>
-<div class="line"><span class="lineno">  162</span>                   <span class="comment">// L10N: Expando is missing a terminator character</span></div>
-<div class="line"><span class="lineno">  163</span>                   <span class="comment">//       e.g. &quot;%[...&quot; is missing the final &#39;]&#39;</span></div>
-<div class="line"><span class="lineno">  164</span>                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Conditional expando is missing &#39;%c&#39;&quot;</span>), <span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno">  165</span>          <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
-<div class="line"><span class="lineno">  166</span>          <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-<div class="line"><span class="lineno">  168</span> </div>
-<div class="line"><span class="lineno">  169</span>        str = <a class="code hl_variable" href="structExpandoNode.html#a515bef18c37c1997d72f83999733e1fd">next</a> + 1;</div>
-<div class="line"><span class="lineno">  170</span> </div>
-<div class="line"><span class="lineno">  171</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *start_true = str;</div>
-<div class="line"><span class="lineno">  172</span>        <span class="comment">// nested if-else only allowed in the new style</span></div>
-<div class="line"><span class="lineno">  173</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *end_true = <a class="code hl_function" href="expando_2parse_8c.html#a2788bed6d08112cd8a1429a7a8551403">skip_until_if_true_end</a>(str, end_terminator);</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordtype">bool</span> only_true = (*end_true == end_terminator);</div>
-<div class="line"><span class="lineno">  175</span>        <span class="keywordtype">bool</span> invalid = ((*end_true != <span class="charliteral">&#39;&amp;&#39;</span>) &amp;&amp; !only_true);</div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">if</span> (invalid)</div>
-<div class="line"><span class="lineno">  178</span>        {</div>
-<div class="line"><span class="lineno">  179</span>          err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">position</a> = end_true;</div>
-<div class="line"><span class="lineno">  180</span>          snprintf(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>, <span class="keyword">sizeof</span>(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>),</div>
-<div class="line"><span class="lineno">  181</span>                   <span class="comment">// L10N: Expando is missing a terminator character</span></div>
-<div class="line"><span class="lineno">  182</span>                   <span class="comment">//       e.g. &quot;%[...&quot; is missing the final &#39;]&#39;</span></div>
-<div class="line"><span class="lineno">  183</span>                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Conditional expando is missing &#39;&amp;&#39; or &#39;%c&#39;&quot;</span>), end_terminator);</div>
-<div class="line"><span class="lineno">  184</span>          <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
-<div class="line"><span class="lineno">  185</span>          <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  186</span>        }</div>
-<div class="line"><span class="lineno">  187</span> </div>
-<div class="line"><span class="lineno">  188</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *if_true_parsed = NULL;</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_true = NULL;</div>
+<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">if</span> (!str || (*str == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">while</span> (*str &amp;&amp; (end ? (str &lt;= end) : <span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  134</span>  {</div>
+<div class="line"><span class="lineno">  135</span>    <span class="comment">// %X -&gt; expando</span></div>
+<div class="line"><span class="lineno">  136</span>    <span class="comment">// if there is condition like &lt;X..., the `%` is implicit</span></div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">if</span> ((*str == <span class="charliteral">&#39;%&#39;</span>) ||</div>
+<div class="line"><span class="lineno">  138</span>        ((condition_start == <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa6cf41e893895f135c2cc0785ae7454cb">CON_START</a>) &amp;&amp; ((*str == <span class="charliteral">&#39;?&#39;</span>) || (*str == <span class="charliteral">&#39;&lt;&#39;</span>))))</div>
+<div class="line"><span class="lineno">  139</span>    {</div>
+<div class="line"><span class="lineno">  140</span>      str++;</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>      <span class="comment">// %% -&gt; &quot;%&quot;s</span></div>
+<div class="line"><span class="lineno">  143</span>      <span class="keywordflow">if</span> (*str == <span class="charliteral">&#39;%&#39;</span>)</div>
+<div class="line"><span class="lineno">  144</span>      {</div>
+<div class="line"><span class="lineno">  145</span>        *parsed_until = str + 1;</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="node__text_8c.html#a270e422730751fcb42f1de462c80f153">node_text_new</a>(str, str + 1);</div>
+<div class="line"><span class="lineno">  147</span>      }</div>
+<div class="line"><span class="lineno">  148</span>      <span class="comment">// conditional</span></div>
+<div class="line"><span class="lineno">  149</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((*str == <span class="charliteral">&#39;?&#39;</span>) || (*str == <span class="charliteral">&#39;&lt;&#39;</span>))</div>
+<div class="line"><span class="lineno">  150</span>      {</div>
+<div class="line"><span class="lineno">  151</span>        <span class="keywordtype">bool</span> old_style = (*str == <span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno">  152</span>        <span class="keywordtype">char</span> end_terminator = old_style ? <span class="charliteral">&#39;?&#39;</span> : <span class="charliteral">&#39;&gt;&#39;</span>;</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *cond_end = <a class="code hl_function" href="expando_2helpers_8c.html#a1f2ace18285efd6b5743267f71e1a673">skip_until_ch</a>(str, <span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno">  155</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *next = NULL;</div>
+<div class="line"><span class="lineno">  156</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_cond = <a class="code hl_function" href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a>(str, cond_end, <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa6cf41e893895f135c2cc0785ae7454cb">CON_START</a>,</div>
+<div class="line"><span class="lineno">  157</span>                                                   &amp;next, defs, err);</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (!node_cond)</div>
+<div class="line"><span class="lineno">  159</span>          <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  160</span> </div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">if</span> (*next != <span class="charliteral">&#39;?&#39;</span>)</div>
+<div class="line"><span class="lineno">  162</span>        {</div>
+<div class="line"><span class="lineno">  163</span>          err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">position</a> = next;</div>
+<div class="line"><span class="lineno">  164</span>          snprintf(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>, <span class="keyword">sizeof</span>(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>),</div>
+<div class="line"><span class="lineno">  165</span>                   <span class="comment">// L10N: Expando is missing a terminator character</span></div>
+<div class="line"><span class="lineno">  166</span>                   <span class="comment">//       e.g. &quot;%[...&quot; is missing the final &#39;]&#39;</span></div>
+<div class="line"><span class="lineno">  167</span>                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Conditional expando is missing &#39;%c&#39;&quot;</span>), <span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno">  168</span>          <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
+<div class="line"><span class="lineno">  169</span>          <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  170</span>        }</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>        str = next + 1;</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *start_true = str;</div>
+<div class="line"><span class="lineno">  175</span>        <span class="comment">// nested if-else only allowed in the new style</span></div>
+<div class="line"><span class="lineno">  176</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *end_true = <a class="code hl_function" href="expando_2parse_8c.html#a2788bed6d08112cd8a1429a7a8551403">skip_until_if_true_end</a>(str, end_terminator);</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordtype">bool</span> only_true = (*end_true == end_terminator);</div>
+<div class="line"><span class="lineno">  178</span>        <span class="keywordtype">bool</span> invalid = ((*end_true != <span class="charliteral">&#39;&amp;&#39;</span>) &amp;&amp; !only_true);</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">if</span> (invalid)</div>
+<div class="line"><span class="lineno">  181</span>        {</div>
+<div class="line"><span class="lineno">  182</span>          err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">position</a> = end_true;</div>
+<div class="line"><span class="lineno">  183</span>          snprintf(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>, <span class="keyword">sizeof</span>(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>),</div>
+<div class="line"><span class="lineno">  184</span>                   <span class="comment">// L10N: Expando is missing a terminator character</span></div>
+<div class="line"><span class="lineno">  185</span>                   <span class="comment">//       e.g. &quot;%[...&quot; is missing the final &#39;]&#39;</span></div>
+<div class="line"><span class="lineno">  186</span>                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Conditional expando is missing &#39;&amp;&#39; or &#39;%c&#39;&quot;</span>), end_terminator);</div>
+<div class="line"><span class="lineno">  187</span>          <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
+<div class="line"><span class="lineno">  188</span>          <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
 <div class="line"><span class="lineno">  190</span> </div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">while</span> (start_true &lt; end_true)</div>
-<div class="line"><span class="lineno">  192</span>        {</div>
-<div class="line"><span class="lineno">  193</span>          <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = <a class="code hl_function" href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a>(start_true, end_true, <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa427e3666526818c63092d0e4a2cc5f02">CON_NO_CONDITION</a>,</div>
-<div class="line"><span class="lineno">  194</span>                                                &amp;if_true_parsed, defs, err);</div>
-<div class="line"><span class="lineno">  195</span>          <span class="keywordflow">if</span> (!node)</div>
-<div class="line"><span class="lineno">  196</span>          {</div>
-<div class="line"><span class="lineno">  197</span>            <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
-<div class="line"><span class="lineno">  198</span>            <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  199</span>          }</div>
-<div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>          <a class="code hl_function" href="node_8c.html#abb957887ad483993f9ef1eec7f705eb6">node_append</a>(&amp;node_true, node);</div>
-<div class="line"><span class="lineno">  202</span> </div>
-<div class="line"><span class="lineno">  203</span>          start_true = if_true_parsed;</div>
-<div class="line"><span class="lineno">  204</span>        }</div>
-<div class="line"><span class="lineno">  205</span> </div>
-<div class="line"><span class="lineno">  206</span>        <span class="keywordflow">if</span> ((start_true == end_true) &amp;&amp; !node_true)</div>
-<div class="line"><span class="lineno">  207</span>        {</div>
-<div class="line"><span class="lineno">  208</span>          node_true = <a class="code hl_function" href="node_8c.html#a7679f012a650e807fd5583e62e90b92c">node_new</a>();</div>
-<div class="line"><span class="lineno">  209</span>        }</div>
-<div class="line"><span class="lineno">  210</span> </div>
-<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">if</span> (only_true)</div>
-<div class="line"><span class="lineno">  212</span>        {</div>
-<div class="line"><span class="lineno">  213</span>          *parsed_until = end_true + 1;</div>
-<div class="line"><span class="lineno">  214</span>          <span class="keywordflow">return</span> <a class="code hl_function" href="node__condition_8c.html#aedb0d370f257c4ac56c48c8ad10d3a21">node_condition_new</a>(node_cond, node_true, NULL);</div>
-<div class="line"><span class="lineno">  215</span>        }</div>
-<div class="line"><span class="lineno">  216</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  217</span>        {</div>
-<div class="line"><span class="lineno">  218</span>          <span class="keyword">const</span> <span class="keywordtype">char</span> *start_false = end_true + 1;</div>
-<div class="line"><span class="lineno">  219</span>          <span class="comment">// nested if-else only allowed in the new style</span></div>
-<div class="line"><span class="lineno">  220</span>          <span class="keyword">const</span> <span class="keywordtype">char</span> *end_false = <a class="code hl_function" href="expando_2parse_8c.html#a368401cfcae7cd2b857ba5821e0d062e">skip_until_if_false_end</a>(start_false, end_terminator);</div>
-<div class="line"><span class="lineno">  221</span> </div>
-<div class="line"><span class="lineno">  222</span>          <span class="keywordflow">if</span> (*end_false != end_terminator)</div>
-<div class="line"><span class="lineno">  223</span>          {</div>
-<div class="line"><span class="lineno">  224</span>            err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">position</a> = start_false;</div>
-<div class="line"><span class="lineno">  225</span>            snprintf(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>, <span class="keyword">sizeof</span>(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>),</div>
-<div class="line"><span class="lineno">  226</span>                     <span class="comment">// L10N: Expando is missing a terminator character</span></div>
-<div class="line"><span class="lineno">  227</span>                     <span class="comment">//       e.g. &quot;%[...&quot; is missing the final &#39;]&#39;</span></div>
-<div class="line"><span class="lineno">  228</span>                     <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Conditional expando is missing &#39;%c&#39;&quot;</span>), end_terminator);</div>
-<div class="line"><span class="lineno">  229</span>            <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_true);</div>
-<div class="line"><span class="lineno">  230</span>            <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
-<div class="line"><span class="lineno">  231</span>            <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  232</span>          }</div>
-<div class="line"><span class="lineno">  233</span> </div>
-<div class="line"><span class="lineno">  234</span>          <span class="keyword">const</span> <span class="keywordtype">char</span> *if_false_parsed = NULL;</div>
-<div class="line"><span class="lineno">  235</span>          <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_false = NULL;</div>
-<div class="line"><span class="lineno">  236</span> </div>
-<div class="line"><span class="lineno">  237</span>          <span class="keywordflow">while</span> (start_false &lt; end_false)</div>
-<div class="line"><span class="lineno">  238</span>          {</div>
-<div class="line"><span class="lineno">  239</span>            <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = <a class="code hl_function" href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a>(start_false, end_false, <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa427e3666526818c63092d0e4a2cc5f02">CON_NO_CONDITION</a>,</div>
-<div class="line"><span class="lineno">  240</span>                                                  &amp;if_false_parsed, defs, err);</div>
-<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (!node)</div>
-<div class="line"><span class="lineno">  242</span>            {</div>
-<div class="line"><span class="lineno">  243</span>              <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_true);</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *if_true_parsed = NULL;</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_true = <a class="code hl_function" href="node__container_8c.html#a8a172485970bae39f40d0cf046f69a73">node_container_new</a>();</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">while</span> (start_true &lt; end_true)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>          <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = <a class="code hl_function" href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a>(start_true, end_true, <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa427e3666526818c63092d0e4a2cc5f02">CON_NO_CONDITION</a>,</div>
+<div class="line"><span class="lineno">  197</span>                                                &amp;if_true_parsed, defs, err);</div>
+<div class="line"><span class="lineno">  198</span>          <span class="keywordflow">if</span> (!node)</div>
+<div class="line"><span class="lineno">  199</span>          {</div>
+<div class="line"><span class="lineno">  200</span>            <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_true);</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
+<div class="line"><span class="lineno">  202</span>            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  203</span>          }</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>          <a class="code hl_function" href="node_8c.html#ac2af561350d9b39d134b7b172fedfa5a">node_add_child</a>(node_true, node);</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>          start_true = if_true_parsed;</div>
+<div class="line"><span class="lineno">  208</span>        }</div>
+<div class="line"><span class="lineno">  209</span> </div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">if</span> (only_true)</div>
+<div class="line"><span class="lineno">  211</span>        {</div>
+<div class="line"><span class="lineno">  212</span>          *parsed_until = end_true + 1;</div>
+<div class="line"><span class="lineno">  213</span>          <span class="keywordflow">return</span> <a class="code hl_function" href="node__condition_8c.html#aedb0d370f257c4ac56c48c8ad10d3a21">node_condition_new</a>(node_cond, node_true, NULL);</div>
+<div class="line"><span class="lineno">  214</span>        }</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>          <span class="keyword">const</span> <span class="keywordtype">char</span> *start_false = end_true + 1;</div>
+<div class="line"><span class="lineno">  218</span>          <span class="comment">// nested if-else only allowed in the new style</span></div>
+<div class="line"><span class="lineno">  219</span>          <span class="keyword">const</span> <span class="keywordtype">char</span> *end_false = <a class="code hl_function" href="expando_2parse_8c.html#a368401cfcae7cd2b857ba5821e0d062e">skip_until_if_false_end</a>(start_false, end_terminator);</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>          <span class="keywordflow">if</span> (*end_false != end_terminator)</div>
+<div class="line"><span class="lineno">  222</span>          {</div>
+<div class="line"><span class="lineno">  223</span>            err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">position</a> = start_false;</div>
+<div class="line"><span class="lineno">  224</span>            snprintf(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>, <span class="keyword">sizeof</span>(err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">message</a>),</div>
+<div class="line"><span class="lineno">  225</span>                     <span class="comment">// L10N: Expando is missing a terminator character</span></div>
+<div class="line"><span class="lineno">  226</span>                     <span class="comment">//       e.g. &quot;%[...&quot; is missing the final &#39;]&#39;</span></div>
+<div class="line"><span class="lineno">  227</span>                     <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Conditional expando is missing &#39;%c&#39;&quot;</span>), end_terminator);</div>
+<div class="line"><span class="lineno">  228</span>            <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_true);</div>
+<div class="line"><span class="lineno">  229</span>            <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
+<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  231</span>          }</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>          <span class="keyword">const</span> <span class="keywordtype">char</span> *if_false_parsed = NULL;</div>
+<div class="line"><span class="lineno">  234</span>          <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_false = <a class="code hl_function" href="node__container_8c.html#a8a172485970bae39f40d0cf046f69a73">node_container_new</a>();</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>          <span class="keywordflow">while</span> (start_false &lt; end_false)</div>
+<div class="line"><span class="lineno">  237</span>          {</div>
+<div class="line"><span class="lineno">  238</span>            <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = <a class="code hl_function" href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a>(start_false, end_false, <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa427e3666526818c63092d0e4a2cc5f02">CON_NO_CONDITION</a>,</div>
+<div class="line"><span class="lineno">  239</span>                                                  &amp;if_false_parsed, defs, err);</div>
+<div class="line"><span class="lineno">  240</span>            <span class="keywordflow">if</span> (!node)</div>
+<div class="line"><span class="lineno">  241</span>            {</div>
+<div class="line"><span class="lineno">  242</span>              <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_true);</div>
+<div class="line"><span class="lineno">  243</span>              <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_false);</div>
 <div class="line"><span class="lineno">  244</span>              <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node_cond);</div>
 <div class="line"><span class="lineno">  245</span>              <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><span class="lineno">  246</span>            }</div>
 <div class="line"><span class="lineno">  247</span> </div>
-<div class="line"><span class="lineno">  248</span>            <a class="code hl_function" href="node_8c.html#abb957887ad483993f9ef1eec7f705eb6">node_append</a>(&amp;node_false, node);</div>
+<div class="line"><span class="lineno">  248</span>            <a class="code hl_function" href="node_8c.html#ac2af561350d9b39d134b7b172fedfa5a">node_add_child</a>(node_false, node);</div>
 <div class="line"><span class="lineno">  249</span> </div>
 <div class="line"><span class="lineno">  250</span>            start_false = if_false_parsed;</div>
 <div class="line"><span class="lineno">  251</span>          }</div>
 <div class="line"><span class="lineno">  252</span> </div>
-<div class="line"><span class="lineno">  253</span>          <span class="keywordflow">if</span> ((start_false == end_false) &amp;&amp; !node_false)</div>
-<div class="line"><span class="lineno">  254</span>          {</div>
-<div class="line"><span class="lineno">  255</span>            node_false = <a class="code hl_function" href="node_8c.html#a7679f012a650e807fd5583e62e90b92c">node_new</a>();</div>
-<div class="line"><span class="lineno">  256</span>          }</div>
-<div class="line"><span class="lineno">  257</span> </div>
-<div class="line"><span class="lineno">  258</span>          *parsed_until = end_false + 1;</div>
-<div class="line"><span class="lineno">  259</span>          <span class="keywordflow">return</span> <a class="code hl_function" href="node__condition_8c.html#aedb0d370f257c4ac56c48c8ad10d3a21">node_condition_new</a>(node_cond, node_true, node_false);</div>
-<div class="line"><span class="lineno">  260</span>        }</div>
-<div class="line"><span class="lineno">  261</span>      }</div>
-<div class="line"><span class="lineno">  262</span>      <span class="keywordflow">else</span> <span class="comment">// expando</span></div>
-<div class="line"><span class="lineno">  263</span>      {</div>
-<div class="line"><span class="lineno">  264</span>        <a class="code hl_typedef" href="definition_8h.html#a5a516ad696c12d769fb040f088bf3bd0">ExpandoParserFlags</a> flags = (condition_start == <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa6cf41e893895f135c2cc0785ae7454cb">CON_START</a>) ? <a class="code hl_define" href="definition_8h.html#a6f04fcb8cf7d8283e5602b8dcfc9dcf7">EP_CONDITIONAL</a> : <a class="code hl_define" href="definition_8h.html#a2a611701655c4ac10063351268fdcf4c">EP_NO_FLAGS</a>;</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = NULL;</div>
-<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="definition_8h.html#a6f04fcb8cf7d8283e5602b8dcfc9dcf7">EP_CONDITIONAL</a>)</div>
-<div class="line"><span class="lineno">  267</span>        {</div>
-<div class="line"><span class="lineno">  268</span>          node = <a class="code hl_function" href="group__expando__parse__api.html#ga74a9cf9da7ce28bad692d03ae8d39902">node_condbool_parse</a>(str, parsed_until, defs, flags, err);</div>
-<div class="line"><span class="lineno">  269</span>        }</div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  253</span>          *parsed_until = end_false + 1;</div>
+<div class="line"><span class="lineno">  254</span>          <span class="keywordflow">return</span> <a class="code hl_function" href="node__condition_8c.html#aedb0d370f257c4ac56c48c8ad10d3a21">node_condition_new</a>(node_cond, node_true, node_false);</div>
+<div class="line"><span class="lineno">  255</span>        }</div>
+<div class="line"><span class="lineno">  256</span>      }</div>
+<div class="line"><span class="lineno">  257</span>      <span class="keywordflow">else</span> <span class="comment">// expando</span></div>
+<div class="line"><span class="lineno">  258</span>      {</div>
+<div class="line"><span class="lineno">  259</span>        <a class="code hl_typedef" href="definition_8h.html#a5a516ad696c12d769fb040f088bf3bd0">ExpandoParserFlags</a> flags = (condition_start == <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa6cf41e893895f135c2cc0785ae7454cb">CON_START</a>) ? <a class="code hl_define" href="definition_8h.html#a6f04fcb8cf7d8283e5602b8dcfc9dcf7">EP_CONDITIONAL</a> : <a class="code hl_define" href="definition_8h.html#a2a611701655c4ac10063351268fdcf4c">EP_NO_FLAGS</a>;</div>
+<div class="line"><span class="lineno">  260</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = NULL;</div>
+<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="definition_8h.html#a6f04fcb8cf7d8283e5602b8dcfc9dcf7">EP_CONDITIONAL</a>)</div>
+<div class="line"><span class="lineno">  262</span>        {</div>
+<div class="line"><span class="lineno">  263</span>          node = <a class="code hl_function" href="group__expando__parse__api.html#ga715ca21156b9b7762363dc1994d48682">node_condbool_parse</a>(str, defs, flags, parsed_until, err);</div>
+<div class="line"><span class="lineno">  264</span>        }</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  266</span>        {</div>
+<div class="line"><span class="lineno">  267</span>          node = <a class="code hl_function" href="node__expando_8c.html#a04d047b9388a2d7cf4c122b9def4e620">node_expando_parse</a>(str, defs, flags, parsed_until, err);</div>
+<div class="line"><span class="lineno">  268</span>        }</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span> (!node || err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">position</a>)</div>
 <div class="line"><span class="lineno">  271</span>        {</div>
-<div class="line"><span class="lineno">  272</span>          node = <a class="code hl_function" href="node__expando_8c.html#ad1065ae3861925c24798aba35608084c">node_expando_parse</a>(str, parsed_until, defs, flags, err);</div>
-<div class="line"><span class="lineno">  273</span>        }</div>
-<div class="line"><span class="lineno">  274</span> </div>
-<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">if</span> (!node || err-&gt;<a class="code hl_variable" href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">position</a>)</div>
-<div class="line"><span class="lineno">  276</span>        {</div>
-<div class="line"><span class="lineno">  277</span>          <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node);</div>
-<div class="line"><span class="lineno">  278</span>          <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  279</span>        }</div>
-<div class="line"><span class="lineno">  280</span> </div>
-<div class="line"><span class="lineno">  281</span>        <span class="keywordflow">return</span> node;</div>
-<div class="line"><span class="lineno">  282</span>      }</div>
-<div class="line"><span class="lineno">  283</span>    }</div>
-<div class="line"><span class="lineno">  284</span>    <span class="keywordflow">else</span> <span class="comment">// text</span></div>
-<div class="line"><span class="lineno">  285</span>    {</div>
-<div class="line"><span class="lineno">  286</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="node__text_8c.html#a411b029099f46384c6c1ffbcda55a9a4">node_text_parse</a>(str, <a class="code hl_variable" href="structExpandoNode.html#a4ae11ca93cc8845109e0d6fa4ab84bde">end</a>, parsed_until);</div>
-<div class="line"><span class="lineno">  287</span>    }</div>
-<div class="line"><span class="lineno">  288</span>  }</div>
-<div class="line"><span class="lineno">  289</span> </div>
-<div class="line"><span class="lineno">  290</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Internal parsing error&quot;</span>); <span class="comment">// LCOV_EXCL_LINE</span></div>
-<div class="line"><span class="lineno">  291</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  292</span>}</div>
+<div class="line"><span class="lineno">  272</span>          <a class="code hl_function" href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a>(&amp;node);</div>
+<div class="line"><span class="lineno">  273</span>          <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  274</span>        }</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>        <span class="keywordflow">return</span> node;</div>
+<div class="line"><span class="lineno">  277</span>      }</div>
+<div class="line"><span class="lineno">  278</span>    }</div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">else</span> <span class="comment">// text</span></div>
+<div class="line"><span class="lineno">  280</span>    {</div>
+<div class="line"><span class="lineno">  281</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="node__text_8c.html#a411b029099f46384c6c1ffbcda55a9a4">node_text_parse</a>(str, end, parsed_until);</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
+<div class="line"><span class="lineno">  283</span>  }</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(<span class="keyword">false</span> &amp;&amp; <span class="stringliteral">&quot;Internal parsing error&quot;</span>); <span class="comment">// LCOV_EXCL_LINE</span></div>
+<div class="line"><span class="lineno">  286</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  287</span>}</div>
 <div class="ttc" id="adefinition_8h_html_a2a611701655c4ac10063351268fdcf4c"><div class="ttname"><a href="definition_8h.html#a2a611701655c4ac10063351268fdcf4c">EP_NO_FLAGS</a></div><div class="ttdeci">#define EP_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition:</b> <a href="definition_8h_source.html#l00042">definition.h:42</a></div></div>
 <div class="ttc" id="adefinition_8h_html_a5a516ad696c12d769fb040f088bf3bd0"><div class="ttname"><a href="definition_8h.html#a5a516ad696c12d769fb040f088bf3bd0">ExpandoParserFlags</a></div><div class="ttdeci">uint8_t ExpandoParserFlags</div><div class="ttdoc">Flags for expando_parse(), e.g. EP_CONDITIONAL.</div><div class="ttdef"><b>Definition:</b> <a href="definition_8h_source.html#l00041">definition.h:41</a></div></div>
 <div class="ttc" id="adefinition_8h_html_a6f04fcb8cf7d8283e5602b8dcfc9dcf7"><div class="ttname"><a href="definition_8h.html#a6f04fcb8cf7d8283e5602b8dcfc9dcf7">EP_CONDITIONAL</a></div><div class="ttdeci">#define EP_CONDITIONAL</div><div class="ttdoc">Expando is being used as a condition.</div><div class="ttdef"><b>Definition:</b> <a href="definition_8h_source.html#l00043">definition.h:43</a></div></div>
@@ -574,29 +566,27 @@ Functions</h2></td></tr>
 <div class="ttc" id="aexpando_2parse_8c_html_a2788bed6d08112cd8a1429a7a8551403"><div class="ttname"><a href="expando_2parse_8c.html#a2788bed6d08112cd8a1429a7a8551403">skip_until_if_true_end</a></div><div class="ttdeci">static const char * skip_until_if_true_end(const char *start, char end_terminator)</div><div class="ttdoc">Search for the end of an 'if true' condition.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2parse_8c_source.html#l00050">parse.c:50</a></div></div>
 <div class="ttc" id="aexpando_2parse_8c_html_a368401cfcae7cd2b857ba5821e0d062e"><div class="ttname"><a href="expando_2parse_8c.html#a368401cfcae7cd2b857ba5821e0d062e">skip_until_if_false_end</a></div><div class="ttdeci">static const char * skip_until_if_false_end(const char *start, char end_terminator)</div><div class="ttdoc">Search for the end of an 'if false' condition.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2parse_8c_source.html#l00085">parse.c:85</a></div></div>
 <div class="ttc" id="aexpando_2parse_8c_html_a8e9234e8bbc9e40f144b7e48b6c41e62"><div class="ttname"><a href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a></div><div class="ttdeci">struct ExpandoNode * node_parse(const char *str, const char *end, enum ExpandoConditionStart condition_start, const char **parsed_until, const struct ExpandoDefinition *defs, struct ExpandoParseError *err)</div><div class="ttdoc">Parse a format string into ExpandoNodes.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2parse_8c_source.html#l00124">parse.c:124</a></div></div>
-<div class="ttc" id="agroup__expando__parse__api_html_ga74a9cf9da7ce28bad692d03ae8d39902"><div class="ttname"><a href="group__expando__parse__api.html#ga74a9cf9da7ce28bad692d03ae8d39902">node_condbool_parse</a></div><div class="ttdeci">struct ExpandoNode * node_condbool_parse(const char *str, const char **parsed_until, const struct ExpandoDefinition *defs, ExpandoParserFlags flags, struct ExpandoParseError *err)</div><div class="ttdoc">Parse a CondBool format string - Implements ExpandoDefinition::parse() -.</div><div class="ttdef"><b>Definition:</b> <a href="node__condbool_8c_source.html#l00066">node_condbool.c:66</a></div></div>
+<div class="ttc" id="agroup__expando__parse__api_html_ga715ca21156b9b7762363dc1994d48682"><div class="ttname"><a href="group__expando__parse__api.html#ga715ca21156b9b7762363dc1994d48682">node_condbool_parse</a></div><div class="ttdeci">struct ExpandoNode * node_condbool_parse(const char *str, const struct ExpandoDefinition *defs, ExpandoParserFlags flags, const char **parsed_until, struct ExpandoParseError *err)</div><div class="ttdoc">Parse a CondBool format string - Implements ExpandoDefinition::parse() -.</div><div class="ttdef"><b>Definition:</b> <a href="node__condbool_8c_source.html#l00063">node_condbool.c:63</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
-<div class="ttc" id="anode_8c_html_a7679f012a650e807fd5583e62e90b92c"><div class="ttname"><a href="node_8c.html#a7679f012a650e807fd5583e62e90b92c">node_new</a></div><div class="ttdeci">struct ExpandoNode * node_new(void)</div><div class="ttdoc">Create a new empty ExpandoNode.</div><div class="ttdef"><b>Definition:</b> <a href="node_8c_source.html#l00039">node.c:39</a></div></div>
-<div class="ttc" id="anode_8c_html_abb957887ad483993f9ef1eec7f705eb6"><div class="ttname"><a href="node_8c.html#abb957887ad483993f9ef1eec7f705eb6">node_append</a></div><div class="ttdeci">void node_append(struct ExpandoNode **root, struct ExpandoNode *new_node)</div><div class="ttdoc">Append an ExpandoNode to an existing node.</div><div class="ttdef"><b>Definition:</b> <a href="node_8c_source.html#l00116">node.c:116</a></div></div>
+<div class="ttc" id="anode_8c_html_ac2af561350d9b39d134b7b172fedfa5a"><div class="ttname"><a href="node_8c.html#ac2af561350d9b39d134b7b172fedfa5a">node_add_child</a></div><div class="ttdeci">void node_add_child(struct ExpandoNode *node, struct ExpandoNode *child)</div><div class="ttdoc">Add a child to an ExpandoNode.</div><div class="ttdef"><b>Definition:</b> <a href="node_8c_source.html#l00076">node.c:76</a></div></div>
 <div class="ttc" id="anode_8c_html_ada813725ff9e01f5ba34338ec7ffc0f3"><div class="ttname"><a href="node_8c.html#ada813725ff9e01f5ba34338ec7ffc0f3">node_free</a></div><div class="ttdeci">void node_free(struct ExpandoNode **ptr)</div><div class="ttdoc">Free an ExpandoNode and its private data.</div><div class="ttdef"><b>Definition:</b> <a href="node_8c_source.html#l00048">node.c:48</a></div></div>
 <div class="ttc" id="anode__condition_8c_html_aedb0d370f257c4ac56c48c8ad10d3a21"><div class="ttname"><a href="node__condition_8c.html#aedb0d370f257c4ac56c48c8ad10d3a21">node_condition_new</a></div><div class="ttdeci">struct ExpandoNode * node_condition_new(struct ExpandoNode *condition, struct ExpandoNode *node_true, struct ExpandoNode *node_false)</div><div class="ttdoc">Create a new Condition Expando Node.</div><div class="ttdef"><b>Definition:</b> <a href="node__condition_8c_source.html#l00072">node_condition.c:72</a></div></div>
 <div class="ttc" id="anode__condition_8h_html_a32f868fa7173f96e2c71b99367198b4aa427e3666526818c63092d0e4a2cc5f02"><div class="ttname"><a href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa427e3666526818c63092d0e4a2cc5f02">CON_NO_CONDITION</a></div><div class="ttdeci">@ CON_NO_CONDITION</div><div class="ttdoc">Parser is not currently in a condition.</div><div class="ttdef"><b>Definition:</b> <a href="node__condition_8h_source.html#l00036">node_condition.h:36</a></div></div>
 <div class="ttc" id="anode__condition_8h_html_a32f868fa7173f96e2c71b99367198b4aa6cf41e893895f135c2cc0785ae7454cb"><div class="ttname"><a href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa6cf41e893895f135c2cc0785ae7454cb">CON_START</a></div><div class="ttdeci">@ CON_START</div><div class="ttdoc">Parser is working on a condition.</div><div class="ttdef"><b>Definition:</b> <a href="node__condition_8h_source.html#l00038">node_condition.h:37</a></div></div>
-<div class="ttc" id="anode__expando_8c_html_ad1065ae3861925c24798aba35608084c"><div class="ttname"><a href="node__expando_8c.html#ad1065ae3861925c24798aba35608084c">node_expando_parse</a></div><div class="ttdeci">struct ExpandoNode * node_expando_parse(const char *str, const char **parsed_until, const struct ExpandoDefinition *defs, ExpandoParserFlags flags, struct ExpandoParseError *err)</div><div class="ttdoc">Parse an Expando format string.</div><div class="ttdef"><b>Definition:</b> <a href="node__expando_8c_source.html#l00237">node_expando.c:237</a></div></div>
+<div class="ttc" id="anode__container_8c_html_a8a172485970bae39f40d0cf046f69a73"><div class="ttname"><a href="node__container_8c.html#a8a172485970bae39f40d0cf046f69a73">node_container_new</a></div><div class="ttdeci">struct ExpandoNode * node_container_new(void)</div><div class="ttdoc">Create a new Container ExpandoNode.</div><div class="ttdef"><b>Definition:</b> <a href="node__container_8c_source.html#l00086">node_container.c:86</a></div></div>
+<div class="ttc" id="anode__expando_8c_html_a04d047b9388a2d7cf4c122b9def4e620"><div class="ttname"><a href="node__expando_8c.html#a04d047b9388a2d7cf4c122b9def4e620">node_expando_parse</a></div><div class="ttdeci">struct ExpandoNode * node_expando_parse(const char *str, const struct ExpandoDefinition *defs, ExpandoParserFlags flags, const char **parsed_until, struct ExpandoParseError *err)</div><div class="ttdoc">Parse an Expando format string.</div><div class="ttdef"><b>Definition:</b> <a href="node__expando_8c_source.html#l00229">node_expando.c:229</a></div></div>
 <div class="ttc" id="anode__text_8c_html_a270e422730751fcb42f1de462c80f153"><div class="ttname"><a href="node__text_8c.html#a270e422730751fcb42f1de462c80f153">node_text_new</a></div><div class="ttdeci">struct ExpandoNode * node_text_new(const char *start, const char *end)</div><div class="ttdoc">Create a new Text ExpandoNode.</div><div class="ttdef"><b>Definition:</b> <a href="node__text_8c_source.html#l00057">node_text.c:57</a></div></div>
-<div class="ttc" id="anode__text_8c_html_a411b029099f46384c6c1ffbcda55a9a4"><div class="ttname"><a href="node__text_8c.html#a411b029099f46384c6c1ffbcda55a9a4">node_text_parse</a></div><div class="ttdeci">struct ExpandoNode * node_text_parse(const char *str, const char *end, const char **parsed_until)</div><div class="ttdoc">Extract a block of text.</div><div class="ttdef"><b>Definition:</b> <a href="node__text_8c_source.html#l00103">node_text.c:103</a></div></div>
+<div class="ttc" id="anode__text_8c_html_a411b029099f46384c6c1ffbcda55a9a4"><div class="ttname"><a href="node__text_8c.html#a411b029099f46384c6c1ffbcda55a9a4">node_text_parse</a></div><div class="ttdeci">struct ExpandoNode * node_text_parse(const char *str, const char *end, const char **parsed_until)</div><div class="ttdoc">Extract a block of text.</div><div class="ttdef"><b>Definition:</b> <a href="node__text_8c_source.html#l00102">node_text.c:102</a></div></div>
 <div class="ttc" id="asignal2_8h_html_a903f9b298be75defd8a3043ebf62bd99"><div class="ttname"><a href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a></div><div class="ttdeci">#define ASSERT(COND)</div><div class="ttdef"><b>Definition:</b> <a href="signal2_8h_source.html#l00058">signal2.h:58</a></div></div>
-<div class="ttc" id="astructExpandoNode_html"><div class="ttname"><a href="structExpandoNode.html">ExpandoNode</a></div><div class="ttdoc">Basic Expando Node.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00068">node.h:69</a></div></div>
-<div class="ttc" id="astructExpandoNode_html_a4ae11ca93cc8845109e0d6fa4ab84bde"><div class="ttname"><a href="structExpandoNode.html#a4ae11ca93cc8845109e0d6fa4ab84bde">ExpandoNode::end</a></div><div class="ttdeci">const char * end</div><div class="ttdoc">End of string data.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00080">node.h:80</a></div></div>
-<div class="ttc" id="astructExpandoNode_html_a515bef18c37c1997d72f83999733e1fd"><div class="ttname"><a href="structExpandoNode.html#a515bef18c37c1997d72f83999733e1fd">ExpandoNode::next</a></div><div class="ttdeci">struct ExpandoNode * next</div><div class="ttdoc">Linked list.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00071">node.h:71</a></div></div>
-<div class="ttc" id="astructExpandoParseError_html_a4e3bcd0484de2f1de896b2bedb7228dc"><div class="ttname"><a href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">ExpandoParseError::position</a></div><div class="ttdeci">const char * position</div><div class="ttdoc">Position of error in original string.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2parse_8h_source.html#l00036">parse.h:36</a></div></div>
-<div class="ttc" id="astructExpandoParseError_html_a66c71136e4a3deb030cb4d777445f329"><div class="ttname"><a href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">ExpandoParseError::message</a></div><div class="ttdeci">char message[256]</div><div class="ttdoc">Error message.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2parse_8h_source.html#l00035">parse.h:35</a></div></div>
+<div class="ttc" id="astructExpandoNode_html"><div class="ttname"><a href="structExpandoNode.html">ExpandoNode</a></div><div class="ttdoc">Basic Expando Node.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00066">node.h:67</a></div></div>
+<div class="ttc" id="astructExpandoParseError_html_a4e3bcd0484de2f1de896b2bedb7228dc"><div class="ttname"><a href="structExpandoParseError.html#a4e3bcd0484de2f1de896b2bedb7228dc">ExpandoParseError::position</a></div><div class="ttdeci">const char * position</div><div class="ttdoc">Position of error in original string.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2parse_8h_source.html#l00037">parse.h:37</a></div></div>
+<div class="ttc" id="astructExpandoParseError_html_a66c71136e4a3deb030cb4d777445f329"><div class="ttname"><a href="structExpandoParseError.html#a66c71136e4a3deb030cb4d777445f329">ExpandoParseError::message</a></div><div class="ttdeci">char message[256]</div><div class="ttdoc">Error message.</div><div class="ttdef"><b>Definition:</b> <a href="expando_2parse_8h_source.html#l00036">parse.h:36</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expando_2parse_8c_a8e9234e8bbc9e40f144b7e48b6c41e62_cgraph.svg" width="642" height="536"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="expando_2parse_8c_a8e9234e8bbc9e40f144b7e48b6c41e62_cgraph.svg" width="475" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -604,100 +594,7 @@ Functions</h2></td></tr>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expando_2parse_8c_a8e9234e8bbc9e40f144b7e48b6c41e62_icgraph.svg" width="280" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="a8f5ee7cadf596095eb6a307e6ec53e07" name="a8f5ee7cadf596095eb6a307e6ec53e07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f5ee7cadf596095eb6a307e6ec53e07">&#9670;&#160;</a></span>node_tree_parse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void node_tree_parse </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structExpandoNode.html">ExpandoNode</a> **&#160;</td>
-          <td class="paramname"><em>root</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>string</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const struct <a class="el" href="structExpandoDefinition.html">ExpandoDefinition</a> *&#160;</td>
-          <td class="paramname"><em>defs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">struct <a class="el" href="structExpandoParseError.html">ExpandoParseError</a> *&#160;</td>
-          <td class="paramname"><em>err</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parse a format string into ExpandoNodes. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">root</td><td>Parent <a class="el" href="structExpandoNode.html" title="Basic Expando Node.">ExpandoNode</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>String to parse </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">defs</td><td><a class="el" href="structExpando.html" title="Parsed Expando trees.">Expando</a> definitions </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">err</td><td><a class="el" href="structBuffer.html" title="String manipulation buffer.">Buffer</a> for errors </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="expando_2parse_8c_source.html#l00301">301</a> of file <a class="el" href="expando_2parse_8c_source.html">parse.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  303</span>{</div>
-<div class="line"><span class="lineno">  304</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">string</span> || !*<span class="keywordtype">string</span>)</div>
-<div class="line"><span class="lineno">  305</span>  {</div>
-<div class="line"><span class="lineno">  306</span>    <a class="code hl_function" href="node_8c.html#abb957887ad483993f9ef1eec7f705eb6">node_append</a>(root, <a class="code hl_function" href="node_8c.html#a7679f012a650e807fd5583e62e90b92c">node_new</a>());</div>
-<div class="line"><span class="lineno">  307</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  308</span>  }</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *end = NULL;</div>
-<div class="line"><span class="lineno">  311</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *start = string;</div>
-<div class="line"><span class="lineno">  312</span> </div>
-<div class="line"><span class="lineno">  313</span>  <span class="keywordflow">while</span> (*start)</div>
-<div class="line"><span class="lineno">  314</span>  {</div>
-<div class="line"><span class="lineno">  315</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = <a class="code hl_function" href="expando_2parse_8c.html#a8e9234e8bbc9e40f144b7e48b6c41e62">node_parse</a>(<a class="code hl_variable" href="structExpandoNode.html#ab6f0615a32db4f62233c032c5f93f696">start</a>, NULL, <a class="code hl_enumvalue" href="node__condition_8h.html#a32f868fa7173f96e2c71b99367198b4aa427e3666526818c63092d0e4a2cc5f02">CON_NO_CONDITION</a>, &amp;<a class="code hl_variable" href="structExpandoNode.html#a4ae11ca93cc8845109e0d6fa4ab84bde">end</a>, defs, err);</div>
-<div class="line"><span class="lineno">  316</span>    <span class="keywordflow">if</span> (!node)</div>
-<div class="line"><span class="lineno">  317</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  318</span> </div>
-<div class="line"><span class="lineno">  319</span>    <a class="code hl_function" href="node_8c.html#abb957887ad483993f9ef1eec7f705eb6">node_append</a>(root, node);</div>
-<div class="line"><span class="lineno">  320</span>    <a class="code hl_variable" href="structExpandoNode.html#ab6f0615a32db4f62233c032c5f93f696">start</a> = <a class="code hl_variable" href="structExpandoNode.html#a4ae11ca93cc8845109e0d6fa4ab84bde">end</a>;</div>
-<div class="line"><span class="lineno">  321</span>  }</div>
-<div class="line"><span class="lineno">  322</span> </div>
-<div class="line"><span class="lineno">  323</span>  <a class="code hl_function" href="node__padding_8c.html#a088ae6286a941d4860637f756c3ed013">node_padding_repad</a>(root);</div>
-<div class="line"><span class="lineno">  324</span>}</div>
-<div class="ttc" id="anode__padding_8c_html_a088ae6286a941d4860637f756c3ed013"><div class="ttname"><a href="node__padding_8c.html#a088ae6286a941d4860637f756c3ed013">node_padding_repad</a></div><div class="ttdeci">void node_padding_repad(struct ExpandoNode **parent)</div><div class="ttdoc">Rearrange Padding in a tree of ExpandoNodes.</div><div class="ttdef"><b>Definition:</b> <a href="node__padding_8c_source.html#l00278">node_padding.c:278</a></div></div>
-<div class="ttc" id="astructExpandoNode_html_ab6f0615a32db4f62233c032c5f93f696"><div class="ttname"><a href="structExpandoNode.html#ab6f0615a32db4f62233c032c5f93f696">ExpandoNode::start</a></div><div class="ttdeci">const char * start</div><div class="ttdoc">Start of string data.</div><div class="ttdef"><b>Definition:</b> <a href="node_8h_source.html#l00079">node.h:79</a></div></div>
-</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expando_2parse_8c_a8f5ee7cadf596095eb6a307e6ec53e07_cgraph.svg" width="492" height="186"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expando_2parse_8c_a8f5ee7cadf596095eb6a307e6ec53e07_icgraph.svg" width="302" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="expando_2parse_8c_a8e9234e8bbc9e40f144b7e48b6c41e62_icgraph.svg" width="270" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 

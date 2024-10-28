@@ -70,7 +70,7 @@ var searchData=
   ['terminate_5fbuffer_67',['terminate_buffer',['../string2_8h.html#aaebedb0586e8649bb6ad54123a6de9d5',1,'string2.h']]],
   ['terminate_5fstring_68',['terminate_string',['../string2_8h.html#a89435fb2d02747769361525891c832c9',1,'string2.h']]],
   ['testcommand_69',['testcommand',['../structMailcapEntry.html#a545b63069c50022f46b179e77c312a0f',1,'MailcapEntry']]],
-  ['text_70',['text',['../structMsgWinWindowData.html#a6046b3d7e5d1a5a83c0da9c5d03267ce',1,'MsgWinWindowData']]],
+  ['text_70',['text',['../structMsgWinWindowData.html#a6046b3d7e5d1a5a83c0da9c5d03267ce',1,'MsgWinWindowData::text()'],['../structExpandoNode.html#a8bcba302c1b074f1e9327745397e8796',1,'ExpandoNode::text()']]],
   ['text_20node_71',['Text Node',['../expando_node_text.html',1,'lib_expando']]],
   ['text_20parser_72',['Text parser',['../parse_extract.html',1,'lib_parse']]],
   ['text_20parsing_20functions_73',['Text parsing functions',['../lib_parse.html',1,'']]],

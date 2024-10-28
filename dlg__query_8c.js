@@ -1,13 +1,13 @@
 var dlg__query_8c =
 [
     [ "alias_to_addrlist", "dlg__query_8c.html#a8e282b40781bf2e94271731b7599b7c0", null ],
-    [ "query_a", "group__expando__get__string__api.html#ga006f02eea38230f7131388cf3cc09a08", null ],
+    [ "query_a", "group__expando__get__string__api.html#gafa76d90d4744ef0e92ed59bebce88c5b", null ],
     [ "query_c_num", "group__expando__get__number__api.html#ga0bd45904c3651753f5eb5fba08f91537", null ],
-    [ "query_e", "group__expando__get__string__api.html#gaf28735fc908bb2261560987dc85a1973", null ],
-    [ "query_n", "group__expando__get__string__api.html#gaefe6f48844d9c60b7d702fb320a2f5ec", null ],
+    [ "query_e", "group__expando__get__string__api.html#ga803dcf7e34e3ae2094cc588cb1bf4b7f", null ],
+    [ "query_n", "group__expando__get__string__api.html#ga46819e838cfb03a9f95c850913f4e51a", null ],
     [ "query_t_num", "group__expando__get__number__api.html#ga068a930f179634a1d07a8f5139e9a6a6", null ],
-    [ "query_t", "group__expando__get__string__api.html#ga231e75e4ce75c26ad5ad4c466e9fc50b", null ],
-    [ "query_Y", "group__expando__get__string__api.html#ga10932d1a82fb8bdc329ec6edc174f078", null ],
+    [ "query_t", "group__expando__get__string__api.html#ga861df0149af7030c26a5638f69e15517", null ],
+    [ "query_Y", "group__expando__get__string__api.html#gaa19e3f95e13d9de3e64e55e1161d4fbe", null ],
     [ "query_make_entry", "group__menu__make__entry.html#gadfd9b4b27dab6dad997f5b55be71f8fd", null ],
     [ "query_tag", "group__menu__tag.html#ga9be22e1702401b4845efffd8059a3605", null ],
     [ "query_run", "dlg__query_8c.html#a2bd3336d8e47d12c721e40217e7e3496", null ],

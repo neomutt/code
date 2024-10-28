@@ -1,10 +1,10 @@
 var pgpinvoke_8c =
 [
-    [ "pgp_command_a", "group__expando__get__string__api.html#gaa85ed31fcd2e4094d78bc4e6a5d96ea7", null ],
-    [ "pgp_command_f", "group__expando__get__string__api.html#ga304ef27664b15bf09b8a6afe7cc298c4", null ],
-    [ "pgp_command_p", "group__expando__get__string__api.html#gaa9f9d782129089f256fe2ad55a19bf7b", null ],
-    [ "pgp_command_r", "group__expando__get__string__api.html#ga224faefe28822f6b452ad7b13ab9b855", null ],
-    [ "pgp_command_s", "group__expando__get__string__api.html#ga02d22d6eba105c414c9f8715a5dca86c", null ],
+    [ "pgp_command_a", "group__expando__get__string__api.html#ga8a2e61d22c5522c552b22f5722a1130a", null ],
+    [ "pgp_command_f", "group__expando__get__string__api.html#gabe16eef1eb043ef4b590fc4ba6d3ac43", null ],
+    [ "pgp_command_p", "group__expando__get__string__api.html#ga996bf0be951b95274bc4e792027e8a3c", null ],
+    [ "pgp_command_r", "group__expando__get__string__api.html#ga2d3f0befa7978f92accd751ab4ba3a0f", null ],
+    [ "pgp_command_s", "group__expando__get__string__api.html#ga71b95345a09f190bc057c7d0856c49e8", null ],
     [ "mutt_pgp_command", "pgpinvoke_8c.html#a98751ec36c88d40ac3419b1a24085b0b", null ],
     [ "pgp_invoke", "pgpinvoke_8c.html#a5a37c06387c1a5cf10adaa20dd0df392", null ],
     [ "pgp_invoke_decode", "pgpinvoke_8c.html#a407b2ceab1cb744122e3cb5e9e9b0fd5", null ],

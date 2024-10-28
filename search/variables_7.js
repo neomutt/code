@@ -7,7 +7,7 @@ var searchData=
   ['genericdefaultbindings_4',['GenericDefaultBindings',['../gui_2functions_8h.html#a6f702c62b2c9a61ee1c6f859a99782c5',1,'GenericDefaultBindings():&#160;functions.c'],['../gui_2functions_8c.html#a6f702c62b2c9a61ee1c6f859a99782c5',1,'GenericDefaultBindings():&#160;functions.c']]],
   ['get_5ffield_5',['get_field',['../structConnAccount.html#ae69871442c1135a06b359011104f630b',1,'ConnAccount']]],
   ['get_5fnumber_6',['get_number',['../structExpandoRenderData.html#a200c37edb12597404bf57b27c4ad0904',1,'ExpandoRenderData']]],
-  ['get_5fstring_7',['get_string',['../structExpandoRenderData.html#a1de537a64093b2f1700d970cd04fd78a',1,'ExpandoRenderData']]],
+  ['get_5fstring_7',['get_string',['../structExpandoRenderData.html#ad6a76eb79b096fb089476bf6a9283d01',1,'ExpandoRenderData']]],
   ['gf_5fdata_8',['gf_data',['../structConnAccount.html#af8038540105baf4da84d15bcb6bffa61',1,'ConnAccount']]],
   ['gid_9',['gid',['../structFolderFile.html#a5a5786506959747b14573f280a8e5a7c',1,'FolderFile']]],
   ['gitver_10',['GitVer',['../globals_8h.html#adc526a91dddf9717c5e96ef6e85d19d7',1,'globals.h']]],

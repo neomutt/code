@@ -1,6 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"mutt__thread_8h.html":[2,0,93],
 "mutt__thread_8h.html#a090c2765b566eca8e7a627a6c2f5fbbb":[2,0,93,4],
 "mutt__thread_8h.html#a13d89de5f6b408671d0e624de135ea8a":[2,0,93,17],
 "mutt__thread_8h.html#a1e6979ff2660cfcc507fed20066338a6":[2,0,93,31],
@@ -249,5 +248,6 @@ var NAVTREEINDEX30 =
 "muttlib_8h.html#a1b422ce225f4eb96e3ce8e276467ae9f":[2,0,95,21],
 "muttlib_8h.html#a1fd6bc6316a4a762b67e8c5eba776682":[2,0,95,17],
 "muttlib_8h.html#a23e2405002a60eaa1507f7f6d677f696":[2,0,95,8],
-"muttlib_8h.html#a2e3c864ac49cfb7bc862c32416baf81d":[2,0,95,20]
+"muttlib_8h.html#a2e3c864ac49cfb7bc862c32416baf81d":[2,0,95,20],
+"muttlib_8h.html#a3ffd45805a0aa4478b3f176602f3082f":[2,0,95,2]
 };

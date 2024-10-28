@@ -163,7 +163,7 @@ var searchData=
   ['history_5ffunction_5fdispatcher_160',['history_function_dispatcher',['../group__dispatcher__api.html#gac49d2af85cb6599adffa13c50da14ac7',1,'history_function_dispatcher(struct MuttWindow *win, int op):&#160;functions.c'],['../group__dispatcher__api.html#gac49d2af85cb6599adffa13c50da14ac7',1,'history_function_dispatcher(struct MuttWindow *win, int op):&#160;functions.c']]],
   ['history_5ffunction_5ft_161',['history_function_t',['../history_2functions_8h.html#ae7e3ef3e40185a593e366cf7168a5f82',1,'functions.h']]],
   ['history_5fmake_5fentry_162',['history_make_entry',['../group__menu__make__entry.html#ga9249c08cccfb4df603237c1a0eb98281',1,'dlg_history.c']]],
-  ['history_5fs_163',['history_s',['../group__expando__get__string__api.html#ga2485f2e349a894f0a2c1accd14369d03',1,'dlg_history.c']]],
+  ['history_5fs_163',['history_s',['../group__expando__get__string__api.html#gacd81398dc0b760e0c6b42c14e16cda20',1,'dlg_history.c']]],
   ['historyclass_164',['HistoryClass',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234',1,'lib.h']]],
   ['historydata_165',['HistoryData',['../structHistoryData.html',1,'']]],
   ['historyentry_166',['HistoryEntry',['../structHistoryEntry.html',1,'']]],

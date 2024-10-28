@@ -1,7 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"util_8c.html#a5c25adc3a9cda9a494d747a928b6f522":[2,0,25,30,2],
-"util_8c.html#a5e2320844010da2174168a797767aed7":[2,0,25,30,38],
 "util_8c.html#a6a0f18e27558517a063dcf464f2ffd4e":[2,0,25,30,29],
 "util_8c.html#a6c162a023e8a5d5ba34d0031f88b15f5":[2,0,25,30,15],
 "util_8c.html#a6c7cbd7c42e90cf17c1da23c5da4f247":[2,0,25,30,19],

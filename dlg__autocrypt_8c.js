@@ -1,10 +1,10 @@
 var dlg__autocrypt_8c =
 [
-    [ "autocrypt_a", "group__expando__get__string__api.html#gaf1cd25d6a69432f63e690bc63ab5b89d", null ],
-    [ "autocrypt_k", "group__expando__get__string__api.html#gac1e59ec6a4848e1798fdcf9ea67137ff", null ],
+    [ "autocrypt_a", "group__expando__get__string__api.html#ga392cea3c95ec9ad1f6514c611ed6c770", null ],
+    [ "autocrypt_k", "group__expando__get__string__api.html#gafa94662a8d342db895e2ba24b8e80445", null ],
     [ "autocrypt_n_num", "group__expando__get__number__api.html#ga1d59c31c5e0f6817f3701b2b4c7ab7b8", null ],
-    [ "autocrypt_p", "group__expando__get__string__api.html#ga844a871cd064f578b52f7ef3ebd9124b", null ],
-    [ "autocrypt_s", "group__expando__get__string__api.html#gae741a4acec69ed735b1a85ca03188b42", null ],
+    [ "autocrypt_p", "group__expando__get__string__api.html#ga562654f7d186049043477639c1a2aede", null ],
+    [ "autocrypt_s", "group__expando__get__string__api.html#ga79a415a804a7275ba924ea2934b71412", null ],
     [ "autocrypt_make_entry", "group__menu__make__entry.html#ga250408ee0d73a201052792587a440acd", null ],
     [ "autocrypt_menu_free", "group__menu__mdata__free.html#gae14bd22a760581ec0b7eb7d737c4ef8f", null ],
     [ "populate_menu", "dlg__autocrypt_8c.html#ad24c7e95a9f01bed3d6d38b54aff24b2", null ],

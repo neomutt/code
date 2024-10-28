@@ -38,7 +38,7 @@ var searchData=
   ['history_5fc_5fnum_35',['history_C_num',['../group__expando__get__number__api.html#gabd1ea27a2eeeaf85ad527446f94fc09d',1,'dlg_history.c']]],
   ['history_5ffunction_5fdispatcher_36',['history_function_dispatcher',['../group__dispatcher__api.html#gac49d2af85cb6599adffa13c50da14ac7',1,'history_function_dispatcher(struct MuttWindow *win, int op):&#160;functions.c'],['../group__dispatcher__api.html#gac49d2af85cb6599adffa13c50da14ac7',1,'history_function_dispatcher(struct MuttWindow *win, int op):&#160;functions.c']]],
   ['history_5fmake_5fentry_37',['history_make_entry',['../group__menu__make__entry.html#ga9249c08cccfb4df603237c1a0eb98281',1,'dlg_history.c']]],
-  ['history_5fs_38',['history_s',['../group__expando__get__string__api.html#ga2485f2e349a894f0a2c1accd14369d03',1,'dlg_history.c']]],
+  ['history_5fs_38',['history_s',['../group__expando__get__string__api.html#gacd81398dc0b760e0c6b42c14e16cda20',1,'dlg_history.c']]],
   ['hmac_5fmd5_39',['hmac_md5',['../auth__cram_8c.html#a673b1574125481e030da94e03aa3d6e3',1,'auth_cram.c']]],
   ['hook_5ffree_40',['hook_free',['../hook_8c.html#a687da69151e78719547e5b58de316089',1,'hook.c']]],
   ['hook_5fnew_41',['hook_new',['../hook_8c.html#af03b03a2d048b4a3972e4737a025183b',1,'hook.c']]],

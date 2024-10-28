@@ -1,7 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"structSearchState.html#a09b871630482499d27724fb324864273":[1,0,224,1],
-"structSearchState.html#a10ed9ec626b19daf21013cead8d19218":[1,0,224,2],
 "structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada":[1,0,224,3],
 "structSearchState.html#a9ae675072a20827591b01a54becd5832":[1,0,224,0],
 "structSeqsetIterator.html":[1,0,225],
@@ -249,5 +247,7 @@ var NAVTREEINDEX49 =
 "tags_8c.html#a9133a330145f3c459022833c74cdc65d":[2,0,17,22,11],
 "tags_8c.html#a9d369d00d53292bb40c5ff55b257d9f2":[2,0,17,22,3],
 "tags_8c.html#aa8faf643ed8512537ef09525b7a08d31":[2,0,17,22,7],
-"tags_8c.html#aadb38a7004cb2dfa0550d53004eb74d1":[2,0,17,22,13]
+"tags_8c.html#aadb38a7004cb2dfa0550d53004eb74d1":[2,0,17,22,13],
+"tags_8c.html#ad3d51f4daf15765e5f2ea45a6bba6991":[2,0,17,22,4],
+"tags_8c.html#ad8747ae0afa8c43e6394a5955c3e7862":[2,0,17,22,0]
 };
