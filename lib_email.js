@@ -1,6 +1,7 @@
 var lib_email =
 [
     [ "Body of an Email", "email_body.html", null ],
+    [ "Config used by the Email library", "email_config.html", null ],
     [ "Email object", "email_email.html", null ],
     [ "Envelope (Email header)", "email_envelope.html", null ],
     [ "Who is the email from?", "email_from.html", null ],

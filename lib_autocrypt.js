@@ -14,6 +14,7 @@ var lib_autocrypt =
     [ "Autocrypt Config", "autocrypt_config.html", null ],
     [ "Autocrypt database handling", "autocrypt_db.html", null ],
     [ "Autocrypt account dialog", "autocrypt_dlg_autocrypt.html", null ],
+    [ "Autocrypt Expando definitions", "autocrypt_expando.html", null ],
     [ "Autocrypt functions", "autocrypt_functions.html", null ],
     [ "Autocrypt GPGME handler", "autocrypt_gpgme.html", null ],
     [ "Autocrypt database schema", "autocrypt_schema.html", null ]

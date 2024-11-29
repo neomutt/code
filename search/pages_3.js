@@ -3,7 +3,7 @@ var searchData=
   ['data_20for_20mime_20encoding_0',['Data for MIME encoding',['../email_mime.html',1,'lib_email']]],
   ['data_20for_20the_20help_20bar_1',['Data for the Help Bar',['../helpbar_wdata.html',1,'lib_helpbar']]],
   ['debug_20code_2',['Debug Code',['../lib_debug.html',1,'']]],
-  ['debug_20names_3',['Debug names',['../debug_names.html',1,'']]],
+  ['debug_20names_3',['Debug names',['../debug_names.html',1,'lib_debug']]],
   ['decide_20how_20to_20display_20email_20content_4',['Decide how to display email content',['../neo_handler.html',1,'index']]],
   ['definitions_20of_20config_20variables_5',['Definitions of config variables',['../neo_mutt_config.html',1,'index']]],
   ['definitions_20of_20user_20functions_6',['Definitions of user functions',['../gui_functions.html',1,'lib_gui']]],

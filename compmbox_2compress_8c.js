@@ -8,8 +8,6 @@ var compmbox_2compress_8c =
     [ "validate_compress_expando", "compmbox_2compress_8c.html#af1706f5e36d466053b589c0dd335816a", null ],
     [ "set_compress_info", "compmbox_2compress_8c.html#a5a32c514bae251affffd84d7328af23a", null ],
     [ "compress_info_free", "compmbox_2compress_8c.html#a5ae987f4dda46e1423fedf6a0ac0b2de", null ],
-    [ "compress_f", "group__expando__get__string__api.html#gacf89da41c214ddbbdb2c6451715e97bc", null ],
-    [ "compress_t", "group__expando__get__string__api.html#ga8a82ec58fb6dbfe99f6e617f880279a6", null ],
     [ "execute_command", "compmbox_2compress_8c.html#ac72bc28dc8d4e5d6e73aeb6607acfcc6", null ],
     [ "mutt_comp_can_append", "compmbox_2compress_8c.html#a9f3c7362d3b06ea8c32ce55d5c3db5f1", null ],
     [ "mutt_comp_can_read", "compmbox_2compress_8c.html#af5e4caf583046a535cf5fda9933d3c74", null ],
@@ -31,7 +29,6 @@ var compmbox_2compress_8c =
     [ "comp_tags_commit", "group__mx__tags__commit.html#gac663a0b667d336d2010914f5f0be7c37", null ],
     [ "comp_path_probe", "group__mx__path__probe.html#gad886126ad1805be0c69f9b2fe138db10", null ],
     [ "comp_path_canon", "group__mx__path__canon.html#ga4ccac52345a9318ef488da005b4e578d", null ],
-    [ "CompressRenderData", "compmbox_2compress_8c.html#a5fcf155e3dc1a19cb6a2a6db8d45afb8", null ],
     [ "CompCommands", "compmbox_2compress_8c.html#aa95fe1211fa05439ba1ab5fe9e638813", null ],
     [ "CompressFormatDef", "compmbox_2compress_8c.html#a6c1b542a9adb8833e20013f96e164a26", null ],
     [ "MxCompOps", "group__mx__api.html#gaa6a44181c588646a076abd5ba38e2c2d", null ]

@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-11-14-78-gc90a55</span>
+   &#160;<span id="projectnumber">2024-11-14-131-g707bcf</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -117,15 +117,15 @@ $(document).ready(function(){initNavTree('bcache_8c.html',''); initResizable(); 
 <code>#include &quot;<a class="el" href="config_2lib_8h_source.html">config/lib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="email_2lib_8h_source.html">email/lib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="core_2lib_8h_source.html">core/lib.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="conn_2lib_8h_source.html">conn/lib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="bcache_2lib_8h_source.html">lib.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mutt__account_8h_source.html">mutt_account.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="muttlib_8h_source.html">muttlib.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Include dependency graph for bcache.c:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="bcache_8c__incl.svg" width="1334" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="bcache_8c__incl.svg" width="1296" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -240,53 +240,53 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00063">63</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   64</span>{</div>
-<div class="line"><span class="lineno">   65</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_message_cache_dir = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;message_cache_dir&quot;</span>);</div>
-<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">if</span> (!account || !c_message_cache_dir || !bcache)</div>
-<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
-<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">if</span> (!((stat(c_message_cache_dir, &amp;st) == 0) &amp;&amp; S_ISDIR(st.st_mode)))</div>
-<div class="line"><span class="lineno">   71</span>  {</div>
-<div class="line"><span class="lineno">   72</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Cache disabled, $message_cache_dir isn&#39;t a directory: %s&quot;</span>), c_message_cache_dir);</div>
-<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   74</span>  }</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structUrl.html">Url</a> url = { 0 };</div>
-<div class="line"><span class="lineno">   77</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *host = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>  <span class="comment">/* make up a Url we can turn into a string */</span></div>
-<div class="line"><span class="lineno">   80</span>  <a class="code hl_function" href="mutt__account_8c.html#a7b58d7c236d1bea3a516cf682648bf3e">mutt_account_tourl</a>(account, &amp;url);</div>
-<div class="line"><span class="lineno">   81</span>  <span class="comment">/* mutt_account_tourl() just sets up some pointers;</span></div>
-<div class="line"><span class="lineno">   82</span><span class="comment">   * if this ever changes, we have a memleak here */</span></div>
-<div class="line"><span class="lineno">   83</span>  url.<a class="code hl_variable" href="structUrl.html#ad4b772878b40b204a7e91520b0bcbed4">path</a> = NULL;</div>
-<div class="line"><span class="lineno">   84</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="url_8c.html#aa114f683b940e0773ca758b49a18a2a7">url_tostring</a>(&amp;url, host-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, host-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>, <a class="code hl_define" href="url_8h.html#a2f7d340c7b07a0b212e6ba7c9d1c52fa">U_PATH</a>) &lt; 0)</div>
-<div class="line"><span class="lineno">   85</span>  {</div>
-<div class="line"><span class="lineno">   86</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;URL to string failed\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   87</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;host);</div>
-<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   89</span>  }</div>
-<div class="line"><span class="lineno">   90</span>  <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(host);</div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00061">61</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{</div>
+<div class="line"><span class="lineno">   63</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_message_cache_dir = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;message_cache_dir&quot;</span>);</div>
+<div class="line"><span class="lineno">   64</span>  <span class="keywordflow">if</span> (!account || !c_message_cache_dir || !bcache)</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
+<div class="line"><span class="lineno">   68</span>  <span class="keywordflow">if</span> (!((stat(c_message_cache_dir, &amp;st) == 0) &amp;&amp; S_ISDIR(st.st_mode)))</div>
+<div class="line"><span class="lineno">   69</span>  {</div>
+<div class="line"><span class="lineno">   70</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Cache disabled, $message_cache_dir isn&#39;t a directory: %s&quot;</span>), c_message_cache_dir);</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   72</span>  }</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structUrl.html">Url</a> url = { 0 };</div>
+<div class="line"><span class="lineno">   75</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *host = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>  <span class="comment">/* make up a Url we can turn into a string */</span></div>
+<div class="line"><span class="lineno">   78</span>  <a class="code hl_function" href="mutt__account_8c.html#aab5936a62e77123420e4c515904567f3">account_to_url</a>(account, &amp;url);</div>
+<div class="line"><span class="lineno">   79</span>  <span class="comment">/* account_to_url() just sets up some pointers;</span></div>
+<div class="line"><span class="lineno">   80</span><span class="comment">   * if this ever changes, we have a memleak here */</span></div>
+<div class="line"><span class="lineno">   81</span>  url.<a class="code hl_variable" href="structUrl.html#ad4b772878b40b204a7e91520b0bcbed4">path</a> = NULL;</div>
+<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="url_8c.html#aa114f683b940e0773ca758b49a18a2a7">url_tostring</a>(&amp;url, host-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, host-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>, <a class="code hl_define" href="url_8h.html#a2f7d340c7b07a0b212e6ba7c9d1c52fa">U_PATH</a>) &lt; 0)</div>
+<div class="line"><span class="lineno">   83</span>  {</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;URL to string failed\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;host);</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   87</span>  }</div>
+<div class="line"><span class="lineno">   88</span>  <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(host);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(host, mailbox);</div>
 <div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(host, mailbox);</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">   95</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *dst = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">   96</span>  <a class="code hl_function" href="muttlib_8c.html#aeac015518fd637e7822d8e679dc3d18f">mutt_encode_path</a>(path, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(host));</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(dst, <span class="stringliteral">&quot;%s/%s&quot;</span>, c_message_cache_dir, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
-<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">if</span> (*(dst-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a> - 1) != <span class="charliteral">&#39;/&#39;</span>)</div>
-<div class="line"><span class="lineno">  100</span>    <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dst, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;path: &#39;%s&#39;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dst));</div>
-<div class="line"><span class="lineno">  103</span>  bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a> = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(dst);</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;host);</div>
-<div class="line"><span class="lineno">  106</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
-<div class="line"><span class="lineno">  107</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;dst);</div>
-<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  109</span>}</div>
+<div class="line"><span class="lineno">   92</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">   93</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *dst = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">   94</span>  <a class="code hl_function" href="muttlib_8c.html#aeac015518fd637e7822d8e679dc3d18f">mutt_encode_path</a>(path, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(host));</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(dst, <span class="stringliteral">&quot;%s/%s&quot;</span>, c_message_cache_dir, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> (*(dst-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a> - 1) != <span class="charliteral">&#39;/&#39;</span>)</div>
+<div class="line"><span class="lineno">   98</span>    <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dst, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;path: &#39;%s&#39;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dst));</div>
+<div class="line"><span class="lineno">  101</span>  bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a> = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(dst);</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;host);</div>
+<div class="line"><span class="lineno">  104</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  105</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;dst);</div>
+<div class="line"><span class="lineno">  106</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  107</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00161">buffer.c:161</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a4964d146427002ec3b52e121513b6078"><div class="ttname"><a href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a></div><div class="ttdeci">void buf_fix_dptr(struct Buffer *buf)</div><div class="ttdoc">Move the dptr to end of the Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00182">buffer.c:182</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9765efbb7f2c32e46fb1cb271a02ba20"><div class="ttname"><a href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a></div><div class="ttdeci">size_t buf_addch(struct Buffer *buf, char c)</div><div class="ttdoc">Add a single character to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00241">buffer.c:241</a></div></div>
@@ -299,11 +299,11 @@ Functions</h2></td></tr>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a></div><div class="ttdeci">@ LL_DEBUG3</div><div class="ttdoc">Log at debug level 3.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00043">logging2.h:43</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
-<div class="ttc" id="amutt__account_8c_html_a7b58d7c236d1bea3a516cf682648bf3e"><div class="ttname"><a href="mutt__account_8c.html#a7b58d7c236d1bea3a516cf682648bf3e">mutt_account_tourl</a></div><div class="ttdeci">void mutt_account_tourl(struct ConnAccount *cac, struct Url *url)</div><div class="ttdoc">Fill URL with info from account.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__account_8c_source.html#l00080">mutt_account.c:80</a></div></div>
+<div class="ttc" id="amutt__account_8c_html_aab5936a62e77123420e4c515904567f3"><div class="ttname"><a href="mutt__account_8c.html#aab5936a62e77123420e4c515904567f3">account_to_url</a></div><div class="ttdeci">void account_to_url(struct ConnAccount *cac, struct Url *url)</div><div class="ttdoc">Fill URL with info from account.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__account_8c_source.html#l00080">mutt_account.c:80</a></div></div>
 <div class="ttc" id="amuttlib_8c_html_aeac015518fd637e7822d8e679dc3d18f"><div class="ttname"><a href="muttlib_8c.html#aeac015518fd637e7822d8e679dc3d18f">mutt_encode_path</a></div><div class="ttdeci">void mutt_encode_path(struct Buffer *buf, const char *src)</div><div class="ttdoc">Convert a path to 'us-ascii'.</div><div class="ttdef"><b>Definition:</b> <a href="muttlib_8c_source.html#l00872">muttlib.c:872</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
-<div class="ttc" id="astructBodyCache_html_ad36a6ab1f12d388d75ae724635beb727"><div class="ttname"><a href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">BodyCache::path</a></div><div class="ttdeci">char * path</div><div class="ttdoc">On-disk path to the file.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00052">bcache.c:52</a></div></div>
+<div class="ttc" id="astructBodyCache_html_ad36a6ab1f12d388d75ae724635beb727"><div class="ttname"><a href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">BodyCache::path</a></div><div class="ttdeci">char * path</div><div class="ttdoc">On-disk path to the file.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00050">bcache.c:50</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
 <div class="ttc" id="astructBuffer_html_a058d67252184c2eeaf57059544f8cdcf"><div class="ttname"><a href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">Buffer::dptr</a></div><div class="ttdeci">char * dptr</div><div class="ttdoc">Current read/write position.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00038">buffer.h:38</a></div></div>
 <div class="ttc" id="astructBuffer_html_a1d9ee60bcf94de702b15ec2b5d811995"><div class="ttname"><a href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">Buffer::dsize</a></div><div class="ttdeci">size_t dsize</div><div class="ttdoc">Length of data.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00039">buffer.h:39</a></div></div>
@@ -319,7 +319,7 @@ Functions</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="bcache_8c_a5a6da9a92e635c11bf3af21611c6ea5f_cgraph.svg" width="475" height="586"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="bcache_8c_a5a6da9a92e635c11bf3af21611c6ea5f_cgraph.svg" width="471" height="586"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -390,24 +390,24 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00119">119</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>{</div>
-<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">if</span> (!bcache || !<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !newid || (*newid == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  125</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *newpath = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(path, <span class="stringliteral">&quot;%s%s&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  128</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(newpath, <span class="stringliteral">&quot;%s%s&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, newid);</div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00117">117</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
+<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">if</span> (!bcache || !<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !newid || (*newid == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  123</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *newpath = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(path, <span class="stringliteral">&quot;%s%s&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  126</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(newpath, <span class="stringliteral">&quot;%s%s&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, newid);</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: mv: &#39;%s&#39; &#39;%s&#39;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(newpath));</div>
 <div class="line"><span class="lineno">  129</span> </div>
-<div class="line"><span class="lineno">  130</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: mv: &#39;%s&#39; &#39;%s&#39;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(newpath));</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>  <span class="keywordtype">int</span> rc = rename(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(newpath));</div>
-<div class="line"><span class="lineno">  133</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
-<div class="line"><span class="lineno">  134</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;newpath);</div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  136</span>}</div>
+<div class="line"><span class="lineno">  130</span>  <span class="keywordtype">int</span> rc = rename(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(newpath));</div>
+<div class="line"><span class="lineno">  131</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  132</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;newpath);</div>
+<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  134</span>}</div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -469,24 +469,24 @@ Functions</h2></td></tr>
 </dl>
 <p>The driver using it is responsible for ensuring that hierarchies are separated by '/' (if it knows of such a concepts like mailboxes or hierarchies) </p>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00148">148</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>{</div>
-<div class="line"><span class="lineno">  150</span>  <span class="keywordflow">if</span> (!account)</div>
-<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  152</span> </div>
-<div class="line"><span class="lineno">  153</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBodyCache.html">BodyCache</a> *bcache = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structBodyCache.html">BodyCache</a>);</div>
-<div class="line"><span class="lineno">  154</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="bcache_8c.html#a5a6da9a92e635c11bf3af21611c6ea5f">bcache_path</a>(account, mailbox, bcache) &lt; 0)</div>
-<div class="line"><span class="lineno">  155</span>  {</div>
-<div class="line"><span class="lineno">  156</span>    <a class="code hl_function" href="bcache_8c.html#a77e4e275b9eef5e12aef41bf912bd8f4">mutt_bcache_close</a>(&amp;bcache);</div>
-<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  158</span>  }</div>
-<div class="line"><span class="lineno">  159</span> </div>
-<div class="line"><span class="lineno">  160</span>  <span class="keywordflow">return</span> bcache;</div>
-<div class="line"><span class="lineno">  161</span>}</div>
-<div class="ttc" id="abcache_8c_html_a5a6da9a92e635c11bf3af21611c6ea5f"><div class="ttname"><a href="bcache_8c.html#a5a6da9a92e635c11bf3af21611c6ea5f">bcache_path</a></div><div class="ttdeci">static int bcache_path(struct ConnAccount *account, const char *mailbox, struct BodyCache *bcache)</div><div class="ttdoc">Create the cache path for a given account/mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00063">bcache.c:63</a></div></div>
-<div class="ttc" id="abcache_8c_html_a77e4e275b9eef5e12aef41bf912bd8f4"><div class="ttname"><a href="bcache_8c.html#a77e4e275b9eef5e12aef41bf912bd8f4">mutt_bcache_close</a></div><div class="ttdeci">void mutt_bcache_close(struct BodyCache **ptr)</div><div class="ttdoc">Close an Email-Body Cache.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00169">bcache.c:169</a></div></div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00146">146</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>{</div>
+<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">if</span> (!account)</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBodyCache.html">BodyCache</a> *bcache = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structBodyCache.html">BodyCache</a>);</div>
+<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="bcache_8c.html#a5a6da9a92e635c11bf3af21611c6ea5f">bcache_path</a>(account, mailbox, bcache) &lt; 0)</div>
+<div class="line"><span class="lineno">  153</span>  {</div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_function" href="bcache_8c.html#a77e4e275b9eef5e12aef41bf912bd8f4">mutt_bcache_close</a>(&amp;bcache);</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  156</span>  }</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>  <span class="keywordflow">return</span> bcache;</div>
+<div class="line"><span class="lineno">  159</span>}</div>
+<div class="ttc" id="abcache_8c_html_a5a6da9a92e635c11bf3af21611c6ea5f"><div class="ttname"><a href="bcache_8c.html#a5a6da9a92e635c11bf3af21611c6ea5f">bcache_path</a></div><div class="ttdeci">static int bcache_path(struct ConnAccount *account, const char *mailbox, struct BodyCache *bcache)</div><div class="ttdoc">Create the cache path for a given account/mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00061">bcache.c:61</a></div></div>
+<div class="ttc" id="abcache_8c_html_a77e4e275b9eef5e12aef41bf912bd8f4"><div class="ttname"><a href="bcache_8c.html#a77e4e275b9eef5e12aef41bf912bd8f4">mutt_bcache_close</a></div><div class="ttdeci">void mutt_bcache_close(struct BodyCache **ptr)</div><div class="ttdoc">Close an Email-Body Cache.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00167">bcache.c:167</a></div></div>
 <div class="ttc" id="amemory_8h_html_a9aaf8f21a29735767a069ff1aee9d7d9"><div class="ttname"><a href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a></div><div class="ttdeci">#define MUTT_MEM_CALLOC(n, type)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00040">memory.h:40</a></div></div>
-<div class="ttc" id="astructBodyCache_html"><div class="ttname"><a href="structBodyCache.html">BodyCache</a></div><div class="ttdoc">Local cache of email bodies.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00050">bcache.c:51</a></div></div>
+<div class="ttc" id="astructBodyCache_html"><div class="ttname"><a href="structBodyCache.html">BodyCache</a></div><div class="ttdoc">Local cache of email bodies.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00048">bcache.c:49</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -531,16 +531,16 @@ Functions</h2></td></tr>
 </dl>
 <p>Free all memory of bcache and finally <a class="el" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE()</a> it, too. </p>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00169">169</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  170</span>{</div>
-<div class="line"><span class="lineno">  171</span>  <span class="keywordflow">if</span> (!ptr || !*ptr)</div>
-<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBodyCache.html">BodyCache</a> *bcache = *ptr;</div>
-<div class="line"><span class="lineno">  175</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(ptr);</div>
-<div class="line"><span class="lineno">  178</span>}</div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00167">167</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>{</div>
+<div class="line"><span class="lineno">  169</span>  <span class="keywordflow">if</span> (!ptr || !*ptr)</div>
+<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBodyCache.html">BodyCache</a> *bcache = *ptr;</div>
+<div class="line"><span class="lineno">  173</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(ptr);</div>
+<div class="line"><span class="lineno">  176</span>}</div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00055">memory.h:55</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -595,22 +595,22 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00187">187</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  188</span>{</div>
-<div class="line"><span class="lineno">  189</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !bcache)</div>
-<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  191</span> </div>
-<div class="line"><span class="lineno">  192</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  193</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
-<div class="line"><span class="lineno">  194</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, <span class="keywordtype">id</span>);</div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00185">185</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>{</div>
+<div class="line"><span class="lineno">  187</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !bcache)</div>
+<div class="line"><span class="lineno">  188</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  191</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
+<div class="line"><span class="lineno">  192</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), <span class="stringliteral">&quot;r&quot;</span>);</div>
 <div class="line"><span class="lineno">  195</span> </div>
-<div class="line"><span class="lineno">  196</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  196</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: get: &#39;%s&#39;: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), fp ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
 <div class="line"><span class="lineno">  197</span> </div>
-<div class="line"><span class="lineno">  198</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: get: &#39;%s&#39;: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), fp ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-<div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
-<div class="line"><span class="lineno">  201</span>  <span class="keywordflow">return</span> fp;</div>
-<div class="line"><span class="lineno">  202</span>}</div>
+<div class="line"><span class="lineno">  198</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  199</span>  <span class="keywordflow">return</span> fp;</div>
+<div class="line"><span class="lineno">  200</span>}</div>
 <div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00137">file.h:137</a></div></div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -674,38 +674,38 @@ Functions</h2></td></tr>
 </dl>
 <p>The returned FILE* is in a temporary location. Use mutt_bcache_commit to put it into place </p>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00214">214</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  215</span>{</div>
-<div class="line"><span class="lineno">  216</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !bcache)</div>
-<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  218</span> </div>
-<div class="line"><span class="lineno">  219</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  220</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(path, <span class="stringliteral">&quot;%s%s%s&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, <span class="keywordtype">id</span>, <span class="stringliteral">&quot;.tmp&quot;</span>);</div>
-<div class="line"><span class="lineno">  221</span> </div>
-<div class="line"><span class="lineno">  222</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
-<div class="line"><span class="lineno">  223</span>  <span class="keywordflow">if</span> (stat(bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, &amp;st) == 0)</div>
-<div class="line"><span class="lineno">  224</span>  {</div>
-<div class="line"><span class="lineno">  225</span>    <span class="keywordflow">if</span> (!S_ISDIR(st.st_mode))</div>
-<div class="line"><span class="lineno">  226</span>    {</div>
-<div class="line"><span class="lineno">  227</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Message cache isn&#39;t a directory: %s&quot;</span>), bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
-<div class="line"><span class="lineno">  228</span>      <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
-<div class="line"><span class="lineno">  230</span>  }</div>
-<div class="line"><span class="lineno">  231</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  232</span>  {</div>
-<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8c.html#a42b89c4ae9ca386c22de502b37cdf45e">mutt_file_mkdir</a>(bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, S_IRWXU | S_IRWXG | S_IRWXO) &lt; 0)</div>
-<div class="line"><span class="lineno">  234</span>    {</div>
-<div class="line"><span class="lineno">  235</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create %s: %s&quot;</span>), bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, strerror(errno));</div>
-<div class="line"><span class="lineno">  236</span>      <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-<div class="line"><span class="lineno">  238</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00212">212</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>{</div>
+<div class="line"><span class="lineno">  214</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !bcache)</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  218</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(path, <span class="stringliteral">&quot;%s%s%s&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, <span class="keywordtype">id</span>, <span class="stringliteral">&quot;.tmp&quot;</span>);</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
+<div class="line"><span class="lineno">  221</span>  <span class="keywordflow">if</span> (stat(bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, &amp;st) == 0)</div>
+<div class="line"><span class="lineno">  222</span>  {</div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> (!S_ISDIR(st.st_mode))</div>
+<div class="line"><span class="lineno">  224</span>    {</div>
+<div class="line"><span class="lineno">  225</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Message cache isn&#39;t a directory: %s&quot;</span>), bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
+<div class="line"><span class="lineno">  226</span>      <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  227</span>    }</div>
+<div class="line"><span class="lineno">  228</span>  }</div>
+<div class="line"><span class="lineno">  229</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  230</span>  {</div>
+<div class="line"><span class="lineno">  231</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="file_8c.html#a42b89c4ae9ca386c22de502b37cdf45e">mutt_file_mkdir</a>(bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, S_IRWXU | S_IRWXG | S_IRWXO) &lt; 0)</div>
+<div class="line"><span class="lineno">  232</span>    {</div>
+<div class="line"><span class="lineno">  233</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create %s: %s&quot;</span>), bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, strerror(errno));</div>
+<div class="line"><span class="lineno">  234</span>      <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  235</span>    }</div>
+<div class="line"><span class="lineno">  236</span>  }</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: put: &#39;%s&#39;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
 <div class="line"><span class="lineno">  239</span> </div>
-<div class="line"><span class="lineno">  240</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: put: &#39;%s&#39;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
-<div class="line"><span class="lineno">  241</span> </div>
-<div class="line"><span class="lineno">  242</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), <span class="stringliteral">&quot;w+&quot;</span>);</div>
-<div class="line"><span class="lineno">  243</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
-<div class="line"><span class="lineno">  244</span>  <span class="keywordflow">return</span> fp;</div>
-<div class="line"><span class="lineno">  245</span>}</div>
+<div class="line"><span class="lineno">  240</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), <span class="stringliteral">&quot;w+&quot;</span>);</div>
+<div class="line"><span class="lineno">  241</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  242</span>  <span class="keywordflow">return</span> fp;</div>
+<div class="line"><span class="lineno">  243</span>}</div>
 <div class="ttc" id="afile_8c_html_a42b89c4ae9ca386c22de502b37cdf45e"><div class="ttname"><a href="file_8c.html#a42b89c4ae9ca386c22de502b37cdf45e">mutt_file_mkdir</a></div><div class="ttdeci">int mutt_file_mkdir(const char *path, mode_t mode)</div><div class="ttdoc">Recursively create directories.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00974">file.c:974</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -768,16 +768,16 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00254">254</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  255</span>{</div>
-<div class="line"><span class="lineno">  256</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmpid = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  257</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(tmpid, <span class="stringliteral">&quot;%s.tmp&quot;</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  258</span> </div>
-<div class="line"><span class="lineno">  259</span>  <span class="keywordtype">int</span> rc = <a class="code hl_function" href="bcache_8c.html#affefecb14cd62cc08faf0a6ba19b52c0">mutt_bcache_move</a>(bcache, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tmpid), <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  260</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmpid);</div>
-<div class="line"><span class="lineno">  261</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  262</span>}</div>
-<div class="ttc" id="abcache_8c_html_affefecb14cd62cc08faf0a6ba19b52c0"><div class="ttname"><a href="bcache_8c.html#affefecb14cd62cc08faf0a6ba19b52c0">mutt_bcache_move</a></div><div class="ttdeci">static int mutt_bcache_move(struct BodyCache *bcache, const char *id, const char *newid)</div><div class="ttdoc">Change the id of a message in the cache.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00119">bcache.c:119</a></div></div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00252">252</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  253</span>{</div>
+<div class="line"><span class="lineno">  254</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmpid = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  255</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(tmpid, <span class="stringliteral">&quot;%s.tmp&quot;</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>  <span class="keywordtype">int</span> rc = <a class="code hl_function" href="bcache_8c.html#affefecb14cd62cc08faf0a6ba19b52c0">mutt_bcache_move</a>(bcache, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tmpid), <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  258</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmpid);</div>
+<div class="line"><span class="lineno">  259</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  260</span>}</div>
+<div class="ttc" id="abcache_8c_html_affefecb14cd62cc08faf0a6ba19b52c0"><div class="ttname"><a href="bcache_8c.html#affefecb14cd62cc08faf0a6ba19b52c0">mutt_bcache_move</a></div><div class="ttdeci">static int mutt_bcache_move(struct BodyCache *bcache, const char *id, const char *newid)</div><div class="ttdoc">Change the id of a message in the cache.</div><div class="ttdef"><b>Definition:</b> <a href="bcache_8c_source.html#l00117">bcache.c:117</a></div></div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -839,21 +839,21 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00271">271</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  272</span>{</div>
-<div class="line"><span class="lineno">  273</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !bcache)</div>
-<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  275</span> </div>
-<div class="line"><span class="lineno">  276</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  277</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
-<div class="line"><span class="lineno">  278</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, <span class="keywordtype">id</span>);</div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00269">269</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>{</div>
+<div class="line"><span class="lineno">  271</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !bcache)</div>
+<div class="line"><span class="lineno">  272</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  275</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
+<div class="line"><span class="lineno">  276</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  277</span> </div>
+<div class="line"><span class="lineno">  278</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: del: &#39;%s&#39;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
 <div class="line"><span class="lineno">  279</span> </div>
-<div class="line"><span class="lineno">  280</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: del: &#39;%s&#39;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
-<div class="line"><span class="lineno">  281</span> </div>
-<div class="line"><span class="lineno">  282</span>  <span class="keywordtype">int</span> rc = unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
-<div class="line"><span class="lineno">  283</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
-<div class="line"><span class="lineno">  284</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  285</span>}</div>
+<div class="line"><span class="lineno">  280</span>  <span class="keywordtype">int</span> rc = unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path));</div>
+<div class="line"><span class="lineno">  281</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  282</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  283</span>}</div>
 </div><!-- fragment --><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-14-summary" class="dynsummary" style="display:block;">
@@ -915,28 +915,28 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00294">294</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  295</span>{</div>
-<div class="line"><span class="lineno">  296</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !bcache)</div>
-<div class="line"><span class="lineno">  297</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  298</span> </div>
-<div class="line"><span class="lineno">  299</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  300</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
-<div class="line"><span class="lineno">  301</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  302</span> </div>
-<div class="line"><span class="lineno">  303</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno">  304</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
-<div class="line"><span class="lineno">  305</span>  <span class="keywordflow">if</span> (stat(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), &amp;st) &lt; 0)</div>
-<div class="line"><span class="lineno">  306</span>    rc = -1;</div>
-<div class="line"><span class="lineno">  307</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  308</span>    rc = (S_ISREG(st.st_mode) &amp;&amp; (st.st_size != 0)) ? 0 : -1;</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: exists: &#39;%s&#39;: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path),</div>
-<div class="line"><span class="lineno">  311</span>             (rc == 0) ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
-<div class="line"><span class="lineno">  312</span> </div>
-<div class="line"><span class="lineno">  313</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
-<div class="line"><span class="lineno">  314</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  315</span>}</div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00292">292</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  293</span>{</div>
+<div class="line"><span class="lineno">  294</span>  <span class="keywordflow">if</span> (!<span class="keywordtype">id</span> || (*<span class="keywordtype">id</span> == <span class="charliteral">&#39;\0&#39;</span>) || !bcache)</div>
+<div class="line"><span class="lineno">  295</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  296</span> </div>
+<div class="line"><span class="lineno">  297</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  298</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
+<div class="line"><span class="lineno">  299</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(path, <span class="keywordtype">id</span>);</div>
+<div class="line"><span class="lineno">  300</span> </div>
+<div class="line"><span class="lineno">  301</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno">  302</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
+<div class="line"><span class="lineno">  303</span>  <span class="keywordflow">if</span> (stat(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), &amp;st) &lt; 0)</div>
+<div class="line"><span class="lineno">  304</span>    rc = -1;</div>
+<div class="line"><span class="lineno">  305</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  306</span>    rc = (S_ISREG(st.st_mode) &amp;&amp; (st.st_size != 0)) ? 0 : -1;</div>
+<div class="line"><span class="lineno">  307</span> </div>
+<div class="line"><span class="lineno">  308</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: exists: &#39;%s&#39;: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path),</div>
+<div class="line"><span class="lineno">  309</span>             (rc == 0) ? <span class="stringliteral">&quot;yes&quot;</span> : <span class="stringliteral">&quot;no&quot;</span>);</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;path);</div>
+<div class="line"><span class="lineno">  312</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  313</span>}</div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -1007,43 +1007,43 @@ Functions</h2></td></tr>
 <p>This more or less "examines" the cache and calls a function with each id it finds if given.</p>
 <p>The optional callback function gets the id of a message, the very same body cache handle <a class="el" href="bcache_8c.html#a61b6432fa4ef33ea232dad524cf907bb" title="Find matching entries in the Body Cache.">mutt_bcache_list()</a> is called with (to, perhaps, perform further operations on the bcache), and a data cookie which is just passed as-is. If the return value of the callback is non-zero, the listing is aborted and continued otherwise. The callback is optional so that this function can be used to count the items in the cache (see below for return value). </p>
 
-<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00336">336</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  337</span>{</div>
-<div class="line"><span class="lineno">  338</span>  DIR *dir = NULL;</div>
-<div class="line"><span class="lineno">  339</span>  <span class="keyword">struct </span>dirent *de = NULL;</div>
-<div class="line"><span class="lineno">  340</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">  341</span> </div>
-<div class="line"><span class="lineno">  342</span>  <span class="keywordflow">if</span> (!bcache || !(dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>)))</div>
-<div class="line"><span class="lineno">  343</span>    <span class="keywordflow">goto</span> out;</div>
+<p class="definition">Definition at line <a class="el" href="bcache_8c_source.html#l00334">334</a> of file <a class="el" href="bcache_8c_source.html">bcache.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  335</span>{</div>
+<div class="line"><span class="lineno">  336</span>  DIR *dir = NULL;</div>
+<div class="line"><span class="lineno">  337</span>  <span class="keyword">struct </span>dirent *de = NULL;</div>
+<div class="line"><span class="lineno">  338</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>  <span class="keywordflow">if</span> (!bcache || !(dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>)))</div>
+<div class="line"><span class="lineno">  341</span>    <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno">  342</span> </div>
+<div class="line"><span class="lineno">  343</span>  rc = 0;</div>
 <div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>  rc = 0;</div>
+<div class="line"><span class="lineno">  345</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: list: dir: &#39;%s&#39;\n&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
 <div class="line"><span class="lineno">  346</span> </div>
-<div class="line"><span class="lineno">  347</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: list: dir: &#39;%s&#39;\n&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>);</div>
-<div class="line"><span class="lineno">  348</span> </div>
-<div class="line"><span class="lineno">  349</span>  <span class="keywordflow">while</span> ((de = readdir(dir)))</div>
-<div class="line"><span class="lineno">  350</span>  {</div>
-<div class="line"><span class="lineno">  351</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(de-&gt;d_name, <span class="stringliteral">&quot;.&quot;</span>) || <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(de-&gt;d_name, <span class="stringliteral">&quot;..&quot;</span>))</div>
-<div class="line"><span class="lineno">  352</span>    {</div>
-<div class="line"><span class="lineno">  353</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  354</span>    }</div>
+<div class="line"><span class="lineno">  347</span>  <span class="keywordflow">while</span> ((de = readdir(dir)))</div>
+<div class="line"><span class="lineno">  348</span>  {</div>
+<div class="line"><span class="lineno">  349</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(de-&gt;d_name, <span class="stringliteral">&quot;.&quot;</span>) || <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(de-&gt;d_name, <span class="stringliteral">&quot;..&quot;</span>))</div>
+<div class="line"><span class="lineno">  350</span>    {</div>
+<div class="line"><span class="lineno">  351</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  352</span>    }</div>
+<div class="line"><span class="lineno">  353</span> </div>
+<div class="line"><span class="lineno">  354</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: list: dir: &#39;%s&#39;, id :&#39;%s&#39;\n&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, de-&gt;d_name);</div>
 <div class="line"><span class="lineno">  355</span> </div>
-<div class="line"><span class="lineno">  356</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: list: dir: &#39;%s&#39;, id :&#39;%s&#39;\n&quot;</span>, bcache-&gt;<a class="code hl_variable" href="structBodyCache.html#ad36a6ab1f12d388d75ae724635beb727">path</a>, de-&gt;d_name);</div>
-<div class="line"><span class="lineno">  357</span> </div>
-<div class="line"><span class="lineno">  358</span>    <span class="keywordflow">if</span> (want_id &amp;&amp; (want_id(de-&gt;d_name, bcache, data) != 0))</div>
-<div class="line"><span class="lineno">  359</span>      <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno">  360</span> </div>
-<div class="line"><span class="lineno">  361</span>    rc++;</div>
-<div class="line"><span class="lineno">  362</span>  }</div>
-<div class="line"><span class="lineno">  363</span> </div>
-<div class="line"><span class="lineno">  364</span>out:</div>
-<div class="line"><span class="lineno">  365</span>  <span class="keywordflow">if</span> (dir)</div>
-<div class="line"><span class="lineno">  366</span>  {</div>
-<div class="line"><span class="lineno">  367</span>    <span class="keywordflow">if</span> (closedir(dir) &lt; 0)</div>
-<div class="line"><span class="lineno">  368</span>      rc = -1;</div>
-<div class="line"><span class="lineno">  369</span>  }</div>
-<div class="line"><span class="lineno">  370</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: list: did %d entries\n&quot;</span>, rc);</div>
-<div class="line"><span class="lineno">  371</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  372</span>}</div>
+<div class="line"><span class="lineno">  356</span>    <span class="keywordflow">if</span> (want_id &amp;&amp; (want_id(de-&gt;d_name, bcache, data) != 0))</div>
+<div class="line"><span class="lineno">  357</span>      <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>    rc++;</div>
+<div class="line"><span class="lineno">  360</span>  }</div>
+<div class="line"><span class="lineno">  361</span> </div>
+<div class="line"><span class="lineno">  362</span>out:</div>
+<div class="line"><span class="lineno">  363</span>  <span class="keywordflow">if</span> (dir)</div>
+<div class="line"><span class="lineno">  364</span>  {</div>
+<div class="line"><span class="lineno">  365</span>    <span class="keywordflow">if</span> (closedir(dir) &lt; 0)</div>
+<div class="line"><span class="lineno">  366</span>      rc = -1;</div>
+<div class="line"><span class="lineno">  367</span>  }</div>
+<div class="line"><span class="lineno">  368</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;bcache: list: did %d entries\n&quot;</span>, rc);</div>
+<div class="line"><span class="lineno">  369</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  370</span>}</div>
 <div class="ttc" id="afile_8c_html_a69da918c66c3f22815d6e4aed88b6122"><div class="ttname"><a href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a></div><div class="ttdeci">DIR * mutt_file_opendir(const char *path, enum MuttOpenDirMode mode)</div><div class="ttdoc">Open a directory.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00642">file.c:642</a></div></div>
 <div class="ttc" id="afile_8h_html_a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60"><div class="ttname"><a href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a></div><div class="ttdeci">@ MUTT_OPENDIR_NONE</div><div class="ttdoc">Plain opendir()</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00063">file.h:63</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a9bf968304f4f9b49e24215cb2e28d22d"><div class="ttname"><a href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a></div><div class="ttdeci">size_t mutt_str_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00230">string.c:230</a></div></div>

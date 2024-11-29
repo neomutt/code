@@ -8,6 +8,6 @@ var mutt__account_8h =
       [ "MUTT_ACCT_TYPE_NNTP", "mutt__account_8h.html#a406c8474bdbb9cc2a25882558a367c2fa5cb8b16458e2d70c723c355ea3b8bfa3", null ],
       [ "MUTT_ACCT_TYPE_MAX", "mutt__account_8h.html#a406c8474bdbb9cc2a25882558a367c2fae964a93a5e000f65eb2957e89e3b4cd5", null ]
     ] ],
-    [ "mutt_account_fromurl", "mutt__account_8h.html#a819d8c338e36a6f36367bdb69be40ec8", null ],
-    [ "mutt_account_tourl", "mutt__account_8h.html#a2a35f089e4154e0abd22e0ed04a20547", null ]
+    [ "account_from_url", "mutt__account_8h.html#a2a4e248e7aba17bcb9790c526df67923", null ],
+    [ "account_to_url", "mutt__account_8h.html#aaa1bc1156410fa655f171b1cd28cf797", null ]
 ];

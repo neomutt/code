@@ -11,6 +11,7 @@ var browser_2lib_8h =
     [ "ExpandoDataFolder", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257", [
       [ "ED_FOL_DATE", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257ac3b7da0308ceb8da09f6706f78bb7a8e", null ],
       [ "ED_FOL_DATE_FORMAT", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a48579c3019c6f4c07241474f76b57a15", null ],
+      [ "ED_FOL_DATE_STRF", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a6f69f3cf223a47b4897d181349d2908e", null ],
       [ "ED_FOL_DESCRIPTION", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257ae0729c5f74287edea21846090a7b2af4", null ],
       [ "ED_FOL_FILENAME", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a42daea04b4b8a36b1fde27733a9a0a4d", null ],
       [ "ED_FOL_FILE_GROUP", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a3e4700d8fa6fdde5134021abe9840895", null ],
@@ -27,7 +28,6 @@ var browser_2lib_8h =
       [ "ED_FOL_NOTIFY", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a0a8418b23114dc448c181e79694b38e2", null ],
       [ "ED_FOL_NUMBER", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257ad2982a758f3e169d60868d39d9de8044", null ],
       [ "ED_FOL_POLL", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a001cec3907ff02e3bff52357bf202cfd", null ],
-      [ "ED_FOL_STRF", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257ac570ee3b483b15a9ccb183dd638cb974", null ],
       [ "ED_FOL_TAGGED", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257ac8a7d44643cf5e6820a086a219700fde", null ],
       [ "ED_FOL_UNREAD_COUNT", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a71535eaf02e697a5cea30db93c5e4139", null ]
     ] ],

@@ -87,6 +87,7 @@ var annotated_dup =
     [ "ExpandoFormat", "structExpandoFormat.html", "structExpandoFormat" ],
     [ "ExpandoNode", "structExpandoNode.html", "structExpandoNode" ],
     [ "ExpandoParseError", "structExpandoParseError.html", "structExpandoParseError" ],
+    [ "ExpandoRenderCallback", "structExpandoRenderCallback.html", "structExpandoRenderCallback" ],
     [ "ExpandoRenderData", "structExpandoRenderData.html", "structExpandoRenderData" ],
     [ "Extkey", "structExtkey.html", "structExtkey" ],
     [ "FetchCtx", "structFetchCtx.html", "structFetchCtx" ],

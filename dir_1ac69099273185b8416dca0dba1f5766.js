@@ -2,6 +2,7 @@ var dir_1ac69099273185b8416dca0dba1f5766 =
 [
     [ "body.c", "email_2body_8c.html", "email_2body_8c" ],
     [ "body.h", "email_2body_8h.html", "email_2body_8h" ],
+    [ "config.c", "email_2config_8c.html", "email_2config_8c" ],
     [ "content.h", "content_8h.html", "content_8h" ],
     [ "email.c", "email_2email_8c.html", "email_2email_8c" ],
     [ "email.h", "email_8h.html", "email_8h" ],

@@ -34,8 +34,10 @@ var index_2lib_8h =
     [ "index_pager_init", "index_2lib_8h.html#af8efcd0ce3952702bc60f84abc828f3c", null ],
     [ "mutt_dlgindex_observer", "index_2lib_8h.html#acde55b5814852d0713f23d4880fcfc7d", null ],
     [ "mutt_draw_statusline", "index_2lib_8h.html#a3932a451feea973fd2559ea67f6dd16d", null ],
-    [ "mutt_set_header_color", "index_2lib_8h.html#a6566b9f6bf6671102a3330bee435ed8b", null ],
+    [ "email_set_color", "index_2lib_8h.html#a445957247e2e9c75567508f3b6c5b097", null ],
     [ "resort_index", "index_2lib_8h.html#a97e8ab6c6b6bb77c8f657744f67f83d3", null ],
     [ "update_index", "index_2lib_8h.html#a5c88a7cc2d9e9ed37eaa8cf81c5db8e6", null ],
-    [ "IndexNewsHelp", "index_2lib_8h.html#a2bc480ec1d6debf952165e41454e1070", null ]
+    [ "mutt_make_string", "index_2lib_8h.html#ae150a6b0d1c7e5ffa3ad1705072ca048", null ],
+    [ "IndexNewsHelp", "index_2lib_8h.html#a2bc480ec1d6debf952165e41454e1070", null ],
+    [ "StatusFormatDef", "index_2lib_8h.html#a44f783fe72392aa9a0569081b4147dcc", null ]
 ];

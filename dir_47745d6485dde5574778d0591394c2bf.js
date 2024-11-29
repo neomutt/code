@@ -6,6 +6,8 @@ var dir_47745d6485dde5574778d0591394c2bf =
     [ "config.c", "autocrypt_2config_8c.html", "autocrypt_2config_8c" ],
     [ "db.c", "autocrypt_2db_8c.html", "autocrypt_2db_8c" ],
     [ "dlg_autocrypt.c", "dlg__autocrypt_8c.html", "dlg__autocrypt_8c" ],
+    [ "expando.c", "autocrypt_2expando_8c.html", "autocrypt_2expando_8c" ],
+    [ "expando.h", "autocrypt_2expando_8h.html", "autocrypt_2expando_8h" ],
     [ "functions.c", "autocrypt_2functions_8c.html", "autocrypt_2functions_8c" ],
     [ "functions.h", "autocrypt_2functions_8h.html", "autocrypt_2functions_8h" ],
     [ "gpgme.c", "gpgme_8c.html", "gpgme_8c" ],

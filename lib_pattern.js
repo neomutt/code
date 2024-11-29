@@ -5,6 +5,7 @@ var lib_pattern =
     [ "Config used by libpattern", "pattern_config.html", null ],
     [ "Pattern Selection Dialog", "pattern_dlg_pattern.html", null ],
     [ "Execute a Pattern", "pattern_exec.html", null ],
+    [ "Pattern Expando definitions", "pattern_expando.html", null ],
     [ "Pattern definitions", "pattern_flags.html", null ],
     [ "Pattern functions", "pattern_functions.html", null ],
     [ "Pattern handling for messages", "pattern_message.html", null ],

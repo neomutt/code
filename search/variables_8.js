@@ -49,7 +49,7 @@ var searchData=
   ['historyformatdef_46',['HistoryFormatDef',['../history_2config_8c.html#a43c775326869d5c85cc6bb3f3769252e',1,'config.c']]],
   ['historyfunctions_47',['HistoryFunctions',['../history_2functions_8c.html#a067682be1c5b794f5f8c00e230528948',1,'functions.c']]],
   ['historyhelp_48',['HistoryHelp',['../dlg__history_8c.html#a842f535e4ed4d6bc1f93473aee06a085',1,'dlg_history.c']]],
-  ['historyrenderdata_49',['HistoryRenderData',['../dlg__history_8c.html#ad57bedd418ccd74deb12f67377735737',1,'dlg_history.c']]],
+  ['historyrendercallbacks_49',['HistoryRenderCallbacks',['../history_2expando_8h.html#a423ff5a2b05b99a23a1ffd2cef79b15d',1,'HistoryRenderCallbacks():&#160;expando.c'],['../history_2expando_8c.html#a423ff5a2b05b99a23a1ffd2cef79b15d',1,'HistoryRenderCallbacks():&#160;expando.c']]],
   ['historyvars_50',['HistoryVars',['../history_2config_8c.html#a04cc486ece6582b032bae8dd366023ff',1,'config.c']]],
   ['homedir_51',['HomeDir',['../config_2path_8c.html#a6f7b1cf93328b961c3e3a64f300d75b0',1,'HomeDir():&#160;globals.c'],['../globals_8c.html#a6f7b1cf93328b961c3e3a64f300d75b0',1,'HomeDir():&#160;globals.c'],['../globals_8h.html#a6f7b1cf93328b961c3e3a64f300d75b0',1,'HomeDir():&#160;globals.c']]],
   ['hookcommands_52',['HookCommands',['../hook_8c.html#abeacc262338aa3335bc4fd50d11564ca',1,'hook.c']]],

@@ -41,7 +41,7 @@ var searchData=
   ['trash_38',['trash',['../structEmail.html#ad14bdb707d3b5811734782cfb570d9eb',1,'Email']]],
   ['tree_39',['tree',['../structAttachPtr.html#a675e3442ea87e4479649a58c20f68aa7',1,'AttachPtr::tree()'],['../structEmail.html#a6ab0c038ad82a3771c419731c93398ce',1,'Email::tree()'],['../structThreadsContext.html#a0c499ca77a266daf0af9c659fc41de9f',1,'ThreadsContext::tree()']]],
   ['trust_40',['trust',['../structPgpUid.html#a581c0cff806e1f531c21b10b30529a3d',1,'PgpUid::trust()'],['../structSmimeKey.html#abc36d7072ad69579e39e26326eed39e0',1,'SmimeKey::trust()']]],
-  ['trustflags_41',['TrustFlags',['../dlg__pgp_8c.html#ac58b0df6c2e955595e3083f363eff6b9',1,'dlg_pgp.c']]],
+  ['trustflags_41',['TrustFlags',['../expando__pgp_8c.html#ac58b0df6c2e955595e3083f363eff6b9',1,'expando_pgp.c']]],
   ['ts_5ficon_5fformat_42',['ts_icon_format',['../structIBarPrivateData.html#a21e904573006dc6f88655afa248f2298',1,'IBarPrivateData']]],
   ['ts_5fstatus_5fformat_43',['ts_status_format',['../structIBarPrivateData.html#a97791534c5b5882fb2c866d9b7de6ddd',1,'IBarPrivateData']]],
   ['tsl_44',['TSL',['../terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6',1,'terminal.c']]],

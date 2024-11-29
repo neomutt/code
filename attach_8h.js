@@ -15,22 +15,5 @@ var attach_8h =
     [ "mutt_actx_entries_free", "attach_8h.html#a773158419b51bd96d4a7249422d21f73", null ],
     [ "mutt_actx_new", "attach_8h.html#a015f0af47b8748f62d757fbf59523532", null ],
     [ "mutt_aptr_free", "attach_8h.html#a89df650a7e1c04159234f52044c82d84", null ],
-    [ "mutt_aptr_new", "attach_8h.html#a391fb25384a6e0c205de35fb24a1cc24", null ],
-    [ "attach_C", "group__expando__get__string__api.html#ga07e6951d6c8bd76b132d5eb2528ec328", null ],
-    [ "attach_c", "group__expando__get__string__api.html#ga9cab99419d1b0f96f027f7d043cdbde4", null ],
-    [ "attach_D", "group__expando__get__string__api.html#gaec0d82644f60d94bb84da0234901a6bd", null ],
-    [ "attach_d", "group__expando__get__string__api.html#ga12e178363de0709181e83fe97791ead3", null ],
-    [ "attach_e", "group__expando__get__string__api.html#gaf83e9537ea80a85eaec8707c00e1b037", null ],
-    [ "attach_F", "group__expando__get__string__api.html#ga1a653ee20fedaa0d31e920fd4b74b587", null ],
-    [ "attach_f", "group__expando__get__string__api.html#ga8b8e3e3fbb38d037d0ba4ce4066bd1f5", null ],
-    [ "attach_I", "group__expando__get__string__api.html#gaef01bd6cc604819ce525b7b34985a752", null ],
-    [ "attach_M", "group__expando__get__string__api.html#gab53c5efab481fee521e60dcfa6594ea7", null ],
-    [ "attach_m", "group__expando__get__string__api.html#ga46b24183b40460a1a51d105c0f25fc31", null ],
-    [ "attach_Q", "group__expando__get__string__api.html#gab36c9ae587948952fd676ff31c9043d1", null ],
-    [ "attach_s", "group__expando__get__string__api.html#ga7a6c8978f45c0ff021786d186a751f05", null ],
-    [ "attach_T", "group__expando__get__string__api.html#ga5cf97a9bd1ea7538055a2a4b7ec4c145", null ],
-    [ "attach_t", "group__expando__get__string__api.html#gad2b3c7edd92c56ae39c5a9677546b7f8", null ],
-    [ "attach_u", "group__expando__get__string__api.html#ga6c6af9633cf0ef9aed839dd8a82cbb5d", null ],
-    [ "attach_n_num", "group__expando__get__number__api.html#gaecf81830641b5b1c72c673f1282e301b", null ],
-    [ "attach_X_num", "group__expando__get__number__api.html#gabd8a7eac4abd3e753bccda820490465a", null ]
+    [ "mutt_aptr_new", "attach_8h.html#a391fb25384a6e0c205de35fb24a1cc24", null ]
 ];

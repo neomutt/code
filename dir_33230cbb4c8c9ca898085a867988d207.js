@@ -12,7 +12,7 @@ var dir_33230cbb4c8c9ca898085a867988d207 =
     [ "auth_oauth.c", "auth__oauth_8c.html", "auth__oauth_8c" ],
     [ "auth_plain.c", "auth__plain_8c.html", "auth__plain_8c" ],
     [ "auth_sasl.c", "auth__sasl_8c.html", "auth__sasl_8c" ],
-    [ "browse.c", "imap_2browse_8c.html", "imap_2browse_8c" ],
+    [ "browse.c", "browse_8c.html", "browse_8c" ],
     [ "command.c", "imap_2command_8c.html", "imap_2command_8c" ],
     [ "config.c", "imap_2config_8c.html", "imap_2config_8c" ],
     [ "edata.c", "imap_2edata_8c.html", "imap_2edata_8c" ],

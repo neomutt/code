@@ -14,10 +14,11 @@ var searchData=
   ['gpgme_20key_20sorting_11',['GPGME Key Sorting',['../crypt_sort_gpgme.html',1,'lib_ncrypt']]],
   ['graphical_20code_12',['Graphical code',['../lib_gui.html',1,'']]],
   ['graphviz_20dot_20file_13',['GraphViz dot file',['../debug_graphviz.html',1,'lib_debug']]],
-  ['gss_20authentication_14',['GSS authentication',['../imap_auth_gss.html',1,'lib_imap']]],
-  ['gui_20ask_20the_20user_20to_20enter_20a_20string_15',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],
-  ['gui_20display_20a_20user_2dconfigurable_20status_20line_16',['GUI display a user-configurable status line',['../neo_status.html',1,'index']]],
-  ['gui_20display_20the_20mailboxes_20in_20a_20side_20panel_17',['GUI display the mailboxes in a side panel',['../sidebar_sidebar.html',1,'lib_sidebar']]],
-  ['gui_20handle_20the_20resizing_20of_20the_20screen_18',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
-  ['gui_20present_20the_20user_20with_20a_20selectable_20list_19',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]]
+  ['greeting_20expando_20definitions_14',['Greeting Expando definitions',['../send_expando.html',1,'lib_send']]],
+  ['gss_20authentication_15',['GSS authentication',['../imap_auth_gss.html',1,'lib_imap']]],
+  ['gui_20ask_20the_20user_20to_20enter_20a_20string_16',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],
+  ['gui_20display_20a_20user_2dconfigurable_20status_20line_17',['GUI display a user-configurable status line',['../index_expando_status.html',1,'lib_index'],['../index_status.html',1,'lib_index']]],
+  ['gui_20display_20the_20mailboxes_20in_20a_20side_20panel_18',['GUI display the mailboxes in a side panel',['../sidebar_sidebar.html',1,'lib_sidebar']]],
+  ['gui_20handle_20the_20resizing_20of_20the_20screen_19',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
+  ['gui_20present_20the_20user_20with_20a_20selectable_20list_20',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]]
 ];

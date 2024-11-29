@@ -9,7 +9,7 @@ var searchData=
   ['body_2eh_6',['body.h',['../email_2body_8h.html',1,'(Global Namespace)'],['../send_2body_8h.html',1,'(Global Namespace)']]],
   ['bool_2ec_7',['bool.c',['../bool_8c.html',1,'']]],
   ['bool_2eh_8',['bool.h',['../bool_8h.html',1,'']]],
-  ['browse_2ec_9',['browse.c',['../imap_2browse_8c.html',1,'(Global Namespace)'],['../nntp_2browse_8c.html',1,'(Global Namespace)']]],
+  ['browse_2ec_9',['browse.c',['../browse_8c.html',1,'']]],
   ['buffer_2ec_10',['buffer.c',['../buffer_8c.html',1,'']]],
   ['buffer_2eh_11',['buffer.h',['../buffer_8h.html',1,'']]]
 ];

@@ -5,6 +5,7 @@ var smime_8h =
     [ "ExpandoDataSmimeCmd", "smime_8h.html#a33a1ecc6791f7496f1e12acd4abc4f4a", [
       [ "ED_SMI_ALGORITHM", "smime_8h.html#a33a1ecc6791f7496f1e12acd4abc4f4aa285f1a16668a19a0f32e7be4814474b4", null ],
       [ "ED_SMI_CERTIFICATE_IDS", "smime_8h.html#a33a1ecc6791f7496f1e12acd4abc4f4aa6f2631c23cfdeccb1a42198c1cd9fbf9", null ],
+      [ "ED_SMI_CERTIFICATE_PATH", "smime_8h.html#a33a1ecc6791f7496f1e12acd4abc4f4aaefe6dd972bb61fdff84cbf0df50a23b4", null ],
       [ "ED_SMI_DIGEST_ALGORITHM", "smime_8h.html#a33a1ecc6791f7496f1e12acd4abc4f4aa50b26891ce689d2563717d283e75072a", null ],
       [ "ED_SMI_INTERMEDIATE_IDS", "smime_8h.html#a33a1ecc6791f7496f1e12acd4abc4f4aaee8f2cc5433445009339446f25ac35d5", null ],
       [ "ED_SMI_KEY", "smime_8h.html#a33a1ecc6791f7496f1e12acd4abc4f4aa812552a3ff0899380fc8b0862675d733", null ],

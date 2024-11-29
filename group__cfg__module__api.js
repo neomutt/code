@@ -5,6 +5,7 @@ var group__cfg__module__api =
     [ "config_init_browser", "group__cfg__module__api.html#gad71d98b342df156006392cfa4d609ff2", null ],
     [ "config_init_compose", "group__cfg__module__api.html#ga3f6ac46618c7ee1f87a39031678d5590", null ],
     [ "config_init_conn", "group__cfg__module__api.html#ga86f39c85acdec1116d68920c0f8da071", null ],
+    [ "config_init_email", "group__cfg__module__api.html#ga5d5650660b3806229084c943d5266afb", null ],
     [ "config_init_hcache", "group__cfg__module__api.html#gafc15e7a5ea409e9f17f504bb58ad92c2", null ],
     [ "config_init_helpbar", "group__cfg__module__api.html#gaa41123a77e3c3260d274db859eccf093", null ],
     [ "config_init_history", "group__cfg__module__api.html#gab7c81cf54d9468a2a99e10cac3eae6be", null ],
@@ -21,6 +22,7 @@ var group__cfg__module__api =
     [ "config_init_pager", "group__cfg__module__api.html#gacf76a58b6736ff9ca3f6d72688bcc537", null ],
     [ "config_init_pattern", "group__cfg__module__api.html#ga26be0435201fcac5a63233943cab92cf", null ],
     [ "config_init_pop", "group__cfg__module__api.html#ga51af99fa94746593ce0cdf071c224851", null ],
+    [ "config_init_progress", "group__cfg__module__api.html#ga6670e3109cb18cb508eae0ad6f819912", null ],
     [ "config_init_send", "group__cfg__module__api.html#gaaa6ae3ae0d5ab627ae2342295463908b", null ],
     [ "config_init_sidebar", "group__cfg__module__api.html#gae7634227027409303c7d244cb68cac49", null ]
 ];

@@ -11,6 +11,5 @@ var alias_2expando_8c =
     [ "alias_view_index_num", "group__expando__get__number__api.html#ga1ebf04feae17a83564d99158a4230d0c", null ],
     [ "alias_view_tagged", "group__expando__get__string__api.html#gaccda9f33472cec5fc9a014a9b17047ce", null ],
     [ "alias_view_tagged_num", "group__expando__get__number__api.html#ga7b0fbdb0d08ec038188de548426f53e0", null ],
-    [ "AliasRenderData", "alias_2expando_8c.html#a4f079df31ac564a71fd5d4023f786475", null ],
-    [ "QueryRenderData", "alias_2expando_8c.html#a998adffad5c40ba5764730d1cbc5072a", null ]
+    [ "AliasRenderCallbacks", "alias_2expando_8c.html#a150b629f2f5a9915a09cd6ec6d015676", null ]
 ];

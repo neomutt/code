@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-11-14-78-gc90a55</span>
+   &#160;<span id="projectnumber">2024-11-14-131-g707bcf</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -212,76 +212,76 @@ Functions</h2></td></tr>
 
 <p>Does the sender match the certificate? - Implements <a class="el" href="structCryptModuleSpecs.html#ab1befdfed56bdbcdd6f42b174a66fe1a">CryptModuleSpecs::smime_verify_sender()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l01208">1208</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1209</span>{</div>
-<div class="line"><span class="lineno"> 1210</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *mbox = NULL, *certfile = NULL;</div>
-<div class="line"><span class="lineno"> 1211</span>  <span class="keywordtype">int</span> rc = 1;</div>
-<div class="line"><span class="lineno"> 1212</span> </div>
-<div class="line"><span class="lineno"> 1213</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempfname = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno"> 1214</span>  <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempfname);</div>
-<div class="line"><span class="lineno"> 1215</span>  FILE *fp_out = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname), <span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1216</span>  <span class="keywordflow">if</span> (!fp_out)</div>
-<div class="line"><span class="lineno"> 1217</span>  {</div>
-<div class="line"><span class="lineno"> 1218</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname));</div>
-<div class="line"><span class="lineno"> 1219</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno"> 1220</span>  }</div>
-<div class="line"><span class="lineno"> 1221</span> </div>
-<div class="line"><span class="lineno"> 1222</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> encrypt = e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a>;</div>
-<div class="line"><span class="lineno"> 1223</span>  <a class="code hl_function" href="copy_8c.html#a72172841415fb14e143da3c102be0364">mutt_copy_message</a>(fp_out, e, msg,</div>
-<div class="line"><span class="lineno"> 1224</span>                    encrypt ? (<a class="code hl_define" href="copy_8h.html#acb95a965dc299a0cd0b13bf4ade6fb26">MUTT_CM_DECODE_CRYPT</a> &amp; <a class="code hl_define" href="copy_8h.html#a68c59ce93ab61f8d664fc94e60f61f3c">MUTT_CM_DECODE_SMIME</a>) : <a class="code hl_define" href="copy_8h.html#ac778c083de78e4fb27889f345f242d13">MUTT_CM_NO_FLAGS</a>,</div>
-<div class="line"><span class="lineno"> 1225</span>                    encrypt ? (<a class="code hl_define" href="copy_8h.html#a7eafef308595ca62d50bb0087ee605ce">CH_MIME</a> | <a class="code hl_define" href="copy_8h.html#a5e818fe5d60277b658d3f98ee7e0e675">CH_WEED</a> | <a class="code hl_define" href="copy_8h.html#a5456d9b0419ab775a33967dcdb978a3d">CH_NONEWLINE</a>) : <a class="code hl_define" href="copy_8h.html#af310a44d7c96b22de90934cb18634b58">CH_NO_FLAGS</a>, 0);</div>
-<div class="line"><span class="lineno"> 1226</span> </div>
-<div class="line"><span class="lineno"> 1227</span>  fflush(fp_out);</div>
-<div class="line"><span class="lineno"> 1228</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
-<div class="line"><span class="lineno"> 1229</span> </div>
-<div class="line"><span class="lineno"> 1230</span>  <span class="keywordflow">if</span> (!<a class="code hl_define" href="queue_8h.html#ac3c9da7ac712eacbbad5cc54d7a3477e">TAILQ_EMPTY</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>))</div>
-<div class="line"><span class="lineno"> 1231</span>  {</div>
-<div class="line"><span class="lineno"> 1232</span>    <a class="code hl_function" href="alias_8c.html#a7c57d5376e9a1cf5e1f504a452996b86">mutt_expand_aliases</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>);</div>
-<div class="line"><span class="lineno"> 1233</span>    mbox = <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(<a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>)-&gt;mailbox);</div>
-<div class="line"><span class="lineno"> 1234</span>  }</div>
-<div class="line"><span class="lineno"> 1235</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_define" href="queue_8h.html#ac3c9da7ac712eacbbad5cc54d7a3477e">TAILQ_EMPTY</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>))</div>
-<div class="line"><span class="lineno"> 1236</span>  {</div>
-<div class="line"><span class="lineno"> 1237</span>    <a class="code hl_function" href="alias_8c.html#a7c57d5376e9a1cf5e1f504a452996b86">mutt_expand_aliases</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>);</div>
-<div class="line"><span class="lineno"> 1238</span>    mbox = <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(<a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>)-&gt;mailbox);</div>
-<div class="line"><span class="lineno"> 1239</span>  }</div>
-<div class="line"><span class="lineno"> 1240</span> </div>
-<div class="line"><span class="lineno"> 1241</span>  <span class="keywordflow">if</span> (mbox)</div>
-<div class="line"><span class="lineno"> 1242</span>  {</div>
-<div class="line"><span class="lineno"> 1243</span>    certfile = <a class="code hl_function" href="smime_8c.html#a8239a280f5be0afe28e328c5917e8d5a">smime_extract_signer_certificate</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname));</div>
-<div class="line"><span class="lineno"> 1244</span>    <span class="keywordflow">if</span> (certfile)</div>
-<div class="line"><span class="lineno"> 1245</span>    {</div>
-<div class="line"><span class="lineno"> 1246</span>      <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname));</div>
-<div class="line"><span class="lineno"> 1247</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="smime_8c.html#ac22eada01fd9622f13deb3f43459d412">smime_handle_cert_email</a>(certfile, mbox, <span class="keyword">false</span>, NULL, NULL))</div>
-<div class="line"><span class="lineno"> 1248</span>      {</div>
-<div class="line"><span class="lineno"> 1249</span>        <span class="keywordflow">if</span> (isendwin())</div>
-<div class="line"><span class="lineno"> 1250</span>          <a class="code hl_function" href="curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774">mutt_any_key_to_continue</a>(NULL);</div>
-<div class="line"><span class="lineno"> 1251</span>      }</div>
-<div class="line"><span class="lineno"> 1252</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1253</span>      {</div>
-<div class="line"><span class="lineno"> 1254</span>        rc = 0;</div>
-<div class="line"><span class="lineno"> 1255</span>      }</div>
-<div class="line"><span class="lineno"> 1256</span>      <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(certfile);</div>
-<div class="line"><span class="lineno"> 1257</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;certfile);</div>
-<div class="line"><span class="lineno"> 1258</span>    }</div>
-<div class="line"><span class="lineno"> 1259</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1260</span>    {</div>
-<div class="line"><span class="lineno"> 1261</span>      <a class="code hl_function" href="curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774">mutt_any_key_to_continue</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;no certfile&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1262</span>    }</div>
-<div class="line"><span class="lineno"> 1263</span>  }</div>
-<div class="line"><span class="lineno"> 1264</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1265</span>  {</div>
-<div class="line"><span class="lineno"> 1266</span>    <a class="code hl_function" href="curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774">mutt_any_key_to_continue</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;no mbox&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1267</span>  }</div>
-<div class="line"><span class="lineno"> 1268</span> </div>
-<div class="line"><span class="lineno"> 1269</span>  <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname));</div>
-<div class="line"><span class="lineno"> 1270</span> </div>
-<div class="line"><span class="lineno"> 1271</span>cleanup:</div>
-<div class="line"><span class="lineno"> 1272</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfname);</div>
-<div class="line"><span class="lineno"> 1273</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1274</span>}</div>
+<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l01071">1071</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1072</span>{</div>
+<div class="line"><span class="lineno"> 1073</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *mbox = NULL, *certfile = NULL;</div>
+<div class="line"><span class="lineno"> 1074</span>  <span class="keywordtype">int</span> rc = 1;</div>
+<div class="line"><span class="lineno"> 1075</span> </div>
+<div class="line"><span class="lineno"> 1076</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempfname = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno"> 1077</span>  <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempfname);</div>
+<div class="line"><span class="lineno"> 1078</span>  FILE *fp_out = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname), <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1079</span>  <span class="keywordflow">if</span> (!fp_out)</div>
+<div class="line"><span class="lineno"> 1080</span>  {</div>
+<div class="line"><span class="lineno"> 1081</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname));</div>
+<div class="line"><span class="lineno"> 1082</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno"> 1083</span>  }</div>
+<div class="line"><span class="lineno"> 1084</span> </div>
+<div class="line"><span class="lineno"> 1085</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> encrypt = e-&gt;<a class="code hl_variable" href="structEmail.html#a570a81cd747437c9ea4357947731ae10">security</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a>;</div>
+<div class="line"><span class="lineno"> 1086</span>  <a class="code hl_function" href="copy_8c.html#a72172841415fb14e143da3c102be0364">mutt_copy_message</a>(fp_out, e, msg,</div>
+<div class="line"><span class="lineno"> 1087</span>                    encrypt ? (<a class="code hl_define" href="copy_8h.html#acb95a965dc299a0cd0b13bf4ade6fb26">MUTT_CM_DECODE_CRYPT</a> &amp; <a class="code hl_define" href="copy_8h.html#a68c59ce93ab61f8d664fc94e60f61f3c">MUTT_CM_DECODE_SMIME</a>) : <a class="code hl_define" href="copy_8h.html#ac778c083de78e4fb27889f345f242d13">MUTT_CM_NO_FLAGS</a>,</div>
+<div class="line"><span class="lineno"> 1088</span>                    encrypt ? (<a class="code hl_define" href="copy_8h.html#a7eafef308595ca62d50bb0087ee605ce">CH_MIME</a> | <a class="code hl_define" href="copy_8h.html#a5e818fe5d60277b658d3f98ee7e0e675">CH_WEED</a> | <a class="code hl_define" href="copy_8h.html#a5456d9b0419ab775a33967dcdb978a3d">CH_NONEWLINE</a>) : <a class="code hl_define" href="copy_8h.html#af310a44d7c96b22de90934cb18634b58">CH_NO_FLAGS</a>, 0);</div>
+<div class="line"><span class="lineno"> 1089</span> </div>
+<div class="line"><span class="lineno"> 1090</span>  fflush(fp_out);</div>
+<div class="line"><span class="lineno"> 1091</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
+<div class="line"><span class="lineno"> 1092</span> </div>
+<div class="line"><span class="lineno"> 1093</span>  <span class="keywordflow">if</span> (!<a class="code hl_define" href="queue_8h.html#ac3c9da7ac712eacbbad5cc54d7a3477e">TAILQ_EMPTY</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>))</div>
+<div class="line"><span class="lineno"> 1094</span>  {</div>
+<div class="line"><span class="lineno"> 1095</span>    <a class="code hl_function" href="alias_8c.html#a7c57d5376e9a1cf5e1f504a452996b86">mutt_expand_aliases</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>);</div>
+<div class="line"><span class="lineno"> 1096</span>    mbox = <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(<a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>)-&gt;mailbox);</div>
+<div class="line"><span class="lineno"> 1097</span>  }</div>
+<div class="line"><span class="lineno"> 1098</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!<a class="code hl_define" href="queue_8h.html#ac3c9da7ac712eacbbad5cc54d7a3477e">TAILQ_EMPTY</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>))</div>
+<div class="line"><span class="lineno"> 1099</span>  {</div>
+<div class="line"><span class="lineno"> 1100</span>    <a class="code hl_function" href="alias_8c.html#a7c57d5376e9a1cf5e1f504a452996b86">mutt_expand_aliases</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>);</div>
+<div class="line"><span class="lineno"> 1101</span>    mbox = <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(<a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>)-&gt;mailbox);</div>
+<div class="line"><span class="lineno"> 1102</span>  }</div>
+<div class="line"><span class="lineno"> 1103</span> </div>
+<div class="line"><span class="lineno"> 1104</span>  <span class="keywordflow">if</span> (mbox)</div>
+<div class="line"><span class="lineno"> 1105</span>  {</div>
+<div class="line"><span class="lineno"> 1106</span>    certfile = <a class="code hl_function" href="smime_8c.html#a8239a280f5be0afe28e328c5917e8d5a">smime_extract_signer_certificate</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname));</div>
+<div class="line"><span class="lineno"> 1107</span>    <span class="keywordflow">if</span> (certfile)</div>
+<div class="line"><span class="lineno"> 1108</span>    {</div>
+<div class="line"><span class="lineno"> 1109</span>      <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname));</div>
+<div class="line"><span class="lineno"> 1110</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="smime_8c.html#ac22eada01fd9622f13deb3f43459d412">smime_handle_cert_email</a>(certfile, mbox, <span class="keyword">false</span>, NULL, NULL))</div>
+<div class="line"><span class="lineno"> 1111</span>      {</div>
+<div class="line"><span class="lineno"> 1112</span>        <span class="keywordflow">if</span> (isendwin())</div>
+<div class="line"><span class="lineno"> 1113</span>          <a class="code hl_function" href="curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774">mutt_any_key_to_continue</a>(NULL);</div>
+<div class="line"><span class="lineno"> 1114</span>      }</div>
+<div class="line"><span class="lineno"> 1115</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1116</span>      {</div>
+<div class="line"><span class="lineno"> 1117</span>        rc = 0;</div>
+<div class="line"><span class="lineno"> 1118</span>      }</div>
+<div class="line"><span class="lineno"> 1119</span>      <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(certfile);</div>
+<div class="line"><span class="lineno"> 1120</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;certfile);</div>
+<div class="line"><span class="lineno"> 1121</span>    }</div>
+<div class="line"><span class="lineno"> 1122</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1123</span>    {</div>
+<div class="line"><span class="lineno"> 1124</span>      <a class="code hl_function" href="curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774">mutt_any_key_to_continue</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;no certfile&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1125</span>    }</div>
+<div class="line"><span class="lineno"> 1126</span>  }</div>
+<div class="line"><span class="lineno"> 1127</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1128</span>  {</div>
+<div class="line"><span class="lineno"> 1129</span>    <a class="code hl_function" href="curs__lib_8c.html#ab6a61cdfcf8c2c73ee59381c79c79774">mutt_any_key_to_continue</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;no mbox&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1130</span>  }</div>
+<div class="line"><span class="lineno"> 1131</span> </div>
+<div class="line"><span class="lineno"> 1132</span>  <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfname));</div>
+<div class="line"><span class="lineno"> 1133</span> </div>
+<div class="line"><span class="lineno"> 1134</span>cleanup:</div>
+<div class="line"><span class="lineno"> 1135</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfname);</div>
+<div class="line"><span class="lineno"> 1136</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1137</span>}</div>
 <div class="ttc" id="aalias_8c_html_a7c57d5376e9a1cf5e1f504a452996b86"><div class="ttname"><a href="alias_8c.html#a7c57d5376e9a1cf5e1f504a452996b86">mutt_expand_aliases</a></div><div class="ttdeci">void mutt_expand_aliases(struct AddressList *al)</div><div class="ttdoc">Expand aliases in a List of Addresses.</div><div class="ttdef"><b>Definition:</b> <a href="alias_8c_source.html#l00295">alias.c:295</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
-<div class="ttc" id="acopy_8c_html_a72172841415fb14e143da3c102be0364"><div class="ttname"><a href="copy_8c.html#a72172841415fb14e143da3c102be0364">mutt_copy_message</a></div><div class="ttdeci">int mutt_copy_message(FILE *fp_out, struct Email *e, struct Message *msg, CopyMessageFlags cmflags, CopyHeaderFlags chflags, int wraplen)</div><div class="ttdoc">Copy a message from a Mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="copy_8c_source.html#l00907">copy.c:907</a></div></div>
+<div class="ttc" id="acopy_8c_html_a72172841415fb14e143da3c102be0364"><div class="ttname"><a href="copy_8c.html#a72172841415fb14e143da3c102be0364">mutt_copy_message</a></div><div class="ttdeci">int mutt_copy_message(FILE *fp_out, struct Email *e, struct Message *msg, CopyMessageFlags cmflags, CopyHeaderFlags chflags, int wraplen)</div><div class="ttdoc">Copy a message from a Mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="copy_8c_source.html#l00906">copy.c:906</a></div></div>
 <div class="ttc" id="acopy_8h_html_a5456d9b0419ab775a33967dcdb978a3d"><div class="ttname"><a href="copy_8h.html#a5456d9b0419ab775a33967dcdb978a3d">CH_NONEWLINE</a></div><div class="ttdeci">#define CH_NONEWLINE</div><div class="ttdoc">Don't output terminating newline after the header.</div><div class="ttdef"><b>Definition:</b> <a href="copy_8h_source.html#l00062">copy.h:62</a></div></div>
 <div class="ttc" id="acopy_8h_html_a5e818fe5d60277b658d3f98ee7e0e675"><div class="ttname"><a href="copy_8h.html#a5e818fe5d60277b658d3f98ee7e0e675">CH_WEED</a></div><div class="ttdeci">#define CH_WEED</div><div class="ttdoc">Weed the headers?</div><div class="ttdef"><b>Definition:</b> <a href="copy_8h_source.html#l00055">copy.h:55</a></div></div>
 <div class="ttc" id="acopy_8h_html_a68c59ce93ab61f8d664fc94e60f61f3c"><div class="ttname"><a href="copy_8h.html#a68c59ce93ab61f8d664fc94e60f61f3c">MUTT_CM_DECODE_SMIME</a></div><div class="ttdeci">#define MUTT_CM_DECODE_SMIME</div><div class="ttdoc">Used for decoding S/MIME messages.</div><div class="ttdef"><b>Definition:</b> <a href="copy_8h_source.html#l00048">copy.h:48</a></div></div>
@@ -296,13 +296,13 @@ Functions</h2></td></tr>
 <div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00055">memory.h:55</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
-<div class="ttc" id="ancrypt_2lib_8h_html_aacaa4abd4c0696e260b7a0f1d466360a"><div class="ttname"><a href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a></div><div class="ttdeci">#define SEC_ENCRYPT</div><div class="ttdoc">Email is encrypted.</div><div class="ttdef"><b>Definition:</b> <a href="ncrypt_2lib_8h_source.html#l00080">lib.h:80</a></div></div>
+<div class="ttc" id="ancrypt_2lib_8h_html_aacaa4abd4c0696e260b7a0f1d466360a"><div class="ttname"><a href="ncrypt_2lib_8h.html#aacaa4abd4c0696e260b7a0f1d466360a">SEC_ENCRYPT</a></div><div class="ttdeci">#define SEC_ENCRYPT</div><div class="ttdoc">Email is encrypted.</div><div class="ttdef"><b>Definition:</b> <a href="ncrypt_2lib_8h_source.html#l00084">lib.h:84</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a7d6894360bd1c41e0e6f6d84998c1362"><div class="ttname"><a href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a></div><div class="ttdeci">#define TAILQ_FIRST(head)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00741">queue.h:741</a></div></div>
 <div class="ttc" id="aqueue_8h_html_ac3c9da7ac712eacbbad5cc54d7a3477e"><div class="ttname"><a href="queue_8h.html#ac3c9da7ac712eacbbad5cc54d7a3477e">TAILQ_EMPTY</a></div><div class="ttdeci">#define TAILQ_EMPTY(head)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00739">queue.h:739</a></div></div>
-<div class="ttc" id="asmime_8c_html_a8239a280f5be0afe28e328c5917e8d5a"><div class="ttname"><a href="smime_8c.html#a8239a280f5be0afe28e328c5917e8d5a">smime_extract_signer_certificate</a></div><div class="ttdeci">static char * smime_extract_signer_certificate(const char *infile)</div><div class="ttdoc">Extract the signer's certificate.</div><div class="ttdef"><b>Definition:</b> <a href="smime_8c_source.html#l01064">smime.c:1064</a></div></div>
-<div class="ttc" id="asmime_8c_html_ac22eada01fd9622f13deb3f43459d412"><div class="ttname"><a href="smime_8c.html#ac22eada01fd9622f13deb3f43459d412">smime_handle_cert_email</a></div><div class="ttdeci">static int smime_handle_cert_email(const char *certificate, const char *mailbox, bool copy, char ***buffer, int *num)</div><div class="ttdoc">Process an email containing certificates.</div><div class="ttdef"><b>Definition:</b> <a href="smime_8c_source.html#l00847">smime.c:847</a></div></div>
+<div class="ttc" id="asmime_8c_html_a8239a280f5be0afe28e328c5917e8d5a"><div class="ttname"><a href="smime_8c.html#a8239a280f5be0afe28e328c5917e8d5a">smime_extract_signer_certificate</a></div><div class="ttdeci">static char * smime_extract_signer_certificate(const char *infile)</div><div class="ttdoc">Extract the signer's certificate.</div><div class="ttdef"><b>Definition:</b> <a href="smime_8c_source.html#l00927">smime.c:927</a></div></div>
+<div class="ttc" id="asmime_8c_html_ac22eada01fd9622f13deb3f43459d412"><div class="ttname"><a href="smime_8c.html#ac22eada01fd9622f13deb3f43459d412">smime_handle_cert_email</a></div><div class="ttdeci">static int smime_handle_cert_email(const char *certificate, const char *mailbox, bool copy, char ***buffer, int *num)</div><div class="ttdoc">Process an email containing certificates.</div><div class="ttdef"><b>Definition:</b> <a href="smime_8c_source.html#l00710">smime.c:710</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
 <div class="ttc" id="astructEmail_html_a34cc4493729d7a3b1f4ed783e739a9ec"><div class="ttname"><a href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">Email::env</a></div><div class="ttdeci">struct Envelope * env</div><div class="ttdoc">Envelope information.</div><div class="ttdef"><b>Definition:</b> <a href="email_8h_source.html#l00068">email.h:68</a></div></div>
 <div class="ttc" id="astructEmail_html_a570a81cd747437c9ea4357947731ae10"><div class="ttname"><a href="structEmail.html#a570a81cd747437c9ea4357947731ae10">Email::security</a></div><div class="ttdeci">SecurityFlags security</div><div class="ttdoc">bit 0-10: flags, bit 11,12: application, bit 13: traditional pgp See: ncrypt/lib.h pgplib....</div><div class="ttdef"><b>Definition:</b> <a href="email_8h_source.html#l00043">email.h:43</a></div></div>

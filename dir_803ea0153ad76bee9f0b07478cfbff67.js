@@ -12,6 +12,8 @@ var dir_803ea0153ad76bee9f0b07478cfbff67 =
     [ "gsasl.c", "gsasl_8c.html", "gsasl_8c" ],
     [ "gsasl2.h", "gsasl2_8h.html", "gsasl2_8h" ],
     [ "lib.h", "conn_2lib_8h.html", "conn_2lib_8h" ],
+    [ "mutt_account.c", "mutt__account_8c.html", "mutt__account_8c" ],
+    [ "mutt_account.h", "mutt__account_8h.html", "mutt__account_8h" ],
     [ "openssl.c", "openssl_8c.html", "openssl_8c" ],
     [ "private.h", "conn_2private_8h.html", "conn_2private_8h" ],
     [ "raw.c", "raw_8c.html", "raw_8c" ],

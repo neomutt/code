@@ -19,7 +19,7 @@ var pattern_2private_8h =
     [ "MUTT_MAXRANGE", "pattern_2private_8h.html#a704b31bafbefd8857fce3bc1f9bb5ba8", null ],
     [ "ExpandoDataPattern", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7", [
       [ "ED_PAT_DESCRIPTION", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7a5f3f9a62a5cd384320d4ca4af208f64e", null ],
-      [ "ED_PAT_EXPRESION", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7a8f29140dbafc6ef400e85dd8f835ffe5", null ],
+      [ "ED_PAT_EXPRESSION", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7aaaa29d15a4bc3cf6378365de021401bd", null ],
       [ "ED_PAT_NUMBER", "pattern_2private_8h.html#a20f0770cc36e4dd917b8eea2f9b5e5c7aec81da68b1100b3e664b73665656199c", null ]
     ] ],
     [ "PatternEat", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966", [

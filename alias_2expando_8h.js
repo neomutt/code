@@ -11,6 +11,6 @@ var alias_2expando_8h =
       [ "ED_ALI_TAGGED", "alias_2expando_8h.html#a7cc8182b455391a9e35cb2a04c07c092aabed31c85150a6f2848b3b2b8f329e4d", null ],
       [ "ED_ALI_TAGS", "alias_2expando_8h.html#a7cc8182b455391a9e35cb2a04c07c092aeb27b7e7203ad71d983ebb47f2d942d2", null ]
     ] ],
-    [ "AliasRenderData", "alias_2expando_8h.html#a4f079df31ac564a71fd5d4023f786475", null ],
-    [ "QueryRenderData", "alias_2expando_8h.html#a998adffad5c40ba5764730d1cbc5072a", null ]
+    [ "AliasRenderCallbacks", "alias_2expando_8h.html#a150b629f2f5a9915a09cd6ec6d015676", null ],
+    [ "QueryRenderCallbacks", "alias_2expando_8h.html#ae4ee8a0e04a9138ebbd255c2e7f5ff35", null ]
 ];

@@ -63,7 +63,7 @@ var searchData=
   ['querydefaultbindings_60',['QueryDefaultBindings',['../alias_2functions_8c.html#a3d408602c06d6a9eedb291ac880b422b',1,'QueryDefaultBindings():&#160;functions.c'],['../key_2init_8c.html#a3d408602c06d6a9eedb291ac880b422b',1,'QueryDefaultBindings():&#160;functions.c']]],
   ['queryformatdef_61',['QueryFormatDef',['../alias_2config_8c.html#a60424ae3fac89a2965e11c5a5cfaf46d',1,'config.c']]],
   ['queryhelp_62',['QueryHelp',['../dlg__query_8c.html#a12d28b03eb265706a3c03ee5ff42c82d',1,'dlg_query.c']]],
-  ['queryrenderdata_63',['QueryRenderData',['../alias_2expando_8c.html#a998adffad5c40ba5764730d1cbc5072a',1,'QueryRenderData():&#160;expando.c'],['../alias_2expando_8h.html#a998adffad5c40ba5764730d1cbc5072a',1,'QueryRenderData():&#160;expando.c']]],
+  ['queryrendercallbacks_63',['QueryRenderCallbacks',['../alias_2expando_8h.html#ae4ee8a0e04a9138ebbd255c2e7f5ff35',1,'expando.h']]],
   ['question_64',['Question',['../lib_question.html',1,'']]],
   ['question_2ec_65',['question.c',['../question_8c.html',1,'']]],
   ['queue_2eh_66',['queue.h',['../queue_8h.html',1,'']]],

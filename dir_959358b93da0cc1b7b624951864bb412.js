@@ -9,6 +9,8 @@ var dir_959358b93da0cc1b7b624951864bb412 =
     [ "cbar_data.h", "cbar__data_8h.html", "cbar__data_8h" ],
     [ "config.c", "compose_2config_8c.html", "compose_2config_8c" ],
     [ "dlg_compose.c", "dlg__compose_8c.html", "dlg__compose_8c" ],
+    [ "expando.c", "compose_2expando_8c.html", "compose_2expando_8c" ],
+    [ "expando.h", "compose_2expando_8h.html", "compose_2expando_8h" ],
     [ "functions.c", "compose_2functions_8c.html", "compose_2functions_8c" ],
     [ "functions.h", "compose_2functions_8h.html", "compose_2functions_8h" ],
     [ "lib.h", "compose_2lib_8h.html", "compose_2lib_8h" ],

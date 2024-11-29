@@ -5,6 +5,8 @@ var dir_8fdb7f4d27c6340e06275085d6f34a15 =
     [ "config.c", "pattern_2config_8c.html", "pattern_2config_8c" ],
     [ "dlg_pattern.c", "dlg__pattern_8c.html", "dlg__pattern_8c" ],
     [ "exec.c", "exec_8c.html", "exec_8c" ],
+    [ "expando.c", "pattern_2expando_8c.html", "pattern_2expando_8c" ],
+    [ "expando.h", "pattern_2expando_8h.html", "pattern_2expando_8h" ],
     [ "flags.c", "pattern_2flags_8c.html", "pattern_2flags_8c" ],
     [ "functions.c", "pattern_2functions_8c.html", "pattern_2functions_8c" ],
     [ "functions.h", "pattern_2functions_8h.html", "pattern_2functions_8h" ],

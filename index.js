@@ -5,8 +5,8 @@ var index =
       [ "Miscellaneous files", "index.html#autotoc_md82", null ],
       [ "Building these Docs", "index.html#autotoc_md83", null ],
       [ "Installing the Docs", "index.html#autotoc_md84", [
-        [ "Data", "neo_alternates.html#autotoc_md606", null ],
-        [ "Functions", "neo_alternates.html#autotoc_md607", null ]
+        [ "Data", "neo_alternates.html#autotoc_md627", null ],
+        [ "Functions", "neo_alternates.html#autotoc_md628", null ]
       ] ]
     ] ],
     [ "Functions to parse commands in a config file", "neo_commands.html", null ],
@@ -17,7 +17,6 @@ var index =
     [ "Manipulate the flags in an email header", "neo_flags.html", null ],
     [ "Global variables", "neo_globals.html", null ],
     [ "Decide how to display email content", "neo_handler.html", null ],
-    [ "String processing routines to generate the mail index", "neo_hdrline.html", null ],
     [ "Generate the help-page and GUI display it", "neo_help.html", null ],
     [ "Parse and execute user-defined hooks", "neo_hook.html", null ],
     [ "Config/command parsing", "neo_init.html", null ],
@@ -26,7 +25,6 @@ var index =
     [ "Command line processing", "neo_main.html", null ],
     [ "Monitor files for changes", "neo_monitor.html", null ],
     [ "Some miscellaneous functions", "neo_muttlib.html", null ],
-    [ "ConnAccount object used by POP and IMAP", "neo_mutt_account.html", null ],
     [ "Representation of the body of an email", "neo_mutt_body.html", null ],
     [ "Definitions of config variables", "neo_mutt_config.html", null ],
     [ "Manipulate an email's header", "neo_mutt_header.html", null ],
@@ -41,7 +39,6 @@ var index =
     [ "Send/reply with an attachment", "neo_recvcmd.html", null ],
     [ "RFC3676 Format Flowed routines", "neo_rfc3676.html", null ],
     [ "Routines for adding user scores to emails", "neo_score.html", null ],
-    [ "GUI display a user-configurable status line", "neo_status.html", null ],
     [ "Subject Regex handling", "neo_subjrx.html", null ],
     [ "Execute external programs", "neo_system.html", null ],
     [ "For systems lacking timegm()", "neo_timegm.html", null ],
