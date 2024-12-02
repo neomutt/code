@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-11-14-131-g707bcf</span>
+   &#160;<span id="projectnumber">2024-11-14-138-ge5ca67</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -188,75 +188,75 @@ Functions</h2></td></tr>
 <p>flags may also contain <a class="el" href="mxapi_8h.html#a3a651e08849ce73161750d86d4ac1ee6" title="Create a new folder - same as MUTT_APPEND, but uses mutt_file_fopen() with mode &quot;w&quot; for mbox-style fo...">MUTT_NEWFOLDER</a></p>
 <p>To append to a compressed mailbox we need an append-hook (or both open- and close-hooks). </p>
 
-<p class="definition">Definition at line <a class="el" href="compmbox_2compress_8c_source.html#l00481">481</a> of file <a class="el" href="compmbox_2compress_8c_source.html">compress.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  482</span>{</div>
-<div class="line"><span class="lineno">  483</span>  <span class="comment">/* If this succeeds, we know there&#39;s an open-hook */</span></div>
-<div class="line"><span class="lineno">  484</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structCompressInfo.html">CompressInfo</a> *ci = <a class="code hl_function" href="compmbox_2compress_8c.html#a5a32c514bae251affffd84d7328af23a">set_compress_info</a>(m);</div>
-<div class="line"><span class="lineno">  485</span>  <span class="keywordflow">if</span> (!ci)</div>
-<div class="line"><span class="lineno">  486</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  487</span> </div>
-<div class="line"><span class="lineno">  488</span>  <span class="comment">/* To append we need an append-hook or a close-hook */</span></div>
-<div class="line"><span class="lineno">  489</span>  <span class="keywordflow">if</span> (!ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a97e20b0a307d1164a6de7265b28136f7">cmd_append</a> &amp;&amp; !ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#aef70fbe59eca22ca5326424873ffeaae">cmd_close</a>)</div>
-<div class="line"><span class="lineno">  490</span>  {</div>
-<div class="line"><span class="lineno">  491</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t append without an append-hook or close-hook : %s&quot;</span>),</div>
-<div class="line"><span class="lineno">  492</span>               <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  493</span>    <span class="keywordflow">goto</span> cmoa_fail1;</div>
-<div class="line"><span class="lineno">  494</span>  }</div>
-<div class="line"><span class="lineno">  495</span> </div>
-<div class="line"><span class="lineno">  496</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="compmbox_2compress_8c.html#a60e1b3c821fbb441941a42b24149fbb3">setup_paths</a>(m) != 0)</div>
-<div class="line"><span class="lineno">  497</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
-<div class="line"><span class="lineno">  498</span> </div>
-<div class="line"><span class="lineno">  499</span>  <span class="comment">/* Lock the realpath for the duration of the append.</span></div>
-<div class="line"><span class="lineno">  500</span><span class="comment">   * It will be unlocked in the close */</span></div>
-<div class="line"><span class="lineno">  501</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="compmbox_2compress_8c.html#a8c82fa05ac9a30a1cd0e5c5b472ae066">lock_realpath</a>(m, <span class="keyword">true</span>))</div>
-<div class="line"><span class="lineno">  502</span>  {</div>
-<div class="line"><span class="lineno">  503</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Unable to lock mailbox&quot;</span>));</div>
-<div class="line"><span class="lineno">  504</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
-<div class="line"><span class="lineno">  505</span>  }</div>
-<div class="line"><span class="lineno">  506</span> </div>
-<div class="line"><span class="lineno">  507</span>  <span class="comment">/* Open the existing mailbox, unless we are appending */</span></div>
-<div class="line"><span class="lineno">  508</span>  <span class="keywordflow">if</span> (!ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a97e20b0a307d1164a6de7265b28136f7">cmd_append</a> &amp;&amp; (<a class="code hl_function" href="file_8c.html#a75f1c8024613a5e8c23f92d229f52101">mutt_file_get_size</a>(m-&gt;<a class="code hl_variable" href="structMailbox.html#a1f36c27b2c78a6c7c216e3aca9f0c89f">realpath</a>) &gt; 0))</div>
-<div class="line"><span class="lineno">  509</span>  {</div>
-<div class="line"><span class="lineno">  510</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="compmbox_2compress_8c.html#ac72bc28dc8d4e5d6e73aeb6607acfcc6">execute_command</a>(m, ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a0a2254cd8b511a6a5f6b726961252095">cmd_open</a>, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Decompressing %s&quot;</span>)))</div>
-<div class="line"><span class="lineno">  511</span>    {</div>
-<div class="line"><span class="lineno">  512</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Compress command failed: %s&quot;</span>), ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a0a2254cd8b511a6a5f6b726961252095">cmd_open</a>-&gt;<a class="code hl_variable" href="structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a">string</a>);</div>
-<div class="line"><span class="lineno">  513</span>      <span class="keywordflow">goto</span> cmoa_fail2;</div>
-<div class="line"><span class="lineno">  514</span>    }</div>
-<div class="line"><span class="lineno">  515</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> = <a class="code hl_function" href="mx_8c.html#add36baf7d8410fb37158defdaebe9a5d">mx_path_probe</a>(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  516</span>  }</div>
-<div class="line"><span class="lineno">  517</span>  <span class="keywordflow">else</span></div>
+<p class="definition">Definition at line <a class="el" href="compmbox_2compress_8c_source.html#l00475">475</a> of file <a class="el" href="compmbox_2compress_8c_source.html">compress.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  476</span>{</div>
+<div class="line"><span class="lineno">  477</span>  <span class="comment">/* If this succeeds, we know there&#39;s an open-hook */</span></div>
+<div class="line"><span class="lineno">  478</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structCompressInfo.html">CompressInfo</a> *ci = <a class="code hl_function" href="compmbox_2compress_8c.html#a5a32c514bae251affffd84d7328af23a">set_compress_info</a>(m);</div>
+<div class="line"><span class="lineno">  479</span>  <span class="keywordflow">if</span> (!ci)</div>
+<div class="line"><span class="lineno">  480</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  481</span> </div>
+<div class="line"><span class="lineno">  482</span>  <span class="comment">/* To append we need an append-hook or a close-hook */</span></div>
+<div class="line"><span class="lineno">  483</span>  <span class="keywordflow">if</span> (!ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a97e20b0a307d1164a6de7265b28136f7">cmd_append</a> &amp;&amp; !ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#aef70fbe59eca22ca5326424873ffeaae">cmd_close</a>)</div>
+<div class="line"><span class="lineno">  484</span>  {</div>
+<div class="line"><span class="lineno">  485</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t append without an append-hook or close-hook : %s&quot;</span>),</div>
+<div class="line"><span class="lineno">  486</span>               <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  487</span>    <span class="keywordflow">goto</span> cmoa_fail1;</div>
+<div class="line"><span class="lineno">  488</span>  }</div>
+<div class="line"><span class="lineno">  489</span> </div>
+<div class="line"><span class="lineno">  490</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="compmbox_2compress_8c.html#a60e1b3c821fbb441941a42b24149fbb3">setup_paths</a>(m) != 0)</div>
+<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
+<div class="line"><span class="lineno">  492</span> </div>
+<div class="line"><span class="lineno">  493</span>  <span class="comment">/* Lock the realpath for the duration of the append.</span></div>
+<div class="line"><span class="lineno">  494</span><span class="comment">   * It will be unlocked in the close */</span></div>
+<div class="line"><span class="lineno">  495</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="compmbox_2compress_8c.html#a8c82fa05ac9a30a1cd0e5c5b472ae066">lock_realpath</a>(m, <span class="keyword">true</span>))</div>
+<div class="line"><span class="lineno">  496</span>  {</div>
+<div class="line"><span class="lineno">  497</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Unable to lock mailbox&quot;</span>));</div>
+<div class="line"><span class="lineno">  498</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
+<div class="line"><span class="lineno">  499</span>  }</div>
+<div class="line"><span class="lineno">  500</span> </div>
+<div class="line"><span class="lineno">  501</span>  <span class="comment">/* Open the existing mailbox, unless we are appending */</span></div>
+<div class="line"><span class="lineno">  502</span>  <span class="keywordflow">if</span> (!ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a97e20b0a307d1164a6de7265b28136f7">cmd_append</a> &amp;&amp; (<a class="code hl_function" href="file_8c.html#a75f1c8024613a5e8c23f92d229f52101">mutt_file_get_size</a>(m-&gt;<a class="code hl_variable" href="structMailbox.html#a1f36c27b2c78a6c7c216e3aca9f0c89f">realpath</a>) &gt; 0))</div>
+<div class="line"><span class="lineno">  503</span>  {</div>
+<div class="line"><span class="lineno">  504</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="compmbox_2compress_8c.html#ac72bc28dc8d4e5d6e73aeb6607acfcc6">execute_command</a>(m, ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a0a2254cd8b511a6a5f6b726961252095">cmd_open</a>, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Decompressing %s&quot;</span>)))</div>
+<div class="line"><span class="lineno">  505</span>    {</div>
+<div class="line"><span class="lineno">  506</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Compress command failed: %s&quot;</span>), ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a0a2254cd8b511a6a5f6b726961252095">cmd_open</a>-&gt;<a class="code hl_variable" href="structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a">string</a>);</div>
+<div class="line"><span class="lineno">  507</span>      <span class="keywordflow">goto</span> cmoa_fail2;</div>
+<div class="line"><span class="lineno">  508</span>    }</div>
+<div class="line"><span class="lineno">  509</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> = <a class="code hl_function" href="mx_8c.html#add36baf7d8410fb37158defdaebe9a5d">mx_path_probe</a>(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  510</span>  }</div>
+<div class="line"><span class="lineno">  511</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  512</span>  {</div>
+<div class="line"><span class="lineno">  513</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> = <a class="code hl_function" href="config_2helpers_8c.html#a95398bb7e62a54dcce14a027a926a193">cs_subset_enum</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;mbox_type&quot;</span>);</div>
+<div class="line"><span class="lineno">  514</span>  }</div>
+<div class="line"><span class="lineno">  515</span> </div>
+<div class="line"><span class="lineno">  516</span>  <span class="comment">/* We can only deal with mbox and mmdf mailboxes */</span></div>
+<div class="line"><span class="lineno">  517</span>  <span class="keywordflow">if</span> ((m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> != <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525">MUTT_MBOX</a>) &amp;&amp; (m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> != <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da09cef4c4e3dc42c9137860413dcdb374">MUTT_MMDF</a>))</div>
 <div class="line"><span class="lineno">  518</span>  {</div>
-<div class="line"><span class="lineno">  519</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> = <a class="code hl_function" href="config_2helpers_8c.html#a95398bb7e62a54dcce14a027a926a193">cs_subset_enum</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;mbox_type&quot;</span>);</div>
-<div class="line"><span class="lineno">  520</span>  }</div>
-<div class="line"><span class="lineno">  521</span> </div>
-<div class="line"><span class="lineno">  522</span>  <span class="comment">/* We can only deal with mbox and mmdf mailboxes */</span></div>
-<div class="line"><span class="lineno">  523</span>  <span class="keywordflow">if</span> ((m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> != <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525">MUTT_MBOX</a>) &amp;&amp; (m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> != <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da09cef4c4e3dc42c9137860413dcdb374">MUTT_MMDF</a>))</div>
-<div class="line"><span class="lineno">  524</span>  {</div>
-<div class="line"><span class="lineno">  525</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Unsupported mailbox type for appending&quot;</span>));</div>
-<div class="line"><span class="lineno">  526</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
-<div class="line"><span class="lineno">  527</span>  }</div>
-<div class="line"><span class="lineno">  528</span> </div>
-<div class="line"><span class="lineno">  529</span>  ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472">child_ops</a> = <a class="code hl_function" href="mx_8c.html#aa5b819072a9b84aee79c29a5738c3139">mx_get_ops</a>(m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a>);</div>
-<div class="line"><span class="lineno">  530</span>  <span class="keywordflow">if</span> (!ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472">child_ops</a>)</div>
-<div class="line"><span class="lineno">  531</span>  {</div>
-<div class="line"><span class="lineno">  532</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t find mailbox ops for mailbox type %d&quot;</span>), m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a>);</div>
-<div class="line"><span class="lineno">  533</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
-<div class="line"><span class="lineno">  534</span>  }</div>
-<div class="line"><span class="lineno">  535</span> </div>
-<div class="line"><span class="lineno">  536</span>  <span class="keywordflow">if</span> (!ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472">child_ops</a>-&gt;<a class="code hl_variable" href="structMxOps.html#af201c2c2f87a1253cbaf8ae24f062ef3">mbox_open_append</a>(m, flags))</div>
-<div class="line"><span class="lineno">  537</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
-<div class="line"><span class="lineno">  538</span> </div>
-<div class="line"><span class="lineno">  539</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  540</span> </div>
-<div class="line"><span class="lineno">  541</span>cmoa_fail2:</div>
-<div class="line"><span class="lineno">  542</span>  <span class="comment">/* remove the partial uncompressed file */</span></div>
-<div class="line"><span class="lineno">  543</span>  (void) remove(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  544</span>cmoa_fail1:</div>
-<div class="line"><span class="lineno">  545</span>  <span class="comment">/* Free the compress_info to prevent close from trying to recompress */</span></div>
-<div class="line"><span class="lineno">  546</span>  <a class="code hl_function" href="compmbox_2compress_8c.html#a5ae987f4dda46e1423fedf6a0ac0b2de">compress_info_free</a>(m);</div>
-<div class="line"><span class="lineno">  547</span> </div>
-<div class="line"><span class="lineno">  548</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  549</span>}</div>
+<div class="line"><span class="lineno">  519</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Unsupported mailbox type for appending&quot;</span>));</div>
+<div class="line"><span class="lineno">  520</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
+<div class="line"><span class="lineno">  521</span>  }</div>
+<div class="line"><span class="lineno">  522</span> </div>
+<div class="line"><span class="lineno">  523</span>  ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472">child_ops</a> = <a class="code hl_function" href="mx_8c.html#aa5b819072a9b84aee79c29a5738c3139">mx_get_ops</a>(m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a>);</div>
+<div class="line"><span class="lineno">  524</span>  <span class="keywordflow">if</span> (!ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472">child_ops</a>)</div>
+<div class="line"><span class="lineno">  525</span>  {</div>
+<div class="line"><span class="lineno">  526</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t find mailbox ops for mailbox type %d&quot;</span>), m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a>);</div>
+<div class="line"><span class="lineno">  527</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
+<div class="line"><span class="lineno">  528</span>  }</div>
+<div class="line"><span class="lineno">  529</span> </div>
+<div class="line"><span class="lineno">  530</span>  <span class="keywordflow">if</span> (!ci-&gt;<a class="code hl_variable" href="structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472">child_ops</a>-&gt;<a class="code hl_variable" href="structMxOps.html#af201c2c2f87a1253cbaf8ae24f062ef3">mbox_open_append</a>(m, flags))</div>
+<div class="line"><span class="lineno">  531</span>    <span class="keywordflow">goto</span> cmoa_fail2;</div>
+<div class="line"><span class="lineno">  532</span> </div>
+<div class="line"><span class="lineno">  533</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  534</span> </div>
+<div class="line"><span class="lineno">  535</span>cmoa_fail2:</div>
+<div class="line"><span class="lineno">  536</span>  <span class="comment">/* remove the partial uncompressed file */</span></div>
+<div class="line"><span class="lineno">  537</span>  (void) remove(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  538</span>cmoa_fail1:</div>
+<div class="line"><span class="lineno">  539</span>  <span class="comment">/* Free the compress_info to prevent close from trying to recompress */</span></div>
+<div class="line"><span class="lineno">  540</span>  <a class="code hl_function" href="compmbox_2compress_8c.html#a5ae987f4dda46e1423fedf6a0ac0b2de">compress_info_free</a>(m);</div>
+<div class="line"><span class="lineno">  541</span> </div>
+<div class="line"><span class="lineno">  542</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  543</span>}</div>
 <div class="ttc" id="acompmbox_2compress_8c_html_a5a32c514bae251affffd84d7328af23a"><div class="ttname"><a href="compmbox_2compress_8c.html#a5a32c514bae251affffd84d7328af23a">set_compress_info</a></div><div class="ttdeci">static struct CompressInfo * set_compress_info(struct Mailbox *m)</div><div class="ttdoc">Find the compress hooks for a mailbox.</div><div class="ttdef"><b>Definition:</b> <a href="compmbox_2compress_8c_source.html#l00238">compress.c:238</a></div></div>
 <div class="ttc" id="acompmbox_2compress_8c_html_a5ae987f4dda46e1423fedf6a0ac0b2de"><div class="ttname"><a href="compmbox_2compress_8c.html#a5ae987f4dda46e1423fedf6a0ac0b2de">compress_info_free</a></div><div class="ttdeci">static void compress_info_free(struct Mailbox *m)</div><div class="ttdoc">Frees the compress info members and structure.</div><div class="ttdef"><b>Definition:</b> <a href="compmbox_2compress_8c_source.html#l00268">compress.c:268</a></div></div>
 <div class="ttc" id="acompmbox_2compress_8c_html_a60e1b3c821fbb441941a42b24149fbb3"><div class="ttname"><a href="compmbox_2compress_8c.html#a60e1b3c821fbb441941a42b24149fbb3">setup_paths</a></div><div class="ttdeci">static int setup_paths(struct Mailbox *m)</div><div class="ttdoc">Set the mailbox paths.</div><div class="ttdef"><b>Definition:</b> <a href="compmbox_2compress_8c_source.html#l00173">compress.c:173</a></div></div>

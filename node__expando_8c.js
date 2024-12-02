@@ -11,5 +11,5 @@ var node__expando_8c =
     [ "skip_until_ch", "node__expando_8c.html#acea677f41e715c26c66353145cfda068", null ],
     [ "node_expando_parse_enclosure", "node__expando_8c.html#a90fd5ef7cc502d11802ea9223d0829dd", null ],
     [ "add_color", "node__expando_8c.html#a7a6dce64bac633817c230fcc8131200e", null ],
-    [ "node_expando_render", "group__expando__render.html#gabd5f268032f048f3255d3fd976e67d82", null ]
+    [ "node_expando_render", "group__expando__render.html#ga3de5fed891ae73d7997420162106f010", null ]
 ];

@@ -1,9 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"color_8c_source.html":[2,0,6,4],
-"color_8h.html":[2,0,6,5],
-"color_8h.html#a35f1332269e545cf1ec7f30fc9424442":[2,0,6,5,7],
-"color_8h.html#a4446c94565fccfad7ca90b914bfe3ff5":[2,0,6,5,5],
 "color_8h.html#a4476932702aa028f1fcdc565633c03cf":[2,0,6,5,6],
 "color_8h.html#a56e1aea61ee305e3648158362333b3a8":[2,0,6,5,0],
 "color_8h.html#a8f62b76a0baef9936162697d43edddf3":[2,0,6,5,4],
@@ -229,13 +225,10 @@ var NAVTREEINDEX4 =
 "compose_2config_8c.html#ab8182aefe39a9e841d8e80ea0a8bec35":[2,0,9,7,2],
 "compose_2config_8c_source.html":[2,0,9,7],
 "compose_2expando_8c.html":[2,0,9,9],
-"compose_2expando_8c.html#a1812a6fdfbac7b43b971d6d09936f6db":[2,0,9,9,6],
-"compose_2expando_8c.html#a5a3d5fb4ca6e3fd831215516cfb6be5a":[2,0,9,9,0],
-"compose_2expando_8c.html#af1aacae3524a277f14dde25469bfaa8c":[2,0,9,9,7],
+"compose_2expando_8c.html#a363bd86dfac7e246cf136035fb9e6d18":[2,0,9,9,5],
 "compose_2expando_8c_source.html":[2,0,9,9],
 "compose_2expando_8h.html":[2,0,9,10],
-"compose_2expando_8h.html#a1812a6fdfbac7b43b971d6d09936f6db":[2,0,9,10,0],
-"compose_2expando_8h.html#af1aacae3524a277f14dde25469bfaa8c":[2,0,9,10,1],
+"compose_2expando_8h.html#a363bd86dfac7e246cf136035fb9e6d18":[2,0,9,10,0],
 "compose_2expando_8h_source.html":[2,0,9,10],
 "compose_2functions_8c.html":[2,0,9,11],
 "compose_2functions_8c.html#a0b0529f94fccff91159e173fb58a7c64":[2,0,9,11,0],
@@ -249,5 +242,12 @@ var NAVTREEINDEX4 =
 "compose_2functions_8c.html#ab888d10bda8b3f792707eb614bc9d7b1":[2,0,9,11,3],
 "compose_2functions_8c.html#ad47746953723123b042d5fd6d6719ec8":[2,0,9,11,47],
 "compose_2functions_8c.html#ae368aa194ea8e0a6b877e152c0f52eae":[2,0,9,11,4],
-"compose_2functions_8c_source.html":[2,0,9,11]
+"compose_2functions_8c_source.html":[2,0,9,11],
+"compose_2functions_8h.html":[2,0,9,12],
+"compose_2functions_8h.html#a0252411a8be6a975ff178864a70f4fad":[2,0,9,12,1],
+"compose_2functions_8h_source.html":[2,0,9,12],
+"compose_2lib_8h.html":[2,0,9,13],
+"compose_2lib_8h.html#adf568d592758fae1758bbb4dc4e3e554":[2,0,9,13,0],
+"compose_2lib_8h_source.html":[2,0,9,13],
+"compose_2private_8h.html":[2,0,9,14]
 };

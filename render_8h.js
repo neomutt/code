@@ -1,7 +1,6 @@
 var render_8h =
 [
     [ "ExpandoRenderCallback", "structExpandoRenderCallback.html", "structExpandoRenderCallback" ],
-    [ "ExpandoRenderData", "structExpandoRenderData.html", "structExpandoRenderData" ],
     [ "MUTT_FORMAT_NO_FLAGS", "render_8h.html#a5167e8b2777abe5e02be90e0d2a816de", null ],
     [ "MUTT_FORMAT_FORCESUBJ", "render_8h.html#a4e0cfbd12c8b35a6133f01f5aecce174", null ],
     [ "MUTT_FORMAT_TREE", "render_8h.html#a81048fb11bd50194942c9a92abfba4ca", null ],
@@ -12,5 +11,5 @@ var render_8h =
     [ "MuttFormatFlags", "render_8h.html#ad2734d319d795141616e1b5f241be1b2", null ],
     [ "get_string_t", "render_8h.html#a49b0096b70a1a613accc7be1c4c5337a", null ],
     [ "get_number_t", "render_8h.html#a75f776223e01be28f85bb98f1bd51c6f", null ],
-    [ "node_render", "render_8h.html#a623e7614b6d40f832b235f6bd42f47f7", null ]
+    [ "node_render", "render_8h.html#a8e68e50878bc684afc146c163d7ea95c", null ]
 ];

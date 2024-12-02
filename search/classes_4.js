@@ -29,6 +29,5 @@ var searchData=
   ['expandonode_26',['ExpandoNode',['../structExpandoNode.html',1,'']]],
   ['expandoparseerror_27',['ExpandoParseError',['../structExpandoParseError.html',1,'']]],
   ['expandorendercallback_28',['ExpandoRenderCallback',['../structExpandoRenderCallback.html',1,'']]],
-  ['expandorenderdata_29',['ExpandoRenderData',['../structExpandoRenderData.html',1,'']]],
-  ['extkey_30',['Extkey',['../structExtkey.html',1,'']]]
+  ['extkey_29',['Extkey',['../structExtkey.html',1,'']]]
 ];

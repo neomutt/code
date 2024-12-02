@@ -22,6 +22,5 @@ var attach_2expando_8c =
     [ "body_tagged_num", "group__expando__get__number__api.html#ga22b9d308a9ad35aa7871ce32bb6b6e8d", null ],
     [ "body_unlink", "group__expando__get__string__api.html#gacf3f8261cc8326d694cf6e96fb625864", null ],
     [ "body_unlink_num", "group__expando__get__number__api.html#gac85a2dfa061c7d69112306db5f6d916e", null ],
-    [ "AttachRenderCallbacks1", "attach_2expando_8c.html#a5b54f7293931e18567893231bb8c557e", null ],
-    [ "AttachRenderCallbacks2", "attach_2expando_8c.html#a1b075b7c4768ddcede2571990c241494", null ]
+    [ "AttachRenderCallbacks", "attach_2expando_8c.html#a327152e95de2097582ef151f0ba71fbe", null ]
 ];

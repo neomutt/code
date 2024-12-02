@@ -27,6 +27,5 @@ var browser_2expando_8c =
     [ "folder_unread_count", "group__expando__get__string__api.html#gaf456c4dc8c493ebc7366902a8a20f239", null ],
     [ "folder_unread_count_num", "group__expando__get__number__api.html#gac4dfa45cd8d306c7e8019a8e0f7c4bf5", null ],
     [ "global_padding_space", "group__expando__get__string__api.html#ga97aa02af8726fdf3268fb000f173e4b3", null ],
-    [ "FolderRenderCallbacks1", "browser_2expando_8c.html#a758f46c8e1d9c6e8a92873f0a9f840bf", null ],
-    [ "FolderRenderCallbacks2", "browser_2expando_8c.html#a8cdc002a1bef16c4bb1be1f2f17bcc5b", null ]
+    [ "FolderRenderCallbacks", "browser_2expando_8c.html#ad10774a3904c0190c4794e71797d788c", null ]
 ];

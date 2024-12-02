@@ -27,7 +27,5 @@ var expando__status_8c =
     [ "index_unread_mailboxes_num", "group__expando__get__number__api.html#gac2f099f81791b4bf4f5cc2ac78507982", null ],
     [ "menu_percentage", "group__expando__get__string__api.html#ga42529d262379defd3e297e96e7f92411", null ],
     [ "menu_percentage_num", "group__expando__get__number__api.html#gadd592413af56197fea0ab4cdd9f04982", null ],
-    [ "StatusRenderCallbacks1", "expando__status_8c.html#a139755cda67e02e6678162ca6ffb7130", null ],
-    [ "StatusRenderCallbacks2", "expando__status_8c.html#acba32775dbe1795bfa630e74054cbd89", null ],
-    [ "StatusRenderCallbacks3", "expando__status_8c.html#afe8a23939b878b73bf8e1e834b91a2d6", null ]
+    [ "StatusRenderCallbacks", "expando__status_8c.html#a059b649175299a90d7c0406607666a41", null ]
 ];

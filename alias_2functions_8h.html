@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-11-14-131-g707bcf</span>
+   &#160;<span id="projectnumber">2024-11-14-138-ge5ca67</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -419,86 +419,86 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="dlg__query_8c_source.html#l00195">195</a> of file <a class="el" href="dlg__query_8c_source.html">dlg_query.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  196</span>{</div>
-<div class="line"><span class="lineno">  197</span>  FILE *fp = NULL;</div>
-<div class="line"><span class="lineno">  198</span>  <span class="keywordtype">char</span> *buf = NULL;</div>
-<div class="line"><span class="lineno">  199</span>  <span class="keywordtype">size_t</span> buflen;</div>
-<div class="line"><span class="lineno">  200</span>  <span class="keywordtype">char</span> *msg = NULL;</div>
-<div class="line"><span class="lineno">  201</span>  <span class="keywordtype">size_t</span> msglen = 0;</div>
-<div class="line"><span class="lineno">  202</span>  <span class="keywordtype">char</span> *tok = NULL;</div>
-<div class="line"><span class="lineno">  203</span>  <span class="keywordtype">char</span> *next_tok = NULL;</div>
-<div class="line"><span class="lineno">  204</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *cmd = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  205</span> </div>
-<div class="line"><span class="lineno">  206</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_query_command = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(sub, <span class="stringliteral">&quot;query_command&quot;</span>);</div>
-<div class="line"><span class="lineno">  207</span>  <a class="code hl_function" href="file_8c.html#a38a33d4b10796145aab0ca1f802ff26f">buf_file_expand_fmt_quote</a>(cmd, c_query_command, s);</div>
-<div class="line"><span class="lineno">  208</span> </div>
-<div class="line"><span class="lineno">  209</span>  pid_t pid = <a class="code hl_function" href="mutt_2filter_8c.html#ad1ec6916f8ee2520af1711891f6b5302">filter_create</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(cmd), NULL, &amp;fp, NULL, <a class="code hl_variable" href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a>);</div>
-<div class="line"><span class="lineno">  210</span>  <span class="keywordflow">if</span> (pid &lt; 0)</div>
-<div class="line"><span class="lineno">  211</span>  {</div>
-<div class="line"><span class="lineno">  212</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;unable to fork command: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(cmd));</div>
-<div class="line"><span class="lineno">  213</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;cmd);</div>
-<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  215</span>  }</div>
-<div class="line"><span class="lineno">  216</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;cmd);</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>  <span class="keywordflow">if</span> (verbose)</div>
-<div class="line"><span class="lineno">  219</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Waiting for response...&quot;</span>));</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *addr = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  222</span>  <span class="comment">/* The query protocol first reads one NL-terminated line. If an error</span></div>
-<div class="line"><span class="lineno">  223</span><span class="comment">   * occurs, this is assumed to be an error message. Otherwise it&#39;s ignored. */</span></div>
-<div class="line"><span class="lineno">  224</span>  msg = <a class="code hl_function" href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a>(msg, &amp;msglen, fp, NULL, <a class="code hl_define" href="file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa">MUTT_RL_NO_FLAGS</a>);</div>
-<div class="line"><span class="lineno">  225</span>  <span class="keywordflow">while</span> ((buf = <a class="code hl_function" href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a>(buf, &amp;buflen, fp, NULL, <a class="code hl_define" href="file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa">MUTT_RL_NO_FLAGS</a>)))</div>
-<div class="line"><span class="lineno">  226</span>  {</div>
-<div class="line"><span class="lineno">  227</span>    tok = buf;</div>
-<div class="line"><span class="lineno">  228</span>    next_tok = strchr(tok, <span class="charliteral">&#39;\t&#39;</span>);</div>
-<div class="line"><span class="lineno">  229</span>    <span class="keywordflow">if</span> (next_tok)</div>
-<div class="line"><span class="lineno">  230</span>      *next_tok++ = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  231</span> </div>
-<div class="line"><span class="lineno">  232</span>    <span class="keywordflow">if</span> (*tok == <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  233</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  234</span> </div>
-<div class="line"><span class="lineno">  235</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structAlias.html">Alias</a> *alias = <a class="code hl_function" href="alias_8c.html#aa8bb09e1ec41cd6e59b7de5d00b19380">alias_new</a>();</div>
-<div class="line"><span class="lineno">  236</span> </div>
-<div class="line"><span class="lineno">  237</span>    <span class="keywordflow">if</span> (next_tok)</div>
-<div class="line"><span class="lineno">  238</span>    {</div>
-<div class="line"><span class="lineno">  239</span>      tok = next_tok;</div>
-<div class="line"><span class="lineno">  240</span>      next_tok = strchr(tok, <span class="charliteral">&#39;\t&#39;</span>);</div>
-<div class="line"><span class="lineno">  241</span>      <span class="keywordflow">if</span> (next_tok)</div>
-<div class="line"><span class="lineno">  242</span>        *next_tok++ = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  243</span> </div>
-<div class="line"><span class="lineno">  244</span>      <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, <span class="stringliteral">&quot;%s &lt;%s&gt;&quot;</span>, tok, buf);</div>
-<div class="line"><span class="lineno">  245</span>      <a class="code hl_function" href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a>(&amp;alias-&gt;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>));</div>
-<div class="line"><span class="lineno">  246</span> </div>
-<div class="line"><span class="lineno">  247</span>      <a class="code hl_function" href="alias_2commands_8c.html#a616800c2b79940c2020ad49e9f2657ce">parse_alias_comments</a>(alias, next_tok);</div>
-<div class="line"><span class="lineno">  248</span>    }</div>
-<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  250</span>    {</div>
-<div class="line"><span class="lineno">  251</span>      <a class="code hl_function" href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a>(&amp;alias-&gt;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, buf); <span class="comment">// Email address</span></div>
-<div class="line"><span class="lineno">  252</span>    }</div>
-<div class="line"><span class="lineno">  253</span> </div>
-<div class="line"><span class="lineno">  254</span>    <a class="code hl_define" href="queue_8h.html#a512bee16b46f601078c96c776d2648c3">TAILQ_INSERT_TAIL</a>(al, alias, entries);</div>
-<div class="line"><span class="lineno">  255</span>  }</div>
-<div class="line"><span class="lineno">  256</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>);</div>
-<div class="line"><span class="lineno">  257</span> </div>
-<div class="line"><span class="lineno">  258</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  259</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
-<div class="line"><span class="lineno">  260</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid))</div>
+<p class="definition">Definition at line <a class="el" href="dlg__query_8c_source.html#l00189">189</a> of file <a class="el" href="dlg__query_8c_source.html">dlg_query.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  190</span>{</div>
+<div class="line"><span class="lineno">  191</span>  FILE *fp = NULL;</div>
+<div class="line"><span class="lineno">  192</span>  <span class="keywordtype">char</span> *buf = NULL;</div>
+<div class="line"><span class="lineno">  193</span>  <span class="keywordtype">size_t</span> buflen;</div>
+<div class="line"><span class="lineno">  194</span>  <span class="keywordtype">char</span> *msg = NULL;</div>
+<div class="line"><span class="lineno">  195</span>  <span class="keywordtype">size_t</span> msglen = 0;</div>
+<div class="line"><span class="lineno">  196</span>  <span class="keywordtype">char</span> *tok = NULL;</div>
+<div class="line"><span class="lineno">  197</span>  <span class="keywordtype">char</span> *next_tok = NULL;</div>
+<div class="line"><span class="lineno">  198</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *cmd = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_query_command = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(sub, <span class="stringliteral">&quot;query_command&quot;</span>);</div>
+<div class="line"><span class="lineno">  201</span>  <a class="code hl_function" href="file_8c.html#a38a33d4b10796145aab0ca1f802ff26f">buf_file_expand_fmt_quote</a>(cmd, c_query_command, s);</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>  pid_t pid = <a class="code hl_function" href="mutt_2filter_8c.html#ad1ec6916f8ee2520af1711891f6b5302">filter_create</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(cmd), NULL, &amp;fp, NULL, <a class="code hl_variable" href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a>);</div>
+<div class="line"><span class="lineno">  204</span>  <span class="keywordflow">if</span> (pid &lt; 0)</div>
+<div class="line"><span class="lineno">  205</span>  {</div>
+<div class="line"><span class="lineno">  206</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;unable to fork command: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(cmd));</div>
+<div class="line"><span class="lineno">  207</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;cmd);</div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  209</span>  }</div>
+<div class="line"><span class="lineno">  210</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;cmd);</div>
+<div class="line"><span class="lineno">  211</span> </div>
+<div class="line"><span class="lineno">  212</span>  <span class="keywordflow">if</span> (verbose)</div>
+<div class="line"><span class="lineno">  213</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Waiting for response...&quot;</span>));</div>
+<div class="line"><span class="lineno">  214</span> </div>
+<div class="line"><span class="lineno">  215</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *addr = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  216</span>  <span class="comment">/* The query protocol first reads one NL-terminated line. If an error</span></div>
+<div class="line"><span class="lineno">  217</span><span class="comment">   * occurs, this is assumed to be an error message. Otherwise it&#39;s ignored. */</span></div>
+<div class="line"><span class="lineno">  218</span>  msg = <a class="code hl_function" href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a>(msg, &amp;msglen, fp, NULL, <a class="code hl_define" href="file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa">MUTT_RL_NO_FLAGS</a>);</div>
+<div class="line"><span class="lineno">  219</span>  <span class="keywordflow">while</span> ((buf = <a class="code hl_function" href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a>(buf, &amp;buflen, fp, NULL, <a class="code hl_define" href="file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa">MUTT_RL_NO_FLAGS</a>)))</div>
+<div class="line"><span class="lineno">  220</span>  {</div>
+<div class="line"><span class="lineno">  221</span>    tok = buf;</div>
+<div class="line"><span class="lineno">  222</span>    next_tok = strchr(tok, <span class="charliteral">&#39;\t&#39;</span>);</div>
+<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> (next_tok)</div>
+<div class="line"><span class="lineno">  224</span>      *next_tok++ = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>    <span class="keywordflow">if</span> (*tok == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  227</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  228</span> </div>
+<div class="line"><span class="lineno">  229</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structAlias.html">Alias</a> *alias = <a class="code hl_function" href="alias_8c.html#aa8bb09e1ec41cd6e59b7de5d00b19380">alias_new</a>();</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>    <span class="keywordflow">if</span> (next_tok)</div>
+<div class="line"><span class="lineno">  232</span>    {</div>
+<div class="line"><span class="lineno">  233</span>      tok = next_tok;</div>
+<div class="line"><span class="lineno">  234</span>      next_tok = strchr(tok, <span class="charliteral">&#39;\t&#39;</span>);</div>
+<div class="line"><span class="lineno">  235</span>      <span class="keywordflow">if</span> (next_tok)</div>
+<div class="line"><span class="lineno">  236</span>        *next_tok++ = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>      <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, <span class="stringliteral">&quot;%s &lt;%s&gt;&quot;</span>, tok, buf);</div>
+<div class="line"><span class="lineno">  239</span>      <a class="code hl_function" href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a>(&amp;alias-&gt;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>));</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>      <a class="code hl_function" href="alias_2commands_8c.html#a616800c2b79940c2020ad49e9f2657ce">parse_alias_comments</a>(alias, next_tok);</div>
+<div class="line"><span class="lineno">  242</span>    }</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  244</span>    {</div>
+<div class="line"><span class="lineno">  245</span>      <a class="code hl_function" href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a>(&amp;alias-&gt;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, buf); <span class="comment">// Email address</span></div>
+<div class="line"><span class="lineno">  246</span>    }</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>    <a class="code hl_define" href="queue_8h.html#a512bee16b46f601078c96c776d2648c3">TAILQ_INSERT_TAIL</a>(al, alias, entries);</div>
+<div class="line"><span class="lineno">  249</span>  }</div>
+<div class="line"><span class="lineno">  250</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>);</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  253</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
+<div class="line"><span class="lineno">  254</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid))</div>
+<div class="line"><span class="lineno">  255</span>  {</div>
+<div class="line"><span class="lineno">  256</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error: %s\n&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">if</span> (verbose)</div>
+<div class="line"><span class="lineno">  258</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  259</span>  }</div>
+<div class="line"><span class="lineno">  260</span>  <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  261</span>  {</div>
-<div class="line"><span class="lineno">  262</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error: %s\n&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">if</span> (verbose)</div>
-<div class="line"><span class="lineno">  264</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  265</span>  }</div>
-<div class="line"><span class="lineno">  266</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  267</span>  {</div>
-<div class="line"><span class="lineno">  268</span>    <span class="keywordflow">if</span> (verbose)</div>
-<div class="line"><span class="lineno">  269</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  270</span>  }</div>
-<div class="line"><span class="lineno">  271</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;msg);</div>
-<div class="line"><span class="lineno">  272</span> </div>
-<div class="line"><span class="lineno">  273</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  274</span>}</div>
+<div class="line"><span class="lineno">  262</span>    <span class="keywordflow">if</span> (verbose)</div>
+<div class="line"><span class="lineno">  263</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  264</span>  }</div>
+<div class="line"><span class="lineno">  265</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;msg);</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  268</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a9bb4abe92405bac67f03e36936a29b6e"><div class="ttname"><a href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a></div><div class="ttdeci">int mutt_addrlist_parse(struct AddressList *al, const char *s)</div><div class="ttdoc">Parse a list of email addresses.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l00480">address.c:480</a></div></div>
 <div class="ttc" id="aalias_2commands_8c_html_a616800c2b79940c2020ad49e9f2657ce"><div class="ttname"><a href="alias_2commands_8c.html#a616800c2b79940c2020ad49e9f2657ce">parse_alias_comments</a></div><div class="ttdeci">void parse_alias_comments(struct Alias *alias, const char *com)</div><div class="ttdoc">Parse the alias/query comment field.</div><div class="ttdef"><b>Definition:</b> <a href="alias_2commands_8c_source.html#l00095">commands.c:95</a></div></div>
 <div class="ttc" id="aalias_8c_html_aa8bb09e1ec41cd6e59b7de5d00b19380"><div class="ttname"><a href="alias_8c.html#aa8bb09e1ec41cd6e59b7de5d00b19380">alias_new</a></div><div class="ttdeci">struct Alias * alias_new(void)</div><div class="ttdoc">Create a new Alias.</div><div class="ttdef"><b>Definition:</b> <a href="alias_8c_source.html#l00660">alias.c:660</a></div></div>

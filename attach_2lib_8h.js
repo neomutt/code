@@ -6,6 +6,5 @@ var attach_2lib_8h =
     [ "attach_body_previous", "attach_2lib_8h.html#af05337416de845ffb859c40809fba19a", null ],
     [ "parse_attachments", "group__command__parse.html#gaf433f0af5d00dc471fbcd0b62c1b2f9b", null ],
     [ "parse_unattachments", "group__command__parse.html#gabbd9abd9a9e82ae4de6db96b7c6d8df2", null ],
-    [ "AttachRenderCallbacks1", "attach_2lib_8h.html#a5b54f7293931e18567893231bb8c557e", null ],
-    [ "AttachRenderCallbacks2", "attach_2lib_8h.html#a1b075b7c4768ddcede2571990c241494", null ]
+    [ "AttachRenderCallbacks", "attach_2lib_8h.html#a327152e95de2097582ef151f0ba71fbe", null ]
 ];

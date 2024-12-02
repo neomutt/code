@@ -29,7 +29,5 @@ var expando__index_8h =
       [ "FLAG_CHAR_TO_SUBSCRIBED_LIST", "expando__index_8h.html#a1dc1f13fafabbf343eccee712c5c2824ab0431d479192fbb2c0c1f32193d18220", null ],
       [ "FLAG_CHAR_TO_REPLY_TO", "expando__index_8h.html#a1dc1f13fafabbf343eccee712c5c2824aa2a3e550b7845d0e4e2ce1bf81e8d074", null ]
     ] ],
-    [ "IndexRenderCallbacks1", "expando__index_8h.html#ab5d4b37f0e7045801ef2db313b42cb59", null ],
-    [ "IndexRenderCallbacks2", "expando__index_8h.html#ae10f482c1fb91f93838d9c0023e04553", null ],
-    [ "IndexRenderCallbacks3", "expando__index_8h.html#a6cd75ad5cbff4942a7bcb81dd6e99995", null ]
+    [ "IndexRenderCallbacks", "expando__index_8h.html#a4bc9c3a7c50b6e7ac63b65ed2591d453", null ]
 ];

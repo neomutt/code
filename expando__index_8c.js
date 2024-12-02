@@ -80,7 +80,5 @@ var expando__index_8c =
     [ "envelope_x_label", "group__expando__get__string__api.html#ga35744164b6bd697d3caceddd7234ada1", null ],
     [ "mailbox_message_count", "group__expando__get__number__api.html#ga226b0b97e37d9b2cac8c1441e2ce6918", null ],
     [ "mailbox_percentage", "group__expando__get__string__api.html#ga89e0bef90790a86d0af698d94035144e", null ],
-    [ "IndexRenderCallbacks1", "expando__index_8c.html#ab5d4b37f0e7045801ef2db313b42cb59", null ],
-    [ "IndexRenderCallbacks2", "expando__index_8c.html#ae10f482c1fb91f93838d9c0023e04553", null ],
-    [ "IndexRenderCallbacks3", "expando__index_8c.html#a6cd75ad5cbff4942a7bcb81dd6e99995", null ]
+    [ "IndexRenderCallbacks", "expando__index_8c.html#a4bc9c3a7c50b6e7ac63b65ed2591d453", null ]
 ];

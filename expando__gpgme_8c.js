@@ -14,6 +14,5 @@ var expando__gpgme_8c =
     [ "gpgme_key_id", "group__expando__get__string__api.html#gad584328659eff333c6e1968f76e205c4", null ],
     [ "gpgme_key_length_num", "group__expando__get__number__api.html#ga0b5afe56611c552478e589973ca26d12", null ],
     [ "gpgme_key_protocol", "group__expando__get__string__api.html#ga1b2e1a2a63a871a04e9bbae5d62ff3d1", null ],
-    [ "PgpEntryGpgmeRenderCallbacks1", "expando__gpgme_8c.html#a63af33206f13854081b6dd537f839df4", null ],
-    [ "PgpEntryGpgmeRenderCallbacks2", "expando__gpgme_8c.html#a46247cafc51f204177519d693af2467d", null ]
+    [ "PgpEntryGpgmeRenderCallbacks", "expando__gpgme_8c.html#a47deeb3b632146f9e2ed0304fa2d0d52", null ]
 ];

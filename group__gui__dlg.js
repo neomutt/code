@@ -1,6 +1,6 @@
 var group__gui__dlg =
 [
-    [ "dlg_alias", "group__gui__dlg.html#gaedc1543aea458b7ae09f5c0ae063ceff", null ],
+    [ "dlg_alias", "group__gui__dlg.html#gaee420e636381e1cea6cce6a794b77a14", null ],
     [ "dlg_query", "group__gui__dlg.html#ga829b076c15b48324f760aca2185d28ff", null ],
     [ "dlg_attachment", "group__gui__dlg.html#gac409b9da544a983e07a55108487079be", null ],
     [ "dlg_autocrypt", "group__gui__dlg.html#gab4a4e8d5d5aadc4545c1ad53370a1cc0", null ],

@@ -19,6 +19,5 @@ var expando__pgp_8c =
     [ "pgp_pkey_id", "group__expando__get__string__api.html#gacae655fabaeb0accbe19a3b33f636844", null ],
     [ "pgp_pkey_length_num", "group__expando__get__number__api.html#gacf5a75ddc4d8b421ebb3f3e46061e903", null ],
     [ "TrustFlags", "expando__pgp_8c.html#ac58b0df6c2e955595e3083f363eff6b9", null ],
-    [ "PgpEntryRenderCallbacks1", "expando__pgp_8c.html#acdac0ba3f7c29466745539a6e8b859a0", null ],
-    [ "PgpEntryRenderCallbacks2", "expando__pgp_8c.html#a22050e5aa384a96a062ff79ada9f26d2", null ]
+    [ "PgpEntryRenderCallbacks", "expando__pgp_8c.html#a22732e3236838cab416634db53e351ba", null ]
 ];

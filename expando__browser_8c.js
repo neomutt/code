@@ -1,13 +1,13 @@
 var expando__browser_8c =
 [
-    [ "group_index_a_num", "group__expando__get__number__api.html#gaf68d9b4af7b1b612f85d73d626f1c844", null ],
-    [ "group_index_C_num", "group__expando__get__number__api.html#ga16a6e28c26c5c992bdb4942f4c05612a", null ],
-    [ "group_index_d", "group__expando__get__string__api.html#ga1640011412058926f3a4d0fe23bc3068", null ],
-    [ "group_index_f", "group__expando__get__string__api.html#gac004f7ae462379f4837caa111e947aa3", null ],
-    [ "group_index_M", "group__expando__get__string__api.html#ga21f8a5a5e3424c21fd82e070275d92c0", null ],
-    [ "group_index_n_num", "group__expando__get__number__api.html#ga3fcd567d666fc6b0fceeb63bcddaebb1", null ],
-    [ "group_index_N", "group__expando__get__string__api.html#gab1f6a7b69526097d111e2973f9c004e1", null ],
-    [ "group_index_p_num", "group__expando__get__number__api.html#ga9a6ddc5a08bb31883a95efbb9040a000", null ],
-    [ "group_index_s_num", "group__expando__get__number__api.html#ga016a32e7478c011cfb906dffac3be6ea", null ],
+    [ "group_index_description", "group__expando__get__string__api.html#ga0a96074ac2df9d1a4c5c1156a8c58208", null ],
+    [ "group_index_flags", "group__expando__get__string__api.html#gab7e3adcb609f8168c203c5ab8e35c309", null ],
+    [ "group_index_flags2", "group__expando__get__string__api.html#ga65541f1d9f9081d443f2b10fd09c7d5d", null ],
+    [ "group_index_newsgroup", "group__expando__get__string__api.html#ga80acba97d01015447be5a34d80326f4b", null ],
+    [ "group_index_notify_num", "group__expando__get__number__api.html#ga3552ac7a19c1500ef4b9139ba728fdd7", null ],
+    [ "group_index_new_count_num", "group__expando__get__number__api.html#ga45a9c10c4ab224f66b9187b2720a0e32", null ],
+    [ "group_index_number_num", "group__expando__get__number__api.html#gad2c924934f6fdb76c1523b0c0e9faaff", null ],
+    [ "group_index_poll_num", "group__expando__get__number__api.html#ga8fefef19ed8100e802a01266f2f9993d", null ],
+    [ "group_index_unread_count_num", "group__expando__get__number__api.html#ga9b34f0ddd35c510e7a8e99e3e0c6a94a", null ],
     [ "GroupIndexRenderCallbacks", "expando__browser_8c.html#a59ed7c02c543b136a5f377d0d1a8ece3", null ]
 ];

@@ -8,5 +8,5 @@ var structExpandoNode =
     [ "children", "structExpandoNode.html#adc733309e276118e9d3ef72bf8de33d8", null ],
     [ "ndata", "structExpandoNode.html#a1a1a28faa2cb0cd2b7f82221dcc32831", null ],
     [ "ndata_free", "structExpandoNode.html#ab7c466760db9c101446a79beb037ace8", null ],
-    [ "render", "structExpandoNode.html#a3fd73d2c450d054a0b7b9c2ea95bf894", null ]
+    [ "render", "structExpandoNode.html#a3cadedb7aeb2ef942e57cbcbd946d93a", null ]
 ];

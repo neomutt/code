@@ -1,12 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"core_2message_8h.html#ad82e68e30fee883f62ccbd8135ae5989":[2,0,14,12,1],
-"core_2message_8h_source.html":[2,0,14,12],
-"core_account.html":[17,0],
-"core_command.html":[17,1],
-"core_config_cache.html":[17,2],
-"core_dispatcher.html":[17,3],
-"core_mailbox.html":[17,4],
 "core_message.html":[17,5],
 "core_neomutt.html":[17,6],
 "core_tmp.html":[17,7],
@@ -249,5 +242,12 @@ var NAVTREEINDEX7 =
 "curs__lib_8c_source.html":[2,0,21,0],
 "curs__lib_8h.html":[2,0,21,1],
 "curs__lib_8h.html#a0590f11f42a6242002ea4c842438231b":[2,0,21,1,5],
-"curs__lib_8h.html#a31e6cf5a50bccf3cb75b6a7f2ecf1405":[2,0,21,1,7]
+"curs__lib_8h.html#a31e6cf5a50bccf3cb75b6a7f2ecf1405":[2,0,21,1,7],
+"curs__lib_8h.html#a48a9fd66de2ef76e2b72704badd3c40b":[2,0,21,1,19],
+"curs__lib_8h.html#a56f61b461d106fcc36eb09c0690f9abb":[2,0,21,1,15],
+"curs__lib_8h.html#a6ef7b1ace696713f403479e10c391642":[2,0,21,1,18],
+"curs__lib_8h.html#a6fb1a3233123b74771ce95c448b22b79":[2,0,21,1,11],
+"curs__lib_8h.html#a7d47b607e72adbec2c1963d6ae164a85":[2,0,21,1,8],
+"curs__lib_8h.html#a861e3d2f47099563f8c21a1bb0eb2092":[2,0,21,1,10],
+"curs__lib_8h.html#a8a7310e8fd6bf845a7754c8787d7333e":[2,0,21,1,17]
 };
