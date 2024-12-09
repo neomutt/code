@@ -2,6 +2,7 @@ var mbyte_8h =
 [
     [ "IsPrint", "mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705", null ],
     [ "IsWPrint", "mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d", null ],
+    [ "IsBOM", "mbyte_8h.html#a0b91f5349a135366d05c62135903084f", null ],
     [ "mutt_mb_charlen", "mbyte_8h.html#a165139f7a1f06cfcbc1fc377d5236f8b", null ],
     [ "mutt_mb_filter_unprintable", "mbyte_8h.html#a2ff7f0c0693d59c4fbb25cff5198a208", null ],
     [ "mutt_mb_get_initials", "mbyte_8h.html#a877da38f06afd8673f82b2bc418ed3fd", null ],

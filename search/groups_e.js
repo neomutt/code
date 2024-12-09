@@ -18,5 +18,6 @@ var searchData=
   ['poll_28_29_15',['poll()',['../group__connection__poll.html',1,'']]],
   ['pop_20authentication_20api_16',['POP Authentication API',['../group__pop__authenticate.html',1,'']]],
   ['pop_20response_20parser_20api_17',['POP Response Parser API',['../group__pop__fetch__api.html',1,'']]],
-  ['postpone_20function_20api_18',['Postpone Function API',['../group__postpone__function__api.html',1,'']]]
+  ['postpone_20function_20api_18',['Postpone Function API',['../group__postpone__function__api.html',1,'']]],
+  ['preview_20function_20api_19',['Preview Function API',['../group__preview__function__api.html',1,'']]]
 ];

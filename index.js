@@ -1,12 +1,12 @@
 var index =
 [
     [ "Alternate address handling", "neo_alternates.html", [
-      [ "Libraries", "index.html#autotoc_md81", null ],
-      [ "Miscellaneous files", "index.html#autotoc_md82", null ],
-      [ "Building these Docs", "index.html#autotoc_md83", null ],
-      [ "Installing the Docs", "index.html#autotoc_md84", [
-        [ "Data", "neo_alternates.html#autotoc_md632", null ],
-        [ "Functions", "neo_alternates.html#autotoc_md633", null ]
+      [ "Libraries", "index.html#autotoc_md84", null ],
+      [ "Miscellaneous files", "index.html#autotoc_md85", null ],
+      [ "Building these Docs", "index.html#autotoc_md86", null ],
+      [ "Installing the Docs", "index.html#autotoc_md87", [
+        [ "Data", "neo_alternates.html#autotoc_md637", null ],
+        [ "Functions", "neo_alternates.html#autotoc_md638", null ]
       ] ]
     ] ],
     [ "Functions to parse commands in a config file", "neo_commands.html", null ],

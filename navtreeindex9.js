@@ -1,5 +1,11 @@
 var NAVTREEINDEX9 =
 {
+"dir_75abb9231d86341b14b61e580a744c28.html":[2,0,36],
+"dir_7c4da566fc26790d35e426e8356dec56.html":[2,0,0],
+"dir_803ea0153ad76bee9f0b07478cfbff67.html":[2,0,12],
+"dir_84d4ec99856759213102e4209c09c524.html":[2,0,15],
+"dir_880caa4cc75494b45961a8ebdc8ca26e.html":[2,0,33],
+"dir_8fdb7f4d27c6340e06275085d6f34a15.html":[2,0,38],
 "dir_92ddae6c8b6535f88cdb370049e1d22d.html":[2,0,27],
 "dir_959358b93da0cc1b7b624951864bb412.html":[2,0,9],
 "dir_9787aee6b318e7158c982fb5567cbd8b.html":[2,0,31],
@@ -91,11 +97,11 @@ var NAVTREEINDEX9 =
 "dlg__browser_8c.html#afed209a69c8a1ba27282de9d6972b744":[2,0,5,2,2],
 "dlg__browser_8c_source.html":[2,0,5,2],
 "dlg__compose_8c.html":[2,0,9,8],
-"dlg__compose_8c.html#a26c85658a833eeebe97b7b0438b1b9ab":[2,0,9,8,3],
-"dlg__compose_8c.html#a51ed67e9d27545c7982d196826bbc7bc":[2,0,9,8,4],
-"dlg__compose_8c.html#a785f04ab170c17ce970ceea7d2615150":[2,0,9,8,7],
-"dlg__compose_8c.html#aa5d7e91e9396582befc17198ad78464c":[2,0,9,8,8],
-"dlg__compose_8c.html#ad694d73a9d8ed13b02bc90ebe38cb0a3":[2,0,9,8,5],
+"dlg__compose_8c.html#a26c85658a833eeebe97b7b0438b1b9ab":[2,0,9,8,4],
+"dlg__compose_8c.html#a51ed67e9d27545c7982d196826bbc7bc":[2,0,9,8,5],
+"dlg__compose_8c.html#a785f04ab170c17ce970ceea7d2615150":[2,0,9,8,8],
+"dlg__compose_8c.html#aa5d7e91e9396582befc17198ad78464c":[2,0,9,8,9],
+"dlg__compose_8c.html#ad694d73a9d8ed13b02bc90ebe38cb0a3":[2,0,9,8,6],
 "dlg__compose_8c_source.html":[2,0,9,8],
 "dlg__gpgme_8c.html":[2,0,33,13],
 "dlg__gpgme_8c.html#aef081963c1fd0287be5bfff4fc37912a":[2,0,33,13,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX9 =
 "editor_enter.html":[19,0],
 "editor_functions.html":[19,1],
 "editor_state.html":[19,2],
-"editor_window.html":[19,3],
-"email_2body_8c.html":[2,0,17,0],
-"email_2body_8c.html#a129af1c316fcbc26b55fb48957bab2cb":[2,0,17,0,1],
-"email_2body_8c.html#a37b346253e3b97aa64bb38ffc8d1ea0c":[2,0,17,0,0],
-"email_2body_8c.html#a4a63ed39ada6cca40f6890ef06950059":[2,0,17,0,3],
-"email_2body_8c.html#af8bf716dc11fb780a1d2492fe722e1ae":[2,0,17,0,2],
-"email_2body_8c_source.html":[2,0,17,0]
+"editor_window.html":[19,3]
 };

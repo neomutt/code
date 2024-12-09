@@ -216,7 +216,9 @@ var NAVTREEINDEX4 =
 "compmbox_expando.html":[11,1],
 "compose_2attach_8c.html":[2,0,9,0],
 "compose_2attach_8c.html#a0a04fab6930b2ffd45c5e07e9dd5cee2":[2,0,9,0,0],
-"compose_2attach_8c.html#acdad1afc334d7c1d955b22b96b47b187":[2,0,9,0,6],
+"compose_2attach_8c.html#aa66cf8e620299622be5b5844e7e07ccb":[2,0,9,0,8],
+"compose_2attach_8c.html#acdad1afc334d7c1d955b22b96b47b187":[2,0,9,0,7],
+"compose_2attach_8c.html#af07cac11910dec7eae1c77ac8631456c":[2,0,9,0,9],
 "compose_2attach_8c.html#gaf03da6c6d8a55ac381f26505a9414b4f":[2,0,9,0,3],
 "compose_2attach_8c_source.html":[2,0,9,0],
 "compose_2config_8c.html":[2,0,9,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "compose_2functions_8h.html#a0252411a8be6a975ff178864a70f4fad":[2,0,9,12,1],
 "compose_2functions_8h_source.html":[2,0,9,12],
 "compose_2lib_8h.html":[2,0,9,13],
-"compose_2lib_8h.html#adf568d592758fae1758bbb4dc4e3e554":[2,0,9,13,0],
-"compose_2lib_8h_source.html":[2,0,9,13],
-"compose_2private_8h.html":[2,0,9,14]
+"compose_2lib_8h.html#adf568d592758fae1758bbb4dc4e3e554":[2,0,9,13,0]
 };

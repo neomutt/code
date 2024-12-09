@@ -1,11 +1,11 @@
 var lib_hcache =
 [
     [ "Config used by Header Cache", "hc_config.html", [
-      [ "Operation", "lib_hcache.html#autotoc_md61", null ],
-      [ "Source", "lib_hcache.html#autotoc_md62", null ],
-      [ "Functions", "lib_hcache.html#autotoc_md343", [
-        [ "Data", "hc_config.html#autotoc_md339", null ],
-        [ "Functions", "hc_config.html#autotoc_md340", null ]
+      [ "Operation", "lib_hcache.html#autotoc_md64", null ],
+      [ "Source", "lib_hcache.html#autotoc_md65", null ],
+      [ "Functions", "lib_hcache.html#autotoc_md348", [
+        [ "Data", "hc_config.html#autotoc_md344", null ],
+        [ "Functions", "hc_config.html#autotoc_md345", null ]
       ] ]
     ] ],
     [ "Header cache multiplexor", "hc_hcache.html", null ],

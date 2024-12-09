@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-11-14-138-ge5ca67</span>
+   &#160;<span id="projectnumber">2024-11-14-151-g38259e</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -137,6 +137,8 @@ Macros</h2></td></tr>
 <tr class="separator:a5d72c6bce8097c88972c989bedf2f705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac15ed1bc3e367f33ed66c9d76d16334d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d">IsWPrint</a>(wc)&#160;&#160;&#160;(iswprint(wc) || (<a class="el" href="mbyte_8c.html#a82f8a6a3adff040ee79e734db05b61b1">OptLocales</a> ? 0 : (wc &gt;= 0xa0)))</td></tr>
 <tr class="separator:ac15ed1bc3e367f33ed66c9d76d16334d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b91f5349a135366d05c62135903084f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mbyte_8h.html#a0b91f5349a135366d05c62135903084f">IsBOM</a>(wc)&#160;&#160;&#160;(wc == L'\xfeff')</td></tr>
+<tr class="separator:a0b91f5349a135366d05c62135903084f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -232,6 +234,26 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mbyte_8h_source.html#l00041">41</a> of file <a class="el" href="mbyte_8h_source.html">mbyte.h</a>.</p>
+
+</div>
+</div>
+<a id="a0b91f5349a135366d05c62135903084f" name="a0b91f5349a135366d05c62135903084f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b91f5349a135366d05c62135903084f">&#9670;&#160;</a></span>IsBOM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IsBOM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">wc</td><td>)</td>
+          <td>&#160;&#160;&#160;(wc == L'\xfeff')</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mbyte_8h_source.html#l00043">43</a> of file <a class="el" href="mbyte_8h_source.html">mbyte.h</a>.</p>
 
 </div>
 </div>
@@ -370,28 +392,33 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  441</span>      memset(&amp;mbstate1, 0, <span class="keyword">sizeof</span>(mbstate1));</div>
 <div class="line"><span class="lineno">  442</span>      wc = <a class="code hl_variable" href="mutt_2charset_8c.html#ac31e11b5fb12abda40361188af9105ef">ReplacementChar</a>;</div>
 <div class="line"><span class="lineno">  443</span>    }</div>
-<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">if</span> (!<a class="code hl_define" href="mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d">IsWPrint</a>(wc))</div>
-<div class="line"><span class="lineno">  445</span>      wc = <span class="charliteral">&#39;?&#39;</span>;</div>
-<div class="line"><span class="lineno">  446</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="mutt_2charset_8c.html#a7bcd93869f482805be7e6d437d29f54d">CharsetIsUtf8</a> &amp;&amp; <a class="code hl_function" href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a>(wc))</div>
-<div class="line"><span class="lineno">  447</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  448</span>    k2 = wcrtomb(scratch, wc, &amp;mbstate2);</div>
-<div class="line"><span class="lineno">  449</span>    scratch[k2] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  450</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, scratch);</div>
-<div class="line"><span class="lineno">  451</span>  }</div>
-<div class="line"><span class="lineno">  452</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(s);</div>
-<div class="line"><span class="lineno">  453</span> </div>
-<div class="line"><span class="lineno">  454</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
-<div class="line"><span class="lineno">  455</span>    *s = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keywordtype">char</span>); <span class="comment">// Fake empty string</span></div>
-<div class="line"><span class="lineno">  456</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  457</span>    *s = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
-<div class="line"><span class="lineno">  458</span> </div>
-<div class="line"><span class="lineno">  459</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  460</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  461</span>}</div>
+<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="mutt_2charset_8c.html#a7bcd93869f482805be7e6d437d29f54d">CharsetIsUtf8</a> &amp;&amp; <a class="code hl_define" href="mbyte_8h.html#a0b91f5349a135366d05c62135903084f">IsBOM</a>(wc))</div>
+<div class="line"><span class="lineno">  445</span>    {</div>
+<div class="line"><span class="lineno">  446</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  447</span>    }</div>
+<div class="line"><span class="lineno">  448</span>    <span class="keywordflow">if</span> (!<a class="code hl_define" href="mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d">IsWPrint</a>(wc))</div>
+<div class="line"><span class="lineno">  449</span>      wc = <span class="charliteral">&#39;?&#39;</span>;</div>
+<div class="line"><span class="lineno">  450</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="mutt_2charset_8c.html#a7bcd93869f482805be7e6d437d29f54d">CharsetIsUtf8</a> &amp;&amp; <a class="code hl_function" href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a>(wc))</div>
+<div class="line"><span class="lineno">  451</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  452</span>    k2 = wcrtomb(scratch, wc, &amp;mbstate2);</div>
+<div class="line"><span class="lineno">  453</span>    scratch[k2] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  454</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, scratch);</div>
+<div class="line"><span class="lineno">  455</span>  }</div>
+<div class="line"><span class="lineno">  456</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(s);</div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
+<div class="line"><span class="lineno">  459</span>    *s = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keywordtype">char</span>); <span class="comment">// Fake empty string</span></div>
+<div class="line"><span class="lineno">  460</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  461</span>    *s = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
+<div class="line"><span class="lineno">  462</span> </div>
+<div class="line"><span class="lineno">  463</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  464</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  465</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00291">buffer.c:291</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9924e74ddcb5280ab380e4627d1fba99"><div class="ttname"><a href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a></div><div class="ttdeci">size_t buf_addstr(struct Buffer *buf, const char *s)</div><div class="ttdoc">Add a string to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00226">buffer.c:226</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ad76477cc0c660bc50162393e997233eb"><div class="ttname"><a href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a></div><div class="ttdeci">char * buf_strdup(const struct Buffer *buf)</div><div class="ttdoc">Copy a Buffer's string.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00571">buffer.c:571</a></div></div>
 <div class="ttc" id="ambyte_8c_html_a8b3655b8b6b2c470b95071f06e2b7a64"><div class="ttname"><a href="mbyte_8c.html#a8b3655b8b6b2c470b95071f06e2b7a64">mutt_mb_is_display_corrupting_utf8</a></div><div class="ttdeci">bool mutt_mb_is_display_corrupting_utf8(wchar_t wc)</div><div class="ttdoc">Will this character corrupt the display?</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8c_source.html#l00385">mbyte.c:385</a></div></div>
+<div class="ttc" id="ambyte_8h_html_a0b91f5349a135366d05c62135903084f"><div class="ttname"><a href="mbyte_8h.html#a0b91f5349a135366d05c62135903084f">IsBOM</a></div><div class="ttdeci">#define IsBOM(wc)</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8h_source.html#l00043">mbyte.h:43</a></div></div>
 <div class="ttc" id="ambyte_8h_html_ac15ed1bc3e367f33ed66c9d76d16334d"><div class="ttname"><a href="mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d">IsWPrint</a></div><div class="ttdeci">#define IsWPrint(wc)</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8h_source.html#l00041">mbyte.h:41</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00055">memory.h:55</a></div></div>
 <div class="ttc" id="amemory_8h_html_a9aaf8f21a29735767a069ff1aee9d7d9"><div class="ttname"><a href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a></div><div class="ttdeci">#define MUTT_MEM_CALLOC(n, type)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00040">memory.h:40</a></div></div>

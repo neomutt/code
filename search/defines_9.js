@@ -62,7 +62,8 @@ var searchData=
   ['is_5fmailbox_59',['IS_MAILBOX',['../types_8h.html#a0fb5dbb0eb019a3889836deb991aae7b',1,'types.h']]],
   ['is_5fmultipart_60',['is_multipart',['../mime_8h.html#aeaf0dc750233c21ac5b499082c6ff62f',1,'mime.h']]],
   ['is_5fspecial_61',['is_special',['../address_2address_8c.html#abd3dab3876f09438368ece04594cd9f5',1,'address.c']]],
-  ['ispell_62',['ISPELL',['../compose_2config_8c.html#aa4edd692877f894c7864779c8cdf767b',1,'config.c']]],
-  ['isprint_63',['IsPrint',['../mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705',1,'mbyte.h']]],
-  ['iswprint_64',['IsWPrint',['../mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d',1,'mbyte.h']]]
+  ['isbom_62',['IsBOM',['../mbyte_8h.html#a0b91f5349a135366d05c62135903084f',1,'mbyte.h']]],
+  ['ispell_63',['ISPELL',['../compose_2config_8c.html#aa4edd692877f894c7864779c8cdf767b',1,'config.c']]],
+  ['isprint_64',['IsPrint',['../mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705',1,'mbyte.h']]],
+  ['iswprint_65',['IsWPrint',['../mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d',1,'mbyte.h']]]
 ];

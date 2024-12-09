@@ -1,7 +1,10 @@
 var group__window__recalc =
 [
     [ "alias_recalc", "group__window__recalc.html#ga05f270a58ed952d2a0adc246441190c5", null ],
+    [ "attach_recalc", "group__window__recalc.html#gac7f32fac8e578a4905e29336e42aa250", null ],
     [ "cbar_recalc", "group__window__recalc.html#ga45b6ef7a2b68a84c1d71816d97ec475a", null ],
+    [ "compose_recalc", "group__window__recalc.html#ga19810257ecfde2de00f4f7812906dac3", null ],
+    [ "preview_recalc", "group__window__recalc.html#ga82b7f442ba2bfeb9b2cd01f5f8dce41f", null ],
     [ "enter_recalc", "group__window__recalc.html#gaa78d5c0a5171d61d1afbced56404ce72", null ],
     [ "env_recalc", "group__window__recalc.html#ga2ac8b6e6ab2aa7c3c9d4d8e4041d7b67", null ],
     [ "msgwin_recalc", "group__window__recalc.html#ga0f2cf24711bdbc3c5704cf8cce07e1ea", null ],

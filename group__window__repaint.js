@@ -1,6 +1,7 @@
 var group__window__repaint =
 [
     [ "cbar_repaint", "group__window__repaint.html#ga095a7f494315f82f45df5bf39a10cf94", null ],
+    [ "preview_repaint", "group__window__repaint.html#gab0478451e37afdacbcd26224a8c4a594", null ],
     [ "enter_repaint", "group__window__repaint.html#ga4da3f2f14730356b2e5e483925b82ffe", null ],
     [ "env_repaint", "group__window__repaint.html#ga715d5c2bca7741c1cb933636b6e6cfa9", null ],
     [ "msgwin_repaint", "group__window__repaint.html#gae7583a8406cfc0e3602be902ab8cac8e", null ],

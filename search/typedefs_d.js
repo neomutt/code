@@ -11,5 +11,6 @@ var searchData=
   ['pgp_5ffunction_5ft_8',['pgp_function_t',['../pgp__functions_8h.html#ab0c0880ba623f4f3e851a5f26ba86447',1,'pgp_functions.h']]],
   ['pgpkeyvalidflags_9',['PgpKeyValidFlags',['../pgpkey_8c.html#afa1aa4d0dec2040afc7e3d72d3ffc6b3',1,'pgpkey.c']]],
   ['pop_5ffetch_5ft_10',['pop_fetch_t',['../pop_2private_8h.html#a6f34d9779646083fed3b121e1997f4f6',1,'private.h']]],
-  ['postpone_5ffunction_5ft_11',['postpone_function_t',['../postpone_2functions_8h.html#a5a3ba6b33cfed4e60535a36d796794ae',1,'functions.h']]]
+  ['postpone_5ffunction_5ft_11',['postpone_function_t',['../postpone_2functions_8h.html#a5a3ba6b33cfed4e60535a36d796794ae',1,'functions.h']]],
+  ['preview_5ffunction_5ft_12',['preview_function_t',['../preview_8c.html#a4be71be4f1e9b336c6d936ccf7d64c88',1,'preview.c']]]
 ];

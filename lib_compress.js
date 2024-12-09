@@ -1,10 +1,10 @@
 var lib_compress =
 [
     [ "Shared compression code", "compress_compress.html", [
-      [ "Interface", "lib_compress.html#autotoc_md34", null ],
-      [ "Source", "lib_compress.html#autotoc_md35", [
-        [ "Data", "compress_compress.html#autotoc_md230", null ],
-        [ "Functions", "compress_compress.html#autotoc_md231", null ]
+      [ "Interface", "lib_compress.html#autotoc_md37", null ],
+      [ "Source", "lib_compress.html#autotoc_md38", [
+        [ "Data", "compress_compress.html#autotoc_md235", null ],
+        [ "Functions", "compress_compress.html#autotoc_md236", null ]
       ] ]
     ] ],
     [ "LZ4 compression", "compress_lz4.html", null ],

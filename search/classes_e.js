@@ -25,6 +25,8 @@ var searchData=
   ['popemaildata_22',['PopEmailData',['../structPopEmailData.html',1,'']]],
   ['postponedata_23',['PostponeData',['../structPostponeData.html',1,'']]],
   ['postponefunction_24',['PostponeFunction',['../structPostponeFunction.html',1,'']]],
-  ['prexstorage_25',['PrexStorage',['../structPrexStorage.html',1,'']]],
-  ['progresswindowdata_26',['ProgressWindowData',['../structProgressWindowData.html',1,'']]]
+  ['previewfunction_25',['PreviewFunction',['../structPreviewFunction.html',1,'']]],
+  ['previewwindowdata_26',['PreviewWindowData',['../structPreviewWindowData.html',1,'']]],
+  ['prexstorage_27',['PrexStorage',['../structPrexStorage.html',1,'']]],
+  ['progresswindowdata_28',['ProgressWindowData',['../structProgressWindowData.html',1,'']]]
 ];

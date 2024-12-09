@@ -1,5 +1,6 @@
 var dlg__compose_8c =
 [
+    [ "compose_recalc", "group__window__recalc.html#ga19810257ecfde2de00f4f7812906dac3", null ],
     [ "compose_config_observer", "group__observer__api.html#ga82dc12838cf57973070cdd4e9c554d41", null ],
     [ "compose_email_observer", "group__observer__api.html#ga56af65dd29bdecb9f92fda3d07347a75", null ],
     [ "compose_window_observer", "group__observer__api.html#gadafec1e26a0cc777c63616051a27f47d", null ],

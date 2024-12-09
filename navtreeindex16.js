@@ -1,5 +1,11 @@
 var NAVTREEINDEX16 =
 {
+"group__cfg__type__string__plus__equals.html#ga211c709aa470c83bf597894755afac9d":[48,8,4,5],
+"group__cfg__type__string__plus__equals.html#ga432e4f33460ba4f01e8ed19c2d36be95":[48,8,4,1],
+"group__cfg__type__string__plus__equals.html#ga8d660979e628a6028b06e1fc7658f6dc":[48,8,4,2],
+"group__cfg__type__string__plus__equals.html#ga98ecf62db278f672852bab607497c047":[48,8,4,4],
+"group__cfg__type__string__plus__equals.html#gac0aa604c89779d8594360606b06e10aa":[48,8,4,0],
+"group__cfg__type__string__plus__equals.html#gacf2b7ffeec3e25e37e32866bf5831d7c":[48,8,4,3],
 "group__cfg__type__string__set.html":[48,8,0],
 "group__cfg__type__string__set.html#ga038de06121ff19dcea9bb18d34df4ad9":[48,8,0,10],
 "group__cfg__type__string__set.html#ga1836b567baead24f9ae06e3abb1cf01b":[48,8,0,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX16 =
 "group__crypto__send__menu.html#ga95da8ee8b6073935efb814164ff9ee78":[48,39,10,3],
 "group__crypto__send__menu.html#gaf6bacfca0a7821fb11394b0469c37709":[48,39,10,1],
 "group__crypto__set__sender.html":[48,39,11],
-"group__crypto__set__sender.html#ga192c41e1923f64fd284a130d27328cb2":[48,39,11,0],
-"group__crypto__sign__message.html":[48,39,8],
-"group__crypto__sign__message.html#ga4b65a3544c6b5557c5ef6d7670c31e34":[48,39,8,2],
-"group__crypto__sign__message.html#ga55f07d68e357e30d78443c9bf658403e":[48,39,8,1],
-"group__crypto__sign__message.html#ga8b92663dcfebcf295d41d9837985801a":[48,39,8,3],
-"group__crypto__sign__message.html#gade56dd6d83ec75886a5fa5bcd15bbd9d":[48,39,8,0],
-"group__crypto__smime__build__smime__entity.html":[48,39,21]
+"group__crypto__set__sender.html#ga192c41e1923f64fd284a130d27328cb2":[48,39,11,0]
 };

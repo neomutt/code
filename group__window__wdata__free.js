@@ -2,6 +2,7 @@ var group__window__wdata__free =
 [
     [ "browser_private_data_free", "group__window__wdata__free.html#ga401482150811a9473168a7f1624e989e", null ],
     [ "cbar_data_free", "group__window__wdata__free.html#gae403f2b8a1280c5b30a1bab5e4344b8b", null ],
+    [ "preview_wdata_free", "group__window__wdata__free.html#ga52df47edac76ede1342a01c84af21da5", null ],
     [ "compose_shared_data_free", "group__window__wdata__free.html#gad8b61b965328344cfccd42b969dec064", null ],
     [ "env_wdata_free", "group__window__wdata__free.html#ga6626946cb05367b4d328a3d19949693c", null ],
     [ "msgwin_wdata_free", "group__window__wdata__free.html#ga6e44a23594bc757166043e886fa3e9c6", null ],
