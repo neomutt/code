@@ -1,5 +1,9 @@
 var NAVTREEINDEX17 =
 {
+"group__crypto__send__menu.html#ga95da8ee8b6073935efb814164ff9ee78":[48,39,10,3],
+"group__crypto__send__menu.html#gaf6bacfca0a7821fb11394b0469c37709":[48,39,10,1],
+"group__crypto__set__sender.html":[48,39,11],
+"group__crypto__set__sender.html#ga192c41e1923f64fd284a130d27328cb2":[48,39,11,0],
 "group__crypto__sign__message.html":[48,39,8],
 "group__crypto__sign__message.html#ga4b65a3544c6b5557c5ef6d7670c31e34":[48,39,8,2],
 "group__crypto__sign__message.html#ga55f07d68e357e30d78443c9bf658403e":[48,39,8,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX17 =
 "group__expando__get__string__api.html#ga6bbe46e7c20c3ce4674877579c9869e4":[48,22,0,46],
 "group__expando__get__string__api.html#ga6d53e73e4fbfcfa05540d6075368e9bf":[48,22,0,8],
 "group__expando__get__string__api.html#ga6de140bf910817bdf677f60dd6279be9":[48,22,0,111],
-"group__expando__get__string__api.html#ga6e886727b2724d226d7eda34a052be79":[48,22,0,26],
-"group__expando__get__string__api.html#ga6f05f788b07cf3a5d6ebdc2985beb64b":[48,22,0,47],
-"group__expando__get__string__api.html#ga72a819547ff2451b11a3a801131e35f2":[48,22,0,54],
-"group__expando__get__string__api.html#ga7672d8aab5a6c8e33a7ce174480c4be1":[48,22,0,110],
-"group__expando__get__string__api.html#ga76d591c958ff05c06faf7bd26a71de21":[48,22,0,81]
+"group__expando__get__string__api.html#ga6e886727b2724d226d7eda34a052be79":[48,22,0,26]
 };

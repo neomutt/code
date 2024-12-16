@@ -11,6 +11,7 @@ var lib_color =
     [ "Colour notifications", "color_notify.html", null ],
     [ "Parse ANSI Sequences", "color_parse_ansi.html", null ],
     [ "Parse colours", "color_parse_color.html", null ],
+    [ "Quoted style", "color_qstyle.html", null ],
     [ "Quoted-Email colours", "color_quote.html", null ],
     [ "Regex Colour", "color_regex.html", null ],
     [ "Simple colour", "color_simple.html", null ]

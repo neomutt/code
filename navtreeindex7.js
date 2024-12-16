@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"core_2message_8h.html#a765710914b1c4e463064022d73b3523f":[2,0,14,12,2],
+"core_2message_8h.html#ad82e68e30fee883f62ccbd8135ae5989":[2,0,14,12,1],
 "core_2message_8h_source.html":[2,0,14,12],
 "core_account.html":[17,0],
 "core_command.html":[17,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "curs__lib_8c.html#ad506c0f8d5c549c330f49e2fa56e207b":[2,0,21,0,11],
 "curs__lib_8c_source.html":[2,0,21,0],
 "curs__lib_8h.html":[2,0,21,1],
-"curs__lib_8h.html#a0590f11f42a6242002ea4c842438231b":[2,0,21,1,5],
-"curs__lib_8h.html#a31e6cf5a50bccf3cb75b6a7f2ecf1405":[2,0,21,1,7],
-"curs__lib_8h.html#a48a9fd66de2ef76e2b72704badd3c40b":[2,0,21,1,19]
+"curs__lib_8h.html#a0590f11f42a6242002ea4c842438231b":[2,0,21,1,5]
 };

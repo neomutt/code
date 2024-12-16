@@ -1,5 +1,16 @@
 var NAVTREEINDEX48 =
 {
+"structMsgWinWindowData.html#aa447c5ed2e99857aab63b690b524b3cd":[1,0,158,4],
+"structMuttFileIter.html":[1,0,160],
+"structMuttFileIter.html#a6d36915919730adb1e42907f62404a73":[1,0,160,0],
+"structMuttFileIter.html#aacfd420beeec918d8ba4c8ecfc444c77":[1,0,160,2],
+"structMuttFileIter.html#abe79ad830baea3b3be7bf3ea18a63f76":[1,0,160,1],
+"structMuttThread.html":[1,0,161],
+"structMuttThread.html#a1fb485f333eb5dbc8b4e74196b818906":[1,0,161,5],
+"structMuttThread.html#a30c80a1167887f0dc4ab7bff443b8df3":[1,0,161,7],
+"structMuttThread.html#a39d5bb1957cb943617225ff5efb9f55c":[1,0,161,8],
+"structMuttThread.html#a3dafd246afbf111a25932721162265c8":[1,0,161,14],
+"structMuttThread.html#a5931c5905063b72935f0b37f044dad00":[1,0,161,11],
 "structMuttThread.html#a68156e7ac570e245272ba291dfd840fd":[1,0,161,3],
 "structMuttThread.html#a7067492dadd86f81def9036474086211":[1,0,161,9],
 "structMuttThread.html#a76cec751739177388526fb9ae65b7383":[1,0,161,12],
@@ -238,16 +249,5 @@ var NAVTREEINDEX48 =
 "structPattern.html#a3a86d7b7703c6667672912971d40f6e4":[1,0,188,0],
 "structPattern.html#a4e88c803a593a311d84fa34d6c634883":[1,0,188,17],
 "structPattern.html#a502bcf07280750bacbba15073bee2aa6":[1,0,188,16],
-"structPattern.html#a5e477ca7e73c6015d187a9b1476c4b2a":[1,0,188,7],
-"structPattern.html#a62f96e70e91227a7f62ff26d0e630a3b":[1,0,188,6],
-"structPattern.html#a6a332741926ea1e2056b350df886c2ac":[1,0,188,12],
-"structPattern.html#a7f4991ea8f62a8a90ec55dedaedc17ff":[1,0,188,8],
-"structPattern.html#aa8bd5e633c1911b5c6fda6812479085a":[1,0,188,1],
-"structPattern.html#aa97631028cf654598903dec75812179c":[1,0,188,9],
-"structPattern.html#ab200683a6bdf319ac4474907a1d82143":[1,0,188,10],
-"structPattern.html#ac30b84c71e88bc933aaaa87fe0afe06e":[1,0,188,2],
-"structPatternCache.html":[1,0,189],
-"structPatternCache.html#a4c3bb04152dbeb1bf88e0290e2d179d4":[1,0,189,4],
-"structPatternCache.html#a568eeef9ffea3c00f4b810355d05458c":[1,0,189,1],
-"structPatternCache.html#a8479e7467a5a88604c6e52ee944fe005":[1,0,189,7]
+"structPattern.html#a5e477ca7e73c6015d187a9b1476c4b2a":[1,0,188,7]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX32 =
 {
+"mx_8c.html#ad58805a8bbfd902091a2766767f3c70d":[2,0,94,17],
+"mx_8c.html#ad7adbbda58c642107eadf33b1fbf0c13":[2,0,94,11],
+"mx_8c.html#ad9772f30292be237af605c682e8f0777":[2,0,94,37],
+"mx_8c.html#add0e192c5f27bf6bd096ae2eb7c0b67b":[2,0,94,14],
 "mx_8c.html#add2885e30ecd4859c902ae1893c75fbe":[2,0,94,29],
 "mx_8c.html#add36baf7d8410fb37158defdaebe9a5d":[2,0,94,21],
 "mx_8c.html#addbeb100364d5be4dd89b74ac73ef067":[2,0,94,28],
@@ -237,17 +241,13 @@ var NAVTREEINDEX32 =
 "ncrypt_expando_pgp.html":[35,14],
 "ncrypt_expando_smime.html":[35,15],
 "neo_alternates.html":[0,0],
-"neo_alternates.html#autotoc_md637":[3,0],
-"neo_alternates.html#autotoc_md638":[3,1],
+"neo_alternates.html#autotoc_md638":[3,0],
+"neo_alternates.html#autotoc_md639":[3,1],
 "neo_commands.html":[0,1],
 "neo_copy.html":[0,2],
 "neo_editmsg.html":[0,3],
 "neo_enriched.html":[0,4],
 "neo_external.html":[0,5],
 "neo_flags.html":[0,6],
-"neo_globals.html":[0,7],
-"neo_handler.html":[0,8],
-"neo_help.html":[0,9],
-"neo_hook.html":[0,10],
-"neo_init.html":[0,11]
+"neo_globals.html":[0,7]
 };

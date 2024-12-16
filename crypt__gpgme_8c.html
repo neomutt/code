@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-11-14-151-g38259e</span>
+   &#160;<span id="projectnumber">2024-12-12-14-g7b49f7</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -1962,11 +1962,11 @@ Variables</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  564</span>{</div>
 <div class="line"><span class="lineno">  565</span>  ssize_t nread = 0;</div>
 <div class="line"><span class="lineno">  566</span>  <span class="keywordtype">char</span> *rv = NULL;</div>
-<div class="line"><span class="lineno">  567</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  567</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempfile = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
 <div class="line"><span class="lineno">  568</span> </div>
-<div class="line"><span class="lineno">  569</span>  <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempf);</div>
+<div class="line"><span class="lineno">  569</span>  <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempfile);</div>
 <div class="line"><span class="lineno">  570</span> </div>
-<div class="line"><span class="lineno">  571</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempf), <span class="stringliteral">&quot;w+&quot;</span>);</div>
+<div class="line"><span class="lineno">  571</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile), <span class="stringliteral">&quot;w+&quot;</span>);</div>
 <div class="line"><span class="lineno">  572</span>  <span class="keywordflow">if</span> (!fp)</div>
 <div class="line"><span class="lineno">  573</span>  {</div>
 <div class="line"><span class="lineno">  574</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
@@ -1984,9 +1984,9 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  586</span>    {</div>
 <div class="line"><span class="lineno">  587</span>      <span class="keywordflow">if</span> (fwrite(buf, nread, 1, fp) != 1)</div>
 <div class="line"><span class="lineno">  588</span>      {</div>
-<div class="line"><span class="lineno">  589</span>        <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempf));</div>
+<div class="line"><span class="lineno">  589</span>        <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
 <div class="line"><span class="lineno">  590</span>        <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
-<div class="line"><span class="lineno">  591</span>        unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempf));</div>
+<div class="line"><span class="lineno">  591</span>        unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
 <div class="line"><span class="lineno">  592</span>        <span class="keywordflow">goto</span> cleanup;</div>
 <div class="line"><span class="lineno">  593</span>      }</div>
 <div class="line"><span class="lineno">  594</span>    }</div>
@@ -1998,16 +1998,16 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  600</span>  <span class="keywordflow">if</span> (nread == -1)</div>
 <div class="line"><span class="lineno">  601</span>  {</div>
 <div class="line"><span class="lineno">  602</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;error reading data object: %s&quot;</span>), gpgme_strerror(err));</div>
-<div class="line"><span class="lineno">  603</span>    unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempf));</div>
+<div class="line"><span class="lineno">  603</span>    unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
 <div class="line"><span class="lineno">  604</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
 <div class="line"><span class="lineno">  605</span>    <span class="keywordflow">goto</span> cleanup;</div>
 <div class="line"><span class="lineno">  606</span>  }</div>
 <div class="line"><span class="lineno">  607</span>  <span class="keywordflow">if</span> (fp_ret)</div>
 <div class="line"><span class="lineno">  608</span>    *fp_ret = fp;</div>
-<div class="line"><span class="lineno">  609</span>  rv = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(tempf);</div>
+<div class="line"><span class="lineno">  609</span>  rv = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(tempfile);</div>
 <div class="line"><span class="lineno">  610</span> </div>
 <div class="line"><span class="lineno">  611</span>cleanup:</div>
-<div class="line"><span class="lineno">  612</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempf);</div>
+<div class="line"><span class="lineno">  612</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfile);</div>
 <div class="line"><span class="lineno">  613</span>  <span class="keywordflow">return</span> rv;</div>
 <div class="line"><span class="lineno">  614</span>}</div>
 <div class="ttc" id="abuffer_8c_html_ad76477cc0c660bc50162393e997233eb"><div class="ttname"><a href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a></div><div class="ttdeci">char * buf_strdup(const struct Buffer *buf)</div><div class="ttdoc">Copy a Buffer's string.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00571">buffer.c:571</a></div></div>
@@ -4694,7 +4694,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="amime_8h_html_a3ccd048df649c335df5a7f82673bbc79ad88e88afaec507209421bba20aeeb167"><div class="ttname"><a href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ad88e88afaec507209421bba20aeeb167">TYPE_TEXT</a></div><div class="ttdeci">@ TYPE_TEXT</div><div class="ttdoc">Type: 'text/*'.</div><div class="ttdef"><b>Definition:</b> <a href="mime_8h_source.html#l00038">mime.h:38</a></div></div>
 <div class="ttc" id="amutt_2state_8h_html_ade99d644543f92ade39406eac478d302"><div class="ttname"><a href="mutt_2state_8h.html#ade99d644543f92ade39406eac478d302">STATE_NO_FLAGS</a></div><div class="ttdeci">#define STATE_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2state_8h_source.html#l00032">state.h:32</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a9bf968304f4f9b49e24215cb2e28d22d"><div class="ttname"><a href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a></div><div class="ttdeci">size_t mutt_str_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00230">string.c:230</a></div></div>
-<div class="ttc" id="amutt__attach_8c_html_aac29548ca4501311138dfa43db788bd3"><div class="ttname"><a href="mutt__attach_8c.html#aac29548ca4501311138dfa43db788bd3">mutt_decode_save_attachment</a></div><div class="ttdeci">int mutt_decode_save_attachment(FILE *fp, struct Body *b, const char *path, StateFlags flags, enum SaveAttach opt)</div><div class="ttdoc">Decode, then save an attachment.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__attach_8c_source.html#l01041">mutt_attach.c:1041</a></div></div>
+<div class="ttc" id="amutt__attach_8c_html_aac29548ca4501311138dfa43db788bd3"><div class="ttname"><a href="mutt__attach_8c.html#aac29548ca4501311138dfa43db788bd3">mutt_decode_save_attachment</a></div><div class="ttdeci">int mutt_decode_save_attachment(FILE *fp, struct Body *b, const char *path, StateFlags flags, enum SaveAttach opt)</div><div class="ttdoc">Decode, then save an attachment.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__attach_8c_source.html#l01042">mutt_attach.c:1042</a></div></div>
 <div class="ttc" id="amutt__attach_8h_html_a5675c7a41890711ec4871b592c840faaaed4c57bafee22c671cdc621feed0b224"><div class="ttname"><a href="mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaaed4c57bafee22c671cdc621feed0b224">MUTT_SAVE_NO_FLAGS</a></div><div class="ttdeci">@ MUTT_SAVE_NO_FLAGS</div><div class="ttdoc">No flags set.</div><div class="ttdef"><b>Definition:</b> <a href="mutt__attach_8h_source.html#l00058">mutt_attach.h:58</a></div></div>
 </div><!-- fragment --><div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-61-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

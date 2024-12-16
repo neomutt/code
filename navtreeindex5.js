@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"compose_2lib_8h.html":[2,0,9,13],
+"compose_2lib_8h.html#adf568d592758fae1758bbb4dc4e3e554":[2,0,9,13,0],
 "compose_2lib_8h_source.html":[2,0,9,13],
 "compose_2private_8h.html":[2,0,9,15],
 "compose_2private_8h.html#a030b7dfa4bc7ba5ba253990b2784341b":[2,0,9,15,5],
@@ -45,8 +47,8 @@ var NAVTREEINDEX5 =
 "compress_2private_8h.html#ab1ff8dc4176d4b51300f0df987e853d2":[2,0,10,3,0],
 "compress_2private_8h_source.html":[2,0,10,3],
 "compress_compress.html":[13,0],
-"compress_compress.html#autotoc_md235":[1,0],
-"compress_compress.html#autotoc_md236":[1,1],
+"compress_compress.html#autotoc_md236":[1,0],
+"compress_compress.html#autotoc_md237":[1,1],
 "compress_lz4.html":[13,1],
 "compress_zlib.html":[13,2],
 "compress_zstd.html":[13,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX5 =
 "config_slist.html":[14,13],
 "config_sort.html":[14,14],
 "config_string.html":[14,15],
-"config_subset.html":[14,16],
-"conn_2config_8c.html":[2,0,12,2],
-"conn_2config_8c.html#a81e672eb7e6a9ac2b74850392f307d5a":[2,0,12,2,2]
+"config_subset.html":[14,16]
 };

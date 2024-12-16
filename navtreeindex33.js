@@ -1,5 +1,9 @@
 var NAVTREEINDEX33 =
 {
+"neo_handler.html":[0,8],
+"neo_help.html":[0,9],
+"neo_hook.html":[0,10],
+"neo_init.html":[0,11],
 "neo_mailcap.html":[0,12],
 "neo_maillist.html":[0,13],
 "neo_main.html":[0,14],
@@ -245,9 +249,5 @@ var NAVTREEINDEX33 =
 "node__container_8c.html#ae964e3ba0bbc52ec15ae98b4b758f3f1":[2,0,19,20,2],
 "node__container_8c_source.html":[2,0,19,20],
 "node__container_8h.html":[2,0,19,21],
-"node__container_8h.html#a8a172485970bae39f40d0cf046f69a73":[2,0,19,21,0],
-"node__container_8h.html#ab1c562117abc8bdd90220757b4034ffc":[2,0,19,21,1],
-"node__container_8h_source.html":[2,0,19,21],
-"node__expando_8c.html":[2,0,19,22],
-"node__expando_8c.html#a04d047b9388a2d7cf4c122b9def4e620":[2,0,19,22,7]
+"node__container_8h.html#a8a172485970bae39f40d0cf046f69a73":[2,0,19,21,0]
 };

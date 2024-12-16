@@ -9,6 +9,7 @@ var display_8c =
     [ "check_protected_header_marker", "display_8c.html#a18e1fdb87db0cf8e9e0585a0b4b55c31", null ],
     [ "mutt_is_quote_line", "display_8c.html#a2e899f2d711d53f6e97e83dea8aca151", null ],
     [ "match_body_patterns", "display_8c.html#a5d23939f7a384e22fe2fa2feecb08e6b", null ],
+    [ "color_is_header", "display_8c.html#a7db57a02c45f0150eda6c24f2ae215f0", null ],
     [ "resolve_types", "display_8c.html#a9912e3b588ad5b08a8fd1cb0fa0df83e", null ],
     [ "buf_strip_formatting", "display_8c.html#a73742be224ef1cc275d4b6c7d585d44a", null ],
     [ "fill_buffer", "display_8c.html#a3a08ef3aa5940bc4550d19bd601894b5", null ],

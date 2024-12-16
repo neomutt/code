@@ -239,8 +239,8 @@ var searchData=
   ['nntp_5fparse_5fxref_236',['nntp_parse_xref',['../nntp_8c.html#aba0b869ad5244bb92012df19edef7bd5',1,'nntp.c']]],
   ['nntp_5fpath_5fcanon_237',['nntp_path_canon',['../group__mx__path__canon.html#ga6b0863ccb0a3324447b728571db8d903',1,'nntp.c']]],
   ['nntp_5fpath_5fprobe_238',['nntp_path_probe',['../group__mx__path__probe.html#ga0af5851670960cce257a6e5f9f9805ff',1,'nntp_path_probe(const char *path, const struct stat *st):&#160;nntp.c'],['../group__mx__path__probe.html#ga0af5851670960cce257a6e5f9f9805ff',1,'nntp_path_probe(const char *path, const struct stat *st):&#160;nntp.c']]],
-  ['nntp_5fport_239',['nntp_port',['../group__expando__get__number__api.html#ga3c2615fd31d4baa5ee6e7ea5e95565a3',1,'expando_newsrc.c']]],
-  ['nntp_5fport_240',['NNTP_PORT',['../nntp_2private_8h.html#aaccdd399473f113674cbabfeaa5ef972',1,'private.h']]],
+  ['nntp_5fport_239',['NNTP_PORT',['../nntp_2private_8h.html#aaccdd399473f113674cbabfeaa5ef972',1,'private.h']]],
+  ['nntp_5fport_240',['nntp_port',['../group__expando__get__number__api.html#ga3c2615fd31d4baa5ee6e7ea5e95565a3',1,'expando_newsrc.c']]],
   ['nntp_5fport_5fif_241',['nntp_port_if',['../group__expando__get__string__api.html#ga440b5ce3b2ed551cfda6c3aea5dfc4f5',1,'expando_newsrc.c']]],
   ['nntp_5fport_5fif_5fnum_242',['nntp_port_if_num',['../group__expando__get__number__api.html#gafc5c038eee1960cc06dec2231ccd3c08',1,'expando_newsrc.c']]],
   ['nntp_5fpost_243',['nntp_post',['../nntp_2lib_8h.html#a4cec5b84b23b34587cae72db07ad2d04',1,'nntp_post(struct Mailbox *m, const char *msg):&#160;nntp.c'],['../nntp_8c.html#a4cec5b84b23b34587cae72db07ad2d04',1,'nntp_post(struct Mailbox *m, const char *msg):&#160;nntp.c']]],
@@ -494,7 +494,7 @@ var searchData=
   ['nte_5fno_5fflags_491',['NTE_NO_FLAGS',['../node__text_8h.html#a28b6e075e42eafc6d1a36425a68934a0',1,'node_text.h']]],
   ['nte_5fquestion_492',['NTE_QUESTION',['../node__text_8h.html#a3cdf0bfa2c7d6d02a5060fb430fe5423',1,'node_text.h']]],
   ['nulbin_493',['nulbin',['../structContent.html#ae2a914f5ad69e35003f328f905279910',1,'Content']]],
-  ['num_494',['num',['../structPgpEntry.html#afe81b58afeff1f2d70aba5621125487c',1,'PgpEntry::num()'],['../structChildCtx.html#a9ca2a8cf245455ac084610026f49d9dd',1,'ChildCtx::num()'],['../structPatternEntry.html#a94a7a58f4618f28f6d32e47236d7a039',1,'PatternEntry::num()'],['../structCryptEntry.html#aa3757de68379ec3cb1abec30a1c1f91a',1,'CryptEntry::num()'],['../structHistoryEntry.html#a32f24bb573abe5ea55040462275068f4',1,'HistoryEntry::num()'],['../structFolder.html#a356f20ebab3ead589035c5100911c791',1,'Folder::num()'],['../structAccountEntry.html#a8b156271f95e8b9a2f44024b5a9b754a',1,'AccountEntry::num()'],['../structAliasView.html#a7b805b55ebbaa9f08b4f6692c4ae33ab',1,'AliasView::num()'],['../structAttachPtr.html#a71db2d33eefd6c1f41f129f6943fe83a',1,'AttachPtr::num()']]],
+  ['num_494',['num',['../structChildCtx.html#a9ca2a8cf245455ac084610026f49d9dd',1,'ChildCtx::num()'],['../structPatternEntry.html#a94a7a58f4618f28f6d32e47236d7a039',1,'PatternEntry::num()'],['../structPgpEntry.html#afe81b58afeff1f2d70aba5621125487c',1,'PgpEntry::num()'],['../structCryptEntry.html#aa3757de68379ec3cb1abec30a1c1f91a',1,'CryptEntry::num()'],['../structHistoryEntry.html#a32f24bb573abe5ea55040462275068f4',1,'HistoryEntry::num()'],['../structAliasView.html#a7b805b55ebbaa9f08b4f6692c4ae33ab',1,'AliasView::num()'],['../structAttachPtr.html#a71db2d33eefd6c1f41f129f6943fe83a',1,'AttachPtr::num()'],['../structAccountEntry.html#a8b156271f95e8b9a2f44024b5a9b754a',1,'AccountEntry::num()'],['../structFolder.html#a356f20ebab3ead589035c5100911c791',1,'Folder::num()']]],
   ['num_5felems_495',['num_elems',['../structHashTable.html#a85ac1a8f74a5b2d73de18c9e503a3c5e',1,'HashTable']]],
   ['num_5femails_496',['num_emails',['../structEventEmail.html#a4b2a1b3e897ed10d908c31ba41c32e47',1,'EventEmail']]],
   ['num_5fhidden_497',['num_hidden',['../structEmail.html#a71f1e37390a5400b182e0724c1f61769',1,'Email']]],
@@ -514,5 +514,5 @@ var searchData=
   ['numcursescolors_511',['NumCursesColors',['../curses_8c.html#a3224e4fb24b9a03567ef9ea6f57c8d79',1,'curses.c']]],
   ['numfiles_512',['numfiles',['../structBrowserPrivateData.html#a97d162638f5ce0230c081c115c1c5ed6',1,'BrowserPrivateData::numfiles()'],['../structFileCompletionData.html#afd6d6eeecfacd15fcaa566c27548600e',1,'FileCompletionData::numfiles()']]],
   ['numoflogs_513',['NumOfLogs',['../mutt__logging_8c.html#a16142aa6408b6e19a850bb34b419ed7f',1,'mutt_logging.c']]],
-  ['numquotedcolors_514',['NumQuotedColors',['../quoted_8h.html#a63372a7d9377459c27142554ff4c928a',1,'NumQuotedColors():&#160;quoted.c'],['../quoted_8c.html#a63372a7d9377459c27142554ff4c928a',1,'NumQuotedColors():&#160;quoted.c']]]
+  ['numquotedcolors_514',['NumQuotedColors',['../quoted_8c.html#a63372a7d9377459c27142554ff4c928a',1,'quoted.c']]]
 ];
