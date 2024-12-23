@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-12-12-14-g7b49f7</span>
+   &#160;<span id="projectnumber">2024-12-12-19-ge4b57e</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -234,8 +234,10 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00050">50</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
-<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">return</span> (*(intptr_t *) var &amp; <a class="code hl_define" href="number_8c.html#a4fd877e65910709d8121e36263efb7d3">TOGGLE_BIT</a>) ? 0 : *(<span class="keywordtype">short</span> *) var;</div>
-<div class="line"><span class="lineno">   53</span>}</div>
+<div class="line"><span class="lineno">   52</span>  <span class="comment">// take care of endianess and always read intptr_t value</span></div>
+<div class="line"><span class="lineno">   53</span>  intptr_t v = *(intptr_t *) var;</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">return</span> (v &amp; <a class="code hl_define" href="number_8c.html#a4fd877e65910709d8121e36263efb7d3">TOGGLE_BIT</a>) ? 0 : (short) v;</div>
+<div class="line"><span class="lineno">   55</span>}</div>
 <div class="ttc" id="anumber_8c_html_a4fd877e65910709d8121e36263efb7d3"><div class="ttname"><a href="number_8c.html#a4fd877e65910709d8121e36263efb7d3">TOGGLE_BIT</a></div><div class="ttdeci">#define TOGGLE_BIT</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00046">number.c:46</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -284,11 +286,12 @@ Variables</h2></td></tr>
 
 <p>Set an int into a Number config item. </p>
 
-<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00058">58</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>{</div>
-<div class="line"><span class="lineno">   60</span>  *(intptr_t *) var = 0; <span class="comment">// clear any pending toggle status</span></div>
-<div class="line"><span class="lineno">   61</span>  *(<span class="keywordtype">short</span> *) var = val;</div>
-<div class="line"><span class="lineno">   62</span>}</div>
+<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00060">60</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>{</div>
+<div class="line"><span class="lineno">   62</span>  <span class="comment">// cast to unsigned short to clear any pending toggle status bits</span></div>
+<div class="line"><span class="lineno">   63</span>  val = (<span class="keywordtype">unsigned</span> short) val;</div>
+<div class="line"><span class="lineno">   64</span>  *(intptr_t *) var = val;</div>
+<div class="line"><span class="lineno">   65</span>}</div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -326,10 +329,10 @@ Variables</h2></td></tr>
 
 <p>Toggle a Number config item. </p>
 
-<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00067">67</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>{</div>
-<div class="line"><span class="lineno">   69</span>  *(intptr_t *) var = *(uintptr_t *) var ^ <a class="code hl_define" href="number_8c.html#a4fd877e65910709d8121e36263efb7d3">TOGGLE_BIT</a>;</div>
-<div class="line"><span class="lineno">   70</span>}</div>
+<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00070">70</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
+<div class="line"><span class="lineno">   72</span>  *(intptr_t *) var = *(uintptr_t *) var ^ <a class="code hl_define" href="number_8c.html#a4fd877e65910709d8121e36263efb7d3">TOGGLE_BIT</a>;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -389,26 +392,26 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00301">301</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  302</span>{</div>
-<div class="line"><span class="lineno">  303</span>  <span class="keywordflow">if</span> (!sub || !he || !he-&gt;<a class="code hl_variable" href="structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365">data</a>)</div>
-<div class="line"><span class="lineno">  304</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a8785f60615c4c531e94a9c97974522d7">CSR_ERR_CODE</a>;</div>
-<div class="line"><span class="lineno">  305</span> </div>
-<div class="line"><span class="lineno">  306</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHashElem.html">HashElem</a> *he_base = <a class="code hl_function" href="config_2set_8c.html#a75dc50a55aa4a44a985c5e9763d78ee9">cs_get_base</a>(he);</div>
-<div class="line"><span class="lineno">  307</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="types_8h.html#a15a11710ca23d5779aa35ead735c7b36">DTYPE</a>(he_base-&gt;<a class="code hl_variable" href="structHashElem.html#aafb6e3d6500e9f3dee67b7eab85f0480">type</a>) != <a class="code hl_enumvalue" href="types_8h.html#ac254e872972d56fde0b2d9b767e157a9a10a00085772a0af85d737a13047275a7">DT_NUMBER</a>)</div>
-<div class="line"><span class="lineno">  308</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a8785f60615c4c531e94a9c97974522d7">CSR_ERR_CODE</a>;</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structConfigDef.html">ConfigDef</a> *cdef = he_base-&gt;<a class="code hl_variable" href="structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365">data</a>;</div>
-<div class="line"><span class="lineno">  311</span>  <a class="code hl_function" href="number_8c.html#a52f2317ea97c0235fd08ee43273db19c">native_toggle</a>(&amp;cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a2ce6465c0431046f6a4483ed15e77698">var</a>);</div>
+<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00304">304</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  305</span>{</div>
+<div class="line"><span class="lineno">  306</span>  <span class="keywordflow">if</span> (!sub || !he || !he-&gt;<a class="code hl_variable" href="structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365">data</a>)</div>
+<div class="line"><span class="lineno">  307</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a8785f60615c4c531e94a9c97974522d7">CSR_ERR_CODE</a>;</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHashElem.html">HashElem</a> *he_base = <a class="code hl_function" href="config_2set_8c.html#a75dc50a55aa4a44a985c5e9763d78ee9">cs_get_base</a>(he);</div>
+<div class="line"><span class="lineno">  310</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="types_8h.html#a15a11710ca23d5779aa35ead735c7b36">DTYPE</a>(he_base-&gt;<a class="code hl_variable" href="structHashElem.html#aafb6e3d6500e9f3dee67b7eab85f0480">type</a>) != <a class="code hl_enumvalue" href="types_8h.html#ac254e872972d56fde0b2d9b767e157a9a10a00085772a0af85d737a13047275a7">DT_NUMBER</a>)</div>
+<div class="line"><span class="lineno">  311</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#a8785f60615c4c531e94a9c97974522d7">CSR_ERR_CODE</a>;</div>
 <div class="line"><span class="lineno">  312</span> </div>
-<div class="line"><span class="lineno">  313</span>  <a class="code hl_function" href="subset_8c.html#ade6fadcb576282a84fd1746c1231f41c">cs_subset_notify_observers</a>(sub, he, <a class="code hl_enumvalue" href="subset_8h.html#a439e82194af78ebb1c24dabc16f068b7af9830f369cf9b3cc169ffefe97ae90d9">NT_CONFIG_SET</a>);</div>
-<div class="line"><span class="lineno">  314</span> </div>
-<div class="line"><span class="lineno">  315</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  316</span>}</div>
+<div class="line"><span class="lineno">  313</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structConfigDef.html">ConfigDef</a> *cdef = he_base-&gt;<a class="code hl_variable" href="structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365">data</a>;</div>
+<div class="line"><span class="lineno">  314</span>  <a class="code hl_function" href="number_8c.html#a52f2317ea97c0235fd08ee43273db19c">native_toggle</a>(&amp;cdef-&gt;<a class="code hl_variable" href="structConfigDef.html#a2ce6465c0431046f6a4483ed15e77698">var</a>);</div>
+<div class="line"><span class="lineno">  315</span> </div>
+<div class="line"><span class="lineno">  316</span>  <a class="code hl_function" href="subset_8c.html#ade6fadcb576282a84fd1746c1231f41c">cs_subset_notify_observers</a>(sub, he, <a class="code hl_enumvalue" href="subset_8h.html#a439e82194af78ebb1c24dabc16f068b7af9830f369cf9b3cc169ffefe97ae90d9">NT_CONFIG_SET</a>);</div>
+<div class="line"><span class="lineno">  317</span> </div>
+<div class="line"><span class="lineno">  318</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  319</span>}</div>
 <div class="ttc" id="aconfig_2set_8c_html_a75dc50a55aa4a44a985c5e9763d78ee9"><div class="ttname"><a href="config_2set_8c.html#a75dc50a55aa4a44a985c5e9763d78ee9">cs_get_base</a></div><div class="ttdeci">struct HashElem * cs_get_base(struct HashElem *he)</div><div class="ttdoc">Find the root Config Item.</div><div class="ttdef"><b>Definition:</b> <a href="config_2set_8c_source.html#l00160">set.c:160</a></div></div>
 <div class="ttc" id="aconfig_2set_8h_html_a8785f60615c4c531e94a9c97974522d7"><div class="ttname"><a href="config_2set_8h.html#a8785f60615c4c531e94a9c97974522d7">CSR_ERR_CODE</a></div><div class="ttdeci">#define CSR_ERR_CODE</div><div class="ttdoc">Problem with the code.</div><div class="ttdef"><b>Definition:</b> <a href="config_2set_8h_source.html#l00036">set.h:36</a></div></div>
 <div class="ttc" id="aconfig_2set_8h_html_ac9999a70a5f8e7cf64053a5f0861d329"><div class="ttname"><a href="config_2set_8h.html#ac9999a70a5f8e7cf64053a5f0861d329">CSR_SUCCESS</a></div><div class="ttdeci">#define CSR_SUCCESS</div><div class="ttdoc">Action completed successfully.</div><div class="ttdef"><b>Definition:</b> <a href="config_2set_8h_source.html#l00035">set.h:35</a></div></div>
-<div class="ttc" id="anumber_8c_html_a52f2317ea97c0235fd08ee43273db19c"><div class="ttname"><a href="number_8c.html#a52f2317ea97c0235fd08ee43273db19c">native_toggle</a></div><div class="ttdeci">static void native_toggle(void *var)</div><div class="ttdoc">Toggle a Number config item.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00067">number.c:67</a></div></div>
+<div class="ttc" id="anumber_8c_html_a52f2317ea97c0235fd08ee43273db19c"><div class="ttname"><a href="number_8c.html#a52f2317ea97c0235fd08ee43273db19c">native_toggle</a></div><div class="ttdeci">static void native_toggle(void *var)</div><div class="ttdoc">Toggle a Number config item.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00070">number.c:70</a></div></div>
 <div class="ttc" id="astructConfigDef_html"><div class="ttname"><a href="structConfigDef.html">ConfigDef</a></div><div class="ttdef"><b>Definition:</b> <a href="config_2set_8h_source.html#l00063">set.h:64</a></div></div>
 <div class="ttc" id="astructConfigDef_html_a2ce6465c0431046f6a4483ed15e77698"><div class="ttname"><a href="structConfigDef.html#a2ce6465c0431046f6a4483ed15e77698">ConfigDef::var</a></div><div class="ttdeci">intptr_t var</div><div class="ttdoc">Storage for the variable.</div><div class="ttdef"><b>Definition:</b> <a href="config_2set_8h_source.html#l00085">set.h:85</a></div></div>
 <div class="ttc" id="astructHashElem_html"><div class="ttname"><a href="structHashElem.html">HashElem</a></div><div class="ttdoc">The item stored in a Hash Table.</div><div class="ttdef"><b>Definition:</b> <a href="hash_8h_source.html#l00042">hash.h:43</a></div></div>
@@ -461,17 +464,17 @@ Variables</h2></td></tr>
 <div class="line">  <a class="code hl_function" href="group__cfg__type__reset.html#ga480e656188e4fdbae90a1aca70d2540c">number_reset</a>,</div>
 <div class="line">  NULL, </div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__cfg__type__native__get_html_ga5b4ca2dec425a8360da1744477bb291c"><div class="ttname"><a href="group__cfg__type__native__get.html#ga5b4ca2dec425a8360da1744477bb291c">number_native_get</a></div><div class="ttdeci">static intptr_t number_native_get(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, struct Buffer *err)</div><div class="ttdoc">Get an int from a Number config item - Implements ConfigSetType::native_get() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00180">number.c:180</a></div></div>
-<div class="ttc" id="agroup__cfg__type__native__set_html_ga5bcf940a158f552c8866887c3f00bc95"><div class="ttname"><a href="group__cfg__type__native__set.html#ga5bcf940a158f552c8866887c3f00bc95">number_native_set</a></div><div class="ttdeci">static int number_native_set(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err)</div><div class="ttdoc">Set a Number config item by int - Implements ConfigSetType::native_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00143">number.c:143</a></div></div>
-<div class="ttc" id="agroup__cfg__type__reset_html_ga480e656188e4fdbae90a1aca70d2540c"><div class="ttname"><a href="group__cfg__type__reset.html#ga480e656188e4fdbae90a1aca70d2540c">number_reset</a></div><div class="ttdeci">static int number_reset(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, struct Buffer *err)</div><div class="ttdoc">Reset a Number to its initial value - Implements ConfigSetType::reset() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00273">number.c:273</a></div></div>
-<div class="ttc" id="agroup__cfg__type__string__get_html_ga6de5fbd27f8b885e1c5bab48be4d7dba"><div class="ttname"><a href="group__cfg__type__string__get.html#ga6de5fbd27f8b885e1c5bab48be4d7dba">number_string_get</a></div><div class="ttdeci">static int number_string_get(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, struct Buffer *result)</div><div class="ttdoc">Get a Number as a string - Implements ConfigSetType::string_get() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00126">number.c:126</a></div></div>
-<div class="ttc" id="agroup__cfg__type__string__minus__equals_html_ga118b3ceca4da77fc7d33f6babc654969"><div class="ttname"><a href="group__cfg__type__string__minus__equals.html#ga118b3ceca4da77fc7d33f6babc654969">number_string_minus_equals</a></div><div class="ttdeci">static int number_string_minus_equals(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, const char *value, struct Buffer *err)</div><div class="ttdoc">Subtract from a Number by string - Implements ConfigSetType::string_minus_equals() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00231">number.c:231</a></div></div>
-<div class="ttc" id="agroup__cfg__type__string__plus__equals_html_ga8d660979e628a6028b06e1fc7658f6dc"><div class="ttname"><a href="group__cfg__type__string__plus__equals.html#ga8d660979e628a6028b06e1fc7658f6dc">number_string_plus_equals</a></div><div class="ttdeci">static int number_string_plus_equals(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, const char *value, struct Buffer *err)</div><div class="ttdoc">Add to a Number by string - Implements ConfigSetType::string_plus_equals() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00189">number.c:189</a></div></div>
-<div class="ttc" id="agroup__cfg__type__string__set_html_ga32215db83b015d56b493195cfb092165"><div class="ttname"><a href="group__cfg__type__string__set.html#ga32215db83b015d56b493195cfb092165">number_string_set</a></div><div class="ttdeci">static int number_string_set(const struct ConfigSet *cs, void *var, struct ConfigDef *cdef, const char *value, struct Buffer *err)</div><div class="ttdoc">Set a Number by string - Implements ConfigSetType::string_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00075">number.c:75</a></div></div>
+<div class="ttc" id="agroup__cfg__type__native__get_html_ga5b4ca2dec425a8360da1744477bb291c"><div class="ttname"><a href="group__cfg__type__native__get.html#ga5b4ca2dec425a8360da1744477bb291c">number_native_get</a></div><div class="ttdeci">static intptr_t number_native_get(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, struct Buffer *err)</div><div class="ttdoc">Get an int from a Number config item - Implements ConfigSetType::native_get() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00183">number.c:183</a></div></div>
+<div class="ttc" id="agroup__cfg__type__native__set_html_ga5bcf940a158f552c8866887c3f00bc95"><div class="ttname"><a href="group__cfg__type__native__set.html#ga5bcf940a158f552c8866887c3f00bc95">number_native_set</a></div><div class="ttdeci">static int number_native_set(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err)</div><div class="ttdoc">Set a Number config item by int - Implements ConfigSetType::native_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00146">number.c:146</a></div></div>
+<div class="ttc" id="agroup__cfg__type__reset_html_ga480e656188e4fdbae90a1aca70d2540c"><div class="ttname"><a href="group__cfg__type__reset.html#ga480e656188e4fdbae90a1aca70d2540c">number_reset</a></div><div class="ttdeci">static int number_reset(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, struct Buffer *err)</div><div class="ttdoc">Reset a Number to its initial value - Implements ConfigSetType::reset() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00276">number.c:276</a></div></div>
+<div class="ttc" id="agroup__cfg__type__string__get_html_ga6de5fbd27f8b885e1c5bab48be4d7dba"><div class="ttname"><a href="group__cfg__type__string__get.html#ga6de5fbd27f8b885e1c5bab48be4d7dba">number_string_get</a></div><div class="ttdeci">static int number_string_get(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, struct Buffer *result)</div><div class="ttdoc">Get a Number as a string - Implements ConfigSetType::string_get() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00129">number.c:129</a></div></div>
+<div class="ttc" id="agroup__cfg__type__string__minus__equals_html_ga118b3ceca4da77fc7d33f6babc654969"><div class="ttname"><a href="group__cfg__type__string__minus__equals.html#ga118b3ceca4da77fc7d33f6babc654969">number_string_minus_equals</a></div><div class="ttdeci">static int number_string_minus_equals(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, const char *value, struct Buffer *err)</div><div class="ttdoc">Subtract from a Number by string - Implements ConfigSetType::string_minus_equals() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00234">number.c:234</a></div></div>
+<div class="ttc" id="agroup__cfg__type__string__plus__equals_html_ga8d660979e628a6028b06e1fc7658f6dc"><div class="ttname"><a href="group__cfg__type__string__plus__equals.html#ga8d660979e628a6028b06e1fc7658f6dc">number_string_plus_equals</a></div><div class="ttdeci">static int number_string_plus_equals(const struct ConfigSet *cs, void *var, const struct ConfigDef *cdef, const char *value, struct Buffer *err)</div><div class="ttdoc">Add to a Number by string - Implements ConfigSetType::string_plus_equals() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00192">number.c:192</a></div></div>
+<div class="ttc" id="agroup__cfg__type__string__set_html_ga32215db83b015d56b493195cfb092165"><div class="ttname"><a href="group__cfg__type__string__set.html#ga32215db83b015d56b493195cfb092165">number_string_set</a></div><div class="ttdeci">static int number_string_set(const struct ConfigSet *cs, void *var, struct ConfigDef *cdef, const char *value, struct Buffer *err)</div><div class="ttdoc">Set a Number by string - Implements ConfigSetType::string_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="number_8c_source.html#l00078">number.c:78</a></div></div>
 </div><!-- fragment -->
 <p>Config type representing a number. </p>
 
-<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00321">321</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="number_8c_source.html#l00324">324</a> of file <a class="el" href="number_8c_source.html">number.c</a>.</p>
 
 </div>
 </div>

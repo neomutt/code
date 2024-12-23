@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2024-12-12-14-g7b49f7</span>
+   &#160;<span id="projectnumber">2024-12-12-19-ge4b57e</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -2052,99 +2052,102 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno"> 1401</span>    }</div>
 <div class="line"><span class="lineno"> 1402</span> </div>
 <div class="line"><span class="lineno"> 1403</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_cur = <a class="code hl_function" href="core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570">mailbox_find</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(folder));</div>
-<div class="line"><span class="lineno"> 1404</span>    <a class="code hl_function" href="hook_8c.html#a6c1eb72c5e9a39b354d9c394f9116f50">mutt_folder_hook</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(folder), m_cur ? m_cur-&gt;<a class="code hl_variable" href="structMailbox.html#a7ae2093eac22095d5470161a5983f55c">name</a> : NULL);</div>
-<div class="line"><span class="lineno"> 1405</span>    <a class="code hl_function" href="hook_8c.html#a346f2e985b8be4ee687b08eab1879561">mutt_startup_shutdown_hook</a>(<a class="code hl_define" href="hook_8h.html#a694243a6a9e9eb8775505e1df4105a15">MUTT_STARTUP_HOOK</a>);</div>
-<div class="line"><span class="lineno"> 1406</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ae42597be1ed1040ef128b6367d17bb73">LL_NOTIFY</a>, <span class="stringliteral">&quot;NT_GLOBAL_STARTUP\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1407</span>    <a class="code hl_function" href="mutt_2notify_8c.html#ade2f42f8e0d8a843e87816300799a8e1">notify_send</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b">notify</a>, <a class="code hl_enumvalue" href="notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8acce7b38b7377553781432765eb427d59">NT_GLOBAL</a>, <a class="code hl_enumvalue" href="neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5da9f79a70fee6c93084e8b6d081bbd96b8">NT_GLOBAL_STARTUP</a>, NULL);</div>
-<div class="line"><span class="lineno"> 1408</span> </div>
-<div class="line"><span class="lineno"> 1409</span>    <a class="code hl_function" href="mutt_2notify_8c.html#ade2f42f8e0d8a843e87816300799a8e1">notify_send</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#a49906a21787be2a36fd08fccb54d8911">notify_resize</a>, <a class="code hl_enumvalue" href="notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8aea83b2fc98e0ce85bfac3545957c62ac">NT_RESIZE</a>, 0, NULL);</div>
-<div class="line"><span class="lineno"> 1410</span>    <a class="code hl_function" href="mutt__window_8c.html#a0af7bfe97dbb8f95d03851ec3fe62553">window_redraw</a>(NULL);</div>
+<div class="line"><span class="lineno"> 1404</span>    <span class="comment">// Take a copy of the name just in case the hook alters m_cur</span></div>
+<div class="line"><span class="lineno"> 1405</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structMailbox.html#a7ae2093eac22095d5470161a5983f55c">name</a> = m_cur ? <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(m_cur-&gt;<a class="code hl_variable" href="structMailbox.html#a7ae2093eac22095d5470161a5983f55c">name</a>) : NULL;</div>
+<div class="line"><span class="lineno"> 1406</span>    <a class="code hl_function" href="hook_8c.html#a6c1eb72c5e9a39b354d9c394f9116f50">mutt_folder_hook</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(folder), <a class="code hl_variable" href="structMailbox.html#a7ae2093eac22095d5470161a5983f55c">name</a>);</div>
+<div class="line"><span class="lineno"> 1407</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a7ae2093eac22095d5470161a5983f55c">name</a>);</div>
+<div class="line"><span class="lineno"> 1408</span>    <a class="code hl_function" href="hook_8c.html#a346f2e985b8be4ee687b08eab1879561">mutt_startup_shutdown_hook</a>(<a class="code hl_define" href="hook_8h.html#a694243a6a9e9eb8775505e1df4105a15">MUTT_STARTUP_HOOK</a>);</div>
+<div class="line"><span class="lineno"> 1409</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ae42597be1ed1040ef128b6367d17bb73">LL_NOTIFY</a>, <span class="stringliteral">&quot;NT_GLOBAL_STARTUP\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1410</span>    <a class="code hl_function" href="mutt_2notify_8c.html#ade2f42f8e0d8a843e87816300799a8e1">notify_send</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b">notify</a>, <a class="code hl_enumvalue" href="notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8acce7b38b7377553781432765eb427d59">NT_GLOBAL</a>, <a class="code hl_enumvalue" href="neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5da9f79a70fee6c93084e8b6d081bbd96b8">NT_GLOBAL_STARTUP</a>, NULL);</div>
 <div class="line"><span class="lineno"> 1411</span> </div>
-<div class="line"><span class="lineno"> 1412</span>    repeat_error = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1413</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = <a class="code hl_function" href="mx_8c.html#a7afcd03fb06da48f81f48e04e6c5ea70">mx_resolve</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(folder));</div>
-<div class="line"><span class="lineno"> 1414</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> c_read_only = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;read_only&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1415</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="mx_8c.html#a6c4f4c51fa0b086d86a8638197c40578">mx_mbox_open</a>(m, ((flags &amp; <a class="code hl_define" href="main_8c.html#ab1c73e79937c5b31594b81defaaf353e">MUTT_CLI_RO</a>) || c_read_only) ? <a class="code hl_define" href="mxapi_8h.html#a11b97885a0fc04bcd13572076e8a17ab">MUTT_READONLY</a> : <a class="code hl_define" href="mxapi_8h.html#ad32c5821121dddb7fa99ad0de0a9e719">MUTT_OPEN_NO_FLAGS</a>))</div>
-<div class="line"><span class="lineno"> 1416</span>    {</div>
-<div class="line"><span class="lineno"> 1417</span>      <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#ab9a4528fcd39e61bdefd4dcfdbc6252f">account</a>)</div>
-<div class="line"><span class="lineno"> 1418</span>        <a class="code hl_function" href="core_2account_8c.html#a14989e440fba9c705d4d64f4d121890a">account_mailbox_remove</a>(m-&gt;<a class="code hl_variable" href="structMailbox.html#ab9a4528fcd39e61bdefd4dcfdbc6252f">account</a>, m);</div>
-<div class="line"><span class="lineno"> 1419</span> </div>
-<div class="line"><span class="lineno"> 1420</span>      <a class="code hl_function" href="core_2mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9">mailbox_free</a>(&amp;m);</div>
-<div class="line"><span class="lineno"> 1421</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Unable to open mailbox %s&quot;</span>), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(folder));</div>
-<div class="line"><span class="lineno"> 1422</span>      repeat_error = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1423</span>    }</div>
-<div class="line"><span class="lineno"> 1424</span>    <span class="keywordflow">if</span> (m || !explicit_folder)</div>
-<div class="line"><span class="lineno"> 1425</span>    {</div>
-<div class="line"><span class="lineno"> 1426</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dlg__index_8c.html#af8efcd0ce3952702bc60f84abc828f3c">index_pager_init</a>();</div>
-<div class="line"><span class="lineno"> 1427</span>      <a class="code hl_function" href="dialog_8c.html#a7c4678f81d8185d89e16e4befe94bb08">dialog_push</a>(dlg);</div>
-<div class="line"><span class="lineno"> 1428</span> </div>
-<div class="line"><span class="lineno"> 1429</span>      <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dace908f40d9cc4394f4e477b190acf4bd">MUTT_CURSOR_INVISIBLE</a>);</div>
-<div class="line"><span class="lineno"> 1430</span>      m = <a class="code hl_function" href="group__gui__dlg.html#gaf4266da82ada988b3b2482b910ddb15a">dlg_index</a>(dlg, m);</div>
-<div class="line"><span class="lineno"> 1431</span>      <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>);</div>
-<div class="line"><span class="lineno"> 1432</span>      <a class="code hl_function" href="core_2mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9">mailbox_free</a>(&amp;m);</div>
-<div class="line"><span class="lineno"> 1433</span> </div>
-<div class="line"><span class="lineno"> 1434</span>      <a class="code hl_function" href="dialog_8c.html#a82616808183352fb315931b2bb3518c0">dialog_pop</a>();</div>
-<div class="line"><span class="lineno"> 1435</span>      <a class="code hl_function" href="mutt__window_8c.html#a52ff022e671a7fbdec773fc2d24e0e15">mutt_window_free</a>(&amp;dlg);</div>
-<div class="line"><span class="lineno"> 1436</span>      <a class="code hl_function" href="mutt_2logging_8c.html#a0f20ec32631fac9bf1f6fa2d1eb29da1">log_queue_empty</a>();</div>
-<div class="line"><span class="lineno"> 1437</span>      repeat_error = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1438</span>    }</div>
-<div class="line"><span class="lineno"> 1439</span>    <a class="code hl_function" href="imap_8c.html#ace40ffc72b9f8ed5f315ea2825472773">imap_logout_all</a>();</div>
-<div class="line"><span class="lineno"> 1440</span><span class="preprocessor">#ifdef USE_SASL_CYRUS</span></div>
-<div class="line"><span class="lineno"> 1441</span>    <a class="code hl_function" href="sasl_8c.html#a40170e4263cf2874982633d54f96a817">mutt_sasl_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1442</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno"> 1443</span><span class="preprocessor">#ifdef USE_SASL_GNU</span></div>
-<div class="line"><span class="lineno"> 1444</span>    <a class="code hl_function" href="gsasl_8c.html#ab663e5bd2bcd0febaee74d3891c1b6b6">mutt_gsasl_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1412</span>    <a class="code hl_function" href="mutt_2notify_8c.html#ade2f42f8e0d8a843e87816300799a8e1">notify_send</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#a49906a21787be2a36fd08fccb54d8911">notify_resize</a>, <a class="code hl_enumvalue" href="notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8aea83b2fc98e0ce85bfac3545957c62ac">NT_RESIZE</a>, 0, NULL);</div>
+<div class="line"><span class="lineno"> 1413</span>    <a class="code hl_function" href="mutt__window_8c.html#a0af7bfe97dbb8f95d03851ec3fe62553">window_redraw</a>(NULL);</div>
+<div class="line"><span class="lineno"> 1414</span> </div>
+<div class="line"><span class="lineno"> 1415</span>    repeat_error = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1416</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = <a class="code hl_function" href="mx_8c.html#a7afcd03fb06da48f81f48e04e6c5ea70">mx_resolve</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(folder));</div>
+<div class="line"><span class="lineno"> 1417</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> c_read_only = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;read_only&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1418</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="mx_8c.html#a6c4f4c51fa0b086d86a8638197c40578">mx_mbox_open</a>(m, ((flags &amp; <a class="code hl_define" href="main_8c.html#ab1c73e79937c5b31594b81defaaf353e">MUTT_CLI_RO</a>) || c_read_only) ? <a class="code hl_define" href="mxapi_8h.html#a11b97885a0fc04bcd13572076e8a17ab">MUTT_READONLY</a> : <a class="code hl_define" href="mxapi_8h.html#ad32c5821121dddb7fa99ad0de0a9e719">MUTT_OPEN_NO_FLAGS</a>))</div>
+<div class="line"><span class="lineno"> 1419</span>    {</div>
+<div class="line"><span class="lineno"> 1420</span>      <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#ab9a4528fcd39e61bdefd4dcfdbc6252f">account</a>)</div>
+<div class="line"><span class="lineno"> 1421</span>        <a class="code hl_function" href="core_2account_8c.html#a14989e440fba9c705d4d64f4d121890a">account_mailbox_remove</a>(m-&gt;<a class="code hl_variable" href="structMailbox.html#ab9a4528fcd39e61bdefd4dcfdbc6252f">account</a>, m);</div>
+<div class="line"><span class="lineno"> 1422</span> </div>
+<div class="line"><span class="lineno"> 1423</span>      <a class="code hl_function" href="core_2mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9">mailbox_free</a>(&amp;m);</div>
+<div class="line"><span class="lineno"> 1424</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Unable to open mailbox %s&quot;</span>), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(folder));</div>
+<div class="line"><span class="lineno"> 1425</span>      repeat_error = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1426</span>    }</div>
+<div class="line"><span class="lineno"> 1427</span>    <span class="keywordflow">if</span> (m || !explicit_folder)</div>
+<div class="line"><span class="lineno"> 1428</span>    {</div>
+<div class="line"><span class="lineno"> 1429</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dlg__index_8c.html#af8efcd0ce3952702bc60f84abc828f3c">index_pager_init</a>();</div>
+<div class="line"><span class="lineno"> 1430</span>      <a class="code hl_function" href="dialog_8c.html#a7c4678f81d8185d89e16e4befe94bb08">dialog_push</a>(dlg);</div>
+<div class="line"><span class="lineno"> 1431</span> </div>
+<div class="line"><span class="lineno"> 1432</span>      <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dace908f40d9cc4394f4e477b190acf4bd">MUTT_CURSOR_INVISIBLE</a>);</div>
+<div class="line"><span class="lineno"> 1433</span>      m = <a class="code hl_function" href="group__gui__dlg.html#gaf4266da82ada988b3b2482b910ddb15a">dlg_index</a>(dlg, m);</div>
+<div class="line"><span class="lineno"> 1434</span>      <a class="code hl_function" href="mutt__curses_8c.html#a5b14a8ded6f47a2c518890c9ff70c76f">mutt_curses_set_cursor</a>(<a class="code hl_enumvalue" href="mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961dae729444cbcf8887a784e333da294fa2e">MUTT_CURSOR_VISIBLE</a>);</div>
+<div class="line"><span class="lineno"> 1435</span>      <a class="code hl_function" href="core_2mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9">mailbox_free</a>(&amp;m);</div>
+<div class="line"><span class="lineno"> 1436</span> </div>
+<div class="line"><span class="lineno"> 1437</span>      <a class="code hl_function" href="dialog_8c.html#a82616808183352fb315931b2bb3518c0">dialog_pop</a>();</div>
+<div class="line"><span class="lineno"> 1438</span>      <a class="code hl_function" href="mutt__window_8c.html#a52ff022e671a7fbdec773fc2d24e0e15">mutt_window_free</a>(&amp;dlg);</div>
+<div class="line"><span class="lineno"> 1439</span>      <a class="code hl_function" href="mutt_2logging_8c.html#a0f20ec32631fac9bf1f6fa2d1eb29da1">log_queue_empty</a>();</div>
+<div class="line"><span class="lineno"> 1440</span>      repeat_error = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1441</span>    }</div>
+<div class="line"><span class="lineno"> 1442</span>    <a class="code hl_function" href="imap_8c.html#ace40ffc72b9f8ed5f315ea2825472773">imap_logout_all</a>();</div>
+<div class="line"><span class="lineno"> 1443</span><span class="preprocessor">#ifdef USE_SASL_CYRUS</span></div>
+<div class="line"><span class="lineno"> 1444</span>    <a class="code hl_function" href="sasl_8c.html#a40170e4263cf2874982633d54f96a817">mutt_sasl_cleanup</a>();</div>
 <div class="line"><span class="lineno"> 1445</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno"> 1446</span><span class="preprocessor">#ifdef USE_AUTOCRYPT</span></div>
-<div class="line"><span class="lineno"> 1447</span>    <a class="code hl_function" href="autocrypt_8c.html#a6ccee2b006fad28ea865139d135e5d59">mutt_autocrypt_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1446</span><span class="preprocessor">#ifdef USE_SASL_GNU</span></div>
+<div class="line"><span class="lineno"> 1447</span>    <a class="code hl_function" href="gsasl_8c.html#ab663e5bd2bcd0febaee74d3891c1b6b6">mutt_gsasl_cleanup</a>();</div>
 <div class="line"><span class="lineno"> 1448</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno"> 1449</span>    <span class="comment">// TEST43: neomutt (no change to mailbox)</span></div>
-<div class="line"><span class="lineno"> 1450</span>    <span class="comment">// TEST44: neomutt (change mailbox)</span></div>
-<div class="line"><span class="lineno"> 1451</span>  }</div>
-<div class="line"><span class="lineno"> 1452</span> </div>
-<div class="line"><span class="lineno"> 1453</span>main_ok:</div>
-<div class="line"><span class="lineno"> 1454</span>  rc = 0;</div>
-<div class="line"><span class="lineno"> 1455</span>main_curses:</div>
-<div class="line"><span class="lineno"> 1456</span>  <a class="code hl_function" href="curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2">mutt_endwin</a>();</div>
-<div class="line"><span class="lineno"> 1457</span>  <a class="code hl_function" href="mutt__attach_8c.html#a6276b87d132d5b4e7590eb3d9265c0f8">mutt_temp_attachments_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1458</span>  <span class="comment">/* Repeat the last message to the user */</span></div>
-<div class="line"><span class="lineno"> 1459</span>  <span class="keywordflow">if</span> (repeat_error &amp;&amp; <a class="code hl_variable" href="globals_8c.html#a8b07bedfff276299caa6925c95b5b157">ErrorBufMessage</a>)</div>
-<div class="line"><span class="lineno"> 1460</span>    puts(<a class="code hl_variable" href="globals_8c.html#a6dc47daf9dad9df1140145c872d9dc2c">ErrorBuf</a>);</div>
-<div class="line"><span class="lineno"> 1461</span>main_exit:</div>
-<div class="line"><span class="lineno"> 1462</span>  <span class="keywordflow">if</span> (<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a> &amp;&amp; <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>)</div>
-<div class="line"><span class="lineno"> 1463</span>  {</div>
-<div class="line"><span class="lineno"> 1464</span>    <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>-&gt;<a class="code hl_variable" href="structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga2a9a5a2068ae8c2b217cb64cd679e498">main_hist_observer</a>, NULL);</div>
-<div class="line"><span class="lineno"> 1465</span>    <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>-&gt;<a class="code hl_variable" href="structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992">notify</a>, <a class="code hl_function" href="group__observer__api.html#gaf98c6ba45ec913e5d090791dea996e4c">main_log_observer</a>, NULL);</div>
-<div class="line"><span class="lineno"> 1466</span>    <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>-&gt;<a class="code hl_variable" href="structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga049ba4fc607d07b760a146a99bbc405e">main_config_observer</a>, NULL);</div>
-<div class="line"><span class="lineno"> 1467</span>    <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga7f47d16f5c1dad6c825d946fec19fa95">main_timeout_observer</a>, NULL);</div>
-<div class="line"><span class="lineno"> 1468</span>  }</div>
-<div class="line"><span class="lineno"> 1469</span>  <a class="code hl_function" href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a>(&amp;commands);</div>
-<div class="line"><span class="lineno"> 1470</span>  <a class="code hl_typedef" href="logging2_8h.html#a6db33de0f7da0088013ee90717734329">MuttLogger</a> = <a class="code hl_function" href="group__logging__api.html#ga2edbe9483e89b1090b072e9d9e4de62f">log_disp_queue</a>;</div>
-<div class="line"><span class="lineno"> 1471</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;folder);</div>
-<div class="line"><span class="lineno"> 1472</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;expanded_infile);</div>
-<div class="line"><span class="lineno"> 1473</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfile);</div>
-<div class="line"><span class="lineno"> 1474</span>  <a class="code hl_function" href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a>(&amp;queries);</div>
-<div class="line"><span class="lineno"> 1475</span>  <a class="code hl_function" href="crypt__mod_8c.html#a626ef0840a8870758022db54646c12ae">crypto_module_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1476</span>  <a class="code hl_function" href="rootwin_8c.html#a83f7595f597a4658d36a454d90772514">rootwin_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1477</span>  <a class="code hl_function" href="pool_8c.html#a86847a3c1a84e9dd4abfd8be0bd9f780">buf_pool_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1478</span>  <a class="code hl_function" href="envlist_8c.html#a2f375949728856cea8e5a9065444dd2c">envlist_free</a>(&amp;<a class="code hl_variable" href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a>);</div>
-<div class="line"><span class="lineno"> 1479</span>  <a class="code hl_function" href="dlg__browser_8c.html#ae57ac9cc2f16e09d897d2c37177da2cd">mutt_browser_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1480</span>  <a class="code hl_function" href="external_8c.html#a90a9f2dbed02e1442ce33c654f2cb620">external_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1481</span>  <a class="code hl_function" href="menu_2lib_8h.html#a14ee2c5a6e8d6e3dd5b3702a77317d5b">menu_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1482</span>  <a class="code hl_function" href="cryptglue_8c.html#a397940a79b0c75800fed7d264f7fd6b4">crypt_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1483</span>  <a class="code hl_function" href="mutt_2charset_8c.html#a52a634eff18853e0a34a06876717fa4c">mutt_ch_cache_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1484</span>  <a class="code hl_function" href="init_8c.html#ae29b8e4fd453b2492979c1fc3fcbffd4">mutt_opts_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1485</span>  <a class="code hl_function" href="subjectrx_8c.html#a738c050bdf5c464aa61ccad43def4b5a">subjrx_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1486</span>  <a class="code hl_function" href="attachments_8c.html#aaec97f5f9c7a89e5f86326bed4d44f47">attach_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1487</span>  <a class="code hl_function" href="alternates_8c.html#a0a4b00e60f2ecc10aaf25eb48ec087fd">alternates_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1488</span>  <a class="code hl_function" href="key_2init_8c.html#ae61198929e0c7cdf946ca0f9f9bfcbef">mutt_keys_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1489</span>  <a class="code hl_function" href="prex_8c.html#ace512d3a339810772edaf83f3a2b4425">mutt_prex_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1490</span>  <a class="code hl_function" href="config__cache_8c.html#a5902a18178b1e790f684e51a6152e8d4">config_cache_cleanup</a>();</div>
-<div class="line"><span class="lineno"> 1491</span>  <a class="code hl_function" href="neomutt_8c.html#af06ffebf075ceb3397d90d0501c83301">neomutt_free</a>(&amp;<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>);</div>
-<div class="line"><span class="lineno"> 1492</span>  <a class="code hl_function" href="config_2set_8c.html#a2ab12e419e99eef8f118eb83886078e0">cs_free</a>(&amp;cs);</div>
-<div class="line"><span class="lineno"> 1493</span>  <a class="code hl_function" href="mutt_2logging_8c.html#a964e39fa7f189e7513aa05e9993a1c0b">log_queue_flush</a>(<a class="code hl_function" href="group__logging__api.html#gaa8db59bb1ae8a4901a2635a68367d477">log_disp_terminal</a>);</div>
-<div class="line"><span class="lineno"> 1494</span>  <a class="code hl_function" href="mutt__logging_8c.html#a622226178155c08b3976e28c013a42cf">mutt_log_stop</a>();</div>
-<div class="line"><span class="lineno"> 1495</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1496</span>}</div>
+<div class="line"><span class="lineno"> 1449</span><span class="preprocessor">#ifdef USE_AUTOCRYPT</span></div>
+<div class="line"><span class="lineno"> 1450</span>    <a class="code hl_function" href="autocrypt_8c.html#a6ccee2b006fad28ea865139d135e5d59">mutt_autocrypt_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1451</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno"> 1452</span>    <span class="comment">// TEST43: neomutt (no change to mailbox)</span></div>
+<div class="line"><span class="lineno"> 1453</span>    <span class="comment">// TEST44: neomutt (change mailbox)</span></div>
+<div class="line"><span class="lineno"> 1454</span>  }</div>
+<div class="line"><span class="lineno"> 1455</span> </div>
+<div class="line"><span class="lineno"> 1456</span>main_ok:</div>
+<div class="line"><span class="lineno"> 1457</span>  rc = 0;</div>
+<div class="line"><span class="lineno"> 1458</span>main_curses:</div>
+<div class="line"><span class="lineno"> 1459</span>  <a class="code hl_function" href="curs__lib_8c.html#acd14d074d8b9e6cb21e851dd573cdec2">mutt_endwin</a>();</div>
+<div class="line"><span class="lineno"> 1460</span>  <a class="code hl_function" href="mutt__attach_8c.html#a6276b87d132d5b4e7590eb3d9265c0f8">mutt_temp_attachments_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1461</span>  <span class="comment">/* Repeat the last message to the user */</span></div>
+<div class="line"><span class="lineno"> 1462</span>  <span class="keywordflow">if</span> (repeat_error &amp;&amp; <a class="code hl_variable" href="globals_8c.html#a8b07bedfff276299caa6925c95b5b157">ErrorBufMessage</a>)</div>
+<div class="line"><span class="lineno"> 1463</span>    puts(<a class="code hl_variable" href="globals_8c.html#a6dc47daf9dad9df1140145c872d9dc2c">ErrorBuf</a>);</div>
+<div class="line"><span class="lineno"> 1464</span>main_exit:</div>
+<div class="line"><span class="lineno"> 1465</span>  <span class="keywordflow">if</span> (<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a> &amp;&amp; <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>)</div>
+<div class="line"><span class="lineno"> 1466</span>  {</div>
+<div class="line"><span class="lineno"> 1467</span>    <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>-&gt;<a class="code hl_variable" href="structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga2a9a5a2068ae8c2b217cb64cd679e498">main_hist_observer</a>, NULL);</div>
+<div class="line"><span class="lineno"> 1468</span>    <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>-&gt;<a class="code hl_variable" href="structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992">notify</a>, <a class="code hl_function" href="group__observer__api.html#gaf98c6ba45ec913e5d090791dea996e4c">main_log_observer</a>, NULL);</div>
+<div class="line"><span class="lineno"> 1469</span>    <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>-&gt;<a class="code hl_variable" href="structConfigSubset.html#a14f023ba0ccb91862957ae7c6bcb8992">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga049ba4fc607d07b760a146a99bbc405e">main_config_observer</a>, NULL);</div>
+<div class="line"><span class="lineno"> 1470</span>    <a class="code hl_function" href="mutt_2notify_8c.html#a0cfc4087bc33bb057001e9d3a55eb2bb">notify_observer_remove</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b">notify</a>, <a class="code hl_function" href="group__observer__api.html#ga7f47d16f5c1dad6c825d946fec19fa95">main_timeout_observer</a>, NULL);</div>
+<div class="line"><span class="lineno"> 1471</span>  }</div>
+<div class="line"><span class="lineno"> 1472</span>  <a class="code hl_function" href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a>(&amp;commands);</div>
+<div class="line"><span class="lineno"> 1473</span>  <a class="code hl_typedef" href="logging2_8h.html#a6db33de0f7da0088013ee90717734329">MuttLogger</a> = <a class="code hl_function" href="group__logging__api.html#ga2edbe9483e89b1090b072e9d9e4de62f">log_disp_queue</a>;</div>
+<div class="line"><span class="lineno"> 1474</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;folder);</div>
+<div class="line"><span class="lineno"> 1475</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;expanded_infile);</div>
+<div class="line"><span class="lineno"> 1476</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfile);</div>
+<div class="line"><span class="lineno"> 1477</span>  <a class="code hl_function" href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a>(&amp;queries);</div>
+<div class="line"><span class="lineno"> 1478</span>  <a class="code hl_function" href="crypt__mod_8c.html#a626ef0840a8870758022db54646c12ae">crypto_module_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1479</span>  <a class="code hl_function" href="rootwin_8c.html#a83f7595f597a4658d36a454d90772514">rootwin_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1480</span>  <a class="code hl_function" href="pool_8c.html#a86847a3c1a84e9dd4abfd8be0bd9f780">buf_pool_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1481</span>  <a class="code hl_function" href="envlist_8c.html#a2f375949728856cea8e5a9065444dd2c">envlist_free</a>(&amp;<a class="code hl_variable" href="globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01">EnvList</a>);</div>
+<div class="line"><span class="lineno"> 1482</span>  <a class="code hl_function" href="dlg__browser_8c.html#ae57ac9cc2f16e09d897d2c37177da2cd">mutt_browser_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1483</span>  <a class="code hl_function" href="external_8c.html#a90a9f2dbed02e1442ce33c654f2cb620">external_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1484</span>  <a class="code hl_function" href="menu_2lib_8h.html#a14ee2c5a6e8d6e3dd5b3702a77317d5b">menu_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1485</span>  <a class="code hl_function" href="cryptglue_8c.html#a397940a79b0c75800fed7d264f7fd6b4">crypt_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1486</span>  <a class="code hl_function" href="mutt_2charset_8c.html#a52a634eff18853e0a34a06876717fa4c">mutt_ch_cache_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1487</span>  <a class="code hl_function" href="init_8c.html#ae29b8e4fd453b2492979c1fc3fcbffd4">mutt_opts_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1488</span>  <a class="code hl_function" href="subjectrx_8c.html#a738c050bdf5c464aa61ccad43def4b5a">subjrx_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1489</span>  <a class="code hl_function" href="attachments_8c.html#aaec97f5f9c7a89e5f86326bed4d44f47">attach_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1490</span>  <a class="code hl_function" href="alternates_8c.html#a0a4b00e60f2ecc10aaf25eb48ec087fd">alternates_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1491</span>  <a class="code hl_function" href="key_2init_8c.html#ae61198929e0c7cdf946ca0f9f9bfcbef">mutt_keys_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1492</span>  <a class="code hl_function" href="prex_8c.html#ace512d3a339810772edaf83f3a2b4425">mutt_prex_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1493</span>  <a class="code hl_function" href="config__cache_8c.html#a5902a18178b1e790f684e51a6152e8d4">config_cache_cleanup</a>();</div>
+<div class="line"><span class="lineno"> 1494</span>  <a class="code hl_function" href="neomutt_8c.html#af06ffebf075ceb3397d90d0501c83301">neomutt_free</a>(&amp;<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>);</div>
+<div class="line"><span class="lineno"> 1495</span>  <a class="code hl_function" href="config_2set_8c.html#a2ab12e419e99eef8f118eb83886078e0">cs_free</a>(&amp;cs);</div>
+<div class="line"><span class="lineno"> 1496</span>  <a class="code hl_function" href="mutt_2logging_8c.html#a964e39fa7f189e7513aa05e9993a1c0b">log_queue_flush</a>(<a class="code hl_function" href="group__logging__api.html#gaa8db59bb1ae8a4901a2635a68367d477">log_disp_terminal</a>);</div>
+<div class="line"><span class="lineno"> 1497</span>  <a class="code hl_function" href="mutt__logging_8c.html#a622226178155c08b3976e28c013a42cf">mutt_log_stop</a>();</div>
+<div class="line"><span class="lineno"> 1498</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1499</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a16764dc80c9b3f6ad2897c8b7e59bd10"><div class="ttname"><a href="address_2address_8c.html#a16764dc80c9b3f6ad2897c8b7e59bd10">mutt_addrlist_copy</a></div><div class="ttdeci">void mutt_addrlist_copy(struct AddressList *dst, const struct AddressList *src, bool prune)</div><div class="ttdoc">Copy a list of addresses into another list.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l00765">address.c:765</a></div></div>
 <div class="ttc" id="aaddress_2address_8c_html_a8143574988507c4f906548a2e88166d5"><div class="ttname"><a href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a></div><div class="ttdeci">size_t mutt_addrlist_write(const struct AddressList *al, struct Buffer *buf, bool display)</div><div class="ttdoc">Write an Address to a buffer.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l01206">address.c:1206</a></div></div>
 <div class="ttc" id="aaddress_2address_8c_html_a9bb4abe92405bac67f03e36936a29b6e"><div class="ttname"><a href="address_2address_8c.html#a9bb4abe92405bac67f03e36936a29b6e">mutt_addrlist_parse</a></div><div class="ttdeci">int mutt_addrlist_parse(struct AddressList *al, const char *s)</div><div class="ttdoc">Parse a list of email addresses.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l00480">address.c:480</a></div></div>
