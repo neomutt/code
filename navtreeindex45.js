@@ -1,6 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"structContentState.html":[1,0,51],
 "structContentState.html#a4695d6d270f8dad90692b74b583095b1":[1,0,51,4],
 "structContentState.html#a54db42e78cb60f77b08b70acad296b54":[1,0,51,1],
 "structContentState.html#a7c0938679ad00987c0337eeaac95724d":[1,0,51,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX45 =
 "structEventWindow.html#aea98dd74fef5d4f43d41ec6223a4a37d":[1,0,82,1],
 "structExpando.html":[1,0,83],
 "structExpando.html#adc52c6adec511408e4d9ba48cb1ec38d":[1,0,83,1],
-"structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a":[1,0,83,0]
+"structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a":[1,0,83,0],
+"structExpandoDefinition.html":[1,0,84]
 };

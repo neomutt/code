@@ -1,6 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"structSimpleDialogWindows.html#afceb391aaa30c99f5ded2b2cc19db509":[1,0,230,0],
 "structSlist.html":[1,0,231],
 "structSlist.html#a6abed005cd7946996bcf80e0daa53c3b":[1,0,231,0],
 "structSlist.html#a7ad6a474ee1f2eeb00367916567fb5a6":[1,0,231,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX50 =
 "terminal_8c.html":[2,0,21,30],
 "terminal_8c.html#a0d85ab6bf7d5c8806fab02f86155c18c":[2,0,21,30,4],
 "terminal_8c.html#a2a578d4e25e598d7eb838298d9c735a1":[2,0,21,30,6],
-"terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6":[2,0,21,30,5]
+"terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6":[2,0,21,30,5],
+"terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec":[2,0,21,30,0]
 };

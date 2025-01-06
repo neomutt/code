@@ -1,6 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"structMsgWinWindowData.html#aa447c5ed2e99857aab63b690b524b3cd":[1,0,158,4],
 "structMuttFileIter.html":[1,0,160],
 "structMuttFileIter.html#a6d36915919730adb1e42907f62404a73":[1,0,160,0],
 "structMuttFileIter.html#aacfd420beeec918d8ba4c8ecfc444c77":[1,0,160,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX48 =
 "structPattern.html#a3a86d7b7703c6667672912971d40f6e4":[1,0,188,0],
 "structPattern.html#a4e88c803a593a311d84fa34d6c634883":[1,0,188,17],
 "structPattern.html#a502bcf07280750bacbba15073bee2aa6":[1,0,188,16],
-"structPattern.html#a5e477ca7e73c6015d187a9b1476c4b2a":[1,0,188,7]
+"structPattern.html#a5e477ca7e73c6015d187a9b1476c4b2a":[1,0,188,7],
+"structPattern.html#a62f96e70e91227a7f62ff26d0e630a3b":[1,0,188,6]
 };

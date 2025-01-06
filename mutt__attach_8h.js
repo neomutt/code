@@ -8,8 +8,7 @@ var mutt__attach_8h =
     ] ],
     [ "SaveAttach", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faa", [
       [ "MUTT_SAVE_NO_FLAGS", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaaed4c57bafee22c671cdc621feed0b224", null ],
-      [ "MUTT_SAVE_APPEND", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaa3f82d6dcb02891511fe91907b398aa1c", null ],
-      [ "MUTT_SAVE_OVERWRITE", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaa854916bc31aae9f2f9afbc6e15309ae7", null ]
+      [ "MUTT_SAVE_APPEND", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaa3f82d6dcb02891511fe91907b398aa1c", null ]
     ] ],
     [ "mutt_attach_display_loop", "mutt__attach_8h.html#a72c9e19b893d8d4afc5593d9d2b399ff", null ],
     [ "mutt_save_attachment_list", "mutt__attach_8h.html#a588a5719b699c5d062f263711598836e", null ],

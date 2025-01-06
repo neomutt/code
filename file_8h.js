@@ -54,6 +54,7 @@ var file_8h =
     [ "mutt_file_stat_timespec_compare", "file_8h.html#acf5bbc5f63d75ef10f2d16f183de0de0", null ],
     [ "mutt_file_symlink", "file_8h.html#a8f150fbd8c72f544d733440b861eda9c", null ],
     [ "mutt_file_timespec_compare", "file_8h.html#a50b47db0c2ba13f42141c27a7d271779", null ],
+    [ "mutt_file_touch", "file_8h.html#a004c6c512fd985a8e230e7fff6dfff33", null ],
     [ "mutt_file_touch_atime", "file_8h.html#a3b39a0ad0a86d765510227b75fba988e", null ],
     [ "mutt_file_unlink", "file_8h.html#ae57463c2854c006a3c67b78736e9056e", null ],
     [ "mutt_file_unlink_empty", "file_8h.html#a1d61fd8c991d26942e6ae461aaf0fe13", null ],
