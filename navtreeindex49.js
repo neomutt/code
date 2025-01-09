@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"structPattern.html#a62f96e70e91227a7f62ff26d0e630a3b":[1,0,188,6],
 "structPattern.html#a6a332741926ea1e2056b350df886c2ac":[1,0,188,12],
 "structPattern.html#a7f4991ea8f62a8a90ec55dedaedc17ff":[1,0,188,8],
 "structPattern.html#aa8bd5e633c1911b5c6fda6812479085a":[1,0,188,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f":[1,0,229,2],
 "structSimpleDialogWindows.html":[1,0,230],
 "structSimpleDialogWindows.html#a23d39f4677299e52f7a49c3a4cfc591a":[1,0,230,1],
-"structSimpleDialogWindows.html#a9ac8062ab030db6056252f62ec61103c":[1,0,230,2],
-"structSimpleDialogWindows.html#afceb391aaa30c99f5ded2b2cc19db509":[1,0,230,0]
+"structSimpleDialogWindows.html#a9ac8062ab030db6056252f62ec61103c":[1,0,230,2]
 };

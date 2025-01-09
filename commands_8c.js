@@ -12,6 +12,7 @@ var commands_8c =
       [ "GS_ADDR", "commands_8c.html#a28ba8325f0898ed34334448a529be7efafb99c50ae127e02906df58a5688d97cb", null ]
     ] ],
     [ "is_function", "commands_8c.html#afafced1b84e7868cb29d1cde26c7c74a", null ],
+    [ "is_color_object", "commands_8c.html#a24e753457aba43a6e749eda649c6b953", null ],
     [ "parse_grouplist", "commands_8c.html#a441b580ab90bd2bc9e1346bc82fd973c", null ],
     [ "parse_rc_line_cwd", "commands_8c.html#a3661ee2d6db04b9f787cac051efc3b32", null ],
     [ "mutt_get_sourced_cwd", "commands_8c.html#aef2d030e6e9498e89343f12c2fa918b8", null ],

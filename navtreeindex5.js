@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"compose_2functions_8h_source.html":[2,0,9,12],
 "compose_2lib_8h.html":[2,0,9,13],
 "compose_2lib_8h.html#adf568d592758fae1758bbb4dc4e3e554":[2,0,9,13,0],
 "compose_2lib_8h_source.html":[2,0,9,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "config_set.html":[14,12],
 "config_slist.html":[14,13],
 "config_sort.html":[14,14],
-"config_string.html":[14,15],
-"config_subset.html":[14,16]
+"config_string.html":[14,15]
 };

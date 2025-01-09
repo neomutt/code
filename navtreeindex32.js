@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"mx_8c.html#ad58805a8bbfd902091a2766767f3c70d":[2,0,95,17],
 "mx_8c.html#ad7adbbda58c642107eadf33b1fbf0c13":[2,0,95,11],
 "mx_8c.html#ad9772f30292be237af605c682e8f0777":[2,0,95,37],
 "mx_8c.html#add0e192c5f27bf6bd096ae2eb7c0b67b":[2,0,95,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "neo_enriched.html":[0,4],
 "neo_external.html":[0,5],
 "neo_flags.html":[0,6],
-"neo_globals.html":[0,7],
-"neo_handler.html":[0,8]
+"neo_globals.html":[0,7]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"query_8h.html":[2,0,35,13],
 "query_8h.html#a005246432ee7301cb450cbc25cf9f71a":[2,0,35,13,3],
 "query_8h.html#a567ffd509ddb81f271914fedbfda6d16":[2,0,35,13,6],
 "query_8h.html#a5e4875af0e433ff3133f1b1f66744e42":[2,0,35,13,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "recvcmd_8c_source.html":[2,0,98],
 "recvcmd_8h.html":[2,0,99],
 "recvcmd_8h.html#abee66b14939bc78e04d643339582dad5":[2,0,99,1],
-"recvcmd_8h.html#abfcbdaa23e31b52663a8360589aab574":[2,0,99,4],
-"recvcmd_8h.html#ad30e2923a0b92d6397ad74edabdf72de":[2,0,99,2]
+"recvcmd_8h.html#abfcbdaa23e31b52663a8360589aab574":[2,0,99,4]
 };

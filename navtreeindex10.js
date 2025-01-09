@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"editor_2window_8c_source.html":[2,0,16,8],
 "editor_enter.html":[19,0],
 "editor_functions.html":[19,1],
 "editor_state.html":[19,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "enter_8c.html#a78883bb21f84133b76c45cdc9a17574d":[2,0,16,0,6],
 "enter_8c.html#a7d0758a66be130175541079f6183383e":[2,0,16,0,4],
 "enter_8c.html#a8cce8d19a0f95bbfef94c77cc3c6ce94":[2,0,16,0,1],
-"enter_8c.html#a96a74633f9162486a7d78304e4fc417e":[2,0,16,0,14],
-"enter_8c.html#ab207b9d4d36d4ca2208b3158868f98ac":[2,0,16,0,7]
+"enter_8c.html#a96a74633f9162486a7d78304e4fc417e":[2,0,16,0,14]
 };
