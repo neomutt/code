@@ -11,6 +11,7 @@ var config_2dump_8h =
     [ "CS_DUMP_SHOW_SYNONYMS", "config_2dump_8h.html#a3009c688dc6d6d7860e4feb6f6546cfb", null ],
     [ "CS_DUMP_SHOW_DEPRECATED", "config_2dump_8h.html#a609447cfa8a93c99d48d8c856c006957", null ],
     [ "CS_DUMP_SHOW_DOCS", "config_2dump_8h.html#aed43f9e35bb2925ad257d59d87d84041", null ],
+    [ "CS_DUMP_LINK_DOCS", "config_2dump_8h.html#ac9b43bd257081265d21f30377ad852e6", null ],
     [ "ConfigDumpFlags", "config_2dump_8h.html#abe3e4e7d1c2d1e1dc744b23c2e588c31", null ],
     [ "dump_config_neo", "config_2dump_8h.html#a98a7ec58cbc4628935b32f23d6066945", null ],
     [ "dump_config", "config_2dump_8h.html#a200d11d28ce799a726af4e7bd2bad49d", null ],

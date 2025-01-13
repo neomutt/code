@@ -1,7 +1,7 @@
 var helpbar_8c =
 [
-    [ "make_help", "helpbar_8c.html#a68602a25e3322fb3b83bc387d69da84f", null ],
-    [ "compile_help", "helpbar_8c.html#a4447ae630696350e931dacf1f18f10fc", null ],
+    [ "make_help", "helpbar_8c.html#a64f7034c9d3618541f34dac22a23d937", null ],
+    [ "compile_help", "helpbar_8c.html#a2c217f9748bb6a1531f0bd6ab3f0af5a", null ],
     [ "helpbar_recalc", "group__window__recalc.html#ga5165a2f8ed1418aba9747d98572b104b", null ],
     [ "helpbar_repaint", "group__window__repaint.html#ga744700a753aeb8f87e50e57706bfb08d", null ],
     [ "helpbar_binding_observer", "group__observer__api.html#gab0329ccef8dd2aef381a44436e4a2020", null ],

@@ -1,5 +1,15 @@
 var NAVTREEINDEX21 =
 {
+"group__store__fetch.html#gad4954ea287c16ca9f1ddf4694c4fa138":[48,44,1,6],
+"group__store__fetch.html#gae275607f571a9b1b20b64be021efd39f":[48,44,1,3],
+"group__store__fetch.html#gae3107cad0715b0fff7a662632faf4450":[48,44,1,1],
+"group__store__fetch.html#gaf4881fe6e64bcf98d794ef345dcccbf7":[48,44,1,0],
+"group__store__fetch.html#gaf6192dbfc776b6606565ffa6461e47d7":[48,44,1,2],
+"group__store__free.html":[48,44,2],
+"group__store__free.html#ga02fe241b34a34cd61d1bf3714bead00e":[48,44,2,1],
+"group__store__free.html#ga1cc13d08a9299ebab2af3e535d489a09":[48,44,2,0],
+"group__store__free.html#ga47aabb5904ef661e84f38b5a20ab9841":[48,44,2,7],
+"group__store__free.html#ga5c8f9355b57f51be483a682c6197a772":[48,44,2,6],
 "group__store__free.html#ga73a4444553d67dc5164d8f59d53fe4a2":[48,44,2,4],
 "group__store__free.html#ga780c438ee81296688ea83f5d42c60246":[48,44,2,2],
 "group__store__free.html#ga930750f96c5e58193d6c0b5322c1edb9":[48,44,2,5],
@@ -239,15 +249,5 @@ var NAVTREEINDEX21 =
 "hcache_2hcache_8c.html#a4e108975e258e0336d268fcf1d8d0c04":[2,0,22,1,6],
 "hcache_2hcache_8c.html#a5086e15744da558388677cc362f74959":[2,0,22,1,11],
 "hcache_2hcache_8c.html#a5691b8a075665d48c570eb105a472556":[2,0,22,1,16],
-"hcache_2hcache_8c.html#a5c63cb46a1df5ae2e732a76eb78c6183":[2,0,22,1,8],
-"hcache_2hcache_8c.html#a66e48b640205127c7a4bb987b8d0192d":[2,0,22,1,23],
-"hcache_2hcache_8c.html#a791c8437997aca5d8747271ff4c75e98":[2,0,22,1,17],
-"hcache_2hcache_8c.html#a82a990727c9f0e254d510805919890c1":[2,0,22,1,14],
-"hcache_2hcache_8c.html#a83fb46f01645076c584af0530d4cbc54":[2,0,22,1,9],
-"hcache_2hcache_8c.html#a8ef10068ab1140db0955929b282525f6":[2,0,22,1,18],
-"hcache_2hcache_8c.html#a91d2e272efeedb1cd0c61b139e034625":[2,0,22,1,5],
-"hcache_2hcache_8c.html#a92af5c18e373eace42e9f0bb948f723f":[2,0,22,1,15],
-"hcache_2hcache_8c.html#a940c6e385e0177db2ab348030a64ae14":[2,0,22,1,7],
-"hcache_2hcache_8c.html#a9e0172956ca278dc113eefc10baef638":[2,0,22,1,21],
-"hcache_2hcache_8c.html#a9f2aea3b2e8ba9dc758a06e0163dee14":[2,0,22,1,20]
+"hcache_2hcache_8c.html#a5c63cb46a1df5ae2e732a76eb78c6183":[2,0,22,1,8]
 };

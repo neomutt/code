@@ -1,5 +1,14 @@
 var NAVTREEINDEX18 =
 {
+"group__expando__get__string__api.html#ga6087b1186fc71956fc16eac09c316bda":[48,22,0,30],
+"group__expando__get__string__api.html#ga65541f1d9f9081d443f2b10fd09c7d5d":[48,22,0,139],
+"group__expando__get__string__api.html#ga67a3268607fd3b07384cc17737ecfe97":[48,22,0,59],
+"group__expando__get__string__api.html#ga67de204d5021d72840c65199c11f4696":[48,22,0,29],
+"group__expando__get__string__api.html#ga684b33807b7e200e8ca5a168ee88ba10":[48,22,0,108],
+"group__expando__get__string__api.html#ga691d819f267c7e1729d0c92b5989fb12":[48,22,0,91],
+"group__expando__get__string__api.html#ga6bbe46e7c20c3ce4674877579c9869e4":[48,22,0,46],
+"group__expando__get__string__api.html#ga6d53e73e4fbfcfa05540d6075368e9bf":[48,22,0,8],
+"group__expando__get__string__api.html#ga6de140bf910817bdf677f60dd6279be9":[48,22,0,111],
 "group__expando__get__string__api.html#ga6e886727b2724d226d7eda34a052be79":[48,22,0,26],
 "group__expando__get__string__api.html#ga6f05f788b07cf3a5d6ebdc2985beb64b":[48,22,0,47],
 "group__expando__get__string__api.html#ga72a819547ff2451b11a3a801131e35f2":[48,22,0,54],
@@ -240,14 +249,5 @@ var NAVTREEINDEX18 =
 "group__index__function__api.html#ga79a2ce1636045c0caf2695ea4302d37a":[48,13,8,55],
 "group__index__function__api.html#ga7b6e6ede76315a771d222535f5e8c3db":[48,13,8,72],
 "group__index__function__api.html#ga7f941170e4f691695ca4c460b43e424b":[48,13,8,64],
-"group__index__function__api.html#ga816f9da63d9350cfb8a14c426aa1a7b6":[48,13,8,58],
-"group__index__function__api.html#ga866a26f96bec8b68ccb85967d692d189":[48,13,8,66],
-"group__index__function__api.html#ga86c05f9351a94fedebc1bb583340a899":[48,13,8,45],
-"group__index__function__api.html#ga8927097d5d6fe8c0b1100d015a15e98b":[48,13,8,57],
-"group__index__function__api.html#ga91148c3b42b2b18787cc283b2f7c7c9a":[48,13,8,47],
-"group__index__function__api.html#ga93a78e65ca84514737292320362e0296":[48,13,8,10],
-"group__index__function__api.html#ga9771759ade6d4835ff362d960d3a013f":[48,13,8,2],
-"group__index__function__api.html#ga9bbeaf263a02ed3eb994c02bc20d2db6":[48,13,8,4],
-"group__index__function__api.html#ga9dfbe550ac24b081564de87007bfff1c":[48,13,8,17],
-"group__index__function__api.html#ga9fc6e2fac8978d86ab50b9e1aaf0b163":[48,13,8,76]
+"group__index__function__api.html#ga816f9da63d9350cfb8a14c426aa1a7b6":[48,13,8,58]
 };

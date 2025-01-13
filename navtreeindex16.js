@@ -1,5 +1,14 @@
 var NAVTREEINDEX16 =
 {
+"group__cfg__type__string__get.html#ga78b8c3c203de744be9cc40185ecbb07f":[48,8,1,2],
+"group__cfg__type__string__get.html#gabd426213a52955a8bda2ee6f372e243e":[48,8,1,13],
+"group__cfg__type__string__get.html#gabf83cfcb7725c482a8ee0d9fbb15c070":[48,8,1,12],
+"group__cfg__type__string__get.html#gac1349fc2d7de85f1fcd8aed68cc68065":[48,8,1,7],
+"group__cfg__type__string__get.html#gacc2acaa38111794dd1d19a521b1bd9a1":[48,8,1,5],
+"group__cfg__type__string__get.html#gad491963060ee2cc61d5426b2367707d9":[48,8,1,0],
+"group__cfg__type__string__get.html#gadcc1fd1ca971eacff907f8e5f08e6a15":[48,8,1,1],
+"group__cfg__type__string__get.html#gaf458194ca4d2919a626af268cb81cd0f":[48,8,1,11],
+"group__cfg__type__string__get.html#gaf7c02093f19f42a947d9f18ff2139ca6":[48,8,1,3],
 "group__cfg__type__string__minus__equals.html":[48,8,5],
 "group__cfg__type__string__minus__equals.html#ga118b3ceca4da77fc7d33f6babc654969":[48,8,5,1],
 "group__cfg__type__string__minus__equals.html#ga138201e31e9ea0d582b2b8a4cc915b29":[48,8,5,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX16 =
 "group__crypto__pgp__extract__key__from__attachment.html#gabbed31f62b13dc442e28f334de2dba25":[48,39,18,0],
 "group__crypto__pgp__invoke__getkeys.html":[48,39,16],
 "group__crypto__pgp__invoke__getkeys.html#ga41108b7fbffaf50678e9299b62a8fc7a":[48,39,16,0],
-"group__crypto__pgp__invoke__import.html":[48,39,17],
-"group__crypto__pgp__invoke__import.html#ga9b73f1b32f324051fd9c955173f4acec":[48,39,17,0],
-"group__crypto__pgp__invoke__import.html#gacee2a4b90d106433cf7840a98171491f":[48,39,17,1],
-"group__crypto__pgp__make__key__attachment.html":[48,39,13],
-"group__crypto__pgp__make__key__attachment.html#ga9c2457db7807a83563f0ffcddb6705df":[48,39,13,1],
-"group__crypto__pgp__make__key__attachment.html#gaaf6d917fffbbc1c4d54376cea70ea9d6":[48,39,13,0],
-"group__crypto__pgp__traditional__encryptsign.html":[48,39,15],
-"group__crypto__pgp__traditional__encryptsign.html#gaaa1aedb09184862e99651bd5cde64d41":[48,39,15,0],
-"group__crypto__send__menu.html":[48,39,10],
-"group__crypto__send__menu.html#ga8b0a3fa1ac99d5701063bc472fec560b":[48,39,10,2]
+"group__crypto__pgp__invoke__import.html":[48,39,17]
 };

@@ -47,6 +47,7 @@ var debug_2lib_8h =
     [ "dump_graphviz_expando_node", "debug_2lib_8h.html#a7b9b32b9bd9decc597d2e65b094536c7", null ],
     [ "dump_keybindings", "debug_2lib_8h.html#abb476b24e8bea9ec4108b4f6c28f51da", null ],
     [ "log_disp_debug", "group__logging__api.html#ga8b28ce95a9e7ec9d8b500e49eb97d0b2", null ],
+    [ "name_color_id", "debug_2lib_8h.html#ada474aa080b94c6b09df827e0ece88d6", null ],
     [ "name_content_disposition", "debug_2lib_8h.html#aa79e3349baca3ec7de77efe29b506020", null ],
     [ "name_content_encoding", "debug_2lib_8h.html#a213ff2ae2b2fec1b3dff92ef7a750a43", null ],
     [ "name_content_type", "debug_2lib_8h.html#a935857b19c48e5f691ed62d5adc9eacb", null ],

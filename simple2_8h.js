@@ -1,5 +1,6 @@
 var simple2_8h =
 [
+    [ "COLOR_COMPOSE", "simple2_8h.html#a4c98dcdabf8f35d1953b020fa8836652", null ],
     [ "simple_colors_init", "simple2_8h.html#a040a984f0bd210626435fcc448ae1f5c", null ],
     [ "simple_colors_reset", "simple2_8h.html#a842af6d74a2443d9d31956d9b64f9dcf", null ],
     [ "simple_colors_cleanup", "simple2_8h.html#a617d503925624101a2280cb79c189457", null ],

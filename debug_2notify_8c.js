@@ -11,6 +11,5 @@ var debug_2notify_8c =
     [ "notify_dump_window_state", "debug_2notify_8c.html#afea224275b7b400352a04317877218f7", null ],
     [ "notify_dump_window_focus", "debug_2notify_8c.html#ad766956bc33de5387af4d71172a52b0a", null ],
     [ "debug_all_observer", "debug_2notify_8c.html#aa8b31bf9d0963d2c99a0c8f6d18664ad", null ],
-    [ "ColorFields", "debug_2notify_8c.html#a4476932702aa028f1fcdc565633c03cf", null ],
-    [ "ComposeColorFields", "debug_2notify_8c.html#a35f1332269e545cf1ec7f30fc9424442", null ]
+    [ "ColorFields", "debug_2notify_8c.html#a4476932702aa028f1fcdc565633c03cf", null ]
 ];

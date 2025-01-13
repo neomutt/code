@@ -109,6 +109,7 @@ var annotated_dup =
     [ "HCacheEntry", "structHCacheEntry.html", "structHCacheEntry" ],
     [ "HeaderCache", "structHeaderCache.html", "structHeaderCache" ],
     [ "HelpbarWindowData", "structHelpbarWindowData.html", "structHelpbarWindowData" ],
+    [ "HelpLine", "structHelpLine.html", "structHelpLine" ],
     [ "History", "structHistory.html", "structHistory" ],
     [ "HistoryData", "structHistoryData.html", "structHistoryData" ],
     [ "HistoryEntry", "structHistoryEntry.html", "structHistoryEntry" ],

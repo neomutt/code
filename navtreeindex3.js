@@ -171,11 +171,10 @@ var NAVTREEINDEX3 =
 "cid_8h_source.html":[2,0,2,5],
 "classes.html":[1,1],
 "color_2command_8c.html":[2,0,6,6],
-"color_2command_8c.html#a35f1332269e545cf1ec7f30fc9424442":[2,0,6,6,9],
 "color_2command_8c.html#a4223d5d1f0253f7ee4b4cf2e06041f1f":[2,0,6,6,0],
 "color_2command_8c.html#a4476932702aa028f1fcdc565633c03cf":[2,0,6,6,8],
-"color_2command_8c.html#aa01da42d6033fe3b7ca46c61a7b8a20c":[2,0,6,6,1],
 "color_2command_8c.html#abf4fa6284b875336d79d4cf473c3019d":[2,0,6,6,3],
+"color_2command_8c.html#acc67f336f74803823dd88fd44cf39614":[2,0,6,6,1],
 "color_2command_8c.html#afc5ca3d357fa1ccff17544249c7f2905":[2,0,6,6,2],
 "color_2command_8c_source.html":[2,0,6,6],
 "color_2dump_8c.html":[2,0,6,12],
@@ -206,6 +205,7 @@ var NAVTREEINDEX3 =
 "color_2regex_8c.html":[2,0,6,27],
 "color_2regex_8c.html#a03ecb24e5af3ec1bb0523ff94d7ffa63":[2,0,6,27,16],
 "color_2regex_8c.html#a07861c080c83be36736a1ed516ab3f8e":[2,0,6,27,18],
+"color_2regex_8c.html#a18c029b7ffefd9545300ad82e662d5ae":[2,0,6,27,8],
 "color_2regex_8c.html#a19770f05e20969aa3d8d00bd9084aa77":[2,0,6,27,15],
 "color_2regex_8c.html#a30e52a1f8bb4cecbdcc74db28a9d7b05":[2,0,6,27,23],
 "color_2regex_8c.html#a3b438e1542b19271a0537e463c677342":[2,0,6,27,19],
@@ -229,7 +229,6 @@ var NAVTREEINDEX3 =
 "color_2regex_8c.html#ae5988f181a572cc7e2060c7271e4c7e2":[2,0,6,27,21],
 "color_2regex_8c.html#ae963acd0744f5dfd000b03193d3d4a48":[2,0,6,27,6],
 "color_2regex_8c.html#aef70b1b6233b968b2f90589debe3279f":[2,0,6,27,22],
-"color_2regex_8c.html#af4edcca1a89668cec8d2d400e45aa373":[2,0,6,27,8],
 "color_2regex_8c.html#afe34d897552bbed1c7dd96438abcc6fe":[2,0,6,27,3],
 "color_2regex_8c_source.html":[2,0,6,27],
 "color_2simple_8c.html":[2,0,6,29],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "color_8c.html#aec44cbbfbd9198585b2c1f532416c8d4":[2,0,6,4,1],
 "color_8c_source.html":[2,0,6,4],
 "color_8h.html":[2,0,6,5],
-"color_8h.html#a35f1332269e545cf1ec7f30fc9424442":[2,0,6,5,7]
+"color_8h.html#a4446c94565fccfad7ca90b914bfe3ff5":[2,0,6,5,4],
+"color_8h.html#a4476932702aa028f1fcdc565633c03cf":[2,0,6,5,6]
 };

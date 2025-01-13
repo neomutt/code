@@ -24,7 +24,16 @@ var color_8h =
       [ "MT_COLOR_OPTIONS", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da8dbc682068cfaeda9aa87af90c112cb7", null ],
       [ "MT_COLOR_PROGRESS", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da7a9531690b24f72f28f1bf5397bb94e2", null ],
       [ "MT_COLOR_PROMPT", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabebf88d1a3c7d705d314bee4ffcf2e43", null ],
-      [ "MT_COLOR_QUOTED", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da16d9a4b13f291a7196a24b6fd5195e16", null ],
+      [ "MT_COLOR_QUOTED0", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da22c50bf584c542816a7f4ca43d40716e", null ],
+      [ "MT_COLOR_QUOTED1", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da4e12a8d664592471d37ae5fee49797ee", null ],
+      [ "MT_COLOR_QUOTED2", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dacac25299958dea176b0f783ade5e7668", null ],
+      [ "MT_COLOR_QUOTED3", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da5949e9e233d936e148d78ea566e0d94c", null ],
+      [ "MT_COLOR_QUOTED4", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabd560f1376cc05a95264c8f26085a655", null ],
+      [ "MT_COLOR_QUOTED5", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dae8bca826d459b02e89aacd455608bda0", null ],
+      [ "MT_COLOR_QUOTED6", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da7503f647725258a00aae2d789f0e4be6", null ],
+      [ "MT_COLOR_QUOTED7", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da94ada6e201739f04443193dc44ffd62f", null ],
+      [ "MT_COLOR_QUOTED8", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da80ff1a125bccc7b505e7822dc78dcb2b", null ],
+      [ "MT_COLOR_QUOTED9", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dac2f392c6c6ea9e76549e0df8a1f9e2c9", null ],
       [ "MT_COLOR_SEARCH", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070daaa89b2802ec0099665f647772888c868", null ],
       [ "MT_COLOR_SIDEBAR_BACKGROUND", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da822ec10b7f9ef2b597801b39121f15e3", null ],
       [ "MT_COLOR_SIDEBAR_DIVIDER", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da0c5c2a36133d35bf7d45645936a65444", null ],
@@ -60,6 +69,5 @@ var color_8h =
     [ "colors_reset", "color_8h.html#aec44cbbfbd9198585b2c1f532416c8d4", null ],
     [ "colors_cleanup", "color_8h.html#a4446c94565fccfad7ca90b914bfe3ff5", null ],
     [ "mutt_color_has_pattern", "color_8h.html#a8f62b76a0baef9936162697d43edddf3", null ],
-    [ "ColorFields", "color_8h.html#a4476932702aa028f1fcdc565633c03cf", null ],
-    [ "ComposeColorFields", "color_8h.html#a35f1332269e545cf1ec7f30fc9424442", null ]
+    [ "ColorFields", "color_8h.html#a4476932702aa028f1fcdc565633c03cf", null ]
 ];

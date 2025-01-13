@@ -1,5 +1,14 @@
 var NAVTREEINDEX19 =
 {
+"group__index__function__api.html#ga866a26f96bec8b68ccb85967d692d189":[48,13,8,66],
+"group__index__function__api.html#ga86c05f9351a94fedebc1bb583340a899":[48,13,8,45],
+"group__index__function__api.html#ga8927097d5d6fe8c0b1100d015a15e98b":[48,13,8,57],
+"group__index__function__api.html#ga91148c3b42b2b18787cc283b2f7c7c9a":[48,13,8,47],
+"group__index__function__api.html#ga93a78e65ca84514737292320362e0296":[48,13,8,10],
+"group__index__function__api.html#ga9771759ade6d4835ff362d960d3a013f":[48,13,8,2],
+"group__index__function__api.html#ga9bbeaf263a02ed3eb994c02bc20d2db6":[48,13,8,4],
+"group__index__function__api.html#ga9dfbe550ac24b081564de87007bfff1c":[48,13,8,17],
+"group__index__function__api.html#ga9fc6e2fac8978d86ab50b9e1aaf0b163":[48,13,8,76],
 "group__index__function__api.html#ga9fddda17346c1e50e691b011d703ee1a":[48,13,8,8],
 "group__index__function__api.html#gaa02ccb51a6b383fec2471320999ab2fc":[48,13,8,75],
 "group__index__function__api.html#gaa03cf48bb9f5aa6e6bc64c9cd178f6df":[48,13,8,61],
@@ -240,14 +249,5 @@ var NAVTREEINDEX19 =
 "group__mx__tags__edit.html#gac44e390c7bf1a1f9fce4986e2840bead":[48,15,14,2],
 "group__mx__tags__edit.html#gae590acf08296adc53c72386bc68938ce":[48,15,14,0],
 "group__observer__api.html":[48,36],
-"group__observer__api.html#ga02a84da95839b84b1ca6374aacb2533f":[48,36,25],
-"group__observer__api.html#ga049ba4fc607d07b760a146a99bbc405e":[48,36,65],
-"group__observer__api.html#ga068ce35f65369cb15cf1eb933e6e78c1":[48,36,33],
-"group__observer__api.html#ga06a52beb9e52bee0d471f74976dc0cba":[48,36,94],
-"group__observer__api.html#ga0722aa70bc2c6450daccb2651e0b61e7":[48,36,101],
-"group__observer__api.html#ga078909a8671e53219dacd6c54fff4b52":[48,36,82],
-"group__observer__api.html#ga0a40f588d2ec2ed6c83cd18bc848443a":[48,36,51],
-"group__observer__api.html#ga0a86978773047112bee0fbf6a7b6ca1a":[48,36,72],
-"group__observer__api.html#ga0f5bc69d8eb06b0bd5f33eb5b5a1e2fe":[48,36,100],
-"group__observer__api.html#ga0fdff9cb3f7f6b6b8803121b90d7f305":[48,36,1]
+"group__observer__api.html#ga02a84da95839b84b1ca6374aacb2533f":[48,36,26]
 };

@@ -1,5 +1,11 @@
 var NAVTREEINDEX32 =
 {
+"mx_8c.html#aad7cc570931da848b0f0e7f8ecb08218":[2,0,95,19],
+"mx_8c.html#ab564fbbf566928004b4564b9aa01a603":[2,0,95,35],
+"mx_8c.html#ac2035653a21eb8784cd537ef4fe83203":[2,0,95,38],
+"mx_8c.html#ac32b635494a705cc5828b7686b910834":[2,0,95,4],
+"mx_8c.html#ac7293053abc93a865472b2a86729eafa":[2,0,95,25],
+"mx_8c.html#ad1b4348096500e4c8df39275b956ec1c":[2,0,95,36],
 "mx_8c.html#ad58805a8bbfd902091a2766767f3c70d":[2,0,95,17],
 "mx_8c.html#ad7adbbda58c642107eadf33b1fbf0c13":[2,0,95,11],
 "mx_8c.html#ad9772f30292be237af605c682e8f0777":[2,0,95,37],
@@ -97,6 +103,7 @@ var NAVTREEINDEX32 =
 "names_8c.html#aa79e3349baca3ec7de77efe29b506020":[2,0,15,7,4],
 "names_8c.html#acc7e5ddd9ea6f8a5bad29c18afc27353":[2,0,15,7,10],
 "names_8c.html#ad77366b445700f2cb901c529a9e0a2fc":[2,0,15,7,1],
+"names_8c.html#ada474aa080b94c6b09df827e0ece88d6":[2,0,15,7,14],
 "names_8c_source.html":[2,0,15,7],
 "names__expando_8c.html":[2,0,15,8],
 "names__expando_8c.html#a02755b0d882179e531212877a1fadd9a":[2,0,15,8,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX32 =
 "ncrypt_expando_smime.html":[35,15],
 "neo_alternates.html":[0,0],
 "neo_alternates.html#autotoc_md638":[3,0],
-"neo_alternates.html#autotoc_md639":[3,1],
-"neo_commands.html":[0,1],
-"neo_copy.html":[0,2],
-"neo_editmsg.html":[0,3],
-"neo_enriched.html":[0,4],
-"neo_external.html":[0,5],
-"neo_flags.html":[0,6],
-"neo_globals.html":[0,7]
+"neo_alternates.html#autotoc_md639":[3,1]
 };

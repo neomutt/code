@@ -13,5 +13,6 @@ var names_8c =
     [ "name_notify_mailbox", "names_8c.html#acc7e5ddd9ea6f8a5bad29c18afc27353", null ],
     [ "name_notify_mview", "names_8c.html#a83862c28611a0a1010b05e37b286b9e0", null ],
     [ "name_window_type", "names_8c.html#a799a208febb17ef2dec92d4d114e5b44", null ],
-    [ "name_window_size", "names_8c.html#a265397e4b3e7ee775ee7693cfa22fae2", null ]
+    [ "name_window_size", "names_8c.html#a265397e4b3e7ee775ee7693cfa22fae2", null ],
+    [ "name_color_id", "names_8c.html#ada474aa080b94c6b09df827e0ece88d6", null ]
 ];

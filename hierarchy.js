@@ -126,6 +126,7 @@ var hierarchy =
     [ "HashWalkState", "structHashWalkState.html", null ],
     [ "HCacheEntry", "structHCacheEntry.html", null ],
     [ "HeaderCache", "structHeaderCache.html", null ],
+    [ "HelpLine", "structHelpLine.html", null ],
     [ "History", "structHistory.html", null ],
     [ "HistoryData", "structHistoryData.html", null ],
     [ "HistoryEntry", "structHistoryEntry.html", null ],
