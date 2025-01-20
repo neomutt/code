@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"structExpandoDefinition.html":[1,0,84],
+"structExpandoDefinition.html#a4450ea6bb5fb80766cffc58c101fc323":[1,0,84,3],
 "structExpandoDefinition.html#a46172446e92db75fc21a4a756ddb2d22":[1,0,84,4],
 "structExpandoDefinition.html#aa7f3e0a1a30a0d774a768af4ff51adad":[1,0,84,1],
 "structExpandoDefinition.html#ac9ce21146072b7cbeb611ba202d8048d":[1,0,84,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "structImapMboxData.html#add06baf96fd584f61a318a84ccbd3bf1":[1,0,123,13],
 "structIndexFunction.html":[1,0,124],
 "structIndexFunction.html#a2d1bd1bb87e0d35c72cf3f0d4915165b":[1,0,124,0],
-"structIndexFunction.html#a44d84103e03de542f9c18495b1af33ca":[1,0,124,1],
-"structIndexFunction.html#a464c06e809e8a74510bf6fcb10be34a1":[1,0,124,2],
-"structIndexPrivateData.html":[1,0,125]
+"structIndexFunction.html#a44d84103e03de542f9c18495b1af33ca":[1,0,124,1]
 };

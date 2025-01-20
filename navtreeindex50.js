@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f":[1,0,230,2],
+"structSimpleDialogWindows.html":[1,0,231],
 "structSimpleDialogWindows.html#a23d39f4677299e52f7a49c3a4cfc591a":[1,0,231,1],
 "structSimpleDialogWindows.html#a9ac8062ab030db6056252f62ec61103c":[1,0,231,2],
 "structSimpleDialogWindows.html#afceb391aaa30c99f5ded2b2cc19db509":[1,0,231,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "tc_8c.html":[2,0,45,8],
 "tc_8c_source.html":[2,0,45,8],
 "tdb_8c.html":[2,0,45,9],
-"tdb_8c_source.html":[2,0,45,9],
-"terminal_8c.html":[2,0,21,30],
-"terminal_8c.html#a0d85ab6bf7d5c8806fab02f86155c18c":[2,0,21,30,4]
+"tdb_8c_source.html":[2,0,45,9]
 };

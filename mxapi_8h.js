@@ -6,7 +6,6 @@ var mxapi_8h =
     [ "MUTT_APPEND", "mxapi_8h.html#a6168431d3be24912b33a6c486fa11366", null ],
     [ "MUTT_READONLY", "mxapi_8h.html#a11b97885a0fc04bcd13572076e8a17ab", null ],
     [ "MUTT_QUIET", "mxapi_8h.html#a75f314042a266df29efcc524d35c4b2d", null ],
-    [ "MUTT_NEWFOLDER", "mxapi_8h.html#a3a651e08849ce73161750d86d4ac1ee6", null ],
     [ "MUTT_PEEK", "mxapi_8h.html#a968f688cbe0d506670853e20a623c15c", null ],
     [ "MUTT_APPENDNEW", "mxapi_8h.html#ac3c0a14560d66d5c3ae9c905d3b4bb26", null ],
     [ "MUTT_MAILBOX_CHECK_NO_FLAGS", "mxapi_8h.html#a20db67a082f406914d798b8caa9686a3", null ],
