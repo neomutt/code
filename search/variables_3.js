@@ -80,7 +80,7 @@ var searchData=
   ['compopts_77',['CompOpts',['../version_8c.html#a7c40473f630f00cab6b972bdea08cbc1',1,'version.c']]],
   ['compose_5fformat_78',['compose_format',['../structComposeBarData.html#aaafa399158993b44bd02a851d52374b2',1,'ComposeBarData']]],
   ['composecommand_79',['composecommand',['../structMailcapEntry.html#a365aee1471f7897abec0c347e43426e1',1,'MailcapEntry']]],
-  ['composedefaultbindings_80',['ComposeDefaultBindings',['../key_2init_8c.html#ad47746953723123b042d5fd6d6719ec8',1,'ComposeDefaultBindings():&#160;functions.c'],['../compose_2functions_8c.html#ad47746953723123b042d5fd6d6719ec8',1,'ComposeDefaultBindings():&#160;functions.c']]],
+  ['composedefaultbindings_80',['ComposeDefaultBindings',['../init_8c.html#ad47746953723123b042d5fd6d6719ec8',1,'ComposeDefaultBindings():&#160;functions.c'],['../compose_2functions_8c.html#ad47746953723123b042d5fd6d6719ec8',1,'ComposeDefaultBindings():&#160;functions.c']]],
   ['composeformatdef_81',['ComposeFormatDef',['../compose_2config_8c.html#ab8182aefe39a9e841d8e80ea0a8bec35',1,'config.c']]],
   ['composefunctions_82',['ComposeFunctions',['../compose_2functions_8c.html#a2b9793e540a32c9668d3928e0cf8b7f7',1,'functions.c']]],
   ['composehelp_83',['ComposeHelp',['../dlg__compose_8c.html#a785f04ab170c17ce970ceea7d2615150',1,'dlg_compose.c']]],

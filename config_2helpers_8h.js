@@ -11,5 +11,7 @@ var config_2helpers_8h =
     [ "cs_subset_slist", "config_2helpers_8h.html#a72ee0a5d0c0632c4fe911ef5aa6a9b8b", null ],
     [ "cs_subset_sort", "config_2helpers_8h.html#af7f3de51c3c2f5b8f527f40c8397a3fc", null ],
     [ "cs_subset_string", "config_2helpers_8h.html#a6b1589ee93ff51ef31f1d9324e138078", null ],
-    [ "cs_subset_expando", "config_2helpers_8h.html#afadba3dd7a0ec53c70d047005b2efcef", null ]
+    [ "cs_subset_expando", "config_2helpers_8h.html#afadba3dd7a0ec53c70d047005b2efcef", null ],
+    [ "config_he_set_initial", "config_2helpers_8h.html#aeefcd32b88c607fb2f4d2f429fe90339", null ],
+    [ "config_str_set_initial", "config_2helpers_8h.html#acad5e4b64f4131258e4ef457f77e29d8", null ]
 ];

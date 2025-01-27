@@ -7,7 +7,6 @@ var searchData=
   ['imap_2ec_4',['imap.c',['../imap_8c.html',1,'']]],
   ['index_2ec_5',['index.c',['../index_8c.html',1,'']]],
   ['inheritance_2eh_6',['inheritance.h',['../inheritance_8h.html',1,'']]],
-  ['init_2ec_7',['init.c',['../init_8c.html',1,'(Global Namespace)'],['../key_2init_8c.html',1,'(Global Namespace)']]],
-  ['init_2eh_8',['init.h',['../init_8h.html',1,'']]],
-  ['ipanel_2ec_9',['ipanel.c',['../ipanel_8c.html',1,'']]]
+  ['init_2ec_7',['init.c',['../init_8c.html',1,'']]],
+  ['ipanel_2ec_8',['ipanel.c',['../ipanel_8c.html',1,'']]]
 ];

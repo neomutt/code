@@ -75,7 +75,7 @@ var searchData=
   ['km_5fexpand_5fkey_5fstring_72',['km_expand_key_string',['../key_2lib_8c.html#aff53463851870df55bceb41d84e4cc96',1,'km_expand_key_string(char *str, struct Buffer *buf):&#160;lib.c'],['../key_2lib_8h.html#aff53463851870df55bceb41d84e4cc96',1,'km_expand_key_string(char *str, struct Buffer *buf):&#160;lib.c']]],
   ['km_5ffind_5ffunc_73',['km_find_func',['../key_2lib_8c.html#a11136cc3c6e52a9a3db85d1887f4fe1c',1,'km_find_func(enum MenuType mtype, int func):&#160;lib.c'],['../key_2lib_8h.html#a64546c390fc1d690019b727b211759c6',1,'km_find_func(enum MenuType menu, int func):&#160;lib.c']]],
   ['km_5fget_5ftable_74',['km_get_table',['../key_2lib_8h.html#ac73ba4b4de1642f905738d2da0e79d91',1,'km_get_table(enum MenuType mtype):&#160;lib.c'],['../key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91',1,'km_get_table(enum MenuType mtype):&#160;lib.c']]],
-  ['km_5finit_75',['km_init',['../key_2lib_8h.html#a58e38a78c1e289c77166b7239ee843b0',1,'km_init(void):&#160;init.c'],['../key_2init_8c.html#a58e38a78c1e289c77166b7239ee843b0',1,'km_init(void):&#160;init.c']]],
+  ['km_5finit_75',['km_init',['../key_2lib_8h.html#a58e38a78c1e289c77166b7239ee843b0',1,'km_init(void):&#160;init.c'],['../init_8c.html#a58e38a78c1e289c77166b7239ee843b0',1,'km_init(void):&#160;init.c']]],
   ['km_5fkeyname_76',['km_keyname',['../key_2lib_8c.html#aa18825fc025ec3c06830e428b46130cd',1,'km_keyname(int c, struct Buffer *buf):&#160;lib.c'],['../key_2lib_8h.html#aa18825fc025ec3c06830e428b46130cd',1,'km_keyname(int c, struct Buffer *buf):&#160;lib.c']]],
   ['km_5funbind_5fall_77',['km_unbind_all',['../key_2parse_8c.html#a6f4f749c1d279d30c302e03961f4a9f5',1,'parse.c']]],
   ['kobj_78',['kobj',['../structCryptKeyInfo.html#ae1f570089508f19aa36f6c1cdb31eca0',1,'CryptKeyInfo']]],

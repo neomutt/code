@@ -4,7 +4,7 @@ var searchData=
   ['edata_1',['edata',['../structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b',1,'Email::edata()'],['../structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50',1,'ImapHeader::edata()']]],
   ['edata_5ffree_2',['edata_free',['../structEmail.html#a781551eba730fd251226081727ae74bb',1,'Email']]],
   ['editcommand_3',['editcommand',['../structMailcapEntry.html#ac195e10d836eb0b886580310c2cf0554',1,'MailcapEntry']]],
-  ['editordefaultbindings_4',['EditorDefaultBindings',['../editor_2functions_8c.html#a28c252222e94e35df4ecd1f90c50174d',1,'EditorDefaultBindings():&#160;functions.c'],['../key_2init_8c.html#a28c252222e94e35df4ecd1f90c50174d',1,'EditorDefaultBindings():&#160;functions.c']]],
+  ['editordefaultbindings_4',['EditorDefaultBindings',['../editor_2functions_8c.html#a28c252222e94e35df4ecd1f90c50174d',1,'EditorDefaultBindings():&#160;functions.c'],['../init_8c.html#a28c252222e94e35df4ecd1f90c50174d',1,'EditorDefaultBindings():&#160;functions.c']]],
   ['editorhelp_5',['EditorHelp',['../editor_2window_8c.html#a7a8470a3494dd5d43f22dfb2a489acb4',1,'window.c']]],
   ['email_6',['email',['../structPostponeData.html#a10c3536efabab61b4ef602d9225fe37e',1,'PostponeData::email()'],['../structPreviewWindowData.html#ada56d40f21c4883352bb899625823a18',1,'PreviewWindowData::email()'],['../structAttachCtx.html#a8753a1c1a51b26d4a628861dfd56294f',1,'AttachCtx::email()'],['../structComposeSharedData.html#ab3378f34463d3a779f5ccc5b281ed291',1,'ComposeSharedData::email()'],['../structSmimeKey.html#a9f73117582d0292e71e7867b7909326c',1,'SmimeKey::email()'],['../structMhEmail.html#a2c4f25588fb9aa0ef67fa98c9cf90a50',1,'MhEmail::email()'],['../structMdEmail.html#a94a29619b71c7e15685ffe4eafc05144',1,'MdEmail::email()'],['../structIndexSharedData.html#a66c441f7e8f9d49d4e9b497d8da14b99',1,'IndexSharedData::email()'],['../structEmailFormatInfo.html#a0bbf30f2b3be053b16f450a88319e102',1,'EmailFormatInfo::email()'],['../structHCacheEntry.html#a5348d7756835f94b4173db6afc4849eb',1,'HCacheEntry::email()'],['../structEnvelopeWindowData.html#a67ff9d4e4bf03ce271696c7ed1bb5ec2',1,'EnvelopeWindowData::email()'],['../structEmailNode.html#a812e5a33b27b12a78daacbe246089abb',1,'EmailNode::email()'],['../structBody.html#a8e10ba22522218bd12bd3cb38dd3fcc9',1,'Body::email()']]],
   ['email_5faddr_7',['email_addr',['../structAutocryptAccount.html#a1491a84008983c09066e20941cae2171',1,'AutocryptAccount::email_addr()'],['../structAutocryptPeer.html#a8f38fad81193e8caaba6c35eb26099eb',1,'AutocryptPeer::email_addr()']]],
@@ -42,6 +42,6 @@ var searchData=
   ['expire_39',['expire',['../structPopAccountData.html#aad2e94674fb9bc43561cc360270aad3d',1,'PopAccountData']]],
   ['expired_40',['expired',['../structEmail.html#aa72ad88f6a82e49b76a0d0eb790abae8',1,'Email']]],
   ['expr_41',['expr',['../structPatternEntry.html#ab1260f8baedeff5ce0a8539d47143a52',1,'PatternEntry']]],
-  ['extkeys_42',['ExtKeys',['../key_2init_8c.html#a542d4e1caa8cb858e9880d929b4e0b06',1,'init.c']]],
+  ['extkeys_42',['ExtKeys',['../init_8c.html#a542d4e1caa8cb858e9880d929b4e0b06',1,'init.c']]],
   ['extpagerprogress_43',['ExtPagerProgress',['../pager_2message_8c.html#a7137b6425845f3ca8a126e273ec8022a',1,'message.c']]]
 ];

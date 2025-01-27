@@ -15,6 +15,8 @@ var config_2set_8c =
     [ "cs_uninherit_variable", "config_2set_8c.html#afc62808c51333fd2e3acb261a917b65c", null ],
     [ "cs_he_reset", "config_2set_8c.html#a52b4a1b57f44e2a7972fe3e3747c3557", null ],
     [ "cs_str_reset", "config_2set_8c.html#a2c2cb475e50df247e8c88dab8c123534", null ],
+    [ "cs_he_has_been_set", "config_2set_8c.html#a8011b4ca1ee9c6098609122fef898ac2", null ],
+    [ "cs_str_has_been_set", "config_2set_8c.html#a4c7614b7ca6fc2dd0efc55c45b718d13", null ],
     [ "cs_he_initial_set", "config_2set_8c.html#ad446d589baec46f5506d398fd4895d96", null ],
     [ "cs_str_initial_set", "config_2set_8c.html#a2923b046583690255351a486a6a7a0c6", null ],
     [ "cs_he_initial_get", "config_2set_8c.html#adcbe5a0a3dbd9fb44afaaeb1546e6a6f", null ],

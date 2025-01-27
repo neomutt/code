@@ -48,7 +48,7 @@ var mutt__thread_8h =
     [ "mutt_traverse_thread", "mutt__thread_8h.html#a6279a78ec582855fb16ab4eecc7eaf08", null ],
     [ "mutt_thread_style", "mutt__thread_8h.html#aa7ffe096f2973f3d0cd486f8e8b4228b", null ],
     [ "get_use_threads_str", "mutt__thread_8h.html#a849aee4fafabc93f47d0aa2beba610fb", null ],
-    [ "sort_validator", "group__cfg__def__validator.html#ga595f9f1861a0be3ae65a4c2eadc4bec5", null ],
+    [ "sort_validator", "group__cfg__def__validator.html#ga74ba16751b7e5adab6eb77967c802a97", null ],
     [ "mutt_aside_thread", "mutt__thread_8h.html#adb66f40987e98d64c631d45ee1bda645", null ],
     [ "mutt_thread_ctx_init", "mutt__thread_8h.html#a3887239c945c4eef7b5efd942754ca24", null ],
     [ "mutt_thread_ctx_free", "mutt__thread_8h.html#a83a0025fb6c71b19d45e8ba006346303", null ],

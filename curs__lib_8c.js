@@ -13,5 +13,6 @@ var curs__lib_8c =
     [ "mutt_wstr_trunc", "curs__lib_8c.html#a48a9fd66de2ef76e2b72704badd3c40b", null ],
     [ "mutt_strwidth", "curs__lib_8c.html#ad506c0f8d5c549c330f49e2fa56e207b", null ],
     [ "mutt_strnwidth", "curs__lib_8c.html#a065d0cc61c21f10fe6f4fc4fad8c7afe", null ],
-    [ "mw_what_key", "group__gui__mw.html#ga24de819c1b6837b59e35cbfdd0d827cf", null ]
+    [ "mw_what_key", "group__gui__mw.html#ga24de819c1b6837b59e35cbfdd0d827cf", null ],
+    [ "mutt_str_expand_tabs", "curs__lib_8c.html#aefe403cf07bbeee669678ab3087e2055", null ]
 ];

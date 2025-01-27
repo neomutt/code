@@ -27,5 +27,6 @@ var expando__status_8c =
     [ "index_unread_mailboxes_num", "group__expando__get__number__api.html#gac2f099f81791b4bf4f5cc2ac78507982", null ],
     [ "menu_percentage", "group__expando__get__string__api.html#ga42529d262379defd3e297e96e7f92411", null ],
     [ "menu_percentage_num", "group__expando__get__number__api.html#gadd592413af56197fea0ab4cdd9f04982", null ],
+    [ "SortMethods", "expando__status_8c.html#a212caaae7a78c55728bc774f190e8948", null ],
     [ "StatusRenderCallbacks", "expando__status_8c.html#a059b649175299a90d7c0406607666a41", null ]
 ];

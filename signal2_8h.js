@@ -15,5 +15,6 @@ var signal2_8h =
     [ "mutt_sig_unblock", "signal2_8h.html#aa9356c41baa1b35d3a7719f90570e6b7", null ],
     [ "mutt_sig_unblock_system", "signal2_8h.html#ad44b8fd5380fa4749911e9f1792af99d", null ],
     [ "SigInt", "signal2_8h.html#a85c069643781da758ffa8281db66e8f0", null ],
-    [ "SigWinch", "signal2_8h.html#a2588723370f4c5d5e77126030a640bd9", null ]
+    [ "SigWinch", "signal2_8h.html#a2588723370f4c5d5e77126030a640bd9", null ],
+    [ "OldSegvHandler", "signal2_8h.html#a887883dde907036a5683a2e18a5f5ee5", null ]
 ];

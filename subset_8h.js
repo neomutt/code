@@ -12,6 +12,10 @@ var subset_8h =
       [ "NT_CONFIG_RESET", "subset_8h.html#a439e82194af78ebb1c24dabc16f068b7af68d628dfb42e869b509fe40a5091758", null ],
       [ "NT_CONFIG_DELETED", "subset_8h.html#a439e82194af78ebb1c24dabc16f068b7a5b8ab8ea898d4320991b2e6630a52558", null ]
     ] ],
+    [ "GetElemListFlags", "subset_8h.html#a9637d326536071b3217672a6bae18755", [
+      [ "GEL_ALL_CONFIG", "subset_8h.html#a9637d326536071b3217672a6bae18755ac3fce06a6648e29da1410ac0fb03aa72", null ],
+      [ "GEL_CHANGED_CONFIG", "subset_8h.html#a9637d326536071b3217672a6bae18755a56794d5ee574d42b1eeec5e347cbb8ab", null ]
+    ] ],
     [ "cs_subset_new", "subset_8h.html#a9e18bf67c546cd800bed08b710902daa", null ],
     [ "cs_subset_free", "subset_8h.html#aa13d98edef88b0563dd96102fc8bc22b", null ],
     [ "cs_subset_create_inheritance", "subset_8h.html#a96772da248b8a2c4f0caf6b170c1e8e8", null ],
@@ -29,5 +33,5 @@ var subset_8h =
     [ "cs_subset_str_string_get", "subset_8h.html#a7e8ecc401fed4ef7d076bc377ec8b80a", null ],
     [ "cs_subset_str_string_set", "subset_8h.html#a8d7d5e60bd8f7f0f8ffd8522de126b12", null ],
     [ "elem_list_sort", "group__sort__api.html#ga6f4b8e74fdd8c97c64ed424fc8183db1", null ],
-    [ "get_elem_list", "subset_8h.html#a7b29db6a8801c474a1c24dfb32246e09", null ]
+    [ "get_elem_list", "subset_8h.html#a92d611c1cf202d2af68ef259eb6f3ce9", null ]
 ];

@@ -36,6 +36,5 @@ var searchData=
   ['debug_5fname_33',['DEBUG_NAME',['../names_8c.html#a1699ad866560e41b38f8d2417a0a2a77',1,'DEBUG_NAME():&#160;names.c'],['../names__expando_8c.html#a1699ad866560e41b38f8d2417a0a2a77',1,'DEBUG_NAME():&#160;names_expando.c']]],
   ['define_5fhelp_5fmessage_34',['DEFINE_HELP_MESSAGE',['../opcodes_8c.html#a25e5aa6946427ebda3e8580a0970b748',1,'opcodes.c']]],
   ['define_5fops_35',['DEFINE_OPS',['../opcodes_8h.html#a1bf673fe27b714464aadda6edbb6d652',1,'opcodes.h']]],
-  ['domain_5fspecial_5fmask_36',['DOMAIN_SPECIAL_MASK',['../address_2address_8c.html#aafa805d81c9081201be968406f9354cf',1,'address.c']]],
-  ['dtype_37',['DTYPE',['../types_8h.html#a15a11710ca23d5779aa35ead735c7b36',1,'types.h']]]
+  ['domain_5fspecial_5fmask_36',['DOMAIN_SPECIAL_MASK',['../address_2address_8c.html#aafa805d81c9081201be968406f9354cf',1,'address.c']]]
 ];

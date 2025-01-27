@@ -1,11 +1,11 @@
 var group__cfg__type__destroy =
 [
-    [ "address_destroy", "group__cfg__type__destroy.html#gabd2f53bded52356d4d0066d3558326df", null ],
-    [ "mbtable_destroy", "group__cfg__type__destroy.html#gaea3f143fe75aa40ffa14b2785120c3e0", null ],
-    [ "myvar_destroy", "group__cfg__type__destroy.html#gadbfd88e6ac3a75b085cfada2fc97e983", null ],
-    [ "path_destroy", "group__cfg__type__destroy.html#ga550f8f42ea47fdc252201cdd189674b6", null ],
-    [ "regex_destroy", "group__cfg__type__destroy.html#ga51745ca37912561b82be4b0560686d6c", null ],
-    [ "slist_destroy", "group__cfg__type__destroy.html#ga4d0991f0c7ea664efcd83f406209f32a", null ],
-    [ "string_destroy", "group__cfg__type__destroy.html#ga02e912517ad66b0b9f74cf9726ab3ede", null ],
-    [ "expando_destroy", "group__cfg__type__destroy.html#gaf6330e899b7e7d96a2d8440b8f1ea06c", null ]
+    [ "address_destroy", "group__cfg__type__destroy.html#gac13fde215d412763b167aa4621b764f1", null ],
+    [ "mbtable_destroy", "group__cfg__type__destroy.html#ga02d9402c88a74d49832084729c3233ad", null ],
+    [ "myvar_destroy", "group__cfg__type__destroy.html#gac988261b1701468992925e48a4b4ea7f", null ],
+    [ "path_destroy", "group__cfg__type__destroy.html#ga51934aec6de60fb87061732a999fd0a9", null ],
+    [ "regex_destroy", "group__cfg__type__destroy.html#ga90500b2b2eca225108492f138d6853da", null ],
+    [ "slist_destroy", "group__cfg__type__destroy.html#gae76bda28bcf811e67a4fa0937e52040b", null ],
+    [ "string_destroy", "group__cfg__type__destroy.html#ga536d72256979f7de5f6fefab3a408a33", null ],
+    [ "expando_destroy", "group__cfg__type__destroy.html#ga6455fa4329665d6d8d018367469c2932", null ]
 ];

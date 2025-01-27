@@ -1,6 +1,6 @@
 var group__cfg__type__string__minus__equals =
 [
-    [ "long_string_minus_equals", "group__cfg__type__string__minus__equals.html#ga1c9c9d14e91536d29b5c4f583337dcbc", null ],
-    [ "number_string_minus_equals", "group__cfg__type__string__minus__equals.html#ga118b3ceca4da77fc7d33f6babc654969", null ],
-    [ "slist_string_minus_equals", "group__cfg__type__string__minus__equals.html#ga138201e31e9ea0d582b2b8a4cc915b29", null ]
+    [ "long_string_minus_equals", "group__cfg__type__string__minus__equals.html#ga9ff1478280a1a545aa43c94cf00c126c", null ],
+    [ "number_string_minus_equals", "group__cfg__type__string__minus__equals.html#gaf932395546f14c7ec28da574b8190c7b", null ],
+    [ "slist_string_minus_equals", "group__cfg__type__string__minus__equals.html#ga39b01edee80144f697d61eabac90f6ec", null ]
 ];

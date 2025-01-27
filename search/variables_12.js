@@ -35,7 +35,7 @@ var searchData=
   ['reply_5fto_32',['reply_to',['../structEnvelope.html#a4b75ab1853f95878dec079371bb0d799',1,'Envelope']]],
   ['req_5fcols_33',['req_cols',['../structMuttWindow.html#a3d852a60f45c3df06d64dc20114fa3df',1,'MuttWindow']]],
   ['req_5frows_34',['req_rows',['../structMuttWindow.html#a5f230c86f48f70162d2c408b0e9ad6c3',1,'MuttWindow']]],
-  ['reset_35',['reset',['../structConfigSetType.html#ad392f82b5421743c74fb020752a3e401',1,'ConfigSetType']]],
+  ['reset_35',['reset',['../structConfigSetType.html#a818267ba2bcd246332facd32fbd6aa9e',1,'ConfigSetType']]],
   ['resp_5fcodes_36',['resp_codes',['../structPopAccountData.html#a2c36b41f042cd37b0f5091d79dca48d9',1,'PopAccountData']]],
   ['restore_37',['restore',['../structFetchCtx.html#a2fc01f0b6bca5a84734a9d9dbaedcd5b',1,'FetchCtx']]],
   ['return_5fpath_38',['return_path',['../structEnvelope.html#a1c204b091d782098fc1efa0c2f3b1e20',1,'Envelope']]],

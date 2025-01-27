@@ -2,7 +2,7 @@ var mutt__config_8c =
 [
     [ "CONFIG_INIT_TYPE", "mutt__config_8c.html#a46304032f260bb0781771795493e2f36", null ],
     [ "CONFIG_INIT_VARS", "mutt__config_8c.html#a0eff39991a042bad67ff8f98c557e9d5", null ],
-    [ "multipart_validator", "group__cfg__def__validator.html#ga7734e4d740ff40c7ee7660c59b40c883", null ],
+    [ "multipart_validator", "group__cfg__def__validator.html#ga9b303f7546a426032cc7e2d22103eae9", null ],
     [ "parse_index_date_recv_local", "group__expando__parse__api.html#ga96bba48fba03ae289acff725fd189426", null ],
     [ "parse_index_date_local", "group__expando__parse__api.html#gaa4e73b3f7b3d7bb10cb46a057cb4ea00", null ],
     [ "parse_index_date", "group__expando__parse__api.html#gacce4041399da6ccbbafaeb9aa021e05b", null ],

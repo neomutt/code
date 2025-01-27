@@ -1,6 +1,6 @@
 var sidebar_2expando_8c =
 [
-    [ "add_indent", "sidebar_2expando_8c.html#aae58ea58e66c04c21e3f4b96a55b43ec", null ],
+    [ "add_indent", "sidebar_2expando_8c.html#ab6c168641af24238fcea1d97fe7d9b13", null ],
     [ "sidebar_deleted_count_num", "group__expando__get__number__api.html#ga9a7c9bf601b5944c475aa2dde792b64e", null ],
     [ "sidebar_description", "group__expando__get__string__api.html#gabe734a9fe033b538ed25b9e29a6c9cd0", null ],
     [ "sidebar_flagged", "group__expando__get__string__api.html#gac17ab75dba353ef9124efd00ccefae6e", null ],

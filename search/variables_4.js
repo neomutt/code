@@ -26,7 +26,7 @@ var searchData=
   ['depth_23',['depth',['../structSbEntry.html#a23ebcead73d1691757fd66925cc24246',1,'SbEntry']]],
   ['desc_24',['desc',['../structNntpMboxData.html#a6d1f6681e3b32714f5c85d463f38fab8',1,'NntpMboxData::desc()'],['../structPatternFlags.html#a59bdf829b129533bfd13702ef1020430',1,'PatternFlags::desc()'],['../structPatternEntry.html#a1832bd0a97373b41a1a00a8f854224d3',1,'PatternEntry::desc()'],['../structMonitor.html#a5dd04ce30d4f595518db86dffe0645bf',1,'Monitor::desc()'],['../structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f',1,'Keymap::desc()'],['../structFolderFile.html#a862ba1521b82421e7b7261e86cbd232b',1,'FolderFile::desc()']]],
   ['description_25',['description',['../structBody.html#a90db5151872e23e56a8f31d68925c121',1,'Body']]],
-  ['destroy_26',['destroy',['../structConfigSetType.html#ad7c535ff8033c38dbaffa7c14bb4412e',1,'ConfigSetType']]],
+  ['destroy_26',['destroy',['../structConfigSetType.html#aa547c6d34a2912c20e0d3bd33ef773f3',1,'ConfigSetType']]],
   ['dflt_27',['dflt',['../structCryptCache.html#a8dd12b5c42e7430529eb9f41807b9331',1,'CryptCache::dflt()'],['../structPgpCache.html#a27971ba1f4f97f5421cba3c374ccdb10',1,'PgpCache::dflt()']]],
   ['dialogdefaultbindings_28',['DialogDefaultBindings',['../gui_2functions_8c.html#ae0546fc4f3687c9d8592712bb161bc51',1,'DialogDefaultBindings():&#160;functions.c'],['../gui_2functions_8h.html#ae0546fc4f3687c9d8592712bb161bc51',1,'DialogDefaultBindings():&#160;functions.c']]],
   ['did_29',['did',['../structExpandoDefinition.html#ac9ce21146072b7cbeb611ba202d8048d',1,'ExpandoDefinition::did()'],['../structExpandoNode.html#a874cf8c66bbdc23cb1068015997d0b7a',1,'ExpandoNode::did()'],['../structExpandoRenderCallback.html#a83a3d26c68b5da6e9a13e6b36b4b56d8',1,'ExpandoRenderCallback::did()']]],

@@ -1,8 +1,8 @@
 var hcache_2config_8c =
 [
-    [ "hcache_validator", "group__cfg__def__validator.html#ga1fe37a4f60050615642003f75b204983", null ],
-    [ "compress_method_validator", "group__cfg__def__validator.html#gaa4d9698486c5dc87baa39c5f41371e88", null ],
-    [ "compress_level_validator", "group__cfg__def__validator.html#ga1c097b334a8132caae4c1f7b6bfd7070", null ],
+    [ "hcache_validator", "group__cfg__def__validator.html#ga05dae2365658ad0a06b4edd5d94ea153", null ],
+    [ "compress_method_validator", "group__cfg__def__validator.html#ga6cf1aa25dbe79dfc6abdc41e59c56573", null ],
+    [ "compress_level_validator", "group__cfg__def__validator.html#ga92fbd6702ed51d28bda1eb3ecce03e1e", null ],
     [ "config_init_hcache", "group__cfg__module__api.html#gafc15e7a5ea409e9f17f504bb58ad92c2", null ],
     [ "HcacheVars", "hcache_2config_8c.html#a742b1cc596ceffbc75d6902a0229ecfd", null ],
     [ "HcacheVarsComp", "hcache_2config_8c.html#a9c9f451bf18f00e0f707ed2c120b061f", null ],

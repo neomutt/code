@@ -56,6 +56,5 @@ var searchData=
   ['trashit_53',['TRASHIT',['../queue_8h.html#adee7bf054da0ade68bb853732c665a2b',1,'queue.h']]],
   ['txt_5fenriched_54',['TXT_ENRICHED',['../handler_8c.html#aac25f3e996b8633b1ee447360b4f4398',1,'handler.c']]],
   ['txt_5fhtml_55',['TXT_HTML',['../handler_8c.html#a984562cb651e984a5b587170dee57a89',1,'handler.c']]],
-  ['txt_5fplain_56',['TXT_PLAIN',['../handler_8c.html#a83d9765384489e5b98d948f610c4af38',1,'handler.c']]],
-  ['type_57',['TYPE',['../mime_8h.html#ab12186b6fac3d22b88fac67700f07b1d',1,'mime.h']]]
+  ['txt_5fplain_56',['TXT_PLAIN',['../handler_8c.html#a83d9765384489e5b98d948f610c4af38',1,'handler.c']]]
 ];

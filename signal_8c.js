@@ -23,6 +23,7 @@ var signal_8c =
     [ "SigHandler", "signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4", null ],
     [ "ExitHandler", "signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407", null ],
     [ "SegvHandler", "signal_8c.html#ac0b20aa051ab69871cf4487066324d78", null ],
+    [ "OldSegvHandler", "signal_8c.html#a887883dde907036a5683a2e18a5f5ee5", null ],
     [ "SigInt", "signal_8c.html#a85c069643781da758ffa8281db66e8f0", null ],
     [ "SigWinch", "signal_8c.html#a2588723370f4c5d5e77126030a640bd9", null ]
 ];

@@ -1,7 +1,7 @@
 var subset_8c =
 [
     [ "elem_list_sort", "group__sort__api.html#ga6f4b8e74fdd8c97c64ed424fc8183db1", null ],
-    [ "get_elem_list", "subset_8c.html#a7b29db6a8801c474a1c24dfb32246e09", null ],
+    [ "get_elem_list", "subset_8c.html#a92d611c1cf202d2af68ef259eb6f3ce9", null ],
     [ "cs_subset_free", "subset_8c.html#aa13d98edef88b0563dd96102fc8bc22b", null ],
     [ "cs_subset_new", "subset_8c.html#a9e18bf67c546cd800bed08b710902daa", null ],
     [ "cs_subset_lookup", "subset_8c.html#ac22ac8f8fd30068d1d00fd3fdd3394e5", null ],

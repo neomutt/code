@@ -1,5 +1,13 @@
 var NAVTREEINDEX6 =
 {
+"config_bool.html":[14,0],
+"config_charset.html":[14,1],
+"config_dump.html":[14,2],
+"config_enum.html":[14,3],
+"config_helpers.html":[14,4],
+"config_long.html":[14,5],
+"config_mbtable.html":[14,6],
+"config_myvar.html":[14,7],
 "config_number.html":[14,8],
 "config_path.html":[14,9],
 "config_quad.html":[14,10],
@@ -241,13 +249,5 @@ var NAVTREEINDEX6 =
 "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da33fa729dbeb1a8b678fd94effae0bdc9":[2,0,14,10,17,1],
 "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da3b55e432fcbfdbd550d0aea5b03679de":[2,0,14,10,17,10],
 "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da54a635e509630de2bfd6fd6f46e9fd89":[2,0,14,10,17,5],
-"core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da6d3955b4b5acc450ba154b6ec9100803":[2,0,14,10,17,7],
-"core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da7f541a03089370b1a260e344f8d1809b":[2,0,14,10,17,8],
-"core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da817ef3cf5f529965875400b412678525":[2,0,14,10,17,3],
-"core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dab19ce39e3d79c72a2988457640553489":[2,0,14,10,17,0],
-"core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dabe3e473aa651d6b7030b5ef08953eb4e":[2,0,14,10,17,11],
-"core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608":[2,0,14,10,17,2],
-"core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dafd4cdaa9851e1c936b2f648b4bdc6ad4":[2,0,14,10,17,6],
-"core_2mailbox_8h.html#af726790bdcf33b797e735f03aab88730":[2,0,14,10,13],
-"core_2mailbox_8h.html#af79adca81fd0bfc0cd740f6b0589ee78":[2,0,14,10,33]
+"core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da6d3955b4b5acc450ba154b6ec9100803":[2,0,14,10,17,7]
 };

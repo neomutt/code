@@ -67,7 +67,7 @@ var group__observer__api =
     [ "index_shared_mailbox_observer", "group__observer__api.html#gac09f0e3225d814ba5e6ddb36aa795566", null ],
     [ "index_shared_email_observer", "group__observer__api.html#ga481fc754cfbeb58038e5cdd00d375aaa", null ],
     [ "main_config_observer", "group__observer__api.html#ga049ba4fc607d07b760a146a99bbc405e", null ],
-    [ "main_timeout_observer", "group__observer__api.html#ga7f47d16f5c1dad6c825d946fec19fa95", null ],
+    [ "main_timeout_observer", "group__observer__api.html#gaa849be736f7be7f602f10410419749fe", null ],
     [ "menu_color_observer", "group__observer__api.html#ga71980ec0ff9bbe4cfb49a11d52a2b778", null ],
     [ "menu_config_observer", "group__observer__api.html#ga1ff70da0ef343b7d81145774f14de2fe", null ],
     [ "menu_window_observer", "group__observer__api.html#ga11f9d36da5fd7be43e2fb5e28559e86f", null ],

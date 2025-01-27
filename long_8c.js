@@ -1,11 +1,12 @@
 var long_8c =
 [
-    [ "long_string_set", "group__cfg__type__string__set.html#gab3829740e15fb933e827302ffd3b05f4", null ],
-    [ "long_string_get", "group__cfg__type__string__get.html#gaf7c02093f19f42a947d9f18ff2139ca6", null ],
-    [ "long_native_set", "group__cfg__type__native__set.html#ga092950b386f831d0e8c0f80614093bea", null ],
-    [ "long_native_get", "group__cfg__type__native__get.html#gacd4f3cdb0dd12722312f77ac4795fc9a", null ],
-    [ "long_string_plus_equals", "group__cfg__type__string__plus__equals.html#gac0aa604c89779d8594360606b06e10aa", null ],
-    [ "long_string_minus_equals", "group__cfg__type__string__minus__equals.html#ga1c9c9d14e91536d29b5c4f583337dcbc", null ],
-    [ "long_reset", "group__cfg__type__reset.html#ga6b9f210c80578e3a6470dcc9668d7c13", null ],
+    [ "long_string_set", "group__cfg__type__string__set.html#gad46f9fd0957f68a81741af2d0b649340", null ],
+    [ "long_string_get", "group__cfg__type__string__get.html#ga8ecc972bda652f77a639f09b7d1acb0d", null ],
+    [ "long_native_set", "group__cfg__type__native__set.html#gaa1738d550ca84cf2b85fb707efb85723", null ],
+    [ "long_native_get", "group__cfg__type__native__get.html#ga2809d5bda308492ad41e2e90227f67de", null ],
+    [ "long_string_plus_equals", "group__cfg__type__string__plus__equals.html#ga47dc22104683852a4f9d27062e5700ff", null ],
+    [ "long_string_minus_equals", "group__cfg__type__string__minus__equals.html#ga9ff1478280a1a545aa43c94cf00c126c", null ],
+    [ "long_has_been_set", "group__cfg__type__has__been__set.html#ga2d08689224b6de9dfeb21584802a5d8a", null ],
+    [ "long_reset", "group__cfg__type__reset.html#ga1f26a62a8197dcfb7a11630ee5953cc0", null ],
     [ "CstLong", "long_8c.html#a3719b195acce72f98e46fc5aad0e06ec", null ]
 ];

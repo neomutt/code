@@ -19,7 +19,6 @@ var index =
     [ "Decide how to display email content", "neo_handler.html", null ],
     [ "Generate the help-page and GUI display it", "neo_help.html", null ],
     [ "Parse and execute user-defined hooks", "neo_hook.html", null ],
-    [ "Config/command parsing", "neo_init.html", null ],
     [ "RFC1524 Mailcap routines", "neo_mailcap.html", null ],
     [ "Handle mailing lists", "neo_maillist.html", null ],
     [ "Command line processing", "neo_main.html", null ],

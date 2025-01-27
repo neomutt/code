@@ -12,6 +12,7 @@ var hash_8h =
     [ "hash_gen_hash_t", "hash_8h.html#a92b5004e205568c961210c6de64f4bf7", null ],
     [ "hash_cmp_key_t", "hash_8h.html#a2d46e3cf79b3afbe974fc8fd8cd2604e", null ],
     [ "HashFlags", "hash_8h.html#a0c35f1ef26058e20bb04048da91d9c3f", null ],
+    [ "ARRAY_HEAD", "hash_8h.html#a414a96d435cedb316b005234b4c4cb9f", null ],
     [ "mutt_hash_delete", "hash_8h.html#a114557f625aa5366ab736c607fd381dd", null ],
     [ "mutt_hash_find_bucket", "hash_8h.html#a45a0f9c9f31792cbbce7c4cc44c545aa", null ],
     [ "mutt_hash_find", "hash_8h.html#a21cfc2c56db496fc57d3d85a71c03215", null ],

@@ -1,6 +1,6 @@
 var types_8h =
 [
-    [ "DTYPE", "types_8h.html#a15a11710ca23d5779aa35ead735c7b36", null ],
+    [ "CONFIG_TYPE", "types_8h.html#a03e4dd17f797746b072864956223eeca", null ],
     [ "D_ON_STARTUP", "types_8h.html#af301361fd02995f2537326b761b6b0c6", null ],
     [ "D_NOT_EMPTY", "types_8h.html#aea3e4855f54b280dea3511e5e0ea6d5a", null ],
     [ "D_SENSITIVE", "types_8h.html#adfe27bfbb2df0f6f610b4cd49749563c", null ],
@@ -40,7 +40,6 @@ var types_8h =
       [ "DT_BOOL", "types_8h.html#ac254e872972d56fde0b2d9b767e157a9a23a27697955ba33fa0fa54d51c63427b", null ],
       [ "DT_ENUM", "types_8h.html#ac254e872972d56fde0b2d9b767e157a9af423c7c02d10668abffd710e25b5d2d3", null ],
       [ "DT_EXPANDO", "types_8h.html#ac254e872972d56fde0b2d9b767e157a9ae6e09e200d796f133ebc9fe06a5426fd", null ],
-      [ "DT_HCACHE", "types_8h.html#ac254e872972d56fde0b2d9b767e157a9af6ac7fdab7f920541de4b30831319d89", null ],
       [ "DT_LONG", "types_8h.html#ac254e872972d56fde0b2d9b767e157a9ae4d9e995c73b14756f8638e31993c40f", null ],
       [ "DT_MBTABLE", "types_8h.html#ac254e872972d56fde0b2d9b767e157a9ab67643c87a1a7ca592c32690f2b8cce3", null ],
       [ "DT_MYVAR", "types_8h.html#ac254e872972d56fde0b2d9b767e157a9a9a6ea05db5ddd5f9d1d77cf13d5c45d7", null ],
