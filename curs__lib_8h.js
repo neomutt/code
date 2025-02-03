@@ -20,5 +20,6 @@ var curs__lib_8h =
     [ "mutt_unget_ch", "curs__lib_8h.html#ae568d7843782964d3ab8566aa9c59e7b", null ],
     [ "mutt_unget_op", "curs__lib_8h.html#a8a7310e8fd6bf845a7754c8787d7333e", null ],
     [ "mutt_unget_string", "curs__lib_8h.html#a6ef7b1ace696713f403479e10c391642", null ],
-    [ "mutt_wstr_trunc", "curs__lib_8h.html#a48a9fd66de2ef76e2b72704badd3c40b", null ]
+    [ "mutt_wstr_trunc", "curs__lib_8h.html#a48a9fd66de2ef76e2b72704badd3c40b", null ],
+    [ "mw_what_key", "group__gui__mw.html#ga24de819c1b6837b59e35cbfdd0d827cf", null ]
 ];

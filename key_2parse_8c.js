@@ -9,9 +9,9 @@ var key_2parse_8c =
     [ "parse_keymap", "key_2parse_8c.html#abef8d8fc8603d392f925e15e171ec7b0", null ],
     [ "parse_menu", "key_2parse_8c.html#a091c8588a20028ca4b5c4137b93d29d6", null ],
     [ "try_bind", "key_2parse_8c.html#ad06fa9e5028db083ad4da72556f92c5f", null ],
-    [ "mutt_parse_push", "group__command__parse.html#gaee353816c517466abb6a0fc6ab80be89", null ],
-    [ "mutt_parse_bind", "group__command__parse.html#ga4a07241c2d4f2a55e4c669cd241fa07a", null ],
-    [ "mutt_parse_unbind", "group__command__parse.html#ga8167d07caa2c08334e8f10405104046c", null ],
-    [ "mutt_parse_macro", "group__command__parse.html#gab110a24561eb55190de031d0e6e5dc4c", null ],
-    [ "mutt_parse_exec", "group__command__parse.html#gaf84f116289baf67db6243a7442a03b4f", null ]
+    [ "parse_push", "group__command__parse.html#ga1b33114968b43fbe4325efe82823ccc1", null ],
+    [ "parse_bind", "group__command__parse.html#ga1cf37053ecec1c2a20db8246f07b7944", null ],
+    [ "parse_unbind", "group__command__parse.html#ga878630646a6a93ff034da0cb0467fdb8", null ],
+    [ "parse_macro", "group__command__parse.html#gaffb229a6ed42c442dd84e65552ac6790", null ],
+    [ "parse_exec", "group__command__parse.html#gab6d336041173506af5bb62bc6ca22b3e", null ]
 ];

@@ -53,7 +53,6 @@ var pager_2lib_8h =
     [ "mutt_clear_pager_position", "pager_2lib_8h.html#a52cb29b8a518d62062551b6ff7a3cb4f", null ],
     [ "dump_text_syntax", "pager_2lib_8h.html#a1694de57ddab1d0171e39dbe9a9b2cda", null ],
     [ "dump_line", "pager_2lib_8h.html#ae5b4e3e6d5435298d70bfdc069888bb8", null ],
-    [ "dump_pager", "pager_2lib_8h.html#a9eadacb76690f5b5ac21ee849b50f3a2", null ],
     [ "BrailleRow", "pager_2lib_8h.html#a3490b6b810e8a21aa55b285983ab06b3", null ],
     [ "BrailleCol", "pager_2lib_8h.html#a555e902447ceeb65bbcb35988b8d09c9", null ]
 ];

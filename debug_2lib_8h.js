@@ -61,7 +61,7 @@ var debug_2lib_8h =
     [ "name_window_size", "debug_2lib_8h.html#a265397e4b3e7ee775ee7693cfa22fae2", null ],
     [ "name_window_type", "debug_2lib_8h.html#a799a208febb17ef2dec92d4d114e5b44", null ],
     [ "debug_all_observer", "debug_2lib_8h.html#aa8b31bf9d0963d2c99a0c8f6d18664ad", null ],
-    [ "dump_pager", "debug_2lib_8h.html#a75e96888d4dd459544387e360f631d21", null ],
+    [ "dump_pager", "debug_2lib_8h.html#a9eadacb76690f5b5ac21ee849b50f3a2", null ],
     [ "debug_win_dump", "debug_2lib_8h.html#a3e949b6cf149926e285fbfdad1e94eb0", null ],
     [ "DebugLogColor", "debug_2lib_8h.html#a7af1f4419d3fa89569a0d87c63ec126b", null ],
     [ "DebugLogLevel", "debug_2lib_8h.html#a610c94eb24e3f1da3f7456394a8fdaa5", null ],

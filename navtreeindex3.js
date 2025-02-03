@@ -1,5 +1,9 @@
 var NAVTREEINDEX3 =
 {
+"browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a0a8418b23114dc448c181e79694b38e2":[2,0,5,7,8,16],
+"browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a24d25b6119635c9d851874e36b9fe384":[2,0,5,7,8,14],
+"browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a383d5b099aed733293e6420f1c9f242f":[2,0,5,7,8,7],
+"browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a3e4700d8fa6fdde5134021abe9840895":[2,0,5,7,8,5],
 "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a42daea04b4b8a36b1fde27733a9a0a4d":[2,0,5,7,8,4],
 "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a48579c3019c6f4c07241474f76b57a15":[2,0,5,7,8,1],
 "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a6f69f3cf223a47b4897d181349d2908e":[2,0,5,7,8,2],
@@ -171,11 +175,11 @@ var NAVTREEINDEX3 =
 "cid_8h_source.html":[2,0,2,5],
 "classes.html":[1,1],
 "color_2command_8c.html":[2,0,6,6],
+"color_2command_8c.html#a061040c12d058b0031f699cc8662cb0f":[2,0,6,6,2],
 "color_2command_8c.html#a4223d5d1f0253f7ee4b4cf2e06041f1f":[2,0,6,6,0],
 "color_2command_8c.html#a4476932702aa028f1fcdc565633c03cf":[2,0,6,6,8],
-"color_2command_8c.html#abf4fa6284b875336d79d4cf473c3019d":[2,0,6,6,3],
+"color_2command_8c.html#a8846d66d71dafd863285a981ffc0dd77":[2,0,6,6,3],
 "color_2command_8c.html#acc67f336f74803823dd88fd44cf39614":[2,0,6,6,1],
-"color_2command_8c.html#afc5ca3d357fa1ccff17544249c7f2905":[2,0,6,6,2],
 "color_2command_8c_source.html":[2,0,6,6],
 "color_2dump_8c.html":[2,0,6,12],
 "color_2dump_8c.html#a0e8823e4ca8ed9cb47b5b9aec304a350":[2,0,6,12,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "color_8c.html#a4446c94565fccfad7ca90b914bfe3ff5":[2,0,6,4,2],
 "color_8c.html#a7f2103d066df78cbf75de5083c02dd74":[2,0,6,4,0],
 "color_8c.html#a8f62b76a0baef9936162697d43edddf3":[2,0,6,4,3],
-"color_8c.html#aec44cbbfbd9198585b2c1f532416c8d4":[2,0,6,4,1],
-"color_8c_source.html":[2,0,6,4],
-"color_8h.html":[2,0,6,5],
-"color_8h.html#a4446c94565fccfad7ca90b914bfe3ff5":[2,0,6,5,4],
-"color_8h.html#a4476932702aa028f1fcdc565633c03cf":[2,0,6,5,6]
+"color_8c.html#aec44cbbfbd9198585b2c1f532416c8d4":[2,0,6,4,1]
 };

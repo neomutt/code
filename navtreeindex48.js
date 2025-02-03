@@ -1,5 +1,14 @@
 var NAVTREEINDEX48 =
 {
+"structMhEmail.html#a34bec8eb69452e1092e8781e8da0c4b9":[1,0,153,1],
+"structMhEmail.html#aab7e0d8736bf006563e1a87bcc6578e4":[1,0,153,3],
+"structMhMboxData.html":[1,0,154],
+"structMhMboxData.html#a379d00adbfc0301ebcacd3b133778e3b":[1,0,154,2],
+"structMhMboxData.html#a85adbb86243eea69ce9c7e09f6fc08d2":[1,0,154,0],
+"structMhMboxData.html#ae14b8ca7026abb5d7a65c603b2bb558c":[1,0,154,1],
+"structMhSequences.html":[1,0,155],
+"structMhSequences.html#a08f58e22514b81c92dd8731a98219af1":[1,0,155,1],
+"structMhSequences.html#a4f50dd478cc24d2af98b7d72d99f8f6f":[1,0,155,0],
 "structMimeNames.html":[1,0,156],
 "structMimeNames.html#a43266ef0b04e2d3bd3f7eb6df267aa6b":[1,0,156,0],
 "structMimeNames.html#aef49d21e1a319c25eab15f635200942c":[1,0,156,1],
@@ -240,14 +249,5 @@ var NAVTREEINDEX48 =
 "structPagerPrivateData.html#ad7c650de77a14afc73455f7177f78f3a":[1,0,186,19],
 "structPagerPrivateData.html#ad8bcd0088f080aa11c4edfdc676636ee":[1,0,186,12],
 "structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd":[1,0,186,0],
-"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,186,22],
-"structPagerPrivateData.html#ae448f18ad03d4c47cf38b84c106b79da":[1,0,186,25],
-"structPagerPrivateData.html#ae85cad304a17fbe3fc3a0bc126bd1411":[1,0,186,18],
-"structPagerPrivateData.html#ae8aca194ad702e2e716ecb08172a3a53":[1,0,186,9],
-"structPagerPrivateData.html#af5416e43311ef0ec6c3057946294ac07":[1,0,186,8],
-"structPagerPrivateData.html#afb5dbf89eff9e94e26674696e934dae0":[1,0,186,1],
-"structPagerPrivateData.html#afd2063e9a724fe469e2379dfb32911c1":[1,0,186,15],
-"structPagerPrivateData.html#affde2b6eb6be4e569a73998a47e8eb48":[1,0,186,17],
-"structPagerView.html":[1,0,187],
-"structPagerView.html#a182ca407e5882d112f23e078b2980482":[1,0,187,4]
+"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,186,22]
 };

@@ -231,7 +231,7 @@ var searchData=
   ['ipanel_5fwindow_5fobserver_228',['ipanel_window_observer',['../group__observer__api.html#gac97ba3dcc8206296620c579d1b152315',1,'ipanel.c']]],
   ['iptostring_229',['iptostring',['../sasl_8c.html#abd06051d6bdbf9f011dbfa8df64c424c',1,'sasl.c']]],
   ['is_5fautoview_230',['is_autoview',['../handler_8c.html#a09f27e2821153040ea4cad0b9ade6153',1,'handler.c']]],
-  ['is_5fbound_231',['is_bound',['../help_8c.html#a3fe741379b821e5ebf472d1b823c7b01',1,'help.c']]],
+  ['is_5fbound_231',['is_bound',['../key_2lib_8c.html#a7418778743995b05400fc57cd82e920b',1,'lib.c']]],
   ['is_5fcolor_5fobject_232',['is_color_object',['../commands_8c.html#a24e753457aba43a6e749eda649c6b953',1,'commands.c']]],
   ['is_5fdescendant_233',['is_descendant',['../thread_8c.html#a270ef45b668941a460185742a798a9d4',1,'is_descendant(const struct MuttThread *a, const struct MuttThread *b):&#160;thread.c'],['../thread_8h.html#a270ef45b668941a460185742a798a9d4',1,'is_descendant(const struct MuttThread *a, const struct MuttThread *b):&#160;thread.c']]],
   ['is_5ffrom_234',['is_from',['../from_8c.html#af485f9451b398a9beb14a61aaa68ddeb',1,'is_from(const char *s, char *path, size_t pathlen, time_t *tp):&#160;from.c'],['../from_8h.html#af485f9451b398a9beb14a61aaa68ddeb',1,'is_from(const char *s, char *path, size_t pathlen, time_t *tp):&#160;from.c']]],

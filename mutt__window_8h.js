@@ -90,6 +90,6 @@ var mutt__window_8h =
     [ "window_redraw", "mutt__window_8h.html#a0af7bfe97dbb8f95d03851ec3fe62553", null ],
     [ "window_invalidate_all", "mutt__window_8h.html#af4d3d4773ed4611da7cb46ebed71cdee", null ],
     [ "mutt_window_win_name", "mutt__window_8h.html#a61446f88f6193a4fe76e7de175a6fd01", null ],
-    [ "window_status_on_top", "mutt__window_8h.html#a18886eabbcb97d67bf5e948829b086c8", null ],
+    [ "window_status_on_top", "mutt__window_8h.html#afa9848865c1f114423149b22e7021a99", null ],
     [ "mutt_window_swap", "mutt__window_8h.html#a92654b98bfdcd11cae2f3b6e9cd55b1a", null ]
 ];

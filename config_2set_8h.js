@@ -41,7 +41,6 @@ var config_2set_8h =
     [ "cs_he_delete", "config_2set_8h.html#a568925711287812c04a3b48097d30668", null ],
     [ "cs_str_has_been_set", "config_2set_8h.html#a4c7614b7ca6fc2dd0efc55c45b718d13", null ],
     [ "cs_str_initial_get", "config_2set_8h.html#a1bc435f8e505a9274333899fa70250ce", null ],
-    [ "cs_str_initial_set", "config_2set_8h.html#a2923b046583690255351a486a6a7a0c6", null ],
     [ "cs_str_native_set", "config_2set_8h.html#a6eec066d228f0ded678c35ed8aa9ac28", null ],
     [ "cs_str_reset", "config_2set_8h.html#a2c2cb475e50df247e8c88dab8c123534", null ],
     [ "cs_str_string_set", "config_2set_8h.html#a5b6c4a72c38c2eca93569af53cc82eed", null ],

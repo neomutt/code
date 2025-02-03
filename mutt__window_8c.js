@@ -33,7 +33,7 @@ var mutt__window_8c =
     [ "mutt_window_win_name", "mutt__window_8c.html#a61446f88f6193a4fe76e7de175a6fd01", null ],
     [ "window_invalidate", "mutt__window_8c.html#a8648bef61c735a41e61419cdfbbb10d9", null ],
     [ "window_invalidate_all", "mutt__window_8c.html#af4d3d4773ed4611da7cb46ebed71cdee", null ],
-    [ "window_status_on_top", "mutt__window_8c.html#a18886eabbcb97d67bf5e948829b086c8", null ],
+    [ "window_status_on_top", "mutt__window_8c.html#afa9848865c1f114423149b22e7021a99", null ],
     [ "mutt_window_swap", "mutt__window_8c.html#a92654b98bfdcd11cae2f3b6e9cd55b1a", null ],
     [ "WindowNames", "mutt__window_8c.html#a24d4ce5d3833eedef691573c1ced9107", null ]
 ];

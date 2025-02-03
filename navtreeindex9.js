@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada":[2,0,21,2,0],
+"dialog_8c_source.html":[2,0,21,2],
 "dialog_8h.html":[2,0,21,3],
 "dialog_8h.html#a7c4678f81d8185d89e16e4befe94bb08":[2,0,21,3,2],
 "dialog_8h.html#a82616808183352fb315931b2bb3518c0":[2,0,21,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "editor_2functions_8h.html#ae97582af5919a128251070d8d67543dc":[2,0,16,3,3],
 "editor_2functions_8h_source.html":[2,0,16,3],
 "editor_2lib_8h.html":[2,0,16,4],
-"editor_2lib_8h.html#ad2f6f39bb1405a4a86c08f04b5102b27":[2,0,16,4,1],
-"editor_2lib_8h_source.html":[2,0,16,4],
-"editor_2state_8c.html":[2,0,16,5]
+"editor_2lib_8h.html#ad2f6f39bb1405a4a86c08f04b5102b27":[2,0,16,4,1]
 };
