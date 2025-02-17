@@ -8,7 +8,7 @@ var searchData=
   ['unalternates_5',['UnAlternates',['../alternates_8c.html#ada803e44ab2a6eb78904482e46d6b1f7',1,'alternates.c']]],
   ['ungetkeyevents_6',['UngetKeyEvents',['../get_8c.html#a373b5ab01bae42f52b0d60a972ce110c',1,'get.c']]],
   ['unicode_7',['unicode',['../structImapAccountData.html#a9ce6191c36074e9613d78e22851119d0',1,'ImapAccountData']]],
-  ['unignore_8',['UnIgnore',['../email_2globals_8c.html#aedead725975fc1c761da7aba127d2586',1,'UnIgnore():&#160;globals.c'],['../email_2globals_8h.html#aedead725975fc1c761da7aba127d2586',1,'UnIgnore():&#160;globals.c']]],
+  ['unignore_8',['UnIgnore',['../email_2globals_8h.html#aedead725975fc1c761da7aba127d2586',1,'UnIgnore():&#160;globals.c'],['../email_2globals_8c.html#aedead725975fc1c761da7aba127d2586',1,'UnIgnore():&#160;globals.c']]],
   ['unlink_9',['unlink',['../structBody.html#a47191eabf16d34d0deb412c898ed629b',1,'Body']]],
   ['unmaillists_10',['UnMailLists',['../email_2globals_8h.html#a4604400f5d21502c96623074740c892d',1,'UnMailLists():&#160;globals.c'],['../email_2globals_8c.html#a4604400f5d21502c96623074740c892d',1,'UnMailLists():&#160;globals.c']]],
   ['unowned_11',['unowned',['../structAttachPtr.html#a85722c8044f044e59047c3c8b12ef279',1,'AttachPtr']]],
@@ -30,7 +30,7 @@ var searchData=
   ['userhdrs_27',['userhdrs',['../structEnvelope.html#a005f4bd665ae1ae362add27948753fe1',1,'Envelope']]],
   ['userhdrsoverrideheaders_28',['UserhdrsOverrideHeaders',['../header_8c.html#a520c5ce2825ef71a466e3f751bb5ac51',1,'header.c']]],
   ['userheader_29',['UserHeader',['../globals_8c.html#aa6af9b507b7033a8a1226c0c1946116d',1,'UserHeader():&#160;globals.c'],['../globals_8h.html#aa6af9b507b7033a8a1226c0c1946116d',1,'UserHeader():&#160;globals.c']]],
-  ['username_30',['Username',['../globals_8c.html#ab8e2fef8236168bd41c60e16d4c72d72',1,'Username():&#160;globals.c'],['../globals_8h.html#ab8e2fef8236168bd41c60e16d4c72d72',1,'Username():&#160;globals.c']]],
+  ['username_30',['username',['../structNeoMutt.html#a5c2d30a2f734f94412bd5b3a7367b981',1,'NeoMutt']]],
   ['usethreadsmethods_31',['UseThreadsMethods',['../mutt__thread_8c.html#a5c2a82bc1766950548a5d97a7dbd8d2a',1,'mutt_thread.c']]],
   ['usethreadstypedef_32',['UseThreadsTypeDef',['../mutt__thread_8c.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef():&#160;mutt_thread.c'],['../mutt__thread_8h.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef():&#160;mutt_thread.c']]]
 ];

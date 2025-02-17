@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-01-09-104-g5de5ef</span>
+   &#160;<span id="projectnumber">2025-01-09-117-gace867</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -111,6 +111,7 @@ $(document).ready(function(){initNavTree('config_2path_8c.html',''); initResizab
 <code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="mutt_2lib_8h_source.html">mutt/lib.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="core_2lib_8h_source.html">core/lib.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="config_2set_8h_source.html">set.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8h_source.html">types.h</a>&quot;</code><br />
 </div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -118,7 +119,7 @@ $(document).ready(function(){initNavTree('config_2path_8c.html',''); initResizab
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="config_2path_8c__incl.svg" width="524" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="config_2path_8c__incl.svg" width="628" height="256"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -153,9 +154,6 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6f7b1cf93328b961c3e3a64f300d75b0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_2path_8c.html#a6f7b1cf93328b961c3e3a64f300d75b0">HomeDir</a></td></tr>
-<tr class="memdesc:a6f7b1cf93328b961c3e3a64f300d75b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">User's home directory.  <br /></td></tr>
-<tr class="separator:a6f7b1cf93328b961c3e3a64f300d75b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0159616e41286b0947eaa40dfb660532"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structConfigSetType.html">ConfigSetType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_2path_8c.html#a0159616e41286b0947eaa40dfb660532">CstPath</a></td></tr>
 <tr class="memdesc:a0159616e41286b0947eaa40dfb660532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Config type representing a path.  <br /></td></tr>
 <tr class="separator:a0159616e41286b0947eaa40dfb660532"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,30 +224,31 @@ Variables</h2></td></tr>
 <p>Expand <code>~</code> and remove junk like <code>/./</code></p>
 <dl class="section note"><dt>Note</dt><dd>The caller must free the returned string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="config_2path_8c_source.html#l00058">58</a> of file <a class="el" href="config_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>{</div>
-<div class="line"><span class="lineno">   60</span>  <span class="keywordflow">if</span> (!path || (*path == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">   64</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(buf, path);</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>  <a class="code hl_function" href="mutt_2path_8c.html#aa51eaec92f9803ff9e11e442efa5aff9">mutt_path_tilde</a>(buf, <a class="code hl_variable" href="config_2path_8c.html#a6f7b1cf93328b961c3e3a64f300d75b0">HomeDir</a>);</div>
-<div class="line"><span class="lineno">   67</span>  <a class="code hl_function" href="mutt_2path_8c.html#a5ab1c7e67015696230c62a80223bc752">mutt_path_tidy</a>(buf, is_dir);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>  <span class="keywordtype">char</span> *tidy_path = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
-<div class="line"><span class="lineno">   70</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">return</span> tidy_path;</div>
-<div class="line"><span class="lineno">   73</span>}</div>
+<p class="definition">Definition at line <a class="el" href="config_2path_8c_source.html#l00057">57</a> of file <a class="el" href="config_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">if</span> (!path || (*path == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">   63</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(buf, path);</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  <a class="code hl_function" href="mutt_2path_8c.html#aa51eaec92f9803ff9e11e442efa5aff9">mutt_path_tilde</a>(buf, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08">home_dir</a>);</div>
+<div class="line"><span class="lineno">   66</span>  <a class="code hl_function" href="mutt_2path_8c.html#a5ab1c7e67015696230c62a80223bc752">mutt_path_tidy</a>(buf, is_dir);</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>  <span class="keywordtype">char</span> *tidy_path = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
+<div class="line"><span class="lineno">   69</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordflow">return</span> tidy_path;</div>
+<div class="line"><span class="lineno">   72</span>}</div>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00395">buffer.c:395</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ad76477cc0c660bc50162393e997233eb"><div class="ttname"><a href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a></div><div class="ttdeci">char * buf_strdup(const struct Buffer *buf)</div><div class="ttdoc">Copy a Buffer's string.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00571">buffer.c:571</a></div></div>
-<div class="ttc" id="aconfig_2path_8c_html_a6f7b1cf93328b961c3e3a64f300d75b0"><div class="ttname"><a href="config_2path_8c.html#a6f7b1cf93328b961c3e3a64f300d75b0">HomeDir</a></div><div class="ttdeci">char * HomeDir</div><div class="ttdoc">User's home directory.</div><div class="ttdef"><b>Definition:</b> <a href="globals_8c_source.html#l00037">globals.c:37</a></div></div>
 <div class="ttc" id="amutt_2path_8c_html_a5ab1c7e67015696230c62a80223bc752"><div class="ttname"><a href="mutt_2path_8c.html#a5ab1c7e67015696230c62a80223bc752">mutt_path_tidy</a></div><div class="ttdeci">bool mutt_path_tidy(struct Buffer *path, bool is_dir)</div><div class="ttdoc">Remove unnecessary parts of a path.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00169">path.c:169</a></div></div>
 <div class="ttc" id="amutt_2path_8c_html_aa51eaec92f9803ff9e11e442efa5aff9"><div class="ttname"><a href="mutt_2path_8c.html#aa51eaec92f9803ff9e11e442efa5aff9">mutt_path_tilde</a></div><div class="ttdeci">bool mutt_path_tilde(struct Buffer *path, const char *homedir)</div><div class="ttdoc">Expand '~' in a path.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2path_8c_source.html#l00194">path.c:194</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
+<div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00042">neomutt.h:43</a></div></div>
+<div class="ttc" id="astructNeoMutt_html_ac181d2dd4b8f4acbcfe0b1878ebbfa08"><div class="ttname"><a href="structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08">NeoMutt::home_dir</a></div><div class="ttdeci">char * home_dir</div><div class="ttdoc">User's home directory.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00053">neomutt.h:53</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -270,32 +269,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a6f7b1cf93328b961c3e3a64f300d75b0" name="a6f7b1cf93328b961c3e3a64f300d75b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f7b1cf93328b961c3e3a64f300d75b0">&#9670;&#160;</a></span>HomeDir</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* HomeDir</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>User's home directory. </p>
-
-<p class="definition">Definition at line <a class="el" href="globals_8c_source.html#l00037">37</a> of file <a class="el" href="globals_8c_source.html">globals.c</a>.</p>
-
-</div>
-</div>
 <a id="a0159616e41286b0947eaa40dfb660532" name="a0159616e41286b0947eaa40dfb660532"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0159616e41286b0947eaa40dfb660532">&#9670;&#160;</a></span>CstPath</h2>
 
@@ -320,18 +293,18 @@ Variables</h2></td></tr>
 <div class="line">  <a class="code hl_function" href="group__cfg__type__reset.html#ga70f1fee65b4b36afe9897a0f969a993a">path_reset</a>,</div>
 <div class="line">  <a class="code hl_function" href="group__cfg__type__destroy.html#ga51934aec6de60fb87061732a999fd0a9">path_destroy</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__cfg__type__destroy_html_ga51934aec6de60fb87061732a999fd0a9"><div class="ttname"><a href="group__cfg__type__destroy.html#ga51934aec6de60fb87061732a999fd0a9">path_destroy</a></div><div class="ttdeci">static void path_destroy(void *var, const struct ConfigDef *cdef)</div><div class="ttdoc">Destroy a Path - Implements ConfigSetType::destroy() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00078">path.c:78</a></div></div>
-<div class="ttc" id="agroup__cfg__type__has__been__set_html_gae96b892ced50f9f791e76e0101a4ad7d"><div class="ttname"><a href="group__cfg__type__has__been__set.html#gae96b892ced50f9f791e76e0101a4ad7d">path_has_been_set</a></div><div class="ttdeci">static bool path_has_been_set(void *var, const struct ConfigDef *cdef)</div><div class="ttdoc">Is the config value different to its initial value? - Implements ConfigSetType::has_been_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00218">path.c:218</a></div></div>
-<div class="ttc" id="agroup__cfg__type__native__get_html_ga0f333eeb0f3541f3b49c666736c3a964"><div class="ttname"><a href="group__cfg__type__native__get.html#ga0f333eeb0f3541f3b49c666736c3a964">path_native_get</a></div><div class="ttdeci">static intptr_t path_native_get(void *var, const struct ConfigDef *cdef, struct Buffer *err)</div><div class="ttdoc">Get a string from a Path config item - Implements ConfigSetType::native_get() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00208">path.c:208</a></div></div>
-<div class="ttc" id="agroup__cfg__type__native__set_html_gac81a6c8cf6101e5b92e3a1cd7cadfff0"><div class="ttname"><a href="group__cfg__type__native__set.html#gac81a6c8cf6101e5b92e3a1cd7cadfff0">path_native_set</a></div><div class="ttdeci">static int path_native_set(void *var, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err)</div><div class="ttdoc">Set a Path config item by string - Implements ConfigSetType::native_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00163">path.c:163</a></div></div>
-<div class="ttc" id="agroup__cfg__type__reset_html_ga70f1fee65b4b36afe9897a0f969a993a"><div class="ttname"><a href="group__cfg__type__reset.html#ga70f1fee65b4b36afe9897a0f969a993a">path_reset</a></div><div class="ttdeci">static int path_reset(void *var, const struct ConfigDef *cdef, struct Buffer *err)</div><div class="ttdoc">Reset a Path to its initial value - Implements ConfigSetType::reset() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00231">path.c:231</a></div></div>
-<div class="ttc" id="agroup__cfg__type__string__get_html_ga8e8f74244829779159e9abcfd996d92d"><div class="ttname"><a href="group__cfg__type__string__get.html#ga8e8f74244829779159e9abcfd996d92d">path_string_get</a></div><div class="ttdeci">static int path_string_get(void *var, const struct ConfigDef *cdef, struct Buffer *result)</div><div class="ttdoc">Get a Path as a string - Implements ConfigSetType::string_get() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00144">path.c:144</a></div></div>
-<div class="ttc" id="agroup__cfg__type__string__set_html_ga59cef903dfd2f3107130289f4b95f7f2"><div class="ttname"><a href="group__cfg__type__string__set.html#ga59cef903dfd2f3107130289f4b95f7f2">path_string_set</a></div><div class="ttdeci">static int path_string_set(void *var, struct ConfigDef *cdef, const char *value, struct Buffer *err)</div><div class="ttdoc">Set a Path by string - Implements ConfigSetType::string_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00090">path.c:90</a></div></div>
+<div class="ttc" id="agroup__cfg__type__destroy_html_ga51934aec6de60fb87061732a999fd0a9"><div class="ttname"><a href="group__cfg__type__destroy.html#ga51934aec6de60fb87061732a999fd0a9">path_destroy</a></div><div class="ttdeci">static void path_destroy(void *var, const struct ConfigDef *cdef)</div><div class="ttdoc">Destroy a Path - Implements ConfigSetType::destroy() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00077">path.c:77</a></div></div>
+<div class="ttc" id="agroup__cfg__type__has__been__set_html_gae96b892ced50f9f791e76e0101a4ad7d"><div class="ttname"><a href="group__cfg__type__has__been__set.html#gae96b892ced50f9f791e76e0101a4ad7d">path_has_been_set</a></div><div class="ttdeci">static bool path_has_been_set(void *var, const struct ConfigDef *cdef)</div><div class="ttdoc">Is the config value different to its initial value? - Implements ConfigSetType::has_been_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00217">path.c:217</a></div></div>
+<div class="ttc" id="agroup__cfg__type__native__get_html_ga0f333eeb0f3541f3b49c666736c3a964"><div class="ttname"><a href="group__cfg__type__native__get.html#ga0f333eeb0f3541f3b49c666736c3a964">path_native_get</a></div><div class="ttdeci">static intptr_t path_native_get(void *var, const struct ConfigDef *cdef, struct Buffer *err)</div><div class="ttdoc">Get a string from a Path config item - Implements ConfigSetType::native_get() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00207">path.c:207</a></div></div>
+<div class="ttc" id="agroup__cfg__type__native__set_html_gac81a6c8cf6101e5b92e3a1cd7cadfff0"><div class="ttname"><a href="group__cfg__type__native__set.html#gac81a6c8cf6101e5b92e3a1cd7cadfff0">path_native_set</a></div><div class="ttdeci">static int path_native_set(void *var, const struct ConfigDef *cdef, intptr_t value, struct Buffer *err)</div><div class="ttdoc">Set a Path config item by string - Implements ConfigSetType::native_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00162">path.c:162</a></div></div>
+<div class="ttc" id="agroup__cfg__type__reset_html_ga70f1fee65b4b36afe9897a0f969a993a"><div class="ttname"><a href="group__cfg__type__reset.html#ga70f1fee65b4b36afe9897a0f969a993a">path_reset</a></div><div class="ttdeci">static int path_reset(void *var, const struct ConfigDef *cdef, struct Buffer *err)</div><div class="ttdoc">Reset a Path to its initial value - Implements ConfigSetType::reset() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00230">path.c:230</a></div></div>
+<div class="ttc" id="agroup__cfg__type__string__get_html_ga8e8f74244829779159e9abcfd996d92d"><div class="ttname"><a href="group__cfg__type__string__get.html#ga8e8f74244829779159e9abcfd996d92d">path_string_get</a></div><div class="ttdeci">static int path_string_get(void *var, const struct ConfigDef *cdef, struct Buffer *result)</div><div class="ttdoc">Get a Path as a string - Implements ConfigSetType::string_get() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00143">path.c:143</a></div></div>
+<div class="ttc" id="agroup__cfg__type__string__set_html_ga59cef903dfd2f3107130289f4b95f7f2"><div class="ttname"><a href="group__cfg__type__string__set.html#ga59cef903dfd2f3107130289f4b95f7f2">path_string_set</a></div><div class="ttdeci">static int path_string_set(void *var, struct ConfigDef *cdef, const char *value, struct Buffer *err)</div><div class="ttdoc">Set a Path by string - Implements ConfigSetType::string_set() -.</div><div class="ttdef"><b>Definition:</b> <a href="config_2path_8c_source.html#l00089">path.c:89</a></div></div>
 <div class="ttc" id="atypes_8h_html_ac254e872972d56fde0b2d9b767e157a9af65458e47958a637870a424b7578565f"><div class="ttname"><a href="types_8h.html#ac254e872972d56fde0b2d9b767e157a9af65458e47958a637870a424b7578565f">DT_PATH</a></div><div class="ttdeci">@ DT_PATH</div><div class="ttdoc">a path to a file/directory</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00039">types.h:39</a></div></div>
 </div><!-- fragment -->
 <p>Config type representing a path. </p>
 
-<p class="definition">Definition at line <a class="el" href="config_2path_8c_source.html#l00274">274</a> of file <a class="el" href="config_2path_8c_source.html">path.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="config_2path_8c_source.html#l00273">273</a> of file <a class="el" href="config_2path_8c_source.html">path.c</a>.</p>
 
 </div>
 </div>

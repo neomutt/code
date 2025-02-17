@@ -2,9 +2,7 @@ var globals_8c =
 [
     [ "ErrorBufMessage", "globals_8c.html#a8b07bedfff276299caa6925c95b5b157", null ],
     [ "ErrorBuf", "globals_8c.html#a6dc47daf9dad9df1140145c872d9dc2c", null ],
-    [ "HomeDir", "globals_8c.html#a6f7b1cf93328b961c3e3a64f300d75b0", null ],
     [ "ShortHostname", "globals_8c.html#a12bc91409c8ec9f5b1600f34d1f557b6", null ],
-    [ "Username", "globals_8c.html#ab8e2fef8236168bd41c60e16d4c72d72", null ],
     [ "CurrentFolder", "globals_8c.html#a972299f89841a17ed8c5e6e3f283660c", null ],
     [ "LastFolder", "globals_8c.html#a0ca4c1a10f6b64e56e4b31b1d6836ca9", null ],
     [ "AlternativeOrderList", "globals_8c.html#a62b820cb814d69bafbca876aeabaf081", null ],
@@ -26,6 +24,5 @@ var globals_8c =
     [ "OptNoCurses", "globals_8c.html#a3406f3a7cf18cf13fef48849210487ed", null ],
     [ "OptPgpCheckTrust", "globals_8c.html#a3cf441307286abc7db5e6b8213cfad98", null ],
     [ "OptResortInit", "globals_8c.html#a47fc38d31ae258634aacd32d9345d940", null ],
-    [ "OptSortSubthreads", "globals_8c.html#abf26ef5fcbd5234531d588f9f3a1f293", null ],
-    [ "EnvList", "globals_8c.html#ae45378328cf8b407e63b6d53eaf61a01", null ]
+    [ "OptSortSubthreads", "globals_8c.html#abf26ef5fcbd5234531d588f9f3a1f293", null ]
 ];

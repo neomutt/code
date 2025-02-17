@@ -1,13 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"structEtags.html#a4dfb2c4b8941b7d6152f6de86d2a061c":[1,0,73,1],
-"structEtags.html#aea21780374e5741d70205a1efc9781ea":[1,0,73,0],
-"structEventAccount.html":[1,0,74],
-"structEventAccount.html#ac420c69e05c38e42e09e3dd88cf54c9f":[1,0,74,0],
-"structEventAlias.html":[1,0,75],
-"structEventAlias.html#a41feecc7a71d20e0a724b41ca52afb09":[1,0,75,0],
-"structEventBinding.html":[1,0,76],
-"structEventBinding.html#a0ad733d233568d1be0c2b320c7290c61":[1,0,76,1],
 "structEventBinding.html#a598d0913e664bdf76e0691351fbe0c5c":[1,0,76,2],
 "structEventBinding.html#ac556bc4621c935cd9f01036e7f4e666f":[1,0,76,0],
 "structEventColor.html":[1,0,77],
@@ -249,5 +241,13 @@ var NAVTREEINDEX46 =
 "structImapEmailData.html#af3d57aed1b74390358fe594de497b8f1":[1,0,120,8],
 "structImapHeader.html":[1,0,121],
 "structImapHeader.html#a18937a689b628b43ac8d7718eb951544":[1,0,121,1],
-"structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50":[1,0,121,0]
+"structImapHeader.html#a9ab09cdab7d1f3048a34092e3a1e7d50":[1,0,121,0],
+"structImapHeader.html#ae53cb16ef576e34ad7ad0a684a0d77ad":[1,0,121,2],
+"structImapList.html":[1,0,122],
+"structImapList.html#a18ef4b7bcc281c4f69370bc73b97b6af":[1,0,122,2],
+"structImapList.html#a5568aa5accb3bb6b13e039253e7b8b43":[1,0,122,3],
+"structImapList.html#ab748e7763b4a908456f4c7a647c87012":[1,0,122,0],
+"structImapList.html#ae781ce990b408777cf84f7da397303fe":[1,0,122,1],
+"structImapMboxData.html":[1,0,123],
+"structImapMboxData.html#a0361d64a273edc77a83d276053da5b6d":[1,0,123,4]
 };

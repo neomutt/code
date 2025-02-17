@@ -1,13 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"group__expando__get__string__api.html#ga1c7d12260dca7f16481a0ef2cf518007":[48,22,0,55],
-"group__expando__get__string__api.html#ga1d0b5373597edc855fb94c78a6db614e":[48,22,0,38],
-"group__expando__get__string__api.html#ga1e7444ff25ac0299ab96cf62bd8b7921":[48,22,0,39],
-"group__expando__get__string__api.html#ga258b50443284a64a2a6aaea9b8e6eb69":[48,22,0,89],
-"group__expando__get__string__api.html#ga258ce2cf925758bb4455868f39d44c36":[48,22,0,79],
-"group__expando__get__string__api.html#ga25c81a3d2186df31e3328dc148e6416a":[48,22,0,2],
-"group__expando__get__string__api.html#ga264c0aa92464a4c6f841bc9830c5f13f":[48,22,0,5],
-"group__expando__get__string__api.html#ga266fbabb88f8236545226c50fbe0423a":[48,22,0,66],
 "group__expando__get__string__api.html#ga27c73c7048e4197781213cb6564b2162":[48,22,0,153],
 "group__expando__get__string__api.html#ga287502ba913cf5cf3cf3f3496122f503":[48,22,0,21],
 "group__expando__get__string__api.html#ga2928eb3ab231fb26800025cd9e71e539":[48,22,0,117],
@@ -249,5 +241,13 @@ var NAVTREEINDEX18 =
 "group__index__function__api.html#ga0df6cabe6b7ce9e999d0c5a48d5bfee1":[48,13,8,41],
 "group__index__function__api.html#ga114801aeec88b41f5fd94433c05077ae":[48,13,8,30],
 "group__index__function__api.html#ga150eee3167229b54d1e48315702a06de":[48,13,8,63],
-"group__index__function__api.html#ga16500c311df2be815904b994ea0a207d":[48,13,8,25]
+"group__index__function__api.html#ga16500c311df2be815904b994ea0a207d":[48,13,8,25],
+"group__index__function__api.html#ga1d5a2a20a986ded06ca46e81c8aace1d":[48,13,8,9],
+"group__index__function__api.html#ga1dd9ba0bdf8a15e8f1db7b51064bebba":[48,13,8,36],
+"group__index__function__api.html#ga1df409dcb0f3e15e6056a9cf9325f8a8":[48,13,8,79],
+"group__index__function__api.html#ga269fd5405ec4cb57e0e2ec6169c03362":[48,13,8,20],
+"group__index__function__api.html#ga28f077f490e0a78e227c8a77b450e445":[48,13,8,7],
+"group__index__function__api.html#ga2e35907bda43973c7f75b4f45832b174":[48,13,8,37],
+"group__index__function__api.html#ga307bf6ad62aef8589ed67f12cee7aa9e":[48,13,8,50],
+"group__index__function__api.html#ga3292836385eaf0e68ad7a306283bbbcc":[48,13,8,38]
 };

@@ -50,7 +50,7 @@ var commands_8c =
     [ "parse_unsubscribe_from", "group__command__parse.html#ga4de6648a96f0b42657a3b5bb3eccfa22", null ],
     [ "parse_version", "group__command__parse.html#ga04871473a2fca290d12034c0978027cb", null ],
     [ "source_stack_cleanup", "commands_8c.html#a4b3c0ff4862536cd4c111b107a88e843", null ],
-    [ "commands_init", "commands_8c.html#a3e9ed14716fd984977306110fbf28de0", null ],
+    [ "commands_init", "commands_8c.html#a738b21e3eb17cb1ba10e4952c212d6ee", null ],
     [ "MuttrcStack", "commands_8c.html#a9606ade62612df075df6ae982722ed63", null ],
     [ "MuttCommands", "commands_8c.html#a07713b1fb67ab4fe83722fe6ab7ee172", null ]
 ];

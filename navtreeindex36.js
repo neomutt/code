@@ -1,13 +1,5 @@
 var NAVTREEINDEX36 =
 {
-"parse__ansi_8h_source.html":[2,0,6,20],
-"parse__color_8c.html":[2,0,6,21],
-"parse__color_8c.html#a10f5382f1f20530a9217277d34aca64f":[2,0,6,21,0],
-"parse__color_8c.html#a25fdf40f5b2aca2f5c006703f86d8b73":[2,0,6,21,7],
-"parse__color_8c.html#a32de089101f36403a7c4a7bbe8b0e83f":[2,0,6,21,8],
-"parse__color_8c.html#a59c04124c48db8a42104a864aee88973":[2,0,6,21,2],
-"parse__color_8c.html#ac69d335a20f24b1d09f938a933f8a913":[2,0,6,21,4],
-"parse__color_8c.html#adfe17ceea29f4095343c5169f3dd701c":[2,0,6,21,3],
 "parse__color_8c.html#af155a9d49e8f5faa0e784a77f02fee41":[2,0,6,21,1],
 "parse__color_8c_source.html":[2,0,6,21],
 "parse__color_8h.html":[2,0,6,22],
@@ -249,5 +241,13 @@ var NAVTREEINDEX36 =
 "pgp_functions.html":[35,20],
 "pgpinvoke_8c.html":[2,0,33,34],
 "pgpinvoke_8c.html#a07a1392c06efa0eaa3e02b39cc2e4571":[2,0,33,34,11],
-"pgpinvoke_8c.html#a20c6ffdd8d441f667f3be7de29fea174":[2,0,33,34,6]
+"pgpinvoke_8c.html#a20c6ffdd8d441f667f3be7de29fea174":[2,0,33,34,6],
+"pgpinvoke_8c.html#a407b2ceab1cb744122e3cb5e9e9b0fd5":[2,0,33,34,2],
+"pgpinvoke_8c.html#a56bcf68282aea0a51774c08a7f283054":[2,0,33,34,7],
+"pgpinvoke_8c.html#a5a37c06387c1a5cf10adaa20dd0df392":[2,0,33,34,1],
+"pgpinvoke_8c.html#a626be470c9585e938f353bf56b1e774f":[2,0,33,34,5],
+"pgpinvoke_8c.html#a65bfacfc8067ed58d224aeefc6f99905":[2,0,33,34,3],
+"pgpinvoke_8c.html#a6ce58fd133819e138da6a9294ee081bb":[2,0,33,34,10],
+"pgpinvoke_8c.html#a98751ec36c88d40ac3419b1a24085b0b":[2,0,33,34,0],
+"pgpinvoke_8c.html#a9922a095eaa2b9f874028bd0ae5332ef":[2,0,33,34,12]
 };

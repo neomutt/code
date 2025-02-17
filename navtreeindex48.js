@@ -1,13 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"structMhEmail.html#a34bec8eb69452e1092e8781e8da0c4b9":[1,0,153,1],
-"structMhEmail.html#aab7e0d8736bf006563e1a87bcc6578e4":[1,0,153,3],
-"structMhMboxData.html":[1,0,154],
-"structMhMboxData.html#a379d00adbfc0301ebcacd3b133778e3b":[1,0,154,2],
-"structMhMboxData.html#a85adbb86243eea69ce9c7e09f6fc08d2":[1,0,154,0],
-"structMhMboxData.html#ae14b8ca7026abb5d7a65c603b2bb558c":[1,0,154,1],
-"structMhSequences.html":[1,0,155],
-"structMhSequences.html#a08f58e22514b81c92dd8731a98219af1":[1,0,155,1],
 "structMhSequences.html#a4f50dd478cc24d2af98b7d72d99f8f6f":[1,0,155,0],
 "structMimeNames.html":[1,0,156],
 "structMimeNames.html#a43266ef0b04e2d3bd3f7eb6df267aa6b":[1,0,156,0],
@@ -108,9 +100,13 @@ var NAVTREEINDEX48 =
 "structMxOps.html#af72b7c6ef064d1ca86b71ac9aff3e875":[1,0,166,7],
 "structNeoMutt.html":[1,0,167],
 "structNeoMutt.html#a29f4831264d622680eb43c7ee691f22f":[1,0,167,2],
+"structNeoMutt.html#a3024ae27b85ddf7c9c3ff11299d01b05":[1,0,167,7],
 "structNeoMutt.html#a49906a21787be2a36fd08fccb54d8911":[1,0,167,1],
+"structNeoMutt.html#a5410041863c473ba1f27b415c0a40482":[1,0,167,10],
+"structNeoMutt.html#a5c2d30a2f734f94412bd5b3a7367b981":[1,0,167,9],
 "structNeoMutt.html#a6d954f6370463364dbd5b78db333fbfd":[1,0,167,4],
 "structNeoMutt.html#a8ee01c265189481c68e70799425e7f97":[1,0,167,6],
+"structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08":[1,0,167,8],
 "structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b":[1,0,167,0],
 "structNeoMutt.html#af98065e32243ce9331f93b7f30247d47":[1,0,167,3],
 "structNeoMutt.html#afd5cdbd92e7d707ccb91240702ae36b2":[1,0,167,5],
@@ -249,5 +245,9 @@ var NAVTREEINDEX48 =
 "structPagerPrivateData.html#ad7c650de77a14afc73455f7177f78f3a":[1,0,186,19],
 "structPagerPrivateData.html#ad8bcd0088f080aa11c4edfdc676636ee":[1,0,186,12],
 "structPagerPrivateData.html#ae0f12597ca245a9d8e0bdf8dabbd18cd":[1,0,186,0],
-"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,186,22]
+"structPagerPrivateData.html#ae2f137f8f6562eeb80b7e8897315f7f1":[1,0,186,22],
+"structPagerPrivateData.html#ae448f18ad03d4c47cf38b84c106b79da":[1,0,186,25],
+"structPagerPrivateData.html#ae85cad304a17fbe3fc3a0bc126bd1411":[1,0,186,18],
+"structPagerPrivateData.html#ae8aca194ad702e2e716ecb08172a3a53":[1,0,186,9],
+"structPagerPrivateData.html#af5416e43311ef0ec6c3057946294ac07":[1,0,186,8]
 };
