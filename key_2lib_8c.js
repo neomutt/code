@@ -18,7 +18,7 @@ var key_2lib_8c =
     [ "km_expand_key_string", "key_2lib_8c.html#aff53463851870df55bceb41d84e4cc96", null ],
     [ "km_find_func", "key_2lib_8c.html#a11136cc3c6e52a9a3db85d1887f4fe1c", null ],
     [ "km_get_table", "key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91", null ],
-    [ "help_lookup_function", "key_2lib_8c.html#a3b2a33bd72ef75978a93737915b39149", null ],
+    [ "help_lookup_function", "key_2lib_8c.html#a2fe666fb372f338856db1f1730ede428", null ],
     [ "gather_menu", "key_2lib_8c.html#a3397ea33ffb6b8185f3cd3a72fa3b700", null ],
     [ "OpAlias", "key_2lib_8c.html#ae54d96788c4946d13eb5c642378b6ab2", null ],
     [ "OpAttachment", "key_2lib_8c.html#a8d9018cf9de6a07d49146f555a993043", null ],

@@ -41,6 +41,7 @@ var index =
     [ "Subject Regex handling", "neo_subjrx.html", null ],
     [ "Execute external programs", "neo_system.html", null ],
     [ "For systems lacking timegm()", "neo_timegm.html", null ],
+    [ "Display Usage Information for NeoMutt", "neo_usage.html", null ],
     [ "Display version and copyright about NeoMutt", "neo_version.html", null ],
     [ "For systems lacking wcscasecmp()", "neo_wcscasecmp.html", null ]
 ];

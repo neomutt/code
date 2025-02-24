@@ -30,10 +30,9 @@ var searchData=
   ['url_5fpct_5fencode_27',['url_pct_encode',['../url_8c.html#ad489a551217fd22a942ae19d009f3342',1,'url_pct_encode(char *buf, size_t buflen, const char *src):&#160;url.c'],['../url_8h.html#ad489a551217fd22a942ae19d009f3342',1,'url_pct_encode(char *buf, size_t buflen, const char *src):&#160;url.c']]],
   ['url_5ftobuffer_28',['url_tobuffer',['../url_8c.html#acd1ba16c11584d69dc3f5ba285c67b1c',1,'url_tobuffer(const struct Url *url, struct Buffer *buf, uint8_t flags):&#160;url.c'],['../url_8h.html#afe5b6afac9808f35417e66bde1144cdd',1,'url_tobuffer(const struct Url *url, struct Buffer *dest, uint8_t flags):&#160;url.c']]],
   ['url_5ftostring_29',['url_tostring',['../url_8c.html#aa114f683b940e0773ca758b49a18a2a7',1,'url_tostring(const struct Url *url, char *dest, size_t len, uint8_t flags):&#160;url.c'],['../url_8h.html#a7e27c7f574978cd687aa470ef40ba240',1,'url_tostring(const struct Url *url, char *buf, size_t buflen, uint8_t flags):&#160;url.c']]],
-  ['usage_30',['usage',['../main_8c.html#a74d245f09f1a67d783a15374e474cdc7',1,'main.c']]],
-  ['user_5fin_5faddr_31',['user_in_addr',['../expando__index_8c.html#aebd2a18291349b0a08fc7fd743574073',1,'expando_index.c']]],
-  ['user_5fis_5frecipient_32',['user_is_recipient',['../expando__index_8c.html#ac4523f9226617ca0f13753443fa5bc98',1,'expando_index.c']]],
-  ['userhdrs_5foverride_5fcmp_33',['userhdrs_override_cmp',['../header_8c.html#a6ef86d7ae6a1f68fb3aad005cab8f961',1,'header.c']]],
-  ['utf7_5fto_5futf8_34',['utf7_to_utf8',['../utf7_8c.html#ad5c3e1174762249432cba15cd4330871',1,'utf7.c']]],
-  ['utf8_5fto_5futf7_35',['utf8_to_utf7',['../utf7_8c.html#a9890d5981d6dd007456212a0d37d77ed',1,'utf7.c']]]
+  ['user_5fin_5faddr_30',['user_in_addr',['../expando__index_8c.html#aebd2a18291349b0a08fc7fd743574073',1,'expando_index.c']]],
+  ['user_5fis_5frecipient_31',['user_is_recipient',['../expando__index_8c.html#ac4523f9226617ca0f13753443fa5bc98',1,'expando_index.c']]],
+  ['userhdrs_5foverride_5fcmp_32',['userhdrs_override_cmp',['../header_8c.html#a6ef86d7ae6a1f68fb3aad005cab8f961',1,'header.c']]],
+  ['utf7_5fto_5futf8_33',['utf7_to_utf8',['../utf7_8c.html#ad5c3e1174762249432cba15cd4330871',1,'utf7.c']]],
+  ['utf8_5fto_5futf7_34',['utf8_to_utf7',['../utf7_8c.html#a9890d5981d6dd007456212a0d37d77ed',1,'utf7.c']]]
 ];

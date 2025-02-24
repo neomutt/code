@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-01-09-117-gace867</span>
+   &#160;<span id="projectnumber">2025-01-09-134-g7b7c50</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -184,9 +184,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac73ba4b4de1642f905738d2da0e79d91"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structMenuFuncOp.html">MenuFuncOp</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a> (enum <a class="el" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> mtype)</td></tr>
 <tr class="memdesc:ac73ba4b4de1642f905738d2da0e79d91"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structLookup.html" title="Regex to String lookup table.">Lookup</a> a <a class="el" href="structMenu.html">Menu</a>'s functions.  <br /></td></tr>
 <tr class="separator:ac73ba4b4de1642f905738d2da0e79d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b2a33bd72ef75978a93737915b39149"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="key_2lib_8c.html#a3b2a33bd72ef75978a93737915b39149">help_lookup_function</a> (int op, enum <a class="el" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> menu)</td></tr>
-<tr class="memdesc:a3b2a33bd72ef75978a93737915b39149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a keybinding for an operation.  <br /></td></tr>
-<tr class="separator:a3b2a33bd72ef75978a93737915b39149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fe666fb372f338856db1f1730ede428"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="key_2lib_8c.html#a2fe666fb372f338856db1f1730ede428">help_lookup_function</a> (int op, enum <a class="el" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> menu)</td></tr>
+<tr class="memdesc:a2fe666fb372f338856db1f1730ede428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a keybinding for an operation.  <br /></td></tr>
+<tr class="separator:a2fe666fb372f338856db1f1730ede428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3397ea33ffb6b8185f3cd3a72fa3b700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="key_2lib_8c.html#a3397ea33ffb6b8185f3cd3a72fa3b700">gather_menu</a> (enum <a class="el" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro)</td></tr>
 <tr class="memdesc:a3397ea33ffb6b8185f3cd3a72fa3b700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gather info about one menu.  <br /></td></tr>
 <tr class="separator:a3397ea33ffb6b8185f3cd3a72fa3b700"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -817,14 +817,17 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00320">320</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  321</span>{</div>
-<div class="line"><span class="lineno">  322</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; funcs[i].<a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>; i++)</div>
-<div class="line"><span class="lineno">  323</span>  {</div>
-<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">if</span> (funcs[i].op == op)</div>
-<div class="line"><span class="lineno">  325</span>      <span class="keywordflow">return</span> funcs[i].<a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>;</div>
-<div class="line"><span class="lineno">  326</span>  }</div>
-<div class="line"><span class="lineno">  327</span> </div>
-<div class="line"><span class="lineno">  328</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  329</span>}</div>
+<div class="line"><span class="lineno">  322</span>  <span class="keywordflow">if</span> (!funcs)</div>
+<div class="line"><span class="lineno">  323</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; funcs[i].<a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>; i++)</div>
+<div class="line"><span class="lineno">  326</span>  {</div>
+<div class="line"><span class="lineno">  327</span>    <span class="keywordflow">if</span> (funcs[i].op == op)</div>
+<div class="line"><span class="lineno">  328</span>      <span class="keywordflow">return</span> funcs[i].<a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>;</div>
+<div class="line"><span class="lineno">  329</span>  }</div>
+<div class="line"><span class="lineno">  330</span> </div>
+<div class="line"><span class="lineno">  331</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  332</span>}</div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -872,52 +875,52 @@ Variables</h2></td></tr>
 </dl>
 <p><a class="el" href="structReplace.html" title="List of regular expressions.">Replace</a> characters, such as <code>&lt;Enter&gt;</code> with the literal "\n" </p>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00338">338</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  339</span>{</div>
-<div class="line"><span class="lineno">  340</span>  <span class="keywordtype">wchar_t</span> wc = 0;</div>
-<div class="line"><span class="lineno">  341</span>  <span class="keywordtype">size_t</span> k;</div>
-<div class="line"><span class="lineno">  342</span>  <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(macro);</div>
-<div class="line"><span class="lineno">  343</span>  mbstate_t mbstate1 = { 0 };</div>
-<div class="line"><span class="lineno">  344</span>  mbstate_t mbstate2 = { 0 };</div>
-<div class="line"><span class="lineno">  345</span> </div>
-<div class="line"><span class="lineno">  346</span>  <span class="keywordflow">for</span> (; (len &gt; 0) &amp;&amp; (k = mbrtowc(&amp;wc, macro, MB_LEN_MAX, &amp;mbstate1)); macro += k, len -= k)</div>
-<div class="line"><span class="lineno">  347</span>  {</div>
-<div class="line"><span class="lineno">  348</span>    <span class="keywordflow">if</span> ((k == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>) || (k == <a class="code hl_define" href="mutt_2charset_8h.html#a4563ada344f551c4f386fc42127579a7">ICONV_BUF_TOO_SMALL</a>))</div>
-<div class="line"><span class="lineno">  349</span>    {</div>
-<div class="line"><span class="lineno">  350</span>      <span class="keywordflow">if</span> (k == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>)</div>
-<div class="line"><span class="lineno">  351</span>        memset(&amp;mbstate1, 0, <span class="keyword">sizeof</span>(mbstate1));</div>
-<div class="line"><span class="lineno">  352</span>      k = (k == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>) ? 1 : len;</div>
-<div class="line"><span class="lineno">  353</span>      wc = <a class="code hl_variable" href="mutt_2charset_8c.html#ac31e11b5fb12abda40361188af9105ef">ReplacementChar</a>;</div>
-<div class="line"><span class="lineno">  354</span>    }</div>
-<div class="line"><span class="lineno">  355</span> </div>
-<div class="line"><span class="lineno">  356</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> w = wcwidth(wc);</div>
-<div class="line"><span class="lineno">  357</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d">IsWPrint</a>(wc) &amp;&amp; (w &gt;= 0))</div>
-<div class="line"><span class="lineno">  358</span>    {</div>
-<div class="line"><span class="lineno">  359</span>      <span class="keywordtype">char</span> tmp[MB_LEN_MAX * 2] = { 0 };</div>
-<div class="line"><span class="lineno">  360</span>      <span class="keywordflow">if</span> (wcrtomb(tmp, wc, &amp;mbstate2) != <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>)</div>
-<div class="line"><span class="lineno">  361</span>      {</div>
-<div class="line"><span class="lineno">  362</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, tmp);</div>
-<div class="line"><span class="lineno">  363</span>      }</div>
-<div class="line"><span class="lineno">  364</span>    }</div>
-<div class="line"><span class="lineno">  365</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((wc &lt; 0x20) || (wc == 0x7f))</div>
-<div class="line"><span class="lineno">  366</span>    {</div>
-<div class="line"><span class="lineno">  367</span>      <span class="keywordflow">if</span> (wc == <span class="charliteral">&#39;\033&#39;</span>) <span class="comment">// Escape</span></div>
-<div class="line"><span class="lineno">  368</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\\e&quot;</span>);</div>
-<div class="line"><span class="lineno">  369</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wc == <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line"><span class="lineno">  370</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  371</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wc == <span class="charliteral">&#39;\r&#39;</span>)</div>
-<div class="line"><span class="lineno">  372</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\\r&quot;</span>);</div>
-<div class="line"><span class="lineno">  373</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wc == <span class="charliteral">&#39;\t&#39;</span>)</div>
-<div class="line"><span class="lineno">  374</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\\t&quot;</span>);</div>
-<div class="line"><span class="lineno">  375</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  376</span>        <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;^%c&quot;</span>, (<span class="keywordtype">char</span>) ((wc + <span class="charliteral">&#39;@&#39;</span>) &amp; 0x7f));</div>
-<div class="line"><span class="lineno">  377</span>    }</div>
-<div class="line"><span class="lineno">  378</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  379</span>    {</div>
-<div class="line"><span class="lineno">  380</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, <span class="charliteral">&#39;?&#39;</span>);</div>
-<div class="line"><span class="lineno">  381</span>    }</div>
-<div class="line"><span class="lineno">  382</span>  }</div>
-<div class="line"><span class="lineno">  383</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00341">341</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  342</span>{</div>
+<div class="line"><span class="lineno">  343</span>  <span class="keywordtype">wchar_t</span> wc = 0;</div>
+<div class="line"><span class="lineno">  344</span>  <span class="keywordtype">size_t</span> k;</div>
+<div class="line"><span class="lineno">  345</span>  <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(macro);</div>
+<div class="line"><span class="lineno">  346</span>  mbstate_t mbstate1 = { 0 };</div>
+<div class="line"><span class="lineno">  347</span>  mbstate_t mbstate2 = { 0 };</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>  <span class="keywordflow">for</span> (; (len &gt; 0) &amp;&amp; (k = mbrtowc(&amp;wc, macro, MB_LEN_MAX, &amp;mbstate1)); macro += k, len -= k)</div>
+<div class="line"><span class="lineno">  350</span>  {</div>
+<div class="line"><span class="lineno">  351</span>    <span class="keywordflow">if</span> ((k == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>) || (k == <a class="code hl_define" href="mutt_2charset_8h.html#a4563ada344f551c4f386fc42127579a7">ICONV_BUF_TOO_SMALL</a>))</div>
+<div class="line"><span class="lineno">  352</span>    {</div>
+<div class="line"><span class="lineno">  353</span>      <span class="keywordflow">if</span> (k == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>)</div>
+<div class="line"><span class="lineno">  354</span>        memset(&amp;mbstate1, 0, <span class="keyword">sizeof</span>(mbstate1));</div>
+<div class="line"><span class="lineno">  355</span>      k = (k == <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>) ? 1 : len;</div>
+<div class="line"><span class="lineno">  356</span>      wc = <a class="code hl_variable" href="mutt_2charset_8c.html#ac31e11b5fb12abda40361188af9105ef">ReplacementChar</a>;</div>
+<div class="line"><span class="lineno">  357</span>    }</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> w = wcwidth(wc);</div>
+<div class="line"><span class="lineno">  360</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d">IsWPrint</a>(wc) &amp;&amp; (w &gt;= 0))</div>
+<div class="line"><span class="lineno">  361</span>    {</div>
+<div class="line"><span class="lineno">  362</span>      <span class="keywordtype">char</span> tmp[MB_LEN_MAX * 2] = { 0 };</div>
+<div class="line"><span class="lineno">  363</span>      <span class="keywordflow">if</span> (wcrtomb(tmp, wc, &amp;mbstate2) != <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>)</div>
+<div class="line"><span class="lineno">  364</span>      {</div>
+<div class="line"><span class="lineno">  365</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, tmp);</div>
+<div class="line"><span class="lineno">  366</span>      }</div>
+<div class="line"><span class="lineno">  367</span>    }</div>
+<div class="line"><span class="lineno">  368</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((wc &lt; 0x20) || (wc == 0x7f))</div>
+<div class="line"><span class="lineno">  369</span>    {</div>
+<div class="line"><span class="lineno">  370</span>      <span class="keywordflow">if</span> (wc == <span class="charliteral">&#39;\033&#39;</span>) <span class="comment">// Escape</span></div>
+<div class="line"><span class="lineno">  371</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\\e&quot;</span>);</div>
+<div class="line"><span class="lineno">  372</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wc == <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><span class="lineno">  373</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  374</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wc == <span class="charliteral">&#39;\r&#39;</span>)</div>
+<div class="line"><span class="lineno">  375</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\\r&quot;</span>);</div>
+<div class="line"><span class="lineno">  376</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wc == <span class="charliteral">&#39;\t&#39;</span>)</div>
+<div class="line"><span class="lineno">  377</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;\\t&quot;</span>);</div>
+<div class="line"><span class="lineno">  378</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  379</span>        <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;^%c&quot;</span>, (<span class="keywordtype">char</span>) ((wc + <span class="charliteral">&#39;@&#39;</span>) &amp; 0x7f));</div>
+<div class="line"><span class="lineno">  380</span>    }</div>
+<div class="line"><span class="lineno">  381</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  382</span>    {</div>
+<div class="line"><span class="lineno">  383</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, <span class="charliteral">&#39;?&#39;</span>);</div>
+<div class="line"><span class="lineno">  384</span>    }</div>
+<div class="line"><span class="lineno">  385</span>  }</div>
+<div class="line"><span class="lineno">  386</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a0849b79217aad19e4bf9381d532d59d1"><div class="ttname"><a href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a></div><div class="ttdeci">int buf_add_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string appending a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00204">buffer.c:204</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9765efbb7f2c32e46fb1cb271a02ba20"><div class="ttname"><a href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a></div><div class="ttdeci">size_t buf_addch(struct Buffer *buf, char c)</div><div class="ttdoc">Add a single character to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00241">buffer.c:241</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9924e74ddcb5280ab380e4627d1fba99"><div class="ttname"><a href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a></div><div class="ttdeci">size_t buf_addstr(struct Buffer *buf, const char *s)</div><div class="ttdoc">Add a string to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00226">buffer.c:226</a></div></div>
@@ -985,16 +988,16 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00391">391</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  392</span>{</div>
-<div class="line"><span class="lineno">  393</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *map = NULL;</div>
-<div class="line"><span class="lineno">  394</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(map, km_list, entries)</div>
-<div class="line"><span class="lineno">  395</span>  {</div>
-<div class="line"><span class="lineno">  396</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == <a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>)</div>
-<div class="line"><span class="lineno">  397</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  398</span>  }</div>
-<div class="line"><span class="lineno">  399</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  400</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00394">394</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  395</span>{</div>
+<div class="line"><span class="lineno">  396</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *map = NULL;</div>
+<div class="line"><span class="lineno">  397</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(map, km_list, entries)</div>
+<div class="line"><span class="lineno">  398</span>  {</div>
+<div class="line"><span class="lineno">  399</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == <a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>)</div>
+<div class="line"><span class="lineno">  400</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  401</span>  }</div>
+<div class="line"><span class="lineno">  402</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  403</span>}</div>
 <div class="ttc" id="aqueue_8h_html_a77999ebdf5aaf7af8b8ea22bf208c432"><div class="ttname"><a href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a></div><div class="ttdeci">#define STAILQ_FOREACH(var, head, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00390">queue.h:390</a></div></div>
 <div class="ttc" id="astructKeymap_html_ae0f1f33eb69b7ee89188039d50d49145"><div class="ttname"><a href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">Keymap::op</a></div><div class="ttdeci">short op</div><div class="ttdoc">Operation to perform.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00069">lib.h:69</a></div></div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1049,19 +1052,19 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00419">419</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  420</span>{</div>
-<div class="line"><span class="lineno">  421</span>  <span class="keywordtype">int</span> max_width = 0;</div>
-<div class="line"><span class="lineno">  422</span> </div>
-<div class="line"><span class="lineno">  423</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBindingInfo.html">BindingInfo</a> *bi = NULL;</div>
-<div class="line"><span class="lineno">  424</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(bi, bia)</div>
-<div class="line"><span class="lineno">  425</span>  {</div>
-<div class="line"><span class="lineno">  426</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> col_width = <a class="code hl_function" href="curs__lib_8c.html#ad506c0f8d5c549c330f49e2fa56e207b">mutt_strwidth</a>(bi-&gt;<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[col]);</div>
-<div class="line"><span class="lineno">  427</span>    max_width = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(max_width, col_width);</div>
-<div class="line"><span class="lineno">  428</span>  }</div>
-<div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>  <span class="keywordflow">return</span> max_width;</div>
-<div class="line"><span class="lineno">  431</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00422">422</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  423</span>{</div>
+<div class="line"><span class="lineno">  424</span>  <span class="keywordtype">int</span> max_width = 0;</div>
+<div class="line"><span class="lineno">  425</span> </div>
+<div class="line"><span class="lineno">  426</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBindingInfo.html">BindingInfo</a> *bi = NULL;</div>
+<div class="line"><span class="lineno">  427</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(bi, bia)</div>
+<div class="line"><span class="lineno">  428</span>  {</div>
+<div class="line"><span class="lineno">  429</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> col_width = <a class="code hl_function" href="curs__lib_8c.html#ad506c0f8d5c549c330f49e2fa56e207b">mutt_strwidth</a>(bi-&gt;<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[col]);</div>
+<div class="line"><span class="lineno">  430</span>    max_width = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(max_width, col_width);</div>
+<div class="line"><span class="lineno">  431</span>  }</div>
+<div class="line"><span class="lineno">  432</span> </div>
+<div class="line"><span class="lineno">  433</span>  <span class="keywordflow">return</span> max_width;</div>
+<div class="line"><span class="lineno">  434</span>}</div>
 <div class="ttc" id="aarray_8h_html_a6b8ea5fb2f366d7716f5042b347093a6"><div class="ttname"><a href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a></div><div class="ttdeci">#define ARRAY_FOREACH(elem, head)</div><div class="ttdoc">Iterate over all elements of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00214">array.h:214</a></div></div>
 <div class="ttc" id="acurs__lib_8c_html_ad506c0f8d5c549c330f49e2fa56e207b"><div class="ttname"><a href="curs__lib_8c.html#ad506c0f8d5c549c330f49e2fa56e207b">mutt_strwidth</a></div><div class="ttdeci">size_t mutt_strwidth(const char *s)</div><div class="ttdoc">Measure a string's width in screen cells.</div><div class="ttdef"><b>Definition:</b> <a href="curs__lib_8c_source.html#l00445">curs_lib.c:445</a></div></div>
 <div class="ttc" id="amemory_8h_html_afa99ec4acc4ecb2dc3c2d05da15d0e3f"><div class="ttname"><a href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a></div><div class="ttdeci">#define MAX(a, b)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00031">memory.h:31</a></div></div>
@@ -1141,26 +1144,26 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00441">441</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  443</span>{</div>
-<div class="line"><span class="lineno">  444</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; funcs[i].<a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>; i++)</div>
-<div class="line"><span class="lineno">  445</span>  {</div>
-<div class="line"><span class="lineno">  446</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="key_2lib_8c.html#a7418778743995b05400fc57cd82e920b">is_bound</a>(km_menu, funcs[i].op) &amp;&amp;</div>
-<div class="line"><span class="lineno">  447</span>        (!km_aux || !<a class="code hl_function" href="key_2lib_8c.html#a7418778743995b05400fc57cd82e920b">is_bound</a>(km_aux, funcs[i].op)))</div>
-<div class="line"><span class="lineno">  448</span>    {</div>
-<div class="line"><span class="lineno">  449</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBindingInfo.html">BindingInfo</a> bi = { 0 };</div>
-<div class="line"><span class="lineno">  450</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[0] = NULL;</div>
-<div class="line"><span class="lineno">  451</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[1] = funcs[i].<a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>;</div>
-<div class="line"><span class="lineno">  452</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[2] = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<a class="code hl_function" href="opcodes_8c.html#a73aef3d9a4346ec4b99020e19fb03987">opcodes_get_description</a>(funcs[i].op));</div>
-<div class="line"><span class="lineno">  453</span>      <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(bia_unbound, bi);</div>
-<div class="line"><span class="lineno">  454</span>    }</div>
-<div class="line"><span class="lineno">  455</span>  }</div>
-<div class="line"><span class="lineno">  456</span> </div>
-<div class="line"><span class="lineno">  457</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(bia_unbound);</div>
-<div class="line"><span class="lineno">  458</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00444">444</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  446</span>{</div>
+<div class="line"><span class="lineno">  447</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; funcs[i].<a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>; i++)</div>
+<div class="line"><span class="lineno">  448</span>  {</div>
+<div class="line"><span class="lineno">  449</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="key_2lib_8c.html#a7418778743995b05400fc57cd82e920b">is_bound</a>(km_menu, funcs[i].op) &amp;&amp;</div>
+<div class="line"><span class="lineno">  450</span>        (!km_aux || !<a class="code hl_function" href="key_2lib_8c.html#a7418778743995b05400fc57cd82e920b">is_bound</a>(km_aux, funcs[i].op)))</div>
+<div class="line"><span class="lineno">  451</span>    {</div>
+<div class="line"><span class="lineno">  452</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBindingInfo.html">BindingInfo</a> bi = { 0 };</div>
+<div class="line"><span class="lineno">  453</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[0] = NULL;</div>
+<div class="line"><span class="lineno">  454</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[1] = funcs[i].<a class="code hl_variable" href="structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d">name</a>;</div>
+<div class="line"><span class="lineno">  455</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[2] = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<a class="code hl_function" href="opcodes_8c.html#a73aef3d9a4346ec4b99020e19fb03987">opcodes_get_description</a>(funcs[i].op));</div>
+<div class="line"><span class="lineno">  456</span>      <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(bia_unbound, bi);</div>
+<div class="line"><span class="lineno">  457</span>    }</div>
+<div class="line"><span class="lineno">  458</span>  }</div>
+<div class="line"><span class="lineno">  459</span> </div>
+<div class="line"><span class="lineno">  460</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(bia_unbound);</div>
+<div class="line"><span class="lineno">  461</span>}</div>
 <div class="ttc" id="aarray_8h_html_a4f570f2382025383e4b2cc46ede6ebd0"><div class="ttname"><a href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a></div><div class="ttdeci">#define ARRAY_ADD(head, elem)</div><div class="ttdoc">Add an element at the end of the array.</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00156">array.h:156</a></div></div>
 <div class="ttc" id="aarray_8h_html_a7f1bf469a48c0a2618c94b7b8281c5bf"><div class="ttname"><a href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a></div><div class="ttdeci">#define ARRAY_SIZE(head)</div><div class="ttdoc">The number of elements stored.</div><div class="ttdef"><b>Definition:</b> <a href="array_8h_source.html#l00087">array.h:87</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_a7418778743995b05400fc57cd82e920b"><div class="ttname"><a href="key_2lib_8c.html#a7418778743995b05400fc57cd82e920b">is_bound</a></div><div class="ttdeci">bool is_bound(const struct KeymapList *km_list, int op)</div><div class="ttdoc">Does a function have a keybinding?</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00391">lib.c:391</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_a7418778743995b05400fc57cd82e920b"><div class="ttname"><a href="key_2lib_8c.html#a7418778743995b05400fc57cd82e920b">is_bound</a></div><div class="ttdeci">bool is_bound(const struct KeymapList *km_list, int op)</div><div class="ttdoc">Does a function have a keybinding?</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00394">lib.c:394</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 <div class="ttc" id="aopcodes_8c_html_a73aef3d9a4346ec4b99020e19fb03987"><div class="ttname"><a href="opcodes_8c.html#a73aef3d9a4346ec4b99020e19fb03987">opcodes_get_description</a></div><div class="ttdeci">const char * opcodes_get_description(int op)</div><div class="ttdoc">Get the description of an opcode.</div><div class="ttdef"><b>Definition:</b> <a href="opcodes_8c_source.html#l00070">opcodes.c:70</a></div></div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1217,43 +1220,43 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00465">465</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  466</span>{</div>
-<div class="line"><span class="lineno">  467</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *name = <a class="code hl_function" href="mapping_8c.html#ae52d375da6dc3039d2341ae4ace4f557">mutt_map_get_name</a>(c, <a class="code hl_variable" href="key_2lib_8c.html#ac969492dae41de846590e2257f260d3b">KeyNames</a>);</div>
-<div class="line"><span class="lineno">  468</span>  <span class="keywordflow">if</span> (name)</div>
-<div class="line"><span class="lineno">  469</span>  {</div>
-<div class="line"><span class="lineno">  470</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, name);</div>
-<div class="line"><span class="lineno">  471</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  472</span>  }</div>
-<div class="line"><span class="lineno">  473</span> </div>
-<div class="line"><span class="lineno">  474</span>  <span class="keywordflow">if</span> ((c &lt; 256) &amp;&amp; (c &gt; -128) &amp;&amp; iscntrl((<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>) c))</div>
-<div class="line"><span class="lineno">  475</span>  {</div>
-<div class="line"><span class="lineno">  476</span>    <span class="keywordflow">if</span> (c &lt; 0)</div>
-<div class="line"><span class="lineno">  477</span>      c += 256;</div>
-<div class="line"><span class="lineno">  478</span> </div>
-<div class="line"><span class="lineno">  479</span>    <span class="keywordflow">if</span> (c &lt; 128)</div>
-<div class="line"><span class="lineno">  480</span>    {</div>
-<div class="line"><span class="lineno">  481</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, <span class="charliteral">&#39;^&#39;</span>);</div>
-<div class="line"><span class="lineno">  482</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, (c + <span class="charliteral">&#39;@&#39;</span>) &amp; 0x7f);</div>
-<div class="line"><span class="lineno">  483</span>    }</div>
-<div class="line"><span class="lineno">  484</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  485</span>    {</div>
-<div class="line"><span class="lineno">  486</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;\\%d%d%d&quot;</span>, c &gt;&gt; 6, (c &gt;&gt; 3) &amp; 7, c &amp; 7);</div>
-<div class="line"><span class="lineno">  487</span>    }</div>
-<div class="line"><span class="lineno">  488</span>  }</div>
-<div class="line"><span class="lineno">  489</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((c &gt;= KEY_F0) &amp;&amp; (c &lt; KEY_F(256))) <span class="comment">/* this maximum is just a guess */</span></div>
-<div class="line"><span class="lineno">  490</span>  {</div>
-<div class="line"><span class="lineno">  491</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;&lt;F%d&gt;&quot;</span>, c - KEY_F0);</div>
-<div class="line"><span class="lineno">  492</span>  }</div>
-<div class="line"><span class="lineno">  493</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((c &lt; 256) &amp;&amp; (c &gt;= -128) &amp;&amp; <a class="code hl_define" href="mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705">IsPrint</a>(c))</div>
-<div class="line"><span class="lineno">  494</span>  {</div>
-<div class="line"><span class="lineno">  495</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%c&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>) c);</div>
-<div class="line"><span class="lineno">  496</span>  }</div>
-<div class="line"><span class="lineno">  497</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  498</span>  {</div>
-<div class="line"><span class="lineno">  499</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;&lt;%ho&gt;&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>) c);</div>
-<div class="line"><span class="lineno">  500</span>  }</div>
-<div class="line"><span class="lineno">  501</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00468">468</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  469</span>{</div>
+<div class="line"><span class="lineno">  470</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *name = <a class="code hl_function" href="mapping_8c.html#ae52d375da6dc3039d2341ae4ace4f557">mutt_map_get_name</a>(c, <a class="code hl_variable" href="key_2lib_8c.html#ac969492dae41de846590e2257f260d3b">KeyNames</a>);</div>
+<div class="line"><span class="lineno">  471</span>  <span class="keywordflow">if</span> (name)</div>
+<div class="line"><span class="lineno">  472</span>  {</div>
+<div class="line"><span class="lineno">  473</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, name);</div>
+<div class="line"><span class="lineno">  474</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  475</span>  }</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>  <span class="keywordflow">if</span> ((c &lt; 256) &amp;&amp; (c &gt; -128) &amp;&amp; iscntrl((<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>) c))</div>
+<div class="line"><span class="lineno">  478</span>  {</div>
+<div class="line"><span class="lineno">  479</span>    <span class="keywordflow">if</span> (c &lt; 0)</div>
+<div class="line"><span class="lineno">  480</span>      c += 256;</div>
+<div class="line"><span class="lineno">  481</span> </div>
+<div class="line"><span class="lineno">  482</span>    <span class="keywordflow">if</span> (c &lt; 128)</div>
+<div class="line"><span class="lineno">  483</span>    {</div>
+<div class="line"><span class="lineno">  484</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, <span class="charliteral">&#39;^&#39;</span>);</div>
+<div class="line"><span class="lineno">  485</span>      <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf, (c + <span class="charliteral">&#39;@&#39;</span>) &amp; 0x7f);</div>
+<div class="line"><span class="lineno">  486</span>    }</div>
+<div class="line"><span class="lineno">  487</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  488</span>    {</div>
+<div class="line"><span class="lineno">  489</span>      <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;\\%d%d%d&quot;</span>, c &gt;&gt; 6, (c &gt;&gt; 3) &amp; 7, c &amp; 7);</div>
+<div class="line"><span class="lineno">  490</span>    }</div>
+<div class="line"><span class="lineno">  491</span>  }</div>
+<div class="line"><span class="lineno">  492</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((c &gt;= KEY_F0) &amp;&amp; (c &lt; KEY_F(256))) <span class="comment">/* this maximum is just a guess */</span></div>
+<div class="line"><span class="lineno">  493</span>  {</div>
+<div class="line"><span class="lineno">  494</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;&lt;F%d&gt;&quot;</span>, c - KEY_F0);</div>
+<div class="line"><span class="lineno">  495</span>  }</div>
+<div class="line"><span class="lineno">  496</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((c &lt; 256) &amp;&amp; (c &gt;= -128) &amp;&amp; <a class="code hl_define" href="mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705">IsPrint</a>(c))</div>
+<div class="line"><span class="lineno">  497</span>  {</div>
+<div class="line"><span class="lineno">  498</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;%c&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>) c);</div>
+<div class="line"><span class="lineno">  499</span>  }</div>
+<div class="line"><span class="lineno">  500</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  501</span>  {</div>
+<div class="line"><span class="lineno">  502</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(buf, <span class="stringliteral">&quot;&lt;%ho&gt;&quot;</span>, (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>) c);</div>
+<div class="line"><span class="lineno">  503</span>  }</div>
+<div class="line"><span class="lineno">  504</span>}</div>
 <div class="ttc" id="amapping_8c_html_ae52d375da6dc3039d2341ae4ace4f557"><div class="ttname"><a href="mapping_8c.html#ae52d375da6dc3039d2341ae4ace4f557">mutt_map_get_name</a></div><div class="ttdeci">const char * mutt_map_get_name(int val, const struct Mapping *map)</div><div class="ttdoc">Lookup a string for a constant.</div><div class="ttdef"><b>Definition:</b> <a href="mapping_8c_source.html#l00042">mapping.c:42</a></div></div>
 <div class="ttc" id="ambyte_8h_html_a5d72c6bce8097c88972c989bedf2f705"><div class="ttname"><a href="mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705">IsPrint</a></div><div class="ttdeci">#define IsPrint(ch)</div><div class="ttdef"><b>Definition:</b> <a href="mbyte_8h_source.html#l00040">mbyte.h:40</a></div></div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1316,19 +1319,19 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00509">509</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  510</span>{</div>
-<div class="line"><span class="lineno">  511</span>  <span class="keywordflow">if</span> (!map || !buf)</div>
-<div class="line"><span class="lineno">  512</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  513</span> </div>
-<div class="line"><span class="lineno">  514</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; map-&gt;<a class="code hl_variable" href="structKeymap.html#add26f340b9b45b9e12bec12fe980929c">len</a>; i++)</div>
-<div class="line"><span class="lineno">  515</span>  {</div>
-<div class="line"><span class="lineno">  516</span>    <a class="code hl_function" href="key_2lib_8c.html#aa18825fc025ec3c06830e428b46130cd">km_keyname</a>(map-&gt;<a class="code hl_variable" href="structKeymap.html#a6e9753f45d5dbb60ba4f9328df9a6bc4">keys</a>[i], buf);</div>
-<div class="line"><span class="lineno">  517</span>  }</div>
-<div class="line"><span class="lineno">  518</span> </div>
-<div class="line"><span class="lineno">  519</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  520</span>}</div>
-<div class="ttc" id="akey_2lib_8c_html_aa18825fc025ec3c06830e428b46130cd"><div class="ttname"><a href="key_2lib_8c.html#aa18825fc025ec3c06830e428b46130cd">km_keyname</a></div><div class="ttdeci">void km_keyname(int c, struct Buffer *buf)</div><div class="ttdoc">Get the human name for a key.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00465">lib.c:465</a></div></div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00512">512</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  513</span>{</div>
+<div class="line"><span class="lineno">  514</span>  <span class="keywordflow">if</span> (!map || !buf)</div>
+<div class="line"><span class="lineno">  515</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  516</span> </div>
+<div class="line"><span class="lineno">  517</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; map-&gt;<a class="code hl_variable" href="structKeymap.html#add26f340b9b45b9e12bec12fe980929c">len</a>; i++)</div>
+<div class="line"><span class="lineno">  518</span>  {</div>
+<div class="line"><span class="lineno">  519</span>    <a class="code hl_function" href="key_2lib_8c.html#aa18825fc025ec3c06830e428b46130cd">km_keyname</a>(map-&gt;<a class="code hl_variable" href="structKeymap.html#a6e9753f45d5dbb60ba4f9328df9a6bc4">keys</a>[i], buf);</div>
+<div class="line"><span class="lineno">  520</span>  }</div>
+<div class="line"><span class="lineno">  521</span> </div>
+<div class="line"><span class="lineno">  522</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  523</span>}</div>
+<div class="ttc" id="akey_2lib_8c_html_aa18825fc025ec3c06830e428b46130cd"><div class="ttname"><a href="key_2lib_8c.html#aa18825fc025ec3c06830e428b46130cd">km_keyname</a></div><div class="ttdeci">void km_keyname(int c, struct Buffer *buf)</div><div class="ttdoc">Get the human name for a key.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00468">lib.c:468</a></div></div>
 </div><!-- fragment --><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
@@ -1383,13 +1386,13 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00527">527</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  528</span>{</div>
-<div class="line"><span class="lineno">  529</span>  <span class="keywordflow">for</span> (; *str; str++)</div>
-<div class="line"><span class="lineno">  530</span>  {</div>
-<div class="line"><span class="lineno">  531</span>    <a class="code hl_function" href="key_2lib_8c.html#aa18825fc025ec3c06830e428b46130cd">km_keyname</a>(*str, buf);</div>
-<div class="line"><span class="lineno">  532</span>  }</div>
-<div class="line"><span class="lineno">  533</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00530">530</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  531</span>{</div>
+<div class="line"><span class="lineno">  532</span>  <span class="keywordflow">for</span> (; *str; str++)</div>
+<div class="line"><span class="lineno">  533</span>  {</div>
+<div class="line"><span class="lineno">  534</span>    <a class="code hl_function" href="key_2lib_8c.html#aa18825fc025ec3c06830e428b46130cd">km_keyname</a>(*str, buf);</div>
+<div class="line"><span class="lineno">  535</span>  }</div>
+<div class="line"><span class="lineno">  536</span>}</div>
 </div><!-- fragment --><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
@@ -1450,16 +1453,16 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00541">541</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  542</span>{</div>
-<div class="line"><span class="lineno">  543</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *np = NULL;</div>
-<div class="line"><span class="lineno">  544</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[mtype], entries)</div>
-<div class="line"><span class="lineno">  545</span>  {</div>
-<div class="line"><span class="lineno">  546</span>    <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == func)</div>
-<div class="line"><span class="lineno">  547</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  548</span>  }</div>
-<div class="line"><span class="lineno">  549</span>  <span class="keywordflow">return</span> np;</div>
-<div class="line"><span class="lineno">  550</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00544">544</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  545</span>{</div>
+<div class="line"><span class="lineno">  546</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *np = NULL;</div>
+<div class="line"><span class="lineno">  547</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[mtype], entries)</div>
+<div class="line"><span class="lineno">  548</span>  {</div>
+<div class="line"><span class="lineno">  549</span>    <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == func)</div>
+<div class="line"><span class="lineno">  550</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  551</span>  }</div>
+<div class="line"><span class="lineno">  552</span>  <span class="keywordflow">return</span> np;</div>
+<div class="line"><span class="lineno">  553</span>}</div>
 <div class="ttc" id="akey_2lib_8c_html_a786f5d70631dfcec23d9e9439304d52e"><div class="ttname"><a href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a></div><div class="ttdeci">struct KeymapList Keymaps[MENU_MAX]</div><div class="ttdoc">Array of key mappings, one for each MenuType.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00124">lib.c:124</a></div></div>
 </div><!-- fragment --><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1502,44 +1505,44 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00557">557</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  558</span>{</div>
-<div class="line"><span class="lineno">  559</span>  <span class="keywordflow">switch</span> (mtype)</div>
-<div class="line"><span class="lineno">  560</span>  {</div>
-<div class="line"><span class="lineno">  561</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae3f6738230354145ab8205b0b129cd45">MENU_ALIAS</a>:</div>
-<div class="line"><span class="lineno">  562</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#ae54d96788c4946d13eb5c642378b6ab2">OpAlias</a>;</div>
-<div class="line"><span class="lineno">  563</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a8dc7e07647009e4938fbd4f7cee5b671">MENU_ATTACHMENT</a>:</div>
-<div class="line"><span class="lineno">  564</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a8d9018cf9de6a07d49146f555a993043">OpAttachment</a>;</div>
-<div class="line"><span class="lineno">  565</span><span class="preprocessor">#ifdef USE_AUTOCRYPT</span></div>
-<div class="line"><span class="lineno">  566</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a7956f31ecde66b1c95d0a4a638a36858">MENU_AUTOCRYPT</a>:</div>
-<div class="line"><span class="lineno">  567</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a5c422d626f8339e93694bac32c3bdb04">OpAutocrypt</a>;</div>
-<div class="line"><span class="lineno">  568</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  569</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a7a2816b127278d0f65953adc8c58a25a">MENU_COMPOSE</a>:</div>
-<div class="line"><span class="lineno">  570</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a3a00602ccff1ed66fd784dee4218bd74">OpCompose</a>;</div>
-<div class="line"><span class="lineno">  571</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a2997a5bba349ba8601d1f543b27820db">MENU_DIALOG</a>:</div>
-<div class="line"><span class="lineno">  572</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="gui_2functions_8c.html#aff115bba32c89092a36bd7ff3c6b6d29">OpDialog</a>;</div>
-<div class="line"><span class="lineno">  573</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a>:</div>
-<div class="line"><span class="lineno">  574</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a8cbd587896ed4a4ddc932bf15bb8f188">OpEditor</a>;</div>
-<div class="line"><span class="lineno">  575</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae86bb494d081abe9caf74402638c0d3d">MENU_FOLDER</a>:</div>
-<div class="line"><span class="lineno">  576</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a55fe14d3ed8aaa06fd626170368f7bfe">OpBrowser</a>;</div>
-<div class="line"><span class="lineno">  577</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a>:</div>
-<div class="line"><span class="lineno">  578</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a>;</div>
-<div class="line"><span class="lineno">  579</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a0afea51eb66be4c2e856b047b0db4cd7">MENU_INDEX</a>:</div>
-<div class="line"><span class="lineno">  580</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a2680735dfe321d9c8ecfab713c1a8fd1">OpIndex</a>;</div>
-<div class="line"><span class="lineno">  581</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a>:</div>
-<div class="line"><span class="lineno">  582</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a73fb1c9b00778f4e3b5a2471de4021ed">OpPager</a>;</div>
-<div class="line"><span class="lineno">  583</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4abde0a6cb18588a44a6d0a63828f1c603">MENU_PGP</a>:</div>
-<div class="line"><span class="lineno">  584</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#aa5c6f7d7fdadc007f235a9139df2f251">OpPgp</a>;</div>
-<div class="line"><span class="lineno">  585</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af632c49a67e5e048d46556ec28c8c958">MENU_POSTPONED</a>:</div>
-<div class="line"><span class="lineno">  586</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a240855c58bbffa263b1806022902ab61">OpPostponed</a>;</div>
-<div class="line"><span class="lineno">  587</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a739c790e5df497ca3d7e7f2e3837aaf1">MENU_QUERY</a>:</div>
-<div class="line"><span class="lineno">  588</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a02e8724026167606aad4d0516923eff8">OpQuery</a>;</div>
-<div class="line"><span class="lineno">  589</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4add02b7e5714bc7ecd2a6d3e2b618fce9">MENU_SMIME</a>:</div>
-<div class="line"><span class="lineno">  590</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a47c640809ce529499a23e88bf0ceac0f">OpSmime</a>;</div>
-<div class="line"><span class="lineno">  591</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  592</span>      <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  593</span>  }</div>
-<div class="line"><span class="lineno">  594</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00560">560</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  561</span>{</div>
+<div class="line"><span class="lineno">  562</span>  <span class="keywordflow">switch</span> (mtype)</div>
+<div class="line"><span class="lineno">  563</span>  {</div>
+<div class="line"><span class="lineno">  564</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae3f6738230354145ab8205b0b129cd45">MENU_ALIAS</a>:</div>
+<div class="line"><span class="lineno">  565</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#ae54d96788c4946d13eb5c642378b6ab2">OpAlias</a>;</div>
+<div class="line"><span class="lineno">  566</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a8dc7e07647009e4938fbd4f7cee5b671">MENU_ATTACHMENT</a>:</div>
+<div class="line"><span class="lineno">  567</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a8d9018cf9de6a07d49146f555a993043">OpAttachment</a>;</div>
+<div class="line"><span class="lineno">  568</span><span class="preprocessor">#ifdef USE_AUTOCRYPT</span></div>
+<div class="line"><span class="lineno">  569</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a7956f31ecde66b1c95d0a4a638a36858">MENU_AUTOCRYPT</a>:</div>
+<div class="line"><span class="lineno">  570</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a5c422d626f8339e93694bac32c3bdb04">OpAutocrypt</a>;</div>
+<div class="line"><span class="lineno">  571</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  572</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a7a2816b127278d0f65953adc8c58a25a">MENU_COMPOSE</a>:</div>
+<div class="line"><span class="lineno">  573</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a3a00602ccff1ed66fd784dee4218bd74">OpCompose</a>;</div>
+<div class="line"><span class="lineno">  574</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a2997a5bba349ba8601d1f543b27820db">MENU_DIALOG</a>:</div>
+<div class="line"><span class="lineno">  575</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="gui_2functions_8c.html#aff115bba32c89092a36bd7ff3c6b6d29">OpDialog</a>;</div>
+<div class="line"><span class="lineno">  576</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a>:</div>
+<div class="line"><span class="lineno">  577</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a8cbd587896ed4a4ddc932bf15bb8f188">OpEditor</a>;</div>
+<div class="line"><span class="lineno">  578</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae86bb494d081abe9caf74402638c0d3d">MENU_FOLDER</a>:</div>
+<div class="line"><span class="lineno">  579</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a55fe14d3ed8aaa06fd626170368f7bfe">OpBrowser</a>;</div>
+<div class="line"><span class="lineno">  580</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a>:</div>
+<div class="line"><span class="lineno">  581</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a>;</div>
+<div class="line"><span class="lineno">  582</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a0afea51eb66be4c2e856b047b0db4cd7">MENU_INDEX</a>:</div>
+<div class="line"><span class="lineno">  583</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a2680735dfe321d9c8ecfab713c1a8fd1">OpIndex</a>;</div>
+<div class="line"><span class="lineno">  584</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a>:</div>
+<div class="line"><span class="lineno">  585</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a73fb1c9b00778f4e3b5a2471de4021ed">OpPager</a>;</div>
+<div class="line"><span class="lineno">  586</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4abde0a6cb18588a44a6d0a63828f1c603">MENU_PGP</a>:</div>
+<div class="line"><span class="lineno">  587</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#aa5c6f7d7fdadc007f235a9139df2f251">OpPgp</a>;</div>
+<div class="line"><span class="lineno">  588</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af632c49a67e5e048d46556ec28c8c958">MENU_POSTPONED</a>:</div>
+<div class="line"><span class="lineno">  589</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a240855c58bbffa263b1806022902ab61">OpPostponed</a>;</div>
+<div class="line"><span class="lineno">  590</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a739c790e5df497ca3d7e7f2e3837aaf1">MENU_QUERY</a>:</div>
+<div class="line"><span class="lineno">  591</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a02e8724026167606aad4d0516923eff8">OpQuery</a>;</div>
+<div class="line"><span class="lineno">  592</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4add02b7e5714bc7ecd2a6d3e2b618fce9">MENU_SMIME</a>:</div>
+<div class="line"><span class="lineno">  593</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="key_2lib_8c.html#a47c640809ce529499a23e88bf0ceac0f">OpSmime</a>;</div>
+<div class="line"><span class="lineno">  594</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  595</span>      <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  596</span>  }</div>
+<div class="line"><span class="lineno">  597</span>}</div>
 <div class="ttc" id="agui_2functions_8c_html_a3457ad68df60a03b25a1a85b71a22822"><div class="ttname"><a href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a></div><div class="ttdeci">const struct MenuFuncOp OpGeneric[]</div><div class="ttdoc">Functions for the Generic Menu.</div><div class="ttdef"><b>Definition:</b> <a href="gui_2functions_8c_source.html#l00069">functions.c:69</a></div></div>
 <div class="ttc" id="agui_2functions_8c_html_aff115bba32c89092a36bd7ff3c6b6d29"><div class="ttname"><a href="gui_2functions_8c.html#aff115bba32c89092a36bd7ff3c6b6d29">OpDialog</a></div><div class="ttdeci">const struct MenuFuncOp OpDialog[]</div><div class="ttdoc">Functions for Simple Dialogs.</div><div class="ttdef"><b>Definition:</b> <a href="gui_2functions_8c_source.html#l00060">functions.c:60</a></div></div>
 <div class="ttc" id="akey_2lib_8c_html_a02e8724026167606aad4d0516923eff8"><div class="ttname"><a href="key_2lib_8c.html#a02e8724026167606aad4d0516923eff8">OpQuery</a></div><div class="ttdeci">const struct MenuFuncOp OpQuery[]</div><div class="ttdoc">Functions for the external Query Menu.</div><div class="ttdef"><b>Definition:</b> <a href="alias_2functions_8c_source.html#l00076">functions.c:76</a></div></div>
@@ -1579,14 +1582,17 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3b2a33bd72ef75978a93737915b39149" name="a3b2a33bd72ef75978a93737915b39149"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b2a33bd72ef75978a93737915b39149">&#9670;&#160;</a></span>help_lookup_function()</h2>
+<a id="a2fe666fb372f338856db1f1730ede428" name="a2fe666fb372f338856db1f1730ede428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe666fb372f338856db1f1730ede428">&#9670;&#160;</a></span>help_lookup_function()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char * help_lookup_function </td>
+          <td class="memname">static const char * help_lookup_function </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>op</em>, </td>
@@ -1603,6 +1609,11 @@ Variables</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Find a keybinding for an operation. </p>
@@ -1621,29 +1632,29 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00603">603</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  604</span>{</div>
-<div class="line"><span class="lineno">  605</span>  <span class="keywordflow">if</span> ((menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a>) &amp;&amp; (menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a>) &amp;&amp; (menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a>))</div>
-<div class="line"><span class="lineno">  606</span>  {</div>
-<div class="line"><span class="lineno">  607</span>    <span class="comment">/* first look in the generic map for the function */</span></div>
-<div class="line"><span class="lineno">  608</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *fn_name = <a class="code hl_function" href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a>(<a class="code hl_variable" href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a>, op);</div>
-<div class="line"><span class="lineno">  609</span>    <span class="keywordflow">if</span> (fn_name)</div>
-<div class="line"><span class="lineno">  610</span>      <span class="keywordflow">return</span> fn_name;</div>
-<div class="line"><span class="lineno">  611</span>  }</div>
-<div class="line"><span class="lineno">  612</span> </div>
-<div class="line"><span class="lineno">  613</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structMenuFuncOp.html">MenuFuncOp</a> *funcs = <a class="code hl_function" href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a>(menu);</div>
-<div class="line"><span class="lineno">  614</span> </div>
-<div class="line"><span class="lineno">  615</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a>(funcs, <a class="code hl_variable" href="structMenuFuncOp.html#a9b0871a1dbef5ed0907e9ae681cc4abd">op</a>);</div>
-<div class="line"><span class="lineno">  616</span>}</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00606">606</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  607</span>{</div>
+<div class="line"><span class="lineno">  608</span>  <span class="keywordflow">if</span> ((menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a>) &amp;&amp; (menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a>) &amp;&amp; (menu != <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a>))</div>
+<div class="line"><span class="lineno">  609</span>  {</div>
+<div class="line"><span class="lineno">  610</span>    <span class="comment">/* first look in the generic map for the function */</span></div>
+<div class="line"><span class="lineno">  611</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *fn_name = <a class="code hl_function" href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a>(<a class="code hl_variable" href="gui_2functions_8c.html#a3457ad68df60a03b25a1a85b71a22822">OpGeneric</a>, op);</div>
+<div class="line"><span class="lineno">  612</span>    <span class="keywordflow">if</span> (fn_name)</div>
+<div class="line"><span class="lineno">  613</span>      <span class="keywordflow">return</span> fn_name;</div>
+<div class="line"><span class="lineno">  614</span>  }</div>
+<div class="line"><span class="lineno">  615</span> </div>
+<div class="line"><span class="lineno">  616</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structMenuFuncOp.html">MenuFuncOp</a> *funcs = <a class="code hl_function" href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a>(menu);</div>
+<div class="line"><span class="lineno">  617</span> </div>
+<div class="line"><span class="lineno">  618</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a>(funcs, <a class="code hl_variable" href="structMenuFuncOp.html#a9b0871a1dbef5ed0907e9ae681cc4abd">op</a>);</div>
+<div class="line"><span class="lineno">  619</span>}</div>
 <div class="ttc" id="akey_2lib_8c_html_a8d253bf595636e08c076cb3a56f8bd71"><div class="ttname"><a href="key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71">mutt_get_func</a></div><div class="ttdeci">const char * mutt_get_func(const struct MenuFuncOp *funcs, int op)</div><div class="ttdoc">Get the name of a function.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00320">lib.c:320</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_ac73ba4b4de1642f905738d2da0e79d91"><div class="ttname"><a href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a></div><div class="ttdeci">const struct MenuFuncOp * km_get_table(enum MenuType mtype)</div><div class="ttdoc">Lookup a Menu's functions.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00557">lib.c:557</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_ac73ba4b4de1642f905738d2da0e79d91"><div class="ttname"><a href="key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91">km_get_table</a></div><div class="ttdeci">const struct MenuFuncOp * km_get_table(enum MenuType mtype)</div><div class="ttdoc">Lookup a Menu's functions.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00560">lib.c:560</a></div></div>
 <div class="ttc" id="astructMenuFuncOp_html"><div class="ttname"><a href="structMenuFuncOp.html">MenuFuncOp</a></div><div class="ttdoc">Mapping between a function and an operation.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00111">lib.h:112</a></div></div>
 </div><!-- fragment --><div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-26-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-26-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="key_2lib_8c_a3b2a33bd72ef75978a93737915b39149_cgraph.svg" width="326" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="key_2lib_8c_a2fe666fb372f338856db1f1730ede428_cgraph.svg" width="326" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1651,7 +1662,7 @@ Variables</h2></td></tr>
 <div id="dynsection-27-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-27-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="key_2lib_8c_a3b2a33bd72ef75978a93737915b39149_icgraph.svg" width="320" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="key_2lib_8c_a2fe666fb372f338856db1f1730ede428_icgraph.svg" width="320" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -1699,59 +1710,59 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00624">624</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  626</span>{</div>
-<div class="line"><span class="lineno">  627</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *key_binding = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  628</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *macro = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  629</span> </div>
-<div class="line"><span class="lineno">  630</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *map = NULL;</div>
-<div class="line"><span class="lineno">  631</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(map, &amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[menu], entries)</div>
-<div class="line"><span class="lineno">  632</span>  {</div>
-<div class="line"><span class="lineno">  633</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBindingInfo.html">BindingInfo</a> bi = { 0 };</div>
-<div class="line"><span class="lineno">  634</span> </div>
-<div class="line"><span class="lineno">  635</span>    <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(key_binding);</div>
-<div class="line"><span class="lineno">  636</span>    <a class="code hl_function" href="key_2lib_8c.html#af30297e027dd7f2242b311aeb86d506b">km_expand_key</a>(map, key_binding);</div>
+<p class="definition">Definition at line <a class="el" href="key_2lib_8c_source.html#l00627">627</a> of file <a class="el" href="key_2lib_8c_source.html">lib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  629</span>{</div>
+<div class="line"><span class="lineno">  630</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *key_binding = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  631</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *macro = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  632</span> </div>
+<div class="line"><span class="lineno">  633</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *map = NULL;</div>
+<div class="line"><span class="lineno">  634</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(map, &amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[menu], entries)</div>
+<div class="line"><span class="lineno">  635</span>  {</div>
+<div class="line"><span class="lineno">  636</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBindingInfo.html">BindingInfo</a> bi = { 0 };</div>
 <div class="line"><span class="lineno">  637</span> </div>
-<div class="line"><span class="lineno">  638</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_MACRO)</div>
-<div class="line"><span class="lineno">  639</span>    {</div>
-<div class="line"><span class="lineno">  640</span>      <span class="keywordflow">if</span> (!bia_macro || (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_NULL))</div>
-<div class="line"><span class="lineno">  641</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  642</span> </div>
-<div class="line"><span class="lineno">  643</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(macro);</div>
-<div class="line"><span class="lineno">  644</span>      <a class="code hl_function" href="key_2lib_8c.html#acd4962900253a906c205bbaf05e11d7a">escape_macro</a>(map-&gt;<a class="code hl_variable" href="structKeymap.html#a7dba6084f1e86314eaac281a75b179ab">macro</a>, macro);</div>
-<div class="line"><span class="lineno">  645</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[0] = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(key_binding);</div>
-<div class="line"><span class="lineno">  646</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[1] = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(macro);</div>
-<div class="line"><span class="lineno">  647</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[2] = map-&gt;<a class="code hl_variable" href="structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f">desc</a>;</div>
-<div class="line"><span class="lineno">  648</span>      <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(bia_macro, bi);</div>
-<div class="line"><span class="lineno">  649</span>    }</div>
-<div class="line"><span class="lineno">  650</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  651</span>    {</div>
-<div class="line"><span class="lineno">  652</span>      <span class="keywordflow">if</span> (!bia_bind)</div>
-<div class="line"><span class="lineno">  653</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  654</span> </div>
-<div class="line"><span class="lineno">  655</span>      <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_NULL)</div>
-<div class="line"><span class="lineno">  656</span>      {</div>
-<div class="line"><span class="lineno">  657</span>        bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[0] = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(key_binding);</div>
-<div class="line"><span class="lineno">  658</span>        bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[1] = <span class="stringliteral">&quot;noop&quot;</span>;</div>
-<div class="line"><span class="lineno">  659</span>        <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(bia_bind, bi);</div>
-<div class="line"><span class="lineno">  660</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  661</span>      }</div>
-<div class="line"><span class="lineno">  662</span> </div>
-<div class="line"><span class="lineno">  663</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[0] = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(key_binding);</div>
-<div class="line"><span class="lineno">  664</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[1] = <a class="code hl_function" href="key_2lib_8c.html#a3b2a33bd72ef75978a93737915b39149">help_lookup_function</a>(map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>, menu);</div>
-<div class="line"><span class="lineno">  665</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[2] = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<a class="code hl_function" href="opcodes_8c.html#a73aef3d9a4346ec4b99020e19fb03987">opcodes_get_description</a>(map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>));</div>
-<div class="line"><span class="lineno">  666</span>      <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(bia_bind, bi);</div>
-<div class="line"><span class="lineno">  667</span>    }</div>
-<div class="line"><span class="lineno">  668</span>  }</div>
-<div class="line"><span class="lineno">  669</span> </div>
-<div class="line"><span class="lineno">  670</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;key_binding);</div>
-<div class="line"><span class="lineno">  671</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;macro);</div>
-<div class="line"><span class="lineno">  672</span>}</div>
+<div class="line"><span class="lineno">  638</span>    <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(key_binding);</div>
+<div class="line"><span class="lineno">  639</span>    <a class="code hl_function" href="key_2lib_8c.html#af30297e027dd7f2242b311aeb86d506b">km_expand_key</a>(map, key_binding);</div>
+<div class="line"><span class="lineno">  640</span> </div>
+<div class="line"><span class="lineno">  641</span>    <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_MACRO)</div>
+<div class="line"><span class="lineno">  642</span>    {</div>
+<div class="line"><span class="lineno">  643</span>      <span class="keywordflow">if</span> (!bia_macro || (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_NULL))</div>
+<div class="line"><span class="lineno">  644</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  645</span> </div>
+<div class="line"><span class="lineno">  646</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(macro);</div>
+<div class="line"><span class="lineno">  647</span>      <a class="code hl_function" href="key_2lib_8c.html#acd4962900253a906c205bbaf05e11d7a">escape_macro</a>(map-&gt;<a class="code hl_variable" href="structKeymap.html#a7dba6084f1e86314eaac281a75b179ab">macro</a>, macro);</div>
+<div class="line"><span class="lineno">  648</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[0] = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(key_binding);</div>
+<div class="line"><span class="lineno">  649</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[1] = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(macro);</div>
+<div class="line"><span class="lineno">  650</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[2] = map-&gt;<a class="code hl_variable" href="structKeymap.html#abffcc8161b8a5a31eba06dea5fca163f">desc</a>;</div>
+<div class="line"><span class="lineno">  651</span>      <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(bia_macro, bi);</div>
+<div class="line"><span class="lineno">  652</span>    }</div>
+<div class="line"><span class="lineno">  653</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  654</span>    {</div>
+<div class="line"><span class="lineno">  655</span>      <span class="keywordflow">if</span> (!bia_bind)</div>
+<div class="line"><span class="lineno">  656</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  657</span> </div>
+<div class="line"><span class="lineno">  658</span>      <span class="keywordflow">if</span> (map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a> == OP_NULL)</div>
+<div class="line"><span class="lineno">  659</span>      {</div>
+<div class="line"><span class="lineno">  660</span>        bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[0] = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(key_binding);</div>
+<div class="line"><span class="lineno">  661</span>        bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[1] = <span class="stringliteral">&quot;noop&quot;</span>;</div>
+<div class="line"><span class="lineno">  662</span>        <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(bia_bind, bi);</div>
+<div class="line"><span class="lineno">  663</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  664</span>      }</div>
+<div class="line"><span class="lineno">  665</span> </div>
+<div class="line"><span class="lineno">  666</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[0] = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(key_binding);</div>
+<div class="line"><span class="lineno">  667</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[1] = <a class="code hl_function" href="key_2lib_8c.html#a2fe666fb372f338856db1f1730ede428">help_lookup_function</a>(map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>, menu);</div>
+<div class="line"><span class="lineno">  668</span>      bi.<a class="code hl_variable" href="structBindingInfo.html#a8cfb38fae209d753a26e7e0c6357ac69">a</a>[2] = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<a class="code hl_function" href="opcodes_8c.html#a73aef3d9a4346ec4b99020e19fb03987">opcodes_get_description</a>(map-&gt;<a class="code hl_variable" href="structKeymap.html#ae0f1f33eb69b7ee89188039d50d49145">op</a>));</div>
+<div class="line"><span class="lineno">  669</span>      <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(bia_bind, bi);</div>
+<div class="line"><span class="lineno">  670</span>    }</div>
+<div class="line"><span class="lineno">  671</span>  }</div>
+<div class="line"><span class="lineno">  672</span> </div>
+<div class="line"><span class="lineno">  673</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;key_binding);</div>
+<div class="line"><span class="lineno">  674</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;macro);</div>
+<div class="line"><span class="lineno">  675</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00076">buffer.c:76</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ad76477cc0c660bc50162393e997233eb"><div class="ttname"><a href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a></div><div class="ttdeci">char * buf_strdup(const struct Buffer *buf)</div><div class="ttdoc">Copy a Buffer's string.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00571">buffer.c:571</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_a3b2a33bd72ef75978a93737915b39149"><div class="ttname"><a href="key_2lib_8c.html#a3b2a33bd72ef75978a93737915b39149">help_lookup_function</a></div><div class="ttdeci">const char * help_lookup_function(int op, enum MenuType menu)</div><div class="ttdoc">Find a keybinding for an operation.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00603">lib.c:603</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_acd4962900253a906c205bbaf05e11d7a"><div class="ttname"><a href="key_2lib_8c.html#acd4962900253a906c205bbaf05e11d7a">escape_macro</a></div><div class="ttdeci">void escape_macro(const char *macro, struct Buffer *buf)</div><div class="ttdoc">Escape any special characters in a macro.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00338">lib.c:338</a></div></div>
-<div class="ttc" id="akey_2lib_8c_html_af30297e027dd7f2242b311aeb86d506b"><div class="ttname"><a href="key_2lib_8c.html#af30297e027dd7f2242b311aeb86d506b">km_expand_key</a></div><div class="ttdeci">bool km_expand_key(struct Keymap *map, struct Buffer *buf)</div><div class="ttdoc">Get the key string bound to a Keymap.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00509">lib.c:509</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_a2fe666fb372f338856db1f1730ede428"><div class="ttname"><a href="key_2lib_8c.html#a2fe666fb372f338856db1f1730ede428">help_lookup_function</a></div><div class="ttdeci">static const char * help_lookup_function(int op, enum MenuType menu)</div><div class="ttdoc">Find a keybinding for an operation.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00606">lib.c:606</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_acd4962900253a906c205bbaf05e11d7a"><div class="ttname"><a href="key_2lib_8c.html#acd4962900253a906c205bbaf05e11d7a">escape_macro</a></div><div class="ttdeci">void escape_macro(const char *macro, struct Buffer *buf)</div><div class="ttdoc">Escape any special characters in a macro.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00341">lib.c:341</a></div></div>
+<div class="ttc" id="akey_2lib_8c_html_af30297e027dd7f2242b311aeb86d506b"><div class="ttname"><a href="key_2lib_8c.html#af30297e027dd7f2242b311aeb86d506b">km_expand_key</a></div><div class="ttdeci">bool km_expand_key(struct Keymap *map, struct Buffer *buf)</div><div class="ttdoc">Get the key string bound to a Keymap.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00512">lib.c:512</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>

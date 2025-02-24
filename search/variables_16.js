@@ -12,7 +12,7 @@ var searchData=
   ['verbose_9',['verbose',['../structMailbox.html#af1ff47b8f14a4503c9b8473582b13d5a',1,'Mailbox']]],
   ['verify_5fone_10',['verify_one',['../structCryptModuleSpecs.html#abe8b95602735ac15f4f3a8d6ab1dc45b',1,'CryptModuleSpecs']]],
   ['verifyhelp_11',['VerifyHelp',['../dlg__verifycert_8c.html#aa69730b009a948a078128038057f8a92',1,'dlg_verifycert.c']]],
-  ['version_12',['version',['../structStoreOps.html#a04ca00d60c243af0cefe9a5c191e64e9',1,'StoreOps']]],
+  ['version_12',['version',['../structCliHelp.html#a542b9732bbb2a93e3145e8e5283243d6',1,'CliHelp::version()'],['../structStoreOps.html#a04ca00d60c243af0cefe9a5c191e64e9',1,'StoreOps::version()']]],
   ['virtual_5fid_13',['virtual_id',['../structNmEmailData.html#ac95286a6a9f4b7d1649cb4bed151ec97',1,'NmEmailData']]],
   ['visible_14',['visible',['../structMailbox.html#ad538c9745e4f0d1a103c45b54819cf32',1,'Mailbox::visible()'],['../structEmail.html#a1b48457d5e16b021ada7d227b689f516',1,'Email::visible()'],['../structMuttThread.html#a30c80a1167887f0dc4ab7bff443b8df3',1,'MuttThread::visible()'],['../structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b',1,'WindowState::visible()']]],
   ['vnum_15',['vnum',['../structEmail.html#aa5e274ea0f8ce3482f226752fcccad12',1,'Email']]],

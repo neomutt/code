@@ -116,7 +116,7 @@ var searchData=
   ['fold_5fone_5fheader_113',['fold_one_header',['../header_8c.html#a05f309b54c36fe2f7121cb91b2d202d0',1,'header.c']]],
   ['folder_114',['folder',['../structNmEmailData.html#ab0f65adbf106a79e0a3875a128f15e0f',1,'NmEmailData']]],
   ['folder_115',['Folder',['../structFolder.html',1,'']]],
-  ['folder_116',['folder',['../structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95',1,'HeaderCache::folder()'],['../structBrowserState.html#a103b46ca5b0d6d1c3982aef869343601',1,'BrowserState::folder()'],['../structBrowserPrivateData.html#a94aaff56faa65882faf2277b27ad3133',1,'BrowserPrivateData::folder()']]],
+  ['folder_116',['folder',['../structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95',1,'HeaderCache::folder()'],['../structBrowserState.html#a103b46ca5b0d6d1c3982aef869343601',1,'BrowserState::folder()'],['../structBrowserPrivateData.html#a94aaff56faa65882faf2277b27ad3133',1,'BrowserPrivateData::folder()'],['../structCliTui.html#a9590f29edcf38d65b61171d18e6e9f24',1,'CliTui::folder()']]],
   ['folder_5fdate_117',['folder_date',['../group__expando__get__string__api.html#ga7891c6c4940aa5c1c1d0eb5f27317ae2',1,'expando.c']]],
   ['folder_5fdate_5fformat_118',['folder_date_format',['../group__expando__get__string__api.html#ga8943f7726d8bf782178aa5b05dacc6a6',1,'expando.c']]],
   ['folder_5fdate_5fformat_5fnum_119',['folder_date_format_num',['../group__expando__get__number__api.html#gae7786e3f7c248c636be51c12d23a71f2',1,'expando.c']]],

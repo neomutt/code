@@ -9,7 +9,6 @@ var globals_8c =
     [ "AutoViewList", "globals_8c.html#a6972067b736a0ea1e2855cd1e9dfb0a3", null ],
     [ "HeaderOrderList", "globals_8c.html#ac9ee071134eb30f6cbe02c315bd32e14", null ],
     [ "MimeLookupList", "globals_8c.html#a5289e099e9203b04ea2829a957915905", null ],
-    [ "Muttrc", "globals_8c.html#ab643e119be235279423098b7e2cfe8fb", null ],
     [ "TempAttachmentsList", "globals_8c.html#a29415171c9dd4ed4f41456275cddf672", null ],
     [ "UserHeader", "globals_8c.html#aa6af9b507b7033a8a1226c0c1946116d", null ],
     [ "OptAutocryptGpgme", "globals_8c.html#a1137c8074e2a6ff941529fc8e64fbca5", null ],

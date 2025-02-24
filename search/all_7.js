@@ -33,7 +33,7 @@ var searchData=
   ['get_5fdefault_5fmailbox_30',['get_default_mailbox',['../notmuch_8c.html#a7557b4c8c21bc1fe7da1730b0af70836',1,'notmuch.c']]],
   ['get_5fdescription_31',['get_description',['../nntp_8c.html#aad1e29b1bda60fc87fa98dd0ff8b8539',1,'nntp.c']]],
   ['get_5felem_5flist_32',['get_elem_list',['../subset_8h.html#a92d611c1cf202d2af68ef259eb6f3ce9',1,'get_elem_list(struct ConfigSet *cs, enum GetElemListFlags flags):&#160;subset.c'],['../subset_8c.html#a92d611c1cf202d2af68ef259eb6f3ce9',1,'get_elem_list(struct ConfigSet *cs, enum GetElemListFlags flags):&#160;subset.c']]],
-  ['get_5felem_5fqueries_33',['get_elem_queries',['../main_8c.html#a78576e5f5ea52d19d86ae4563bfd5d58',1,'main.c']]],
+  ['get_5felem_5fqueries_33',['get_elem_queries',['../main_8c.html#ad52e45dbd043d6808117e8db554f6ba1',1,'main.c']]],
   ['get_5ffield_34',['get_field',['../structConnAccount.html#ae69871442c1135a06b359011104f630b',1,'ConnAccount::get_field()'],['../mailcap_8c.html#ab198973849d7dbba39ef1208445453e5',1,'get_field(char *s):&#160;mailcap.c']]],
   ['get_5ffield_5ftext_35',['get_field_text',['../mailcap_8c.html#a7df906e1b57347a19286cea26512b8f6',1,'mailcap.c']]],
   ['get_5fflags_36',['get_flags',['../imap_8c.html#ad0c94b5dea653ee8d1b5974a80c772a3',1,'imap.c']]],

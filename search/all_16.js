@@ -21,7 +21,7 @@ var searchData=
   ['verify_5fone_28_29_18',['verify_one()',['../group__crypto__verify__one.html',1,'']]],
   ['verify_5fsender_19',['verify_sender',['../crypt__gpgme_8c.html#a10e8fb8f5b9b458202bc424762ff96cd',1,'crypt_gpgme.c']]],
   ['verifyhelp_20',['VerifyHelp',['../dlg__verifycert_8c.html#aa69730b009a948a078128038057f8a92',1,'dlg_verifycert.c']]],
-  ['version_21',['version',['../structStoreOps.html#a04ca00d60c243af0cefe9a5c191e64e9',1,'StoreOps']]],
+  ['version_21',['version',['../structStoreOps.html#a04ca00d60c243af0cefe9a5c191e64e9',1,'StoreOps::version()'],['../structCliHelp.html#a542b9732bbb2a93e3145e8e5283243d6',1,'CliHelp::version()']]],
   ['version_28_29_22',['version()',['../group__store__version.html',1,'']]],
   ['version_2ec_23',['version.c',['../version_8c.html',1,'']]],
   ['version_2eh_24',['version.h',['../version_8h.html',1,'']]],
