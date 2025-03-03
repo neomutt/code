@@ -1,8 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"sasl__plain_8c.html":[2,0,13,19],
-"sasl__plain_8c.html#a823ff643553588897f0621b8981d80ce":[2,0,13,19,0],
-"sasl__plain_8c_source.html":[2,0,13,19],
 "sasl__plain_8h.html":[2,0,13,20],
 "sasl__plain_8h.html#a823ff643553588897f0621b8981d80ce":[2,0,13,20,0],
 "sasl__plain_8h_source.html":[2,0,13,20],
@@ -19,15 +16,15 @@ var NAVTREEINDEX41 =
 "schema_8c.html#a6bf8cc8f42e2dce5232ea607b5706b32":[2,0,3,13,1],
 "schema_8c.html#a73749110f164d660af828e2373bc4211":[2,0,3,13,0],
 "schema_8c_source.html":[2,0,3,13],
-"score_8c.html":[2,0,100],
-"score_8c.html#a60a76f10dee174e97a23343e44a416b5":[2,0,100,1],
-"score_8c.html#a6e4551cc338bfaf9829eb6e3bc992a25":[2,0,100,5],
-"score_8c.html#a73b6dd4283368222cc337dbdf21390a2":[2,0,100,3],
-"score_8c_source.html":[2,0,100],
-"score_8h.html":[2,0,101],
-"score_8h.html#a60a76f10dee174e97a23343e44a416b5":[2,0,101,0],
-"score_8h.html#a73b6dd4283368222cc337dbdf21390a2":[2,0,101,3],
-"score_8h_source.html":[2,0,101],
+"score_8c.html":[2,0,101],
+"score_8c.html#a60a76f10dee174e97a23343e44a416b5":[2,0,101,1],
+"score_8c.html#a6e4551cc338bfaf9829eb6e3bc992a25":[2,0,101,5],
+"score_8c.html#a73b6dd4283368222cc337dbdf21390a2":[2,0,101,3],
+"score_8c_source.html":[2,0,101],
+"score_8h.html":[2,0,102],
+"score_8h.html#a60a76f10dee174e97a23343e44a416b5":[2,0,102,0],
+"score_8h.html#a73b6dd4283368222cc337dbdf21390a2":[2,0,102,3],
+"score_8h_source.html":[2,0,102],
 "search_8c.html":[2,0,26,28],
 "search_8c.html#a0a138692a3b3fd427e04ac34e4b1ef83":[2,0,26,28,1],
 "search_8c.html#a16ae16329d5991367f1cb78cc112ac5e":[2,0,26,28,0],
@@ -249,5 +246,8 @@ var NAVTREEINDEX41 =
 "sequence_8h.html#ad5089c5888bb5f8fba2348be50c943dc":[2,0,32,8,10],
 "sequence_8h_source.html":[2,0,32,8],
 "serialize_8c.html":[2,0,23,3],
-"serialize_8c.html#a03d3c3312aec4c34f97ec0fbe7a13444":[2,0,23,3,20]
+"serialize_8c.html#a03d3c3312aec4c34f97ec0fbe7a13444":[2,0,23,3,20],
+"serialize_8c.html#a2a3f3516ac8475877d5fbbc12d72e3fc":[2,0,23,3,24],
+"serialize_8c.html#a3f5215a6c3393b3da564c1671f76b910":[2,0,23,3,25],
+"serialize_8c.html#a3f838ff5dd17e29ca342aa6c16772b21":[2,0,23,3,3]
 };

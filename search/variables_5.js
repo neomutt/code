@@ -14,7 +14,7 @@ var searchData=
   ['email_5fseq_11',['email_seq',['../structIndexSharedData.html#a29ac3f8a88179b13ad526738b7628f89',1,'IndexSharedData']]],
   ['emails_12',['emails',['../structMailbox.html#a73ca79846dce43a175892c5d88e932ca',1,'Mailbox::emails()'],['../structEventEmail.html#a986bd9003cd8f876f7703e66c2023808',1,'EventEmail::emails()']]],
   ['emailvars_13',['EmailVars',['../email_2config_8c.html#ad740e872f47acd90f5133a529fa87f40',1,'config.c']]],
-  ['enabled_14',['enabled',['../structCompileOptions.html#a83049b17812be0c11ad7ef25f1e509fc',1,'CompileOptions::enabled()'],['../structAutocryptAccount.html#adb2b16e2c4bf0403e68add64bf0487c0',1,'AutocryptAccount::enabled()']]],
+  ['enabled_14',['enabled',['../structCompileOption.html#a6f92e3d19cf7b95d052cd4a763fe8942',1,'CompileOption::enabled()'],['../structAutocryptAccount.html#adb2b16e2c4bf0403e68add64bf0487c0',1,'AutocryptAccount::enabled()']]],
   ['encoded_15',['encoded',['../structRfc2231Parameter.html#a02cf205f394a208081803e433f27bfcf',1,'Rfc2231Parameter']]],
   ['encoding_16',['encoding',['../structBody.html#ad2f05b8ff24813de41988e63de5d6a31',1,'Body']]],
   ['encrypted_5fhandler_17',['encrypted_handler',['../structCryptModuleSpecs.html#a0a6f227729bf45fc362bc0896a241de2',1,'CryptModuleSpecs']]],

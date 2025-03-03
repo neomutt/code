@@ -1,8 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012":[1,0,73,0],
-"structEnterState.html#ab94327a0300b5c132e37416c87d44699":[1,0,73,2],
-"structEnterWindowData.html":[1,0,74],
 "structEnterWindowData.html#a045e4602568a2d5aad2ce849425dfeb4":[1,0,74,8],
 "structEnterWindowData.html#a0a288cf2947dfc2983a21990622db2a0":[1,0,74,13],
 "structEnterWindowData.html#a0d1d16a2433c03ec4d57120213be5a4b":[1,0,74,5],
@@ -249,5 +246,8 @@ var NAVTREEINDEX46 =
 "structHistory.html#a586cfe2bee4f1b7ee52280a147a419b1":[1,0,116,0],
 "structHistoryData.html":[1,0,117],
 "structHistoryData.html#a12b26bc712033c012fe7eb945ff48679":[1,0,117,3],
-"structHistoryData.html#a259659d996f885ce9b616320e50d6885":[1,0,117,2]
+"structHistoryData.html#a259659d996f885ce9b616320e50d6885":[1,0,117,2],
+"structHistoryData.html#a4a405d002aec089b72620e20536d7506":[1,0,117,4],
+"structHistoryData.html#aa1a31c239a303ae0aa5ee9f525eeb12d":[1,0,117,0],
+"structHistoryData.html#ad73cd09078020e5df7c6d55b8941ba54":[1,0,117,1]
 };

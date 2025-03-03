@@ -12,7 +12,7 @@ var searchData=
   ['command_9',['Command',['../structCommand.html',1,'']]],
   ['commandline_10',['CommandLine',['../structCommandLine.html',1,'']]],
   ['comparedata_11',['CompareData',['../structCompareData.html',1,'']]],
-  ['compileoptions_12',['CompileOptions',['../structCompileOptions.html',1,'']]],
+  ['compileoption_12',['CompileOption',['../structCompileOption.html',1,'']]],
   ['completeops_13',['CompleteOps',['../structCompleteOps.html',1,'']]],
   ['completiondata_14',['CompletionData',['../structCompletionData.html',1,'']]],
   ['composeattachdata_15',['ComposeAttachData',['../structComposeAttachData.html',1,'']]],

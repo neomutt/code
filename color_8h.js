@@ -19,7 +19,6 @@ var color_8h =
       [ "MT_COLOR_ITALIC", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabd02f67dc3dd39169ec18760a2902b6f", null ],
       [ "MT_COLOR_MARKERS", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da0e0eb95b84c687088e6b4bfb648cf6f5", null ],
       [ "MT_COLOR_MESSAGE", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da1374263734b5fd5e14dd6111ab05120f", null ],
-      [ "MT_COLOR_MESSAGE_LOG", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070daac2c955f2e5158add372ed36589d9bbb", null ],
       [ "MT_COLOR_NORMAL", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da980ed428f52c843cc77476caf208265a", null ],
       [ "MT_COLOR_OPTIONS", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da8dbc682068cfaeda9aa87af90c112cb7", null ],
       [ "MT_COLOR_PROGRESS", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da7a9531690b24f72f28f1bf5397bb94e2", null ],
