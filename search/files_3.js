@@ -2,7 +2,7 @@ var searchData=
 [
   ['data_2ec_0',['data.c',['../data_8c.html',1,'']]],
   ['data_2eh_1',['data.h',['../data_8h.html',1,'']]],
-  ['date_2ec_2',['date.c',['../fuzz_2date_8c.html',1,'(Global Namespace)'],['../mutt_2date_8c.html',1,'(Global Namespace)']]],
+  ['date_2ec_2',['date.c',['../mutt_2date_8c.html',1,'(Global Namespace)'],['../fuzz_2date_8c.html',1,'(Global Namespace)']]],
   ['date_2eh_3',['date.h',['../date_8h.html',1,'']]],
   ['db_2ec_4',['db.c',['../autocrypt_2db_8c.html',1,'(Global Namespace)'],['../notmuch_2db_8c.html',1,'(Global Namespace)']]],
   ['debug_2ec_5',['debug.c',['../debug_8c.html',1,'']]],

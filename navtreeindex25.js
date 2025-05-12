@@ -249,5 +249,5 @@ var NAVTREEINDEX25 =
 "lz4_8c.html#ad6fbd0304e4c99a963b8ede7a2b45009":[2,0,11,2,1],
 "lz4_8c.html#adecf6822fc666a01c078f9f489cf0140":[2,0,11,2,4],
 "lz4_8c_source.html":[2,0,11,2],
-"mailcap_8c.html":[2,0,66]
+"mailcap_8c.html":[2,0,64]
 };
