@@ -76,7 +76,7 @@ var searchData=
   ['is_5fmatched_73',['is_matched',['../structAliasView.html#a2415ea4839d043b562c0a79d51618f3c',1,'AliasView']]],
   ['is_5fmulti_74',['is_multi',['../structPattern.html#ab200683a6bdf319ac4474907a1d82143',1,'Pattern']]],
   ['is_5fnews_75',['is_news',['../structEnvelopeWindowData.html#a0b744fb32385b778f8cda4c10d37cc21',1,'EnvelopeWindowData']]],
-  ['is_5foverridden_76',['is_overridden',['../structUserHdrsOverride.html#af0a74d5474f0ae0c917e969bcbe3b5fc',1,'UserHdrsOverride']]],
+  ['is_5foverridden_76',['is_overridden',['../structUserHdrsOverride.html#ab44a48d21c233d517c3c66c030db9e7d',1,'UserHdrsOverride']]],
   ['is_5fsearched_77',['is_searched',['../structAliasView.html#a71a64de73888c57232ff738a1cf8dc91',1,'AliasView']]],
   ['is_5fset_78',['is_set',['../structCliHelp.html#aeda0754097038d0eafbae9268c276b71',1,'CliHelp::is_set()'],['../structCliTui.html#a89a075d7701da55e1c8df5d65a5c752c',1,'CliTui::is_set()'],['../structCliSend.html#a0694a827ccc9da98bc3035229a7baa72',1,'CliSend::is_set()'],['../structCliInfo.html#a2e4c8a7e114628780d4ec6540a83d702',1,'CliInfo::is_set()'],['../structCliShared.html#a99a023b1c43428f4471c91f1a1c08508',1,'CliShared::is_set()']]],
   ['is_5ftagged_79',['is_tagged',['../structAliasView.html#a683663ebafec086d5d253cd55fb7b209',1,'AliasView']]],

@@ -4,7 +4,7 @@ var memory_8h =
     [ "MIN", "memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f", null ],
     [ "CLAMP", "memory_8h.html#afe7f454e724563cccb0ee848d624792e", null ],
     [ "ROUND_UP", "memory_8h.html#a82aade22dcbee55989c7825a3b099b83", null ],
-    [ "mutt_array_size", "memory_8h.html#afe62718c7d5ad088c3ea1dc4c28ccea3", null ],
+    [ "countof", "memory_8h.html#a13aaf9e9e194ebfd84f90bcf4e264aca", null ],
     [ "MUTT_MEM_CALLOC", "memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9", null ],
     [ "MUTT_MEM_MALLOC", "memory_8h.html#af997cb3719dc7abbeabae655d0ee1b9e", null ],
     [ "MUTT_MEM_REALLOC", "memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba", null ],

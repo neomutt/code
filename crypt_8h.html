@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-05-10</span>
+   &#160;<span id="projectnumber">2025-05-10-9-gb9f27b</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -402,86 +402,86 @@ Functions</h2></td></tr>
 <p>Obtain pointers to fingerprint or short or long key ID, if any.</p>
 <p>Upon return, at most one of return, *ppl and *pps pointers is non-NULL, indicating the longest fingerprint or ID found, if any. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt_8c_source.html#l01385">1385</a> of file <a class="el" href="crypt_8c_source.html">crypt.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1387</span>{</div>
-<div class="line"><span class="lineno"> 1388</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *ps = NULL, *pl = NULL, *phint = NULL;</div>
-<div class="line"><span class="lineno"> 1389</span>  <span class="keywordtype">char</span> *pfcopy = NULL, *s1 = NULL, *s2 = NULL;</div>
-<div class="line"><span class="lineno"> 1390</span>  <span class="keywordtype">char</span> c;</div>
-<div class="line"><span class="lineno"> 1391</span>  <span class="keywordtype">int</span> isid;</div>
-<div class="line"><span class="lineno"> 1392</span>  <span class="keywordtype">size_t</span> hexdigits;</div>
-<div class="line"><span class="lineno"> 1393</span> </div>
-<div class="line"><span class="lineno"> 1394</span>  <span class="comment">/* User input may be partial name, fingerprint or short or long key ID,</span></div>
-<div class="line"><span class="lineno"> 1395</span><span class="comment">   * independent of `$pgp_long_ids`.</span></div>
-<div class="line"><span class="lineno"> 1396</span><span class="comment">   * Fingerprint without spaces is 40 hex digits (SHA-1) or 32 hex digits (MD5).</span></div>
-<div class="line"><span class="lineno"> 1397</span><span class="comment">   * Strip leading &quot;0x&quot; for key ID detection and prepare pl and ps to indicate</span></div>
-<div class="line"><span class="lineno"> 1398</span><span class="comment">   * if an ID was found and to simplify logic in the key loop&#39;s inner</span></div>
-<div class="line"><span class="lineno"> 1399</span><span class="comment">   * condition of the caller. */</span></div>
-<div class="line"><span class="lineno"> 1400</span> </div>
-<div class="line"><span class="lineno"> 1401</span>  <span class="keywordtype">char</span> *pf = <a class="code hl_function" href="mutt_2string_8c.html#aa2fa4dcaf72786b58e825349883f14c2">mutt_str_skip_whitespace</a>(p);</div>
-<div class="line"><span class="lineno"> 1402</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pf, <span class="stringliteral">&quot;0x&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1403</span>    pf += 2;</div>
-<div class="line"><span class="lineno"> 1404</span> </div>
-<div class="line"><span class="lineno"> 1405</span>  <span class="comment">/* Check if a fingerprint is given, must be hex digits only, blanks</span></div>
-<div class="line"><span class="lineno"> 1406</span><span class="comment">   * separating groups of 4 hex digits are allowed. Also pre-check for ID. */</span></div>
-<div class="line"><span class="lineno"> 1407</span>  isid = 2; <span class="comment">/* unknown */</span></div>
-<div class="line"><span class="lineno"> 1408</span>  hexdigits = 0;</div>
-<div class="line"><span class="lineno"> 1409</span>  s1 = pf;</div>
-<div class="line"><span class="lineno"> 1410</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno"> 1411</span>  {</div>
-<div class="line"><span class="lineno"> 1412</span>    c = *(s1++);</div>
-<div class="line"><span class="lineno"> 1413</span>    <span class="keywordflow">if</span> (((<span class="charliteral">&#39;0&#39;</span> &lt;= c) &amp;&amp; (c &lt;= <span class="charliteral">&#39;9&#39;</span>)) || ((<span class="charliteral">&#39;A&#39;</span> &lt;= c) &amp;&amp; (c &lt;= <span class="charliteral">&#39;F&#39;</span>)) ||</div>
-<div class="line"><span class="lineno"> 1414</span>        ((<span class="charliteral">&#39;a&#39;</span> &lt;= c) &amp;&amp; (c &lt;= <span class="charliteral">&#39;f&#39;</span>)))</div>
-<div class="line"><span class="lineno"> 1415</span>    {</div>
-<div class="line"><span class="lineno"> 1416</span>      hexdigits++;</div>
-<div class="line"><span class="lineno"> 1417</span>      <span class="keywordflow">if</span> (isid == 2)</div>
-<div class="line"><span class="lineno"> 1418</span>        isid = 1; <span class="comment">/* it is an ID so far */</span></div>
-<div class="line"><span class="lineno"> 1419</span>    }</div>
-<div class="line"><span class="lineno"> 1420</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c)</div>
-<div class="line"><span class="lineno"> 1421</span>    {</div>
-<div class="line"><span class="lineno"> 1422</span>      isid = 0; <span class="comment">/* not an ID */</span></div>
-<div class="line"><span class="lineno"> 1423</span>      <span class="keywordflow">if</span> ((c == <span class="charliteral">&#39; &#39;</span>) &amp;&amp; ((hexdigits % 4) == 0))</div>
-<div class="line"><span class="lineno"> 1424</span>        ; <span class="comment">/* skip blank before or after 4 hex digits */</span></div>
-<div class="line"><span class="lineno"> 1425</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1426</span>        <span class="keywordflow">break</span>; <span class="comment">/* any other character or position */</span></div>
-<div class="line"><span class="lineno"> 1427</span>    }</div>
-<div class="line"><span class="lineno"> 1428</span>  } <span class="keywordflow">while</span> (c);</div>
-<div class="line"><span class="lineno"> 1429</span> </div>
-<div class="line"><span class="lineno"> 1430</span>  <span class="comment">/* If at end of input, check for correct fingerprint length and copy if. */</span></div>
-<div class="line"><span class="lineno"> 1431</span>  pfcopy = (!c &amp;&amp; ((hexdigits == 40) || (hexdigits == 32)) ? <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(pf) : NULL);</div>
-<div class="line"><span class="lineno"> 1432</span> </div>
-<div class="line"><span class="lineno"> 1433</span>  <span class="keywordflow">if</span> (pfcopy)</div>
-<div class="line"><span class="lineno"> 1434</span>  {</div>
-<div class="line"><span class="lineno"> 1435</span>    <span class="comment">/* Use pfcopy to strip all spaces from fingerprint and as hint. */</span></div>
-<div class="line"><span class="lineno"> 1436</span>    s1 = pfcopy;</div>
-<div class="line"><span class="lineno"> 1437</span>    s2 = pfcopy;</div>
-<div class="line"><span class="lineno"> 1438</span>    <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno"> 1439</span>    {</div>
-<div class="line"><span class="lineno"> 1440</span>      *(s1++) = *(s2 = <a class="code hl_function" href="mutt_2string_8c.html#aa2fa4dcaf72786b58e825349883f14c2">mutt_str_skip_whitespace</a>(s2));</div>
-<div class="line"><span class="lineno"> 1441</span>    } <span class="keywordflow">while</span> (*(s2++));</div>
-<div class="line"><span class="lineno"> 1442</span> </div>
-<div class="line"><span class="lineno"> 1443</span>    phint = pfcopy;</div>
-<div class="line"><span class="lineno"> 1444</span>    ps = NULL;</div>
-<div class="line"><span class="lineno"> 1445</span>    pl = NULL;</div>
-<div class="line"><span class="lineno"> 1446</span>  }</div>
-<div class="line"><span class="lineno"> 1447</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1448</span>  {</div>
-<div class="line"><span class="lineno"> 1449</span>    phint = p;</div>
-<div class="line"><span class="lineno"> 1450</span>    ps = NULL;</div>
-<div class="line"><span class="lineno"> 1451</span>    pl = NULL;</div>
-<div class="line"><span class="lineno"> 1452</span>    <span class="keywordflow">if</span> (isid == 1)</div>
-<div class="line"><span class="lineno"> 1453</span>    {</div>
-<div class="line"><span class="lineno"> 1454</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(pf) == 16)</div>
-<div class="line"><span class="lineno"> 1455</span>        pl = pf; <span class="comment">/* long key ID */</span></div>
-<div class="line"><span class="lineno"> 1456</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(pf) == 8)</div>
-<div class="line"><span class="lineno"> 1457</span>        ps = pf; <span class="comment">/* short key ID */</span></div>
-<div class="line"><span class="lineno"> 1458</span>    }</div>
-<div class="line"><span class="lineno"> 1459</span>  }</div>
-<div class="line"><span class="lineno"> 1460</span> </div>
-<div class="line"><span class="lineno"> 1461</span>  *pphint = phint;</div>
-<div class="line"><span class="lineno"> 1462</span>  *ppl = pl;</div>
-<div class="line"><span class="lineno"> 1463</span>  *pps = ps;</div>
-<div class="line"><span class="lineno"> 1464</span>  <span class="keywordflow">return</span> pfcopy;</div>
-<div class="line"><span class="lineno"> 1465</span>}</div>
+<p class="definition">Definition at line <a class="el" href="crypt_8c_source.html#l01383">1383</a> of file <a class="el" href="crypt_8c_source.html">crypt.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1385</span>{</div>
+<div class="line"><span class="lineno"> 1386</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *ps = NULL, *pl = NULL, *phint = NULL;</div>
+<div class="line"><span class="lineno"> 1387</span>  <span class="keywordtype">char</span> *pfcopy = NULL, *s1 = NULL, *s2 = NULL;</div>
+<div class="line"><span class="lineno"> 1388</span>  <span class="keywordtype">char</span> c;</div>
+<div class="line"><span class="lineno"> 1389</span>  <span class="keywordtype">int</span> isid;</div>
+<div class="line"><span class="lineno"> 1390</span>  <span class="keywordtype">size_t</span> hexdigits;</div>
+<div class="line"><span class="lineno"> 1391</span> </div>
+<div class="line"><span class="lineno"> 1392</span>  <span class="comment">/* User input may be partial name, fingerprint or short or long key ID,</span></div>
+<div class="line"><span class="lineno"> 1393</span><span class="comment">   * independent of `$pgp_long_ids`.</span></div>
+<div class="line"><span class="lineno"> 1394</span><span class="comment">   * Fingerprint without spaces is 40 hex digits (SHA-1) or 32 hex digits (MD5).</span></div>
+<div class="line"><span class="lineno"> 1395</span><span class="comment">   * Strip leading &quot;0x&quot; for key ID detection and prepare pl and ps to indicate</span></div>
+<div class="line"><span class="lineno"> 1396</span><span class="comment">   * if an ID was found and to simplify logic in the key loop&#39;s inner</span></div>
+<div class="line"><span class="lineno"> 1397</span><span class="comment">   * condition of the caller. */</span></div>
+<div class="line"><span class="lineno"> 1398</span> </div>
+<div class="line"><span class="lineno"> 1399</span>  <span class="keywordtype">char</span> *pf = <a class="code hl_function" href="mutt_2string_8c.html#aa2fa4dcaf72786b58e825349883f14c2">mutt_str_skip_whitespace</a>(p);</div>
+<div class="line"><span class="lineno"> 1400</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pf, <span class="stringliteral">&quot;0x&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1401</span>    pf += 2;</div>
+<div class="line"><span class="lineno"> 1402</span> </div>
+<div class="line"><span class="lineno"> 1403</span>  <span class="comment">/* Check if a fingerprint is given, must be hex digits only, blanks</span></div>
+<div class="line"><span class="lineno"> 1404</span><span class="comment">   * separating groups of 4 hex digits are allowed. Also pre-check for ID. */</span></div>
+<div class="line"><span class="lineno"> 1405</span>  isid = 2; <span class="comment">/* unknown */</span></div>
+<div class="line"><span class="lineno"> 1406</span>  hexdigits = 0;</div>
+<div class="line"><span class="lineno"> 1407</span>  s1 = pf;</div>
+<div class="line"><span class="lineno"> 1408</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno"> 1409</span>  {</div>
+<div class="line"><span class="lineno"> 1410</span>    c = *(s1++);</div>
+<div class="line"><span class="lineno"> 1411</span>    <span class="keywordflow">if</span> (((<span class="charliteral">&#39;0&#39;</span> &lt;= c) &amp;&amp; (c &lt;= <span class="charliteral">&#39;9&#39;</span>)) || ((<span class="charliteral">&#39;A&#39;</span> &lt;= c) &amp;&amp; (c &lt;= <span class="charliteral">&#39;F&#39;</span>)) ||</div>
+<div class="line"><span class="lineno"> 1412</span>        ((<span class="charliteral">&#39;a&#39;</span> &lt;= c) &amp;&amp; (c &lt;= <span class="charliteral">&#39;f&#39;</span>)))</div>
+<div class="line"><span class="lineno"> 1413</span>    {</div>
+<div class="line"><span class="lineno"> 1414</span>      hexdigits++;</div>
+<div class="line"><span class="lineno"> 1415</span>      <span class="keywordflow">if</span> (isid == 2)</div>
+<div class="line"><span class="lineno"> 1416</span>        isid = 1; <span class="comment">/* it is an ID so far */</span></div>
+<div class="line"><span class="lineno"> 1417</span>    }</div>
+<div class="line"><span class="lineno"> 1418</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c)</div>
+<div class="line"><span class="lineno"> 1419</span>    {</div>
+<div class="line"><span class="lineno"> 1420</span>      isid = 0; <span class="comment">/* not an ID */</span></div>
+<div class="line"><span class="lineno"> 1421</span>      <span class="keywordflow">if</span> ((c == <span class="charliteral">&#39; &#39;</span>) &amp;&amp; ((hexdigits % 4) == 0))</div>
+<div class="line"><span class="lineno"> 1422</span>        ; <span class="comment">/* skip blank before or after 4 hex digits */</span></div>
+<div class="line"><span class="lineno"> 1423</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1424</span>        <span class="keywordflow">break</span>; <span class="comment">/* any other character or position */</span></div>
+<div class="line"><span class="lineno"> 1425</span>    }</div>
+<div class="line"><span class="lineno"> 1426</span>  } <span class="keywordflow">while</span> (c);</div>
+<div class="line"><span class="lineno"> 1427</span> </div>
+<div class="line"><span class="lineno"> 1428</span>  <span class="comment">/* If at end of input, check for correct fingerprint length and copy if. */</span></div>
+<div class="line"><span class="lineno"> 1429</span>  pfcopy = (!c &amp;&amp; ((hexdigits == 40) || (hexdigits == 32)) ? <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(pf) : NULL);</div>
+<div class="line"><span class="lineno"> 1430</span> </div>
+<div class="line"><span class="lineno"> 1431</span>  <span class="keywordflow">if</span> (pfcopy)</div>
+<div class="line"><span class="lineno"> 1432</span>  {</div>
+<div class="line"><span class="lineno"> 1433</span>    <span class="comment">/* Use pfcopy to strip all spaces from fingerprint and as hint. */</span></div>
+<div class="line"><span class="lineno"> 1434</span>    s1 = pfcopy;</div>
+<div class="line"><span class="lineno"> 1435</span>    s2 = pfcopy;</div>
+<div class="line"><span class="lineno"> 1436</span>    <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno"> 1437</span>    {</div>
+<div class="line"><span class="lineno"> 1438</span>      *(s1++) = *(s2 = <a class="code hl_function" href="mutt_2string_8c.html#aa2fa4dcaf72786b58e825349883f14c2">mutt_str_skip_whitespace</a>(s2));</div>
+<div class="line"><span class="lineno"> 1439</span>    } <span class="keywordflow">while</span> (*(s2++));</div>
+<div class="line"><span class="lineno"> 1440</span> </div>
+<div class="line"><span class="lineno"> 1441</span>    phint = pfcopy;</div>
+<div class="line"><span class="lineno"> 1442</span>    ps = NULL;</div>
+<div class="line"><span class="lineno"> 1443</span>    pl = NULL;</div>
+<div class="line"><span class="lineno"> 1444</span>  }</div>
+<div class="line"><span class="lineno"> 1445</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1446</span>  {</div>
+<div class="line"><span class="lineno"> 1447</span>    phint = p;</div>
+<div class="line"><span class="lineno"> 1448</span>    ps = NULL;</div>
+<div class="line"><span class="lineno"> 1449</span>    pl = NULL;</div>
+<div class="line"><span class="lineno"> 1450</span>    <span class="keywordflow">if</span> (isid == 1)</div>
+<div class="line"><span class="lineno"> 1451</span>    {</div>
+<div class="line"><span class="lineno"> 1452</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(pf) == 16)</div>
+<div class="line"><span class="lineno"> 1453</span>        pl = pf; <span class="comment">/* long key ID */</span></div>
+<div class="line"><span class="lineno"> 1454</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(pf) == 8)</div>
+<div class="line"><span class="lineno"> 1455</span>        ps = pf; <span class="comment">/* short key ID */</span></div>
+<div class="line"><span class="lineno"> 1456</span>    }</div>
+<div class="line"><span class="lineno"> 1457</span>  }</div>
+<div class="line"><span class="lineno"> 1458</span> </div>
+<div class="line"><span class="lineno"> 1459</span>  *pphint = phint;</div>
+<div class="line"><span class="lineno"> 1460</span>  *ppl = pl;</div>
+<div class="line"><span class="lineno"> 1461</span>  *pps = ps;</div>
+<div class="line"><span class="lineno"> 1462</span>  <span class="keywordflow">return</span> pfcopy;</div>
+<div class="line"><span class="lineno"> 1463</span>}</div>
 <div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00254">string.c:254</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_aa2fa4dcaf72786b58e825349883f14c2"><div class="ttname"><a href="mutt_2string_8c.html#aa2fa4dcaf72786b58e825349883f14c2">mutt_str_skip_whitespace</a></div><div class="ttdeci">char * mutt_str_skip_whitespace(const char *p)</div><div class="ttdoc">Find the first non-whitespace character in a string.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00552">string.c:552</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00497">string.c:497</a></div></div>
@@ -536,19 +536,19 @@ Functions</h2></td></tr>
 </dl>
 <p>Check if a crypt-hook value is a key id. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt_8c_source.html#l01474">1474</a> of file <a class="el" href="crypt_8c_source.html">crypt.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1475</span>{</div>
-<div class="line"><span class="lineno"> 1476</span>  <span class="comment">/* or should we require the &quot;0x&quot;? */</span></div>
-<div class="line"><span class="lineno"> 1477</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(s, <span class="stringliteral">&quot;0x&quot;</span>, 2))</div>
-<div class="line"><span class="lineno"> 1478</span>    s += 2;</div>
-<div class="line"><span class="lineno"> 1479</span>  <span class="keywordflow">if</span> (strlen(s) % 8)</div>
-<div class="line"><span class="lineno"> 1480</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1481</span>  <span class="keywordflow">while</span> (*s)</div>
-<div class="line"><span class="lineno"> 1482</span>    <span class="keywordflow">if</span> (!strchr(<span class="stringliteral">&quot;0123456789ABCDEFabcdef&quot;</span>, *s++))</div>
-<div class="line"><span class="lineno"> 1483</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1484</span> </div>
-<div class="line"><span class="lineno"> 1485</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1486</span>}</div>
+<p class="definition">Definition at line <a class="el" href="crypt_8c_source.html#l01472">1472</a> of file <a class="el" href="crypt_8c_source.html">crypt.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1473</span>{</div>
+<div class="line"><span class="lineno"> 1474</span>  <span class="comment">/* or should we require the &quot;0x&quot;? */</span></div>
+<div class="line"><span class="lineno"> 1475</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(s, <span class="stringliteral">&quot;0x&quot;</span>, 2))</div>
+<div class="line"><span class="lineno"> 1476</span>    s += 2;</div>
+<div class="line"><span class="lineno"> 1477</span>  <span class="keywordflow">if</span> (strlen(s) % 8)</div>
+<div class="line"><span class="lineno"> 1478</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1479</span>  <span class="keywordflow">while</span> (*s)</div>
+<div class="line"><span class="lineno"> 1480</span>    <span class="keywordflow">if</span> (!strchr(<span class="stringliteral">&quot;0123456789ABCDEFabcdef&quot;</span>, *s++))</div>
+<div class="line"><span class="lineno"> 1481</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1482</span> </div>
+<div class="line"><span class="lineno"> 1483</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1484</span>}</div>
 <div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00426">string.c:426</a></div></div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

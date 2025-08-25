@@ -31,7 +31,7 @@ var logging2_8h =
     [ "log_queue_add", "logging2_8h.html#aa5914eb167c53fecab6fb77fc5935404", null ],
     [ "log_queue_empty", "logging2_8h.html#a0f20ec32631fac9bf1f6fa2d1eb29da1", null ],
     [ "log_queue_flush", "logging2_8h.html#a964e39fa7f189e7513aa05e9993a1c0b", null ],
-    [ "log_queue_get", "logging2_8h.html#a94c96ca02ff436a5a3a019abdff90410", null ],
+    [ "log_queue_get", "logging2_8h.html#af289d9795f65ea28887c56f6dd957021", null ],
     [ "log_queue_set_max_size", "logging2_8h.html#a22363e7b791fe93f8c17977850c5dfec", null ],
     [ "log_file_close", "logging2_8h.html#ad17b384128d5803b107ecded67cc4077", null ],
     [ "log_file_open", "logging2_8h.html#a04052a86613d16390be5add72eee7523", null ],

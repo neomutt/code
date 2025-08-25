@@ -12,7 +12,7 @@ var mutt_2logging_8c =
     [ "log_queue_set_max_size", "mutt_2logging_8c.html#a22363e7b791fe93f8c17977850c5dfec", null ],
     [ "log_queue_empty", "mutt_2logging_8c.html#a0f20ec32631fac9bf1f6fa2d1eb29da1", null ],
     [ "log_queue_flush", "mutt_2logging_8c.html#a964e39fa7f189e7513aa05e9993a1c0b", null ],
-    [ "log_queue_get", "mutt_2logging_8c.html#a94c96ca02ff436a5a3a019abdff90410", null ],
+    [ "log_queue_get", "mutt_2logging_8c.html#af289d9795f65ea28887c56f6dd957021", null ],
     [ "log_disp_queue", "group__logging__api.html#ga2edbe9483e89b1090b072e9d9e4de62f", null ],
     [ "log_disp_terminal", "group__logging__api.html#gaa8db59bb1ae8a4901a2635a68367d477", null ],
     [ "log_multiline_full", "mutt_2logging_8c.html#a8f8ee3672f4406de96665e96c256d989", null ],
