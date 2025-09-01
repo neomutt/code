@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-05-10-9-gb9f27b</span>
+   &#160;<span id="projectnumber">2025-05-10-25-g858224</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -184,51 +184,51 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This must happen after the terminfo has been initialised. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00072">72</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>{</div>
-<div class="line"><span class="lineno">   74</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *known[] = {</div>
-<div class="line"><span class="lineno">   75</span>    <span class="stringliteral">&quot;color-xterm&quot;</span>, <span class="stringliteral">&quot;cygwin&quot;</span>, <span class="stringliteral">&quot;eterm&quot;</span>,  <span class="stringliteral">&quot;kterm&quot;</span>, <span class="stringliteral">&quot;nxterm&quot;</span>,</div>
-<div class="line"><span class="lineno">   76</span>    <span class="stringliteral">&quot;putty&quot;</span>,       <span class="stringliteral">&quot;rxvt&quot;</span>,   <span class="stringliteral">&quot;screen&quot;</span>, <span class="stringliteral">&quot;xterm&quot;</span>, NULL,</div>
-<div class="line"><span class="lineno">   77</span>  };</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span><span class="preprocessor">#ifdef HAVE_USE_EXTENDED_NAMES</span></div>
-<div class="line"><span class="lineno">   80</span>  <span class="comment">/* If tsl is set, then terminfo says that status lines work. */</span></div>
-<div class="line"><span class="lineno">   81</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *tcaps = <a class="code hl_function" href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec">mutt_tigetstr</a>(<span class="stringliteral">&quot;tsl&quot;</span>);</div>
-<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">if</span> (tcaps)</div>
-<div class="line"><span class="lineno">   83</span>  {</div>
-<div class="line"><span class="lineno">   84</span>    <span class="comment">/* update the static definitions of tsl/fsl from terminfo */</span></div>
-<div class="line"><span class="lineno">   85</span>    <a class="code hl_variable" href="terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6">TSL</a> = tcaps;</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>    tcaps = <a class="code hl_function" href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec">mutt_tigetstr</a>(<span class="stringliteral">&quot;fsl&quot;</span>);</div>
-<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">if</span> (tcaps)</div>
-<div class="line"><span class="lineno">   89</span>      <a class="code hl_variable" href="terminal_8c.html#a2a578d4e25e598d7eb838298d9c735a1">FSL</a> = tcaps;</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   92</span>  }</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>  <span class="comment">/* If XT (boolean) is set, then this terminal supports the standard escape. */</span></div>
-<div class="line"><span class="lineno">   95</span>  <span class="comment">/* Beware: tigetflag returns -1 if XT is invalid or not a boolean. */</span></div>
-<div class="line"><span class="lineno">   96</span>  <span class="keywordtype">int</span> tcapi = tigetflag(<span class="stringliteral">&quot;XT&quot;</span>);</div>
-<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> (tcapi == 1)</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   99</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>  <span class="comment">/* Check term types that are known to support the standard escape without</span></div>
-<div class="line"><span class="lineno">  102</span><span class="comment">   * necessarily asserting it in terminfo. */</span></div>
-<div class="line"><span class="lineno">  103</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *term = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<span class="stringliteral">&quot;TERM&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span> **termp = known; *termp; termp++)</div>
-<div class="line"><span class="lineno">  105</span>  {</div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">if</span> (term &amp;&amp; !<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(term, *termp))</div>
-<div class="line"><span class="lineno">  107</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  108</span>  }</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  111</span>}</div>
+<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00083">83</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>{</div>
+<div class="line"><span class="lineno">   85</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *known[] = {</div>
+<div class="line"><span class="lineno">   86</span>    <span class="stringliteral">&quot;color-xterm&quot;</span>, <span class="stringliteral">&quot;cygwin&quot;</span>, <span class="stringliteral">&quot;eterm&quot;</span>,  <span class="stringliteral">&quot;kterm&quot;</span>, <span class="stringliteral">&quot;nxterm&quot;</span>,</div>
+<div class="line"><span class="lineno">   87</span>    <span class="stringliteral">&quot;putty&quot;</span>,       <span class="stringliteral">&quot;rxvt&quot;</span>,   <span class="stringliteral">&quot;screen&quot;</span>, <span class="stringliteral">&quot;xterm&quot;</span>, NULL,</div>
+<div class="line"><span class="lineno">   88</span>  };</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span><span class="preprocessor">#ifdef HAVE_USE_EXTENDED_NAMES</span></div>
+<div class="line"><span class="lineno">   91</span>  <span class="comment">/* If tsl is set, then terminfo says that status lines work. */</span></div>
+<div class="line"><span class="lineno">   92</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *tcaps = <a class="code hl_function" href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec">mutt_tigetstr</a>(<span class="stringliteral">&quot;tsl&quot;</span>);</div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">if</span> (tcaps)</div>
+<div class="line"><span class="lineno">   94</span>  {</div>
+<div class="line"><span class="lineno">   95</span>    <span class="comment">/* update the static definitions of tsl/fsl from terminfo */</span></div>
+<div class="line"><span class="lineno">   96</span>    <a class="code hl_variable" href="terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6">TSL</a> = tcaps;</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    tcaps = <a class="code hl_function" href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec">mutt_tigetstr</a>(<span class="stringliteral">&quot;fsl&quot;</span>);</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">if</span> (tcaps)</div>
+<div class="line"><span class="lineno">  100</span>      <a class="code hl_variable" href="terminal_8c.html#a2a578d4e25e598d7eb838298d9c735a1">FSL</a> = tcaps;</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  103</span>  }</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>  <span class="comment">/* If XT (boolean) is set, then this terminal supports the standard escape. */</span></div>
+<div class="line"><span class="lineno">  106</span>  <span class="comment">/* Beware: tigetflag returns -1 if XT is invalid or not a boolean. */</span></div>
+<div class="line"><span class="lineno">  107</span>  <span class="keywordtype">int</span> tcapi = tigetflag(<span class="stringliteral">&quot;XT&quot;</span>);</div>
+<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">if</span> (tcapi == 1)</div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  110</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>  <span class="comment">/* Check term types that are known to support the standard escape without</span></div>
+<div class="line"><span class="lineno">  113</span><span class="comment">   * necessarily asserting it in terminfo. */</span></div>
+<div class="line"><span class="lineno">  114</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *term = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<span class="stringliteral">&quot;TERM&quot;</span>);</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span> **termp = known; *termp; termp++)</div>
+<div class="line"><span class="lineno">  116</span>  {</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span> (term &amp;&amp; !<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(term, *termp))</div>
+<div class="line"><span class="lineno">  118</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  119</span>  }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  122</span>}</div>
 <div class="ttc" id="amutt_2string_8c_html_a954e319c94dafe57f48ea9b847269127"><div class="ttname"><a href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a></div><div class="ttdeci">const char * mutt_str_getenv(const char *name)</div><div class="ttdoc">Get an environment variable.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00727">string.c:727</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_aebd2a8a3f8a30062c31fa1474d87cc41"><div class="ttname"><a href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a></div><div class="ttdeci">size_t mutt_istr_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix, ignoring case.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00243">string.c:243</a></div></div>
-<div class="ttc" id="aterminal_8c_html_a2a578d4e25e598d7eb838298d9c735a1"><div class="ttname"><a href="terminal_8c.html#a2a578d4e25e598d7eb838298d9c735a1">FSL</a></div><div class="ttdeci">static const char * FSL</div><div class="ttdoc">FSL: from_status_line - Sent after the terminal title.</div><div class="ttdef"><b>Definition:</b> <a href="terminal_8c_source.html#l00048">terminal.c:48</a></div></div>
-<div class="ttc" id="aterminal_8c_html_a47bc4a9075bca8a5ad5a478acc481ea6"><div class="ttname"><a href="terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6">TSL</a></div><div class="ttdeci">static const char * TSL</div><div class="ttdoc">TSL: to_status_line - Sent before the terminal title.</div><div class="ttdef"><b>Definition:</b> <a href="terminal_8c_source.html#l00046">terminal.c:46</a></div></div>
-<div class="ttc" id="aterminal_8c_html_a4f0d4f44cb4580ba6a8ebf298b30bdec"><div class="ttname"><a href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec">mutt_tigetstr</a></div><div class="ttdeci">const char * mutt_tigetstr(const char *name)</div><div class="ttdoc">Get terminal capabilities.</div><div class="ttdef"><b>Definition:</b> <a href="terminal_8c_source.html#l00057">terminal.c:57</a></div></div>
+<div class="ttc" id="aterminal_8c_html_a2a578d4e25e598d7eb838298d9c735a1"><div class="ttname"><a href="terminal_8c.html#a2a578d4e25e598d7eb838298d9c735a1">FSL</a></div><div class="ttdeci">static const char * FSL</div><div class="ttdoc">FSL: from_status_line - Sent after the terminal title.</div><div class="ttdef"><b>Definition:</b> <a href="terminal_8c_source.html#l00059">terminal.c:59</a></div></div>
+<div class="ttc" id="aterminal_8c_html_a47bc4a9075bca8a5ad5a478acc481ea6"><div class="ttname"><a href="terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6">TSL</a></div><div class="ttdeci">static const char * TSL</div><div class="ttdoc">TSL: to_status_line - Sent before the terminal title.</div><div class="ttdef"><b>Definition:</b> <a href="terminal_8c_source.html#l00057">terminal.c:57</a></div></div>
+<div class="ttc" id="aterminal_8c_html_a4f0d4f44cb4580ba6a8ebf298b30bdec"><div class="ttname"><a href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec">mutt_tigetstr</a></div><div class="ttdeci">const char * mutt_tigetstr(const char *name)</div><div class="ttdoc">Get terminal capabilities.</div><div class="ttdef"><b>Definition:</b> <a href="terminal_8c_source.html#l00068">terminal.c:68</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -273,13 +273,13 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>To clear the text, set the title to a single space. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00119">119</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>{</div>
-<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">if</span> (!str || (*str == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>  fprintf(stderr, <span class="stringliteral">&quot;%s%s%s&quot;</span>, <a class="code hl_variable" href="terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6">TSL</a>, str, <a class="code hl_variable" href="terminal_8c.html#a2a578d4e25e598d7eb838298d9c735a1">FSL</a>);</div>
-<div class="line"><span class="lineno">  125</span>}</div>
+<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00130">130</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>{</div>
+<div class="line"><span class="lineno">  132</span>  <span class="keywordflow">if</span> (!str || (*str == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>  fprintf(stderr, <span class="stringliteral">&quot;%s%s%s&quot;</span>, <a class="code hl_variable" href="terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6">TSL</a>, str, <a class="code hl_variable" href="terminal_8c.html#a2a578d4e25e598d7eb838298d9c735a1">FSL</a>);</div>
+<div class="line"><span class="lineno">  136</span>}</div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -316,14 +316,14 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>To clear the icon, set it to a single space. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00133">133</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  134</span>{</div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">if</span> (!str || (*str == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  137</span> </div>
-<div class="line"><span class="lineno">  138</span>  <span class="comment">/* icon setting is not supported in terminfo, so hardcode the escape */</span></div>
-<div class="line"><span class="lineno">  139</span>  fprintf(stderr, <span class="stringliteral">&quot;\033]1;%s\007&quot;</span>, str); <span class="comment">// Escape</span></div>
-<div class="line"><span class="lineno">  140</span>}</div>
+<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00144">144</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>{</div>
+<div class="line"><span class="lineno">  146</span>  <span class="keywordflow">if</span> (!str || (*str == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>  <span class="comment">/* icon setting is not supported in terminfo, so hardcode the escape */</span></div>
+<div class="line"><span class="lineno">  150</span>  fprintf(stderr, <span class="stringliteral">&quot;\033]1;%s\007&quot;</span>, str); <span class="comment">// Escape</span></div>
+<div class="line"><span class="lineno">  151</span>}</div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -366,14 +366,14 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Do not free the returned string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00057">57</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
-<div class="line"><span class="lineno">   59</span>  <span class="keywordtype">char</span> *cap = tigetstr(name);</div>
-<div class="line"><span class="lineno">   60</span>  <span class="keywordflow">if</span> (!cap || (cap == (<span class="keywordtype">char</span> *) -1) || (*cap == <span class="charliteral">&#39;\0&#39;</span>))</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">return</span> cap;</div>
-<div class="line"><span class="lineno">   64</span>}</div>
+<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00068">68</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>{</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordtype">char</span> *cap = tigetstr(name);</div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordflow">if</span> (!cap || (cap == (<span class="keywordtype">char</span> *) -1) || (*cap == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>  <span class="keywordflow">return</span> cap;</div>
+<div class="line"><span class="lineno">   75</span>}</div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
@@ -408,7 +408,7 @@ Variables</h2></td></tr>
 
 <p>Terminal Setting is supported. </p>
 
-<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00042">42</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="terminal_8c_source.html#l00053">53</a> of file <a class="el" href="terminal_8c_source.html">terminal.c</a>.</p>
 
 </div>
 </div>

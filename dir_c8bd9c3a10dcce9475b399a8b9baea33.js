@@ -9,6 +9,8 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "buffer.h", "buffer_8h.html", "buffer_8h" ],
     [ "charset.c", "mutt_2charset_8c.html", "mutt_2charset_8c" ],
     [ "charset.h", "mutt_2charset_8h.html", "mutt_2charset_8h" ],
+    [ "ctype.c", "ctype_8c.html", "ctype_8c" ],
+    [ "ctype2.h", "ctype2_8h.html", "ctype2_8h" ],
     [ "date.c", "mutt_2date_8c.html", "mutt_2date_8c" ],
     [ "date.h", "date_8h.html", "date_8h" ],
     [ "envlist.c", "envlist_8c.html", "envlist_8c" ],

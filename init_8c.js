@@ -1,7 +1,5 @@
 var init_8c =
 [
-    [ "Extkey", "structExtkey.html", "structExtkey" ],
-    [ "find_ext_name", "init_8c.html#abcb363b2c6e567d56de8f900f93c7ef2", null ],
     [ "init_extended_keys", "init_8c.html#ae6be8f34be875971676339bac0d726bd", null ],
     [ "create_bindings", "init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b", null ],
     [ "km_init", "init_8c.html#a58e38a78c1e289c77166b7239ee843b0", null ],
@@ -20,6 +18,5 @@ var init_8c =
     [ "PgpDefaultBindings", "init_8c.html#ac34ba5661fc49da744196b10ac4fb60c", null ],
     [ "PostponedDefaultBindings", "init_8c.html#a43fe9838c367b8164c0c9242355f34ef", null ],
     [ "QueryDefaultBindings", "init_8c.html#a3d408602c06d6a9eedb291ac880b422b", null ],
-    [ "SmimeDefaultBindings", "init_8c.html#ae8798a4f3a90d5c7736e7880d38f6ba7", null ],
-    [ "ExtKeys", "init_8c.html#a542d4e1caa8cb858e9880d929b4e0b06", null ]
+    [ "SmimeDefaultBindings", "init_8c.html#ae8798a4f3a90d5c7736e7880d38f6ba7", null ]
 ];

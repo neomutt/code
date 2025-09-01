@@ -65,5 +65,6 @@ var searchData=
   ['cram_2dmd5_20authentication_62',['CRAM-MD5 authentication',['../imap_auth_cram.html',1,'lib_imap']]],
   ['create_20temporary_20files_63',['Create Temporary Files',['../core_tmp.html',1,'lib_core']]],
   ['create_2fmanipulate_20threading_20in_20emails_64',['Create/manipulate threading in emails',['../neo_mutt_thread.html',1,'index']]],
-  ['curses_20colour_65',['Curses Colour',['../color_curses.html',1,'lib_color']]]
+  ['ctype_283_29_20wrapper_20functions_65',['ctype(3) wrapper functions',['../mutt_ctype.html',1,'lib_mutt']]],
+  ['curses_20colour_66',['Curses Colour',['../color_curses.html',1,'lib_color']]]
 ];

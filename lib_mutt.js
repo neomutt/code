@@ -5,6 +5,7 @@ var lib_mutt =
     [ "Conversion to/from base64 encoding", "mutt_base64.html", null ],
     [ "Helper object for storing and parsing strings", "mutt_buffer.html", null ],
     [ "Conversion between different character encodings", "mutt_charset.html", null ],
+    [ "ctype(3) wrapper functions", "mutt_ctype.html", null ],
     [ "Time and date handling routines", "mutt_date.html", null ],
     [ "Private copy of the environment variables", "mutt_envlist.html", null ],
     [ "Case-insensitive fixed-chunk comparisons", "mutt_eqi.html", null ],

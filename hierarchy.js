@@ -114,7 +114,6 @@ var hierarchy =
     ] ],
     [ "ExpandoParseError", "structExpandoParseError.html", null ],
     [ "ExpandoRenderCallback", "structExpandoRenderCallback.html", null ],
-    [ "Extkey", "structExtkey.html", null ],
     [ "FetchCtx", "structFetchCtx.html", null ],
     [ "FgetConv", "structFgetConv.html", null ],
     [ "FileCompletionData", "structFileCompletionData.html", null ],

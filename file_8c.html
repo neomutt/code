@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-05-10-9-gb9f27b</span>
+   &#160;<span id="projectnumber">2025-05-10-25-g858224</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -108,7 +108,6 @@ $(document).ready(function(){initNavTree('file_8c.html',''); initResizable(); })
 <p>File management functions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;config.h&quot;</code><br />
-<code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
 <code>#include &lt;fcntl.h&gt;</code><br />
 <code>#include &lt;limits.h&gt;</code><br />
@@ -127,6 +126,7 @@ $(document).ready(function(){initNavTree('file_8c.html',''); initResizable(); })
 <code>#include &quot;<a class="el" href="date_8h_source.html">date.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="logging2_8h_source.html">logging2.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="memory_8h_source.html">memory.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ctype2_8h_source.html">mutt/ctype2.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mutt_2message_8h_source.html">message.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mutt_2path_8h_source.html">path.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pool_8h_source.html">pool.h</a>&quot;</code><br />
@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('file_8c.html',''); initResizable(); })
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c__incl.svg" width="2056" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c__incl.svg" width="2002" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -2336,7 +2336,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  936</span> </div>
 <div class="line"><span class="lineno">  937</span>  <span class="keywordflow">return</span> mtime;</div>
 <div class="line"><span class="lineno">  938</span>}</div>
-<div class="ttc" id="amutt_2date_8c_html_ad1e6304a91c7b6f3c266a9b17c1740fe"><div class="ttname"><a href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a></div><div class="ttdeci">time_t mutt_date_now(void)</div><div class="ttdoc">Return the number of seconds since the Unix epoch.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2date_8c_source.html#l00456">date.c:456</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_ad1e6304a91c7b6f3c266a9b17c1740fe"><div class="ttname"><a href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a></div><div class="ttdeci">time_t mutt_date_now(void)</div><div class="ttdoc">Return the number of seconds since the Unix epoch.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2date_8c_source.html#l00455">date.c:455</a></div></div>
 </div><!-- fragment --><div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-31-summary" class="dynsummary" style="display:block;">
@@ -3116,19 +3116,28 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1311</span>  <a class="code hl_define" href="string2_8h.html#aebd4477213a7b706515efaffdec64181">SKIPWS</a>(buf);</div>
 <div class="line"><span class="lineno"> 1312</span>  <span class="keywordtype">char</span> *start = buf;</div>
 <div class="line"><span class="lineno"> 1313</span> </div>
-<div class="line"><span class="lineno"> 1314</span>  <span class="keywordflow">while</span> ((*buf != <span class="charliteral">&#39;\0&#39;</span>) &amp;&amp; !isspace(*buf))</div>
+<div class="line"><span class="lineno"> 1314</span>  <span class="keywordflow">while</span> ((*buf != <span class="charliteral">&#39;\0&#39;</span>) &amp;&amp; !<a class="code hl_function" href="ctype_8c.html#a4437ff43159c7036db44b6c18c494679">mutt_isspace</a>(*buf))</div>
 <div class="line"><span class="lineno"> 1315</span>    buf++;</div>
 <div class="line"><span class="lineno"> 1316</span> </div>
 <div class="line"><span class="lineno"> 1317</span>  *buf = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><span class="lineno"> 1318</span> </div>
 <div class="line"><span class="lineno"> 1319</span>  <span class="keywordflow">return</span> start;</div>
 <div class="line"><span class="lineno"> 1320</span>}</div>
+<div class="ttc" id="actype_8c_html_a4437ff43159c7036db44b6c18c494679"><div class="ttname"><a href="ctype_8c.html#a4437ff43159c7036db44b6c18c494679">mutt_isspace</a></div><div class="ttdeci">int mutt_isspace(int arg)</div><div class="ttdoc">Wrapper for isspace(3)</div><div class="ttdef"><b>Definition:</b> <a href="ctype_8c_source.html#l00094">ctype.c:94</a></div></div>
 <div class="ttc" id="astring2_8h_html_aebd4477213a7b706515efaffdec64181"><div class="ttname"><a href="string2_8h.html#aebd4477213a7b706515efaffdec64181">SKIPWS</a></div><div class="ttdeci">#define SKIPWS(ch)</div><div class="ttdef"><b>Definition:</b> <a href="string2_8h_source.html#l00045">string2.h:45</a></div></div>
 </div><!-- fragment --><div id="dynsection-46" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-46-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-46-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-46-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-46-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a322b3819fa7a44209b89d7b009af4336_cgraph.svg" width="331" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-47-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-47-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-47-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a322b3819fa7a44209b89d7b009af4336_icgraph.svg" width="304" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3178,11 +3187,11 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1337</span> </div>
 <div class="line"><span class="lineno"> 1338</span>  <span class="keywordflow">return</span> st.st_size == 0;</div>
 <div class="line"><span class="lineno"> 1339</span>}</div>
-</div><!-- fragment --><div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-47-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-47-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-48" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-48-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-48-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-47-content" class="dyncontent" style="display:none;">
+<div id="dynsection-48-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a417087adf70a53897756794b6562c511_icgraph.svg" width="375" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3242,19 +3251,19 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1356</span>}</div>
 <div class="ttc" id="afile_8c_html_a0da2bc91bbaabcf0c3c403a1d61c8526"><div class="ttname"><a href="file_8c.html#a0da2bc91bbaabcf0c3c403a1d61c8526">buf_quote_filename</a></div><div class="ttdeci">void buf_quote_filename(struct Buffer *buf, const char *filename, bool add_outer)</div><div class="ttdoc">Quote a filename to survive the shell's quoting rules.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l00810">file.c:810</a></div></div>
 <div class="ttc" id="afile_8c_html_ab0b0c8e739075124bcd94ca090b328e1"><div class="ttname"><a href="file_8c.html#ab0b0c8e739075124bcd94ca090b328e1">mutt_file_expand_fmt</a></div><div class="ttdeci">void mutt_file_expand_fmt(struct Buffer *dest, const char *fmt, const char *src)</div><div class="ttdoc">Replace s in a string with a filename.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01364">file.c:1364</a></div></div>
-</div><!-- fragment --><div id="dynsection-48" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-48-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-48-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-48-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a38a33d4b10796145aab0ca1f802ff26f_cgraph.svg" width="362" height="234"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-49" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-49-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-49" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-49-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-49-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-49-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a38a33d4b10796145aab0ca1f802ff26f_cgraph.svg" width="362" height="234"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-50" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-50-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-50-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-50-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a38a33d4b10796145aab0ca1f802ff26f_icgraph.svg" width="368" height="184"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3344,19 +3353,19 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1402</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(dest, src);</div>
 <div class="line"><span class="lineno"> 1403</span>  }</div>
 <div class="line"><span class="lineno"> 1404</span>}</div>
-</div><!-- fragment --><div id="dynsection-50" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-50-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-50-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-50-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_ab0b0c8e739075124bcd94ca090b328e1_cgraph.svg" width="304" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-51" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-51-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-51" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-51-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-51-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-51-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_ab0b0c8e739075124bcd94ca090b328e1_cgraph.svg" width="304" height="135"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-52" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-52-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-52-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-52-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_ab0b0c8e739075124bcd94ca090b328e1_icgraph.svg" width="394" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3405,11 +3414,11 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1420</span> </div>
 <div class="line"><span class="lineno"> 1421</span>  <span class="keywordflow">return</span> st.st_size;</div>
 <div class="line"><span class="lineno"> 1422</span>}</div>
-</div><!-- fragment --><div id="dynsection-52" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-52-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-52-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-53" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-53-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-53-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-52-content" class="dyncontent" style="display:none;">
+<div id="dynsection-53-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a75f1c8024613a5e8c23f92d229f52101_icgraph.svg" width="567" height="351"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3458,11 +3467,11 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1438</span> </div>
 <div class="line"><span class="lineno"> 1439</span>  <span class="keywordflow">return</span> st.st_size;</div>
 <div class="line"><span class="lineno"> 1440</span>}</div>
-</div><!-- fragment --><div id="dynsection-53" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-53-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-53-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-54" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-54-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-54-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-53-content" class="dyncontent" style="display:none;">
+<div id="dynsection-54-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a4cffa4f503de3736198956ebed431f7e_icgraph.svg" width="366" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3527,11 +3536,11 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1462</span>    <span class="keywordflow">return</span> 1;</div>
 <div class="line"><span class="lineno"> 1463</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno"> 1464</span>}</div>
-</div><!-- fragment --><div id="dynsection-54" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-54-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-54-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-55" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-55-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-55-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-54-content" class="dyncontent" style="display:none;">
+<div id="dynsection-55-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a50b47db0c2ba13f42141c27a7d271779_icgraph.svg" width="366" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3613,11 +3622,11 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="ttc" id="afile_8h_html_ad852389693b4c5a8d79c25e84b2d1139a25e70e7259f84aeac06539334a6b43e2"><div class="ttname"><a href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139a25e70e7259f84aeac06539334a6b43e2">MUTT_STAT_CTIME</a></div><div class="ttdeci">@ MUTT_STAT_CTIME</div><div class="ttdoc">File/dir's ctime - creation time.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00055">file.h:55</a></div></div>
 <div class="ttc" id="afile_8h_html_ad852389693b4c5a8d79c25e84b2d1139aaebe13aad5970939f4383a8ed082201f"><div class="ttname"><a href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139aaebe13aad5970939f4383a8ed082201f">MUTT_STAT_ATIME</a></div><div class="ttdeci">@ MUTT_STAT_ATIME</div><div class="ttdoc">File/dir's atime - last accessed time.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00053">file.h:53</a></div></div>
 <div class="ttc" id="afile_8h_html_ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df"><div class="ttname"><a href="file_8h.html#ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df">MUTT_STAT_MTIME</a></div><div class="ttdeci">@ MUTT_STAT_MTIME</div><div class="ttdoc">File/dir's mtime - last modified time.</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00054">file.h:54</a></div></div>
-</div><!-- fragment --><div id="dynsection-55" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-55-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-55-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-56" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-56-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-56-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-55-content" class="dyncontent" style="display:none;">
+<div id="dynsection-56-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a0a1a67cd697cb0074317215d4ce6c9e3_icgraph.svg" width="547" height="491"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3686,19 +3695,19 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1522</span>}</div>
 <div class="ttc" id="afile_8c_html_a0a1a67cd697cb0074317215d4ce6c9e3"><div class="ttname"><a href="file_8c.html#a0a1a67cd697cb0074317215d4ce6c9e3">mutt_file_get_stat_timespec</a></div><div class="ttdeci">void mutt_file_get_stat_timespec(struct timespec *dest, struct stat *st, enum MuttStatType type)</div><div class="ttdoc">Read the stat() time into a time value.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01472">file.c:1472</a></div></div>
 <div class="ttc" id="afile_8c_html_a50b47db0c2ba13f42141c27a7d271779"><div class="ttname"><a href="file_8c.html#a50b47db0c2ba13f42141c27a7d271779">mutt_file_timespec_compare</a></div><div class="ttdeci">int mutt_file_timespec_compare(struct timespec *a, struct timespec *b)</div><div class="ttdoc">Compare to time values.</div><div class="ttdef"><b>Definition:</b> <a href="file_8c_source.html#l01450">file.c:1450</a></div></div>
-</div><!-- fragment --><div id="dynsection-56" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-56-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-56-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-56-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_acf5bbc5f63d75ef10f2d16f183de0de0_cgraph.svg" width="366" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-57" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-57-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-57" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-57-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-57-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-57-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_acf5bbc5f63d75ef10f2d16f183de0de0_cgraph.svg" width="366" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-58" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-58-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-58-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-58-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_acf5bbc5f63d75ef10f2d16f183de0de0_icgraph.svg" width="402" height="332"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3774,19 +3783,19 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1544</span>  <a class="code hl_function" href="file_8c.html#a0a1a67cd697cb0074317215d4ce6c9e3">mutt_file_get_stat_timespec</a>(&amp;b, st2, st2_type);</div>
 <div class="line"><span class="lineno"> 1545</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="file_8c.html#a50b47db0c2ba13f42141c27a7d271779">mutt_file_timespec_compare</a>(&amp;a, &amp;b);</div>
 <div class="line"><span class="lineno"> 1546</span>}</div>
-</div><!-- fragment --><div id="dynsection-58" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-58-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-58-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-58-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a29dfaf34f54e277c4ed513ba72a4b1d6_cgraph.svg" width="364" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-59" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-59-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-59" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-59-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-59-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-59-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a29dfaf34f54e277c4ed513ba72a4b1d6_cgraph.svg" width="364" height="115"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-60" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-60-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-60-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-60-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_a29dfaf34f54e277c4ed513ba72a4b1d6_icgraph.svg" width="400" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3831,19 +3840,19 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1563</span>  }</div>
 <div class="line"><span class="lineno"> 1564</span>}</div>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00395">buffer.c:395</a></div></div>
-</div><!-- fragment --><div id="dynsection-60" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-60-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-60-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-60-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_ab2b6d0cfae3b1a4038db5f44d06117c1_cgraph.svg" width="326" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-61-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-61-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-61-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-61-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_ab2b6d0cfae3b1a4038db5f44d06117c1_cgraph.svg" width="326" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-62" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-62-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-62-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-62-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_ab2b6d0cfae3b1a4038db5f44d06117c1_icgraph.svg" width="386" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -3903,19 +3912,19 @@ mutt_file_chmod_rm_stat(path, S_IWUSR | S_IWGRP | S_IWOTH, st);
 <div class="line"><span class="lineno"> 1581</span>  <span class="keywordflow">return</span> fwrite(str, 1, len, fp);</div>
 <div class="line"><span class="lineno"> 1582</span>}</div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00497">string.c:497</a></div></div>
-</div><!-- fragment --><div id="dynsection-62" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-62-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-62-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-62-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_af27dd517394cd25f1cb021c7a3629a74_cgraph.svg" width="294" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-63" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-63-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-63" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-63-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-63-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-63-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_af27dd517394cd25f1cb021c7a3629a74_cgraph.svg" width="294" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div id="dynsection-64" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-64-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-64-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-64-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="file_8c_af27dd517394cd25f1cb021c7a3629a74_icgraph.svg" width="288" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
