@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-05-10-25-g858224</span>
+   &#160;<span id="projectnumber">2025-09-05-2-g4bf191</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -107,39 +107,41 @@ $(document).ready(function(){initNavTree('backtrace_8c_source.html',''); initRes
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="mutt_2lib_8h.html">mutt/lib.h</a>&quot;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="store_2lib_8h.html">lib.h</a>&quot;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="muttlib_8h.html">muttlib.h</a>&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  unw_cursor_t cursor = { 0 };</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  unw_context_t uc = { 0 };</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  unw_word_t ip = 0;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  unw_word_t sp = 0;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">char</span> buf[256] = { 0 };</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  printf(<span class="stringliteral">&quot;\n%s\n&quot;</span>, <a class="code hl_function" href="version_8c.html#a69b9bf85b68576604d5356405ace86b6">mutt_make_version</a>());</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  printf(<span class="stringliteral">&quot;Backtrace\n&quot;</span>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;\nBacktrace\n&quot;</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  unw_getcontext(&amp;uc);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  unw_init_local(&amp;cursor, &amp;uc);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">while</span> (unw_step(&amp;cursor) &gt; 0)</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    unw_get_reg(&amp;cursor, UNW_REG_IP, &amp;ip);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    unw_get_reg(&amp;cursor, UNW_REG_SP, &amp;sp);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    unw_get_proc_name(&amp;cursor, buf, <span class="keyword">sizeof</span>(buf), &amp;ip);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (buf[0] == <span class="charliteral">&#39;_&#39;</span>)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    printf(<span class="stringliteral">&quot;    %s() ip = %lx, sp = %lx\n&quot;</span>, buf, (<span class="keywordtype">long</span>) ip, (<span class="keywordtype">long</span>) sp);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;    %s() ip = %lx, sp = %lx\n&quot;</span>, buf, (<span class="keywordtype">long</span>) ip, (<span class="keywordtype">long</span>) sp);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
-<div class="ttc" id="abacktrace_8c_html_ad4e568bce6fff0e62266165aec83d7e6"><div class="ttname"><a href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a></div><div class="ttdeci">void show_backtrace(void)</div><div class="ttdoc">Log the program's call stack.</div><div class="ttdef"><b>Definition:</b> <a href="backtrace_8c_source.html#l00039">backtrace.c:39</a></div></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="version_8h.html">version.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">   40</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  unw_cursor_t cursor = { 0 };</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  unw_context_t uc = { 0 };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  unw_word_t ip = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  unw_word_t sp = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">char</span> buf[256] = { 0 };</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  printf(<span class="stringliteral">&quot;\n%s\n&quot;</span>, <a class="code hl_function" href="version_8c.html#a69b9bf85b68576604d5356405ace86b6">mutt_make_version</a>());</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  printf(<span class="stringliteral">&quot;Backtrace\n&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;\nBacktrace\n&quot;</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  unw_getcontext(&amp;uc);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  unw_init_local(&amp;cursor, &amp;uc);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordflow">while</span> (unw_step(&amp;cursor) &gt; 0)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    unw_get_reg(&amp;cursor, UNW_REG_IP, &amp;ip);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    unw_get_reg(&amp;cursor, UNW_REG_SP, &amp;sp);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    unw_get_proc_name(&amp;cursor, buf, <span class="keyword">sizeof</span>(buf), &amp;ip);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (buf[0] == <span class="charliteral">&#39;_&#39;</span>)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    printf(<span class="stringliteral">&quot;    %s() ip = %lx, sp = %lx\n&quot;</span>, buf, (<span class="keywordtype">long</span>) ip, (<span class="keywordtype">long</span>) sp);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;    %s() ip = %lx, sp = %lx\n&quot;</span>, buf, (<span class="keywordtype">long</span>) ip, (<span class="keywordtype">long</span>) sp);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+<div class="ttc" id="abacktrace_8c_html_ad4e568bce6fff0e62266165aec83d7e6"><div class="ttname"><a href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a></div><div class="ttdeci">void show_backtrace(void)</div><div class="ttdoc">Log the program's call stack.</div><div class="ttdef"><b>Definition:</b> <a href="backtrace_8c_source.html#l00040">backtrace.c:40</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00090">logging2.h:90</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00044">logging2.h:44</a></div></div>
 <div class="ttc" id="amutt_2lib_8h_html"><div class="ttname"><a href="mutt_2lib_8h.html">lib.h</a></div><div class="ttdoc">Convenience wrapper for the library headers.</div></div>
 <div class="ttc" id="amuttlib_8h_html"><div class="ttname"><a href="muttlib_8h.html">muttlib.h</a></div><div class="ttdoc">Some miscellaneous functions.</div></div>
 <div class="ttc" id="astore_2lib_8h_html"><div class="ttname"><a href="store_2lib_8h.html">lib.h</a></div><div class="ttdoc">Key value store.</div></div>
 <div class="ttc" id="aversion_8c_html_a69b9bf85b68576604d5356405ace86b6"><div class="ttname"><a href="version_8c.html#a69b9bf85b68576604d5356405ace86b6">mutt_make_version</a></div><div class="ttdeci">const char * mutt_make_version(void)</div><div class="ttdoc">Generate the NeoMutt version string.</div><div class="ttdef"><b>Definition:</b> <a href="version_8c_source.html#l00295">version.c:295</a></div></div>
+<div class="ttc" id="aversion_8h_html"><div class="ttname"><a href="version_8h.html">version.h</a></div><div class="ttdoc">Display version and copyright about NeoMutt.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </body>

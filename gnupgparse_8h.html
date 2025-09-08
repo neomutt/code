@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-05-10-25-g858224</span>
+   &#160;<span id="projectnumber">2025-09-05-2-g4bf191</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -186,75 +186,75 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnupgparse_8c_source.html#l00418">418</a> of file <a class="el" href="gnupgparse_8c_source.html">gnupgparse.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  419</span>{</div>
-<div class="line"><span class="lineno">  420</span>  FILE *fp = NULL;</div>
-<div class="line"><span class="lineno">  421</span>  pid_t pid;</div>
-<div class="line"><span class="lineno">  422</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
-<div class="line"><span class="lineno">  423</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *db = NULL, **kend = NULL, *k = NULL, *kk = NULL, *mainkey = NULL;</div>
-<div class="line"><span class="lineno">  424</span>  <span class="keywordtype">bool</span> is_sub = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  425</span> </div>
-<div class="line"><span class="lineno">  426</span>  <span class="keywordtype">int</span> fd_null = open(<span class="stringliteral">&quot;/dev/null&quot;</span>, O_RDWR);</div>
-<div class="line"><span class="lineno">  427</span>  <span class="keywordflow">if</span> (fd_null == -1)</div>
-<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>  <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;<a class="code hl_variable" href="gnupgparse_8c.html#a8330b1cadbd07de78abc27c530aa49e6">Charset</a>, <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>());</div>
-<div class="line"><span class="lineno">  431</span> </div>
-<div class="line"><span class="lineno">  432</span>  pid = <a class="code hl_function" href="pgpinvoke_8c.html#a9922a095eaa2b9f874028bd0ae5332ef">pgp_invoke_list_keys</a>(NULL, &amp;fp, NULL, -1, -1, fd_null, keyring, hints);</div>
-<div class="line"><span class="lineno">  433</span>  <span class="keywordflow">if</span> (pid == -1)</div>
-<div class="line"><span class="lineno">  434</span>  {</div>
-<div class="line"><span class="lineno">  435</span>    close(fd_null);</div>
-<div class="line"><span class="lineno">  436</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  437</span>  }</div>
-<div class="line"><span class="lineno">  438</span> </div>
-<div class="line"><span class="lineno">  439</span>  kend = &amp;db;</div>
-<div class="line"><span class="lineno">  440</span>  k = NULL;</div>
-<div class="line"><span class="lineno">  441</span>  <span class="keywordflow">while</span> (fgets(buf, <span class="keyword">sizeof</span>(buf) - 1, fp))</div>
-<div class="line"><span class="lineno">  442</span>  {</div>
-<div class="line"><span class="lineno">  443</span>    kk = <a class="code hl_function" href="gnupgparse_8c.html#aeb6c281bb02162299886e067af1fb817">parse_pub_line</a>(buf, &amp;is_sub, k);</div>
-<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">if</span> (!kk)</div>
-<div class="line"><span class="lineno">  445</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  446</span> </div>
-<div class="line"><span class="lineno">  447</span>    <span class="comment">/* Only append kk to the list if it&#39;s new. */</span></div>
-<div class="line"><span class="lineno">  448</span>    <span class="keywordflow">if</span> (kk != k)</div>
-<div class="line"><span class="lineno">  449</span>    {</div>
-<div class="line"><span class="lineno">  450</span>      <span class="keywordflow">if</span> (k)</div>
-<div class="line"><span class="lineno">  451</span>        kend = &amp;k-&gt;next;</div>
-<div class="line"><span class="lineno">  452</span>      *kend = kk;</div>
-<div class="line"><span class="lineno">  453</span>      k = kk;</div>
-<div class="line"><span class="lineno">  454</span> </div>
-<div class="line"><span class="lineno">  455</span>      <span class="keywordflow">if</span> (is_sub)</div>
-<div class="line"><span class="lineno">  456</span>      {</div>
-<div class="line"><span class="lineno">  457</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structPgpUid.html">PgpUid</a> **l = NULL;</div>
-<div class="line"><span class="lineno">  458</span> </div>
-<div class="line"><span class="lineno">  459</span>        k-&gt;<a class="code hl_variable" href="structPgpUid.html#abb667f6331ac3c3e8ed96da044371f3e">flags</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#a73a1ead56127b7fac407296e153c0967">KEYFLAG_SUBKEY</a>;</div>
-<div class="line"><span class="lineno">  460</span>        k-&gt;parent = mainkey;</div>
-<div class="line"><span class="lineno">  461</span>        <span class="keywordflow">for</span> (l = &amp;k-&gt;address; *l; l = &amp;(*l)-&gt;next)</div>
-<div class="line"><span class="lineno">  462</span>          ; <span class="comment">// do nothing</span></div>
-<div class="line"><span class="lineno">  463</span> </div>
-<div class="line"><span class="lineno">  464</span>        *l = <a class="code hl_function" href="pgplib_8c.html#ab6d5c131cb7b66b96a0f45a77092db94">pgp_copy_uids</a>(mainkey-&gt;address, k);</div>
-<div class="line"><span class="lineno">  465</span>      }</div>
-<div class="line"><span class="lineno">  466</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  467</span>      {</div>
-<div class="line"><span class="lineno">  468</span>        mainkey = k;</div>
-<div class="line"><span class="lineno">  469</span>      }</div>
-<div class="line"><span class="lineno">  470</span>    }</div>
-<div class="line"><span class="lineno">  471</span>  }</div>
-<div class="line"><span class="lineno">  472</span> </div>
-<div class="line"><span class="lineno">  473</span>  <span class="keywordflow">if</span> (ferror(fp))</div>
-<div class="line"><span class="lineno">  474</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;fgets&quot;</span>);</div>
-<div class="line"><span class="lineno">  475</span> </div>
-<div class="line"><span class="lineno">  476</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
-<div class="line"><span class="lineno">  477</span>  <a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
-<div class="line"><span class="lineno">  478</span> </div>
-<div class="line"><span class="lineno">  479</span>  close(fd_null);</div>
-<div class="line"><span class="lineno">  480</span> </div>
-<div class="line"><span class="lineno">  481</span>  <span class="keywordflow">return</span> db;</div>
-<div class="line"><span class="lineno">  482</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gnupgparse_8c_source.html#l00417">417</a> of file <a class="el" href="gnupgparse_8c_source.html">gnupgparse.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  418</span>{</div>
+<div class="line"><span class="lineno">  419</span>  FILE *fp = NULL;</div>
+<div class="line"><span class="lineno">  420</span>  pid_t pid;</div>
+<div class="line"><span class="lineno">  421</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno">  422</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *db = NULL, **kend = NULL, *k = NULL, *kk = NULL, *mainkey = NULL;</div>
+<div class="line"><span class="lineno">  423</span>  <span class="keywordtype">bool</span> is_sub = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  424</span> </div>
+<div class="line"><span class="lineno">  425</span>  <span class="keywordtype">int</span> fd_null = open(<span class="stringliteral">&quot;/dev/null&quot;</span>, O_RDWR);</div>
+<div class="line"><span class="lineno">  426</span>  <span class="keywordflow">if</span> (fd_null == -1)</div>
+<div class="line"><span class="lineno">  427</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  428</span> </div>
+<div class="line"><span class="lineno">  429</span>  <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;<a class="code hl_variable" href="gnupgparse_8c.html#a8330b1cadbd07de78abc27c530aa49e6">Charset</a>, <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>());</div>
+<div class="line"><span class="lineno">  430</span> </div>
+<div class="line"><span class="lineno">  431</span>  pid = <a class="code hl_function" href="pgpinvoke_8c.html#a9922a095eaa2b9f874028bd0ae5332ef">pgp_invoke_list_keys</a>(NULL, &amp;fp, NULL, -1, -1, fd_null, keyring, hints);</div>
+<div class="line"><span class="lineno">  432</span>  <span class="keywordflow">if</span> (pid == -1)</div>
+<div class="line"><span class="lineno">  433</span>  {</div>
+<div class="line"><span class="lineno">  434</span>    close(fd_null);</div>
+<div class="line"><span class="lineno">  435</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  436</span>  }</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>  kend = &amp;db;</div>
+<div class="line"><span class="lineno">  439</span>  k = NULL;</div>
+<div class="line"><span class="lineno">  440</span>  <span class="keywordflow">while</span> (fgets(buf, <span class="keyword">sizeof</span>(buf) - 1, fp))</div>
+<div class="line"><span class="lineno">  441</span>  {</div>
+<div class="line"><span class="lineno">  442</span>    kk = <a class="code hl_function" href="gnupgparse_8c.html#aeb6c281bb02162299886e067af1fb817">parse_pub_line</a>(buf, &amp;is_sub, k);</div>
+<div class="line"><span class="lineno">  443</span>    <span class="keywordflow">if</span> (!kk)</div>
+<div class="line"><span class="lineno">  444</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  445</span> </div>
+<div class="line"><span class="lineno">  446</span>    <span class="comment">/* Only append kk to the list if it&#39;s new. */</span></div>
+<div class="line"><span class="lineno">  447</span>    <span class="keywordflow">if</span> (kk != k)</div>
+<div class="line"><span class="lineno">  448</span>    {</div>
+<div class="line"><span class="lineno">  449</span>      <span class="keywordflow">if</span> (k)</div>
+<div class="line"><span class="lineno">  450</span>        kend = &amp;k-&gt;next;</div>
+<div class="line"><span class="lineno">  451</span>      *kend = kk;</div>
+<div class="line"><span class="lineno">  452</span>      k = kk;</div>
+<div class="line"><span class="lineno">  453</span> </div>
+<div class="line"><span class="lineno">  454</span>      <span class="keywordflow">if</span> (is_sub)</div>
+<div class="line"><span class="lineno">  455</span>      {</div>
+<div class="line"><span class="lineno">  456</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structPgpUid.html">PgpUid</a> **l = NULL;</div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>        k-&gt;<a class="code hl_variable" href="structPgpUid.html#abb667f6331ac3c3e8ed96da044371f3e">flags</a> |= <a class="code hl_define" href="ncrypt_2lib_8h.html#a73a1ead56127b7fac407296e153c0967">KEYFLAG_SUBKEY</a>;</div>
+<div class="line"><span class="lineno">  459</span>        k-&gt;parent = mainkey;</div>
+<div class="line"><span class="lineno">  460</span>        <span class="keywordflow">for</span> (l = &amp;k-&gt;address; *l; l = &amp;(*l)-&gt;next)</div>
+<div class="line"><span class="lineno">  461</span>          ; <span class="comment">// do nothing</span></div>
+<div class="line"><span class="lineno">  462</span> </div>
+<div class="line"><span class="lineno">  463</span>        *l = <a class="code hl_function" href="pgplib_8c.html#ab6d5c131cb7b66b96a0f45a77092db94">pgp_copy_uids</a>(mainkey-&gt;address, k);</div>
+<div class="line"><span class="lineno">  464</span>      }</div>
+<div class="line"><span class="lineno">  465</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  466</span>      {</div>
+<div class="line"><span class="lineno">  467</span>        mainkey = k;</div>
+<div class="line"><span class="lineno">  468</span>      }</div>
+<div class="line"><span class="lineno">  469</span>    }</div>
+<div class="line"><span class="lineno">  470</span>  }</div>
+<div class="line"><span class="lineno">  471</span> </div>
+<div class="line"><span class="lineno">  472</span>  <span class="keywordflow">if</span> (ferror(fp))</div>
+<div class="line"><span class="lineno">  473</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;fgets&quot;</span>);</div>
+<div class="line"><span class="lineno">  474</span> </div>
+<div class="line"><span class="lineno">  475</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
+<div class="line"><span class="lineno">  476</span>  <a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
+<div class="line"><span class="lineno">  477</span> </div>
+<div class="line"><span class="lineno">  478</span>  close(fd_null);</div>
+<div class="line"><span class="lineno">  479</span> </div>
+<div class="line"><span class="lineno">  480</span>  <span class="keywordflow">return</span> db;</div>
+<div class="line"><span class="lineno">  481</span>}</div>
 <div class="ttc" id="aconfig__cache_8c_html_a03027fb835011539c3cbfeb1b0fa8811"><div class="ttname"><a href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a></div><div class="ttdeci">const char * cc_charset(void)</div><div class="ttdoc">Get the cached value of $charset.</div><div class="ttdef"><b>Definition:</b> <a href="config__cache_8c_source.html#l00116">config_cache.c:116</a></div></div>
 <div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition:</b> <a href="file_8h_source.html#l00139">file.h:139</a></div></div>
 <div class="ttc" id="agnupgparse_8c_html_a8330b1cadbd07de78abc27c530aa49e6"><div class="ttname"><a href="gnupgparse_8c.html#a8330b1cadbd07de78abc27c530aa49e6">Charset</a></div><div class="ttdeci">static char * Charset</div><div class="ttdoc">Cached copy of $charset.</div><div class="ttdef"><b>Definition:</b> <a href="gnupgparse_8c_source.html#l00075">gnupgparse.c:75</a></div></div>
-<div class="ttc" id="agnupgparse_8c_html_aeb6c281bb02162299886e067af1fb817"><div class="ttname"><a href="gnupgparse_8c.html#aeb6c281bb02162299886e067af1fb817">parse_pub_line</a></div><div class="ttdeci">static struct PgpKeyInfo * parse_pub_line(char *buf, bool *is_subkey, struct PgpKeyInfo *k)</div><div class="ttdoc">Parse the 'pub' line from the pgp output.</div><div class="ttdef"><b>Definition:</b> <a href="gnupgparse_8c_source.html#l00135">gnupgparse.c:135</a></div></div>
+<div class="ttc" id="agnupgparse_8c_html_aeb6c281bb02162299886e067af1fb817"><div class="ttname"><a href="gnupgparse_8c.html#aeb6c281bb02162299886e067af1fb817">parse_pub_line</a></div><div class="ttdeci">static struct PgpKeyInfo * parse_pub_line(char *buf, bool *is_subkey, struct PgpKeyInfo *k)</div><div class="ttdoc">Parse the 'pub' line from the pgp output.</div><div class="ttdef"><b>Definition:</b> <a href="gnupgparse_8c_source.html#l00134">gnupgparse.c:134</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
 <div class="ttc" id="amutt_2filter_8c_html_a22c6912b837b1114c3276c990e73dca3"><div class="ttname"><a href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a></div><div class="ttdeci">int filter_wait(pid_t pid)</div><div class="ttdoc">Wait for the exit of a process and return its status.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2filter_8c_source.html#l00220">filter.c:220</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_af8c32ffc64dd55e92001a974a4be6bbf"><div class="ttname"><a href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a></div><div class="ttdeci">char * mutt_str_replace(char **p, const char *s)</div><div class="ttdoc">Replace one string with another.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00281">string.c:281</a></div></div>
