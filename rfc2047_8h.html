@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-05-10-25-g858224</span>
+   &#160;<span id="projectnumber">2025-09-05-2-g4bf191</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -175,102 +175,102 @@ Functions</h2></td></tr>
 </dl>
 <p>Try to decode anything that looks like a valid RFC2047 encoded header field, ignoring RFC822 parsing rules. If decoding fails, for example due to an invalid base64 string, the original input is left untouched. </p>
 
-<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00660">660</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  661</span>{</div>
-<div class="line"><span class="lineno">  662</span>  <span class="keywordflow">if</span> (!pd || !*pd)</div>
-<div class="line"><span class="lineno">  663</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  664</span> </div>
-<div class="line"><span class="lineno">  665</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();  <span class="comment">// Output buffer</span></div>
-<div class="line"><span class="lineno">  666</span>  <span class="keywordtype">char</span> *s = *pd;                        <span class="comment">// Read pointer</span></div>
-<div class="line"><span class="lineno">  667</span>  <span class="keywordtype">char</span> *beg = NULL;                     <span class="comment">// Begin of encoded word</span></div>
-<div class="line"><span class="lineno">  668</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61">ContentEncoding</a> enc = <a class="code hl_enumvalue" href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61a18d61a8aef64facb444f1987ee81c5c9">ENC_OTHER</a>; <span class="comment">// ENC_BASE64 or ENC_QUOTED_PRINTABLE</span></div>
-<div class="line"><span class="lineno">  669</span>  <span class="keywordtype">char</span> *charset = NULL;                 <span class="comment">// Which charset</span></div>
-<div class="line"><span class="lineno">  670</span>  <span class="keywordtype">size_t</span> charsetlen;                    <span class="comment">// Length of the charset</span></div>
-<div class="line"><span class="lineno">  671</span>  <span class="keywordtype">char</span> *text = NULL;                    <span class="comment">// Encoded text</span></div>
-<div class="line"><span class="lineno">  672</span>  <span class="keywordtype">size_t</span> textlen = 0;                   <span class="comment">// Length of encoded text</span></div>
-<div class="line"><span class="lineno">  673</span> </div>
-<div class="line"><span class="lineno">  674</span>  <span class="comment">/* Keep some state in case the next decoded word is using the same charset</span></div>
-<div class="line"><span class="lineno">  675</span><span class="comment">   * and it happens to be split in the middle of a multibyte character.</span></div>
-<div class="line"><span class="lineno">  676</span><span class="comment">   * See https://github.com/neomutt/neomutt/issues/1015 */</span></div>
-<div class="line"><span class="lineno">  677</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *prev = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>(); <span class="comment">/* Previously decoded word  */</span></div>
-<div class="line"><span class="lineno">  678</span>  <span class="keywordtype">char</span> *prev_charset = NULL;  <span class="comment">/* Previously used charset                */</span></div>
-<div class="line"><span class="lineno">  679</span>  <span class="keywordtype">size_t</span> prev_charsetlen = 0; <span class="comment">/* Length of the previously used charset  */</span></div>
-<div class="line"><span class="lineno">  680</span> </div>
-<div class="line"><span class="lineno">  681</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structSlist.html">Slist</a> *c_assumed_charset = <a class="code hl_function" href="config__cache_8c.html#addc06d02c91cce26bfe7c3692ddf0046">cc_assumed_charset</a>();</div>
-<div class="line"><span class="lineno">  682</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *c_charset = <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>();</div>
-<div class="line"><span class="lineno">  683</span>  <span class="keywordflow">while</span> (*s)</div>
-<div class="line"><span class="lineno">  684</span>  {</div>
-<div class="line"><span class="lineno">  685</span>    beg = <a class="code hl_function" href="rfc2047_8c.html#a7a1b1661d6ad0bbd2c87ed4883d51bf7">parse_encoded_word</a>(s, &amp;enc, &amp;charset, &amp;charsetlen, &amp;text, &amp;textlen);</div>
-<div class="line"><span class="lineno">  686</span>    <span class="keywordflow">if</span> (beg != s)</div>
-<div class="line"><span class="lineno">  687</span>    {</div>
-<div class="line"><span class="lineno">  688</span>      <span class="comment">/* Some non-encoded text was found */</span></div>
-<div class="line"><span class="lineno">  689</span>      <span class="keywordtype">size_t</span> holelen = beg ? beg - s : <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(s);</div>
-<div class="line"><span class="lineno">  690</span> </div>
-<div class="line"><span class="lineno">  691</span>      <span class="comment">/* Ignore whitespace between encoded words */</span></div>
-<div class="line"><span class="lineno">  692</span>      <span class="keywordflow">if</span> (beg &amp;&amp; (<a class="code hl_function" href="mutt_2string_8c.html#a64aa5bd37494ee3cbc4285bd06d6c91c">mutt_str_lws_len</a>(s, holelen) == holelen))</div>
-<div class="line"><span class="lineno">  693</span>      {</div>
-<div class="line"><span class="lineno">  694</span>        s = beg;</div>
-<div class="line"><span class="lineno">  695</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  696</span>      }</div>
-<div class="line"><span class="lineno">  697</span> </div>
-<div class="line"><span class="lineno">  698</span>      <span class="comment">/* If we have some previously decoded text, add it now */</span></div>
-<div class="line"><span class="lineno">  699</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(prev))</div>
-<div class="line"><span class="lineno">  700</span>      {</div>
-<div class="line"><span class="lineno">  701</span>        <a class="code hl_function" href="rfc2047_8c.html#afef686b50d1bc6030d76a2c1c5dbb6c4">finalize_chunk</a>(buf, prev, prev_charset, prev_charsetlen);</div>
-<div class="line"><span class="lineno">  702</span>      }</div>
-<div class="line"><span class="lineno">  703</span> </div>
-<div class="line"><span class="lineno">  704</span>      <span class="comment">/* Add non-encoded part */</span></div>
-<div class="line"><span class="lineno">  705</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2slist_8c.html#a4811cefce245ed4de9d8aacd8b4ab43f">slist_is_empty</a>(c_assumed_charset))</div>
-<div class="line"><span class="lineno">  706</span>      {</div>
-<div class="line"><span class="lineno">  707</span>        <a class="code hl_function" href="buffer_8c.html#a2881936af4a3e3b45079cb9af0cdb3e8">buf_addstr_n</a>(buf, s, holelen);</div>
-<div class="line"><span class="lineno">  708</span>      }</div>
-<div class="line"><span class="lineno">  709</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  710</span>      {</div>
-<div class="line"><span class="lineno">  711</span>        <span class="keywordtype">char</span> *conv = <a class="code hl_function" href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a>(s, holelen);</div>
-<div class="line"><span class="lineno">  712</span>        <a class="code hl_function" href="mutt_2charset_8c.html#a328973bb86fd341ba82021d540c0cc0b">mutt_ch_convert_nonmime_string</a>(c_assumed_charset, c_charset, &amp;conv);</div>
-<div class="line"><span class="lineno">  713</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, conv);</div>
-<div class="line"><span class="lineno">  714</span>        <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;conv);</div>
-<div class="line"><span class="lineno">  715</span>      }</div>
-<div class="line"><span class="lineno">  716</span>      s += holelen;</div>
-<div class="line"><span class="lineno">  717</span>    }</div>
-<div class="line"><span class="lineno">  718</span>    <span class="keywordflow">if</span> (beg)</div>
-<div class="line"><span class="lineno">  719</span>    {</div>
-<div class="line"><span class="lineno">  720</span>      <span class="comment">/* Some encoded text was found */</span></div>
-<div class="line"><span class="lineno">  721</span>      text[textlen] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  722</span>      <span class="keywordtype">char</span> *decoded = <a class="code hl_function" href="rfc2047_8c.html#ab1018339402895dc4ec81b2afbcaab57">decode_word</a>(text, textlen, enc);</div>
-<div class="line"><span class="lineno">  723</span>      <span class="keywordflow">if</span> (!decoded)</div>
-<div class="line"><span class="lineno">  724</span>      {</div>
-<div class="line"><span class="lineno">  725</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  726</span>      }</div>
-<div class="line"><span class="lineno">  727</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(prev) &amp;&amp; ((prev_charsetlen != charsetlen) ||</div>
-<div class="line"><span class="lineno">  728</span>                                  !<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(prev_charset, charset, charsetlen)))</div>
-<div class="line"><span class="lineno">  729</span>      {</div>
-<div class="line"><span class="lineno">  730</span>        <span class="comment">/* Different charset, convert the previous chunk and add it to the</span></div>
-<div class="line"><span class="lineno">  731</span><span class="comment">         * final result */</span></div>
-<div class="line"><span class="lineno">  732</span>        <a class="code hl_function" href="rfc2047_8c.html#afef686b50d1bc6030d76a2c1c5dbb6c4">finalize_chunk</a>(buf, prev, prev_charset, prev_charsetlen);</div>
-<div class="line"><span class="lineno">  733</span>      }</div>
-<div class="line"><span class="lineno">  734</span> </div>
-<div class="line"><span class="lineno">  735</span>      <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(prev, decoded);</div>
-<div class="line"><span class="lineno">  736</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;decoded);</div>
-<div class="line"><span class="lineno">  737</span>      prev_charset = charset;</div>
-<div class="line"><span class="lineno">  738</span>      prev_charsetlen = charsetlen;</div>
-<div class="line"><span class="lineno">  739</span>      s = text + textlen + 2; <span class="comment">/* Skip final ?= */</span></div>
-<div class="line"><span class="lineno">  740</span>    }</div>
-<div class="line"><span class="lineno">  741</span>  }</div>
-<div class="line"><span class="lineno">  742</span> </div>
-<div class="line"><span class="lineno">  743</span>  <span class="comment">/* Save the last chunk */</span></div>
-<div class="line"><span class="lineno">  744</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(prev))</div>
-<div class="line"><span class="lineno">  745</span>  {</div>
-<div class="line"><span class="lineno">  746</span>    <a class="code hl_function" href="rfc2047_8c.html#afef686b50d1bc6030d76a2c1c5dbb6c4">finalize_chunk</a>(buf, prev, prev_charset, prev_charsetlen);</div>
-<div class="line"><span class="lineno">  747</span>  }</div>
-<div class="line"><span class="lineno">  748</span> </div>
-<div class="line"><span class="lineno">  749</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(pd);</div>
-<div class="line"><span class="lineno">  750</span>  *pd = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
-<div class="line"><span class="lineno">  751</span> </div>
-<div class="line"><span class="lineno">  752</span>done:</div>
-<div class="line"><span class="lineno">  753</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  754</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;prev);</div>
-<div class="line"><span class="lineno">  755</span>}</div>
+<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00661">661</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  662</span>{</div>
+<div class="line"><span class="lineno">  663</span>  <span class="keywordflow">if</span> (!pd || !*pd)</div>
+<div class="line"><span class="lineno">  664</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  665</span> </div>
+<div class="line"><span class="lineno">  666</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();  <span class="comment">// Output buffer</span></div>
+<div class="line"><span class="lineno">  667</span>  <span class="keywordtype">char</span> *s = *pd;                        <span class="comment">// Read pointer</span></div>
+<div class="line"><span class="lineno">  668</span>  <span class="keywordtype">char</span> *beg = NULL;                     <span class="comment">// Begin of encoded word</span></div>
+<div class="line"><span class="lineno">  669</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61">ContentEncoding</a> enc = <a class="code hl_enumvalue" href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61a18d61a8aef64facb444f1987ee81c5c9">ENC_OTHER</a>; <span class="comment">// ENC_BASE64 or ENC_QUOTED_PRINTABLE</span></div>
+<div class="line"><span class="lineno">  670</span>  <span class="keywordtype">char</span> *charset = NULL;                 <span class="comment">// Which charset</span></div>
+<div class="line"><span class="lineno">  671</span>  <span class="keywordtype">size_t</span> charsetlen;                    <span class="comment">// Length of the charset</span></div>
+<div class="line"><span class="lineno">  672</span>  <span class="keywordtype">char</span> *text = NULL;                    <span class="comment">// Encoded text</span></div>
+<div class="line"><span class="lineno">  673</span>  <span class="keywordtype">size_t</span> textlen = 0;                   <span class="comment">// Length of encoded text</span></div>
+<div class="line"><span class="lineno">  674</span> </div>
+<div class="line"><span class="lineno">  675</span>  <span class="comment">/* Keep some state in case the next decoded word is using the same charset</span></div>
+<div class="line"><span class="lineno">  676</span><span class="comment">   * and it happens to be split in the middle of a multibyte character.</span></div>
+<div class="line"><span class="lineno">  677</span><span class="comment">   * See https://github.com/neomutt/neomutt/issues/1015 */</span></div>
+<div class="line"><span class="lineno">  678</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *prev = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>(); <span class="comment">/* Previously decoded word  */</span></div>
+<div class="line"><span class="lineno">  679</span>  <span class="keywordtype">char</span> *prev_charset = NULL;  <span class="comment">/* Previously used charset                */</span></div>
+<div class="line"><span class="lineno">  680</span>  <span class="keywordtype">size_t</span> prev_charsetlen = 0; <span class="comment">/* Length of the previously used charset  */</span></div>
+<div class="line"><span class="lineno">  681</span> </div>
+<div class="line"><span class="lineno">  682</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structSlist.html">Slist</a> *c_assumed_charset = <a class="code hl_function" href="config__cache_8c.html#addc06d02c91cce26bfe7c3692ddf0046">cc_assumed_charset</a>();</div>
+<div class="line"><span class="lineno">  683</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *c_charset = <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>();</div>
+<div class="line"><span class="lineno">  684</span>  <span class="keywordflow">while</span> (*s)</div>
+<div class="line"><span class="lineno">  685</span>  {</div>
+<div class="line"><span class="lineno">  686</span>    beg = <a class="code hl_function" href="rfc2047_8c.html#a7a1b1661d6ad0bbd2c87ed4883d51bf7">parse_encoded_word</a>(s, &amp;enc, &amp;charset, &amp;charsetlen, &amp;text, &amp;textlen);</div>
+<div class="line"><span class="lineno">  687</span>    <span class="keywordflow">if</span> (beg != s)</div>
+<div class="line"><span class="lineno">  688</span>    {</div>
+<div class="line"><span class="lineno">  689</span>      <span class="comment">/* Some non-encoded text was found */</span></div>
+<div class="line"><span class="lineno">  690</span>      <span class="keywordtype">size_t</span> holelen = beg ? beg - s : <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(s);</div>
+<div class="line"><span class="lineno">  691</span> </div>
+<div class="line"><span class="lineno">  692</span>      <span class="comment">/* Ignore whitespace between encoded words */</span></div>
+<div class="line"><span class="lineno">  693</span>      <span class="keywordflow">if</span> (beg &amp;&amp; (<a class="code hl_function" href="mutt_2string_8c.html#a64aa5bd37494ee3cbc4285bd06d6c91c">mutt_str_lws_len</a>(s, holelen) == holelen))</div>
+<div class="line"><span class="lineno">  694</span>      {</div>
+<div class="line"><span class="lineno">  695</span>        s = beg;</div>
+<div class="line"><span class="lineno">  696</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  697</span>      }</div>
+<div class="line"><span class="lineno">  698</span> </div>
+<div class="line"><span class="lineno">  699</span>      <span class="comment">/* If we have some previously decoded text, add it now */</span></div>
+<div class="line"><span class="lineno">  700</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(prev))</div>
+<div class="line"><span class="lineno">  701</span>      {</div>
+<div class="line"><span class="lineno">  702</span>        <a class="code hl_function" href="rfc2047_8c.html#afef686b50d1bc6030d76a2c1c5dbb6c4">finalize_chunk</a>(buf, prev, prev_charset, prev_charsetlen);</div>
+<div class="line"><span class="lineno">  703</span>      }</div>
+<div class="line"><span class="lineno">  704</span> </div>
+<div class="line"><span class="lineno">  705</span>      <span class="comment">/* Add non-encoded part */</span></div>
+<div class="line"><span class="lineno">  706</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2slist_8c.html#a4811cefce245ed4de9d8aacd8b4ab43f">slist_is_empty</a>(c_assumed_charset))</div>
+<div class="line"><span class="lineno">  707</span>      {</div>
+<div class="line"><span class="lineno">  708</span>        <a class="code hl_function" href="buffer_8c.html#a2881936af4a3e3b45079cb9af0cdb3e8">buf_addstr_n</a>(buf, s, holelen);</div>
+<div class="line"><span class="lineno">  709</span>      }</div>
+<div class="line"><span class="lineno">  710</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  711</span>      {</div>
+<div class="line"><span class="lineno">  712</span>        <span class="keywordtype">char</span> *conv = <a class="code hl_function" href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a>(s, holelen);</div>
+<div class="line"><span class="lineno">  713</span>        <a class="code hl_function" href="mutt_2charset_8c.html#a328973bb86fd341ba82021d540c0cc0b">mutt_ch_convert_nonmime_string</a>(c_assumed_charset, c_charset, &amp;conv);</div>
+<div class="line"><span class="lineno">  714</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, conv);</div>
+<div class="line"><span class="lineno">  715</span>        <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;conv);</div>
+<div class="line"><span class="lineno">  716</span>      }</div>
+<div class="line"><span class="lineno">  717</span>      s += holelen;</div>
+<div class="line"><span class="lineno">  718</span>    }</div>
+<div class="line"><span class="lineno">  719</span>    <span class="keywordflow">if</span> (beg)</div>
+<div class="line"><span class="lineno">  720</span>    {</div>
+<div class="line"><span class="lineno">  721</span>      <span class="comment">/* Some encoded text was found */</span></div>
+<div class="line"><span class="lineno">  722</span>      text[textlen] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  723</span>      <span class="keywordtype">char</span> *decoded = <a class="code hl_function" href="rfc2047_8c.html#ab1018339402895dc4ec81b2afbcaab57">decode_word</a>(text, textlen, enc);</div>
+<div class="line"><span class="lineno">  724</span>      <span class="keywordflow">if</span> (!decoded)</div>
+<div class="line"><span class="lineno">  725</span>      {</div>
+<div class="line"><span class="lineno">  726</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  727</span>      }</div>
+<div class="line"><span class="lineno">  728</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(prev) &amp;&amp; ((prev_charsetlen != charsetlen) ||</div>
+<div class="line"><span class="lineno">  729</span>                                  !<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(prev_charset, charset, charsetlen)))</div>
+<div class="line"><span class="lineno">  730</span>      {</div>
+<div class="line"><span class="lineno">  731</span>        <span class="comment">/* Different charset, convert the previous chunk and add it to the</span></div>
+<div class="line"><span class="lineno">  732</span><span class="comment">         * final result */</span></div>
+<div class="line"><span class="lineno">  733</span>        <a class="code hl_function" href="rfc2047_8c.html#afef686b50d1bc6030d76a2c1c5dbb6c4">finalize_chunk</a>(buf, prev, prev_charset, prev_charsetlen);</div>
+<div class="line"><span class="lineno">  734</span>      }</div>
+<div class="line"><span class="lineno">  735</span> </div>
+<div class="line"><span class="lineno">  736</span>      <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(prev, decoded);</div>
+<div class="line"><span class="lineno">  737</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;decoded);</div>
+<div class="line"><span class="lineno">  738</span>      prev_charset = charset;</div>
+<div class="line"><span class="lineno">  739</span>      prev_charsetlen = charsetlen;</div>
+<div class="line"><span class="lineno">  740</span>      s = text + textlen + 2; <span class="comment">/* Skip final ?= */</span></div>
+<div class="line"><span class="lineno">  741</span>    }</div>
+<div class="line"><span class="lineno">  742</span>  }</div>
+<div class="line"><span class="lineno">  743</span> </div>
+<div class="line"><span class="lineno">  744</span>  <span class="comment">/* Save the last chunk */</span></div>
+<div class="line"><span class="lineno">  745</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(prev))</div>
+<div class="line"><span class="lineno">  746</span>  {</div>
+<div class="line"><span class="lineno">  747</span>    <a class="code hl_function" href="rfc2047_8c.html#afef686b50d1bc6030d76a2c1c5dbb6c4">finalize_chunk</a>(buf, prev, prev_charset, prev_charsetlen);</div>
+<div class="line"><span class="lineno">  748</span>  }</div>
+<div class="line"><span class="lineno">  749</span> </div>
+<div class="line"><span class="lineno">  750</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(pd);</div>
+<div class="line"><span class="lineno">  751</span>  *pd = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
+<div class="line"><span class="lineno">  752</span> </div>
+<div class="line"><span class="lineno">  753</span>done:</div>
+<div class="line"><span class="lineno">  754</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  755</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;prev);</div>
+<div class="line"><span class="lineno">  756</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a2881936af4a3e3b45079cb9af0cdb3e8"><div class="ttname"><a href="buffer_8c.html#a2881936af4a3e3b45079cb9af0cdb3e8">buf_addstr_n</a></div><div class="ttdeci">size_t buf_addstr_n(struct Buffer *buf, const char *s, size_t len)</div><div class="ttdoc">Add a string to a Buffer, expanding it if necessary.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00096">buffer.c:96</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00291">buffer.c:291</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9924e74ddcb5280ab380e4627d1fba99"><div class="ttname"><a href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a></div><div class="ttdeci">size_t buf_addstr(struct Buffer *buf, const char *s)</div><div class="ttdoc">Add a string to a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00226">buffer.c:226</a></div></div>
@@ -283,14 +283,14 @@ Functions</h2></td></tr>
 <div class="ttc" id="amutt_2charset_8c_html_a328973bb86fd341ba82021d540c0cc0b"><div class="ttname"><a href="mutt_2charset_8c.html#a328973bb86fd341ba82021d540c0cc0b">mutt_ch_convert_nonmime_string</a></div><div class="ttdeci">int mutt_ch_convert_nonmime_string(const struct Slist *const assumed_charset, const char *charset, char **ps)</div><div class="ttdoc">Try to convert a string using a list of character sets.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2charset_8c_source.html#l00331">charset.c:331</a></div></div>
 <div class="ttc" id="amutt_2slist_8c_html_a4811cefce245ed4de9d8aacd8b4ab43f"><div class="ttname"><a href="mutt_2slist_8c.html#a4811cefce245ed4de9d8aacd8b4ab43f">slist_is_empty</a></div><div class="ttdeci">bool slist_is_empty(const struct Slist *list)</div><div class="ttdoc">Is the slist empty?</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2slist_8c_source.html#l00140">slist.c:140</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a116d1d2391bc57f2ba3a9d9cfb15db76"><div class="ttname"><a href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a></div><div class="ttdeci">char * mutt_strn_dup(const char *begin, size_t len)</div><div class="ttdoc">Duplicate a sub-string.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00381">string.c:381</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a64aa5bd37494ee3cbc4285bd06d6c91c"><div class="ttname"><a href="mutt_2string_8c.html#a64aa5bd37494ee3cbc4285bd06d6c91c">mutt_str_lws_len</a></div><div class="ttdeci">size_t mutt_str_lws_len(const char *s, size_t n)</div><div class="ttdoc">Measure the linear-white-space at the beginning of a string.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00629">string.c:629</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a64aa5bd37494ee3cbc4285bd06d6c91c"><div class="ttname"><a href="mutt_2string_8c.html#a64aa5bd37494ee3cbc4285bd06d6c91c">mutt_str_lws_len</a></div><div class="ttdeci">size_t mutt_str_lws_len(const char *s, size_t n)</div><div class="ttdoc">Measure the linear-white-space at the beginning of a string.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00627">string.c:627</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00426">string.c:426</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2string_8c_source.html#l00497">string.c:497</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition:</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
 <div class="ttc" id="arfc2047_8c_html_a7a1b1661d6ad0bbd2c87ed4883d51bf7"><div class="ttname"><a href="rfc2047_8c.html#a7a1b1661d6ad0bbd2c87ed4883d51bf7">parse_encoded_word</a></div><div class="ttdeci">static char * parse_encoded_word(char *str, enum ContentEncoding *enc, char **charset, size_t *charsetlen, char **text, size_t *textlen)</div><div class="ttdoc">Parse a string and report RFC2047 elements.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00147">rfc2047.c:147</a></div></div>
-<div class="ttc" id="arfc2047_8c_html_ab1018339402895dc4ec81b2afbcaab57"><div class="ttname"><a href="rfc2047_8c.html#ab1018339402895dc4ec81b2afbcaab57">decode_word</a></div><div class="ttdeci">static char * decode_word(const char *s, size_t len, enum ContentEncoding enc)</div><div class="ttdoc">Decode an RFC2047-encoded string.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00364">rfc2047.c:364</a></div></div>
-<div class="ttc" id="arfc2047_8c_html_afef686b50d1bc6030d76a2c1c5dbb6c4"><div class="ttname"><a href="rfc2047_8c.html#afef686b50d1bc6030d76a2c1c5dbb6c4">finalize_chunk</a></div><div class="ttdeci">static void finalize_chunk(struct Buffer *res, struct Buffer *buf, char *charset, size_t charsetlen)</div><div class="ttdoc">Perform charset conversion and filtering.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00340">rfc2047.c:340</a></div></div>
+<div class="ttc" id="arfc2047_8c_html_ab1018339402895dc4ec81b2afbcaab57"><div class="ttname"><a href="rfc2047_8c.html#ab1018339402895dc4ec81b2afbcaab57">decode_word</a></div><div class="ttdeci">static char * decode_word(const char *s, size_t len, enum ContentEncoding enc)</div><div class="ttdoc">Decode an RFC2047-encoded string.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00365">rfc2047.c:365</a></div></div>
+<div class="ttc" id="arfc2047_8c_html_afef686b50d1bc6030d76a2c1c5dbb6c4"><div class="ttname"><a href="rfc2047_8c.html#afef686b50d1bc6030d76a2c1c5dbb6c4">finalize_chunk</a></div><div class="ttdeci">static void finalize_chunk(struct Buffer *res, struct Buffer *buf, char *charset, size_t charsetlen)</div><div class="ttdoc">Perform charset conversion and filtering.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00341">rfc2047.c:341</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
 <div class="ttc" id="astructSlist_html"><div class="ttname"><a href="structSlist.html">Slist</a></div><div class="ttdoc">String list.</div><div class="ttdef"><b>Definition:</b> <a href="slist_8h_source.html#l00036">slist.h:37</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -361,33 +361,33 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00627">627</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  628</span>{</div>
-<div class="line"><span class="lineno">  629</span>  <span class="keywordflow">if</span> (!pd || !*pd)</div>
-<div class="line"><span class="lineno">  630</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  631</span> </div>
-<div class="line"><span class="lineno">  632</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_charset = <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>();</div>
-<div class="line"><span class="lineno">  633</span>  <span class="keywordflow">if</span> (!c_charset)</div>
-<div class="line"><span class="lineno">  634</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  635</span> </div>
-<div class="line"><span class="lineno">  636</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSlist.html">Slist</a> *fallback = NULL;</div>
-<div class="line"><span class="lineno">  637</span>  <span class="keywordflow">if</span> (!charsets)</div>
-<div class="line"><span class="lineno">  638</span>  {</div>
-<div class="line"><span class="lineno">  639</span>    fallback = <a class="code hl_function" href="mutt_2slist_8c.html#a2d02fa5cb8f110a65948963264371bb8">slist_parse</a>(<span class="stringliteral">&quot;utf-8&quot;</span>, <a class="code hl_define" href="types_8h.html#a19d7a62cf6cef8a8e86a91bea7278561">D_SLIST_SEP_COLON</a>);</div>
-<div class="line"><span class="lineno">  640</span>    charsets = fallback;</div>
-<div class="line"><span class="lineno">  641</span>  }</div>
-<div class="line"><span class="lineno">  642</span> </div>
-<div class="line"><span class="lineno">  643</span>  <span class="keywordtype">char</span> *e = NULL;</div>
-<div class="line"><span class="lineno">  644</span>  <span class="keywordtype">size_t</span> elen = 0;</div>
-<div class="line"><span class="lineno">  645</span>  <a class="code hl_function" href="rfc2047_8c.html#ad76ba986603e70d8fcacff83ee5a4dc2">encode</a>(*pd, strlen(*pd), col, c_charset, charsets, &amp;e, &amp;elen, specials);</div>
-<div class="line"><span class="lineno">  646</span> </div>
-<div class="line"><span class="lineno">  647</span>  <a class="code hl_function" href="mutt_2slist_8c.html#a5df0937ee812d311a487d0401a232bb7">slist_free</a>(&amp;fallback);</div>
-<div class="line"><span class="lineno">  648</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(pd);</div>
-<div class="line"><span class="lineno">  649</span>  *pd = e;</div>
-<div class="line"><span class="lineno">  650</span>}</div>
+<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00628">628</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  629</span>{</div>
+<div class="line"><span class="lineno">  630</span>  <span class="keywordflow">if</span> (!pd || !*pd)</div>
+<div class="line"><span class="lineno">  631</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  632</span> </div>
+<div class="line"><span class="lineno">  633</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_charset = <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>();</div>
+<div class="line"><span class="lineno">  634</span>  <span class="keywordflow">if</span> (!c_charset)</div>
+<div class="line"><span class="lineno">  635</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  636</span> </div>
+<div class="line"><span class="lineno">  637</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSlist.html">Slist</a> *fallback = NULL;</div>
+<div class="line"><span class="lineno">  638</span>  <span class="keywordflow">if</span> (!charsets)</div>
+<div class="line"><span class="lineno">  639</span>  {</div>
+<div class="line"><span class="lineno">  640</span>    fallback = <a class="code hl_function" href="mutt_2slist_8c.html#a2d02fa5cb8f110a65948963264371bb8">slist_parse</a>(<span class="stringliteral">&quot;utf-8&quot;</span>, <a class="code hl_define" href="types_8h.html#a19d7a62cf6cef8a8e86a91bea7278561">D_SLIST_SEP_COLON</a>);</div>
+<div class="line"><span class="lineno">  641</span>    charsets = fallback;</div>
+<div class="line"><span class="lineno">  642</span>  }</div>
+<div class="line"><span class="lineno">  643</span> </div>
+<div class="line"><span class="lineno">  644</span>  <span class="keywordtype">char</span> *e = NULL;</div>
+<div class="line"><span class="lineno">  645</span>  <span class="keywordtype">size_t</span> elen = 0;</div>
+<div class="line"><span class="lineno">  646</span>  <a class="code hl_function" href="rfc2047_8c.html#ad76ba986603e70d8fcacff83ee5a4dc2">encode</a>(*pd, strlen(*pd), col, c_charset, charsets, &amp;e, &amp;elen, specials);</div>
+<div class="line"><span class="lineno">  647</span> </div>
+<div class="line"><span class="lineno">  648</span>  <a class="code hl_function" href="mutt_2slist_8c.html#a5df0937ee812d311a487d0401a232bb7">slist_free</a>(&amp;fallback);</div>
+<div class="line"><span class="lineno">  649</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(pd);</div>
+<div class="line"><span class="lineno">  650</span>  *pd = e;</div>
+<div class="line"><span class="lineno">  651</span>}</div>
 <div class="ttc" id="amutt_2slist_8c_html_a2d02fa5cb8f110a65948963264371bb8"><div class="ttname"><a href="mutt_2slist_8c.html#a2d02fa5cb8f110a65948963264371bb8">slist_parse</a></div><div class="ttdeci">struct Slist * slist_parse(const char *str, uint32_t flags)</div><div class="ttdoc">Parse a list of strings into a list.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2slist_8c_source.html#l00177">slist.c:177</a></div></div>
 <div class="ttc" id="amutt_2slist_8c_html_a5df0937ee812d311a487d0401a232bb7"><div class="ttname"><a href="mutt_2slist_8c.html#a5df0937ee812d311a487d0401a232bb7">slist_free</a></div><div class="ttdeci">void slist_free(struct Slist **ptr)</div><div class="ttdoc">Free an Slist object.</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2slist_8c_source.html#l00124">slist.c:124</a></div></div>
-<div class="ttc" id="arfc2047_8c_html_ad76ba986603e70d8fcacff83ee5a4dc2"><div class="ttname"><a href="rfc2047_8c.html#ad76ba986603e70d8fcacff83ee5a4dc2">encode</a></div><div class="ttdeci">static int encode(const char *d, size_t dlen, int col, const char *fromcode, const struct Slist *charsets, char **e, size_t *elen, const char *specials)</div><div class="ttdoc">RFC2047-encode a string.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00425">rfc2047.c:425</a></div></div>
+<div class="ttc" id="arfc2047_8c_html_ad76ba986603e70d8fcacff83ee5a4dc2"><div class="ttname"><a href="rfc2047_8c.html#ad76ba986603e70d8fcacff83ee5a4dc2">encode</a></div><div class="ttdeci">static int encode(const char *d, size_t dlen, int col, const char *fromcode, const struct Slist *charsets, char **e, size_t *elen, const char *specials)</div><div class="ttdoc">RFC2047-encode a string.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00426">rfc2047.c:426</a></div></div>
 <div class="ttc" id="atypes_8h_html_a19d7a62cf6cef8a8e86a91bea7278561"><div class="ttname"><a href="types_8h.html#a19d7a62cf6cef8a8e86a91bea7278561">D_SLIST_SEP_COLON</a></div><div class="ttdeci">#define D_SLIST_SEP_COLON</div><div class="ttdoc">Slist items are colon-separated.</div><div class="ttdef"><b>Definition:</b> <a href="types_8h_source.html#l00111">types.h:111</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -433,36 +433,36 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760" title="Decode any RFC2047-encoded header fields.">rfc2047_decode()</a> may realloc the data pointer it's given, so work on a copy to avoid breaking the <a class="el" href="structBuffer.html" title="String manipulation buffer.">Buffer</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00800">800</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  801</span>{</div>
-<div class="line"><span class="lineno">  802</span>  <span class="keywordflow">if</span> (!al)</div>
-<div class="line"><span class="lineno">  803</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  804</span> </div>
-<div class="line"><span class="lineno">  805</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> assumed = !<a class="code hl_function" href="mutt_2slist_8c.html#a4811cefce245ed4de9d8aacd8b4ab43f">slist_is_empty</a>(<a class="code hl_function" href="config__cache_8c.html#addc06d02c91cce26bfe7c3692ddf0046">cc_assumed_charset</a>());</div>
-<div class="line"><span class="lineno">  806</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *a = NULL;</div>
-<div class="line"><span class="lineno">  807</span>  <span class="keywordtype">char</span> *data = NULL;</div>
-<div class="line"><span class="lineno">  808</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(a, al, entries)</div>
-<div class="line"><span class="lineno">  809</span>  {</div>
-<div class="line"><span class="lineno">  810</span>    <span class="keywordflow">if</span> (a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a> &amp;&amp; ((<a class="code hl_function" href="buffer_8c.html#a3736b0ddabdd7bb69313bd475cac9a97">buf_find_string</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>, <span class="stringliteral">&quot;=?&quot;</span>)) || assumed))</div>
-<div class="line"><span class="lineno">  811</span>    {</div>
-<div class="line"><span class="lineno">  812</span>      data = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>);</div>
-<div class="line"><span class="lineno">  813</span>      <a class="code hl_function" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a>(&amp;data);</div>
-<div class="line"><span class="lineno">  814</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>, data);</div>
-<div class="line"><span class="lineno">  815</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;data);</div>
-<div class="line"><span class="lineno">  816</span>    }</div>
-<div class="line"><span class="lineno">  817</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a-&gt;<a class="code hl_variable" href="structAddress.html#a12bd44ccc016e50c674ec3a902ba1c28">group</a> &amp;&amp; a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a> &amp;&amp; <a class="code hl_function" href="buffer_8c.html#a3736b0ddabdd7bb69313bd475cac9a97">buf_find_string</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>, <span class="stringliteral">&quot;=?&quot;</span>))</div>
-<div class="line"><span class="lineno">  818</span>    {</div>
-<div class="line"><span class="lineno">  819</span>      data = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>);</div>
-<div class="line"><span class="lineno">  820</span>      <a class="code hl_function" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a>(&amp;data);</div>
-<div class="line"><span class="lineno">  821</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>, data);</div>
-<div class="line"><span class="lineno">  822</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;data);</div>
-<div class="line"><span class="lineno">  823</span>    }</div>
-<div class="line"><span class="lineno">  824</span>  }</div>
-<div class="line"><span class="lineno">  825</span>}</div>
+<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00801">801</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  802</span>{</div>
+<div class="line"><span class="lineno">  803</span>  <span class="keywordflow">if</span> (!al)</div>
+<div class="line"><span class="lineno">  804</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  805</span> </div>
+<div class="line"><span class="lineno">  806</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> assumed = !<a class="code hl_function" href="mutt_2slist_8c.html#a4811cefce245ed4de9d8aacd8b4ab43f">slist_is_empty</a>(<a class="code hl_function" href="config__cache_8c.html#addc06d02c91cce26bfe7c3692ddf0046">cc_assumed_charset</a>());</div>
+<div class="line"><span class="lineno">  807</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *a = NULL;</div>
+<div class="line"><span class="lineno">  808</span>  <span class="keywordtype">char</span> *data = NULL;</div>
+<div class="line"><span class="lineno">  809</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(a, al, entries)</div>
+<div class="line"><span class="lineno">  810</span>  {</div>
+<div class="line"><span class="lineno">  811</span>    <span class="keywordflow">if</span> (a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a> &amp;&amp; ((<a class="code hl_function" href="buffer_8c.html#a3736b0ddabdd7bb69313bd475cac9a97">buf_find_string</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>, <span class="stringliteral">&quot;=?&quot;</span>)) || assumed))</div>
+<div class="line"><span class="lineno">  812</span>    {</div>
+<div class="line"><span class="lineno">  813</span>      data = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>);</div>
+<div class="line"><span class="lineno">  814</span>      <a class="code hl_function" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a>(&amp;data);</div>
+<div class="line"><span class="lineno">  815</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>, data);</div>
+<div class="line"><span class="lineno">  816</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;data);</div>
+<div class="line"><span class="lineno">  817</span>    }</div>
+<div class="line"><span class="lineno">  818</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a-&gt;<a class="code hl_variable" href="structAddress.html#a12bd44ccc016e50c674ec3a902ba1c28">group</a> &amp;&amp; a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a> &amp;&amp; <a class="code hl_function" href="buffer_8c.html#a3736b0ddabdd7bb69313bd475cac9a97">buf_find_string</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>, <span class="stringliteral">&quot;=?&quot;</span>))</div>
+<div class="line"><span class="lineno">  819</span>    {</div>
+<div class="line"><span class="lineno">  820</span>      data = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>);</div>
+<div class="line"><span class="lineno">  821</span>      <a class="code hl_function" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a>(&amp;data);</div>
+<div class="line"><span class="lineno">  822</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>, data);</div>
+<div class="line"><span class="lineno">  823</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;data);</div>
+<div class="line"><span class="lineno">  824</span>    }</div>
+<div class="line"><span class="lineno">  825</span>  }</div>
+<div class="line"><span class="lineno">  826</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a3736b0ddabdd7bb69313bd475cac9a97"><div class="ttname"><a href="buffer_8c.html#a3736b0ddabdd7bb69313bd475cac9a97">buf_find_string</a></div><div class="ttdeci">const char * buf_find_string(const struct Buffer *buf, const char *s)</div><div class="ttdoc">Return a pointer to a substring found in the buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00638">buffer.c:638</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8c_source.html#l00395">buffer.c:395</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a16e5fc168e7f3494d4b1df54447d871e"><div class="ttname"><a href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a></div><div class="ttdeci">#define TAILQ_FOREACH(var, head, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00782">queue.h:782</a></div></div>
-<div class="ttc" id="arfc2047_8c_html_a89c57c82465740567f73641c9397d760"><div class="ttname"><a href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a></div><div class="ttdeci">void rfc2047_decode(char **pd)</div><div class="ttdoc">Decode any RFC2047-encoded header fields.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00660">rfc2047.c:660</a></div></div>
+<div class="ttc" id="arfc2047_8c_html_a89c57c82465740567f73641c9397d760"><div class="ttname"><a href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a></div><div class="ttdeci">void rfc2047_decode(char **pd)</div><div class="ttdoc">Decode any RFC2047-encoded header fields.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00661">rfc2047.c:661</a></div></div>
 <div class="ttc" id="astructAddress_html"><div class="ttname"><a href="structAddress.html">Address</a></div><div class="ttdoc">An email address.</div><div class="ttdef"><b>Definition:</b> <a href="address_8h_source.html#l00035">address.h:36</a></div></div>
 <div class="ttc" id="astructAddress_html_a01b32bc3153d06f852064f1cca3feb61"><div class="ttname"><a href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">Address::personal</a></div><div class="ttdeci">struct Buffer * personal</div><div class="ttdoc">Real name of address.</div><div class="ttdef"><b>Definition:</b> <a href="address_8h_source.html#l00037">address.h:37</a></div></div>
 <div class="ttc" id="astructAddress_html_a12bd44ccc016e50c674ec3a902ba1c28"><div class="ttname"><a href="structAddress.html#a12bd44ccc016e50c674ec3a902ba1c28">Address::group</a></div><div class="ttdeci">bool group</div><div class="ttdoc">Group mailbox?</div><div class="ttdef"><b>Definition:</b> <a href="address_8h_source.html#l00039">address.h:39</a></div></div>
@@ -522,36 +522,36 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b" title="RFC-2047-encode a string.">rfc2047_encode()</a> may realloc the data pointer it's given, so work on a copy to avoid breaking the <a class="el" href="structBuffer.html" title="String manipulation buffer.">Buffer</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00765">765</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  766</span>{</div>
-<div class="line"><span class="lineno">  767</span>  <span class="keywordflow">if</span> (!al)</div>
-<div class="line"><span class="lineno">  768</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  769</span> </div>
-<div class="line"><span class="lineno">  770</span>  <span class="keywordtype">int</span> col = tag ? strlen(tag) + 2 : 32;</div>
-<div class="line"><span class="lineno">  771</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *a = NULL;</div>
-<div class="line"><span class="lineno">  772</span>  <span class="keywordtype">char</span> *data = NULL;</div>
-<div class="line"><span class="lineno">  773</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structSlist.html">Slist</a> *<span class="keyword">const</span> c_send_charset = <a class="code hl_function" href="config_2helpers_8c.html#a72ee0a5d0c0632c4fe911ef5aa6a9b8b">cs_subset_slist</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;send_charset&quot;</span>);</div>
-<div class="line"><span class="lineno">  774</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(a, al, entries)</div>
-<div class="line"><span class="lineno">  775</span>  {</div>
-<div class="line"><span class="lineno">  776</span>    <span class="keywordflow">if</span> (a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>)</div>
-<div class="line"><span class="lineno">  777</span>    {</div>
-<div class="line"><span class="lineno">  778</span>      data = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>);</div>
-<div class="line"><span class="lineno">  779</span>      <a class="code hl_function" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a>(&amp;data, <a class="code hl_variable" href="address_2address_8c.html#a930029e50328c7a0b48e302ef87fe023">AddressSpecials</a>, col, c_send_charset);</div>
-<div class="line"><span class="lineno">  780</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>, data);</div>
-<div class="line"><span class="lineno">  781</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;data);</div>
-<div class="line"><span class="lineno">  782</span>    }</div>
-<div class="line"><span class="lineno">  783</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a-&gt;<a class="code hl_variable" href="structAddress.html#a12bd44ccc016e50c674ec3a902ba1c28">group</a> &amp;&amp; a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
-<div class="line"><span class="lineno">  784</span>    {</div>
-<div class="line"><span class="lineno">  785</span>      data = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>);</div>
-<div class="line"><span class="lineno">  786</span>      <a class="code hl_function" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a>(&amp;data, <a class="code hl_variable" href="address_2address_8c.html#a930029e50328c7a0b48e302ef87fe023">AddressSpecials</a>, col, c_send_charset);</div>
-<div class="line"><span class="lineno">  787</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>, data);</div>
-<div class="line"><span class="lineno">  788</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;data);</div>
-<div class="line"><span class="lineno">  789</span>    }</div>
-<div class="line"><span class="lineno">  790</span>  }</div>
-<div class="line"><span class="lineno">  791</span>}</div>
+<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00766">766</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  767</span>{</div>
+<div class="line"><span class="lineno">  768</span>  <span class="keywordflow">if</span> (!al)</div>
+<div class="line"><span class="lineno">  769</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  770</span> </div>
+<div class="line"><span class="lineno">  771</span>  <span class="keywordtype">int</span> col = tag ? strlen(tag) + 2 : 32;</div>
+<div class="line"><span class="lineno">  772</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *a = NULL;</div>
+<div class="line"><span class="lineno">  773</span>  <span class="keywordtype">char</span> *data = NULL;</div>
+<div class="line"><span class="lineno">  774</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structSlist.html">Slist</a> *<span class="keyword">const</span> c_send_charset = <a class="code hl_function" href="config_2helpers_8c.html#a72ee0a5d0c0632c4fe911ef5aa6a9b8b">cs_subset_slist</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;send_charset&quot;</span>);</div>
+<div class="line"><span class="lineno">  775</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(a, al, entries)</div>
+<div class="line"><span class="lineno">  776</span>  {</div>
+<div class="line"><span class="lineno">  777</span>    <span class="keywordflow">if</span> (a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>)</div>
+<div class="line"><span class="lineno">  778</span>    {</div>
+<div class="line"><span class="lineno">  779</span>      data = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>);</div>
+<div class="line"><span class="lineno">  780</span>      <a class="code hl_function" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a>(&amp;data, <a class="code hl_variable" href="address_2address_8c.html#a930029e50328c7a0b48e302ef87fe023">AddressSpecials</a>, col, c_send_charset);</div>
+<div class="line"><span class="lineno">  781</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a01b32bc3153d06f852064f1cca3feb61">personal</a>, data);</div>
+<div class="line"><span class="lineno">  782</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;data);</div>
+<div class="line"><span class="lineno">  783</span>    }</div>
+<div class="line"><span class="lineno">  784</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a-&gt;<a class="code hl_variable" href="structAddress.html#a12bd44ccc016e50c674ec3a902ba1c28">group</a> &amp;&amp; a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
+<div class="line"><span class="lineno">  785</span>    {</div>
+<div class="line"><span class="lineno">  786</span>      data = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>);</div>
+<div class="line"><span class="lineno">  787</span>      <a class="code hl_function" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a>(&amp;data, <a class="code hl_variable" href="address_2address_8c.html#a930029e50328c7a0b48e302ef87fe023">AddressSpecials</a>, col, c_send_charset);</div>
+<div class="line"><span class="lineno">  788</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(a-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>, data);</div>
+<div class="line"><span class="lineno">  789</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;data);</div>
+<div class="line"><span class="lineno">  790</span>    }</div>
+<div class="line"><span class="lineno">  791</span>  }</div>
+<div class="line"><span class="lineno">  792</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a930029e50328c7a0b48e302ef87fe023"><div class="ttname"><a href="address_2address_8c.html#a930029e50328c7a0b48e302ef87fe023">AddressSpecials</a></div><div class="ttdeci">const char AddressSpecials[]</div><div class="ttdoc">Characters with special meaning for email addresses.</div><div class="ttdef"><b>Definition:</b> <a href="address_2address_8c_source.html#l00045">address.c:45</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a72ee0a5d0c0632c4fe911ef5aa6a9b8b"><div class="ttname"><a href="config_2helpers_8c.html#a72ee0a5d0c0632c4fe911ef5aa6a9b8b">cs_subset_slist</a></div><div class="ttdeci">const struct Slist * cs_subset_slist(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a string-list config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00242">helpers.c:242</a></div></div>
-<div class="ttc" id="arfc2047_8c_html_a61043d0660090027414b220222dbf90b"><div class="ttname"><a href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a></div><div class="ttdeci">void rfc2047_encode(char **pd, const char *specials, int col, const struct Slist *charsets)</div><div class="ttdoc">RFC-2047-encode a string.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00627">rfc2047.c:627</a></div></div>
+<div class="ttc" id="arfc2047_8c_html_a61043d0660090027414b220222dbf90b"><div class="ttname"><a href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a></div><div class="ttdeci">void rfc2047_encode(char **pd, const char *specials, int col, const struct Slist *charsets)</div><div class="ttdoc">RFC-2047-encode a string.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00628">rfc2047.c:628</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00042">neomutt.h:43</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00047">neomutt.h:47</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -597,28 +597,28 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00831">831</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  832</span>{</div>
-<div class="line"><span class="lineno">  833</span>  <span class="keywordflow">if</span> (!env)</div>
-<div class="line"><span class="lineno">  834</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  835</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>);</div>
-<div class="line"><span class="lineno">  836</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>);</div>
-<div class="line"><span class="lineno">  837</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>);</div>
-<div class="line"><span class="lineno">  838</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6">bcc</a>);</div>
-<div class="line"><span class="lineno">  839</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a4b75ab1853f95878dec079371bb0d799">reply_to</a>);</div>
-<div class="line"><span class="lineno">  840</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6044b60220b8029a6a505e5b61f1cadc">mail_followup_to</a>);</div>
-<div class="line"><span class="lineno">  841</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a1c204b091d782098fc1efa0c2f3b1e20">return_path</a>);</div>
-<div class="line"><span class="lineno">  842</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>);</div>
-<div class="line"><span class="lineno">  843</span>  <a class="code hl_function" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#ac7bed8a507227756030c035a7aad198e">x_label</a>);</div>
-<div class="line"><span class="lineno">  844</span> </div>
-<div class="line"><span class="lineno">  845</span>  <span class="keywordtype">char</span> *subj = env-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a>;</div>
-<div class="line"><span class="lineno">  846</span>  *(<span class="keywordtype">char</span> **) &amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a> = NULL;</div>
-<div class="line"><span class="lineno">  847</span>  <a class="code hl_function" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a>(&amp;subj);</div>
-<div class="line"><span class="lineno">  848</span>  <a class="code hl_function" href="envelope_8c.html#a91c00f700ee3ca43aa33487591b0d317">mutt_env_set_subject</a>(env, subj);</div>
-<div class="line"><span class="lineno">  849</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;subj);</div>
-<div class="line"><span class="lineno">  850</span>}</div>
+<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00832">832</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  833</span>{</div>
+<div class="line"><span class="lineno">  834</span>  <span class="keywordflow">if</span> (!env)</div>
+<div class="line"><span class="lineno">  835</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  836</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>);</div>
+<div class="line"><span class="lineno">  837</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>);</div>
+<div class="line"><span class="lineno">  838</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>);</div>
+<div class="line"><span class="lineno">  839</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6">bcc</a>);</div>
+<div class="line"><span class="lineno">  840</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a4b75ab1853f95878dec079371bb0d799">reply_to</a>);</div>
+<div class="line"><span class="lineno">  841</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6044b60220b8029a6a505e5b61f1cadc">mail_followup_to</a>);</div>
+<div class="line"><span class="lineno">  842</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a1c204b091d782098fc1efa0c2f3b1e20">return_path</a>);</div>
+<div class="line"><span class="lineno">  843</span>  <a class="code hl_function" href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>);</div>
+<div class="line"><span class="lineno">  844</span>  <a class="code hl_function" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#ac7bed8a507227756030c035a7aad198e">x_label</a>);</div>
+<div class="line"><span class="lineno">  845</span> </div>
+<div class="line"><span class="lineno">  846</span>  <span class="keywordtype">char</span> *subj = env-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a>;</div>
+<div class="line"><span class="lineno">  847</span>  *(<span class="keywordtype">char</span> **) &amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a> = NULL;</div>
+<div class="line"><span class="lineno">  848</span>  <a class="code hl_function" href="rfc2047_8c.html#a89c57c82465740567f73641c9397d760">rfc2047_decode</a>(&amp;subj);</div>
+<div class="line"><span class="lineno">  849</span>  <a class="code hl_function" href="envelope_8c.html#a91c00f700ee3ca43aa33487591b0d317">mutt_env_set_subject</a>(env, subj);</div>
+<div class="line"><span class="lineno">  850</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;subj);</div>
+<div class="line"><span class="lineno">  851</span>}</div>
 <div class="ttc" id="aenvelope_8c_html_a91c00f700ee3ca43aa33487591b0d317"><div class="ttname"><a href="envelope_8c.html#a91c00f700ee3ca43aa33487591b0d317">mutt_env_set_subject</a></div><div class="ttdeci">void mutt_env_set_subject(struct Envelope *env, const char *subj)</div><div class="ttdoc">Set both subject and real_subj to subj.</div><div class="ttdef"><b>Definition:</b> <a href="envelope_8c_source.html#l00069">envelope.c:69</a></div></div>
-<div class="ttc" id="arfc2047_8c_html_ac7aa3c6d84c8eaa435d161cc2c227b88"><div class="ttname"><a href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a></div><div class="ttdeci">void rfc2047_decode_addrlist(struct AddressList *al)</div><div class="ttdoc">Decode any RFC2047 headers in an Address list.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00800">rfc2047.c:800</a></div></div>
+<div class="ttc" id="arfc2047_8c_html_ac7aa3c6d84c8eaa435d161cc2c227b88"><div class="ttname"><a href="rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88">rfc2047_decode_addrlist</a></div><div class="ttdeci">void rfc2047_decode_addrlist(struct AddressList *al)</div><div class="ttdoc">Decode any RFC2047 headers in an Address list.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00801">rfc2047.c:801</a></div></div>
 <div class="ttc" id="astructEnvelope_html_a1c204b091d782098fc1efa0c2f3b1e20"><div class="ttname"><a href="structEnvelope.html#a1c204b091d782098fc1efa0c2f3b1e20">Envelope::return_path</a></div><div class="ttdeci">struct AddressList return_path</div><div class="ttdoc">Return path for the Email.</div><div class="ttdef"><b>Definition:</b> <a href="envelope_8h_source.html#l00058">envelope.h:58</a></div></div>
 <div class="ttc" id="astructEnvelope_html_a20d5ccf675db375e011a7791151fa09d"><div class="ttname"><a href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">Envelope::subject</a></div><div class="ttdeci">char *const subject</div><div class="ttdoc">Email's subject.</div><div class="ttdef"><b>Definition:</b> <a href="envelope_8h_source.html#l00070">envelope.h:70</a></div></div>
 <div class="ttc" id="astructEnvelope_html_a2d927371b3b80e025d6f7522b7361fe7"><div class="ttname"><a href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">Envelope::to</a></div><div class="ttdeci">struct AddressList to</div><div class="ttdoc">Email's 'To' list.</div><div class="ttdef"><b>Definition:</b> <a href="envelope_8h_source.html#l00060">envelope.h:60</a></div></div>
@@ -672,27 +672,27 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00856">856</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  857</span>{</div>
-<div class="line"><span class="lineno">  858</span>  <span class="keywordflow">if</span> (!env)</div>
-<div class="line"><span class="lineno">  859</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  860</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>, <span class="stringliteral">&quot;From&quot;</span>);</div>
-<div class="line"><span class="lineno">  861</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>, <span class="stringliteral">&quot;To&quot;</span>);</div>
-<div class="line"><span class="lineno">  862</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>, <span class="stringliteral">&quot;Cc&quot;</span>);</div>
-<div class="line"><span class="lineno">  863</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6">bcc</a>, <span class="stringliteral">&quot;Bcc&quot;</span>);</div>
-<div class="line"><span class="lineno">  864</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a4b75ab1853f95878dec079371bb0d799">reply_to</a>, <span class="stringliteral">&quot;Reply-To&quot;</span>);</div>
-<div class="line"><span class="lineno">  865</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6044b60220b8029a6a505e5b61f1cadc">mail_followup_to</a>, <span class="stringliteral">&quot;Mail-Followup-To&quot;</span>);</div>
-<div class="line"><span class="lineno">  866</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>, <span class="stringliteral">&quot;Sender&quot;</span>);</div>
-<div class="line"><span class="lineno">  867</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structSlist.html">Slist</a> *<span class="keyword">const</span> c_send_charset = <a class="code hl_function" href="config_2helpers_8c.html#a72ee0a5d0c0632c4fe911ef5aa6a9b8b">cs_subset_slist</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;send_charset&quot;</span>);</div>
-<div class="line"><span class="lineno">  868</span>  <a class="code hl_function" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#ac7bed8a507227756030c035a7aad198e">x_label</a>, NULL, <span class="keyword">sizeof</span>(<span class="stringliteral">&quot;X-Label:&quot;</span>), c_send_charset);</div>
-<div class="line"><span class="lineno">  869</span> </div>
-<div class="line"><span class="lineno">  870</span>  <span class="keywordtype">char</span> *subj = env-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a>;</div>
-<div class="line"><span class="lineno">  871</span>  *(<span class="keywordtype">char</span> **) &amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a> = NULL;</div>
-<div class="line"><span class="lineno">  872</span>  <a class="code hl_function" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a>(&amp;subj, NULL, <span class="keyword">sizeof</span>(<span class="stringliteral">&quot;Subject:&quot;</span>), c_send_charset);</div>
-<div class="line"><span class="lineno">  873</span>  <a class="code hl_function" href="envelope_8c.html#a91c00f700ee3ca43aa33487591b0d317">mutt_env_set_subject</a>(env, subj);</div>
-<div class="line"><span class="lineno">  874</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;subj);</div>
-<div class="line"><span class="lineno">  875</span>}</div>
-<div class="ttc" id="arfc2047_8c_html_a4f979b4ba087d3291049da868935e005"><div class="ttname"><a href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a></div><div class="ttdeci">void rfc2047_encode_addrlist(struct AddressList *al, const char *tag)</div><div class="ttdoc">Encode any RFC2047 headers, where required, in an Address list.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00765">rfc2047.c:765</a></div></div>
+<p class="definition">Definition at line <a class="el" href="rfc2047_8c_source.html#l00857">857</a> of file <a class="el" href="rfc2047_8c_source.html">rfc2047.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  858</span>{</div>
+<div class="line"><span class="lineno">  859</span>  <span class="keywordflow">if</span> (!env)</div>
+<div class="line"><span class="lineno">  860</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  861</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>, <span class="stringliteral">&quot;From&quot;</span>);</div>
+<div class="line"><span class="lineno">  862</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>, <span class="stringliteral">&quot;To&quot;</span>);</div>
+<div class="line"><span class="lineno">  863</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>, <span class="stringliteral">&quot;Cc&quot;</span>);</div>
+<div class="line"><span class="lineno">  864</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6">bcc</a>, <span class="stringliteral">&quot;Bcc&quot;</span>);</div>
+<div class="line"><span class="lineno">  865</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a4b75ab1853f95878dec079371bb0d799">reply_to</a>, <span class="stringliteral">&quot;Reply-To&quot;</span>);</div>
+<div class="line"><span class="lineno">  866</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6044b60220b8029a6a505e5b61f1cadc">mail_followup_to</a>, <span class="stringliteral">&quot;Mail-Followup-To&quot;</span>);</div>
+<div class="line"><span class="lineno">  867</span>  <a class="code hl_function" href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>, <span class="stringliteral">&quot;Sender&quot;</span>);</div>
+<div class="line"><span class="lineno">  868</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structSlist.html">Slist</a> *<span class="keyword">const</span> c_send_charset = <a class="code hl_function" href="config_2helpers_8c.html#a72ee0a5d0c0632c4fe911ef5aa6a9b8b">cs_subset_slist</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;send_charset&quot;</span>);</div>
+<div class="line"><span class="lineno">  869</span>  <a class="code hl_function" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#ac7bed8a507227756030c035a7aad198e">x_label</a>, NULL, <span class="keyword">sizeof</span>(<span class="stringliteral">&quot;X-Label:&quot;</span>), c_send_charset);</div>
+<div class="line"><span class="lineno">  870</span> </div>
+<div class="line"><span class="lineno">  871</span>  <span class="keywordtype">char</span> *subj = env-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a>;</div>
+<div class="line"><span class="lineno">  872</span>  *(<span class="keywordtype">char</span> **) &amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a> = NULL;</div>
+<div class="line"><span class="lineno">  873</span>  <a class="code hl_function" href="rfc2047_8c.html#a61043d0660090027414b220222dbf90b">rfc2047_encode</a>(&amp;subj, NULL, <span class="keyword">sizeof</span>(<span class="stringliteral">&quot;Subject:&quot;</span>), c_send_charset);</div>
+<div class="line"><span class="lineno">  874</span>  <a class="code hl_function" href="envelope_8c.html#a91c00f700ee3ca43aa33487591b0d317">mutt_env_set_subject</a>(env, subj);</div>
+<div class="line"><span class="lineno">  875</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;subj);</div>
+<div class="line"><span class="lineno">  876</span>}</div>
+<div class="ttc" id="arfc2047_8c_html_a4f979b4ba087d3291049da868935e005"><div class="ttname"><a href="rfc2047_8c.html#a4f979b4ba087d3291049da868935e005">rfc2047_encode_addrlist</a></div><div class="ttdeci">void rfc2047_encode_addrlist(struct AddressList *al, const char *tag)</div><div class="ttdoc">Encode any RFC2047 headers, where required, in an Address list.</div><div class="ttdef"><b>Definition:</b> <a href="rfc2047_8c_source.html#l00766">rfc2047.c:766</a></div></div>
 </div><!-- fragment --><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
