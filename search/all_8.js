@@ -58,7 +58,7 @@ var searchData=
   ['hc_5fother_55',['HC_OTHER',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a',1,'lib.h']]],
   ['hc_5fpattern_56',['HC_PATTERN',['../history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b',1,'lib.h']]],
   ['hcache_57',['hcache',['../structImapMboxData.html#a2201c72b20cba8bcd5cc42e7f395ae6a',1,'ImapMboxData']]],
-  ['hcache_2ec_58',['hcache.c',['../maildir_2hcache_8c.html',1,'(Global Namespace)'],['../hcache_2hcache_8c.html',1,'(Global Namespace)']]],
+  ['hcache_2ec_58',['hcache.c',['../hcache_2hcache_8c.html',1,'(Global Namespace)'],['../maildir_2hcache_8c.html',1,'(Global Namespace)']]],
   ['hcache_2eh_59',['hcache.h',['../hcache_8h.html',1,'']]],
   ['hcache_5fclose_60',['hcache_close',['../hcache_2hcache_8c.html#a791c8437997aca5d8747271ff4c75e98',1,'hcache_close(struct HeaderCache **ptr):&#160;hcache.c'],['../hcache_2lib_8h.html#a791c8437997aca5d8747271ff4c75e98',1,'hcache_close(struct HeaderCache **ptr):&#160;hcache.c']]],
   ['hcache_5fdelete_5femail_61',['hcache_delete_email',['../hcache_2hcache_8c.html#a66e48b640205127c7a4bb987b8d0192d',1,'hcache_delete_email(struct HeaderCache *hc, const char *key, size_t keylen):&#160;hcache.c'],['../hcache_2lib_8h.html#a66e48b640205127c7a4bb987b8d0192d',1,'hcache_delete_email(struct HeaderCache *hc, const char *key, size_t keylen):&#160;hcache.c']]],
