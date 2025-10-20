@@ -31,7 +31,7 @@ var notmuch_8c =
     [ "get_threads", "notmuch_8c.html#a0256045c9befd9a5bf7ec50373f7b431", null ],
     [ "read_threads_query", "notmuch_8c.html#a73570c4d26bc98c4862a64d96859d09f", null ],
     [ "get_nm_message", "notmuch_8c.html#a5ea2e0203ec9a6bf6c9d346d7178c9da", null ],
-    [ "nm_message_has_tag", "notmuch_8c.html#aa2697eb2457e0bcd498462830debc346", null ],
+    [ "nm_message_has_tag", "notmuch_8c.html#aacdf02765d6b92f25b17fb389440566a", null ],
     [ "sync_email_path_with_nm", "notmuch_8c.html#a5d9e6d209beb0f018e50e865a7b53c44", null ],
     [ "update_tags", "notmuch_8c.html#ab368ac6da1bfee09880e51942edb79ab", null ],
     [ "update_email_flags", "notmuch_8c.html#ad8f62a6c7fc1fcdab25470d50e6b9d49", null ],

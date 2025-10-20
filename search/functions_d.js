@@ -90,7 +90,7 @@ var searchData=
   ['nm_5fmdata_5ffree_87',['nm_mdata_free',['../group__mailbox__mdata__free.html#ga2b2dbfa2b1f60e776e9bc6371e08ba37',1,'nm_mdata_free(void **ptr):&#160;mdata.c'],['../group__mailbox__mdata__free.html#ga2b2dbfa2b1f60e776e9bc6371e08ba37',1,'nm_mdata_free(void **ptr):&#160;mdata.c']]],
   ['nm_5fmdata_5fget_88',['nm_mdata_get',['../notmuch_2mdata_8c.html#a8906852e9cd707fc4e4fb61a264799dc',1,'nm_mdata_get(struct Mailbox *m):&#160;mdata.c'],['../notmuch_2mdata_8h.html#a8906852e9cd707fc4e4fb61a264799dc',1,'nm_mdata_get(struct Mailbox *m):&#160;mdata.c']]],
   ['nm_5fmdata_5fnew_89',['nm_mdata_new',['../notmuch_2mdata_8c.html#a064456517ccebf77fb96e4716bf6f85e',1,'nm_mdata_new(const char *url):&#160;mdata.c'],['../notmuch_2mdata_8h.html#a064456517ccebf77fb96e4716bf6f85e',1,'nm_mdata_new(const char *url):&#160;mdata.c']]],
-  ['nm_5fmessage_5fhas_5ftag_90',['nm_message_has_tag',['../notmuch_8c.html#aa2697eb2457e0bcd498462830debc346',1,'notmuch.c']]],
+  ['nm_5fmessage_5fhas_5ftag_90',['nm_message_has_tag',['../notmuch_8c.html#aacdf02765d6b92f25b17fb389440566a',1,'notmuch.c']]],
   ['nm_5fmessage_5fis_5fstill_5fqueried_91',['nm_message_is_still_queried',['../notmuch_2lib_8h.html#ad84349cdd5669f38ce04692c048dcfc8',1,'nm_message_is_still_queried(struct Mailbox *m, struct Email *e):&#160;notmuch.c'],['../notmuch_8c.html#ad84349cdd5669f38ce04692c048dcfc8',1,'nm_message_is_still_queried(struct Mailbox *m, struct Email *e):&#160;notmuch.c']]],
   ['nm_5fmsg_5fclose_92',['nm_msg_close',['../group__mx__msg__close.html#gac8114a1b39313cf9d098b94aefcef468',1,'notmuch.c']]],
   ['nm_5fmsg_5fcommit_93',['nm_msg_commit',['../group__mx__msg__commit.html#ga687f114afaf0d0f46f15fefb042388f8',1,'notmuch.c']]],

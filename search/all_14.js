@@ -17,7 +17,7 @@ var searchData=
   ['tagged_14',['tagged',['../structEmail.html#af2c0a7e5c214aa9b1a42b7befaa1cffe',1,'Email::tagged()'],['../structBody.html#aaaa97781986925aa1f10f24be18243ab',1,'Body::tagged()'],['../structFolderFile.html#a4820cf6500387c1c2762ea022a94f784',1,'FolderFile::tagged()']]],
   ['tagging_20support_15',['Tagging support',['../menu_tagging.html',1,'lib_menu']]],
   ['tagging_2ec_16',['tagging.c',['../tagging_8c.html',1,'']]],
-  ['tags_17',['tags',['../structNmTags.html#ace1826333fd06f58136657c323ada671',1,'NmTags::tags()'],['../structEmail.html#aaa992628043f7a89ba87b8ce24f8c1b1',1,'Email::tags()'],['../structAlias.html#a033aa03e863c114142a8d8474825ed2d',1,'Alias::tags()']]],
+  ['tags_17',['tags',['../structNmTags.html#a5a1921dc2cf39e108af3ea05f8d051e6',1,'NmTags::tags()'],['../structEmail.html#aaa992628043f7a89ba87b8ce24f8c1b1',1,'Email::tags()'],['../structAlias.html#a033aa03e863c114142a8d8474825ed2d',1,'Alias::tags()']]],
   ['tags_2ec_18',['tags.c',['../tags_8c.html',1,'']]],
   ['tags_2eh_19',['tags.h',['../tags_8h.html',1,'']]],
   ['tags_5fcommit_20',['tags_commit',['../structMxOps.html#a2c86bd6a85aefbb16701be00593013fb',1,'MxOps']]],

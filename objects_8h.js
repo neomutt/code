@@ -15,7 +15,6 @@ var objects_8h =
       [ "HM_TUI", "objects_8h.html#adc537f8b6bfa7ac716cc822163b11f10a9ac0724e1a47bba0ac88c27661f5b21f", null ],
       [ "HM_ALL", "objects_8h.html#adc537f8b6bfa7ac716cc822163b11f10a23909ae0e94d4b5be5accae114d477ed", null ]
     ] ],
-    [ "ARRAY_HEAD", "objects_8h.html#a37dd967933871352df3bf7de698ffcd0", null ],
     [ "command_line_new", "objects_8h.html#a4eda753f94fb0909be3d2eedd4da5424", null ],
     [ "command_line_free", "objects_8h.html#a885c5db5e51b0bfcbc068fb545eb0815", null ]
 ];

@@ -26,5 +26,5 @@ var compile_8c =
     [ "attach_leaf", "compile_8c.html#a4aa4651f7e95c67bd19b6d7ff604297b", null ],
     [ "attach_new_root", "compile_8c.html#a2b46a3a5cd833d8a52b20381d8a5a875", null ],
     [ "attach_new_leaf", "compile_8c.html#a4252a4aa015f0814f9017d7610a1a346", null ],
-    [ "mutt_pattern_comp", "compile_8c.html#acf40948be2d6bd0deedbc24a016b41db", null ]
+    [ "mutt_pattern_comp", "compile_8c.html#a43039fbeb001087dad2a07081ca9526e", null ]
 ];

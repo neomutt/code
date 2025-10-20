@@ -9,7 +9,7 @@ var history_8c =
     [ "shrink_histfile", "history_8c.html#aad9bcbc1882ab91a90f84be0543b13ff", null ],
     [ "save_history", "history_8c.html#a51c77f2d472f83f66271fa8693476c50", null ],
     [ "remove_history_dups", "history_8c.html#a115238984c7cbc554e1526f7ce460f60", null ],
-    [ "mutt_hist_search", "history_8c.html#add5deb66d78099dd9e77668e9bab9eaf", null ],
+    [ "mutt_hist_search", "history_8c.html#aa012096d01b1ad78ec0a002c86fe40fa", null ],
     [ "mutt_hist_cleanup", "history_8c.html#aff6eb2b4dc96f0d63aff49733a640999", null ],
     [ "mutt_hist_init", "history_8c.html#a46801529f80d425b727d1d4a3fc57a97", null ],
     [ "mutt_hist_add", "history_8c.html#a541c9c8be36706c87b62c896a897f680", null ],

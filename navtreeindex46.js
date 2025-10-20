@@ -1,9 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"structEnrichedState.html#a7bb708aafd980deba0ec3c02570dc599":[1,0,71,9],
-"structEnrichedState.html#aadd5d9d9dca68deb9860d698492a09a4":[1,0,71,5],
-"structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4":[1,0,71,14],
-"structEnrichedState.html#acb9ee0793e0aff2f26e4845a1161f46e":[1,0,71,8],
 "structEnrichedState.html#ad6e42cbea8841c7ddff457cb8c63693e":[1,0,71,11],
 "structEnrichedState.html#adf614f409d404535611711b2af200f7e":[1,0,71,4],
 "structEnrichedState.html#aefb17717977e343b9c178b934c65830e":[1,0,71,6],
@@ -249,5 +245,9 @@ var NAVTREEINDEX46 =
 "structHeaderCache.html#a11a84f4577509d7a782b8f695886a1c0":[1,0,113,5],
 "structHeaderCache.html#a48bc8a680626d25eb1e2e10438e89271":[1,0,113,1],
 "structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95":[1,0,113,0],
-"structHeaderCache.html#a70c1a9921a59f63eb065e43768e9e9b6":[1,0,113,2]
+"structHeaderCache.html#a70c1a9921a59f63eb065e43768e9e9b6":[1,0,113,2],
+"structHeaderCache.html#aa3dbee309b4040e10348d089e0cfe9b8":[1,0,113,3],
+"structHeaderCache.html#aa5791d506eed6ed34656d6e5eadd6d0e":[1,0,113,4],
+"structHelpbarWindowData.html":[1,0,114],
+"structHelpbarWindowData.html#a139fa7a522634f18bfa3e0fd2b25463a":[1,0,114,0]
 };

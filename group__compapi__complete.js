@@ -8,5 +8,5 @@ var group__compapi__complete =
     [ "complete_label", "group__compapi__complete.html#gac53b3c76e07d4164cff2a78c2413e031", null ],
     [ "complete_nm_query", "group__compapi__complete.html#ga37f75bf978f897a77f20aa67506791ab", null ],
     [ "complete_nm_tag", "group__compapi__complete.html#gab906e39fccd5145ad4fae7d4295e1af4", null ],
-    [ "complete_pattern", "group__compapi__complete.html#ga23f8c7fc924827ce77a714aab11b2a67", null ]
+    [ "complete_pattern", "group__compapi__complete.html#ga9b3ebdf40252d834c6b0e5fddcafc2de", null ]
 ];

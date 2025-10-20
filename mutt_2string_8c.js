@@ -40,5 +40,6 @@ var mutt_2string_8c =
     [ "mutt_str_asprintf", "mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595", null ],
     [ "mutt_str_hyphenate", "mutt_2string_8c.html#a9cb41e346ba2d579f1b3057f8faab7da", null ],
     [ "mutt_str_inbox_cmp", "group__sort__api.html#ga4b21fa92aed3a2a6ebcee6b35b17dc50", null ],
+    [ "string_array_clear", "mutt_2string_8c.html#ac6115e7fb3ab6a3b86d9f4f745890fb0", null ],
     [ "SysExits", "mutt_2string_8c.html#a665ca76b0df4c4fd511240fdb87b86f1", null ]
 ];

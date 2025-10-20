@@ -22,7 +22,7 @@ var openssl_8c =
     [ "check_host", "openssl_8c.html#a039081100802f18e9d2fb80b492e61ac", null ],
     [ "check_certificate_by_digest", "openssl_8c.html#afdbe2b83fcf6173cf72e7f729f230a72", null ],
     [ "ssl_cache_trusted_cert", "openssl_8c.html#ab8bbb9fa54bc203070165c84f273cb0f", null ],
-    [ "add_cert", "openssl_8c.html#ad27e7ee5e0150cef8b9b5d85c4529589", null ],
+    [ "add_cert", "openssl_8c.html#acd1c8bc6deae4960eb20099d6fda2ebf", null ],
     [ "interactive_check_cert", "openssl_8c.html#ae0a15dc5df31b626a42f31bd6a5ea7f4", null ],
     [ "ssl_verify_callback", "openssl_8c.html#a93e2f01418ccb7300b9864837c0a2719", null ],
     [ "ssl_negotiate", "openssl_8c.html#a7480af2397359ace6c8741be1e680295", null ],

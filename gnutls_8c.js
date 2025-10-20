@@ -18,7 +18,7 @@ var gnutls_8c =
     [ "tls_check_stored_hostname", "gnutls_8c.html#a2e7613e6664e42d7fbc4cc7dea6a0de6", null ],
     [ "tls_compare_certificates", "gnutls_8c.html#a70776094818b4522aa78760d2008191b", null ],
     [ "tls_check_preauth", "gnutls_8c.html#a05268b51fa6e96dd8ac0e40630b2b316", null ],
-    [ "add_cert", "gnutls_8c.html#af01f53a5d805ac4b638f6cb7973b2cea", null ],
+    [ "add_cert", "gnutls_8c.html#a48a166ba56f9fe1b210c560cadceb7ab", null ],
     [ "tls_check_one_certificate", "gnutls_8c.html#ad2898199aadc914b669fbc3bab018ee2", null ],
     [ "tls_check_certificate", "gnutls_8c.html#a0b8141f6dc5a59f2080067f026b20860", null ],
     [ "tls_get_client_cert", "gnutls_8c.html#ac78a03ed1e6f606a618f474c0dd798ca", null ],

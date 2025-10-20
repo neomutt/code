@@ -9,7 +9,7 @@ var searchData=
   ['tag_5fstr_6',['tag_str',['../structNmTags.html#aeb685f7878de45a6603480a0bd41bd63',1,'NmTags']]],
   ['tagformats_7',['TagFormats',['../tags_8c.html#a7aff994ecdbb3ec877067e5885388102',1,'TagFormats():&#160;tags.c'],['../tags_8h.html#a7aff994ecdbb3ec877067e5885388102',1,'TagFormats():&#160;tags.c']]],
   ['tagged_8',['tagged',['../structBody.html#aaaa97781986925aa1f10f24be18243ab',1,'Body::tagged()'],['../structFolderFile.html#a4820cf6500387c1c2762ea022a94f784',1,'FolderFile::tagged()'],['../structEmail.html#af2c0a7e5c214aa9b1a42b7befaa1cffe',1,'Email::tagged()']]],
-  ['tags_9',['tags',['../structAlias.html#a033aa03e863c114142a8d8474825ed2d',1,'Alias::tags()'],['../structEmail.html#aaa992628043f7a89ba87b8ce24f8c1b1',1,'Email::tags()'],['../structNmTags.html#ace1826333fd06f58136657c323ada671',1,'NmTags::tags()']]],
+  ['tags_9',['tags',['../structAlias.html#a033aa03e863c114142a8d8474825ed2d',1,'Alias::tags()'],['../structEmail.html#aaa992628043f7a89ba87b8ce24f8c1b1',1,'Email::tags()'],['../structNmTags.html#a5a1921dc2cf39e108af3ea05f8d051e6',1,'NmTags::tags()']]],
   ['tags_5fcommit_10',['tags_commit',['../structMxOps.html#a2c86bd6a85aefbb16701be00593013fb',1,'MxOps']]],
   ['tags_5fedit_11',['tags_edit',['../structMxOps.html#a9b14a8b820a431e67082863331938d81',1,'MxOps']]],
   ['tagtransforms_12',['TagTransforms',['../tags_8h.html#aadb38a7004cb2dfa0550d53004eb74d1',1,'TagTransforms():&#160;tags.c'],['../tags_8c.html#aadb38a7004cb2dfa0550d53004eb74d1',1,'TagTransforms():&#160;tags.c']]],

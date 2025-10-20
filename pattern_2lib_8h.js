@@ -65,7 +65,7 @@ var pattern_2lib_8h =
     [ "SLIST_HEAD", "pattern_2lib_8h.html#a2bfd0ca84e9773d600ef85243eeb4550", null ],
     [ "mutt_pattern_exec", "pattern_2lib_8h.html#af131fa5d7ea39b2d806ed30369f401ac", null ],
     [ "mutt_pattern_alias_exec", "pattern_2lib_8h.html#a3e5c6984e80a84d451642c66acc8dcf1", null ],
-    [ "mutt_pattern_comp", "pattern_2lib_8h.html#acf40948be2d6bd0deedbc24a016b41db", null ],
+    [ "mutt_pattern_comp", "pattern_2lib_8h.html#a43039fbeb001087dad2a07081ca9526e", null ],
     [ "mutt_check_simple", "pattern_2lib_8h.html#a6cee22aa2e3cb0c24cbbcdcc175d7ac6", null ],
     [ "mutt_pattern_free", "pattern_2lib_8h.html#ae447e834babbe84bef7005199ec39962", null ],
     [ "dlg_pattern", "group__gui__dlg.html#ga910fa61e8d073d59d75b57b3effc738a", null ],

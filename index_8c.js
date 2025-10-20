@@ -21,6 +21,5 @@ var index_8c =
     [ "index_repaint", "group__window__repaint.html#ga3a77e69451f3977b5f554d8d3aa08c0e", null ],
     [ "index_window_new", "index_8c.html#a9eca6a0294598fb4f758bda818cb37cc", null ],
     [ "get_current_mailbox_view", "index_8c.html#a5915d8b932eb86633f1d7d65a8c83289", null ],
-    [ "get_current_mailbox", "index_8c.html#a798c826c6ad972b975c8c51070008f99", null ],
-    [ "get_current_menu", "index_8c.html#a7e00402870b9fc83f95345e707f43d92", null ]
+    [ "get_current_mailbox", "index_8c.html#a798c826c6ad972b975c8c51070008f99", null ]
 ];

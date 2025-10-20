@@ -27,7 +27,6 @@ var index_2lib_8h =
     [ "find_previous_undeleted", "index_2lib_8h.html#af67a4bfc2e8e2781fa29baad634b6efc", null ],
     [ "get_current_mailbox", "index_2lib_8h.html#a798c826c6ad972b975c8c51070008f99", null ],
     [ "get_current_mailbox_view", "index_2lib_8h.html#a5915d8b932eb86633f1d7d65a8c83289", null ],
-    [ "get_current_menu", "index_2lib_8h.html#a7e00402870b9fc83f95345e707f43d92", null ],
     [ "index_change_folder", "index_2lib_8h.html#a79bba17b676af37c3a7f120a714c3e62", null ],
     [ "index_color", "group__menu__color.html#ga8227ef1e013f8256d0ace9f4fefb1d8e", null ],
     [ "index_make_entry", "group__menu__make__entry.html#ga3fe3f5bd655d5d45e9c814eb0ff75005", null ],

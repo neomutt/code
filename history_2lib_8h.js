@@ -24,8 +24,8 @@ var history_2lib_8h =
     [ "mutt_hist_read_file", "history_2lib_8h.html#a282fdccadb31bf6aaf2a45c392a46f88", null ],
     [ "mutt_hist_reset_state", "history_2lib_8h.html#a6197a536a3da0385551bac50a45d6a7a", null ],
     [ "mutt_hist_save_scratch", "history_2lib_8h.html#a2d26cab55cd51b83f6e2a45a8ce44799", null ],
-    [ "mutt_hist_search", "history_2lib_8h.html#add5deb66d78099dd9e77668e9bab9eaf", null ],
+    [ "mutt_hist_search", "history_2lib_8h.html#aa012096d01b1ad78ec0a002c86fe40fa", null ],
     [ "mutt_hist_complete", "history_2lib_8h.html#a3825d9cf2dbb8401a11e988a8c683eb8", null ],
     [ "main_hist_observer", "group__observer__api.html#ga2a9a5a2068ae8c2b217cb64cd679e498", null ],
-    [ "dlg_history", "group__gui__dlg.html#ga83c5fc3028cc9a8a848880f2c2a80086", null ]
+    [ "dlg_history", "group__gui__dlg.html#ga62db297c2561b6ccee8223a38735b997", null ]
 ];

@@ -24,7 +24,7 @@ var searchData=
   ['match_5flist_21',['match_list',['../structCompletionData.html#ab9497ed215f2a456de8f2fe9f2195b82',1,'CompletionData']]],
   ['match_5flist_5flen_22',['match_list_len',['../structCompletionData.html#a2bfd704a3f09f1519bdcb29ef80ef5cb',1,'CompletionData']]],
   ['matched_23',['matched',['../structEmail.html#a176c9555da85be4329562050056c0071',1,'Email']]],
-  ['matches_24',['matches',['../structPrexStorage.html#aaa337527edf626ffda0c7baf8c43178f',1,'PrexStorage::matches()'],['../structHistoryData.html#a4a405d002aec089b72620e20536d7506',1,'HistoryData::matches()']]],
+  ['matches_24',['matches',['../structPrexStorage.html#aaa337527edf626ffda0c7baf8c43178f',1,'PrexStorage::matches()'],['../structHistoryData.html#a60752d9e4b0d461a2c259e767c81bbd5',1,'HistoryData::matches()']]],
   ['max_25',['max',['../structPattern.html#a6a332741926ea1e2056b350df886c2ac',1,'Pattern::max()'],['../structChildCtx.html#a7791d536383236bfbb2084f7644e606b',1,'ChildCtx::max()'],['../structMhSequences.html#a4f50dd478cc24d2af98b7d72d99f8f6f',1,'MhSequences::max()'],['../structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b',1,'Menu::max()']]],
   ['max_5fcols_26',['max_cols',['../structExpandoFormat.html#ab72c2ba7dea6beb609b5d7e58c142c55',1,'ExpandoFormat']]],
   ['max_5flevel_27',['max_level',['../structComprOps.html#a840192d536030cfc27f47675d23fc074',1,'ComprOps']]],

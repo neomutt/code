@@ -7,6 +7,8 @@ var string2_8h =
     [ "SKIPWS", "string2_8h.html#aebd4477213a7b706515efaffdec64181", null ],
     [ "terminate_string", "string2_8h.html#a89435fb2d02747769361525891c832c9", null ],
     [ "terminate_buffer", "string2_8h.html#aaebedb0586e8649bb6ad54123a6de9d5", null ],
+    [ "ARRAY_HEAD", "string2_8h.html#af642c8ab2e5e89b6efdbd1e94aec1f50", null ],
+    [ "string_array_clear", "string2_8h.html#ac6115e7fb3ab6a3b86d9f4f745890fb0", null ],
     [ "mutt_str_adjust", "string2_8h.html#aa413e39e802d1748408fcc8509844411", null ],
     [ "mutt_str_asprintf", "string2_8h.html#a51804523442c072745bf8cdef6a43938", null ],
     [ "mutt_str_coll", "string2_8h.html#a7d1e7d6b0d1ab35338725c8ade519ba2", null ],
