@@ -2,7 +2,7 @@ var searchData=
 [
   ['data_2ec_0',['data.c',['../data_8c.html',1,'']]],
   ['data_2eh_1',['data.h',['../data_8h.html',1,'']]],
-  ['date_2ec_2',['date.c',['../mutt_2date_8c.html',1,'(Global Namespace)'],['../fuzz_2date_8c.html',1,'(Global Namespace)']]],
+  ['date_2ec_2',['date.c',['../fuzz_2date_8c.html',1,'(Global Namespace)'],['../mutt_2date_8c.html',1,'(Global Namespace)']]],
   ['date_2eh_3',['date.h',['../date_8h.html',1,'']]],
   ['db_2ec_4',['db.c',['../autocrypt_2db_8c.html',1,'(Global Namespace)'],['../notmuch_2db_8c.html',1,'(Global Namespace)']]],
   ['debug_2ec_5',['debug.c',['../debug_8c.html',1,'']]],
@@ -32,6 +32,6 @@ var searchData=
   ['do_5fpager_2ec_29',['do_pager.c',['../do__pager_8c.html',1,'']]],
   ['domain_2eh_30',['domain.h',['../domain_8h.html',1,'']]],
   ['draw_2ec_31',['draw.c',['../draw_8c.html',1,'']]],
-  ['dump_2ec_32',['dump.c',['../key_2dump_8c.html',1,'(Global Namespace)'],['../config_2dump_8c.html',1,'(Global Namespace)'],['../color_2dump_8c.html',1,'(Global Namespace)']]],
-  ['dump_2eh_33',['dump.h',['../config_2dump_8h.html',1,'(Global Namespace)'],['../color_2dump_8h.html',1,'(Global Namespace)']]]
+  ['dump_2ec_32',['dump.c',['../color_2dump_8c.html',1,'(Global Namespace)'],['../config_2dump_8c.html',1,'(Global Namespace)'],['../key_2dump_8c.html',1,'(Global Namespace)']]],
+  ['dump_2eh_33',['dump.h',['../color_2dump_8h.html',1,'(Global Namespace)'],['../config_2dump_8h.html',1,'(Global Namespace)']]]
 ];

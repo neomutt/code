@@ -8,6 +8,6 @@ var structMessage =
     [ "flagged", "structMessage.html#aaa255a41e07cb4277d457c0db894a47a", null ],
     [ "replied", "structMessage.html#a7fb38cfeca11b8aee9cd598475100dfb", null ],
     [ "draft", "structMessage.html#a7a53f3b9c450c29d93793c0d2b0608f7", null ],
-    [ "flags", "structMessage.html#af789382bf4127b5b8c784bbae1c04241", null ],
+    [ "flags", "structMessage.html#a6b0ccab7dd8eeb0f8c14858d75e872c7", null ],
     [ "received", "structMessage.html#aa586337aebc4a460be8ae0f676cd0ff6", null ]
 ];

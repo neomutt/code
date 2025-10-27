@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['gather_5fmenu_0',['gather_menu',['../key_2lib_8h.html#a3397ea33ffb6b8185f3cd3a72fa3b700',1,'gather_menu(enum MenuType menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro):&#160;lib.c'],['../key_2lib_8c.html#a3397ea33ffb6b8185f3cd3a72fa3b700',1,'gather_menu(enum MenuType menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro):&#160;lib.c']]],
-  ['gather_5funbound_1',['gather_unbound',['../key_2lib_8h.html#add7ed79b95d588c1f3d9726eb7440d63',1,'gather_unbound(const struct MenuFuncOp *funcs, const struct KeymapList *km_menu, const struct KeymapList *km_aux, struct BindingInfoArray *bia_unbound):&#160;lib.c'],['../key_2lib_8c.html#add7ed79b95d588c1f3d9726eb7440d63',1,'gather_unbound(const struct MenuFuncOp *funcs, const struct KeymapList *km_menu, const struct KeymapList *km_aux, struct BindingInfoArray *bia_unbound):&#160;lib.c']]],
+  ['gather_5fmenu_0',['gather_menu',['../key_2lib_8c.html#a3397ea33ffb6b8185f3cd3a72fa3b700',1,'gather_menu(enum MenuType menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro):&#160;lib.c'],['../key_2lib_8h.html#a3397ea33ffb6b8185f3cd3a72fa3b700',1,'gather_menu(enum MenuType menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro):&#160;lib.c']]],
+  ['gather_5funbound_1',['gather_unbound',['../key_2lib_8c.html#add7ed79b95d588c1f3d9726eb7440d63',1,'gather_unbound(const struct MenuFuncOp *funcs, const struct KeymapList *km_menu, const struct KeymapList *km_aux, struct BindingInfoArray *bia_unbound):&#160;lib.c'],['../key_2lib_8h.html#add7ed79b95d588c1f3d9726eb7440d63',1,'gather_unbound(const struct MenuFuncOp *funcs, const struct KeymapList *km_menu, const struct KeymapList *km_aux, struct BindingInfoArray *bia_unbound):&#160;lib.c']]],
   ['gen_5fattach_5flist_2',['gen_attach_list',['../dlg__compose_8c.html#a26c85658a833eeebe97b7b0438b1b9ab',1,'dlg_compose.c']]],
   ['gen_5fcid_3',['gen_cid',['../compose_2functions_8c.html#a78c7433990448979005f6b6824848edd',1,'functions.c']]],
   ['gen_5fhash_5fcase_5fstring_4',['gen_hash_case_string',['../group__hash__gen__hash__api.html#gad41b9a23170c9fb4a6bb1c0b68576bb3',1,'hash.c']]],
@@ -48,7 +48,7 @@ var searchData=
   ['get_5ftoplevel_5fencoding_45',['get_toplevel_encoding',['../multipart_8c.html#a2971e087b3204abafa47adb0ded71055',1,'multipart.c']]],
   ['get_5fuse_5fthreads_5fstr_46',['get_use_threads_str',['../mutt__thread_8c.html#a849aee4fafabc93f47d0aa2beba610fb',1,'get_use_threads_str(enum UseThreads value):&#160;mutt_thread.c'],['../mutt__thread_8h.html#a849aee4fafabc93f47d0aa2beba610fb',1,'get_use_threads_str(enum UseThreads value):&#160;mutt_thread.c']]],
   ['get_5fuser_5finfo_47',['get_user_info',['../main_8c.html#ab1ab96b05777c73f61c060778657ec38',1,'main.c']]],
-  ['getdnsdomainname_48',['getdnsdomainname',['../conn_2lib_8h.html#a0ce5421f78cc2c1589d43205b5730c7a',1,'getdnsdomainname(struct Buffer *result):&#160;getdomain.c'],['../getdomain_8c.html#a0ce5421f78cc2c1589d43205b5730c7a',1,'getdnsdomainname(struct Buffer *result):&#160;getdomain.c']]],
+  ['getdnsdomainname_48',['getdnsdomainname',['../getdomain_8c.html#a0ce5421f78cc2c1589d43205b5730c7a',1,'getdnsdomainname(struct Buffer *result):&#160;getdomain.c'],['../conn_2lib_8h.html#a0ce5421f78cc2c1589d43205b5730c7a',1,'getdnsdomainname(struct Buffer *result):&#160;getdomain.c']]],
   ['getkeys_49',['getkeys',['../smime_8c.html#a4477a016ba21f15dd55a65c753c47b01',1,'smime.c']]],
   ['getmailname_50',['getmailname',['../main_8c.html#a2bcc94a09340f246c1b1f8ce2f483b78',1,'main.c']]],
   ['getnameinfo_5ferr_51',['getnameinfo_err',['../sasl_8c.html#a691680adf1d3b7d37d7dfa319d25095f',1,'sasl.c']]],

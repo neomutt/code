@@ -10,8 +10,8 @@ var searchData=
   ['header_2eh_7',['header.h',['../header_8h.html',1,'']]],
   ['help_2ec_8',['help.c',['../help_8c.html',1,'']]],
   ['helpbar_2ec_9',['helpbar.c',['../helpbar_8c.html',1,'']]],
-  ['helpers_2ec_10',['helpers.c',['../complete_2helpers_8c.html',1,'(Global Namespace)'],['../expando_2helpers_8c.html',1,'(Global Namespace)'],['../config_2helpers_8c.html',1,'(Global Namespace)']]],
-  ['helpers_2eh_11',['helpers.h',['../expando_2helpers_8h.html',1,'(Global Namespace)'],['../config_2helpers_8h.html',1,'(Global Namespace)']]],
+  ['helpers_2ec_10',['helpers.c',['../complete_2helpers_8c.html',1,'(Global Namespace)'],['../config_2helpers_8c.html',1,'(Global Namespace)'],['../expando_2helpers_8c.html',1,'(Global Namespace)']]],
+  ['helpers_2eh_11',['helpers.h',['../config_2helpers_8h.html',1,'(Global Namespace)'],['../expando_2helpers_8h.html',1,'(Global Namespace)']]],
   ['history_2ec_12',['history.c',['../history_8c.html',1,'']]],
   ['hook_2ec_13',['hook.c',['../hook_8c.html',1,'']]],
   ['hook_2eh_14',['hook.h',['../hook_8h.html',1,'']]]

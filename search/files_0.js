@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['account_2ec_0',['account.c',['../maildir_2account_8c.html',1,'(Global Namespace)'],['../core_2account_8c.html',1,'(Global Namespace)']]],
-  ['account_2eh_1',['account.h',['../maildir_2account_8h.html',1,'(Global Namespace)'],['../core_2account_8h.html',1,'(Global Namespace)']]],
+  ['account_2ec_0',['account.c',['../core_2account_8c.html',1,'(Global Namespace)'],['../maildir_2account_8c.html',1,'(Global Namespace)']]],
+  ['account_2eh_1',['account.h',['../core_2account_8h.html',1,'(Global Namespace)'],['../maildir_2account_8h.html',1,'(Global Namespace)']]],
   ['accountcmd_2ec_2',['accountcmd.c',['../accountcmd_8c.html',1,'']]],
   ['accountcmd_2eh_3',['accountcmd.h',['../accountcmd_8h.html',1,'']]],
-  ['adata_2ec_4',['adata.c',['../pop_2adata_8c.html',1,'(Global Namespace)'],['../notmuch_2adata_8c.html',1,'(Global Namespace)'],['../nntp_2adata_8c.html',1,'(Global Namespace)'],['../imap_2adata_8c.html',1,'(Global Namespace)']]],
-  ['adata_2eh_5',['adata.h',['../pop_2adata_8h.html',1,'(Global Namespace)'],['../notmuch_2adata_8h.html',1,'(Global Namespace)'],['../nntp_2adata_8h.html',1,'(Global Namespace)'],['../imap_2adata_8h.html',1,'(Global Namespace)']]],
-  ['address_2ec_6',['address.c',['../fuzz_2address_8c.html',1,'(Global Namespace)'],['../address_2address_8c.html',1,'(Global Namespace)']]],
+  ['adata_2ec_4',['adata.c',['../imap_2adata_8c.html',1,'(Global Namespace)'],['../nntp_2adata_8c.html',1,'(Global Namespace)'],['../notmuch_2adata_8c.html',1,'(Global Namespace)'],['../pop_2adata_8c.html',1,'(Global Namespace)']]],
+  ['adata_2eh_5',['adata.h',['../imap_2adata_8h.html',1,'(Global Namespace)'],['../nntp_2adata_8h.html',1,'(Global Namespace)'],['../notmuch_2adata_8h.html',1,'(Global Namespace)'],['../pop_2adata_8h.html',1,'(Global Namespace)']]],
+  ['address_2ec_6',['address.c',['../address_2address_8c.html',1,'(Global Namespace)'],['../fuzz_2address_8c.html',1,'(Global Namespace)']]],
   ['address_2eh_7',['address.h',['../address_8h.html',1,'']]],
   ['alias_2ec_8',['alias.c',['../alias_8c.html',1,'']]],
   ['alias_2eh_9',['alias.h',['../alias_8h.html',1,'']]],

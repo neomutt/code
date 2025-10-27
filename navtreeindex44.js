@@ -1,7 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"structAliasView.html":[1,0,6],
-"structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4":[1,0,6,6],
 "structAliasView.html#a0db3775dbf901fbd380681d2e806f601":[1,0,6,7],
 "structAliasView.html#a2415ea4839d043b562c0a79d51618f3c":[1,0,6,3],
 "structAliasView.html#a5be64feabac1222706a5555845e285cc":[1,0,6,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX44 =
 "structCommandLine.html#a544b84c746efffdb4747b9d91969379a":[1,0,40,2],
 "structCommandLine.html#a78bd7e7c9bf3d815e9db8b64700f768d":[1,0,40,4],
 "structCompareData.html":[1,0,41],
-"structCompareData.html#a494fd1e791a53e404330531678597e00":[1,0,41,0]
+"structCompareData.html#a494fd1e791a53e404330531678597e00":[1,0,41,0],
+"structCompareData.html#aca9552167a3e5bdc72ba533b6e7cbf4c":[1,0,41,2],
+"structCompareData.html#af65faa211f79ea1d5e25094ed94854f6":[1,0,41,1]
 };

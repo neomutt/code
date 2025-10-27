@@ -9,7 +9,7 @@ var logging2_8h =
     [ "mutt_perror", "group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e", null ],
     [ "log_multiline", "logging2_8h.html#a0e57bfb924929ad6e4fedfdb02a620ef", null ],
     [ "log_dispatcher_t", "logging2_8h.html#a1c158513b81df9b79b9a77b3520593c0", null ],
-    [ "MuttLogger", "logging2_8h.html#a6db33de0f7da0088013ee90717734329", null ],
+    [ "MuttLogger", "logging2_8h.html#a55573239ba63fc399ff1264bf4baad63", null ],
     [ "LogLevel", "logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9", [
       [ "LL_PERROR", "logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a59abd13564735daa4b5e42f5fb1f7c89", null ],
       [ "LL_ERROR", "logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a50717458baf49c204bb0645418e0da15", null ],

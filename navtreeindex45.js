@@ -1,7 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"structCompareData.html#aca9552167a3e5bdc72ba533b6e7cbf4c":[1,0,41,2],
-"structCompareData.html#af65faa211f79ea1d5e25094ed94854f6":[1,0,41,1],
 "structCompileOption.html":[1,0,42],
 "structCompileOption.html#a3332f6412399342ceb410a9dfb9e2018":[1,0,42,0],
 "structCompileOption.html#a6f92e3d19cf7b95d052cd4a763fe8942":[1,0,42,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX45 =
 "structEnrichedState.html#a7bb708aafd980deba0ec3c02570dc599":[1,0,71,9],
 "structEnrichedState.html#aadd5d9d9dca68deb9860d698492a09a4":[1,0,71,5],
 "structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4":[1,0,71,14],
-"structEnrichedState.html#acb9ee0793e0aff2f26e4845a1161f46e":[1,0,71,8]
+"structEnrichedState.html#acb9ee0793e0aff2f26e4845a1161f46e":[1,0,71,8],
+"structEnrichedState.html#ad6e42cbea8841c7ddff457cb8c63693e":[1,0,71,11],
+"structEnrichedState.html#adf614f409d404535611711b2af200f7e":[1,0,71,4]
 };

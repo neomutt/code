@@ -1,9 +1,9 @@
 var searchData=
 [
   ['edata_2ec_0',['edata.c',['../imap_2edata_8c.html',1,'(Global Namespace)'],['../maildir_2edata_8c.html',1,'(Global Namespace)'],['../nntp_2edata_8c.html',1,'(Global Namespace)'],['../notmuch_2edata_8c.html',1,'(Global Namespace)'],['../pop_2edata_8c.html',1,'(Global Namespace)']]],
-  ['edata_2eh_1',['edata.h',['../pop_2edata_8h.html',1,'(Global Namespace)'],['../notmuch_2edata_8h.html',1,'(Global Namespace)'],['../nntp_2edata_8h.html',1,'(Global Namespace)'],['../maildir_2edata_8h.html',1,'(Global Namespace)'],['../imap_2edata_8h.html',1,'(Global Namespace)']]],
+  ['edata_2eh_1',['edata.h',['../imap_2edata_8h.html',1,'(Global Namespace)'],['../maildir_2edata_8h.html',1,'(Global Namespace)'],['../nntp_2edata_8h.html',1,'(Global Namespace)'],['../notmuch_2edata_8h.html',1,'(Global Namespace)'],['../pop_2edata_8h.html',1,'(Global Namespace)']]],
   ['editmsg_2ec_2',['editmsg.c',['../editmsg_8c.html',1,'']]],
-  ['email_2ec_3',['email.c',['../email_2email_8c.html',1,'(Global Namespace)'],['../debug_2email_8c.html',1,'(Global Namespace)']]],
+  ['email_2ec_3',['email.c',['../debug_2email_8c.html',1,'(Global Namespace)'],['../email_2email_8c.html',1,'(Global Namespace)']]],
   ['email_2eh_4',['email.h',['../email_8h.html',1,'']]],
   ['enriched_2ec_5',['enriched.c',['../enriched_8c.html',1,'']]],
   ['enriched_2eh_6',['enriched.h',['../enriched_8h.html',1,'']]],
@@ -19,8 +19,8 @@ var searchData=
   ['exec_2ec_16',['exec.c',['../exec_8c.html',1,'']]],
   ['exit_2ec_17',['exit.c',['../exit_8c.html',1,'']]],
   ['exit_2eh_18',['exit.h',['../exit_8h.html',1,'']]],
-  ['expando_2ec_19',['expando.c',['../attach_2expando_8c.html',1,'(Global Namespace)'],['../alias_2expando_8c.html',1,'(Global Namespace)'],['../autocrypt_2expando_8c.html',1,'(Global Namespace)'],['../browser_2expando_8c.html',1,'(Global Namespace)'],['../compmbox_2expando_8c.html',1,'(Global Namespace)'],['../compose_2expando_8c.html',1,'(Global Namespace)'],['../expando_2expando_8c.html',1,'(Global Namespace)'],['../history_2expando_8c.html',1,'(Global Namespace)'],['../pattern_2expando_8c.html',1,'(Global Namespace)'],['../send_2expando_8c.html',1,'(Global Namespace)'],['../sidebar_2expando_8c.html',1,'(Global Namespace)']]],
-  ['expando_2eh_20',['expando.h',['../send_2expando_8h.html',1,'(Global Namespace)'],['../alias_2expando_8h.html',1,'(Global Namespace)'],['../autocrypt_2expando_8h.html',1,'(Global Namespace)'],['../sidebar_2expando_8h.html',1,'(Global Namespace)'],['../pattern_2expando_8h.html',1,'(Global Namespace)'],['../history_2expando_8h.html',1,'(Global Namespace)'],['../expando_2expando_8h.html',1,'(Global Namespace)'],['../attach_2expando_8h.html',1,'(Global Namespace)'],['../browser_2expando_8h.html',1,'(Global Namespace)'],['../compose_2expando_8h.html',1,'(Global Namespace)'],['../compmbox_2expando_8h.html',1,'(Global Namespace)']]],
+  ['expando_2ec_19',['expando.c',['../alias_2expando_8c.html',1,'(Global Namespace)'],['../attach_2expando_8c.html',1,'(Global Namespace)'],['../autocrypt_2expando_8c.html',1,'(Global Namespace)'],['../browser_2expando_8c.html',1,'(Global Namespace)'],['../compmbox_2expando_8c.html',1,'(Global Namespace)'],['../compose_2expando_8c.html',1,'(Global Namespace)'],['../expando_2expando_8c.html',1,'(Global Namespace)'],['../history_2expando_8c.html',1,'(Global Namespace)'],['../pattern_2expando_8c.html',1,'(Global Namespace)'],['../send_2expando_8c.html',1,'(Global Namespace)'],['../sidebar_2expando_8c.html',1,'(Global Namespace)']]],
+  ['expando_2eh_20',['expando.h',['../alias_2expando_8h.html',1,'(Global Namespace)'],['../attach_2expando_8h.html',1,'(Global Namespace)'],['../autocrypt_2expando_8h.html',1,'(Global Namespace)'],['../browser_2expando_8h.html',1,'(Global Namespace)'],['../compmbox_2expando_8h.html',1,'(Global Namespace)'],['../compose_2expando_8h.html',1,'(Global Namespace)'],['../expando_2expando_8h.html',1,'(Global Namespace)'],['../history_2expando_8h.html',1,'(Global Namespace)'],['../pattern_2expando_8h.html',1,'(Global Namespace)'],['../send_2expando_8h.html',1,'(Global Namespace)'],['../sidebar_2expando_8h.html',1,'(Global Namespace)']]],
   ['expando_5fbrowser_2ec_21',['expando_browser.c',['../expando__browser_8c.html',1,'']]],
   ['expando_5fbrowser_2eh_22',['expando_browser.h',['../expando__browser_8h.html',1,'']]],
   ['expando_5fcommand_2ec_23',['expando_command.c',['../expando__command_8c.html',1,'']]],

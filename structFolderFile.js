@@ -16,7 +16,7 @@ var structFolderFile =
     [ "selectable", "structFolderFile.html#a17d111be604cc40c886cd34f99e4ad6c", null ],
     [ "inferiors", "structFolderFile.html#ad72eeead1dc078467a02c6c4f5e01a93", null ],
     [ "has_mailbox", "structFolderFile.html#a361a3034934f734ad32ee1ac7ae0cbfe", null ],
-    [ "__pad0__", "structFolderFile.html#a15e438de694dbf85c86d941c4103582a", null ],
+    [ "local", "structFolderFile.html#ab62ecba0220b65c661c637b0c77a1c6e", null ],
     [ "notify_user", "structFolderFile.html#a65eb3d5695bbc03d00d7fcd135fc4187", null ],
     [ "poll_new_mail", "structFolderFile.html#a60d6eb45af1ffc7a8f733b83ead40964", null ],
     [ "tagged", "structFolderFile.html#a4820cf6500387c1c2762ea022a94f784", null ],

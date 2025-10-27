@@ -1,7 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"group__expando__get__number__api.html#gae999aae02f6164077e4f50b89d7baa56":[49,22,1,27],
-"group__expando__get__number__api.html#gaf0dddfe157466e501eb37b85fc9ca7e4":[49,22,1,75],
 "group__expando__get__number__api.html#gaf2bf8aea7b257c2853868897574c2543":[49,22,1,36],
 "group__expando__get__number__api.html#gaf78bdc4b17d10c707c313f9f7a6496f7":[49,22,1,74],
 "group__expando__get__number__api.html#gaf9b720026f34dc958dc7b7dbc5765067":[49,22,1,38],
@@ -249,5 +247,7 @@ var NAVTREEINDEX18 =
 "group__hash__hdata__free__api.html#ga2ea0788baeec454f03c9b03a5b28b315":[49,31,0],
 "group__hash__hdata__free__api.html#ga6c55d68e0ab13d9aaf342c1fd33f3399":[49,31,3],
 "group__hash__hdata__free__api.html#gac7a6c714d618e4154a6c7380db506729":[49,31,4],
-"group__hash__hdata__free__api.html#gaed5e3a06b467a01713e2eb7246523ba4":[49,31,1]
+"group__hash__hdata__free__api.html#gaed5e3a06b467a01713e2eb7246523ba4":[49,31,1],
+"group__hcache__namer__api.html":[49,27],
+"group__hcache__namer__api.html#ga19bc8f7fbeb48402994c77c1ad0a38de":[49,27,0]
 };

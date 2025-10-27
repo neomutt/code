@@ -10,6 +10,7 @@ var key_2lib_8h =
     [ "MUTT_UNMACRO", "key_2lib_8h.html#a9a836da3d0bc3e615e9b2f3b130f9a4f", null ],
     [ "GETCH_NO_FLAGS", "key_2lib_8h.html#a95278987011dd0b2efeeced0765deeb2", null ],
     [ "GETCH_IGNORE_MACRO", "key_2lib_8h.html#a271cd6518e23dd7f0f789d2bf8145b2d", null ],
+    [ "OP_DEPRECATED", "key_2lib_8h.html#a776a88c17585a96a9d0fdd48b090d2c2", null ],
     [ "GetChFlags", "key_2lib_8h.html#a062691fba109226647ad88c481c32408", null ],
     [ "keycode_t", "key_2lib_8h.html#aa19669081ba051c79ced78b2b7ea889c", null ],
     [ "NotifyBinding", "key_2lib_8h.html#a16cc241d9d21e873d82c7a7576547fa8", [

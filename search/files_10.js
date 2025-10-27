@@ -11,7 +11,7 @@ var searchData=
   ['recvcmd_2eh_8',['recvcmd.h',['../recvcmd_8h.html',1,'']]],
   ['reflow_2ec_9',['reflow.c',['../reflow_8c.html',1,'']]],
   ['reflow_2eh_10',['reflow.h',['../reflow_8h.html',1,'']]],
-  ['regex_2ec_11',['regex.c',['../mutt_2regex_8c.html',1,'(Global Namespace)'],['../color_2regex_8c.html',1,'(Global Namespace)'],['../config_2regex_8c.html',1,'(Global Namespace)']]],
+  ['regex_2ec_11',['regex.c',['../color_2regex_8c.html',1,'(Global Namespace)'],['../config_2regex_8c.html',1,'(Global Namespace)'],['../mutt_2regex_8c.html',1,'(Global Namespace)']]],
   ['regex2_2eh_12',['regex2.h',['../regex2_8h.html',1,'']]],
   ['regex3_2eh_13',['regex3.h',['../regex3_8h.html',1,'']]],
   ['regex4_2eh_14',['regex4.h',['../regex4_8h.html',1,'']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['feature_5fenabled_0',['feature_enabled',['../version_8h.html#ad4a3f719e02f32c690d0a68785481422',1,'feature_enabled(const char *name):&#160;version.c'],['../version_8c.html#ad4a3f719e02f32c690d0a68785481422',1,'feature_enabled(const char *name):&#160;version.c']]],
+  ['feature_5fenabled_0',['feature_enabled',['../version_8c.html#ad4a3f719e02f32c690d0a68785481422',1,'feature_enabled(const char *name):&#160;version.c'],['../version_8h.html#ad4a3f719e02f32c690d0a68785481422',1,'feature_enabled(const char *name):&#160;version.c']]],
   ['fetch_5fauth_1',['fetch_auth',['../group__pop__fetch__api.html#gaabff8caa7467a16ac8d2f77d0d14abc5',1,'lib.c']]],
   ['fetch_5fcapa_2',['fetch_capa',['../group__pop__fetch__api.html#ga408a66a06e087854500a1de8fbf2d3c8',1,'lib.c']]],
   ['fetch_5fchildren_3',['fetch_children',['../nntp_8c.html#a1b2bc10241891f96f165f08e03ef18b4',1,'nntp.c']]],
@@ -33,8 +33,8 @@ var searchData=
   ['find_5fprevious_5fundeleted_30',['find_previous_undeleted',['../dlg__index_8c.html#af67a4bfc2e8e2781fa29baad634b6efc',1,'find_previous_undeleted(struct MailboxView *mv, int msgno, bool uncollapse):&#160;dlg_index.c'],['../index_2lib_8h.html#af67a4bfc2e8e2781fa29baad634b6efc',1,'find_previous_undeleted(struct MailboxView *mv, int msgno, bool uncollapse):&#160;dlg_index.c']]],
   ['find_5fsubject_31',['find_subject',['../mutt__thread_8c.html#ade53690995c9c0c41164aea914536fc7',1,'mutt_thread.c']]],
   ['find_5ftz_32',['find_tz',['../mutt_2date_8c.html#a6e3d63ce76dd4fc2a64fd8150f059ebb',1,'date.c']]],
-  ['find_5fvirtual_33',['find_virtual',['../thread_8h.html#a935c58e8d42dc12e4ed901702fd9f7f3',1,'find_virtual(struct MuttThread *cur, bool reverse):&#160;thread.c'],['../thread_8c.html#a935c58e8d42dc12e4ed901702fd9f7f3',1,'find_virtual(struct MuttThread *cur, bool reverse):&#160;thread.c']]],
-  ['first_5fmailing_5flist_34',['first_mailing_list',['../maillist_8h.html#a643495f76455c793820d55aada5597e1',1,'first_mailing_list(char *buf, size_t buflen, struct AddressList *al):&#160;maillist.c'],['../maillist_8c.html#a643495f76455c793820d55aada5597e1',1,'first_mailing_list(char *buf, size_t buflen, struct AddressList *al):&#160;maillist.c']]],
+  ['find_5fvirtual_33',['find_virtual',['../thread_8c.html#a935c58e8d42dc12e4ed901702fd9f7f3',1,'find_virtual(struct MuttThread *cur, bool reverse):&#160;thread.c'],['../thread_8h.html#a935c58e8d42dc12e4ed901702fd9f7f3',1,'find_virtual(struct MuttThread *cur, bool reverse):&#160;thread.c']]],
+  ['first_5fmailing_5flist_34',['first_mailing_list',['../maillist_8c.html#a643495f76455c793820d55aada5597e1',1,'first_mailing_list(char *buf, size_t buflen, struct AddressList *al):&#160;maillist.c'],['../maillist_8h.html#a643495f76455c793820d55aada5597e1',1,'first_mailing_list(char *buf, size_t buflen, struct AddressList *al):&#160;maillist.c']]],
   ['fix_5fend_5fof_5ffile_35',['fix_end_of_file',['../send_8c.html#ad5e73f6a253107a7f55ee7388fbbf92f',1,'send.c']]],
   ['fix_5fuid_36',['fix_uid',['../gnupgparse_8c.html#a18dfeec11744f1c9a301dbbfaec153bc',1,'gnupgparse.c']]],
   ['flush_5fbuffer_37',['flush_buffer',['../imap_2message_8c.html#a6d20c017931a27796e7462278f74defe',1,'message.c']]],

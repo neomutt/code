@@ -1,7 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"structMailcapEntry.html#ac195e10d836eb0b886580310c2cf0554":[1,0,146,4],
-"structMailcapEntry.html#ad682bf5b0b80e72f2a9b9196728514e3":[1,0,146,0],
 "structMailcapEntry.html#adcea89b25743514d268e8fde508d6295":[1,0,146,9],
 "structMailcapEntry.html#af711c81e4798bf4790fb6dd58d739d68":[1,0,146,10],
 "structMailcapEntry.html#af91c521a75699979b652fc4b319870ff":[1,0,146,7],
@@ -63,6 +61,7 @@ var NAVTREEINDEX48 =
 "structMenuFuncOp.html":[1,0,155],
 "structMenuFuncOp.html#a4afbddbb2e7ed64c63061458ca62130d":[1,0,155,0],
 "structMenuFuncOp.html#a9b0871a1dbef5ed0907e9ae681cc4abd":[1,0,155,1],
+"structMenuFuncOp.html#affd8cff7596453229b7338f9c24b75c2":[1,0,155,2],
 "structMenuFunction.html":[1,0,156],
 "structMenuFunction.html#aaefbf26df7c25fa401fa075757b33a3d":[1,0,156,1],
 "structMenuFunction.html#abdb4b982efd32024eb0a24dc9d7f5ce5":[1,0,156,0],
@@ -75,6 +74,7 @@ var NAVTREEINDEX48 =
 "structMessage.html":[1,0,159],
 "structMessage.html#a11d53ee4319e8735c1677d8780a7b517":[1,0,159,0],
 "structMessage.html#a668759f9813e882a9cfcf3ac725b6200":[1,0,159,1],
+"structMessage.html#a6b0ccab7dd8eeb0f8c14858d75e872c7":[1,0,159,8],
 "structMessage.html#a7a53f3b9c450c29d93793c0d2b0608f7":[1,0,159,7],
 "structMessage.html#a7fb38cfeca11b8aee9cd598475100dfb":[1,0,159,6],
 "structMessage.html#a817c2e03ff60bae58f117fc3391d3d62":[1,0,159,2],
@@ -82,7 +82,6 @@ var NAVTREEINDEX48 =
 "structMessage.html#aa97affe6dd666261890aee8ec004c26c":[1,0,159,3],
 "structMessage.html#aaa255a41e07cb4277d457c0db894a47a":[1,0,159,5],
 "structMessage.html#ace4606e8dc8aa0c35738e9f788f47705":[1,0,159,4],
-"structMessage.html#af789382bf4127b5b8c784bbae1c04241":[1,0,159,8],
 "structMhEmail.html":[1,0,160],
 "structMhEmail.html#a0d4a5cfe0f8a2086e3791f02b352b0af":[1,0,160,2],
 "structMhEmail.html#a2c4f25588fb9aa0ef67fa98c9cf90a50":[1,0,160,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX48 =
 "structNntpAccountData.html#a158b6bdd5a8be673e51ce25946709052":[1,0,182,8],
 "structNntpAccountData.html#a17e649e29d0d7d8e6137647e62aa4b37":[1,0,182,23],
 "structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a":[1,0,182,25],
-"structNntpAccountData.html#a2a1c6e75563a61693936d8d82acc1321":[1,0,182,10]
+"structNntpAccountData.html#a2a1c6e75563a61693936d8d82acc1321":[1,0,182,10],
+"structNntpAccountData.html#a31956518f4a223c885421a1315b79330":[1,0,182,15]
 };
