@@ -1,7 +1,6 @@
 var opcodes_8h =
 [
     [ "OP_REPAINT", "opcodes_8h.html#a93af396c035b85cf082bcbaa05693ec2", null ],
-    [ "OP_PARTIAL_KEY", "opcodes_8h.html#ae457692db05079d0b5d754a579ef802a", null ],
     [ "OP_TIMEOUT", "opcodes_8h.html#a1edfa98369961982b96768d8816754dc", null ],
     [ "OP_ABORT", "opcodes_8h.html#a9d285ee08aa8460023a7c730fabf3c94", null ],
     [ "OPS_ATTACHMENT", "opcodes_8h.html#a7726469daa83b044b358e0725101d9ff", null ],

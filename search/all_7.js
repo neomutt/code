@@ -25,7 +25,7 @@ var searchData=
   ['get_5fcandidates_22',['get_candidates',['../crypt__gpgme_8c.html#a9e3f1458f4f8dd545036eaac132b105e',1,'crypt_gpgme.c']]],
   ['get_5fcharset_23',['get_charset',['../rfc2231_8c.html#a3b3e93837724c04250a654608a329155',1,'rfc2231.c']]],
   ['get_5fcolor_24',['get_color',['../draw_8c.html#a2c9ac04bb60a20248165aa9671972b1d',1,'draw.c']]],
-  ['get_5fcolorid_5fname_25',['get_colorid_name',['../color_2command_8c.html#a4223d5d1f0253f7ee4b4cf2e06041f1f',1,'get_colorid_name(unsigned int cid, struct Buffer *buf):&#160;command.c'],['../command2_8h.html#ac66edbd714c6d9a284a8d83ebefcce52',1,'get_colorid_name(unsigned int color_id, struct Buffer *buf):&#160;command.c']]],
+  ['get_5fcolorid_5fname_25',['get_colorid_name',['../color_2commands_8c.html#a4223d5d1f0253f7ee4b4cf2e06041f1f',1,'get_colorid_name(unsigned int cid, struct Buffer *buf):&#160;commands.c'],['../color_2commands_8h.html#ac66edbd714c6d9a284a8d83ebefcce52',1,'get_colorid_name(unsigned int color_id, struct Buffer *buf):&#160;commands.c']]],
   ['get_5fcurrent_5fmailbox_26',['get_current_mailbox',['../index_8c.html#a798c826c6ad972b975c8c51070008f99',1,'get_current_mailbox(void):&#160;index.c'],['../index_2lib_8h.html#a798c826c6ad972b975c8c51070008f99',1,'get_current_mailbox(void):&#160;index.c']]],
   ['get_5fcurrent_5fmailbox_5fview_27',['get_current_mailbox_view',['../index_2lib_8h.html#a5915d8b932eb86633f1d7d65a8c83289',1,'get_current_mailbox_view(void):&#160;index.c'],['../index_8c.html#a5915d8b932eb86633f1d7d65a8c83289',1,'get_current_mailbox_view(void):&#160;index.c']]],
   ['get_5fdate_28',['get_date',['../compile_8c.html#a953d84039783a915a1898d82132fd21f',1,'compile.c']]],

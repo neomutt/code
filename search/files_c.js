@@ -22,7 +22,7 @@ var searchData=
   ['node_5fpadding_2eh_19',['node_padding.h',['../node__padding_8h.html',1,'']]],
   ['node_5ftext_2ec_20',['node_text.c',['../node__text_8c.html',1,'']]],
   ['node_5ftext_2eh_21',['node_text.h',['../node__text_8h.html',1,'']]],
-  ['notify_2ec_22',['notify.c',['../debug_2notify_8c.html',1,'(Global Namespace)'],['../mutt_2notify_8c.html',1,'(Global Namespace)'],['../color_2notify_8c.html',1,'(Global Namespace)']]],
+  ['notify_2ec_22',['notify.c',['../color_2notify_8c.html',1,'(Global Namespace)'],['../debug_2notify_8c.html',1,'(Global Namespace)'],['../mutt_2notify_8c.html',1,'(Global Namespace)']]],
   ['notify_2eh_23',['notify.h',['../notify_8h.html',1,'']]],
   ['notify2_2eh_24',['notify2.h',['../notify2_8h.html',1,'']]],
   ['notify_5ftype_2eh_25',['notify_type.h',['../notify__type_8h.html',1,'']]],

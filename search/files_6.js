@@ -6,7 +6,7 @@ var searchData=
   ['global_2ec_3',['global.c',['../global_8c.html',1,'']]],
   ['global_2eh_4',['global.h',['../global_8h.html',1,'']]],
   ['globals_2ec_5',['globals.c',['../globals_8c.html',1,'(Global Namespace)'],['../email_2globals_8c.html',1,'(Global Namespace)']]],
-  ['globals_2eh_6',['globals.h',['../email_2globals_8h.html',1,'(Global Namespace)'],['../globals_8h.html',1,'(Global Namespace)']]],
+  ['globals_2eh_6',['globals.h',['../globals_8h.html',1,'(Global Namespace)'],['../email_2globals_8h.html',1,'(Global Namespace)']]],
   ['gnupgparse_2ec_7',['gnupgparse.c',['../gnupgparse_8c.html',1,'']]],
   ['gnupgparse_2eh_8',['gnupgparse.h',['../gnupgparse_8h.html',1,'']]],
   ['gnutls_2ec_9',['gnutls.c',['../gnutls_8c.html',1,'']]],

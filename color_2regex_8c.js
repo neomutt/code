@@ -4,7 +4,7 @@ var color_2regex_8c =
     [ "regex_colors_reset", "color_2regex_8c.html#a92fed79a6fd6d0163bce28f3f2f541ee", null ],
     [ "regex_colors_cleanup", "color_2regex_8c.html#abebda380e37bcdd67111add8ed7940c4", null ],
     [ "regex_color_clear", "color_2regex_8c.html#afe34d897552bbed1c7dd96438abcc6fe", null ],
-    [ "regex_color_free", "color_2regex_8c.html#a61d597a991d0663d8318c2e2884e0ede", null ],
+    [ "regex_color_free", "color_2regex_8c.html#a993e456bd06e063c31ab883047c2f503", null ],
     [ "regex_color_new", "color_2regex_8c.html#ad24af99b0c9bb92910ef400cb8a17451", null ],
     [ "regex_color_list_new", "color_2regex_8c.html#af61e6c2b23c8342477811450e8fd02f8", null ],
     [ "regex_color_list_clear", "color_2regex_8c.html#ae963acd0744f5dfd000b03193d3d4a48", null ],

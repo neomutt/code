@@ -4,7 +4,7 @@ var searchData=
   ['pagerflags_1',['PagerFlags',['../pager_2lib_8h.html#a4b89dc870e3d48afbacfc74da0533898',1,'lib.h']]],
   ['pagerredrawflags_2',['PagerRedrawFlags',['../pager_2lib_8h.html#ac5514bf8b78b3f31e4e3b06d60a735b8',1,'lib.h']]],
   ['parsedaterangeflags_3',['ParseDateRangeFlags',['../compile_8c.html#a2f73b95e29ef9649a55b2bd4418915b0',1,'compile.c']]],
-  ['parser_5fcallback_5ft_4',['parser_callback_t',['../command2_8h.html#a10287b5915a06e969f5e387628bb5516',1,'command2.h']]],
+  ['parser_5fcallback_5ft_4',['parser_callback_t',['../color_2commands_8h.html#a10287b5915a06e969f5e387628bb5516',1,'commands.h']]],
   ['pattern_5ffunction_5ft_5',['pattern_function_t',['../pattern_2functions_8h.html#aaf0fd1bf8397ed167feed4f5528a70fe',1,'functions.h']]],
   ['patterncompflags_6',['PatternCompFlags',['../pattern_2lib_8h.html#a1d78529336f13dffb6168735b63f0384',1,'lib.h']]],
   ['patternexecflags_7',['PatternExecFlags',['../pattern_2lib_8h.html#afc18a7b0cd352fb9ea17aedb748aaff9',1,'lib.h']]],

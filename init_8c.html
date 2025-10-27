@@ -29,7 +29,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-32-g1e0d0a</span>
+   &#160;<span id="projectnumber">2025-09-05-40-g6a7c50</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -130,9 +130,6 @@ $(document).ready(function(){initNavTree('init_8c.html',''); initResizable(); })
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae6be8f34be875971676339bac0d726bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8c.html#ae6be8f34be875971676339bac0d726bd">init_extended_keys</a> (void)</td></tr>
-<tr class="memdesc:ae6be8f34be875971676339bac0d726bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise map of ncurses extended keys.  <br /></td></tr>
-<tr class="separator:ae6be8f34be875971676339bac0d726bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe4c5cb8652b768c631efa7f4ef5523b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a> (const struct <a class="el" href="structMenuOpSeq.html">MenuOpSeq</a> *map, enum <a class="el" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> mtype)</td></tr>
 <tr class="memdesc:abe4c5cb8652b768c631efa7f4ef5523b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach a set of keybindings to a <a class="el" href="structMenu.html">Menu</a>.  <br /></td></tr>
 <tr class="separator:abe4c5cb8652b768c631efa7f4ef5523b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,74 +200,6 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="ae6be8f34be875971676339bac0d726bd" name="ae6be8f34be875971676339bac0d726bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6be8f34be875971676339bac0d726bd">&#9670;&#160;</a></span>init_extended_keys()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void init_extended_keys </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialise map of ncurses extended keys. </p>
-<p>Determine the keycodes for ncurses extended keys and fill in the KeyNames array.</p>
-<p>This function must be called <em>after</em> initscr(), or <a class="el" href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec" title="Get terminal capabilities.">mutt_tigetstr()</a> fails. This creates a bit of a chicken-and-egg problem because <a class="el" href="init_8c.html#a58e38a78c1e289c77166b7239ee843b0" title="Initialise all the menu keybindings.">km_init()</a> is called prior to <a class="el" href="main_8c.html#a89dfa0cebc094eedb2f4855e6db352ca" title="Start the Curses UI.">start_curses()</a>. This means that the default keybindings can't include any of the extended keys because they won't be defined until later. </p>
-
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00135">135</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>{</div>
-<div class="line"><span class="lineno">  137</span><span class="preprocessor">#ifdef HAVE_USE_EXTENDED_NAMES</span></div>
-<div class="line"><span class="lineno">  138</span>  use_extended_names(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; <a class="code hl_variable" href="key_2lib_8c.html#ac969492dae41de846590e2257f260d3b">KeyNames</a>[j].<a class="code hl_variable" href="structMapping.html#af58a0487d1578953f5ee067a311877b1">name</a>; j++)</div>
-<div class="line"><span class="lineno">  141</span>  {</div>
-<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="key_2lib_8c.html#ac969492dae41de846590e2257f260d3b">KeyNames</a>[j].value == -1)</div>
-<div class="line"><span class="lineno">  143</span>    {</div>
-<div class="line"><span class="lineno">  144</span>      <span class="keyword">const</span> <span class="keywordtype">char</span> *keyname = find_ext_name(<a class="code hl_variable" href="key_2lib_8c.html#ac969492dae41de846590e2257f260d3b">KeyNames</a>[j].name);</div>
-<div class="line"><span class="lineno">  145</span> </div>
-<div class="line"><span class="lineno">  146</span>      <span class="keywordflow">if</span> (keyname)</div>
-<div class="line"><span class="lineno">  147</span>      {</div>
-<div class="line"><span class="lineno">  148</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *s = <a class="code hl_function" href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec">mutt_tigetstr</a>((<span class="keywordtype">char</span> *) keyname);</div>
-<div class="line"><span class="lineno">  149</span>        <span class="keywordflow">if</span> (s &amp;&amp; ((<span class="keywordtype">long</span>) (s) != -1))</div>
-<div class="line"><span class="lineno">  150</span>        {</div>
-<div class="line"><span class="lineno">  151</span>          <span class="keywordtype">int</span> code = key_defined(s);</div>
-<div class="line"><span class="lineno">  152</span>          <span class="keywordflow">if</span> (code &gt; 0)</div>
-<div class="line"><span class="lineno">  153</span>            <a class="code hl_variable" href="key_2lib_8c.html#ac969492dae41de846590e2257f260d3b">KeyNames</a>[j].<a class="code hl_variable" href="structMapping.html#a517f39747e4b07f4771ac8c785670280">value</a> = code;</div>
-<div class="line"><span class="lineno">  154</span>        }</div>
-<div class="line"><span class="lineno">  155</span>      }</div>
-<div class="line"><span class="lineno">  156</span>    }</div>
-<div class="line"><span class="lineno">  157</span>  }</div>
-<div class="line"><span class="lineno">  158</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  159</span>}</div>
-<div class="ttc" id="akey_2lib_8c_html_ac969492dae41de846590e2257f260d3b"><div class="ttname"><a href="key_2lib_8c.html#ac969492dae41de846590e2257f260d3b">KeyNames</a></div><div class="ttdeci">struct Mapping KeyNames[]</div><div class="ttdoc">Key name lookup table.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00059">lib.c:59</a></div></div>
-<div class="ttc" id="astructMapping_html_a517f39747e4b07f4771ac8c785670280"><div class="ttname"><a href="structMapping.html#a517f39747e4b07f4771ac8c785670280">Mapping::value</a></div><div class="ttdeci">int value</div><div class="ttdoc">Integer value.</div><div class="ttdef"><b>Definition:</b> <a href="mapping_8h_source.html#l00035">mapping.h:35</a></div></div>
-<div class="ttc" id="astructMapping_html_af58a0487d1578953f5ee067a311877b1"><div class="ttname"><a href="structMapping.html#af58a0487d1578953f5ee067a311877b1">Mapping::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">String value.</div><div class="ttdef"><b>Definition:</b> <a href="mapping_8h_source.html#l00034">mapping.h:34</a></div></div>
-<div class="ttc" id="aterminal_8c_html_a4f0d4f44cb4580ba6a8ebf298b30bdec"><div class="ttname"><a href="terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec">mutt_tigetstr</a></div><div class="ttdeci">const char * mutt_tigetstr(const char *name)</div><div class="ttdoc">Get terminal capabilities.</div><div class="ttdef"><b>Definition:</b> <a href="terminal_8c_source.html#l00068">terminal.c:68</a></div></div>
-</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ae6be8f34be875971676339bac0d726bd_cgraph.svg" width="302" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ae6be8f34be875971676339bac0d726bd_icgraph.svg" width="295" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
 <a id="abe4c5cb8652b768c631efa7f4ef5523b" name="abe4c5cb8652b768c631efa7f4ef5523b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe4c5cb8652b768c631efa7f4ef5523b">&#9670;&#160;</a></span>create_bindings()</h2>
 
@@ -314,31 +243,31 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00166">166</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>{</div>
-<div class="line"><span class="lineno">  168</span>  <a class="code hl_define" href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a>(&amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[mtype]);</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; map[i].<a class="code hl_variable" href="structMenuOpSeq.html#ad18b6fedab982a1b10c09676b06ed191">op</a> != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">  171</span>    <span class="keywordflow">if</span> (map[i].seq)</div>
-<div class="line"><span class="lineno">  172</span>      <a class="code hl_function" href="key_2lib_8h.html#ab32d3716e27e944ccc8e04182707b8db">km_bindkey</a>(map[i].seq, mtype, map[i].op);</div>
-<div class="line"><span class="lineno">  173</span>}</div>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00061">61</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{</div>
+<div class="line"><span class="lineno">   63</span>  <a class="code hl_define" href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a>(&amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[mtype]);</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; map[i].<a class="code hl_variable" href="structMenuOpSeq.html#ad18b6fedab982a1b10c09676b06ed191">op</a> != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">if</span> (map[i].seq)</div>
+<div class="line"><span class="lineno">   67</span>      <a class="code hl_function" href="key_2commands_8c.html#a11591b7917643bd6420fa3816d48abe2">km_bind</a>(map[i].seq, mtype, map[i].op, NULL, NULL, NULL);</div>
+<div class="line"><span class="lineno">   68</span>}</div>
+<div class="ttc" id="akey_2commands_8c_html_a11591b7917643bd6420fa3816d48abe2"><div class="ttname"><a href="key_2commands_8c.html#a11591b7917643bd6420fa3816d48abe2">km_bind</a></div><div class="ttdeci">enum CommandResult km_bind(const char *s, enum MenuType mtype, int op, char *macro, char *desc, struct Buffer *err)</div><div class="ttdoc">Set up a key binding.</div><div class="ttdef"><b>Definition:</b> <a href="key_2commands_8c_source.html#l00058">commands.c:58</a></div></div>
 <div class="ttc" id="akey_2lib_8c_html_a786f5d70631dfcec23d9e9439304d52e"><div class="ttname"><a href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a></div><div class="ttdeci">struct KeymapList Keymaps[MENU_MAX]</div><div class="ttdoc">Array of key mappings, one for each MenuType.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00124">lib.c:124</a></div></div>
-<div class="ttc" id="akey_2lib_8h_html_ab32d3716e27e944ccc8e04182707b8db"><div class="ttname"><a href="key_2lib_8h.html#ab32d3716e27e944ccc8e04182707b8db">km_bindkey</a></div><div class="ttdeci">enum CommandResult km_bindkey(const char *s, enum MenuType mtype, int op)</div><div class="ttdoc">Bind a key in a Menu to an operation.</div><div class="ttdef"><b>Definition:</b> <a href="key_2parse_8c_source.html#l00191">parse.c:191</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a3b508a1c06ded6b4ce4b1feea7643c28"><div class="ttname"><a href="queue_8h.html#a3b508a1c06ded6b4ce4b1feea7643c28">STAILQ_INIT</a></div><div class="ttdeci">#define STAILQ_INIT(head)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00410">queue.h:410</a></div></div>
-<div class="ttc" id="astructMenuOpSeq_html_ad18b6fedab982a1b10c09676b06ed191"><div class="ttname"><a href="structMenuOpSeq.html#ad18b6fedab982a1b10c09676b06ed191">MenuOpSeq::op</a></div><div class="ttdeci">int op</div><div class="ttdoc">Operation, e.g. OP_DELETE.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00122">lib.h:122</a></div></div>
-</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+<div class="ttc" id="astructMenuOpSeq_html_ad18b6fedab982a1b10c09676b06ed191"><div class="ttname"><a href="structMenuOpSeq.html#ad18b6fedab982a1b10c09676b06ed191">MenuOpSeq::op</a></div><div class="ttdeci">int op</div><div class="ttdoc">Operation, e.g. OP_DELETE.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00123">lib.h:123</a></div></div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_abe4c5cb8652b768c631efa7f4ef5523b_cgraph.svg" width="272" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_abe4c5cb8652b768c631efa7f4ef5523b_cgraph.svg" width="252" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_abe4c5cb8652b768c631efa7f4ef5523b_icgraph.svg" width="244" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -363,27 +292,27 @@ Variables</h2></td></tr>
 
 <p>Initialise all the menu keybindings. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00178">178</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>{</div>
-<div class="line"><span class="lineno">  180</span>  memset(<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>, 0, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> KeymapList) * <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>);</div>
-<div class="line"><span class="lineno">  181</span> </div>
-<div class="line"><span class="lineno">  182</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a48aa2c7292f5d7e59ae0b10e862bb48a">AliasDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae3f6738230354145ab8205b0b129cd45">MENU_ALIAS</a>);</div>
-<div class="line"><span class="lineno">  183</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a164613fa5d7feec9b9c8a9f73e009565">AttachmentDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a8dc7e07647009e4938fbd4f7cee5b671">MENU_ATTACHMENT</a>);</div>
-<div class="line"><span class="lineno">  184</span><span class="preprocessor">#ifdef USE_AUTOCRYPT</span></div>
-<div class="line"><span class="lineno">  185</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#aae2b9549c8d43e39e4d8a19e8719ffe6">AutocryptDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a7956f31ecde66b1c95d0a4a638a36858">MENU_AUTOCRYPT</a>);</div>
-<div class="line"><span class="lineno">  186</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  187</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a44b64cc2f259cfbc2dfef33096461a97">BrowserDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae86bb494d081abe9caf74402638c0d3d">MENU_FOLDER</a>);</div>
-<div class="line"><span class="lineno">  188</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#ad47746953723123b042d5fd6d6719ec8">ComposeDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a7a2816b127278d0f65953adc8c58a25a">MENU_COMPOSE</a>);</div>
-<div class="line"><span class="lineno">  189</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="gui_2functions_8c.html#ae0546fc4f3687c9d8592712bb161bc51">DialogDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a2997a5bba349ba8601d1f543b27820db">MENU_DIALOG</a>);</div>
-<div class="line"><span class="lineno">  190</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a28c252222e94e35df4ecd1f90c50174d">EditorDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a>);</div>
-<div class="line"><span class="lineno">  191</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="gui_2functions_8c.html#a6f702c62b2c9a61ee1c6f859a99782c5">GenericDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a>);</div>
-<div class="line"><span class="lineno">  192</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#aaa03f8f82b66fb9a6a44315d518cb348">IndexDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a0afea51eb66be4c2e856b047b0db4cd7">MENU_INDEX</a>);</div>
-<div class="line"><span class="lineno">  193</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a6beda52096305ada8ac945f21e3f02b4">PagerDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a>);</div>
-<div class="line"><span class="lineno">  194</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#ac34ba5661fc49da744196b10ac4fb60c">PgpDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4abde0a6cb18588a44a6d0a63828f1c603">MENU_PGP</a>);</div>
-<div class="line"><span class="lineno">  195</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a43fe9838c367b8164c0c9242355f34ef">PostponedDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af632c49a67e5e048d46556ec28c8c958">MENU_POSTPONED</a>);</div>
-<div class="line"><span class="lineno">  196</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a3d408602c06d6a9eedb291ac880b422b">QueryDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a739c790e5df497ca3d7e7f2e3837aaf1">MENU_QUERY</a>);</div>
-<div class="line"><span class="lineno">  197</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#ae8798a4f3a90d5c7736e7880d38f6ba7">SmimeDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4add02b7e5714bc7ecd2a6d3e2b618fce9">MENU_SMIME</a>);</div>
-<div class="line"><span class="lineno">  198</span>}</div>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00073">73</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
+<div class="line"><span class="lineno">   75</span>  memset(<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>, 0, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> KeymapList) * <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>);</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a48aa2c7292f5d7e59ae0b10e862bb48a">AliasDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae3f6738230354145ab8205b0b129cd45">MENU_ALIAS</a>);</div>
+<div class="line"><span class="lineno">   78</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a164613fa5d7feec9b9c8a9f73e009565">AttachmentDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a8dc7e07647009e4938fbd4f7cee5b671">MENU_ATTACHMENT</a>);</div>
+<div class="line"><span class="lineno">   79</span><span class="preprocessor">#ifdef USE_AUTOCRYPT</span></div>
+<div class="line"><span class="lineno">   80</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#aae2b9549c8d43e39e4d8a19e8719ffe6">AutocryptDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a7956f31ecde66b1c95d0a4a638a36858">MENU_AUTOCRYPT</a>);</div>
+<div class="line"><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   82</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a44b64cc2f259cfbc2dfef33096461a97">BrowserDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae86bb494d081abe9caf74402638c0d3d">MENU_FOLDER</a>);</div>
+<div class="line"><span class="lineno">   83</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#ad47746953723123b042d5fd6d6719ec8">ComposeDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a7a2816b127278d0f65953adc8c58a25a">MENU_COMPOSE</a>);</div>
+<div class="line"><span class="lineno">   84</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="gui_2functions_8c.html#ae0546fc4f3687c9d8592712bb161bc51">DialogDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a2997a5bba349ba8601d1f543b27820db">MENU_DIALOG</a>);</div>
+<div class="line"><span class="lineno">   85</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a28c252222e94e35df4ecd1f90c50174d">EditorDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270">MENU_EDITOR</a>);</div>
+<div class="line"><span class="lineno">   86</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="gui_2functions_8c.html#a6f702c62b2c9a61ee1c6f859a99782c5">GenericDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b">MENU_GENERIC</a>);</div>
+<div class="line"><span class="lineno">   87</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#aaa03f8f82b66fb9a6a44315d518cb348">IndexDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a0afea51eb66be4c2e856b047b0db4cd7">MENU_INDEX</a>);</div>
+<div class="line"><span class="lineno">   88</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a6beda52096305ada8ac945f21e3f02b4">PagerDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929">MENU_PAGER</a>);</div>
+<div class="line"><span class="lineno">   89</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#ac34ba5661fc49da744196b10ac4fb60c">PgpDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4abde0a6cb18588a44a6d0a63828f1c603">MENU_PGP</a>);</div>
+<div class="line"><span class="lineno">   90</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a43fe9838c367b8164c0c9242355f34ef">PostponedDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af632c49a67e5e048d46556ec28c8c958">MENU_POSTPONED</a>);</div>
+<div class="line"><span class="lineno">   91</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#a3d408602c06d6a9eedb291ac880b422b">QueryDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a739c790e5df497ca3d7e7f2e3837aaf1">MENU_QUERY</a>);</div>
+<div class="line"><span class="lineno">   92</span>  <a class="code hl_function" href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a>(<a class="code hl_variable" href="init_8c.html#ae8798a4f3a90d5c7736e7880d38f6ba7">SmimeDefaultBindings</a>, <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4add02b7e5714bc7ecd2a6d3e2b618fce9">MENU_SMIME</a>);</div>
+<div class="line"><span class="lineno">   93</span>}</div>
 <div class="ttc" id="agui_2functions_8c_html_a6f702c62b2c9a61ee1c6f859a99782c5"><div class="ttname"><a href="gui_2functions_8c.html#a6f702c62b2c9a61ee1c6f859a99782c5">GenericDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq GenericDefaultBindings[]</div><div class="ttdoc">Key bindings for the Generic Menu.</div><div class="ttdef"><b>Definition:</b> <a href="gui_2functions_8c_source.html#l00139">functions.c:139</a></div></div>
 <div class="ttc" id="agui_2functions_8c_html_ae0546fc4f3687c9d8592712bb161bc51"><div class="ttname"><a href="gui_2functions_8c.html#ae0546fc4f3687c9d8592712bb161bc51">DialogDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq DialogDefaultBindings[]</div><div class="ttdoc">Key bindings for Simple Dialogs.</div><div class="ttdef"><b>Definition:</b> <a href="gui_2functions_8c_source.html#l00131">functions.c:131</a></div></div>
 <div class="ttc" id="ainit_8c_html_a164613fa5d7feec9b9c8a9f73e009565"><div class="ttname"><a href="init_8c.html#a164613fa5d7feec9b9c8a9f73e009565">AttachmentDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq AttachmentDefaultBindings[]</div><div class="ttdoc">Key bindings for the Attachment Menu.</div><div class="ttdef"><b>Definition:</b> <a href="attach_2functions_8c_source.html#l00098">functions.c:98</a></div></div>
@@ -395,7 +324,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="ainit_8c_html_a6beda52096305ada8ac945f21e3f02b4"><div class="ttname"><a href="init_8c.html#a6beda52096305ada8ac945f21e3f02b4">PagerDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq PagerDefaultBindings[]</div><div class="ttdoc">Key bindings for the Pager Menu.</div><div class="ttdef"><b>Definition:</b> <a href="pager_2functions_8c_source.html#l00229">functions.c:229</a></div></div>
 <div class="ttc" id="ainit_8c_html_aaa03f8f82b66fb9a6a44315d518cb348"><div class="ttname"><a href="init_8c.html#aaa03f8f82b66fb9a6a44315d518cb348">IndexDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq IndexDefaultBindings[]</div><div class="ttdoc">Key bindings for the Index Menu.</div><div class="ttdef"><b>Definition:</b> <a href="index_2functions_8c_source.html#l00235">functions.c:235</a></div></div>
 <div class="ttc" id="ainit_8c_html_aae2b9549c8d43e39e4d8a19e8719ffe6"><div class="ttname"><a href="init_8c.html#aae2b9549c8d43e39e4d8a19e8719ffe6">AutocryptDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq AutocryptDefaultBindings[]</div><div class="ttdoc">Key bindings for the Autocrypt Account.</div><div class="ttdef"><b>Definition:</b> <a href="autocrypt_2functions_8c_source.html#l00068">functions.c:68</a></div></div>
-<div class="ttc" id="ainit_8c_html_abe4c5cb8652b768c631efa7f4ef5523b"><div class="ttname"><a href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a></div><div class="ttdeci">static void create_bindings(const struct MenuOpSeq *map, enum MenuType mtype)</div><div class="ttdoc">Attach a set of keybindings to a Menu.</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00166">init.c:166</a></div></div>
+<div class="ttc" id="ainit_8c_html_abe4c5cb8652b768c631efa7f4ef5523b"><div class="ttname"><a href="init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b">create_bindings</a></div><div class="ttdeci">static void create_bindings(const struct MenuOpSeq *map, enum MenuType mtype)</div><div class="ttdoc">Attach a set of keybindings to a Menu.</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00061">init.c:61</a></div></div>
 <div class="ttc" id="ainit_8c_html_ac34ba5661fc49da744196b10ac4fb60c"><div class="ttname"><a href="init_8c.html#ac34ba5661fc49da744196b10ac4fb60c">PgpDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq PgpDefaultBindings[]</div><div class="ttdoc">Key bindings for the Pgp Menu.</div><div class="ttdef"><b>Definition:</b> <a href="ncrypt_2functions_8c_source.html#l00064">functions.c:64</a></div></div>
 <div class="ttc" id="ainit_8c_html_ad47746953723123b042d5fd6d6719ec8"><div class="ttname"><a href="init_8c.html#ad47746953723123b042d5fd6d6719ec8">ComposeDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq ComposeDefaultBindings[]</div><div class="ttdoc">Key bindings for the Compose Menu.</div><div class="ttdef"><b>Definition:</b> <a href="compose_2functions_8c_source.html#l00155">functions.c:155</a></div></div>
 <div class="ttc" id="ainit_8c_html_ae8798a4f3a90d5c7736e7880d38f6ba7"><div class="ttname"><a href="init_8c.html#ae8798a4f3a90d5c7736e7880d38f6ba7">SmimeDefaultBindings</a></div><div class="ttdeci">const struct MenuOpSeq SmimeDefaultBindings[]</div><div class="ttdoc">Key bindings for the Smime Menu.</div><div class="ttdef"><b>Definition:</b> <a href="ncrypt_2functions_8c_source.html#l00074">functions.c:74</a></div></div>
@@ -414,19 +343,19 @@ Variables</h2></td></tr>
 <div class="ttc" id="atype_8h_html_ae5c7b6b4f6e696391cd7faaea6571bb4ae3f6738230354145ab8205b0b129cd45"><div class="ttname"><a href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae3f6738230354145ab8205b0b129cd45">MENU_ALIAS</a></div><div class="ttdeci">@ MENU_ALIAS</div><div class="ttdoc">Select an email address by its alias.</div><div class="ttdef"><b>Definition:</b> <a href="type_8h_source.html#l00037">type.h:37</a></div></div>
 <div class="ttc" id="atype_8h_html_ae5c7b6b4f6e696391cd7faaea6571bb4ae86bb494d081abe9caf74402638c0d3d"><div class="ttname"><a href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae86bb494d081abe9caf74402638c0d3d">MENU_FOLDER</a></div><div class="ttdeci">@ MENU_FOLDER</div><div class="ttdoc">General file/mailbox browser.</div><div class="ttdef"><b>Definition:</b> <a href="type_8h_source.html#l00045">type.h:45</a></div></div>
 <div class="ttc" id="atype_8h_html_ae5c7b6b4f6e696391cd7faaea6571bb4af632c49a67e5e048d46556ec28c8c958"><div class="ttname"><a href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af632c49a67e5e048d46556ec28c8c958">MENU_POSTPONED</a></div><div class="ttdeci">@ MENU_POSTPONED</div><div class="ttdoc">Select a postponed email.</div><div class="ttdef"><b>Definition:</b> <a href="type_8h_source.html#l00050">type.h:50</a></div></div>
-</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_a58e38a78c1e289c77166b7239ee843b0_cgraph.svg" width="244" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_a58e38a78c1e289c77166b7239ee843b0_icgraph.svg" width="223" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -465,32 +394,32 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00204">204</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  205</span>{</div>
-<div class="line"><span class="lineno">  206</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *np = NULL, *tmp = NULL;</div>
-<div class="line"><span class="lineno">  207</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, km_list, entries, tmp)</div>
-<div class="line"><span class="lineno">  208</span>  {</div>
-<div class="line"><span class="lineno">  209</span>    <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(km_list, np, <a class="code hl_struct" href="structKeymap.html">Keymap</a>, entries);</div>
-<div class="line"><span class="lineno">  210</span>    <a class="code hl_function" href="key_2lib_8c.html#a4793709a5bb605ebc6e16f277eab869d">mutt_keymap_free</a>(&amp;np);</div>
-<div class="line"><span class="lineno">  211</span>  }</div>
-<div class="line"><span class="lineno">  212</span>}</div>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00099">99</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>{</div>
+<div class="line"><span class="lineno">  101</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeymap.html">Keymap</a> *np = NULL, *tmp = NULL;</div>
+<div class="line"><span class="lineno">  102</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, km_list, entries, tmp)</div>
+<div class="line"><span class="lineno">  103</span>  {</div>
+<div class="line"><span class="lineno">  104</span>    <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(km_list, np, <a class="code hl_struct" href="structKeymap.html">Keymap</a>, entries);</div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_function" href="key_2lib_8c.html#a4793709a5bb605ebc6e16f277eab869d">mutt_keymap_free</a>(&amp;np);</div>
+<div class="line"><span class="lineno">  106</span>  }</div>
+<div class="line"><span class="lineno">  107</span>}</div>
 <div class="ttc" id="akey_2lib_8c_html_a4793709a5bb605ebc6e16f277eab869d"><div class="ttname"><a href="key_2lib_8c.html#a4793709a5bb605ebc6e16f277eab869d">mutt_keymap_free</a></div><div class="ttdeci">void mutt_keymap_free(struct Keymap **ptr)</div><div class="ttdoc">Free a Keymap.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00130">lib.c:130</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a2a0d6665f277f80bf301a16e6ab2403c"><div class="ttname"><a href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a></div><div class="ttdeci">#define STAILQ_REMOVE(head, elm, type, field)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00441">queue.h:441</a></div></div>
 <div class="ttc" id="aqueue_8h_html_ac3203dcce73148c142df4586eb55ce55"><div class="ttname"><a href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a></div><div class="ttdeci">#define STAILQ_FOREACH_SAFE(var, head, field, tvar)</div><div class="ttdef"><b>Definition:</b> <a href="queue_8h_source.html#l00400">queue.h:400</a></div></div>
-<div class="ttc" id="astructKeymap_html"><div class="ttname"><a href="structKeymap.html">Keymap</a></div><div class="ttdoc">A keyboard mapping.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00065">lib.h:66</a></div></div>
-</div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div class="ttc" id="astructKeymap_html"><div class="ttname"><a href="structKeymap.html">Keymap</a></div><div class="ttdoc">A keyboard mapping.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00066">lib.h:67</a></div></div>
+</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_adbdc88cb4c82ae41499789c72281a4f2_cgraph.svg" width="352" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_adbdc88cb4c82ae41499789c72281a4f2_icgraph.svg" width="352" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -515,28 +444,28 @@ Variables</h2></td></tr>
 
 <p>Free the key maps. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00217">217</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  218</span>{</div>
-<div class="line"><span class="lineno">  219</span>  <span class="keywordflow">for</span> (<span class="keyword">enum</span> <a class="code hl_enumeration" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> i = 1; i &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>; i++)</div>
-<div class="line"><span class="lineno">  220</span>  {</div>
-<div class="line"><span class="lineno">  221</span>    <a class="code hl_function" href="init_8c.html#adbdc88cb4c82ae41499789c72281a4f2">mutt_keymaplist_free</a>(&amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[i]);</div>
-<div class="line"><span class="lineno">  222</span>  }</div>
-<div class="line"><span class="lineno">  223</span>}</div>
-<div class="ttc" id="ainit_8c_html_adbdc88cb4c82ae41499789c72281a4f2"><div class="ttname"><a href="init_8c.html#adbdc88cb4c82ae41499789c72281a4f2">mutt_keymaplist_free</a></div><div class="ttdeci">static void mutt_keymaplist_free(struct KeymapList *km_list)</div><div class="ttdoc">Free a List of Keymaps.</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00204">init.c:204</a></div></div>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00112">112</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  113</span>{</div>
+<div class="line"><span class="lineno">  114</span>  <span class="keywordflow">for</span> (<span class="keyword">enum</span> <a class="code hl_enumeration" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a> i = 1; i &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>; i++)</div>
+<div class="line"><span class="lineno">  115</span>  {</div>
+<div class="line"><span class="lineno">  116</span>    <a class="code hl_function" href="init_8c.html#adbdc88cb4c82ae41499789c72281a4f2">mutt_keymaplist_free</a>(&amp;<a class="code hl_variable" href="key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e">Keymaps</a>[i]);</div>
+<div class="line"><span class="lineno">  117</span>  }</div>
+<div class="line"><span class="lineno">  118</span>}</div>
+<div class="ttc" id="ainit_8c_html_adbdc88cb4c82ae41499789c72281a4f2"><div class="ttname"><a href="init_8c.html#adbdc88cb4c82ae41499789c72281a4f2">mutt_keymaplist_free</a></div><div class="ttdeci">static void mutt_keymaplist_free(struct KeymapList *km_list)</div><div class="ttdoc">Free a List of Keymaps.</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00099">init.c:99</a></div></div>
 <div class="ttc" id="atype_8h_html_ae5c7b6b4f6e696391cd7faaea6571bb4"><div class="ttname"><a href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4">MenuType</a></div><div class="ttdeci">MenuType</div><div class="ttdoc">Types of GUI selections.</div><div class="ttdef"><b>Definition:</b> <a href="type_8h_source.html#l00035">type.h:36</a></div></div>
-</div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ae61198929e0c7cdf946ca0f9f9bfcbef_cgraph.svg" width="352" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_ae61198929e0c7cdf946ca0f9f9bfcbef_icgraph.svg" width="250" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -562,48 +491,48 @@ Variables</h2></td></tr>
 <p>Parse the abort_key config string. </p>
 <p>Parse the string into <code>$abort_key</code> and put the keycode into AbortKey. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00230">230</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  231</span>{</div>
-<div class="line"><span class="lineno">  232</span>  <a class="code hl_typedef" href="key_2lib_8h.html#aa19669081ba051c79ced78b2b7ea889c">keycode_t</a> buf[2];</div>
-<div class="line"><span class="lineno">  233</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_abort_key = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;abort_key&quot;</span>);</div>
-<div class="line"><span class="lineno">  234</span>  <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="key_2lib_8c.html#a7c860db7ed76d50ed70768379f1cb680">parsekeys</a>(c_abort_key, buf, <a class="code hl_define" href="memory_8h.html#a13aaf9e9e194ebfd84f90bcf4e264aca">countof</a>(buf));</div>
-<div class="line"><span class="lineno">  235</span>  <span class="keywordflow">if</span> (len == 0)</div>
-<div class="line"><span class="lineno">  236</span>  {</div>
-<div class="line"><span class="lineno">  237</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Abort key is not set, defaulting to Ctrl-G&quot;</span>));</div>
-<div class="line"><span class="lineno">  238</span>    <a class="code hl_variable" href="key_2lib_8c.html#a22bced2c7fdf47916ddc963f43432541">AbortKey</a> = <a class="code hl_define" href="mutt__curses_8h.html#a9c9be04d10032182290f931273c63e8b">ctrl</a>(<span class="charliteral">&#39;G&#39;</span>);</div>
-<div class="line"><span class="lineno">  239</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  240</span>  }</div>
-<div class="line"><span class="lineno">  241</span>  <span class="keywordflow">if</span> (len &gt; 1)</div>
-<div class="line"><span class="lineno">  242</span>  {</div>
-<div class="line"><span class="lineno">  243</span>    <a class="code hl_define" href="group__logging__api.html#ga377d6ae04687e3cac3da87e05bc7de5d">mutt_warning</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Specified abort key sequence (%s) will be truncated to first key&quot;</span>),</div>
-<div class="line"><span class="lineno">  244</span>                 c_abort_key);</div>
-<div class="line"><span class="lineno">  245</span>  }</div>
-<div class="line"><span class="lineno">  246</span>  <a class="code hl_variable" href="key_2lib_8c.html#a22bced2c7fdf47916ddc963f43432541">AbortKey</a> = buf[0];</div>
-<div class="line"><span class="lineno">  247</span>}</div>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00125">125</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>{</div>
+<div class="line"><span class="lineno">  127</span>  <a class="code hl_typedef" href="key_2lib_8h.html#aa19669081ba051c79ced78b2b7ea889c">keycode_t</a> buf[2];</div>
+<div class="line"><span class="lineno">  128</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_abort_key = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;abort_key&quot;</span>);</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="key_2lib_8c.html#a7c860db7ed76d50ed70768379f1cb680">parsekeys</a>(c_abort_key, buf, <a class="code hl_define" href="memory_8h.html#a13aaf9e9e194ebfd84f90bcf4e264aca">countof</a>(buf));</div>
+<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><span class="lineno">  131</span>  {</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Abort key is not set, defaulting to Ctrl-G&quot;</span>));</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_variable" href="key_2lib_8c.html#a22bced2c7fdf47916ddc963f43432541">AbortKey</a> = <a class="code hl_define" href="mutt__curses_8h.html#a9c9be04d10032182290f931273c63e8b">ctrl</a>(<span class="charliteral">&#39;G&#39;</span>);</div>
+<div class="line"><span class="lineno">  134</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  135</span>  }</div>
+<div class="line"><span class="lineno">  136</span>  <span class="keywordflow">if</span> (len &gt; 1)</div>
+<div class="line"><span class="lineno">  137</span>  {</div>
+<div class="line"><span class="lineno">  138</span>    <a class="code hl_define" href="group__logging__api.html#ga377d6ae04687e3cac3da87e05bc7de5d">mutt_warning</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Specified abort key sequence (%s) will be truncated to first key&quot;</span>),</div>
+<div class="line"><span class="lineno">  139</span>                 c_abort_key);</div>
+<div class="line"><span class="lineno">  140</span>  }</div>
+<div class="line"><span class="lineno">  141</span>  <a class="code hl_variable" href="key_2lib_8c.html#a22bced2c7fdf47916ddc963f43432541">AbortKey</a> = buf[0];</div>
+<div class="line"><span class="lineno">  142</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a6b1589ee93ff51ef31f1d9324e138078"><div class="ttname"><a href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a></div><div class="ttdeci">const char * cs_subset_string(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a string config item by name.</div><div class="ttdef"><b>Definition:</b> <a href="config_2helpers_8c_source.html#l00291">helpers.c:291</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_ga377d6ae04687e3cac3da87e05bc7de5d"><div class="ttname"><a href="group__logging__api.html#ga377d6ae04687e3cac3da87e05bc7de5d">mutt_warning</a></div><div class="ttdeci">#define mutt_warning(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition:</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
 <div class="ttc" id="akey_2lib_8c_html_a22bced2c7fdf47916ddc963f43432541"><div class="ttname"><a href="key_2lib_8c.html#a22bced2c7fdf47916ddc963f43432541">AbortKey</a></div><div class="ttdeci">keycode_t AbortKey</div><div class="ttdoc">code of key to abort prompts, normally Ctrl-G</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00121">lib.c:121</a></div></div>
 <div class="ttc" id="akey_2lib_8c_html_a7c860db7ed76d50ed70768379f1cb680"><div class="ttname"><a href="key_2lib_8c.html#a7c860db7ed76d50ed70768379f1cb680">parsekeys</a></div><div class="ttdeci">size_t parsekeys(const char *str, keycode_t *d, size_t max)</div><div class="ttdoc">Parse a key string into key codes.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8c_source.html#l00215">lib.c:215</a></div></div>
-<div class="ttc" id="akey_2lib_8h_html_aa19669081ba051c79ced78b2b7ea889c"><div class="ttname"><a href="key_2lib_8h.html#aa19669081ba051c79ced78b2b7ea889c">keycode_t</a></div><div class="ttdeci">short keycode_t</div><div class="ttdoc">Type for key storage, the rest of neomutt works fine with int type.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00056">lib.h:56</a></div></div>
+<div class="ttc" id="akey_2lib_8h_html_aa19669081ba051c79ced78b2b7ea889c"><div class="ttname"><a href="key_2lib_8h.html#aa19669081ba051c79ced78b2b7ea889c">keycode_t</a></div><div class="ttdeci">short keycode_t</div><div class="ttdoc">Type for key storage, the rest of neomutt works fine with int type.</div><div class="ttdef"><b>Definition:</b> <a href="key_2lib_8h_source.html#l00057">lib.h:57</a></div></div>
 <div class="ttc" id="amemory_8h_html_a13aaf9e9e194ebfd84f90bcf4e264aca"><div class="ttname"><a href="memory_8h.html#a13aaf9e9e194ebfd84f90bcf4e264aca">countof</a></div><div class="ttdeci">#define countof(x)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8h_source.html#l00044">memory.h:44</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition:</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 <div class="ttc" id="amutt__curses_8h_html_a9c9be04d10032182290f931273c63e8b"><div class="ttname"><a href="mutt__curses_8h.html#a9c9be04d10032182290f931273c63e8b">ctrl</a></div><div class="ttdeci">#define ctrl(ch)</div><div class="ttdef"><b>Definition:</b> <a href="mutt__curses_8h_source.html#l00052">mutt_curses.h:52</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00042">neomutt.h:43</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition:</b> <a href="neomutt_8h_source.html#l00047">neomutt.h:47</a></div></div>
-</div><!-- fragment --><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_af8ffdc7a5202729727f64dc5a86a36b9_cgraph.svg" width="326" height="86"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
-<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="init_8c_af8ffdc7a5202729727f64dc5a86a36b9_icgraph.svg" width="462" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>

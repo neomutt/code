@@ -6,7 +6,7 @@ var searchData=
   ['notifyaccount_3',['NotifyAccount',['../core_2account_8h.html#a19a9ad056d93491b610201fa644eef6e',1,'account.h']]],
   ['notifyalias_4',['NotifyAlias',['../alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7b',1,'alias.h']]],
   ['notifyalternates_5',['NotifyAlternates',['../alternates_8h.html#ab0e2b7b767e108a74d4bc21d44538f1d',1,'alternates.h']]],
-  ['notifyattach_6',['NotifyAttach',['../attachments_8h.html#a56fb7e6f646794a571725498057e27c7',1,'attachments.h']]],
+  ['notifyattach_6',['NotifyAttach',['../attach_2commands_8h.html#a56fb7e6f646794a571725498057e27c7',1,'commands.h']]],
   ['notifybinding_7',['NotifyBinding',['../key_2lib_8h.html#a16cc241d9d21e873d82c7a7576547fa8',1,'lib.h']]],
   ['notifycolor_8',['NotifyColor',['../notify2_8h.html#a9c069540e46a95aff05c0b0d878ed66d',1,'notify2.h']]],
   ['notifyconfig_9',['NotifyConfig',['../subset_8h.html#a439e82194af78ebb1c24dabc16f068b7',1,'subset.h']]],

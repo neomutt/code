@@ -1,6 +1,5 @@
 var init_8c =
 [
-    [ "init_extended_keys", "init_8c.html#ae6be8f34be875971676339bac0d726bd", null ],
     [ "create_bindings", "init_8c.html#abe4c5cb8652b768c631efa7f4ef5523b", null ],
     [ "km_init", "init_8c.html#a58e38a78c1e289c77166b7239ee843b0", null ],
     [ "mutt_keymaplist_free", "init_8c.html#adbdc88cb4c82ae41499789c72281a4f2", null ],

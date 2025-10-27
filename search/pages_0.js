@@ -23,7 +23,7 @@ var searchData=
   ['array_20of_20alias_20views_20',['Array of Alias Views',['../alias_array.html',1,'lib_alias']]],
   ['ask_20the_20user_20a_20question_21',['Ask the user a question',['../question_question.html',1,'lib_question']]],
   ['attach_20expando_20definitions_22',['Attach Expando definitions',['../attach_expando.html',1,'lib_attach']]],
-  ['attachment_20commands_23',['Attachment commands',['../attach_attachments.html',1,'lib_attach']]],
+  ['attachment_20commands_23',['Attachment commands',['../attach_commands.html',1,'lib_attach']]],
   ['attachment_20content_2did_20header_20functions_24',['Attachment Content-ID header functions',['../attach_cid.html',1,'lib_attach']]],
   ['attachment_20data_25',['Attachment Data',['../compose_attach_data.html',1,'lib_compose']]],
   ['attachment_20functions_26',['Attachment functions',['../attach_functions.html',1,'lib_attach'],['../attach_recvattach.html',1,'lib_attach']]],
