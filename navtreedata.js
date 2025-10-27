@@ -94,7 +94,8 @@ var NAVTREE =
     [ "Send", "lib_send.html", "lib_send" ],
     [ "Sidebar", "lib_sidebar.html", "lib_sidebar" ],
     [ "Store", "lib_store.html", "lib_store" ],
-    [ "APIs", "topics.html", "topics" ]
+    [ "APIs", "topics.html", "topics" ],
+    [ "GitHub", "^https://github.com/neomutt/neomutt", null ]
   ] ]
 ];
 

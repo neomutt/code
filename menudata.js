@@ -251,4 +251,5 @@ var menudata={children:[
 {text:"u",url:"globals_defs_u.html#index_u"},
 {text:"w",url:"globals_defs_w.html#index_w"}]}]}]},
 {text:"Libraries",url:"pages.html"},
-{text:"APIs",url:"topics.html"}]}
+{text:"APIs",url:"topics.html"},
+{text:"GitHub",url:"^https://github.com/neomutt/neomutt"}]}
