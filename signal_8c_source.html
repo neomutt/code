@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-43-g177ed6</span>
+   &#160;<span id="projectnumber">2025-09-05-53-g1e05a3</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -113,313 +113,312 @@ $(function(){initNavTree('signal_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;config.h&quot;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;signal.h&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;<a class="code" href="signal2_8h.html">signal2.h</a>&quot;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="signal_8c.html#a98b4f102294daf38e646dba8b7f4f9e0">   39</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="signal_8c.html#a98b4f102294daf38e646dba8b7f4f9e0">endwin</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">   42</a></span><span class="keyword">static</span> sigset_t <a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">   44</a></span><span class="keyword">static</span> sigset_t <a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">   47</a></span><span class="keyword">static</span> <span class="keyword">struct </span>sigaction <a class="code hl_variable" href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">SysOldInt</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">   49</a></span><span class="keyword">static</span> <span class="keyword">struct </span>sigaction <a class="code hl_variable" href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">   53</a></span><span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">   57</a></span><span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">   60</a></span><span class="keyword">static</span> <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> <a class="code hl_variable" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a> = <a class="code hl_function" href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">   62</a></span><span class="keyword">static</span> <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> <a class="code hl_variable" href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">ExitHandler</a> = <a class="code hl_function" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">   64</a></span><span class="keyword">static</span> <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> <a class="code hl_variable" href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">SegvHandler</a> = <a class="code hl_function" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="signal_8c.html#a887883dde907036a5683a2e18a5f5ee5">   67</a></span><a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> <a class="code hl_variable" href="signal_8c.html#a887883dde907036a5683a2e18a5f5ee5">OldSegvHandler</a> = NULL;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">   69</a></span><span class="keyword">volatile</span> sig_atomic_t <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>;   </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="signal_8c.html#a2588723370f4c5d5e77126030a640bd9">   70</a></span><span class="keyword">volatile</span> sig_atomic_t <a class="code hl_variable" href="signal_8c.html#a2588723370f4c5d5e77126030a640bd9">SigWinch</a>; </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
-<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">   76</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">exit_print_uint</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">char</span> <a class="code hl_function" href="crypt__gpgme_8h.html#aa6f37478ebd949c46ad620ad1acd2d6e">digit</a>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordflow">if</span> (n &gt; 9)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_function" href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">exit_print_uint</a>(n / 10);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_function" href="crypt__gpgme_8h.html#aa6f37478ebd949c46ad620ad1acd2d6e">digit</a> = <span class="charliteral">&#39;0&#39;</span> + (n % 10);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">if</span> (write(STDOUT_FILENO, &amp;<a class="code hl_function" href="crypt__gpgme_8h.html#aa6f37478ebd949c46ad620ad1acd2d6e">digit</a>, 1) == -1)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// do nothing</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="signal2_8h.html">signal2.h</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="signal_8c.html#a98b4f102294daf38e646dba8b7f4f9e0">   38</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="signal_8c.html#a98b4f102294daf38e646dba8b7f4f9e0">endwin</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">   41</a></span><span class="keyword">static</span> sigset_t <a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">   43</a></span><span class="keyword">static</span> sigset_t <a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">   46</a></span><span class="keyword">static</span> <span class="keyword">struct </span>sigaction <a class="code hl_variable" href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">SysOldInt</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">   48</a></span><span class="keyword">static</span> <span class="keyword">struct </span>sigaction <a class="code hl_variable" href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">   52</a></span><span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">   56</a></span><span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">   59</a></span><span class="keyword">static</span> <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> <a class="code hl_variable" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a> = <a class="code hl_function" href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">   61</a></span><span class="keyword">static</span> <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> <a class="code hl_variable" href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">ExitHandler</a> = <a class="code hl_function" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">   63</a></span><span class="keyword">static</span> <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> <a class="code hl_variable" href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">SegvHandler</a> = <a class="code hl_function" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="signal_8c.html#a887883dde907036a5683a2e18a5f5ee5">   66</a></span><a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> <a class="code hl_variable" href="signal_8c.html#a887883dde907036a5683a2e18a5f5ee5">OldSegvHandler</a> = NULL;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">   68</a></span><span class="keyword">volatile</span> sig_atomic_t <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>;   </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="signal_8c.html#a2588723370f4c5d5e77126030a640bd9">   69</a></span><span class="keyword">volatile</span> sig_atomic_t <a class="code hl_variable" href="signal_8c.html#a2588723370f4c5d5e77126030a640bd9">SigWinch</a>; </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">   75</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">exit_print_uint</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">char</span> <a class="code hl_function" href="crypt__gpgme_8h.html#aa6f37478ebd949c46ad620ad1acd2d6e">digit</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordflow">if</span> (n &gt; 9)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_function" href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">exit_print_uint</a>(n / 10);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_function" href="crypt__gpgme_8h.html#aa6f37478ebd949c46ad620ad1acd2d6e">digit</a> = <span class="charliteral">&#39;0&#39;</span> + (n % 10);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">if</span> (write(STDOUT_FILENO, &amp;<a class="code hl_function" href="crypt__gpgme_8h.html#aa6f37478ebd949c46ad620ad1acd2d6e">digit</a>, 1) == -1)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// do nothing</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
-<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="signal_8c.html#abdbf54979fbd4394419ee38c99342788">   95</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#abdbf54979fbd4394419ee38c99342788">exit_print_int</a>(<span class="keywordtype">int</span> n)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordflow">if</span> (n &lt; 0)</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> (write(STDOUT_FILENO, <span class="stringliteral">&quot;-&quot;</span>, 1) == -1)</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="comment">// do nothing</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    n = -n;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <a class="code hl_function" href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">exit_print_uint</a>(n);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="signal_8c.html#abdbf54979fbd4394419ee38c99342788">   94</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#abdbf54979fbd4394419ee38c99342788">exit_print_int</a>(<span class="keywordtype">int</span> n)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordflow">if</span> (n &lt; 0)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (write(STDOUT_FILENO, <span class="stringliteral">&quot;-&quot;</span>, 1) == -1)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="comment">// do nothing</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    n = -n;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <a class="code hl_function" href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">exit_print_uint</a>(n);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
 </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
-<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">  113</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *str)</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordflow">if</span> (!str)</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">if</span> (write(STDOUT_FILENO, str, strlen(str)) == -1)</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">// do nothing</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">  112</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *str)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">if</span> (!str)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordflow">if</span> (write(STDOUT_FILENO, str, strlen(str)) == -1)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="comment">// do nothing</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
 </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
-<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">  131</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a>(<span class="keywordtype">int</span> sig)</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">  130</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a>(<span class="keywordtype">int</span> sig)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>{</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
 </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
-<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">  139</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a>(<span class="keywordtype">int</span> sig)</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>{</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(<span class="stringliteral">&quot;Caught signal &quot;</span>);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <a class="code hl_function" href="signal_8c.html#abdbf54979fbd4394419ee38c99342788">exit_print_int</a>(sig);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(<span class="stringliteral">&quot; &quot;</span>);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">#ifdef HAVE_DECL_SYS_SIGLIST</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(sys_siglist[sig]);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#elif (defined(__sun__) &amp;&amp; defined(__svr4__))</span></div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(_sys_siglist[sig]);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#elif (defined(__alpha) &amp;&amp; defined(__osf__))</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(__sys_siglist[sig]);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(<span class="stringliteral">&quot;...  Exiting\n&quot;</span>);</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  exit(0);</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>}</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span></div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">  138</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a>(<span class="keywordtype">int</span> sig)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>{</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(<span class="stringliteral">&quot;Caught signal &quot;</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <a class="code hl_function" href="signal_8c.html#abdbf54979fbd4394419ee38c99342788">exit_print_int</a>(sig);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#ifdef HAVE_DECL_SYS_SIGLIST</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(sys_siglist[sig]);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#elif (defined(__sun__) &amp;&amp; defined(__svr4__))</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(_sys_siglist[sig]);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">#elif (defined(__alpha) &amp;&amp; defined(__osf__))</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(__sys_siglist[sig]);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <a class="code hl_function" href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a>(<span class="stringliteral">&quot;...  Exiting\n&quot;</span>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  exit(0);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
 </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
-<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">  164</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">mutt_sig_init</a>(<a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> sig_fn, <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> exit_fn, <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> segv_fn)</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>{</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordflow">if</span> (sig_fn)</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_variable" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a> = sig_fn;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="keywordflow">if</span> (exit_fn)</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <a class="code hl_variable" href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">ExitHandler</a> = exit_fn;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="keywordflow">if</span> (segv_fn)</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_variable" href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">SegvHandler</a> = segv_fn;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">struct </span>sigaction act = { 0 };</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keyword">struct </span>sigaction old_act = { 0 };</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  sigemptyset(&amp;act.sa_mask);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  act.sa_flags = 0;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  act.sa_handler = SIG_IGN;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  sigaction(SIGPIPE, &amp;act, NULL);</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  act.sa_handler = <a class="code hl_variable" href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">SegvHandler</a>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  sigaction(SIGSEGV, &amp;act, &amp;old_act);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <a class="code hl_variable" href="signal_8c.html#a887883dde907036a5683a2e18a5f5ee5">OldSegvHandler</a> = old_act.sa_handler;</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  act.sa_handler = <a class="code hl_variable" href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">ExitHandler</a>;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  sigaction(SIGTERM, &amp;act, NULL);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  sigaction(SIGHUP, &amp;act, NULL);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  sigaction(SIGQUIT, &amp;act, NULL);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="comment">/* we want to avoid race conditions */</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  sigaddset(&amp;act.sa_mask, SIGTSTP);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  act.sa_handler = <a class="code hl_variable" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a>;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="comment">/* we want SIGALRM to abort the current syscall, so we do this before</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">   * setting the SA_RESTART flag below.  currently this is only used to</span></div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">   * timeout on a connect() call in a reasonable amount of time. */</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  sigaction(SIGALRM, &amp;act, NULL);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment">/* we also don&#39;t want to mess with interrupted system calls */</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">#ifdef SA_RESTART</span></div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  act.sa_flags = SA_RESTART;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  sigaction(SIGCONT, &amp;act, NULL);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  sigaction(SIGTSTP, &amp;act, NULL);</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  sigaction(SIGINT, &amp;act, NULL);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  sigaction(SIGWINCH, &amp;act, NULL);</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="comment">/* POSIX doesn&#39;t allow us to ignore SIGCHLD,</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment">   * so we just install a dummy handler for it */</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  act.sa_handler = <a class="code hl_function" href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a>;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="comment">/* don&#39;t need to block any other signals here */</span></div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  sigemptyset(&amp;act.sa_mask);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="comment">/* we don&#39;t want to mess with stopped children */</span></div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  act.sa_flags |= SA_NOCLDSTOP;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  sigaction(SIGCHLD, &amp;act, NULL);</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>}</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">  163</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">mutt_sig_init</a>(<a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> sig_fn, <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> exit_fn, <a class="code hl_typedef" href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a> segv_fn)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>{</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordflow">if</span> (sig_fn)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_variable" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a> = sig_fn;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="keywordflow">if</span> (exit_fn)</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_variable" href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">ExitHandler</a> = exit_fn;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="keywordflow">if</span> (segv_fn)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <a class="code hl_variable" href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">SegvHandler</a> = segv_fn;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="keyword">struct </span>sigaction act = { 0 };</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">struct </span>sigaction old_act = { 0 };</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  sigemptyset(&amp;act.sa_mask);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  act.sa_flags = 0;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  act.sa_handler = SIG_IGN;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  sigaction(SIGPIPE, &amp;act, NULL);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  act.sa_handler = <a class="code hl_variable" href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">SegvHandler</a>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  sigaction(SIGSEGV, &amp;act, &amp;old_act);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <a class="code hl_variable" href="signal_8c.html#a887883dde907036a5683a2e18a5f5ee5">OldSegvHandler</a> = old_act.sa_handler;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  act.sa_handler = <a class="code hl_variable" href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">ExitHandler</a>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  sigaction(SIGTERM, &amp;act, NULL);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  sigaction(SIGHUP, &amp;act, NULL);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  sigaction(SIGQUIT, &amp;act, NULL);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="comment">/* we want to avoid race conditions */</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  sigaddset(&amp;act.sa_mask, SIGTSTP);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  act.sa_handler = <a class="code hl_variable" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="comment">/* we want SIGALRM to abort the current syscall, so we do this before</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">   * setting the SA_RESTART flag below.  currently this is only used to</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">   * timeout on a connect() call in a reasonable amount of time. */</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  sigaction(SIGALRM, &amp;act, NULL);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment">/* we also don&#39;t want to mess with interrupted system calls */</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#ifdef SA_RESTART</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  act.sa_flags = SA_RESTART;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  sigaction(SIGCONT, &amp;act, NULL);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  sigaction(SIGTSTP, &amp;act, NULL);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  sigaction(SIGINT, &amp;act, NULL);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  sigaction(SIGWINCH, &amp;act, NULL);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <span class="comment">/* POSIX doesn&#39;t allow us to ignore SIGCHLD,</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment">   * so we just install a dummy handler for it */</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  act.sa_handler = <a class="code hl_function" href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a>;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="comment">/* don&#39;t need to block any other signals here */</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  sigemptyset(&amp;act.sa_mask);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <span class="comment">/* we don&#39;t want to mess with stopped children */</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  act.sa_flags |= SA_NOCLDSTOP;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  sigaction(SIGCHLD, &amp;act, NULL);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>}</div>
 </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span></div>
-<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="signal_8c.html#aa6c49e5535cdffeffd2cd4eee28bc96b">  228</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#aa6c49e5535cdffeffd2cd4eee28bc96b">mutt_sig_block</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>{</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a>)</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  sigemptyset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>);</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGTERM);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGHUP);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGTSTP);</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGINT);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGWINCH);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  sigprocmask(SIG_BLOCK, &amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, 0);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span></div>
+<div class="foldopen" id="foldopen00227" data-start="{" data-end="}">
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="signal_8c.html#aa6c49e5535cdffeffd2cd4eee28bc96b">  227</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#aa6c49e5535cdffeffd2cd4eee28bc96b">mutt_sig_block</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>{</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a>)</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  sigemptyset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGTERM);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGHUP);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGTSTP);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGINT);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, SIGWINCH);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  sigprocmask(SIG_BLOCK, &amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, 0);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
 </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span></div>
-<div class="foldopen" id="foldopen00246" data-start="{" data-end="}">
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="signal_8c.html#aa9356c41baa1b35d3a7719f90570e6b7">  246</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#aa9356c41baa1b35d3a7719f90570e6b7">mutt_sig_unblock</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>{</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a>)</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  sigprocmask(SIG_UNBLOCK, &amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, 0);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>}</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span></div>
+<div class="foldopen" id="foldopen00245" data-start="{" data-end="}">
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="signal_8c.html#aa9356c41baa1b35d3a7719f90570e6b7">  245</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#aa9356c41baa1b35d3a7719f90570e6b7">mutt_sig_unblock</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>{</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a>)</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  sigprocmask(SIG_UNBLOCK, &amp;<a class="code hl_variable" href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a>, 0);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <a class="code hl_variable" href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>}</div>
 </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span></div>
-<div class="foldopen" id="foldopen00261" data-start="{" data-end="}">
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">  261</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>{</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a>)</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  <span class="keyword">struct </span>sigaction sa = { 0 };</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  <span class="comment">/* POSIX: ignore SIGINT and SIGQUIT &amp; block SIGCHLD before exec */</span></div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  sa.sa_handler = SIG_IGN;</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  sa.sa_flags = 0;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  sigemptyset(&amp;sa.sa_mask);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  sigaction(SIGINT, &amp;sa, &amp;<a class="code hl_variable" href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">SysOldInt</a>);</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  sigaction(SIGQUIT, &amp;sa, &amp;<a class="code hl_variable" href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a>);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  sigemptyset(&amp;<a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>, SIGCHLD);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  sigprocmask(SIG_BLOCK, &amp;<a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>, 0);</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>}</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span></div>
+<div class="foldopen" id="foldopen00260" data-start="{" data-end="}">
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">  260</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>{</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a>)</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <span class="keyword">struct </span>sigaction sa = { 0 };</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="comment">/* POSIX: ignore SIGINT and SIGQUIT &amp; block SIGCHLD before exec */</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  sa.sa_handler = SIG_IGN;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  sa.sa_flags = 0;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  sigemptyset(&amp;sa.sa_mask);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>  sigaction(SIGINT, &amp;sa, &amp;<a class="code hl_variable" href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">SysOldInt</a>);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  sigaction(SIGQUIT, &amp;sa, &amp;<a class="code hl_variable" href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a>);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  sigemptyset(&amp;<a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  sigaddset(&amp;<a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>, SIGCHLD);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  sigprocmask(SIG_BLOCK, &amp;<a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>, 0);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>}</div>
 </div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span></div>
-<div class="foldopen" id="foldopen00285" data-start="{" data-end="}">
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">  285</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keywordtype">bool</span> restore)</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>{</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a>)</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  sigprocmask(SIG_UNBLOCK, &amp;<a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>, NULL);</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <span class="keywordflow">if</span> (restore)</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  {</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    sigaction(SIGQUIT, &amp;<a class="code hl_variable" href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a>, NULL);</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    sigaction(SIGINT, &amp;<a class="code hl_variable" href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">SysOldInt</a>, NULL);</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  }</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keyword">struct </span>sigaction sa = { 0 };</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    sa.sa_handler = SIG_DFL;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    sigemptyset(&amp;sa.sa_mask);</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    sa.sa_flags = 0;</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    sigaction(SIGQUIT, &amp;sa, NULL);</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    sigaction(SIGINT, &amp;sa, NULL);</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  <a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>}</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span></div>
+<div class="foldopen" id="foldopen00284" data-start="{" data-end="}">
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">  284</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a>(<span class="keywordtype">bool</span> restore)</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>{</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a>)</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  sigprocmask(SIG_UNBLOCK, &amp;<a class="code hl_variable" href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a>, NULL);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <span class="keywordflow">if</span> (restore)</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    sigaction(SIGQUIT, &amp;<a class="code hl_variable" href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a>, NULL);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    sigaction(SIGINT, &amp;<a class="code hl_variable" href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">SysOldInt</a>, NULL);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keyword">struct </span>sigaction sa = { 0 };</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    sa.sa_handler = SIG_DFL;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    sigemptyset(&amp;sa.sa_mask);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    sa.sa_flags = 0;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    sigaction(SIGQUIT, &amp;sa, NULL);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    sigaction(SIGINT, &amp;sa, NULL);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <a class="code hl_variable" href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>}</div>
 </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span></div>
-<div class="foldopen" id="foldopen00316" data-start="{" data-end="}">
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="signal_8c.html#af00bed52276317e59f6ae7bb13b0322b">  316</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#af00bed52276317e59f6ae7bb13b0322b">mutt_sig_allow_interrupt</a>(<span class="keywordtype">bool</span> allow)</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>{</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="keyword">struct </span>sigaction sa = { 0 };</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  sa.sa_handler = <a class="code hl_variable" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a>;</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="preprocessor">#ifdef SA_RESTART</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="keywordflow">if</span> (!allow)</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    sa.sa_flags |= SA_RESTART;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  sigaction(SIGINT, &amp;sa, NULL);</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span></div>
+<div class="foldopen" id="foldopen00315" data-start="{" data-end="}">
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="signal_8c.html#af00bed52276317e59f6ae7bb13b0322b">  315</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#af00bed52276317e59f6ae7bb13b0322b">mutt_sig_allow_interrupt</a>(<span class="keywordtype">bool</span> allow)</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>{</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  <span class="keyword">struct </span>sigaction sa = { 0 };</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  sa.sa_handler = <a class="code hl_variable" href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a>;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">#ifdef SA_RESTART</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <span class="keywordflow">if</span> (!allow)</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    sa.sa_flags |= SA_RESTART;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  sigaction(SIGINT, &amp;sa, NULL);</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>}</div>
 </div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span></div>
-<div class="foldopen" id="foldopen00337" data-start="{" data-end="}">
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">  337</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>{</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>  <span class="keyword">struct </span>sigaction sa = { 0 };</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  sa.sa_handler = SIG_DFL;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  sa.sa_flags = 0;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  sigemptyset(&amp;sa.sa_mask);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>  <span class="comment">/* These signals are set to SIG_IGN and must be reset */</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  sigaction(SIGPIPE, &amp;sa, NULL);</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>  <span class="comment">/* These technically don&#39;t need to be reset, but the code has been</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="comment">   * doing so for a long time. */</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  sigaction(SIGTERM, &amp;sa, NULL);</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>  sigaction(SIGTSTP, &amp;sa, NULL);</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>  sigaction(SIGCONT, &amp;sa, NULL);</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>}</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span></div>
+<div class="foldopen" id="foldopen00336" data-start="{" data-end="}">
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">  336</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>{</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  <span class="keyword">struct </span>sigaction sa = { 0 };</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  sa.sa_handler = SIG_DFL;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  sa.sa_flags = 0;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  sigemptyset(&amp;sa.sa_mask);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  <span class="comment">/* These signals are set to SIG_IGN and must be reset */</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>  sigaction(SIGPIPE, &amp;sa, NULL);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  <span class="comment">/* These technically don&#39;t need to be reset, but the code has been</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="comment">   * doing so for a long time. */</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  sigaction(SIGTERM, &amp;sa, NULL);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  sigaction(SIGTSTP, &amp;sa, NULL);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>  sigaction(SIGCONT, &amp;sa, NULL);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>}</div>
 </div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span></div>
-<div class="foldopen" id="foldopen00362" data-start="{" data-end="}">
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="signal_8c.html#a1b3ea57ac15456dd9ebe3a02b136cb42">  362</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a1b3ea57ac15456dd9ebe3a02b136cb42">assertion_dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span> *func, <span class="keyword">const</span> <span class="keywordtype">char</span> *cond)</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>{</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>  <a class="code hl_function" href="signal_8c.html#a98b4f102294daf38e646dba8b7f4f9e0">endwin</a>();</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  <a class="code hl_function" href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a>();</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>  printf(<span class="stringliteral">&quot;%s:%d:%s() -- assertion failed (%s)\n&quot;</span>, file, line, func, cond);</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>}</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span></div>
+<div class="foldopen" id="foldopen00361" data-start="{" data-end="}">
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno"><a class="line" href="signal_8c.html#a1b3ea57ac15456dd9ebe3a02b136cb42">  361</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="signal_8c.html#a1b3ea57ac15456dd9ebe3a02b136cb42">assertion_dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file, <span class="keywordtype">int</span> line, <span class="keyword">const</span> <span class="keywordtype">char</span> *func, <span class="keyword">const</span> <span class="keywordtype">char</span> *cond)</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>{</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>  <a class="code hl_function" href="signal_8c.html#a98b4f102294daf38e646dba8b7f4f9e0">endwin</a>();</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>  <a class="code hl_function" href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a>();</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  printf(<span class="stringliteral">&quot;%s:%d:%s() -- assertion failed (%s)\n&quot;</span>, file, line, func, cond);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>}</div>
 </div>
 <div class="ttc" id="abacktrace_8c_html_ad4e568bce6fff0e62266165aec83d7e6"><div class="ttname"><a href="backtrace_8c.html#ad4e568bce6fff0e62266165aec83d7e6">show_backtrace</a></div><div class="ttdeci">void show_backtrace(void)</div><div class="ttdoc">Log the program&#39;s call stack.</div><div class="ttdef"><b>Definition</b> <a href="backtrace_8c_source.html#l00040">backtrace.c:40</a></div></div>
 <div class="ttc" id="acrypt__gpgme_8h_html_aa6f37478ebd949c46ad620ad1acd2d6e"><div class="ttname"><a href="crypt__gpgme_8h.html#aa6f37478ebd949c46ad620ad1acd2d6e">digit</a></div><div class="ttdeci">int digit(const char *s)</div></div>
 <div class="ttc" id="asignal2_8h_html"><div class="ttname"><a href="signal2_8h.html">signal2.h</a></div><div class="ttdoc">Signal handling.</div></div>
 <div class="ttc" id="asignal2_8h_html_a60d3777917d4b61a09ecb88574a935e1"><div class="ttname"><a href="signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1">sig_handler_t</a></div><div class="ttdeci">void(* sig_handler_t)(int sig)</div><div class="ttdef"><b>Definition</b> <a href="signal2_8h_source.html#l00046">signal2.h:46</a></div></div>
-<div class="ttc" id="asignal_8c_html_a079bd657ae3ccdcf07507d85097abfd8"><div class="ttname"><a href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">mutt_sig_init</a></div><div class="ttdeci">void mutt_sig_init(sig_handler_t sig_fn, sig_handler_t exit_fn, sig_handler_t segv_fn)</div><div class="ttdoc">Initialise the signal handling.</div><div class="ttdef"><b>Definition</b> <a href="#l00164">signal.c:164</a></div></div>
-<div class="ttc" id="asignal_8c_html_a1b3ea57ac15456dd9ebe3a02b136cb42"><div class="ttname"><a href="signal_8c.html#a1b3ea57ac15456dd9ebe3a02b136cb42">assertion_dump</a></div><div class="ttdeci">void assertion_dump(const char *file, int line, const char *func, const char *cond)</div><div class="ttdoc">Dump some debugging info before we stop the program.</div><div class="ttdef"><b>Definition</b> <a href="#l00362">signal.c:362</a></div></div>
-<div class="ttc" id="asignal_8c_html_a1eade47ee05fcf5997945cd11734ca75"><div class="ttname"><a href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a></div><div class="ttdeci">static bool SysSignalsBlocked</div><div class="ttdoc">true when system signals are blocked, e.g.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">signal.c:57</a></div></div>
-<div class="ttc" id="asignal_8c_html_a1edd32200cd9c935dd7742eea9b1a407"><div class="ttname"><a href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">ExitHandler</a></div><div class="ttdeci">static sig_handler_t ExitHandler</div><div class="ttdoc">Function to handle SIGTERM (15), SIGHUP (1), SIGQUIT (3) signals.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">signal.c:62</a></div></div>
-<div class="ttc" id="asignal_8c_html_a2588723370f4c5d5e77126030a640bd9"><div class="ttname"><a href="signal_8c.html#a2588723370f4c5d5e77126030a640bd9">SigWinch</a></div><div class="ttdeci">volatile sig_atomic_t SigWinch</div><div class="ttdoc">true after SIGWINCH is received</div><div class="ttdef"><b>Definition</b> <a href="#l00070">signal.c:70</a></div></div>
-<div class="ttc" id="asignal_8c_html_a29f65a716bfe4dfe86659d93b44073c4"><div class="ttname"><a href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a></div><div class="ttdeci">static sig_handler_t SigHandler</div><div class="ttdoc">Function to handle other signals, e.g. SIGINT (2)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">signal.c:60</a></div></div>
-<div class="ttc" id="asignal_8c_html_a2f2118f9e6616e782f74bda2a52a1d30"><div class="ttname"><a href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a></div><div class="ttdeci">static struct sigaction SysOldQuit</div><div class="ttdoc">Backup of SIGQUIT handler, when mutt_sig_block_system() is called.</div><div class="ttdef"><b>Definition</b> <a href="#l00049">signal.c:49</a></div></div>
-<div class="ttc" id="asignal_8c_html_a3c47b4b55af72c2a31cce3db2a19d70b"><div class="ttname"><a href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a></div><div class="ttdeci">void mutt_sig_empty_handler(int sig)</div><div class="ttdoc">Dummy signal handler.</div><div class="ttdef"><b>Definition</b> <a href="#l00131">signal.c:131</a></div></div>
-<div class="ttc" id="asignal_8c_html_a610de2c59847bf7ea2b60e18c8a8989b"><div class="ttname"><a href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a></div><div class="ttdeci">static sigset_t Sigset</div><div class="ttdoc">A set of signals used by mutt_sig_block(), mutt_sig_unblock()</div><div class="ttdef"><b>Definition</b> <a href="#l00042">signal.c:42</a></div></div>
-<div class="ttc" id="asignal_8c_html_a6747c4aea06d3fceb2dd568124ffa67d"><div class="ttname"><a href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a></div><div class="ttdeci">void mutt_sig_reset_child_signals(void)</div><div class="ttdoc">Reset ignored signals back to the default.</div><div class="ttdef"><b>Definition</b> <a href="#l00337">signal.c:337</a></div></div>
-<div class="ttc" id="asignal_8c_html_a6da515e05b9aab5847bdb7a72edfc96a"><div class="ttname"><a href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">exit_print_uint</a></div><div class="ttdeci">static void exit_print_uint(unsigned int n)</div><div class="ttdoc">AS-safe version of printf(&quot;%u&quot;, n)</div><div class="ttdef"><b>Definition</b> <a href="#l00076">signal.c:76</a></div></div>
-<div class="ttc" id="asignal_8c_html_a85c069643781da758ffa8281db66e8f0"><div class="ttname"><a href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a></div><div class="ttdeci">volatile sig_atomic_t SigInt</div><div class="ttdoc">true after SIGINT is received</div><div class="ttdef"><b>Definition</b> <a href="#l00069">signal.c:69</a></div></div>
-<div class="ttc" id="asignal_8c_html_a887883dde907036a5683a2e18a5f5ee5"><div class="ttname"><a href="signal_8c.html#a887883dde907036a5683a2e18a5f5ee5">OldSegvHandler</a></div><div class="ttdeci">sig_handler_t OldSegvHandler</div><div class="ttdoc">Keep the old SEGV handler, it could have been set by ASAN.</div><div class="ttdef"><b>Definition</b> <a href="#l00067">signal.c:67</a></div></div>
-<div class="ttc" id="asignal_8c_html_a8f760c89850a7fdab70f3e084dae29ea"><div class="ttname"><a href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a></div><div class="ttdeci">void mutt_sig_block_system(void)</div><div class="ttdoc">Block signals before calling exec()</div><div class="ttdef"><b>Definition</b> <a href="#l00261">signal.c:261</a></div></div>
+<div class="ttc" id="asignal_8c_html_a079bd657ae3ccdcf07507d85097abfd8"><div class="ttname"><a href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">mutt_sig_init</a></div><div class="ttdeci">void mutt_sig_init(sig_handler_t sig_fn, sig_handler_t exit_fn, sig_handler_t segv_fn)</div><div class="ttdoc">Initialise the signal handling.</div><div class="ttdef"><b>Definition</b> <a href="#l00163">signal.c:163</a></div></div>
+<div class="ttc" id="asignal_8c_html_a1b3ea57ac15456dd9ebe3a02b136cb42"><div class="ttname"><a href="signal_8c.html#a1b3ea57ac15456dd9ebe3a02b136cb42">assertion_dump</a></div><div class="ttdeci">void assertion_dump(const char *file, int line, const char *func, const char *cond)</div><div class="ttdoc">Dump some debugging info before we stop the program.</div><div class="ttdef"><b>Definition</b> <a href="#l00361">signal.c:361</a></div></div>
+<div class="ttc" id="asignal_8c_html_a1eade47ee05fcf5997945cd11734ca75"><div class="ttname"><a href="signal_8c.html#a1eade47ee05fcf5997945cd11734ca75">SysSignalsBlocked</a></div><div class="ttdeci">static bool SysSignalsBlocked</div><div class="ttdoc">true when system signals are blocked, e.g.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">signal.c:56</a></div></div>
+<div class="ttc" id="asignal_8c_html_a1edd32200cd9c935dd7742eea9b1a407"><div class="ttname"><a href="signal_8c.html#a1edd32200cd9c935dd7742eea9b1a407">ExitHandler</a></div><div class="ttdeci">static sig_handler_t ExitHandler</div><div class="ttdoc">Function to handle SIGTERM (15), SIGHUP (1), SIGQUIT (3) signals.</div><div class="ttdef"><b>Definition</b> <a href="#l00061">signal.c:61</a></div></div>
+<div class="ttc" id="asignal_8c_html_a2588723370f4c5d5e77126030a640bd9"><div class="ttname"><a href="signal_8c.html#a2588723370f4c5d5e77126030a640bd9">SigWinch</a></div><div class="ttdeci">volatile sig_atomic_t SigWinch</div><div class="ttdoc">true after SIGWINCH is received</div><div class="ttdef"><b>Definition</b> <a href="#l00069">signal.c:69</a></div></div>
+<div class="ttc" id="asignal_8c_html_a29f65a716bfe4dfe86659d93b44073c4"><div class="ttname"><a href="signal_8c.html#a29f65a716bfe4dfe86659d93b44073c4">SigHandler</a></div><div class="ttdeci">static sig_handler_t SigHandler</div><div class="ttdoc">Function to handle other signals, e.g. SIGINT (2)</div><div class="ttdef"><b>Definition</b> <a href="#l00059">signal.c:59</a></div></div>
+<div class="ttc" id="asignal_8c_html_a2f2118f9e6616e782f74bda2a52a1d30"><div class="ttname"><a href="signal_8c.html#a2f2118f9e6616e782f74bda2a52a1d30">SysOldQuit</a></div><div class="ttdeci">static struct sigaction SysOldQuit</div><div class="ttdoc">Backup of SIGQUIT handler, when mutt_sig_block_system() is called.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">signal.c:48</a></div></div>
+<div class="ttc" id="asignal_8c_html_a3c47b4b55af72c2a31cce3db2a19d70b"><div class="ttname"><a href="signal_8c.html#a3c47b4b55af72c2a31cce3db2a19d70b">mutt_sig_empty_handler</a></div><div class="ttdeci">void mutt_sig_empty_handler(int sig)</div><div class="ttdoc">Dummy signal handler.</div><div class="ttdef"><b>Definition</b> <a href="#l00130">signal.c:130</a></div></div>
+<div class="ttc" id="asignal_8c_html_a610de2c59847bf7ea2b60e18c8a8989b"><div class="ttname"><a href="signal_8c.html#a610de2c59847bf7ea2b60e18c8a8989b">Sigset</a></div><div class="ttdeci">static sigset_t Sigset</div><div class="ttdoc">A set of signals used by mutt_sig_block(), mutt_sig_unblock()</div><div class="ttdef"><b>Definition</b> <a href="#l00041">signal.c:41</a></div></div>
+<div class="ttc" id="asignal_8c_html_a6747c4aea06d3fceb2dd568124ffa67d"><div class="ttname"><a href="signal_8c.html#a6747c4aea06d3fceb2dd568124ffa67d">mutt_sig_reset_child_signals</a></div><div class="ttdeci">void mutt_sig_reset_child_signals(void)</div><div class="ttdoc">Reset ignored signals back to the default.</div><div class="ttdef"><b>Definition</b> <a href="#l00336">signal.c:336</a></div></div>
+<div class="ttc" id="asignal_8c_html_a6da515e05b9aab5847bdb7a72edfc96a"><div class="ttname"><a href="signal_8c.html#a6da515e05b9aab5847bdb7a72edfc96a">exit_print_uint</a></div><div class="ttdeci">static void exit_print_uint(unsigned int n)</div><div class="ttdoc">AS-safe version of printf(&quot;%u&quot;, n)</div><div class="ttdef"><b>Definition</b> <a href="#l00075">signal.c:75</a></div></div>
+<div class="ttc" id="asignal_8c_html_a85c069643781da758ffa8281db66e8f0"><div class="ttname"><a href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a></div><div class="ttdeci">volatile sig_atomic_t SigInt</div><div class="ttdoc">true after SIGINT is received</div><div class="ttdef"><b>Definition</b> <a href="#l00068">signal.c:68</a></div></div>
+<div class="ttc" id="asignal_8c_html_a887883dde907036a5683a2e18a5f5ee5"><div class="ttname"><a href="signal_8c.html#a887883dde907036a5683a2e18a5f5ee5">OldSegvHandler</a></div><div class="ttdeci">sig_handler_t OldSegvHandler</div><div class="ttdoc">Keep the old SEGV handler, it could have been set by ASAN.</div><div class="ttdef"><b>Definition</b> <a href="#l00066">signal.c:66</a></div></div>
+<div class="ttc" id="asignal_8c_html_a8f760c89850a7fdab70f3e084dae29ea"><div class="ttname"><a href="signal_8c.html#a8f760c89850a7fdab70f3e084dae29ea">mutt_sig_block_system</a></div><div class="ttdeci">void mutt_sig_block_system(void)</div><div class="ttdoc">Block signals before calling exec()</div><div class="ttdef"><b>Definition</b> <a href="#l00260">signal.c:260</a></div></div>
 <div class="ttc" id="asignal_8c_html_a98b4f102294daf38e646dba8b7f4f9e0"><div class="ttname"><a href="signal_8c.html#a98b4f102294daf38e646dba8b7f4f9e0">endwin</a></div><div class="ttdeci">int endwin(void)</div></div>
-<div class="ttc" id="asignal_8c_html_aa6c49e5535cdffeffd2cd4eee28bc96b"><div class="ttname"><a href="signal_8c.html#aa6c49e5535cdffeffd2cd4eee28bc96b">mutt_sig_block</a></div><div class="ttdeci">void mutt_sig_block(void)</div><div class="ttdoc">Block signals during critical operations.</div><div class="ttdef"><b>Definition</b> <a href="#l00228">signal.c:228</a></div></div>
-<div class="ttc" id="asignal_8c_html_aa9356c41baa1b35d3a7719f90570e6b7"><div class="ttname"><a href="signal_8c.html#aa9356c41baa1b35d3a7719f90570e6b7">mutt_sig_unblock</a></div><div class="ttdeci">void mutt_sig_unblock(void)</div><div class="ttdoc">Restore previously blocked signals.</div><div class="ttdef"><b>Definition</b> <a href="#l00246">signal.c:246</a></div></div>
-<div class="ttc" id="asignal_8c_html_aaee566e4b01c3bdb15592990e28f4070"><div class="ttname"><a href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a></div><div class="ttdeci">static bool SignalsBlocked</div><div class="ttdoc">true when signals are blocked, e.g.</div><div class="ttdef"><b>Definition</b> <a href="#l00053">signal.c:53</a></div></div>
-<div class="ttc" id="asignal_8c_html_abdbf54979fbd4394419ee38c99342788"><div class="ttname"><a href="signal_8c.html#abdbf54979fbd4394419ee38c99342788">exit_print_int</a></div><div class="ttdeci">static void exit_print_int(int n)</div><div class="ttdoc">AS-safe version of printf(&quot;%d&quot;, n)</div><div class="ttdef"><b>Definition</b> <a href="#l00095">signal.c:95</a></div></div>
-<div class="ttc" id="asignal_8c_html_ac0b20aa051ab69871cf4487066324d78"><div class="ttname"><a href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">SegvHandler</a></div><div class="ttdeci">static sig_handler_t SegvHandler</div><div class="ttdoc">Function to handle SIGSEGV (11) signals.</div><div class="ttdef"><b>Definition</b> <a href="#l00064">signal.c:64</a></div></div>
-<div class="ttc" id="asignal_8c_html_ad42f2065add33be177e19d2882f7238f"><div class="ttname"><a href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a></div><div class="ttdeci">static sigset_t SigsetSys</div><div class="ttdoc">A set of signals used by mutt_sig_block_system(), mutt_sig_unblock_system()</div><div class="ttdef"><b>Definition</b> <a href="#l00044">signal.c:44</a></div></div>
-<div class="ttc" id="asignal_8c_html_ad44b8fd5380fa4749911e9f1792af99d"><div class="ttname"><a href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a></div><div class="ttdeci">void mutt_sig_unblock_system(bool restore)</div><div class="ttdoc">Restore previously blocked signals.</div><div class="ttdef"><b>Definition</b> <a href="#l00285">signal.c:285</a></div></div>
-<div class="ttc" id="asignal_8c_html_ad70cefd5f7ea9c36c0439a9267f30aa3"><div class="ttname"><a href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">SysOldInt</a></div><div class="ttdeci">static struct sigaction SysOldInt</div><div class="ttdoc">Backup of SIGINT handler, when mutt_sig_block_system() is called.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">signal.c:47</a></div></div>
-<div class="ttc" id="asignal_8c_html_aec7898d818fcdfde24359d55af521579"><div class="ttname"><a href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a></div><div class="ttdeci">static void exit_print_string(const char *str)</div><div class="ttdoc">AS-safe version of printf(&quot;%s&quot;, str)</div><div class="ttdef"><b>Definition</b> <a href="#l00113">signal.c:113</a></div></div>
-<div class="ttc" id="asignal_8c_html_af00bed52276317e59f6ae7bb13b0322b"><div class="ttname"><a href="signal_8c.html#af00bed52276317e59f6ae7bb13b0322b">mutt_sig_allow_interrupt</a></div><div class="ttdeci">void mutt_sig_allow_interrupt(bool allow)</div><div class="ttdoc">Allow/disallow Ctrl-C (SIGINT)</div><div class="ttdef"><b>Definition</b> <a href="#l00316">signal.c:316</a></div></div>
-<div class="ttc" id="asignal_8c_html_af1e9e97dcf8b15c143401cdd8cbfcb92"><div class="ttname"><a href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a></div><div class="ttdeci">void mutt_sig_exit_handler(int sig)</div><div class="ttdoc">Notify the user and shutdown gracefully.</div><div class="ttdef"><b>Definition</b> <a href="#l00139">signal.c:139</a></div></div>
+<div class="ttc" id="asignal_8c_html_aa6c49e5535cdffeffd2cd4eee28bc96b"><div class="ttname"><a href="signal_8c.html#aa6c49e5535cdffeffd2cd4eee28bc96b">mutt_sig_block</a></div><div class="ttdeci">void mutt_sig_block(void)</div><div class="ttdoc">Block signals during critical operations.</div><div class="ttdef"><b>Definition</b> <a href="#l00227">signal.c:227</a></div></div>
+<div class="ttc" id="asignal_8c_html_aa9356c41baa1b35d3a7719f90570e6b7"><div class="ttname"><a href="signal_8c.html#aa9356c41baa1b35d3a7719f90570e6b7">mutt_sig_unblock</a></div><div class="ttdeci">void mutt_sig_unblock(void)</div><div class="ttdoc">Restore previously blocked signals.</div><div class="ttdef"><b>Definition</b> <a href="#l00245">signal.c:245</a></div></div>
+<div class="ttc" id="asignal_8c_html_aaee566e4b01c3bdb15592990e28f4070"><div class="ttname"><a href="signal_8c.html#aaee566e4b01c3bdb15592990e28f4070">SignalsBlocked</a></div><div class="ttdeci">static bool SignalsBlocked</div><div class="ttdoc">true when signals are blocked, e.g.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">signal.c:52</a></div></div>
+<div class="ttc" id="asignal_8c_html_abdbf54979fbd4394419ee38c99342788"><div class="ttname"><a href="signal_8c.html#abdbf54979fbd4394419ee38c99342788">exit_print_int</a></div><div class="ttdeci">static void exit_print_int(int n)</div><div class="ttdoc">AS-safe version of printf(&quot;%d&quot;, n)</div><div class="ttdef"><b>Definition</b> <a href="#l00094">signal.c:94</a></div></div>
+<div class="ttc" id="asignal_8c_html_ac0b20aa051ab69871cf4487066324d78"><div class="ttname"><a href="signal_8c.html#ac0b20aa051ab69871cf4487066324d78">SegvHandler</a></div><div class="ttdeci">static sig_handler_t SegvHandler</div><div class="ttdoc">Function to handle SIGSEGV (11) signals.</div><div class="ttdef"><b>Definition</b> <a href="#l00063">signal.c:63</a></div></div>
+<div class="ttc" id="asignal_8c_html_ad42f2065add33be177e19d2882f7238f"><div class="ttname"><a href="signal_8c.html#ad42f2065add33be177e19d2882f7238f">SigsetSys</a></div><div class="ttdeci">static sigset_t SigsetSys</div><div class="ttdoc">A set of signals used by mutt_sig_block_system(), mutt_sig_unblock_system()</div><div class="ttdef"><b>Definition</b> <a href="#l00043">signal.c:43</a></div></div>
+<div class="ttc" id="asignal_8c_html_ad44b8fd5380fa4749911e9f1792af99d"><div class="ttname"><a href="signal_8c.html#ad44b8fd5380fa4749911e9f1792af99d">mutt_sig_unblock_system</a></div><div class="ttdeci">void mutt_sig_unblock_system(bool restore)</div><div class="ttdoc">Restore previously blocked signals.</div><div class="ttdef"><b>Definition</b> <a href="#l00284">signal.c:284</a></div></div>
+<div class="ttc" id="asignal_8c_html_ad70cefd5f7ea9c36c0439a9267f30aa3"><div class="ttname"><a href="signal_8c.html#ad70cefd5f7ea9c36c0439a9267f30aa3">SysOldInt</a></div><div class="ttdeci">static struct sigaction SysOldInt</div><div class="ttdoc">Backup of SIGINT handler, when mutt_sig_block_system() is called.</div><div class="ttdef"><b>Definition</b> <a href="#l00046">signal.c:46</a></div></div>
+<div class="ttc" id="asignal_8c_html_aec7898d818fcdfde24359d55af521579"><div class="ttname"><a href="signal_8c.html#aec7898d818fcdfde24359d55af521579">exit_print_string</a></div><div class="ttdeci">static void exit_print_string(const char *str)</div><div class="ttdoc">AS-safe version of printf(&quot;%s&quot;, str)</div><div class="ttdef"><b>Definition</b> <a href="#l00112">signal.c:112</a></div></div>
+<div class="ttc" id="asignal_8c_html_af00bed52276317e59f6ae7bb13b0322b"><div class="ttname"><a href="signal_8c.html#af00bed52276317e59f6ae7bb13b0322b">mutt_sig_allow_interrupt</a></div><div class="ttdeci">void mutt_sig_allow_interrupt(bool allow)</div><div class="ttdoc">Allow/disallow Ctrl-C (SIGINT)</div><div class="ttdef"><b>Definition</b> <a href="#l00315">signal.c:315</a></div></div>
+<div class="ttc" id="asignal_8c_html_af1e9e97dcf8b15c143401cdd8cbfcb92"><div class="ttname"><a href="signal_8c.html#af1e9e97dcf8b15c143401cdd8cbfcb92">mutt_sig_exit_handler</a></div><div class="ttdeci">void mutt_sig_exit_handler(int sig)</div><div class="ttdoc">Notify the user and shutdown gracefully.</div><div class="ttdef"><b>Definition</b> <a href="#l00138">signal.c:138</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.13.2-->

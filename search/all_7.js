@@ -560,7 +560,7 @@ var searchData=
   ['error_5fpause_557',['error_pause',['../mutt__logging_8c.html#abcfbeac77028256b94618b1ebdac6891',1,'mutt_logging.c']]],
   ['errorbuf_558',['ErrorBuf',['../globals_8c.html#a6dc47daf9dad9df1140145c872d9dc2c',1,'ErrorBuf:&#160;globals.c'],['../globals_8h.html#a6dc47daf9dad9df1140145c872d9dc2c',1,'ErrorBuf:&#160;globals.c']]],
   ['errorbufmessage_559',['ErrorBufMessage',['../globals_8c.html#a8b07bedfff276299caa6925c95b5b157',1,'ErrorBufMessage:&#160;globals.c'],['../globals_8h.html#a8b07bedfff276299caa6925c95b5b157',1,'ErrorBufMessage:&#160;globals.c']]],
-  ['escape_5fmacro_560',['escape_macro',['../key_2lib_8c.html#acd4962900253a906c205bbaf05e11d7a',1,'lib.c']]],
+  ['escape_5fmacro_560',['escape_macro',['../key_2dump_8c.html#acd4962900253a906c205bbaf05e11d7a',1,'dump.c']]],
   ['escape_5fstring_561',['escape_string',['../config_2dump_8c.html#a03edb5012f9f0894b258ab6a6cb6ed11',1,'escape_string(struct Buffer *buf, const char *src):&#160;dump.c'],['../config_2dump_8h.html#a03edb5012f9f0894b258ab6a6cb6ed11',1,'escape_string(struct Buffer *buf, const char *src):&#160;dump.c']]],
   ['etags_562',['Etags',['../structEtags.html',1,'']]],
   ['ev_5fmessage_563',['ev_message',['../editmsg_8c.html#a8cccfe84ab7389c624becc6f5f14d13f',1,'editmsg.c']]],

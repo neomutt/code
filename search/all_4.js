@@ -47,7 +47,7 @@ var searchData=
   ['bg_44',['bg',['../structAnsiColor.html#a87daadf84d4b6a20b6acc774cf95d7d6',1,'AnsiColor::bg'],['../structAttrColor.html#a1d8b663b7d66d895ff1ec911ca7e9d2d',1,'AttrColor::bg'],['../structCursesColor.html#a2cb08234c6eb8b85179e81397be3886f',1,'CursesColor::bg']]],
   ['binary_45',['binary',['../structContent.html#a9b7fb2b72f01b83ee4e9b91213752120',1,'Content']]],
   ['binding_20commands_46',['Parse key binding commands',['../key_commands.html',1,'lib_key']]],
-  ['binding_5fsort_47',['binding_sort',['../group__sort__api.html#ga4716503da52b261d3090b7f897f4a6c8',1,'binding_sort(const void *a, const void *b, void *sdata):&#160;lib.c'],['../group__sort__api.html#ga4716503da52b261d3090b7f897f4a6c8',1,'binding_sort(const void *a, const void *b, void *sdata):&#160;lib.c']]],
+  ['binding_5fsort_47',['binding_sort',['../group__sort__api.html#ga4716503da52b261d3090b7f897f4a6c8',1,'binding_sort(const void *a, const void *b, void *sdata):&#160;dump.c'],['../group__sort__api.html#ga4716503da52b261d3090b7f897f4a6c8',1,'binding_sort(const void *a, const void *b, void *sdata):&#160;dump.c']]],
   ['bindinginfo_48',['BindingInfo',['../structBindingInfo.html',1,'']]],
   ['bindings_49',['bindings',['../key_dump.html',1,'Dump key bindings'],['../key_init.html',1,'Set up the key bindings']]],
   ['blen_50',['blen',['../structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a',1,'SaslSockData::blen'],['../structImapAccountData.html#aaed384a49fa308902250d28b91b70c46',1,'ImapAccountData::blen']]],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"structMailcapEntry.html#ac195e10d836eb0b886580310c2cf0554":[1,0,146,4],
+"structMailcapEntry.html#ad682bf5b0b80e72f2a9b9196728514e3":[1,0,146,0],
 "structMailcapEntry.html#adcea89b25743514d268e8fde508d6295":[1,0,146,9],
 "structMailcapEntry.html#af711c81e4798bf4790fb6dd58d739d68":[1,0,146,10],
 "structMailcapEntry.html#af91c521a75699979b652fc4b319870ff":[1,0,146,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "structNntpAccountData.html#a12f478749b5ab10135a81d90ed0dc797":[1,0,182,17],
 "structNntpAccountData.html#a158b6bdd5a8be673e51ce25946709052":[1,0,182,8],
 "structNntpAccountData.html#a17e649e29d0d7d8e6137647e62aa4b37":[1,0,182,23],
-"structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a":[1,0,182,25],
-"structNntpAccountData.html#a2a1c6e75563a61693936d8d82acc1321":[1,0,182,10],
-"structNntpAccountData.html#a31956518f4a223c885421a1315b79330":[1,0,182,15]
+"structNntpAccountData.html#a27c41dff3b7d62798dda5cec8d755c2a":[1,0,182,25]
 };

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-43-g177ed6</span>
+   &#160;<span id="projectnumber">2025-09-05-53-g1e05a3</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -208,153 +208,153 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="enriched_8c_source.html#l00469">469</a> of file <a class="el" href="enriched_8c_source.html">enriched.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  470</span>{</div>
-<div class="line"><span class="lineno">  471</span>  <span class="keyword">enum</span></div>
-<div class="line"><span class="lineno">  472</span>  {</div>
-<div class="line"><span class="lineno">  473</span>    TEXT,</div>
-<div class="line"><span class="lineno">  474</span>    LANGLE,</div>
-<div class="line"><span class="lineno">  475</span>    TAG,</div>
-<div class="line"><span class="lineno">  476</span>    BOGUS_TAG,</div>
-<div class="line"><span class="lineno">  477</span>    NEWLINE,</div>
-<div class="line"><span class="lineno">  478</span>    ST_EOF,</div>
-<div class="line"><span class="lineno">  479</span>    DONE</div>
-<div class="line"><span class="lineno">  480</span>  } text_state = TEXT;</div>
-<div class="line"><span class="lineno">  481</span> </div>
-<div class="line"><span class="lineno">  482</span>  <span class="keywordtype">long</span> bytes = b_email-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
-<div class="line"><span class="lineno">  483</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEnrichedState.html">EnrichedState</a> enriched = { 0 };</div>
-<div class="line"><span class="lineno">  484</span>  wint_t wc = 0;</div>
-<div class="line"><span class="lineno">  485</span>  <span class="keywordtype">int</span> tag_len = 0;</div>
-<div class="line"><span class="lineno">  486</span>  <span class="keywordtype">wchar_t</span> tag[1024 + 1];</div>
-<div class="line"><span class="lineno">  487</span> </div>
-<div class="line"><span class="lineno">  488</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a> = <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>;</div>
-<div class="line"><span class="lineno">  489</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26">wrap_margin</a> = ((<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">wraplen</a> &gt; 4) &amp;&amp;</div>
-<div class="line"><span class="lineno">  490</span>                          ((<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>) || (<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">wraplen</a> &lt; 76))) ?</div>
-<div class="line"><span class="lineno">  491</span>                             <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">wraplen</a> - 4 :</div>
-<div class="line"><span class="lineno">  492</span>                             72;</div>
-<div class="line"><span class="lineno">  493</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#aefb17717977e343b9c178b934c65830e">line_max</a> = enriched.<a class="code hl_variable" href="structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26">wrap_margin</a> * 4;</div>
-<div class="line"><span class="lineno">  494</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#a5c98ee59229be04267e11585aa973684">line</a> = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(enriched.<a class="code hl_variable" href="structEnrichedState.html#aefb17717977e343b9c178b934c65830e">line_max</a> + 1, <span class="keywordtype">wchar_t</span>);</div>
-<div class="line"><span class="lineno">  495</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#a4302bc98504a6e715be8e5006833051c">param</a> = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(256, <span class="keywordtype">wchar_t</span>);</div>
-<div class="line"><span class="lineno">  496</span> </div>
-<div class="line"><span class="lineno">  497</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#ad6e42cbea8841c7ddff457cb8c63693e">param_len</a> = 256;</div>
-<div class="line"><span class="lineno">  498</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#a3def386a556bda9d870e9b44bd2407e0">param_used</a> = 0;</div>
-<div class="line"><span class="lineno">  499</span> </div>
-<div class="line"><span class="lineno">  500</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>)</div>
-<div class="line"><span class="lineno">  501</span>  {</div>
-<div class="line"><span class="lineno">  502</span>    <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>, <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
-<div class="line"><span class="lineno">  503</span>    enriched.<a class="code hl_variable" href="structEnrichedState.html#aff30327d80e7c33db452c719aeea9c7a">indent_len</a> += <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
-<div class="line"><span class="lineno">  504</span>  }</div>
-<div class="line"><span class="lineno">  505</span> </div>
-<div class="line"><span class="lineno">  506</span>  <span class="keywordflow">while</span> (text_state != DONE)</div>
-<div class="line"><span class="lineno">  507</span>  {</div>
-<div class="line"><span class="lineno">  508</span>    <span class="keywordflow">if</span> (text_state != ST_EOF)</div>
-<div class="line"><span class="lineno">  509</span>    {</div>
-<div class="line"><span class="lineno">  510</span>      <span class="keywordflow">if</span> (!bytes || ((wc = fgetwc(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>)) == WEOF))</div>
-<div class="line"><span class="lineno">  511</span>        text_state = ST_EOF;</div>
-<div class="line"><span class="lineno">  512</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  513</span>        bytes--;</div>
-<div class="line"><span class="lineno">  514</span>    }</div>
-<div class="line"><span class="lineno">  515</span> </div>
-<div class="line"><span class="lineno">  516</span>    <span class="keywordflow">switch</span> (text_state)</div>
-<div class="line"><span class="lineno">  517</span>    {</div>
-<div class="line"><span class="lineno">  518</span>      <span class="keywordflow">case</span> TEXT:</div>
-<div class="line"><span class="lineno">  519</span>        <span class="keywordflow">switch</span> (wc)</div>
-<div class="line"><span class="lineno">  520</span>        {</div>
-<div class="line"><span class="lineno">  521</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39;&lt;&#39;</span>:</div>
-<div class="line"><span class="lineno">  522</span>            text_state = LANGLE;</div>
-<div class="line"><span class="lineno">  523</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  524</span> </div>
-<div class="line"><span class="lineno">  525</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
-<div class="line"><span class="lineno">  526</span>            <span class="keywordflow">if</span> (enriched.<a class="code hl_variable" href="structEnrichedState.html#a7003e363f1bd2f53eded1dffd3dd51d3">tag_level</a>[<a class="code hl_enumvalue" href="enriched_8c.html#a4148209775369a82f56b9fde2cf2dd2da06eab0f67d7b47d5693157b7ad9f3bb1">RICH_NOFILL</a>])</div>
-<div class="line"><span class="lineno">  527</span>            {</div>
-<div class="line"><span class="lineno">  528</span>              <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  529</span>            }</div>
-<div class="line"><span class="lineno">  530</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  531</span>            {</div>
-<div class="line"><span class="lineno">  532</span>              <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>((<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39; &#39;</span>, &amp;enriched);</div>
-<div class="line"><span class="lineno">  533</span>              text_state = NEWLINE;</div>
-<div class="line"><span class="lineno">  534</span>            }</div>
-<div class="line"><span class="lineno">  535</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  536</span> </div>
-<div class="line"><span class="lineno">  537</span>          <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  538</span>            <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>(wc, &amp;enriched);</div>
-<div class="line"><span class="lineno">  539</span>        }</div>
-<div class="line"><span class="lineno">  540</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  541</span> </div>
-<div class="line"><span class="lineno">  542</span>      <span class="keywordflow">case</span> LANGLE:</div>
-<div class="line"><span class="lineno">  543</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&lt;&#39;</span>)</div>
-<div class="line"><span class="lineno">  544</span>        {</div>
-<div class="line"><span class="lineno">  545</span>          <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>(wc, &amp;enriched);</div>
-<div class="line"><span class="lineno">  546</span>          text_state = TEXT;</div>
-<div class="line"><span class="lineno">  547</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  548</span>        }</div>
-<div class="line"><span class="lineno">  549</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  550</span>        {</div>
-<div class="line"><span class="lineno">  551</span>          tag_len = 0;</div>
-<div class="line"><span class="lineno">  552</span>          text_state = TAG;</div>
-<div class="line"><span class="lineno">  553</span>        }</div>
-<div class="line"><span class="lineno">  554</span>        <span class="comment">/* Yes, (it wasn&#39;t a &lt;&lt;, so this char is first in TAG) */</span></div>
-<div class="line"><span class="lineno">  555</span>        <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
-<div class="line"><span class="lineno">  556</span> </div>
-<div class="line"><span class="lineno">  557</span>      <span class="keywordflow">case</span> TAG:</div>
-<div class="line"><span class="lineno">  558</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&gt;&#39;</span>)</div>
-<div class="line"><span class="lineno">  559</span>        {</div>
-<div class="line"><span class="lineno">  560</span>          tag[tag_len] = (wchar_t) <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  561</span>          <a class="code hl_function" href="enriched_8c.html#a0671852d4e72755733eb2715cbdf87f8">enriched_set_flags</a>(tag, &amp;enriched);</div>
-<div class="line"><span class="lineno">  562</span>          text_state = TEXT;</div>
-<div class="line"><span class="lineno">  563</span>        }</div>
-<div class="line"><span class="lineno">  564</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tag_len &lt; 1024) <span class="comment">/* ignore overly long tags */</span></div>
-<div class="line"><span class="lineno">  565</span>        {</div>
-<div class="line"><span class="lineno">  566</span>          tag[tag_len++] = wc;</div>
-<div class="line"><span class="lineno">  567</span>        }</div>
-<div class="line"><span class="lineno">  568</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  569</span>        {</div>
-<div class="line"><span class="lineno">  570</span>          text_state = BOGUS_TAG;</div>
-<div class="line"><span class="lineno">  571</span>        }</div>
-<div class="line"><span class="lineno">  572</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  573</span> </div>
-<div class="line"><span class="lineno">  574</span>      <span class="keywordflow">case</span> BOGUS_TAG:</div>
-<div class="line"><span class="lineno">  575</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&gt;&#39;</span>)</div>
-<div class="line"><span class="lineno">  576</span>          text_state = TEXT;</div>
-<div class="line"><span class="lineno">  577</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  578</span> </div>
-<div class="line"><span class="lineno">  579</span>      <span class="keywordflow">case</span> NEWLINE:</div>
-<div class="line"><span class="lineno">  580</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line"><span class="lineno">  581</span>        {</div>
-<div class="line"><span class="lineno">  582</span>          <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  583</span>        }</div>
-<div class="line"><span class="lineno">  584</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  585</span>        {</div>
-<div class="line"><span class="lineno">  586</span>          ungetwc(wc, <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
-<div class="line"><span class="lineno">  587</span>          bytes++;</div>
-<div class="line"><span class="lineno">  588</span>          text_state = TEXT;</div>
-<div class="line"><span class="lineno">  589</span>        }</div>
-<div class="line"><span class="lineno">  590</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  591</span> </div>
-<div class="line"><span class="lineno">  592</span>      <span class="keywordflow">case</span> ST_EOF:</div>
-<div class="line"><span class="lineno">  593</span>        <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>((<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;\0&#39;</span>, &amp;enriched);</div>
-<div class="line"><span class="lineno">  594</span>        <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  595</span>        text_state = DONE;</div>
-<div class="line"><span class="lineno">  596</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  597</span> </div>
-<div class="line"><span class="lineno">  598</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  599</span>        <span class="comment">/* not reached */</span></div>
-<div class="line"><span class="lineno">  600</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  601</span>    }</div>
-<div class="line"><span class="lineno">  602</span>  }</div>
-<div class="line"><span class="lineno">  603</span> </div>
-<div class="line"><span class="lineno">  604</span>  <a class="code hl_define" href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a>(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>, <span class="charliteral">&#39;\n&#39;</span>); <span class="comment">/* add a final newline */</span></div>
-<div class="line"><span class="lineno">  605</span> </div>
-<div class="line"><span class="lineno">  606</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a24e444e4075e48ac58f72cff287f3c0f">buffer</a>));</div>
-<div class="line"><span class="lineno">  607</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a5c98ee59229be04267e11585aa973684">line</a>));</div>
-<div class="line"><span class="lineno">  608</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a4302bc98504a6e715be8e5006833051c">param</a>));</div>
-<div class="line"><span class="lineno">  609</span> </div>
-<div class="line"><span class="lineno">  610</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  611</span>}</div>
-<div class="ttc" id="aenriched_8c_html_a0671852d4e72755733eb2715cbdf87f8"><div class="ttname"><a href="enriched_8c.html#a0671852d4e72755733eb2715cbdf87f8">enriched_set_flags</a></div><div class="ttdeci">static void enriched_set_flags(const wchar_t *tag, struct EnrichedState *enriched)</div><div class="ttdoc">Set flags on the enriched text state.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00377">enriched.c:377</a></div></div>
-<div class="ttc" id="aenriched_8c_html_a4148209775369a82f56b9fde2cf2dd2da06eab0f67d7b47d5693157b7ad9f3bb1"><div class="ttname"><a href="enriched_8c.html#a4148209775369a82f56b9fde2cf2dd2da06eab0f67d7b47d5693157b7ad9f3bb1">RICH_NOFILL</a></div><div class="ttdeci">@ RICH_NOFILL</div><div class="ttdoc">Text will not be reformatted.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00054">enriched.c:54</a></div></div>
-<div class="ttc" id="aenriched_8c_html_a564da94635e771c599f27fb909577626"><div class="ttname"><a href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a></div><div class="ttdeci">static void enriched_putwc(wchar_t c, struct EnrichedState *enriched)</div><div class="ttdoc">Write one wide character to the state.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00275">enriched.c:275</a></div></div>
-<div class="ttc" id="aenriched_8c_html_ab669a4eb5f4606a93dc08e1226172cf1"><div class="ttname"><a href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a></div><div class="ttdeci">static void enriched_flush(struct EnrichedState *enriched, bool wrap)</div><div class="ttdoc">Write enriched text to the State.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00238">enriched.c:238</a></div></div>
+<p class="definition">Definition at line <a class="el" href="enriched_8c_source.html#l00468">468</a> of file <a class="el" href="enriched_8c_source.html">enriched.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  469</span>{</div>
+<div class="line"><span class="lineno">  470</span>  <span class="keyword">enum</span></div>
+<div class="line"><span class="lineno">  471</span>  {</div>
+<div class="line"><span class="lineno">  472</span>    TEXT,</div>
+<div class="line"><span class="lineno">  473</span>    LANGLE,</div>
+<div class="line"><span class="lineno">  474</span>    TAG,</div>
+<div class="line"><span class="lineno">  475</span>    BOGUS_TAG,</div>
+<div class="line"><span class="lineno">  476</span>    NEWLINE,</div>
+<div class="line"><span class="lineno">  477</span>    ST_EOF,</div>
+<div class="line"><span class="lineno">  478</span>    DONE</div>
+<div class="line"><span class="lineno">  479</span>  } text_state = TEXT;</div>
+<div class="line"><span class="lineno">  480</span> </div>
+<div class="line"><span class="lineno">  481</span>  <span class="keywordtype">long</span> bytes = b_email-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
+<div class="line"><span class="lineno">  482</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEnrichedState.html">EnrichedState</a> enriched = { 0 };</div>
+<div class="line"><span class="lineno">  483</span>  wint_t wc = 0;</div>
+<div class="line"><span class="lineno">  484</span>  <span class="keywordtype">int</span> tag_len = 0;</div>
+<div class="line"><span class="lineno">  485</span>  <span class="keywordtype">wchar_t</span> tag[1024 + 1];</div>
+<div class="line"><span class="lineno">  486</span> </div>
+<div class="line"><span class="lineno">  487</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a> = <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>;</div>
+<div class="line"><span class="lineno">  488</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26">wrap_margin</a> = ((<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">wraplen</a> &gt; 4) &amp;&amp;</div>
+<div class="line"><span class="lineno">  489</span>                          ((<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>) || (<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">wraplen</a> &lt; 76))) ?</div>
+<div class="line"><span class="lineno">  490</span>                             <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">wraplen</a> - 4 :</div>
+<div class="line"><span class="lineno">  491</span>                             72;</div>
+<div class="line"><span class="lineno">  492</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#aefb17717977e343b9c178b934c65830e">line_max</a> = enriched.<a class="code hl_variable" href="structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26">wrap_margin</a> * 4;</div>
+<div class="line"><span class="lineno">  493</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#a5c98ee59229be04267e11585aa973684">line</a> = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(enriched.<a class="code hl_variable" href="structEnrichedState.html#aefb17717977e343b9c178b934c65830e">line_max</a> + 1, <span class="keywordtype">wchar_t</span>);</div>
+<div class="line"><span class="lineno">  494</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#a4302bc98504a6e715be8e5006833051c">param</a> = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(256, <span class="keywordtype">wchar_t</span>);</div>
+<div class="line"><span class="lineno">  495</span> </div>
+<div class="line"><span class="lineno">  496</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#ad6e42cbea8841c7ddff457cb8c63693e">param_len</a> = 256;</div>
+<div class="line"><span class="lineno">  497</span>  enriched.<a class="code hl_variable" href="structEnrichedState.html#a3def386a556bda9d870e9b44bd2407e0">param_used</a> = 0;</div>
+<div class="line"><span class="lineno">  498</span> </div>
+<div class="line"><span class="lineno">  499</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>)</div>
+<div class="line"><span class="lineno">  500</span>  {</div>
+<div class="line"><span class="lineno">  501</span>    <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>, <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
+<div class="line"><span class="lineno">  502</span>    enriched.<a class="code hl_variable" href="structEnrichedState.html#aff30327d80e7c33db452c719aeea9c7a">indent_len</a> += <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
+<div class="line"><span class="lineno">  503</span>  }</div>
+<div class="line"><span class="lineno">  504</span> </div>
+<div class="line"><span class="lineno">  505</span>  <span class="keywordflow">while</span> (text_state != DONE)</div>
+<div class="line"><span class="lineno">  506</span>  {</div>
+<div class="line"><span class="lineno">  507</span>    <span class="keywordflow">if</span> (text_state != ST_EOF)</div>
+<div class="line"><span class="lineno">  508</span>    {</div>
+<div class="line"><span class="lineno">  509</span>      <span class="keywordflow">if</span> (!bytes || ((wc = fgetwc(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>)) == WEOF))</div>
+<div class="line"><span class="lineno">  510</span>        text_state = ST_EOF;</div>
+<div class="line"><span class="lineno">  511</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  512</span>        bytes--;</div>
+<div class="line"><span class="lineno">  513</span>    }</div>
+<div class="line"><span class="lineno">  514</span> </div>
+<div class="line"><span class="lineno">  515</span>    <span class="keywordflow">switch</span> (text_state)</div>
+<div class="line"><span class="lineno">  516</span>    {</div>
+<div class="line"><span class="lineno">  517</span>      <span class="keywordflow">case</span> TEXT:</div>
+<div class="line"><span class="lineno">  518</span>        <span class="keywordflow">switch</span> (wc)</div>
+<div class="line"><span class="lineno">  519</span>        {</div>
+<div class="line"><span class="lineno">  520</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39;&lt;&#39;</span>:</div>
+<div class="line"><span class="lineno">  521</span>            text_state = LANGLE;</div>
+<div class="line"><span class="lineno">  522</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  523</span> </div>
+<div class="line"><span class="lineno">  524</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
+<div class="line"><span class="lineno">  525</span>            <span class="keywordflow">if</span> (enriched.<a class="code hl_variable" href="structEnrichedState.html#a7003e363f1bd2f53eded1dffd3dd51d3">tag_level</a>[<a class="code hl_enumvalue" href="enriched_8c.html#a4148209775369a82f56b9fde2cf2dd2da06eab0f67d7b47d5693157b7ad9f3bb1">RICH_NOFILL</a>])</div>
+<div class="line"><span class="lineno">  526</span>            {</div>
+<div class="line"><span class="lineno">  527</span>              <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  528</span>            }</div>
+<div class="line"><span class="lineno">  529</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  530</span>            {</div>
+<div class="line"><span class="lineno">  531</span>              <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>((<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39; &#39;</span>, &amp;enriched);</div>
+<div class="line"><span class="lineno">  532</span>              text_state = NEWLINE;</div>
+<div class="line"><span class="lineno">  533</span>            }</div>
+<div class="line"><span class="lineno">  534</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  535</span> </div>
+<div class="line"><span class="lineno">  536</span>          <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  537</span>            <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>(wc, &amp;enriched);</div>
+<div class="line"><span class="lineno">  538</span>        }</div>
+<div class="line"><span class="lineno">  539</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  540</span> </div>
+<div class="line"><span class="lineno">  541</span>      <span class="keywordflow">case</span> LANGLE:</div>
+<div class="line"><span class="lineno">  542</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&lt;&#39;</span>)</div>
+<div class="line"><span class="lineno">  543</span>        {</div>
+<div class="line"><span class="lineno">  544</span>          <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>(wc, &amp;enriched);</div>
+<div class="line"><span class="lineno">  545</span>          text_state = TEXT;</div>
+<div class="line"><span class="lineno">  546</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  547</span>        }</div>
+<div class="line"><span class="lineno">  548</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  549</span>        {</div>
+<div class="line"><span class="lineno">  550</span>          tag_len = 0;</div>
+<div class="line"><span class="lineno">  551</span>          text_state = TAG;</div>
+<div class="line"><span class="lineno">  552</span>        }</div>
+<div class="line"><span class="lineno">  553</span>        <span class="comment">/* Yes, (it wasn&#39;t a &lt;&lt;, so this char is first in TAG) */</span></div>
+<div class="line"><span class="lineno">  554</span>        <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
+<div class="line"><span class="lineno">  555</span> </div>
+<div class="line"><span class="lineno">  556</span>      <span class="keywordflow">case</span> TAG:</div>
+<div class="line"><span class="lineno">  557</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line"><span class="lineno">  558</span>        {</div>
+<div class="line"><span class="lineno">  559</span>          tag[tag_len] = (wchar_t) <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  560</span>          <a class="code hl_function" href="enriched_8c.html#a0671852d4e72755733eb2715cbdf87f8">enriched_set_flags</a>(tag, &amp;enriched);</div>
+<div class="line"><span class="lineno">  561</span>          text_state = TEXT;</div>
+<div class="line"><span class="lineno">  562</span>        }</div>
+<div class="line"><span class="lineno">  563</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tag_len &lt; 1024) <span class="comment">/* ignore overly long tags */</span></div>
+<div class="line"><span class="lineno">  564</span>        {</div>
+<div class="line"><span class="lineno">  565</span>          tag[tag_len++] = wc;</div>
+<div class="line"><span class="lineno">  566</span>        }</div>
+<div class="line"><span class="lineno">  567</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  568</span>        {</div>
+<div class="line"><span class="lineno">  569</span>          text_state = BOGUS_TAG;</div>
+<div class="line"><span class="lineno">  570</span>        }</div>
+<div class="line"><span class="lineno">  571</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  572</span> </div>
+<div class="line"><span class="lineno">  573</span>      <span class="keywordflow">case</span> BOGUS_TAG:</div>
+<div class="line"><span class="lineno">  574</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;&gt;&#39;</span>)</div>
+<div class="line"><span class="lineno">  575</span>          text_state = TEXT;</div>
+<div class="line"><span class="lineno">  576</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  577</span> </div>
+<div class="line"><span class="lineno">  578</span>      <span class="keywordflow">case</span> NEWLINE:</div>
+<div class="line"><span class="lineno">  579</span>        <span class="keywordflow">if</span> (wc == (<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><span class="lineno">  580</span>        {</div>
+<div class="line"><span class="lineno">  581</span>          <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  582</span>        }</div>
+<div class="line"><span class="lineno">  583</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  584</span>        {</div>
+<div class="line"><span class="lineno">  585</span>          ungetwc(wc, <a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
+<div class="line"><span class="lineno">  586</span>          bytes++;</div>
+<div class="line"><span class="lineno">  587</span>          text_state = TEXT;</div>
+<div class="line"><span class="lineno">  588</span>        }</div>
+<div class="line"><span class="lineno">  589</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  590</span> </div>
+<div class="line"><span class="lineno">  591</span>      <span class="keywordflow">case</span> ST_EOF:</div>
+<div class="line"><span class="lineno">  592</span>        <a class="code hl_function" href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a>((<span class="keywordtype">wchar_t</span>) <span class="charliteral">&#39;\0&#39;</span>, &amp;enriched);</div>
+<div class="line"><span class="lineno">  593</span>        <a class="code hl_function" href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a>(&amp;enriched, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  594</span>        text_state = DONE;</div>
+<div class="line"><span class="lineno">  595</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  596</span> </div>
+<div class="line"><span class="lineno">  597</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  598</span>        <span class="comment">/* not reached */</span></div>
+<div class="line"><span class="lineno">  599</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  600</span>    }</div>
+<div class="line"><span class="lineno">  601</span>  }</div>
+<div class="line"><span class="lineno">  602</span> </div>
+<div class="line"><span class="lineno">  603</span>  <a class="code hl_define" href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a>(<a class="code hl_variable" href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">state</a>, <span class="charliteral">&#39;\n&#39;</span>); <span class="comment">/* add a final newline */</span></div>
+<div class="line"><span class="lineno">  604</span> </div>
+<div class="line"><span class="lineno">  605</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a24e444e4075e48ac58f72cff287f3c0f">buffer</a>));</div>
+<div class="line"><span class="lineno">  606</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a5c98ee59229be04267e11585aa973684">line</a>));</div>
+<div class="line"><span class="lineno">  607</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;(enriched.<a class="code hl_variable" href="structEnrichedState.html#a4302bc98504a6e715be8e5006833051c">param</a>));</div>
+<div class="line"><span class="lineno">  608</span> </div>
+<div class="line"><span class="lineno">  609</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  610</span>}</div>
+<div class="ttc" id="aenriched_8c_html_a0671852d4e72755733eb2715cbdf87f8"><div class="ttname"><a href="enriched_8c.html#a0671852d4e72755733eb2715cbdf87f8">enriched_set_flags</a></div><div class="ttdeci">static void enriched_set_flags(const wchar_t *tag, struct EnrichedState *enriched)</div><div class="ttdoc">Set flags on the enriched text state.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00376">enriched.c:376</a></div></div>
+<div class="ttc" id="aenriched_8c_html_a4148209775369a82f56b9fde2cf2dd2da06eab0f67d7b47d5693157b7ad9f3bb1"><div class="ttname"><a href="enriched_8c.html#a4148209775369a82f56b9fde2cf2dd2da06eab0f67d7b47d5693157b7ad9f3bb1">RICH_NOFILL</a></div><div class="ttdeci">@ RICH_NOFILL</div><div class="ttdoc">Text will not be reformatted.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00053">enriched.c:53</a></div></div>
+<div class="ttc" id="aenriched_8c_html_a564da94635e771c599f27fb909577626"><div class="ttname"><a href="enriched_8c.html#a564da94635e771c599f27fb909577626">enriched_putwc</a></div><div class="ttdeci">static void enriched_putwc(wchar_t c, struct EnrichedState *enriched)</div><div class="ttdoc">Write one wide character to the state.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00274">enriched.c:274</a></div></div>
+<div class="ttc" id="aenriched_8c_html_ab669a4eb5f4606a93dc08e1226172cf1"><div class="ttname"><a href="enriched_8c.html#ab669a4eb5f4606a93dc08e1226172cf1">enriched_flush</a></div><div class="ttdeci">static void enriched_flush(struct EnrichedState *enriched, bool wrap)</div><div class="ttdoc">Write enriched text to the State.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00237">enriched.c:237</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00062">memory.h:62</a></div></div>
 <div class="ttc" id="amemory_8h_html_a9aaf8f21a29735767a069ff1aee9d7d9"><div class="ttname"><a href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a></div><div class="ttdeci">#define MUTT_MEM_CALLOC(n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00047">memory.h:47</a></div></div>
 <div class="ttc" id="amutt_2lib_8h_html_a0cf2d82c57a09723ab59e6f4dcc45b84"><div class="ttname"><a href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a></div><div class="ttdeci">#define FALLTHROUGH</div><div class="ttdef"><b>Definition</b> <a href="mutt_2lib_8h_source.html#l00113">lib.h:113</a></div></div>
@@ -363,17 +363,17 @@ Functions</h2></td></tr>
 <div class="ttc" id="amutt_2state_8h_html_a511e4530400bb790de3fc76b44640e43"><div class="ttname"><a href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a></div><div class="ttdeci">#define state_putc(STATE, STR)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00059">state.h:59</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00498">string.c:498</a></div></div>
 <div class="ttc" id="astructBody_html_a6f92d7ec8568ca04ae07931c56dd0790"><div class="ttname"><a href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">Body::length</a></div><div class="ttdeci">LOFF_T length</div><div class="ttdoc">length (in bytes) of attachment</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00053">body.h:53</a></div></div>
-<div class="ttc" id="astructEnrichedState_html"><div class="ttname"><a href="structEnrichedState.html">EnrichedState</a></div><div class="ttdoc">State of enriched-text parser.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00098">enriched.c:99</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_a24e444e4075e48ac58f72cff287f3c0f"><div class="ttname"><a href="structEnrichedState.html#a24e444e4075e48ac58f72cff287f3c0f">EnrichedState::buffer</a></div><div class="ttdeci">wchar_t * buffer</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00100">enriched.c:100</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_a3def386a556bda9d870e9b44bd2407e0"><div class="ttname"><a href="structEnrichedState.html#a3def386a556bda9d870e9b44bd2407e0">EnrichedState::param_used</a></div><div class="ttdeci">size_t param_used</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00110">enriched.c:110</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_a4302bc98504a6e715be8e5006833051c"><div class="ttname"><a href="structEnrichedState.html#a4302bc98504a6e715be8e5006833051c">EnrichedState::param</a></div><div class="ttdeci">wchar_t * param</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00102">enriched.c:102</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_a5c98ee59229be04267e11585aa973684"><div class="ttname"><a href="structEnrichedState.html#a5c98ee59229be04267e11585aa973684">EnrichedState::line</a></div><div class="ttdeci">wchar_t * line</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00101">enriched.c:101</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_a7003e363f1bd2f53eded1dffd3dd51d3"><div class="ttname"><a href="structEnrichedState.html#a7003e363f1bd2f53eded1dffd3dd51d3">EnrichedState::tag_level</a></div><div class="ttdeci">int tag_level[RICH_MAX]</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00112">enriched.c:112</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_ac0dfe119df7a193d899282cf630e01e4"><div class="ttname"><a href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">EnrichedState::state</a></div><div class="ttdeci">struct State * state</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00114">enriched.c:114</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_ad6e42cbea8841c7ddff457cb8c63693e"><div class="ttname"><a href="structEnrichedState.html#ad6e42cbea8841c7ddff457cb8c63693e">EnrichedState::param_len</a></div><div class="ttdeci">size_t param_len</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00111">enriched.c:111</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_aefb17717977e343b9c178b934c65830e"><div class="ttname"><a href="structEnrichedState.html#aefb17717977e343b9c178b934c65830e">EnrichedState::line_max</a></div><div class="ttdeci">size_t line_max</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00106">enriched.c:106</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_afed741d4664b2201a4bd28b23f776b26"><div class="ttname"><a href="structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26">EnrichedState::wrap_margin</a></div><div class="ttdeci">int wrap_margin</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00113">enriched.c:113</a></div></div>
-<div class="ttc" id="astructEnrichedState_html_aff30327d80e7c33db452c719aeea9c7a"><div class="ttname"><a href="structEnrichedState.html#aff30327d80e7c33db452c719aeea9c7a">EnrichedState::indent_len</a></div><div class="ttdeci">size_t indent_len</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00107">enriched.c:107</a></div></div>
+<div class="ttc" id="astructEnrichedState_html"><div class="ttname"><a href="structEnrichedState.html">EnrichedState</a></div><div class="ttdoc">State of enriched-text parser.</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00097">enriched.c:98</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_a24e444e4075e48ac58f72cff287f3c0f"><div class="ttname"><a href="structEnrichedState.html#a24e444e4075e48ac58f72cff287f3c0f">EnrichedState::buffer</a></div><div class="ttdeci">wchar_t * buffer</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00099">enriched.c:99</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_a3def386a556bda9d870e9b44bd2407e0"><div class="ttname"><a href="structEnrichedState.html#a3def386a556bda9d870e9b44bd2407e0">EnrichedState::param_used</a></div><div class="ttdeci">size_t param_used</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00109">enriched.c:109</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_a4302bc98504a6e715be8e5006833051c"><div class="ttname"><a href="structEnrichedState.html#a4302bc98504a6e715be8e5006833051c">EnrichedState::param</a></div><div class="ttdeci">wchar_t * param</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00101">enriched.c:101</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_a5c98ee59229be04267e11585aa973684"><div class="ttname"><a href="structEnrichedState.html#a5c98ee59229be04267e11585aa973684">EnrichedState::line</a></div><div class="ttdeci">wchar_t * line</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00100">enriched.c:100</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_a7003e363f1bd2f53eded1dffd3dd51d3"><div class="ttname"><a href="structEnrichedState.html#a7003e363f1bd2f53eded1dffd3dd51d3">EnrichedState::tag_level</a></div><div class="ttdeci">int tag_level[RICH_MAX]</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00111">enriched.c:111</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_ac0dfe119df7a193d899282cf630e01e4"><div class="ttname"><a href="structEnrichedState.html#ac0dfe119df7a193d899282cf630e01e4">EnrichedState::state</a></div><div class="ttdeci">struct State * state</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00113">enriched.c:113</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_ad6e42cbea8841c7ddff457cb8c63693e"><div class="ttname"><a href="structEnrichedState.html#ad6e42cbea8841c7ddff457cb8c63693e">EnrichedState::param_len</a></div><div class="ttdeci">size_t param_len</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00110">enriched.c:110</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_aefb17717977e343b9c178b934c65830e"><div class="ttname"><a href="structEnrichedState.html#aefb17717977e343b9c178b934c65830e">EnrichedState::line_max</a></div><div class="ttdeci">size_t line_max</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00105">enriched.c:105</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_afed741d4664b2201a4bd28b23f776b26"><div class="ttname"><a href="structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26">EnrichedState::wrap_margin</a></div><div class="ttdeci">int wrap_margin</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00112">enriched.c:112</a></div></div>
+<div class="ttc" id="astructEnrichedState_html_aff30327d80e7c33db452c719aeea9c7a"><div class="ttname"><a href="structEnrichedState.html#aff30327d80e7c33db452c719aeea9c7a">EnrichedState::indent_len</a></div><div class="ttdeci">size_t indent_len</div><div class="ttdef"><b>Definition</b> <a href="enriched_8c_source.html#l00106">enriched.c:106</a></div></div>
 <div class="ttc" id="astructState_html_a2c506e7d8513e59e6162cdc5d6f9f320"><div class="ttname"><a href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">State::wraplen</a></div><div class="ttdeci">int wraplen</div><div class="ttdoc">Width to wrap lines to (when flags &amp; STATE_DISPLAY)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00053">state.h:53</a></div></div>
 <div class="ttc" id="astructState_html_a5d855f7d518fde2ac4e8e409cbb24ad3"><div class="ttname"><a href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">State::flags</a></div><div class="ttdeci">StateFlags flags</div><div class="ttdoc">Flags, e.g. STATE_DISPLAY.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00052">state.h:52</a></div></div>
 <div class="ttc" id="astructState_html_a9cf7e1f0c5c12399def5ca38b13054ae"><div class="ttname"><a href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">State::fp_in</a></div><div class="ttdeci">FILE * fp_in</div><div class="ttdoc">File to read from.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00049">state.h:49</a></div></div>
@@ -1022,8 +1022,8 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  936</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">  937</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00161">buffer.c:161</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_ad1e6304a91c7b6f3c266a9b17c1740fe"><div class="ttname"><a href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a></div><div class="ttdeci">time_t mutt_date_now(void)</div><div class="ttdoc">Return the number of seconds since the Unix epoch.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2date_8c_source.html#l00456">date.c:456</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_ad8aaf5118148ed8f6708f32bfab3146f"><div class="ttname"><a href="mutt_2date_8c.html#ad8aaf5118148ed8f6708f32bfab3146f">mutt_date_parse_date</a></div><div class="ttdeci">time_t mutt_date_parse_date(const char *s, struct Tz *tz_out)</div><div class="ttdoc">Parse a date string in RFC822 format.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2date_8c_source.html#l00716">date.c:716</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_ad1e6304a91c7b6f3c266a9b17c1740fe"><div class="ttname"><a href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a></div><div class="ttdeci">time_t mutt_date_now(void)</div><div class="ttdoc">Return the number of seconds since the Unix epoch.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2date_8c_source.html#l00455">date.c:455</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_ad8aaf5118148ed8f6708f32bfab3146f"><div class="ttname"><a href="mutt_2date_8c.html#ad8aaf5118148ed8f6708f32bfab3146f">mutt_date_parse_date</a></div><div class="ttdeci">time_t mutt_date_parse_date(const char *s, struct Tz *tz_out)</div><div class="ttdoc">Parse a date string in RFC822 format.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2date_8c_source.html#l00715">date.c:715</a></div></div>
 <div class="ttc" id="amutt_2state_8c_html_a0d52430e63f8cffdd0e6a78182ad4385"><div class="ttname"><a href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a></div><div class="ttdeci">void state_attach_puts(struct State *state, const char *t)</div><div class="ttdoc">Write a string to the state.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8c_source.html#l00104">state.c:104</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a29db81d6f5a7dd216cbea75ecf8a5885"><div class="ttname"><a href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a></div><div class="ttdeci">bool mutt_istr_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00672">string.c:672</a></div></div>
 <div class="ttc" id="amuttlib_8c_html_a68a20bb1a92b933179acfe8157e423b1"><div class="ttname"><a href="muttlib_8c.html#a68a20bb1a92b933179acfe8157e423b1">mutt_str_pretty_size</a></div><div class="ttdeci">int mutt_str_pretty_size(struct Buffer *buf, size_t num)</div><div class="ttdoc">Display an abbreviated size, like 3.4K.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00989">muttlib.c:989</a></div></div>
@@ -1641,7 +1641,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno"> 1494</span> </div>
 <div class="line"><span class="lineno"> 1495</span>  <span class="keywordflow">return</span> rc;</div>
 <div class="line"><span class="lineno"> 1496</span>}</div>
-<div class="ttc" id="aenvelope_8c_html_a244dacf9b1001c9ce1dbd473e001381f"><div class="ttname"><a href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a></div><div class="ttdeci">void mutt_env_free(struct Envelope **ptr)</div><div class="ttdoc">Free an Envelope.</div><div class="ttdef"><b>Definition</b> <a href="envelope_8c_source.html#l00126">envelope.c:126</a></div></div>
+<div class="ttc" id="aenvelope_8c_html_a244dacf9b1001c9ce1dbd473e001381f"><div class="ttname"><a href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a></div><div class="ttdeci">void mutt_env_free(struct Envelope **ptr)</div><div class="ttdoc">Free an Envelope.</div><div class="ttdef"><b>Definition</b> <a href="envelope_8c_source.html#l00125">envelope.c:125</a></div></div>
 <div class="ttc" id="agroup__handler__api_html_ga7b445e21874bc1e1ec681a2626df13f9"><div class="ttname"><a href="#ga7b445e21874bc1e1ec681a2626df13f9">crypt_pgp_encrypted_handler</a></div><div class="ttdeci">int crypt_pgp_encrypted_handler(struct Body *b_email, struct State *state)</div><div class="ttdoc">Wrapper for CryptModuleSpecs::encrypted_handler() - Implements handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="cryptglue_8c_source.html#l00247">cryptglue.c:247</a></div></div>
 <div class="ttc" id="ahandler_8c_html_a88df4ca81c59bfc2464df374863edfd9"><div class="ttname"><a href="handler_8c.html#a88df4ca81c59bfc2464df374863edfd9">run_decode_and_handler</a></div><div class="ttdeci">static int run_decode_and_handler(struct Body *b, struct State *state, handler_t handler, bool plaintext)</div><div class="ttdoc">Run an appropriate decoder for an email.</div><div class="ttdef"><b>Definition</b> <a href="handler_8c_source.html#l01327">handler.c:1327</a></div></div>
 <div class="ttc" id="amime_8h_html_a1757cddbe4d3d273bf8fbffde3489a61a0bc13f416d890a95b7d7e7c77b155f8e"><div class="ttname"><a href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61a0bc13f416d890a95b7d7e7c77b155f8e">ENC_7BIT</a></div><div class="ttdeci">@ ENC_7BIT</div><div class="ttdoc">7-bit text</div><div class="ttdef"><b>Definition</b> <a href="mime_8h_source.html#l00049">mime.h:49</a></div></div>
@@ -1756,126 +1756,126 @@ Functions</h2></td></tr>
 
 <p>Handler for protected headers - Implements <a class="el" href="handler_8c.html#a72454e2cd50fcfe2124f5a923dcda538">handler_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt_8c_source.html#l01118">1118</a> of file <a class="el" href="crypt_8c_source.html">crypt.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1119</span>{</div>
-<div class="line"><span class="lineno"> 1120</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;crypt_protected_headers_read&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1121</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1122</span> </div>
-<div class="line"><span class="lineno"> 1123</span>  <a class="code hl_function" href="mutt_2state_8c.html#aa5f14be3e44a3a28b094ca1f1116025b">state_mark_protected_header</a>(state);</div>
-<div class="line"><span class="lineno"> 1124</span> </div>
-<div class="line"><span class="lineno"> 1125</span>  <span class="keywordflow">if</span> (!b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>)</div>
-<div class="line"><span class="lineno"> 1126</span>    <span class="keywordflow">goto</span> blank;</div>
-<div class="line"><span class="lineno"> 1127</span> </div>
-<div class="line"><span class="lineno"> 1128</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_devel_security = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;devel_security&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1129</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> display = (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>);</div>
-<div class="line"><span class="lineno"> 1130</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_weed = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;weed&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1131</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_crypt_protected_headers_weed = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;crypt_protected_headers_weed&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1132</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_wrap = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;wrap&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1133</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> wraplen = display ? <a class="code hl_function" href="mutt__window_8c.html#abab364f87c187982863f3bbed871f7e6">mutt_window_wrap_cols</a>(state-&gt;<a class="code hl_variable" href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">wraplen</a>, c_wrap) : 0;</div>
-<div class="line"><span class="lineno"> 1134</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="copy_8h.html#a88a40e8f238a8478b885c90d1ce53e9c">CopyHeaderFlags</a> chflags = display ? <a class="code hl_define" href="copy_8h.html#a78788518de9fe57639d22d204a686383">CH_DISPLAY</a> : <a class="code hl_define" href="copy_8h.html#af310a44d7c96b22de90934cb18634b58">CH_NO_FLAGS</a>;</div>
-<div class="line"><span class="lineno"> 1135</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno"> 1136</span>  <span class="keywordtype">bool</span> weed = (display &amp;&amp; c_weed &amp;&amp; c_crypt_protected_headers_weed);</div>
-<div class="line"><span class="lineno"> 1137</span> </div>
-<div class="line"><span class="lineno"> 1138</span>  <span class="keywordflow">if</span> (c_devel_security)</div>
-<div class="line"><span class="lineno"> 1139</span>  {</div>
-<div class="line"><span class="lineno"> 1140</span>    <span class="keywordflow">if</span> (b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#adb752a72d48a701571b3c1784bc4b59b">date</a> &amp;&amp; (!display || !c_weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;date&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 1141</span>    {</div>
-<div class="line"><span class="lineno"> 1142</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Date&quot;</span>, b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#adb752a72d48a701571b3c1784bc4b59b">date</a>,</div>
-<div class="line"><span class="lineno"> 1143</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1144</span>    }</div>
-<div class="line"><span class="lineno"> 1145</span> </div>
-<div class="line"><span class="lineno"> 1146</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;return-path&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1147</span>    {</div>
-<div class="line"><span class="lineno"> 1148</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a1c204b091d782098fc1efa0c2f3b1e20">return_path</a>, buf, display);</div>
-<div class="line"><span class="lineno"> 1149</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Return-Path&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
-<div class="line"><span class="lineno"> 1150</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1151</span>    }</div>
-<div class="line"><span class="lineno"> 1152</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;from&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1153</span>    {</div>
-<div class="line"><span class="lineno"> 1154</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1155</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>, buf, display);</div>
-<div class="line"><span class="lineno"> 1156</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;From&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
-<div class="line"><span class="lineno"> 1157</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1158</span>    }</div>
-<div class="line"><span class="lineno"> 1159</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;to&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1160</span>    {</div>
-<div class="line"><span class="lineno"> 1161</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1162</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>, buf, display);</div>
-<div class="line"><span class="lineno"> 1163</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>,</div>
-<div class="line"><span class="lineno"> 1164</span>                            wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1165</span>    }</div>
-<div class="line"><span class="lineno"> 1166</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;cc&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1167</span>    {</div>
-<div class="line"><span class="lineno"> 1168</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1169</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>, buf, display);</div>
-<div class="line"><span class="lineno"> 1170</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Cc&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>,</div>
-<div class="line"><span class="lineno"> 1171</span>                            wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1172</span>    }</div>
-<div class="line"><span class="lineno"> 1173</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;sender&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1174</span>    {</div>
-<div class="line"><span class="lineno"> 1175</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1176</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>, buf, display);</div>
-<div class="line"><span class="lineno"> 1177</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Sender&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
-<div class="line"><span class="lineno"> 1178</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1179</span>    }</div>
-<div class="line"><span class="lineno"> 1180</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;reply-to&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1181</span>    {</div>
-<div class="line"><span class="lineno"> 1182</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1183</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a4b75ab1853f95878dec079371bb0d799">reply_to</a>, buf, display);</div>
-<div class="line"><span class="lineno"> 1184</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Reply-To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
-<div class="line"><span class="lineno"> 1185</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1186</span>    }</div>
-<div class="line"><span class="lineno"> 1187</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;mail-followup-to&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1188</span>    {</div>
-<div class="line"><span class="lineno"> 1189</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1190</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a6044b60220b8029a6a505e5b61f1cadc">mail_followup_to</a>, buf, display);</div>
-<div class="line"><span class="lineno"> 1191</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Mail-Followup-To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
-<div class="line"><span class="lineno"> 1192</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1193</span>    }</div>
-<div class="line"><span class="lineno"> 1194</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;x-original-to&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1195</span>    {</div>
-<div class="line"><span class="lineno"> 1196</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1197</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a525bd5213606067d5c2be2e17fbe956b">x_original_to</a>, buf, display);</div>
-<div class="line"><span class="lineno"> 1198</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;X-Original-To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
-<div class="line"><span class="lineno"> 1199</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1200</span>    }</div>
-<div class="line"><span class="lineno"> 1201</span>  }</div>
-<div class="line"><span class="lineno"> 1202</span> </div>
-<div class="line"><span class="lineno"> 1203</span>  <span class="keywordflow">if</span> (b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a> &amp;&amp; (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;subject&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 1204</span>  {</div>
-<div class="line"><span class="lineno"> 1205</span>    <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Subject&quot;</span>, b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a>,</div>
-<div class="line"><span class="lineno"> 1206</span>                          state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1207</span>  }</div>
-<div class="line"><span class="lineno"> 1208</span> </div>
-<div class="line"><span class="lineno"> 1209</span>  <span class="keywordflow">if</span> (c_devel_security)</div>
-<div class="line"><span class="lineno"> 1210</span>  {</div>
-<div class="line"><span class="lineno"> 1211</span>    <span class="keywordflow">if</span> (b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a50418c13a849bf27b22922bd5867e5e1">message_id</a> &amp;&amp; (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;message-id&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 1212</span>    {</div>
-<div class="line"><span class="lineno"> 1213</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Message-ID&quot;</span>, b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a50418c13a849bf27b22922bd5867e5e1">message_id</a>,</div>
-<div class="line"><span class="lineno"> 1214</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1215</span>    }</div>
-<div class="line"><span class="lineno"> 1216</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;references&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1217</span>    {</div>
-<div class="line"><span class="lineno"> 1218</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1219</span>      <a class="code hl_function" href="list_8c.html#a5f04ca102be20813d8c3ab0776a2786b">mutt_list_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a832eec73356a806761e26f0bc40d9083">references</a>, buf);</div>
-<div class="line"><span class="lineno"> 1220</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;References&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
-<div class="line"><span class="lineno"> 1221</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1222</span>    }</div>
-<div class="line"><span class="lineno"> 1223</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;in-reply-to&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1224</span>    {</div>
-<div class="line"><span class="lineno"> 1225</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 1226</span>      <a class="code hl_function" href="list_8c.html#a5f04ca102be20813d8c3ab0776a2786b">mutt_list_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a9ae6d450b2f012c37d3350f4305fbb90">in_reply_to</a>, buf);</div>
-<div class="line"><span class="lineno"> 1227</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;In-Reply-To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
-<div class="line"><span class="lineno"> 1228</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno"> 1229</span>    }</div>
-<div class="line"><span class="lineno"> 1230</span>  }</div>
-<div class="line"><span class="lineno"> 1231</span> </div>
-<div class="line"><span class="lineno"> 1232</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno"> 1233</span> </div>
-<div class="line"><span class="lineno"> 1234</span>blank:</div>
-<div class="line"><span class="lineno"> 1235</span>  <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1236</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1237</span>}</div>
+<p class="definition">Definition at line <a class="el" href="crypt_8c_source.html#l01117">1117</a> of file <a class="el" href="crypt_8c_source.html">crypt.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1118</span>{</div>
+<div class="line"><span class="lineno"> 1119</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;crypt_protected_headers_read&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1120</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1121</span> </div>
+<div class="line"><span class="lineno"> 1122</span>  <a class="code hl_function" href="mutt_2state_8c.html#aa5f14be3e44a3a28b094ca1f1116025b">state_mark_protected_header</a>(state);</div>
+<div class="line"><span class="lineno"> 1123</span> </div>
+<div class="line"><span class="lineno"> 1124</span>  <span class="keywordflow">if</span> (!b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>)</div>
+<div class="line"><span class="lineno"> 1125</span>    <span class="keywordflow">goto</span> blank;</div>
+<div class="line"><span class="lineno"> 1126</span> </div>
+<div class="line"><span class="lineno"> 1127</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_devel_security = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;devel_security&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1128</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> display = (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>);</div>
+<div class="line"><span class="lineno"> 1129</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_weed = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;weed&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1130</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_crypt_protected_headers_weed = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;crypt_protected_headers_weed&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1131</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_wrap = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;wrap&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1132</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> wraplen = display ? <a class="code hl_function" href="mutt__window_8c.html#abab364f87c187982863f3bbed871f7e6">mutt_window_wrap_cols</a>(state-&gt;<a class="code hl_variable" href="structState.html#a2c506e7d8513e59e6162cdc5d6f9f320">wraplen</a>, c_wrap) : 0;</div>
+<div class="line"><span class="lineno"> 1133</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="copy_8h.html#a88a40e8f238a8478b885c90d1ce53e9c">CopyHeaderFlags</a> chflags = display ? <a class="code hl_define" href="copy_8h.html#a78788518de9fe57639d22d204a686383">CH_DISPLAY</a> : <a class="code hl_define" href="copy_8h.html#af310a44d7c96b22de90934cb18634b58">CH_NO_FLAGS</a>;</div>
+<div class="line"><span class="lineno"> 1134</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno"> 1135</span>  <span class="keywordtype">bool</span> weed = (display &amp;&amp; c_weed &amp;&amp; c_crypt_protected_headers_weed);</div>
+<div class="line"><span class="lineno"> 1136</span> </div>
+<div class="line"><span class="lineno"> 1137</span>  <span class="keywordflow">if</span> (c_devel_security)</div>
+<div class="line"><span class="lineno"> 1138</span>  {</div>
+<div class="line"><span class="lineno"> 1139</span>    <span class="keywordflow">if</span> (b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#adb752a72d48a701571b3c1784bc4b59b">date</a> &amp;&amp; (!display || !c_weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;date&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 1140</span>    {</div>
+<div class="line"><span class="lineno"> 1141</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Date&quot;</span>, b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#adb752a72d48a701571b3c1784bc4b59b">date</a>,</div>
+<div class="line"><span class="lineno"> 1142</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1143</span>    }</div>
+<div class="line"><span class="lineno"> 1144</span> </div>
+<div class="line"><span class="lineno"> 1145</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;return-path&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1146</span>    {</div>
+<div class="line"><span class="lineno"> 1147</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a1c204b091d782098fc1efa0c2f3b1e20">return_path</a>, buf, display);</div>
+<div class="line"><span class="lineno"> 1148</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Return-Path&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
+<div class="line"><span class="lineno"> 1149</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1150</span>    }</div>
+<div class="line"><span class="lineno"> 1151</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;from&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1152</span>    {</div>
+<div class="line"><span class="lineno"> 1153</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1154</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>, buf, display);</div>
+<div class="line"><span class="lineno"> 1155</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;From&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
+<div class="line"><span class="lineno"> 1156</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1157</span>    }</div>
+<div class="line"><span class="lineno"> 1158</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;to&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1159</span>    {</div>
+<div class="line"><span class="lineno"> 1160</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1161</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>, buf, display);</div>
+<div class="line"><span class="lineno"> 1162</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>,</div>
+<div class="line"><span class="lineno"> 1163</span>                            wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1164</span>    }</div>
+<div class="line"><span class="lineno"> 1165</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;cc&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1166</span>    {</div>
+<div class="line"><span class="lineno"> 1167</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1168</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>, buf, display);</div>
+<div class="line"><span class="lineno"> 1169</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Cc&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>,</div>
+<div class="line"><span class="lineno"> 1170</span>                            wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1171</span>    }</div>
+<div class="line"><span class="lineno"> 1172</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;sender&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1173</span>    {</div>
+<div class="line"><span class="lineno"> 1174</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1175</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a72ee5c0af4f94f83aeb8d31183261611">sender</a>, buf, display);</div>
+<div class="line"><span class="lineno"> 1176</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Sender&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
+<div class="line"><span class="lineno"> 1177</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1178</span>    }</div>
+<div class="line"><span class="lineno"> 1179</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;reply-to&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1180</span>    {</div>
+<div class="line"><span class="lineno"> 1181</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1182</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a4b75ab1853f95878dec079371bb0d799">reply_to</a>, buf, display);</div>
+<div class="line"><span class="lineno"> 1183</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Reply-To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
+<div class="line"><span class="lineno"> 1184</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1185</span>    }</div>
+<div class="line"><span class="lineno"> 1186</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;mail-followup-to&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1187</span>    {</div>
+<div class="line"><span class="lineno"> 1188</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1189</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a6044b60220b8029a6a505e5b61f1cadc">mail_followup_to</a>, buf, display);</div>
+<div class="line"><span class="lineno"> 1190</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Mail-Followup-To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
+<div class="line"><span class="lineno"> 1191</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1192</span>    }</div>
+<div class="line"><span class="lineno"> 1193</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;x-original-to&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1194</span>    {</div>
+<div class="line"><span class="lineno"> 1195</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1196</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a525bd5213606067d5c2be2e17fbe956b">x_original_to</a>, buf, display);</div>
+<div class="line"><span class="lineno"> 1197</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;X-Original-To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
+<div class="line"><span class="lineno"> 1198</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1199</span>    }</div>
+<div class="line"><span class="lineno"> 1200</span>  }</div>
+<div class="line"><span class="lineno"> 1201</span> </div>
+<div class="line"><span class="lineno"> 1202</span>  <span class="keywordflow">if</span> (b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a> &amp;&amp; (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;subject&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 1203</span>  {</div>
+<div class="line"><span class="lineno"> 1204</span>    <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Subject&quot;</span>, b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a20d5ccf675db375e011a7791151fa09d">subject</a>,</div>
+<div class="line"><span class="lineno"> 1205</span>                          state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1206</span>  }</div>
+<div class="line"><span class="lineno"> 1207</span> </div>
+<div class="line"><span class="lineno"> 1208</span>  <span class="keywordflow">if</span> (c_devel_security)</div>
+<div class="line"><span class="lineno"> 1209</span>  {</div>
+<div class="line"><span class="lineno"> 1210</span>    <span class="keywordflow">if</span> (b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a50418c13a849bf27b22922bd5867e5e1">message_id</a> &amp;&amp; (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;message-id&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 1211</span>    {</div>
+<div class="line"><span class="lineno"> 1212</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;Message-ID&quot;</span>, b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a50418c13a849bf27b22922bd5867e5e1">message_id</a>,</div>
+<div class="line"><span class="lineno"> 1213</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1214</span>    }</div>
+<div class="line"><span class="lineno"> 1215</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;references&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1216</span>    {</div>
+<div class="line"><span class="lineno"> 1217</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1218</span>      <a class="code hl_function" href="list_8c.html#a5f04ca102be20813d8c3ab0776a2786b">mutt_list_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a832eec73356a806761e26f0bc40d9083">references</a>, buf);</div>
+<div class="line"><span class="lineno"> 1219</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;References&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
+<div class="line"><span class="lineno"> 1220</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1221</span>    }</div>
+<div class="line"><span class="lineno"> 1222</span>    <span class="keywordflow">if</span> (!weed || !<a class="code hl_function" href="email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1">mutt_matches_ignore</a>(<span class="stringliteral">&quot;in-reply-to&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1223</span>    {</div>
+<div class="line"><span class="lineno"> 1224</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 1225</span>      <a class="code hl_function" href="list_8c.html#a5f04ca102be20813d8c3ab0776a2786b">mutt_list_write</a>(&amp;b_email-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a9ae6d450b2f012c37d3350f4305fbb90">in_reply_to</a>, buf);</div>
+<div class="line"><span class="lineno"> 1226</span>      <a class="code hl_function" href="header_8c.html#acb110e1fda6d0ddb3cdf8074ba439441">mutt_write_one_header</a>(state-&gt;<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="stringliteral">&quot;In-Reply-To&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf),</div>
+<div class="line"><span class="lineno"> 1227</span>                            state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>, wraplen, chflags, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno"> 1228</span>    }</div>
+<div class="line"><span class="lineno"> 1229</span>  }</div>
+<div class="line"><span class="lineno"> 1230</span> </div>
+<div class="line"><span class="lineno"> 1231</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno"> 1232</span> </div>
+<div class="line"><span class="lineno"> 1233</span>blank:</div>
+<div class="line"><span class="lineno"> 1234</span>  <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1235</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1236</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a8143574988507c4f906548a2e88166d5"><div class="ttname"><a href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a></div><div class="ttdeci">size_t mutt_addrlist_write(const struct AddressList *al, struct Buffer *buf, bool display)</div><div class="ttdoc">Write an Address to a buffer.</div><div class="ttdef"><b>Definition</b> <a href="address_2address_8c_source.html#l01206">address.c:1206</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00076">buffer.c:76</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a96039a9f8d37daad993ae7b490510339"><div class="ttname"><a href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a></div><div class="ttdeci">short cs_subset_number(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a number config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00143">helpers.c:143</a></div></div>
@@ -1936,139 +1936,139 @@ Functions</h2></td></tr>
 
 <p>Handler for "multipart/signed" - Implements <a class="el" href="handler_8c.html#a72454e2cd50fcfe2124f5a923dcda538">handler_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt_8c_source.html#l01242">1242</a> of file <a class="el" href="crypt_8c_source.html">crypt.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1243</span>{</div>
-<div class="line"><span class="lineno"> 1244</span>  <span class="keywordflow">if</span> (!<a class="code hl_define" href="ncrypt_2lib_8h.html#ad980bff69bb614893ad8e7e1c28a5023">WithCrypto</a>)</div>
-<div class="line"><span class="lineno"> 1245</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1246</span> </div>
-<div class="line"><span class="lineno"> 1247</span>  <span class="keywordtype">bool</span> inconsistent = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1248</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *top = b_email;</div>
-<div class="line"><span class="lineno"> 1249</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> **signatures = NULL;</div>
-<div class="line"><span class="lineno"> 1250</span>  <span class="keywordtype">int</span> sigcnt = 0;</div>
-<div class="line"><span class="lineno"> 1251</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno"> 1252</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempfile = NULL;</div>
-<div class="line"><span class="lineno"> 1253</span> </div>
-<div class="line"><span class="lineno"> 1254</span>  b_email = b_email-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>;</div>
-<div class="line"><span class="lineno"> 1255</span>  <a class="code hl_typedef" href="ncrypt_2lib_8h.html#a2073a168ca3a64c3c30d13fa4917a05d">SecurityFlags</a> signed_type = <a class="code hl_function" href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a>(top);</div>
-<div class="line"><span class="lineno"> 1256</span>  <span class="keywordflow">if</span> (signed_type == <a class="code hl_define" href="ncrypt_2lib_8h.html#a95845954210adfc850d5602843f858d4">SEC_NO_FLAGS</a>)</div>
-<div class="line"><span class="lineno"> 1257</span>  {</div>
-<div class="line"><span class="lineno"> 1258</span>    <span class="comment">/* A null protocol value is already checked for in mutt_body_handler() */</span></div>
-<div class="line"><span class="lineno"> 1259</span>    <a class="code hl_function" href="mutt_2state_8c.html#a7566d1f9e015cd673fd8744bf5ad2f06">state_printf</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Error: Unknown multipart/signed protocol %s --]\n\n&quot;</span>),</div>
-<div class="line"><span class="lineno"> 1260</span>                 <a class="code hl_function" href="parameter_8c.html#a31d10561ad6b3637e7591569b903aa33">mutt_param_get</a>(&amp;top-&gt;<a class="code hl_variable" href="structBody.html#a782cee95e0064e3895b88248bdfc781a">parameter</a>, <span class="stringliteral">&quot;protocol&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1261</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a>(b_email, state);</div>
-<div class="line"><span class="lineno"> 1262</span>  }</div>
-<div class="line"><span class="lineno"> 1263</span> </div>
-<div class="line"><span class="lineno"> 1264</span>  <span class="keywordflow">if</span> (!(b_email &amp;&amp; b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>))</div>
-<div class="line"><span class="lineno"> 1265</span>  {</div>
-<div class="line"><span class="lineno"> 1266</span>    inconsistent = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1267</span>  }</div>
-<div class="line"><span class="lineno"> 1268</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1269</span>  {</div>
-<div class="line"><span class="lineno"> 1270</span>    <span class="keywordflow">switch</span> (signed_type)</div>
-<div class="line"><span class="lineno"> 1271</span>    {</div>
-<div class="line"><span class="lineno"> 1272</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>:</div>
-<div class="line"><span class="lineno"> 1273</span>        <span class="keywordflow">if</span> ((b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> != <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a877e24e62c85f20ff0e0f09ab983031e">TYPE_MULTIPART</a>) ||</div>
-<div class="line"><span class="lineno"> 1274</span>            !<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a>, <span class="stringliteral">&quot;mixed&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1275</span>        {</div>
-<div class="line"><span class="lineno"> 1276</span>          inconsistent = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1277</span>        }</div>
-<div class="line"><span class="lineno"> 1278</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1279</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="ncrypt_2lib_8h.html#a14f75a650c49341776276f44881d54b2">PGP_SIGN</a>:</div>
-<div class="line"><span class="lineno"> 1280</span>        <span class="keywordflow">if</span> ((b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> != <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>) ||</div>
-<div class="line"><span class="lineno"> 1281</span>            !<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a>, <span class="stringliteral">&quot;pgp-signature&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1282</span>        {</div>
-<div class="line"><span class="lineno"> 1283</span>          inconsistent = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1284</span>        }</div>
-<div class="line"><span class="lineno"> 1285</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1286</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="ncrypt_2lib_8h.html#a67114d960e61fc36c467f4bf08d37335">SMIME_SIGN</a>:</div>
-<div class="line"><span class="lineno"> 1287</span>        <span class="keywordflow">if</span> ((b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> != <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>) ||</div>
-<div class="line"><span class="lineno"> 1288</span>            (!<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a>, <span class="stringliteral">&quot;x-pkcs7-signature&quot;</span>) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1289</span>             !<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a>, <span class="stringliteral">&quot;pkcs7-signature&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 1290</span>        {</div>
-<div class="line"><span class="lineno"> 1291</span>          inconsistent = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1292</span>        }</div>
-<div class="line"><span class="lineno"> 1293</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1294</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno"> 1295</span>        inconsistent = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1296</span>    }</div>
-<div class="line"><span class="lineno"> 1297</span>  }</div>
-<div class="line"><span class="lineno"> 1298</span>  <span class="keywordflow">if</span> (inconsistent)</div>
-<div class="line"><span class="lineno"> 1299</span>  {</div>
-<div class="line"><span class="lineno"> 1300</span>    <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Error: Missing or bad-format multipart/signed signature --]\n\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1301</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a>(b_email, state);</div>
-<div class="line"><span class="lineno"> 1302</span>  }</div>
-<div class="line"><span class="lineno"> 1303</span> </div>
-<div class="line"><span class="lineno"> 1304</span>  <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
-<div class="line"><span class="lineno"> 1305</span>  {</div>
-<div class="line"><span class="lineno"> 1306</span>    <a class="code hl_function" href="crypt_8c.html#a125731bc0d4f94974c4ccba4a6146c23">crypt_fetch_signatures</a>(&amp;signatures, b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>, &amp;sigcnt);</div>
-<div class="line"><span class="lineno"> 1307</span> </div>
-<div class="line"><span class="lineno"> 1308</span>    <span class="keywordflow">if</span> (sigcnt != 0)</div>
-<div class="line"><span class="lineno"> 1309</span>    {</div>
-<div class="line"><span class="lineno"> 1310</span>      tempfile = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno"> 1311</span>      <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempfile);</div>
-<div class="line"><span class="lineno"> 1312</span>      <span class="keywordtype">bool</span> goodsig = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1313</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#ab3dde2a67c95a70df3d498215427863b">crypt_write_signed</a>(b_email, state, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile)) == 0)</div>
-<div class="line"><span class="lineno"> 1314</span>      {</div>
-<div class="line"><span class="lineno"> 1315</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; sigcnt; i++)</div>
-<div class="line"><span class="lineno"> 1316</span>        {</div>
-<div class="line"><span class="lineno"> 1317</span>          <span class="keywordflow">if</span> (((<a class="code hl_define" href="ncrypt_2lib_8h.html#ad980bff69bb614893ad8e7e1c28a5023">WithCrypto</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#a587e679a4c9cc44f11f0c467bb22b0af">APPLICATION_PGP</a>) != 0) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1318</span>              (signatures[i]-&gt;type == <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1319</span>              <a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(signatures[i]-&gt;subtype, <span class="stringliteral">&quot;pgp-signature&quot;</span>))</div>
-<div class="line"><span class="lineno"> 1320</span>          {</div>
-<div class="line"><span class="lineno"> 1321</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="cryptglue_8c.html#ad4a89b47b43715de8ee481c21cbb8df1">crypt_pgp_verify_one</a>(signatures[i], state, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile)) != 0)</div>
-<div class="line"><span class="lineno"> 1322</span>              goodsig = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1323</span> </div>
-<div class="line"><span class="lineno"> 1324</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1325</span>          }</div>
-<div class="line"><span class="lineno"> 1326</span> </div>
-<div class="line"><span class="lineno"> 1327</span>          <span class="keywordflow">if</span> (((<a class="code hl_define" href="ncrypt_2lib_8h.html#ad980bff69bb614893ad8e7e1c28a5023">WithCrypto</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2">APPLICATION_SMIME</a>) != 0) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1328</span>              (signatures[i]-&gt;type == <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 1329</span>              (<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(signatures[i]-&gt;subtype, <span class="stringliteral">&quot;x-pkcs7-signature&quot;</span>) ||</div>
-<div class="line"><span class="lineno"> 1330</span>               <a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(signatures[i]-&gt;subtype, <span class="stringliteral">&quot;pkcs7-signature&quot;</span>)))</div>
-<div class="line"><span class="lineno"> 1331</span>          {</div>
-<div class="line"><span class="lineno"> 1332</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="cryptglue_8c.html#aade609beeedeadec75f1c15cfa4b1e61">crypt_smime_verify_one</a>(signatures[i], state, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile)) != 0)</div>
-<div class="line"><span class="lineno"> 1333</span>              goodsig = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1334</span> </div>
-<div class="line"><span class="lineno"> 1335</span>            <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 1336</span>          }</div>
-<div class="line"><span class="lineno"> 1337</span> </div>
-<div class="line"><span class="lineno"> 1338</span>          <a class="code hl_function" href="mutt_2state_8c.html#a7566d1f9e015cd673fd8744bf5ad2f06">state_printf</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Warning: We can&#39;t verify %s/%s signatures --]\n\n&quot;</span>),</div>
-<div class="line"><span class="lineno"> 1339</span>                       <a class="code hl_define" href="mime_8h.html#a3e568918dd102d7bfd39661c82ff6c3f">BODY_TYPE</a>(signatures[i]), signatures[i]-&gt;subtype);</div>
-<div class="line"><span class="lineno"> 1340</span>        }</div>
-<div class="line"><span class="lineno"> 1341</span>      }</div>
-<div class="line"><span class="lineno"> 1342</span> </div>
-<div class="line"><span class="lineno"> 1343</span>      <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
-<div class="line"><span class="lineno"> 1344</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfile);</div>
-<div class="line"><span class="lineno"> 1345</span> </div>
-<div class="line"><span class="lineno"> 1346</span>      top-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = goodsig;</div>
-<div class="line"><span class="lineno"> 1347</span>      top-&gt;<a class="code hl_variable" href="structBody.html#a4de063a5f09cb7376f9fde6bb0fe48bc">badsig</a> = !goodsig;</div>
-<div class="line"><span class="lineno"> 1348</span> </div>
-<div class="line"><span class="lineno"> 1349</span>      <span class="comment">/* Now display the signed body */</span></div>
-<div class="line"><span class="lineno"> 1350</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- The following data is signed --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1351</span> </div>
-<div class="line"><span class="lineno"> 1352</span>      <a class="code hl_function" href="#ga7ccf06ce10b9aed658fcc6c7a40c64b8">mutt_protected_headers_handler</a>(b_email, state);</div>
-<div class="line"><span class="lineno"> 1353</span> </div>
-<div class="line"><span class="lineno"> 1354</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;signatures);</div>
-<div class="line"><span class="lineno"> 1355</span>    }</div>
-<div class="line"><span class="lineno"> 1356</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1357</span>    {</div>
-<div class="line"><span class="lineno"> 1358</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Warning: Can&#39;t find any signatures --]\n\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1359</span>    }</div>
-<div class="line"><span class="lineno"> 1360</span>  }</div>
-<div class="line"><span class="lineno"> 1361</span> </div>
-<div class="line"><span class="lineno"> 1362</span>  rc = <a class="code hl_function" href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a>(b_email, state);</div>
-<div class="line"><span class="lineno"> 1363</span> </div>
-<div class="line"><span class="lineno"> 1364</span>  <span class="keywordflow">if</span> ((state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>) &amp;&amp; (sigcnt != 0))</div>
-<div class="line"><span class="lineno"> 1365</span>    <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- End of signed data --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1366</span> </div>
-<div class="line"><span class="lineno"> 1367</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1368</span>}</div>
-<div class="ttc" id="acrypt_8c_html_a125731bc0d4f94974c4ccba4a6146c23"><div class="ttname"><a href="crypt_8c.html#a125731bc0d4f94974c4ccba4a6146c23">crypt_fetch_signatures</a></div><div class="ttdeci">static void crypt_fetch_signatures(struct Body ***b_sigs, struct Body *b, int *n)</div><div class="ttdoc">Create an array of an emails parts.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l01075">crypt.c:1075</a></div></div>
-<div class="ttc" id="acrypt_8c_html_a345fb1ff241b3fc778632947c2b08d37"><div class="ttname"><a href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a></div><div class="ttdeci">SecurityFlags mutt_is_multipart_signed(struct Body *b)</div><div class="ttdoc">Is a message signed?</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00409">crypt.c:409</a></div></div>
-<div class="ttc" id="acrypt_8c_html_ab3dde2a67c95a70df3d498215427863b"><div class="ttname"><a href="crypt_8c.html#ab3dde2a67c95a70df3d498215427863b">crypt_write_signed</a></div><div class="ttdeci">int crypt_write_signed(struct Body *b, struct State *state, const char *tempfile)</div><div class="ttdoc">Write the message body/part.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00760">crypt.c:760</a></div></div>
+<p class="definition">Definition at line <a class="el" href="crypt_8c_source.html#l01241">1241</a> of file <a class="el" href="crypt_8c_source.html">crypt.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1242</span>{</div>
+<div class="line"><span class="lineno"> 1243</span>  <span class="keywordflow">if</span> (!<a class="code hl_define" href="ncrypt_2lib_8h.html#ad980bff69bb614893ad8e7e1c28a5023">WithCrypto</a>)</div>
+<div class="line"><span class="lineno"> 1244</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1245</span> </div>
+<div class="line"><span class="lineno"> 1246</span>  <span class="keywordtype">bool</span> inconsistent = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1247</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *top = b_email;</div>
+<div class="line"><span class="lineno"> 1248</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> **signatures = NULL;</div>
+<div class="line"><span class="lineno"> 1249</span>  <span class="keywordtype">int</span> sigcnt = 0;</div>
+<div class="line"><span class="lineno"> 1250</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno"> 1251</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempfile = NULL;</div>
+<div class="line"><span class="lineno"> 1252</span> </div>
+<div class="line"><span class="lineno"> 1253</span>  b_email = b_email-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>;</div>
+<div class="line"><span class="lineno"> 1254</span>  <a class="code hl_typedef" href="ncrypt_2lib_8h.html#a2073a168ca3a64c3c30d13fa4917a05d">SecurityFlags</a> signed_type = <a class="code hl_function" href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a>(top);</div>
+<div class="line"><span class="lineno"> 1255</span>  <span class="keywordflow">if</span> (signed_type == <a class="code hl_define" href="ncrypt_2lib_8h.html#a95845954210adfc850d5602843f858d4">SEC_NO_FLAGS</a>)</div>
+<div class="line"><span class="lineno"> 1256</span>  {</div>
+<div class="line"><span class="lineno"> 1257</span>    <span class="comment">/* A null protocol value is already checked for in mutt_body_handler() */</span></div>
+<div class="line"><span class="lineno"> 1258</span>    <a class="code hl_function" href="mutt_2state_8c.html#a7566d1f9e015cd673fd8744bf5ad2f06">state_printf</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Error: Unknown multipart/signed protocol %s --]\n\n&quot;</span>),</div>
+<div class="line"><span class="lineno"> 1259</span>                 <a class="code hl_function" href="parameter_8c.html#a31d10561ad6b3637e7591569b903aa33">mutt_param_get</a>(&amp;top-&gt;<a class="code hl_variable" href="structBody.html#a782cee95e0064e3895b88248bdfc781a">parameter</a>, <span class="stringliteral">&quot;protocol&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1260</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a>(b_email, state);</div>
+<div class="line"><span class="lineno"> 1261</span>  }</div>
+<div class="line"><span class="lineno"> 1262</span> </div>
+<div class="line"><span class="lineno"> 1263</span>  <span class="keywordflow">if</span> (!(b_email &amp;&amp; b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>))</div>
+<div class="line"><span class="lineno"> 1264</span>  {</div>
+<div class="line"><span class="lineno"> 1265</span>    inconsistent = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1266</span>  }</div>
+<div class="line"><span class="lineno"> 1267</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1268</span>  {</div>
+<div class="line"><span class="lineno"> 1269</span>    <span class="keywordflow">switch</span> (signed_type)</div>
+<div class="line"><span class="lineno"> 1270</span>    {</div>
+<div class="line"><span class="lineno"> 1271</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="ncrypt_2lib_8h.html#ae12c003463c99d28f65f1d6b8b053b2c">SEC_SIGN</a>:</div>
+<div class="line"><span class="lineno"> 1272</span>        <span class="keywordflow">if</span> ((b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> != <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a877e24e62c85f20ff0e0f09ab983031e">TYPE_MULTIPART</a>) ||</div>
+<div class="line"><span class="lineno"> 1273</span>            !<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a>, <span class="stringliteral">&quot;mixed&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1274</span>        {</div>
+<div class="line"><span class="lineno"> 1275</span>          inconsistent = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1276</span>        }</div>
+<div class="line"><span class="lineno"> 1277</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1278</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="ncrypt_2lib_8h.html#a14f75a650c49341776276f44881d54b2">PGP_SIGN</a>:</div>
+<div class="line"><span class="lineno"> 1279</span>        <span class="keywordflow">if</span> ((b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> != <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>) ||</div>
+<div class="line"><span class="lineno"> 1280</span>            !<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a>, <span class="stringliteral">&quot;pgp-signature&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1281</span>        {</div>
+<div class="line"><span class="lineno"> 1282</span>          inconsistent = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1283</span>        }</div>
+<div class="line"><span class="lineno"> 1284</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1285</span>      <span class="keywordflow">case</span> <a class="code hl_define" href="ncrypt_2lib_8h.html#a67114d960e61fc36c467f4bf08d37335">SMIME_SIGN</a>:</div>
+<div class="line"><span class="lineno"> 1286</span>        <span class="keywordflow">if</span> ((b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> != <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>) ||</div>
+<div class="line"><span class="lineno"> 1287</span>            (!<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a>, <span class="stringliteral">&quot;x-pkcs7-signature&quot;</span>) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1288</span>             !<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a>, <span class="stringliteral">&quot;pkcs7-signature&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 1289</span>        {</div>
+<div class="line"><span class="lineno"> 1290</span>          inconsistent = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1291</span>        }</div>
+<div class="line"><span class="lineno"> 1292</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1293</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno"> 1294</span>        inconsistent = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1295</span>    }</div>
+<div class="line"><span class="lineno"> 1296</span>  }</div>
+<div class="line"><span class="lineno"> 1297</span>  <span class="keywordflow">if</span> (inconsistent)</div>
+<div class="line"><span class="lineno"> 1298</span>  {</div>
+<div class="line"><span class="lineno"> 1299</span>    <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Error: Missing or bad-format multipart/signed signature --]\n\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1300</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a>(b_email, state);</div>
+<div class="line"><span class="lineno"> 1301</span>  }</div>
+<div class="line"><span class="lineno"> 1302</span> </div>
+<div class="line"><span class="lineno"> 1303</span>  <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
+<div class="line"><span class="lineno"> 1304</span>  {</div>
+<div class="line"><span class="lineno"> 1305</span>    <a class="code hl_function" href="crypt_8c.html#a125731bc0d4f94974c4ccba4a6146c23">crypt_fetch_signatures</a>(&amp;signatures, b_email-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>, &amp;sigcnt);</div>
+<div class="line"><span class="lineno"> 1306</span> </div>
+<div class="line"><span class="lineno"> 1307</span>    <span class="keywordflow">if</span> (sigcnt != 0)</div>
+<div class="line"><span class="lineno"> 1308</span>    {</div>
+<div class="line"><span class="lineno"> 1309</span>      tempfile = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno"> 1310</span>      <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempfile);</div>
+<div class="line"><span class="lineno"> 1311</span>      <span class="keywordtype">bool</span> goodsig = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1312</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#ab3dde2a67c95a70df3d498215427863b">crypt_write_signed</a>(b_email, state, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile)) == 0)</div>
+<div class="line"><span class="lineno"> 1313</span>      {</div>
+<div class="line"><span class="lineno"> 1314</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; sigcnt; i++)</div>
+<div class="line"><span class="lineno"> 1315</span>        {</div>
+<div class="line"><span class="lineno"> 1316</span>          <span class="keywordflow">if</span> (((<a class="code hl_define" href="ncrypt_2lib_8h.html#ad980bff69bb614893ad8e7e1c28a5023">WithCrypto</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#a587e679a4c9cc44f11f0c467bb22b0af">APPLICATION_PGP</a>) != 0) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1317</span>              (signatures[i]-&gt;type == <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1318</span>              <a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(signatures[i]-&gt;subtype, <span class="stringliteral">&quot;pgp-signature&quot;</span>))</div>
+<div class="line"><span class="lineno"> 1319</span>          {</div>
+<div class="line"><span class="lineno"> 1320</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="cryptglue_8c.html#ad4a89b47b43715de8ee481c21cbb8df1">crypt_pgp_verify_one</a>(signatures[i], state, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile)) != 0)</div>
+<div class="line"><span class="lineno"> 1321</span>              goodsig = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1322</span> </div>
+<div class="line"><span class="lineno"> 1323</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1324</span>          }</div>
+<div class="line"><span class="lineno"> 1325</span> </div>
+<div class="line"><span class="lineno"> 1326</span>          <span class="keywordflow">if</span> (((<a class="code hl_define" href="ncrypt_2lib_8h.html#ad980bff69bb614893ad8e7e1c28a5023">WithCrypto</a> &amp; <a class="code hl_define" href="ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2">APPLICATION_SMIME</a>) != 0) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1327</span>              (signatures[i]-&gt;type == <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 1328</span>              (<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(signatures[i]-&gt;subtype, <span class="stringliteral">&quot;x-pkcs7-signature&quot;</span>) ||</div>
+<div class="line"><span class="lineno"> 1329</span>               <a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(signatures[i]-&gt;subtype, <span class="stringliteral">&quot;pkcs7-signature&quot;</span>)))</div>
+<div class="line"><span class="lineno"> 1330</span>          {</div>
+<div class="line"><span class="lineno"> 1331</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="cryptglue_8c.html#aade609beeedeadec75f1c15cfa4b1e61">crypt_smime_verify_one</a>(signatures[i], state, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile)) != 0)</div>
+<div class="line"><span class="lineno"> 1332</span>              goodsig = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1333</span> </div>
+<div class="line"><span class="lineno"> 1334</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 1335</span>          }</div>
+<div class="line"><span class="lineno"> 1336</span> </div>
+<div class="line"><span class="lineno"> 1337</span>          <a class="code hl_function" href="mutt_2state_8c.html#a7566d1f9e015cd673fd8744bf5ad2f06">state_printf</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Warning: We can&#39;t verify %s/%s signatures --]\n\n&quot;</span>),</div>
+<div class="line"><span class="lineno"> 1338</span>                       <a class="code hl_define" href="mime_8h.html#a3e568918dd102d7bfd39661c82ff6c3f">BODY_TYPE</a>(signatures[i]), signatures[i]-&gt;subtype);</div>
+<div class="line"><span class="lineno"> 1339</span>        }</div>
+<div class="line"><span class="lineno"> 1340</span>      }</div>
+<div class="line"><span class="lineno"> 1341</span> </div>
+<div class="line"><span class="lineno"> 1342</span>      <a class="code hl_function" href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
+<div class="line"><span class="lineno"> 1343</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfile);</div>
+<div class="line"><span class="lineno"> 1344</span> </div>
+<div class="line"><span class="lineno"> 1345</span>      top-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = goodsig;</div>
+<div class="line"><span class="lineno"> 1346</span>      top-&gt;<a class="code hl_variable" href="structBody.html#a4de063a5f09cb7376f9fde6bb0fe48bc">badsig</a> = !goodsig;</div>
+<div class="line"><span class="lineno"> 1347</span> </div>
+<div class="line"><span class="lineno"> 1348</span>      <span class="comment">/* Now display the signed body */</span></div>
+<div class="line"><span class="lineno"> 1349</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- The following data is signed --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1350</span> </div>
+<div class="line"><span class="lineno"> 1351</span>      <a class="code hl_function" href="#ga7ccf06ce10b9aed658fcc6c7a40c64b8">mutt_protected_headers_handler</a>(b_email, state);</div>
+<div class="line"><span class="lineno"> 1352</span> </div>
+<div class="line"><span class="lineno"> 1353</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;signatures);</div>
+<div class="line"><span class="lineno"> 1354</span>    }</div>
+<div class="line"><span class="lineno"> 1355</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1356</span>    {</div>
+<div class="line"><span class="lineno"> 1357</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Warning: Can&#39;t find any signatures --]\n\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1358</span>    }</div>
+<div class="line"><span class="lineno"> 1359</span>  }</div>
+<div class="line"><span class="lineno"> 1360</span> </div>
+<div class="line"><span class="lineno"> 1361</span>  rc = <a class="code hl_function" href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a>(b_email, state);</div>
+<div class="line"><span class="lineno"> 1362</span> </div>
+<div class="line"><span class="lineno"> 1363</span>  <span class="keywordflow">if</span> ((state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>) &amp;&amp; (sigcnt != 0))</div>
+<div class="line"><span class="lineno"> 1364</span>    <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- End of signed data --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1365</span> </div>
+<div class="line"><span class="lineno"> 1366</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1367</span>}</div>
+<div class="ttc" id="acrypt_8c_html_a125731bc0d4f94974c4ccba4a6146c23"><div class="ttname"><a href="crypt_8c.html#a125731bc0d4f94974c4ccba4a6146c23">crypt_fetch_signatures</a></div><div class="ttdeci">static void crypt_fetch_signatures(struct Body ***b_sigs, struct Body *b, int *n)</div><div class="ttdoc">Create an array of an emails parts.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l01074">crypt.c:1074</a></div></div>
+<div class="ttc" id="acrypt_8c_html_a345fb1ff241b3fc778632947c2b08d37"><div class="ttname"><a href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a></div><div class="ttdeci">SecurityFlags mutt_is_multipart_signed(struct Body *b)</div><div class="ttdoc">Is a message signed?</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00408">crypt.c:408</a></div></div>
+<div class="ttc" id="acrypt_8c_html_ab3dde2a67c95a70df3d498215427863b"><div class="ttname"><a href="crypt_8c.html#ab3dde2a67c95a70df3d498215427863b">crypt_write_signed</a></div><div class="ttdeci">int crypt_write_signed(struct Body *b, struct State *state, const char *tempfile)</div><div class="ttdoc">Write the message body/part.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00759">crypt.c:759</a></div></div>
 <div class="ttc" id="acryptglue_8c_html_aade609beeedeadec75f1c15cfa4b1e61"><div class="ttname"><a href="cryptglue_8c.html#aade609beeedeadec75f1c15cfa4b1e61">crypt_smime_verify_one</a></div><div class="ttdeci">int crypt_smime_verify_one(struct Body *b, struct State *state, const char *tempf)</div><div class="ttdoc">Wrapper for CryptModuleSpecs::verify_one()</div><div class="ttdef"><b>Definition</b> <a href="cryptglue_8c_source.html#l00516">cryptglue.c:516</a></div></div>
 <div class="ttc" id="acryptglue_8c_html_ad4a89b47b43715de8ee481c21cbb8df1"><div class="ttname"><a href="cryptglue_8c.html#ad4a89b47b43715de8ee481c21cbb8df1">crypt_pgp_verify_one</a></div><div class="ttdeci">int crypt_pgp_verify_one(struct Body *b, struct State *state, const char *tempf)</div><div class="ttdoc">Wrapper for CryptModuleSpecs::verify_one()</div><div class="ttdef"><b>Definition</b> <a href="cryptglue_8c_source.html#l00372">cryptglue.c:372</a></div></div>
-<div class="ttc" id="agroup__handler__api_html_ga7ccf06ce10b9aed658fcc6c7a40c64b8"><div class="ttname"><a href="#ga7ccf06ce10b9aed658fcc6c7a40c64b8">mutt_protected_headers_handler</a></div><div class="ttdeci">int mutt_protected_headers_handler(struct Body *b_email, struct State *state)</div><div class="ttdoc">Handler for protected headers - Implements handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l01118">crypt.c:1118</a></div></div>
+<div class="ttc" id="agroup__handler__api_html_ga7ccf06ce10b9aed658fcc6c7a40c64b8"><div class="ttname"><a href="#ga7ccf06ce10b9aed658fcc6c7a40c64b8">mutt_protected_headers_handler</a></div><div class="ttdeci">int mutt_protected_headers_handler(struct Body *b_email, struct State *state)</div><div class="ttdoc">Handler for protected headers - Implements handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l01117">crypt.c:1117</a></div></div>
 <div class="ttc" id="amime_8h_html_a3ccd048df649c335df5a7f82673bbc79a877e24e62c85f20ff0e0f09ab983031e"><div class="ttname"><a href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a877e24e62c85f20ff0e0f09ab983031e">TYPE_MULTIPART</a></div><div class="ttdeci">@ TYPE_MULTIPART</div><div class="ttdoc">Type: &#39;multipart/*&#39;.</div><div class="ttdef"><b>Definition</b> <a href="mime_8h_source.html#l00037">mime.h:37</a></div></div>
 <div class="ttc" id="amime_8h_html_a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e"><div class="ttname"><a href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a></div><div class="ttdeci">@ TYPE_APPLICATION</div><div class="ttdoc">Type: &#39;application/*&#39;.</div><div class="ttdef"><b>Definition</b> <a href="mime_8h_source.html#l00033">mime.h:33</a></div></div>
 <div class="ttc" id="ancrypt_2lib_8h_html_a14f75a650c49341776276f44881d54b2"><div class="ttname"><a href="ncrypt_2lib_8h.html#a14f75a650c49341776276f44881d54b2">PGP_SIGN</a></div><div class="ttdeci">#define PGP_SIGN</div><div class="ttdef"><b>Definition</b> <a href="ncrypt_2lib_8h_source.html#l00103">lib.h:103</a></div></div>

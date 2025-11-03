@@ -24,7 +24,7 @@ var searchData=
   ['header_5fset_21',['header_set',['../email_2email_8c.html#acee41ce2426493da0af40829167f421b',1,'header_set(struct ListHead *hdrlist, const char *header):&#160;email.c'],['../email_8h.html#acee41ce2426493da0af40829167f421b',1,'header_set(struct ListHead *hdrlist, const char *header):&#160;email.c']]],
   ['header_5fsize_22',['header_size',['../hcache_2hcache_8c.html#ab0e95e8a30f666418f3f8205cecc0582',1,'hcache.c']]],
   ['header_5fupdate_23',['header_update',['../email_2email_8c.html#ae587d1b64d09838f9344c68cb808bb2c',1,'header_update(struct ListNode *hdr, const char *header):&#160;email.c'],['../email_8h.html#a06f53fc5e3ac537d37110d149b9cb94f',1,'header_update(struct ListNode *hdrnode, const char *header):&#160;email.c']]],
-  ['help_5flookup_5ffunction_24',['help_lookup_function',['../key_2lib_8c.html#a2fe666fb372f338856db1f1730ede428',1,'lib.c']]],
+  ['help_5flookup_5ffunction_24',['help_lookup_function',['../key_2dump_8c.html#a2fe666fb372f338856db1f1730ede428',1,'dump.c']]],
   ['helpbar_5fbinding_5fobserver_25',['helpbar_binding_observer',['../group__observer__api.html#gab0329ccef8dd2aef381a44436e4a2020',1,'helpbar.c']]],
   ['helpbar_5fcolor_5fobserver_26',['helpbar_color_observer',['../group__observer__api.html#ga40dca5830610c5304bea0d59e4d5f284',1,'helpbar.c']]],
   ['helpbar_5fconfig_5fobserver_27',['helpbar_config_observer',['../group__observer__api.html#gaf5bdd54ad5934b0056562ce7f07f38be',1,'helpbar.c']]],

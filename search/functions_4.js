@@ -167,7 +167,7 @@ var searchData=
   ['eqi8_164',['eqi8',['../eqi_8h.html#a21bf6a5ca5c452fcba8e508f6330a28e',1,'eqi.h']]],
   ['eqi9_165',['eqi9',['../eqi_8h.html#a0b48b9a2c86d85301e1d32c0e8627f83',1,'eqi.h']]],
   ['error_5fpause_166',['error_pause',['../mutt__logging_8c.html#abcfbeac77028256b94618b1ebdac6891',1,'mutt_logging.c']]],
-  ['escape_5fmacro_167',['escape_macro',['../key_2lib_8c.html#acd4962900253a906c205bbaf05e11d7a',1,'lib.c']]],
+  ['escape_5fmacro_167',['escape_macro',['../key_2dump_8c.html#acd4962900253a906c205bbaf05e11d7a',1,'dump.c']]],
   ['escape_5fstring_168',['escape_string',['../config_2dump_8c.html#a03edb5012f9f0894b258ab6a6cb6ed11',1,'escape_string(struct Buffer *buf, const char *src):&#160;dump.c'],['../config_2dump_8h.html#a03edb5012f9f0894b258ab6a6cb6ed11',1,'escape_string(struct Buffer *buf, const char *src):&#160;dump.c']]],
   ['ev_5fmessage_169',['ev_message',['../editmsg_8c.html#a8cccfe84ab7389c624becc6f5f14d13f',1,'editmsg.c']]],
   ['eval_5fdate_5fminmax_170',['eval_date_minmax',['../compile_8c.html#a20e645effab0dbabefd7a5ff7970ad1e',1,'eval_date_minmax(struct Pattern *pat, const char *s, struct Buffer *err):&#160;compile.c'],['../pattern_2private_8h.html#a20e645effab0dbabefd7a5ff7970ad1e',1,'eval_date_minmax(struct Pattern *pat, const char *s, struct Buffer *err):&#160;compile.c']]],

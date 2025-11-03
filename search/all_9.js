@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gather_5fmenu_0',['gather_menu',['../key_2lib_8c.html#a3397ea33ffb6b8185f3cd3a72fa3b700',1,'gather_menu(enum MenuType menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro):&#160;lib.c'],['../key_2lib_8h.html#a3397ea33ffb6b8185f3cd3a72fa3b700',1,'gather_menu(enum MenuType menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro):&#160;lib.c']]],
+  ['gather_5fmenu_0',['gather_menu',['../key_2dump_8c.html#a3397ea33ffb6b8185f3cd3a72fa3b700',1,'gather_menu(enum MenuType menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro):&#160;dump.c'],['../key_2lib_8h.html#a3397ea33ffb6b8185f3cd3a72fa3b700',1,'gather_menu(enum MenuType menu, struct BindingInfoArray *bia_bind, struct BindingInfoArray *bia_macro):&#160;dump.c']]],
   ['gather_5funbound_1',['gather_unbound',['../key_2lib_8c.html#add7ed79b95d588c1f3d9726eb7440d63',1,'gather_unbound(const struct MenuFuncOp *funcs, const struct KeymapList *km_menu, const struct KeymapList *km_aux, struct BindingInfoArray *bia_unbound):&#160;lib.c'],['../key_2lib_8h.html#add7ed79b95d588c1f3d9726eb7440d63',1,'gather_unbound(const struct MenuFuncOp *funcs, const struct KeymapList *km_menu, const struct KeymapList *km_aux, struct BindingInfoArray *bia_unbound):&#160;lib.c']]],
   ['gc_2',['GC',['../core_2mailbox_8c.html#ae8b6979b57fced8046a7e91396f7e820',1,'mailbox.c']]],
   ['gdbm_3',['GNU dbm (GDBM)',['../store_gdbm.html',1,'lib_store']]],

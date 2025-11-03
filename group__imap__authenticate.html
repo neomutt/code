@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-43-g177ed6</span>
+   &#160;<span id="projectnumber">2025-09-05-53-g1e05a3</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -284,102 +284,102 @@ Functions</h2></td></tr>
 
 <p>Authenticate using CRAM-MD5 - Implements <a class="el" href="structImapAuth.html#ae626ffacba170b0ca2744fbb3acc4029">ImapAuth::authenticate()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="auth__cram_8c_source.html#l00097">97</a> of file <a class="el" href="auth__cram_8c_source.html">auth_cram.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>{</div>
-<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">if</span> (!(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_define" href="imap_2private_8h.html#a1841e6d99230d33ba3b77a302591da68">IMAP_CAP_AUTH_CRAM_MD5</a>))</div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  103</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), <span class="stringliteral">&quot;CRAM-MD5&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>  <span class="comment">/* get auth info */</span></div>
-<div class="line"><span class="lineno">  106</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#afa9b76e1771e8d4773815ae6891fbeac">mutt_account_getlogin</a>(&amp;adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) &lt; 0)</div>
-<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2bc0b90ace43b835b6ad51f3d8fa5c1a">mutt_account_getpass</a>(&amp;adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) &lt; 0)</div>
-<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>  <a class="code hl_function" href="imap_2command_8c.html#a07786a21982bd266c8faca5423b7f2cf">imap_cmd_start</a>(adata, <span class="stringliteral">&quot;AUTHENTICATE CRAM-MD5&quot;</span>);</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *ibuf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  114</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *obuf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  115</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> hmac_response[<a class="code hl_define" href="auth__cram_8c.html#ae1ccf1a4af3f69b0f73113109de28a90">MD5_DIGEST_LEN</a>];</div>
-<div class="line"><span class="lineno">  116</span>  <span class="keywordtype">int</span> rc_step;</div>
-<div class="line"><span class="lineno">  117</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="auth_8h.html#aba20e35487bf461507e63b783243dbad">ImapAuthRes</a> rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>  <span class="comment">/* From RFC2195:</span></div>
-<div class="line"><span class="lineno">  120</span><span class="comment">   * The data encoded in the first ready response contains a presumptively</span></div>
-<div class="line"><span class="lineno">  121</span><span class="comment">   * arbitrary string of random digits, a timestamp, and the fully-qualified</span></div>
-<div class="line"><span class="lineno">  122</span><span class="comment">   * primary host name of the server. The syntax of the unencoded form must</span></div>
-<div class="line"><span class="lineno">  123</span><span class="comment">   * correspond to that of an RFC822 &#39;msg-id&#39; [RFC822] as described in [POP3].  */</span></div>
-<div class="line"><span class="lineno">  124</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  125</span>  {</div>
-<div class="line"><span class="lineno">  126</span>    rc_step = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  127</span>  } <span class="keywordflow">while</span> (rc_step == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">if</span> (rc_step != <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
-<div class="line"><span class="lineno">  130</span>  {</div>
-<div class="line"><span class="lineno">  131</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Invalid response from server\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  133</span>  }</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2, obuf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, obuf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>) == -1)</div>
-<div class="line"><span class="lineno">  136</span>  {</div>
-<div class="line"><span class="lineno">  137</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error decoding base64 response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  139</span>  }</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;CRAM challenge: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(obuf));</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>  <span class="comment">/* The client makes note of the data and then responds with a string</span></div>
-<div class="line"><span class="lineno">  144</span><span class="comment">   * consisting of the user name, a space, and a &#39;digest&#39;. The latter is</span></div>
-<div class="line"><span class="lineno">  145</span><span class="comment">   * computed by applying the keyed MD5 algorithm from [KEYED-MD5] where the</span></div>
-<div class="line"><span class="lineno">  146</span><span class="comment">   * key is a shared secret and the digested text is the timestamp (including</span></div>
-<div class="line"><span class="lineno">  147</span><span class="comment">   * angle-brackets).</span></div>
-<div class="line"><span class="lineno">  148</span><span class="comment">   *</span></div>
-<div class="line"><span class="lineno">  149</span><span class="comment">   * Note: The user name shouldn&#39;t be quoted. Since the digest can&#39;t contain</span></div>
-<div class="line"><span class="lineno">  150</span><span class="comment">   *   spaces, there is no ambiguity. Some servers get this wrong, we&#39;ll work</span></div>
-<div class="line"><span class="lineno">  151</span><span class="comment">   *   around them when the bug report comes in. Until then, we&#39;ll remain</span></div>
-<div class="line"><span class="lineno">  152</span><span class="comment">   *   blissfully RFC-compliant.  */</span></div>
-<div class="line"><span class="lineno">  153</span>  <a class="code hl_function" href="auth__cram_8c.html#a673b1574125481e030da94e03aa3d6e3">hmac_md5</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(obuf), hmac_response);</div>
-<div class="line"><span class="lineno">  154</span>  <span class="comment">/* dubious optimisation I saw elsewhere: make the whole string in one call */</span></div>
-<div class="line"><span class="lineno">  155</span>  <span class="keywordtype">int</span> off = <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(obuf, <span class="stringliteral">&quot;%s &quot;</span>, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>);</div>
-<div class="line"><span class="lineno">  156</span>  <a class="code hl_function" href="md5_8c.html#ad9357420e20dfe953f58bb167a6be911">mutt_md5_toascii</a>(hmac_response, obuf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + off);</div>
-<div class="line"><span class="lineno">  157</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;CRAM response: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(obuf));</div>
-<div class="line"><span class="lineno">  158</span> </div>
-<div class="line"><span class="lineno">  159</span>  <span class="comment">/* ibuf must be long enough to store the base64 encoding of obuf,</span></div>
-<div class="line"><span class="lineno">  160</span><span class="comment">   * plus the additional debris */</span></div>
-<div class="line"><span class="lineno">  161</span>  <a class="code hl_function" href="base64_8c.html#a19ef6d7010ebd0b203c0e6da4119ba0f">mutt_b64_encode</a>(obuf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, obuf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>, ibuf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, ibuf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> - 2);</div>
-<div class="line"><span class="lineno">  162</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(ibuf, <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  163</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(ibuf));</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  166</span>  {</div>
-<div class="line"><span class="lineno">  167</span>    rc_step = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  168</span>  } <span class="keywordflow">while</span> (rc_step == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>  <span class="keywordflow">if</span> (rc_step != <a class="code hl_define" href="imap_2private_8h.html#a3e63d724ab73ca87b3f8f43a772d32ba">IMAP_RES_OK</a>)</div>
-<div class="line"><span class="lineno">  171</span>  {</div>
-<div class="line"><span class="lineno">  172</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error receiving server response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  173</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  174</span>  }</div>
-<div class="line"><span class="lineno">  175</span> </div>
-<div class="line"><span class="lineno">  176</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="imap_2command_8c.html#abf593435042f4db0db8d4594443b0c96">imap_code</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>))</div>
-<div class="line"><span class="lineno">  177</span>    rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada544df33a559dae35b9b71951782eb897">IMAP_AUTH_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  178</span> </div>
-<div class="line"><span class="lineno">  179</span>bail:</div>
-<div class="line"><span class="lineno">  180</span>  <span class="keywordflow">if</span> (rc != <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada544df33a559dae35b9b71951782eb897">IMAP_AUTH_SUCCESS</a>)</div>
-<div class="line"><span class="lineno">  181</span>  {</div>
-<div class="line"><span class="lineno">  182</span>    <span class="comment">// L10N: %s is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  183</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s authentication failed&quot;</span>), <span class="stringliteral">&quot;CRAM-MD5&quot;</span>);</div>
-<div class="line"><span class="lineno">  184</span>  }</div>
-<div class="line"><span class="lineno">  185</span> </div>
-<div class="line"><span class="lineno">  186</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;ibuf);</div>
-<div class="line"><span class="lineno">  187</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;obuf);</div>
-<div class="line"><span class="lineno">  188</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  189</span>}</div>
+<p class="definition">Definition at line <a class="el" href="auth__cram_8c_source.html#l00096">96</a> of file <a class="el" href="auth__cram_8c_source.html">auth_cram.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>{</div>
+<div class="line"><span class="lineno">   98</span>  <span class="keywordflow">if</span> (!(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_define" href="imap_2private_8h.html#a1841e6d99230d33ba3b77a302591da68">IMAP_CAP_AUTH_CRAM_MD5</a>))</div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  102</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), <span class="stringliteral">&quot;CRAM-MD5&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>  <span class="comment">/* get auth info */</span></div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#afa9b76e1771e8d4773815ae6891fbeac">mutt_account_getlogin</a>(&amp;adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) &lt; 0)</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  107</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2bc0b90ace43b835b6ad51f3d8fa5c1a">mutt_account_getpass</a>(&amp;adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) &lt; 0)</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>  <a class="code hl_function" href="imap_2command_8c.html#a07786a21982bd266c8faca5423b7f2cf">imap_cmd_start</a>(adata, <span class="stringliteral">&quot;AUTHENTICATE CRAM-MD5&quot;</span>);</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *ibuf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  113</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *obuf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  114</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> hmac_response[<a class="code hl_define" href="auth__cram_8c.html#ae1ccf1a4af3f69b0f73113109de28a90">MD5_DIGEST_LEN</a>];</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordtype">int</span> rc_step;</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="auth_8h.html#aba20e35487bf461507e63b783243dbad">ImapAuthRes</a> rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>  <span class="comment">/* From RFC2195:</span></div>
+<div class="line"><span class="lineno">  119</span><span class="comment">   * The data encoded in the first ready response contains a presumptively</span></div>
+<div class="line"><span class="lineno">  120</span><span class="comment">   * arbitrary string of random digits, a timestamp, and the fully-qualified</span></div>
+<div class="line"><span class="lineno">  121</span><span class="comment">   * primary host name of the server. The syntax of the unencoded form must</span></div>
+<div class="line"><span class="lineno">  122</span><span class="comment">   * correspond to that of an RFC822 &#39;msg-id&#39; [RFC822] as described in [POP3].  */</span></div>
+<div class="line"><span class="lineno">  123</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  124</span>  {</div>
+<div class="line"><span class="lineno">  125</span>    rc_step = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  126</span>  } <span class="keywordflow">while</span> (rc_step == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  <span class="keywordflow">if</span> (rc_step != <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
+<div class="line"><span class="lineno">  129</span>  {</div>
+<div class="line"><span class="lineno">  130</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Invalid response from server\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  132</span>  }</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2, obuf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, obuf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>) == -1)</div>
+<div class="line"><span class="lineno">  135</span>  {</div>
+<div class="line"><span class="lineno">  136</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error decoding base64 response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  138</span>  }</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;CRAM challenge: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(obuf));</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>  <span class="comment">/* The client makes note of the data and then responds with a string</span></div>
+<div class="line"><span class="lineno">  143</span><span class="comment">   * consisting of the user name, a space, and a &#39;digest&#39;. The latter is</span></div>
+<div class="line"><span class="lineno">  144</span><span class="comment">   * computed by applying the keyed MD5 algorithm from [KEYED-MD5] where the</span></div>
+<div class="line"><span class="lineno">  145</span><span class="comment">   * key is a shared secret and the digested text is the timestamp (including</span></div>
+<div class="line"><span class="lineno">  146</span><span class="comment">   * angle-brackets).</span></div>
+<div class="line"><span class="lineno">  147</span><span class="comment">   *</span></div>
+<div class="line"><span class="lineno">  148</span><span class="comment">   * Note: The user name shouldn&#39;t be quoted. Since the digest can&#39;t contain</span></div>
+<div class="line"><span class="lineno">  149</span><span class="comment">   *   spaces, there is no ambiguity. Some servers get this wrong, we&#39;ll work</span></div>
+<div class="line"><span class="lineno">  150</span><span class="comment">   *   around them when the bug report comes in. Until then, we&#39;ll remain</span></div>
+<div class="line"><span class="lineno">  151</span><span class="comment">   *   blissfully RFC-compliant.  */</span></div>
+<div class="line"><span class="lineno">  152</span>  <a class="code hl_function" href="auth__cram_8c.html#a673b1574125481e030da94e03aa3d6e3">hmac_md5</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(obuf), hmac_response);</div>
+<div class="line"><span class="lineno">  153</span>  <span class="comment">/* dubious optimisation I saw elsewhere: make the whole string in one call */</span></div>
+<div class="line"><span class="lineno">  154</span>  <span class="keywordtype">int</span> off = <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(obuf, <span class="stringliteral">&quot;%s &quot;</span>, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>);</div>
+<div class="line"><span class="lineno">  155</span>  <a class="code hl_function" href="md5_8c.html#ad9357420e20dfe953f58bb167a6be911">mutt_md5_toascii</a>(hmac_response, obuf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a> + off);</div>
+<div class="line"><span class="lineno">  156</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;CRAM response: %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(obuf));</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>  <span class="comment">/* ibuf must be long enough to store the base64 encoding of obuf,</span></div>
+<div class="line"><span class="lineno">  159</span><span class="comment">   * plus the additional debris */</span></div>
+<div class="line"><span class="lineno">  160</span>  <a class="code hl_function" href="base64_8c.html#a19ef6d7010ebd0b203c0e6da4119ba0f">mutt_b64_encode</a>(obuf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, obuf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>, ibuf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, ibuf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> - 2);</div>
+<div class="line"><span class="lineno">  161</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(ibuf, <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  162</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(ibuf));</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  165</span>  {</div>
+<div class="line"><span class="lineno">  166</span>    rc_step = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  167</span>  } <span class="keywordflow">while</span> (rc_step == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno">  168</span> </div>
+<div class="line"><span class="lineno">  169</span>  <span class="keywordflow">if</span> (rc_step != <a class="code hl_define" href="imap_2private_8h.html#a3e63d724ab73ca87b3f8f43a772d32ba">IMAP_RES_OK</a>)</div>
+<div class="line"><span class="lineno">  170</span>  {</div>
+<div class="line"><span class="lineno">  171</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error receiving server response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  172</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  173</span>  }</div>
+<div class="line"><span class="lineno">  174</span> </div>
+<div class="line"><span class="lineno">  175</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="imap_2command_8c.html#abf593435042f4db0db8d4594443b0c96">imap_code</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>))</div>
+<div class="line"><span class="lineno">  176</span>    rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada544df33a559dae35b9b71951782eb897">IMAP_AUTH_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>bail:</div>
+<div class="line"><span class="lineno">  179</span>  <span class="keywordflow">if</span> (rc != <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada544df33a559dae35b9b71951782eb897">IMAP_AUTH_SUCCESS</a>)</div>
+<div class="line"><span class="lineno">  180</span>  {</div>
+<div class="line"><span class="lineno">  181</span>    <span class="comment">// L10N: %s is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  182</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s authentication failed&quot;</span>), <span class="stringliteral">&quot;CRAM-MD5&quot;</span>);</div>
+<div class="line"><span class="lineno">  183</span>  }</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;ibuf);</div>
+<div class="line"><span class="lineno">  186</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;obuf);</div>
+<div class="line"><span class="lineno">  187</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  188</span>}</div>
 <div class="ttc" id="aauth_8h_html_aba20e35487bf461507e63b783243dbad"><div class="ttname"><a href="auth_8h.html#aba20e35487bf461507e63b783243dbad">ImapAuthRes</a></div><div class="ttdeci">ImapAuthRes</div><div class="ttdoc">Results of IMAP Authentication.</div><div class="ttdef"><b>Definition</b> <a href="auth_8h_source.html#l00038">auth.h:39</a></div></div>
-<div class="ttc" id="aauth__cram_8c_html_a673b1574125481e030da94e03aa3d6e3"><div class="ttname"><a href="auth__cram_8c.html#a673b1574125481e030da94e03aa3d6e3">hmac_md5</a></div><div class="ttdeci">static void hmac_md5(const char *password, const char *challenge, unsigned char *response)</div><div class="ttdoc">Produce CRAM-MD5 challenge response.</div><div class="ttdef"><b>Definition</b> <a href="auth__cram_8c_source.html#l00049">auth_cram.c:49</a></div></div>
-<div class="ttc" id="aauth__cram_8c_html_ae1ccf1a4af3f69b0f73113109de28a90"><div class="ttname"><a href="auth__cram_8c.html#ae1ccf1a4af3f69b0f73113109de28a90">MD5_DIGEST_LEN</a></div><div class="ttdeci">#define MD5_DIGEST_LEN</div><div class="ttdef"><b>Definition</b> <a href="auth__cram_8c_source.html#l00041">auth_cram.c:41</a></div></div>
+<div class="ttc" id="aauth__cram_8c_html_a673b1574125481e030da94e03aa3d6e3"><div class="ttname"><a href="auth__cram_8c.html#a673b1574125481e030da94e03aa3d6e3">hmac_md5</a></div><div class="ttdeci">static void hmac_md5(const char *password, const char *challenge, unsigned char *response)</div><div class="ttdoc">Produce CRAM-MD5 challenge response.</div><div class="ttdef"><b>Definition</b> <a href="auth__cram_8c_source.html#l00048">auth_cram.c:48</a></div></div>
+<div class="ttc" id="aauth__cram_8c_html_ae1ccf1a4af3f69b0f73113109de28a90"><div class="ttname"><a href="auth__cram_8c.html#ae1ccf1a4af3f69b0f73113109de28a90">MD5_DIGEST_LEN</a></div><div class="ttdeci">#define MD5_DIGEST_LEN</div><div class="ttdef"><b>Definition</b> <a href="auth__cram_8c_source.html#l00040">auth_cram.c:40</a></div></div>
 <div class="ttc" id="abase64_8c_html_a19ef6d7010ebd0b203c0e6da4119ba0f"><div class="ttname"><a href="base64_8c.html#a19ef6d7010ebd0b203c0e6da4119ba0f">mutt_b64_encode</a></div><div class="ttdeci">size_t mutt_b64_encode(const char *in, size_t inlen, char *out, size_t outlen)</div><div class="ttdoc">Convert raw bytes to NUL-terminated base64 string.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00087">base64.c:87</a></div></div>
 <div class="ttc" id="abase64_8c_html_a46d7ee223a298c936fe501e37b06ac58"><div class="ttname"><a href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a></div><div class="ttdeci">int mutt_b64_decode(const char *in, char *out, size_t olen)</div><div class="ttdoc">Convert NUL-terminated base64 string to raw bytes.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00135">base64.c:135</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00161">buffer.c:161</a></div></div>
@@ -579,263 +579,263 @@ Functions</h2></td></tr>
 
 <p>GSS Authentication support - Implements <a class="el" href="structImapAuth.html#ae626ffacba170b0ca2744fbb3acc4029">ImapAuth::authenticate()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="auth__gss_8c_source.html#l00106">106</a> of file <a class="el" href="auth__gss_8c_source.html">auth_gss.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  107</span>{</div>
-<div class="line"><span class="lineno">  108</span>  gss_buffer_desc request_buf, send_token;</div>
-<div class="line"><span class="lineno">  109</span>  gss_buffer_t sec_token;</div>
-<div class="line"><span class="lineno">  110</span>  gss_name_t target_name;</div>
-<div class="line"><span class="lineno">  111</span>  gss_ctx_id_t context;</div>
-<div class="line"><span class="lineno">  112</span>  gss_OID mech_name;</div>
-<div class="line"><span class="lineno">  113</span>  <span class="keywordtype">char</span> server_conf_flags;</div>
-<div class="line"><span class="lineno">  114</span>  gss_qop_t quality;</div>
-<div class="line"><span class="lineno">  115</span>  <span class="keywordtype">int</span> cflags;</div>
-<div class="line"><span class="lineno">  116</span>  OM_uint32 maj_stat, min_stat;</div>
-<div class="line"><span class="lineno">  117</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> buf_size;</div>
-<div class="line"><span class="lineno">  118</span>  <span class="keywordtype">int</span> rc2, rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  119</span> </div>
-<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span> (!(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_define" href="imap_2private_8h.html#abfbec66df401ed33d60074044cfd6c49">IMAP_CAP_AUTH_GSSAPI</a>))</div>
-<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  122</span> </div>
-<div class="line"><span class="lineno">  123</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2e00de19727c4db19f452dde494a770a">mutt_account_getuser</a>(&amp;adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) &lt; 0)</div>
-<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf1 = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  127</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf2 = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>  <span class="comment">/* get an IMAP service ticket for the server */</span></div>
-<div class="line"><span class="lineno">  130</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf1, <span class="stringliteral">&quot;imap@%s&quot;</span>, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>);</div>
-<div class="line"><span class="lineno">  131</span>  request_buf.value = buf1-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
-<div class="line"><span class="lineno">  132</span>  request_buf.length = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf1);</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_debug_level = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;debug_level&quot;</span>);</div>
-<div class="line"><span class="lineno">  135</span>  maj_stat = gss_import_name(&amp;min_stat, &amp;request_buf, gss_nt_service_name, &amp;target_name);</div>
-<div class="line"><span class="lineno">  136</span>  <span class="keywordflow">if</span> (maj_stat != GSS_S_COMPLETE)</div>
-<div class="line"><span class="lineno">  137</span>  {</div>
-<div class="line"><span class="lineno">  138</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Couldn&#39;t get service name for [%s]\n&quot;</span>, buf1-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>);</div>
-<div class="line"><span class="lineno">  139</span>    rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  141</span>  }</div>
-<div class="line"><span class="lineno">  142</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c_debug_level &gt;= 2)</div>
-<div class="line"><span class="lineno">  143</span>  {</div>
-<div class="line"><span class="lineno">  144</span>    gss_display_name(&amp;min_stat, target_name, &amp;request_buf, &amp;mech_name);</div>
-<div class="line"><span class="lineno">  145</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Using service name [%s]\n&quot;</span>, (<span class="keywordtype">char</span> *) request_buf.value);</div>
-<div class="line"><span class="lineno">  146</span>    gss_release_buffer(&amp;min_stat, &amp;request_buf);</div>
-<div class="line"><span class="lineno">  147</span>  }</div>
-<div class="line"><span class="lineno">  148</span>  <span class="comment">/* Acquire initial credentials - without a TGT GSSAPI is UNAVAIL */</span></div>
-<div class="line"><span class="lineno">  149</span>  sec_token = GSS_C_NO_BUFFER;</div>
-<div class="line"><span class="lineno">  150</span>  context = GSS_C_NO_CONTEXT;</div>
-<div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>  <span class="comment">/* build token */</span></div>
-<div class="line"><span class="lineno">  153</span>  maj_stat = gss_init_sec_context(&amp;min_stat, GSS_C_NO_CREDENTIAL, &amp;context, target_name,</div>
-<div class="line"><span class="lineno">  154</span>                                  GSS_C_NO_OID, GSS_C_MUTUAL_FLAG | GSS_C_SEQUENCE_FLAG,</div>
-<div class="line"><span class="lineno">  155</span>                                  0, GSS_C_NO_CHANNEL_BINDINGS, sec_token, NULL,</div>
-<div class="line"><span class="lineno">  156</span>                                  &amp;send_token, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *) &amp;cflags, NULL);</div>
-<div class="line"><span class="lineno">  157</span>  <span class="keywordflow">if</span> ((maj_stat != GSS_S_COMPLETE) &amp;&amp; (maj_stat != GSS_S_CONTINUE_NEEDED))</div>
-<div class="line"><span class="lineno">  158</span>  {</div>
-<div class="line"><span class="lineno">  159</span>    <a class="code hl_function" href="auth__gss_8c.html#a690d69a2cbc379fe0eb5392017d54b82">print_gss_error</a>(maj_stat, min_stat);</div>
-<div class="line"><span class="lineno">  160</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error acquiring credentials - no TGT?\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  161</span>    gss_release_name(&amp;min_stat, &amp;target_name);</div>
-<div class="line"><span class="lineno">  162</span> </div>
-<div class="line"><span class="lineno">  163</span>    rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  164</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  165</span>  }</div>
-<div class="line"><span class="lineno">  166</span> </div>
-<div class="line"><span class="lineno">  167</span>  <span class="comment">/* now begin login */</span></div>
-<div class="line"><span class="lineno">  168</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  169</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), <span class="stringliteral">&quot;GSSAPI&quot;</span>);</div>
-<div class="line"><span class="lineno">  170</span> </div>
-<div class="line"><span class="lineno">  171</span>  <a class="code hl_function" href="imap_2command_8c.html#a07786a21982bd266c8faca5423b7f2cf">imap_cmd_start</a>(adata, <span class="stringliteral">&quot;AUTHENTICATE GSSAPI&quot;</span>);</div>
-<div class="line"><span class="lineno">  172</span> </div>
-<div class="line"><span class="lineno">  173</span>  <span class="comment">/* expect a null continuation response (&quot;+&quot;) */</span></div>
-<div class="line"><span class="lineno">  174</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  175</span>  {</div>
-<div class="line"><span class="lineno">  176</span>    rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  177</span>  } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno">  178</span> </div>
-<div class="line"><span class="lineno">  179</span>  <span class="keywordflow">if</span> (rc2 != <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
-<div class="line"><span class="lineno">  180</span>  {</div>
-<div class="line"><span class="lineno">  181</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Invalid response from server: %s\n&quot;</span>, buf1-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>);</div>
-<div class="line"><span class="lineno">  182</span>    gss_release_name(&amp;min_stat, &amp;target_name);</div>
-<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  184</span>  }</div>
-<div class="line"><span class="lineno">  185</span> </div>
-<div class="line"><span class="lineno">  186</span>  <span class="comment">/* now start the security context initialisation loop... */</span></div>
-<div class="line"><span class="lineno">  187</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Sending credentials\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  188</span>  <a class="code hl_function" href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a>(buf1, send_token.value, send_token.length);</div>
-<div class="line"><span class="lineno">  189</span>  gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
-<div class="line"><span class="lineno">  190</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf1, <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  191</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf1));</div>
-<div class="line"><span class="lineno">  192</span> </div>
-<div class="line"><span class="lineno">  193</span>  <span class="keywordflow">while</span> (maj_stat == GSS_S_CONTINUE_NEEDED)</div>
-<div class="line"><span class="lineno">  194</span>  {</div>
-<div class="line"><span class="lineno">  195</span>    <span class="comment">/* Read server data */</span></div>
-<div class="line"><span class="lineno">  196</span>    <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  197</span>    {</div>
-<div class="line"><span class="lineno">  198</span>      rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  199</span>    } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">if</span> (rc2 != <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
-<div class="line"><span class="lineno">  202</span>    {</div>
-<div class="line"><span class="lineno">  203</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;#1 Error receiving server response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  204</span>      gss_release_name(&amp;min_stat, &amp;target_name);</div>
-<div class="line"><span class="lineno">  205</span>      <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  206</span>    }</div>
-<div class="line"><span class="lineno">  207</span> </div>
-<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a>(buf2, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2) &lt; 0)</div>
-<div class="line"><span class="lineno">  209</span>    {</div>
-<div class="line"><span class="lineno">  210</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Invalid base64 server response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  211</span>      gss_release_name(&amp;min_stat, &amp;target_name);</div>
-<div class="line"><span class="lineno">  212</span>      <span class="keywordflow">goto</span> err_abort_cmd;</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
-<div class="line"><span class="lineno">  214</span>    request_buf.value = buf2-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
-<div class="line"><span class="lineno">  215</span>    request_buf.length = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf2);</div>
-<div class="line"><span class="lineno">  216</span>    sec_token = &amp;request_buf;</div>
-<div class="line"><span class="lineno">  217</span> </div>
-<div class="line"><span class="lineno">  218</span>    <span class="comment">/* Write client data */</span></div>
-<div class="line"><span class="lineno">  219</span>    maj_stat = gss_init_sec_context(&amp;min_stat, GSS_C_NO_CREDENTIAL, &amp;context, target_name,</div>
-<div class="line"><span class="lineno">  220</span>                                    GSS_C_NO_OID, GSS_C_MUTUAL_FLAG | GSS_C_SEQUENCE_FLAG,</div>
-<div class="line"><span class="lineno">  221</span>                                    0, GSS_C_NO_CHANNEL_BINDINGS, sec_token, NULL,</div>
-<div class="line"><span class="lineno">  222</span>                                    &amp;send_token, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *) &amp;cflags, NULL);</div>
-<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> ((maj_stat != GSS_S_COMPLETE) &amp;&amp; (maj_stat != GSS_S_CONTINUE_NEEDED))</div>
-<div class="line"><span class="lineno">  224</span>    {</div>
-<div class="line"><span class="lineno">  225</span>      <a class="code hl_function" href="auth__gss_8c.html#a690d69a2cbc379fe0eb5392017d54b82">print_gss_error</a>(maj_stat, min_stat);</div>
-<div class="line"><span class="lineno">  226</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error exchanging credentials\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  227</span>      gss_release_name(&amp;min_stat, &amp;target_name);</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>      <span class="keywordflow">goto</span> err_abort_cmd;</div>
-<div class="line"><span class="lineno">  230</span>    }</div>
-<div class="line"><span class="lineno">  231</span>    <a class="code hl_function" href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a>(buf1, send_token.value, send_token.length);</div>
-<div class="line"><span class="lineno">  232</span>    gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
-<div class="line"><span class="lineno">  233</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf1, <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  234</span>    <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf1));</div>
-<div class="line"><span class="lineno">  235</span>  }</div>
-<div class="line"><span class="lineno">  236</span> </div>
-<div class="line"><span class="lineno">  237</span>  gss_release_name(&amp;min_stat, &amp;target_name);</div>
-<div class="line"><span class="lineno">  238</span> </div>
-<div class="line"><span class="lineno">  239</span>  <span class="comment">/* get security flags and buffer size */</span></div>
-<div class="line"><span class="lineno">  240</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  241</span>  {</div>
-<div class="line"><span class="lineno">  242</span>    rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  243</span>  } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno">  244</span> </div>
-<div class="line"><span class="lineno">  245</span>  <span class="keywordflow">if</span> (rc2 != <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
-<div class="line"><span class="lineno">  246</span>  {</div>
-<div class="line"><span class="lineno">  247</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;#2 Error receiving server response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  248</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  249</span>  }</div>
-<div class="line"><span class="lineno">  250</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a>(buf2, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2) &lt; 0)</div>
-<div class="line"><span class="lineno">  251</span>  {</div>
-<div class="line"><span class="lineno">  252</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Invalid base64 server response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  253</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
-<div class="line"><span class="lineno">  254</span>  }</div>
-<div class="line"><span class="lineno">  255</span>  request_buf.value = buf2-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
-<div class="line"><span class="lineno">  256</span>  request_buf.length = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf2);</div>
-<div class="line"><span class="lineno">  257</span> </div>
-<div class="line"><span class="lineno">  258</span>  maj_stat = gss_unwrap(&amp;min_stat, context, &amp;request_buf, &amp;send_token, &amp;cflags, &amp;quality);</div>
-<div class="line"><span class="lineno">  259</span>  <span class="keywordflow">if</span> (maj_stat != GSS_S_COMPLETE)</div>
-<div class="line"><span class="lineno">  260</span>  {</div>
-<div class="line"><span class="lineno">  261</span>    <a class="code hl_function" href="auth__gss_8c.html#a690d69a2cbc379fe0eb5392017d54b82">print_gss_error</a>(maj_stat, min_stat);</div>
-<div class="line"><span class="lineno">  262</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Couldn&#39;t unwrap security level data\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  263</span>    gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
-<div class="line"><span class="lineno">  264</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
-<div class="line"><span class="lineno">  265</span>  }</div>
-<div class="line"><span class="lineno">  266</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Credential exchange complete\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  267</span> </div>
-<div class="line"><span class="lineno">  268</span>  <span class="comment">/* first byte is security levels supported. We want NONE */</span></div>
-<div class="line"><span class="lineno">  269</span>  server_conf_flags = ((<span class="keywordtype">char</span> *) send_token.value)[0];</div>
-<div class="line"><span class="lineno">  270</span>  <span class="keywordflow">if</span> (!(((<span class="keywordtype">char</span> *) send_token.value)[0] &amp; <a class="code hl_define" href="auth__gss_8c.html#a5bc0cc6171ded3b990764a7926573ead">GSS_AUTH_P_NONE</a>))</div>
-<div class="line"><span class="lineno">  271</span>  {</div>
-<div class="line"><span class="lineno">  272</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Server requires integrity or privacy\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  273</span>    gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
-<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
-<div class="line"><span class="lineno">  275</span>  }</div>
-<div class="line"><span class="lineno">  276</span> </div>
-<div class="line"><span class="lineno">  277</span>  <span class="comment">/* we don&#39;t care about buffer size if we don&#39;t wrap content. But here it is */</span></div>
-<div class="line"><span class="lineno">  278</span>  ((<span class="keywordtype">char</span> *) send_token.value)[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  279</span>  buf_size = ntohl(*((<span class="keywordtype">long</span> *) send_token.value));</div>
-<div class="line"><span class="lineno">  280</span>  gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
-<div class="line"><span class="lineno">  281</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Unwrapped security level flags: %c%c%c\n&quot;</span>,</div>
-<div class="line"><span class="lineno">  282</span>             (server_conf_flags &amp; <a class="code hl_define" href="auth__gss_8c.html#a5bc0cc6171ded3b990764a7926573ead">GSS_AUTH_P_NONE</a>) ? <span class="charliteral">&#39;N&#39;</span> : <span class="charliteral">&#39;-&#39;</span>,</div>
-<div class="line"><span class="lineno">  283</span>             (server_conf_flags &amp; <a class="code hl_define" href="auth__gss_8c.html#ae24a325301dd6fd9599c06f659120b18">GSS_AUTH_P_INTEGRITY</a>) ? <span class="charliteral">&#39;I&#39;</span> : <span class="charliteral">&#39;-&#39;</span>,</div>
-<div class="line"><span class="lineno">  284</span>             (server_conf_flags &amp; <a class="code hl_define" href="auth__gss_8c.html#a9870d8bbf044578ccb26ada1e76315f8">GSS_AUTH_P_PRIVACY</a>) ? <span class="charliteral">&#39;P&#39;</span> : <span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><span class="lineno">  285</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Maximum GSS token size is %ld\n&quot;</span>, buf_size);</div>
-<div class="line"><span class="lineno">  286</span> </div>
-<div class="line"><span class="lineno">  287</span>  <span class="comment">/* agree to terms (hack!) */</span></div>
-<div class="line"><span class="lineno">  288</span>  buf_size = htonl(buf_size); <span class="comment">/* not relevant without integrity/privacy */</span></div>
-<div class="line"><span class="lineno">  289</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf1);</div>
-<div class="line"><span class="lineno">  290</span>  <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf1, <a class="code hl_define" href="auth__gss_8c.html#a5bc0cc6171ded3b990764a7926573ead">GSS_AUTH_P_NONE</a>);</div>
-<div class="line"><span class="lineno">  291</span>  <a class="code hl_function" href="buffer_8c.html#a2881936af4a3e3b45079cb9af0cdb3e8">buf_addstr_n</a>(buf1, ((<span class="keywordtype">char</span> *) &amp;buf_size) + 1, 3);</div>
-<div class="line"><span class="lineno">  292</span>  <span class="comment">/* server decides if principal can log in as user */</span></div>
-<div class="line"><span class="lineno">  293</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf1, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>);</div>
-<div class="line"><span class="lineno">  294</span>  request_buf.value = buf1-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
-<div class="line"><span class="lineno">  295</span>  request_buf.length = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf1);</div>
-<div class="line"><span class="lineno">  296</span>  maj_stat = gss_wrap(&amp;min_stat, context, 0, GSS_C_QOP_DEFAULT, &amp;request_buf,</div>
-<div class="line"><span class="lineno">  297</span>                      &amp;cflags, &amp;send_token);</div>
-<div class="line"><span class="lineno">  298</span>  <span class="keywordflow">if</span> (maj_stat != GSS_S_COMPLETE)</div>
-<div class="line"><span class="lineno">  299</span>  {</div>
-<div class="line"><span class="lineno">  300</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Error creating login request\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  301</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
-<div class="line"><span class="lineno">  302</span>  }</div>
-<div class="line"><span class="lineno">  303</span> </div>
-<div class="line"><span class="lineno">  304</span>  <a class="code hl_function" href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a>(buf1, send_token.value, send_token.length);</div>
-<div class="line"><span class="lineno">  305</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Requesting authorisation as %s\n&quot;</span>, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>);</div>
-<div class="line"><span class="lineno">  306</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf1, <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  307</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf1));</div>
-<div class="line"><span class="lineno">  308</span> </div>
-<div class="line"><span class="lineno">  309</span>  <span class="comment">/* Joy of victory or agony of defeat? */</span></div>
-<div class="line"><span class="lineno">  310</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  311</span>  {</div>
-<div class="line"><span class="lineno">  312</span>    rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  313</span>  } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno">  314</span>  <span class="keywordflow">if</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
-<div class="line"><span class="lineno">  315</span>  {</div>
-<div class="line"><span class="lineno">  316</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Unexpected server continuation request\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
-<div class="line"><span class="lineno">  318</span>  }</div>
-<div class="line"><span class="lineno">  319</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="imap_2command_8c.html#abf593435042f4db0db8d4594443b0c96">imap_code</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>))</div>
-<div class="line"><span class="lineno">  320</span>  {</div>
-<div class="line"><span class="lineno">  321</span>    <span class="comment">/* flush the security context */</span></div>
-<div class="line"><span class="lineno">  322</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Releasing GSS credentials\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  323</span>    maj_stat = gss_delete_sec_context(&amp;min_stat, &amp;context, &amp;send_token);</div>
-<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">if</span> (maj_stat != GSS_S_COMPLETE)</div>
-<div class="line"><span class="lineno">  325</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error releasing credentials\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  326</span> </div>
-<div class="line"><span class="lineno">  327</span>    <span class="comment">/* send_token may contain a notification to the server to flush</span></div>
-<div class="line"><span class="lineno">  328</span><span class="comment">     * credentials. RFC1731 doesn&#39;t specify what to do, and since this</span></div>
-<div class="line"><span class="lineno">  329</span><span class="comment">     * support is only for authentication, we&#39;ll assume the server knows</span></div>
-<div class="line"><span class="lineno">  330</span><span class="comment">     * enough to flush its own credentials */</span></div>
-<div class="line"><span class="lineno">  331</span>    gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>    rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada544df33a559dae35b9b71951782eb897">IMAP_AUTH_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  334</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  335</span>  }</div>
-<div class="line"><span class="lineno">  336</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  337</span>  {</div>
-<div class="line"><span class="lineno">  338</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  339</span>  }</div>
-<div class="line"><span class="lineno">  340</span> </div>
-<div class="line"><span class="lineno">  341</span>err_abort_cmd:</div>
-<div class="line"><span class="lineno">  342</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <span class="stringliteral">&quot;*\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  343</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  344</span>  {</div>
-<div class="line"><span class="lineno">  345</span>    rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  346</span>  } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno">  347</span> </div>
-<div class="line"><span class="lineno">  348</span>bail:</div>
-<div class="line"><span class="lineno">  349</span>  <span class="comment">// L10N: %s is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  350</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s authentication failed&quot;</span>), <span class="stringliteral">&quot;GSSAPI&quot;</span>);</div>
-<div class="line"><span class="lineno">  351</span>  rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  352</span> </div>
-<div class="line"><span class="lineno">  353</span>cleanup:</div>
-<div class="line"><span class="lineno">  354</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf1);</div>
-<div class="line"><span class="lineno">  355</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf2);</div>
-<div class="line"><span class="lineno">  356</span> </div>
-<div class="line"><span class="lineno">  357</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  358</span>}</div>
-<div class="ttc" id="aauth__gss_8c_html_a5bc0cc6171ded3b990764a7926573ead"><div class="ttname"><a href="auth__gss_8c.html#a5bc0cc6171ded3b990764a7926573ead">GSS_AUTH_P_NONE</a></div><div class="ttdeci">#define GSS_AUTH_P_NONE</div><div class="ttdef"><b>Definition</b> <a href="auth__gss_8c_source.html#l00057">auth_gss.c:57</a></div></div>
-<div class="ttc" id="aauth__gss_8c_html_a690d69a2cbc379fe0eb5392017d54b82"><div class="ttname"><a href="auth__gss_8c.html#a690d69a2cbc379fe0eb5392017d54b82">print_gss_error</a></div><div class="ttdeci">static void print_gss_error(OM_uint32 err_maj, OM_uint32 err_min)</div><div class="ttdoc">Print detailed error message to the debug log.</div><div class="ttdef"><b>Definition</b> <a href="auth__gss_8c_source.html#l00066">auth_gss.c:66</a></div></div>
-<div class="ttc" id="aauth__gss_8c_html_a9870d8bbf044578ccb26ada1e76315f8"><div class="ttname"><a href="auth__gss_8c.html#a9870d8bbf044578ccb26ada1e76315f8">GSS_AUTH_P_PRIVACY</a></div><div class="ttdeci">#define GSS_AUTH_P_PRIVACY</div><div class="ttdef"><b>Definition</b> <a href="auth__gss_8c_source.html#l00059">auth_gss.c:59</a></div></div>
-<div class="ttc" id="aauth__gss_8c_html_ae24a325301dd6fd9599c06f659120b18"><div class="ttname"><a href="auth__gss_8c.html#ae24a325301dd6fd9599c06f659120b18">GSS_AUTH_P_INTEGRITY</a></div><div class="ttdeci">#define GSS_AUTH_P_INTEGRITY</div><div class="ttdef"><b>Definition</b> <a href="auth__gss_8c_source.html#l00058">auth_gss.c:58</a></div></div>
+<p class="definition">Definition at line <a class="el" href="auth__gss_8c_source.html#l00105">105</a> of file <a class="el" href="auth__gss_8c_source.html">auth_gss.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>{</div>
+<div class="line"><span class="lineno">  107</span>  gss_buffer_desc request_buf, send_token;</div>
+<div class="line"><span class="lineno">  108</span>  gss_buffer_t sec_token;</div>
+<div class="line"><span class="lineno">  109</span>  gss_name_t target_name;</div>
+<div class="line"><span class="lineno">  110</span>  gss_ctx_id_t context;</div>
+<div class="line"><span class="lineno">  111</span>  gss_OID mech_name;</div>
+<div class="line"><span class="lineno">  112</span>  <span class="keywordtype">char</span> server_conf_flags;</div>
+<div class="line"><span class="lineno">  113</span>  gss_qop_t quality;</div>
+<div class="line"><span class="lineno">  114</span>  <span class="keywordtype">int</span> cflags;</div>
+<div class="line"><span class="lineno">  115</span>  OM_uint32 maj_stat, min_stat;</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> buf_size;</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordtype">int</span> rc2, rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">if</span> (!(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_define" href="imap_2private_8h.html#abfbec66df401ed33d60074044cfd6c49">IMAP_CAP_AUTH_GSSAPI</a>))</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2e00de19727c4db19f452dde494a770a">mutt_account_getuser</a>(&amp;adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) &lt; 0)</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf1 = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  126</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf2 = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  <span class="comment">/* get an IMAP service ticket for the server */</span></div>
+<div class="line"><span class="lineno">  129</span>  <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf1, <span class="stringliteral">&quot;imap@%s&quot;</span>, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>);</div>
+<div class="line"><span class="lineno">  130</span>  request_buf.value = buf1-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
+<div class="line"><span class="lineno">  131</span>  request_buf.length = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf1);</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_debug_level = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;debug_level&quot;</span>);</div>
+<div class="line"><span class="lineno">  134</span>  maj_stat = gss_import_name(&amp;min_stat, &amp;request_buf, gss_nt_service_name, &amp;target_name);</div>
+<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">if</span> (maj_stat != GSS_S_COMPLETE)</div>
+<div class="line"><span class="lineno">  136</span>  {</div>
+<div class="line"><span class="lineno">  137</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Couldn&#39;t get service name for [%s]\n&quot;</span>, buf1-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>);</div>
+<div class="line"><span class="lineno">  138</span>    rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  140</span>  }</div>
+<div class="line"><span class="lineno">  141</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c_debug_level &gt;= 2)</div>
+<div class="line"><span class="lineno">  142</span>  {</div>
+<div class="line"><span class="lineno">  143</span>    gss_display_name(&amp;min_stat, target_name, &amp;request_buf, &amp;mech_name);</div>
+<div class="line"><span class="lineno">  144</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Using service name [%s]\n&quot;</span>, (<span class="keywordtype">char</span> *) request_buf.value);</div>
+<div class="line"><span class="lineno">  145</span>    gss_release_buffer(&amp;min_stat, &amp;request_buf);</div>
+<div class="line"><span class="lineno">  146</span>  }</div>
+<div class="line"><span class="lineno">  147</span>  <span class="comment">/* Acquire initial credentials - without a TGT GSSAPI is UNAVAIL */</span></div>
+<div class="line"><span class="lineno">  148</span>  sec_token = GSS_C_NO_BUFFER;</div>
+<div class="line"><span class="lineno">  149</span>  context = GSS_C_NO_CONTEXT;</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>  <span class="comment">/* build token */</span></div>
+<div class="line"><span class="lineno">  152</span>  maj_stat = gss_init_sec_context(&amp;min_stat, GSS_C_NO_CREDENTIAL, &amp;context, target_name,</div>
+<div class="line"><span class="lineno">  153</span>                                  GSS_C_NO_OID, GSS_C_MUTUAL_FLAG | GSS_C_SEQUENCE_FLAG,</div>
+<div class="line"><span class="lineno">  154</span>                                  0, GSS_C_NO_CHANNEL_BINDINGS, sec_token, NULL,</div>
+<div class="line"><span class="lineno">  155</span>                                  &amp;send_token, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *) &amp;cflags, NULL);</div>
+<div class="line"><span class="lineno">  156</span>  <span class="keywordflow">if</span> ((maj_stat != GSS_S_COMPLETE) &amp;&amp; (maj_stat != GSS_S_CONTINUE_NEEDED))</div>
+<div class="line"><span class="lineno">  157</span>  {</div>
+<div class="line"><span class="lineno">  158</span>    <a class="code hl_function" href="auth__gss_8c.html#a690d69a2cbc379fe0eb5392017d54b82">print_gss_error</a>(maj_stat, min_stat);</div>
+<div class="line"><span class="lineno">  159</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error acquiring credentials - no TGT?\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  160</span>    gss_release_name(&amp;min_stat, &amp;target_name);</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>    rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  164</span>  }</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>  <span class="comment">/* now begin login */</span></div>
+<div class="line"><span class="lineno">  167</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  168</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), <span class="stringliteral">&quot;GSSAPI&quot;</span>);</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>  <a class="code hl_function" href="imap_2command_8c.html#a07786a21982bd266c8faca5423b7f2cf">imap_cmd_start</a>(adata, <span class="stringliteral">&quot;AUTHENTICATE GSSAPI&quot;</span>);</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>  <span class="comment">/* expect a null continuation response (&quot;+&quot;) */</span></div>
+<div class="line"><span class="lineno">  173</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  174</span>  {</div>
+<div class="line"><span class="lineno">  175</span>    rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  176</span>  } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>  <span class="keywordflow">if</span> (rc2 != <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
+<div class="line"><span class="lineno">  179</span>  {</div>
+<div class="line"><span class="lineno">  180</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Invalid response from server: %s\n&quot;</span>, buf1-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>);</div>
+<div class="line"><span class="lineno">  181</span>    gss_release_name(&amp;min_stat, &amp;target_name);</div>
+<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  183</span>  }</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>  <span class="comment">/* now start the security context initialisation loop... */</span></div>
+<div class="line"><span class="lineno">  186</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Sending credentials\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  187</span>  <a class="code hl_function" href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a>(buf1, send_token.value, send_token.length);</div>
+<div class="line"><span class="lineno">  188</span>  gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
+<div class="line"><span class="lineno">  189</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf1, <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  190</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf1));</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>  <span class="keywordflow">while</span> (maj_stat == GSS_S_CONTINUE_NEEDED)</div>
+<div class="line"><span class="lineno">  193</span>  {</div>
+<div class="line"><span class="lineno">  194</span>    <span class="comment">/* Read server data */</span></div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  196</span>    {</div>
+<div class="line"><span class="lineno">  197</span>      rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  198</span>    } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>    <span class="keywordflow">if</span> (rc2 != <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
+<div class="line"><span class="lineno">  201</span>    {</div>
+<div class="line"><span class="lineno">  202</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;#1 Error receiving server response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  203</span>      gss_release_name(&amp;min_stat, &amp;target_name);</div>
+<div class="line"><span class="lineno">  204</span>      <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  205</span>    }</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a>(buf2, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2) &lt; 0)</div>
+<div class="line"><span class="lineno">  208</span>    {</div>
+<div class="line"><span class="lineno">  209</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Invalid base64 server response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  210</span>      gss_release_name(&amp;min_stat, &amp;target_name);</div>
+<div class="line"><span class="lineno">  211</span>      <span class="keywordflow">goto</span> err_abort_cmd;</div>
+<div class="line"><span class="lineno">  212</span>    }</div>
+<div class="line"><span class="lineno">  213</span>    request_buf.value = buf2-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
+<div class="line"><span class="lineno">  214</span>    request_buf.length = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf2);</div>
+<div class="line"><span class="lineno">  215</span>    sec_token = &amp;request_buf;</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>    <span class="comment">/* Write client data */</span></div>
+<div class="line"><span class="lineno">  218</span>    maj_stat = gss_init_sec_context(&amp;min_stat, GSS_C_NO_CREDENTIAL, &amp;context, target_name,</div>
+<div class="line"><span class="lineno">  219</span>                                    GSS_C_NO_OID, GSS_C_MUTUAL_FLAG | GSS_C_SEQUENCE_FLAG,</div>
+<div class="line"><span class="lineno">  220</span>                                    0, GSS_C_NO_CHANNEL_BINDINGS, sec_token, NULL,</div>
+<div class="line"><span class="lineno">  221</span>                                    &amp;send_token, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *) &amp;cflags, NULL);</div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">if</span> ((maj_stat != GSS_S_COMPLETE) &amp;&amp; (maj_stat != GSS_S_CONTINUE_NEEDED))</div>
+<div class="line"><span class="lineno">  223</span>    {</div>
+<div class="line"><span class="lineno">  224</span>      <a class="code hl_function" href="auth__gss_8c.html#a690d69a2cbc379fe0eb5392017d54b82">print_gss_error</a>(maj_stat, min_stat);</div>
+<div class="line"><span class="lineno">  225</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error exchanging credentials\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  226</span>      gss_release_name(&amp;min_stat, &amp;target_name);</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>      <span class="keywordflow">goto</span> err_abort_cmd;</div>
+<div class="line"><span class="lineno">  229</span>    }</div>
+<div class="line"><span class="lineno">  230</span>    <a class="code hl_function" href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a>(buf1, send_token.value, send_token.length);</div>
+<div class="line"><span class="lineno">  231</span>    gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
+<div class="line"><span class="lineno">  232</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf1, <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  233</span>    <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf1));</div>
+<div class="line"><span class="lineno">  234</span>  }</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>  gss_release_name(&amp;min_stat, &amp;target_name);</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>  <span class="comment">/* get security flags and buffer size */</span></div>
+<div class="line"><span class="lineno">  239</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  240</span>  {</div>
+<div class="line"><span class="lineno">  241</span>    rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  242</span>  } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>  <span class="keywordflow">if</span> (rc2 != <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
+<div class="line"><span class="lineno">  245</span>  {</div>
+<div class="line"><span class="lineno">  246</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;#2 Error receiving server response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  248</span>  }</div>
+<div class="line"><span class="lineno">  249</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a>(buf2, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2) &lt; 0)</div>
+<div class="line"><span class="lineno">  250</span>  {</div>
+<div class="line"><span class="lineno">  251</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Invalid base64 server response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  252</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
+<div class="line"><span class="lineno">  253</span>  }</div>
+<div class="line"><span class="lineno">  254</span>  request_buf.value = buf2-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
+<div class="line"><span class="lineno">  255</span>  request_buf.length = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf2);</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>  maj_stat = gss_unwrap(&amp;min_stat, context, &amp;request_buf, &amp;send_token, &amp;cflags, &amp;quality);</div>
+<div class="line"><span class="lineno">  258</span>  <span class="keywordflow">if</span> (maj_stat != GSS_S_COMPLETE)</div>
+<div class="line"><span class="lineno">  259</span>  {</div>
+<div class="line"><span class="lineno">  260</span>    <a class="code hl_function" href="auth__gss_8c.html#a690d69a2cbc379fe0eb5392017d54b82">print_gss_error</a>(maj_stat, min_stat);</div>
+<div class="line"><span class="lineno">  261</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Couldn&#39;t unwrap security level data\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  262</span>    gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
+<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
+<div class="line"><span class="lineno">  264</span>  }</div>
+<div class="line"><span class="lineno">  265</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Credential exchange complete\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>  <span class="comment">/* first byte is security levels supported. We want NONE */</span></div>
+<div class="line"><span class="lineno">  268</span>  server_conf_flags = ((<span class="keywordtype">char</span> *) send_token.value)[0];</div>
+<div class="line"><span class="lineno">  269</span>  <span class="keywordflow">if</span> (!(((<span class="keywordtype">char</span> *) send_token.value)[0] &amp; <a class="code hl_define" href="auth__gss_8c.html#a5bc0cc6171ded3b990764a7926573ead">GSS_AUTH_P_NONE</a>))</div>
+<div class="line"><span class="lineno">  270</span>  {</div>
+<div class="line"><span class="lineno">  271</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Server requires integrity or privacy\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  272</span>    gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
+<div class="line"><span class="lineno">  274</span>  }</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>  <span class="comment">/* we don&#39;t care about buffer size if we don&#39;t wrap content. But here it is */</span></div>
+<div class="line"><span class="lineno">  277</span>  ((<span class="keywordtype">char</span> *) send_token.value)[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  278</span>  buf_size = ntohl(*((<span class="keywordtype">long</span> *) send_token.value));</div>
+<div class="line"><span class="lineno">  279</span>  gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
+<div class="line"><span class="lineno">  280</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Unwrapped security level flags: %c%c%c\n&quot;</span>,</div>
+<div class="line"><span class="lineno">  281</span>             (server_conf_flags &amp; <a class="code hl_define" href="auth__gss_8c.html#a5bc0cc6171ded3b990764a7926573ead">GSS_AUTH_P_NONE</a>) ? <span class="charliteral">&#39;N&#39;</span> : <span class="charliteral">&#39;-&#39;</span>,</div>
+<div class="line"><span class="lineno">  282</span>             (server_conf_flags &amp; <a class="code hl_define" href="auth__gss_8c.html#ae24a325301dd6fd9599c06f659120b18">GSS_AUTH_P_INTEGRITY</a>) ? <span class="charliteral">&#39;I&#39;</span> : <span class="charliteral">&#39;-&#39;</span>,</div>
+<div class="line"><span class="lineno">  283</span>             (server_conf_flags &amp; <a class="code hl_define" href="auth__gss_8c.html#a9870d8bbf044578ccb26ada1e76315f8">GSS_AUTH_P_PRIVACY</a>) ? <span class="charliteral">&#39;P&#39;</span> : <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><span class="lineno">  284</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Maximum GSS token size is %ld\n&quot;</span>, buf_size);</div>
+<div class="line"><span class="lineno">  285</span> </div>
+<div class="line"><span class="lineno">  286</span>  <span class="comment">/* agree to terms (hack!) */</span></div>
+<div class="line"><span class="lineno">  287</span>  buf_size = htonl(buf_size); <span class="comment">/* not relevant without integrity/privacy */</span></div>
+<div class="line"><span class="lineno">  288</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf1);</div>
+<div class="line"><span class="lineno">  289</span>  <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(buf1, <a class="code hl_define" href="auth__gss_8c.html#a5bc0cc6171ded3b990764a7926573ead">GSS_AUTH_P_NONE</a>);</div>
+<div class="line"><span class="lineno">  290</span>  <a class="code hl_function" href="buffer_8c.html#a2881936af4a3e3b45079cb9af0cdb3e8">buf_addstr_n</a>(buf1, ((<span class="keywordtype">char</span> *) &amp;buf_size) + 1, 3);</div>
+<div class="line"><span class="lineno">  291</span>  <span class="comment">/* server decides if principal can log in as user */</span></div>
+<div class="line"><span class="lineno">  292</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf1, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>);</div>
+<div class="line"><span class="lineno">  293</span>  request_buf.value = buf1-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
+<div class="line"><span class="lineno">  294</span>  request_buf.length = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf1);</div>
+<div class="line"><span class="lineno">  295</span>  maj_stat = gss_wrap(&amp;min_stat, context, 0, GSS_C_QOP_DEFAULT, &amp;request_buf,</div>
+<div class="line"><span class="lineno">  296</span>                      &amp;cflags, &amp;send_token);</div>
+<div class="line"><span class="lineno">  297</span>  <span class="keywordflow">if</span> (maj_stat != GSS_S_COMPLETE)</div>
+<div class="line"><span class="lineno">  298</span>  {</div>
+<div class="line"><span class="lineno">  299</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Error creating login request\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  300</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
+<div class="line"><span class="lineno">  301</span>  }</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>  <a class="code hl_function" href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a>(buf1, send_token.value, send_token.length);</div>
+<div class="line"><span class="lineno">  304</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Requesting authorisation as %s\n&quot;</span>, adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>);</div>
+<div class="line"><span class="lineno">  305</span>  <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf1, <span class="stringliteral">&quot;\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  306</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf1));</div>
+<div class="line"><span class="lineno">  307</span> </div>
+<div class="line"><span class="lineno">  308</span>  <span class="comment">/* Joy of victory or agony of defeat? */</span></div>
+<div class="line"><span class="lineno">  309</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  310</span>  {</div>
+<div class="line"><span class="lineno">  311</span>    rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  312</span>  } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno">  313</span>  <span class="keywordflow">if</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
+<div class="line"><span class="lineno">  314</span>  {</div>
+<div class="line"><span class="lineno">  315</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Unexpected server continuation request\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  316</span>    <span class="keywordflow">goto</span> err_abort_cmd;</div>
+<div class="line"><span class="lineno">  317</span>  }</div>
+<div class="line"><span class="lineno">  318</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="imap_2command_8c.html#abf593435042f4db0db8d4594443b0c96">imap_code</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>))</div>
+<div class="line"><span class="lineno">  319</span>  {</div>
+<div class="line"><span class="lineno">  320</span>    <span class="comment">/* flush the security context */</span></div>
+<div class="line"><span class="lineno">  321</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Releasing GSS credentials\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  322</span>    maj_stat = gss_delete_sec_context(&amp;min_stat, &amp;context, &amp;send_token);</div>
+<div class="line"><span class="lineno">  323</span>    <span class="keywordflow">if</span> (maj_stat != GSS_S_COMPLETE)</div>
+<div class="line"><span class="lineno">  324</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error releasing credentials\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  325</span> </div>
+<div class="line"><span class="lineno">  326</span>    <span class="comment">/* send_token may contain a notification to the server to flush</span></div>
+<div class="line"><span class="lineno">  327</span><span class="comment">     * credentials. RFC1731 doesn&#39;t specify what to do, and since this</span></div>
+<div class="line"><span class="lineno">  328</span><span class="comment">     * support is only for authentication, we&#39;ll assume the server knows</span></div>
+<div class="line"><span class="lineno">  329</span><span class="comment">     * enough to flush its own credentials */</span></div>
+<div class="line"><span class="lineno">  330</span>    gss_release_buffer(&amp;min_stat, &amp;send_token);</div>
+<div class="line"><span class="lineno">  331</span> </div>
+<div class="line"><span class="lineno">  332</span>    rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada544df33a559dae35b9b71951782eb897">IMAP_AUTH_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  333</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  334</span>  }</div>
+<div class="line"><span class="lineno">  335</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  336</span>  {</div>
+<div class="line"><span class="lineno">  337</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  338</span>  }</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>err_abort_cmd:</div>
+<div class="line"><span class="lineno">  341</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <span class="stringliteral">&quot;*\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  342</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  343</span>  {</div>
+<div class="line"><span class="lineno">  344</span>    rc2 = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  345</span>  } <span class="keywordflow">while</span> (rc2 == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno">  346</span> </div>
+<div class="line"><span class="lineno">  347</span>bail:</div>
+<div class="line"><span class="lineno">  348</span>  <span class="comment">// L10N: %s is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  349</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s authentication failed&quot;</span>), <span class="stringliteral">&quot;GSSAPI&quot;</span>);</div>
+<div class="line"><span class="lineno">  350</span>  rc = <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  351</span> </div>
+<div class="line"><span class="lineno">  352</span>cleanup:</div>
+<div class="line"><span class="lineno">  353</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf1);</div>
+<div class="line"><span class="lineno">  354</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf2);</div>
+<div class="line"><span class="lineno">  355</span> </div>
+<div class="line"><span class="lineno">  356</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  357</span>}</div>
+<div class="ttc" id="aauth__gss_8c_html_a5bc0cc6171ded3b990764a7926573ead"><div class="ttname"><a href="auth__gss_8c.html#a5bc0cc6171ded3b990764a7926573ead">GSS_AUTH_P_NONE</a></div><div class="ttdeci">#define GSS_AUTH_P_NONE</div><div class="ttdef"><b>Definition</b> <a href="auth__gss_8c_source.html#l00056">auth_gss.c:56</a></div></div>
+<div class="ttc" id="aauth__gss_8c_html_a690d69a2cbc379fe0eb5392017d54b82"><div class="ttname"><a href="auth__gss_8c.html#a690d69a2cbc379fe0eb5392017d54b82">print_gss_error</a></div><div class="ttdeci">static void print_gss_error(OM_uint32 err_maj, OM_uint32 err_min)</div><div class="ttdoc">Print detailed error message to the debug log.</div><div class="ttdef"><b>Definition</b> <a href="auth__gss_8c_source.html#l00065">auth_gss.c:65</a></div></div>
+<div class="ttc" id="aauth__gss_8c_html_a9870d8bbf044578ccb26ada1e76315f8"><div class="ttname"><a href="auth__gss_8c.html#a9870d8bbf044578ccb26ada1e76315f8">GSS_AUTH_P_PRIVACY</a></div><div class="ttdeci">#define GSS_AUTH_P_PRIVACY</div><div class="ttdef"><b>Definition</b> <a href="auth__gss_8c_source.html#l00058">auth_gss.c:58</a></div></div>
+<div class="ttc" id="aauth__gss_8c_html_ae24a325301dd6fd9599c06f659120b18"><div class="ttname"><a href="auth__gss_8c.html#ae24a325301dd6fd9599c06f659120b18">GSS_AUTH_P_INTEGRITY</a></div><div class="ttdeci">#define GSS_AUTH_P_INTEGRITY</div><div class="ttdef"><b>Definition</b> <a href="auth__gss_8c_source.html#l00057">auth_gss.c:57</a></div></div>
 <div class="ttc" id="abase64_8c_html_a3465fa1b0c7205634eb87bb505264c60"><div class="ttname"><a href="base64_8c.html#a3465fa1b0c7205634eb87bb505264c60">mutt_b64_buffer_encode</a></div><div class="ttdeci">size_t mutt_b64_buffer_encode(struct Buffer *buf, const char *in, size_t len)</div><div class="ttdoc">Convert raw bytes to NUL-terminated base64 string.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00198">base64.c:198</a></div></div>
 <div class="ttc" id="abase64_8c_html_a768e7c625e7318c12cfe37bc713d365c"><div class="ttname"><a href="base64_8c.html#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a></div><div class="ttdeci">int mutt_b64_buffer_decode(struct Buffer *buf, const char *in)</div><div class="ttdoc">Convert NUL-terminated base64 string to raw bytes.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00216">base64.c:216</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a2881936af4a3e3b45079cb9af0cdb3e8"><div class="ttname"><a href="buffer_8c.html#a2881936af4a3e3b45079cb9af0cdb3e8">buf_addstr_n</a></div><div class="ttdeci">size_t buf_addstr_n(struct Buffer *buf, const char *s, size_t len)</div><div class="ttdoc">Add a string to a Buffer, expanding it if necessary.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00096">buffer.c:96</a></div></div>
@@ -1346,9 +1346,9 @@ Functions</h2></td></tr>
 <div class="ttc" id="amutt_2string_8c_html_a9bf968304f4f9b49e24215cb2e28d22d"><div class="ttname"><a href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a></div><div class="ttdeci">size_t mutt_str_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00232">string.c:232</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00498">string.c:498</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_ad20e00309de897a1e882fc7400335b83"><div class="ttname"><a href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a></div><div class="ttdeci">size_t mutt_str_copy(char *dest, const char *src, size_t dsize)</div><div class="ttdoc">Copy a string into a buffer (guaranteeing NUL-termination)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00581">string.c:581</a></div></div>
-<div class="ttc" id="asasl_8c_html_a69d46ce6a265526da2e547529fe2d44b"><div class="ttname"><a href="sasl_8c.html#a69d46ce6a265526da2e547529fe2d44b">mutt_sasl_interact</a></div><div class="ttdeci">int mutt_sasl_interact(sasl_interact_t *interaction)</div><div class="ttdoc">Perform an SASL interaction with the user.</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00704">sasl.c:704</a></div></div>
-<div class="ttc" id="asasl_8c_html_ad6e1863eb3486324234dea5b32516ccf"><div class="ttname"><a href="sasl_8c.html#ad6e1863eb3486324234dea5b32516ccf">mutt_sasl_client_new</a></div><div class="ttdeci">int mutt_sasl_client_new(struct Connection *conn, sasl_conn_t **saslconn)</div><div class="ttdoc">Wrapper for sasl_client_new()</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00606">sasl.c:606</a></div></div>
-<div class="ttc" id="asasl_8c_html_af737590d183a661ad5cc6bd2de7fe280"><div class="ttname"><a href="sasl_8c.html#af737590d183a661ad5cc6bd2de7fe280">mutt_sasl_setup_conn</a></div><div class="ttdeci">void mutt_sasl_setup_conn(struct Connection *conn, sasl_conn_t *saslconn)</div><div class="ttdoc">Set up an SASL connection.</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00741">sasl.c:741</a></div></div>
+<div class="ttc" id="asasl_8c_html_a69d46ce6a265526da2e547529fe2d44b"><div class="ttname"><a href="sasl_8c.html#a69d46ce6a265526da2e547529fe2d44b">mutt_sasl_interact</a></div><div class="ttdeci">int mutt_sasl_interact(sasl_interact_t *interaction)</div><div class="ttdoc">Perform an SASL interaction with the user.</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00703">sasl.c:703</a></div></div>
+<div class="ttc" id="asasl_8c_html_ad6e1863eb3486324234dea5b32516ccf"><div class="ttname"><a href="sasl_8c.html#ad6e1863eb3486324234dea5b32516ccf">mutt_sasl_client_new</a></div><div class="ttdeci">int mutt_sasl_client_new(struct Connection *conn, sasl_conn_t **saslconn)</div><div class="ttdoc">Wrapper for sasl_client_new()</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00605">sasl.c:605</a></div></div>
+<div class="ttc" id="asasl_8c_html_af737590d183a661ad5cc6bd2de7fe280"><div class="ttname"><a href="sasl_8c.html#af737590d183a661ad5cc6bd2de7fe280">mutt_sasl_setup_conn</a></div><div class="ttdeci">void mutt_sasl_setup_conn(struct Connection *conn, sasl_conn_t *saslconn)</div><div class="ttdoc">Set up an SASL connection.</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00740">sasl.c:740</a></div></div>
 <div class="ttc" id="astring2_8h_html_a7e0481bed27661ea2679f256b24e0283"><div class="ttname"><a href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a></div><div class="ttdeci">#define NONULL(x)</div><div class="ttdef"><b>Definition</b> <a href="string2_8h_source.html#l00043">string2.h:43</a></div></div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

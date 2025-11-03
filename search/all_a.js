@@ -139,7 +139,7 @@ var searchData=
   ['help_20page_20and_20gui_20display_20it_136',['Generate the help-page and GUI display it',['../neo_help.html',1,'index']]],
   ['help_2ec_137',['help.c',['../help_8c.html',1,'']]],
   ['help_5fdata_138',['help_data',['../structMuttWindow.html#a22e31684e6fd3b975477ff1843c50d9b',1,'MuttWindow::help_data'],['../structHelpbarWindowData.html#a96e534bbd4b3227fe941117cabd84b13',1,'HelpbarWindowData::help_data']]],
-  ['help_5flookup_5ffunction_139',['help_lookup_function',['../key_2lib_8c.html#a2fe666fb372f338856db1f1730ede428',1,'lib.c']]],
+  ['help_5flookup_5ffunction_139',['help_lookup_function',['../key_2dump_8c.html#a2fe666fb372f338856db1f1730ede428',1,'dump.c']]],
   ['help_5fmenu_140',['help_menu',['../structMuttWindow.html#aac6b813dcc579c43bb32789834c2a253',1,'MuttWindow::help_menu'],['../structHelpbarWindowData.html#a139fa7a522634f18bfa3e0fd2b25463a',1,'HelpbarWindowData::help_menu']]],
   ['help_5fstr_141',['help_str',['../structHelpbarWindowData.html#a383b346643f35c6b5e95c48f0ad705a6',1,'HelpbarWindowData']]],
   ['helpbar_2ec_142',['helpbar.c',['../helpbar_8c.html',1,'']]],
