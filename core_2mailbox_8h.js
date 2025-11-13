@@ -1,7 +1,6 @@
 var core_2mailbox_8h =
 [
     [ "Mailbox", "structMailbox.html", "structMailbox" ],
-    [ "MailboxNode", "structMailboxNode.html", "structMailboxNode" ],
     [ "EventMailbox", "structEventMailbox.html", "structEventMailbox" ],
     [ "MUTT_ACL_NO_FLAGS", "core_2mailbox_8h.html#a92f7d8c4183cbb790d60d1979e6dc5ea", null ],
     [ "MUTT_ACL_ADMIN", "core_2mailbox_8h.html#afdf7230ac2d28f46a527c939198f23f0", null ],
@@ -46,7 +45,7 @@ var core_2mailbox_8h =
       [ "NT_MAILBOX_UPDATE", "core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4ad0c3ae03b6a1ba8f4a91d5f8c81796ac", null ],
       [ "NT_MAILBOX_UNTAG", "core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a05f2ee1d91419ab8a3b86221ed1e0ca8", null ]
     ] ],
-    [ "STAILQ_HEAD", "core_2mailbox_8h.html#ac613a31f8143d012a050d5cc3e1077bc", null ],
+    [ "ARRAY_HEAD", "core_2mailbox_8h.html#a88305ccec7ea2352238fad314006d4d4", null ],
     [ "mailbox_changed", "core_2mailbox_8h.html#af09ac36728ca3255523cd3b0bfd1f172", null ],
     [ "mailbox_find", "core_2mailbox_8h.html#afa6e5cc34622044961308aa23da3b570", null ],
     [ "mailbox_find_name", "core_2mailbox_8h.html#ac5a2a367b196f81ebd35dc1dba14242e", null ],

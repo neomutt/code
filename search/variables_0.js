@@ -11,7 +11,7 @@ var searchData=
   ['accountdeletestmt_8',['AccountDeleteStmt',['../autocrypt_2db_8c.html#ae5f8db547e9c953b8e1d151bdad402d0',1,'db.c']]],
   ['accountgetstmt_9',['AccountGetStmt',['../autocrypt_2db_8c.html#ad59785b79d676d49d46db0f095faadda',1,'db.c']]],
   ['accountinsertstmt_10',['AccountInsertStmt',['../autocrypt_2db_8c.html#a784b83d4ac3b7a315b720fa93ebf9fbf',1,'db.c']]],
-  ['accounts_11',['accounts',['../structNeoMutt.html#a6d954f6370463364dbd5b78db333fbfd',1,'NeoMutt']]],
+  ['accounts_11',['accounts',['../structNeoMutt.html#a2e28c145ba5138522ae8aad32b107687',1,'NeoMutt']]],
   ['accountupdatestmt_12',['AccountUpdateStmt',['../autocrypt_2db_8c.html#aaa4ccb4012ae52f10375616cf2770114',1,'db.c']]],
   ['actions_13',['actions',['../structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253',1,'MuttWindow']]],
   ['active_14',['active',['../structEmail.html#a620f342070525352c06b9ffabe19a8a6',1,'Email']]],

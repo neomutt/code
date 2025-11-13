@@ -41,6 +41,7 @@ var searchData=
   ['lookups_38',['lookups',['../conn_getdomain.html',1,'DNS lookups'],['../alias_reverse.html',1,'Reverse Alias lookups']]],
   ['low_20level_20socket_20code_39',['Low-level socket code',['../conn_raw.html',1,'lib_conn']]],
   ['low_20level_20socket_20handling_40',['Low-level socket handling',['../conn_socket.html',1,'lib_conn']]],
-  ['lua_20scripting_41',['Integrated Lua scripting',['../neo_mutt_lua.html',1,'index']]],
-  ['lz4_20compression_42',['LZ4 compression',['../compress_lz4.html',1,'lib_compress']]]
+  ['lua_20commands_41',['Lua Commands',['../lua_commands.html',1,'lib_lua']]],
+  ['lua_20scripting_42',['Lua scripting',['../lib_lua.html',1,'Integrated Lua scripting'],['../lua_lua.html',1,'Integrated Lua scripting']]],
+  ['lz4_20compression_43',['LZ4 compression',['../compress_lz4.html',1,'lib_compress']]]
 ];

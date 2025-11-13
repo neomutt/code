@@ -12,7 +12,7 @@ var searchData=
   ['color_2eh_9',['color.h',['../color_8h.html',1,'']]],
   ['command_2ec_10',['command.c',['../core_2command_8c.html',1,'(Global Namespace)'],['../imap_2command_8c.html',1,'(Global Namespace)']]],
   ['command_2eh_11',['command.h',['../command_8h.html',1,'']]],
-  ['commands_2ec_12',['commands.c',['../alias_2commands_8c.html',1,'(Global Namespace)'],['../attach_2commands_8c.html',1,'(Global Namespace)'],['../color_2commands_8c.html',1,'(Global Namespace)'],['../commands_8c.html',1,'(Global Namespace)'],['../key_2commands_8c.html',1,'(Global Namespace)'],['../sidebar_2commands_8c.html',1,'(Global Namespace)']]],
+  ['commands_2ec_12',['commands.c',['../alias_2commands_8c.html',1,'(Global Namespace)'],['../attach_2commands_8c.html',1,'(Global Namespace)'],['../color_2commands_8c.html',1,'(Global Namespace)'],['../commands_8c.html',1,'(Global Namespace)'],['../key_2commands_8c.html',1,'(Global Namespace)'],['../lua_2commands_8c.html',1,'(Global Namespace)'],['../sidebar_2commands_8c.html',1,'(Global Namespace)']]],
   ['commands_2eh_13',['commands.h',['../attach_2commands_8h.html',1,'(Global Namespace)'],['../color_2commands_8h.html',1,'(Global Namespace)'],['../commands_8h.html',1,'(Global Namespace)']]],
   ['common_2ec_14',['common.c',['../common_8c.html',1,'']]],
   ['compapi_2eh_15',['compapi.h',['../compapi_8h.html',1,'']]],

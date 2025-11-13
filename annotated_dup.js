@@ -144,7 +144,6 @@ var annotated_dup =
     [ "Lookup", "structLookup.html", "structLookup" ],
     [ "Lz4ComprData", "structLz4ComprData.html", "structLz4ComprData" ],
     [ "Mailbox", "structMailbox.html", "structMailbox" ],
-    [ "MailboxNode", "structMailboxNode.html", "structMailboxNode" ],
     [ "MailboxView", "structMailboxView.html", "structMailboxView" ],
     [ "MailcapEntry", "structMailcapEntry.html", "structMailcapEntry" ],
     [ "MaildirEmailData", "structMaildirEmailData.html", "structMaildirEmailData" ],

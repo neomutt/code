@@ -9,7 +9,7 @@ var searchData=
   ['schemes_6',['Parse URL schemes',['../email_url.html',1,'lib_email']]],
   ['scores_20to_20emails_7',['Routines for adding user scores to emails',['../neo_score.html',1,'index']]],
   ['screen_8',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
-  ['scripting_9',['Integrated Lua scripting',['../neo_mutt_lua.html',1,'index']]],
+  ['scripting_9',['scripting',['../lib_lua.html',1,'Integrated Lua scripting'],['../lua_lua.html',1,'Integrated Lua scripting']]],
   ['search_10',['Holds state of a search',['../pattern_search_state.html',1,'lib_pattern']]],
   ['search_20routines_11',['Search routines',['../imap_search.html',1,'lib_imap']]],
   ['selectable_20list_12',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]],

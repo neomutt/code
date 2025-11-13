@@ -48,7 +48,7 @@ var searchData=
   ['command_45',['Parse the &apos;set&apos; command',['../parse_set.html',1,'lib_parse']]],
   ['command_20line_46',['Command Line',['../lib_cli.html',1,'Parse the Command Line'],['../cli_parse.html',1,'Parse the Command Line']]],
   ['command_20line_20processing_47',['Command line processing',['../neo_main.html',1,'index']]],
-  ['commands_48',['NeoMutt Commands',['../core_command.html',1,'lib_core']]],
+  ['commands_48',['Commands',['../lua_commands.html',1,'Lua Commands'],['../core_command.html',1,'NeoMutt Commands']]],
   ['commands_49',['commands',['../alias_commands.html',1,'Alias commands'],['../attach_commands.html',1,'Attachment commands'],['../neo_external.html',1,'Manage where the email is piped to external commands'],['../color_commands.html',1,'Parse colour commands'],['../color_parse_color.html',1,'Parse colour commands'],['../key_commands.html',1,'Parse key binding commands'],['../imap_command.html',1,'Send/receive commands'],['../sidebar_commands.html',1,'Sidebar commands']]],
   ['commands_20filters_50',['Pass files through external commands (filters)',['../mutt_filter.html',1,'lib_mutt']]],
   ['commands_20in_20a_20config_20file_51',['Functions to parse commands in a config file',['../neo_commands.html',1,'index']]],

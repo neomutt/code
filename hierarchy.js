@@ -164,7 +164,6 @@ var hierarchy =
       [ "NmMboxData", "structNmMboxData.html", null ],
       [ "NntpMboxData", "structNntpMboxData.html", null ]
     ] ],
-    [ "MailboxNode", "structMailboxNode.html", null ],
     [ "MailboxView", "structMailboxView.html", null ],
     [ "MailcapEntry", "structMailcapEntry.html", null ],
     [ "Mapping", "structMapping.html", null ],

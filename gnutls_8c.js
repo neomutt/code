@@ -23,6 +23,7 @@ var gnutls_8c =
     [ "tls_check_certificate", "gnutls_8c.html#a0b8141f6dc5a59f2080067f026b20860", null ],
     [ "tls_get_client_cert", "gnutls_8c.html#ac78a03ed1e6f606a618f474c0dd798ca", null ],
     [ "tls_set_priority", "gnutls_8c.html#af441e4ca9946761948ca442ec7cbc1a2", null ],
+    [ "tls_socket_poll_with_timeout", "gnutls_8c.html#a31348fe59f2939376ca1758c8f0dc767", null ],
     [ "tls_negotiate", "gnutls_8c.html#ad99b7d713eb4905bafe09ed5e065c748", null ],
     [ "tls_socket_poll", "group__connection__poll.html#ga0cca54964bfbb04db3fb0e2a63200477", null ],
     [ "tls_socket_close", "group__connection__close.html#ga27248e2b6ea60041ed4f73adc4ee2329", null ],

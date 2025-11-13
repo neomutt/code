@@ -412,7 +412,7 @@ var searchData=
   ['insensitive_20fixed_20chunk_20comparisons_409',['Case-insensitive fixed-chunk comparisons',['../mutt_eqi.html',1,'lib_mutt']]],
   ['insert_5fmessage_410',['insert_message',['../thread_8c.html#a459d73c8b753c6704bead8525a7dbc7d',1,'insert_message(struct MuttThread **add, struct MuttThread *parent, struct MuttThread *cur):&#160;thread.c'],['../thread_8h.html#a459d73c8b753c6704bead8525a7dbc7d',1,'insert_message(struct MuttThread **add, struct MuttThread *parent, struct MuttThread *cur):&#160;thread.c']]],
   ['installing_20the_20docs_411',['Installing the Docs',['../index.html#autotoc_md87',1,'']]],
-  ['integrated_20lua_20scripting_412',['Integrated Lua scripting',['../neo_mutt_lua.html',1,'index']]],
+  ['integrated_20lua_20scripting_412',['Integrated Lua scripting',['../lib_lua.html',1,'Integrated Lua scripting'],['../lua_lua.html',1,'Integrated Lua scripting']]],
   ['interactive_5fcheck_5fcert_413',['interactive_check_cert',['../openssl_8c.html#ae0a15dc5df31b626a42f31bd6a5ea7f4',1,'openssl.c']]],
   ['interface_414',['Interface',['../lib_compress.html#autotoc_md37',1,'Interface'],['../lib_store.html#autotoc_md126',1,'Interface']]],
   ['intermediates_415',['intermediates',['../structSmimeCommandContext.html#a2bfac5bbad182bcb933d0dffcb1f9d43',1,'SmimeCommandContext']]],

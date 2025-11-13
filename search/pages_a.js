@@ -27,7 +27,7 @@ var searchData=
   ['info_20extraction_24',['Content Info Extraction',['../convert_content_info.html',1,'lib_convert']]],
   ['information_20for_20neomutt_25',['Display Usage Information for NeoMutt',['../neo_usage.html',1,'index']]],
   ['insensitive_20fixed_20chunk_20comparisons_26',['Case-insensitive fixed-chunk comparisons',['../mutt_eqi.html',1,'lib_mutt']]],
-  ['integrated_20lua_20scripting_27',['Integrated Lua scripting',['../neo_mutt_lua.html',1,'index']]],
+  ['integrated_20lua_20scripting_27',['Integrated Lua scripting',['../lib_lua.html',1,'Integrated Lua scripting'],['../lua_lua.html',1,'Integrated Lua scripting']]],
   ['international_20domain_20names_28',['International domain names',['../addr_idna.html',1,'lib_address']]],
   ['is_20piped_20to_20external_20commands_29',['Manage where the email is piped to external commands',['../neo_external.html',1,'index']]],
   ['is_20the_20email_20from_30',['Who is the email from?',['../email_from.html',1,'lib_email']]],

@@ -9,7 +9,7 @@ var external_8c =
     [ "mutt_print_message", "external_8c.html#a030d89d55ad4799fd1615a86c52dba77", null ],
     [ "mutt_select_sort", "external_8c.html#a034de4f4b1a1e0bc0441a866a6d09d58", null ],
     [ "mutt_shell_escape", "external_8c.html#a83a20586633321eab21727982a90e1ea", null ],
-    [ "mutt_enter_command", "external_8c.html#a59ddef95d9da473164d2e93ced35abfb", null ],
+    [ "mutt_enter_command", "external_8c.html#ab51ef03945c18d5c7c620d9194eb061a", null ],
     [ "mutt_display_address", "external_8c.html#af74f4a746f477efa94a5e576e285bb71", null ],
     [ "set_copy_flags", "external_8c.html#a90bbd4fb181a8a8a31bc21940777fe1b", null ],
     [ "mutt_save_message_mbox", "external_8c.html#a4c419f7909ff49b07b99ccee463e6269", null ],

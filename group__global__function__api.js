@@ -1,10 +1,10 @@
 var group__global__function__api =
 [
-    [ "op_check_stats", "group__global__function__api.html#ga77f1325ac6ecbc9db7e536225d3767dd", null ],
-    [ "op_enter_command", "group__global__function__api.html#ga7e2f0f3058b71229cf04164e9fae7653", null ],
-    [ "op_redraw", "group__global__function__api.html#ga0b001d5b33309c608543d886a4121b48", null ],
-    [ "op_shell_escape", "group__global__function__api.html#gaabd0f1251f8ba64c35753bc42a935c08", null ],
-    [ "op_show_log_messages", "group__global__function__api.html#gac55d6f3fbb437964d1ac72c8ce171dd8", null ],
-    [ "op_version", "group__global__function__api.html#gae151603ed1f11dcef63e72e1e95d83bb", null ],
-    [ "op_what_key", "group__global__function__api.html#gacf796c233788cb896ea56fda64a8ad1a", null ]
+    [ "op_check_stats", "group__global__function__api.html#ga91e30768b30973baaf6b338b2069021f", null ],
+    [ "op_enter_command", "group__global__function__api.html#gac88d89b33c79d0619d30b80c0e971ba4", null ],
+    [ "op_redraw", "group__global__function__api.html#ga99741018fe010b8069e2146589d54f97", null ],
+    [ "op_shell_escape", "group__global__function__api.html#ga9e67096fdf311f010f72334c1ddf1462", null ],
+    [ "op_show_log_messages", "group__global__function__api.html#gacb1756bf775940065ab43f213ee48897", null ],
+    [ "op_version", "group__global__function__api.html#ga58af582013616f84a828969b8025fe1f", null ],
+    [ "op_what_key", "group__global__function__api.html#gae024e0fae84f3145a306c83b0db8188f", null ]
 ];

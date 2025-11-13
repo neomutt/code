@@ -5,8 +5,8 @@ var index =
       [ "Miscellaneous files", "index.html#autotoc_md85", null ],
       [ "Building these Docs", "index.html#autotoc_md86", null ],
       [ "Installing the Docs", "index.html#autotoc_md87", [
-        [ "Data", "neo_alternates.html#autotoc_md658", null ],
-        [ "Functions", "neo_alternates.html#autotoc_md659", null ]
+        [ "Data", "neo_alternates.html#autotoc_md662", null ],
+        [ "Functions", "neo_alternates.html#autotoc_md663", null ]
       ] ]
     ] ],
     [ "Functions to parse commands in a config file", "neo_commands.html", null ],
@@ -28,7 +28,6 @@ var index =
     [ "Definitions of config variables", "neo_mutt_config.html", null ],
     [ "Manipulate an email's header", "neo_mutt_header.html", null ],
     [ "NeoMutt Logging", "neo_mutt_logging.html", null ],
-    [ "Integrated Lua scripting", "neo_mutt_lua.html", null ],
     [ "Mailbox helper functions", "neo_mutt_mailbox.html", null ],
     [ "Signal handling", "neo_mutt_signal.html", null ],
     [ "NeoMutt connections", "neo_mutt_socket.html", null ],

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-55-g97fc89</span>
+   &#160;<span id="projectnumber">2025-09-05-70-gcfdde0</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -200,46 +200,60 @@ Variables</h2></td></tr>
 
 <p>Write data to a TLS socket - Implements <a class="el" href="structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db">Connection::write()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l01076">1076</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1077</span>{</div>
-<div class="line"><span class="lineno"> 1078</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
-<div class="line"><span class="lineno"> 1079</span>  <span class="keywordtype">size_t</span> sent = 0;</div>
-<div class="line"><span class="lineno"> 1080</span> </div>
-<div class="line"><span class="lineno"> 1081</span>  <span class="keywordflow">if</span> (!data)</div>
-<div class="line"><span class="lineno"> 1082</span>  {</div>
-<div class="line"><span class="lineno"> 1083</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: no TLS socket open&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1084</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1085</span>  }</div>
-<div class="line"><span class="lineno"> 1086</span> </div>
-<div class="line"><span class="lineno"> 1087</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno"> 1088</span>  {</div>
-<div class="line"><span class="lineno"> 1089</span>    <span class="keywordtype">int</span> rc;</div>
-<div class="line"><span class="lineno"> 1090</span>    <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno"> 1091</span>    {</div>
-<div class="line"><span class="lineno"> 1092</span>      rc = gnutls_record_send(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, buf + sent, count - sent);</div>
-<div class="line"><span class="lineno"> 1093</span>    } <span class="keywordflow">while</span> ((rc == GNUTLS_E_AGAIN) || (rc == GNUTLS_E_INTERRUPTED));</div>
-<div class="line"><span class="lineno"> 1094</span> </div>
-<div class="line"><span class="lineno"> 1095</span>    <span class="keywordflow">if</span> (rc &lt; 0)</div>
-<div class="line"><span class="lineno"> 1096</span>    {</div>
-<div class="line"><span class="lineno"> 1097</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;tls_socket_write (%s)&quot;</span>, gnutls_strerror(rc));</div>
-<div class="line"><span class="lineno"> 1098</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1099</span>    }</div>
-<div class="line"><span class="lineno"> 1100</span> </div>
-<div class="line"><span class="lineno"> 1101</span>    sent += rc;</div>
-<div class="line"><span class="lineno"> 1102</span>  } <span class="keywordflow">while</span> (sent &lt; count);</div>
-<div class="line"><span class="lineno"> 1103</span> </div>
-<div class="line"><span class="lineno"> 1104</span>  <span class="keywordflow">return</span> sent;</div>
-<div class="line"><span class="lineno"> 1105</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l01110">1110</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1111</span>{</div>
+<div class="line"><span class="lineno"> 1112</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
+<div class="line"><span class="lineno"> 1113</span>  <span class="keywordtype">size_t</span> sent = 0;</div>
+<div class="line"><span class="lineno"> 1114</span> </div>
+<div class="line"><span class="lineno"> 1115</span>  <span class="keywordflow">if</span> (!data)</div>
+<div class="line"><span class="lineno"> 1116</span>  {</div>
+<div class="line"><span class="lineno"> 1117</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: no TLS socket open&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1118</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1119</span>  }</div>
+<div class="line"><span class="lineno"> 1120</span> </div>
+<div class="line"><span class="lineno"> 1121</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno"> 1122</span>  {</div>
+<div class="line"><span class="lineno"> 1123</span>    <span class="keywordtype">int</span> rc;</div>
+<div class="line"><span class="lineno"> 1124</span>    <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno"> 1125</span>    {</div>
+<div class="line"><span class="lineno"> 1126</span>      rc = gnutls_record_send(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, buf + sent, count - sent);</div>
+<div class="line"><span class="lineno"> 1127</span>      <span class="keywordflow">if</span> (rc == GNUTLS_E_AGAIN)</div>
+<div class="line"><span class="lineno"> 1128</span>      {</div>
+<div class="line"><span class="lineno"> 1129</span>        <span class="comment">// Socket would block, wait for data to become available</span></div>
+<div class="line"><span class="lineno"> 1130</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="gnutls_8c.html#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a>(conn))</div>
+<div class="line"><span class="lineno"> 1131</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1132</span>      }</div>
+<div class="line"><span class="lineno"> 1133</span>    } <span class="keywordflow">while</span> ((rc == GNUTLS_E_AGAIN) || (rc == GNUTLS_E_INTERRUPTED));</div>
+<div class="line"><span class="lineno"> 1134</span> </div>
+<div class="line"><span class="lineno"> 1135</span>    <span class="keywordflow">if</span> (rc &lt; 0)</div>
+<div class="line"><span class="lineno"> 1136</span>    {</div>
+<div class="line"><span class="lineno"> 1137</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;tls_socket_write (%s)&quot;</span>, gnutls_strerror(rc));</div>
+<div class="line"><span class="lineno"> 1138</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1139</span>    }</div>
+<div class="line"><span class="lineno"> 1140</span> </div>
+<div class="line"><span class="lineno"> 1141</span>    sent += rc;</div>
+<div class="line"><span class="lineno"> 1142</span>  } <span class="keywordflow">while</span> (sent &lt; count);</div>
+<div class="line"><span class="lineno"> 1143</span> </div>
+<div class="line"><span class="lineno"> 1144</span>  <span class="keywordflow">return</span> sent;</div>
+<div class="line"><span class="lineno"> 1145</span>}</div>
+<div class="ttc" id="agnutls_8c_html_a31348fe59f2939376ca1758c8f0dc767"><div class="ttname"><a href="gnutls_8c.html#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a></div><div class="ttdeci">static bool tls_socket_poll_with_timeout(struct Connection *conn)</div><div class="ttdoc">Poll a socket with configured timeout.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00873">gnutls.c:873</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 <div class="ttc" id="astructConnection_html_a2baa91d494f612c8bf43302bb96543f0"><div class="ttname"><a href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">Connection::sockdata</a></div><div class="ttdeci">void * sockdata</div><div class="ttdoc">Backend-specific socket data.</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00055">connection.h:55</a></div></div>
 <div class="ttc" id="astructTlsSockData_html"><div class="ttname"><a href="structTlsSockData.html">TlsSockData</a></div><div class="ttdoc">TLS socket data -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00081">gnutls.c:82</a></div></div>
 <div class="ttc" id="astructTlsSockData_html_a8a3982cda2beaf0dc42f9e34168b1ec5"><div class="ttname"><a href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">TlsSockData::session</a></div><div class="ttdeci">gnutls_session_t session</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00083">gnutls.c:83</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_gaea266b86c800530b1aa9b91e359e75f5_cgraph.svg" width="320" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_gaea266b86c800530b1aa9b91e359e75f5_icgraph.svg" width="338" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -309,18 +323,18 @@ Variables</h2></td></tr>
 <div class="ttc" id="aopenssl_8c_html_aaf61ace510a4bea2797d93f0226dc631"><div class="ttname"><a href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a></div><div class="ttdeci">static struct SslSockData * sockdata(struct Connection *conn)</div><div class="ttdoc">Get a Connection&#39;s socket data.</div><div class="ttdef"><b>Definition</b> <a href="openssl_8c_source.html#l01196">openssl.c:1196</a></div></div>
 <div class="ttc" id="aopenssl_8c_html_ad0eb5f86037e1612ca14cd3a0a87a0dc"><div class="ttname"><a href="openssl_8c.html#ad0eb5f86037e1612ca14cd3a0a87a0dc">ssl_err</a></div><div class="ttdeci">static void ssl_err(struct SslSockData *data, int err)</div><div class="ttdoc">Display an SSL error message.</div><div class="ttdef"><b>Definition</b> <a href="openssl_8c_source.html#l00239">openssl.c:239</a></div></div>
 <div class="ttc" id="asignal_8c_html_a85c069643781da758ffa8281db66e8f0"><div class="ttname"><a href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a></div><div class="ttdeci">volatile sig_atomic_t SigInt</div><div class="ttdoc">true after SIGINT is received</div><div class="ttdef"><b>Definition</b> <a href="signal_8c_source.html#l00068">signal.c:68</a></div></div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_ga40b2b0f0a706d96487919a4b0489026a_cgraph.svg" width="255" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_ga40b2b0f0a706d96487919a4b0489026a_cgraph.svg" width="255" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_ga40b2b0f0a706d96487919a4b0489026a_icgraph.svg" width="339" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -382,18 +396,18 @@ Variables</h2></td></tr>
 <div class="ttc" id="astructConnAccount_html_aa440323ef3111e1faaf33f6a57103a3a"><div class="ttname"><a href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">ConnAccount::host</a></div><div class="ttdeci">char host[128]</div><div class="ttdoc">Server to login to.</div><div class="ttdef"><b>Definition</b> <a href="connaccount_8h_source.html#l00054">connaccount.h:54</a></div></div>
 <div class="ttc" id="astructConnection_html_ac3c39549b6611c8eaed2a25573b5c432"><div class="ttname"><a href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">Connection::account</a></div><div class="ttdeci">struct ConnAccount account</div><div class="ttdoc">Account details: username, password, etc.</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00049">connection.h:49</a></div></div>
 <div class="ttc" id="astructConnection_html_af805fad417c8fa7c5079ef741d8233e2"><div class="ttname"><a href="structConnection.html#af805fad417c8fa7c5079ef741d8233e2">Connection::fd</a></div><div class="ttdeci">int fd</div><div class="ttdoc">Socket file descriptor.</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00053">connection.h:53</a></div></div>
-</div><!-- fragment --><div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_ga79bb2278f55b18858b3580d8bdf53142_cgraph.svg" width="360" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_ga79bb2278f55b18858b3580d8bdf53142_cgraph.svg" width="360" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_ga79bb2278f55b18858b3580d8bdf53142_icgraph.svg" width="335" height="166"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -488,11 +502,11 @@ Variables</h2></td></tr>
 <div class="ttc" id="astructSaslSockData_html_ac20f9a3a2f654fed571dc0a0f1c3b783"><div class="ttname"><a href="structSaslSockData.html#ac20f9a3a2f654fed571dc0a0f1c3b783">SaslSockData::pbufsize</a></div><div class="ttdeci">const unsigned int * pbufsize</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00067">sasl.c:67</a></div></div>
 <div class="ttc" id="astructSaslSockData_html_ac2f2602d9d3c970401b9df9f3d035672"><div class="ttname"><a href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">SaslSockData::buf</a></div><div class="ttdeci">const char * buf</div><div class="ttdoc">Buffer for data read from the connection.</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00070">sasl.c:70</a></div></div>
 <div class="ttc" id="astructSaslSockData_html_ad702b7b3435e05ceac455f632dfd1864"><div class="ttname"><a href="structSaslSockData.html#ad702b7b3435e05ceac455f632dfd1864">SaslSockData::saslconn</a></div><div class="ttdeci">sasl_conn_t * saslconn</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00065">sasl.c:65</a></div></div>
-</div><!-- fragment --><div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_ga869ea2c66fec11ded4cc7588ede6156d_icgraph.svg" width="368" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -558,11 +572,11 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  191</span>}</div>
 <div class="ttc" id="astructTunnelSockData_html"><div class="ttname"><a href="structTunnelSockData.html">TunnelSockData</a></div><div class="ttdoc">A network tunnel (pair of sockets)</div><div class="ttdef"><b>Definition</b> <a href="tunnel_8c_source.html#l00048">tunnel.c:49</a></div></div>
 <div class="ttc" id="astructTunnelSockData_html_a4e02ed7f3f09ed0df42e3528c89b19ed"><div class="ttname"><a href="structTunnelSockData.html#a4e02ed7f3f09ed0df42e3528c89b19ed">TunnelSockData::fd_write</a></div><div class="ttdeci">int fd_write</div><div class="ttdoc">File descriptor to write to.</div><div class="ttdef"><b>Definition</b> <a href="tunnel_8c_source.html#l00052">tunnel.c:52</a></div></div>
-</div><!-- fragment --><div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_gaaff67eea1d4a26984d92dbb1e0265016_icgraph.svg" width="348" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -658,11 +672,11 @@ Variables</h2></td></tr>
 <div class="ttc" id="astructZstrmContext_html_a83f56498421caa65ebe34386cc21b58b"><div class="ttname"><a href="structZstrmContext.html#a83f56498421caa65ebe34386cc21b58b">ZstrmContext::write</a></div><div class="ttdeci">struct ZstrmDirection write</div><div class="ttdoc">Data being compressed and written.</div><div class="ttdef"><b>Definition</b> <a href="zstrm_8c_source.html#l00060">zstrm.c:60</a></div></div>
 <div class="ttc" id="astructZstrmDirection_html_a6e1305ced59f86eaef8305876cf91942"><div class="ttname"><a href="structZstrmDirection.html#a6e1305ced59f86eaef8305876cf91942">ZstrmDirection::len</a></div><div class="ttdeci">unsigned int len</div><div class="ttdoc">Length of data.</div><div class="ttdef"><b>Definition</b> <a href="zstrm_8c_source.html#l00048">zstrm.c:48</a></div></div>
 <div class="ttc" id="astructZstrmDirection_html_a771415b53524bad27006db570ecb1850"><div class="ttname"><a href="structZstrmDirection.html#a771415b53524bad27006db570ecb1850">ZstrmDirection::z</a></div><div class="ttdeci">z_stream z</div><div class="ttdoc">zlib compression handle</div><div class="ttdef"><b>Definition</b> <a href="zstrm_8c_source.html#l00046">zstrm.c:46</a></div></div>
-</div><!-- fragment --><div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="group__connection__write_gaeaee0ad1c8ca07fa3c66198a219d5241_icgraph.svg" width="318" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
