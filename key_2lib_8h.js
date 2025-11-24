@@ -10,9 +10,11 @@ var key_2lib_8h =
     [ "MUTT_UNMACRO", "key_2lib_8h.html#a9a836da3d0bc3e615e9b2f3b130f9a4f", null ],
     [ "GETCH_NO_FLAGS", "key_2lib_8h.html#a95278987011dd0b2efeeced0765deeb2", null ],
     [ "GETCH_IGNORE_MACRO", "key_2lib_8h.html#a271cd6518e23dd7f0f789d2bf8145b2d", null ],
-    [ "OP_DEPRECATED", "key_2lib_8h.html#a776a88c17585a96a9d0fdd48b090d2c2", null ],
+    [ "MFF_NO_FLAGS", "key_2lib_8h.html#a8967d1ccd3ec02d0f02bec956c84bb28", null ],
+    [ "MFF_DEPRECATED", "key_2lib_8h.html#ab5e053f5c8df9f76b0d573d00f0d8dad", null ],
     [ "GetChFlags", "key_2lib_8h.html#a062691fba109226647ad88c481c32408", null ],
     [ "keycode_t", "key_2lib_8h.html#aa19669081ba051c79ced78b2b7ea889c", null ],
+    [ "MenuFuncFlags", "key_2lib_8h.html#ab9c8d65ea49f2975c54848784d3f200b", null ],
     [ "NotifyBinding", "key_2lib_8h.html#a16cc241d9d21e873d82c7a7576547fa8", [
       [ "NT_BINDING_ADD", "key_2lib_8h.html#a16cc241d9d21e873d82c7a7576547fa8a57e49018dcf6ad0768008cd4574b1459", null ],
       [ "NT_BINDING_DELETE", "key_2lib_8h.html#a16cc241d9d21e873d82c7a7576547fa8a379b524231af6bf9c9acfa1eeb756838", null ],

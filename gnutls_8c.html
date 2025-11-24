@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-70-gcfdde0</span>
+   &#160;<span id="projectnumber">2025-09-05-75-gbc00eb</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -1381,57 +1381,63 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  567</span>    <a class="code hl_define" href="array_8h.html#a4f570f2382025383e4b2cc46ede6ebd0">ARRAY_ADD</a>(&amp;carr, <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Warning: Server certificate was signed using an insecure algorithm&quot;</span>)));</div>
 <div class="line"><span class="lineno">  568</span>  }</div>
 <div class="line"><span class="lineno">  569</span> </div>
-<div class="line"><span class="lineno">  570</span>  snprintf(title, <span class="keyword">sizeof</span>(title),</div>
-<div class="line"><span class="lineno">  571</span>           <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;SSL Certificate check (certificate %zu of %zu in chain)&quot;</span>), len - idx, len);</div>
-<div class="line"><span class="lineno">  572</span> </div>
-<div class="line"><span class="lineno">  573</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_certificate_file = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;certificate_file&quot;</span>);</div>
-<div class="line"><span class="lineno">  574</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> allow_always = (c_certificate_file &amp;&amp; !savedcert &amp;&amp;</div>
-<div class="line"><span class="lineno">  575</span>                             !(certerr &amp; (<a class="code hl_define" href="#a1f187faa751922f8a53b590a0da68aab">CERTERR_EXPIRED</a> | <a class="code hl_define" href="#a487cc0c6862b8c338cd56b607cd7ef31">CERTERR_NOTYETVALID</a> | <a class="code hl_define" href="#afef4647280222e46868e9477e70ba64e">CERTERR_REVOKED</a>)));</div>
-<div class="line"><span class="lineno">  576</span>  <span class="keywordtype">int</span> rc = <a class="code hl_function" href="group__gui__dlg.html#ga2a3679347f519661d55ad954c6b8f8b3">dlg_certificate</a>(title, &amp;carr, allow_always, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  577</span>  <span class="keywordflow">if</span> (rc == 3) <span class="comment">// Accept always</span></div>
-<div class="line"><span class="lineno">  578</span>  {</div>
-<div class="line"><span class="lineno">  579</span>    <span class="keywordtype">bool</span> saved = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  580</span>    FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(c_certificate_file, <span class="stringliteral">&quot;a&quot;</span>);</div>
-<div class="line"><span class="lineno">  581</span>    <span class="keywordflow">if</span> (fp)</div>
-<div class="line"><span class="lineno">  582</span>    {</div>
-<div class="line"><span class="lineno">  583</span>      <span class="keywordflow">if</span> (certerr &amp; <a class="code hl_define" href="#a1e134f48238958d3607e75e138c5a1b1">CERTERR_HOSTNAME</a>) <span class="comment">// Save hostname if necessary</span></div>
-<div class="line"><span class="lineno">  584</span>      {</div>
-<div class="line"><span class="lineno">  585</span>        <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(fpbuf);</div>
-<div class="line"><span class="lineno">  586</span>        <a class="code hl_function" href="#a7d8f351e701bfe0e99522b510d6c482e">tls_fingerprint</a>(GNUTLS_DIG_MD5, fpbuf, certdata);</div>
-<div class="line"><span class="lineno">  587</span>        fprintf(fp, <span class="stringliteral">&quot;#H %s %s\n&quot;</span>, hostname, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(fpbuf));</div>
-<div class="line"><span class="lineno">  588</span>        saved = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  589</span>      }</div>
-<div class="line"><span class="lineno">  590</span>      <span class="keywordflow">if</span> (certerr ^ <a class="code hl_define" href="#a1e134f48238958d3607e75e138c5a1b1">CERTERR_HOSTNAME</a>) <span class="comment">// Save the cert for all other errors</span></div>
-<div class="line"><span class="lineno">  591</span>      {</div>
-<div class="line"><span class="lineno">  592</span>        <span class="keywordtype">int</span> rc2 = gnutls_pem_base64_encode_alloc(<span class="stringliteral">&quot;CERTIFICATE&quot;</span>, certdata, &amp;pemdata);</div>
-<div class="line"><span class="lineno">  593</span>        <span class="keywordflow">if</span> (rc2 == 0)</div>
-<div class="line"><span class="lineno">  594</span>        {</div>
-<div class="line"><span class="lineno">  595</span>          <span class="keywordflow">if</span> (fwrite(pemdata.data, pemdata.size, 1, fp) == 1)</div>
-<div class="line"><span class="lineno">  596</span>          {</div>
-<div class="line"><span class="lineno">  597</span>            saved = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  598</span>          }</div>
-<div class="line"><span class="lineno">  599</span>          gnutls_free(pemdata.data);</div>
-<div class="line"><span class="lineno">  600</span>        }</div>
-<div class="line"><span class="lineno">  601</span>      }</div>
-<div class="line"><span class="lineno">  602</span>      <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
-<div class="line"><span class="lineno">  603</span>    }</div>
-<div class="line"><span class="lineno">  604</span>    <span class="keywordflow">if</span> (saved)</div>
-<div class="line"><span class="lineno">  605</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Certificate saved&quot;</span>));</div>
-<div class="line"><span class="lineno">  606</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  607</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Warning: Couldn&#39;t save certificate&quot;</span>));</div>
-<div class="line"><span class="lineno">  608</span>  }</div>
-<div class="line"><span class="lineno">  609</span> </div>
-<div class="line"><span class="lineno">  610</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;fpbuf);</div>
-<div class="line"><span class="lineno">  611</span>  <a class="code hl_function" href="mutt_2string_8c.html#ac6115e7fb3ab6a3b86d9f4f745890fb0">string_array_clear</a>(&amp;carr);</div>
-<div class="line"><span class="lineno">  612</span>  gnutls_x509_crt_deinit(cert);</div>
-<div class="line"><span class="lineno">  613</span>  <span class="keywordflow">return</span> (rc &gt; 1);</div>
-<div class="line"><span class="lineno">  614</span>}</div>
+<div class="line"><span class="lineno">  570</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> **line_ptr = <a class="code hl_define" href="array_8h.html#a73f1ec257016f9107cd041f550ede034">ARRAY_LAST</a>(&amp;carr);</div>
+<div class="line"><span class="lineno">  571</span>  <span class="keywordflow">if</span> (line_ptr &amp;&amp; !*line_ptr)</div>
+<div class="line"><span class="lineno">  572</span>    <a class="code hl_define" href="array_8h.html#a0202de48c654b38540292933b094716a">ARRAY_SHRINK</a>(&amp;carr, 1);</div>
+<div class="line"><span class="lineno">  573</span> </div>
+<div class="line"><span class="lineno">  574</span>  snprintf(title, <span class="keyword">sizeof</span>(title),</div>
+<div class="line"><span class="lineno">  575</span>           <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;SSL Certificate check (certificate %zu of %zu in chain)&quot;</span>), len - idx, len);</div>
+<div class="line"><span class="lineno">  576</span> </div>
+<div class="line"><span class="lineno">  577</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_certificate_file = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;certificate_file&quot;</span>);</div>
+<div class="line"><span class="lineno">  578</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> allow_always = (c_certificate_file &amp;&amp; !savedcert &amp;&amp;</div>
+<div class="line"><span class="lineno">  579</span>                             !(certerr &amp; (<a class="code hl_define" href="#a1f187faa751922f8a53b590a0da68aab">CERTERR_EXPIRED</a> | <a class="code hl_define" href="#a487cc0c6862b8c338cd56b607cd7ef31">CERTERR_NOTYETVALID</a> | <a class="code hl_define" href="#afef4647280222e46868e9477e70ba64e">CERTERR_REVOKED</a>)));</div>
+<div class="line"><span class="lineno">  580</span>  <span class="keywordtype">int</span> rc = <a class="code hl_function" href="group__gui__dlg.html#ga2a3679347f519661d55ad954c6b8f8b3">dlg_certificate</a>(title, &amp;carr, allow_always, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  581</span>  <span class="keywordflow">if</span> (rc == 3) <span class="comment">// Accept always</span></div>
+<div class="line"><span class="lineno">  582</span>  {</div>
+<div class="line"><span class="lineno">  583</span>    <span class="keywordtype">bool</span> saved = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  584</span>    FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(c_certificate_file, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><span class="lineno">  585</span>    <span class="keywordflow">if</span> (fp)</div>
+<div class="line"><span class="lineno">  586</span>    {</div>
+<div class="line"><span class="lineno">  587</span>      <span class="keywordflow">if</span> (certerr &amp; <a class="code hl_define" href="#a1e134f48238958d3607e75e138c5a1b1">CERTERR_HOSTNAME</a>) <span class="comment">// Save hostname if necessary</span></div>
+<div class="line"><span class="lineno">  588</span>      {</div>
+<div class="line"><span class="lineno">  589</span>        <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(fpbuf);</div>
+<div class="line"><span class="lineno">  590</span>        <a class="code hl_function" href="#a7d8f351e701bfe0e99522b510d6c482e">tls_fingerprint</a>(GNUTLS_DIG_MD5, fpbuf, certdata);</div>
+<div class="line"><span class="lineno">  591</span>        fprintf(fp, <span class="stringliteral">&quot;#H %s %s\n&quot;</span>, hostname, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(fpbuf));</div>
+<div class="line"><span class="lineno">  592</span>        saved = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  593</span>      }</div>
+<div class="line"><span class="lineno">  594</span>      <span class="keywordflow">if</span> (certerr ^ <a class="code hl_define" href="#a1e134f48238958d3607e75e138c5a1b1">CERTERR_HOSTNAME</a>) <span class="comment">// Save the cert for all other errors</span></div>
+<div class="line"><span class="lineno">  595</span>      {</div>
+<div class="line"><span class="lineno">  596</span>        <span class="keywordtype">int</span> rc2 = gnutls_pem_base64_encode_alloc(<span class="stringliteral">&quot;CERTIFICATE&quot;</span>, certdata, &amp;pemdata);</div>
+<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">if</span> (rc2 == 0)</div>
+<div class="line"><span class="lineno">  598</span>        {</div>
+<div class="line"><span class="lineno">  599</span>          <span class="keywordflow">if</span> (fwrite(pemdata.data, pemdata.size, 1, fp) == 1)</div>
+<div class="line"><span class="lineno">  600</span>          {</div>
+<div class="line"><span class="lineno">  601</span>            saved = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  602</span>          }</div>
+<div class="line"><span class="lineno">  603</span>          gnutls_free(pemdata.data);</div>
+<div class="line"><span class="lineno">  604</span>        }</div>
+<div class="line"><span class="lineno">  605</span>      }</div>
+<div class="line"><span class="lineno">  606</span>      <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
+<div class="line"><span class="lineno">  607</span>    }</div>
+<div class="line"><span class="lineno">  608</span>    <span class="keywordflow">if</span> (saved)</div>
+<div class="line"><span class="lineno">  609</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Certificate saved&quot;</span>));</div>
+<div class="line"><span class="lineno">  610</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  611</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Warning: Couldn&#39;t save certificate&quot;</span>));</div>
+<div class="line"><span class="lineno">  612</span>  }</div>
+<div class="line"><span class="lineno">  613</span> </div>
+<div class="line"><span class="lineno">  614</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;fpbuf);</div>
+<div class="line"><span class="lineno">  615</span>  <a class="code hl_function" href="mutt_2string_8c.html#ac6115e7fb3ab6a3b86d9f4f745890fb0">string_array_clear</a>(&amp;carr);</div>
+<div class="line"><span class="lineno">  616</span>  gnutls_x509_crt_deinit(cert);</div>
+<div class="line"><span class="lineno">  617</span>  <span class="keywordflow">return</span> (rc &gt; 1);</div>
+<div class="line"><span class="lineno">  618</span>}</div>
+<div class="ttc" id="aarray_8h_html_a0202de48c654b38540292933b094716a"><div class="ttname"><a href="array_8h.html#a0202de48c654b38540292933b094716a">ARRAY_SHRINK</a></div><div class="ttdeci">#define ARRAY_SHRINK(head, num)</div><div class="ttdoc">Mark a number of slots at the end of the array as unused.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00172">array.h:172</a></div></div>
+<div class="ttc" id="aarray_8h_html_a73f1ec257016f9107cd041f550ede034"><div class="ttname"><a href="array_8h.html#a73f1ec257016f9107cd041f550ede034">ARRAY_LAST</a></div><div class="ttdeci">#define ARRAY_LAST(head)</div><div class="ttdoc">Convenience method to get the last element.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00144">array.h:144</a></div></div>
 <div class="ttc" id="aarray_8h_html_af50a4967d27a0531a1b10a23fc22fe05"><div class="ttname"><a href="array_8h.html#af50a4967d27a0531a1b10a23fc22fe05">ARRAY_HEAD_INITIALIZER</a></div><div class="ttdeci">#define ARRAY_HEAD_INITIALIZER</div><div class="ttdoc">Static initializer for arrays.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00058">array.h:58</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00076">buffer.c:76</a></div></div>
 <div class="ttc" id="aglobals_8c_html_a9b3a197dcd72484bca9ba6f0ce451e1f"><div class="ttname"><a href="globals_8c.html#a9b3a197dcd72484bca9ba6f0ce451e1f">OptGui</a></div><div class="ttdeci">bool OptGui</div><div class="ttdoc">(pseudo) when the gui (and curses) are started</div><div class="ttdef"><b>Definition</b> <a href="globals_8c_source.html#l00059">globals.c:59</a></div></div>
 <div class="ttc" id="agnutls_8c_html_a05268b51fa6e96dd8ac0e40630b2b316"><div class="ttname"><a href="#a05268b51fa6e96dd8ac0e40630b2b316">tls_check_preauth</a></div><div class="ttdeci">static int tls_check_preauth(const gnutls_datum_t *certdata, gnutls_certificate_status_t certstat, const char *hostname, int chainidx, int *certerr, int *savedcert)</div><div class="ttdoc">Prepare a certificate for authentication.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00315">gnutls.c:315</a></div></div>
 <div class="ttc" id="agnutls_8c_html_a48a166ba56f9fe1b210c560cadceb7ab"><div class="ttname"><a href="#a48a166ba56f9fe1b210c560cadceb7ab">add_cert</a></div><div class="ttdeci">static void add_cert(const char *title, gnutls_x509_crt_t cert, bool issuer, struct StringArray *carr)</div><div class="ttdoc">Look up certificate info and save it to a list.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00427">gnutls.c:427</a></div></div>
-<div class="ttc" id="agroup__gui__dlg_html_ga2a3679347f519661d55ad954c6b8f8b3"><div class="ttname"><a href="group__gui__dlg.html#ga2a3679347f519661d55ad954c6b8f8b3">dlg_certificate</a></div><div class="ttdeci">int dlg_certificate(const char *title, struct StringArray *carr, bool allow_always, bool allow_skip)</div><div class="ttdoc">Ask the user to validate the certificate -.</div><div class="ttdef"><b>Definition</b> <a href="dlg__verifycert_8c_source.html#l00168">dlg_verifycert.c:168</a></div></div>
+<div class="ttc" id="agroup__gui__dlg_html_ga2a3679347f519661d55ad954c6b8f8b3"><div class="ttname"><a href="group__gui__dlg.html#ga2a3679347f519661d55ad954c6b8f8b3">dlg_certificate</a></div><div class="ttdeci">int dlg_certificate(const char *title, struct StringArray *carr, bool allow_always, bool allow_skip)</div><div class="ttdoc">Ask the user to validate the certificate -.</div><div class="ttdef"><b>Definition</b> <a href="dlg__verifycert_8c_source.html#l00166">dlg_verifycert.c:166</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00092">logging2.h:92</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00090">logging2.h:90</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00044">logging2.h:44</a></div></div>
@@ -1494,82 +1500,82 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00622">622</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  623</span>{</div>
-<div class="line"><span class="lineno">  624</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
-<div class="line"><span class="lineno">  625</span>  gnutls_session_t <a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a> = data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>;</div>
-<div class="line"><span class="lineno">  626</span>  <span class="keyword">const</span> gnutls_datum_t *cert_list = NULL;</div>
-<div class="line"><span class="lineno">  627</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cert_list_size = 0;</div>
-<div class="line"><span class="lineno">  628</span>  gnutls_certificate_status_t certstat;</div>
-<div class="line"><span class="lineno">  629</span>  <span class="keywordtype">int</span> certerr, savedcert, rc = 0;</div>
-<div class="line"><span class="lineno">  630</span>  <span class="keywordtype">int</span> max_preauth_pass = -1;</div>
-<div class="line"><span class="lineno">  631</span> </div>
-<div class="line"><span class="lineno">  632</span>  <span class="comment">/* tls_verify_peers() calls gnutls_certificate_verify_peers2(),</span></div>
-<div class="line"><span class="lineno">  633</span><span class="comment">   * which verifies the auth_type is GNUTLS_CRD_CERTIFICATE</span></div>
-<div class="line"><span class="lineno">  634</span><span class="comment">   * and that get_certificate_type() for the server is GNUTLS_CRT_X509.</span></div>
-<div class="line"><span class="lineno">  635</span><span class="comment">   * If it returns 0, certstat will be set with failure codes for the first</span></div>
-<div class="line"><span class="lineno">  636</span><span class="comment">   * cert in the chain(from CA to host) with an error.</span></div>
-<div class="line"><span class="lineno">  637</span><span class="comment">   */</span></div>
-<div class="line"><span class="lineno">  638</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a3d0c68a01f6632452a1d0fb8346634a7">tls_verify_peers</a>(<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, &amp;certstat) != 0)</div>
-<div class="line"><span class="lineno">  639</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  640</span> </div>
-<div class="line"><span class="lineno">  641</span>  cert_list = gnutls_certificate_get_peers(<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, &amp;cert_list_size);</div>
-<div class="line"><span class="lineno">  642</span>  <span class="keywordflow">if</span> (!cert_list || (cert_list_size == 0))</div>
-<div class="line"><span class="lineno">  643</span>  {</div>
-<div class="line"><span class="lineno">  644</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Unable to get certificate from peer&quot;</span>));</div>
-<div class="line"><span class="lineno">  645</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  646</span>  }</div>
-<div class="line"><span class="lineno">  647</span> </div>
-<div class="line"><span class="lineno">  648</span>  <span class="comment">/* tls_verify_peers doesn&#39;t check hostname or expiration, so walk</span></div>
-<div class="line"><span class="lineno">  649</span><span class="comment">   * from most specific to least checking these. If we see a saved certificate,</span></div>
-<div class="line"><span class="lineno">  650</span><span class="comment">   * its status short-circuits the remaining checks. */</span></div>
-<div class="line"><span class="lineno">  651</span>  <span class="keywordtype">int</span> preauthrc = 0;</div>
-<div class="line"><span class="lineno">  652</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cert_list_size; i++)</div>
-<div class="line"><span class="lineno">  653</span>  {</div>
-<div class="line"><span class="lineno">  654</span>    rc = <a class="code hl_function" href="#a05268b51fa6e96dd8ac0e40630b2b316">tls_check_preauth</a>(&amp;cert_list[i], certstat, conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>, i,</div>
-<div class="line"><span class="lineno">  655</span>                           &amp;certerr, &amp;savedcert);</div>
-<div class="line"><span class="lineno">  656</span>    preauthrc += rc;</div>
-<div class="line"><span class="lineno">  657</span>    <span class="keywordflow">if</span> (!preauthrc)</div>
-<div class="line"><span class="lineno">  658</span>      max_preauth_pass = i;</div>
-<div class="line"><span class="lineno">  659</span> </div>
-<div class="line"><span class="lineno">  660</span>    <span class="keywordflow">if</span> (savedcert)</div>
-<div class="line"><span class="lineno">  661</span>    {</div>
-<div class="line"><span class="lineno">  662</span>      <span class="keywordflow">if</span> (preauthrc == 0)</div>
-<div class="line"><span class="lineno">  663</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  664</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  665</span>    }</div>
-<div class="line"><span class="lineno">  666</span>  }</div>
-<div class="line"><span class="lineno">  667</span> </div>
-<div class="line"><span class="lineno">  668</span>  <span class="comment">/* then check interactively, starting from chain root */</span></div>
-<div class="line"><span class="lineno">  669</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = cert_list_size - 1; i &gt;= 0; i--)</div>
-<div class="line"><span class="lineno">  670</span>  {</div>
-<div class="line"><span class="lineno">  671</span>    rc = <a class="code hl_function" href="#ad2898199aadc914b669fbc3bab018ee2">tls_check_one_certificate</a>(&amp;cert_list[i], certstat, conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>,</div>
-<div class="line"><span class="lineno">  672</span>                                   i, cert_list_size);</div>
-<div class="line"><span class="lineno">  673</span> </div>
-<div class="line"><span class="lineno">  674</span>    <span class="comment">/* Stop checking if the menu cert is aborted or rejected. */</span></div>
-<div class="line"><span class="lineno">  675</span>    <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  676</span>      <span class="keywordflow">break</span>;</div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00626">626</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  627</span>{</div>
+<div class="line"><span class="lineno">  628</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
+<div class="line"><span class="lineno">  629</span>  gnutls_session_t <a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a> = data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>;</div>
+<div class="line"><span class="lineno">  630</span>  <span class="keyword">const</span> gnutls_datum_t *cert_list = NULL;</div>
+<div class="line"><span class="lineno">  631</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cert_list_size = 0;</div>
+<div class="line"><span class="lineno">  632</span>  gnutls_certificate_status_t certstat;</div>
+<div class="line"><span class="lineno">  633</span>  <span class="keywordtype">int</span> certerr, savedcert, rc = 0;</div>
+<div class="line"><span class="lineno">  634</span>  <span class="keywordtype">int</span> max_preauth_pass = -1;</div>
+<div class="line"><span class="lineno">  635</span> </div>
+<div class="line"><span class="lineno">  636</span>  <span class="comment">/* tls_verify_peers() calls gnutls_certificate_verify_peers2(),</span></div>
+<div class="line"><span class="lineno">  637</span><span class="comment">   * which verifies the auth_type is GNUTLS_CRD_CERTIFICATE</span></div>
+<div class="line"><span class="lineno">  638</span><span class="comment">   * and that get_certificate_type() for the server is GNUTLS_CRT_X509.</span></div>
+<div class="line"><span class="lineno">  639</span><span class="comment">   * If it returns 0, certstat will be set with failure codes for the first</span></div>
+<div class="line"><span class="lineno">  640</span><span class="comment">   * cert in the chain(from CA to host) with an error.</span></div>
+<div class="line"><span class="lineno">  641</span><span class="comment">   */</span></div>
+<div class="line"><span class="lineno">  642</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a3d0c68a01f6632452a1d0fb8346634a7">tls_verify_peers</a>(<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, &amp;certstat) != 0)</div>
+<div class="line"><span class="lineno">  643</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  644</span> </div>
+<div class="line"><span class="lineno">  645</span>  cert_list = gnutls_certificate_get_peers(<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, &amp;cert_list_size);</div>
+<div class="line"><span class="lineno">  646</span>  <span class="keywordflow">if</span> (!cert_list || (cert_list_size == 0))</div>
+<div class="line"><span class="lineno">  647</span>  {</div>
+<div class="line"><span class="lineno">  648</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Unable to get certificate from peer&quot;</span>));</div>
+<div class="line"><span class="lineno">  649</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  650</span>  }</div>
+<div class="line"><span class="lineno">  651</span> </div>
+<div class="line"><span class="lineno">  652</span>  <span class="comment">/* tls_verify_peers doesn&#39;t check hostname or expiration, so walk</span></div>
+<div class="line"><span class="lineno">  653</span><span class="comment">   * from most specific to least checking these. If we see a saved certificate,</span></div>
+<div class="line"><span class="lineno">  654</span><span class="comment">   * its status short-circuits the remaining checks. */</span></div>
+<div class="line"><span class="lineno">  655</span>  <span class="keywordtype">int</span> preauthrc = 0;</div>
+<div class="line"><span class="lineno">  656</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cert_list_size; i++)</div>
+<div class="line"><span class="lineno">  657</span>  {</div>
+<div class="line"><span class="lineno">  658</span>    rc = <a class="code hl_function" href="#a05268b51fa6e96dd8ac0e40630b2b316">tls_check_preauth</a>(&amp;cert_list[i], certstat, conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>, i,</div>
+<div class="line"><span class="lineno">  659</span>                           &amp;certerr, &amp;savedcert);</div>
+<div class="line"><span class="lineno">  660</span>    preauthrc += rc;</div>
+<div class="line"><span class="lineno">  661</span>    <span class="keywordflow">if</span> (!preauthrc)</div>
+<div class="line"><span class="lineno">  662</span>      max_preauth_pass = i;</div>
+<div class="line"><span class="lineno">  663</span> </div>
+<div class="line"><span class="lineno">  664</span>    <span class="keywordflow">if</span> (savedcert)</div>
+<div class="line"><span class="lineno">  665</span>    {</div>
+<div class="line"><span class="lineno">  666</span>      <span class="keywordflow">if</span> (preauthrc == 0)</div>
+<div class="line"><span class="lineno">  667</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  668</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  669</span>    }</div>
+<div class="line"><span class="lineno">  670</span>  }</div>
+<div class="line"><span class="lineno">  671</span> </div>
+<div class="line"><span class="lineno">  672</span>  <span class="comment">/* then check interactively, starting from chain root */</span></div>
+<div class="line"><span class="lineno">  673</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = cert_list_size - 1; i &gt;= 0; i--)</div>
+<div class="line"><span class="lineno">  674</span>  {</div>
+<div class="line"><span class="lineno">  675</span>    rc = <a class="code hl_function" href="#ad2898199aadc914b669fbc3bab018ee2">tls_check_one_certificate</a>(&amp;cert_list[i], certstat, conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>,</div>
+<div class="line"><span class="lineno">  676</span>                                   i, cert_list_size);</div>
 <div class="line"><span class="lineno">  677</span> </div>
-<div class="line"><span class="lineno">  678</span>    <span class="comment">/* add signers to trust set, then reverify */</span></div>
-<div class="line"><span class="lineno">  679</span>    <span class="keywordflow">if</span> (i)</div>
-<div class="line"><span class="lineno">  680</span>    {</div>
-<div class="line"><span class="lineno">  681</span>      <span class="keywordtype">int</span> rcsettrust = gnutls_certificate_set_x509_trust_mem(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, &amp;cert_list[i],</div>
-<div class="line"><span class="lineno">  682</span>                                                             GNUTLS_X509_FMT_DER);</div>
-<div class="line"><span class="lineno">  683</span>      <span class="keywordflow">if</span> (rcsettrust != 1)</div>
-<div class="line"><span class="lineno">  684</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;error trusting certificate %d: %d\n&quot;</span>, i, rcsettrust);</div>
-<div class="line"><span class="lineno">  685</span> </div>
-<div class="line"><span class="lineno">  686</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#a3d0c68a01f6632452a1d0fb8346634a7">tls_verify_peers</a>(<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, &amp;certstat) != 0)</div>
-<div class="line"><span class="lineno">  687</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  688</span> </div>
-<div class="line"><span class="lineno">  689</span>      <span class="comment">/* If the cert chain now verifies, and all lower certs already</span></div>
-<div class="line"><span class="lineno">  690</span><span class="comment">       * passed preauth, we are done. */</span></div>
-<div class="line"><span class="lineno">  691</span>      <span class="keywordflow">if</span> (!certstat &amp;&amp; (max_preauth_pass &gt;= (i - 1)))</div>
-<div class="line"><span class="lineno">  692</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  693</span>    }</div>
-<div class="line"><span class="lineno">  694</span>  }</div>
-<div class="line"><span class="lineno">  695</span> </div>
-<div class="line"><span class="lineno">  696</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  697</span>}</div>
+<div class="line"><span class="lineno">  678</span>    <span class="comment">/* Stop checking if the menu cert is aborted or rejected. */</span></div>
+<div class="line"><span class="lineno">  679</span>    <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  680</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  681</span> </div>
+<div class="line"><span class="lineno">  682</span>    <span class="comment">/* add signers to trust set, then reverify */</span></div>
+<div class="line"><span class="lineno">  683</span>    <span class="keywordflow">if</span> (i)</div>
+<div class="line"><span class="lineno">  684</span>    {</div>
+<div class="line"><span class="lineno">  685</span>      <span class="keywordtype">int</span> rcsettrust = gnutls_certificate_set_x509_trust_mem(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, &amp;cert_list[i],</div>
+<div class="line"><span class="lineno">  686</span>                                                             GNUTLS_X509_FMT_DER);</div>
+<div class="line"><span class="lineno">  687</span>      <span class="keywordflow">if</span> (rcsettrust != 1)</div>
+<div class="line"><span class="lineno">  688</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;error trusting certificate %d: %d\n&quot;</span>, i, rcsettrust);</div>
+<div class="line"><span class="lineno">  689</span> </div>
+<div class="line"><span class="lineno">  690</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="#a3d0c68a01f6632452a1d0fb8346634a7">tls_verify_peers</a>(<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, &amp;certstat) != 0)</div>
+<div class="line"><span class="lineno">  691</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  692</span> </div>
+<div class="line"><span class="lineno">  693</span>      <span class="comment">/* If the cert chain now verifies, and all lower certs already</span></div>
+<div class="line"><span class="lineno">  694</span><span class="comment">       * passed preauth, we are done. */</span></div>
+<div class="line"><span class="lineno">  695</span>      <span class="keywordflow">if</span> (!certstat &amp;&amp; (max_preauth_pass &gt;= (i - 1)))</div>
+<div class="line"><span class="lineno">  696</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  697</span>    }</div>
+<div class="line"><span class="lineno">  698</span>  }</div>
+<div class="line"><span class="lineno">  699</span> </div>
+<div class="line"><span class="lineno">  700</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  701</span>}</div>
 <div class="ttc" id="agnutls_8c_html_a3d0c68a01f6632452a1d0fb8346634a7"><div class="ttname"><a href="#a3d0c68a01f6632452a1d0fb8346634a7">tls_verify_peers</a></div><div class="ttdeci">static int tls_verify_peers(gnutls_session_t tlsstate, gnutls_certificate_status_t *certstat)</div><div class="ttdoc">Wrapper for gnutls_certificate_verify_peers()</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00122">gnutls.c:122</a></div></div>
 <div class="ttc" id="agnutls_8c_html_ad2898199aadc914b669fbc3bab018ee2"><div class="ttname"><a href="#ad2898199aadc914b669fbc3bab018ee2">tls_check_one_certificate</a></div><div class="ttdeci">static int tls_check_one_certificate(const gnutls_datum_t *certdata, gnutls_certificate_status_t certstat, const char *hostname, int idx, size_t len)</div><div class="ttdoc">Check a GnuTLS certificate.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00472">gnutls.c:472</a></div></div>
 <div class="ttc" id="astructConnAccount_html_aa440323ef3111e1faaf33f6a57103a3a"><div class="ttname"><a href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">ConnAccount::host</a></div><div class="ttdeci">char host[128]</div><div class="ttdoc">Server to login to.</div><div class="ttdef"><b>Definition</b> <a href="connaccount_8h_source.html#l00054">connaccount.h:54</a></div></div>
@@ -1627,49 +1633,49 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>This function grabs the CN out of the client cert but appears to do nothing with it. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00706">706</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  707</span>{</div>
-<div class="line"><span class="lineno">  708</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
-<div class="line"><span class="lineno">  709</span>  gnutls_x509_crt_t clientcrt;</div>
-<div class="line"><span class="lineno">  710</span>  <span class="keywordtype">char</span> *cn = NULL;</div>
-<div class="line"><span class="lineno">  711</span>  <span class="keywordtype">size_t</span> cnlen = 0;</div>
-<div class="line"><span class="lineno">  712</span>  <span class="keywordtype">int</span> rc;</div>
-<div class="line"><span class="lineno">  713</span> </div>
-<div class="line"><span class="lineno">  714</span>  <span class="comment">/* get our cert CN if we have one */</span></div>
-<div class="line"><span class="lineno">  715</span>  <span class="keyword">const</span> gnutls_datum_t *crtdata = gnutls_certificate_get_ours(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>);</div>
-<div class="line"><span class="lineno">  716</span>  <span class="keywordflow">if</span> (!crtdata)</div>
-<div class="line"><span class="lineno">  717</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  718</span> </div>
-<div class="line"><span class="lineno">  719</span>  <span class="keywordflow">if</span> (gnutls_x509_crt_init(&amp;clientcrt) &lt; 0)</div>
-<div class="line"><span class="lineno">  720</span>  {</div>
-<div class="line"><span class="lineno">  721</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Failed to init gnutls crt\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  722</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  723</span>  }</div>
-<div class="line"><span class="lineno">  724</span> </div>
-<div class="line"><span class="lineno">  725</span>  <span class="keywordflow">if</span> (gnutls_x509_crt_import(clientcrt, crtdata, GNUTLS_X509_FMT_DER) &lt; 0)</div>
-<div class="line"><span class="lineno">  726</span>  {</div>
-<div class="line"><span class="lineno">  727</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Failed to import gnutls client crt\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  728</span>    <span class="keywordflow">goto</span> err;</div>
-<div class="line"><span class="lineno">  729</span>  }</div>
-<div class="line"><span class="lineno">  730</span> </div>
-<div class="line"><span class="lineno">  731</span>  <span class="comment">/* get length of CN, then grab it. */</span></div>
-<div class="line"><span class="lineno">  732</span>  rc = gnutls_x509_crt_get_dn_by_oid(clientcrt, GNUTLS_OID_X520_COMMON_NAME, 0,</div>
-<div class="line"><span class="lineno">  733</span>                                     0, NULL, &amp;cnlen);</div>
-<div class="line"><span class="lineno">  734</span>  <span class="keywordflow">if</span> (((rc &gt;= 0) || (rc == GNUTLS_E_SHORT_MEMORY_BUFFER)) &amp;&amp; (cnlen &gt; 0))</div>
-<div class="line"><span class="lineno">  735</span>  {</div>
-<div class="line"><span class="lineno">  736</span>    cn = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(cnlen, <span class="keywordtype">char</span>);</div>
-<div class="line"><span class="lineno">  737</span>    <span class="keywordflow">if</span> (gnutls_x509_crt_get_dn_by_oid(clientcrt, GNUTLS_OID_X520_COMMON_NAME, 0,</div>
-<div class="line"><span class="lineno">  738</span>                                      0, cn, &amp;cnlen) &lt; 0)</div>
-<div class="line"><span class="lineno">  739</span>    {</div>
-<div class="line"><span class="lineno">  740</span>      <span class="keywordflow">goto</span> err;</div>
-<div class="line"><span class="lineno">  741</span>    }</div>
-<div class="line"><span class="lineno">  742</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;client certificate CN: %s\n&quot;</span>, cn);</div>
-<div class="line"><span class="lineno">  743</span>  }</div>
-<div class="line"><span class="lineno">  744</span> </div>
-<div class="line"><span class="lineno">  745</span>err:</div>
-<div class="line"><span class="lineno">  746</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;cn);</div>
-<div class="line"><span class="lineno">  747</span>  gnutls_x509_crt_deinit(clientcrt);</div>
-<div class="line"><span class="lineno">  748</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00710">710</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  711</span>{</div>
+<div class="line"><span class="lineno">  712</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
+<div class="line"><span class="lineno">  713</span>  gnutls_x509_crt_t clientcrt;</div>
+<div class="line"><span class="lineno">  714</span>  <span class="keywordtype">char</span> *cn = NULL;</div>
+<div class="line"><span class="lineno">  715</span>  <span class="keywordtype">size_t</span> cnlen = 0;</div>
+<div class="line"><span class="lineno">  716</span>  <span class="keywordtype">int</span> rc;</div>
+<div class="line"><span class="lineno">  717</span> </div>
+<div class="line"><span class="lineno">  718</span>  <span class="comment">/* get our cert CN if we have one */</span></div>
+<div class="line"><span class="lineno">  719</span>  <span class="keyword">const</span> gnutls_datum_t *crtdata = gnutls_certificate_get_ours(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>);</div>
+<div class="line"><span class="lineno">  720</span>  <span class="keywordflow">if</span> (!crtdata)</div>
+<div class="line"><span class="lineno">  721</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  722</span> </div>
+<div class="line"><span class="lineno">  723</span>  <span class="keywordflow">if</span> (gnutls_x509_crt_init(&amp;clientcrt) &lt; 0)</div>
+<div class="line"><span class="lineno">  724</span>  {</div>
+<div class="line"><span class="lineno">  725</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Failed to init gnutls crt\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  726</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  727</span>  }</div>
+<div class="line"><span class="lineno">  728</span> </div>
+<div class="line"><span class="lineno">  729</span>  <span class="keywordflow">if</span> (gnutls_x509_crt_import(clientcrt, crtdata, GNUTLS_X509_FMT_DER) &lt; 0)</div>
+<div class="line"><span class="lineno">  730</span>  {</div>
+<div class="line"><span class="lineno">  731</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Failed to import gnutls client crt\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  732</span>    <span class="keywordflow">goto</span> err;</div>
+<div class="line"><span class="lineno">  733</span>  }</div>
+<div class="line"><span class="lineno">  734</span> </div>
+<div class="line"><span class="lineno">  735</span>  <span class="comment">/* get length of CN, then grab it. */</span></div>
+<div class="line"><span class="lineno">  736</span>  rc = gnutls_x509_crt_get_dn_by_oid(clientcrt, GNUTLS_OID_X520_COMMON_NAME, 0,</div>
+<div class="line"><span class="lineno">  737</span>                                     0, NULL, &amp;cnlen);</div>
+<div class="line"><span class="lineno">  738</span>  <span class="keywordflow">if</span> (((rc &gt;= 0) || (rc == GNUTLS_E_SHORT_MEMORY_BUFFER)) &amp;&amp; (cnlen &gt; 0))</div>
+<div class="line"><span class="lineno">  739</span>  {</div>
+<div class="line"><span class="lineno">  740</span>    cn = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(cnlen, <span class="keywordtype">char</span>);</div>
+<div class="line"><span class="lineno">  741</span>    <span class="keywordflow">if</span> (gnutls_x509_crt_get_dn_by_oid(clientcrt, GNUTLS_OID_X520_COMMON_NAME, 0,</div>
+<div class="line"><span class="lineno">  742</span>                                      0, cn, &amp;cnlen) &lt; 0)</div>
+<div class="line"><span class="lineno">  743</span>    {</div>
+<div class="line"><span class="lineno">  744</span>      <span class="keywordflow">goto</span> err;</div>
+<div class="line"><span class="lineno">  745</span>    }</div>
+<div class="line"><span class="lineno">  746</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;client certificate CN: %s\n&quot;</span>, cn);</div>
+<div class="line"><span class="lineno">  747</span>  }</div>
+<div class="line"><span class="lineno">  748</span> </div>
+<div class="line"><span class="lineno">  749</span>err:</div>
+<div class="line"><span class="lineno">  750</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;cn);</div>
+<div class="line"><span class="lineno">  751</span>  gnutls_x509_crt_deinit(clientcrt);</div>
+<div class="line"><span class="lineno">  752</span>}</div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a></div><div class="ttdeci">@ LL_DEBUG2</div><div class="ttdoc">Log at debug level 2.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1719,42 +1725,42 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00829">829</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  830</span>{</div>
-<div class="line"><span class="lineno">  831</span>  <span class="keywordtype">size_t</span> nproto = 0; <span class="comment">/* number of tls/ssl protocols */</span></div>
-<div class="line"><span class="lineno">  832</span> </div>
-<div class="line"><span class="lineno">  833</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_ssl_use_tlsv1_2 = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_use_tlsv1_2&quot;</span>);</div>
-<div class="line"><span class="lineno">  834</span>  <span class="keywordflow">if</span> (c_ssl_use_tlsv1_2)</div>
-<div class="line"><span class="lineno">  835</span>    <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto++] = GNUTLS_TLS1_2;</div>
-<div class="line"><span class="lineno">  836</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_ssl_use_tlsv1_1 = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_use_tlsv1_1&quot;</span>);</div>
-<div class="line"><span class="lineno">  837</span>  <span class="keywordflow">if</span> (c_ssl_use_tlsv1_1)</div>
-<div class="line"><span class="lineno">  838</span>    <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto++] = GNUTLS_TLS1_1;</div>
-<div class="line"><span class="lineno">  839</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_ssl_use_tlsv1 = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_use_tlsv1&quot;</span>);</div>
-<div class="line"><span class="lineno">  840</span>  <span class="keywordflow">if</span> (c_ssl_use_tlsv1)</div>
-<div class="line"><span class="lineno">  841</span>    <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto++] = GNUTLS_TLS1;</div>
-<div class="line"><span class="lineno">  842</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_ssl_use_sslv3 = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_use_sslv3&quot;</span>);</div>
-<div class="line"><span class="lineno">  843</span>  <span class="keywordflow">if</span> (c_ssl_use_sslv3)</div>
-<div class="line"><span class="lineno">  844</span>    <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto++] = GNUTLS_SSL3;</div>
-<div class="line"><span class="lineno">  845</span>  <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto] = 0;</div>
-<div class="line"><span class="lineno">  846</span> </div>
-<div class="line"><span class="lineno">  847</span>  <span class="keywordflow">if</span> (nproto == 0)</div>
-<div class="line"><span class="lineno">  848</span>  {</div>
-<div class="line"><span class="lineno">  849</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;All available protocols for TLS/SSL connection disabled&quot;</span>));</div>
-<div class="line"><span class="lineno">  850</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  851</span>  }</div>
-<div class="line"><span class="lineno">  852</span> </div>
-<div class="line"><span class="lineno">  853</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_ssl_ciphers = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_ciphers&quot;</span>);</div>
-<div class="line"><span class="lineno">  854</span>  <span class="keywordflow">if</span> (c_ssl_ciphers)</div>
-<div class="line"><span class="lineno">  855</span>  {</div>
-<div class="line"><span class="lineno">  856</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Explicit ciphersuite selection via $ssl_ciphers not supported&quot;</span>));</div>
-<div class="line"><span class="lineno">  857</span>  }</div>
-<div class="line"><span class="lineno">  858</span> </div>
-<div class="line"><span class="lineno">  859</span>  <span class="comment">/* We use default priorities (see gnutls documentation),</span></div>
-<div class="line"><span class="lineno">  860</span><span class="comment">   * except for protocol version */</span></div>
-<div class="line"><span class="lineno">  861</span>  gnutls_set_default_priority(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>);</div>
-<div class="line"><span class="lineno">  862</span>  <a class="code hl_function" href="#a523d86c3823a89ce24cd298ca3c6cb5b">gnutls_protocol_set_priority</a>(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>);</div>
-<div class="line"><span class="lineno">  863</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  864</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00833">833</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  834</span>{</div>
+<div class="line"><span class="lineno">  835</span>  <span class="keywordtype">size_t</span> nproto = 0; <span class="comment">/* number of tls/ssl protocols */</span></div>
+<div class="line"><span class="lineno">  836</span> </div>
+<div class="line"><span class="lineno">  837</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_ssl_use_tlsv1_2 = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_use_tlsv1_2&quot;</span>);</div>
+<div class="line"><span class="lineno">  838</span>  <span class="keywordflow">if</span> (c_ssl_use_tlsv1_2)</div>
+<div class="line"><span class="lineno">  839</span>    <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto++] = GNUTLS_TLS1_2;</div>
+<div class="line"><span class="lineno">  840</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_ssl_use_tlsv1_1 = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_use_tlsv1_1&quot;</span>);</div>
+<div class="line"><span class="lineno">  841</span>  <span class="keywordflow">if</span> (c_ssl_use_tlsv1_1)</div>
+<div class="line"><span class="lineno">  842</span>    <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto++] = GNUTLS_TLS1_1;</div>
+<div class="line"><span class="lineno">  843</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_ssl_use_tlsv1 = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_use_tlsv1&quot;</span>);</div>
+<div class="line"><span class="lineno">  844</span>  <span class="keywordflow">if</span> (c_ssl_use_tlsv1)</div>
+<div class="line"><span class="lineno">  845</span>    <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto++] = GNUTLS_TLS1;</div>
+<div class="line"><span class="lineno">  846</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_ssl_use_sslv3 = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_use_sslv3&quot;</span>);</div>
+<div class="line"><span class="lineno">  847</span>  <span class="keywordflow">if</span> (c_ssl_use_sslv3)</div>
+<div class="line"><span class="lineno">  848</span>    <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto++] = GNUTLS_SSL3;</div>
+<div class="line"><span class="lineno">  849</span>  <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>[nproto] = 0;</div>
+<div class="line"><span class="lineno">  850</span> </div>
+<div class="line"><span class="lineno">  851</span>  <span class="keywordflow">if</span> (nproto == 0)</div>
+<div class="line"><span class="lineno">  852</span>  {</div>
+<div class="line"><span class="lineno">  853</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;All available protocols for TLS/SSL connection disabled&quot;</span>));</div>
+<div class="line"><span class="lineno">  854</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  855</span>  }</div>
+<div class="line"><span class="lineno">  856</span> </div>
+<div class="line"><span class="lineno">  857</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_ssl_ciphers = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_ciphers&quot;</span>);</div>
+<div class="line"><span class="lineno">  858</span>  <span class="keywordflow">if</span> (c_ssl_ciphers)</div>
+<div class="line"><span class="lineno">  859</span>  {</div>
+<div class="line"><span class="lineno">  860</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Explicit ciphersuite selection via $ssl_ciphers not supported&quot;</span>));</div>
+<div class="line"><span class="lineno">  861</span>  }</div>
+<div class="line"><span class="lineno">  862</span> </div>
+<div class="line"><span class="lineno">  863</span>  <span class="comment">/* We use default priorities (see gnutls documentation),</span></div>
+<div class="line"><span class="lineno">  864</span><span class="comment">   * except for protocol version */</span></div>
+<div class="line"><span class="lineno">  865</span>  gnutls_set_default_priority(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>);</div>
+<div class="line"><span class="lineno">  866</span>  <a class="code hl_function" href="#a523d86c3823a89ce24cd298ca3c6cb5b">gnutls_protocol_set_priority</a>(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, <a class="code hl_variable" href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a>);</div>
+<div class="line"><span class="lineno">  867</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  868</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a6b1589ee93ff51ef31f1d9324e138078"><div class="ttname"><a href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a></div><div class="ttdeci">const char * cs_subset_string(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a string config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00291">helpers.c:291</a></div></div>
 <div class="ttc" id="agnutls_8c_html_a4fb652432d59816ffb027177af766a7a"><div class="ttname"><a href="#a4fb652432d59816ffb027177af766a7a">ProtocolPriority</a></div><div class="ttdeci">static int ProtocolPriority[]</div><div class="ttdoc">This array needs to be large enough to hold all the possible values support by NeoMutt.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00075">gnutls.c:75</a></div></div>
 <div class="ttc" id="agnutls_8c_html_a523d86c3823a89ce24cd298ca3c6cb5b"><div class="ttname"><a href="#a523d86c3823a89ce24cd298ca3c6cb5b">gnutls_protocol_set_priority</a></div><div class="ttdeci">int gnutls_protocol_set_priority(gnutls_session_t session, const int *list)</div></div>
@@ -1813,21 +1819,21 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00873">873</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  874</span>{</div>
-<div class="line"><span class="lineno">  875</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_socket_timeout = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;socket_timeout&quot;</span>);</div>
-<div class="line"><span class="lineno">  876</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> poll_rc = <a class="code hl_function" href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a>(conn, c_socket_timeout);</div>
-<div class="line"><span class="lineno">  877</span>  <span class="keywordflow">if</span> (poll_rc &lt;= 0)</div>
-<div class="line"><span class="lineno">  878</span>  {</div>
-<div class="line"><span class="lineno">  879</span>    <span class="comment">// Timeout or error</span></div>
-<div class="line"><span class="lineno">  880</span>    <span class="keywordflow">if</span> (poll_rc == 0)</div>
-<div class="line"><span class="lineno">  881</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Connection to %s timed out&quot;</span>), conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>);</div>
-<div class="line"><span class="lineno">  882</span> </div>
-<div class="line"><span class="lineno">  883</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  884</span>  }</div>
-<div class="line"><span class="lineno">  885</span> </div>
-<div class="line"><span class="lineno">  886</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  887</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00877">877</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  878</span>{</div>
+<div class="line"><span class="lineno">  879</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_socket_timeout = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;socket_timeout&quot;</span>);</div>
+<div class="line"><span class="lineno">  880</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> poll_rc = <a class="code hl_function" href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a>(conn, c_socket_timeout);</div>
+<div class="line"><span class="lineno">  881</span>  <span class="keywordflow">if</span> (poll_rc &lt;= 0)</div>
+<div class="line"><span class="lineno">  882</span>  {</div>
+<div class="line"><span class="lineno">  883</span>    <span class="comment">// Timeout or error</span></div>
+<div class="line"><span class="lineno">  884</span>    <span class="keywordflow">if</span> (poll_rc == 0)</div>
+<div class="line"><span class="lineno">  885</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Connection to %s timed out&quot;</span>), conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>);</div>
+<div class="line"><span class="lineno">  886</span> </div>
+<div class="line"><span class="lineno">  887</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  888</span>  }</div>
+<div class="line"><span class="lineno">  889</span> </div>
+<div class="line"><span class="lineno">  890</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  891</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a96039a9f8d37daad993ae7b490510339"><div class="ttname"><a href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a></div><div class="ttdeci">short cs_subset_number(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a number config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00143">helpers.c:143</a></div></div>
 <div class="ttc" id="agroup__connection__poll_html_ga3e4473be79d3294a1be08ab03d3f7eb6"><div class="ttname"><a href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a></div><div class="ttdeci">int raw_socket_poll(struct Connection *conn, time_t wait_secs)</div><div class="ttdoc">Check if any data is waiting on a socket - Implements Connection::poll() -.</div><div class="ttdef"><b>Definition</b> <a href="raw_8c_source.html#l00355">raw.c:355</a></div></div>
 </div><!-- fragment --><div id="dynsection-21" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1886,128 +1892,128 @@ Variables</h2></td></tr>
 </dl>
 <p>After TLS session has been initialized, attempt to negotiate TLS over the wire, including certificate checks. </p>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00898">898</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  899</span>{</div>
-<div class="line"><span class="lineno">  900</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a>);</div>
-<div class="line"><span class="lineno">  901</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a> = data;</div>
-<div class="line"><span class="lineno">  902</span>  <span class="keywordtype">int</span> err = gnutls_certificate_allocate_credentials(&amp;data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>);</div>
-<div class="line"><span class="lineno">  903</span>  <span class="keywordflow">if</span> (err &lt; 0)</div>
-<div class="line"><span class="lineno">  904</span>  {</div>
-<div class="line"><span class="lineno">  905</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>);</div>
-<div class="line"><span class="lineno">  906</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;gnutls_certificate_allocate_credentials: %s&quot;</span>, gnutls_strerror(err));</div>
-<div class="line"><span class="lineno">  907</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  908</span>  }</div>
-<div class="line"><span class="lineno">  909</span> </div>
-<div class="line"><span class="lineno">  910</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_certificate_file = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;certificate_file&quot;</span>);</div>
-<div class="line"><span class="lineno">  911</span>  gnutls_certificate_set_x509_trust_file(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, c_certificate_file, GNUTLS_X509_FMT_PEM);</div>
-<div class="line"><span class="lineno">  912</span>  <span class="comment">/* ignore errors, maybe file doesn&#39;t exist yet */</span></div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l00902">902</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  903</span>{</div>
+<div class="line"><span class="lineno">  904</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a>);</div>
+<div class="line"><span class="lineno">  905</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a> = data;</div>
+<div class="line"><span class="lineno">  906</span>  <span class="keywordtype">int</span> err = gnutls_certificate_allocate_credentials(&amp;data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>);</div>
+<div class="line"><span class="lineno">  907</span>  <span class="keywordflow">if</span> (err &lt; 0)</div>
+<div class="line"><span class="lineno">  908</span>  {</div>
+<div class="line"><span class="lineno">  909</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>);</div>
+<div class="line"><span class="lineno">  910</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;gnutls_certificate_allocate_credentials: %s&quot;</span>, gnutls_strerror(err));</div>
+<div class="line"><span class="lineno">  911</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  912</span>  }</div>
 <div class="line"><span class="lineno">  913</span> </div>
-<div class="line"><span class="lineno">  914</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_ssl_ca_certificates_file = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_ca_certificates_file&quot;</span>);</div>
-<div class="line"><span class="lineno">  915</span>  <span class="keywordflow">if</span> (c_ssl_ca_certificates_file)</div>
-<div class="line"><span class="lineno">  916</span>  {</div>
-<div class="line"><span class="lineno">  917</span>    gnutls_certificate_set_x509_trust_file(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, c_ssl_ca_certificates_file,</div>
-<div class="line"><span class="lineno">  918</span>                                           GNUTLS_X509_FMT_PEM);</div>
-<div class="line"><span class="lineno">  919</span>  }</div>
-<div class="line"><span class="lineno">  920</span> </div>
-<div class="line"><span class="lineno">  921</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_ssl_client_cert = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_client_cert&quot;</span>);</div>
-<div class="line"><span class="lineno">  922</span>  <span class="keywordflow">if</span> (c_ssl_client_cert)</div>
-<div class="line"><span class="lineno">  923</span>  {</div>
-<div class="line"><span class="lineno">  924</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Using client certificate %s\n&quot;</span>, c_ssl_client_cert);</div>
-<div class="line"><span class="lineno">  925</span>    gnutls_certificate_set_x509_key_file(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, c_ssl_client_cert,</div>
-<div class="line"><span class="lineno">  926</span>                                         c_ssl_client_cert, GNUTLS_X509_FMT_PEM);</div>
-<div class="line"><span class="lineno">  927</span>  }</div>
-<div class="line"><span class="lineno">  928</span> </div>
-<div class="line"><span class="lineno">  929</span><span class="preprocessor">#ifdef HAVE_DECL_GNUTLS_VERIFY_DISABLE_TIME_CHECKS</span></div>
-<div class="line"><span class="lineno">  930</span>  <span class="comment">/* disable checking certificate activation/expiration times</span></div>
-<div class="line"><span class="lineno">  931</span><span class="comment">   * in gnutls, we do the checks ourselves */</span></div>
-<div class="line"><span class="lineno">  932</span>  gnutls_certificate_set_verify_flags(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, GNUTLS_VERIFY_DISABLE_TIME_CHECKS);</div>
-<div class="line"><span class="lineno">  933</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  934</span> </div>
-<div class="line"><span class="lineno">  935</span>  err = gnutls_init(&amp;data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, GNUTLS_CLIENT);</div>
-<div class="line"><span class="lineno">  936</span>  <span class="keywordflow">if</span> (err)</div>
-<div class="line"><span class="lineno">  937</span>  {</div>
-<div class="line"><span class="lineno">  938</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;gnutls_init: %s&quot;</span>, gnutls_strerror(err));</div>
-<div class="line"><span class="lineno">  939</span>    <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  940</span>  }</div>
-<div class="line"><span class="lineno">  941</span> </div>
-<div class="line"><span class="lineno">  942</span>  <span class="comment">/* set socket */</span></div>
-<div class="line"><span class="lineno">  943</span>  gnutls_transport_set_ptr(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, (gnutls_transport_ptr_t) (<span class="keywordtype">long</span>) conn-&gt;<a class="code hl_variable" href="structConnection.html#af805fad417c8fa7c5079ef741d8233e2">fd</a>);</div>
-<div class="line"><span class="lineno">  944</span> </div>
-<div class="line"><span class="lineno">  945</span>  <span class="keywordflow">if</span> (gnutls_server_name_set(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, GNUTLS_NAME_DNS, conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>,</div>
-<div class="line"><span class="lineno">  946</span>                             <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>)))</div>
-<div class="line"><span class="lineno">  947</span>  {</div>
-<div class="line"><span class="lineno">  948</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Warning: unable to set TLS SNI host name&quot;</span>));</div>
-<div class="line"><span class="lineno">  949</span>  }</div>
-<div class="line"><span class="lineno">  950</span> </div>
-<div class="line"><span class="lineno">  951</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#af441e4ca9946761948ca442ec7cbc1a2">tls_set_priority</a>(data) &lt; 0)</div>
-<div class="line"><span class="lineno">  952</span>  {</div>
-<div class="line"><span class="lineno">  953</span>    <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  954</span>  }</div>
-<div class="line"><span class="lineno">  955</span> </div>
-<div class="line"><span class="lineno">  956</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_ssl_min_dh_prime_bits = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_min_dh_prime_bits&quot;</span>);</div>
-<div class="line"><span class="lineno">  957</span>  <span class="keywordflow">if</span> (c_ssl_min_dh_prime_bits &gt; 0)</div>
-<div class="line"><span class="lineno">  958</span>  {</div>
-<div class="line"><span class="lineno">  959</span>    gnutls_dh_set_prime_bits(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, c_ssl_min_dh_prime_bits);</div>
-<div class="line"><span class="lineno">  960</span>  }</div>
-<div class="line"><span class="lineno">  961</span> </div>
-<div class="line"><span class="lineno">  962</span>  gnutls_credentials_set(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, GNUTLS_CRD_CERTIFICATE, data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>);</div>
-<div class="line"><span class="lineno">  963</span> </div>
-<div class="line"><span class="lineno">  964</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  965</span>  {</div>
-<div class="line"><span class="lineno">  966</span>    err = gnutls_handshake(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>);</div>
-<div class="line"><span class="lineno">  967</span>    <span class="keywordflow">if</span> (err == GNUTLS_E_AGAIN)</div>
-<div class="line"><span class="lineno">  968</span>    {</div>
-<div class="line"><span class="lineno">  969</span>      <span class="comment">// Socket would block, wait for data to become available</span></div>
-<div class="line"><span class="lineno">  970</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a>(conn))</div>
-<div class="line"><span class="lineno">  971</span>        <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  972</span>    }</div>
-<div class="line"><span class="lineno">  973</span>  } <span class="keywordflow">while</span> ((err == GNUTLS_E_AGAIN) || (err == GNUTLS_E_INTERRUPTED));</div>
-<div class="line"><span class="lineno">  974</span> </div>
-<div class="line"><span class="lineno">  975</span>  <span class="keywordflow">if</span> (err &lt; 0)</div>
-<div class="line"><span class="lineno">  976</span>  {</div>
-<div class="line"><span class="lineno">  977</span>    <span class="keywordflow">if</span> (err == GNUTLS_E_FATAL_ALERT_RECEIVED)</div>
-<div class="line"><span class="lineno">  978</span>    {</div>
-<div class="line"><span class="lineno">  979</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;gnutls_handshake: %s(%s)&quot;</span>, gnutls_strerror(err),</div>
-<div class="line"><span class="lineno">  980</span>                 gnutls_alert_get_name(gnutls_alert_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)));</div>
-<div class="line"><span class="lineno">  981</span>    }</div>
-<div class="line"><span class="lineno">  982</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  983</span>    {</div>
-<div class="line"><span class="lineno">  984</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;gnutls_handshake: %s&quot;</span>, gnutls_strerror(err));</div>
+<div class="line"><span class="lineno">  914</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_certificate_file = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;certificate_file&quot;</span>);</div>
+<div class="line"><span class="lineno">  915</span>  gnutls_certificate_set_x509_trust_file(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, c_certificate_file, GNUTLS_X509_FMT_PEM);</div>
+<div class="line"><span class="lineno">  916</span>  <span class="comment">/* ignore errors, maybe file doesn&#39;t exist yet */</span></div>
+<div class="line"><span class="lineno">  917</span> </div>
+<div class="line"><span class="lineno">  918</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_ssl_ca_certificates_file = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_ca_certificates_file&quot;</span>);</div>
+<div class="line"><span class="lineno">  919</span>  <span class="keywordflow">if</span> (c_ssl_ca_certificates_file)</div>
+<div class="line"><span class="lineno">  920</span>  {</div>
+<div class="line"><span class="lineno">  921</span>    gnutls_certificate_set_x509_trust_file(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, c_ssl_ca_certificates_file,</div>
+<div class="line"><span class="lineno">  922</span>                                           GNUTLS_X509_FMT_PEM);</div>
+<div class="line"><span class="lineno">  923</span>  }</div>
+<div class="line"><span class="lineno">  924</span> </div>
+<div class="line"><span class="lineno">  925</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_ssl_client_cert = <a class="code hl_function" href="config_2helpers_8c.html#a9f184e61342916799259930333f4205f">cs_subset_path</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_client_cert&quot;</span>);</div>
+<div class="line"><span class="lineno">  926</span>  <span class="keywordflow">if</span> (c_ssl_client_cert)</div>
+<div class="line"><span class="lineno">  927</span>  {</div>
+<div class="line"><span class="lineno">  928</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Using client certificate %s\n&quot;</span>, c_ssl_client_cert);</div>
+<div class="line"><span class="lineno">  929</span>    gnutls_certificate_set_x509_key_file(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, c_ssl_client_cert,</div>
+<div class="line"><span class="lineno">  930</span>                                         c_ssl_client_cert, GNUTLS_X509_FMT_PEM);</div>
+<div class="line"><span class="lineno">  931</span>  }</div>
+<div class="line"><span class="lineno">  932</span> </div>
+<div class="line"><span class="lineno">  933</span><span class="preprocessor">#ifdef HAVE_DECL_GNUTLS_VERIFY_DISABLE_TIME_CHECKS</span></div>
+<div class="line"><span class="lineno">  934</span>  <span class="comment">/* disable checking certificate activation/expiration times</span></div>
+<div class="line"><span class="lineno">  935</span><span class="comment">   * in gnutls, we do the checks ourselves */</span></div>
+<div class="line"><span class="lineno">  936</span>  gnutls_certificate_set_verify_flags(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>, GNUTLS_VERIFY_DISABLE_TIME_CHECKS);</div>
+<div class="line"><span class="lineno">  937</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  938</span> </div>
+<div class="line"><span class="lineno">  939</span>  err = gnutls_init(&amp;data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, GNUTLS_CLIENT);</div>
+<div class="line"><span class="lineno">  940</span>  <span class="keywordflow">if</span> (err)</div>
+<div class="line"><span class="lineno">  941</span>  {</div>
+<div class="line"><span class="lineno">  942</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;gnutls_init: %s&quot;</span>, gnutls_strerror(err));</div>
+<div class="line"><span class="lineno">  943</span>    <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno">  944</span>  }</div>
+<div class="line"><span class="lineno">  945</span> </div>
+<div class="line"><span class="lineno">  946</span>  <span class="comment">/* set socket */</span></div>
+<div class="line"><span class="lineno">  947</span>  gnutls_transport_set_ptr(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, (gnutls_transport_ptr_t) (<span class="keywordtype">long</span>) conn-&gt;<a class="code hl_variable" href="structConnection.html#af805fad417c8fa7c5079ef741d8233e2">fd</a>);</div>
+<div class="line"><span class="lineno">  948</span> </div>
+<div class="line"><span class="lineno">  949</span>  <span class="keywordflow">if</span> (gnutls_server_name_set(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, GNUTLS_NAME_DNS, conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>,</div>
+<div class="line"><span class="lineno">  950</span>                             <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(conn-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a">host</a>)))</div>
+<div class="line"><span class="lineno">  951</span>  {</div>
+<div class="line"><span class="lineno">  952</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Warning: unable to set TLS SNI host name&quot;</span>));</div>
+<div class="line"><span class="lineno">  953</span>  }</div>
+<div class="line"><span class="lineno">  954</span> </div>
+<div class="line"><span class="lineno">  955</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#af441e4ca9946761948ca442ec7cbc1a2">tls_set_priority</a>(data) &lt; 0)</div>
+<div class="line"><span class="lineno">  956</span>  {</div>
+<div class="line"><span class="lineno">  957</span>    <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno">  958</span>  }</div>
+<div class="line"><span class="lineno">  959</span> </div>
+<div class="line"><span class="lineno">  960</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_ssl_min_dh_prime_bits = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;ssl_min_dh_prime_bits&quot;</span>);</div>
+<div class="line"><span class="lineno">  961</span>  <span class="keywordflow">if</span> (c_ssl_min_dh_prime_bits &gt; 0)</div>
+<div class="line"><span class="lineno">  962</span>  {</div>
+<div class="line"><span class="lineno">  963</span>    gnutls_dh_set_prime_bits(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, c_ssl_min_dh_prime_bits);</div>
+<div class="line"><span class="lineno">  964</span>  }</div>
+<div class="line"><span class="lineno">  965</span> </div>
+<div class="line"><span class="lineno">  966</span>  gnutls_credentials_set(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, GNUTLS_CRD_CERTIFICATE, data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>);</div>
+<div class="line"><span class="lineno">  967</span> </div>
+<div class="line"><span class="lineno">  968</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  969</span>  {</div>
+<div class="line"><span class="lineno">  970</span>    err = gnutls_handshake(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>);</div>
+<div class="line"><span class="lineno">  971</span>    <span class="keywordflow">if</span> (err == GNUTLS_E_AGAIN)</div>
+<div class="line"><span class="lineno">  972</span>    {</div>
+<div class="line"><span class="lineno">  973</span>      <span class="comment">// Socket would block, wait for data to become available</span></div>
+<div class="line"><span class="lineno">  974</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a>(conn))</div>
+<div class="line"><span class="lineno">  975</span>        <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno">  976</span>    }</div>
+<div class="line"><span class="lineno">  977</span>  } <span class="keywordflow">while</span> ((err == GNUTLS_E_AGAIN) || (err == GNUTLS_E_INTERRUPTED));</div>
+<div class="line"><span class="lineno">  978</span> </div>
+<div class="line"><span class="lineno">  979</span>  <span class="keywordflow">if</span> (err &lt; 0)</div>
+<div class="line"><span class="lineno">  980</span>  {</div>
+<div class="line"><span class="lineno">  981</span>    <span class="keywordflow">if</span> (err == GNUTLS_E_FATAL_ALERT_RECEIVED)</div>
+<div class="line"><span class="lineno">  982</span>    {</div>
+<div class="line"><span class="lineno">  983</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;gnutls_handshake: %s(%s)&quot;</span>, gnutls_strerror(err),</div>
+<div class="line"><span class="lineno">  984</span>                 gnutls_alert_get_name(gnutls_alert_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)));</div>
 <div class="line"><span class="lineno">  985</span>    }</div>
-<div class="line"><span class="lineno">  986</span>    <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  987</span>  }</div>
-<div class="line"><span class="lineno">  988</span> </div>
-<div class="line"><span class="lineno">  989</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a0b8141f6dc5a59f2080067f026b20860">tls_check_certificate</a>(conn) == 0)</div>
+<div class="line"><span class="lineno">  986</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  987</span>    {</div>
+<div class="line"><span class="lineno">  988</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;gnutls_handshake: %s&quot;</span>, gnutls_strerror(err));</div>
+<div class="line"><span class="lineno">  989</span>    }</div>
 <div class="line"><span class="lineno">  990</span>    <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  991</span> </div>
-<div class="line"><span class="lineno">  992</span>  <span class="comment">/* set Security Strength Factor (SSF) for SASL */</span></div>
-<div class="line"><span class="lineno">  993</span>  <span class="comment">/* NB: gnutls_cipher_get_key_size() returns key length in bytes */</span></div>
-<div class="line"><span class="lineno">  994</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a577e30cca37f125532cc73d4cbf51dcb">ssf</a> = gnutls_cipher_get_key_size(gnutls_cipher_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)) * 8;</div>
+<div class="line"><span class="lineno">  991</span>  }</div>
+<div class="line"><span class="lineno">  992</span> </div>
+<div class="line"><span class="lineno">  993</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a0b8141f6dc5a59f2080067f026b20860">tls_check_certificate</a>(conn) == 0)</div>
+<div class="line"><span class="lineno">  994</span>    <span class="keywordflow">goto</span> fail;</div>
 <div class="line"><span class="lineno">  995</span> </div>
-<div class="line"><span class="lineno">  996</span>  <a class="code hl_function" href="#ac78a03ed1e6f606a618f474c0dd798ca">tls_get_client_cert</a>(conn);</div>
-<div class="line"><span class="lineno">  997</span> </div>
-<div class="line"><span class="lineno">  998</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a9b3a197dcd72484bca9ba6f0ce451e1f">OptGui</a>)</div>
-<div class="line"><span class="lineno">  999</span>  {</div>
-<div class="line"><span class="lineno"> 1000</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;SSL/TLS connection using %s (%s/%s/%s)&quot;</span>),</div>
-<div class="line"><span class="lineno"> 1001</span>                 gnutls_protocol_get_name(gnutls_protocol_get_version(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)),</div>
-<div class="line"><span class="lineno"> 1002</span>                 gnutls_kx_get_name(gnutls_kx_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)),</div>
-<div class="line"><span class="lineno"> 1003</span>                 gnutls_cipher_get_name(gnutls_cipher_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)),</div>
-<div class="line"><span class="lineno"> 1004</span>                 gnutls_mac_get_name(gnutls_mac_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)));</div>
-<div class="line"><span class="lineno"> 1005</span>    <a class="code hl_function" href="muttlib_8c.html#a6fbcbe533be7c4e05d99b0eb9cdb2581">mutt_sleep</a>(0);</div>
-<div class="line"><span class="lineno"> 1006</span>  }</div>
-<div class="line"><span class="lineno"> 1007</span> </div>
-<div class="line"><span class="lineno"> 1008</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1009</span> </div>
-<div class="line"><span class="lineno"> 1010</span>fail:</div>
-<div class="line"><span class="lineno"> 1011</span>  gnutls_certificate_free_credentials(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>);</div>
-<div class="line"><span class="lineno"> 1012</span>  gnutls_deinit(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>);</div>
-<div class="line"><span class="lineno"> 1013</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>);</div>
-<div class="line"><span class="lineno"> 1014</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1015</span>}</div>
-<div class="ttc" id="agnutls_8c_html_a0b8141f6dc5a59f2080067f026b20860"><div class="ttname"><a href="#a0b8141f6dc5a59f2080067f026b20860">tls_check_certificate</a></div><div class="ttdeci">static int tls_check_certificate(struct Connection *conn)</div><div class="ttdoc">Check a connection&#39;s certificate.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00622">gnutls.c:622</a></div></div>
-<div class="ttc" id="agnutls_8c_html_a31348fe59f2939376ca1758c8f0dc767"><div class="ttname"><a href="#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a></div><div class="ttdeci">static bool tls_socket_poll_with_timeout(struct Connection *conn)</div><div class="ttdoc">Poll a socket with configured timeout.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00873">gnutls.c:873</a></div></div>
-<div class="ttc" id="agnutls_8c_html_ac78a03ed1e6f606a618f474c0dd798ca"><div class="ttname"><a href="#ac78a03ed1e6f606a618f474c0dd798ca">tls_get_client_cert</a></div><div class="ttdeci">static void tls_get_client_cert(struct Connection *conn)</div><div class="ttdoc">Get the client certificate for a TLS connection.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00706">gnutls.c:706</a></div></div>
-<div class="ttc" id="agnutls_8c_html_af441e4ca9946761948ca442ec7cbc1a2"><div class="ttname"><a href="#af441e4ca9946761948ca442ec7cbc1a2">tls_set_priority</a></div><div class="ttdeci">static int tls_set_priority(struct TlsSockData *data)</div><div class="ttdoc">Set the priority of various protocols.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00829">gnutls.c:829</a></div></div>
+<div class="line"><span class="lineno">  996</span>  <span class="comment">/* set Security Strength Factor (SSF) for SASL */</span></div>
+<div class="line"><span class="lineno">  997</span>  <span class="comment">/* NB: gnutls_cipher_get_key_size() returns key length in bytes */</span></div>
+<div class="line"><span class="lineno">  998</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a577e30cca37f125532cc73d4cbf51dcb">ssf</a> = gnutls_cipher_get_key_size(gnutls_cipher_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)) * 8;</div>
+<div class="line"><span class="lineno">  999</span> </div>
+<div class="line"><span class="lineno"> 1000</span>  <a class="code hl_function" href="#ac78a03ed1e6f606a618f474c0dd798ca">tls_get_client_cert</a>(conn);</div>
+<div class="line"><span class="lineno"> 1001</span> </div>
+<div class="line"><span class="lineno"> 1002</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a9b3a197dcd72484bca9ba6f0ce451e1f">OptGui</a>)</div>
+<div class="line"><span class="lineno"> 1003</span>  {</div>
+<div class="line"><span class="lineno"> 1004</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;SSL/TLS connection using %s (%s/%s/%s)&quot;</span>),</div>
+<div class="line"><span class="lineno"> 1005</span>                 gnutls_protocol_get_name(gnutls_protocol_get_version(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)),</div>
+<div class="line"><span class="lineno"> 1006</span>                 gnutls_kx_get_name(gnutls_kx_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)),</div>
+<div class="line"><span class="lineno"> 1007</span>                 gnutls_cipher_get_name(gnutls_cipher_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)),</div>
+<div class="line"><span class="lineno"> 1008</span>                 gnutls_mac_get_name(gnutls_mac_get(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>)));</div>
+<div class="line"><span class="lineno"> 1009</span>    <a class="code hl_function" href="muttlib_8c.html#a6fbcbe533be7c4e05d99b0eb9cdb2581">mutt_sleep</a>(0);</div>
+<div class="line"><span class="lineno"> 1010</span>  }</div>
+<div class="line"><span class="lineno"> 1011</span> </div>
+<div class="line"><span class="lineno"> 1012</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1013</span> </div>
+<div class="line"><span class="lineno"> 1014</span>fail:</div>
+<div class="line"><span class="lineno"> 1015</span>  gnutls_certificate_free_credentials(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a44b81a79c0f6cd2185054a494b9eb193">xcred</a>);</div>
+<div class="line"><span class="lineno"> 1016</span>  gnutls_deinit(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>);</div>
+<div class="line"><span class="lineno"> 1017</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>);</div>
+<div class="line"><span class="lineno"> 1018</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1019</span>}</div>
+<div class="ttc" id="agnutls_8c_html_a0b8141f6dc5a59f2080067f026b20860"><div class="ttname"><a href="#a0b8141f6dc5a59f2080067f026b20860">tls_check_certificate</a></div><div class="ttdeci">static int tls_check_certificate(struct Connection *conn)</div><div class="ttdoc">Check a connection&#39;s certificate.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00626">gnutls.c:626</a></div></div>
+<div class="ttc" id="agnutls_8c_html_a31348fe59f2939376ca1758c8f0dc767"><div class="ttname"><a href="#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a></div><div class="ttdeci">static bool tls_socket_poll_with_timeout(struct Connection *conn)</div><div class="ttdoc">Poll a socket with configured timeout.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00877">gnutls.c:877</a></div></div>
+<div class="ttc" id="agnutls_8c_html_ac78a03ed1e6f606a618f474c0dd798ca"><div class="ttname"><a href="#ac78a03ed1e6f606a618f474c0dd798ca">tls_get_client_cert</a></div><div class="ttdeci">static void tls_get_client_cert(struct Connection *conn)</div><div class="ttdoc">Get the client certificate for a TLS connection.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00710">gnutls.c:710</a></div></div>
+<div class="ttc" id="agnutls_8c_html_af441e4ca9946761948ca442ec7cbc1a2"><div class="ttname"><a href="#af441e4ca9946761948ca442ec7cbc1a2">tls_set_priority</a></div><div class="ttdeci">static int tls_set_priority(struct TlsSockData *data)</div><div class="ttdoc">Set the priority of various protocols.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00833">gnutls.c:833</a></div></div>
 <div class="ttc" id="amuttlib_8c_html_a6fbcbe533be7c4e05d99b0eb9cdb2581"><div class="ttname"><a href="muttlib_8c.html#a6fbcbe533be7c4e05d99b0eb9cdb2581">mutt_sleep</a></div><div class="ttdeci">void mutt_sleep(short s)</div><div class="ttdoc">Sleep for a while.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00841">muttlib.c:841</a></div></div>
 <div class="ttc" id="astructConnection_html_a577e30cca37f125532cc73d4cbf51dcb"><div class="ttname"><a href="structConnection.html#a577e30cca37f125532cc73d4cbf51dcb">Connection::ssf</a></div><div class="ttdeci">unsigned int ssf</div><div class="ttdoc">Security strength factor, in bits (see notes)</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00050">connection.h:50</a></div></div>
 <div class="ttc" id="astructConnection_html_af805fad417c8fa7c5079ef741d8233e2"><div class="ttname"><a href="structConnection.html#af805fad417c8fa7c5079ef741d8233e2">Connection::fd</a></div><div class="ttdeci">int fd</div><div class="ttdoc">Socket file descriptor.</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00053">connection.h:53</a></div></div>
@@ -2058,25 +2064,25 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l01169">1169</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1170</span>{</div>
-<div class="line"><span class="lineno"> 1171</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a7fb79e9e2b622f5f50deb486d5efe0d4">tls_init</a>() &lt; 0)</div>
-<div class="line"><span class="lineno"> 1172</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1173</span> </div>
-<div class="line"><span class="lineno"> 1174</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#ad015a1227002b6ae42d5ad0d3add33d2">open</a> = <a class="code hl_function" href="group__connection__open.html#ga5e452ed3f45c2f6d728e8674cbc14171">tls_socket_open</a>;</div>
-<div class="line"><span class="lineno"> 1175</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#afdd852b383b3926639ec9132c048590a">read</a> = <a class="code hl_function" href="group__connection__read.html#ga32bd2425849e3fbcd2610ada3659c909">tls_socket_read</a>;</div>
-<div class="line"><span class="lineno"> 1176</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db">write</a> = <a class="code hl_function" href="group__connection__write.html#gaea266b86c800530b1aa9b91e359e75f5">tls_socket_write</a>;</div>
-<div class="line"><span class="lineno"> 1177</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a7a40be1f125477cf01ced6817be10bbc">close</a> = <a class="code hl_function" href="group__connection__close.html#ga27248e2b6ea60041ed4f73adc4ee2329">tls_socket_close</a>;</div>
-<div class="line"><span class="lineno"> 1178</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2fcded23739f26da564cdb378c8b0a4f">poll</a> = <a class="code hl_function" href="group__connection__poll.html#ga0cca54964bfbb04db3fb0e2a63200477">tls_socket_poll</a>;</div>
-<div class="line"><span class="lineno"> 1179</span> </div>
-<div class="line"><span class="lineno"> 1180</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1181</span>}</div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l01173">1173</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1174</span>{</div>
+<div class="line"><span class="lineno"> 1175</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a7fb79e9e2b622f5f50deb486d5efe0d4">tls_init</a>() &lt; 0)</div>
+<div class="line"><span class="lineno"> 1176</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1177</span> </div>
+<div class="line"><span class="lineno"> 1178</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#ad015a1227002b6ae42d5ad0d3add33d2">open</a> = <a class="code hl_function" href="group__connection__open.html#ga5e452ed3f45c2f6d728e8674cbc14171">tls_socket_open</a>;</div>
+<div class="line"><span class="lineno"> 1179</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#afdd852b383b3926639ec9132c048590a">read</a> = <a class="code hl_function" href="group__connection__read.html#ga32bd2425849e3fbcd2610ada3659c909">tls_socket_read</a>;</div>
+<div class="line"><span class="lineno"> 1180</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db">write</a> = <a class="code hl_function" href="group__connection__write.html#gaea266b86c800530b1aa9b91e359e75f5">tls_socket_write</a>;</div>
+<div class="line"><span class="lineno"> 1181</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a7a40be1f125477cf01ced6817be10bbc">close</a> = <a class="code hl_function" href="group__connection__close.html#ga27248e2b6ea60041ed4f73adc4ee2329">tls_socket_close</a>;</div>
+<div class="line"><span class="lineno"> 1182</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2fcded23739f26da564cdb378c8b0a4f">poll</a> = <a class="code hl_function" href="group__connection__poll.html#ga0cca54964bfbb04db3fb0e2a63200477">tls_socket_poll</a>;</div>
+<div class="line"><span class="lineno"> 1183</span> </div>
+<div class="line"><span class="lineno"> 1184</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1185</span>}</div>
 <div class="ttc" id="agnutls_8c_html_a7fb79e9e2b622f5f50deb486d5efe0d4"><div class="ttname"><a href="#a7fb79e9e2b622f5f50deb486d5efe0d4">tls_init</a></div><div class="ttdeci">static int tls_init(void)</div><div class="ttdoc">Set up Gnu TLS.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00092">gnutls.c:92</a></div></div>
-<div class="ttc" id="agroup__connection__close_html_ga27248e2b6ea60041ed4f73adc4ee2329"><div class="ttname"><a href="group__connection__close.html#ga27248e2b6ea60041ed4f73adc4ee2329">tls_socket_close</a></div><div class="ttdeci">static int tls_socket_close(struct Connection *conn)</div><div class="ttdoc">Close a TLS socket - Implements Connection::close() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01035">gnutls.c:1035</a></div></div>
-<div class="ttc" id="agroup__connection__open_html_ga5e452ed3f45c2f6d728e8674cbc14171"><div class="ttname"><a href="group__connection__open.html#ga5e452ed3f45c2f6d728e8674cbc14171">tls_socket_open</a></div><div class="ttdeci">static int tls_socket_open(struct Connection *conn)</div><div class="ttdoc">Open a TLS socket - Implements Connection::open() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01060">gnutls.c:1060</a></div></div>
-<div class="ttc" id="agroup__connection__poll_html_ga0cca54964bfbb04db3fb0e2a63200477"><div class="ttname"><a href="group__connection__poll.html#ga0cca54964bfbb04db3fb0e2a63200477">tls_socket_poll</a></div><div class="ttdeci">static int tls_socket_poll(struct Connection *conn, time_t wait_secs)</div><div class="ttdoc">Check if any data is waiting on a socket - Implements Connection::poll() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01020">gnutls.c:1020</a></div></div>
-<div class="ttc" id="agroup__connection__read_html_ga32bd2425849e3fbcd2610ada3659c909"><div class="ttname"><a href="group__connection__read.html#ga32bd2425849e3fbcd2610ada3659c909">tls_socket_read</a></div><div class="ttdeci">static int tls_socket_read(struct Connection *conn, char *buf, size_t count)</div><div class="ttdoc">Read data from a TLS socket - Implements Connection::read() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01077">gnutls.c:1077</a></div></div>
-<div class="ttc" id="agroup__connection__write_html_gaea266b86c800530b1aa9b91e359e75f5"><div class="ttname"><a href="group__connection__write.html#gaea266b86c800530b1aa9b91e359e75f5">tls_socket_write</a></div><div class="ttdeci">static int tls_socket_write(struct Connection *conn, const char *buf, size_t count)</div><div class="ttdoc">Write data to a TLS socket - Implements Connection::write() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01110">gnutls.c:1110</a></div></div>
+<div class="ttc" id="agroup__connection__close_html_ga27248e2b6ea60041ed4f73adc4ee2329"><div class="ttname"><a href="group__connection__close.html#ga27248e2b6ea60041ed4f73adc4ee2329">tls_socket_close</a></div><div class="ttdeci">static int tls_socket_close(struct Connection *conn)</div><div class="ttdoc">Close a TLS socket - Implements Connection::close() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01039">gnutls.c:1039</a></div></div>
+<div class="ttc" id="agroup__connection__open_html_ga5e452ed3f45c2f6d728e8674cbc14171"><div class="ttname"><a href="group__connection__open.html#ga5e452ed3f45c2f6d728e8674cbc14171">tls_socket_open</a></div><div class="ttdeci">static int tls_socket_open(struct Connection *conn)</div><div class="ttdoc">Open a TLS socket - Implements Connection::open() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01064">gnutls.c:1064</a></div></div>
+<div class="ttc" id="agroup__connection__poll_html_ga0cca54964bfbb04db3fb0e2a63200477"><div class="ttname"><a href="group__connection__poll.html#ga0cca54964bfbb04db3fb0e2a63200477">tls_socket_poll</a></div><div class="ttdeci">static int tls_socket_poll(struct Connection *conn, time_t wait_secs)</div><div class="ttdoc">Check if any data is waiting on a socket - Implements Connection::poll() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01024">gnutls.c:1024</a></div></div>
+<div class="ttc" id="agroup__connection__read_html_ga32bd2425849e3fbcd2610ada3659c909"><div class="ttname"><a href="group__connection__read.html#ga32bd2425849e3fbcd2610ada3659c909">tls_socket_read</a></div><div class="ttdeci">static int tls_socket_read(struct Connection *conn, char *buf, size_t count)</div><div class="ttdoc">Read data from a TLS socket - Implements Connection::read() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01081">gnutls.c:1081</a></div></div>
+<div class="ttc" id="agroup__connection__write_html_gaea266b86c800530b1aa9b91e359e75f5"><div class="ttname"><a href="group__connection__write.html#gaea266b86c800530b1aa9b91e359e75f5">tls_socket_write</a></div><div class="ttdeci">static int tls_socket_write(struct Connection *conn, const char *buf, size_t count)</div><div class="ttdoc">Write data to a TLS socket - Implements Connection::write() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01114">gnutls.c:1114</a></div></div>
 <div class="ttc" id="astructConnection_html_a2fcded23739f26da564cdb378c8b0a4f"><div class="ttname"><a href="structConnection.html#a2fcded23739f26da564cdb378c8b0a4f">Connection::poll</a></div><div class="ttdeci">int(* poll)(struct Connection *conn, time_t wait_secs)</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00105">connection.h:105</a></div></div>
 <div class="ttc" id="astructConnection_html_a3b376a9471b5c0ecf43968239bf8c2db"><div class="ttname"><a href="structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db">Connection::write</a></div><div class="ttdeci">int(* write)(struct Connection *conn, const char *buf, size_t count)</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00092">connection.h:92</a></div></div>
 <div class="ttc" id="astructConnection_html_a7a40be1f125477cf01ced6817be10bbc"><div class="ttname"><a href="structConnection.html#a7a40be1f125477cf01ced6817be10bbc">Connection::close</a></div><div class="ttdeci">int(* close)(struct Connection *conn)</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00116">connection.h:116</a></div></div>
@@ -2129,23 +2135,23 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l01189">1189</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1190</span>{</div>
-<div class="line"><span class="lineno"> 1191</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a7fb79e9e2b622f5f50deb486d5efe0d4">tls_init</a>() &lt; 0)</div>
-<div class="line"><span class="lineno"> 1192</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1193</span> </div>
-<div class="line"><span class="lineno"> 1194</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#ad99b7d713eb4905bafe09ed5e065c748">tls_negotiate</a>(conn) &lt; 0)</div>
-<div class="line"><span class="lineno"> 1195</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1196</span> </div>
-<div class="line"><span class="lineno"> 1197</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#afdd852b383b3926639ec9132c048590a">read</a> = <a class="code hl_function" href="group__connection__read.html#ga32bd2425849e3fbcd2610ada3659c909">tls_socket_read</a>;</div>
-<div class="line"><span class="lineno"> 1198</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db">write</a> = <a class="code hl_function" href="group__connection__write.html#gaea266b86c800530b1aa9b91e359e75f5">tls_socket_write</a>;</div>
-<div class="line"><span class="lineno"> 1199</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a7a40be1f125477cf01ced6817be10bbc">close</a> = <a class="code hl_function" href="group__connection__close.html#ga0c11cb8253f1e3cd4df8ba1a92ef3252">tls_starttls_close</a>;</div>
-<div class="line"><span class="lineno"> 1200</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2fcded23739f26da564cdb378c8b0a4f">poll</a> = <a class="code hl_function" href="group__connection__poll.html#ga0cca54964bfbb04db3fb0e2a63200477">tls_socket_poll</a>;</div>
-<div class="line"><span class="lineno"> 1201</span> </div>
-<div class="line"><span class="lineno"> 1202</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1203</span>}</div>
-<div class="ttc" id="agnutls_8c_html_ad99b7d713eb4905bafe09ed5e065c748"><div class="ttname"><a href="#ad99b7d713eb4905bafe09ed5e065c748">tls_negotiate</a></div><div class="ttdeci">static int tls_negotiate(struct Connection *conn)</div><div class="ttdoc">Negotiate TLS connection.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00898">gnutls.c:898</a></div></div>
-<div class="ttc" id="agroup__connection__close_html_ga0c11cb8253f1e3cd4df8ba1a92ef3252"><div class="ttname"><a href="group__connection__close.html#ga0c11cb8253f1e3cd4df8ba1a92ef3252">tls_starttls_close</a></div><div class="ttdeci">static int tls_starttls_close(struct Connection *conn)</div><div class="ttdoc">Close a TLS connection - Implements Connection::close() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01150">gnutls.c:1150</a></div></div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l01193">1193</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1194</span>{</div>
+<div class="line"><span class="lineno"> 1195</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a7fb79e9e2b622f5f50deb486d5efe0d4">tls_init</a>() &lt; 0)</div>
+<div class="line"><span class="lineno"> 1196</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1197</span> </div>
+<div class="line"><span class="lineno"> 1198</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#ad99b7d713eb4905bafe09ed5e065c748">tls_negotiate</a>(conn) &lt; 0)</div>
+<div class="line"><span class="lineno"> 1199</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1200</span> </div>
+<div class="line"><span class="lineno"> 1201</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#afdd852b383b3926639ec9132c048590a">read</a> = <a class="code hl_function" href="group__connection__read.html#ga32bd2425849e3fbcd2610ada3659c909">tls_socket_read</a>;</div>
+<div class="line"><span class="lineno"> 1202</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db">write</a> = <a class="code hl_function" href="group__connection__write.html#gaea266b86c800530b1aa9b91e359e75f5">tls_socket_write</a>;</div>
+<div class="line"><span class="lineno"> 1203</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a7a40be1f125477cf01ced6817be10bbc">close</a> = <a class="code hl_function" href="group__connection__close.html#ga0c11cb8253f1e3cd4df8ba1a92ef3252">tls_starttls_close</a>;</div>
+<div class="line"><span class="lineno"> 1204</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2fcded23739f26da564cdb378c8b0a4f">poll</a> = <a class="code hl_function" href="group__connection__poll.html#ga0cca54964bfbb04db3fb0e2a63200477">tls_socket_poll</a>;</div>
+<div class="line"><span class="lineno"> 1205</span> </div>
+<div class="line"><span class="lineno"> 1206</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1207</span>}</div>
+<div class="ttc" id="agnutls_8c_html_ad99b7d713eb4905bafe09ed5e065c748"><div class="ttname"><a href="#ad99b7d713eb4905bafe09ed5e065c748">tls_negotiate</a></div><div class="ttdeci">static int tls_negotiate(struct Connection *conn)</div><div class="ttdoc">Negotiate TLS connection.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00902">gnutls.c:902</a></div></div>
+<div class="ttc" id="agroup__connection__close_html_ga0c11cb8253f1e3cd4df8ba1a92ef3252"><div class="ttname"><a href="group__connection__close.html#ga0c11cb8253f1e3cd4df8ba1a92ef3252">tls_starttls_close</a></div><div class="ttdeci">static int tls_starttls_close(struct Connection *conn)</div><div class="ttdoc">Close a TLS connection - Implements Connection::close() -.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l01154">gnutls.c:1154</a></div></div>
 </div><!-- fragment --><div id="dynsection-27" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-27-summary" class="dynsummary" style="display:block;">

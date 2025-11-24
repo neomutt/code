@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-70-gcfdde0</span>
+   &#160;<span id="projectnumber">2025-09-05-75-gbc00eb</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -200,43 +200,43 @@ Variables</h2></td></tr>
 
 <p>Write data to a TLS socket - Implements <a class="el" href="structConnection.html#a3b376a9471b5c0ecf43968239bf8c2db">Connection::write()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l01110">1110</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1111</span>{</div>
-<div class="line"><span class="lineno"> 1112</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
-<div class="line"><span class="lineno"> 1113</span>  <span class="keywordtype">size_t</span> sent = 0;</div>
-<div class="line"><span class="lineno"> 1114</span> </div>
-<div class="line"><span class="lineno"> 1115</span>  <span class="keywordflow">if</span> (!data)</div>
-<div class="line"><span class="lineno"> 1116</span>  {</div>
-<div class="line"><span class="lineno"> 1117</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: no TLS socket open&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1118</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1119</span>  }</div>
-<div class="line"><span class="lineno"> 1120</span> </div>
-<div class="line"><span class="lineno"> 1121</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno"> 1122</span>  {</div>
-<div class="line"><span class="lineno"> 1123</span>    <span class="keywordtype">int</span> rc;</div>
-<div class="line"><span class="lineno"> 1124</span>    <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno"> 1125</span>    {</div>
-<div class="line"><span class="lineno"> 1126</span>      rc = gnutls_record_send(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, buf + sent, count - sent);</div>
-<div class="line"><span class="lineno"> 1127</span>      <span class="keywordflow">if</span> (rc == GNUTLS_E_AGAIN)</div>
-<div class="line"><span class="lineno"> 1128</span>      {</div>
-<div class="line"><span class="lineno"> 1129</span>        <span class="comment">// Socket would block, wait for data to become available</span></div>
-<div class="line"><span class="lineno"> 1130</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="gnutls_8c.html#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a>(conn))</div>
-<div class="line"><span class="lineno"> 1131</span>          <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1132</span>      }</div>
-<div class="line"><span class="lineno"> 1133</span>    } <span class="keywordflow">while</span> ((rc == GNUTLS_E_AGAIN) || (rc == GNUTLS_E_INTERRUPTED));</div>
-<div class="line"><span class="lineno"> 1134</span> </div>
-<div class="line"><span class="lineno"> 1135</span>    <span class="keywordflow">if</span> (rc &lt; 0)</div>
-<div class="line"><span class="lineno"> 1136</span>    {</div>
-<div class="line"><span class="lineno"> 1137</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;tls_socket_write (%s)&quot;</span>, gnutls_strerror(rc));</div>
-<div class="line"><span class="lineno"> 1138</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1139</span>    }</div>
-<div class="line"><span class="lineno"> 1140</span> </div>
-<div class="line"><span class="lineno"> 1141</span>    sent += rc;</div>
-<div class="line"><span class="lineno"> 1142</span>  } <span class="keywordflow">while</span> (sent &lt; count);</div>
-<div class="line"><span class="lineno"> 1143</span> </div>
-<div class="line"><span class="lineno"> 1144</span>  <span class="keywordflow">return</span> sent;</div>
-<div class="line"><span class="lineno"> 1145</span>}</div>
-<div class="ttc" id="agnutls_8c_html_a31348fe59f2939376ca1758c8f0dc767"><div class="ttname"><a href="gnutls_8c.html#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a></div><div class="ttdeci">static bool tls_socket_poll_with_timeout(struct Connection *conn)</div><div class="ttdoc">Poll a socket with configured timeout.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00873">gnutls.c:873</a></div></div>
+<p class="definition">Definition at line <a class="el" href="gnutls_8c_source.html#l01114">1114</a> of file <a class="el" href="gnutls_8c_source.html">gnutls.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1115</span>{</div>
+<div class="line"><span class="lineno"> 1116</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structTlsSockData.html">TlsSockData</a> *data = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
+<div class="line"><span class="lineno"> 1117</span>  <span class="keywordtype">size_t</span> sent = 0;</div>
+<div class="line"><span class="lineno"> 1118</span> </div>
+<div class="line"><span class="lineno"> 1119</span>  <span class="keywordflow">if</span> (!data)</div>
+<div class="line"><span class="lineno"> 1120</span>  {</div>
+<div class="line"><span class="lineno"> 1121</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: no TLS socket open&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1122</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1123</span>  }</div>
+<div class="line"><span class="lineno"> 1124</span> </div>
+<div class="line"><span class="lineno"> 1125</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno"> 1126</span>  {</div>
+<div class="line"><span class="lineno"> 1127</span>    <span class="keywordtype">int</span> rc;</div>
+<div class="line"><span class="lineno"> 1128</span>    <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno"> 1129</span>    {</div>
+<div class="line"><span class="lineno"> 1130</span>      rc = gnutls_record_send(data-&gt;<a class="code hl_variable" href="structTlsSockData.html#a8a3982cda2beaf0dc42f9e34168b1ec5">session</a>, buf + sent, count - sent);</div>
+<div class="line"><span class="lineno"> 1131</span>      <span class="keywordflow">if</span> (rc == GNUTLS_E_AGAIN)</div>
+<div class="line"><span class="lineno"> 1132</span>      {</div>
+<div class="line"><span class="lineno"> 1133</span>        <span class="comment">// Socket would block, wait for data to become available</span></div>
+<div class="line"><span class="lineno"> 1134</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="gnutls_8c.html#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a>(conn))</div>
+<div class="line"><span class="lineno"> 1135</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1136</span>      }</div>
+<div class="line"><span class="lineno"> 1137</span>    } <span class="keywordflow">while</span> ((rc == GNUTLS_E_AGAIN) || (rc == GNUTLS_E_INTERRUPTED));</div>
+<div class="line"><span class="lineno"> 1138</span> </div>
+<div class="line"><span class="lineno"> 1139</span>    <span class="keywordflow">if</span> (rc &lt; 0)</div>
+<div class="line"><span class="lineno"> 1140</span>    {</div>
+<div class="line"><span class="lineno"> 1141</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;tls_socket_write (%s)&quot;</span>, gnutls_strerror(rc));</div>
+<div class="line"><span class="lineno"> 1142</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1143</span>    }</div>
+<div class="line"><span class="lineno"> 1144</span> </div>
+<div class="line"><span class="lineno"> 1145</span>    sent += rc;</div>
+<div class="line"><span class="lineno"> 1146</span>  } <span class="keywordflow">while</span> (sent &lt; count);</div>
+<div class="line"><span class="lineno"> 1147</span> </div>
+<div class="line"><span class="lineno"> 1148</span>  <span class="keywordflow">return</span> sent;</div>
+<div class="line"><span class="lineno"> 1149</span>}</div>
+<div class="ttc" id="agnutls_8c_html_a31348fe59f2939376ca1758c8f0dc767"><div class="ttname"><a href="gnutls_8c.html#a31348fe59f2939376ca1758c8f0dc767">tls_socket_poll_with_timeout</a></div><div class="ttdeci">static bool tls_socket_poll_with_timeout(struct Connection *conn)</div><div class="ttdoc">Poll a socket with configured timeout.</div><div class="ttdef"><b>Definition</b> <a href="gnutls_8c_source.html#l00877">gnutls.c:877</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 <div class="ttc" id="astructConnection_html_a2baa91d494f612c8bf43302bb96543f0"><div class="ttname"><a href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">Connection::sockdata</a></div><div class="ttdeci">void * sockdata</div><div class="ttdoc">Backend-specific socket data.</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00055">connection.h:55</a></div></div>

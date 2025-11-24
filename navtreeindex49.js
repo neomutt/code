@@ -1,5 +1,8 @@
 var NAVTREEINDEX49 =
 {
+"structNmTags.html":[1,0,179],
+"structNmTags.html#a5a1921dc2cf39e108af3ea05f8d051e6":[1,0,179,0],
+"structNmTags.html#aeb685f7878de45a6603480a0bd41bd63":[1,0,179,1],
 "structNntpAcache.html":[1,0,180],
 "structNntpAcache.html#a33c62982769726fafeb4e89d6c92905c":[1,0,180,1],
 "structNntpAcache.html#a3d753a73325217475df2a93b0ec56ea0":[1,0,180,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX49 =
 "structPopCache.html#a9bd977dd3bbca1f11bdaa3f13d7a8717":[1,0,212,0],
 "structPopCache.html#aedc9204da39b93e203a5ffc0a2e0c2e1":[1,0,212,1],
 "structPopEmailData.html":[1,0,213],
-"structPopEmailData.html#a1de16443ed1e8b4152f38d654c89c4f1":[1,0,213,1],
-"structPopEmailData.html#acf6966ff72e2807416df5d2003e25858":[1,0,213,0],
-"structPostponeData.html":[1,0,214],
-"structPostponeData.html#a10c3536efabab61b4ef602d9225fe37e":[1,0,214,2]
+"structPopEmailData.html#a1de16443ed1e8b4152f38d654c89c4f1":[1,0,213,1]
 };

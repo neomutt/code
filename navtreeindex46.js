@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"structEmailGarbageCollector.html#ad04275e215eeab3e05b26f438c0c4a12":[1,0,69,0],
+"structEmailNode.html":[1,0,70],
 "structEmailNode.html#a6d443e70ad79cbc10e5c98bf28764f8f":[1,0,70,0],
 "structEmailNode.html#a812e5a33b27b12a78daacbe246089abb":[1,0,70,1],
 "structEnrichedState.html":[1,0,71],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "structHashElem.html#aafb6e3d6500e9f3dee67b7eab85f0480":[1,0,109,0],
 "structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365":[1,0,109,2],
 "structHashTable.html":[1,0,111],
-"structHashTable.html#a07e7a7b1c42ebdfeb0128c443fe59422":[1,0,111,4],
-"structHashTable.html#a1090e1661e541fe1b621bdf42a82ec11":[1,0,111,3],
-"structHashTable.html#a23691d6581bd0f1007687113486ba168":[1,0,111,5]
+"structHashTable.html#a07e7a7b1c42ebdfeb0128c443fe59422":[1,0,111,4]
 };

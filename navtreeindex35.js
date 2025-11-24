@@ -1,5 +1,7 @@
 var NAVTREEINDEX35 =
 {
+"notmuch_8c.html#a0256045c9befd9a5bf7ec50373f7b431":[2,0,37,10,28],
+"notmuch_8c.html#a03dd129a289f7f6abe0451cef4ee5ee1":[2,0,37,10,10],
 "notmuch_8c.html#a0ee14876a4916eff9cbdd7678abce919":[2,0,37,10,3],
 "notmuch_8c.html#a117bd16ebdde574564b14e737dc1349e":[2,0,37,10,48],
 "notmuch_8c.html#a1a319609376f1dcd48dd3c75e7f75cf6":[2,0,37,10,46],
@@ -247,7 +249,5 @@ var NAVTREEINDEX35 =
 "pager_functions.html":[40,4],
 "pager_message.html":[40,5],
 "pager_pager.html":[40,6],
-"pager_pbar.html":[40,7],
-"pager_ppanel.html":[40,8],
-"pager_private_data.html":[40,9]
+"pager_pbar.html":[40,7]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX50 =
 {
+"structPopEmailData.html#acf6966ff72e2807416df5d2003e25858":[1,0,213,0],
+"structPostponeData.html":[1,0,214],
+"structPostponeData.html#a10c3536efabab61b4ef602d9225fe37e":[1,0,214,2],
 "structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6":[1,0,214,4],
 "structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6":[1,0,214,3],
 "structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91":[1,0,214,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX50 =
 "structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b":[1,0,258,0],
 "structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43":[1,0,258,1],
 "structWindowState.html#a5f16dfc8603af222e79759ea1f965b13":[1,0,258,4],
-"structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65":[1,0,258,3],
-"structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5":[1,0,258,2],
-"structZlibComprData.html":[1,0,259],
-"structZlibComprData.html#a46d924d0b7e458a23e329e92b3dd2f60":[1,0,259,1]
+"structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65":[1,0,258,3]
 };

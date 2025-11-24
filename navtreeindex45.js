@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"structColorElement.html#a2729cac8adf35a90eda6a47559fc93ee":[1,0,38,1],
+"structColorElement.html#a48ef3921eaed2dc76820a742870a8641":[1,0,38,0],
 "structColorElement.html#a527527072e0d7c465e56e89f7970e2c0":[1,0,38,2],
 "structCommand.html":[1,0,39],
 "structCommand.html#a2bb4670a44e6bdf1d09a36868a9e19e7":[1,0,39,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "structEmailFormatInfo.html#a6b2b651b00301de89b93203aebe60203":[1,0,68,1],
 "structEmailFormatInfo.html#a931f6c23564aa27622ec4e276747e850":[1,0,68,3],
 "structEmailGarbageCollector.html":[1,0,69],
-"structEmailGarbageCollector.html#acb97d99c41d2276955613e2f8b71e9b4":[1,0,69,1],
-"structEmailGarbageCollector.html#ad04275e215eeab3e05b26f438c0c4a12":[1,0,69,0],
-"structEmailNode.html":[1,0,70]
+"structEmailGarbageCollector.html#acb97d99c41d2276955613e2f8b71e9b4":[1,0,69,1]
 };

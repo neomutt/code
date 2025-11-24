@@ -1,5 +1,7 @@
 var NAVTREEINDEX33 =
 {
+"ncrypt_2lib_8h.html#a797309f2fd7a80c9f5a3b97944e37c4b":[2,0,35,29,71],
+"ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2":[2,0,35,29,13],
 "ncrypt_2lib_8h.html#a79c49cef9301420920c8c673f06a1be1":[2,0,35,29,24],
 "ncrypt_2lib_8h.html#a7d989caa27c6539e55662007a6cf2cc5":[2,0,35,29,69],
 "ncrypt_2lib_8h.html#a827146354c736ec416508944692e52b2":[2,0,35,29,27],
@@ -247,7 +249,5 @@ var NAVTREEINDEX33 =
 "nntp_8c_source.html":[2,0,36,14],
 "nntp_adata.html":[38,0],
 "nntp_complete.html":[38,1],
-"nntp_config.html":[38,2],
-"nntp_edata.html":[38,3],
-"nntp_expando_browser.html":[38,4]
+"nntp_config.html":[38,2]
 };

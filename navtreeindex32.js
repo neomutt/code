@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"muttlib_8h.html#ae34cbb3670824b1838c0973c88aab15b":[2,0,88,6],
+"muttlib_8h.html#aeac015518fd637e7822d8e679dc3d18f":[2,0,88,7],
 "muttlib_8h.html#aec67d3d77b0418f6ae01995579c09ad2":[2,0,88,15],
 "muttlib_8h.html#af2015a9a442c4b2bed656f9c9ea20933":[2,0,88,12],
 "muttlib_8h_source.html":[2,0,88],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "ncrypt_2lib_8h.html#a7354df32a82355b8df8c38ea1afc06cc":[2,0,35,29,75],
 "ncrypt_2lib_8h.html#a73a1ead56127b7fac407296e153c0967":[2,0,35,29,35],
 "ncrypt_2lib_8h.html#a74b325469393092ed6d402f1ba78d7ba":[2,0,35,29,39],
-"ncrypt_2lib_8h.html#a776fef61b47569d4c698411d5e733a0f":[2,0,35,29,44],
-"ncrypt_2lib_8h.html#a797309f2fd7a80c9f5a3b97944e37c4b":[2,0,35,29,71],
-"ncrypt_2lib_8h.html#a798dfac1e8839ca89375b4ec62b3eff2":[2,0,35,29,13]
+"ncrypt_2lib_8h.html#a776fef61b47569d4c698411d5e733a0f":[2,0,35,29,44]
 };

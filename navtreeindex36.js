@@ -1,5 +1,7 @@
 var NAVTREEINDEX36 =
 {
+"pager_ppanel.html":[40,8],
+"pager_private_data.html":[40,9],
 "pages.html":[],
 "parameter_8c.html":[2,0,18,15],
 "parameter_8c.html#a24e9e07a1083982ddd84ddccb8f36a6b":[2,0,18,15,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX36 =
 "pattern_message.html":[42,8],
 "pattern_pattern.html":[42,9],
 "pattern_pattern_data.html":[42,10],
-"pattern_search_state.html":[42,11],
-"pbar_8c.html":[2,0,38,10],
-"pbar_8c.html#a0f7f43da96bade21b0ee932586e9cdc0":[2,0,38,10,10]
+"pattern_search_state.html":[42,11]
 };

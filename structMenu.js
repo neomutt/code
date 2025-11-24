@@ -6,6 +6,7 @@ var structMenu =
     [ "type", "structMenu.html#a9fc12a9cc0614626cff484f1b0120bbf", null ],
     [ "page_len", "structMenu.html#aef983750ad6113420634d1ba2544faf4", null ],
     [ "tag_prefix", "structMenu.html#ae3e67808ddefbe6fb0052de6c3019882", null ],
+    [ "show_indicator", "structMenu.html#a4667a656dbefbe212a65cd466f8b3037", null ],
     [ "win", "structMenu.html#a03edef68cc4422dea828bc89332f3020", null ],
     [ "sub", "structMenu.html#acb934ac63ef71f6efe720281b2e6bb1b", null ],
     [ "top", "structMenu.html#a9b6a0ee3837c582e8cf70e985cde69cc", null ],

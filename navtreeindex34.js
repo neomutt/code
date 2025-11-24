@@ -1,5 +1,7 @@
 var NAVTREEINDEX34 =
 {
+"nntp_edata.html":[38,3],
+"nntp_expando_browser.html":[38,4],
 "nntp_expando_newsrc.html":[38,5],
 "nntp_mdata.html":[38,6],
 "nntp_newsrc.html":[38,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX34 =
 "notmuch_2private_8h.html#af3142ba8f1a45d56da0e74227b5ccdb4":[2,0,37,11,12],
 "notmuch_2private_8h.html#afc7d9b81a6379ea5d80b84af5128b66d":[2,0,37,11,11],
 "notmuch_2private_8h_source.html":[2,0,37,11],
-"notmuch_8c.html":[2,0,37,10],
-"notmuch_8c.html#a0256045c9befd9a5bf7ec50373f7b431":[2,0,37,10,28],
-"notmuch_8c.html#a03dd129a289f7f6abe0451cef4ee5ee1":[2,0,37,10,10]
+"notmuch_8c.html":[2,0,37,10]
 };

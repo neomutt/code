@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8":[1,0,3,1],
+"structAlias.html#a82faa14f5f54dafba615959032b3731b":[1,0,3,2],
 "structAliasFunction.html":[1,0,4],
 "structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304":[1,0,4,0],
 "structAliasFunction.html#af6bf64a8a3b386629e726116150f44b0":[1,0,4,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "structCliTui.html#aa08a0923cffe5ffe4216f2e78fd42630":[1,0,37,2],
 "structCliTui.html#aaac96457e0a4b57ec86203d56505d045":[1,0,37,5],
 "structCliTui.html#abdade48cc28e0d0fb5fcf2d759cdc744":[1,0,37,3],
-"structColorElement.html":[1,0,38],
-"structColorElement.html#a2729cac8adf35a90eda6a47559fc93ee":[1,0,38,1],
-"structColorElement.html#a48ef3921eaed2dc76820a742870a8641":[1,0,38,0]
+"structColorElement.html":[1,0,38]
 };
