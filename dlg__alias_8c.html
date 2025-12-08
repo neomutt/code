@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-75-gbc00eb</span>
+   &#160;<span id="projectnumber">2025-09-05-84-g3cce42</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -348,121 +348,135 @@ Variables</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  336</span>{</div>
 <div class="line"><span class="lineno">  337</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAlias.html">Alias</a> *np = NULL;</div>
 <div class="line"><span class="lineno">  338</span>  <span class="keywordtype">char</span> bestname[8192] = { 0 };</div>
-<div class="line"><span class="lineno">  339</span> </div>
-<div class="line"><span class="lineno">  340</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasMenuData.html">AliasMenuData</a> <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a> = { <a class="code hl_define" href="array_8h.html#af50a4967d27a0531a1b10a23fc22fe05">ARRAY_HEAD_INITIALIZER</a>, NULL, <a class="code hl_variable" href="structAliasMenuData.html#af100c948f81ce4d95ec10ea660437827">sub</a> };</div>
-<div class="line"><span class="lineno">  341</span>  <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a> = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
-<div class="line"><span class="lineno">  342</span>  <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.search_state = <a class="code hl_function" href="search__state_8c.html#a7f5c574f020b1335c357e507b3294602">search_state_new</a>();</div>
-<div class="line"><span class="lineno">  343</span> </div>
-<div class="line"><span class="lineno">  344</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(buf, 0) != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  345</span>  {</div>
-<div class="line"><span class="lineno">  346</span>    <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
-<div class="line"><span class="lineno">  347</span>    {</div>
-<div class="line"><span class="lineno">  348</span>      <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a> &amp;&amp; <a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf)))</div>
-<div class="line"><span class="lineno">  349</span>      {</div>
-<div class="line"><span class="lineno">  350</span>        <span class="keywordflow">if</span> (bestname[0] == <span class="charliteral">&#39;\0&#39;</span>) <span class="comment">/* init */</span></div>
-<div class="line"><span class="lineno">  351</span>        {</div>
-<div class="line"><span class="lineno">  352</span>          <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(bestname, np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>,</div>
-<div class="line"><span class="lineno">  353</span>                        <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(<a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>) + 1, <span class="keyword">sizeof</span>(bestname)));</div>
-<div class="line"><span class="lineno">  354</span>        }</div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  339</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAlias.html">Alias</a> *a_best = NULL;</div>
+<div class="line"><span class="lineno">  340</span>  <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasMenuData.html">AliasMenuData</a> <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a> = { <a class="code hl_define" href="array_8h.html#af50a4967d27a0531a1b10a23fc22fe05">ARRAY_HEAD_INITIALIZER</a>, NULL, <a class="code hl_variable" href="structAliasMenuData.html#af100c948f81ce4d95ec10ea660437827">sub</a> };</div>
+<div class="line"><span class="lineno">  343</span>  <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a> = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
+<div class="line"><span class="lineno">  344</span>  <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.search_state = <a class="code hl_function" href="search__state_8c.html#a7f5c574f020b1335c357e507b3294602">search_state_new</a>();</div>
+<div class="line"><span class="lineno">  345</span> </div>
+<div class="line"><span class="lineno">  346</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(buf, 0) != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  347</span>  {</div>
+<div class="line"><span class="lineno">  348</span>    <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
+<div class="line"><span class="lineno">  349</span>    {</div>
+<div class="line"><span class="lineno">  350</span>      <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a> &amp;&amp; <a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf)))</div>
+<div class="line"><span class="lineno">  351</span>      {</div>
+<div class="line"><span class="lineno">  352</span>        a_best = np;</div>
+<div class="line"><span class="lineno">  353</span>        count++;</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">if</span> (bestname[0] == <span class="charliteral">&#39;\0&#39;</span>) <span class="comment">/* init */</span></div>
 <div class="line"><span class="lineno">  356</span>        {</div>
-<div class="line"><span class="lineno">  357</span>          <span class="keywordtype">int</span> i;</div>
-<div class="line"><span class="lineno">  358</span>          <span class="keywordflow">for</span> (i = 0; np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>[i] &amp;&amp; (np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>[i] == bestname[i]); i++)</div>
-<div class="line"><span class="lineno">  359</span>            ; <span class="comment">// do nothing</span></div>
-<div class="line"><span class="lineno">  360</span> </div>
-<div class="line"><span class="lineno">  361</span>          bestname[i] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  362</span>        }</div>
-<div class="line"><span class="lineno">  363</span>      }</div>
-<div class="line"><span class="lineno">  364</span>    }</div>
+<div class="line"><span class="lineno">  357</span>          <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(bestname, np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>,</div>
+<div class="line"><span class="lineno">  358</span>                        <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(<a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>) + 1, <span class="keyword">sizeof</span>(bestname)));</div>
+<div class="line"><span class="lineno">  359</span>        }</div>
+<div class="line"><span class="lineno">  360</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  361</span>        {</div>
+<div class="line"><span class="lineno">  362</span>          <span class="keywordtype">int</span> i;</div>
+<div class="line"><span class="lineno">  363</span>          <span class="keywordflow">for</span> (i = 0; np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>[i] &amp;&amp; (np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>[i] == bestname[i]); i++)</div>
+<div class="line"><span class="lineno">  364</span>            ; <span class="comment">// do nothing</span></div>
 <div class="line"><span class="lineno">  365</span> </div>
-<div class="line"><span class="lineno">  366</span>    <span class="keywordflow">if</span> (bestname[0] == <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  367</span>    {</div>
-<div class="line"><span class="lineno">  368</span>      <span class="comment">// Create a View Array of all the Aliases</span></div>
-<div class="line"><span class="lineno">  369</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.limit);</div>
-<div class="line"><span class="lineno">  370</span>      <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
-<div class="line"><span class="lineno">  371</span>      {</div>
-<div class="line"><span class="lineno">  372</span>        <a class="code hl_function" href="array_8c.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa">alias_array_alias_add</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.ava, np);</div>
-<div class="line"><span class="lineno">  373</span>      }</div>
-<div class="line"><span class="lineno">  374</span>    }</div>
-<div class="line"><span class="lineno">  375</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  376</span>    {</div>
-<div class="line"><span class="lineno">  377</span>      <span class="comment">/* fake the pattern for menu title */</span></div>
-<div class="line"><span class="lineno">  378</span>      <span class="keywordtype">char</span> *mtitle = NULL;</div>
-<div class="line"><span class="lineno">  379</span>      <a class="code hl_function" href="mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595">mutt_str_asprintf</a>(&amp;mtitle, <span class="stringliteral">&quot;~f ^%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
-<div class="line"><span class="lineno">  380</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.limit);</div>
-<div class="line"><span class="lineno">  381</span>      <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.limit = mtitle;</div>
-<div class="line"><span class="lineno">  382</span> </div>
-<div class="line"><span class="lineno">  383</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(bestname, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf)))</div>
-<div class="line"><span class="lineno">  384</span>      {</div>
-<div class="line"><span class="lineno">  385</span>        <span class="comment">/* we are adding something to the completion */</span></div>
-<div class="line"><span class="lineno">  386</span>        <a class="code hl_function" href="buffer_8c.html#a734136197aa74f67d18a150aca77d2ac">buf_strcpy_n</a>(buf, bestname, <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(bestname) + 1);</div>
-<div class="line"><span class="lineno">  387</span>        <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.limit);</div>
-<div class="line"><span class="lineno">  388</span>        <a class="code hl_function" href="search__state_8c.html#a1e52c5b788064eaa56ad7232ed09f77a">search_state_free</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.search_state);</div>
-<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  390</span>      }</div>
-<div class="line"><span class="lineno">  391</span> </div>
-<div class="line"><span class="lineno">  392</span>      <span class="comment">/* build alias list and show it */</span></div>
-<div class="line"><span class="lineno">  393</span>      <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
-<div class="line"><span class="lineno">  394</span>      {</div>
-<div class="line"><span class="lineno">  395</span>        <span class="keywordtype">int</span> aasize = <a class="code hl_function" href="array_8c.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa">alias_array_alias_add</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.ava, np);</div>
+<div class="line"><span class="lineno">  366</span>          bestname[i] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  367</span>        }</div>
+<div class="line"><span class="lineno">  368</span>      }</div>
+<div class="line"><span class="lineno">  369</span>    }</div>
+<div class="line"><span class="lineno">  370</span> </div>
+<div class="line"><span class="lineno">  371</span>    <span class="comment">// Exactly one match, so expand the Alias and return</span></div>
+<div class="line"><span class="lineno">  372</span>    <span class="keywordflow">if</span> (count == 1)</div>
+<div class="line"><span class="lineno">  373</span>    {</div>
+<div class="line"><span class="lineno">  374</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno">  375</span>      <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;a_best-&gt;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, buf, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  376</span>      <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><span class="lineno">  377</span>      <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  378</span>    }</div>
+<div class="line"><span class="lineno">  379</span> </div>
+<div class="line"><span class="lineno">  380</span>    <span class="keywordflow">if</span> (bestname[0] == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  381</span>    {</div>
+<div class="line"><span class="lineno">  382</span>      <span class="comment">// Create a View Array of all the Aliases</span></div>
+<div class="line"><span class="lineno">  383</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.limit);</div>
+<div class="line"><span class="lineno">  384</span>      <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
+<div class="line"><span class="lineno">  385</span>      {</div>
+<div class="line"><span class="lineno">  386</span>        <a class="code hl_function" href="array_8c.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa">alias_array_alias_add</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.ava, np);</div>
+<div class="line"><span class="lineno">  387</span>      }</div>
+<div class="line"><span class="lineno">  388</span>    }</div>
+<div class="line"><span class="lineno">  389</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  390</span>    {</div>
+<div class="line"><span class="lineno">  391</span>      <span class="comment">/* fake the pattern for menu title */</span></div>
+<div class="line"><span class="lineno">  392</span>      <span class="keywordtype">char</span> *mtitle = NULL;</div>
+<div class="line"><span class="lineno">  393</span>      <a class="code hl_function" href="mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595">mutt_str_asprintf</a>(&amp;mtitle, <span class="stringliteral">&quot;~f ^%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
+<div class="line"><span class="lineno">  394</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.limit);</div>
+<div class="line"><span class="lineno">  395</span>      <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.limit = mtitle;</div>
 <div class="line"><span class="lineno">  396</span> </div>
-<div class="line"><span class="lineno">  397</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *av = <a class="code hl_define" href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>, aasize - 1);</div>
-<div class="line"><span class="lineno">  398</span> </div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a> &amp;&amp; !<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf)))</div>
-<div class="line"><span class="lineno">  400</span>        {</div>
-<div class="line"><span class="lineno">  401</span>          av-&gt;<a class="code hl_variable" href="structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4">is_visible</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  402</span>        }</div>
-<div class="line"><span class="lineno">  403</span>      }</div>
-<div class="line"><span class="lineno">  404</span>    }</div>
-<div class="line"><span class="lineno">  405</span>  }</div>
-<div class="line"><span class="lineno">  406</span> </div>
-<div class="line"><span class="lineno">  407</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>))</div>
-<div class="line"><span class="lineno">  408</span>  {</div>
-<div class="line"><span class="lineno">  409</span>    <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
-<div class="line"><span class="lineno">  410</span>    {</div>
-<div class="line"><span class="lineno">  411</span>      <a class="code hl_function" href="array_8c.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa">alias_array_alias_add</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>, np);</div>
-<div class="line"><span class="lineno">  412</span>    }</div>
-<div class="line"><span class="lineno">  413</span> </div>
-<div class="line"><span class="lineno">  414</span>    <a class="code hl_function" href="pattern_2lib_8h.html#a36f056add52f9e43042e468da48b1577">mutt_pattern_alias_func</a>(NULL, &amp;mdata, <a class="code hl_enumvalue" href="pattern_2lib_8h.html#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c">PAA_VISIBLE</a>, NULL);</div>
-<div class="line"><span class="lineno">  415</span>  }</div>
-<div class="line"><span class="lineno">  416</span> </div>
-<div class="line"><span class="lineno">  417</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="group__gui__dlg.html#gaee420e636381e1cea6cce6a794b77a14">dlg_alias</a>(&amp;mdata))</div>
-<div class="line"><span class="lineno">  418</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  419</span> </div>
-<div class="line"><span class="lineno">  420</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno">  421</span> </div>
-<div class="line"><span class="lineno">  422</span>  <span class="comment">// Extract the selected aliases</span></div>
-<div class="line"><span class="lineno">  423</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmpbuf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  424</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *avp = NULL;</div>
-<div class="line"><span class="lineno">  425</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
-<div class="line"><span class="lineno">  426</span>  {</div>
-<div class="line"><span class="lineno">  427</span>    <span class="keywordflow">if</span> (!avp-&gt;<a class="code hl_variable" href="structAliasView.html#a683663ebafec086d5d253cd55fb7b209">is_tagged</a>)</div>
-<div class="line"><span class="lineno">  428</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>    <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>-&gt;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, tmpbuf, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  431</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(tmpbuf, <span class="stringliteral">&quot;, &quot;</span>);</div>
-<div class="line"><span class="lineno">  432</span>  }</div>
-<div class="line"><span class="lineno">  433</span>  <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(buf, tmpbuf);</div>
-<div class="line"><span class="lineno">  434</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmpbuf);</div>
+<div class="line"><span class="lineno">  397</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(bestname, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf)))</div>
+<div class="line"><span class="lineno">  398</span>      {</div>
+<div class="line"><span class="lineno">  399</span>        <span class="comment">/* we are adding something to the completion */</span></div>
+<div class="line"><span class="lineno">  400</span>        <a class="code hl_function" href="buffer_8c.html#a734136197aa74f67d18a150aca77d2ac">buf_strcpy_n</a>(buf, bestname, <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(bestname) + 1);</div>
+<div class="line"><span class="lineno">  401</span>        <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.limit);</div>
+<div class="line"><span class="lineno">  402</span>        <a class="code hl_function" href="search__state_8c.html#a1e52c5b788064eaa56ad7232ed09f77a">search_state_free</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.search_state);</div>
+<div class="line"><span class="lineno">  403</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  404</span>      }</div>
+<div class="line"><span class="lineno">  405</span> </div>
+<div class="line"><span class="lineno">  406</span>      <span class="comment">/* build alias list and show it */</span></div>
+<div class="line"><span class="lineno">  407</span>      <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
+<div class="line"><span class="lineno">  408</span>      {</div>
+<div class="line"><span class="lineno">  409</span>        <span class="keywordtype">int</span> aasize = <a class="code hl_function" href="array_8c.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa">alias_array_alias_add</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.ava, np);</div>
+<div class="line"><span class="lineno">  410</span> </div>
+<div class="line"><span class="lineno">  411</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *av = <a class="code hl_define" href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>, aasize - 1);</div>
+<div class="line"><span class="lineno">  412</span> </div>
+<div class="line"><span class="lineno">  413</span>        <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a> &amp;&amp; !<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(np-&gt;<a class="code hl_variable" href="structAlias.html#a60062d424ebbf53c68c5ccfd478da8d8">name</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf)))</div>
+<div class="line"><span class="lineno">  414</span>        {</div>
+<div class="line"><span class="lineno">  415</span>          av-&gt;<a class="code hl_variable" href="structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4">is_visible</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  416</span>        }</div>
+<div class="line"><span class="lineno">  417</span>      }</div>
+<div class="line"><span class="lineno">  418</span>    }</div>
+<div class="line"><span class="lineno">  419</span>  }</div>
+<div class="line"><span class="lineno">  420</span> </div>
+<div class="line"><span class="lineno">  421</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>))</div>
+<div class="line"><span class="lineno">  422</span>  {</div>
+<div class="line"><span class="lineno">  423</span>    <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
+<div class="line"><span class="lineno">  424</span>    {</div>
+<div class="line"><span class="lineno">  425</span>      <a class="code hl_function" href="array_8c.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa">alias_array_alias_add</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>, np);</div>
+<div class="line"><span class="lineno">  426</span>    }</div>
+<div class="line"><span class="lineno">  427</span> </div>
+<div class="line"><span class="lineno">  428</span>    <a class="code hl_function" href="pattern_2lib_8h.html#a36f056add52f9e43042e468da48b1577">mutt_pattern_alias_func</a>(NULL, &amp;mdata, <a class="code hl_enumvalue" href="pattern_2lib_8h.html#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c">PAA_VISIBLE</a>, NULL);</div>
+<div class="line"><span class="lineno">  429</span>  }</div>
+<div class="line"><span class="lineno">  430</span> </div>
+<div class="line"><span class="lineno">  431</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="group__gui__dlg.html#gaee420e636381e1cea6cce6a794b77a14">dlg_alias</a>(&amp;mdata))</div>
+<div class="line"><span class="lineno">  432</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  433</span> </div>
+<div class="line"><span class="lineno">  434</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
 <div class="line"><span class="lineno">  435</span> </div>
-<div class="line"><span class="lineno">  436</span>done:</div>
-<div class="line"><span class="lineno">  437</span>  <span class="comment">// Process any deleted aliases</span></div>
-<div class="line"><span class="lineno">  438</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
-<div class="line"><span class="lineno">  439</span>  {</div>
-<div class="line"><span class="lineno">  440</span>    <span class="keywordflow">if</span> (!avp-&gt;<a class="code hl_variable" href="structAliasView.html#a5be64feabac1222706a5555845e285cc">is_deleted</a>)</div>
-<div class="line"><span class="lineno">  441</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  442</span> </div>
-<div class="line"><span class="lineno">  443</span>    <a class="code hl_define" href="queue_8h.html#aaae87ca18c28066e1a96221e762d1209">TAILQ_REMOVE</a>(&amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>, entries);</div>
-<div class="line"><span class="lineno">  444</span>    <a class="code hl_function" href="alias_8c.html#a027ff288eb965c15ce16ca26b6467d44">alias_free</a>(&amp;avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>);</div>
-<div class="line"><span class="lineno">  445</span>  }</div>
-<div class="line"><span class="lineno">  446</span> </div>
-<div class="line"><span class="lineno">  447</span>  <a class="code hl_define" href="array_8h.html#aaa8805bd90a2015d8f5eb0fe3bb13b3f">ARRAY_FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>);</div>
-<div class="line"><span class="lineno">  448</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a>);</div>
-<div class="line"><span class="lineno">  449</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#ac168f872d43329c8e4ca9295425ed06d">title</a>);</div>
-<div class="line"><span class="lineno">  450</span>  <a class="code hl_function" href="search__state_8c.html#a1e52c5b788064eaa56ad7232ed09f77a">search_state_free</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a61756ea71635bed6753e002060cd90c5">search_state</a>);</div>
-<div class="line"><span class="lineno">  451</span> </div>
-<div class="line"><span class="lineno">  452</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  453</span>}</div>
+<div class="line"><span class="lineno">  436</span>  <span class="comment">// Extract the selected aliases</span></div>
+<div class="line"><span class="lineno">  437</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmpbuf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  438</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *avp = NULL;</div>
+<div class="line"><span class="lineno">  439</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
+<div class="line"><span class="lineno">  440</span>  {</div>
+<div class="line"><span class="lineno">  441</span>    <span class="keywordflow">if</span> (!avp-&gt;<a class="code hl_variable" href="structAliasView.html#a683663ebafec086d5d253cd55fb7b209">is_tagged</a>)</div>
+<div class="line"><span class="lineno">  442</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  443</span> </div>
+<div class="line"><span class="lineno">  444</span>    <a class="code hl_function" href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a>(&amp;avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>-&gt;<a class="code hl_variable" href="structAlias.html#a82faa14f5f54dafba615959032b3731b">addr</a>, tmpbuf, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  445</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(tmpbuf, <span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"><span class="lineno">  446</span>  }</div>
+<div class="line"><span class="lineno">  447</span>  <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(buf, tmpbuf);</div>
+<div class="line"><span class="lineno">  448</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmpbuf);</div>
+<div class="line"><span class="lineno">  449</span> </div>
+<div class="line"><span class="lineno">  450</span>done:</div>
+<div class="line"><span class="lineno">  451</span>  <span class="comment">// Process any deleted aliases</span></div>
+<div class="line"><span class="lineno">  452</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
+<div class="line"><span class="lineno">  453</span>  {</div>
+<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">if</span> (!avp-&gt;<a class="code hl_variable" href="structAliasView.html#a5be64feabac1222706a5555845e285cc">is_deleted</a>)</div>
+<div class="line"><span class="lineno">  455</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  456</span> </div>
+<div class="line"><span class="lineno">  457</span>    <a class="code hl_define" href="queue_8h.html#aaae87ca18c28066e1a96221e762d1209">TAILQ_REMOVE</a>(&amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>, entries);</div>
+<div class="line"><span class="lineno">  458</span>    <a class="code hl_function" href="alias_8c.html#a027ff288eb965c15ce16ca26b6467d44">alias_free</a>(&amp;avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>);</div>
+<div class="line"><span class="lineno">  459</span>  }</div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>  <a class="code hl_define" href="array_8h.html#aaa8805bd90a2015d8f5eb0fe3bb13b3f">ARRAY_FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>);</div>
+<div class="line"><span class="lineno">  462</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a>);</div>
+<div class="line"><span class="lineno">  463</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#ac168f872d43329c8e4ca9295425ed06d">title</a>);</div>
+<div class="line"><span class="lineno">  464</span>  <a class="code hl_function" href="search__state_8c.html#a1e52c5b788064eaa56ad7232ed09f77a">search_state_free</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a61756ea71635bed6753e002060cd90c5">search_state</a>);</div>
+<div class="line"><span class="lineno">  465</span> </div>
+<div class="line"><span class="lineno">  466</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  467</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a8143574988507c4f906548a2e88166d5"><div class="ttname"><a href="address_2address_8c.html#a8143574988507c4f906548a2e88166d5">mutt_addrlist_write</a></div><div class="ttdeci">size_t mutt_addrlist_write(const struct AddressList *al, struct Buffer *buf, bool display)</div><div class="ttdoc">Write an Address to a buffer.</div><div class="ttdef"><b>Definition</b> <a href="address_2address_8c_source.html#l01206">address.c:1206</a></div></div>
 <div class="ttc" id="aalias_8c_html_a027ff288eb965c15ce16ca26b6467d44"><div class="ttname"><a href="alias_8c.html#a027ff288eb965c15ce16ca26b6467d44">alias_free</a></div><div class="ttdeci">void alias_free(struct Alias **ptr)</div><div class="ttdoc">Free an Alias.</div><div class="ttdef"><b>Definition</b> <a href="alias_8c_source.html#l00668">alias.c:668</a></div></div>
 <div class="ttc" id="aalias_8c_html_a0831e7ca6080141051db5bde20cb45f7"><div class="ttname"><a href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a></div><div class="ttdeci">struct AliasList Aliases</div><div class="ttdoc">List of all the user&#39;s email aliases.</div><div class="ttdef"><b>Definition</b> <a href="alias_8c_source.html#l00061">alias.c:61</a></div></div>
@@ -554,58 +568,58 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="dlg__alias_8c_source.html#l00460">460</a> of file <a class="el" href="dlg__alias_8c_source.html">dlg_alias.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  461</span>{</div>
-<div class="line"><span class="lineno">  462</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAlias.html">Alias</a> *np = NULL;</div>
-<div class="line"><span class="lineno">  463</span> </div>
-<div class="line"><span class="lineno">  464</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasMenuData.html">AliasMenuData</a> <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a> = { <a class="code hl_define" href="array_8h.html#af50a4967d27a0531a1b10a23fc22fe05">ARRAY_HEAD_INITIALIZER</a>, NULL, <a class="code hl_variable" href="structAliasMenuData.html#af100c948f81ce4d95ec10ea660437827">sub</a> };</div>
-<div class="line"><span class="lineno">  465</span>  <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.<a class="code hl_variable" href="structAliasMenuData.html#a61756ea71635bed6753e002060cd90c5">search_state</a> = <a class="code hl_function" href="search__state_8c.html#a7f5c574f020b1335c357e507b3294602">search_state_new</a>();</div>
-<div class="line"><span class="lineno">  466</span> </div>
-<div class="line"><span class="lineno">  467</span>  <span class="comment">// Create a View Array of all the Aliases</span></div>
-<div class="line"><span class="lineno">  468</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
-<div class="line"><span class="lineno">  469</span>  {</div>
-<div class="line"><span class="lineno">  470</span>    <a class="code hl_function" href="array_8c.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa">alias_array_alias_add</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.ava, np);</div>
-<div class="line"><span class="lineno">  471</span>  }</div>
-<div class="line"><span class="lineno">  472</span> </div>
-<div class="line"><span class="lineno">  473</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="group__gui__dlg.html#gaee420e636381e1cea6cce6a794b77a14">dlg_alias</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>))</div>
-<div class="line"><span class="lineno">  474</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  475</span> </div>
-<div class="line"><span class="lineno">  476</span>  <span class="comment">// Prepare the &quot;To:&quot; field of a new email</span></div>
-<div class="line"><span class="lineno">  477</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = <a class="code hl_function" href="email_2email_8c.html#ab53e91414f24cecdc75fcfea6f1824e3">email_new</a>();</div>
-<div class="line"><span class="lineno">  478</span>  e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a> = <a class="code hl_function" href="envelope_8c.html#a406e6f76001e7604ce65ffe972fc19c1">mutt_env_new</a>();</div>
-<div class="line"><span class="lineno">  479</span> </div>
-<div class="line"><span class="lineno">  480</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *avp = NULL;</div>
-<div class="line"><span class="lineno">  481</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
-<div class="line"><span class="lineno">  482</span>  {</div>
-<div class="line"><span class="lineno">  483</span>    <span class="keywordflow">if</span> (!avp-&gt;<a class="code hl_variable" href="structAliasView.html#a683663ebafec086d5d253cd55fb7b209">is_tagged</a>)</div>
-<div class="line"><span class="lineno">  484</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  485</span> </div>
-<div class="line"><span class="lineno">  486</span>    <span class="keyword">struct </span>AddressList al_copy = <a class="code hl_define" href="queue_8h.html#ac269df7d4126ed9885156cbad2cbf8af">TAILQ_HEAD_INITIALIZER</a>(al_copy);</div>
-<div class="line"><span class="lineno">  487</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="dlg__query_8c.html#a8e282b40781bf2e94271731b7599b7c0">alias_to_addrlist</a>(&amp;al_copy, avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>))</div>
-<div class="line"><span class="lineno">  488</span>    {</div>
-<div class="line"><span class="lineno">  489</span>      <a class="code hl_function" href="address_2address_8c.html#a16764dc80c9b3f6ad2897c8b7e59bd10">mutt_addrlist_copy</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>, &amp;al_copy, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  490</span>      <a class="code hl_function" href="address_2address_8c.html#a396bcf6adfff6663096fa6ae99c31c9a">mutt_addrlist_clear</a>(&amp;al_copy);</div>
-<div class="line"><span class="lineno">  491</span>    }</div>
-<div class="line"><span class="lineno">  492</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="dlg__alias_8c_source.html#l00474">474</a> of file <a class="el" href="dlg__alias_8c_source.html">dlg_alias.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  475</span>{</div>
+<div class="line"><span class="lineno">  476</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAlias.html">Alias</a> *np = NULL;</div>
+<div class="line"><span class="lineno">  477</span> </div>
+<div class="line"><span class="lineno">  478</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasMenuData.html">AliasMenuData</a> <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a> = { <a class="code hl_define" href="array_8h.html#af50a4967d27a0531a1b10a23fc22fe05">ARRAY_HEAD_INITIALIZER</a>, NULL, <a class="code hl_variable" href="structAliasMenuData.html#af100c948f81ce4d95ec10ea660437827">sub</a> };</div>
+<div class="line"><span class="lineno">  479</span>  <a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.<a class="code hl_variable" href="structAliasMenuData.html#a61756ea71635bed6753e002060cd90c5">search_state</a> = <a class="code hl_function" href="search__state_8c.html#a7f5c574f020b1335c357e507b3294602">search_state_new</a>();</div>
+<div class="line"><span class="lineno">  480</span> </div>
+<div class="line"><span class="lineno">  481</span>  <span class="comment">// Create a View Array of all the Aliases</span></div>
+<div class="line"><span class="lineno">  482</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, entries)</div>
+<div class="line"><span class="lineno">  483</span>  {</div>
+<div class="line"><span class="lineno">  484</span>    <a class="code hl_function" href="array_8c.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa">alias_array_alias_add</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>.ava, np);</div>
+<div class="line"><span class="lineno">  485</span>  }</div>
+<div class="line"><span class="lineno">  486</span> </div>
+<div class="line"><span class="lineno">  487</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="group__gui__dlg.html#gaee420e636381e1cea6cce6a794b77a14">dlg_alias</a>(&amp;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>))</div>
+<div class="line"><span class="lineno">  488</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  489</span> </div>
+<div class="line"><span class="lineno">  490</span>  <span class="comment">// Prepare the &quot;To:&quot; field of a new email</span></div>
+<div class="line"><span class="lineno">  491</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = <a class="code hl_function" href="email_2email_8c.html#ab53e91414f24cecdc75fcfea6f1824e3">email_new</a>();</div>
+<div class="line"><span class="lineno">  492</span>  e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a> = <a class="code hl_function" href="envelope_8c.html#a406e6f76001e7604ce65ffe972fc19c1">mutt_env_new</a>();</div>
 <div class="line"><span class="lineno">  493</span> </div>
-<div class="line"><span class="lineno">  494</span>  <a class="code hl_function" href="send_8c.html#ad9c2899c7c3a76d2ce3b911221705a30">mutt_send_message</a>(<a class="code hl_define" href="send_8h.html#ae202c5175fee11b7b523c737b41fdb92">SEND_REVIEW_TO</a>, e, NULL, m, NULL, sub);</div>
-<div class="line"><span class="lineno">  495</span> </div>
-<div class="line"><span class="lineno">  496</span>done:</div>
-<div class="line"><span class="lineno">  497</span>  <span class="comment">// Process any deleted aliases</span></div>
-<div class="line"><span class="lineno">  498</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
-<div class="line"><span class="lineno">  499</span>  {</div>
-<div class="line"><span class="lineno">  500</span>    <span class="keywordflow">if</span> (avp-&gt;<a class="code hl_variable" href="structAliasView.html#a5be64feabac1222706a5555845e285cc">is_deleted</a>)</div>
-<div class="line"><span class="lineno">  501</span>    {</div>
-<div class="line"><span class="lineno">  502</span>      <a class="code hl_define" href="queue_8h.html#aaae87ca18c28066e1a96221e762d1209">TAILQ_REMOVE</a>(&amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>, entries);</div>
-<div class="line"><span class="lineno">  503</span>      <a class="code hl_function" href="alias_8c.html#a027ff288eb965c15ce16ca26b6467d44">alias_free</a>(&amp;avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>);</div>
-<div class="line"><span class="lineno">  504</span>    }</div>
-<div class="line"><span class="lineno">  505</span>  }</div>
-<div class="line"><span class="lineno">  506</span> </div>
-<div class="line"><span class="lineno">  507</span>  <a class="code hl_define" href="array_8h.html#aaa8805bd90a2015d8f5eb0fe3bb13b3f">ARRAY_FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>);</div>
-<div class="line"><span class="lineno">  508</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a>);</div>
-<div class="line"><span class="lineno">  509</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#ac168f872d43329c8e4ca9295425ed06d">title</a>);</div>
-<div class="line"><span class="lineno">  510</span>  <a class="code hl_function" href="search__state_8c.html#a1e52c5b788064eaa56ad7232ed09f77a">search_state_free</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a61756ea71635bed6753e002060cd90c5">search_state</a>);</div>
-<div class="line"><span class="lineno">  511</span>}</div>
+<div class="line"><span class="lineno">  494</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *avp = NULL;</div>
+<div class="line"><span class="lineno">  495</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
+<div class="line"><span class="lineno">  496</span>  {</div>
+<div class="line"><span class="lineno">  497</span>    <span class="keywordflow">if</span> (!avp-&gt;<a class="code hl_variable" href="structAliasView.html#a683663ebafec086d5d253cd55fb7b209">is_tagged</a>)</div>
+<div class="line"><span class="lineno">  498</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  499</span> </div>
+<div class="line"><span class="lineno">  500</span>    <span class="keyword">struct </span>AddressList al_copy = <a class="code hl_define" href="queue_8h.html#ac269df7d4126ed9885156cbad2cbf8af">TAILQ_HEAD_INITIALIZER</a>(al_copy);</div>
+<div class="line"><span class="lineno">  501</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="dlg__query_8c.html#a8e282b40781bf2e94271731b7599b7c0">alias_to_addrlist</a>(&amp;al_copy, avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>))</div>
+<div class="line"><span class="lineno">  502</span>    {</div>
+<div class="line"><span class="lineno">  503</span>      <a class="code hl_function" href="address_2address_8c.html#a16764dc80c9b3f6ad2897c8b7e59bd10">mutt_addrlist_copy</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>, &amp;al_copy, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  504</span>      <a class="code hl_function" href="address_2address_8c.html#a396bcf6adfff6663096fa6ae99c31c9a">mutt_addrlist_clear</a>(&amp;al_copy);</div>
+<div class="line"><span class="lineno">  505</span>    }</div>
+<div class="line"><span class="lineno">  506</span>  }</div>
+<div class="line"><span class="lineno">  507</span> </div>
+<div class="line"><span class="lineno">  508</span>  <a class="code hl_function" href="send_8c.html#ad9c2899c7c3a76d2ce3b911221705a30">mutt_send_message</a>(<a class="code hl_define" href="send_8h.html#ae202c5175fee11b7b523c737b41fdb92">SEND_REVIEW_TO</a>, e, NULL, m, NULL, sub);</div>
+<div class="line"><span class="lineno">  509</span> </div>
+<div class="line"><span class="lineno">  510</span>done:</div>
+<div class="line"><span class="lineno">  511</span>  <span class="comment">// Process any deleted aliases</span></div>
+<div class="line"><span class="lineno">  512</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
+<div class="line"><span class="lineno">  513</span>  {</div>
+<div class="line"><span class="lineno">  514</span>    <span class="keywordflow">if</span> (avp-&gt;<a class="code hl_variable" href="structAliasView.html#a5be64feabac1222706a5555845e285cc">is_deleted</a>)</div>
+<div class="line"><span class="lineno">  515</span>    {</div>
+<div class="line"><span class="lineno">  516</span>      <a class="code hl_define" href="queue_8h.html#aaae87ca18c28066e1a96221e762d1209">TAILQ_REMOVE</a>(&amp;<a class="code hl_variable" href="alias_8c.html#a0831e7ca6080141051db5bde20cb45f7">Aliases</a>, avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>, entries);</div>
+<div class="line"><span class="lineno">  517</span>      <a class="code hl_function" href="alias_8c.html#a027ff288eb965c15ce16ca26b6467d44">alias_free</a>(&amp;avp-&gt;<a class="code hl_variable" href="structAliasView.html#a0db3775dbf901fbd380681d2e806f601">alias</a>);</div>
+<div class="line"><span class="lineno">  518</span>    }</div>
+<div class="line"><span class="lineno">  519</span>  }</div>
+<div class="line"><span class="lineno">  520</span> </div>
+<div class="line"><span class="lineno">  521</span>  <a class="code hl_define" href="array_8h.html#aaa8805bd90a2015d8f5eb0fe3bb13b3f">ARRAY_FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>);</div>
+<div class="line"><span class="lineno">  522</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a>);</div>
+<div class="line"><span class="lineno">  523</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#ac168f872d43329c8e4ca9295425ed06d">title</a>);</div>
+<div class="line"><span class="lineno">  524</span>  <a class="code hl_function" href="search__state_8c.html#a1e52c5b788064eaa56ad7232ed09f77a">search_state_free</a>(&amp;mdata.<a class="code hl_variable" href="structAliasMenuData.html#a61756ea71635bed6753e002060cd90c5">search_state</a>);</div>
+<div class="line"><span class="lineno">  525</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a16764dc80c9b3f6ad2897c8b7e59bd10"><div class="ttname"><a href="address_2address_8c.html#a16764dc80c9b3f6ad2897c8b7e59bd10">mutt_addrlist_copy</a></div><div class="ttdeci">void mutt_addrlist_copy(struct AddressList *dst, const struct AddressList *src, bool prune)</div><div class="ttdoc">Copy a list of addresses into another list.</div><div class="ttdef"><b>Definition</b> <a href="address_2address_8c_source.html#l00765">address.c:765</a></div></div>
 <div class="ttc" id="aaddress_2address_8c_html_a396bcf6adfff6663096fa6ae99c31c9a"><div class="ttname"><a href="address_2address_8c.html#a396bcf6adfff6663096fa6ae99c31c9a">mutt_addrlist_clear</a></div><div class="ttdeci">void mutt_addrlist_clear(struct AddressList *al)</div><div class="ttdoc">Unlink and free all Address in an AddressList.</div><div class="ttdef"><b>Definition</b> <a href="address_2address_8c_source.html#l01460">address.c:1460</a></div></div>
 <div class="ttc" id="adlg__query_8c_html_a8e282b40781bf2e94271731b7599b7c0"><div class="ttname"><a href="dlg__query_8c.html#a8e282b40781bf2e94271731b7599b7c0">alias_to_addrlist</a></div><div class="ttdeci">bool alias_to_addrlist(struct AddressList *al, struct Alias *alias)</div><div class="ttdoc">Turn an Alias into an AddressList.</div><div class="ttdef"><b>Definition</b> <a href="dlg__query_8c_source.html#l00119">dlg_query.c:119</a></div></div>
