@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-84-g3cce42</span>
+   &#160;<span id="projectnumber">2025-12-11-1-gcddbd1</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -143,8 +143,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:a46d7ee223a298c936fe501e37b06ac58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert NUL-terminated base64 string to raw bytes.  <br /></td></tr>
 <tr class="separator:a46d7ee223a298c936fe501e37b06ac58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19ef6d7010ebd0b203c0e6da4119ba0f" id="r_a19ef6d7010ebd0b203c0e6da4119ba0f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19ef6d7010ebd0b203c0e6da4119ba0f">mutt_b64_encode</a> (const char *in, size_t inlen, char *out, size_t outlen)</td></tr>
-<tr class="memdesc:a19ef6d7010ebd0b203c0e6da4119ba0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert raw bytes to NUL-terminated base64 string.  <br /></td></tr>
+<tr class="memdesc:a19ef6d7010ebd0b203c0e6da4119ba0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert raw bytes to a base64 string.  <br /></td></tr>
 <tr class="separator:a19ef6d7010ebd0b203c0e6da4119ba0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e95c58da2c4d998070bb1d65a1379be" id="r_a2e95c58da2c4d998070bb1d65a1379be"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e95c58da2c4d998070bb1d65a1379be">mutt_b64_encode_urlsafe</a> (const char *in, size_t inlen, char *out, size_t outlen)</td></tr>
+<tr class="memdesc:a2e95c58da2c4d998070bb1d65a1379be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert raw bytes to a URL-safe base64 string.  <br /></td></tr>
+<tr class="separator:a2e95c58da2c4d998070bb1d65a1379be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a768e7c625e7318c12cfe37bc713d365c" id="r_a768e7c625e7318c12cfe37bc713d365c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a768e7c625e7318c12cfe37bc713d365c">mutt_b64_buffer_decode</a> (struct <a class="el" href="structBuffer.html">Buffer</a> *buf, const char *in)</td></tr>
 <tr class="memdesc:a768e7c625e7318c12cfe37bc713d365c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert NUL-terminated base64 string to raw bytes.  <br /></td></tr>
 <tr class="separator:a768e7c625e7318c12cfe37bc713d365c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,7 +188,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code hl_variable" href="base64_8c.html#a6e40ee29658fd6bae8023a2617157514">Index64</a>[(<span class="keywordtype">unsigned</span> int) (ch)]</div>
-<div class="ttc" id="abase64_8c_html_a6e40ee29658fd6bae8023a2617157514"><div class="ttname"><a href="base64_8c.html#a6e40ee29658fd6bae8023a2617157514">Index64</a></div><div class="ttdeci">const int Index64[128]</div><div class="ttdoc">Lookup table for Base64 encoding characters.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00061">base64.c:61</a></div></div>
+<div class="ttc" id="abase64_8c_html_a6e40ee29658fd6bae8023a2617157514"><div class="ttname"><a href="base64_8c.html#a6e40ee29658fd6bae8023a2617157514">Index64</a></div><div class="ttdeci">const int Index64[128]</div><div class="ttdoc">Lookup table for Base64 encoding characters.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00074">base64.c:74</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="base64_8h_source.html#l00032">32</a> of file <a class="el" href="base64_8h_source.html">base64.h</a>.</p>
 
@@ -234,61 +237,61 @@ Variables</h2></td></tr>
 </dl>
 <p>This function performs base64 decoding. The resulting buffer is NOT NUL-terminated. If the input buffer contains invalid base64 characters, this function returns -1. </p>
 
-<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00135">135</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>{</div>
-<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">if</span> (!in || !*in || !out)</div>
-<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>  <span class="keywordtype">int</span> len = 0;</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>  <span class="keywordflow">for</span> (; *in; in += 4)</div>
-<div class="line"><span class="lineno">  143</span>  {</div>
-<div class="line"><span class="lineno">  144</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digit1 = in[0];</div>
-<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">if</span> ((digit1 &gt; 127) || (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit1) == <a class="code hl_define" href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a>))</div>
-<div class="line"><span class="lineno">  146</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  147</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digit2 = in[1];</div>
-<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">if</span> ((digit2 &gt; 127) || (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit2) == <a class="code hl_define" href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a>))</div>
-<div class="line"><span class="lineno">  149</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>    <span class="comment">/* The 3rd and 4th bytes can be terminating padding chars (&#39;=&#39;). Some</span></div>
-<div class="line"><span class="lineno">  152</span><span class="comment">     * mailers don&#39;t properly terminate base64-encoded strings, so we allow for</span></div>
-<div class="line"><span class="lineno">  153</span><span class="comment">     * the input string to terminate without padding. */</span></div>
-<div class="line"><span class="lineno">  154</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digit3 = in[2] ? in[2] : <span class="charliteral">&#39;=&#39;</span>;</div>
-<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">if</span> ((digit3 &gt; 127) || ((digit3 != <span class="charliteral">&#39;=&#39;</span>) &amp;&amp; (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit3) == <a class="code hl_define" href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a>)))</div>
-<div class="line"><span class="lineno">  156</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  157</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digit4 = (digit3 == <span class="charliteral">&#39;=&#39;</span>) ? <span class="charliteral">&#39;=&#39;</span> : in[3];</div>
-<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">if</span> ((digit4 &gt; 127) || ((digit4 != <span class="charliteral">&#39;=&#39;</span>) &amp;&amp; (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit4) == <a class="code hl_define" href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a>)))</div>
-<div class="line"><span class="lineno">  159</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>    <span class="comment">/* digits are already sanity-checked */</span></div>
-<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">if</span> (len == olen)</div>
-<div class="line"><span class="lineno">  163</span>      <span class="keywordflow">return</span> len;</div>
-<div class="line"><span class="lineno">  164</span>    *out++ = (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit1) &lt;&lt; 2) | (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit2) &gt;&gt; 4);</div>
-<div class="line"><span class="lineno">  165</span>    len++;</div>
-<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">if</span> (digit3 != <span class="charliteral">&#39;=&#39;</span>)</div>
-<div class="line"><span class="lineno">  167</span>    {</div>
-<div class="line"><span class="lineno">  168</span>      <span class="keywordflow">if</span> (len == olen)</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">return</span> len;</div>
-<div class="line"><span class="lineno">  170</span>      *out++ = ((<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit2) &lt;&lt; 4) &amp; 0xf0) | (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit3) &gt;&gt; 2);</div>
-<div class="line"><span class="lineno">  171</span>      len++;</div>
-<div class="line"><span class="lineno">  172</span>      <span class="keywordflow">if</span> (digit4 != <span class="charliteral">&#39;=&#39;</span>)</div>
-<div class="line"><span class="lineno">  173</span>      {</div>
-<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (len == olen)</div>
-<div class="line"><span class="lineno">  175</span>          <span class="keywordflow">return</span> len;</div>
-<div class="line"><span class="lineno">  176</span>        *out++ = ((<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit3) &lt;&lt; 6) &amp; 0xc0) | <a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit4);</div>
-<div class="line"><span class="lineno">  177</span>        len++;</div>
-<div class="line"><span class="lineno">  178</span>      }</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
-<div class="line"><span class="lineno">  180</span> </div>
-<div class="line"><span class="lineno">  181</span>    <span class="comment">/* did we reach the end? */</span></div>
-<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">if</span> (digit4 == <span class="charliteral">&#39;=&#39;</span>)</div>
-<div class="line"><span class="lineno">  183</span>    {</div>
-<div class="line"><span class="lineno">  184</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  185</span>    }</div>
-<div class="line"><span class="lineno">  186</span>  }</div>
-<div class="line"><span class="lineno">  187</span> </div>
-<div class="line"><span class="lineno">  188</span>  <span class="keywordflow">return</span> len;</div>
-<div class="line"><span class="lineno">  189</span>}</div>
+<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00180">180</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>{</div>
+<div class="line"><span class="lineno">  182</span>  <span class="keywordflow">if</span> (!in || !*in || !out)</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>  <span class="keywordtype">int</span> len = 0;</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>  <span class="keywordflow">for</span> (; *in; in += 4)</div>
+<div class="line"><span class="lineno">  188</span>  {</div>
+<div class="line"><span class="lineno">  189</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digit1 = in[0];</div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">if</span> ((digit1 &gt; 127) || (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit1) == <a class="code hl_define" href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a>))</div>
+<div class="line"><span class="lineno">  191</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  192</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digit2 = in[1];</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">if</span> ((digit2 &gt; 127) || (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit2) == <a class="code hl_define" href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a>))</div>
+<div class="line"><span class="lineno">  194</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  195</span> </div>
+<div class="line"><span class="lineno">  196</span>    <span class="comment">/* The 3rd and 4th bytes can be terminating padding chars (&#39;=&#39;). Some</span></div>
+<div class="line"><span class="lineno">  197</span><span class="comment">     * mailers don&#39;t properly terminate base64-encoded strings, so we allow for</span></div>
+<div class="line"><span class="lineno">  198</span><span class="comment">     * the input string to terminate without padding. */</span></div>
+<div class="line"><span class="lineno">  199</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digit3 = in[2] ? in[2] : <span class="charliteral">&#39;=&#39;</span>;</div>
+<div class="line"><span class="lineno">  200</span>    <span class="keywordflow">if</span> ((digit3 &gt; 127) || ((digit3 != <span class="charliteral">&#39;=&#39;</span>) &amp;&amp; (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit3) == <a class="code hl_define" href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a>)))</div>
+<div class="line"><span class="lineno">  201</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  202</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digit4 = (digit3 == <span class="charliteral">&#39;=&#39;</span>) ? <span class="charliteral">&#39;=&#39;</span> : in[3];</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">if</span> ((digit4 &gt; 127) || ((digit4 != <span class="charliteral">&#39;=&#39;</span>) &amp;&amp; (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit4) == <a class="code hl_define" href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a>)))</div>
+<div class="line"><span class="lineno">  204</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>    <span class="comment">/* digits are already sanity-checked */</span></div>
+<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">if</span> (len == olen)</div>
+<div class="line"><span class="lineno">  208</span>      <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">  209</span>    *out++ = (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit1) &lt;&lt; 2) | (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit2) &gt;&gt; 4);</div>
+<div class="line"><span class="lineno">  210</span>    len++;</div>
+<div class="line"><span class="lineno">  211</span>    <span class="keywordflow">if</span> (digit3 != <span class="charliteral">&#39;=&#39;</span>)</div>
+<div class="line"><span class="lineno">  212</span>    {</div>
+<div class="line"><span class="lineno">  213</span>      <span class="keywordflow">if</span> (len == olen)</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">  215</span>      *out++ = ((<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit2) &lt;&lt; 4) &amp; 0xf0) | (<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit3) &gt;&gt; 2);</div>
+<div class="line"><span class="lineno">  216</span>      len++;</div>
+<div class="line"><span class="lineno">  217</span>      <span class="keywordflow">if</span> (digit4 != <span class="charliteral">&#39;=&#39;</span>)</div>
+<div class="line"><span class="lineno">  218</span>      {</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> (len == olen)</div>
+<div class="line"><span class="lineno">  220</span>          <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">  221</span>        *out++ = ((<a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit3) &lt;&lt; 6) &amp; 0xc0) | <a class="code hl_define" href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a>(digit4);</div>
+<div class="line"><span class="lineno">  222</span>        len++;</div>
+<div class="line"><span class="lineno">  223</span>      }</div>
+<div class="line"><span class="lineno">  224</span>    }</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>    <span class="comment">/* did we reach the end? */</span></div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">if</span> (digit4 == <span class="charliteral">&#39;=&#39;</span>)</div>
+<div class="line"><span class="lineno">  228</span>    {</div>
+<div class="line"><span class="lineno">  229</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+<div class="line"><span class="lineno">  231</span>  }</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>  <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">  234</span>}</div>
 <div class="ttc" id="abase64_8c_html_afd3fc9004925132db4faf607ebbf9db7"><div class="ttname"><a href="base64_8c.html#afd3fc9004925132db4faf607ebbf9db7">BAD</a></div><div class="ttdeci">#define BAD</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00039">base64.c:39</a></div></div>
 <div class="ttc" id="abase64_8h_html_a7d7ae4dd0a9d6cbb528295fb24b91a9d"><div class="ttname"><a href="#a7d7ae4dd0a9d6cbb528295fb24b91a9d">base64val</a></div><div class="ttdeci">#define base64val(ch)</div><div class="ttdef"><b>Definition</b> <a href="base64_8h_source.html#l00032">base64.h:32</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -330,7 +333,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convert raw bytes to NUL-terminated base64 string. </p>
+<p>Convert raw bytes to a base64 string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in</td><td>Input buffer for the raw bytes </td></tr>
@@ -346,50 +349,96 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>This function performs base64 encoding. The resulting string is guaranteed to be NUL-terminated. The number of characters up to the terminating NUL-byte is returned (equivalent to calling strlen() on the output buffer after this function returns). </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="base64_8c.html#a622ac48ec3c6f1f5fd2bedf079284a08" title="Convert raw bytes to NUL-terminated base64 string.">b64_encode()</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00087">87</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   88</span>{</div>
-<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">if</span> (!in || !out)</div>
-<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *begin = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) out;</div>
-<div class="line"><span class="lineno">   93</span>  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *inu = (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) in;</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">while</span> ((inlen &gt;= 3) &amp;&amp; (outlen &gt; 4))</div>
-<div class="line"><span class="lineno">   96</span>  {</div>
-<div class="line"><span class="lineno">   97</span>    *out++ = <a class="code hl_variable" href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a>[inu[0] &gt;&gt; 2];</div>
-<div class="line"><span class="lineno">   98</span>    *out++ = <a class="code hl_variable" href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a>[((inu[0] &lt;&lt; 4) &amp; 0x30) | (inu[1] &gt;&gt; 4)];</div>
-<div class="line"><span class="lineno">   99</span>    *out++ = <a class="code hl_variable" href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a>[((inu[1] &lt;&lt; 2) &amp; 0x3c) | (inu[2] &gt;&gt; 6)];</div>
-<div class="line"><span class="lineno">  100</span>    *out++ = <a class="code hl_variable" href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a>[inu[2] &amp; 0x3f];</div>
-<div class="line"><span class="lineno">  101</span>    outlen -= 4;</div>
-<div class="line"><span class="lineno">  102</span>    inlen -= 3;</div>
-<div class="line"><span class="lineno">  103</span>    inu += 3;</div>
-<div class="line"><span class="lineno">  104</span>  }</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>  <span class="comment">/* clean up remainder */</span></div>
-<div class="line"><span class="lineno">  107</span>  <span class="keywordflow">if</span> ((inlen &gt; 0) &amp;&amp; (outlen &gt; 4))</div>
-<div class="line"><span class="lineno">  108</span>  {</div>
-<div class="line"><span class="lineno">  109</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> fragment;</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>    *out++ = <a class="code hl_variable" href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a>[inu[0] &gt;&gt; 2];</div>
-<div class="line"><span class="lineno">  112</span>    fragment = (inu[0] &lt;&lt; 4) &amp; 0x30;</div>
-<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">if</span> (inlen &gt; 1)</div>
-<div class="line"><span class="lineno">  114</span>      fragment |= inu[1] &gt;&gt; 4;</div>
-<div class="line"><span class="lineno">  115</span>    *out++ = <a class="code hl_variable" href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a>[fragment];</div>
-<div class="line"><span class="lineno">  116</span>    *out++ = (inlen &lt; 2) ? <span class="charliteral">&#39;=&#39;</span> : <a class="code hl_variable" href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a>[(inu[1] &lt;&lt; 2) &amp; 0x3c];</div>
-<div class="line"><span class="lineno">  117</span>    *out++ = <span class="charliteral">&#39;=&#39;</span>;</div>
-<div class="line"><span class="lineno">  118</span>  }</div>
-<div class="line"><span class="lineno">  119</span>  *out = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">return</span> out - (<span class="keywordtype">char</span> *) begin;</div>
-<div class="line"><span class="lineno">  121</span>}</div>
+<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00148">148</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>{</div>
+<div class="line"><span class="lineno">  150</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="base64_8c.html#a622ac48ec3c6f1f5fd2bedf079284a08">b64_encode</a>(in, inlen, out, outlen, <a class="code hl_variable" href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a>);</div>
+<div class="line"><span class="lineno">  151</span>}</div>
+<div class="ttc" id="abase64_8c_html_a622ac48ec3c6f1f5fd2bedf079284a08"><div class="ttname"><a href="base64_8c.html#a622ac48ec3c6f1f5fd2bedf079284a08">b64_encode</a></div><div class="ttdeci">static size_t b64_encode(const char *in, size_t inlen, char *out, size_t outlen, const char *alpha)</div><div class="ttdoc">Convert raw bytes to NUL-terminated base64 string.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00101">base64.c:101</a></div></div>
 <div class="ttc" id="autf7_8c_html_abff3beb459075c9e0859e64d791273b8"><div class="ttname"><a href="utf7_8c.html#abff3beb459075c9e0859e64d791273b8">B64Chars</a></div><div class="ttdeci">static const char B64Chars[64]</div><div class="ttdoc">Characters of the Base64 encoding.</div><div class="ttdef"><b>Definition</b> <a href="utf7_8c_source.html#l00082">utf7.c:82</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="base64_8h_a19ef6d7010ebd0b203c0e6da4119ba0f_cgraph.svg" width="290" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="base64_8h_a19ef6d7010ebd0b203c0e6da4119ba0f_icgraph.svg" width="403" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2e95c58da2c4d998070bb1d65a1379be" name="a2e95c58da2c4d998070bb1d65a1379be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e95c58da2c4d998070bb1d65a1379be">&#9670;&#160;</a></span>mutt_b64_encode_urlsafe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t mutt_b64_encode_urlsafe </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>in</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>inlen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>outlen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert raw bytes to a URL-safe base64 string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input buffer for the raw bytes </td></tr>
+    <tr><td class="paramname">inlen</td><td>Length of the input buffer </td></tr>
+    <tr><td class="paramname">out</td><td>Output buffer for the base64 encoded string </td></tr>
+    <tr><td class="paramname">outlen</td><td>Length of the output buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">num</td><td>Length of the string written to the output buffer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="base64_8c.html#a622ac48ec3c6f1f5fd2bedf079284a08" title="Convert raw bytes to NUL-terminated base64 string.">b64_encode()</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00163">163</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  164</span>{</div>
+<div class="line"><span class="lineno">  165</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="base64_8c.html#a622ac48ec3c6f1f5fd2bedf079284a08">b64_encode</a>(in, inlen, out, outlen, <a class="code hl_variable" href="base64_8c.html#a4951a0c5432fa5212b122e125c30933e">B64CharsUrlSafe</a>);</div>
+<div class="line"><span class="lineno">  166</span>}</div>
+<div class="ttc" id="abase64_8c_html_a4951a0c5432fa5212b122e125c30933e"><div class="ttname"><a href="base64_8c.html#a4951a0c5432fa5212b122e125c30933e">B64CharsUrlSafe</a></div><div class="ttdeci">static const char B64CharsUrlSafe[64]</div><div class="ttdoc">URL-Safe Characters of the Base64 encoding.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00057">base64.c:57</a></div></div>
+</div><!-- fragment --><div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="base64_8h_a2e95c58da2c4d998070bb1d65a1379be_cgraph.svg" width="339" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="base64_8h_a2e95c58da2c4d998070bb1d65a1379be_icgraph.svg" width="376" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -429,39 +478,39 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00216">216</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  217</span>{</div>
-<div class="line"><span class="lineno">  218</span>  <span class="keywordflow">if</span> (!buf)</div>
-<div class="line"><span class="lineno">  219</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  220</span> </div>
-<div class="line"><span class="lineno">  221</span>  <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(buf, <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(in));</div>
-<div class="line"><span class="lineno">  222</span>  <span class="keywordtype">int</span> olen = <a class="code hl_function" href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a>(in, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>);</div>
-<div class="line"><span class="lineno">  223</span>  <span class="comment">// mutt_b64_decode returns raw bytes, so don&#39;t terminate the buffer either</span></div>
-<div class="line"><span class="lineno">  224</span>  <span class="keywordflow">if</span> (olen &gt; 0)</div>
-<div class="line"><span class="lineno">  225</span>    <a class="code hl_function" href="buffer_8c.html#a151ed4672a43461119841001f008f31d">buf_seek</a>(buf, olen);</div>
-<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  227</span>    <a class="code hl_function" href="buffer_8c.html#a151ed4672a43461119841001f008f31d">buf_seek</a>(buf, 0);</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>  <span class="keywordflow">return</span> olen;</div>
-<div class="line"><span class="lineno">  230</span>}</div>
-<div class="ttc" id="abase64_8c_html_a46d7ee223a298c936fe501e37b06ac58"><div class="ttname"><a href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a></div><div class="ttdeci">int mutt_b64_decode(const char *in, char *out, size_t olen)</div><div class="ttdoc">Convert NUL-terminated base64 string to raw bytes.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00135">base64.c:135</a></div></div>
+<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00261">261</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>{</div>
+<div class="line"><span class="lineno">  263</span>  <span class="keywordflow">if</span> (!buf)</div>
+<div class="line"><span class="lineno">  264</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>  <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(buf, <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(in));</div>
+<div class="line"><span class="lineno">  267</span>  <span class="keywordtype">int</span> olen = <a class="code hl_function" href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a>(in, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>);</div>
+<div class="line"><span class="lineno">  268</span>  <span class="comment">// mutt_b64_decode returns raw bytes, so don&#39;t terminate the buffer either</span></div>
+<div class="line"><span class="lineno">  269</span>  <span class="keywordflow">if</span> (olen &gt; 0)</div>
+<div class="line"><span class="lineno">  270</span>    <a class="code hl_function" href="buffer_8c.html#a151ed4672a43461119841001f008f31d">buf_seek</a>(buf, olen);</div>
+<div class="line"><span class="lineno">  271</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  272</span>    <a class="code hl_function" href="buffer_8c.html#a151ed4672a43461119841001f008f31d">buf_seek</a>(buf, 0);</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>  <span class="keywordflow">return</span> olen;</div>
+<div class="line"><span class="lineno">  275</span>}</div>
+<div class="ttc" id="abase64_8c_html_a46d7ee223a298c936fe501e37b06ac58"><div class="ttname"><a href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a></div><div class="ttdeci">int mutt_b64_decode(const char *in, char *out, size_t olen)</div><div class="ttdoc">Convert NUL-terminated base64 string to raw bytes.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00180">base64.c:180</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a151ed4672a43461119841001f008f31d"><div class="ttname"><a href="buffer_8c.html#a151ed4672a43461119841001f008f31d">buf_seek</a></div><div class="ttdeci">void buf_seek(struct Buffer *buf, size_t offset)</div><div class="ttdoc">Set current read/write position to offset from beginning.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00622">buffer.c:622</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ae144a736bd5f9de289bdc8f27fecf96a"><div class="ttname"><a href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a></div><div class="ttdeci">void buf_alloc(struct Buffer *buf, size_t new_size)</div><div class="ttdoc">Make sure a buffer can store at least new_size bytes.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00337">buffer.c:337</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00498">string.c:498</a></div></div>
 <div class="ttc" id="astructBuffer_html_a1d9ee60bcf94de702b15ec2b5d811995"><div class="ttname"><a href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">Buffer::dsize</a></div><div class="ttdeci">size_t dsize</div><div class="ttdoc">Length of data.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00039">buffer.h:39</a></div></div>
 <div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00037">buffer.h:37</a></div></div>
-</div><!-- fragment --><div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="base64_8h_a768e7c625e7318c12cfe37bc713d365c_cgraph.svg" width="371" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="base64_8h_a768e7c625e7318c12cfe37bc713d365c_icgraph.svg" width="404" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -507,31 +556,31 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00198">198</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>{</div>
-<div class="line"><span class="lineno">  200</span>  <span class="keywordflow">if</span> (!buf)</div>
-<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  202</span> </div>
-<div class="line"><span class="lineno">  203</span>  <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(buf, <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>((len * 2), 1024));</div>
-<div class="line"><span class="lineno">  204</span>  <span class="keywordtype">size_t</span> num = <a class="code hl_function" href="base64_8c.html#a19ef6d7010ebd0b203c0e6da4119ba0f">mutt_b64_encode</a>(in, len, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>);</div>
-<div class="line"><span class="lineno">  205</span>  <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(buf);</div>
-<div class="line"><span class="lineno">  206</span>  <span class="keywordflow">return</span> num;</div>
-<div class="line"><span class="lineno">  207</span>}</div>
-<div class="ttc" id="abase64_8c_html_a19ef6d7010ebd0b203c0e6da4119ba0f"><div class="ttname"><a href="base64_8c.html#a19ef6d7010ebd0b203c0e6da4119ba0f">mutt_b64_encode</a></div><div class="ttdeci">size_t mutt_b64_encode(const char *in, size_t inlen, char *out, size_t outlen)</div><div class="ttdoc">Convert raw bytes to NUL-terminated base64 string.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00087">base64.c:87</a></div></div>
+<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00243">243</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  244</span>{</div>
+<div class="line"><span class="lineno">  245</span>  <span class="keywordflow">if</span> (!buf)</div>
+<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>  <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(buf, <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>((len * 2), 1024));</div>
+<div class="line"><span class="lineno">  249</span>  <span class="keywordtype">size_t</span> num = <a class="code hl_function" href="base64_8c.html#a19ef6d7010ebd0b203c0e6da4119ba0f">mutt_b64_encode</a>(in, len, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>);</div>
+<div class="line"><span class="lineno">  250</span>  <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(buf);</div>
+<div class="line"><span class="lineno">  251</span>  <span class="keywordflow">return</span> num;</div>
+<div class="line"><span class="lineno">  252</span>}</div>
+<div class="ttc" id="abase64_8c_html_a19ef6d7010ebd0b203c0e6da4119ba0f"><div class="ttname"><a href="base64_8c.html#a19ef6d7010ebd0b203c0e6da4119ba0f">mutt_b64_encode</a></div><div class="ttdeci">size_t mutt_b64_encode(const char *in, size_t inlen, char *out, size_t outlen)</div><div class="ttdoc">Convert raw bytes to a base64 string.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00148">base64.c:148</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a4964d146427002ec3b52e121513b6078"><div class="ttname"><a href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a></div><div class="ttdeci">void buf_fix_dptr(struct Buffer *buf)</div><div class="ttdoc">Move the dptr to end of the Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00182">buffer.c:182</a></div></div>
 <div class="ttc" id="amemory_8h_html_afa99ec4acc4ecb2dc3c2d05da15d0e3f"><div class="ttname"><a href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a></div><div class="ttdeci">#define MAX(a, b)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00036">memory.h:36</a></div></div>
-</div><!-- fragment --><div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="base64_8h_a3465fa1b0c7205634eb87bb505264c60_cgraph.svg" width="371" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
-<div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
-<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-10" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="base64_8h_a3465fa1b0c7205634eb87bb505264c60_icgraph.svg" width="384" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -565,19 +614,19 @@ Variables</h2></td></tr>
 <li>mime A-Za-z0-9+/ </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00061">61</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                         {</div>
-<div class="line"><span class="lineno">   62</span>  <span class="comment">// clang-format off</span></div>
-<div class="line"><span class="lineno">   63</span>  -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,-1,</div>
-<div class="line"><span class="lineno">   64</span>  -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,-1,</div>
-<div class="line"><span class="lineno">   65</span>  -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,62, -1,-1,-1,63,</div>
-<div class="line"><span class="lineno">   66</span>  52,53,54,55, 56,57,58,59, 60,61,-1,-1, -1,-1,-1,-1,</div>
-<div class="line"><span class="lineno">   67</span>  -1, 0, 1, 2,  3, 4, 5, 6,  7, 8, 9,10, 11,12,13,14,</div>
-<div class="line"><span class="lineno">   68</span>  15,16,17,18, 19,20,21,22, 23,24,25,-1, -1,-1,-1,-1,</div>
-<div class="line"><span class="lineno">   69</span>  -1,26,27,28, 29,30,31,32, 33,34,35,36, 37,38,39,40,</div>
-<div class="line"><span class="lineno">   70</span>  41,42,43,44, 45,46,47,48, 49,50,51,-1, -1,-1,-1,-1</div>
-<div class="line"><span class="lineno">   71</span>  <span class="comment">// clang-format on</span></div>
-<div class="line"><span class="lineno">   72</span>};</div>
+<p class="definition">Definition at line <a class="el" href="base64_8c_source.html#l00074">74</a> of file <a class="el" href="base64_8c_source.html">base64.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>                         {</div>
+<div class="line"><span class="lineno">   75</span>  <span class="comment">// clang-format off</span></div>
+<div class="line"><span class="lineno">   76</span>  -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,-1,</div>
+<div class="line"><span class="lineno">   77</span>  -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,-1,</div>
+<div class="line"><span class="lineno">   78</span>  -1,-1,-1,-1, -1,-1,-1,-1, -1,-1,-1,62, -1,-1,-1,63,</div>
+<div class="line"><span class="lineno">   79</span>  52,53,54,55, 56,57,58,59, 60,61,-1,-1, -1,-1,-1,-1,</div>
+<div class="line"><span class="lineno">   80</span>  -1, 0, 1, 2,  3, 4, 5, 6,  7, 8, 9,10, 11,12,13,14,</div>
+<div class="line"><span class="lineno">   81</span>  15,16,17,18, 19,20,21,22, 23,24,25,-1, -1,-1,-1,-1,</div>
+<div class="line"><span class="lineno">   82</span>  -1,26,27,28, 29,30,31,32, 33,34,35,36, 37,38,39,40,</div>
+<div class="line"><span class="lineno">   83</span>  41,42,43,44, 45,46,47,48, 49,50,51,-1, -1,-1,-1,-1</div>
+<div class="line"><span class="lineno">   84</span>  <span class="comment">// clang-format on</span></div>
+<div class="line"><span class="lineno">   85</span>};</div>
 </div><!-- fragment -->
 </div>
 </div>

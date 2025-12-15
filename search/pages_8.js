@@ -22,7 +22,7 @@ var searchData=
   ['gpgme_20smime_19',['Wrappers for calls to GPGME SMIME',['../crypt_crypt_mod_smime_gpgme.html',1,'lib_ncrypt']]],
   ['graphical_20code_20',['Graphical code',['../lib_gui.html',1,'']]],
   ['graphviz_20dot_20file_21',['GraphViz dot file',['../debug_graphviz.html',1,'lib_debug']]],
-  ['greeting_20expando_20definitions_22',['Greeting Expando definitions',['../send_expando.html',1,'lib_send']]],
+  ['greeting_20expando_20definitions_22',['Greeting Expando definitions',['../send_expando_greeting.html',1,'lib_send']]],
   ['groups_23',['groups',['../addr_group.html',1,'Address groups'],['../nntp_expando_browser.html',1,'Browse NNTP groups'],['../nntp_expando_newsrc.html',1,'Browse NNTP groups']]],
   ['gss_20authentication_24',['GSS authentication',['../imap_auth_gss.html',1,'lib_imap']]],
   ['gui_20ask_20the_20user_20to_20enter_20a_20string_25',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],

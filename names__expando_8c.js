@@ -19,6 +19,7 @@ var names__expando_8c =
     [ "name_expando_uid_index", "names__expando_8c.html#ae5fd931933cf4319bf1963900533e037", null ],
     [ "name_expando_uid_mailbox", "names__expando_8c.html#a5e97e6aad91c815f00a83989c5daba12", null ],
     [ "name_expando_uid_menu", "names__expando_8c.html#acf26dd7d32f7f9f0e392ac27c9c59bcc", null ],
+    [ "name_expando_uid_msg_id", "names__expando_8c.html#abdf5bd8f086daccd7455cdb1f034ba41", null ],
     [ "name_expando_uid_nntp", "names__expando_8c.html#af9a081316760a9678cbc5f3877ec769c", null ],
     [ "name_expando_uid_pattern", "names__expando_8c.html#a9cb7727852bec510da67f3e4b9599ee4", null ],
     [ "name_expando_uid_pgp", "names__expando_8c.html#a1fcd662d58e99f7f09118c6f3953d8be", null ],

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-09-05-84-g3cce42</span>
+   &#160;<span id="projectnumber">2025-12-11-1-gcddbd1</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -133,6 +133,9 @@ $(function(){initNavTree('random_8h.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab6f7ab904f47a0ccc44ece588dbd7800" id="r_ab6f7ab904f47a0ccc44ece588dbd7800"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6f7ab904f47a0ccc44ece588dbd7800">mutt_randbuf</a> (void *buf, size_t buflen)</td></tr>
+<tr class="memdesc:ab6f7ab904f47a0ccc44ece588dbd7800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill a buffer with randomness.  <br /></td></tr>
+<tr class="separator:ab6f7ab904f47a0ccc44ece588dbd7800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a642006ba161a78cbefb5667ff780feca" id="r_a642006ba161a78cbefb5667ff780feca"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a642006ba161a78cbefb5667ff780feca">mutt_rand64</a> (void)</td></tr>
 <tr class="memdesc:a642006ba161a78cbefb5667ff780feca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 64-bit random number.  <br /></td></tr>
 <tr class="separator:a642006ba161a78cbefb5667ff780feca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +155,97 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="random_8h_source.html">random.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ab6f7ab904f47a0ccc44ece588dbd7800" name="ab6f7ab904f47a0ccc44ece588dbd7800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f7ab904f47a0ccc44ece588dbd7800">&#9670;&#160;</a></span>mutt_randbuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mutt_randbuf </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>buflen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fill a buffer with randomness. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td><a class="el" href="structBuffer.html" title="String manipulation buffer.">Buffer</a> for result </td></tr>
+    <tr><td class="paramname">buflen</td><td>Size of buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success </td></tr>
+    <tr><td class="paramname">-1</td><td>Error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="random_8c_source.html#l00058">58</a> of file <a class="el" href="random_8c_source.html">random.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>{</div>
+<div class="line"><span class="lineno">   60</span>  <span class="keywordflow">if</span> (buflen &gt; 1048576)</div>
+<div class="line"><span class="lineno">   61</span>  {</div>
+<div class="line"><span class="lineno">   62</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;mutt_randbuf buflen=%zu&quot;</span>), buflen);</div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   64</span>  }</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span><span class="preprocessor">#ifdef HAVE_GETRANDOM</span></div>
+<div class="line"><span class="lineno">   67</span>  ssize_t rc;</div>
+<div class="line"><span class="lineno">   68</span>  ssize_t count = 0;</div>
+<div class="line"><span class="lineno">   69</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">   70</span>  {</div>
+<div class="line"><span class="lineno">   71</span>    <span class="comment">// getrandom() can return less than requested if there&#39;s insufficient</span></div>
+<div class="line"><span class="lineno">   72</span>    <span class="comment">// entropy or it&#39;s interrupted by a signal.</span></div>
+<div class="line"><span class="lineno">   73</span>    rc = getrandom((<span class="keywordtype">char</span> *) buf + count, buflen - count, 0);</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span> (rc &gt; 0)</div>
+<div class="line"><span class="lineno">   75</span>      count += rc;</div>
+<div class="line"><span class="lineno">   76</span>  } <span class="keywordflow">while</span> (((rc &gt;= 0) &amp;&amp; (count &lt; buflen)) || ((rc == -1) &amp;&amp; (errno == EINTR)));</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">if</span> (count == buflen)</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   79</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">   80</span>  <span class="comment">/* let&#39;s try urandom in case we&#39;re on an old kernel, or the user has</span></div>
+<div class="line"><span class="lineno">   81</span><span class="comment">   * configured selinux, seccomp or something to not allow getrandom */</span></div>
+<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="random_8c.html#ac1677ed533d55efe76710053197ebb78">FpRandom</a>)</div>
+<div class="line"><span class="lineno">   83</span>  {</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_variable" href="random_8c.html#ac1677ed533d55efe76710053197ebb78">FpRandom</a> = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<span class="stringliteral">&quot;/dev/urandom&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="random_8c.html#ac1677ed533d55efe76710053197ebb78">FpRandom</a>)</div>
+<div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;open /dev/urandom: %s&quot;</span>), strerror(errno));</div>
+<div class="line"><span class="lineno">   88</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span>    setbuf(<a class="code hl_variable" href="random_8c.html#ac1677ed533d55efe76710053197ebb78">FpRandom</a>, NULL);</div>
+<div class="line"><span class="lineno">   91</span>  }</div>
+<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">if</span> (fread(buf, 1, buflen, <a class="code hl_variable" href="random_8c.html#ac1677ed533d55efe76710053197ebb78">FpRandom</a>) != buflen)</div>
+<div class="line"><span class="lineno">   93</span>  {</div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;read /dev/urandom: %s&quot;</span>), strerror(errno));</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   96</span>  }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   99</span>}</div>
+<div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00138">file.h:138</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
+<div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
+<div class="ttc" id="arandom_8c_html_ac1677ed533d55efe76710053197ebb78"><div class="ttname"><a href="random_8c.html#ac1677ed533d55efe76710053197ebb78">FpRandom</a></div><div class="ttdeci">static FILE * FpRandom</div><div class="ttdoc">FILE pointer of the random source.</div><div class="ttdef"><b>Definition</b> <a href="random_8c_source.html#l00046">random.c:46</a></div></div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="random_8h_ab6f7ab904f47a0ccc44ece588dbd7800_icgraph.svg" width="302" height="254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a642006ba161a78cbefb5667ff780feca" name="a642006ba161a78cbefb5667ff780feca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a642006ba161a78cbefb5667ff780feca">&#9670;&#160;</a></span>mutt_rand64()</h2>
 
@@ -179,24 +273,24 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
 <div class="line"><span class="lineno">  125</span>  uint64_t num = 0;</div>
 <div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="random_8c.html#a7390541cae3dfe450e43704a39900160">mutt_randbuf</a>(&amp;num, <span class="keyword">sizeof</span>(num)) &lt; 0)</div>
+<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="random_8c.html#ab6f7ab904f47a0ccc44ece588dbd7800">mutt_randbuf</a>(&amp;num, <span class="keyword">sizeof</span>(num)) &lt; 0)</div>
 <div class="line"><span class="lineno">  128</span>    <a class="code hl_function" href="exit_8c.html#a65be75bf998d2462599b7d391676554c">mutt_exit</a>(1); <span class="comment">// LCOV_EXCL_LINE</span></div>
 <div class="line"><span class="lineno">  129</span>  <span class="keywordflow">return</span> num;</div>
 <div class="line"><span class="lineno">  130</span>}</div>
 <div class="ttc" id="aexit_8c_html_a65be75bf998d2462599b7d391676554c"><div class="ttname"><a href="exit_8c.html#a65be75bf998d2462599b7d391676554c">mutt_exit</a></div><div class="ttdeci">void mutt_exit(int code)</div><div class="ttdoc">Leave NeoMutt NOW.</div><div class="ttdef"><b>Definition</b> <a href="exit_8c_source.html#l00041">exit.c:41</a></div></div>
-<div class="ttc" id="arandom_8c_html_a7390541cae3dfe450e43704a39900160"><div class="ttname"><a href="random_8c.html#a7390541cae3dfe450e43704a39900160">mutt_randbuf</a></div><div class="ttdeci">static int mutt_randbuf(void *buf, size_t buflen)</div><div class="ttdoc">Fill a buffer with randomness.</div><div class="ttdef"><b>Definition</b> <a href="random_8c_source.html#l00058">random.c:58</a></div></div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="random_8h_a642006ba161a78cbefb5667ff780feca_cgraph.svg" width="267" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div class="ttc" id="arandom_8c_html_ab6f7ab904f47a0ccc44ece588dbd7800"><div class="ttname"><a href="random_8c.html#ab6f7ab904f47a0ccc44ece588dbd7800">mutt_randbuf</a></div><div class="ttdeci">int mutt_randbuf(void *buf, size_t buflen)</div><div class="ttdoc">Fill a buffer with randomness.</div><div class="ttdef"><b>Definition</b> <a href="random_8c_source.html#l00058">random.c:58</a></div></div>
+</div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="random_8h_a642006ba161a78cbefb5667ff780feca_cgraph.svg" width="267" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="random_8h_a642006ba161a78cbefb5667ff780feca_icgraph.svg" width="342" height="254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -237,24 +331,24 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  110</span> </div>
 <div class="line"><span class="lineno">  111</span>  uint8_t *p = (uint8_t *) buf;</div>
 <div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="random_8c.html#a7390541cae3dfe450e43704a39900160">mutt_randbuf</a>(p, buflen) &lt; 0)</div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="random_8c.html#ab6f7ab904f47a0ccc44ece588dbd7800">mutt_randbuf</a>(p, buflen) &lt; 0)</div>
 <div class="line"><span class="lineno">  114</span>    <a class="code hl_function" href="exit_8c.html#a65be75bf998d2462599b7d391676554c">mutt_exit</a>(1); <span class="comment">// LCOV_EXCL_LINE</span></div>
 <div class="line"><span class="lineno">  115</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> pos = 0; pos &lt; buflen; pos++)</div>
 <div class="line"><span class="lineno">  116</span>    p[pos] = <a class="code hl_variable" href="random_8c.html#a456eda22604b638e8ccdbf442a011e0e">Base32</a>[p[pos] % 32];</div>
 <div class="line"><span class="lineno">  117</span>}</div>
 <div class="ttc" id="arandom_8c_html_a456eda22604b638e8ccdbf442a011e0e"><div class="ttname"><a href="random_8c.html#a456eda22604b638e8ccdbf442a011e0e">Base32</a></div><div class="ttdeci">static const unsigned char Base32[]</div><div class="ttdoc">Base 32 alphabet.</div><div class="ttdef"><b>Definition</b> <a href="random_8c_source.html#l00049">random.c:49</a></div></div>
-</div><!-- fragment --><div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="random_8h_adaa3dc154c8cff87c75e59ea89a524d6_cgraph.svg" width="302" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+</div><!-- fragment --><div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="random_8h_adaa3dc154c8cff87c75e59ea89a524d6_cgraph.svg" width="302" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="random_8h_adaa3dc154c8cff87c75e59ea89a524d6_icgraph.svg" width="376" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 

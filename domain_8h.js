@@ -15,6 +15,7 @@ var domain_8h =
       [ "ED_INDEX", "domain_8h.html#a2bedf11cab57ba7804043eac9c949602ac61291e6b2a651819a13d4385e919e97", null ],
       [ "ED_MAILBOX", "domain_8h.html#a2bedf11cab57ba7804043eac9c949602aaa5fad275337853337e6db5b54b9481a", null ],
       [ "ED_MENU", "domain_8h.html#a2bedf11cab57ba7804043eac9c949602a7fb3743f1e82c5893923142b7a9a0ec7", null ],
+      [ "ED_MSG_ID", "domain_8h.html#a2bedf11cab57ba7804043eac9c949602abb68dcc55cadbdd134df9246dc7fd5d7", null ],
       [ "ED_NNTP", "domain_8h.html#a2bedf11cab57ba7804043eac9c949602af625dabaca82b2e5a4fefe1598586d0c", null ],
       [ "ED_PATTERN", "domain_8h.html#a2bedf11cab57ba7804043eac9c949602a72ac8092f31a7d40168ac88f8f88aace", null ],
       [ "ED_PGP", "domain_8h.html#a2bedf11cab57ba7804043eac9c949602a6fdcb76a1a03d2958e24a6a8d2492351", null ],

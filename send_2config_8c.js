@@ -8,5 +8,6 @@ var send_2config_8c =
     [ "IndexFormatDefNoPadding", "send_2config_8c.html#aad5858c3cae3171a14a3fa92e2c570e5", null ],
     [ "NntpFormatDef", "send_2config_8c.html#a283336aa9e22831dcd4bb1f553b48d03", null ],
     [ "GreetingFormatDef", "send_2config_8c.html#ad3f1580e2437dcfe0ef6fae43d136eee", null ],
+    [ "MsgIdFormatDef", "send_2config_8c.html#a926425f7a0249cd69ba7fb747fb23a23", null ],
     [ "SendVars", "send_2config_8c.html#a5e8b48a8c6f7e8b5a73d63a88c2790e1", null ]
 ];

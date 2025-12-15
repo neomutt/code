@@ -49,7 +49,7 @@ var searchData=
   ['fp_5fout_46',['fp_out',['../structState.html#a88fc722d3012ebf69d3a061cbf6bc296',1,'State']]],
   ['fp_5froot_47',['fp_root',['../structAttachCtx.html#a6bd678fc233b795a978f78f786f89f1c',1,'AttachCtx']]],
   ['fprandom_48',['FpRandom',['../random_8c.html#ac1677ed533d55efe76710053197ebb78',1,'random.c']]],
-  ['fqdn_49',['fqdn',['../structSmtpAccountData.html#a350fb7c13d72afddd3be614e4b3da1e9',1,'SmtpAccountData']]],
+  ['fqdn_49',['fqdn',['../structMsgIdData.html#ac438df0523b9826a39eb321fb02a5ac8',1,'MsgIdData::fqdn'],['../structSmtpAccountData.html#a350fb7c13d72afddd3be614e4b3da1e9',1,'SmtpAccountData::fqdn']]],
   ['free_50',['free',['../structStoreOps.html#aaaea6054d70f2111126be8903b1330bc',1,'StoreOps']]],
   ['free_5fmatch_5fstrings_51',['free_match_strings',['../structCompletionData.html#a3545eef7154b6e4aea4b355ea5bf9525',1,'CompletionData']]],
   ['from_52',['from',['../structContent.html#ab0f45d80059bca9d8e33663866f641d0',1,'Content::from'],['../structContentState.html#a7c0938679ad00987c0337eeaac95724d',1,'ContentState::from'],['../structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8',1,'Envelope::from']]],

@@ -24,7 +24,7 @@ var searchData=
   ['gpgmefunctions_21',['GpgmeFunctions',['../gpgme__functions_8c.html#a14d0817f9e5614879d5c38bdaaa7e9e7',1,'gpgme_functions.c']]],
   ['gpgmehelp_22',['GpgmeHelp',['../dlg__gpgme_8c.html#aef081963c1fd0287be5bfff4fc37912a',1,'dlg_gpgme.c']]],
   ['greetingformatdef_23',['GreetingFormatDef',['../send_2config_8c.html#ad3f1580e2437dcfe0ef6fae43d136eee',1,'config.c']]],
-  ['greetingrendercallbacks_24',['GreetingRenderCallbacks',['../send_2expando_8c.html#ac0a239eaf282f770941d49d43894c905',1,'GreetingRenderCallbacks:&#160;expando.c'],['../send_2expando_8h.html#ac0a239eaf282f770941d49d43894c905',1,'GreetingRenderCallbacks:&#160;expando.c']]],
+  ['greetingrendercallbacks_24',['GreetingRenderCallbacks',['../expando__greeting_8c.html#ac0a239eaf282f770941d49d43894c905',1,'GreetingRenderCallbacks:&#160;expando_greeting.c'],['../expando__greeting_8h.html#ac0a239eaf282f770941d49d43894c905',1,'GreetingRenderCallbacks:&#160;expando_greeting.c']]],
   ['group_25',['group',['../structAddress.html#a12bd44ccc016e50c674ec3a902ba1c28',1,'Address::group'],['../structGroupNode.html#ad95aef75a1380ec120748c922ab77bc1',1,'GroupNode::group'],['../structNntpMboxData.html#a4eeac824a82fb5bb884aa9aab449ccf8',1,'NntpMboxData::group'],['../structPattern.html#a137f1b5a9fe923c4ea6c567465f522e7',1,'Pattern::group']]],
   ['group_5fmatch_26',['group_match',['../structPattern.html#a018ea950c8d8c27eec7fe9338953f918',1,'Pattern']]],
   ['groupindexformatdef_27',['GroupIndexFormatDef',['../browser_2config_8c.html#a6d910b138e93c494786eaa9a4ac3e06f',1,'config.c']]],

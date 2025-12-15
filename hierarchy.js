@@ -183,6 +183,7 @@ var hierarchy =
     [ "MimeNames", "structMimeNames.html", null ],
     [ "Monitor", "structMonitor.html", null ],
     [ "MonitorInfo", "structMonitorInfo.html", null ],
+    [ "MsgIdData", "structMsgIdData.html", null ],
     [ "MsgWinWindowData", "structMsgWinWindowData.html", null ],
     [ "MUpdate", "structMUpdate.html", null ],
     [ "MuttFileIter", "structMuttFileIter.html", null ],

@@ -2,7 +2,8 @@ var lib_send =
 [
     [ "Write a MIME Email to a file", "send_body.html", null ],
     [ "Config used by libsend", "send_config.html", null ],
-    [ "Greeting Expando definitions", "send_expando.html", null ],
+    [ "Greeting Expando definitions", "send_expando_greeting.html", null ],
+    [ "Message Id Expando definitions", "send_expando_msgid.html", null ],
     [ "Write a MIME Email Header to a file", "send_header.html", null ],
     [ "Manipulate multipart Emails", "send_multipart.html", null ],
     [ "Prepare and send an email", "send_send.html", null ],

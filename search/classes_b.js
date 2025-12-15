@@ -22,12 +22,13 @@ var searchData=
   ['mimenames_19',['MimeNames',['../structMimeNames.html',1,'']]],
   ['monitor_20',['Monitor',['../structMonitor.html',1,'']]],
   ['monitorinfo_21',['MonitorInfo',['../structMonitorInfo.html',1,'']]],
-  ['msgwinwindowdata_22',['MsgWinWindowData',['../structMsgWinWindowData.html',1,'']]],
-  ['mupdate_23',['MUpdate',['../structMUpdate.html',1,'']]],
-  ['muttfileiter_24',['MuttFileIter',['../structMuttFileIter.html',1,'']]],
-  ['muttthread_25',['MuttThread',['../structMuttThread.html',1,'']]],
-  ['muttwindow_26',['MuttWindow',['../structMuttWindow.html',1,'']]],
-  ['mwchar_27',['MwChar',['../structMwChar.html',1,'']]],
-  ['mwchunk_28',['MwChunk',['../structMwChunk.html',1,'']]],
-  ['mxops_29',['MxOps',['../structMxOps.html',1,'']]]
+  ['msgiddata_22',['MsgIdData',['../structMsgIdData.html',1,'']]],
+  ['msgwinwindowdata_23',['MsgWinWindowData',['../structMsgWinWindowData.html',1,'']]],
+  ['mupdate_24',['MUpdate',['../structMUpdate.html',1,'']]],
+  ['muttfileiter_25',['MuttFileIter',['../structMuttFileIter.html',1,'']]],
+  ['muttthread_26',['MuttThread',['../structMuttThread.html',1,'']]],
+  ['muttwindow_27',['MuttWindow',['../structMuttWindow.html',1,'']]],
+  ['mwchar_28',['MwChar',['../structMwChar.html',1,'']]],
+  ['mwchunk_29',['MwChunk',['../structMwChunk.html',1,'']]],
+  ['mxops_30',['MxOps',['../structMxOps.html',1,'']]]
 ];

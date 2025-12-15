@@ -8,7 +8,7 @@ var neomutt_8h =
       [ "NT_GLOBAL_COMMAND", "neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5dadcad6a049b100a3871e20f6b50289253", null ]
     ] ],
     [ "neomutt_account_add", "neomutt_8h.html#a719e4995956628c3e2286051fd2448ee", null ],
-    [ "neomutt_account_remove", "neomutt_8h.html#a316ab94d59e50ddca92bea0912086c26", null ],
+    [ "neomutt_account_remove", "neomutt_8h.html#a39717f8b683362414a68df94f9b30217", null ],
     [ "neomutt_accounts_free", "neomutt_8h.html#ac2adb3e05612a5a7136ca897c645836e", null ],
     [ "neomutt_free", "neomutt_8h.html#af06ffebf075ceb3397d90d0501c83301", null ],
     [ "neomutt_new", "neomutt_8h.html#a97185791cb85d53c9283f32cfe52576a", null ],

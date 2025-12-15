@@ -165,6 +165,7 @@ var annotated_dup =
     [ "MimeNames", "structMimeNames.html", "structMimeNames" ],
     [ "Monitor", "structMonitor.html", "structMonitor" ],
     [ "MonitorInfo", "structMonitorInfo.html", "structMonitorInfo" ],
+    [ "MsgIdData", "structMsgIdData.html", "structMsgIdData" ],
     [ "MsgWinWindowData", "structMsgWinWindowData.html", "structMsgWinWindowData" ],
     [ "MUpdate", "structMUpdate.html", "structMUpdate" ],
     [ "MuttFileIter", "structMuttFileIter.html", "structMuttFileIter" ],

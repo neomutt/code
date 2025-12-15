@@ -3,7 +3,6 @@ var sendlib_8h =
     [ "MUTT_RANDTAG_LEN", "sendlib_8h.html#a3eb2475f59b97dda306d28971399217a", null ],
     [ "mutt_bounce_message", "sendlib_8h.html#a7848f294cb015bff75efc45e2d15494c", null ],
     [ "mutt_fqdn", "sendlib_8h.html#a448ec1abcfc24a2a3d61197ef604877d", null ],
-    [ "mutt_gen_msgid", "sendlib_8h.html#a891ada8c467ba28aede353247f77d3ec", null ],
     [ "mutt_lookup_mime_type", "sendlib_8h.html#a8022f8bacc7380ec914c526c3ebb69d5", null ],
     [ "mutt_make_file_attach", "sendlib_8h.html#a84c896a702c00ea759c281213e454686", null ],
     [ "mutt_make_message_attach", "sendlib_8h.html#ac581b91b8ed18532dc94bf12335c178b", null ],
