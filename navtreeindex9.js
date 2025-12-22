@@ -16,9 +16,8 @@ var NAVTREEINDEX9 =
 "debug_pager.html":[19,8],
 "debug_window.html":[19,9],
 "definition_8h.html":[2,0,20,1],
-"definition_8h.html#a1aea52cca21f52343d649611caa68b6c":[2,0,20,1,3],
 "definition_8h.html#a2a611701655c4ac10063351268fdcf4c":[2,0,20,1,1],
-"definition_8h.html#a5a516ad696c12d769fb040f088bf3bd0":[2,0,20,1,4],
+"definition_8h.html#a5a516ad696c12d769fb040f088bf3bd0":[2,0,20,1,3],
 "definition_8h.html#a6f04fcb8cf7d8283e5602b8dcfc9dcf7":[2,0,20,1,2],
 "definition_8h_source.html":[2,0,20,1],
 "dialog_8c.html":[2,0,22,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX9 =
 "domain_8h.html#a2bedf11cab57ba7804043eac9c949602aeeca87292f6fb63b6b66ea2468b1c331":[2,0,20,2,0,19],
 "domain_8h.html#a2bedf11cab57ba7804043eac9c949602af625dabaca82b2e5a4fefe1598586d0c":[2,0,20,2,0,15],
 "domain_8h.html#a2bedf11cab57ba7804043eac9c949602af95b0cc503baf07f13c82c820e340ecc":[2,0,20,2,0,5],
-"domain_8h.html#a2bedf11cab57ba7804043eac9c949602af9bd6340924b9f82d18242f39f9c3102":[2,0,20,2,0,10]
+"domain_8h.html#a2bedf11cab57ba7804043eac9c949602af9bd6340924b9f82d18242f39f9c3102":[2,0,20,2,0,10],
+"domain_8h_source.html":[2,0,20,2]
 };

@@ -14,5 +14,6 @@ var lib_expando =
     [ "Padding Node", "expando_node_padding.html", null ],
     [ "Text Node", "expando_node_text.html", null ],
     [ "Expando Parsing", "expando_parse.html", null ],
-    [ "Render Expandos using Data", "expando_render.html", null ]
+    [ "Render Expandos using Data", "expando_render.html", null ],
+    [ "Dump the details of an Expando Tree", "expando_serial.html", null ]
 ];

@@ -1,6 +1,5 @@
 var NAVTREEINDEX21 =
 {
-"group__sidebar__function__api.html#ga115450cc6b32b632ad70dcff751b2551":[50,13,16,6],
 "group__sidebar__function__api.html#ga346014688c886294d5b0e2d70614bcf9":[50,13,16,5],
 "group__sidebar__function__api.html#ga402f0d1bff54d3f9d90c9c068d66de97":[50,13,16,10],
 "group__sidebar__function__api.html#ga47ee41fda6b6a7af9ec56f6b1d3ff5b0":[50,13,16,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX21 =
 "gui_resize.html":[24,11],
 "gui_rootwin.html":[24,12],
 "gui_sbar.html":[24,13],
-"gui_simple.html":[24,14]
+"gui_simple.html":[24,14],
+"gui_terminal.html":[24,15]
 };

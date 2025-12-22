@@ -1,5 +1,5 @@
 var sidebar_2commands_8c =
 [
-    [ "sb_parse_sidebar_pin", "group__command__parse.html#ga2acbdc27637ff84df004c8bc56e3161b", null ],
-    [ "sb_parse_sidebar_unpin", "group__command__parse.html#ga6700426d165695be4159513763ee04d4", null ]
+    [ "parse_sidebar_pin", "group__command__parse.html#gab9d88736702d21947b246589df0d2e8d", null ],
+    [ "parse_sidebar_unpin", "group__command__parse.html#ga8b4814c5601d45d240c8ea22ca98c1d4", null ]
 ];

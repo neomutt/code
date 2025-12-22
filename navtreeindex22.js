@@ -1,6 +1,5 @@
 var NAVTREEINDEX22 =
 {
-"gui_terminal.html":[24,15],
 "gui_window.html":[24,8],
 "handler_8c.html":[2,0,60],
 "handler_8c.html#a09f27e2821153040ea4cad0b9ade6153":[2,0,60,15],
@@ -249,5 +248,6 @@ var NAVTREEINDEX22 =
 "history_8c.html#a405244b558f153aeea5586728370eb85":[2,0,25,6,1],
 "history_8c.html#a46801529f80d425b727d1d4a3fc57a97":[2,0,25,6,11],
 "history_8c.html#a493d2064e68bab2fe5cee4b4769c2d49":[2,0,25,6,17],
-"history_8c.html#a517d4e87a0bb925504a3f683897e87e9":[2,0,25,6,2]
+"history_8c.html#a517d4e87a0bb925504a3f683897e87e9":[2,0,25,6,2],
+"history_8c.html#a51c77f2d472f83f66271fa8693476c50":[2,0,25,6,7]
 };

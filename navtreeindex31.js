@@ -1,6 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"mutt__socket_8h.html#a9e53b65134b09da07adfb100d3271c17":[2,0,84,1],
 "mutt__socket_8h_source.html":[2,0,84],
 "mutt__thread_8c.html":[2,0,85],
 "mutt__thread_8c.html#a050f78574b03ad5cca308994796e5237":[2,0,85,5],
@@ -249,5 +248,6 @@ var NAVTREEINDEX31 =
 "mutt_signal.html":[36,26],
 "mutt_slist.html":[36,27],
 "mutt_state.html":[36,28],
-"mutt_string.html":[36,29]
+"mutt_string.html":[36,29],
+"muttlib_8c.html":[2,0,87]
 };

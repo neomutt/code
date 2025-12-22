@@ -23,7 +23,7 @@ var hook_8h =
     [ "MUTT_GLOBAL_HOOK", "hook_8h.html#a68bd099f7c7df9c686f63450d6a6c44b", null ],
     [ "HookFlags", "hook_8h.html#a3bbd2f4f806a3cef595e60429f0c91af", null ],
     [ "hooks_init", "hook_8h.html#a8e0f55dad3dee3bf436ca00f95d902c0", null ],
-    [ "mutt_parse_hook", "group__command__parse.html#ga4b6e4f5a7cf7c50a1d32450735eba6f9", null ],
+    [ "parse_hook", "group__command__parse.html#ga2a3c4e3adc2c87c8f33a12cc02b5ef3b", null ],
     [ "mutt_account_hook", "hook_8h.html#a4d4e38013bebd1e23d668454609a3def", null ],
     [ "mutt_crypt_hook", "hook_8h.html#adce4d617e1b3ef99bec1a7969dd08a43", null ],
     [ "mutt_default_save", "hook_8h.html#a13ff966ae261a7a9183d70d8d4da7c01", null ],
@@ -32,7 +32,7 @@ var hook_8h =
     [ "mutt_folder_hook", "hook_8h.html#a6c1eb72c5e9a39b354d9c394f9116f50", null ],
     [ "mutt_idxfmt_hook", "hook_8h.html#a80917be2e7aeae0a2bcbc801d5762a6e", null ],
     [ "mutt_message_hook", "hook_8h.html#af487ca5e3f7da21c86e3ad61fdb55faa", null ],
-    [ "mutt_parse_charset_iconv_hook", "group__command__parse.html#ga8768b26f6904ee40b9ff0eedd5b396e0", null ],
+    [ "parse_charset_iconv_hook", "group__command__parse.html#gab4e475362512fb5d06b097ebe6efd091", null ],
     [ "mutt_select_fcc", "hook_8h.html#a6d228c86f5a1900b27af0fde26991a63", null ],
     [ "mutt_startup_shutdown_hook", "hook_8h.html#a346f2e985b8be4ee687b08eab1879561", null ],
     [ "mutt_timeout_hook", "hook_8h.html#a1b93f7bc501b2c75f04350d3ba184885", null ]

@@ -1,12 +1,12 @@
 var color_2commands_8c =
 [
     [ "get_colorid_name", "color_2commands_8c.html#a4223d5d1f0253f7ee4b4cf2e06041f1f", null ],
-    [ "parse_object", "color_2commands_8c.html#acc67f336f74803823dd88fd44cf39614", null ],
-    [ "parse_uncolor_command", "color_2commands_8c.html#a08f61f4df3e01427c98805ebc936b471", null ],
-    [ "parse_color_command", "color_2commands_8c.html#a8846d66d71dafd863285a981ffc0dd77", null ],
-    [ "parse_uncolor", "group__command__parse.html#ga028fe66e7b09afb7380568af05792056", null ],
-    [ "parse_unmono", "group__command__parse.html#ga0a74970e788d7baa8bc29af0282a0064", null ],
-    [ "parse_color", "group__command__parse.html#ga600f9a0f1dd5e5ec3da05c71e161a5e9", null ],
-    [ "parse_mono", "group__command__parse.html#ga2b8cc8214e00f6ce45ad728d6f096b70", null ],
+    [ "parse_object", "color_2commands_8c.html#a5fd0e1f4bd9993a63b922399969678d6", null ],
+    [ "parse_uncolor_command", "color_2commands_8c.html#ad661e7d59e1c74ff09b6323218468940", null ],
+    [ "parse_color_command", "color_2commands_8c.html#ab2c48143951e04e3489a16b59994ffd2", null ],
+    [ "parse_uncolor", "group__command__parse.html#ga428ab64292b61878cca23607f9467155", null ],
+    [ "parse_unmono", "group__command__parse.html#ga47c7c75cdb518df486933e271ce4c66f", null ],
+    [ "parse_color", "group__command__parse.html#gad2ecb68d4f6e75902b617ea51877132a", null ],
+    [ "parse_mono", "group__command__parse.html#gaf5efe10af17f1c67ec40ec3328ce1a6f", null ],
     [ "ColorFields", "color_2commands_8c.html#a4476932702aa028f1fcdc565633c03cf", null ]
 ];

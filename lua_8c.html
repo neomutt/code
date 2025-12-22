@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-1-gcddbd1</span>
+   &#160;<span id="projectnumber">2025-12-11-30-ge364a7</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -421,7 +421,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  117</span>  }</div>
 <div class="line"><span class="lineno">  118</span>  <a class="code hl_function" href="buffer_8c.html#a151ed4672a43461119841001f008f31d">buf_seek</a>(buf, 0);</div>
 <div class="line"><span class="lineno">  119</span> </div>
-<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span> (cmd-&gt;<a class="code hl_variable" href="structCommand.html#a2bb4670a44e6bdf1d09a36868a9e19e7">parse</a>(token, buf, cmd-&gt;<a class="code hl_variable" href="structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f">data</a>, err))</div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span> (cmd-&gt;<a class="code hl_variable" href="structCommand.html#a7708410de6a9b8e38409ff2b573a509e">parse</a>(cmd, token, buf, err))</div>
 <div class="line"><span class="lineno">  121</span>  {</div>
 <div class="line"><span class="lineno">  122</span>    luaL_error(l, <span class="stringliteral">&quot;NeoMutt error: %s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
 <div class="line"><span class="lineno">  123</span>    rc = -1;</div>
@@ -450,8 +450,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
 <div class="ttc" id="astructCommand_html"><div class="ttname"><a href="structCommand.html">Command</a></div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00049">command.h:50</a></div></div>
-<div class="ttc" id="astructCommand_html_a2bb4670a44e6bdf1d09a36868a9e19e7"><div class="ttname"><a href="structCommand.html#a2bb4670a44e6bdf1d09a36868a9e19e7">Command::parse</a></div><div class="ttdeci">enum CommandResult(* parse)(struct Buffer *buf, struct Buffer *s, intptr_t data, struct Buffer *err)</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00051">command.h:64</a></div></div>
-<div class="ttc" id="astructCommand_html_aa5fe18d852766cc28e9641ff4d0e3b6f"><div class="ttname"><a href="structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f">Command::data</a></div><div class="ttdeci">intptr_t data</div><div class="ttdoc">Data or flags to pass to the command.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00066">command.h:66</a></div></div>
+<div class="ttc" id="astructCommand_html_a7708410de6a9b8e38409ff2b573a509e"><div class="ttname"><a href="structCommand.html#a7708410de6a9b8e38409ff2b573a509e">Command::parse</a></div><div class="ttdeci">enum CommandResult(* parse)(const struct Command *cmd, struct Buffer *buf, struct Buffer *line, struct Buffer *err)</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00051">command.h:64</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00041">neomutt.h:42</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_a3024ae27b85ddf7c9c3ff11299d01b05"><div class="ttname"><a href="structNeoMutt.html#a3024ae27b85ddf7c9c3ff11299d01b05">NeoMutt::commands</a></div><div class="ttdeci">struct CommandArray commands</div><div class="ttdoc">NeoMutt commands.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00050">neomutt.h:50</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -781,36 +780,37 @@ Variables</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  304</span>{</div>
 <div class="line"><span class="lineno">  305</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
 <div class="line"><span class="lineno">  306</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  307</span>  <span class="keywordtype">char</span> *buf = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(lua_tostring(l, -1));</div>
-<div class="line"><span class="lineno">  308</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="rc_8c.html#a25ab3efe354608ffa99521994fc4cf07">parse_rc_line</a>(buf, err))</div>
-<div class="line"><span class="lineno">  311</span>  {</div>
-<div class="line"><span class="lineno">  312</span>    luaL_error(l, <span class="stringliteral">&quot;NeoMutt error: %s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
-<div class="line"><span class="lineno">  313</span>    rc = -1;</div>
-<div class="line"><span class="lineno">  314</span>  }</div>
-<div class="line"><span class="lineno">  315</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  316</span>  {</div>
-<div class="line"><span class="lineno">  317</span>    <span class="keywordflow">if</span> (!lua_pushstring(l, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err)))</div>
-<div class="line"><span class="lineno">  318</span>      <a class="code hl_function" href="#ad18e0c6e1d6b137216040a700fb457dc">lua_handle_error</a>(l);</div>
-<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  320</span>      rc++;</div>
-<div class="line"><span class="lineno">  321</span>  }</div>
-<div class="line"><span class="lineno">  322</span> </div>
-<div class="line"><span class="lineno">  323</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  324</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;err);</div>
-<div class="line"><span class="lineno">  325</span> </div>
-<div class="line"><span class="lineno">  326</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  327</span>}</div>
-<div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00062">memory.h:62</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00255">string.c:255</a></div></div>
-<div class="ttc" id="arc_8c_html_a25ab3efe354608ffa99521994fc4cf07"><div class="ttname"><a href="rc_8c.html#a25ab3efe354608ffa99521994fc4cf07">parse_rc_line</a></div><div class="ttdeci">enum CommandResult parse_rc_line(const char *line, struct Buffer *err)</div><div class="ttdoc">Parse a line of user config.</div><div class="ttdef"><b>Definition</b> <a href="rc_8c_source.html#l00109">rc.c:109</a></div></div>
+<div class="line"><span class="lineno">  307</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *line = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  308</span> </div>
+<div class="line"><span class="lineno">  309</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(line, lua_tostring(l, -1));</div>
+<div class="line"><span class="lineno">  310</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="rc_8c.html#ae6debcf37386e5d784efff41d92d02d6">parse_rc_line</a>(line, err))</div>
+<div class="line"><span class="lineno">  313</span>  {</div>
+<div class="line"><span class="lineno">  314</span>    luaL_error(l, <span class="stringliteral">&quot;NeoMutt error: %s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
+<div class="line"><span class="lineno">  315</span>    rc = -1;</div>
+<div class="line"><span class="lineno">  316</span>  }</div>
+<div class="line"><span class="lineno">  317</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  318</span>  {</div>
+<div class="line"><span class="lineno">  319</span>    <span class="keywordflow">if</span> (!lua_pushstring(l, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err)))</div>
+<div class="line"><span class="lineno">  320</span>      <a class="code hl_function" href="#ad18e0c6e1d6b137216040a700fb457dc">lua_handle_error</a>(l);</div>
+<div class="line"><span class="lineno">  321</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  322</span>      rc++;</div>
+<div class="line"><span class="lineno">  323</span>  }</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;line);</div>
+<div class="line"><span class="lineno">  326</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;err);</div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  329</span>}</div>
+<div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00395">buffer.c:395</a></div></div>
+<div class="ttc" id="arc_8c_html_ae6debcf37386e5d784efff41d92d02d6"><div class="ttname"><a href="rc_8c.html#ae6debcf37386e5d784efff41d92d02d6">parse_rc_line</a></div><div class="ttdeci">enum CommandResult parse_rc_line(struct Buffer *line, struct Buffer *err)</div><div class="ttdoc">Parse a line of user config.</div><div class="ttdef"><b>Definition</b> <a href="rc_8c_source.html#l00042">rc.c:42</a></div></div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lua_8c_a8cba55c8b98b67363561f3a07e6c1c69_cgraph.svg" width="503" height="282"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lua_8c_a8cba55c8b98b67363561f3a07e6c1c69_cgraph.svg" width="503" height="296"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -852,14 +852,14 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00334">334</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  335</span>{</div>
-<div class="line"><span class="lineno">  336</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  337</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *msg = lua_tostring(l, -1);</div>
-<div class="line"><span class="lineno">  338</span>  <span class="keywordflow">if</span> (msg)</div>
-<div class="line"><span class="lineno">  339</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  340</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  341</span>}</div>
+<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00336">336</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>{</div>
+<div class="line"><span class="lineno">  338</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  339</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *msg = lua_tostring(l, -1);</div>
+<div class="line"><span class="lineno">  340</span>  <span class="keywordflow">if</span> (msg)</div>
+<div class="line"><span class="lineno">  341</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  342</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  343</span>}</div>
 <div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00092">logging2.h:92</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -901,14 +901,14 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00348">348</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  349</span>{</div>
-<div class="line"><span class="lineno">  350</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  351</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *msg = lua_tostring(l, -1);</div>
-<div class="line"><span class="lineno">  352</span>  <span class="keywordflow">if</span> (msg)</div>
-<div class="line"><span class="lineno">  353</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  354</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  355</span>}</div>
+<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00350">350</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  351</span>{</div>
+<div class="line"><span class="lineno">  352</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  353</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *msg = lua_tostring(l, -1);</div>
+<div class="line"><span class="lineno">  354</span>  <span class="keywordflow">if</span> (msg)</div>
+<div class="line"><span class="lineno">  355</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  356</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  357</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -948,13 +948,13 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00362">362</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  363</span>{</div>
-<div class="line"><span class="lineno">  364</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
-<div class="line"><span class="lineno">  365</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;mutt.command.%s = function (...); mutt.call(&#39;%s&#39;, ...); end&quot;</span>,</div>
-<div class="line"><span class="lineno">  366</span>           cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>, cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>);</div>
-<div class="line"><span class="lineno">  367</span>  (void) luaL_dostring(l, buf);</div>
-<div class="line"><span class="lineno">  368</span>}</div>
+<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00364">364</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  365</span>{</div>
+<div class="line"><span class="lineno">  366</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno">  367</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;mutt.command.%s = function (...); mutt.call(&#39;%s&#39;, ...); end&quot;</span>,</div>
+<div class="line"><span class="lineno">  368</span>           cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>, cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>);</div>
+<div class="line"><span class="lineno">  369</span>  (void) luaL_dostring(l, buf);</div>
+<div class="line"><span class="lineno">  370</span>}</div>
 <div class="ttc" id="astructCommand_html_aaac7db0461198bc84c6bb01e64ae82e3"><div class="ttname"><a href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">Command::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">Name of the command.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00051">command.h:51</a></div></div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -1003,23 +1003,23 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00397">397</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  398</span>{</div>
-<div class="line"><span class="lineno">  399</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  400</span>  luaL_newlib(l, <a class="code hl_variable" href="#a8b3ff0dc3907975a08de0c6fc6df7e73">LuaMuttCommands</a>);</div>
-<div class="line"><span class="lineno">  401</span>  <span class="keywordtype">int</span> lib_idx = lua_gettop(l);</div>
-<div class="line"><span class="lineno">  402</span> </div>
-<div class="line"><span class="lineno">  403</span>  <span class="comment">// clang-format off</span></div>
-<div class="line"><span class="lineno">  404</span>  lua_pushstring(l, <span class="stringliteral">&quot;VERSION&quot;</span>);     lua_pushstring(l, <a class="code hl_function" href="version_8c.html#a69b9bf85b68576604d5356405ace86b6">mutt_make_version</a>()); lua_settable(l, lib_idx);</div>
-<div class="line"><span class="lineno">  405</span>  lua_pushstring(l, <span class="stringliteral">&quot;QUAD_YES&quot;</span>);    lua_pushinteger(l, <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a>);           lua_settable(l, lib_idx);</div>
-<div class="line"><span class="lineno">  406</span>  lua_pushstring(l, <span class="stringliteral">&quot;QUAD_NO&quot;</span>);     lua_pushinteger(l, <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbabe3800cc419f25384aaf1892fc3c812b">MUTT_NO</a>);            lua_settable(l, lib_idx);</div>
-<div class="line"><span class="lineno">  407</span>  lua_pushstring(l, <span class="stringliteral">&quot;QUAD_ASKYES&quot;</span>); lua_pushinteger(l, <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbae15a0a03ca0d129a7ff4530a73fea140">MUTT_ASKYES</a>);        lua_settable(l, lib_idx);</div>
-<div class="line"><span class="lineno">  408</span>  lua_pushstring(l, <span class="stringliteral">&quot;QUAD_ASKNO&quot;</span>);  lua_pushinteger(l, <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbaaf90604c0e1430d5002944c93ac46952">MUTT_ASKNO</a>);         lua_settable(l, lib_idx);</div>
-<div class="line"><span class="lineno">  409</span>  <span class="comment">// clang-format on</span></div>
-<div class="line"><span class="lineno">  410</span> </div>
-<div class="line"><span class="lineno">  411</span>  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno">  412</span>}</div>
-<div class="ttc" id="alua_8c_html_a8b3ff0dc3907975a08de0c6fc6df7e73"><div class="ttname"><a href="#a8b3ff0dc3907975a08de0c6fc6df7e73">LuaMuttCommands</a></div><div class="ttdeci">static const luaL_Reg LuaMuttCommands[]</div><div class="ttdoc">List of Lua commands to register.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00379">lua.c:379</a></div></div>
+<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00399">399</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  400</span>{</div>
+<div class="line"><span class="lineno">  401</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  402</span>  luaL_newlib(l, <a class="code hl_variable" href="#a8b3ff0dc3907975a08de0c6fc6df7e73">LuaMuttCommands</a>);</div>
+<div class="line"><span class="lineno">  403</span>  <span class="keywordtype">int</span> lib_idx = lua_gettop(l);</div>
+<div class="line"><span class="lineno">  404</span> </div>
+<div class="line"><span class="lineno">  405</span>  <span class="comment">// clang-format off</span></div>
+<div class="line"><span class="lineno">  406</span>  lua_pushstring(l, <span class="stringliteral">&quot;VERSION&quot;</span>);     lua_pushstring(l, <a class="code hl_function" href="version_8c.html#a69b9bf85b68576604d5356405ace86b6">mutt_make_version</a>()); lua_settable(l, lib_idx);</div>
+<div class="line"><span class="lineno">  407</span>  lua_pushstring(l, <span class="stringliteral">&quot;QUAD_YES&quot;</span>);    lua_pushinteger(l, <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a>);           lua_settable(l, lib_idx);</div>
+<div class="line"><span class="lineno">  408</span>  lua_pushstring(l, <span class="stringliteral">&quot;QUAD_NO&quot;</span>);     lua_pushinteger(l, <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbabe3800cc419f25384aaf1892fc3c812b">MUTT_NO</a>);            lua_settable(l, lib_idx);</div>
+<div class="line"><span class="lineno">  409</span>  lua_pushstring(l, <span class="stringliteral">&quot;QUAD_ASKYES&quot;</span>); lua_pushinteger(l, <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbae15a0a03ca0d129a7ff4530a73fea140">MUTT_ASKYES</a>);        lua_settable(l, lib_idx);</div>
+<div class="line"><span class="lineno">  410</span>  lua_pushstring(l, <span class="stringliteral">&quot;QUAD_ASKNO&quot;</span>);  lua_pushinteger(l, <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbaaf90604c0e1430d5002944c93ac46952">MUTT_ASKNO</a>);         lua_settable(l, lib_idx);</div>
+<div class="line"><span class="lineno">  411</span>  <span class="comment">// clang-format on</span></div>
+<div class="line"><span class="lineno">  412</span> </div>
+<div class="line"><span class="lineno">  413</span>  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  414</span>}</div>
+<div class="ttc" id="alua_8c_html_a8b3ff0dc3907975a08de0c6fc6df7e73"><div class="ttname"><a href="#a8b3ff0dc3907975a08de0c6fc6df7e73">LuaMuttCommands</a></div><div class="ttdeci">static const luaL_Reg LuaMuttCommands[]</div><div class="ttdoc">List of Lua commands to register.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00381">lua.c:381</a></div></div>
 <div class="ttc" id="aquad_8h_html_a738f558a271fe5035e0ee3b700ee35dbaaf90604c0e1430d5002944c93ac46952"><div class="ttname"><a href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbaaf90604c0e1430d5002944c93ac46952">MUTT_ASKNO</a></div><div class="ttdeci">@ MUTT_ASKNO</div><div class="ttdoc">Ask the user, defaulting to &#39;No&#39;.</div><div class="ttdef"><b>Definition</b> <a href="quad_8h_source.html#l00040">quad.h:40</a></div></div>
 <div class="ttc" id="aquad_8h_html_a738f558a271fe5035e0ee3b700ee35dbabe3800cc419f25384aaf1892fc3c812b"><div class="ttname"><a href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbabe3800cc419f25384aaf1892fc3c812b">MUTT_NO</a></div><div class="ttdeci">@ MUTT_NO</div><div class="ttdoc">User answered &#39;No&#39;, or assume &#39;No&#39;.</div><div class="ttdef"><b>Definition</b> <a href="quad_8h_source.html#l00038">quad.h:38</a></div></div>
 <div class="ttc" id="aquad_8h_html_a738f558a271fe5035e0ee3b700ee35dbae15a0a03ca0d129a7ff4530a73fea140"><div class="ttname"><a href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbae15a0a03ca0d129a7ff4530a73fea140">MUTT_ASKYES</a></div><div class="ttdeci">@ MUTT_ASKYES</div><div class="ttdoc">Ask the user, defaulting to &#39;Yes&#39;.</div><div class="ttdef"><b>Definition</b> <a href="quad_8h_source.html#l00041">quad.h:41</a></div></div>
@@ -1073,22 +1073,22 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00418">418</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  419</span>{</div>
-<div class="line"><span class="lineno">  420</span>  luaL_requiref(l, <span class="stringliteral">&quot;mutt&quot;</span>, <a class="code hl_function" href="#a2152dd402b1484208ec5c1b20a79ea10">lua_expose_commands</a>, 1);</div>
-<div class="line"><span class="lineno">  421</span>  (void) luaL_dostring(l, <span class="stringliteral">&quot;mutt.command = {}&quot;</span>);</div>
-<div class="line"><span class="lineno">  422</span> </div>
-<div class="line"><span class="lineno">  423</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> **cp = NULL;</div>
-<div class="line"><span class="lineno">  424</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(cp, &amp;<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#a3024ae27b85ddf7c9c3ff11299d01b05">commands</a>)</div>
-<div class="line"><span class="lineno">  425</span>  {</div>
-<div class="line"><span class="lineno">  426</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> *cmd = *cp;</div>
-<div class="line"><span class="lineno">  427</span> </div>
-<div class="line"><span class="lineno">  428</span>    <a class="code hl_function" href="#a3f5f4eca3d18b58262710dc8864d4521">lua_expose_command</a>(l, cmd);</div>
-<div class="line"><span class="lineno">  429</span>  }</div>
-<div class="line"><span class="lineno">  430</span>}</div>
+<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00420">420</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  421</span>{</div>
+<div class="line"><span class="lineno">  422</span>  luaL_requiref(l, <span class="stringliteral">&quot;mutt&quot;</span>, <a class="code hl_function" href="#a2152dd402b1484208ec5c1b20a79ea10">lua_expose_commands</a>, 1);</div>
+<div class="line"><span class="lineno">  423</span>  (void) luaL_dostring(l, <span class="stringliteral">&quot;mutt.command = {}&quot;</span>);</div>
+<div class="line"><span class="lineno">  424</span> </div>
+<div class="line"><span class="lineno">  425</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> **cp = NULL;</div>
+<div class="line"><span class="lineno">  426</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(cp, &amp;<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#a3024ae27b85ddf7c9c3ff11299d01b05">commands</a>)</div>
+<div class="line"><span class="lineno">  427</span>  {</div>
+<div class="line"><span class="lineno">  428</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> *cmd = *cp;</div>
+<div class="line"><span class="lineno">  429</span> </div>
+<div class="line"><span class="lineno">  430</span>    <a class="code hl_function" href="#a3f5f4eca3d18b58262710dc8864d4521">lua_expose_command</a>(l, cmd);</div>
+<div class="line"><span class="lineno">  431</span>  }</div>
+<div class="line"><span class="lineno">  432</span>}</div>
 <div class="ttc" id="aarray_8h_html_a6b8ea5fb2f366d7716f5042b347093a6"><div class="ttname"><a href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a></div><div class="ttdeci">#define ARRAY_FOREACH(elem, head)</div><div class="ttdoc">Iterate over all elements of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00214">array.h:214</a></div></div>
-<div class="ttc" id="alua_8c_html_a2152dd402b1484208ec5c1b20a79ea10"><div class="ttname"><a href="#a2152dd402b1484208ec5c1b20a79ea10">lua_expose_commands</a></div><div class="ttdeci">static int lua_expose_commands(lua_State *l)</div><div class="ttdoc">Declare some NeoMutt types to the Lua interpreter.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00397">lua.c:397</a></div></div>
-<div class="ttc" id="alua_8c_html_a3f5f4eca3d18b58262710dc8864d4521"><div class="ttname"><a href="#a3f5f4eca3d18b58262710dc8864d4521">lua_expose_command</a></div><div class="ttdeci">static void lua_expose_command(lua_State *l, const struct Command *cmd)</div><div class="ttdoc">Expose a NeoMutt command to the Lua interpreter.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00362">lua.c:362</a></div></div>
+<div class="ttc" id="alua_8c_html_a2152dd402b1484208ec5c1b20a79ea10"><div class="ttname"><a href="#a2152dd402b1484208ec5c1b20a79ea10">lua_expose_commands</a></div><div class="ttdeci">static int lua_expose_commands(lua_State *l)</div><div class="ttdoc">Declare some NeoMutt types to the Lua interpreter.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00399">lua.c:399</a></div></div>
+<div class="ttc" id="alua_8c_html_a3f5f4eca3d18b58262710dc8864d4521"><div class="ttname"><a href="#a3f5f4eca3d18b58262710dc8864d4521">lua_expose_command</a></div><div class="ttdeci">static void lua_expose_command(lua_State *l, const struct Command *cmd)</div><div class="ttdoc">Expose a NeoMutt command to the Lua interpreter.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00364">lua.c:364</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -1135,31 +1135,31 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00437">437</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  438</span>{</div>
-<div class="line"><span class="lineno">  439</span>  <span class="keywordflow">if</span> (!l)</div>
-<div class="line"><span class="lineno">  440</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  441</span>  <span class="keywordflow">if</span> (*l)</div>
-<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  443</span> </div>
-<div class="line"><span class="lineno">  444</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  445</span>  *l = luaL_newstate();</div>
-<div class="line"><span class="lineno">  446</span> </div>
-<div class="line"><span class="lineno">  447</span>  <span class="keywordflow">if</span> (!*l)</div>
-<div class="line"><span class="lineno">  448</span>  {</div>
-<div class="line"><span class="lineno">  449</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: Couldn&#39;t load the lua interpreter&quot;</span>));</div>
-<div class="line"><span class="lineno">  450</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  451</span>  }</div>
-<div class="line"><span class="lineno">  452</span> </div>
-<div class="line"><span class="lineno">  453</span>  lua_atpanic(*l, <a class="code hl_function" href="#a679ab7321f7b712af467c56fe946c654">lua_handle_panic</a>);</div>
+<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00439">439</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>{</div>
+<div class="line"><span class="lineno">  441</span>  <span class="keywordflow">if</span> (!l)</div>
+<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  443</span>  <span class="keywordflow">if</span> (*l)</div>
+<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  445</span> </div>
+<div class="line"><span class="lineno">  446</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  447</span>  *l = luaL_newstate();</div>
+<div class="line"><span class="lineno">  448</span> </div>
+<div class="line"><span class="lineno">  449</span>  <span class="keywordflow">if</span> (!*l)</div>
+<div class="line"><span class="lineno">  450</span>  {</div>
+<div class="line"><span class="lineno">  451</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: Couldn&#39;t load the lua interpreter&quot;</span>));</div>
+<div class="line"><span class="lineno">  452</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  453</span>  }</div>
 <div class="line"><span class="lineno">  454</span> </div>
-<div class="line"><span class="lineno">  455</span>  <span class="comment">/* load various Lua libraries */</span></div>
-<div class="line"><span class="lineno">  456</span>  luaL_openlibs(*l);</div>
-<div class="line"><span class="lineno">  457</span>  <a class="code hl_function" href="#a2b014668f818722f5c776e3d630a7c8d">lua_expose_mutt</a>(*l);</div>
-<div class="line"><span class="lineno">  458</span> </div>
-<div class="line"><span class="lineno">  459</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  460</span>}</div>
-<div class="ttc" id="alua_8c_html_a2b014668f818722f5c776e3d630a7c8d"><div class="ttname"><a href="#a2b014668f818722f5c776e3d630a7c8d">lua_expose_mutt</a></div><div class="ttdeci">static void lua_expose_mutt(lua_State *l)</div><div class="ttdoc">Expose a &#39;Mutt&#39; object to the Lua interpreter.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00418">lua.c:418</a></div></div>
+<div class="line"><span class="lineno">  455</span>  lua_atpanic(*l, <a class="code hl_function" href="#a679ab7321f7b712af467c56fe946c654">lua_handle_panic</a>);</div>
+<div class="line"><span class="lineno">  456</span> </div>
+<div class="line"><span class="lineno">  457</span>  <span class="comment">/* load various Lua libraries */</span></div>
+<div class="line"><span class="lineno">  458</span>  luaL_openlibs(*l);</div>
+<div class="line"><span class="lineno">  459</span>  <a class="code hl_function" href="#a2b014668f818722f5c776e3d630a7c8d">lua_expose_mutt</a>(*l);</div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  462</span>}</div>
+<div class="ttc" id="alua_8c_html_a2b014668f818722f5c776e3d630a7c8d"><div class="ttname"><a href="#a2b014668f818722f5c776e3d630a7c8d">lua_expose_mutt</a></div><div class="ttdeci">static void lua_expose_mutt(lua_State *l)</div><div class="ttdoc">Expose a &#39;Mutt&#39; object to the Lua interpreter.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00420">lua.c:420</a></div></div>
 <div class="ttc" id="alua_8c_html_a679ab7321f7b712af467c56fe946c654"><div class="ttname"><a href="#a679ab7321f7b712af467c56fe946c654">lua_handle_panic</a></div><div class="ttdeci">static int lua_handle_panic(lua_State *l)</div><div class="ttdoc">Handle a panic in the Lua interpreter.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00064">lua.c:64</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1230,8 +1230,8 @@ Variables</h2></td></tr>
 <div class="line">  </div>
 <div class="line">}</div>
 <div class="ttc" id="alua_8c_html_a271f8515e68aba9d287b93c8cbfad75b"><div class="ttname"><a href="#a271f8515e68aba9d287b93c8cbfad75b">lua_cb_global_set</a></div><div class="ttdeci">static int lua_cb_global_set(lua_State *l)</div><div class="ttdoc">Set a NeoMutt variable.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00145">lua.c:145</a></div></div>
-<div class="ttc" id="alua_8c_html_a6214f1ac1da824e998b0a5610dee5984"><div class="ttname"><a href="#a6214f1ac1da824e998b0a5610dee5984">lua_cb_global_message</a></div><div class="ttdeci">static int lua_cb_global_message(lua_State *l)</div><div class="ttdoc">Display a message in NeoMutt.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00334">lua.c:334</a></div></div>
-<div class="ttc" id="alua_8c_html_a776538b4301b3b695491225ffa87815d"><div class="ttname"><a href="#a776538b4301b3b695491225ffa87815d">lua_cb_global_error</a></div><div class="ttdeci">static int lua_cb_global_error(lua_State *l)</div><div class="ttdoc">Display an error in NeoMutt.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00348">lua.c:348</a></div></div>
+<div class="ttc" id="alua_8c_html_a6214f1ac1da824e998b0a5610dee5984"><div class="ttname"><a href="#a6214f1ac1da824e998b0a5610dee5984">lua_cb_global_message</a></div><div class="ttdeci">static int lua_cb_global_message(lua_State *l)</div><div class="ttdoc">Display a message in NeoMutt.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00336">lua.c:336</a></div></div>
+<div class="ttc" id="alua_8c_html_a776538b4301b3b695491225ffa87815d"><div class="ttname"><a href="#a776538b4301b3b695491225ffa87815d">lua_cb_global_error</a></div><div class="ttdeci">static int lua_cb_global_error(lua_State *l)</div><div class="ttdoc">Display an error in NeoMutt.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00350">lua.c:350</a></div></div>
 <div class="ttc" id="alua_8c_html_a8cba55c8b98b67363561f3a07e6c1c69"><div class="ttname"><a href="#a8cba55c8b98b67363561f3a07e6c1c69">lua_cb_global_enter</a></div><div class="ttdeci">static int lua_cb_global_enter(lua_State *l)</div><div class="ttdoc">Execute NeoMutt config from Lua.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00303">lua.c:303</a></div></div>
 <div class="ttc" id="alua_8c_html_abb4def978f984c233255ef50fcccd40e"><div class="ttname"><a href="#abb4def978f984c233255ef50fcccd40e">lua_cb_global_get</a></div><div class="ttdeci">static int lua_cb_global_get(lua_State *l)</div><div class="ttdoc">Get a NeoMutt variable.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00236">lua.c:236</a></div></div>
 <div class="ttc" id="alua_8c_html_af3d8406611d675858737dd680f66b064"><div class="ttname"><a href="#af3d8406611d675858737dd680f66b064">lua_cb_global_call</a></div><div class="ttdeci">static int lua_cb_global_call(lua_State *l)</div><div class="ttdoc">Call a NeoMutt command by name.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00091">lua.c:91</a></div></div>
@@ -1241,19 +1241,19 @@ Variables</h2></td></tr>
 <p>&lsquo;:lua mutt.message('hello&rsquo;)`</p>
 <p>and it will call <a class="el" href="#a6214f1ac1da824e998b0a5610dee5984" title="Display a message in NeoMutt.">lua_cb_global_message()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00379">379</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  379</span>                                          {</div>
-<div class="line"><span class="lineno">  380</span>  <span class="comment">// clang-format off</span></div>
-<div class="line"><span class="lineno">  381</span>  { <span class="stringliteral">&quot;set&quot;</span>,     <a class="code hl_function" href="#a271f8515e68aba9d287b93c8cbfad75b">lua_cb_global_set</a> },</div>
-<div class="line"><span class="lineno">  382</span>  { <span class="stringliteral">&quot;get&quot;</span>,     <a class="code hl_function" href="#abb4def978f984c233255ef50fcccd40e">lua_cb_global_get</a> },</div>
-<div class="line"><span class="lineno">  383</span>  { <span class="stringliteral">&quot;call&quot;</span>,    <a class="code hl_function" href="#af3d8406611d675858737dd680f66b064">lua_cb_global_call</a> },</div>
-<div class="line"><span class="lineno">  384</span>  { <span class="stringliteral">&quot;enter&quot;</span>,   <a class="code hl_function" href="#a8cba55c8b98b67363561f3a07e6c1c69">lua_cb_global_enter</a> },</div>
-<div class="line"><span class="lineno">  385</span>  { <span class="stringliteral">&quot;print&quot;</span>,   <a class="code hl_function" href="#a6214f1ac1da824e998b0a5610dee5984">lua_cb_global_message</a> },</div>
-<div class="line"><span class="lineno">  386</span>  { <span class="stringliteral">&quot;message&quot;</span>, <a class="code hl_function" href="#a6214f1ac1da824e998b0a5610dee5984">lua_cb_global_message</a> },</div>
-<div class="line"><span class="lineno">  387</span>  { <span class="stringliteral">&quot;error&quot;</span>,   <a class="code hl_function" href="#a776538b4301b3b695491225ffa87815d">lua_cb_global_error</a> },</div>
-<div class="line"><span class="lineno">  388</span>  { NULL, NULL },</div>
-<div class="line"><span class="lineno">  389</span>  <span class="comment">// clang-format on</span></div>
-<div class="line"><span class="lineno">  390</span>};</div>
+<p class="definition">Definition at line <a class="el" href="lua_8c_source.html#l00381">381</a> of file <a class="el" href="lua_8c_source.html">lua.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  381</span>                                          {</div>
+<div class="line"><span class="lineno">  382</span>  <span class="comment">// clang-format off</span></div>
+<div class="line"><span class="lineno">  383</span>  { <span class="stringliteral">&quot;set&quot;</span>,     <a class="code hl_function" href="#a271f8515e68aba9d287b93c8cbfad75b">lua_cb_global_set</a> },</div>
+<div class="line"><span class="lineno">  384</span>  { <span class="stringliteral">&quot;get&quot;</span>,     <a class="code hl_function" href="#abb4def978f984c233255ef50fcccd40e">lua_cb_global_get</a> },</div>
+<div class="line"><span class="lineno">  385</span>  { <span class="stringliteral">&quot;call&quot;</span>,    <a class="code hl_function" href="#af3d8406611d675858737dd680f66b064">lua_cb_global_call</a> },</div>
+<div class="line"><span class="lineno">  386</span>  { <span class="stringliteral">&quot;enter&quot;</span>,   <a class="code hl_function" href="#a8cba55c8b98b67363561f3a07e6c1c69">lua_cb_global_enter</a> },</div>
+<div class="line"><span class="lineno">  387</span>  { <span class="stringliteral">&quot;print&quot;</span>,   <a class="code hl_function" href="#a6214f1ac1da824e998b0a5610dee5984">lua_cb_global_message</a> },</div>
+<div class="line"><span class="lineno">  388</span>  { <span class="stringliteral">&quot;message&quot;</span>, <a class="code hl_function" href="#a6214f1ac1da824e998b0a5610dee5984">lua_cb_global_message</a> },</div>
+<div class="line"><span class="lineno">  389</span>  { <span class="stringliteral">&quot;error&quot;</span>,   <a class="code hl_function" href="#a776538b4301b3b695491225ffa87815d">lua_cb_global_error</a> },</div>
+<div class="line"><span class="lineno">  390</span>  { NULL, NULL },</div>
+<div class="line"><span class="lineno">  391</span>  <span class="comment">// clang-format on</span></div>
+<div class="line"><span class="lineno">  392</span>};</div>
 </div><!-- fragment -->
 </div>
 </div>

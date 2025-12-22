@@ -32,5 +32,7 @@ var dir_da89c73ec01786166a3e0981c39282fb =
     [ "parse.h", "expando_2parse_8h.html", "expando_2parse_8h" ],
     [ "render.c", "render_8c.html", "render_8c" ],
     [ "render.h", "render_8h.html", "render_8h" ],
+    [ "serial.c", "serial_8c.html", "serial_8c" ],
+    [ "serial.h", "serial_8h.html", "serial_8h" ],
     [ "uid.h", "uid_8h.html", "uid_8h" ]
 ];
