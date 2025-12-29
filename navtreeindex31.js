@@ -1,5 +1,11 @@
 var NAVTREEINDEX31 =
 {
+"mutt__socket_8c.html#a7de988b1f0286a570538c03f419622be":[2,0,83,0],
+"mutt__socket_8c.html#ab79e92d0c88e3061f590cb1874b8b59d":[2,0,83,1],
+"mutt__socket_8c_source.html":[2,0,83],
+"mutt__socket_8h.html":[2,0,84],
+"mutt__socket_8h.html#a6fb6b2634c15a663b74efcfa91b56481":[2,0,84,0],
+"mutt__socket_8h.html#a9e53b65134b09da07adfb100d3271c17":[2,0,84,1],
 "mutt__socket_8h_source.html":[2,0,84],
 "mutt__thread_8c.html":[2,0,85],
 "mutt__thread_8c.html#a050f78574b03ad5cca308994796e5237":[2,0,85,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX31 =
 "mutt_pool.html":[36,21],
 "mutt_prex.html":[36,22],
 "mutt_qsort_r.html":[36,23],
-"mutt_random.html":[36,24],
-"mutt_regex.html":[36,25],
-"mutt_signal.html":[36,26],
-"mutt_slist.html":[36,27],
-"mutt_state.html":[36,28],
-"mutt_string.html":[36,29],
-"muttlib_8c.html":[2,0,87]
+"mutt_random.html":[36,24]
 };

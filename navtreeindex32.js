@@ -1,5 +1,11 @@
 var NAVTREEINDEX32 =
 {
+"mutt_regex.html":[36,25],
+"mutt_signal.html":[36,26],
+"mutt_slist.html":[36,27],
+"mutt_state.html":[36,28],
+"mutt_string.html":[36,29],
+"muttlib_8c.html":[2,0,87],
 "muttlib_8c.html#a18edb91c53ec5ae71e0dad16f14eef27":[2,0,87,17],
 "muttlib_8c.html#a1b422ce225f4eb96e3ce8e276467ae9f":[2,0,87,21],
 "muttlib_8c.html#a23e2405002a60eaa1507f7f6d677f696":[2,0,87,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX32 =
 "ncrypt_2config_8c.html#a5301a0b4718c155e18bb8b5516176fed":[2,0,35,0,3],
 "ncrypt_2config_8c.html#a6bceb101ade0a748b4dfc2515ccb222d":[2,0,35,0,9],
 "ncrypt_2config_8c.html#a89323ff16879af1b184eb4432774e9df":[2,0,35,0,2],
-"ncrypt_2config_8c.html#acf726da3e60d09d7204b957f2d13e67a":[2,0,35,0,4],
-"ncrypt_2config_8c.html#adb6605be2f8eac8386d586e07308ece4":[2,0,35,0,6],
-"ncrypt_2config_8c.html#adc3fdc662ba05e019cb5353d9a6c9a14":[2,0,35,0,5],
-"ncrypt_2config_8c_source.html":[2,0,35,0],
-"ncrypt_2functions_8c.html":[2,0,35,24],
-"ncrypt_2functions_8c.html#a47c640809ce529499a23e88bf0ceac0f":[2,0,35,24,1],
-"ncrypt_2functions_8c.html#aa5c6f7d7fdadc007f235a9139df2f251":[2,0,35,24,0]
+"ncrypt_2config_8c.html#acf726da3e60d09d7204b957f2d13e67a":[2,0,35,0,4]
 };

@@ -3,8 +3,8 @@ var lib_store =
     [ "Shared store code", "store_store.html", [
       [ "Interface", "lib_store.html#autotoc_md126", null ],
       [ "Source", "lib_store.html#autotoc_md127", [
-        [ "Data", "store_store.html#autotoc_md660", null ],
-        [ "Functions", "store_store.html#autotoc_md661", null ]
+        [ "Data", "store_store.html#autotoc_md659", null ],
+        [ "Functions", "store_store.html#autotoc_md660", null ]
       ] ]
     ] ],
     [ "Berkeley DB (BDB)", "store_bdb.html", null ],

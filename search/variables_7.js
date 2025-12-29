@@ -36,7 +36,7 @@ var searchData=
   ['headerlist_33',['HeaderList',['../color_2regex_8c.html#aa36442790e7628a85f9cbd5aedb49a07',1,'regex.c']]],
   ['headerorderlist_34',['HeaderOrderList',['../globals_8c.html#ac9ee071134eb30f6cbe02c315bd32e14',1,'HeaderOrderList:&#160;globals.c'],['../globals_8h.html#ac9ee071134eb30f6cbe02c315bd32e14',1,'HeaderOrderList:&#160;globals.c']]],
   ['headerpadding_35',['HeaderPadding',['../envelope_2window_8c.html#a2dc7f233f069332ab5fd13ebb6a32934',1,'window.c']]],
-  ['help_36',['help',['../structCliHelp.html#a8c9dfa852379ab59d20494916c4e2e88',1,'CliHelp::help'],['../structCommandLine.html#a45570bdc8fcea9d953e3bec627feeb9b',1,'CommandLine::help']]],
+  ['help_36',['help',['../structCliHelp.html#a8c9dfa852379ab59d20494916c4e2e88',1,'CliHelp::help'],['../structCommandLine.html#a45570bdc8fcea9d953e3bec627feeb9b',1,'CommandLine::help'],['../structCommand.html#a4c78e4ec9cd040290170f159c0a6c111',1,'Command::help']]],
   ['help_5fdata_37',['help_data',['../structMuttWindow.html#a22e31684e6fd3b975477ff1843c50d9b',1,'MuttWindow::help_data'],['../structHelpbarWindowData.html#a96e534bbd4b3227fe941117cabd84b13',1,'HelpbarWindowData::help_data']]],
   ['help_5fmenu_38',['help_menu',['../structMuttWindow.html#aac6b813dcc579c43bb32789834c2a253',1,'MuttWindow::help_menu'],['../structHelpbarWindowData.html#a139fa7a522634f18bfa3e0fd2b25463a',1,'HelpbarWindowData::help_menu']]],
   ['help_5fstr_39',['help_str',['../structHelpbarWindowData.html#a383b346643f35c6b5e95c48f0ad705a6',1,'HelpbarWindowData']]],

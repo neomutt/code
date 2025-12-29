@@ -1,5 +1,11 @@
 var NAVTREEINDEX43 =
 {
+"sidebar_commands.html":[48,0],
+"sidebar_config.html":[48,1],
+"sidebar_expando.html":[48,2],
+"sidebar_functions.html":[48,3],
+"sidebar_observers.html":[48,4],
+"sidebar_sidebar.html":[48,5],
 "sidebar_sort.html":[48,6],
 "sidebar_wdata.html":[48,7],
 "sidebar_window.html":[48,8],
@@ -236,18 +242,12 @@ var NAVTREEINDEX43 =
 "store_qdbm.html":[49,5],
 "store_rocksdb.html":[49,6],
 "store_store.html":[49,0],
-"store_store.html#autotoc_md660":[1,0],
-"store_store.html#autotoc_md661":[1,1],
+"store_store.html#autotoc_md659":[1,0],
+"store_store.html#autotoc_md660":[1,1],
 "store_tc.html":[49,7],
 "store_tdb.html":[49,8],
 "string2_8h.html":[2,0,34,62],
 "string2_8h.html#a0fbc62c3eb930bee843877dfef888d77":[2,0,34,62,24],
 "string2_8h.html#a12aff586807f47d08506c55b294784da":[2,0,34,62,26],
-"string2_8h.html#a1334ed6ce9fa35f33f7d200ec945f0a7":[2,0,34,62,40],
-"string2_8h.html#a1d343dcbce0482f8979fe2a298913225":[2,0,34,62,19],
-"string2_8h.html#a29db81d6f5a7dd216cbea75ecf8a5885":[2,0,34,62,35],
-"string2_8h.html#a3fe33d90e4814281cd57de048119c950":[2,0,34,62,28],
-"string2_8h.html#a51804523442c072745bf8cdef6a43938":[2,0,34,62,10],
-"string2_8h.html#a52206f8cbb0161a06d6b18ae91e3fafa":[2,0,34,62,25],
-"string2_8h.html#a53b50dddf0ffe2eb0a9aadabffcb1b7d":[2,0,34,62,2]
+"string2_8h.html#a1334ed6ce9fa35f33f7d200ec945f0a7":[2,0,34,62,40]
 };

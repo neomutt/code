@@ -1,5 +1,11 @@
 var NAVTREEINDEX33 =
 {
+"ncrypt_2config_8c.html#adb6605be2f8eac8386d586e07308ece4":[2,0,35,0,6],
+"ncrypt_2config_8c.html#adc3fdc662ba05e019cb5353d9a6c9a14":[2,0,35,0,5],
+"ncrypt_2config_8c_source.html":[2,0,35,0],
+"ncrypt_2functions_8c.html":[2,0,35,24],
+"ncrypt_2functions_8c.html#a47c640809ce529499a23e88bf0ceac0f":[2,0,35,24,1],
+"ncrypt_2functions_8c.html#aa5c6f7d7fdadc007f235a9139df2f251":[2,0,35,24,0],
 "ncrypt_2functions_8c.html#ac34ba5661fc49da744196b10ac4fb60c":[2,0,35,24,2],
 "ncrypt_2functions_8c.html#ae8798a4f3a90d5c7736e7880d38f6ba7":[2,0,35,24,3],
 "ncrypt_2functions_8c_source.html":[2,0,35,24],
@@ -100,8 +106,8 @@ var NAVTREEINDEX33 =
 "ncrypt_expando_pgp.html":[37,14],
 "ncrypt_expando_smime.html":[37,15],
 "neo_alternates.html":[0,0],
-"neo_alternates.html#autotoc_md664":[3,0],
-"neo_alternates.html#autotoc_md665":[3,1],
+"neo_alternates.html#autotoc_md663":[3,0],
+"neo_alternates.html#autotoc_md664":[3,1],
 "neo_commands.html":[0,1],
 "neo_copy.html":[0,2],
 "neo_editmsg.html":[0,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX33 =
 "nntp_2mdata_8c.html":[2,0,36,11],
 "nntp_2mdata_8c_source.html":[2,0,36,11],
 "nntp_2mdata_8h.html":[2,0,36,12],
-"nntp_2mdata_8h_source.html":[2,0,36,12],
-"nntp_2private_8h.html":[2,0,36,15],
-"nntp_2private_8h.html#a00132ef57a28e8ec428b6fa298ea63d4":[2,0,36,15,13],
-"nntp_2private_8h.html#a140bf8e49e3f11e0d9cb4d8253767819":[2,0,36,15,9],
-"nntp_2private_8h.html#a1e2acdcc22ea61457b4dcafc8825aae5":[2,0,36,15,1],
-"nntp_2private_8h.html#a1f4ed64d09034fa97562c2976d80d614":[2,0,36,15,8],
-"nntp_2private_8h.html#a21d6dfb74310c442a524deed9579395a":[2,0,36,15,15]
+"nntp_2mdata_8h_source.html":[2,0,36,12]
 };

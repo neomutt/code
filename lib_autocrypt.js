@@ -7,7 +7,7 @@ var lib_autocrypt =
         [ "header->security | SEC_AUTOCRYPT_OVERRIDE", "lib_autocrypt.html#autotoc_md15", null ],
         [ "mutt_autocrypt_init()", "lib_autocrypt.html#autotoc_md16", null ],
         [ "Database schema version", "lib_autocrypt.html#autotoc_md17", null ],
-        [ "Functions", "autocrypt_autocrypt.html#autotoc_md166", null ]
+        [ "Functions", "autocrypt_autocrypt.html#autotoc_md165", null ]
       ] ]
     ] ],
     [ "Private Autocrypt Data", "autocrypt_autocrypt_data.html", null ],

@@ -1,5 +1,12 @@
 var NAVTREEINDEX21 =
 {
+"group__postpone__function__api.html#ga45cbd42179b94c4ff3d0baca5db64e55":[50,13,15,1],
+"group__postpone__function__api.html#gab03565548dcb1822901888f1b6f39b5c":[50,13,15,2],
+"group__preview__function__api.html":[50,13,4],
+"group__preview__function__api.html#ga7979a2461e23e1b5b4e8607861785d08":[50,13,4,0],
+"group__preview__function__api.html#gad274c3e642de9a9af5f45fc7d0527fb6":[50,13,4,1],
+"group__sidebar__function__api.html":[50,13,16],
+"group__sidebar__function__api.html#ga115450cc6b32b632ad70dcff751b2551":[50,13,16,6],
 "group__sidebar__function__api.html#ga346014688c886294d5b0e2d70614bcf9":[50,13,16,5],
 "group__sidebar__function__api.html#ga402f0d1bff54d3f9d90c9c068d66de97":[50,13,16,10],
 "group__sidebar__function__api.html#ga47ee41fda6b6a7af9ec56f6b1d3ff5b0":[50,13,16,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX21 =
 "gui_global.html":[24,3],
 "gui_msgcont.html":[24,4],
 "gui_msgwin.html":[24,5],
-"gui_msgwin_wdata.html":[24,6],
-"gui_opcode.html":[24,9],
-"gui_reflow.html":[24,10],
-"gui_resize.html":[24,11],
-"gui_rootwin.html":[24,12],
-"gui_sbar.html":[24,13],
-"gui_simple.html":[24,14],
-"gui_terminal.html":[24,15]
+"gui_msgwin_wdata.html":[24,6]
 };

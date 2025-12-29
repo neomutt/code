@@ -140,7 +140,7 @@ var NAVTREEINDEX2 =
 "autocrypt__data_8h.html#a86ccbd32bfee90cc50a3b64968c4f274":[2,0,3,2,3],
 "autocrypt__data_8h_source.html":[2,0,3,2],
 "autocrypt_autocrypt.html":[6,0],
-"autocrypt_autocrypt.html#autotoc_md166":[1,0],
+"autocrypt_autocrypt.html#autotoc_md165":[1,0],
 "autocrypt_autocrypt_data.html":[6,1],
 "autocrypt_config.html":[6,2],
 "autocrypt_db.html":[6,3],

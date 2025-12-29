@@ -1,5 +1,11 @@
 var NAVTREEINDEX45 =
 {
+"structBrowserState.html#a7ea6ab380d7b4206a2a2438e94176524":[1,0,28,3],
+"structBrowserState.html#aa9f0e9b3778d58224e831a9e48863c5b":[1,0,28,0],
+"structBrowserState.html#afe46fc676a2a691f2a4abbdde7c55c9b":[1,0,28,1],
+"structBuffer.html":[1,0,29],
+"structBuffer.html#a058d67252184c2eeaf57059544f8cdcf":[1,0,29,1],
+"structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995":[1,0,29,2],
 "structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8":[1,0,29,0],
 "structCertMenuData.html":[1,0,30],
 "structCertMenuData.html#a414c834ddad7b56d79615c111d482f6b":[1,0,30,1],
@@ -62,7 +68,11 @@ var NAVTREEINDEX45 =
 "structColorElement.html#a48ef3921eaed2dc76820a742870a8641":[1,0,38,0],
 "structColorElement.html#a527527072e0d7c465e56e89f7970e2c0":[1,0,38,2],
 "structCommand.html":[1,0,39],
-"structCommand.html#a7708410de6a9b8e38409ff2b573a509e":[1,0,39,1],
+"structCommand.html#a108acb83b0c649848b6ee1bd2182d188":[1,0,39,1],
+"structCommand.html#a1320a9c9b7c94be1fd5ec4e66221ef1e":[1,0,39,6],
+"structCommand.html#a448ef5b6a4b3f4121fcc93bb18081be3":[1,0,39,4],
+"structCommand.html#a4c78e4ec9cd040290170f159c0a6c111":[1,0,39,3],
+"structCommand.html#a6767591664593a88edf9e6ff3e50f418":[1,0,39,5],
 "structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f":[1,0,39,2],
 "structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3":[1,0,39,0],
 "structCommandLine.html":[1,0,40],
@@ -239,15 +249,5 @@ var NAVTREEINDEX45 =
 "structCursesColor.html#a186f147b17189f1e9e6d03b57cd29816":[1,0,64,1],
 "structCursesColor.html#a23dbc5c60857031ea26ee119a06268f6":[1,0,64,0],
 "structCursesColor.html#a2cb08234c6eb8b85179e81397be3886f":[1,0,64,2],
-"structCursesColor.html#a52a86065e6f848383df586b48699cf0a":[1,0,64,3],
-"structCursesColor.html#afa50e69efee0fd3dcef9fa30f94e1805":[1,0,64,4],
-"structDnArray.html":[1,0,65],
-"structDnArray.html#af682d246eebfc795bcff03ee578c42df":[1,0,65,0],
-"structDnArray.html#afc5041024e5c1f65b3539d3180bb9136":[1,0,65,1],
-"structEmail.html":[1,0,66],
-"structEmail.html#a0168d790a0a31e79bf4e74a7bdf61436":[1,0,66,35],
-"structEmail.html#a0bd79550be901d44e50953fb43614e10":[1,0,66,5],
-"structEmail.html#a0ff8541eb15d71d7d9f73e92365a1618":[1,0,66,10],
-"structEmail.html#a176c9555da85be4329562050056c0071":[1,0,66,32],
-"structEmail.html#a1906966857aa61046b2eca2eeffaf603":[1,0,66,31]
+"structCursesColor.html#a52a86065e6f848383df586b48699cf0a":[1,0,64,3]
 };
