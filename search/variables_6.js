@@ -29,7 +29,7 @@ var searchData=
   ['group_5fmatch_26',['group_match',['../structPattern.html#a018ea950c8d8c27eec7fe9338953f918',1,'Pattern']]],
   ['groupindexformatdef_27',['GroupIndexFormatDef',['../browser_2config_8c.html#a6d910b138e93c494786eaa9a4ac3e06f',1,'config.c']]],
   ['groupindexrendercallbacks_28',['GroupIndexRenderCallbacks',['../expando__browser_8c.html#a59ed7c02c543b136a5f377d0d1a8ece3',1,'GroupIndexRenderCallbacks:&#160;expando_browser.c'],['../expando__browser_8h.html#a59ed7c02c543b136a5f377d0d1a8ece3',1,'GroupIndexRenderCallbacks:&#160;expando_browser.c']]],
-  ['groups_29',['Groups',['../group_8c.html#a567f322116b96d91da15e30f08a14c2f',1,'group.c']]],
+  ['groups_29',['groups',['../structNeoMutt.html#af0ea35a35b272d4d5de07a89c16b6cbb',1,'NeoMutt']]],
   ['groups_5fhash_30',['groups_hash',['../structNntpAccountData.html#a0c47d705c8553a61127b79839399607d',1,'NntpAccountData']]],
   ['groups_5flist_31',['groups_list',['../structNntpAccountData.html#a17e649e29d0d7d8e6137647e62aa4b37',1,'NntpAccountData']]],
   ['groups_5fmax_32',['groups_max',['../structNntpAccountData.html#a9d74636989a2ad52c90363e982997b9a',1,'NntpAccountData']]],

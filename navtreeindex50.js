@@ -1,5 +1,16 @@
 var NAVTREEINDEX50 =
 {
+"structPatternFlags.html#a59bdf829b129533bfd13702ef1020430":[1,0,201,4],
+"structPatternFlags.html#a758c5f34fb4c43120b7f5d3329da650a":[1,0,201,2],
+"structPatternFlags.html#a7c66a2e014cd7a8127695cefd740a3e5":[1,0,201,1],
+"structPatternFunction.html":[1,0,202],
+"structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468":[1,0,202,0],
+"structPatternFunction.html#aaf5109d682a4213fb7da4434337112dd":[1,0,202,1],
+"structPgpCache.html":[1,0,204],
+"structPgpCache.html#a27971ba1f4f97f5421cba3c374ccdb10":[1,0,204,1],
+"structPgpCache.html#a30c15203d8da87adf67a342adb509e40":[1,0,204,2],
+"structPgpCache.html#ac00837b2f448d7de0de62e4d96154aa0":[1,0,204,0],
+"structPgpCommandContext.html":[1,0,205],
 "structPgpCommandContext.html#a78d6362d702a5890e8cd2f6e602298f9":[1,0,205,0],
 "structPgpCommandContext.html#a902503498520f373066233471d32e0ea":[1,0,205,3],
 "structPgpCommandContext.html#accc9f51d99b9369effd24f0b4a123631":[1,0,205,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX50 =
 "structSmimeKey.html#a9f73117582d0292e71e7867b7909326c":[1,0,244,0],
 "structSmimeKey.html#ab9df91118c710284278ceaeb98769f7c":[1,0,244,2],
 "structSmimeKey.html#abc36d7072ad69579e39e26326eed39e0":[1,0,244,4],
-"structSmtpAccountData.html":[1,0,245],
-"structSmtpAccountData.html#a350fb7c13d72afddd3be614e4b3da1e9":[1,0,245,4],
-"structSmtpAccountData.html#a3e577fea311310820b352ecb56061c4d":[1,0,245,3],
-"structSmtpAccountData.html#a7f61c2d6ce07d3a64eb5b1ca02b5b11a":[1,0,245,2],
-"structSmtpAccountData.html#aa83214af6dbc93ce7c7ba0487b26c355":[1,0,245,0],
-"structSmtpAccountData.html#adea3a5a7703b7a9524dc445acbb3321a":[1,0,245,1],
-"structSmtpAuth.html":[1,0,246],
-"structSmtpAuth.html#a007f784ef797d89353cfc7be138231bd":[1,0,246,0],
-"structSmtpAuth.html#afcbd7814f75226e276e3c9fc43cf932c":[1,0,246,1],
-"structState.html":[1,0,247],
-"structState.html#a2c506e7d8513e59e6162cdc5d6f9f320":[1,0,247,4],
-"structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3":[1,0,247,3]
+"structSmtpAccountData.html":[1,0,245]
 };

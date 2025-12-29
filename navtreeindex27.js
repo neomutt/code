@@ -1,5 +1,11 @@
 var NAVTREEINDEX27 =
 {
+"main_8c.html#a600dacf8dcda8b3d41c49158c5cfa729":[2,0,69,14],
+"main_8c.html#a65d332be0abf5b14c519e50da55d72bf":[2,0,69,8],
+"main_8c.html#a6bbe428ec99ac33b9a8ddaa96f2d0d22":[2,0,69,0],
+"main_8c.html#a72d727271a09797117e369c669551aa9":[2,0,69,18],
+"main_8c.html#a7a8d4146626540e7842f98c0f5613e0c":[2,0,69,16],
+"main_8c.html#a89dfa0cebc094eedb2f4855e6db352ca":[2,0,69,10],
 "main_8c.html#a9fd7b5b9a5546257575fa161d3ef25a7":[2,0,69,19],
 "main_8c.html#aaf8eacd4749948bf6d877a63eb886322":[2,0,69,21],
 "main_8c.html#ab1ab96b05777c73f61c060778657ec38":[2,0,69,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX27 =
 "menu_draw.html":[34,1],
 "menu_functions.html":[34,2],
 "menu_menu.html":[34,3],
-"menu_move.html":[34,4],
-"menu_observer.html":[34,5],
-"menu_tagging.html":[34,6],
-"menu_type.html":[34,7],
-"menu_window.html":[34,8],
-"merged_8c.html":[2,0,7,15],
-"merged_8c.html#a7f595491166c80a9b72e4ae4ad0be137":[2,0,7,15,1]
+"menu_move.html":[34,4]
 };

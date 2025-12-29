@@ -1,5 +1,11 @@
 var NAVTREEINDEX44 =
 {
+"string2_8h.html#a1d343dcbce0482f8979fe2a298913225":[2,0,34,62,19],
+"string2_8h.html#a29db81d6f5a7dd216cbea75ecf8a5885":[2,0,34,62,35],
+"string2_8h.html#a3fe33d90e4814281cd57de048119c950":[2,0,34,62,28],
+"string2_8h.html#a51804523442c072745bf8cdef6a43938":[2,0,34,62,10],
+"string2_8h.html#a52206f8cbb0161a06d6b18ae91e3fafa":[2,0,34,62,25],
+"string2_8h.html#a53b50dddf0ffe2eb0a9aadabffcb1b7d":[2,0,34,62,2],
 "string2_8h.html#a591e023cf2d3d5db11b34c7232c90325":[2,0,34,62,17],
 "string2_8h.html#a5bc328ca69776d155059041aaff9435a":[2,0,34,62,22],
 "string2_8h.html#a609e4f93eff5a422679bfb34c30a0a1a":[2,0,34,62,42],
@@ -243,11 +249,5 @@ var NAVTREEINDEX44 =
 "structBrowserPrivateData.html#ad19970e1c2bc867514be35eb09e2ae1e":[1,0,27,13],
 "structBrowserPrivateData.html#afed0a0fa4ab04df470c1ee6773dd050c":[1,0,27,9],
 "structBrowserState.html":[1,0,28],
-"structBrowserState.html#a103b46ca5b0d6d1c3982aef869343601":[1,0,28,2],
-"structBrowserState.html#a7ea6ab380d7b4206a2a2438e94176524":[1,0,28,3],
-"structBrowserState.html#aa9f0e9b3778d58224e831a9e48863c5b":[1,0,28,0],
-"structBrowserState.html#afe46fc676a2a691f2a4abbdde7c55c9b":[1,0,28,1],
-"structBuffer.html":[1,0,29],
-"structBuffer.html#a058d67252184c2eeaf57059544f8cdcf":[1,0,29,1],
-"structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995":[1,0,29,2]
+"structBrowserState.html#a103b46ca5b0d6d1c3982aef869343601":[1,0,28,2]
 };

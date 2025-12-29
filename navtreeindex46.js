@@ -1,5 +1,15 @@
 var NAVTREEINDEX46 =
 {
+"structCursesColor.html#afa50e69efee0fd3dcef9fa30f94e1805":[1,0,64,4],
+"structDnArray.html":[1,0,65],
+"structDnArray.html#af682d246eebfc795bcff03ee578c42df":[1,0,65,0],
+"structDnArray.html#afc5041024e5c1f65b3539d3180bb9136":[1,0,65,1],
+"structEmail.html":[1,0,66],
+"structEmail.html#a0168d790a0a31e79bf4e74a7bdf61436":[1,0,66,35],
+"structEmail.html#a0bd79550be901d44e50953fb43614e10":[1,0,66,5],
+"structEmail.html#a0ff8541eb15d71d7d9f73e92365a1618":[1,0,66,10],
+"structEmail.html#a176c9555da85be4329562050056c0071":[1,0,66,32],
+"structEmail.html#a1906966857aa61046b2eca2eeffaf603":[1,0,66,31],
 "structEmail.html#a1b48457d5e16b021ada7d227b689f516":[1,0,66,48],
 "structEmail.html#a1e108ee29a0c6571211290457ab60756":[1,0,66,26],
 "structEmail.html#a337686eab0f6a9e12612f2f24578daf6":[1,0,66,34],
@@ -239,15 +249,5 @@ var NAVTREEINDEX46 =
 "structFgetConv.html#abf98f002997a9985a4e82483ab9384bd":[1,0,98,8],
 "structFgetConv.html#ac15d524a9c68e47b97c96b377a317171":[1,0,98,6],
 "structFgetConv.html#ac6158087fd789411703f38d046c73820":[1,0,98,5],
-"structFileCompletionData.html":[1,0,99],
-"structFileCompletionData.html#a1eaf72aea5efb3597d95fff6406fb940":[1,0,99,2],
-"structFileCompletionData.html#a446655e915cd86bb8082950e60827d53":[1,0,99,4],
-"structFileCompletionData.html#a74758cfbc21cecacd94be6ee73f59aa4":[1,0,99,1],
-"structFileCompletionData.html#aac4dda75be386dba4d5ac756d44babf4":[1,0,99,0],
-"structFileCompletionData.html#afd6d6eeecfacd15fcaa566c27548600e":[1,0,99,3],
-"structFlowedState.html":[1,0,100],
-"structFlowedState.html#a002470002d76c1ede9624e88fe9f2f36":[1,0,100,2],
-"structFlowedState.html#a635fa843f878b8699143b02b178e5dcb":[1,0,100,0],
-"structFlowedState.html#ac69de4a9540d62353afaf3525356212b":[1,0,100,1],
-"structFolder.html":[1,0,101]
+"structFileCompletionData.html":[1,0,99]
 };

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-30-ge364a7</span>
+   &#160;<span id="projectnumber">2025-12-11-58-g09398d</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -690,33 +690,27 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="mutt__config_8c_source.html#l00255">255</a> of file <a class="el" href="mutt__config_8c_source.html">mutt_config.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  259</span>{</div>
-<div class="line"><span class="lineno">  260</span>  <span class="comment">// Skip over the name</span></div>
-<div class="line"><span class="lineno">  261</span>  str = *parsed_until + 1;</div>
-<div class="line"><span class="lineno">  262</span> </div>
-<div class="line"><span class="lineno">  263</span>  <span class="comment">// Tag expando %G must use an suffix from [A-Za-z0-9], e.g. %Ga, %GL</span></div>
-<div class="line"><span class="lineno">  264</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="ctype_8c.html#abaec851ee8713f4c270906482c4041e5">mutt_isalnum</a>(str[0]))</div>
-<div class="line"><span class="lineno">  265</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  266</span> </div>
-<div class="line"><span class="lineno">  267</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = <a class="code hl_function" href="node__expando_8c.html#a8eb0295fc698c907e709a7b34a0433ab">node_expando_new</a>(fmt, <a class="code hl_variable" href="structExpandoNode.html#a874cf8c66bbdc23cb1068015997d0b7a">did</a>, <a class="code hl_variable" href="structExpandoNode.html#a02967970072f58c78b1d3e8277613d3d">uid</a>);</div>
-<div class="line"><span class="lineno">  268</span> </div>
-<div class="line"><span class="lineno">  269</span>  <span class="keywordtype">char</span> tag[4] = { 0 };</div>
-<div class="line"><span class="lineno">  270</span>  tag[0] = <span class="charliteral">&#39;G&#39;</span>;</div>
-<div class="line"><span class="lineno">  271</span>  tag[1] = str[0];</div>
-<div class="line"><span class="lineno">  272</span>  node-&gt;<a class="code hl_variable" href="structExpandoNode.html#a8bcba302c1b074f1e9327745397e8796">text</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(tag);</div>
+<div class="line"><span class="lineno">  260</span>  <span class="comment">// Tag expando %G must use a suffix from [A-Za-z0-9], e.g. %Ga, %GL</span></div>
+<div class="line"><span class="lineno">  261</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="ctype_8c.html#abaec851ee8713f4c270906482c4041e5">mutt_isalnum</a>(str[1]))</div>
+<div class="line"><span class="lineno">  262</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node = <a class="code hl_function" href="node__expando_8c.html#a8eb0295fc698c907e709a7b34a0433ab">node_expando_new</a>(fmt, <a class="code hl_variable" href="structExpandoNode.html#a874cf8c66bbdc23cb1068015997d0b7a">did</a>, <a class="code hl_variable" href="structExpandoNode.html#a02967970072f58c78b1d3e8277613d3d">uid</a>);</div>
+<div class="line"><span class="lineno">  265</span> </div>
+<div class="line"><span class="lineno">  266</span>  node-&gt;<a class="code hl_variable" href="structExpandoNode.html#a8bcba302c1b074f1e9327745397e8796">text</a> = <a class="code hl_function" href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a>(str, 2);</div>
+<div class="line"><span class="lineno">  267</span> </div>
+<div class="line"><span class="lineno">  268</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="definition_8h.html#a6f04fcb8cf7d8283e5602b8dcfc9dcf7">EP_CONDITIONAL</a>)</div>
+<div class="line"><span class="lineno">  269</span>  {</div>
+<div class="line"><span class="lineno">  270</span>    node-&gt;<a class="code hl_variable" href="structExpandoNode.html#a8e3e271b82e236010d1f10a4b0d8f844">type</a> = <a class="code hl_enumvalue" href="node_8h.html#a8d8460f6f15611456a6d8a679f1012e7add591be90765fd7216df5d3cd4080336">ENT_CONDBOOL</a>;</div>
+<div class="line"><span class="lineno">  271</span>    node-&gt;<a class="code hl_variable" href="structExpandoNode.html#a3cadedb7aeb2ef942e57cbcbd946d93a">render</a> = <a class="code hl_function" href="group__expando__render.html#ga98ce8eee46960e5d03ca1bd6187a1eec">node_condbool_render</a>;</div>
+<div class="line"><span class="lineno">  272</span>  }</div>
 <div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="definition_8h.html#a6f04fcb8cf7d8283e5602b8dcfc9dcf7">EP_CONDITIONAL</a>)</div>
-<div class="line"><span class="lineno">  275</span>  {</div>
-<div class="line"><span class="lineno">  276</span>    node-&gt;<a class="code hl_variable" href="structExpandoNode.html#a8e3e271b82e236010d1f10a4b0d8f844">type</a> = <a class="code hl_enumvalue" href="node_8h.html#a8d8460f6f15611456a6d8a679f1012e7add591be90765fd7216df5d3cd4080336">ENT_CONDBOOL</a>;</div>
-<div class="line"><span class="lineno">  277</span>    node-&gt;<a class="code hl_variable" href="structExpandoNode.html#a3cadedb7aeb2ef942e57cbcbd946d93a">render</a> = <a class="code hl_function" href="group__expando__render.html#ga98ce8eee46960e5d03ca1bd6187a1eec">node_condbool_render</a>;</div>
-<div class="line"><span class="lineno">  278</span>  }</div>
-<div class="line"><span class="lineno">  279</span> </div>
-<div class="line"><span class="lineno">  280</span>  (*parsed_until) += 2;</div>
-<div class="line"><span class="lineno">  281</span> </div>
-<div class="line"><span class="lineno">  282</span>  <span class="keywordflow">return</span> node;</div>
-<div class="line"><span class="lineno">  283</span>}</div>
+<div class="line"><span class="lineno">  274</span>  (*parsed_until) = str + 2;</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>  <span class="keywordflow">return</span> node;</div>
+<div class="line"><span class="lineno">  277</span>}</div>
 <div class="ttc" id="actype_8c_html_abaec851ee8713f4c270906482c4041e5"><div class="ttname"><a href="ctype_8c.html#abaec851ee8713f4c270906482c4041e5">mutt_isalnum</a></div><div class="ttdeci">bool mutt_isalnum(int arg)</div><div class="ttdoc">Wrapper for isalnum(3)</div><div class="ttdef"><b>Definition</b> <a href="ctype_8c_source.html#l00039">ctype.c:39</a></div></div>
 <div class="ttc" id="agroup__expando__render_html_ga98ce8eee46960e5d03ca1bd6187a1eec"><div class="ttname"><a href="group__expando__render.html#ga98ce8eee46960e5d03ca1bd6187a1eec">node_condbool_render</a></div><div class="ttdeci">int node_condbool_render(const struct ExpandoNode *node, const struct ExpandoRenderCallback *erc, struct Buffer *buf, int max_cols, void *data, MuttFormatFlags flags)</div><div class="ttdoc">Callback for every bool node - Implements ExpandoNode::render() -.</div><div class="ttdef"><b>Definition</b> <a href="node__condbool_8c_source.html#l00041">node_condbool.c:41</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00255">string.c:255</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a116d1d2391bc57f2ba3a9d9cfb15db76"><div class="ttname"><a href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a></div><div class="ttdeci">char * mutt_strn_dup(const char *begin, size_t len)</div><div class="ttdoc">Duplicate a sub-string.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00382">string.c:382</a></div></div>
 <div class="ttc" id="anode_8h_html_a8d8460f6f15611456a6d8a679f1012e7add591be90765fd7216df5d3cd4080336"><div class="ttname"><a href="node_8h.html#a8d8460f6f15611456a6d8a679f1012e7add591be90765fd7216df5d3cd4080336">ENT_CONDBOOL</a></div><div class="ttdeci">@ ENT_CONDBOOL</div><div class="ttdoc">True/False boolean condition.</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00042">node.h:42</a></div></div>
 <div class="ttc" id="anode__expando_8c_html_a8eb0295fc698c907e709a7b34a0433ab"><div class="ttname"><a href="node__expando_8c.html#a8eb0295fc698c907e709a7b34a0433ab">node_expando_new</a></div><div class="ttdeci">struct ExpandoNode * node_expando_new(struct ExpandoFormat *fmt, int did, int uid)</div><div class="ttdoc">Create a new Expando ExpandoNode.</div><div class="ttdef"><b>Definition</b> <a href="node__expando_8c_source.html#l00077">node_expando.c:77</a></div></div>
 <div class="ttc" id="astructExpandoNode_html_a3cadedb7aeb2ef942e57cbcbd946d93a"><div class="ttname"><a href="structExpandoNode.html#a3cadedb7aeb2ef942e57cbcbd946d93a">ExpandoNode::render</a></div><div class="ttdeci">int(* render)(const struct ExpandoNode *node, const struct ExpandoRenderCallback *erc, struct Buffer *buf, int max_cols, void *data, MuttFormatFlags flags)</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00092">node.h:92</a></div></div>
@@ -778,23 +772,23 @@ Functions</h2></td></tr>
 <p>Parse a Subject <a class="el" href="structExpando.html" title="Parsed Expando trees.">Expando</a> - Implements <a class="el" href="structExpandoDefinition.html#a46172446e92db75fc21a4a756ddb2d22">ExpandoDefinition::parse()</a> -. </p>
 <p>Parse a Subject <a class="el" href="structExpando.html" title="Parsed Expando trees.">Expando</a>, "%s", into two separate Nodes. One for the tree, one for the subject. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt__config_8c_source.html#l00291">291</a> of file <a class="el" href="mutt__config_8c_source.html">mutt_config.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  294</span>{</div>
-<div class="line"><span class="lineno">  295</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_subj = <a class="code hl_function" href="node__expando_8c.html#a8eb0295fc698c907e709a7b34a0433ab">node_expando_new</a>(NULL, <a class="code hl_variable" href="structExpandoNode.html#a874cf8c66bbdc23cb1068015997d0b7a">did</a>, <a class="code hl_variable" href="structExpandoNode.html#a02967970072f58c78b1d3e8277613d3d">uid</a>);</div>
-<div class="line"><span class="lineno">  296</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_tree = <a class="code hl_function" href="node__expando_8c.html#a8eb0295fc698c907e709a7b34a0433ab">node_expando_new</a>(NULL, <a class="code hl_enumvalue" href="domain_8h.html#a2bedf11cab57ba7804043eac9c949602a00ea4a88bb7dfd75e2e55dd79082609e">ED_ENVELOPE</a>, <a class="code hl_enumvalue" href="envelope_8h.html#aabed8106883c28ef0952b3e68f0d99a8ae4ecfc46c9a6245b61b6c61d2e263799">ED_ENV_THREAD_TREE</a>);</div>
-<div class="line"><span class="lineno">  297</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_cont = <a class="code hl_function" href="node__container_8c.html#a8a172485970bae39f40d0cf046f69a73">node_container_new</a>();</div>
+<p class="definition">Definition at line <a class="el" href="mutt__config_8c_source.html#l00285">285</a> of file <a class="el" href="mutt__config_8c_source.html">mutt_config.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  288</span>{</div>
+<div class="line"><span class="lineno">  289</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_subj = <a class="code hl_function" href="node__expando_8c.html#a8eb0295fc698c907e709a7b34a0433ab">node_expando_new</a>(NULL, <a class="code hl_variable" href="structExpandoNode.html#a874cf8c66bbdc23cb1068015997d0b7a">did</a>, <a class="code hl_variable" href="structExpandoNode.html#a02967970072f58c78b1d3e8277613d3d">uid</a>);</div>
+<div class="line"><span class="lineno">  290</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_tree = <a class="code hl_function" href="node__expando_8c.html#a8eb0295fc698c907e709a7b34a0433ab">node_expando_new</a>(NULL, <a class="code hl_enumvalue" href="domain_8h.html#a2bedf11cab57ba7804043eac9c949602a00ea4a88bb7dfd75e2e55dd79082609e">ED_ENVELOPE</a>, <a class="code hl_enumvalue" href="envelope_8h.html#aabed8106883c28ef0952b3e68f0d99a8ae4ecfc46c9a6245b61b6c61d2e263799">ED_ENV_THREAD_TREE</a>);</div>
+<div class="line"><span class="lineno">  291</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structExpandoNode.html">ExpandoNode</a> *node_cont = <a class="code hl_function" href="node__container_8c.html#a8a172485970bae39f40d0cf046f69a73">node_container_new</a>();</div>
+<div class="line"><span class="lineno">  292</span> </div>
+<div class="line"><span class="lineno">  293</span>  <span class="comment">// Apply the formatting info to the container</span></div>
+<div class="line"><span class="lineno">  294</span>  node_cont-&gt;<a class="code hl_variable" href="structExpandoNode.html#a28a1a2e28b1a6748a9b17830626355a7">format</a> = fmt;</div>
+<div class="line"><span class="lineno">  295</span> </div>
+<div class="line"><span class="lineno">  296</span>  <a class="code hl_function" href="node_8c.html#ac2af561350d9b39d134b7b172fedfa5a">node_add_child</a>(node_cont, node_tree);</div>
+<div class="line"><span class="lineno">  297</span>  <a class="code hl_function" href="node_8c.html#ac2af561350d9b39d134b7b172fedfa5a">node_add_child</a>(node_cont, node_subj);</div>
 <div class="line"><span class="lineno">  298</span> </div>
-<div class="line"><span class="lineno">  299</span>  <span class="comment">// Apply the formatting info to the container</span></div>
-<div class="line"><span class="lineno">  300</span>  node_cont-&gt;<a class="code hl_variable" href="structExpandoNode.html#a28a1a2e28b1a6748a9b17830626355a7">format</a> = fmt;</div>
+<div class="line"><span class="lineno">  299</span>  <span class="keywordflow">if</span> (*parsed_until[0] != <span class="charliteral">&#39;}&#39;</span>)</div>
+<div class="line"><span class="lineno">  300</span>    (*parsed_until)++;</div>
 <div class="line"><span class="lineno">  301</span> </div>
-<div class="line"><span class="lineno">  302</span>  <a class="code hl_function" href="node_8c.html#ac2af561350d9b39d134b7b172fedfa5a">node_add_child</a>(node_cont, node_tree);</div>
-<div class="line"><span class="lineno">  303</span>  <a class="code hl_function" href="node_8c.html#ac2af561350d9b39d134b7b172fedfa5a">node_add_child</a>(node_cont, node_subj);</div>
-<div class="line"><span class="lineno">  304</span> </div>
-<div class="line"><span class="lineno">  305</span>  <span class="keywordflow">if</span> (*parsed_until[0] != <span class="charliteral">&#39;}&#39;</span>)</div>
-<div class="line"><span class="lineno">  306</span>    (*parsed_until)++;</div>
-<div class="line"><span class="lineno">  307</span> </div>
-<div class="line"><span class="lineno">  308</span>  <span class="keywordflow">return</span> node_cont;</div>
-<div class="line"><span class="lineno">  309</span>}</div>
+<div class="line"><span class="lineno">  302</span>  <span class="keywordflow">return</span> node_cont;</div>
+<div class="line"><span class="lineno">  303</span>}</div>
 <div class="ttc" id="adomain_8h_html_a2bedf11cab57ba7804043eac9c949602a00ea4a88bb7dfd75e2e55dd79082609e"><div class="ttname"><a href="domain_8h.html#a2bedf11cab57ba7804043eac9c949602a00ea4a88bb7dfd75e2e55dd79082609e">ED_ENVELOPE</a></div><div class="ttdeci">@ ED_ENVELOPE</div><div class="ttdoc">Envelope ED_ENV_ ExpandoDataEnvelope.</div><div class="ttdef"><b>Definition</b> <a href="domain_8h_source.html#l00042">domain.h:42</a></div></div>
 <div class="ttc" id="aenvelope_8h_html_aabed8106883c28ef0952b3e68f0d99a8ae4ecfc46c9a6245b61b6c61d2e263799"><div class="ttname"><a href="envelope_8h.html#aabed8106883c28ef0952b3e68f0d99a8ae4ecfc46c9a6245b61b6c61d2e263799">ED_ENV_THREAD_TREE</a></div><div class="ttdeci">@ ED_ENV_THREAD_TREE</div><div class="ttdoc">Email.tree.</div><div class="ttdef"><b>Definition</b> <a href="envelope_8h_source.html#l00117">envelope.h:117</a></div></div>
 <div class="ttc" id="anode_8c_html_ac2af561350d9b39d134b7b172fedfa5a"><div class="ttname"><a href="node_8c.html#ac2af561350d9b39d134b7b172fedfa5a">node_add_child</a></div><div class="ttdeci">void node_add_child(struct ExpandoNode *node, struct ExpandoNode *child)</div><div class="ttdoc">Add a child to an ExpandoNode.</div><div class="ttdef"><b>Definition</b> <a href="node_8c_source.html#l00076">node.c:76</a></div></div>

@@ -130,7 +130,7 @@ var searchData=
   ['headerlist_127',['HeaderList',['../color_2regex_8c.html#aa36442790e7628a85f9cbd5aedb49a07',1,'regex.c']]],
   ['headerorderlist_128',['HeaderOrderList',['../globals_8c.html#ac9ee071134eb30f6cbe02c315bd32e14',1,'HeaderOrderList:&#160;globals.c'],['../globals_8h.html#ac9ee071134eb30f6cbe02c315bd32e14',1,'HeaderOrderList:&#160;globals.c']]],
   ['headerpadding_129',['HeaderPadding',['../envelope_2window_8c.html#a2dc7f233f069332ab5fd13ebb6a32934',1,'window.c']]],
-  ['help_130',['help',['../structCliHelp.html#a8c9dfa852379ab59d20494916c4e2e88',1,'CliHelp::help'],['../structCommandLine.html#a45570bdc8fcea9d953e3bec627feeb9b',1,'CommandLine::help']]],
+  ['help_130',['help',['../structCliHelp.html#a8c9dfa852379ab59d20494916c4e2e88',1,'CliHelp::help'],['../structCommandLine.html#a45570bdc8fcea9d953e3bec627feeb9b',1,'CommandLine::help'],['../structCommand.html#a4c78e4ec9cd040290170f159c0a6c111',1,'Command::help']]],
   ['help_20bar_131',['Help Bar',['../helpbar_config.html',1,'Config used by Help Bar'],['../helpbar_wdata.html',1,'Data for the Help Bar']]],
   ['help_20bar_132',['Help bar',['../lib_helpbar.html',1,'']]],
   ['help_20bar_20window_133',['Help Bar Window',['../helpbar_helpbar.html',1,'lib_helpbar']]],
