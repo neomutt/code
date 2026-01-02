@@ -25,7 +25,7 @@ var searchData=
   ['debugging_22',['Debugging',['../color_debug.html',1,'Colour Debugging'],['../debug_pager.html',1,'Pager Debugging']]],
   ['decide_20how_20to_20display_20email_20content_23',['Decide how to display email content',['../neo_handler.html',1,'index']]],
   ['decoding_24',['RFC2047 encoding / decoding',['../email_rfc2047.html',1,'lib_email']]],
-  ['defined_20hooks_25',['Parse and execute user-defined hooks',['../neo_hook.html',1,'index']]],
+  ['defined_20hooks_25',['defined Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
   ['definitions_26',['definitions',['../alias_expando.html',1,'Alias Expando definitions'],['../compose_expando.html',1,'Alias Expando definitions'],['../attach_expando.html',1,'Attach Expando definitions'],['../autocrypt_expando.html',1,'Autocrypt Expando definitions'],['../browser_expando.html',1,'Browser Expando definitions'],['../compmbox_expando.html',1,'Compress Expando definitions'],['../send_expando_greeting.html',1,'Greeting Expando definitions'],['../history_expando.html',1,'History Expando definitions'],['../send_expando_msgid.html',1,'Message Id Expando definitions'],['../ncrypt_expando_command.html',1,'Ncrypt Expando definitions'],['../ncrypt_expando_gpgme.html',1,'Ncrypt Expando definitions'],['../ncrypt_expando_pgp.html',1,'Ncrypt Expando definitions'],['../ncrypt_expando_smime.html',1,'Ncrypt Expando definitions'],['../pattern_flags.html',1,'Pattern definitions'],['../pattern_expando.html',1,'Pattern Expando definitions'],['../sidebar_expando.html',1,'Sidebar Expando definitions']]],
   ['definitions_20of_20config_20variables_27',['Definitions of config variables',['../neo_mutt_config.html',1,'index']]],
   ['definitions_20of_20user_20functions_28',['Definitions of user functions',['../gui_functions.html',1,'lib_gui']]],
@@ -57,6 +57,7 @@ var searchData=
   ['dump_20key_20bindings_54',['Dump key bindings',['../key_dump.html',1,'lib_key']]],
   ['dump_20keybindings_55',['Dump keybindings',['../debug_keymap.html',1,'lib_debug']]],
   ['dump_20the_20details_20of_20an_20expando_20tree_56',['Dump the details of an Expando Tree',['../expando_serial.html',1,'lib_expando']]],
-  ['dump_20the_20windows_57',['Dump the Windows',['../debug_window.html',1,'lib_debug']]],
-  ['duplicate_20the_20structure_20of_20an_20entire_20email_58',['Duplicate the structure of an entire email',['../neo_copy.html',1,'index']]]
+  ['dump_20the_20hooks_20to_20the_20pager_57',['Dump the Hooks to the Pager',['../hooks_dump.html',1,'lib_hooks']]],
+  ['dump_20the_20windows_58',['Dump the Windows',['../debug_window.html',1,'lib_debug']]],
+  ['duplicate_20the_20structure_20of_20an_20entire_20email_59',['Duplicate the structure of an entire email',['../neo_copy.html',1,'index']]]
 ];

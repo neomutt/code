@@ -44,6 +44,7 @@ var ncrypt_2lib_8h =
     [ "KEYFLAG_ABILITIES", "ncrypt_2lib_8h.html#a71ddb5e69f239d16bdf6a6cc266072e4", null ],
     [ "SecurityFlags", "ncrypt_2lib_8h.html#a2073a168ca3a64c3c30d13fa4917a05d", null ],
     [ "KeyFlags", "ncrypt_2lib_8h.html#a530487c28aacc2c2d50f12eefb8c5506", null ],
+    [ "pgp_init_keys", "ncrypt_2lib_8h.html#a3c45bfb46b9d1c886336d4ffa2a520f6", null ],
     [ "crypt_extract_keys_from_messages", "ncrypt_2lib_8h.html#a776fef61b47569d4c698411d5e733a0f", null ],
     [ "crypt_forget_passphrase", "ncrypt_2lib_8h.html#a8a09719065d14c27701c998b48883ac4", null ],
     [ "crypt_get_keys", "ncrypt_2lib_8h.html#abb04ccb83d144391034d86704c52b987", null ],

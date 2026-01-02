@@ -1,6 +1,7 @@
 var alias_2lib_8h =
 [
     [ "alias_init", "alias_2lib_8h.html#a9f4083666781c1d9d1775c15409a521f", null ],
+    [ "alias_init_keys", "alias_2lib_8h.html#a1f4f533c8cd0b49fff649e964bd4378c", null ],
     [ "alias_cleanup", "alias_2lib_8h.html#a0069edd2245ed38eb75ce3835896311c", null ],
     [ "alias_create", "alias_2lib_8h.html#a9a5bce1105cd6bfb1f7a614f680dfef2", null ],
     [ "alias_lookup", "alias_2lib_8h.html#a7a4df76d0f95394e6f02fd3fa8fee709", null ],

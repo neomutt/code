@@ -9,7 +9,7 @@ var searchData=
   ['keyinfoprompts_6',['KeyInfoPrompts',['../gpgme__functions_8c.html#a382b63ab4c0e21cdee8b0e2763ad5c69',1,'gpgme_functions.c']]],
   ['keylen_7',['keylen',['../structRealKey.html#a70436ad4e58f5c76ca838e4db0b54e49',1,'RealKey::keylen'],['../structPgpKeyInfo.html#a6130bb27d19d78cfaf05e30c56de44da',1,'PgpKeyInfo::keylen']]],
   ['keymaps_8',['Keymaps',['../key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e',1,'Keymaps:&#160;lib.c'],['../key_2lib_8h.html#af5cf007895e0e22fb9ae5fc102dee9f6',1,'Keymaps:&#160;lib.c']]],
-  ['keynames_9',['KeyNames',['../key_2lib_8c.html#ac969492dae41de846590e2257f260d3b',1,'KeyNames:&#160;lib.c'],['../key_2lib_8h.html#ac969492dae41de846590e2257f260d3b',1,'KeyNames:&#160;lib.c']]],
+  ['keynames_9',['KeyNames',['../key_2keymap_8c.html#ac969492dae41de846590e2257f260d3b',1,'KeyNames:&#160;keymap.c'],['../keymap_8h.html#ac969492dae41de846590e2257f260d3b',1,'KeyNames:&#160;keymap.c']]],
   ['keys_10',['keys',['../structCertMenuData.html#ac30de96fbbc7403e2277208a4de1e4d2',1,'CertMenuData::keys'],['../structKeymap.html#a6e9753f45d5dbb60ba4f9328df9a6bc4',1,'Keymap::keys']]],
   ['keysortmethods_11',['KeySortMethods',['../ncrypt_2config_8c.html#a89323ff16879af1b184eb4432774e9df',1,'config.c']]],
   ['kill_5fprefix_12',['kill_prefix',['../structBrowserPrivateData.html#a45f4cde937832e9c5165182e246ec243',1,'BrowserPrivateData']]],

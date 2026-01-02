@@ -1,5 +1,6 @@
 var editor_2functions_8c =
 [
+    [ "editor_init_keys", "editor_2functions_8c.html#ad9df5561f179101bd8878265986ec119", null ],
     [ "replace_part", "editor_2functions_8c.html#ad2f6f39bb1405a4a86c08f04b5102b27", null ],
     [ "op_editor_complete", "group__enter__function__api.html#ga612c9f9130f819f8e07915508d32b313", null ],
     [ "op_editor_history_down", "group__enter__function__api.html#ga4209effdea420ec00885e49724fa3d05", null ],

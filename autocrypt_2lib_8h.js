@@ -12,6 +12,7 @@ var autocrypt_2lib_8h =
       [ "AUTOCRYPT_REC_YES", "autocrypt_2lib_8h.html#aed237ffa27e23d83cb0acc07586ffbdaaf1e9fd8d8b038a7cf37ee5fd1e4ee741", null ]
     ] ],
     [ "ARRAY_HEAD", "autocrypt_2lib_8h.html#a2ce46fce260f92259163f3622e06d99d", null ],
+    [ "autocrypt_init_keys", "autocrypt_2lib_8h.html#a11cba4fa3dd5166fcbfd8d20c2fd87bd", null ],
     [ "dlg_autocrypt", "group__gui__dlg.html#gab4a4e8d5d5aadc4545c1ad53370a1cc0", null ],
     [ "mutt_autocrypt_cleanup", "autocrypt_2lib_8h.html#a6ccee2b006fad28ea865139d135e5d59", null ],
     [ "mutt_autocrypt_generate_gossip_list", "autocrypt_2lib_8h.html#a30461121efab5b3f112767d63191c507", null ],

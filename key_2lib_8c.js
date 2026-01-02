@@ -1,19 +1,6 @@
 var key_2lib_8c =
 [
-    [ "mutt_keymap_free", "key_2lib_8c.html#a4793709a5bb605ebc6e16f277eab869d", null ],
-    [ "alloc_keys", "key_2lib_8c.html#a305950180649656287fd8b2a3e1bb66c", null ],
-    [ "parse_fkey", "key_2lib_8c.html#a1e3890a35370e26955e6d55b0253b23b", null ],
-    [ "parse_keycode", "key_2lib_8c.html#a68e34cfedd4c4e7f11534ac901c2348c", null ],
-    [ "parsekeys", "key_2lib_8c.html#a7c860db7ed76d50ed70768379f1cb680", null ],
-    [ "km_compare_keys", "key_2lib_8c.html#a2e074849a221559602f1fb682f06f402", null ],
-    [ "get_op", "key_2lib_8c.html#ac9d8ac1960bfc937ff6b6636826e2934", null ],
     [ "mutt_get_func", "key_2lib_8c.html#a8d253bf595636e08c076cb3a56f8bd71", null ],
-    [ "is_bound", "key_2lib_8c.html#a7418778743995b05400fc57cd82e920b", null ],
-    [ "gather_unbound", "key_2lib_8c.html#add7ed79b95d588c1f3d9726eb7440d63", null ],
-    [ "km_keyname", "key_2lib_8c.html#aa18825fc025ec3c06830e428b46130cd", null ],
-    [ "km_expand_key", "key_2lib_8c.html#af30297e027dd7f2242b311aeb86d506b", null ],
-    [ "km_expand_key_string", "key_2lib_8c.html#aff53463851870df55bceb41d84e4cc96", null ],
-    [ "km_find_func", "key_2lib_8c.html#a11136cc3c6e52a9a3db85d1887f4fe1c", null ],
     [ "km_get_table", "key_2lib_8c.html#ac73ba4b4de1642f905738d2da0e79d91", null ],
     [ "OpAlias", "key_2lib_8c.html#ae54d96788c4946d13eb5c642378b6ab2", null ],
     [ "OpAttachment", "key_2lib_8c.html#a8d9018cf9de6a07d49146f555a993043", null ],
@@ -27,7 +14,5 @@ var key_2lib_8c =
     [ "OpPostponed", "key_2lib_8c.html#a240855c58bbffa263b1806022902ab61", null ],
     [ "OpQuery", "key_2lib_8c.html#a02e8724026167606aad4d0516923eff8", null ],
     [ "OpSmime", "key_2lib_8c.html#a47c640809ce529499a23e88bf0ceac0f", null ],
-    [ "KeyNames", "key_2lib_8c.html#ac969492dae41de846590e2257f260d3b", null ],
-    [ "AbortKey", "key_2lib_8c.html#a22bced2c7fdf47916ddc963f43432541", null ],
     [ "Keymaps", "key_2lib_8c.html#a786f5d70631dfcec23d9e9439304d52e", null ]
 ];

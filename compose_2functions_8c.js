@@ -1,5 +1,6 @@
 var compose_2functions_8c =
 [
+    [ "compose_init_keys", "compose_2functions_8c.html#abec9549ab4d1e575884fbde95bd643e7", null ],
     [ "check_count", "compose_2functions_8c.html#a0b0529f94fccff91159e173fb58a7c64", null ],
     [ "gen_cid", "compose_2functions_8c.html#a78c7433990448979005f6b6824848edd", null ],
     [ "check_cid", "compose_2functions_8c.html#aa2b24f0cc84fe59a9a9542d307ac4e6f", null ],

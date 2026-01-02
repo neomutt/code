@@ -1,6 +1,7 @@
 var pager_2functions_8c =
 [
     [ "op_pager_search_next", "group__pager__function__api.html#gae2efb5fafdaf512100fe0985afd458ed", null ],
+    [ "pager_init_keys", "pager_2functions_8c.html#ae9011c727dde10e36ccdada384f1a7c0", null ],
     [ "assert_pager_mode", "pager_2functions_8c.html#ac15fbc6c161f1b9223fca642f12539f9", null ],
     [ "up_n_lines", "pager_2functions_8c.html#a3a00a793bf2a50cf8d7006624c37dfb6", null ],
     [ "jump_to_bottom", "pager_2functions_8c.html#a88f2a80293f7c62bcfb83c4708ea4d41", null ],

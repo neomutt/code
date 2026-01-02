@@ -38,8 +38,12 @@ var searchData=
   ['history_5fmatch_35',['history_match',['../group__expando__get__string__api.html#ga6f05f788b07cf3a5d6ebdc2985beb64b',1,'expando.c']]],
   ['history_5fnumber_36',['history_number',['../group__expando__get__number__api.html#ga391a33cb17a541eb807a80b24bb02c82',1,'expando.c']]],
   ['hmac_5fmd5_37',['hmac_md5',['../auth__cram_8c.html#a673b1574125481e030da94e03aa3d6e3',1,'auth_cram.c']]],
-  ['hook_5ffree_38',['hook_free',['../hook_8c.html#a687da69151e78719547e5b58de316089',1,'hook.c']]],
-  ['hook_5fnew_39',['hook_new',['../hook_8c.html#af03b03a2d048b4a3972e4737a025183b',1,'hook.c']]],
-  ['hooks_5finit_40',['hooks_init',['../hook_8c.html#a8e0f55dad3dee3bf436ca00f95d902c0',1,'hooks_init(void):&#160;hook.c'],['../hook_8h.html#a8e0f55dad3dee3bf436ca00f95d902c0',1,'hooks_init(void):&#160;hook.c']]],
-  ['hostname_5fmatch_41',['hostname_match',['../openssl_8c.html#ae39adc817bff49725d338570174c4a0b',1,'openssl.c']]]
+  ['hook_5ffree_38',['hook_free',['../hook_8c.html#a3f101664bc43a354d5fc8210209ba7e3',1,'hook_free(struct Hook **ptr):&#160;hook.c'],['../hook_8h.html#a3f101664bc43a354d5fc8210209ba7e3',1,'hook_free(struct Hook **ptr):&#160;hook.c']]],
+  ['hook_5fnew_39',['hook_new',['../hook_8c.html#a56a2eaebdff2ef8176e66bbdc1ac74d7',1,'hook_new(void):&#160;hook.c'],['../hook_8h.html#a56a2eaebdff2ef8176e66bbdc1ac74d7',1,'hook_new(void):&#160;hook.c']]],
+  ['hooks_5fdump_5fcharset_40',['hooks_dump_charset',['../hooks_2dump_8c.html#a035a2622820cbf93bdf2bd1cf47737f1',1,'dump.c']]],
+  ['hooks_5fdump_5findex_41',['hooks_dump_index',['../hooks_2dump_8c.html#aa7dc362731302b399a755129b27a8e62',1,'dump.c']]],
+  ['hooks_5fdump_5fone_42',['hooks_dump_one',['../hooks_2dump_8c.html#ad663a560cf4e3c840fcb4a6217fd8064',1,'dump.c']]],
+  ['hooks_5fdump_5fsimple_43',['hooks_dump_simple',['../hooks_2dump_8c.html#adf8cbcc3af4a8c2af9210a528a782cc1',1,'dump.c']]],
+  ['hooks_5finit_44',['hooks_init',['../hooks_2commands_8c.html#a8e0f55dad3dee3bf436ca00f95d902c0',1,'hooks_init(void):&#160;commands.c'],['../hooks_2commands_8h.html#a8e0f55dad3dee3bf436ca00f95d902c0',1,'hooks_init(void):&#160;commands.c']]],
+  ['hostname_5fmatch_45',['hostname_match',['../openssl_8c.html#ae39adc817bff49725d338570174c4a0b',1,'openssl.c']]]
 ];

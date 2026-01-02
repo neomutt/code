@@ -1,6 +1,7 @@
 var browser_2functions_8c =
 [
     [ "op_subscribe_pattern", "group__browser__function__api.html#ga5fc3702733434a9e82fd0d5037a8e57f", null ],
+    [ "browser_init_keys", "browser_2functions_8c.html#a261d7a4e6c941da42a2f7e327bdfb2ea", null ],
     [ "destroy_state", "browser_2functions_8c.html#aaff67d90e29ac36d805fd778fca74225", null ],
     [ "op_browser_new_file", "group__browser__function__api.html#ga1756ac4bcc4caafdc8617c8fd70c5379", null ],
     [ "op_browser_subscribe", "group__browser__function__api.html#ga84bb49d809598c0361d97489aae61673", null ],

@@ -55,8 +55,8 @@ var searchData=
   ['historyrendercallbacks_52',['HistoryRenderCallbacks',['../history_2expando_8c.html#a423ff5a2b05b99a23a1ffd2cef79b15d',1,'HistoryRenderCallbacks:&#160;expando.c'],['../history_2expando_8h.html#a423ff5a2b05b99a23a1ffd2cef79b15d',1,'HistoryRenderCallbacks:&#160;expando.c']]],
   ['historyvars_53',['HistoryVars',['../history_2config_8c.html#a04cc486ece6582b032bae8dd366023ff',1,'config.c']]],
   ['home_5fdir_54',['home_dir',['../structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08',1,'NeoMutt']]],
-  ['hookcommands_55',['HookCommands',['../hook_8c.html#abeacc262338aa3335bc4fd50d11564ca',1,'hook.c']]],
-  ['hooks_56',['Hooks',['../hook_8c.html#a972b6dffb799adc5f7e8d91438317d64',1,'hook.c']]],
+  ['hookcommands_55',['HookCommands',['../hooks_2commands_8c.html#abeacc262338aa3335bc4fd50d11564ca',1,'commands.c']]],
+  ['hooks_56',['Hooks',['../hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64',1,'Hooks:&#160;parse.c'],['../hooks_2parse_8h.html#a972b6dffb799adc5f7e8d91438317d64',1,'Hooks:&#160;parse.c']]],
   ['host_57',['host',['../structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a',1,'ConnAccount::host'],['../structUrl.html#a565d3391c8b8114a97ad6f1b7c75b5f6',1,'Url::host']]],
   ['hostexdataindex_58',['HostExDataIndex',['../openssl_8c.html#ab43c12dc4d5c8504c852b18a43ef0f8a',1,'openssl.c']]]
 ];

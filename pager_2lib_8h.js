@@ -40,6 +40,7 @@ var pager_2lib_8h =
       [ "PAGER_LOOP_QUIT", "pager_2lib_8h.html#a0d5091765709adcea5775d9dce06cd9aa2552720d9735cc662d65ca65d8016f66", null ],
       [ "PAGER_LOOP_RELOAD", "pager_2lib_8h.html#a0d5091765709adcea5775d9dce06cd9aa168c5f5203de8e5fceee72b94099be41", null ]
     ] ],
+    [ "pager_init_keys", "pager_2lib_8h.html#ae9011c727dde10e36ccdada384f1a7c0", null ],
     [ "dlg_pager", "group__gui__dlg.html#gaa0492e04d356a4dc2eed8a5ac9dd16d7", null ],
     [ "mutt_do_pager", "pager_2lib_8h.html#a9d3af21b7fdf24249c261a9a1aa9f3be", null ],
     [ "buf_strip_formatting", "pager_2lib_8h.html#a73742be224ef1cc275d4b6c7d585d44a", null ],

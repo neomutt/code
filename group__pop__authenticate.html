@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-58-g09398d</span>
+   &#160;<span id="projectnumber">2025-12-11-79-gf03987</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -170,55 +170,55 @@ Functions</h2></td></tr>
 
 <p>APOP authenticator - Implements <a class="el" href="structPopAuth.html#aa2e5b577b8f1770de3f3ec70ac76ee97">PopAuth::authenticate()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="pop_2auth_8c_source.html#l00317">317</a> of file <a class="el" href="pop_2auth_8c_source.html">auth.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>{</div>
-<div class="line"><span class="lineno">  319</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMd5Ctx.html">Md5Ctx</a> md5ctx = { 0 };</div>
-<div class="line"><span class="lineno">  320</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digest[16];</div>
-<div class="line"><span class="lineno">  321</span>  <span class="keywordtype">char</span> hash[33] = { 0 };</div>
-<div class="line"><span class="lineno">  322</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
-<div class="line"><span class="lineno">  323</span> </div>
-<div class="line"><span class="lineno">  324</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2bc0b90ace43b835b6ad51f3d8fa5c1a">mutt_account_getpass</a>(&amp;adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) || !adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>[0])</div>
-<div class="line"><span class="lineno">  325</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  326</span> </div>
-<div class="line"><span class="lineno">  327</span>  <span class="keywordflow">if</span> (!adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3">timestamp</a>)</div>
-<div class="line"><span class="lineno">  328</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739">POP_A_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="address_2address_8c.html#a434492a707aadd897d74bdf7b493bbc2">mutt_addr_valid_msgid</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3">timestamp</a>))</div>
-<div class="line"><span class="lineno">  331</span>  {</div>
-<div class="line"><span class="lineno">  332</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;POP timestamp is invalid&quot;</span>));</div>
-<div class="line"><span class="lineno">  333</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739">POP_A_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  334</span>  }</div>
-<div class="line"><span class="lineno">  335</span> </div>
-<div class="line"><span class="lineno">  336</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  337</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), <span class="stringliteral">&quot;APOP&quot;</span>);</div>
-<div class="line"><span class="lineno">  338</span> </div>
-<div class="line"><span class="lineno">  339</span>  <span class="comment">/* Compute the authentication hash to send to the server */</span></div>
-<div class="line"><span class="lineno">  340</span>  <a class="code hl_function" href="md5_8c.html#ab184d7e3b848f46768f3aa6badd70e88">mutt_md5_init_ctx</a>(&amp;md5ctx);</div>
-<div class="line"><span class="lineno">  341</span>  <a class="code hl_function" href="md5_8c.html#a7852f07aff217c3d47f371eeb4346f7e">mutt_md5_process</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3">timestamp</a>, &amp;md5ctx);</div>
-<div class="line"><span class="lineno">  342</span>  <a class="code hl_function" href="md5_8c.html#a7852f07aff217c3d47f371eeb4346f7e">mutt_md5_process</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>, &amp;md5ctx);</div>
-<div class="line"><span class="lineno">  343</span>  <a class="code hl_function" href="md5_8c.html#ac970009fac75c52cbb998194d3be1d79">mutt_md5_finish_ctx</a>(&amp;md5ctx, digest);</div>
-<div class="line"><span class="lineno">  344</span>  <a class="code hl_function" href="md5_8c.html#ad9357420e20dfe953f58bb167a6be911">mutt_md5_toascii</a>(digest, hash);</div>
-<div class="line"><span class="lineno">  345</span> </div>
-<div class="line"><span class="lineno">  346</span>  <span class="comment">/* Send APOP command to server */</span></div>
-<div class="line"><span class="lineno">  347</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;APOP %s %s\r\n&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>, hash);</div>
-<div class="line"><span class="lineno">  348</span> </div>
-<div class="line"><span class="lineno">  349</span>  <span class="keywordflow">switch</span> (<a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf)))</div>
-<div class="line"><span class="lineno">  350</span>  {</div>
-<div class="line"><span class="lineno">  351</span>    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">  352</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a4f778fe4bd10a07201dcad7c81e354b6">POP_A_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  353</span>    <span class="keywordflow">case</span> -1:</div>
-<div class="line"><span class="lineno">  354</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50af9fcefd3c03ab36585a3da1f7da071ae">POP_A_SOCKET</a>;</div>
-<div class="line"><span class="lineno">  355</span>  }</div>
-<div class="line"><span class="lineno">  356</span> </div>
-<div class="line"><span class="lineno">  357</span>  <span class="comment">// L10N: %s is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  358</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s authentication failed&quot;</span>), <span class="stringliteral">&quot;APOP&quot;</span>);</div>
-<div class="line"><span class="lineno">  359</span> </div>
-<div class="line"><span class="lineno">  360</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  361</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pop_2auth_8c_source.html#l00318">318</a> of file <a class="el" href="pop_2auth_8c_source.html">auth.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  319</span>{</div>
+<div class="line"><span class="lineno">  320</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMd5Ctx.html">Md5Ctx</a> md5ctx = { 0 };</div>
+<div class="line"><span class="lineno">  321</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> digest[16];</div>
+<div class="line"><span class="lineno">  322</span>  <span class="keywordtype">char</span> hash[33] = { 0 };</div>
+<div class="line"><span class="lineno">  323</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno">  324</span> </div>
+<div class="line"><span class="lineno">  325</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2bc0b90ace43b835b6ad51f3d8fa5c1a">mutt_account_getpass</a>(&amp;adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) || !adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>[0])</div>
+<div class="line"><span class="lineno">  326</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>  <span class="keywordflow">if</span> (!adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3">timestamp</a>)</div>
+<div class="line"><span class="lineno">  329</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739">POP_A_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  330</span> </div>
+<div class="line"><span class="lineno">  331</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="address_2address_8c.html#a434492a707aadd897d74bdf7b493bbc2">mutt_addr_valid_msgid</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3">timestamp</a>))</div>
+<div class="line"><span class="lineno">  332</span>  {</div>
+<div class="line"><span class="lineno">  333</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;POP timestamp is invalid&quot;</span>));</div>
+<div class="line"><span class="lineno">  334</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739">POP_A_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  335</span>  }</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  338</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), <span class="stringliteral">&quot;APOP&quot;</span>);</div>
+<div class="line"><span class="lineno">  339</span> </div>
+<div class="line"><span class="lineno">  340</span>  <span class="comment">/* Compute the authentication hash to send to the server */</span></div>
+<div class="line"><span class="lineno">  341</span>  <a class="code hl_function" href="md5_8c.html#ab184d7e3b848f46768f3aa6badd70e88">mutt_md5_init_ctx</a>(&amp;md5ctx);</div>
+<div class="line"><span class="lineno">  342</span>  <a class="code hl_function" href="md5_8c.html#a7852f07aff217c3d47f371eeb4346f7e">mutt_md5_process</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3">timestamp</a>, &amp;md5ctx);</div>
+<div class="line"><span class="lineno">  343</span>  <a class="code hl_function" href="md5_8c.html#a7852f07aff217c3d47f371eeb4346f7e">mutt_md5_process</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>, &amp;md5ctx);</div>
+<div class="line"><span class="lineno">  344</span>  <a class="code hl_function" href="md5_8c.html#ac970009fac75c52cbb998194d3be1d79">mutt_md5_finish_ctx</a>(&amp;md5ctx, digest);</div>
+<div class="line"><span class="lineno">  345</span>  <a class="code hl_function" href="md5_8c.html#ad9357420e20dfe953f58bb167a6be911">mutt_md5_toascii</a>(digest, hash);</div>
+<div class="line"><span class="lineno">  346</span> </div>
+<div class="line"><span class="lineno">  347</span>  <span class="comment">/* Send APOP command to server */</span></div>
+<div class="line"><span class="lineno">  348</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;APOP %s %s\r\n&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>, hash);</div>
+<div class="line"><span class="lineno">  349</span> </div>
+<div class="line"><span class="lineno">  350</span>  <span class="keywordflow">switch</span> (<a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf)))</div>
+<div class="line"><span class="lineno">  351</span>  {</div>
+<div class="line"><span class="lineno">  352</span>    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  353</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a4f778fe4bd10a07201dcad7c81e354b6">POP_A_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  354</span>    <span class="keywordflow">case</span> -1:</div>
+<div class="line"><span class="lineno">  355</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50af9fcefd3c03ab36585a3da1f7da071ae">POP_A_SOCKET</a>;</div>
+<div class="line"><span class="lineno">  356</span>  }</div>
+<div class="line"><span class="lineno">  357</span> </div>
+<div class="line"><span class="lineno">  358</span>  <span class="comment">// L10N: %s is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  359</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s authentication failed&quot;</span>), <span class="stringliteral">&quot;APOP&quot;</span>);</div>
+<div class="line"><span class="lineno">  360</span> </div>
+<div class="line"><span class="lineno">  361</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  362</span>}</div>
 <div class="ttc" id="aaddress_2address_8c_html_a434492a707aadd897d74bdf7b493bbc2"><div class="ttname"><a href="address_2address_8c.html#a434492a707aadd897d74bdf7b493bbc2">mutt_addr_valid_msgid</a></div><div class="ttdeci">bool mutt_addr_valid_msgid(const char *msgid)</div><div class="ttdoc">Is this a valid Message ID?</div><div class="ttdef"><b>Definition</b> <a href="address_2address_8c_source.html#l00792">address.c:792</a></div></div>
 <div class="ttc" id="aconnaccount_8c_html_a2bc0b90ace43b835b6ad51f3d8fa5c1a"><div class="ttname"><a href="connaccount_8c.html#a2bc0b90ace43b835b6ad51f3d8fa5c1a">mutt_account_getpass</a></div><div class="ttdeci">int mutt_account_getpass(struct ConnAccount *cac)</div><div class="ttdoc">Fetch password into ConnAccount, if necessary.</div><div class="ttdef"><b>Definition</b> <a href="connaccount_8c_source.html#l00131">connaccount.c:131</a></div></div>
-<div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
-<div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00092">logging2.h:92</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
 <div class="ttc" id="amd5_8c_html_a7852f07aff217c3d47f371eeb4346f7e"><div class="ttname"><a href="md5_8c.html#a7852f07aff217c3d47f371eeb4346f7e">mutt_md5_process</a></div><div class="ttdeci">void mutt_md5_process(const char *str, struct Md5Ctx *md5ctx)</div><div class="ttdoc">Process a NUL-terminated string.</div><div class="ttdef"><b>Definition</b> <a href="md5_8c_source.html#l00355">md5.c:355</a></div></div>
 <div class="ttc" id="amd5_8c_html_ab184d7e3b848f46768f3aa6badd70e88"><div class="ttname"><a href="md5_8c.html#ab184d7e3b848f46768f3aa6badd70e88">mutt_md5_init_ctx</a></div><div class="ttdeci">void mutt_md5_init_ctx(struct Md5Ctx *md5ctx)</div><div class="ttdoc">Initialise the MD5 computation.</div><div class="ttdef"><b>Definition</b> <a href="md5_8c_source.html#l00261">md5.c:261</a></div></div>
 <div class="ttc" id="amd5_8c_html_ac970009fac75c52cbb998194d3be1d79"><div class="ttname"><a href="md5_8c.html#ac970009fac75c52cbb998194d3be1d79">mutt_md5_finish_ctx</a></div><div class="ttdeci">void * mutt_md5_finish_ctx(struct Md5Ctx *md5ctx, void *resbuf)</div><div class="ttdoc">Process the remaining bytes in the buffer.</div><div class="ttdef"><b>Definition</b> <a href="md5_8c_source.html#l00285">md5.c:285</a></div></div>
@@ -234,7 +234,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructConnection_html_ac3c39549b6611c8eaed2a25573b5c432"><div class="ttname"><a href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">Connection::account</a></div><div class="ttdeci">struct ConnAccount account</div><div class="ttdoc">Account details: username, password, etc.</div><div class="ttdef"><b>Definition</b> <a href="connection_8h_source.html#l00049">connection.h:49</a></div></div>
 <div class="ttc" id="astructMd5Ctx_html"><div class="ttname"><a href="structMd5Ctx.html">Md5Ctx</a></div><div class="ttdoc">Cursor for the MD5 hashing.</div><div class="ttdef"><b>Definition</b> <a href="md5_8h_source.html#l00036">md5.h:37</a></div></div>
 <div class="ttc" id="astructPopAccountData_html_a9b4f6edb28624aaec1821d52f7cb8d18"><div class="ttname"><a href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">PopAccountData::conn</a></div><div class="ttdeci">struct Connection * conn</div><div class="ttdoc">Connection to POP server.</div><div class="ttdef"><b>Definition</b> <a href="pop_2adata_8h_source.html#l00038">adata.h:38</a></div></div>
-<div class="ttc" id="astructPopAccountData_html_ac7a05402e150d1b7bbe5e4d7077933a3"><div class="ttname"><a href="structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3">PopAccountData::timestamp</a></div><div class="ttdeci">char * timestamp</div><div class="ttdef"><b>Definition</b> <a href="pop_2adata_8h_source.html#l00054">adata.h:54</a></div></div>
+<div class="ttc" id="astructPopAccountData_html_ac7a05402e150d1b7bbe5e4d7077933a3"><div class="ttname"><a href="structPopAccountData.html#ac7a05402e150d1b7bbe5e4d7077933a3">PopAccountData::timestamp</a></div><div class="ttdeci">char * timestamp</div><div class="ttdoc">APOP timestamp.</div><div class="ttdef"><b>Definition</b> <a href="pop_2adata_8h_source.html#l00055">adata.h:55</a></div></div>
 </div><!-- fragment --><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -274,68 +274,68 @@ Functions</h2></td></tr>
 
 <p>USER authenticator - Implements <a class="el" href="structPopAuth.html#aa2e5b577b8f1770de3f3ec70ac76ee97">PopAuth::authenticate()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="pop_2auth_8c_source.html#l00366">366</a> of file <a class="el" href="pop_2auth_8c_source.html">auth.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  367</span>{</div>
-<div class="line"><span class="lineno">  368</span>  <span class="keywordflow">if</span> (!adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">cmd_user</a>)</div>
-<div class="line"><span class="lineno">  369</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739">POP_A_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  370</span> </div>
-<div class="line"><span class="lineno">  371</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2bc0b90ace43b835b6ad51f3d8fa5c1a">mutt_account_getpass</a>(&amp;adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) || !adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>[0])</div>
-<div class="line"><span class="lineno">  372</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  373</span> </div>
-<div class="line"><span class="lineno">  374</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Logging in...&quot;</span>));</div>
-<div class="line"><span class="lineno">  375</span> </div>
-<div class="line"><span class="lineno">  376</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
-<div class="line"><span class="lineno">  377</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;USER %s\r\n&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>);</div>
-<div class="line"><span class="lineno">  378</span>  <span class="keywordtype">int</span> rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  379</span> </div>
-<div class="line"><span class="lineno">  380</span>  <span class="keywordflow">if</span> (adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">cmd_user</a> == 2)</div>
-<div class="line"><span class="lineno">  381</span>  {</div>
-<div class="line"><span class="lineno">  382</span>    <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  383</span>    {</div>
-<div class="line"><span class="lineno">  384</span>      adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">cmd_user</a> = 1;</div>
-<div class="line"><span class="lineno">  385</span> </div>
-<div class="line"><span class="lineno">  386</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;set USER capability\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  387</span>    }</div>
-<div class="line"><span class="lineno">  388</span> </div>
-<div class="line"><span class="lineno">  389</span>    <span class="keywordflow">if</span> (rc == -2)</div>
-<div class="line"><span class="lineno">  390</span>    {</div>
-<div class="line"><span class="lineno">  391</span>      adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">cmd_user</a> = 0;</div>
-<div class="line"><span class="lineno">  392</span> </div>
-<div class="line"><span class="lineno">  393</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;unset USER capability\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  394</span>      snprintf(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>, <span class="keyword">sizeof</span>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>), <span class="stringliteral">&quot;%s&quot;</span>,</div>
-<div class="line"><span class="lineno">  395</span>               <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Command USER is not supported by server&quot;</span>));</div>
-<div class="line"><span class="lineno">  396</span>    }</div>
-<div class="line"><span class="lineno">  397</span>  }</div>
-<div class="line"><span class="lineno">  398</span> </div>
-<div class="line"><span class="lineno">  399</span>  <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  400</span>  {</div>
-<div class="line"><span class="lineno">  401</span>    snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;PASS %s\r\n&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>);</div>
-<div class="line"><span class="lineno">  402</span>    <span class="keyword">const</span> <span class="keywordtype">short</span> c_debug_level = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;debug_level&quot;</span>);</div>
-<div class="line"><span class="lineno">  403</span>    rc = <a class="code hl_function" href="pop_2lib_8c.html#aae19861d60bcff0afc265b9327054203">pop_query_d</a>(adata, buf, <span class="keyword">sizeof</span>(buf),</div>
-<div class="line"><span class="lineno">  404</span>                     <span class="comment">/* don&#39;t print the password unless we&#39;re at the ungodly debugging level */</span></div>
-<div class="line"><span class="lineno">  405</span>                     (c_debug_level &lt; <a class="code hl_define" href="socket_8h.html#a20fef332e75f8a0589dfdfac3f034037">MUTT_SOCK_LOG_FULL</a>) ? <span class="stringliteral">&quot;PASS *\r\n&quot;</span> : NULL);</div>
-<div class="line"><span class="lineno">  406</span>  }</div>
-<div class="line"><span class="lineno">  407</span> </div>
-<div class="line"><span class="lineno">  408</span>  <span class="keywordflow">switch</span> (rc)</div>
-<div class="line"><span class="lineno">  409</span>  {</div>
-<div class="line"><span class="lineno">  410</span>    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">  411</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a4f778fe4bd10a07201dcad7c81e354b6">POP_A_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  412</span>    <span class="keywordflow">case</span> -1:</div>
-<div class="line"><span class="lineno">  413</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50af9fcefd3c03ab36585a3da1f7da071ae">POP_A_SOCKET</a>;</div>
-<div class="line"><span class="lineno">  414</span>  }</div>
-<div class="line"><span class="lineno">  415</span> </div>
-<div class="line"><span class="lineno">  416</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s %s&quot;</span>, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Login failed&quot;</span>), adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>);</div>
-<div class="line"><span class="lineno">  417</span> </div>
-<div class="line"><span class="lineno">  418</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  419</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pop_2auth_8c_source.html#l00367">367</a> of file <a class="el" href="pop_2auth_8c_source.html">auth.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  368</span>{</div>
+<div class="line"><span class="lineno">  369</span>  <span class="keywordflow">if</span> (!adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">cmd_user</a>)</div>
+<div class="line"><span class="lineno">  370</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739">POP_A_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  371</span> </div>
+<div class="line"><span class="lineno">  372</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2bc0b90ace43b835b6ad51f3d8fa5c1a">mutt_account_getpass</a>(&amp;adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) || !adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>[0])</div>
+<div class="line"><span class="lineno">  373</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  374</span> </div>
+<div class="line"><span class="lineno">  375</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Logging in...&quot;</span>));</div>
+<div class="line"><span class="lineno">  376</span> </div>
+<div class="line"><span class="lineno">  377</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno">  378</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;USER %s\r\n&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>);</div>
+<div class="line"><span class="lineno">  379</span>  <span class="keywordtype">int</span> rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>  <span class="keywordflow">if</span> (adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">cmd_user</a> == 2)</div>
+<div class="line"><span class="lineno">  382</span>  {</div>
+<div class="line"><span class="lineno">  383</span>    <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  384</span>    {</div>
+<div class="line"><span class="lineno">  385</span>      adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">cmd_user</a> = 1;</div>
+<div class="line"><span class="lineno">  386</span> </div>
+<div class="line"><span class="lineno">  387</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;set USER capability\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  388</span>    }</div>
+<div class="line"><span class="lineno">  389</span> </div>
+<div class="line"><span class="lineno">  390</span>    <span class="keywordflow">if</span> (rc == -2)</div>
+<div class="line"><span class="lineno">  391</span>    {</div>
+<div class="line"><span class="lineno">  392</span>      adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">cmd_user</a> = 0;</div>
+<div class="line"><span class="lineno">  393</span> </div>
+<div class="line"><span class="lineno">  394</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;unset USER capability\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  395</span>      snprintf(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>, <span class="keyword">sizeof</span>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>), <span class="stringliteral">&quot;%s&quot;</span>,</div>
+<div class="line"><span class="lineno">  396</span>               <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Command USER is not supported by server&quot;</span>));</div>
+<div class="line"><span class="lineno">  397</span>    }</div>
+<div class="line"><span class="lineno">  398</span>  }</div>
+<div class="line"><span class="lineno">  399</span> </div>
+<div class="line"><span class="lineno">  400</span>  <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  401</span>  {</div>
+<div class="line"><span class="lineno">  402</span>    snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;PASS %s\r\n&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a842f1bf5afe0830ae96d80bdacead037">pass</a>);</div>
+<div class="line"><span class="lineno">  403</span>    <span class="keyword">const</span> <span class="keywordtype">short</span> c_debug_level = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;debug_level&quot;</span>);</div>
+<div class="line"><span class="lineno">  404</span>    rc = <a class="code hl_function" href="pop_2lib_8c.html#aae19861d60bcff0afc265b9327054203">pop_query_d</a>(adata, buf, <span class="keyword">sizeof</span>(buf),</div>
+<div class="line"><span class="lineno">  405</span>                     <span class="comment">/* don&#39;t print the password unless we&#39;re at the ungodly debugging level */</span></div>
+<div class="line"><span class="lineno">  406</span>                     (c_debug_level &lt; <a class="code hl_define" href="socket_8h.html#a20fef332e75f8a0589dfdfac3f034037">MUTT_SOCK_LOG_FULL</a>) ? <span class="stringliteral">&quot;PASS *\r\n&quot;</span> : NULL);</div>
+<div class="line"><span class="lineno">  407</span>  }</div>
+<div class="line"><span class="lineno">  408</span> </div>
+<div class="line"><span class="lineno">  409</span>  <span class="keywordflow">switch</span> (rc)</div>
+<div class="line"><span class="lineno">  410</span>  {</div>
+<div class="line"><span class="lineno">  411</span>    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  412</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a4f778fe4bd10a07201dcad7c81e354b6">POP_A_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  413</span>    <span class="keywordflow">case</span> -1:</div>
+<div class="line"><span class="lineno">  414</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50af9fcefd3c03ab36585a3da1f7da071ae">POP_A_SOCKET</a>;</div>
+<div class="line"><span class="lineno">  415</span>  }</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s %s&quot;</span>, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Login failed&quot;</span>), adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>);</div>
+<div class="line"><span class="lineno">  418</span> </div>
+<div class="line"><span class="lineno">  419</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  420</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a96039a9f8d37daad993ae7b490510339"><div class="ttname"><a href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a></div><div class="ttdeci">short cs_subset_number(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a number config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00143">helpers.c:143</a></div></div>
-<div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00090">logging2.h:90</a></div></div>
-<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00044">logging2.h:44</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
+<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
 <div class="ttc" id="apop_2lib_8c_html_aae19861d60bcff0afc265b9327054203"><div class="ttname"><a href="pop_2lib_8c.html#aae19861d60bcff0afc265b9327054203">pop_query_d</a></div><div class="ttdeci">int pop_query_d(struct PopAccountData *adata, char *buf, size_t buflen, char *msg)</div><div class="ttdoc">Send data from buffer and receive answer to the same buffer.</div><div class="ttdef"><b>Definition</b> <a href="pop_2lib_8c_source.html#l00465">lib.c:465</a></div></div>
 <div class="ttc" id="asocket_8h_html_a20fef332e75f8a0589dfdfac3f034037"><div class="ttname"><a href="socket_8h.html#a20fef332e75f8a0589dfdfac3f034037">MUTT_SOCK_LOG_FULL</a></div><div class="ttdeci">#define MUTT_SOCK_LOG_FULL</div><div class="ttdef"><b>Definition</b> <a href="socket_8h_source.html#l00054">socket.h:54</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00042">neomutt.h:43</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00047">neomutt.h:47</a></div></div>
-<div class="ttc" id="astructPopAccountData_html_a84cf659582c28abdd77d78e74257143f"><div class="ttname"><a href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">PopAccountData::err_msg</a></div><div class="ttdeci">char err_msg[POP_CMD_RESPONSE]</div><div class="ttdef"><b>Definition</b> <a href="pop_2adata_8h_source.html#l00056">adata.h:56</a></div></div>
+<div class="ttc" id="astructPopAccountData_html_a84cf659582c28abdd77d78e74257143f"><div class="ttname"><a href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">PopAccountData::err_msg</a></div><div class="ttdeci">char err_msg[POP_CMD_RESPONSE]</div><div class="ttdoc">Last error message.</div><div class="ttdef"><b>Definition</b> <a href="pop_2adata_8h_source.html#l00057">adata.h:57</a></div></div>
 <div class="ttc" id="astructPopAccountData_html_afa817df04649cb16d6c9bdef2033f454"><div class="ttname"><a href="structPopAccountData.html#afa817df04649cb16d6c9bdef2033f454">PopAccountData::cmd_user</a></div><div class="ttdeci">unsigned int cmd_user</div><div class="ttdoc">optional command USER</div><div class="ttdef"><b>Definition</b> <a href="pop_2adata_8h_source.html#l00044">adata.h:44</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -376,62 +376,62 @@ Functions</h2></td></tr>
 
 <p>Authenticate a POP connection using OAUTHBEARER - Implements <a class="el" href="structPopAuth.html#aa2e5b577b8f1770de3f3ec70ac76ee97">PopAuth::authenticate()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="pop_2auth_8c_source.html#l00424">424</a> of file <a class="el" href="pop_2auth_8c_source.html">auth.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  425</span>{</div>
-<div class="line"><span class="lineno">  426</span>  <span class="comment">/* If they did not explicitly request or configure oauth then fail quietly */</span></div>
-<div class="line"><span class="lineno">  427</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_pop_oauth_refresh_command = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pop_oauth_refresh_command&quot;</span>);</div>
-<div class="line"><span class="lineno">  428</span>  <span class="keywordflow">if</span> (!method &amp;&amp; !c_pop_oauth_refresh_command)</div>
-<div class="line"><span class="lineno">  429</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739">POP_A_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  430</span> </div>
-<div class="line"><span class="lineno">  431</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  432</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), <span class="stringliteral">&quot;OAUTHBEARER&quot;</span>);</div>
-<div class="line"><span class="lineno">  433</span> </div>
-<div class="line"><span class="lineno">  434</span>  <span class="keywordtype">char</span> *oauthbearer = <a class="code hl_function" href="connaccount_8c.html#ae36a8c7f5cdc6a7e153d869dd72b98ff">mutt_account_getoauthbearer</a>(&amp;adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  435</span>  <span class="keywordflow">if</span> (!oauthbearer)</div>
-<div class="line"><span class="lineno">  436</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  437</span> </div>
-<div class="line"><span class="lineno">  438</span>  <span class="keywordtype">char</span> *auth_cmd = NULL;</div>
-<div class="line"><span class="lineno">  439</span>  <a class="code hl_function" href="mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595">mutt_str_asprintf</a>(&amp;auth_cmd, <span class="stringliteral">&quot;AUTH OAUTHBEARER %s\r\n&quot;</span>, oauthbearer);</div>
-<div class="line"><span class="lineno">  440</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;oauthbearer);</div>
-<div class="line"><span class="lineno">  441</span> </div>
-<div class="line"><span class="lineno">  442</span>  <span class="keywordtype">int</span> rc = <a class="code hl_function" href="pop_2lib_8c.html#aae19861d60bcff0afc265b9327054203">pop_query_d</a>(adata, auth_cmd, strlen(auth_cmd),</div>
-<div class="line"><span class="lineno">  443</span>#ifdef DEBUG</div>
-<div class="line"><span class="lineno">  444</span>                       <span class="comment">/* don&#39;t print the bearer token unless we&#39;re at the ungodly debugging level */</span></div>
-<div class="line"><span class="lineno">  445</span>                       (<a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;debug_level&quot;</span>) &lt; <a class="code hl_define" href="socket_8h.html#a20fef332e75f8a0589dfdfac3f034037">MUTT_SOCK_LOG_FULL</a>) ?</div>
-<div class="line"><span class="lineno">  446</span>                           <span class="stringliteral">&quot;AUTH OAUTHBEARER *\r\n&quot;</span> :</div>
-<div class="line"><span class="lineno">  447</span>#endif</div>
-<div class="line"><span class="lineno">  448</span>                           NULL);</div>
-<div class="line"><span class="lineno">  449</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;auth_cmd);</div>
-<div class="line"><span class="lineno">  450</span> </div>
-<div class="line"><span class="lineno">  451</span>  <span class="keywordflow">switch</span> (rc)</div>
-<div class="line"><span class="lineno">  452</span>  {</div>
-<div class="line"><span class="lineno">  453</span>    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><span class="lineno">  454</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a4f778fe4bd10a07201dcad7c81e354b6">POP_A_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  455</span>    <span class="keywordflow">case</span> -1:</div>
-<div class="line"><span class="lineno">  456</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50af9fcefd3c03ab36585a3da1f7da071ae">POP_A_SOCKET</a>;</div>
-<div class="line"><span class="lineno">  457</span>  }</div>
-<div class="line"><span class="lineno">  458</span> </div>
-<div class="line"><span class="lineno">  459</span>  <span class="comment">/* The error response was a SASL continuation, so &quot;continue&quot; it.</span></div>
-<div class="line"><span class="lineno">  460</span><span class="comment">   * See RFC7628 3.2.3 */</span></div>
-<div class="line"><span class="lineno">  461</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>, <span class="stringliteral">&quot;\001&quot;</span>);</div>
-<div class="line"><span class="lineno">  462</span> </div>
-<div class="line"><span class="lineno">  463</span>  <span class="keywordtype">char</span> *err = adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>;</div>
-<div class="line"><span class="lineno">  464</span>  <span class="keywordtype">char</span> decoded_err[1024] = { 0 };</div>
-<div class="line"><span class="lineno">  465</span>  <span class="keywordtype">int</span> len = <a class="code hl_function" href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>, decoded_err, <span class="keyword">sizeof</span>(decoded_err) - 1);</div>
-<div class="line"><span class="lineno">  466</span>  <span class="keywordflow">if</span> (len &gt;= 0)</div>
-<div class="line"><span class="lineno">  467</span>  {</div>
-<div class="line"><span class="lineno">  468</span>    decoded_err[len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  469</span>    err = decoded_err;</div>
-<div class="line"><span class="lineno">  470</span>  }</div>
-<div class="line"><span class="lineno">  471</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s %s&quot;</span>, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authentication failed&quot;</span>), err);</div>
-<div class="line"><span class="lineno">  472</span> </div>
-<div class="line"><span class="lineno">  473</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  474</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pop_2auth_8c_source.html#l00425">425</a> of file <a class="el" href="pop_2auth_8c_source.html">auth.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  426</span>{</div>
+<div class="line"><span class="lineno">  427</span>  <span class="comment">/* If they did not explicitly request or configure oauth then fail quietly */</span></div>
+<div class="line"><span class="lineno">  428</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_pop_oauth_refresh_command = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pop_oauth_refresh_command&quot;</span>);</div>
+<div class="line"><span class="lineno">  429</span>  <span class="keywordflow">if</span> (!method &amp;&amp; !c_pop_oauth_refresh_command)</div>
+<div class="line"><span class="lineno">  430</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a04de03803dd743f762a3b33d5a5ba739">POP_A_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  431</span> </div>
+<div class="line"><span class="lineno">  432</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  433</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), <span class="stringliteral">&quot;OAUTHBEARER&quot;</span>);</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>  <span class="keywordtype">char</span> *oauthbearer = <a class="code hl_function" href="connaccount_8c.html#ae36a8c7f5cdc6a7e153d869dd72b98ff">mutt_account_getoauthbearer</a>(&amp;adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  436</span>  <span class="keywordflow">if</span> (!oauthbearer)</div>
+<div class="line"><span class="lineno">  437</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  438</span> </div>
+<div class="line"><span class="lineno">  439</span>  <span class="keywordtype">char</span> *auth_cmd = NULL;</div>
+<div class="line"><span class="lineno">  440</span>  <a class="code hl_function" href="mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595">mutt_str_asprintf</a>(&amp;auth_cmd, <span class="stringliteral">&quot;AUTH OAUTHBEARER %s\r\n&quot;</span>, oauthbearer);</div>
+<div class="line"><span class="lineno">  441</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;oauthbearer);</div>
+<div class="line"><span class="lineno">  442</span> </div>
+<div class="line"><span class="lineno">  443</span>  <span class="keywordtype">int</span> rc = <a class="code hl_function" href="pop_2lib_8c.html#aae19861d60bcff0afc265b9327054203">pop_query_d</a>(adata, auth_cmd, strlen(auth_cmd),</div>
+<div class="line"><span class="lineno">  444</span>#ifdef DEBUG</div>
+<div class="line"><span class="lineno">  445</span>                       <span class="comment">/* don&#39;t print the bearer token unless we&#39;re at the ungodly debugging level */</span></div>
+<div class="line"><span class="lineno">  446</span>                       (<a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;debug_level&quot;</span>) &lt; <a class="code hl_define" href="socket_8h.html#a20fef332e75f8a0589dfdfac3f034037">MUTT_SOCK_LOG_FULL</a>) ?</div>
+<div class="line"><span class="lineno">  447</span>                           <span class="stringliteral">&quot;AUTH OAUTHBEARER *\r\n&quot;</span> :</div>
+<div class="line"><span class="lineno">  448</span>#endif</div>
+<div class="line"><span class="lineno">  449</span>                           NULL);</div>
+<div class="line"><span class="lineno">  450</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;auth_cmd);</div>
+<div class="line"><span class="lineno">  451</span> </div>
+<div class="line"><span class="lineno">  452</span>  <span class="keywordflow">switch</span> (rc)</div>
+<div class="line"><span class="lineno">  453</span>  {</div>
+<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><span class="lineno">  455</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a4f778fe4bd10a07201dcad7c81e354b6">POP_A_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  456</span>    <span class="keywordflow">case</span> -1:</div>
+<div class="line"><span class="lineno">  457</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50af9fcefd3c03ab36585a3da1f7da071ae">POP_A_SOCKET</a>;</div>
+<div class="line"><span class="lineno">  458</span>  }</div>
+<div class="line"><span class="lineno">  459</span> </div>
+<div class="line"><span class="lineno">  460</span>  <span class="comment">/* The error response was a SASL continuation, so &quot;continue&quot; it.</span></div>
+<div class="line"><span class="lineno">  461</span><span class="comment">   * See RFC7628 3.2.3 */</span></div>
+<div class="line"><span class="lineno">  462</span>  <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>, <span class="stringliteral">&quot;\001&quot;</span>);</div>
+<div class="line"><span class="lineno">  463</span> </div>
+<div class="line"><span class="lineno">  464</span>  <span class="keywordtype">char</span> *err = adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>;</div>
+<div class="line"><span class="lineno">  465</span>  <span class="keywordtype">char</span> decoded_err[1024] = { 0 };</div>
+<div class="line"><span class="lineno">  466</span>  <span class="keywordtype">int</span> len = <a class="code hl_function" href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>, decoded_err, <span class="keyword">sizeof</span>(decoded_err) - 1);</div>
+<div class="line"><span class="lineno">  467</span>  <span class="keywordflow">if</span> (len &gt;= 0)</div>
+<div class="line"><span class="lineno">  468</span>  {</div>
+<div class="line"><span class="lineno">  469</span>    decoded_err[len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  470</span>    err = decoded_err;</div>
+<div class="line"><span class="lineno">  471</span>  }</div>
+<div class="line"><span class="lineno">  472</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s %s&quot;</span>, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authentication failed&quot;</span>), err);</div>
+<div class="line"><span class="lineno">  473</span> </div>
+<div class="line"><span class="lineno">  474</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="pop_2private_8h.html#a4bca7d3fe1a979439caa3f4d1b561f50a601657443e0e9ce9255943a120377fdc">POP_A_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  475</span>}</div>
 <div class="ttc" id="abase64_8c_html_a46d7ee223a298c936fe501e37b06ac58"><div class="ttname"><a href="base64_8c.html#a46d7ee223a298c936fe501e37b06ac58">mutt_b64_decode</a></div><div class="ttdeci">int mutt_b64_decode(const char *in, char *out, size_t olen)</div><div class="ttdoc">Convert NUL-terminated base64 string to raw bytes.</div><div class="ttdef"><b>Definition</b> <a href="base64_8c_source.html#l00180">base64.c:180</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a6b1589ee93ff51ef31f1d9324e138078"><div class="ttname"><a href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a></div><div class="ttdeci">const char * cs_subset_string(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a string config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00291">helpers.c:291</a></div></div>
 <div class="ttc" id="aconnaccount_8c_html_ae36a8c7f5cdc6a7e153d869dd72b98ff"><div class="ttname"><a href="connaccount_8c.html#ae36a8c7f5cdc6a7e153d869dd72b98ff">mutt_account_getoauthbearer</a></div><div class="ttdeci">char * mutt_account_getoauthbearer(struct ConnAccount *cac, bool xoauth2)</div><div class="ttdoc">Get an OAUTHBEARER/XOAUTH2 token.</div><div class="ttdef"><b>Definition</b> <a href="connaccount_8c_source.html#l00196">connaccount.c:196</a></div></div>
-<div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00062">memory.h:62</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a4388c16988fac9a7596dee4d4af89595"><div class="ttname"><a href="mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595">mutt_str_asprintf</a></div><div class="ttdeci">int mutt_str_asprintf(char **strp, const char *fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00803">string.c:803</a></div></div>
+<div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00063">memory.h:63</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a4388c16988fac9a7596dee4d4af89595"><div class="ttname"><a href="mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595">mutt_str_asprintf</a></div><div class="ttdeci">int mutt_str_asprintf(char **strp, const char *fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00805">string.c:805</a></div></div>
 <div class="ttc" id="asocket_8h_html_acddd830551629051c41026a4bc13d916"><div class="ttname"><a href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a></div><div class="ttdeci">#define mutt_socket_send(conn, buf)</div><div class="ttdef"><b>Definition</b> <a href="socket_8h_source.html#l00057">socket.h:57</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

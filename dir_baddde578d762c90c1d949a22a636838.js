@@ -5,7 +5,7 @@ var dir_baddde578d762c90c1d949a22a636838 =
     [ "functions.c", "menu_2functions_8c.html", "menu_2functions_8c" ],
     [ "functions.h", "menu_2functions_8h.html", "menu_2functions_8h" ],
     [ "lib.h", "menu_2lib_8h.html", "menu_2lib_8h" ],
-    [ "menu.c", "menu_8c.html", "menu_8c" ],
+    [ "menu.c", "menu_2menu_8c.html", "menu_2menu_8c" ],
     [ "move.c", "move_8c.html", "move_8c" ],
     [ "observer.c", "menu_2observer_8c.html", "menu_2observer_8c" ],
     [ "private.h", "menu_2private_8h.html", "menu_2private_8h" ],

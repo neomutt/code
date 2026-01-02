@@ -29,7 +29,7 @@ var searchData=
   ['devel_26',['devel',['../structNeoMuttVersion.html#a913111b163d60834c6fae7d139493a69',1,'NeoMuttVersion']]],
   ['developts_27',['DevelOpts',['../version_8c.html#a14251e38e59af2405cb47e3fd8e2ddba',1,'version.c']]],
   ['dflt_28',['dflt',['../structCryptCache.html#a8dd12b5c42e7430529eb9f41807b9331',1,'CryptCache::dflt'],['../structPgpCache.html#a27971ba1f4f97f5421cba3c374ccdb10',1,'PgpCache::dflt']]],
-  ['dialogdefaultbindings_29',['DialogDefaultBindings',['../gui_2functions_8c.html#ae0546fc4f3687c9d8592712bb161bc51',1,'DialogDefaultBindings:&#160;functions.c'],['../gui_2functions_8h.html#ae0546fc4f3687c9d8592712bb161bc51',1,'DialogDefaultBindings:&#160;functions.c']]],
+  ['dialogdefaultbindings_29',['DialogDefaultBindings',['../gui_2functions_8c.html#ae0546fc4f3687c9d8592712bb161bc51',1,'functions.c']]],
   ['did_30',['did',['../structExpandoDefinition.html#ac9ce21146072b7cbeb611ba202d8048d',1,'ExpandoDefinition::did'],['../structExpandoNode.html#a874cf8c66bbdc23cb1068015997d0b7a',1,'ExpandoNode::did'],['../structExpandoRenderCallback.html#a83a3d26c68b5da6e9a13e6b36b4b56d8',1,'ExpandoRenderCallback::did']]],
   ['digestalg_31',['digestalg',['../structSmimeCommandContext.html#a3dee10ce395177b61300c96086c22ea4',1,'SmimeCommandContext']]],
   ['disable_5fsystem_32',['disable_system',['../structCliShared.html#ab94174ac1d6f25a4f67b031ff54912a7',1,'CliShared']]],

@@ -10,6 +10,7 @@ var searchData=
   ['key_20selection_20dialog_7',['Key Selection Dialog',['../crypt_dlg_gpgme.html',1,'GPGME Key Selection Dialog'],['../crypt_dlg_pgp.html',1,'PGP Key Selection Dialog'],['../crypt_dlg_smime.html',1,'SMIME Key Selection Dialog']]],
   ['key_20sorting_8',['Key Sorting',['../crypt_sort_gpgme.html',1,'GPGME Key Sorting'],['../crypt_sort_pgp.html',1,'PGP Key Sorting']]],
   ['keybindings_9',['Dump keybindings',['../debug_keymap.html',1,'lib_debug']]],
-  ['keys_10',['Set up the extended keys',['../key_extended.html',1,'lib_key']]],
-  ['kyoto_20cabinet_11',['Kyoto Cabinet',['../store_kc.html',1,'lib_store']]]
+  ['keymap_20handling_10',['Keymap handling',['../key_keymap.html',1,'lib_key']]],
+  ['keys_11',['Set up the extended keys',['../key_extended.html',1,'lib_key']]],
+  ['kyoto_20cabinet_12',['Kyoto Cabinet',['../store_kc.html',1,'lib_store']]]
 ];

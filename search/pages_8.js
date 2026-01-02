@@ -23,12 +23,13 @@ var searchData=
   ['graphical_20code_20',['Graphical code',['../lib_gui.html',1,'']]],
   ['graphviz_20dot_20file_21',['GraphViz dot file',['../debug_graphviz.html',1,'lib_debug']]],
   ['greeting_20expando_20definitions_22',['Greeting Expando definitions',['../send_expando_greeting.html',1,'lib_send']]],
-  ['groups_23',['groups',['../addr_group.html',1,'Address groups'],['../nntp_expando_browser.html',1,'Browse NNTP groups'],['../nntp_expando_newsrc.html',1,'Browse NNTP groups']]],
-  ['gss_20authentication_24',['GSS authentication',['../imap_auth_gss.html',1,'lib_imap']]],
-  ['gui_20ask_20the_20user_20to_20enter_20a_20string_25',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],
-  ['gui_20display_20a_20user_20configurable_20status_20line_26',['GUI display a user configurable status line',['../index_expando_status.html',1,'GUI display a user-configurable status line'],['../index_status.html',1,'GUI display a user-configurable status line']]],
-  ['gui_20display_20it_27',['Generate the help-page and GUI display it',['../neo_help.html',1,'index']]],
-  ['gui_20display_20the_20mailboxes_20in_20a_20side_20panel_28',['GUI display the mailboxes in a side panel',['../sidebar_sidebar.html',1,'lib_sidebar']]],
-  ['gui_20handle_20the_20resizing_20of_20the_20screen_29',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
-  ['gui_20present_20the_20user_20with_20a_20selectable_20list_30',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]]
+  ['group_20lists_20commands_23',['Parse Group/Lists Commands',['../commands_group.html',1,'lib_command']]],
+  ['groups_24',['groups',['../addr_group.html',1,'Address groups'],['../nntp_expando_browser.html',1,'Browse NNTP groups'],['../nntp_expando_newsrc.html',1,'Browse NNTP groups']]],
+  ['gss_20authentication_25',['GSS authentication',['../imap_auth_gss.html',1,'lib_imap']]],
+  ['gui_20ask_20the_20user_20to_20enter_20a_20string_26',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],
+  ['gui_20display_20a_20user_20configurable_20status_20line_27',['GUI display a user configurable status line',['../index_expando_status.html',1,'GUI display a user-configurable status line'],['../index_status.html',1,'GUI display a user-configurable status line']]],
+  ['gui_20display_20it_28',['Generate the help-page and GUI display it',['../neo_help.html',1,'index']]],
+  ['gui_20display_20the_20mailboxes_20in_20a_20side_20panel_29',['GUI display the mailboxes in a side panel',['../sidebar_sidebar.html',1,'lib_sidebar']]],
+  ['gui_20handle_20the_20resizing_20of_20the_20screen_30',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
+  ['gui_20present_20the_20user_20with_20a_20selectable_20list_31',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]]
 ];

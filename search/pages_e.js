@@ -4,7 +4,7 @@ var searchData=
   ['ncrypt_1',['Ncrypt',['../lib_ncrypt.html',1,'']]],
   ['ncrypt_20expando_20definitions_2',['Ncrypt Expando definitions',['../ncrypt_expando_command.html',1,'Ncrypt Expando definitions'],['../ncrypt_expando_gpgme.html',1,'Ncrypt Expando definitions'],['../ncrypt_expando_pgp.html',1,'Ncrypt Expando definitions'],['../ncrypt_expando_smime.html',1,'Ncrypt Expando definitions']]],
   ['neomutt_3',['NeoMutt',['../neo_usage.html',1,'Display Usage Information for NeoMutt'],['../neo_version.html',1,'Display version and copyright about NeoMutt']]],
-  ['neomutt_20commands_4',['NeoMutt Commands',['../core_command.html',1,'lib_core']]],
+  ['neomutt_20commands_4',['NeoMutt Commands',['../lib_command.html',1,'NeoMutt Commands'],['../core_command.html',1,'NeoMutt Commands'],['../commands_commands.html',1,'Setup NeoMutt Commands']]],
   ['neomutt_20connections_5',['NeoMutt connections',['../neo_mutt_socket.html',1,'index']]],
   ['neomutt_20logging_6',['NeoMutt Logging',['../neo_mutt_logging.html',1,'index']]],
   ['neomutt_20object_7',['NeoMutt object',['../core_neomutt.html',1,'lib_core']]],

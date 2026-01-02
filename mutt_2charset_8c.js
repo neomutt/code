@@ -1,11 +1,9 @@
 var mutt_2charset_8c =
 [
-    [ "Lookup", "structLookup.html", "structLookup" ],
     [ "IconvCacheEntry", "structIconvCacheEntry.html", "structIconvCacheEntry" ],
     [ "MimeNames", "structMimeNames.html", "structMimeNames" ],
     [ "EILSEQ", "mutt_2charset_8c.html#ac6c071293826a4e66a717bb38db7794d", null ],
     [ "ICONV_CACHE_SIZE", "mutt_2charset_8c.html#aac380af38f941083bdd07b61805786dd", null ],
-    [ "TAILQ_HEAD", "mutt_2charset_8c.html#a5af9267b27b67cda3a18b4f0adaa4857", null ],
     [ "lookup_new", "mutt_2charset_8c.html#a8849f881bcc5d973667da6af45138741", null ],
     [ "lookup_free", "mutt_2charset_8c.html#abb434a7b5d54f0904f8ae5a22b261a44", null ],
     [ "lookup_charset", "mutt_2charset_8c.html#a7f43e095c200569d3434021bc8ce13d1", null ],

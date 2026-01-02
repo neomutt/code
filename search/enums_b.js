@@ -10,11 +10,10 @@ var searchData=
   ['muttcursorstate_7',['MuttCursorState',['../mutt__curses_8h.html#ab62e44dc1b12206d36e97cb12b5f961d',1,'mutt_curses.h']]],
   ['muttopendirmode_8',['MuttOpenDirMode',['../file_8h.html#a222e4f679593f00cd8c126212b3cdb3b',1,'file.h']]],
   ['muttops_9',['MuttOps',['../opcodes_8h.html#aec704af10ca19d5cedb9485467eeb2fb',1,'opcodes.h']]],
-  ['muttsetcommand_10',['MuttSetCommand',['../parse_2set_8h.html#add6d5e9ab8c54289dd69c1f2f76770b4',1,'set.h']]],
-  ['muttstattype_11',['MuttStatType',['../file_8h.html#ad852389693b4c5a8d79c25e84b2d1139',1,'file.h']]],
-  ['muttwindoworientation_12',['MuttWindowOrientation',['../mutt__window_8h.html#a47e8ed5996247ec48ab676c55aa8d3c7',1,'mutt_window.h']]],
-  ['muttwindowsize_13',['MuttWindowSize',['../mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929',1,'mutt_window.h']]],
-  ['muttwriteheadermode_14',['MuttWriteHeaderMode',['../header_8h.html#a610db600447893b501a944c8e5dbb9f7',1,'header.h']]],
-  ['mxopenreturns_15',['MxOpenReturns',['../mxapi_8h.html#a95aa6f9d458f82609e795a7f449f4cad',1,'mxapi.h']]],
-  ['mxstatus_16',['MxStatus',['../mxapi_8h.html#af414aea967025ea4ba10b86268488432',1,'mxapi.h']]]
+  ['muttstattype_10',['MuttStatType',['../file_8h.html#ad852389693b4c5a8d79c25e84b2d1139',1,'file.h']]],
+  ['muttwindoworientation_11',['MuttWindowOrientation',['../mutt__window_8h.html#a47e8ed5996247ec48ab676c55aa8d3c7',1,'mutt_window.h']]],
+  ['muttwindowsize_12',['MuttWindowSize',['../mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929',1,'mutt_window.h']]],
+  ['muttwriteheadermode_13',['MuttWriteHeaderMode',['../header_8h.html#a610db600447893b501a944c8e5dbb9f7',1,'header.h']]],
+  ['mxopenreturns_14',['MxOpenReturns',['../mxapi_8h.html#a95aa6f9d458f82609e795a7f449f4cad',1,'mxapi.h']]],
+  ['mxstatus_15',['MxStatus',['../mxapi_8h.html#af414aea967025ea4ba10b86268488432',1,'mxapi.h']]]
 ];

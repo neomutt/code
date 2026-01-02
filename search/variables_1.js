@@ -28,7 +28,7 @@ var searchData=
   ['bpos_25',['bpos',['../structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d',1,'SaslSockData']]],
   ['braillecol_26',['BrailleCol',['../dlg__pager_8c.html#a555e902447ceeb65bbcb35988b8d09c9',1,'BrailleCol:&#160;dlg_pager.c'],['../pager_2lib_8h.html#a555e902447ceeb65bbcb35988b8d09c9',1,'BrailleCol:&#160;dlg_pager.c']]],
   ['braillerow_27',['BrailleRow',['../dlg__pager_8c.html#a3490b6b810e8a21aa55b285983ab06b3',1,'BrailleRow:&#160;dlg_pager.c'],['../pager_2lib_8h.html#a3490b6b810e8a21aa55b285983ab06b3',1,'BrailleRow:&#160;dlg_pager.c']]],
-  ['browserdefaultbindings_28',['BrowserDefaultBindings',['../browser_2functions_8c.html#a44b64cc2f259cfbc2dfef33096461a97',1,'BrowserDefaultBindings:&#160;functions.c'],['../init_8c.html#a44b64cc2f259cfbc2dfef33096461a97',1,'BrowserDefaultBindings:&#160;functions.c']]],
+  ['browserdefaultbindings_28',['BrowserDefaultBindings',['../browser_2functions_8c.html#a44b64cc2f259cfbc2dfef33096461a97',1,'functions.c']]],
   ['browserfunctions_29',['BrowserFunctions',['../browser_2functions_8c.html#ae678937f9a350be7f44cce7beca12284',1,'functions.c']]],
   ['browsersortmethods_30',['BrowserSortMethods',['../browser_2config_8c.html#ae24e4fe4de99951be660aae9c88ecb6e',1,'config.c']]],
   ['browservars_31',['BrowserVars',['../browser_2config_8c.html#a26a20c0d08d85bbf8562cf72736d0d00',1,'config.c']]],

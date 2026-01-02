@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-58-g09398d</span>
+   &#160;<span id="projectnumber">2025-12-11-79-gf03987</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -173,337 +173,337 @@ Functions</h2></td></tr>
 
 <p>Manage the MIME type "application/pgp" or "application/smime" - Implements <a class="el" href="structCryptModuleSpecs.html#a9d7b47fb748a7cdb4975f2dde8179a98">CryptModuleSpecs::application_handler()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l02469">2469</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2470</span>{</div>
-<div class="line"><span class="lineno"> 2471</span>  <span class="keywordtype">int</span> needpass = -1;</div>
-<div class="line"><span class="lineno"> 2472</span>  <span class="keywordtype">bool</span> pgp_keyblock = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2473</span>  <span class="keywordtype">bool</span> clearsign = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2474</span>  <span class="keywordtype">long</span> bytes;</div>
-<div class="line"><span class="lineno"> 2475</span>  LOFF_T last_pos;</div>
-<div class="line"><span class="lineno"> 2476</span>  LOFF_T block_begin;</div>
-<div class="line"><span class="lineno"> 2477</span>  LOFF_T block_end;</div>
-<div class="line"><span class="lineno"> 2478</span>  <span class="keywordtype">char</span> buf[8192] = { 0 };</div>
-<div class="line"><span class="lineno"> 2479</span>  FILE *fp_out = NULL;</div>
-<div class="line"><span class="lineno"> 2480</span> </div>
-<div class="line"><span class="lineno"> 2481</span>  gpgme_error_t err = GPG_ERR_NO_ERROR;</div>
-<div class="line"><span class="lineno"> 2482</span>  gpgme_data_t armored_data = NULL;</div>
-<div class="line"><span class="lineno"> 2483</span> </div>
-<div class="line"><span class="lineno"> 2484</span>  <span class="keywordtype">bool</span> maybe_goodsig = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2485</span>  <span class="keywordtype">bool</span> have_any_sigs = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2486</span> </div>
-<div class="line"><span class="lineno"> 2487</span>  <span class="keywordtype">char</span> body_charset[256] = { 0 }; <span class="comment">/* Only used for clearsigned messages. */</span></div>
-<div class="line"><span class="lineno"> 2488</span>  <span class="keywordtype">char</span> *gpgcharset = NULL;</div>
-<div class="line"><span class="lineno"> 2489</span> </div>
-<div class="line"><span class="lineno"> 2490</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Entering handler\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2491</span> </div>
-<div class="line"><span class="lineno"> 2492</span>  <span class="comment">/* For clearsigned messages we won&#39;t be able to get a character set</span></div>
-<div class="line"><span class="lineno"> 2493</span><span class="comment">   * but we know that this may only be text thus we assume Latin-1 here. */</span></div>
-<div class="line"><span class="lineno"> 2494</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="email_2body_8c.html#a4a63ed39ada6cca40f6890ef06950059">mutt_body_get_charset</a>(b, body_charset, <span class="keyword">sizeof</span>(body_charset)))</div>
-<div class="line"><span class="lineno"> 2495</span>    <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(body_charset, <span class="stringliteral">&quot;iso-8859-1&quot;</span>, <span class="keyword">sizeof</span>(body_charset));</div>
-<div class="line"><span class="lineno"> 2496</span> </div>
-<div class="line"><span class="lineno"> 2497</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
-<div class="line"><span class="lineno"> 2498</span>  {</div>
-<div class="line"><span class="lineno"> 2499</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2500</span>  }</div>
-<div class="line"><span class="lineno"> 2501</span>  last_pos = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
-<div class="line"><span class="lineno"> 2502</span> </div>
-<div class="line"><span class="lineno"> 2503</span>  <span class="keywordflow">for</span> (bytes = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>; bytes &gt; 0;)</div>
-<div class="line"><span class="lineno"> 2504</span>  {</div>
-<div class="line"><span class="lineno"> 2505</span>    <span class="comment">// record before the fgets in case it is a BEGIN block</span></div>
-<div class="line"><span class="lineno"> 2506</span>    block_begin = last_pos;</div>
-<div class="line"><span class="lineno"> 2507</span> </div>
-<div class="line"><span class="lineno"> 2508</span>    <span class="keywordflow">if</span> (!fgets(buf, <span class="keyword">sizeof</span>(buf), state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>))</div>
-<div class="line"><span class="lineno"> 2509</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2510</span> </div>
-<div class="line"><span class="lineno"> 2511</span>    LOFF_T offset = ftello(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
-<div class="line"><span class="lineno"> 2512</span>    <span class="keywordflow">if</span> (offset &lt; 0)</div>
-<div class="line"><span class="lineno"> 2513</span>    {</div>
-<div class="line"><span class="lineno"> 2514</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;ftello() failed on fd %d\n&quot;</span>, fileno(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>));</div>
-<div class="line"><span class="lineno"> 2515</span>      offset = 0;</div>
-<div class="line"><span class="lineno"> 2516</span>    }</div>
-<div class="line"><span class="lineno"> 2517</span>    bytes -= (offset - last_pos); <span class="comment">/* don&#39;t rely on mutt_str_len(buf) */</span></div>
-<div class="line"><span class="lineno"> 2518</span>    last_pos = offset;</div>
-<div class="line"><span class="lineno"> 2519</span> </div>
-<div class="line"><span class="lineno"> 2520</span>    <span class="keywordtype">size_t</span> plen = <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(buf, <span class="stringliteral">&quot;-----BEGIN PGP &quot;</span>);</div>
-<div class="line"><span class="lineno"> 2521</span>    <span class="keywordflow">if</span> (plen != 0)</div>
-<div class="line"><span class="lineno"> 2522</span>    {</div>
-<div class="line"><span class="lineno"> 2523</span>      needpass = 0;</div>
-<div class="line"><span class="lineno"> 2524</span>      clearsign = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2525</span>      pgp_keyblock = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2526</span> </div>
-<div class="line"><span class="lineno"> 2527</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="crypt__gpgme_8c.html#affb41485e4cf045fe3f34a388846ec1d">MESSAGE</a>(buf + plen))</div>
-<div class="line"><span class="lineno"> 2528</span>      {</div>
-<div class="line"><span class="lineno"> 2529</span>        needpass = 1;</div>
-<div class="line"><span class="lineno"> 2530</span>      }</div>
-<div class="line"><span class="lineno"> 2531</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="crypt__gpgme_8c.html#a704d35681bc3f3a349721e2c69426405">SIGNED_MESSAGE</a>(buf + plen))</div>
-<div class="line"><span class="lineno"> 2532</span>      {</div>
-<div class="line"><span class="lineno"> 2533</span>        clearsign = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2534</span>      }</div>
-<div class="line"><span class="lineno"> 2535</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="crypt__gpgme_8c.html#aa313b6df071b5718005a87f7e33d2da6">PUBLIC_KEY_BLOCK</a>(buf + plen))</div>
-<div class="line"><span class="lineno"> 2536</span>      {</div>
-<div class="line"><span class="lineno"> 2537</span>        pgp_keyblock = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2538</span>      }</div>
-<div class="line"><span class="lineno"> 2539</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2540</span>      {</div>
-<div class="line"><span class="lineno"> 2541</span>        <span class="comment">/* XXX we may wish to recode here */</span></div>
-<div class="line"><span class="lineno"> 2542</span>        <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>)</div>
-<div class="line"><span class="lineno"> 2543</span>          <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
-<div class="line"><span class="lineno"> 2544</span>        <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, buf);</div>
-<div class="line"><span class="lineno"> 2545</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 2546</span>      }</div>
-<div class="line"><span class="lineno"> 2547</span> </div>
-<div class="line"><span class="lineno"> 2548</span>      <span class="comment">/* Find the end of armored block. */</span></div>
-<div class="line"><span class="lineno"> 2549</span>      <span class="keywordflow">while</span> ((bytes &gt; 0) &amp;&amp; (fgets(buf, <span class="keyword">sizeof</span>(buf) - 1, state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>) != NULL))</div>
-<div class="line"><span class="lineno"> 2550</span>      {</div>
-<div class="line"><span class="lineno"> 2551</span>        offset = ftello(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
-<div class="line"><span class="lineno"> 2552</span>        <span class="keywordflow">if</span> (offset &lt; 0)</div>
-<div class="line"><span class="lineno"> 2553</span>        {</div>
-<div class="line"><span class="lineno"> 2554</span>          <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;ftello() failed on fd %d\n&quot;</span>, fileno(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>));</div>
-<div class="line"><span class="lineno"> 2555</span>          offset = 0;</div>
-<div class="line"><span class="lineno"> 2556</span>        }</div>
-<div class="line"><span class="lineno"> 2557</span>        bytes -= (offset - last_pos); <span class="comment">/* don&#39;t rely on mutt_strlen(buf) */</span></div>
-<div class="line"><span class="lineno"> 2558</span>        last_pos = offset;</div>
-<div class="line"><span class="lineno"> 2559</span> </div>
-<div class="line"><span class="lineno"> 2560</span>        <span class="keywordflow">if</span> (needpass &amp;&amp; <a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;-----END PGP MESSAGE-----\n&quot;</span>, buf))</div>
-<div class="line"><span class="lineno"> 2561</span>        {</div>
-<div class="line"><span class="lineno"> 2562</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2563</span>        }</div>
-<div class="line"><span class="lineno"> 2564</span> </div>
-<div class="line"><span class="lineno"> 2565</span>        <span class="keywordflow">if</span> (!needpass &amp;&amp; (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;-----END PGP SIGNATURE-----\n&quot;</span>, buf) ||</div>
-<div class="line"><span class="lineno"> 2566</span>                          <a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;-----END PGP PUBLIC KEY BLOCK-----\n&quot;</span>, buf)))</div>
-<div class="line"><span class="lineno"> 2567</span>        {</div>
-<div class="line"><span class="lineno"> 2568</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2569</span>        }</div>
-<div class="line"><span class="lineno"> 2570</span> </div>
-<div class="line"><span class="lineno"> 2571</span>        <span class="comment">// remember optional Charset: armor header as defined by rfc4880</span></div>
-<div class="line"><span class="lineno"> 2572</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(<span class="stringliteral">&quot;Charset: &quot;</span>, buf, 9))</div>
-<div class="line"><span class="lineno"> 2573</span>        {</div>
-<div class="line"><span class="lineno"> 2574</span>          <span class="keywordtype">size_t</span> l = 0;</div>
-<div class="line"><span class="lineno"> 2575</span>          <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;gpgcharset);</div>
-<div class="line"><span class="lineno"> 2576</span>          gpgcharset = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(buf + 9);</div>
-<div class="line"><span class="lineno"> 2577</span>          <span class="keywordflow">if</span> ((l = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(gpgcharset)) &gt; 0 &amp;&amp; gpgcharset[l - 1] == <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line"><span class="lineno"> 2578</span>            gpgcharset[l - 1] = 0;</div>
-<div class="line"><span class="lineno"> 2579</span>          <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2charset_8c.html#a05daa8adc69c533f5ab46ae98a2b71bc">mutt_ch_check_charset</a>(gpgcharset, 0))</div>
-<div class="line"><span class="lineno"> 2580</span>            <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;gpgcharset, <span class="stringliteral">&quot;UTF-8&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2581</span>        }</div>
-<div class="line"><span class="lineno"> 2582</span>      }</div>
-<div class="line"><span class="lineno"> 2583</span>      block_end = ftello(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
-<div class="line"><span class="lineno"> 2584</span>      <span class="keywordflow">if</span> (block_end &lt; 0)</div>
-<div class="line"><span class="lineno"> 2585</span>      {</div>
-<div class="line"><span class="lineno"> 2586</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;ftello() failed on fd %d\n&quot;</span>, fileno(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>));</div>
-<div class="line"><span class="lineno"> 2587</span>        block_end = 0;</div>
-<div class="line"><span class="lineno"> 2588</span>      }</div>
-<div class="line"><span class="lineno"> 2589</span> </div>
-<div class="line"><span class="lineno"> 2590</span>      have_any_sigs = (have_any_sigs || (clearsign &amp;&amp; (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#abfcaf3ae3b8541263634aec97ee65aeb">STATE_VERIFY</a>)));</div>
-<div class="line"><span class="lineno"> 2591</span> </div>
-<div class="line"><span class="lineno"> 2592</span>      <span class="comment">/* Copy PGP material to an data container */</span></div>
-<div class="line"><span class="lineno"> 2593</span>      armored_data = <a class="code hl_function" href="crypt__gpgme_8c.html#a9e4c3751a7e9290b83db346a58f9fc95">file_to_data_object</a>(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, block_begin, block_end - block_begin);</div>
-<div class="line"><span class="lineno"> 2594</span>      fseeko(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, block_end, 0);</div>
-<div class="line"><span class="lineno"> 2595</span> </div>
-<div class="line"><span class="lineno"> 2596</span>      <span class="comment">/* Invoke PGP if needed */</span></div>
-<div class="line"><span class="lineno"> 2597</span>      <span class="keywordflow">if</span> (pgp_keyblock)</div>
-<div class="line"><span class="lineno"> 2598</span>      {</div>
-<div class="line"><span class="lineno"> 2599</span>        <a class="code hl_function" href="crypt__gpgme_8c.html#acf99c22e68257d9ff91a5cefb5590370">pgp_gpgme_extract_keys</a>(armored_data, &amp;fp_out);</div>
-<div class="line"><span class="lineno"> 2600</span>      }</div>
-<div class="line"><span class="lineno"> 2601</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!clearsign || (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#abfcaf3ae3b8541263634aec97ee65aeb">STATE_VERIFY</a>))</div>
-<div class="line"><span class="lineno"> 2602</span>      {</div>
-<div class="line"><span class="lineno"> 2603</span>        gpgme_data_t plaintext = <a class="code hl_function" href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a>();</div>
-<div class="line"><span class="lineno"> 2604</span>        gpgme_ctx_t ctx = <a class="code hl_function" href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 2605</span> </div>
-<div class="line"><span class="lineno"> 2606</span>        <span class="keywordflow">if</span> (clearsign)</div>
-<div class="line"><span class="lineno"> 2607</span>        {</div>
-<div class="line"><span class="lineno"> 2608</span>          err = gpgme_op_verify(ctx, armored_data, NULL, plaintext);</div>
-<div class="line"><span class="lineno"> 2609</span>        }</div>
-<div class="line"><span class="lineno"> 2610</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2611</span>        {</div>
-<div class="line"><span class="lineno"> 2612</span>          err = gpgme_op_decrypt_verify(ctx, armored_data, plaintext);</div>
-<div class="line"><span class="lineno"> 2613</span>          <span class="keywordflow">if</span> (gpg_err_code(err) == GPG_ERR_NO_DATA)</div>
-<div class="line"><span class="lineno"> 2614</span>          {</div>
-<div class="line"><span class="lineno"> 2615</span>            <span class="comment">/* Decrypt verify can&#39;t handle signed only messages. */</span></div>
-<div class="line"><span class="lineno"> 2616</span>            gpgme_data_seek(armored_data, 0, SEEK_SET);</div>
-<div class="line"><span class="lineno"> 2617</span>            <span class="comment">/* Must release plaintext so that we supply an uninitialized object. */</span></div>
-<div class="line"><span class="lineno"> 2618</span>            gpgme_data_release(plaintext);</div>
-<div class="line"><span class="lineno"> 2619</span>            plaintext = <a class="code hl_function" href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a>();</div>
-<div class="line"><span class="lineno"> 2620</span>            err = gpgme_op_verify(ctx, armored_data, NULL, plaintext);</div>
-<div class="line"><span class="lineno"> 2621</span>          }</div>
-<div class="line"><span class="lineno"> 2622</span>        }</div>
-<div class="line"><span class="lineno"> 2623</span>        <a class="code hl_function" href="crypt__gpgme_8c.html#acde3260a9e30d9ffd4fa5a62f19620a9">redraw_if_needed</a>(ctx);</div>
-<div class="line"><span class="lineno"> 2624</span> </div>
-<div class="line"><span class="lineno"> 2625</span>        gpgme_decrypt_result_t result = gpgme_op_decrypt_result(ctx);</div>
-<div class="line"><span class="lineno"> 2626</span>        <span class="keywordflow">if</span> (result &amp;&amp; (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>))</div>
-<div class="line"><span class="lineno"> 2627</span>          <a class="code hl_function" href="crypt__gpgme_8c.html#a3879c3921ab31de008d3383587d6fa83">show_encryption_info</a>(state, result);</div>
-<div class="line"><span class="lineno"> 2628</span> </div>
-<div class="line"><span class="lineno"> 2629</span>        <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
-<div class="line"><span class="lineno"> 2630</span>        {</div>
-<div class="line"><span class="lineno"> 2631</span>          <span class="keywordtype">char</span> errbuf[200] = { 0 };</div>
-<div class="line"><span class="lineno"> 2632</span> </div>
-<div class="line"><span class="lineno"> 2633</span>          snprintf(errbuf, <span class="keyword">sizeof</span>(errbuf) - 1,</div>
-<div class="line"><span class="lineno"> 2634</span>                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: decryption/verification failed: %s\n&quot;</span>), gpgme_strerror(err));</div>
-<div class="line"><span class="lineno"> 2635</span>          <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, errbuf);</div>
-<div class="line"><span class="lineno"> 2636</span>        }</div>
-<div class="line"><span class="lineno"> 2637</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2638</span>        {</div>
-<div class="line"><span class="lineno"> 2639</span>          <span class="comment">/* Decryption/Verification succeeded */</span></div>
-<div class="line"><span class="lineno"> 2640</span> </div>
-<div class="line"><span class="lineno"> 2641</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;PGP message successfully decrypted&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2642</span> </div>
-<div class="line"><span class="lineno"> 2643</span>          <span class="keywordtype">bool</span> sig_stat = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2644</span>          <span class="keywordtype">char</span> *tmpfname = NULL;</div>
-<div class="line"><span class="lineno"> 2645</span> </div>
-<div class="line"><span class="lineno"> 2646</span>          <span class="comment">/* Check whether signatures have been verified.  */</span></div>
-<div class="line"><span class="lineno"> 2647</span>          gpgme_verify_result_t verify_result = gpgme_op_verify_result(ctx);</div>
-<div class="line"><span class="lineno"> 2648</span>          <span class="keywordflow">if</span> (verify_result-&gt;signatures)</div>
-<div class="line"><span class="lineno"> 2649</span>            sig_stat = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2650</span> </div>
-<div class="line"><span class="lineno"> 2651</span>          have_any_sigs = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2652</span>          maybe_goodsig = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2653</span>          <span class="keywordflow">if</span> ((state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>) &amp;&amp; sig_stat)</div>
-<div class="line"><span class="lineno"> 2654</span>          {</div>
-<div class="line"><span class="lineno"> 2655</span>            <span class="keywordtype">int</span> res, idx;</div>
-<div class="line"><span class="lineno"> 2656</span>            <span class="keywordtype">bool</span> anybad = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2657</span> </div>
-<div class="line"><span class="lineno"> 2658</span>            <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Begin signature information --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2659</span>            have_any_sigs = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2660</span>            <span class="keywordflow">for</span> (idx = 0; (res = <a class="code hl_function" href="crypt__gpgme_8c.html#af1694fde35a32f9a89d9a97a82f3a221">show_one_sig_status</a>(ctx, idx, state)) != -1; idx++)</div>
-<div class="line"><span class="lineno"> 2661</span>            {</div>
-<div class="line"><span class="lineno"> 2662</span>              <span class="keywordflow">if</span> (res == 1)</div>
-<div class="line"><span class="lineno"> 2663</span>                anybad = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2664</span>            }</div>
-<div class="line"><span class="lineno"> 2665</span>            <span class="keywordflow">if</span> (!anybad &amp;&amp; idx)</div>
-<div class="line"><span class="lineno"> 2666</span>              maybe_goodsig = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2667</span> </div>
-<div class="line"><span class="lineno"> 2668</span>            <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- End signature information --]\n\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2669</span>          }</div>
-<div class="line"><span class="lineno"> 2670</span> </div>
-<div class="line"><span class="lineno"> 2671</span>          tmpfname = <a class="code hl_function" href="crypt__gpgme_8c.html#aa6b240b5ee594de46af684f88b1ad05d">data_object_to_tempfile</a>(plaintext, &amp;fp_out);</div>
-<div class="line"><span class="lineno"> 2672</span>          <span class="keywordflow">if</span> (tmpfname)</div>
-<div class="line"><span class="lineno"> 2673</span>          {</div>
-<div class="line"><span class="lineno"> 2674</span>            unlink(tmpfname);</div>
-<div class="line"><span class="lineno"> 2675</span>            <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;tmpfname);</div>
-<div class="line"><span class="lineno"> 2676</span>          }</div>
-<div class="line"><span class="lineno"> 2677</span>          <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2678</span>          {</div>
-<div class="line"><span class="lineno"> 2679</span>            <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
-<div class="line"><span class="lineno"> 2680</span>            <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: copy data failed\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2681</span>          }</div>
-<div class="line"><span class="lineno"> 2682</span>        }</div>
-<div class="line"><span class="lineno"> 2683</span>        gpgme_data_release(plaintext);</div>
-<div class="line"><span class="lineno"> 2684</span>        gpgme_release(ctx);</div>
-<div class="line"><span class="lineno"> 2685</span>      }</div>
-<div class="line"><span class="lineno"> 2686</span> </div>
-<div class="line"><span class="lineno"> 2687</span>      <span class="comment">/* Now, copy cleartext to the screen.  NOTE - we expect that PGP</span></div>
-<div class="line"><span class="lineno"> 2688</span><span class="comment">       * outputs utf-8 cleartext.  This may not always be true, but it</span></div>
-<div class="line"><span class="lineno"> 2689</span><span class="comment">       * seems to be a reasonable guess.  */</span></div>
-<div class="line"><span class="lineno"> 2690</span>      <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
-<div class="line"><span class="lineno"> 2691</span>      {</div>
-<div class="line"><span class="lineno"> 2692</span>        <span class="keywordflow">if</span> (needpass)</div>
-<div class="line"><span class="lineno"> 2693</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- BEGIN PGP MESSAGE --]\n\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2694</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pgp_keyblock)</div>
-<div class="line"><span class="lineno"> 2695</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- BEGIN PGP PUBLIC KEY BLOCK --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2696</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2697</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- BEGIN PGP SIGNED MESSAGE --]\n\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2698</span>      }</div>
-<div class="line"><span class="lineno"> 2699</span> </div>
-<div class="line"><span class="lineno"> 2700</span>      <span class="keywordflow">if</span> (clearsign)</div>
-<div class="line"><span class="lineno"> 2701</span>      {</div>
-<div class="line"><span class="lineno"> 2702</span>        <a class="code hl_function" href="crypt__gpgme_8c.html#af036495f3eb3a45ea4c5f59112f5b211">copy_clearsigned</a>(armored_data, state, body_charset);</div>
-<div class="line"><span class="lineno"> 2703</span>      }</div>
-<div class="line"><span class="lineno"> 2704</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fp_out)</div>
-<div class="line"><span class="lineno"> 2705</span>      {</div>
-<div class="line"><span class="lineno"> 2706</span>        <span class="keywordtype">int</span> c;</div>
-<div class="line"><span class="lineno"> 2707</span>        <span class="keywordtype">char</span> *expected_charset = gpgcharset &amp;&amp; *gpgcharset ? gpgcharset : <span class="stringliteral">&quot;utf-8&quot;</span>;</div>
-<div class="line"><span class="lineno"> 2708</span>        rewind(fp_out);</div>
-<div class="line"><span class="lineno"> 2709</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structFgetConv.html">FgetConv</a> *fc = <a class="code hl_function" href="mutt_2charset_8c.html#acf9480125d36a09af9c0e5c8c13eaed1">mutt_ch_fgetconv_open</a>(fp_out, expected_charset,</div>
-<div class="line"><span class="lineno"> 2710</span>                                                    <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>(), <a class="code hl_define" href="mutt_2charset_8h.html#a1807a22585916adccafa5e09bda9b6a7">MUTT_ICONV_HOOK_FROM</a>);</div>
-<div class="line"><span class="lineno"> 2711</span>        <span class="keywordflow">while</span> ((c = <a class="code hl_function" href="mutt_2charset_8c.html#a90191f2589de2c605dd8c13b496ad3e1">mutt_ch_fgetconv</a>(fc)) != EOF)</div>
-<div class="line"><span class="lineno"> 2712</span>        {</div>
-<div class="line"><span class="lineno"> 2713</span>          <a class="code hl_define" href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a>(state, c);</div>
-<div class="line"><span class="lineno"> 2714</span>          <span class="keywordflow">if</span> ((c == <span class="charliteral">&#39;\n&#39;</span>) &amp;&amp; state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>)</div>
-<div class="line"><span class="lineno"> 2715</span>            <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
-<div class="line"><span class="lineno"> 2716</span>        }</div>
-<div class="line"><span class="lineno"> 2717</span>        <a class="code hl_function" href="mutt_2charset_8c.html#af3ab5375dc558a241b9e0d5787954dc5">mutt_ch_fgetconv_close</a>(&amp;fc);</div>
-<div class="line"><span class="lineno"> 2718</span>      }</div>
-<div class="line"><span class="lineno"> 2719</span> </div>
-<div class="line"><span class="lineno"> 2720</span>      <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
-<div class="line"><span class="lineno"> 2721</span>      {</div>
-<div class="line"><span class="lineno"> 2722</span>        <a class="code hl_define" href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a>(state, <span class="charliteral">&#39;\n&#39;</span>);</div>
-<div class="line"><span class="lineno"> 2723</span>        <span class="keywordflow">if</span> (needpass)</div>
-<div class="line"><span class="lineno"> 2724</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- END PGP MESSAGE --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2725</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pgp_keyblock)</div>
-<div class="line"><span class="lineno"> 2726</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- END PGP PUBLIC KEY BLOCK --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2727</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2728</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- END PGP SIGNED MESSAGE --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2729</span>      }</div>
-<div class="line"><span class="lineno"> 2730</span> </div>
-<div class="line"><span class="lineno"> 2731</span>      <span class="comment">// Multiple PGP blocks can exist, so clean these up in each loop</span></div>
-<div class="line"><span class="lineno"> 2732</span>      gpgme_data_release(armored_data);</div>
-<div class="line"><span class="lineno"> 2733</span>      <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
-<div class="line"><span class="lineno"> 2734</span>    }</div>
-<div class="line"><span class="lineno"> 2735</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2736</span>    {</div>
-<div class="line"><span class="lineno"> 2737</span>      <span class="comment">/* A traditional PGP part may mix signed and unsigned content */</span></div>
-<div class="line"><span class="lineno"> 2738</span>      <span class="comment">/* XXX we may wish to recode here */</span></div>
-<div class="line"><span class="lineno"> 2739</span>      <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>)</div>
-<div class="line"><span class="lineno"> 2740</span>        <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
-<div class="line"><span class="lineno"> 2741</span>      <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, buf);</div>
-<div class="line"><span class="lineno"> 2742</span>    }</div>
-<div class="line"><span class="lineno"> 2743</span>  }</div>
-<div class="line"><span class="lineno"> 2744</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;gpgcharset);</div>
-<div class="line"><span class="lineno"> 2745</span> </div>
-<div class="line"><span class="lineno"> 2746</span>  b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = (maybe_goodsig &amp;&amp; have_any_sigs);</div>
-<div class="line"><span class="lineno"> 2747</span> </div>
-<div class="line"><span class="lineno"> 2748</span>  <span class="keywordflow">if</span> (needpass == -1)</div>
-<div class="line"><span class="lineno"> 2749</span>  {</div>
-<div class="line"><span class="lineno"> 2750</span>    <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Error: could not find beginning of PGP message --]\n\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2751</span>    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno"> 2752</span>  }</div>
-<div class="line"><span class="lineno"> 2753</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Leaving handler\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2754</span> </div>
-<div class="line"><span class="lineno"> 2755</span>  <span class="keywordflow">return</span> err;</div>
-<div class="line"><span class="lineno"> 2756</span>}</div>
+<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l02470">2470</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2471</span>{</div>
+<div class="line"><span class="lineno"> 2472</span>  <span class="keywordtype">int</span> needpass = -1;</div>
+<div class="line"><span class="lineno"> 2473</span>  <span class="keywordtype">bool</span> pgp_keyblock = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2474</span>  <span class="keywordtype">bool</span> clearsign = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2475</span>  <span class="keywordtype">long</span> bytes;</div>
+<div class="line"><span class="lineno"> 2476</span>  LOFF_T last_pos;</div>
+<div class="line"><span class="lineno"> 2477</span>  LOFF_T block_begin;</div>
+<div class="line"><span class="lineno"> 2478</span>  LOFF_T block_end;</div>
+<div class="line"><span class="lineno"> 2479</span>  <span class="keywordtype">char</span> buf[8192] = { 0 };</div>
+<div class="line"><span class="lineno"> 2480</span>  FILE *fp_out = NULL;</div>
+<div class="line"><span class="lineno"> 2481</span> </div>
+<div class="line"><span class="lineno"> 2482</span>  gpgme_error_t err = GPG_ERR_NO_ERROR;</div>
+<div class="line"><span class="lineno"> 2483</span>  gpgme_data_t armored_data = NULL;</div>
+<div class="line"><span class="lineno"> 2484</span> </div>
+<div class="line"><span class="lineno"> 2485</span>  <span class="keywordtype">bool</span> maybe_goodsig = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2486</span>  <span class="keywordtype">bool</span> have_any_sigs = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2487</span> </div>
+<div class="line"><span class="lineno"> 2488</span>  <span class="keywordtype">char</span> body_charset[256] = { 0 }; <span class="comment">/* Only used for clearsigned messages. */</span></div>
+<div class="line"><span class="lineno"> 2489</span>  <span class="keywordtype">char</span> *gpgcharset = NULL;</div>
+<div class="line"><span class="lineno"> 2490</span> </div>
+<div class="line"><span class="lineno"> 2491</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Entering handler\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2492</span> </div>
+<div class="line"><span class="lineno"> 2493</span>  <span class="comment">/* For clearsigned messages we won&#39;t be able to get a character set</span></div>
+<div class="line"><span class="lineno"> 2494</span><span class="comment">   * but we know that this may only be text thus we assume Latin-1 here. */</span></div>
+<div class="line"><span class="lineno"> 2495</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="email_2body_8c.html#a4a63ed39ada6cca40f6890ef06950059">mutt_body_get_charset</a>(b, body_charset, <span class="keyword">sizeof</span>(body_charset)))</div>
+<div class="line"><span class="lineno"> 2496</span>    <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(body_charset, <span class="stringliteral">&quot;iso-8859-1&quot;</span>, <span class="keyword">sizeof</span>(body_charset));</div>
+<div class="line"><span class="lineno"> 2497</span> </div>
+<div class="line"><span class="lineno"> 2498</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
+<div class="line"><span class="lineno"> 2499</span>  {</div>
+<div class="line"><span class="lineno"> 2500</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2501</span>  }</div>
+<div class="line"><span class="lineno"> 2502</span>  last_pos = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
+<div class="line"><span class="lineno"> 2503</span> </div>
+<div class="line"><span class="lineno"> 2504</span>  <span class="keywordflow">for</span> (bytes = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>; bytes &gt; 0;)</div>
+<div class="line"><span class="lineno"> 2505</span>  {</div>
+<div class="line"><span class="lineno"> 2506</span>    <span class="comment">// record before the fgets in case it is a BEGIN block</span></div>
+<div class="line"><span class="lineno"> 2507</span>    block_begin = last_pos;</div>
+<div class="line"><span class="lineno"> 2508</span> </div>
+<div class="line"><span class="lineno"> 2509</span>    <span class="keywordflow">if</span> (!fgets(buf, <span class="keyword">sizeof</span>(buf), state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>))</div>
+<div class="line"><span class="lineno"> 2510</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2511</span> </div>
+<div class="line"><span class="lineno"> 2512</span>    LOFF_T offset = ftello(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
+<div class="line"><span class="lineno"> 2513</span>    <span class="keywordflow">if</span> (offset &lt; 0)</div>
+<div class="line"><span class="lineno"> 2514</span>    {</div>
+<div class="line"><span class="lineno"> 2515</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;ftello() failed on fd %d\n&quot;</span>, fileno(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>));</div>
+<div class="line"><span class="lineno"> 2516</span>      offset = 0;</div>
+<div class="line"><span class="lineno"> 2517</span>    }</div>
+<div class="line"><span class="lineno"> 2518</span>    bytes -= (offset - last_pos); <span class="comment">/* don&#39;t rely on mutt_str_len(buf) */</span></div>
+<div class="line"><span class="lineno"> 2519</span>    last_pos = offset;</div>
+<div class="line"><span class="lineno"> 2520</span> </div>
+<div class="line"><span class="lineno"> 2521</span>    <span class="keywordtype">size_t</span> plen = <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(buf, <span class="stringliteral">&quot;-----BEGIN PGP &quot;</span>);</div>
+<div class="line"><span class="lineno"> 2522</span>    <span class="keywordflow">if</span> (plen != 0)</div>
+<div class="line"><span class="lineno"> 2523</span>    {</div>
+<div class="line"><span class="lineno"> 2524</span>      needpass = 0;</div>
+<div class="line"><span class="lineno"> 2525</span>      clearsign = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2526</span>      pgp_keyblock = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2527</span> </div>
+<div class="line"><span class="lineno"> 2528</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="crypt__gpgme_8c.html#affb41485e4cf045fe3f34a388846ec1d">MESSAGE</a>(buf + plen))</div>
+<div class="line"><span class="lineno"> 2529</span>      {</div>
+<div class="line"><span class="lineno"> 2530</span>        needpass = 1;</div>
+<div class="line"><span class="lineno"> 2531</span>      }</div>
+<div class="line"><span class="lineno"> 2532</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="crypt__gpgme_8c.html#a704d35681bc3f3a349721e2c69426405">SIGNED_MESSAGE</a>(buf + plen))</div>
+<div class="line"><span class="lineno"> 2533</span>      {</div>
+<div class="line"><span class="lineno"> 2534</span>        clearsign = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2535</span>      }</div>
+<div class="line"><span class="lineno"> 2536</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_define" href="crypt__gpgme_8c.html#aa313b6df071b5718005a87f7e33d2da6">PUBLIC_KEY_BLOCK</a>(buf + plen))</div>
+<div class="line"><span class="lineno"> 2537</span>      {</div>
+<div class="line"><span class="lineno"> 2538</span>        pgp_keyblock = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2539</span>      }</div>
+<div class="line"><span class="lineno"> 2540</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2541</span>      {</div>
+<div class="line"><span class="lineno"> 2542</span>        <span class="comment">/* XXX we may wish to recode here */</span></div>
+<div class="line"><span class="lineno"> 2543</span>        <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>)</div>
+<div class="line"><span class="lineno"> 2544</span>          <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
+<div class="line"><span class="lineno"> 2545</span>        <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, buf);</div>
+<div class="line"><span class="lineno"> 2546</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2547</span>      }</div>
+<div class="line"><span class="lineno"> 2548</span> </div>
+<div class="line"><span class="lineno"> 2549</span>      <span class="comment">/* Find the end of armored block. */</span></div>
+<div class="line"><span class="lineno"> 2550</span>      <span class="keywordflow">while</span> ((bytes &gt; 0) &amp;&amp; (fgets(buf, <span class="keyword">sizeof</span>(buf) - 1, state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>) != NULL))</div>
+<div class="line"><span class="lineno"> 2551</span>      {</div>
+<div class="line"><span class="lineno"> 2552</span>        offset = ftello(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
+<div class="line"><span class="lineno"> 2553</span>        <span class="keywordflow">if</span> (offset &lt; 0)</div>
+<div class="line"><span class="lineno"> 2554</span>        {</div>
+<div class="line"><span class="lineno"> 2555</span>          <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;ftello() failed on fd %d\n&quot;</span>, fileno(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>));</div>
+<div class="line"><span class="lineno"> 2556</span>          offset = 0;</div>
+<div class="line"><span class="lineno"> 2557</span>        }</div>
+<div class="line"><span class="lineno"> 2558</span>        bytes -= (offset - last_pos); <span class="comment">/* don&#39;t rely on mutt_strlen(buf) */</span></div>
+<div class="line"><span class="lineno"> 2559</span>        last_pos = offset;</div>
+<div class="line"><span class="lineno"> 2560</span> </div>
+<div class="line"><span class="lineno"> 2561</span>        <span class="keywordflow">if</span> (needpass &amp;&amp; <a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;-----END PGP MESSAGE-----\n&quot;</span>, buf))</div>
+<div class="line"><span class="lineno"> 2562</span>        {</div>
+<div class="line"><span class="lineno"> 2563</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2564</span>        }</div>
+<div class="line"><span class="lineno"> 2565</span> </div>
+<div class="line"><span class="lineno"> 2566</span>        <span class="keywordflow">if</span> (!needpass &amp;&amp; (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;-----END PGP SIGNATURE-----\n&quot;</span>, buf) ||</div>
+<div class="line"><span class="lineno"> 2567</span>                          <a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;-----END PGP PUBLIC KEY BLOCK-----\n&quot;</span>, buf)))</div>
+<div class="line"><span class="lineno"> 2568</span>        {</div>
+<div class="line"><span class="lineno"> 2569</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2570</span>        }</div>
+<div class="line"><span class="lineno"> 2571</span> </div>
+<div class="line"><span class="lineno"> 2572</span>        <span class="comment">// remember optional Charset: armor header as defined by rfc4880</span></div>
+<div class="line"><span class="lineno"> 2573</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(<span class="stringliteral">&quot;Charset: &quot;</span>, buf, 9))</div>
+<div class="line"><span class="lineno"> 2574</span>        {</div>
+<div class="line"><span class="lineno"> 2575</span>          <span class="keywordtype">size_t</span> l = 0;</div>
+<div class="line"><span class="lineno"> 2576</span>          <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;gpgcharset);</div>
+<div class="line"><span class="lineno"> 2577</span>          gpgcharset = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(buf + 9);</div>
+<div class="line"><span class="lineno"> 2578</span>          <span class="keywordflow">if</span> ((l = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(gpgcharset)) &gt; 0 &amp;&amp; gpgcharset[l - 1] == <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><span class="lineno"> 2579</span>            gpgcharset[l - 1] = 0;</div>
+<div class="line"><span class="lineno"> 2580</span>          <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2charset_8c.html#a05daa8adc69c533f5ab46ae98a2b71bc">mutt_ch_check_charset</a>(gpgcharset, 0))</div>
+<div class="line"><span class="lineno"> 2581</span>            <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;gpgcharset, <span class="stringliteral">&quot;UTF-8&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2582</span>        }</div>
+<div class="line"><span class="lineno"> 2583</span>      }</div>
+<div class="line"><span class="lineno"> 2584</span>      block_end = ftello(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>);</div>
+<div class="line"><span class="lineno"> 2585</span>      <span class="keywordflow">if</span> (block_end &lt; 0)</div>
+<div class="line"><span class="lineno"> 2586</span>      {</div>
+<div class="line"><span class="lineno"> 2587</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;ftello() failed on fd %d\n&quot;</span>, fileno(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>));</div>
+<div class="line"><span class="lineno"> 2588</span>        block_end = 0;</div>
+<div class="line"><span class="lineno"> 2589</span>      }</div>
+<div class="line"><span class="lineno"> 2590</span> </div>
+<div class="line"><span class="lineno"> 2591</span>      have_any_sigs = (have_any_sigs || (clearsign &amp;&amp; (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#abfcaf3ae3b8541263634aec97ee65aeb">STATE_VERIFY</a>)));</div>
+<div class="line"><span class="lineno"> 2592</span> </div>
+<div class="line"><span class="lineno"> 2593</span>      <span class="comment">/* Copy PGP material to an data container */</span></div>
+<div class="line"><span class="lineno"> 2594</span>      armored_data = <a class="code hl_function" href="crypt__gpgme_8c.html#a9e4c3751a7e9290b83db346a58f9fc95">file_to_data_object</a>(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, block_begin, block_end - block_begin);</div>
+<div class="line"><span class="lineno"> 2595</span>      fseeko(state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, block_end, 0);</div>
+<div class="line"><span class="lineno"> 2596</span> </div>
+<div class="line"><span class="lineno"> 2597</span>      <span class="comment">/* Invoke PGP if needed */</span></div>
+<div class="line"><span class="lineno"> 2598</span>      <span class="keywordflow">if</span> (pgp_keyblock)</div>
+<div class="line"><span class="lineno"> 2599</span>      {</div>
+<div class="line"><span class="lineno"> 2600</span>        <a class="code hl_function" href="crypt__gpgme_8c.html#acf99c22e68257d9ff91a5cefb5590370">pgp_gpgme_extract_keys</a>(armored_data, &amp;fp_out);</div>
+<div class="line"><span class="lineno"> 2601</span>      }</div>
+<div class="line"><span class="lineno"> 2602</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!clearsign || (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#abfcaf3ae3b8541263634aec97ee65aeb">STATE_VERIFY</a>))</div>
+<div class="line"><span class="lineno"> 2603</span>      {</div>
+<div class="line"><span class="lineno"> 2604</span>        gpgme_data_t plaintext = <a class="code hl_function" href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a>();</div>
+<div class="line"><span class="lineno"> 2605</span>        gpgme_ctx_t ctx = <a class="code hl_function" href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2606</span> </div>
+<div class="line"><span class="lineno"> 2607</span>        <span class="keywordflow">if</span> (clearsign)</div>
+<div class="line"><span class="lineno"> 2608</span>        {</div>
+<div class="line"><span class="lineno"> 2609</span>          err = gpgme_op_verify(ctx, armored_data, NULL, plaintext);</div>
+<div class="line"><span class="lineno"> 2610</span>        }</div>
+<div class="line"><span class="lineno"> 2611</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2612</span>        {</div>
+<div class="line"><span class="lineno"> 2613</span>          err = gpgme_op_decrypt_verify(ctx, armored_data, plaintext);</div>
+<div class="line"><span class="lineno"> 2614</span>          <span class="keywordflow">if</span> (gpg_err_code(err) == GPG_ERR_NO_DATA)</div>
+<div class="line"><span class="lineno"> 2615</span>          {</div>
+<div class="line"><span class="lineno"> 2616</span>            <span class="comment">/* Decrypt verify can&#39;t handle signed only messages. */</span></div>
+<div class="line"><span class="lineno"> 2617</span>            gpgme_data_seek(armored_data, 0, SEEK_SET);</div>
+<div class="line"><span class="lineno"> 2618</span>            <span class="comment">/* Must release plaintext so that we supply an uninitialized object. */</span></div>
+<div class="line"><span class="lineno"> 2619</span>            gpgme_data_release(plaintext);</div>
+<div class="line"><span class="lineno"> 2620</span>            plaintext = <a class="code hl_function" href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a>();</div>
+<div class="line"><span class="lineno"> 2621</span>            err = gpgme_op_verify(ctx, armored_data, NULL, plaintext);</div>
+<div class="line"><span class="lineno"> 2622</span>          }</div>
+<div class="line"><span class="lineno"> 2623</span>        }</div>
+<div class="line"><span class="lineno"> 2624</span>        <a class="code hl_function" href="crypt__gpgme_8c.html#acde3260a9e30d9ffd4fa5a62f19620a9">redraw_if_needed</a>(ctx);</div>
+<div class="line"><span class="lineno"> 2625</span> </div>
+<div class="line"><span class="lineno"> 2626</span>        gpgme_decrypt_result_t result = gpgme_op_decrypt_result(ctx);</div>
+<div class="line"><span class="lineno"> 2627</span>        <span class="keywordflow">if</span> (result &amp;&amp; (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>))</div>
+<div class="line"><span class="lineno"> 2628</span>          <a class="code hl_function" href="crypt__gpgme_8c.html#a3879c3921ab31de008d3383587d6fa83">show_encryption_info</a>(state, result);</div>
+<div class="line"><span class="lineno"> 2629</span> </div>
+<div class="line"><span class="lineno"> 2630</span>        <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
+<div class="line"><span class="lineno"> 2631</span>        {</div>
+<div class="line"><span class="lineno"> 2632</span>          <span class="keywordtype">char</span> errbuf[200] = { 0 };</div>
+<div class="line"><span class="lineno"> 2633</span> </div>
+<div class="line"><span class="lineno"> 2634</span>          snprintf(errbuf, <span class="keyword">sizeof</span>(errbuf) - 1,</div>
+<div class="line"><span class="lineno"> 2635</span>                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: decryption/verification failed: %s\n&quot;</span>), gpgme_strerror(err));</div>
+<div class="line"><span class="lineno"> 2636</span>          <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, errbuf);</div>
+<div class="line"><span class="lineno"> 2637</span>        }</div>
+<div class="line"><span class="lineno"> 2638</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2639</span>        {</div>
+<div class="line"><span class="lineno"> 2640</span>          <span class="comment">/* Decryption/Verification succeeded */</span></div>
+<div class="line"><span class="lineno"> 2641</span> </div>
+<div class="line"><span class="lineno"> 2642</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;PGP message successfully decrypted&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2643</span> </div>
+<div class="line"><span class="lineno"> 2644</span>          <span class="keywordtype">bool</span> sig_stat = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2645</span>          <span class="keywordtype">char</span> *tmpfname = NULL;</div>
+<div class="line"><span class="lineno"> 2646</span> </div>
+<div class="line"><span class="lineno"> 2647</span>          <span class="comment">/* Check whether signatures have been verified.  */</span></div>
+<div class="line"><span class="lineno"> 2648</span>          gpgme_verify_result_t verify_result = gpgme_op_verify_result(ctx);</div>
+<div class="line"><span class="lineno"> 2649</span>          <span class="keywordflow">if</span> (verify_result-&gt;signatures)</div>
+<div class="line"><span class="lineno"> 2650</span>            sig_stat = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2651</span> </div>
+<div class="line"><span class="lineno"> 2652</span>          have_any_sigs = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2653</span>          maybe_goodsig = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2654</span>          <span class="keywordflow">if</span> ((state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>) &amp;&amp; sig_stat)</div>
+<div class="line"><span class="lineno"> 2655</span>          {</div>
+<div class="line"><span class="lineno"> 2656</span>            <span class="keywordtype">int</span> res, idx;</div>
+<div class="line"><span class="lineno"> 2657</span>            <span class="keywordtype">bool</span> anybad = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2658</span> </div>
+<div class="line"><span class="lineno"> 2659</span>            <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Begin signature information --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2660</span>            have_any_sigs = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2661</span>            <span class="keywordflow">for</span> (idx = 0; (res = <a class="code hl_function" href="crypt__gpgme_8c.html#af1694fde35a32f9a89d9a97a82f3a221">show_one_sig_status</a>(ctx, idx, state)) != -1; idx++)</div>
+<div class="line"><span class="lineno"> 2662</span>            {</div>
+<div class="line"><span class="lineno"> 2663</span>              <span class="keywordflow">if</span> (res == 1)</div>
+<div class="line"><span class="lineno"> 2664</span>                anybad = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2665</span>            }</div>
+<div class="line"><span class="lineno"> 2666</span>            <span class="keywordflow">if</span> (!anybad &amp;&amp; idx)</div>
+<div class="line"><span class="lineno"> 2667</span>              maybe_goodsig = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2668</span> </div>
+<div class="line"><span class="lineno"> 2669</span>            <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- End signature information --]\n\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2670</span>          }</div>
+<div class="line"><span class="lineno"> 2671</span> </div>
+<div class="line"><span class="lineno"> 2672</span>          tmpfname = <a class="code hl_function" href="crypt__gpgme_8c.html#aa6b240b5ee594de46af684f88b1ad05d">data_object_to_tempfile</a>(plaintext, &amp;fp_out);</div>
+<div class="line"><span class="lineno"> 2673</span>          <span class="keywordflow">if</span> (tmpfname)</div>
+<div class="line"><span class="lineno"> 2674</span>          {</div>
+<div class="line"><span class="lineno"> 2675</span>            unlink(tmpfname);</div>
+<div class="line"><span class="lineno"> 2676</span>            <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;tmpfname);</div>
+<div class="line"><span class="lineno"> 2677</span>          }</div>
+<div class="line"><span class="lineno"> 2678</span>          <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2679</span>          {</div>
+<div class="line"><span class="lineno"> 2680</span>            <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
+<div class="line"><span class="lineno"> 2681</span>            <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error: copy data failed\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2682</span>          }</div>
+<div class="line"><span class="lineno"> 2683</span>        }</div>
+<div class="line"><span class="lineno"> 2684</span>        gpgme_data_release(plaintext);</div>
+<div class="line"><span class="lineno"> 2685</span>        gpgme_release(ctx);</div>
+<div class="line"><span class="lineno"> 2686</span>      }</div>
+<div class="line"><span class="lineno"> 2687</span> </div>
+<div class="line"><span class="lineno"> 2688</span>      <span class="comment">/* Now, copy cleartext to the screen.  NOTE - we expect that PGP</span></div>
+<div class="line"><span class="lineno"> 2689</span><span class="comment">       * outputs utf-8 cleartext.  This may not always be true, but it</span></div>
+<div class="line"><span class="lineno"> 2690</span><span class="comment">       * seems to be a reasonable guess.  */</span></div>
+<div class="line"><span class="lineno"> 2691</span>      <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
+<div class="line"><span class="lineno"> 2692</span>      {</div>
+<div class="line"><span class="lineno"> 2693</span>        <span class="keywordflow">if</span> (needpass)</div>
+<div class="line"><span class="lineno"> 2694</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- BEGIN PGP MESSAGE --]\n\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2695</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pgp_keyblock)</div>
+<div class="line"><span class="lineno"> 2696</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- BEGIN PGP PUBLIC KEY BLOCK --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2697</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2698</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- BEGIN PGP SIGNED MESSAGE --]\n\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2699</span>      }</div>
+<div class="line"><span class="lineno"> 2700</span> </div>
+<div class="line"><span class="lineno"> 2701</span>      <span class="keywordflow">if</span> (clearsign)</div>
+<div class="line"><span class="lineno"> 2702</span>      {</div>
+<div class="line"><span class="lineno"> 2703</span>        <a class="code hl_function" href="crypt__gpgme_8c.html#af036495f3eb3a45ea4c5f59112f5b211">copy_clearsigned</a>(armored_data, state, body_charset);</div>
+<div class="line"><span class="lineno"> 2704</span>      }</div>
+<div class="line"><span class="lineno"> 2705</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fp_out)</div>
+<div class="line"><span class="lineno"> 2706</span>      {</div>
+<div class="line"><span class="lineno"> 2707</span>        <span class="keywordtype">int</span> c;</div>
+<div class="line"><span class="lineno"> 2708</span>        <span class="keywordtype">char</span> *expected_charset = gpgcharset &amp;&amp; *gpgcharset ? gpgcharset : <span class="stringliteral">&quot;utf-8&quot;</span>;</div>
+<div class="line"><span class="lineno"> 2709</span>        rewind(fp_out);</div>
+<div class="line"><span class="lineno"> 2710</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structFgetConv.html">FgetConv</a> *fc = <a class="code hl_function" href="mutt_2charset_8c.html#acf9480125d36a09af9c0e5c8c13eaed1">mutt_ch_fgetconv_open</a>(fp_out, expected_charset,</div>
+<div class="line"><span class="lineno"> 2711</span>                                                    <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>(), <a class="code hl_define" href="mutt_2charset_8h.html#a1807a22585916adccafa5e09bda9b6a7">MUTT_ICONV_HOOK_FROM</a>);</div>
+<div class="line"><span class="lineno"> 2712</span>        <span class="keywordflow">while</span> ((c = <a class="code hl_function" href="mutt_2charset_8c.html#a90191f2589de2c605dd8c13b496ad3e1">mutt_ch_fgetconv</a>(fc)) != EOF)</div>
+<div class="line"><span class="lineno"> 2713</span>        {</div>
+<div class="line"><span class="lineno"> 2714</span>          <a class="code hl_define" href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a>(state, c);</div>
+<div class="line"><span class="lineno"> 2715</span>          <span class="keywordflow">if</span> ((c == <span class="charliteral">&#39;\n&#39;</span>) &amp;&amp; state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>)</div>
+<div class="line"><span class="lineno"> 2716</span>            <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
+<div class="line"><span class="lineno"> 2717</span>        }</div>
+<div class="line"><span class="lineno"> 2718</span>        <a class="code hl_function" href="mutt_2charset_8c.html#af3ab5375dc558a241b9e0d5787954dc5">mutt_ch_fgetconv_close</a>(&amp;fc);</div>
+<div class="line"><span class="lineno"> 2719</span>      }</div>
+<div class="line"><span class="lineno"> 2720</span> </div>
+<div class="line"><span class="lineno"> 2721</span>      <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
+<div class="line"><span class="lineno"> 2722</span>      {</div>
+<div class="line"><span class="lineno"> 2723</span>        <a class="code hl_define" href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a>(state, <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line"><span class="lineno"> 2724</span>        <span class="keywordflow">if</span> (needpass)</div>
+<div class="line"><span class="lineno"> 2725</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- END PGP MESSAGE --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2726</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pgp_keyblock)</div>
+<div class="line"><span class="lineno"> 2727</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- END PGP PUBLIC KEY BLOCK --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2728</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2729</span>          <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- END PGP SIGNED MESSAGE --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2730</span>      }</div>
+<div class="line"><span class="lineno"> 2731</span> </div>
+<div class="line"><span class="lineno"> 2732</span>      <span class="comment">// Multiple PGP blocks can exist, so clean these up in each loop</span></div>
+<div class="line"><span class="lineno"> 2733</span>      gpgme_data_release(armored_data);</div>
+<div class="line"><span class="lineno"> 2734</span>      <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
+<div class="line"><span class="lineno"> 2735</span>    }</div>
+<div class="line"><span class="lineno"> 2736</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2737</span>    {</div>
+<div class="line"><span class="lineno"> 2738</span>      <span class="comment">/* A traditional PGP part may mix signed and unsigned content */</span></div>
+<div class="line"><span class="lineno"> 2739</span>      <span class="comment">/* XXX we may wish to recode here */</span></div>
+<div class="line"><span class="lineno"> 2740</span>      <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>)</div>
+<div class="line"><span class="lineno"> 2741</span>        <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, state-&gt;<a class="code hl_variable" href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">prefix</a>);</div>
+<div class="line"><span class="lineno"> 2742</span>      <a class="code hl_define" href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a>(state, buf);</div>
+<div class="line"><span class="lineno"> 2743</span>    }</div>
+<div class="line"><span class="lineno"> 2744</span>  }</div>
+<div class="line"><span class="lineno"> 2745</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;gpgcharset);</div>
+<div class="line"><span class="lineno"> 2746</span> </div>
+<div class="line"><span class="lineno"> 2747</span>  b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = (maybe_goodsig &amp;&amp; have_any_sigs);</div>
+<div class="line"><span class="lineno"> 2748</span> </div>
+<div class="line"><span class="lineno"> 2749</span>  <span class="keywordflow">if</span> (needpass == -1)</div>
+<div class="line"><span class="lineno"> 2750</span>  {</div>
+<div class="line"><span class="lineno"> 2751</span>    <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Error: could not find beginning of PGP message --]\n\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2752</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno"> 2753</span>  }</div>
+<div class="line"><span class="lineno"> 2754</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Leaving handler\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2755</span> </div>
+<div class="line"><span class="lineno"> 2756</span>  <span class="keywordflow">return</span> err;</div>
+<div class="line"><span class="lineno"> 2757</span>}</div>
 <div class="ttc" id="aconfig__cache_8c_html_a03027fb835011539c3cbfeb1b0fa8811"><div class="ttname"><a href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a></div><div class="ttdeci">const char * cc_charset(void)</div><div class="ttdoc">Get the cached value of $charset.</div><div class="ttdef"><b>Definition</b> <a href="config__cache_8c_source.html#l00116">config_cache.c:116</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_a3879c3921ab31de008d3383587d6fa83"><div class="ttname"><a href="crypt__gpgme_8c.html#a3879c3921ab31de008d3383587d6fa83">show_encryption_info</a></div><div class="ttdeci">static void show_encryption_info(struct State *state, gpgme_decrypt_result_t result)</div><div class="ttdoc">Show encryption information.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l01433">crypt_gpgme.c:1433</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_a433e35eb7b66902025d1a6eced7c17c8"><div class="ttname"><a href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a></div><div class="ttdeci">static gpgme_data_t create_gpgme_data(void)</div><div class="ttdoc">Create a new GPGME data object.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00400">crypt_gpgme.c:400</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_a54ca8638b13c6da904a48009a8bba358"><div class="ttname"><a href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a></div><div class="ttdeci">gpgme_ctx_t create_gpgme_context(bool for_smime)</div><div class="ttdoc">Create a new GPGME context.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00361">crypt_gpgme.c:361</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_a704d35681bc3f3a349721e2c69426405"><div class="ttname"><a href="crypt__gpgme_8c.html#a704d35681bc3f3a349721e2c69426405">SIGNED_MESSAGE</a></div><div class="ttdeci">#define SIGNED_MESSAGE(_y)</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00102">crypt_gpgme.c:102</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_a9e4c3751a7e9290b83db346a58f9fc95"><div class="ttname"><a href="crypt__gpgme_8c.html#a9e4c3751a7e9290b83db346a58f9fc95">file_to_data_object</a></div><div class="ttdeci">static gpgme_data_t file_to_data_object(FILE *fp, long offset, size_t length)</div><div class="ttdoc">Create GPGME data object from file.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00493">crypt_gpgme.c:493</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_aa313b6df071b5718005a87f7e33d2da6"><div class="ttname"><a href="crypt__gpgme_8c.html#aa313b6df071b5718005a87f7e33d2da6">PUBLIC_KEY_BLOCK</a></div><div class="ttdeci">#define PUBLIC_KEY_BLOCK(_y)</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00103">crypt_gpgme.c:103</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_aa6b240b5ee594de46af684f88b1ad05d"><div class="ttname"><a href="crypt__gpgme_8c.html#aa6b240b5ee594de46af684f88b1ad05d">data_object_to_tempfile</a></div><div class="ttdeci">static char * data_object_to_tempfile(gpgme_data_t data, FILE **fp_ret)</div><div class="ttdoc">Copy a data object to a temporary file.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00563">crypt_gpgme.c:563</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_acde3260a9e30d9ffd4fa5a62f19620a9"><div class="ttname"><a href="crypt__gpgme_8c.html#acde3260a9e30d9ffd4fa5a62f19620a9">redraw_if_needed</a></div><div class="ttdeci">static void redraw_if_needed(gpgme_ctx_t ctx)</div><div class="ttdoc">Accommodate for a redraw if needed.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00121">crypt_gpgme.c:121</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_acf99c22e68257d9ff91a5cefb5590370"><div class="ttname"><a href="crypt__gpgme_8c.html#acf99c22e68257d9ff91a5cefb5590370">pgp_gpgme_extract_keys</a></div><div class="ttdeci">static int pgp_gpgme_extract_keys(gpgme_data_t keydata, FILE **fp)</div><div class="ttdoc">Write PGP keys to a file.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l02111">crypt_gpgme.c:2111</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_af036495f3eb3a45ea4c5f59112f5b211"><div class="ttname"><a href="crypt__gpgme_8c.html#af036495f3eb3a45ea4c5f59112f5b211">copy_clearsigned</a></div><div class="ttdeci">static void copy_clearsigned(gpgme_data_t data, struct State *state, char *charset)</div><div class="ttdoc">Copy a clearsigned message.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l02413">crypt_gpgme.c:2413</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_af1694fde35a32f9a89d9a97a82f3a221"><div class="ttname"><a href="crypt__gpgme_8c.html#af1694fde35a32f9a89d9a97a82f3a221">show_one_sig_status</a></div><div class="ttdeci">static int show_one_sig_status(gpgme_ctx_t ctx, int idx, struct State *state)</div><div class="ttdoc">Show information about one signature.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l01458">crypt_gpgme.c:1458</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_affb41485e4cf045fe3f34a388846ec1d"><div class="ttname"><a href="crypt__gpgme_8c.html#affb41485e4cf045fe3f34a388846ec1d">MESSAGE</a></div><div class="ttdeci">#define MESSAGE(_y)</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00101">crypt_gpgme.c:101</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_a3879c3921ab31de008d3383587d6fa83"><div class="ttname"><a href="crypt__gpgme_8c.html#a3879c3921ab31de008d3383587d6fa83">show_encryption_info</a></div><div class="ttdeci">static void show_encryption_info(struct State *state, gpgme_decrypt_result_t result)</div><div class="ttdoc">Show encryption information.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l01434">crypt_gpgme.c:1434</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_a433e35eb7b66902025d1a6eced7c17c8"><div class="ttname"><a href="crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8">create_gpgme_data</a></div><div class="ttdeci">static gpgme_data_t create_gpgme_data(void)</div><div class="ttdoc">Create a new GPGME data object.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00401">crypt_gpgme.c:401</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_a54ca8638b13c6da904a48009a8bba358"><div class="ttname"><a href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a></div><div class="ttdeci">gpgme_ctx_t create_gpgme_context(bool for_smime)</div><div class="ttdoc">Create a new GPGME context.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00362">crypt_gpgme.c:362</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_a704d35681bc3f3a349721e2c69426405"><div class="ttname"><a href="crypt__gpgme_8c.html#a704d35681bc3f3a349721e2c69426405">SIGNED_MESSAGE</a></div><div class="ttdeci">#define SIGNED_MESSAGE(_y)</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00103">crypt_gpgme.c:103</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_a9e4c3751a7e9290b83db346a58f9fc95"><div class="ttname"><a href="crypt__gpgme_8c.html#a9e4c3751a7e9290b83db346a58f9fc95">file_to_data_object</a></div><div class="ttdeci">static gpgme_data_t file_to_data_object(FILE *fp, long offset, size_t length)</div><div class="ttdoc">Create GPGME data object from file.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00494">crypt_gpgme.c:494</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_aa313b6df071b5718005a87f7e33d2da6"><div class="ttname"><a href="crypt__gpgme_8c.html#aa313b6df071b5718005a87f7e33d2da6">PUBLIC_KEY_BLOCK</a></div><div class="ttdeci">#define PUBLIC_KEY_BLOCK(_y)</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00104">crypt_gpgme.c:104</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_aa6b240b5ee594de46af684f88b1ad05d"><div class="ttname"><a href="crypt__gpgme_8c.html#aa6b240b5ee594de46af684f88b1ad05d">data_object_to_tempfile</a></div><div class="ttdeci">static char * data_object_to_tempfile(gpgme_data_t data, FILE **fp_ret)</div><div class="ttdoc">Copy a data object to a temporary file.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00564">crypt_gpgme.c:564</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_acde3260a9e30d9ffd4fa5a62f19620a9"><div class="ttname"><a href="crypt__gpgme_8c.html#acde3260a9e30d9ffd4fa5a62f19620a9">redraw_if_needed</a></div><div class="ttdeci">static void redraw_if_needed(gpgme_ctx_t ctx)</div><div class="ttdoc">Accommodate for a redraw if needed.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00122">crypt_gpgme.c:122</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_acf99c22e68257d9ff91a5cefb5590370"><div class="ttname"><a href="crypt__gpgme_8c.html#acf99c22e68257d9ff91a5cefb5590370">pgp_gpgme_extract_keys</a></div><div class="ttdeci">static int pgp_gpgme_extract_keys(gpgme_data_t keydata, FILE **fp)</div><div class="ttdoc">Write PGP keys to a file.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l02112">crypt_gpgme.c:2112</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_af036495f3eb3a45ea4c5f59112f5b211"><div class="ttname"><a href="crypt__gpgme_8c.html#af036495f3eb3a45ea4c5f59112f5b211">copy_clearsigned</a></div><div class="ttdeci">static void copy_clearsigned(gpgme_data_t data, struct State *state, char *charset)</div><div class="ttdoc">Copy a clearsigned message.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l02414">crypt_gpgme.c:2414</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_af1694fde35a32f9a89d9a97a82f3a221"><div class="ttname"><a href="crypt__gpgme_8c.html#af1694fde35a32f9a89d9a97a82f3a221">show_one_sig_status</a></div><div class="ttdeci">static int show_one_sig_status(gpgme_ctx_t ctx, int idx, struct State *state)</div><div class="ttdoc">Show information about one signature.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l01459">crypt_gpgme.c:1459</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_affb41485e4cf045fe3f34a388846ec1d"><div class="ttname"><a href="crypt__gpgme_8c.html#affb41485e4cf045fe3f34a388846ec1d">MESSAGE</a></div><div class="ttdeci">#define MESSAGE(_y)</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00102">crypt_gpgme.c:102</a></div></div>
 <div class="ttc" id="aemail_2body_8c_html_a4a63ed39ada6cca40f6890ef06950059"><div class="ttname"><a href="email_2body_8c.html#a4a63ed39ada6cca40f6890ef06950059">mutt_body_get_charset</a></div><div class="ttdeci">char * mutt_body_get_charset(struct Body *b, char *buf, size_t buflen)</div><div class="ttdoc">Get a body&#39;s character set.</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8c_source.html#l00133">body.c:133</a></div></div>
-<div class="ttc" id="afile_8c_html_a6b60cb2044041374689e6e6641c5cc05"><div class="ttname"><a href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a></div><div class="ttdeci">bool mutt_file_seek(FILE *fp, LOFF_T offset, int whence)</div><div class="ttdoc">Wrapper for fseeko with error handling.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00655">file.c:655</a></div></div>
+<div class="ttc" id="afile_8c_html_a6b60cb2044041374689e6e6641c5cc05"><div class="ttname"><a href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a></div><div class="ttdeci">bool mutt_file_seek(FILE *fp, LOFF_T offset, int whence)</div><div class="ttdoc">Wrapper for fseeko with error handling.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00656">file.c:656</a></div></div>
 <div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00139">file.h:139</a></div></div>
-<div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00092">logging2.h:92</a></div></div>
-<div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00090">logging2.h:90</a></div></div>
-<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a></div><div class="ttdeci">@ LL_DEBUG2</div><div class="ttdoc">Log at debug level 2.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
-<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00044">logging2.h:44</a></div></div>
-<div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00062">memory.h:62</a></div></div>
-<div class="ttc" id="amutt_2charset_8c_html_a05daa8adc69c533f5ab46ae98a2b71bc"><div class="ttname"><a href="mutt_2charset_8c.html#a05daa8adc69c533f5ab46ae98a2b71bc">mutt_ch_check_charset</a></div><div class="ttdeci">bool mutt_ch_check_charset(const char *cs, bool strict)</div><div class="ttdoc">Does iconv understand a character set?</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8c_source.html#l00894">charset.c:894</a></div></div>
-<div class="ttc" id="amutt_2charset_8c_html_a90191f2589de2c605dd8c13b496ad3e1"><div class="ttname"><a href="mutt_2charset_8c.html#a90191f2589de2c605dd8c13b496ad3e1">mutt_ch_fgetconv</a></div><div class="ttdeci">int mutt_ch_fgetconv(struct FgetConv *fc)</div><div class="ttdoc">Convert a file&#39;s character set.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8c_source.html#l00980">charset.c:980</a></div></div>
-<div class="ttc" id="amutt_2charset_8c_html_acf9480125d36a09af9c0e5c8c13eaed1"><div class="ttname"><a href="mutt_2charset_8c.html#acf9480125d36a09af9c0e5c8c13eaed1">mutt_ch_fgetconv_open</a></div><div class="ttdeci">struct FgetConv * mutt_ch_fgetconv_open(FILE *fp, const char *from, const char *to, uint8_t flags)</div><div class="ttdoc">Prepare a file for charset conversion.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8c_source.html#l00933">charset.c:933</a></div></div>
-<div class="ttc" id="amutt_2charset_8c_html_af3ab5375dc558a241b9e0d5787954dc5"><div class="ttname"><a href="mutt_2charset_8c.html#af3ab5375dc558a241b9e0d5787954dc5">mutt_ch_fgetconv_close</a></div><div class="ttdeci">void mutt_ch_fgetconv_close(struct FgetConv **ptr)</div><div class="ttdoc">Close an fgetconv handle.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8c_source.html#l00962">charset.c:962</a></div></div>
-<div class="ttc" id="amutt_2charset_8h_html_a1807a22585916adccafa5e09bda9b6a7"><div class="ttname"><a href="mutt_2charset_8h.html#a1807a22585916adccafa5e09bda9b6a7">MUTT_ICONV_HOOK_FROM</a></div><div class="ttdeci">#define MUTT_ICONV_HOOK_FROM</div><div class="ttdoc">apply charset-hooks to fromcode</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8h_source.html#l00065">charset.h:65</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
+<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a></div><div class="ttdeci">@ LL_DEBUG2</div><div class="ttdoc">Log at debug level 2.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00046">logging2.h:46</a></div></div>
+<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
+<div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00063">memory.h:63</a></div></div>
+<div class="ttc" id="amutt_2charset_8c_html_a05daa8adc69c533f5ab46ae98a2b71bc"><div class="ttname"><a href="mutt_2charset_8c.html#a05daa8adc69c533f5ab46ae98a2b71bc">mutt_ch_check_charset</a></div><div class="ttdeci">bool mutt_ch_check_charset(const char *cs, bool strict)</div><div class="ttdoc">Does iconv understand a character set?</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8c_source.html#l00880">charset.c:880</a></div></div>
+<div class="ttc" id="amutt_2charset_8c_html_a90191f2589de2c605dd8c13b496ad3e1"><div class="ttname"><a href="mutt_2charset_8c.html#a90191f2589de2c605dd8c13b496ad3e1">mutt_ch_fgetconv</a></div><div class="ttdeci">int mutt_ch_fgetconv(struct FgetConv *fc)</div><div class="ttdoc">Convert a file&#39;s character set.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8c_source.html#l00966">charset.c:966</a></div></div>
+<div class="ttc" id="amutt_2charset_8c_html_acf9480125d36a09af9c0e5c8c13eaed1"><div class="ttname"><a href="mutt_2charset_8c.html#acf9480125d36a09af9c0e5c8c13eaed1">mutt_ch_fgetconv_open</a></div><div class="ttdeci">struct FgetConv * mutt_ch_fgetconv_open(FILE *fp, const char *from, const char *to, uint8_t flags)</div><div class="ttdoc">Prepare a file for charset conversion.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8c_source.html#l00919">charset.c:919</a></div></div>
+<div class="ttc" id="amutt_2charset_8c_html_af3ab5375dc558a241b9e0d5787954dc5"><div class="ttname"><a href="mutt_2charset_8c.html#af3ab5375dc558a241b9e0d5787954dc5">mutt_ch_fgetconv_close</a></div><div class="ttdeci">void mutt_ch_fgetconv_close(struct FgetConv **ptr)</div><div class="ttdoc">Close an fgetconv handle.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8c_source.html#l00948">charset.c:948</a></div></div>
+<div class="ttc" id="amutt_2charset_8h_html_a1807a22585916adccafa5e09bda9b6a7"><div class="ttname"><a href="mutt_2charset_8h.html#a1807a22585916adccafa5e09bda9b6a7">MUTT_ICONV_HOOK_FROM</a></div><div class="ttdeci">#define MUTT_ICONV_HOOK_FROM</div><div class="ttdoc">apply charset-hooks to fromcode</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8h_source.html#l00067">charset.h:67</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 <div class="ttc" id="amutt_2state_8c_html_a0d52430e63f8cffdd0e6a78182ad4385"><div class="ttname"><a href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a></div><div class="ttdeci">void state_attach_puts(struct State *state, const char *t)</div><div class="ttdoc">Write a string to the state.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8c_source.html#l00104">state.c:104</a></div></div>
 <div class="ttc" id="amutt_2state_8h_html_a0ea44a0777d9d2712ba6db4350f1e671"><div class="ttname"><a href="mutt_2state_8h.html#a0ea44a0777d9d2712ba6db4350f1e671">state_puts</a></div><div class="ttdeci">#define state_puts(STATE, STR)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00058">state.h:58</a></div></div>
 <div class="ttc" id="amutt_2state_8h_html_a2a4ce653367a744f47960bc30b42f3a7"><div class="ttname"><a href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a></div><div class="ttdeci">#define STATE_DISPLAY</div><div class="ttdoc">Output is displayed to the user.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00033">state.h:33</a></div></div>
 <div class="ttc" id="amutt_2state_8h_html_a511e4530400bb790de3fc76b44640e43"><div class="ttname"><a href="mutt_2state_8h.html#a511e4530400bb790de3fc76b44640e43">state_putc</a></div><div class="ttdeci">#define state_putc(STATE, STR)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00059">state.h:59</a></div></div>
 <div class="ttc" id="amutt_2state_8h_html_abfcaf3ae3b8541263634aec97ee65aeb"><div class="ttname"><a href="mutt_2state_8h.html#abfcaf3ae3b8541263634aec97ee65aeb">STATE_VERIFY</a></div><div class="ttdeci">#define STATE_VERIFY</div><div class="ttdoc">Perform signature verification.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00034">state.h:34</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00255">string.c:255</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00660">string.c:660</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00427">string.c:427</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a9bf968304f4f9b49e24215cb2e28d22d"><div class="ttname"><a href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a></div><div class="ttdeci">size_t mutt_str_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00232">string.c:232</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00498">string.c:498</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_ad20e00309de897a1e882fc7400335b83"><div class="ttname"><a href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a></div><div class="ttdeci">size_t mutt_str_copy(char *dest, const char *src, size_t dsize)</div><div class="ttdoc">Copy a string into a buffer (guaranteeing NUL-termination)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00581">string.c:581</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_af8c32ffc64dd55e92001a974a4be6bbf"><div class="ttname"><a href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a></div><div class="ttdeci">char * mutt_str_replace(char **p, const char *s)</div><div class="ttdoc">Replace one string with another.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00282">string.c:282</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00257">string.c:257</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00662">string.c:662</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00429">string.c:429</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a9bf968304f4f9b49e24215cb2e28d22d"><div class="ttname"><a href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a></div><div class="ttdeci">size_t mutt_str_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00234">string.c:234</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00500">string.c:500</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_ad20e00309de897a1e882fc7400335b83"><div class="ttname"><a href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a></div><div class="ttdeci">size_t mutt_str_copy(char *dest, const char *src, size_t dsize)</div><div class="ttdoc">Copy a string into a buffer (guaranteeing NUL-termination)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00583">string.c:583</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_af8c32ffc64dd55e92001a974a4be6bbf"><div class="ttname"><a href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a></div><div class="ttdeci">char * mutt_str_replace(char **p, const char *s)</div><div class="ttdoc">Replace one string with another.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00284">string.c:284</a></div></div>
 <div class="ttc" id="astructBody_html_a1969dfeb0a155ccb16153fe777a103b0"><div class="ttname"><a href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">Body::offset</a></div><div class="ttdeci">LOFF_T offset</div><div class="ttdoc">offset where the actual data begins</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00052">body.h:52</a></div></div>
 <div class="ttc" id="astructBody_html_a6f92d7ec8568ca04ae07931c56dd0790"><div class="ttname"><a href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">Body::length</a></div><div class="ttdeci">LOFF_T length</div><div class="ttdoc">length (in bytes) of attachment</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00053">body.h:53</a></div></div>
 <div class="ttc" id="astructBody_html_ae4b2706a5c4601ae1497a96e047d8f5e"><div class="ttname"><a href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">Body::goodsig</a></div><div class="ttdeci">bool goodsig</div><div class="ttdoc">Good cryptographic signature.</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00045">body.h:45</a></div></div>
-<div class="ttc" id="astructFgetConv_html"><div class="ttname"><a href="structFgetConv.html">FgetConv</a></div><div class="ttdoc">Cursor for converting a file&#39;s encoding.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8h_source.html#l00042">charset.h:43</a></div></div>
+<div class="ttc" id="astructFgetConv_html"><div class="ttname"><a href="structFgetConv.html">FgetConv</a></div><div class="ttdoc">Cursor for converting a file&#39;s encoding.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8h_source.html#l00044">charset.h:45</a></div></div>
 <div class="ttc" id="astructState_html_a5d855f7d518fde2ac4e8e409cbb24ad3"><div class="ttname"><a href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">State::flags</a></div><div class="ttdeci">StateFlags flags</div><div class="ttdoc">Flags, e.g. STATE_DISPLAY.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00052">state.h:52</a></div></div>
 <div class="ttc" id="astructState_html_a9cf7e1f0c5c12399def5ca38b13054ae"><div class="ttname"><a href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">State::fp_in</a></div><div class="ttdeci">FILE * fp_in</div><div class="ttdoc">File to read from.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00049">state.h:49</a></div></div>
 <div class="ttc" id="astructState_html_ac92c06846530ad9f3cde7e23d5789d76"><div class="ttname"><a href="structState.html#ac92c06846530ad9f3cde7e23d5789d76">State::prefix</a></div><div class="ttdeci">const char * prefix</div><div class="ttdoc">String to add to the beginning of each output line.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00051">state.h:51</a></div></div>
@@ -538,98 +538,98 @@ Functions</h2></td></tr>
 
 <p>Manage the MIME type "application/pgp" or "application/smime" - Implements <a class="el" href="structCryptModuleSpecs.html#a9d7b47fb748a7cdb4975f2dde8179a98">CryptModuleSpecs::application_handler()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l02854">2854</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2855</span>{</div>
-<div class="line"><span class="lineno"> 2856</span>  <span class="keywordtype">int</span> is_signed = 0;</div>
-<div class="line"><span class="lineno"> 2857</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno"> 2858</span> </div>
-<div class="line"><span class="lineno"> 2859</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Entering handler\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2860</span> </div>
-<div class="line"><span class="lineno"> 2861</span>  <span class="comment">/* clear out any mime headers before the handler, so they can&#39;t be spoofed. */</span></div>
-<div class="line"><span class="lineno"> 2862</span>  <a class="code hl_function" href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a>(&amp;b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>);</div>
-<div class="line"><span class="lineno"> 2863</span>  b-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2864</span>  FILE *fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 2865</span>  <span class="keywordflow">if</span> (!fp_out)</div>
-<div class="line"><span class="lineno"> 2866</span>  {</div>
-<div class="line"><span class="lineno"> 2867</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2868</span>    <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
-<div class="line"><span class="lineno"> 2869</span>    {</div>
-<div class="line"><span class="lineno"> 2870</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Error: could not create temporary file --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2871</span>    }</div>
-<div class="line"><span class="lineno"> 2872</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2873</span>  }</div>
-<div class="line"><span class="lineno"> 2874</span> </div>
-<div class="line"><span class="lineno"> 2875</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *tattach = <a class="code hl_function" href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a>(b, state, fp_out, <span class="keyword">true</span>, &amp;is_signed);</div>
-<div class="line"><span class="lineno"> 2876</span>  <span class="keywordflow">if</span> (tattach)</div>
-<div class="line"><span class="lineno"> 2877</span>  {</div>
-<div class="line"><span class="lineno"> 2878</span>    tattach-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = is_signed &gt; 0;</div>
-<div class="line"><span class="lineno"> 2879</span> </div>
-<div class="line"><span class="lineno"> 2880</span>    <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
-<div class="line"><span class="lineno"> 2881</span>    {</div>
-<div class="line"><span class="lineno"> 2882</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, is_signed ?</div>
-<div class="line"><span class="lineno"> 2883</span>                                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- The following data is S/MIME signed --]\n&quot;</span>) :</div>
-<div class="line"><span class="lineno"> 2884</span>                                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- The following data is S/MIME encrypted --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2885</span>      <a class="code hl_function" href="group__handler__api.html#ga7ccf06ce10b9aed658fcc6c7a40c64b8">mutt_protected_headers_handler</a>(tattach, state);</div>
-<div class="line"><span class="lineno"> 2886</span>    }</div>
-<div class="line"><span class="lineno"> 2887</span> </div>
-<div class="line"><span class="lineno"> 2888</span>    <span class="comment">/* Store any protected headers in the parent so they can be</span></div>
-<div class="line"><span class="lineno"> 2889</span><span class="comment">     * accessed for index updates after the handler recursion is done.</span></div>
-<div class="line"><span class="lineno"> 2890</span><span class="comment">     * This is done before the handler to prevent a nested encrypted</span></div>
-<div class="line"><span class="lineno"> 2891</span><span class="comment">     * handler from freeing the headers. */</span></div>
-<div class="line"><span class="lineno"> 2892</span>    <a class="code hl_function" href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a>(&amp;b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>);</div>
-<div class="line"><span class="lineno"> 2893</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>;</div>
-<div class="line"><span class="lineno"> 2894</span>    tattach-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a> = NULL;</div>
-<div class="line"><span class="lineno"> 2895</span> </div>
-<div class="line"><span class="lineno"> 2896</span>    FILE *fp_save = state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>;</div>
-<div class="line"><span class="lineno"> 2897</span>    state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_out;</div>
-<div class="line"><span class="lineno"> 2898</span>    rc = <a class="code hl_function" href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a>(tattach, state);</div>
-<div class="line"><span class="lineno"> 2899</span>    state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_save;</div>
-<div class="line"><span class="lineno"> 2900</span> </div>
-<div class="line"><span class="lineno"> 2901</span>    <span class="comment">/* Embedded multipart signed protected headers override the</span></div>
-<div class="line"><span class="lineno"> 2902</span><span class="comment">     * encrypted headers.  We need to do this after the handler so</span></div>
-<div class="line"><span class="lineno"> 2903</span><span class="comment">     * they can be printed in the pager. */</span></div>
-<div class="line"><span class="lineno"> 2904</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a>(tattach) &amp;&amp; tattach-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a> &amp;&amp; tattach-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>)</div>
-<div class="line"><span class="lineno"> 2905</span>    {</div>
-<div class="line"><span class="lineno"> 2906</span>      <a class="code hl_function" href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a>(&amp;b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>);</div>
-<div class="line"><span class="lineno"> 2907</span>      b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>;</div>
-<div class="line"><span class="lineno"> 2908</span>      tattach-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a> = NULL;</div>
-<div class="line"><span class="lineno"> 2909</span>    }</div>
-<div class="line"><span class="lineno"> 2910</span> </div>
-<div class="line"><span class="lineno"> 2911</span>    <span class="comment">/* if a multipart/signed is the _only_ sub-part of a multipart/encrypted,</span></div>
-<div class="line"><span class="lineno"> 2912</span><span class="comment">     * cache signature verification status.  */</span></div>
-<div class="line"><span class="lineno"> 2913</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a>(tattach) &amp;&amp; !tattach-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>)</div>
-<div class="line"><span class="lineno"> 2914</span>    {</div>
-<div class="line"><span class="lineno"> 2915</span>      b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a>;</div>
-<div class="line"><span class="lineno"> 2916</span>      <span class="keywordflow">if</span> (!b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a>)</div>
-<div class="line"><span class="lineno"> 2917</span>        b-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a>;</div>
-<div class="line"><span class="lineno"> 2918</span>    }</div>
-<div class="line"><span class="lineno"> 2919</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tattach-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a>)</div>
-<div class="line"><span class="lineno"> 2920</span>    {</div>
-<div class="line"><span class="lineno"> 2921</span>      b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2922</span>      b-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a>;</div>
-<div class="line"><span class="lineno"> 2923</span>    }</div>
-<div class="line"><span class="lineno"> 2924</span> </div>
-<div class="line"><span class="lineno"> 2925</span>    <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
-<div class="line"><span class="lineno"> 2926</span>    {</div>
-<div class="line"><span class="lineno"> 2927</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, is_signed ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- End of S/MIME signed data --]\n&quot;</span>) :</div>
-<div class="line"><span class="lineno"> 2928</span>                                           <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- End of S/MIME encrypted data --]\n&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2929</span>    }</div>
-<div class="line"><span class="lineno"> 2930</span> </div>
-<div class="line"><span class="lineno"> 2931</span>    <a class="code hl_function" href="email_2body_8c.html#a129af1c316fcbc26b55fb48957bab2cb">mutt_body_free</a>(&amp;tattach);</div>
-<div class="line"><span class="lineno"> 2932</span>  }</div>
-<div class="line"><span class="lineno"> 2933</span> </div>
-<div class="line"><span class="lineno"> 2934</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
-<div class="line"><span class="lineno"> 2935</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Leaving handler\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2936</span> </div>
-<div class="line"><span class="lineno"> 2937</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 2938</span>}</div>
-<div class="ttc" id="acrypt_8c_html_a345fb1ff241b3fc778632947c2b08d37"><div class="ttname"><a href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a></div><div class="ttdeci">SecurityFlags mutt_is_multipart_signed(struct Body *b)</div><div class="ttdoc">Is a message signed?</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00408">crypt.c:408</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_aa009033da100651a4083dc6f419469be"><div class="ttname"><a href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a></div><div class="ttdeci">static struct Body * decrypt_part(struct Body *b, struct State *state, FILE *fp_out, bool is_smime, int *r_is_signed)</div><div class="ttdoc">Decrypt a PGP or SMIME message.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l01732">crypt_gpgme.c:1732</a></div></div>
+<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l02855">2855</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2856</span>{</div>
+<div class="line"><span class="lineno"> 2857</span>  <span class="keywordtype">int</span> is_signed = 0;</div>
+<div class="line"><span class="lineno"> 2858</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno"> 2859</span> </div>
+<div class="line"><span class="lineno"> 2860</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Entering handler\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2861</span> </div>
+<div class="line"><span class="lineno"> 2862</span>  <span class="comment">/* clear out any mime headers before the handler, so they can&#39;t be spoofed. */</span></div>
+<div class="line"><span class="lineno"> 2863</span>  <a class="code hl_function" href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a>(&amp;b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>);</div>
+<div class="line"><span class="lineno"> 2864</span>  b-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2865</span>  FILE *fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 2866</span>  <span class="keywordflow">if</span> (!fp_out)</div>
+<div class="line"><span class="lineno"> 2867</span>  {</div>
+<div class="line"><span class="lineno"> 2868</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2869</span>    <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
+<div class="line"><span class="lineno"> 2870</span>    {</div>
+<div class="line"><span class="lineno"> 2871</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- Error: could not create temporary file --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2872</span>    }</div>
+<div class="line"><span class="lineno"> 2873</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2874</span>  }</div>
+<div class="line"><span class="lineno"> 2875</span> </div>
+<div class="line"><span class="lineno"> 2876</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *tattach = <a class="code hl_function" href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a>(b, state, fp_out, <span class="keyword">true</span>, &amp;is_signed);</div>
+<div class="line"><span class="lineno"> 2877</span>  <span class="keywordflow">if</span> (tattach)</div>
+<div class="line"><span class="lineno"> 2878</span>  {</div>
+<div class="line"><span class="lineno"> 2879</span>    tattach-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = is_signed &gt; 0;</div>
+<div class="line"><span class="lineno"> 2880</span> </div>
+<div class="line"><span class="lineno"> 2881</span>    <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
+<div class="line"><span class="lineno"> 2882</span>    {</div>
+<div class="line"><span class="lineno"> 2883</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, is_signed ?</div>
+<div class="line"><span class="lineno"> 2884</span>                                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- The following data is S/MIME signed --]\n&quot;</span>) :</div>
+<div class="line"><span class="lineno"> 2885</span>                                   <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- The following data is S/MIME encrypted --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2886</span>      <a class="code hl_function" href="group__handler__api.html#ga7ccf06ce10b9aed658fcc6c7a40c64b8">mutt_protected_headers_handler</a>(tattach, state);</div>
+<div class="line"><span class="lineno"> 2887</span>    }</div>
+<div class="line"><span class="lineno"> 2888</span> </div>
+<div class="line"><span class="lineno"> 2889</span>    <span class="comment">/* Store any protected headers in the parent so they can be</span></div>
+<div class="line"><span class="lineno"> 2890</span><span class="comment">     * accessed for index updates after the handler recursion is done.</span></div>
+<div class="line"><span class="lineno"> 2891</span><span class="comment">     * This is done before the handler to prevent a nested encrypted</span></div>
+<div class="line"><span class="lineno"> 2892</span><span class="comment">     * handler from freeing the headers. */</span></div>
+<div class="line"><span class="lineno"> 2893</span>    <a class="code hl_function" href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a>(&amp;b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>);</div>
+<div class="line"><span class="lineno"> 2894</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>;</div>
+<div class="line"><span class="lineno"> 2895</span>    tattach-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a> = NULL;</div>
+<div class="line"><span class="lineno"> 2896</span> </div>
+<div class="line"><span class="lineno"> 2897</span>    FILE *fp_save = state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>;</div>
+<div class="line"><span class="lineno"> 2898</span>    state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_out;</div>
+<div class="line"><span class="lineno"> 2899</span>    rc = <a class="code hl_function" href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a>(tattach, state);</div>
+<div class="line"><span class="lineno"> 2900</span>    state-&gt;<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_save;</div>
+<div class="line"><span class="lineno"> 2901</span> </div>
+<div class="line"><span class="lineno"> 2902</span>    <span class="comment">/* Embedded multipart signed protected headers override the</span></div>
+<div class="line"><span class="lineno"> 2903</span><span class="comment">     * encrypted headers.  We need to do this after the handler so</span></div>
+<div class="line"><span class="lineno"> 2904</span><span class="comment">     * they can be printed in the pager. */</span></div>
+<div class="line"><span class="lineno"> 2905</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a>(tattach) &amp;&amp; tattach-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a> &amp;&amp; tattach-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>)</div>
+<div class="line"><span class="lineno"> 2906</span>    {</div>
+<div class="line"><span class="lineno"> 2907</span>      <a class="code hl_function" href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a>(&amp;b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>);</div>
+<div class="line"><span class="lineno"> 2908</span>      b-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a>;</div>
+<div class="line"><span class="lineno"> 2909</span>      tattach-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">mime_headers</a> = NULL;</div>
+<div class="line"><span class="lineno"> 2910</span>    }</div>
+<div class="line"><span class="lineno"> 2911</span> </div>
+<div class="line"><span class="lineno"> 2912</span>    <span class="comment">/* if a multipart/signed is the _only_ sub-part of a multipart/encrypted,</span></div>
+<div class="line"><span class="lineno"> 2913</span><span class="comment">     * cache signature verification status.  */</span></div>
+<div class="line"><span class="lineno"> 2914</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a>(tattach) &amp;&amp; !tattach-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>)</div>
+<div class="line"><span class="lineno"> 2915</span>    {</div>
+<div class="line"><span class="lineno"> 2916</span>      b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a>;</div>
+<div class="line"><span class="lineno"> 2917</span>      <span class="keywordflow">if</span> (!b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a>)</div>
+<div class="line"><span class="lineno"> 2918</span>        b-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a>;</div>
+<div class="line"><span class="lineno"> 2919</span>    }</div>
+<div class="line"><span class="lineno"> 2920</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (tattach-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a>)</div>
+<div class="line"><span class="lineno"> 2921</span>    {</div>
+<div class="line"><span class="lineno"> 2922</span>      b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2923</span>      b-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a> = tattach-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a>;</div>
+<div class="line"><span class="lineno"> 2924</span>    }</div>
+<div class="line"><span class="lineno"> 2925</span> </div>
+<div class="line"><span class="lineno"> 2926</span>    <span class="keywordflow">if</span> (state-&gt;<a class="code hl_variable" href="structState.html#a5d855f7d518fde2ac4e8e409cbb24ad3">flags</a> &amp; <a class="code hl_define" href="mutt_2state_8h.html#a2a4ce653367a744f47960bc30b42f3a7">STATE_DISPLAY</a>)</div>
+<div class="line"><span class="lineno"> 2927</span>    {</div>
+<div class="line"><span class="lineno"> 2928</span>      <a class="code hl_function" href="mutt_2state_8c.html#a0d52430e63f8cffdd0e6a78182ad4385">state_attach_puts</a>(state, is_signed ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- End of S/MIME signed data --]\n&quot;</span>) :</div>
+<div class="line"><span class="lineno"> 2929</span>                                           <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;[-- End of S/MIME encrypted data --]\n&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2930</span>    }</div>
+<div class="line"><span class="lineno"> 2931</span> </div>
+<div class="line"><span class="lineno"> 2932</span>    <a class="code hl_function" href="email_2body_8c.html#a129af1c316fcbc26b55fb48957bab2cb">mutt_body_free</a>(&amp;tattach);</div>
+<div class="line"><span class="lineno"> 2933</span>  }</div>
+<div class="line"><span class="lineno"> 2934</span> </div>
+<div class="line"><span class="lineno"> 2935</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_out);</div>
+<div class="line"><span class="lineno"> 2936</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Leaving handler\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2937</span> </div>
+<div class="line"><span class="lineno"> 2938</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 2939</span>}</div>
+<div class="ttc" id="acrypt_8c_html_a345fb1ff241b3fc778632947c2b08d37"><div class="ttname"><a href="crypt_8c.html#a345fb1ff241b3fc778632947c2b08d37">mutt_is_multipart_signed</a></div><div class="ttdeci">SecurityFlags mutt_is_multipart_signed(struct Body *b)</div><div class="ttdoc">Is a message signed?</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00410">crypt.c:410</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_aa009033da100651a4083dc6f419469be"><div class="ttname"><a href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a></div><div class="ttdeci">static struct Body * decrypt_part(struct Body *b, struct State *state, FILE *fp_out, bool is_smime, int *r_is_signed)</div><div class="ttdoc">Decrypt a PGP or SMIME message.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l01733">crypt_gpgme.c:1733</a></div></div>
 <div class="ttc" id="aemail_2body_8c_html_a129af1c316fcbc26b55fb48957bab2cb"><div class="ttname"><a href="email_2body_8c.html#a129af1c316fcbc26b55fb48957bab2cb">mutt_body_free</a></div><div class="ttdeci">void mutt_body_free(struct Body **ptr)</div><div class="ttdoc">Free a Body.</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8c_source.html#l00058">body.c:58</a></div></div>
 <div class="ttc" id="aenvelope_8c_html_a244dacf9b1001c9ce1dbd473e001381f"><div class="ttname"><a href="envelope_8c.html#a244dacf9b1001c9ce1dbd473e001381f">mutt_env_free</a></div><div class="ttdeci">void mutt_env_free(struct Envelope **ptr)</div><div class="ttdoc">Free an Envelope.</div><div class="ttdef"><b>Definition</b> <a href="envelope_8c_source.html#l00125">envelope.c:125</a></div></div>
-<div class="ttc" id="agroup__handler__api_html_ga7ccf06ce10b9aed658fcc6c7a40c64b8"><div class="ttname"><a href="group__handler__api.html#ga7ccf06ce10b9aed658fcc6c7a40c64b8">mutt_protected_headers_handler</a></div><div class="ttdeci">int mutt_protected_headers_handler(struct Body *b_email, struct State *state)</div><div class="ttdoc">Handler for protected headers - Implements handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l01117">crypt.c:1117</a></div></div>
-<div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
-<div class="ttc" id="ahandler_8c_html_a3e520d3004995a6c0cf0696edfd209fb"><div class="ttname"><a href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a></div><div class="ttdeci">int mutt_body_handler(struct Body *b, struct State *state)</div><div class="ttdoc">Handler for the Body of an email.</div><div class="ttdef"><b>Definition</b> <a href="handler_8c_source.html#l01632">handler.c:1632</a></div></div>
+<div class="ttc" id="agroup__handler__api_html_ga7ccf06ce10b9aed658fcc6c7a40c64b8"><div class="ttname"><a href="group__handler__api.html#ga7ccf06ce10b9aed658fcc6c7a40c64b8">mutt_protected_headers_handler</a></div><div class="ttdeci">int mutt_protected_headers_handler(struct Body *b_email, struct State *state)</div><div class="ttdoc">Handler for protected headers - Implements handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l01119">crypt.c:1119</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00095">logging2.h:95</a></div></div>
+<div class="ttc" id="ahandler_8c_html_a3e520d3004995a6c0cf0696edfd209fb"><div class="ttname"><a href="handler_8c.html#a3e520d3004995a6c0cf0696edfd209fb">mutt_body_handler</a></div><div class="ttdeci">int mutt_body_handler(struct Body *b, struct State *state)</div><div class="ttdoc">Handler for the Body of an email.</div><div class="ttdef"><b>Definition</b> <a href="handler_8c_source.html#l01633">handler.c:1633</a></div></div>
 <div class="ttc" id="astructBody_html"><div class="ttname"><a href="structBody.html">Body</a></div><div class="ttdoc">The body of an email.</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00035">body.h:36</a></div></div>
 <div class="ttc" id="astructBody_html_a0b87b7bdb6faef44d9aac4854975f805"><div class="ttname"><a href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">Body::parts</a></div><div class="ttdeci">struct Body * parts</div><div class="ttdoc">parts of a multipart or message/rfc822</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00073">body.h:73</a></div></div>
 <div class="ttc" id="astructBody_html_a62f6c9b4245ed3b6b9296adb45aa4010"><div class="ttname"><a href="structBody.html#a62f6c9b4245ed3b6b9296adb45aa4010">Body::mime_headers</a></div><div class="ttdeci">struct Envelope * mime_headers</div><div class="ttdoc">Memory hole protected headers.</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00076">body.h:76</a></div></div>
@@ -989,14 +989,14 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  791</span>  <span class="keywordflow">return</span> rc;</div>
 <div class="line"><span class="lineno">  792</span>}</div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
-<div class="ttc" id="acrypt_8c_html_ac85f3f9345f53423bce29d478a6d7aaa"><div class="ttname"><a href="crypt_8c.html#ac85f3f9345f53423bce29d478a6d7aaa">crypt_current_time</a></div><div class="ttdeci">void crypt_current_time(struct State *state, const char *app_name)</div><div class="ttdoc">Print the current time.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00064">crypt.c:64</a></div></div>
+<div class="ttc" id="acrypt_8c_html_ac85f3f9345f53423bce29d478a6d7aaa"><div class="ttname"><a href="crypt_8c.html#ac85f3f9345f53423bce29d478a6d7aaa">crypt_current_time</a></div><div class="ttdeci">void crypt_current_time(struct State *state, const char *app_name)</div><div class="ttdoc">Print the current time.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00066">crypt.c:66</a></div></div>
 <div class="ttc" id="acurs__lib_8c_html_abbd51b0f01f2565da12fddf6716c7b9c"><div class="ttname"><a href="curs__lib_8c.html#abbd51b0f01f2565da12fddf6716c7b9c">mutt_need_hard_redraw</a></div><div class="ttdeci">void mutt_need_hard_redraw(void)</div><div class="ttdoc">Force a hard refresh.</div><div class="ttdef"><b>Definition</b> <a href="curs__lib_8c_source.html#l00101">curs_lib.c:101</a></div></div>
-<div class="ttc" id="afile_8c_html_ae57463c2854c006a3c67b78736e9056e"><div class="ttname"><a href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a></div><div class="ttdeci">void mutt_file_unlink(const char *s)</div><div class="ttdoc">Delete a file, carefully.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00159">file.c:159</a></div></div>
+<div class="ttc" id="afile_8c_html_ae57463c2854c006a3c67b78736e9056e"><div class="ttname"><a href="file_8c.html#ae57463c2854c006a3c67b78736e9056e">mutt_file_unlink</a></div><div class="ttdeci">void mutt_file_unlink(const char *s)</div><div class="ttdoc">Delete a file, carefully.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00160">file.c:160</a></div></div>
 <div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00138">file.h:138</a></div></div>
 <div class="ttc" id="agroup__crypto__valid__passphrase_html_ga0e9e718dd04065013a56713bc7b0eae4"><div class="ttname"><a href="group__crypto__valid__passphrase.html#ga0e9e718dd04065013a56713bc7b0eae4">pgp_class_valid_passphrase</a></div><div class="ttdeci">bool pgp_class_valid_passphrase(void)</div><div class="ttdoc">Ensure we have a valid passphrase - Implements CryptModuleSpecs::valid_passphrase() -.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00085">pgp.c:85</a></div></div>
 <div class="ttc" id="agroup__crypto__void__passphrase_html_ga5f22ad399cd8c0e467f61969e762aba0"><div class="ttname"><a href="group__crypto__void__passphrase.html#ga5f22ad399cd8c0e467f61969e762aba0">pgp_class_void_passphrase</a></div><div class="ttdeci">void pgp_class_void_passphrase(void)</div><div class="ttdoc">Forget the cached passphrase - Implements CryptModuleSpecs::void_passphrase() -.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00076">pgp.c:76</a></div></div>
-<div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
-<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a></div><div class="ttdeci">@ LL_DEBUG3</div><div class="ttdoc">Log at debug level 3.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00046">logging2.h:46</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
+<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a></div><div class="ttdeci">@ LL_DEBUG3</div><div class="ttdoc">Log at debug level 3.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00047">logging2.h:47</a></div></div>
 <div class="ttc" id="amutt_2filter_8c_html_a22c6912b837b1114c3276c990e73dca3"><div class="ttname"><a href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a></div><div class="ttdeci">int filter_wait(pid_t pid)</div><div class="ttdoc">Wait for the exit of a process and return its status.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2filter_8c_source.html#l00220">filter.c:220</a></div></div>
 <div class="ttc" id="amutt_2state_8c_html_aec643b92a6aa72398b6e90e8ccec43e8"><div class="ttname"><a href="mutt_2state_8c.html#aec643b92a6aa72398b6e90e8ccec43e8">state_prefix_putc</a></div><div class="ttdeci">void state_prefix_putc(struct State *state, char c)</div><div class="ttdoc">Write a prefixed character to the state.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8c_source.html#l00165">state.c:165</a></div></div>
 <div class="ttc" id="amutt_2state_8h_html_a0f20589a346d8b214575ba401aa29015"><div class="ttname"><a href="mutt_2state_8h.html#a0f20589a346d8b214575ba401aa29015">state_set_prefix</a></div><div class="ttdeci">#define state_set_prefix(state)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2state_8h_source.html#l00056">state.h:56</a></div></div>

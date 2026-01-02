@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-58-g09398d</span>
+   &#160;<span id="projectnumber">2025-12-11-79-gf03987</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -243,92 +243,92 @@ buf is not NULL </dd></dl>
 
 <p>Prompt and validate new messages tags - Implements <a class="el" href="structMxOps.html#a9b14a8b820a431e67082863331938d81">MxOps::tags_edit()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="imap_8c_source.html#l02225">2225</a> of file <a class="el" href="imap_8c_source.html">imap.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2226</span>{</div>
-<div class="line"><span class="lineno"> 2227</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structImapMboxData.html">ImapMboxData</a> *<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = <a class="code hl_function" href="imap_2mdata_8c.html#a567e2876fed5edb8626c5fefba4ac7ce">imap_mdata_get</a>(m);</div>
-<div class="line"><span class="lineno"> 2228</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>)</div>
-<div class="line"><span class="lineno"> 2229</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2230</span> </div>
-<div class="line"><span class="lineno"> 2231</span>  <span class="keywordtype">char</span> *new_tag = NULL;</div>
-<div class="line"><span class="lineno"> 2232</span>  <span class="keywordtype">char</span> *checker = NULL;</div>
-<div class="line"><span class="lineno"> 2233</span> </div>
-<div class="line"><span class="lineno"> 2234</span>  <span class="comment">/* Check for \* flags capability */</span></div>
-<div class="line"><span class="lineno"> 2235</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="imap_8c.html#ad998b83df59b588e3643ec0e1b41af3d">imap_has_flag</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags, NULL))</div>
-<div class="line"><span class="lineno"> 2236</span>  {</div>
-<div class="line"><span class="lineno"> 2237</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;IMAP server doesn&#39;t support custom flags&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2238</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2239</span>  }</div>
-<div class="line"><span class="lineno"> 2240</span> </div>
-<div class="line"><span class="lineno"> 2241</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 2242</span>  <span class="keywordflow">if</span> (tags)</div>
-<div class="line"><span class="lineno"> 2243</span>    <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(buf, tags);</div>
-<div class="line"><span class="lineno"> 2244</span> </div>
-<div class="line"><span class="lineno"> 2245</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<span class="stringliteral">&quot;Tags: &quot;</span>, buf, <a class="code hl_define" href="mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2">MUTT_COMP_NO_FLAGS</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL) != 0)</div>
-<div class="line"><span class="lineno"> 2246</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2247</span> </div>
-<div class="line"><span class="lineno"> 2248</span>  <span class="comment">/* each keyword must be atom defined by rfc822 as:</span></div>
-<div class="line"><span class="lineno"> 2249</span><span class="comment">   *</span></div>
-<div class="line"><span class="lineno"> 2250</span><span class="comment">   * atom           = 1*&lt;any CHAR except specials, SPACE and CTLs&gt;</span></div>
-<div class="line"><span class="lineno"> 2251</span><span class="comment">   * CHAR           = ( 0.-127. )</span></div>
-<div class="line"><span class="lineno"> 2252</span><span class="comment">   * specials       = &quot;(&quot; / &quot;)&quot; / &quot;&lt;&quot; / &quot;&gt;&quot; / &quot;@&quot;</span></div>
-<div class="line"><span class="lineno"> 2253</span><span class="comment">   *                  / &quot;,&quot; / &quot;;&quot; / &quot;:&quot; / &quot;\&quot; / &lt;&quot;&gt;</span></div>
-<div class="line"><span class="lineno"> 2254</span><span class="comment">   *                  / &quot;.&quot; / &quot;[&quot; / &quot;]&quot;</span></div>
-<div class="line"><span class="lineno"> 2255</span><span class="comment">   * SPACE          = ( 32. )</span></div>
-<div class="line"><span class="lineno"> 2256</span><span class="comment">   * CTLS           = ( 0.-31., 127.)</span></div>
-<div class="line"><span class="lineno"> 2257</span><span class="comment">   *</span></div>
-<div class="line"><span class="lineno"> 2258</span><span class="comment">   * And must be separated by one space.</span></div>
-<div class="line"><span class="lineno"> 2259</span><span class="comment">   */</span></div>
-<div class="line"><span class="lineno"> 2260</span> </div>
-<div class="line"><span class="lineno"> 2261</span>  new_tag = buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
-<div class="line"><span class="lineno"> 2262</span>  checker = buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
-<div class="line"><span class="lineno"> 2263</span>  <a class="code hl_define" href="string2_8h.html#aebd4477213a7b706515efaffdec64181">SKIPWS</a>(checker);</div>
-<div class="line"><span class="lineno"> 2264</span>  <span class="keywordflow">while</span> (*checker != <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno"> 2265</span>  {</div>
-<div class="line"><span class="lineno"> 2266</span>    <span class="keywordflow">if</span> ((*checker &lt; 32) || (*checker &gt;= 127) || <span class="comment">// We allow space because it&#39;s the separator</span></div>
-<div class="line"><span class="lineno"> 2267</span>        (*checker == 40) ||                     <span class="comment">// (</span></div>
-<div class="line"><span class="lineno"> 2268</span>        (*checker == 41) ||                     <span class="comment">// )</span></div>
-<div class="line"><span class="lineno"> 2269</span>        (*checker == 60) ||                     <span class="comment">// &lt;</span></div>
-<div class="line"><span class="lineno"> 2270</span>        (*checker == 62) ||                     <span class="comment">// &gt;</span></div>
-<div class="line"><span class="lineno"> 2271</span>        (*checker == 64) ||                     <span class="comment">// @</span></div>
-<div class="line"><span class="lineno"> 2272</span>        (*checker == 44) ||                     <span class="comment">// ,</span></div>
-<div class="line"><span class="lineno"> 2273</span>        (*checker == 59) ||                     <span class="comment">// ;</span></div>
-<div class="line"><span class="lineno"> 2274</span>        (*checker == 58) ||                     <span class="comment">// :</span></div>
-<div class="line"><span class="lineno"> 2275</span>        (*checker == 92) ||                     <span class="comment">// backslash</span></div>
-<div class="line"><span class="lineno"> 2276</span>        (*checker == 34) ||                     <span class="comment">// &quot;</span></div>
-<div class="line"><span class="lineno"> 2277</span>        (*checker == 46) ||                     <span class="comment">// .</span></div>
-<div class="line"><span class="lineno"> 2278</span>        (*checker == 91) ||                     <span class="comment">// [</span></div>
-<div class="line"><span class="lineno"> 2279</span>        (*checker == 93))                       <span class="comment">// ]</span></div>
-<div class="line"><span class="lineno"> 2280</span>    {</div>
-<div class="line"><span class="lineno"> 2281</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid IMAP flags&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2282</span>      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 2283</span>    }</div>
-<div class="line"><span class="lineno"> 2284</span> </div>
-<div class="line"><span class="lineno"> 2285</span>    <span class="comment">/* Skip duplicate space */</span></div>
-<div class="line"><span class="lineno"> 2286</span>    <span class="keywordflow">while</span> ((checker[0] == <span class="charliteral">&#39; &#39;</span>) &amp;&amp; (checker[1] == <span class="charliteral">&#39; &#39;</span>))</div>
-<div class="line"><span class="lineno"> 2287</span>      checker++;</div>
-<div class="line"><span class="lineno"> 2288</span> </div>
-<div class="line"><span class="lineno"> 2289</span>    <span class="comment">/* copy char to new_tag and go the next one */</span></div>
-<div class="line"><span class="lineno"> 2290</span>    *new_tag++ = *checker++;</div>
-<div class="line"><span class="lineno"> 2291</span>  }</div>
-<div class="line"><span class="lineno"> 2292</span>  *new_tag = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno"> 2293</span>  new_tag = buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>; <span class="comment">/* rewind */</span></div>
-<div class="line"><span class="lineno"> 2294</span>  <a class="code hl_function" href="mutt_2string_8c.html#a1d343dcbce0482f8979fe2a298913225">mutt_str_remove_trailing_ws</a>(new_tag);</div>
-<div class="line"><span class="lineno"> 2295</span> </div>
-<div class="line"><span class="lineno"> 2296</span>  <span class="keywordflow">return</span> !<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(tags, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
-<div class="line"><span class="lineno"> 2297</span>}</div>
+<p class="definition">Definition at line <a class="el" href="imap_8c_source.html#l02319">2319</a> of file <a class="el" href="imap_8c_source.html">imap.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2320</span>{</div>
+<div class="line"><span class="lineno"> 2321</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structImapMboxData.html">ImapMboxData</a> *<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = <a class="code hl_function" href="imap_2mdata_8c.html#a567e2876fed5edb8626c5fefba4ac7ce">imap_mdata_get</a>(m);</div>
+<div class="line"><span class="lineno"> 2322</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>)</div>
+<div class="line"><span class="lineno"> 2323</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2324</span> </div>
+<div class="line"><span class="lineno"> 2325</span>  <span class="keywordtype">char</span> *new_tag = NULL;</div>
+<div class="line"><span class="lineno"> 2326</span>  <span class="keywordtype">char</span> *checker = NULL;</div>
+<div class="line"><span class="lineno"> 2327</span> </div>
+<div class="line"><span class="lineno"> 2328</span>  <span class="comment">/* Check for \* flags capability */</span></div>
+<div class="line"><span class="lineno"> 2329</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="imap_8c.html#ad998b83df59b588e3643ec0e1b41af3d">imap_has_flag</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags, NULL))</div>
+<div class="line"><span class="lineno"> 2330</span>  {</div>
+<div class="line"><span class="lineno"> 2331</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;IMAP server doesn&#39;t support custom flags&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2332</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2333</span>  }</div>
+<div class="line"><span class="lineno"> 2334</span> </div>
+<div class="line"><span class="lineno"> 2335</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 2336</span>  <span class="keywordflow">if</span> (tags)</div>
+<div class="line"><span class="lineno"> 2337</span>    <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(buf, tags);</div>
+<div class="line"><span class="lineno"> 2338</span> </div>
+<div class="line"><span class="lineno"> 2339</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<span class="stringliteral">&quot;Tags: &quot;</span>, buf, <a class="code hl_define" href="mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2">MUTT_COMP_NO_FLAGS</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL) != 0)</div>
+<div class="line"><span class="lineno"> 2340</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2341</span> </div>
+<div class="line"><span class="lineno"> 2342</span>  <span class="comment">/* each keyword must be atom defined by rfc822 as:</span></div>
+<div class="line"><span class="lineno"> 2343</span><span class="comment">   *</span></div>
+<div class="line"><span class="lineno"> 2344</span><span class="comment">   * atom           = 1*&lt;any CHAR except specials, SPACE and CTLs&gt;</span></div>
+<div class="line"><span class="lineno"> 2345</span><span class="comment">   * CHAR           = ( 0.-127. )</span></div>
+<div class="line"><span class="lineno"> 2346</span><span class="comment">   * specials       = &quot;(&quot; / &quot;)&quot; / &quot;&lt;&quot; / &quot;&gt;&quot; / &quot;@&quot;</span></div>
+<div class="line"><span class="lineno"> 2347</span><span class="comment">   *                  / &quot;,&quot; / &quot;;&quot; / &quot;:&quot; / &quot;\&quot; / &lt;&quot;&gt;</span></div>
+<div class="line"><span class="lineno"> 2348</span><span class="comment">   *                  / &quot;.&quot; / &quot;[&quot; / &quot;]&quot;</span></div>
+<div class="line"><span class="lineno"> 2349</span><span class="comment">   * SPACE          = ( 32. )</span></div>
+<div class="line"><span class="lineno"> 2350</span><span class="comment">   * CTLS           = ( 0.-31., 127.)</span></div>
+<div class="line"><span class="lineno"> 2351</span><span class="comment">   *</span></div>
+<div class="line"><span class="lineno"> 2352</span><span class="comment">   * And must be separated by one space.</span></div>
+<div class="line"><span class="lineno"> 2353</span><span class="comment">   */</span></div>
+<div class="line"><span class="lineno"> 2354</span> </div>
+<div class="line"><span class="lineno"> 2355</span>  new_tag = buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
+<div class="line"><span class="lineno"> 2356</span>  checker = buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
+<div class="line"><span class="lineno"> 2357</span>  <a class="code hl_define" href="string2_8h.html#aebd4477213a7b706515efaffdec64181">SKIPWS</a>(checker);</div>
+<div class="line"><span class="lineno"> 2358</span>  <span class="keywordflow">while</span> (*checker != <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno"> 2359</span>  {</div>
+<div class="line"><span class="lineno"> 2360</span>    <span class="keywordflow">if</span> ((*checker &lt; 32) || (*checker &gt;= 127) || <span class="comment">// We allow space because it&#39;s the separator</span></div>
+<div class="line"><span class="lineno"> 2361</span>        (*checker == 40) ||                     <span class="comment">// (</span></div>
+<div class="line"><span class="lineno"> 2362</span>        (*checker == 41) ||                     <span class="comment">// )</span></div>
+<div class="line"><span class="lineno"> 2363</span>        (*checker == 60) ||                     <span class="comment">// &lt;</span></div>
+<div class="line"><span class="lineno"> 2364</span>        (*checker == 62) ||                     <span class="comment">// &gt;</span></div>
+<div class="line"><span class="lineno"> 2365</span>        (*checker == 64) ||                     <span class="comment">// @</span></div>
+<div class="line"><span class="lineno"> 2366</span>        (*checker == 44) ||                     <span class="comment">// ,</span></div>
+<div class="line"><span class="lineno"> 2367</span>        (*checker == 59) ||                     <span class="comment">// ;</span></div>
+<div class="line"><span class="lineno"> 2368</span>        (*checker == 58) ||                     <span class="comment">// :</span></div>
+<div class="line"><span class="lineno"> 2369</span>        (*checker == 92) ||                     <span class="comment">// backslash</span></div>
+<div class="line"><span class="lineno"> 2370</span>        (*checker == 34) ||                     <span class="comment">// &quot;</span></div>
+<div class="line"><span class="lineno"> 2371</span>        (*checker == 46) ||                     <span class="comment">// .</span></div>
+<div class="line"><span class="lineno"> 2372</span>        (*checker == 91) ||                     <span class="comment">// [</span></div>
+<div class="line"><span class="lineno"> 2373</span>        (*checker == 93))                       <span class="comment">// ]</span></div>
+<div class="line"><span class="lineno"> 2374</span>    {</div>
+<div class="line"><span class="lineno"> 2375</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid IMAP flags&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2376</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 2377</span>    }</div>
+<div class="line"><span class="lineno"> 2378</span> </div>
+<div class="line"><span class="lineno"> 2379</span>    <span class="comment">/* Skip duplicate space */</span></div>
+<div class="line"><span class="lineno"> 2380</span>    <span class="keywordflow">while</span> ((checker[0] == <span class="charliteral">&#39; &#39;</span>) &amp;&amp; (checker[1] == <span class="charliteral">&#39; &#39;</span>))</div>
+<div class="line"><span class="lineno"> 2381</span>      checker++;</div>
+<div class="line"><span class="lineno"> 2382</span> </div>
+<div class="line"><span class="lineno"> 2383</span>    <span class="comment">/* copy char to new_tag and go the next one */</span></div>
+<div class="line"><span class="lineno"> 2384</span>    *new_tag++ = *checker++;</div>
+<div class="line"><span class="lineno"> 2385</span>  }</div>
+<div class="line"><span class="lineno"> 2386</span>  *new_tag = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno"> 2387</span>  new_tag = buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>; <span class="comment">/* rewind */</span></div>
+<div class="line"><span class="lineno"> 2388</span>  <a class="code hl_function" href="mutt_2string_8c.html#a1d343dcbce0482f8979fe2a298913225">mutt_str_remove_trailing_ws</a>(new_tag);</div>
+<div class="line"><span class="lineno"> 2389</span> </div>
+<div class="line"><span class="lineno"> 2390</span>  <span class="keywordflow">return</span> !<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(tags, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
+<div class="line"><span class="lineno"> 2391</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00076">buffer.c:76</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00395">buffer.c:395</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
 <div class="ttc" id="agroup__gui__mw_html_gabcbd2498b412e9f8e9d953cafc01989c"><div class="ttname"><a href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a></div><div class="ttdeci">int mw_get_field(const char *prompt, struct Buffer *buf, CompletionFlags complete, enum HistoryClass hclass, const struct CompleteOps *comp_api, void *cdata)</div><div class="ttdoc">Ask the user for a string -.</div><div class="ttdef"><b>Definition</b> <a href="editor_2window_8c_source.html#l00272">window.c:272</a></div></div>
-<div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
+<div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
 <div class="ttc" id="ahistory_2lib_8h_html_acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a"><div class="ttname"><a href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a></div><div class="ttdeci">@ HC_OTHER</div><div class="ttdoc">Miscellaneous strings.</div><div class="ttdef"><b>Definition</b> <a href="history_2lib_8h_source.html#l00059">lib.h:59</a></div></div>
 <div class="ttc" id="aimap_2mdata_8c_html_a567e2876fed5edb8626c5fefba4ac7ce"><div class="ttname"><a href="imap_2mdata_8c.html#a567e2876fed5edb8626c5fefba4ac7ce">imap_mdata_get</a></div><div class="ttdeci">struct ImapMboxData * imap_mdata_get(struct Mailbox *m)</div><div class="ttdoc">Get the Mailbox data for this mailbox.</div><div class="ttdef"><b>Definition</b> <a href="imap_2mdata_8c_source.html#l00061">mdata.c:61</a></div></div>
-<div class="ttc" id="aimap_8c_html_ad998b83df59b588e3643ec0e1b41af3d"><div class="ttname"><a href="imap_8c.html#ad998b83df59b588e3643ec0e1b41af3d">imap_has_flag</a></div><div class="ttdeci">bool imap_has_flag(struct ListHead *flag_list, const char *flag)</div><div class="ttdoc">Does the flag exist in the list.</div><div class="ttdef"><b>Definition</b> <a href="imap_8c_source.html#l00894">imap.c:894</a></div></div>
+<div class="ttc" id="aimap_8c_html_ad998b83df59b588e3643ec0e1b41af3d"><div class="ttname"><a href="imap_8c.html#ad998b83df59b588e3643ec0e1b41af3d">imap_has_flag</a></div><div class="ttdeci">bool imap_has_flag(struct ListHead *flag_list, const char *flag)</div><div class="ttdoc">Does the flag exist in the list.</div><div class="ttdef"><b>Definition</b> <a href="imap_8c_source.html#l00988">imap.c:988</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a1d343dcbce0482f8979fe2a298913225"><div class="ttname"><a href="mutt_2string_8c.html#a1d343dcbce0482f8979fe2a298913225">mutt_str_remove_trailing_ws</a></div><div class="ttdeci">void mutt_str_remove_trailing_ws(char *s)</div><div class="ttdoc">Trim trailing whitespace from a string.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00565">string.c:565</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00660">string.c:660</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a1d343dcbce0482f8979fe2a298913225"><div class="ttname"><a href="mutt_2string_8c.html#a1d343dcbce0482f8979fe2a298913225">mutt_str_remove_trailing_ws</a></div><div class="ttdeci">void mutt_str_remove_trailing_ws(char *s)</div><div class="ttdoc">Trim trailing whitespace from a string.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00567">string.c:567</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00662">string.c:662</a></div></div>
 <div class="ttc" id="amutt_8h_html_ab0d3fda521b45dec654ff46bac59c8c2"><div class="ttname"><a href="mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2">MUTT_COMP_NO_FLAGS</a></div><div class="ttdeci">#define MUTT_COMP_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00056">mutt.h:56</a></div></div>
-<div class="ttc" id="astring2_8h_html_aebd4477213a7b706515efaffdec64181"><div class="ttname"><a href="string2_8h.html#aebd4477213a7b706515efaffdec64181">SKIPWS</a></div><div class="ttdeci">#define SKIPWS(ch)</div><div class="ttdef"><b>Definition</b> <a href="string2_8h_source.html#l00051">string2.h:51</a></div></div>
+<div class="ttc" id="astring2_8h_html_aebd4477213a7b706515efaffdec64181"><div class="ttname"><a href="string2_8h.html#aebd4477213a7b706515efaffdec64181">SKIPWS</a></div><div class="ttdeci">#define SKIPWS(ch)</div><div class="ttdef"><b>Definition</b> <a href="string2_8h_source.html#l00052">string2.h:52</a></div></div>
 <div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00037">buffer.h:37</a></div></div>
 <div class="ttc" id="astructImapMboxData_html"><div class="ttname"><a href="structImapMboxData.html">ImapMboxData</a></div><div class="ttdoc">IMAP-specific Mailbox data -.</div><div class="ttdef"><b>Definition</b> <a href="imap_2mdata_8h_source.html#l00039">mdata.h:40</a></div></div>
 <div class="ttc" id="astructMailbox_html_a69b544c5c748ab3046dcc6e61a41f595"><div class="ttname"><a href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">Mailbox::mdata</a></div><div class="ttdeci">void * mdata</div><div class="ttdoc">Driver specific data.</div><div class="ttdef"><b>Definition</b> <a href="core_2mailbox_8h_source.html#l00132">mailbox.h:132</a></div></div>
@@ -376,16 +376,16 @@ buf is not NULL </dd></dl>
 
 <p>Prompt and validate new messages tags - Implements <a class="el" href="structMxOps.html#a9b14a8b820a431e67082863331938d81">MxOps::tags_edit()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="notmuch_8c_source.html#l02426">2426</a> of file <a class="el" href="notmuch_8c_source.html">notmuch.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2427</span>{</div>
-<div class="line"><span class="lineno"> 2428</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno"> 2429</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<span class="stringliteral">&quot;Add/remove labels: &quot;</span>, buf, <a class="code hl_define" href="mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2">MUTT_COMP_NO_FLAGS</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>,</div>
-<div class="line"><span class="lineno"> 2430</span>                   &amp;<a class="code hl_variable" href="notmuch_2complete_8c.html#aa3e8d3e0fd9188868c9ea63d4aa810ba">CompleteNmTagOps</a>, NULL) != 0)</div>
-<div class="line"><span class="lineno"> 2431</span>  {</div>
-<div class="line"><span class="lineno"> 2432</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2433</span>  }</div>
-<div class="line"><span class="lineno"> 2434</span>  <span class="keywordflow">return</span> 1;</div>
-<div class="line"><span class="lineno"> 2435</span>}</div>
+<p class="definition">Definition at line <a class="el" href="notmuch_8c_source.html#l02428">2428</a> of file <a class="el" href="notmuch_8c_source.html">notmuch.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2429</span>{</div>
+<div class="line"><span class="lineno"> 2430</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno"> 2431</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<span class="stringliteral">&quot;Add/remove labels: &quot;</span>, buf, <a class="code hl_define" href="mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2">MUTT_COMP_NO_FLAGS</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>,</div>
+<div class="line"><span class="lineno"> 2432</span>                   &amp;<a class="code hl_variable" href="notmuch_2complete_8c.html#aa3e8d3e0fd9188868c9ea63d4aa810ba">CompleteNmTagOps</a>, NULL) != 0)</div>
+<div class="line"><span class="lineno"> 2433</span>  {</div>
+<div class="line"><span class="lineno"> 2434</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2435</span>  }</div>
+<div class="line"><span class="lineno"> 2436</span>  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno"> 2437</span>}</div>
 <div class="ttc" id="anotmuch_2complete_8c_html_aa3e8d3e0fd9188868c9ea63d4aa810ba"><div class="ttname"><a href="notmuch_2complete_8c.html#aa3e8d3e0fd9188868c9ea63d4aa810ba">CompleteNmTagOps</a></div><div class="ttdeci">const struct CompleteOps CompleteNmTagOps</div><div class="ttdoc">Auto-Completion of NmTags.</div><div class="ttdef"><b>Definition</b> <a href="notmuch_2complete_8c_source.html#l00254">complete.c:254</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

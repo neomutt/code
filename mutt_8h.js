@@ -5,8 +5,6 @@ var mutt_8h =
     [ "MUTT_COMP_CLEAR", "mutt_8h.html#aff320b29c6010a53a17749f6423834a3", null ],
     [ "MUTT_COMP_PASS", "mutt_8h.html#a356890cce1c2b54d0b24d3014c67b4a6", null ],
     [ "MUTT_COMP_UNBUFFERED", "mutt_8h.html#a46ba7ec4f446acf2e7d1d06e22e56414", null ],
-    [ "MUTT_SPAM", "mutt_8h.html#ae07cfd55776874cb17533f6fdb79b084", null ],
-    [ "MUTT_NOSPAM", "mutt_8h.html#a68f9123b75a5f0a15805b2db4cb2dea4", null ],
     [ "CompletionFlags", "mutt_8h.html#a1b1b36a26c40bdaaa10c65ca5f54a54c", null ],
     [ "MessageType", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013", [
       [ "MUTT_ALL", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a03f808d156e1c0c39b5e986980b748e9", null ],

@@ -4,7 +4,7 @@ var searchData=
   ['gen_1',['gen',['../structFolderFile.html#ab22fa4a6e95437fcc5b9f5860ed13759',1,'FolderFile::gen'],['../structMailbox.html#af8a0807a1ec429b12a10f3c2e0319b59',1,'Mailbox::gen']]],
   ['gen_5fhash_2',['gen_hash',['../structHashTable.html#a07e7a7b1c42ebdfeb0128c443fe59422',1,'HashTable']]],
   ['gen_5ftime_3',['gen_time',['../structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd',1,'PgpKeyInfo']]],
-  ['genericdefaultbindings_4',['GenericDefaultBindings',['../gui_2functions_8c.html#a6f702c62b2c9a61ee1c6f859a99782c5',1,'GenericDefaultBindings:&#160;functions.c'],['../gui_2functions_8h.html#a6f702c62b2c9a61ee1c6f859a99782c5',1,'GenericDefaultBindings:&#160;functions.c']]],
+  ['genericdefaultbindings_4',['GenericDefaultBindings',['../gui_2functions_8c.html#a6f702c62b2c9a61ee1c6f859a99782c5',1,'functions.c']]],
   ['get_5ffield_5',['get_field',['../structConnAccount.html#ae69871442c1135a06b359011104f630b',1,'ConnAccount']]],
   ['get_5fnumber_6',['get_number',['../structExpandoRenderCallback.html#ad0b151b1682fd0adc94aca385977d831',1,'ExpandoRenderCallback']]],
   ['get_5fstring_7',['get_string',['../structExpandoRenderCallback.html#ac2b100af9b2e39d99e6e8817584d9904',1,'ExpandoRenderCallback']]],

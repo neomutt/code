@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-58-g09398d</span>
+   &#160;<span id="projectnumber">2025-12-11-79-gf03987</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -146,6 +146,7 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Maildir Path handling. </p>
 <dl class="section author"><dt>Authors</dt><dd><ul>
 <li>Richard Russon</li>
+<li>Alejandro Colomar</li>
 </ul>
 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.</dd></dl>
@@ -185,41 +186,41 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="maildir_2path_8c_source.html#l00056">56</a> of file <a class="el" href="maildir_2path_8c_source.html">path.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>{</div>
-<div class="line"><span class="lineno">   58</span>  DIR *dir = NULL;</div>
-<div class="line"><span class="lineno">   59</span>  <span class="keyword">struct </span>dirent *de = NULL;</div>
-<div class="line"><span class="lineno">   60</span>  <span class="keywordtype">int</span> rc = 1; <span class="comment">/* assume empty until we find a message */</span></div>
-<div class="line"><span class="lineno">   61</span>  <span class="keywordtype">char</span> realpath[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">   62</span>  <span class="keywordtype">int</span> iter = 0;</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>  <span class="comment">/* Strategy here is to look for any file not beginning with a period */</span></div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">   67</span>  {</div>
-<div class="line"><span class="lineno">   68</span>    <span class="comment">/* we do &quot;cur&quot; on the first iteration since it&#39;s more likely that we&#39;ll</span></div>
-<div class="line"><span class="lineno">   69</span><span class="comment">     * find old messages without having to scan both subdirs */</span></div>
-<div class="line"><span class="lineno">   70</span>    snprintf(realpath, <span class="keyword">sizeof</span>(realpath), <span class="stringliteral">&quot;%s/%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path),</div>
-<div class="line"><span class="lineno">   71</span>             (iter == 0) ? <span class="stringliteral">&quot;cur&quot;</span> : <span class="stringliteral">&quot;new&quot;</span>);</div>
-<div class="line"><span class="lineno">   72</span>    dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(realpath, <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba279decdd0165f19ffc7d35736615f499">MUTT_OPENDIR_CREATE</a>);</div>
-<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span> (!dir)</div>
-<div class="line"><span class="lineno">   74</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">while</span> ((de = readdir(dir)))</div>
-<div class="line"><span class="lineno">   76</span>    {</div>
-<div class="line"><span class="lineno">   77</span>      <span class="keywordflow">if</span> (*de-&gt;d_name != <span class="charliteral">&#39;.&#39;</span>)</div>
-<div class="line"><span class="lineno">   78</span>      {</div>
-<div class="line"><span class="lineno">   79</span>        rc = 0;</div>
-<div class="line"><span class="lineno">   80</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   81</span>      }</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-<div class="line"><span class="lineno">   83</span>    closedir(dir);</div>
-<div class="line"><span class="lineno">   84</span>    iter++;</div>
-<div class="line"><span class="lineno">   85</span>  } <span class="keywordflow">while</span> (rc &amp;&amp; iter &lt; 2);</div>
-<div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">   88</span>}</div>
+<p class="definition">Definition at line <a class="el" href="maildir_2path_8c_source.html#l00057">57</a> of file <a class="el" href="maildir_2path_8c_source.html">path.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
+<div class="line"><span class="lineno">   59</span>  DIR *dir = NULL;</div>
+<div class="line"><span class="lineno">   60</span>  <span class="keyword">struct </span>dirent *de = NULL;</div>
+<div class="line"><span class="lineno">   61</span>  <span class="keywordtype">int</span> rc = 1; <span class="comment">/* assume empty until we find a message */</span></div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordtype">char</span> realpath[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordtype">int</span> iter = 0;</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  <span class="comment">/* Strategy here is to look for any file not beginning with a period */</span></div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">   68</span>  {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">/* we do &quot;cur&quot; on the first iteration since it&#39;s more likely that we&#39;ll</span></div>
+<div class="line"><span class="lineno">   70</span><span class="comment">     * find old messages without having to scan both subdirs */</span></div>
+<div class="line"><span class="lineno">   71</span>    snprintf(realpath, <span class="keyword">sizeof</span>(realpath), <span class="stringliteral">&quot;%s/%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path),</div>
+<div class="line"><span class="lineno">   72</span>             (iter == 0) ? <span class="stringliteral">&quot;cur&quot;</span> : <span class="stringliteral">&quot;new&quot;</span>);</div>
+<div class="line"><span class="lineno">   73</span>    dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(realpath, <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba279decdd0165f19ffc7d35736615f499">MUTT_OPENDIR_CREATE</a>);</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span> (!dir)</div>
+<div class="line"><span class="lineno">   75</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">while</span> ((de = readdir(dir)))</div>
+<div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">if</span> (*de-&gt;d_name != <span class="charliteral">&#39;.&#39;</span>)</div>
+<div class="line"><span class="lineno">   79</span>      {</div>
+<div class="line"><span class="lineno">   80</span>        rc = 0;</div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   82</span>      }</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="line"><span class="lineno">   84</span>    closedir(dir);</div>
+<div class="line"><span class="lineno">   85</span>    iter++;</div>
+<div class="line"><span class="lineno">   86</span>  } <span class="keywordflow">while</span> (rc &amp;&amp; iter &lt; 2);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">   89</span>}</div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
-<div class="ttc" id="afile_8c_html_a69da918c66c3f22815d6e4aed88b6122"><div class="ttname"><a href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a></div><div class="ttdeci">DIR * mutt_file_opendir(const char *path, enum MuttOpenDirMode mode)</div><div class="ttdoc">Open a directory.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00542">file.c:542</a></div></div>
+<div class="ttc" id="afile_8c_html_a69da918c66c3f22815d6e4aed88b6122"><div class="ttname"><a href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a></div><div class="ttdeci">DIR * mutt_file_opendir(const char *path, enum MuttOpenDirMode mode)</div><div class="ttdoc">Open a directory.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00543">file.c:543</a></div></div>
 <div class="ttc" id="afile_8h_html_a222e4f679593f00cd8c126212b3cdb3ba279decdd0165f19ffc7d35736615f499"><div class="ttname"><a href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba279decdd0165f19ffc7d35736615f499">MUTT_OPENDIR_CREATE</a></div><div class="ttdeci">@ MUTT_OPENDIR_CREATE</div><div class="ttdoc">Create the directory if it doesn&#39;t exist.</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00064">file.h:64</a></div></div>
 <div class="ttc" id="amutt_8h_html_ae688d728e1acdfe5988c7db45d6f0166"><div class="ttname"><a href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a></div><div class="ttdeci">#define PATH_MAX</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00042">mutt.h:42</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

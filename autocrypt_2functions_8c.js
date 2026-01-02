@@ -1,5 +1,6 @@
 var autocrypt_2functions_8c =
 [
+    [ "autocrypt_init_keys", "autocrypt_2functions_8c.html#a11cba4fa3dd5166fcbfd8d20c2fd87bd", null ],
     [ "toggle_active", "autocrypt_2functions_8c.html#a1457d95507bf4ee7a4bd4a15e3545f32", null ],
     [ "toggle_prefer_encrypt", "autocrypt_2functions_8c.html#afb946e389ae112c24e849bd35daa43f3", null ],
     [ "op_autocrypt_create_acct", "group__autocrypt__function__api.html#ga76b31aa057484d215c3394a47e59487e", null ],

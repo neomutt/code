@@ -1,16 +1,13 @@
 var index =
 [
-    [ "Alternate address handling", "neo_alternates.html", [
+    [ "Duplicate the structure of an entire email", "neo_copy.html", [
       [ "Libraries", "index.html#autotoc_md84", null ],
       [ "Miscellaneous files", "index.html#autotoc_md85", null ],
       [ "Building these Docs", "index.html#autotoc_md86", null ],
       [ "Installing the Docs", "index.html#autotoc_md87", [
-        [ "Data", "neo_alternates.html#autotoc_md663", null ],
-        [ "Functions", "neo_alternates.html#autotoc_md664", null ]
+        [ "Functions", "neo_copy.html#autotoc_md668", null ]
       ] ]
     ] ],
-    [ "Functions to parse commands in a config file", "neo_commands.html", null ],
-    [ "Duplicate the structure of an entire email", "neo_copy.html", null ],
     [ "Prepare an email to be edited", "neo_editmsg.html", null ],
     [ "Rich text handler", "neo_enriched.html", null ],
     [ "Manage where the email is piped to external commands", "neo_external.html", null ],
@@ -18,7 +15,6 @@ var index =
     [ "Global variables", "neo_globals.html", null ],
     [ "Decide how to display email content", "neo_handler.html", null ],
     [ "Generate the help-page and GUI display it", "neo_help.html", null ],
-    [ "Parse and execute user-defined hooks", "neo_hook.html", null ],
     [ "RFC1524 Mailcap routines", "neo_mailcap.html", null ],
     [ "Handle mailing lists", "neo_maillist.html", null ],
     [ "Command line processing", "neo_main.html", null ],
@@ -37,7 +33,6 @@ var index =
     [ "Send/reply with an attachment", "neo_recvcmd.html", null ],
     [ "RFC3676 Format Flowed routines", "neo_rfc3676.html", null ],
     [ "Routines for adding user scores to emails", "neo_score.html", null ],
-    [ "Subject Regex handling", "neo_subjrx.html", null ],
     [ "Execute external programs", "neo_system.html", null ],
     [ "For systems lacking timegm()", "neo_timegm.html", null ],
     [ "Display Usage Information for NeoMutt", "neo_usage.html", null ],

@@ -3,7 +3,7 @@ var searchData=
   ['handle_20mailing_20lists_0',['Handle mailing lists',['../neo_maillist.html',1,'index']]],
   ['handle_20the_20resizing_20of_20the_20screen_1',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
   ['handler_2',['handler',['../autocrypt_gpgme.html',1,'Autocrypt GPGME handler'],['../neo_enriched.html',1,'Rich text handler']]],
-  ['handling_3',['handling',['../neo_alternates.html',1,'Alternate address handling'],['../autocrypt_db.html',1,'Autocrypt database handling'],['../history_history.html',1,'History file handling'],['../conn_socket.html',1,'Low-level socket handling'],['../maildir_path.html',1,'Maildir Path handling'],['../nm_db.html',1,'Notmuch database handling'],['../mutt_signal.html',1,'Signal handling'],['../neo_mutt_signal.html',1,'Signal handling'],['../neo_subjrx.html',1,'Subject Regex handling']]],
+  ['handling_3',['handling',['../autocrypt_db.html',1,'Autocrypt database handling'],['../history_history.html',1,'History file handling'],['../key_keymap.html',1,'Keymap handling'],['../conn_socket.html',1,'Low-level socket handling'],['../maildir_path.html',1,'Maildir Path handling'],['../nm_db.html',1,'Notmuch database handling'],['../mutt_signal.html',1,'Signal handling'],['../neo_mutt_signal.html',1,'Signal handling']]],
   ['handling_20for_20messages_4',['Pattern handling for messages',['../pattern_message.html',1,'lib_pattern']]],
   ['handling_20routines_5',['Time and date handling routines',['../mutt_date.html',1,'lib_mutt']]],
   ['hash_20algorithm_20from_20a_20pgp_20signature_6',['Identify the hash algorithm from a PGP signature',['../crypt_pgpmicalg.html',1,'lib_ncrypt']]],
@@ -30,6 +30,8 @@ var searchData=
   ['history_20functions_27',['History functions',['../history_functions.html',1,'lib_history']]],
   ['history_20selection_20dialog_28',['History Selection Dialog',['../history_dlg_history.html',1,'lib_history']]],
   ['holds_20state_20of_20a_20search_29',['Holds state of a search',['../pattern_search_state.html',1,'lib_pattern']]],
-  ['hooks_30',['Parse and execute user-defined hooks',['../neo_hook.html',1,'index']]],
-  ['how_20to_20display_20email_20content_31',['Decide how to display email content',['../neo_handler.html',1,'index']]]
+  ['hook_20commands_30',['Hook Commands',['../hooks_commands.html',1,'Hook Commands'],['../lib_hooks.html',1,'Hook Commands']]],
+  ['hooks_31',['Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
+  ['hooks_20to_20the_20pager_32',['Dump the Hooks to the Pager',['../hooks_dump.html',1,'lib_hooks']]],
+  ['how_20to_20display_20email_20content_33',['Decide how to display email content',['../neo_handler.html',1,'index']]]
 ];

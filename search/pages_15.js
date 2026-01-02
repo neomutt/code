@@ -31,12 +31,13 @@ var searchData=
   ['user_20a_20question_28',['Ask the user a question',['../question_question.html',1,'lib_question']]],
   ['user_20callable_20functions_29',['All user-callable functions',['../gui_opcode.html',1,'lib_gui']]],
   ['user_20configurable_20status_20line_30',['user configurable status line',['../index_expando_status.html',1,'GUI display a user-configurable status line'],['../index_status.html',1,'GUI display a user-configurable status line']]],
-  ['user_20defined_20hooks_31',['Parse and execute user-defined hooks',['../neo_hook.html',1,'index']]],
-  ['user_20functions_32',['Definitions of user functions',['../gui_functions.html',1,'lib_gui']]],
-  ['user_20scores_20to_20emails_33',['Routines for adding user scores to emails',['../neo_score.html',1,'index']]],
-  ['user_20to_20enter_20a_20string_34',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],
-  ['user_20with_20a_20selectable_20list_35',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]],
-  ['using_20data_36',['Render Expandos using Data',['../expando_render.html',1,'lib_expando']]],
-  ['using_20sendmail_37',['Send email using sendmail',['../send_sendmail.html',1,'lib_send']]],
-  ['utf_207_20manipulation_38',['UTF-7 Manipulation',['../imap_utf7.html',1,'lib_imap']]]
+  ['user_20defined_20hooks_31',['User-defined Hooks',['../hooks_hook.html',1,'lib_hooks']]],
+  ['user_20defined_20hooks_32',['user defined Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks']]],
+  ['user_20functions_33',['Definitions of user functions',['../gui_functions.html',1,'lib_gui']]],
+  ['user_20scores_20to_20emails_34',['Routines for adding user scores to emails',['../neo_score.html',1,'index']]],
+  ['user_20to_20enter_20a_20string_35',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],
+  ['user_20with_20a_20selectable_20list_36',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]],
+  ['using_20data_37',['Render Expandos using Data',['../expando_render.html',1,'lib_expando']]],
+  ['using_20sendmail_38',['Send email using sendmail',['../send_sendmail.html',1,'lib_send']]],
+  ['utf_207_20manipulation_39',['UTF-7 Manipulation',['../imap_utf7.html',1,'lib_imap']]]
 ];

@@ -10,6 +10,7 @@ var main_8c =
     [ "get_elem_queries", "main_8c.html#ad52e45dbd043d6808117e8db554f6ba1", null ],
     [ "reset_tilde", "main_8c.html#a65d332be0abf5b14c519e50da55d72bf", null ],
     [ "localise_config", "main_8c.html#a2dfdc4e2f40b36cfe235112bb335b778", null ],
+    [ "init_keys", "main_8c.html#af1e49363f35a85580c49e2acd4bd62bc", null ],
     [ "start_curses", "main_8c.html#a89dfa0cebc094eedb2f4855e6db352ca", null ],
     [ "init_locale", "main_8c.html#a274eea3c14525423de529ba1b1e22c68", null ],
     [ "get_user_info", "main_8c.html#ab1ab96b05777c73f61c060778657ec38", null ],

@@ -39,7 +39,7 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "memory.h", "memory_8h.html", "memory_8h" ],
     [ "message.h", "mutt_2message_8h.html", "mutt_2message_8h" ],
     [ "notify.c", "mutt_2notify_8c.html", "mutt_2notify_8c" ],
-    [ "notify.h", "notify_8h.html", "notify_8h" ],
+    [ "notify.h", "mutt_2notify_8h.html", "mutt_2notify_8h" ],
     [ "notify_type.h", "notify__type_8h.html", "notify__type_8h" ],
     [ "observer.h", "observer_8h.html", "observer_8h" ],
     [ "path.c", "mutt_2path_8c.html", "mutt_2path_8c" ],

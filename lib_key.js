@@ -5,5 +5,7 @@ var lib_key =
     [ "Set up the extended keys", "key_extended.html", null ],
     [ "Get a key from the user", "key_get.html", null ],
     [ "Set up the key bindings", "key_init.html", null ],
-    [ "Key helper functions", "key_lib.html", null ]
+    [ "Keymap handling", "key_keymap.html", null ],
+    [ "Key helper functions", "key_lib.html", null ],
+    [ "Maniplate Menus and SubMenus", "key_menu.html", null ]
 ];

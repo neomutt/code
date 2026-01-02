@@ -1,7 +1,7 @@
 var extended_8c =
 [
     [ "Extkey", "structExtkey.html", "structExtkey" ],
-    [ "find_ext_name", "extended_8c.html#abcb363b2c6e567d56de8f900f93c7ef2", null ],
-    [ "init_extended_keys", "extended_8c.html#ae6be8f34be875971676339bac0d726bd", null ],
+    [ "ext_key_find", "extended_8c.html#a01ed38e059a3ec28f9c035c504484a85", null ],
+    [ "ext_keys_init", "extended_8c.html#a9abb904d6a1e6eb0c6da94590046cd11", null ],
     [ "ExtKeys", "extended_8c.html#a542d4e1caa8cb858e9880d929b4e0b06", null ]
 ];
