@@ -7,5 +7,6 @@ var mailboxes_8h =
     ] ],
     [ "parse_mailboxes", "group__command__parse.html#gaffa5ff30f5414f2eb4f109bf79d887d3", null ],
     [ "parse_unmailboxes", "group__command__parse.html#ga4dd0ed6bd66a9e5975e826d7278f2897", null ],
-    [ "mailbox_add_simple", "mailboxes_8h.html#ac986cda38f3082d420d4056efc824ac3", null ]
+    [ "mailbox_add_simple", "mailboxes_8h.html#ac986cda38f3082d420d4056efc824ac3", null ],
+    [ "mailbox_remove_simple", "mailboxes_8h.html#a1b2c90f08dfb9013c117c91af40a45ca", null ]
 ];

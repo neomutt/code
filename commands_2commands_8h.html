@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-79-gf03987</span>
+   &#160;<span id="projectnumber">2025-12-11-87-gae07fd</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -291,28 +291,48 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">ptr</td><td>Matching <a class="el" href="structCommand.html">Command</a> </td></tr>
+    <tr><td class="paramname">ptr</td><td>Matching <a class="el" href="structCommand.html">Command</a></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>If the name matches a <a class="el" href="structCommand.html">Command</a> Synonym, the real <a class="el" href="structCommand.html">Command</a> is returned. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="commands_2commands_8c_source.html#l00319">319</a> of file <a class="el" href="commands_2commands_8c_source.html">commands.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  320</span>{</div>
-<div class="line"><span class="lineno">  321</span>  <span class="keywordflow">if</span> (!ca || !name)</div>
-<div class="line"><span class="lineno">  322</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  323</span> </div>
-<div class="line"><span class="lineno">  324</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> **cp = NULL;</div>
-<div class="line"><span class="lineno">  325</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(cp, ca)</div>
-<div class="line"><span class="lineno">  326</span>  {</div>
-<div class="line"><span class="lineno">  327</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> *cmd = *cp;</div>
-<div class="line"><span class="lineno">  328</span> </div>
-<div class="line"><span class="lineno">  329</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>, <a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>))</div>
-<div class="line"><span class="lineno">  330</span>      <span class="keywordflow">return</span> cmd;</div>
-<div class="line"><span class="lineno">  331</span>  }</div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  334</span>}</div>
+<p class="definition">Definition at line <a class="el" href="commands_2commands_8c_source.html#l00321">321</a> of file <a class="el" href="commands_2commands_8c_source.html">commands.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  322</span>{</div>
+<div class="line"><span class="lineno">  323</span>  <span class="keywordflow">if</span> (!ca || !name)</div>
+<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  325</span> </div>
+<div class="line"><span class="lineno">  326</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> **cp = NULL;</div>
+<div class="line"><span class="lineno">  327</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(cp, ca)</div>
+<div class="line"><span class="lineno">  328</span>  {</div>
+<div class="line"><span class="lineno">  329</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> *cmd = *cp;</div>
+<div class="line"><span class="lineno">  330</span> </div>
+<div class="line"><span class="lineno">  331</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>, <a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>))</div>
+<div class="line"><span class="lineno">  332</span>    {</div>
+<div class="line"><span class="lineno">  333</span>      <span class="comment">// If this is a synonym, look up the real Command</span></div>
+<div class="line"><span class="lineno">  334</span>      <span class="keywordflow">if</span> ((cmd-&gt;<a class="code hl_variable" href="structCommand.html#a1320a9c9b7c94be1fd5ec4e66221ef1e">flags</a> &amp; <a class="code hl_define" href="command_8h.html#a1a3618a807d7eb4b20736d312950214c">CF_SYNONYM</a>) &amp;&amp; cmd-&gt;<a class="code hl_variable" href="structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f">data</a>)</div>
+<div class="line"><span class="lineno">  335</span>      {</div>
+<div class="line"><span class="lineno">  336</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *real_name = (<span class="keyword">const</span> <span class="keywordtype">char</span> *) cmd-&gt;<a class="code hl_variable" href="structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f">data</a>;</div>
+<div class="line"><span class="lineno">  337</span>        <span class="comment">// Search for the real command (non-recursive, single pass)</span></div>
+<div class="line"><span class="lineno">  338</span>        <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> **rp = NULL;</div>
+<div class="line"><span class="lineno">  339</span>        <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(rp, ca)</div>
+<div class="line"><span class="lineno">  340</span>        {</div>
+<div class="line"><span class="lineno">  341</span>          <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structCommand.html">Command</a> *real_cmd = *rp;</div>
+<div class="line"><span class="lineno">  342</span>          <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(real_cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>, real_name) &amp;&amp; !(real_cmd-&gt;<a class="code hl_variable" href="structCommand.html#a1320a9c9b7c94be1fd5ec4e66221ef1e">flags</a> &amp; <a class="code hl_define" href="command_8h.html#a1a3618a807d7eb4b20736d312950214c">CF_SYNONYM</a>))</div>
+<div class="line"><span class="lineno">  343</span>            <span class="keywordflow">return</span> real_cmd;</div>
+<div class="line"><span class="lineno">  344</span>        }</div>
+<div class="line"><span class="lineno">  345</span>        <span class="keywordflow">return</span> NULL; <span class="comment">// Real command not found</span></div>
+<div class="line"><span class="lineno">  346</span>      }</div>
+<div class="line"><span class="lineno">  347</span>      <span class="keywordflow">return</span> cmd;</div>
+<div class="line"><span class="lineno">  348</span>    }</div>
+<div class="line"><span class="lineno">  349</span>  }</div>
+<div class="line"><span class="lineno">  350</span> </div>
+<div class="line"><span class="lineno">  351</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  352</span>}</div>
+<div class="ttc" id="acommand_8h_html_a1a3618a807d7eb4b20736d312950214c"><div class="ttname"><a href="command_8h.html#a1a3618a807d7eb4b20736d312950214c">CF_SYNONYM</a></div><div class="ttdeci">#define CF_SYNONYM</div><div class="ttdoc">Command is a synonym for another command.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00047">command.h:47</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00662">string.c:662</a></div></div>
+<div class="ttc" id="astructCommand_html_a1320a9c9b7c94be1fd5ec4e66221ef1e"><div class="ttname"><a href="structCommand.html#a1320a9c9b7c94be1fd5ec4e66221ef1e">Command::flags</a></div><div class="ttdeci">CommandFlags flags</div><div class="ttdoc">Command flags, e.g. CF_SYNONYM.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00184">command.h:184</a></div></div>
+<div class="ttc" id="astructCommand_html_aa5fe18d852766cc28e9641ff4d0e3b6f"><div class="ttname"><a href="structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f">Command::data</a></div><div class="ttdeci">intptr_t data</div><div class="ttdoc">Data or flags to pass to the command.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00178">command.h:178</a></div></div>
 <div class="ttc" id="astructCommand_html_aaac7db0461198bc84c6bb01e64ae82e3"><div class="ttname"><a href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">Command::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">Name of the Command.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00159">command.h:159</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

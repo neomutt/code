@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"structPgpCache.html#a30c15203d8da87adf67a342adb509e40":[1,0,204,2],
+"structPgpCache.html#ac00837b2f448d7de0de62e4d96154aa0":[1,0,204,0],
 "structPgpCommandContext.html":[1,0,205],
 "structPgpCommandContext.html#a78d6362d702a5890e8cd2f6e602298f9":[1,0,205,0],
 "structPgpCommandContext.html#a902503498520f373066233471d32e0ea":[1,0,205,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "structSmtpAccountData.html#adea3a5a7703b7a9524dc445acbb3321a":[1,0,245,1],
 "structSmtpAuth.html":[1,0,246],
 "structSmtpAuth.html#a007f784ef797d89353cfc7be138231bd":[1,0,246,0],
-"structSmtpAuth.html#afcbd7814f75226e276e3c9fc43cf932c":[1,0,246,1],
-"structState.html":[1,0,247],
-"structState.html#a2c506e7d8513e59e6162cdc5d6f9f320":[1,0,247,4]
+"structSmtpAuth.html#afcbd7814f75226e276e3c9fc43cf932c":[1,0,246,1]
 };

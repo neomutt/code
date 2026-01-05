@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"structEmail.html#a1b48457d5e16b021ada7d227b689f516":[1,0,66,48],
+"structEmail.html#a1e108ee29a0c6571211290457ab60756":[1,0,66,26],
 "structEmail.html#a337686eab0f6a9e12612f2f24578daf6":[1,0,66,34],
 "structEmail.html#a33e9e6bd4eda721034d75e6052c94e18":[1,0,66,30],
 "structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec":[1,0,66,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "structFlowedState.html#a002470002d76c1ede9624e88fe9f2f36":[1,0,100,2],
 "structFlowedState.html#a635fa843f878b8699143b02b178e5dcb":[1,0,100,0],
 "structFlowedState.html#ac69de4a9540d62353afaf3525356212b":[1,0,100,1],
-"structFolder.html":[1,0,101],
-"structFolder.html#a356f20ebab3ead589035c5100911c791":[1,0,101,1],
-"structFolder.html#a37163d36b029dfee673d8c86c77eb3c0":[1,0,101,0]
+"structFolder.html":[1,0,101]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"structFolder.html#a356f20ebab3ead589035c5100911c791":[1,0,101,1],
+"structFolder.html#a37163d36b029dfee673d8c86c77eb3c0":[1,0,101,0],
 "structFolderFile.html":[1,0,102],
 "structFolderFile.html#a17d111be604cc40c886cd34f99e4ad6c":[1,0,102,13],
 "structFolderFile.html#a1d0f057cba1ea9cb0933acccac91bf78":[1,0,102,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "structLogLine.html#af86393989ceb3453c060027555f303b9":[1,0,140,5],
 "structLogLine.html#afeec3f261a14a70ac885fdff163dc179":[1,0,140,1],
 "structLookup.html":[1,0,141],
-"structLookup.html#a25a23240d9698ea3e760736f1e516c3c":[1,0,141,3],
-"structLookup.html#a89726da813ba93a35abba858ff2f5a0b":[1,0,141,1],
-"structLookup.html#ab8893578bc138302e089ee40fea03fee":[1,0,141,2]
+"structLookup.html#a25a23240d9698ea3e760736f1e516c3c":[1,0,141,3]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"structMxOps.html#a15a6d1b3b3a214b6e23a36e4b82e1353":[1,0,173,2],
+"structMxOps.html#a1eaafb57e50a69b5d091f03cbd2521cc":[1,0,173,11],
 "structMxOps.html#a2c86bd6a85aefbb16701be00593013fb":[1,0,173,18],
 "structMxOps.html#a4c0ce9432905dfb3f6849c97ae504f84":[1,0,173,16],
 "structMxOps.html#a625a6ea0abfdb6620542e26acc499177":[1,0,173,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468":[1,0,202,0],
 "structPatternFunction.html#aaf5109d682a4213fb7da4434337112dd":[1,0,202,1],
 "structPgpCache.html":[1,0,204],
-"structPgpCache.html#a27971ba1f4f97f5421cba3c374ccdb10":[1,0,204,1],
-"structPgpCache.html#a30c15203d8da87adf67a342adb509e40":[1,0,204,2],
-"structPgpCache.html#ac00837b2f448d7de0de62e4d96154aa0":[1,0,204,0]
+"structPgpCache.html#a27971ba1f4f97f5421cba3c374ccdb10":[1,0,204,1]
 };
