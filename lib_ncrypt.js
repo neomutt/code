@@ -19,6 +19,7 @@ var lib_ncrypt =
     [ "PGP/Smime functions", "crypt_functions.html", null ],
     [ "Parse the output of CLI PGP program", "crypt_gnupg.html", null ],
     [ "Gpgme functions", "crypt_gpgme_functions.html", null ],
+    [ "Definition of the Ncrypt Module", "ncrypt_module.html", null ],
     [ "PGP sign, encrypt, check routines", "crypt_pgp.html", null ],
     [ "Pgp functions", "pgp_functions.html", null ],
     [ "Wrapper around calls to external PGP program", "crypt_pgpinvoke.html", null ],

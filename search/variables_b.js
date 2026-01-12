@@ -67,7 +67,7 @@ var searchData=
   ['lookups_64',['Lookups',['../mutt_2charset_8c.html#a34621a4d59512ce0d1f14d66d2c6abde',1,'Lookups:&#160;charset.c'],['../mutt_2charset_8h.html#a34621a4d59512ce0d1f14d66d2c6abde',1,'Lookups:&#160;charset.c']]],
   ['loop_65',['loop',['../structPagerPrivateData.html#a6e62f926a13931d35d49184348058fbb',1,'PagerPrivateData']]],
   ['lower_66',['lower',['../structExpandoFormat.html#ad593fcf869924eecdf40c69a21a7689a',1,'ExpandoFormat']]],
-  ['luacommands_67',['LuaCommands',['../lua_2commands_8c.html#acd4abe6e1bce2bf73a95ca55eb0f6d66',1,'commands.c']]],
+  ['luacommands_67',['LuaCommands',['../lua_2commands_8c.html#acd4abe6e1bce2bf73a95ca55eb0f6d66',1,'LuaCommands:&#160;commands.c'],['../lua_2module_8c.html#acd4abe6e1bce2bf73a95ca55eb0f6d66',1,'LuaCommands:&#160;commands.c']]],
   ['luamuttcommands_68',['LuaMuttCommands',['../lua_8c.html#a8b3ff0dc3907975a08de0c6fc6df7e73',1,'lua.c']]],
   ['luastate_69',['LuaState',['../lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da',1,'LuaState:&#160;lua.c'],['../lua_8c.html#a8af176d3e7c60ee4905f03742bd621da',1,'LuaState:&#160;lua.c']]]
 ];

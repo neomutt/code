@@ -13,6 +13,7 @@ var dir_cadddfe7f86d0e152e92d814fe81e3e8 =
     [ "functions.h", "attach_2functions_8h.html", "attach_2functions_8h" ],
     [ "lib.c", "attach_2lib_8c.html", "attach_2lib_8c" ],
     [ "lib.h", "attach_2lib_8h.html", "attach_2lib_8h" ],
+    [ "module.c", "attach_2module_8c.html", "attach_2module_8c" ],
     [ "mutt_attach.c", "mutt__attach_8c.html", "mutt__attach_8c" ],
     [ "mutt_attach.h", "mutt__attach_8h.html", "mutt__attach_8h" ],
     [ "private_data.c", "attach_2private__data_8c.html", "attach_2private__data_8c" ],

@@ -7,7 +7,7 @@ var lib_autocrypt =
         [ "header->security | SEC_AUTOCRYPT_OVERRIDE", "lib_autocrypt.html#autotoc_md15", null ],
         [ "mutt_autocrypt_init()", "lib_autocrypt.html#autotoc_md16", null ],
         [ "Database schema version", "lib_autocrypt.html#autotoc_md17", null ],
-        [ "Functions", "autocrypt_autocrypt.html#autotoc_md165", null ]
+        [ "Functions", "autocrypt_autocrypt.html#autotoc_md169", null ]
       ] ]
     ] ],
     [ "Private Autocrypt Data", "autocrypt_autocrypt_data.html", null ],
@@ -17,5 +17,6 @@ var lib_autocrypt =
     [ "Autocrypt Expando definitions", "autocrypt_expando.html", null ],
     [ "Autocrypt functions", "autocrypt_functions.html", null ],
     [ "Autocrypt GPGME handler", "autocrypt_gpgme.html", null ],
+    [ "Definition of the Autocrypt Module", "autocrypt_module.html", null ],
     [ "Autocrypt database schema", "autocrypt_schema.html", null ]
 ];

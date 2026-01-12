@@ -13,6 +13,7 @@ var group__sort__api =
     [ "browser_sort_new", "group__sort__api.html#gab7ff8359f4cfc1cf59433097cd7c4438", null ],
     [ "browser_sort_helper", "group__sort__api.html#gab4fa1ad1bdb5a82a61572b832c1ecdd7", null ],
     [ "envlist_sort", "group__sort__api.html#ga387c03d3ad5d586efbe4cb66900ca57f", null ],
+    [ "complete_sort_strings", "group__sort__api.html#ga0e2f41396a40407ae0f4755b089c1b9b", null ],
     [ "label_sort", "group__sort__api.html#gad4e89a7d800396041906f3b9beb9d004", null ],
     [ "elem_list_sort", "group__sort__api.html#ga6f4b8e74fdd8c97c64ed424fc8183db1", null ],
     [ "commands_sort", "group__sort__api.html#gacf4bdcca745053c70092c63a48ab7ddd", null ],

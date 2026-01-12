@@ -15,6 +15,7 @@ var dir_4ac3aefb9d9c4a22cf23f594cbf57925 =
     [ "gui.c", "gui_8c.html", "gui_8c" ],
     [ "gui.h", "gui_8h.html", "gui_8h" ],
     [ "lib.h", "alias_2lib_8h.html", "alias_2lib_8h" ],
+    [ "module.c", "alias_2module_8c.html", "alias_2module_8c" ],
     [ "reverse.c", "reverse_8c.html", "reverse_8c" ],
     [ "reverse.h", "reverse_8h.html", "reverse_8h" ],
     [ "sort.c", "alias_2sort_8c.html", "alias_2sort_8c" ],

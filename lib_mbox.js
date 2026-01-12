@@ -1,5 +1,6 @@
 var lib_mbox =
 [
     [ "Config used by libmbox", "mbox_config.html", null ],
-    [ "Mbox local mailbox type", "mbox_mbox.html", null ]
+    [ "Mbox local mailbox type", "mbox_mbox.html", null ],
+    [ "Definition of the Mbox Module", "mbox_module.html", null ]
 ];

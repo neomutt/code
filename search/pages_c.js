@@ -43,6 +43,7 @@ var searchData=
   ['low_20level_20socket_20code_40',['Low-level socket code',['../conn_raw.html',1,'lib_conn']]],
   ['low_20level_20socket_20handling_41',['Low-level socket handling',['../conn_socket.html',1,'lib_conn']]],
   ['lua_20commands_42',['Lua Commands',['../lua_commands.html',1,'lib_lua']]],
-  ['lua_20scripting_43',['Lua scripting',['../lib_lua.html',1,'Integrated Lua scripting'],['../lua_lua.html',1,'Integrated Lua scripting']]],
-  ['lz4_20compression_44',['LZ4 compression',['../compress_lz4.html',1,'lib_compress']]]
+  ['lua_20module_43',['Definition of the Lua Module',['../lua_module.html',1,'lib_lua']]],
+  ['lua_20scripting_44',['Lua scripting',['../lib_lua.html',1,'Integrated Lua scripting'],['../lua_lua.html',1,'Integrated Lua scripting']]],
+  ['lz4_20compression_45',['LZ4 compression',['../compress_lz4.html',1,'lib_compress']]]
 ];

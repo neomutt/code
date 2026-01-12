@@ -4,5 +4,6 @@ var lib_history =
     [ "History Selection Dialog", "history_dlg_history.html", null ],
     [ "History Expando definitions", "history_expando.html", null ],
     [ "History functions", "history_functions.html", null ],
-    [ "History file handling", "history_history.html", null ]
+    [ "History file handling", "history_history.html", null ],
+    [ "Definition of the History Module", "history_module.html", null ]
 ];

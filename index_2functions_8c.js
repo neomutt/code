@@ -6,7 +6,7 @@ var index_2functions_8c =
       [ "RESOLVE_NEXT_THREAD", "index_2functions_8c.html#aea03692781e579bff799cf5199e3b999a94864a6927a89688e5b64e61ab181149", null ],
       [ "RESOLVE_NEXT_SUBTHREAD", "index_2functions_8c.html#aea03692781e579bff799cf5199e3b999a220d4aaf8778a8bd2a353b3817992c90", null ]
     ] ],
-    [ "index_init_keys", "index_2functions_8c.html#acd580d6c4e803da52b1c32cfc2de462e", null ],
+    [ "index_init_keys", "index_2functions_8c.html#acc3bf74d647af683c6b1f0206993e8c8", null ],
     [ "resolve_email", "index_2functions_8c.html#a79974324b9d926c3f2ef8a07c93bcfe3", null ],
     [ "index_next_undeleted", "index_2functions_8c.html#a6e09a10a71d4891eef264ce0cb3504e9", null ],
     [ "op_alias_dialog", "group__index__function__api.html#gaae09582d316d53025ec808c3d7998c79", null ],

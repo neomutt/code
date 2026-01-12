@@ -15,6 +15,7 @@ var dir_1ac69099273185b8416dca0dba1f5766 =
     [ "lib.h", "email_2lib_8h.html", null ],
     [ "mime.c", "mime_8c.html", "mime_8c" ],
     [ "mime.h", "mime_8h.html", "mime_8h" ],
+    [ "module.c", "email_2module_8c.html", "email_2module_8c" ],
     [ "parameter.c", "parameter_8c.html", "parameter_8c" ],
     [ "parameter.h", "parameter_8h.html", "parameter_8h" ],
     [ "parse.c", "email_2parse_8c.html", "email_2parse_8c" ],

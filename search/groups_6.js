@@ -7,5 +7,7 @@ var searchData=
   ['global_20function_20api_4',['Global Function API',['../group__global__function__api.html',1,'']]],
   ['gpgme_20function_20api_5',['Gpgme Function API',['../group__gpgme__function__api.html',1,'']]],
   ['gui_3a_20dialog_20windows_6',['GUI: Dialog Windows',['../group__gui__dlg.html',1,'']]],
-  ['gui_3a_20message_20windows_7',['GUI: Message Windows',['../group__gui__mw.html',1,'']]]
+  ['gui_3a_20message_20windows_7',['GUI: Message Windows',['../group__gui__mw.html',1,'']]],
+  ['gui_5fcleanup_8',['gui_cleanup()',['../group__module__gui__cleanup.html',1,'']]],
+  ['gui_5finit_9',['gui_init()',['../group__module__gui__init.html',1,'']]]
 ];

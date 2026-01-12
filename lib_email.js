@@ -7,6 +7,7 @@ var lib_email =
     [ "Who is the email from?", "email_from.html", null ],
     [ "Global Variables", "email_globals.html", null ],
     [ "Data for MIME encoding", "email_mime.html", null ],
+    [ "Definition of the Email Module", "email_module.html", null ],
     [ "Attributes for a MIME part", "email_parameter.html", null ],
     [ "Email parsing code", "email_parse.html", null ],
     [ "RFC2047 encoding / decoding", "email_rfc2047.html", null ],

@@ -1,6 +1,5 @@
 var compmbox_2compress_8c =
 [
-    [ "mutt_comp_init", "compmbox_2compress_8c.html#a8440ad71a5e3d43cd2c836c777bccded", null ],
     [ "lock_realpath", "compmbox_2compress_8c.html#a8c82fa05ac9a30a1cd0e5c5b472ae066", null ],
     [ "unlock_realpath", "compmbox_2compress_8c.html#aa35e239a0ed2772ae5824c317276f83a", null ],
     [ "setup_paths", "compmbox_2compress_8c.html#a60e1b3c821fbb441941a42b24149fbb3", null ],

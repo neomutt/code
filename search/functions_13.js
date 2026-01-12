@@ -37,11 +37,10 @@ var searchData=
   ['top_5fof_5fthread_34',['top_of_thread',['../mview_8c.html#ab65b072521ed0256d873f056d8c7e8a6',1,'mview.c']]],
   ['transform_5fto_5f7bit_35',['transform_to_7bit',['../sendlib_8c.html#aad3b0f8c92ca56bbe5a4dbe51c9ce81a',1,'sendlib.c']]],
   ['trash_5fappend_36',['trash_append',['../mx_8c.html#a4384d774c74bb9e8b8065e6aeb6b483f',1,'mx.c']]],
-  ['try_5fbind_37',['try_bind',['../key_2commands_8c.html#ad06fa9e5028db083ad4da72556f92c5f',1,'commands.c']]],
-  ['try_5fblock_38',['try_block',['../rfc2047_8c.html#af517130be123255c119dae5b47f3cb1c',1,'rfc2047.c']]],
-  ['tunnel_5fsocket_5fclose_39',['tunnel_socket_close',['../group__connection__close.html#ga583380c9cf4ff2c49eeb9e54f6cfcad3',1,'tunnel.c']]],
-  ['tunnel_5fsocket_5fopen_40',['tunnel_socket_open',['../group__connection__open.html#gafbb9829f3f988c86ff1a01d9c9ea6e03',1,'tunnel.c']]],
-  ['tunnel_5fsocket_5fpoll_41',['tunnel_socket_poll',['../group__connection__poll.html#gaef546927ab07168c0f1d85ecbd202bf6',1,'tunnel.c']]],
-  ['tunnel_5fsocket_5fread_42',['tunnel_socket_read',['../group__connection__read.html#ga1fca6ae2c065a707588777632b2beb5c',1,'tunnel.c']]],
-  ['tunnel_5fsocket_5fwrite_43',['tunnel_socket_write',['../group__connection__write.html#gaaff67eea1d4a26984d92dbb1e0265016',1,'tunnel.c']]]
+  ['try_5fblock_37',['try_block',['../rfc2047_8c.html#af517130be123255c119dae5b47f3cb1c',1,'rfc2047.c']]],
+  ['tunnel_5fsocket_5fclose_38',['tunnel_socket_close',['../group__connection__close.html#ga583380c9cf4ff2c49eeb9e54f6cfcad3',1,'tunnel.c']]],
+  ['tunnel_5fsocket_5fopen_39',['tunnel_socket_open',['../group__connection__open.html#gafbb9829f3f988c86ff1a01d9c9ea6e03',1,'tunnel.c']]],
+  ['tunnel_5fsocket_5fpoll_40',['tunnel_socket_poll',['../group__connection__poll.html#gaef546927ab07168c0f1d85ecbd202bf6',1,'tunnel.c']]],
+  ['tunnel_5fsocket_5fread_41',['tunnel_socket_read',['../group__connection__read.html#ga1fca6ae2c065a707588777632b2beb5c',1,'tunnel.c']]],
+  ['tunnel_5fsocket_5fwrite_42',['tunnel_socket_write',['../group__connection__write.html#gaaff67eea1d4a26984d92dbb1e0265016',1,'tunnel.c']]]
 ];

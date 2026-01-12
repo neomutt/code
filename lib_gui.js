@@ -4,6 +4,7 @@ var lib_gui =
     [ "Dialog Windows", "gui_dialog.html", null ],
     [ "Definitions of user functions", "gui_functions.html", null ],
     [ "Global functions", "gui_global.html", null ],
+    [ "Definition of the Gui Module", "gui_module.html", null ],
     [ "Message Container", "gui_msgcont.html", null ],
     [ "Message Window", "gui_msgwin.html", null ],
     [ "Message Window private data", "gui_msgwin_wdata.html", null ],

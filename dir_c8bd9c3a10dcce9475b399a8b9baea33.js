@@ -38,6 +38,7 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "memory.c", "memory_8c.html", "memory_8c" ],
     [ "memory.h", "memory_8h.html", "memory_8h" ],
     [ "message.h", "mutt_2message_8h.html", "mutt_2message_8h" ],
+    [ "module.c", "mutt_2module_8c.html", "mutt_2module_8c" ],
     [ "notify.c", "mutt_2notify_8c.html", "mutt_2notify_8c" ],
     [ "notify.h", "mutt_2notify_8h.html", "mutt_2notify_8h" ],
     [ "notify_type.h", "notify__type_8h.html", "notify__type_8h" ],

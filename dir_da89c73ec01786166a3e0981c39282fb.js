@@ -12,6 +12,7 @@ var dir_da89c73ec01786166a3e0981c39282fb =
     [ "helpers.c", "expando_2helpers_8c.html", "expando_2helpers_8c" ],
     [ "helpers.h", "expando_2helpers_8h.html", "expando_2helpers_8h" ],
     [ "lib.h", "expando_2lib_8h.html", "expando_2lib_8h" ],
+    [ "module.c", "expando_2module_8c.html", "expando_2module_8c" ],
     [ "node.c", "node_8c.html", "node_8c" ],
     [ "node.h", "node_8h.html", "node_8h" ],
     [ "node_condbool.c", "node__condbool_8c.html", "node__condbool_8c" ],

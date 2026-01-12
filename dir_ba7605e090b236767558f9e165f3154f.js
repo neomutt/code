@@ -7,6 +7,7 @@ var dir_ba7605e090b236767558f9e165f3154f =
     [ "functions.c", "sidebar_2functions_8c.html", "sidebar_2functions_8c" ],
     [ "functions.h", "sidebar_2functions_8h.html", "sidebar_2functions_8h" ],
     [ "lib.h", "sidebar_2lib_8h.html", "sidebar_2lib_8h" ],
+    [ "module.c", "sidebar_2module_8c.html", "sidebar_2module_8c" ],
     [ "observer.c", "sidebar_2observer_8c.html", "sidebar_2observer_8c" ],
     [ "private.h", "sidebar_2private_8h.html", "sidebar_2private_8h" ],
     [ "sidebar.c", "sidebar_8c.html", "sidebar_8c" ],

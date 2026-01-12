@@ -5,6 +5,7 @@ var lib_expando =
     [ "Expando filtering", "expando_filter.html", null ],
     [ "Simple string formatting", "expando_format.html", null ],
     [ "Shared code", "expando_helpers.html", null ],
+    [ "Definition of the Expando Module", "expando_module.html", null ],
     [ "Basic Expando Node", "expando_node.html", null ],
     [ "Condition Boolean Node", "expando_node_condbool.html", null ],
     [ "Conditional Date Node", "expando_node_conddate.html", null ],

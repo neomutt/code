@@ -6,6 +6,6 @@ var lib_key =
     [ "Get a key from the user", "key_get.html", null ],
     [ "Set up the key bindings", "key_init.html", null ],
     [ "Keymap handling", "key_keymap.html", null ],
-    [ "Key helper functions", "key_lib.html", null ],
-    [ "Maniplate Menus and SubMenus", "key_menu.html", null ]
+    [ "Maniplate Menus and SubMenus", "key_menu.html", null ],
+    [ "Definition of the Key Module", "key_module.html", null ]
 ];

@@ -1,6 +1,5 @@
 var notmuch_8c =
 [
-    [ "nm_init", "notmuch_8c.html#ac14b20cce8965804b7da03772f8d6f0b", null ],
     [ "nm_hcache_open", "notmuch_8c.html#a99bcf8d4cf20029c6285d28d681efe00", null ],
     [ "nm_hcache_close", "notmuch_8c.html#aea09d673b9d50ceb497435f800bb4075", null ],
     [ "nm_get_default_url", "notmuch_8c.html#a0ee14876a4916eff9cbdd7678abce919", null ],

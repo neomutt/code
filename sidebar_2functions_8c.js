@@ -1,5 +1,7 @@
 var sidebar_2functions_8c =
 [
+    [ "sidebar_init_keys", "sidebar_2functions_8c.html#a1bd964113486e28a6f0e9f00db267a9e", null ],
+    [ "sidebar_get_submenu", "sidebar_2functions_8c.html#ab17de98dd673d37cef12db1e1f862c9b", null ],
     [ "sb_next", "sidebar_2functions_8c.html#ae64f05f5fb7aafc3184d3e1fcf132ed5", null ],
     [ "sb_next_new", "sidebar_2functions_8c.html#aed4fcca069d222dfe60f3274b565611e", null ],
     [ "sb_prev", "sidebar_2functions_8c.html#a4c5570fc54f15ab6b010868392791b25", null ],
@@ -16,5 +18,7 @@ var sidebar_2functions_8c =
     [ "op_sidebar_toggle_visible", "group__sidebar__function__api.html#ga6704f4240f487bc2397ba342aa99d84d", null ],
     [ "op_sidebar_toggle_virtual", "group__sidebar__function__api.html#ga402f0d1bff54d3f9d90c9c068d66de97", null ],
     [ "sb_function_dispatcher", "group__dispatcher__api.html#ga4a32cef3b62bb558858cf2511d0fd05c", null ],
+    [ "SmSidebar", "sidebar_2functions_8c.html#a7139be211339ccc75c921b04b8a31000", null ],
+    [ "OpSidebar", "sidebar_2functions_8c.html#aebe6e8ae33c98bb469f70b9141b54713", null ],
     [ "SidebarFunctions", "sidebar_2functions_8c.html#a23fe1c5d3aa0063215cf5ed3492aeabf", null ]
 ];

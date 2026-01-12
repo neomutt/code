@@ -5,5 +5,6 @@ var lib_pop =
     [ "Config used by libpop", "pop_config.html", null ],
     [ "Pop-specific Email data", "pop_edata.html", null ],
     [ "POP helper routines", "pop_lib.html", null ],
+    [ "Definition of the Pop Module", "pop_module.html", null ],
     [ "POP network mailbox", "pop_pop.html", null ]
 ];

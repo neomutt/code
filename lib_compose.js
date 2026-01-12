@@ -8,6 +8,7 @@ var lib_compose =
     [ "Compose Email Dialog", "compose_dlg_compose.html", null ],
     [ "Alias Expando definitions", "compose_expando.html", null ],
     [ "Compose functions", "compose_functions.html", null ],
+    [ "Definition of the Compose Module", "compose_module.html", null ],
     [ "Message Preview Window", "compose_preview.html", null ],
     [ "Compose Shared Data", "compose_shared_data.html", null ]
 ];

@@ -13,6 +13,7 @@ var dir_d65448580e9217255cc008a16a3f25d3 =
     [ "index.c", "index_8c.html", "index_8c" ],
     [ "ipanel.c", "ipanel_8c.html", "ipanel_8c" ],
     [ "lib.h", "index_2lib_8h.html", "index_2lib_8h" ],
+    [ "module.c", "index_2module_8c.html", "index_2module_8c" ],
     [ "private.h", "index_2private_8h.html", "index_2private_8h" ],
     [ "private_data.c", "index_2private__data_8c.html", "index_2private__data_8c" ],
     [ "private_data.h", "index_2private__data_8h.html", "index_2private__data_8h" ],

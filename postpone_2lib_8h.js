@@ -1,6 +1,6 @@
 var postpone_2lib_8h =
 [
-    [ "postponed_init_keys", "postpone_2lib_8h.html#af0df1851730b7b9d924176fedda6b412", null ],
+    [ "postponed_init_keys", "postpone_2lib_8h.html#a21a329f5d061deefd884a9bc0d96e5e2", null ],
     [ "dlg_postponed", "group__gui__dlg.html#ga0085fc5cc00f40fb966d7d47b8092f92", null ],
     [ "mutt_get_postponed", "postpone_2lib_8h.html#aacde94d20e952e822eac92e0fbf74682", null ],
     [ "mutt_num_postponed", "postpone_2lib_8h.html#a42853d2d4da10271644dc7083ae1c453", null ],

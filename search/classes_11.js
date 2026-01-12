@@ -19,5 +19,7 @@ var searchData=
   ['smtpauth_16',['SmtpAuth',['../structSmtpAuth.html',1,'']]],
   ['state_17',['State',['../structState.html',1,'']]],
   ['storeops_18',['StoreOps',['../structStoreOps.html',1,'']]],
-  ['sysexits_19',['SysExits',['../structSysExits.html',1,'']]]
+  ['submenu_19',['SubMenu',['../structSubMenu.html',1,'']]],
+  ['submenuid_20',['SubMenuId',['../structSubMenuId.html',1,'']]],
+  ['sysexits_21',['SysExits',['../structSysExits.html',1,'']]]
 ];

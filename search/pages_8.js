@@ -31,5 +31,6 @@ var searchData=
   ['gui_20display_20it_28',['Generate the help-page and GUI display it',['../neo_help.html',1,'index']]],
   ['gui_20display_20the_20mailboxes_20in_20a_20side_20panel_29',['GUI display the mailboxes in a side panel',['../sidebar_sidebar.html',1,'lib_sidebar']]],
   ['gui_20handle_20the_20resizing_20of_20the_20screen_30',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
-  ['gui_20present_20the_20user_20with_20a_20selectable_20list_31',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]]
+  ['gui_20module_31',['Definition of the Gui Module',['../gui_module.html',1,'lib_gui']]],
+  ['gui_20present_20the_20user_20with_20a_20selectable_20list_32',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]]
 ];

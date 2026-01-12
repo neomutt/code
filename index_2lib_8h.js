@@ -16,7 +16,7 @@ var index_2lib_8h =
     [ "CHECK_ATTACH", "index_2lib_8h.html#a397bc5725fce5f47f8019284280cc606", null ],
     [ "NotifyIndex", "index_2lib_8h.html#a46d350542f65b8ef5720eab7daf36a9a", null ],
     [ "CheckFlags", "index_2lib_8h.html#a0fbf75fa988aa37198039a83614ef2f8", null ],
-    [ "index_init_keys", "index_2lib_8h.html#acd580d6c4e803da52b1c32cfc2de462e", null ],
+    [ "index_init_keys", "index_2lib_8h.html#acc3bf74d647af683c6b1f0206993e8c8", null ],
     [ "change_folder_mailbox", "index_2lib_8h.html#a2f01349e640f3de95d4477b256148cc7", null ],
     [ "change_folder_notmuch", "index_2lib_8h.html#a38c0b435d8faefbb863bbb0d6860cc7e", null ],
     [ "change_folder_string", "index_2lib_8h.html#add72c0d04cf5de2184826b4cba8cdf5e", null ],

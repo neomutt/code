@@ -5,7 +5,7 @@ var index =
       [ "Miscellaneous files", "index.html#autotoc_md85", null ],
       [ "Building these Docs", "index.html#autotoc_md86", null ],
       [ "Installing the Docs", "index.html#autotoc_md87", [
-        [ "Functions", "neo_copy.html#autotoc_md668", null ]
+        [ "Functions", "neo_copy.html#autotoc_md726", null ]
       ] ]
     ] ],
     [ "Prepare an email to be edited", "neo_editmsg.html", null ],
@@ -18,6 +18,7 @@ var index =
     [ "RFC1524 Mailcap routines", "neo_mailcap.html", null ],
     [ "Handle mailing lists", "neo_maillist.html", null ],
     [ "Command line processing", "neo_main.html", null ],
+    [ "Definition of the Main Module", "main_module.html", null ],
     [ "Monitor files for changes", "neo_monitor.html", null ],
     [ "Some miscellaneous functions", "neo_muttlib.html", null ],
     [ "Representation of the body of an email", "neo_mutt_body.html", null ],

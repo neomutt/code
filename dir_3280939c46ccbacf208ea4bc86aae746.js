@@ -7,5 +7,6 @@ var dir_3280939c46ccbacf208ea4bc86aae746 =
     [ "functions.c", "history_2functions_8c.html", "history_2functions_8c" ],
     [ "functions.h", "history_2functions_8h.html", "history_2functions_8h" ],
     [ "history.c", "history_8c.html", "history_8c" ],
-    [ "lib.h", "history_2lib_8h.html", "history_2lib_8h" ]
+    [ "lib.h", "history_2lib_8h.html", "history_2lib_8h" ],
+    [ "module.c", "history_2module_8c.html", "history_2module_8c" ]
 ];

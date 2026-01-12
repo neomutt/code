@@ -31,7 +31,7 @@ var searchData=
   ['browserdefaultbindings_28',['BrowserDefaultBindings',['../browser_2functions_8c.html#a44b64cc2f259cfbc2dfef33096461a97',1,'functions.c']]],
   ['browserfunctions_29',['BrowserFunctions',['../browser_2functions_8c.html#ae678937f9a350be7f44cce7beca12284',1,'functions.c']]],
   ['browsersortmethods_30',['BrowserSortMethods',['../browser_2config_8c.html#ae24e4fe4de99951be660aae9c88ecb6e',1,'config.c']]],
-  ['browservars_31',['BrowserVars',['../browser_2config_8c.html#a26a20c0d08d85bbf8562cf72736d0d00',1,'config.c']]],
+  ['browservars_31',['BrowserVars',['../browser_2config_8c.html#a26a20c0d08d85bbf8562cf72736d0d00',1,'BrowserVars:&#160;config.c'],['../browser_2module_8c.html#a26a20c0d08d85bbf8562cf72736d0d00',1,'BrowserVars:&#160;config.c']]],
   ['buf_32',['buf',['../structLz4ComprData.html#a7a8b36f6ce8f2a7d9819179431aeff60',1,'Lz4ComprData::buf'],['../structZlibComprData.html#ab01611bc24d8c8ec1fe596bfa3f34285',1,'ZlibComprData::buf'],['../structZstdComprData.html#ac55ba35312b467029c2f9d73641f5cd3',1,'ZstdComprData::buf'],['../structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672',1,'SaslSockData::buf'],['../structZstrmDirection.html#a9dfab9c149d4455f2a02e5bbfd407d50',1,'ZstrmDirection::buf'],['../structHistoryData.html#a259659d996f885ce9b616320e50d6885',1,'HistoryData::buf'],['../structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd',1,'ImapAccountData::buf'],['../structPatternData.html#a8afb2162a68b6f97aec651c06c4f9514',1,'PatternData::buf']]],
   ['buf_5flen_33',['buf_len',['../structEnrichedState.html#a25b2b5e283b091dc6bfb6ce3cb3f4025',1,'EnrichedState']]],
   ['buf_5fused_34',['buf_used',['../structEnrichedState.html#a7bb708aafd980deba0ec3c02570dc599',1,'EnrichedState']]],

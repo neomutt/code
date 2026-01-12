@@ -7,6 +7,7 @@ var lib_attach =
     [ "Attach Expando definitions", "attach_expando.html", null ],
     [ "Attachment functions", "attach_functions.html", null ],
     [ "Attachment library", "attach_lib.html", null ],
+    [ "Definition of the Attach Module", "attach_module.html", null ],
     [ "Shared attachments functions", "attach_mutt_attach.html", null ],
     [ "Private state data for Attachments", "attach_private_data.html", null ],
     [ "Attachment functions", "attach_recvattach.html", null ]

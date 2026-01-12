@@ -12,6 +12,7 @@ var dir_8fdb7f4d27c6340e06275085d6f34a15 =
     [ "functions.h", "pattern_2functions_8h.html", "pattern_2functions_8h" ],
     [ "lib.h", "pattern_2lib_8h.html", "pattern_2lib_8h" ],
     [ "message.c", "pattern_2message_8c.html", "pattern_2message_8c" ],
+    [ "module.c", "pattern_2module_8c.html", "pattern_2module_8c" ],
     [ "pattern.c", "pattern_8c.html", "pattern_8c" ],
     [ "pattern_data.c", "pattern__data_8c.html", "pattern__data_8c" ],
     [ "pattern_data.h", "pattern__data_8h.html", "pattern__data_8h" ],

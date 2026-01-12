@@ -8,6 +8,7 @@ var lib_index =
     [ "Index Bar (status)", "index_ibar.html", null ],
     [ "Index Window", "index_index.html", null ],
     [ "Index Panel", "index_ipanel.html", null ],
+    [ "Definition of the Index Module", "index_module.html", null ],
     [ "Private data for the Index", "index_private_data.html", null ],
     [ "Shared data", "index_shared_data.html", null ],
     [ "GUI display a user-configurable status line", "index_status.html", null ]

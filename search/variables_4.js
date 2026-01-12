@@ -13,7 +13,7 @@ var searchData=
   ['email_5fmsgid_10',['email_msgid',['../structAutocryptPeerHistory.html#aa0530136a1fd19505c3b3188059da89f',1,'AutocryptPeerHistory::email_msgid'],['../structAutocryptGossipHistory.html#a563910382a2fe060b66ba8c1009d941e',1,'AutocryptGossipHistory::email_msgid']]],
   ['email_5fseq_11',['email_seq',['../structIndexSharedData.html#a29ac3f8a88179b13ad526738b7628f89',1,'IndexSharedData']]],
   ['emails_12',['emails',['../structMailbox.html#a73ca79846dce43a175892c5d88e932ca',1,'Mailbox::emails'],['../structEventEmail.html#a986bd9003cd8f876f7703e66c2023808',1,'EventEmail::emails']]],
-  ['emailvars_13',['EmailVars',['../email_2config_8c.html#ad740e872f47acd90f5133a529fa87f40',1,'config.c']]],
+  ['emailvars_13',['EmailVars',['../email_2config_8c.html#ad740e872f47acd90f5133a529fa87f40',1,'EmailVars:&#160;config.c'],['../email_2module_8c.html#ad740e872f47acd90f5133a529fa87f40',1,'EmailVars:&#160;config.c']]],
   ['enabled_14',['enabled',['../structAutocryptAccount.html#adb2b16e2c4bf0403e68add64bf0487c0',1,'AutocryptAccount::enabled'],['../structCompileOption.html#a6f92e3d19cf7b95d052cd4a763fe8942',1,'CompileOption::enabled']]],
   ['encoded_15',['encoded',['../structRfc2231Parameter.html#a02cf205f394a208081803e433f27bfcf',1,'Rfc2231Parameter']]],
   ['encoding_16',['encoding',['../structBody.html#ad2f05b8ff24813de41988e63de5d6a31',1,'Body']]],

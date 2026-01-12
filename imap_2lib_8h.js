@@ -1,6 +1,5 @@
 var imap_2lib_8h =
 [
-    [ "imap_init", "imap_2lib_8h.html#afa7993bff64be4e3f095e7644493c902", null ],
     [ "imap_access", "imap_2lib_8h.html#ac9f5086daa8615bc5f01884b51053392", null ],
     [ "imap_check_mailbox", "imap_2lib_8h.html#acfd4b6567f210cef7e4dcffa45f263ce", null ],
     [ "imap_delete_mailbox", "imap_2lib_8h.html#a8f78f88f04284f923f839a64ec680c35", null ],

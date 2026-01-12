@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-87-gae07fd</span>
+   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -272,36 +272,36 @@ Functions</h2></td></tr>
 
 <p>Perform a <a class="el" href="structAlias.html" title="A shortcut for an email address or addresses.">Alias</a> function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="alias_2functions_8c_source.html#l00475">475</a> of file <a class="el" href="alias_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  476</span>{</div>
-<div class="line"><span class="lineno">  477</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
-<div class="line"><span class="lineno">  478</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
-<div class="line"><span class="lineno">  479</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno">  480</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  481</span> </div>
-<div class="line"><span class="lineno">  482</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  483</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasMenuData.html">AliasMenuData</a> *<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a> = <a class="code hl_variable" href="structAliasMenuData.html#a80c31195ea34deeb083d2a044b98d1ca">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
-<div class="line"><span class="lineno">  484</span> </div>
-<div class="line"><span class="lineno">  485</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">  486</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="alias_2functions_8c.html#a7ea45356412185e6cb2d051da8ce122c">AliasFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">  487</span>  {</div>
-<div class="line"><span class="lineno">  488</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAliasFunction.html">AliasFunction</a> *fn = &amp;<a class="code hl_variable" href="alias_2functions_8c.html#a7ea45356412185e6cb2d051da8ce122c">AliasFunctions</a>[i];</div>
-<div class="line"><span class="lineno">  489</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a> == <a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a>)</div>
-<div class="line"><span class="lineno">  490</span>    {</div>
-<div class="line"><span class="lineno">  491</span>      rc = fn-&gt;<a class="code hl_variable" href="structAliasFunction.html#af6bf64a8a3b386629e726116150f44b0">function</a>(mdata, <a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a>);</div>
-<div class="line"><span class="lineno">  492</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  493</span>    }</div>
-<div class="line"><span class="lineno">  494</span>  }</div>
-<div class="line"><span class="lineno">  495</span> </div>
-<div class="line"><span class="lineno">  496</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno">  497</span>    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  498</span> </div>
-<div class="line"><span class="lineno">  499</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
-<div class="line"><span class="lineno">  500</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a>), <a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
-<div class="line"><span class="lineno">  501</span> </div>
-<div class="line"><span class="lineno">  502</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  503</span>}</div>
-<div class="ttc" id="aalias_2functions_8c_html_a7ea45356412185e6cb2d051da8ce122c"><div class="ttname"><a href="alias_2functions_8c.html#a7ea45356412185e6cb2d051da8ce122c">AliasFunctions</a></div><div class="ttdeci">static const struct AliasFunction AliasFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Alias supports.</div><div class="ttdef"><b>Definition</b> <a href="alias_2functions_8c_source.html#l00449">functions.c:449</a></div></div>
+<p class="definition">Definition at line <a class="el" href="alias_2functions_8c_source.html#l00487">487</a> of file <a class="el" href="alias_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  488</span>{</div>
+<div class="line"><span class="lineno">  489</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
+<div class="line"><span class="lineno">  490</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
+<div class="line"><span class="lineno">  491</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno">  492</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">  493</span> </div>
+<div class="line"><span class="lineno">  494</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  495</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasMenuData.html">AliasMenuData</a> *<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a> = <a class="code hl_variable" href="structAliasMenuData.html#a80c31195ea34deeb083d2a044b98d1ca">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
+<div class="line"><span class="lineno">  496</span> </div>
+<div class="line"><span class="lineno">  497</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">  498</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="alias_2functions_8c.html#a7ea45356412185e6cb2d051da8ce122c">AliasFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">  499</span>  {</div>
+<div class="line"><span class="lineno">  500</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAliasFunction.html">AliasFunction</a> *fn = &amp;<a class="code hl_variable" href="alias_2functions_8c.html#a7ea45356412185e6cb2d051da8ce122c">AliasFunctions</a>[i];</div>
+<div class="line"><span class="lineno">  501</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a> == <a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a>)</div>
+<div class="line"><span class="lineno">  502</span>    {</div>
+<div class="line"><span class="lineno">  503</span>      rc = fn-&gt;<a class="code hl_variable" href="structAliasFunction.html#af6bf64a8a3b386629e726116150f44b0">function</a>(mdata, <a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a>);</div>
+<div class="line"><span class="lineno">  504</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  505</span>    }</div>
+<div class="line"><span class="lineno">  506</span>  }</div>
+<div class="line"><span class="lineno">  507</span> </div>
+<div class="line"><span class="lineno">  508</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno">  509</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  510</span> </div>
+<div class="line"><span class="lineno">  511</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
+<div class="line"><span class="lineno">  512</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a>), <a class="code hl_variable" href="structAliasFunction.html#a74be64d9134f8ba45ab00d9f7bd9b304">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno">  513</span> </div>
+<div class="line"><span class="lineno">  514</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  515</span>}</div>
+<div class="ttc" id="aalias_2functions_8c_html_a7ea45356412185e6cb2d051da8ce122c"><div class="ttname"><a href="alias_2functions_8c.html#a7ea45356412185e6cb2d051da8ce122c">AliasFunctions</a></div><div class="ttdeci">static const struct AliasFunction AliasFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Alias supports.</div><div class="ttdef"><b>Definition</b> <a href="alias_2functions_8c_source.html#l00461">functions.c:461</a></div></div>
 <div class="ttc" id="adialog_8c_html_ae9143ce9323ae3351fd9b612a6063ada"><div class="ttname"><a href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a></div><div class="ttdeci">struct MuttWindow * dialog_find(struct MuttWindow *win)</div><div class="ttdoc">Find the parent Dialog of a Window.</div><div class="ttdef"><b>Definition</b> <a href="dialog_8c_source.html#l00089">dialog.c:89</a></div></div>
 <div class="ttc" id="adispatcher_8c_html_a7522b1f6b422dfe470e82b463c9c79ff"><div class="ttname"><a href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a></div><div class="ttdeci">const char * dispatcher_get_retval_name(int rv)</div><div class="ttdoc">Get the name of a return value.</div><div class="ttdef"><b>Definition</b> <a href="dispatcher_8c_source.html#l00054">dispatcher.c:54</a></div></div>
 <div class="ttc" id="adispatcher_8h_html_a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa"><div class="ttname"><a href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a></div><div class="ttdeci">@ FR_UNKNOWN</div><div class="ttdoc">Unknown function.</div><div class="ttdef"><b>Definition</b> <a href="dispatcher_8h_source.html#l00033">dispatcher.h:33</a></div></div>
@@ -357,32 +357,32 @@ Functions</h2></td></tr>
 
 <p>Perform a Attach function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="attach_2functions_8c_source.html#l00719">719</a> of file <a class="el" href="attach_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  720</span>{</div>
-<div class="line"><span class="lineno">  721</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
-<div class="line"><span class="lineno">  722</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
-<div class="line"><span class="lineno">  723</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno">  724</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  725</span> </div>
-<div class="line"><span class="lineno">  726</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  727</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAttachPrivateData.html">AttachPrivateData</a> *priv = <a class="code hl_variable" href="structAttachPrivateData.html#a1cca70ad111c9bee242f5b112a5fc338">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
-<div class="line"><span class="lineno">  728</span>  <span class="keywordflow">if</span> (!priv)</div>
-<div class="line"><span class="lineno">  729</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  730</span> </div>
-<div class="line"><span class="lineno">  731</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">  732</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="attach_2functions_8c.html#ab6272403a46d39ad3c8c61e4717587df">AttachFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">  733</span>  {</div>
-<div class="line"><span class="lineno">  734</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAttachFunction.html">AttachFunction</a> *fn = &amp;<a class="code hl_variable" href="attach_2functions_8c.html#ab6272403a46d39ad3c8c61e4717587df">AttachFunctions</a>[i];</div>
-<div class="line"><span class="lineno">  735</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structAttachFunction.html#aa816d889471fab5e6737ae5f0c2d1050">op</a> == <a class="code hl_variable" href="structAttachFunction.html#aa816d889471fab5e6737ae5f0c2d1050">op</a>)</div>
-<div class="line"><span class="lineno">  736</span>    {</div>
-<div class="line"><span class="lineno">  737</span>      rc = fn-&gt;<a class="code hl_variable" href="structAttachFunction.html#a9d5978a5a7d4c87821ea9d7edba3c07e">function</a>(priv, <a class="code hl_variable" href="structAttachFunction.html#aa816d889471fab5e6737ae5f0c2d1050">op</a>);</div>
-<div class="line"><span class="lineno">  738</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  739</span>    }</div>
-<div class="line"><span class="lineno">  740</span>  }</div>
-<div class="line"><span class="lineno">  741</span> </div>
-<div class="line"><span class="lineno">  742</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  743</span>}</div>
-<div class="ttc" id="aattach_2functions_8c_html_ab6272403a46d39ad3c8c61e4717587df"><div class="ttname"><a href="attach_2functions_8c.html#ab6272403a46d39ad3c8c61e4717587df">AttachFunctions</a></div><div class="ttdeci">static const struct AttachFunction AttachFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Attach supports.</div><div class="ttdef"><b>Definition</b> <a href="attach_2functions_8c_source.html#l00682">functions.c:682</a></div></div>
+<p class="definition">Definition at line <a class="el" href="attach_2functions_8c_source.html#l00726">726</a> of file <a class="el" href="attach_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  727</span>{</div>
+<div class="line"><span class="lineno">  728</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
+<div class="line"><span class="lineno">  729</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
+<div class="line"><span class="lineno">  730</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno">  731</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">  732</span> </div>
+<div class="line"><span class="lineno">  733</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  734</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAttachPrivateData.html">AttachPrivateData</a> *priv = <a class="code hl_variable" href="structAttachPrivateData.html#a1cca70ad111c9bee242f5b112a5fc338">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
+<div class="line"><span class="lineno">  735</span>  <span class="keywordflow">if</span> (!priv)</div>
+<div class="line"><span class="lineno">  736</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">  737</span> </div>
+<div class="line"><span class="lineno">  738</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">  739</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="attach_2functions_8c.html#ab6272403a46d39ad3c8c61e4717587df">AttachFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">  740</span>  {</div>
+<div class="line"><span class="lineno">  741</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAttachFunction.html">AttachFunction</a> *fn = &amp;<a class="code hl_variable" href="attach_2functions_8c.html#ab6272403a46d39ad3c8c61e4717587df">AttachFunctions</a>[i];</div>
+<div class="line"><span class="lineno">  742</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structAttachFunction.html#aa816d889471fab5e6737ae5f0c2d1050">op</a> == <a class="code hl_variable" href="structAttachFunction.html#aa816d889471fab5e6737ae5f0c2d1050">op</a>)</div>
+<div class="line"><span class="lineno">  743</span>    {</div>
+<div class="line"><span class="lineno">  744</span>      rc = fn-&gt;<a class="code hl_variable" href="structAttachFunction.html#a9d5978a5a7d4c87821ea9d7edba3c07e">function</a>(priv, <a class="code hl_variable" href="structAttachFunction.html#aa816d889471fab5e6737ae5f0c2d1050">op</a>);</div>
+<div class="line"><span class="lineno">  745</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  746</span>    }</div>
+<div class="line"><span class="lineno">  747</span>  }</div>
+<div class="line"><span class="lineno">  748</span> </div>
+<div class="line"><span class="lineno">  749</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  750</span>}</div>
+<div class="ttc" id="aattach_2functions_8c_html_ab6272403a46d39ad3c8c61e4717587df"><div class="ttname"><a href="attach_2functions_8c.html#ab6272403a46d39ad3c8c61e4717587df">AttachFunctions</a></div><div class="ttdeci">static const struct AttachFunction AttachFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Attach supports.</div><div class="ttdef"><b>Definition</b> <a href="attach_2functions_8c_source.html#l00689">functions.c:689</a></div></div>
 <div class="ttc" id="astructAttachFunction_html"><div class="ttname"><a href="structAttachFunction.html">AttachFunction</a></div><div class="ttdoc">A NeoMutt function.</div><div class="ttdef"><b>Definition</b> <a href="attach_2functions_8h_source.html#l00044">functions.h:45</a></div></div>
 <div class="ttc" id="astructAttachFunction_html_a9d5978a5a7d4c87821ea9d7edba3c07e"><div class="ttname"><a href="structAttachFunction.html#a9d5978a5a7d4c87821ea9d7edba3c07e">AttachFunction::function</a></div><div class="ttdeci">attach_function_t function</div><div class="ttdoc">Function to call.</div><div class="ttdef"><b>Definition</b> <a href="attach_2functions_8h_source.html#l00047">functions.h:47</a></div></div>
 <div class="ttc" id="astructAttachFunction_html_aa816d889471fab5e6737ae5f0c2d1050"><div class="ttname"><a href="structAttachFunction.html#aa816d889471fab5e6737ae5f0c2d1050">AttachFunction::op</a></div><div class="ttdeci">int op</div><div class="ttdoc">Op code, e.g. OP_ATTACHMENT_COLLAPSE.</div><div class="ttdef"><b>Definition</b> <a href="attach_2functions_8h_source.html#l00046">functions.h:46</a></div></div>
@@ -426,36 +426,36 @@ Functions</h2></td></tr>
 
 <p>Perform a Autocrypt function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="autocrypt_2functions_8c_source.html#l00222">222</a> of file <a class="el" href="autocrypt_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  223</span>{</div>
-<div class="line"><span class="lineno">  224</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
-<div class="line"><span class="lineno">  225</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
-<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  230</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAutocryptData.html">AutocryptData</a> *ad = <a class="code hl_variable" href="structAutocryptData.html#aaee2a8f4f40b7d265fa9440528973a6b">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
+<p class="definition">Definition at line <a class="el" href="autocrypt_2functions_8c_source.html#l00225">225</a> of file <a class="el" href="autocrypt_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>{</div>
+<div class="line"><span class="lineno">  227</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
+<div class="line"><span class="lineno">  228</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
+<div class="line"><span class="lineno">  229</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno">  230</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
 <div class="line"><span class="lineno">  231</span> </div>
-<div class="line"><span class="lineno">  232</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">  233</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="autocrypt_2functions_8c.html#a7303c33bec280a21931fac3087603e4e">AutocryptFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">  234</span>  {</div>
-<div class="line"><span class="lineno">  235</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAutocryptFunction.html">AutocryptFunction</a> *fn = &amp;<a class="code hl_variable" href="autocrypt_2functions_8c.html#a7303c33bec280a21931fac3087603e4e">AutocryptFunctions</a>[i];</div>
-<div class="line"><span class="lineno">  236</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a> == <a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a>)</div>
-<div class="line"><span class="lineno">  237</span>    {</div>
-<div class="line"><span class="lineno">  238</span>      rc = fn-&gt;<a class="code hl_variable" href="structAutocryptFunction.html#a1d5b2964d92a733ef300a145cbf935c2">function</a>(ad, <a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a>);</div>
-<div class="line"><span class="lineno">  239</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  240</span>    }</div>
-<div class="line"><span class="lineno">  241</span>  }</div>
-<div class="line"><span class="lineno">  242</span> </div>
-<div class="line"><span class="lineno">  243</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno">  244</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  232</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  233</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAutocryptData.html">AutocryptData</a> *ad = <a class="code hl_variable" href="structAutocryptData.html#aaee2a8f4f40b7d265fa9440528973a6b">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">  236</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="autocrypt_2functions_8c.html#a7303c33bec280a21931fac3087603e4e">AutocryptFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">  237</span>  {</div>
+<div class="line"><span class="lineno">  238</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAutocryptFunction.html">AutocryptFunction</a> *fn = &amp;<a class="code hl_variable" href="autocrypt_2functions_8c.html#a7303c33bec280a21931fac3087603e4e">AutocryptFunctions</a>[i];</div>
+<div class="line"><span class="lineno">  239</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a> == <a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a>)</div>
+<div class="line"><span class="lineno">  240</span>    {</div>
+<div class="line"><span class="lineno">  241</span>      rc = fn-&gt;<a class="code hl_variable" href="structAutocryptFunction.html#a1d5b2964d92a733ef300a145cbf935c2">function</a>(ad, <a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a>);</div>
+<div class="line"><span class="lineno">  242</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  243</span>    }</div>
+<div class="line"><span class="lineno">  244</span>  }</div>
 <div class="line"><span class="lineno">  245</span> </div>
-<div class="line"><span class="lineno">  246</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
-<div class="line"><span class="lineno">  247</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a>), <a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno">  246</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">return</span> rc;</div>
 <div class="line"><span class="lineno">  248</span> </div>
-<div class="line"><span class="lineno">  249</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  250</span>}</div>
-<div class="ttc" id="aautocrypt_2functions_8c_html_a7303c33bec280a21931fac3087603e4e"><div class="ttname"><a href="autocrypt_2functions_8c.html#a7303c33bec280a21931fac3087603e4e">AutocryptFunctions</a></div><div class="ttdeci">static const struct AutocryptFunction AutocryptFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Autocrypt supports.</div><div class="ttdef"><b>Definition</b> <a href="autocrypt_2functions_8c_source.html#l00208">functions.c:208</a></div></div>
+<div class="line"><span class="lineno">  249</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
+<div class="line"><span class="lineno">  250</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a>), <a class="code hl_variable" href="structAutocryptFunction.html#ab4c06023a2b4a5a50643f02f3f850b67">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  253</span>}</div>
+<div class="ttc" id="aautocrypt_2functions_8c_html_a7303c33bec280a21931fac3087603e4e"><div class="ttname"><a href="autocrypt_2functions_8c.html#a7303c33bec280a21931fac3087603e4e">AutocryptFunctions</a></div><div class="ttdeci">static const struct AutocryptFunction AutocryptFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Autocrypt supports.</div><div class="ttdef"><b>Definition</b> <a href="autocrypt_2functions_8c_source.html#l00211">functions.c:211</a></div></div>
 <div class="ttc" id="astructAutocryptData_html"><div class="ttname"><a href="structAutocryptData.html">AutocryptData</a></div><div class="ttdoc">Data to pass to the Autocrypt Functions.</div><div class="ttdef"><b>Definition</b> <a href="autocrypt__data_8h_source.html#l00034">autocrypt_data.h:35</a></div></div>
 <div class="ttc" id="astructAutocryptData_html_aaee2a8f4f40b7d265fa9440528973a6b"><div class="ttname"><a href="structAutocryptData.html#aaee2a8f4f40b7d265fa9440528973a6b">AutocryptData::menu</a></div><div class="ttdeci">struct Menu * menu</div><div class="ttdoc">Autocrypt Menu.</div><div class="ttdef"><b>Definition</b> <a href="autocrypt__data_8h_source.html#l00037">autocrypt_data.h:37</a></div></div>
 <div class="ttc" id="astructAutocryptFunction_html"><div class="ttname"><a href="structAutocryptFunction.html">AutocryptFunction</a></div><div class="ttdoc">A NeoMutt function.</div><div class="ttdef"><b>Definition</b> <a href="autocrypt_2functions_8h_source.html#l00044">functions.h:45</a></div></div>
@@ -499,34 +499,34 @@ Functions</h2></td></tr>
 
 <p>Perform a Compose function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="compose_2functions_8c_source.html#l02149">2149</a> of file <a class="el" href="compose_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2150</span>{</div>
-<div class="line"><span class="lineno"> 2151</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
-<div class="line"><span class="lineno"> 2152</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
-<div class="line"><span class="lineno"> 2153</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno"> 2154</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno"> 2155</span> </div>
-<div class="line"><span class="lineno"> 2156</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno"> 2157</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="compose_2functions_8c.html#a2b9793e540a32c9668d3928e0cf8b7f7">ComposeFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno"> 2158</span>  {</div>
-<div class="line"><span class="lineno"> 2159</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structComposeFunction.html">ComposeFunction</a> *fn = &amp;<a class="code hl_variable" href="compose_2functions_8c.html#a2b9793e540a32c9668d3928e0cf8b7f7">ComposeFunctions</a>[i];</div>
-<div class="line"><span class="lineno"> 2160</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structComposeFunction.html#a3e038466b9f4bc6f6066eb9aa9de7cd2">op</a> == <a class="code hl_variable" href="structComposeFunction.html#a3e038466b9f4bc6f6066eb9aa9de7cd2">op</a>)</div>
-<div class="line"><span class="lineno"> 2161</span>    {</div>
-<div class="line"><span class="lineno"> 2162</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structComposeSharedData.html">ComposeSharedData</a> *shared = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno"> 2163</span>      <a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a> = fn-&gt;<a class="code hl_variable" href="structComposeFunction.html#ae3c55b1212608e09e4df2198389a52b5">function</a>(shared, op);</div>
-<div class="line"><span class="lineno"> 2164</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2165</span>    }</div>
-<div class="line"><span class="lineno"> 2166</span>  }</div>
-<div class="line"><span class="lineno"> 2167</span> </div>
-<div class="line"><span class="lineno"> 2168</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a> == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno"> 2169</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a>;</div>
-<div class="line"><span class="lineno"> 2170</span> </div>
-<div class="line"><span class="lineno"> 2171</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(<a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a>);</div>
-<div class="line"><span class="lineno"> 2172</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(op), op, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
-<div class="line"><span class="lineno"> 2173</span> </div>
-<div class="line"><span class="lineno"> 2174</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a>;</div>
-<div class="line"><span class="lineno"> 2175</span>}</div>
-<div class="ttc" id="acompose_2functions_8c_html_a2b9793e540a32c9668d3928e0cf8b7f7"><div class="ttname"><a href="compose_2functions_8c.html#a2b9793e540a32c9668d3928e0cf8b7f7">ComposeFunctions</a></div><div class="ttdeci">static const struct ComposeFunction ComposeFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Compose supports.</div><div class="ttdef"><b>Definition</b> <a href="compose_2functions_8c_source.html#l02097">functions.c:2097</a></div></div>
+<p class="definition">Definition at line <a class="el" href="compose_2functions_8c_source.html#l02156">2156</a> of file <a class="el" href="compose_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2157</span>{</div>
+<div class="line"><span class="lineno"> 2158</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
+<div class="line"><span class="lineno"> 2159</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
+<div class="line"><span class="lineno"> 2160</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno"> 2161</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno"> 2162</span> </div>
+<div class="line"><span class="lineno"> 2163</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno"> 2164</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="compose_2functions_8c.html#a2b9793e540a32c9668d3928e0cf8b7f7">ComposeFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno"> 2165</span>  {</div>
+<div class="line"><span class="lineno"> 2166</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structComposeFunction.html">ComposeFunction</a> *fn = &amp;<a class="code hl_variable" href="compose_2functions_8c.html#a2b9793e540a32c9668d3928e0cf8b7f7">ComposeFunctions</a>[i];</div>
+<div class="line"><span class="lineno"> 2167</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structComposeFunction.html#a3e038466b9f4bc6f6066eb9aa9de7cd2">op</a> == <a class="code hl_variable" href="structComposeFunction.html#a3e038466b9f4bc6f6066eb9aa9de7cd2">op</a>)</div>
+<div class="line"><span class="lineno"> 2168</span>    {</div>
+<div class="line"><span class="lineno"> 2169</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structComposeSharedData.html">ComposeSharedData</a> *shared = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno"> 2170</span>      <a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a> = fn-&gt;<a class="code hl_variable" href="structComposeFunction.html#ae3c55b1212608e09e4df2198389a52b5">function</a>(shared, op);</div>
+<div class="line"><span class="lineno"> 2171</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2172</span>    }</div>
+<div class="line"><span class="lineno"> 2173</span>  }</div>
+<div class="line"><span class="lineno"> 2174</span> </div>
+<div class="line"><span class="lineno"> 2175</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a> == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno"> 2176</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a>;</div>
+<div class="line"><span class="lineno"> 2177</span> </div>
+<div class="line"><span class="lineno"> 2178</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(<a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a>);</div>
+<div class="line"><span class="lineno"> 2179</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(op), op, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno"> 2180</span> </div>
+<div class="line"><span class="lineno"> 2181</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a">rc</a>;</div>
+<div class="line"><span class="lineno"> 2182</span>}</div>
+<div class="ttc" id="acompose_2functions_8c_html_a2b9793e540a32c9668d3928e0cf8b7f7"><div class="ttname"><a href="compose_2functions_8c.html#a2b9793e540a32c9668d3928e0cf8b7f7">ComposeFunctions</a></div><div class="ttdeci">static const struct ComposeFunction ComposeFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Compose supports.</div><div class="ttdef"><b>Definition</b> <a href="compose_2functions_8c_source.html#l02104">functions.c:2104</a></div></div>
 <div class="ttc" id="astructComposeFunction_html"><div class="ttname"><a href="structComposeFunction.html">ComposeFunction</a></div><div class="ttdoc">A NeoMutt function.</div><div class="ttdef"><b>Definition</b> <a href="compose_2functions_8h_source.html#l00044">functions.h:45</a></div></div>
 <div class="ttc" id="astructComposeFunction_html_a3e038466b9f4bc6f6066eb9aa9de7cd2"><div class="ttname"><a href="structComposeFunction.html#a3e038466b9f4bc6f6066eb9aa9de7cd2">ComposeFunction::op</a></div><div class="ttdeci">int op</div><div class="ttdoc">Op code, e.g. OP_COMPOSE_WRITE_MESSAGE.</div><div class="ttdef"><b>Definition</b> <a href="compose_2functions_8h_source.html#l00046">functions.h:46</a></div></div>
 <div class="ttc" id="astructComposeFunction_html_ae3c55b1212608e09e4df2198389a52b5"><div class="ttname"><a href="structComposeFunction.html#ae3c55b1212608e09e4df2198389a52b5">ComposeFunction::function</a></div><div class="ttdeci">compose_function_t function</div><div class="ttdoc">Function to call.</div><div class="ttdef"><b>Definition</b> <a href="compose_2functions_8h_source.html#l00047">functions.h:47</a></div></div>
@@ -639,33 +639,33 @@ Functions</h2></td></tr>
 
 <p>Perform an Enter function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00490">490</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  491</span>{</div>
-<div class="line"><span class="lineno">  492</span>  <span class="keywordflow">if</span> (!win || !win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno">  493</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">  494</span> </div>
-<div class="line"><span class="lineno">  495</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEnterWindowData.html">EnterWindowData</a> *wdata = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  496</span> </div>
-<div class="line"><span class="lineno">  497</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">  498</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="editor_2functions_8c.html#ac9afed5146fe8ba8b7310248920e408a">EnterFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">  499</span>  {</div>
-<div class="line"><span class="lineno">  500</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structEnterFunction.html">EnterFunction</a> *fn = &amp;<a class="code hl_variable" href="editor_2functions_8c.html#ac9afed5146fe8ba8b7310248920e408a">EnterFunctions</a>[i];</div>
-<div class="line"><span class="lineno">  501</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a> == <a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a>)</div>
-<div class="line"><span class="lineno">  502</span>    {</div>
-<div class="line"><span class="lineno">  503</span>      rc = fn-&gt;<a class="code hl_variable" href="structEnterFunction.html#ad60ac2b3178400703613c8a91e58c20d">function</a>(wdata, <a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a>);</div>
-<div class="line"><span class="lineno">  504</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  505</span>    }</div>
-<div class="line"><span class="lineno">  506</span>  }</div>
-<div class="line"><span class="lineno">  507</span> </div>
-<div class="line"><span class="lineno">  508</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno">  509</span>    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  510</span> </div>
-<div class="line"><span class="lineno">  511</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
-<div class="line"><span class="lineno">  512</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a>), <a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<p class="definition">Definition at line <a class="el" href="editor_2functions_8c_source.html#l00496">496</a> of file <a class="el" href="editor_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  497</span>{</div>
+<div class="line"><span class="lineno">  498</span>  <span class="keywordflow">if</span> (!win || !win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno">  499</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">  500</span> </div>
+<div class="line"><span class="lineno">  501</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEnterWindowData.html">EnterWindowData</a> *wdata = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  502</span> </div>
+<div class="line"><span class="lineno">  503</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">  504</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="editor_2functions_8c.html#ac9afed5146fe8ba8b7310248920e408a">EnterFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">  505</span>  {</div>
+<div class="line"><span class="lineno">  506</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structEnterFunction.html">EnterFunction</a> *fn = &amp;<a class="code hl_variable" href="editor_2functions_8c.html#ac9afed5146fe8ba8b7310248920e408a">EnterFunctions</a>[i];</div>
+<div class="line"><span class="lineno">  507</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a> == <a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a>)</div>
+<div class="line"><span class="lineno">  508</span>    {</div>
+<div class="line"><span class="lineno">  509</span>      rc = fn-&gt;<a class="code hl_variable" href="structEnterFunction.html#ad60ac2b3178400703613c8a91e58c20d">function</a>(wdata, <a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a>);</div>
+<div class="line"><span class="lineno">  510</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  511</span>    }</div>
+<div class="line"><span class="lineno">  512</span>  }</div>
 <div class="line"><span class="lineno">  513</span> </div>
-<div class="line"><span class="lineno">  514</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  515</span>}</div>
-<div class="ttc" id="aeditor_2functions_8c_html_ac9afed5146fe8ba8b7310248920e408a"><div class="ttname"><a href="editor_2functions_8c.html#ac9afed5146fe8ba8b7310248920e408a">EnterFunctions</a></div><div class="ttdeci">static const struct EnterFunction EnterFunctions[]</div><div class="ttdoc">All the NeoMutt functions that Enter supports.</div><div class="ttdef"><b>Definition</b> <a href="editor_2functions_8c_source.html#l00455">functions.c:455</a></div></div>
+<div class="line"><span class="lineno">  514</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno">  515</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  516</span> </div>
+<div class="line"><span class="lineno">  517</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
+<div class="line"><span class="lineno">  518</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a>), <a class="code hl_variable" href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno">  519</span> </div>
+<div class="line"><span class="lineno">  520</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  521</span>}</div>
+<div class="ttc" id="aeditor_2functions_8c_html_ac9afed5146fe8ba8b7310248920e408a"><div class="ttname"><a href="editor_2functions_8c.html#ac9afed5146fe8ba8b7310248920e408a">EnterFunctions</a></div><div class="ttdeci">static const struct EnterFunction EnterFunctions[]</div><div class="ttdoc">All the NeoMutt functions that Enter supports.</div><div class="ttdef"><b>Definition</b> <a href="editor_2functions_8c_source.html#l00461">functions.c:461</a></div></div>
 <div class="ttc" id="astructEnterFunction_html"><div class="ttname"><a href="structEnterFunction.html">EnterFunction</a></div><div class="ttdoc">A NeoMutt function.</div><div class="ttdef"><b>Definition</b> <a href="editor_2functions_8h_source.html#l00047">functions.h:48</a></div></div>
 <div class="ttc" id="astructEnterFunction_html_a77ed0382dd776cf2393b7334f5b910f2"><div class="ttname"><a href="structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2">EnterFunction::op</a></div><div class="ttdeci">int op</div><div class="ttdoc">Op code, e.g. OP_SEARCH.</div><div class="ttdef"><b>Definition</b> <a href="editor_2functions_8h_source.html#l00049">functions.h:49</a></div></div>
 <div class="ttc" id="astructEnterFunction_html_ad60ac2b3178400703613c8a91e58c20d"><div class="ttname"><a href="structEnterFunction.html#ad60ac2b3178400703613c8a91e58c20d">EnterFunction::function</a></div><div class="ttdeci">enter_function_t function</div><div class="ttdoc">Function to call.</div><div class="ttdef"><b>Definition</b> <a href="editor_2functions_8h_source.html#l00050">functions.h:50</a></div></div>
@@ -841,35 +841,35 @@ Functions</h2></td></tr>
 
 <p>Perform a <a class="el" href="structHistory.html" title="Saved list of user-entered commands/searches.">History</a> function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="history_2functions_8c_source.html#l00079">79</a> of file <a class="el" href="history_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>{</div>
-<div class="line"><span class="lineno">   81</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
-<div class="line"><span class="lineno">   82</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
-<div class="line"><span class="lineno">   83</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">   87</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHistoryData.html">HistoryData</a> *hd = <a class="code hl_variable" href="structHistoryData.html#a12b26bc712033c012fe7eb945ff48679">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="history_2functions_8c.html#a067682be1c5b794f5f8c00e230528948">HistoryFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">   91</span>  {</div>
-<div class="line"><span class="lineno">   92</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structHistoryFunction.html">HistoryFunction</a> *fn = &amp;<a class="code hl_variable" href="history_2functions_8c.html#a067682be1c5b794f5f8c00e230528948">HistoryFunctions</a>[i];</div>
-<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a> == <a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a>)</div>
-<div class="line"><span class="lineno">   94</span>    {</div>
-<div class="line"><span class="lineno">   95</span>      rc = fn-&gt;<a class="code hl_variable" href="structHistoryFunction.html#a797f785ca3cae51d7b4bcda9725bcdd8">function</a>(hd, <a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a>);</div>
-<div class="line"><span class="lineno">   96</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="line"><span class="lineno">   98</span>  }</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
-<div class="line"><span class="lineno">  104</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a>), <a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
-<div class="line"><span class="lineno">  105</span> </div>
-<div class="line"><span class="lineno">  106</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  107</span>}</div>
+<p class="definition">Definition at line <a class="el" href="history_2functions_8c_source.html#l00080">80</a> of file <a class="el" href="history_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>{</div>
+<div class="line"><span class="lineno">   82</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
+<div class="line"><span class="lineno">   83</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
+<div class="line"><span class="lineno">   84</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">   88</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHistoryData.html">HistoryData</a> *hd = <a class="code hl_variable" href="structHistoryData.html#a12b26bc712033c012fe7eb945ff48679">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="history_2functions_8c.html#a067682be1c5b794f5f8c00e230528948">HistoryFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">   92</span>  {</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structHistoryFunction.html">HistoryFunction</a> *fn = &amp;<a class="code hl_variable" href="history_2functions_8c.html#a067682be1c5b794f5f8c00e230528948">HistoryFunctions</a>[i];</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a> == <a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a>)</div>
+<div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>      rc = fn-&gt;<a class="code hl_variable" href="structHistoryFunction.html#a797f785ca3cae51d7b4bcda9725bcdd8">function</a>(hd, <a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a>);</div>
+<div class="line"><span class="lineno">   97</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="line"><span class="lineno">   99</span>  }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
+<div class="line"><span class="lineno">  105</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a>), <a class="code hl_variable" href="structHistoryFunction.html#a7ab9a82ba81c8e8d2709b24056b987be">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  108</span>}</div>
 <div class="ttc" id="ahistory_2functions_8c_html_a067682be1c5b794f5f8c00e230528948"><div class="ttname"><a href="history_2functions_8c.html#a067682be1c5b794f5f8c00e230528948">HistoryFunctions</a></div><div class="ttdeci">static const struct HistoryFunction HistoryFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the History supports.</div><div class="ttdef"><b>Definition</b> <a href="history_2functions_8c_source.html#l00068">functions.c:68</a></div></div>
 <div class="ttc" id="astructHistoryData_html"><div class="ttname"><a href="structHistoryData.html">HistoryData</a></div><div class="ttdoc">Data to pass to the History Functions.</div><div class="ttdef"><b>Definition</b> <a href="history_2functions_8h_source.html#l00033">functions.h:34</a></div></div>
 <div class="ttc" id="astructHistoryData_html_a12b26bc712033c012fe7eb945ff48679"><div class="ttname"><a href="structHistoryData.html#a12b26bc712033c012fe7eb945ff48679">HistoryData::menu</a></div><div class="ttdeci">struct Menu * menu</div><div class="ttdoc">History Menu.</div><div class="ttdef"><b>Definition</b> <a href="history_2functions_8h_source.html#l00038">functions.h:38</a></div></div>
@@ -1353,46 +1353,46 @@ Functions</h2></td></tr>
 
 <p>Perform a Pager function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="pager_2functions_8c_source.html#l01138">1138</a> of file <a class="el" href="pager_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1139</span>{</div>
-<div class="line"><span class="lineno"> 1140</span>  <span class="keywordflow">if</span> (!win)</div>
-<div class="line"><span class="lineno"> 1141</span>  {</div>
-<div class="line"><span class="lineno"> 1142</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<a class="code hl_variable" href="pager_2functions_8c.html#a58b4ae9e30b595f5eded392bcf9f2e00">Not_available_in_this_menu</a>));</div>
-<div class="line"><span class="lineno"> 1143</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno"> 1144</span>  }</div>
-<div class="line"><span class="lineno"> 1145</span> </div>
-<div class="line"><span class="lineno"> 1146</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPagerPrivateData.html">PagerPrivateData</a> *priv = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3">parent</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno"> 1147</span>  <span class="keywordflow">if</span> (!priv)</div>
-<div class="line"><span class="lineno"> 1148</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno"> 1149</span> </div>
-<div class="line"><span class="lineno"> 1150</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
-<div class="line"><span class="lineno"> 1151</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno"> 1152</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno"> 1153</span> </div>
-<div class="line"><span class="lineno"> 1154</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno"> 1155</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="pager_2functions_8c.html#aeeaeccdf90422458d889d654c0a5e63d">PagerFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno"> 1156</span>  {</div>
-<div class="line"><span class="lineno"> 1157</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structPagerFunction.html">PagerFunction</a> *fn = &amp;<a class="code hl_variable" href="pager_2functions_8c.html#aeeaeccdf90422458d889d654c0a5e63d">PagerFunctions</a>[i];</div>
-<div class="line"><span class="lineno"> 1158</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structPagerFunction.html#aabc7216c8b3018b43fd0ec48664c0e84">op</a> == <a class="code hl_variable" href="structPagerFunction.html#aabc7216c8b3018b43fd0ec48664c0e84">op</a>)</div>
-<div class="line"><span class="lineno"> 1159</span>    {</div>
-<div class="line"><span class="lineno"> 1160</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structIndexSharedData.html">IndexSharedData</a> *shared = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno"> 1161</span>      rc = fn-&gt;<a class="code hl_variable" href="structPagerFunction.html#a6bf58e14b973b05f94023e97e6b578d3">function</a>(shared, priv, op);</div>
-<div class="line"><span class="lineno"> 1162</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 1163</span>    }</div>
-<div class="line"><span class="lineno"> 1164</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="pager_2functions_8c_source.html#l01135">1135</a> of file <a class="el" href="pager_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1136</span>{</div>
+<div class="line"><span class="lineno"> 1137</span>  <span class="keywordflow">if</span> (!win)</div>
+<div class="line"><span class="lineno"> 1138</span>  {</div>
+<div class="line"><span class="lineno"> 1139</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<a class="code hl_variable" href="pager_2functions_8c.html#a58b4ae9e30b595f5eded392bcf9f2e00">Not_available_in_this_menu</a>));</div>
+<div class="line"><span class="lineno"> 1140</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno"> 1141</span>  }</div>
+<div class="line"><span class="lineno"> 1142</span> </div>
+<div class="line"><span class="lineno"> 1143</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPagerPrivateData.html">PagerPrivateData</a> *priv = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3">parent</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno"> 1144</span>  <span class="keywordflow">if</span> (!priv)</div>
+<div class="line"><span class="lineno"> 1145</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno"> 1146</span> </div>
+<div class="line"><span class="lineno"> 1147</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
+<div class="line"><span class="lineno"> 1148</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno"> 1149</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno"> 1150</span> </div>
+<div class="line"><span class="lineno"> 1151</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno"> 1152</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="pager_2functions_8c.html#aeeaeccdf90422458d889d654c0a5e63d">PagerFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno"> 1153</span>  {</div>
+<div class="line"><span class="lineno"> 1154</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structPagerFunction.html">PagerFunction</a> *fn = &amp;<a class="code hl_variable" href="pager_2functions_8c.html#aeeaeccdf90422458d889d654c0a5e63d">PagerFunctions</a>[i];</div>
+<div class="line"><span class="lineno"> 1155</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structPagerFunction.html#aabc7216c8b3018b43fd0ec48664c0e84">op</a> == <a class="code hl_variable" href="structPagerFunction.html#aabc7216c8b3018b43fd0ec48664c0e84">op</a>)</div>
+<div class="line"><span class="lineno"> 1156</span>    {</div>
+<div class="line"><span class="lineno"> 1157</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structIndexSharedData.html">IndexSharedData</a> *shared = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno"> 1158</span>      rc = fn-&gt;<a class="code hl_variable" href="structPagerFunction.html#a6bf58e14b973b05f94023e97e6b578d3">function</a>(shared, priv, op);</div>
+<div class="line"><span class="lineno"> 1159</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 1160</span>    }</div>
+<div class="line"><span class="lineno"> 1161</span>  }</div>
+<div class="line"><span class="lineno"> 1162</span> </div>
+<div class="line"><span class="lineno"> 1163</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno"> 1164</span>    <span class="keywordflow">return</span> rc;</div>
 <div class="line"><span class="lineno"> 1165</span> </div>
-<div class="line"><span class="lineno"> 1166</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno"> 1167</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1166</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
+<div class="line"><span class="lineno"> 1167</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(op), op, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
 <div class="line"><span class="lineno"> 1168</span> </div>
-<div class="line"><span class="lineno"> 1169</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
-<div class="line"><span class="lineno"> 1170</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(op), op, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
-<div class="line"><span class="lineno"> 1171</span> </div>
-<div class="line"><span class="lineno"> 1172</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1173</span>}</div>
+<div class="line"><span class="lineno"> 1169</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1170</span>}</div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
-<div class="ttc" id="apager_2functions_8c_html_a58b4ae9e30b595f5eded392bcf9f2e00"><div class="ttname"><a href="pager_2functions_8c.html#a58b4ae9e30b595f5eded392bcf9f2e00">Not_available_in_this_menu</a></div><div class="ttdeci">static const char * Not_available_in_this_menu</div><div class="ttdoc">Error message for unavailable functions.</div><div class="ttdef"><b>Definition</b> <a href="pager_2functions_8c_source.html#l00061">functions.c:61</a></div></div>
-<div class="ttc" id="apager_2functions_8c_html_aeeaeccdf90422458d889d654c0a5e63d"><div class="ttname"><a href="pager_2functions_8c.html#aeeaeccdf90422458d889d654c0a5e63d">PagerFunctions</a></div><div class="ttdeci">static const struct PagerFunction PagerFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Pager supports.</div><div class="ttdef"><b>Definition</b> <a href="pager_2functions_8c_source.html#l01109">functions.c:1109</a></div></div>
+<div class="ttc" id="apager_2functions_8c_html_a58b4ae9e30b595f5eded392bcf9f2e00"><div class="ttname"><a href="pager_2functions_8c.html#a58b4ae9e30b595f5eded392bcf9f2e00">Not_available_in_this_menu</a></div><div class="ttdeci">static const char * Not_available_in_this_menu</div><div class="ttdoc">Error message for unavailable functions.</div><div class="ttdef"><b>Definition</b> <a href="pager_2functions_8c_source.html#l00062">functions.c:62</a></div></div>
+<div class="ttc" id="apager_2functions_8c_html_aeeaeccdf90422458d889d654c0a5e63d"><div class="ttname"><a href="pager_2functions_8c.html#aeeaeccdf90422458d889d654c0a5e63d">PagerFunctions</a></div><div class="ttdeci">static const struct PagerFunction PagerFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Pager supports.</div><div class="ttdef"><b>Definition</b> <a href="pager_2functions_8c_source.html#l01106">functions.c:1106</a></div></div>
 <div class="ttc" id="astructPagerFunction_html"><div class="ttname"><a href="structPagerFunction.html">PagerFunction</a></div><div class="ttdoc">A NeoMutt function.</div><div class="ttdef"><b>Definition</b> <a href="pager_2functions_8h_source.html#l00049">functions.h:50</a></div></div>
 <div class="ttc" id="astructPagerFunction_html_a6bf58e14b973b05f94023e97e6b578d3"><div class="ttname"><a href="structPagerFunction.html#a6bf58e14b973b05f94023e97e6b578d3">PagerFunction::function</a></div><div class="ttdeci">pager_function_t function</div><div class="ttdoc">Function to call.</div><div class="ttdef"><b>Definition</b> <a href="pager_2functions_8h_source.html#l00052">functions.h:52</a></div></div>
 <div class="ttc" id="astructPagerFunction_html_aabc7216c8b3018b43fd0ec48664c0e84"><div class="ttname"><a href="structPagerFunction.html#aabc7216c8b3018b43fd0ec48664c0e84">PagerFunction::op</a></div><div class="ttdeci">int op</div><div class="ttdoc">Op code, e.g. OP_MAIN_LIMIT.</div><div class="ttdef"><b>Definition</b> <a href="pager_2functions_8h_source.html#l00051">functions.h:51</a></div></div>
@@ -1435,35 +1435,35 @@ Functions</h2></td></tr>
 
 <p>Perform a <a class="el" href="structPattern.html" title="A simple (non-regex) pattern.">Pattern</a> function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="pattern_2functions_8c_source.html#l00081">81</a> of file <a class="el" href="pattern_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>{</div>
-<div class="line"><span class="lineno">   83</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
-<div class="line"><span class="lineno">   84</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
-<div class="line"><span class="lineno">   85</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">   89</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPatternData.html">PatternData</a> *pd = <a class="code hl_variable" href="structPatternData.html#a25f67f8706d1c1e91364c512b35e3c38">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="pattern_2functions_8c.html#abaa99b919759028bdc9a65b4c7277703">PatternFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">   93</span>  {</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structPatternFunction.html">PatternFunction</a> *fn = &amp;<a class="code hl_variable" href="pattern_2functions_8c.html#abaa99b919759028bdc9a65b4c7277703">PatternFunctions</a>[i];</div>
-<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a> == <a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a>)</div>
-<div class="line"><span class="lineno">   96</span>    {</div>
-<div class="line"><span class="lineno">   97</span>      rc = fn-&gt;<a class="code hl_variable" href="structPatternFunction.html#aaf5109d682a4213fb7da4434337112dd">function</a>(pd, <a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a>);</div>
-<div class="line"><span class="lineno">   98</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   99</span>    }</div>
-<div class="line"><span class="lineno">  100</span>  }</div>
-<div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
-<div class="line"><span class="lineno">  106</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a>), <a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
-<div class="line"><span class="lineno">  107</span> </div>
-<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  109</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pattern_2functions_8c_source.html#l00082">82</a> of file <a class="el" href="pattern_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
+<div class="line"><span class="lineno">   84</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
+<div class="line"><span class="lineno">   85</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">   90</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPatternData.html">PatternData</a> *pd = <a class="code hl_variable" href="structPatternData.html#a25f67f8706d1c1e91364c512b35e3c38">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="pattern_2functions_8c.html#abaa99b919759028bdc9a65b4c7277703">PatternFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">   94</span>  {</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structPatternFunction.html">PatternFunction</a> *fn = &amp;<a class="code hl_variable" href="pattern_2functions_8c.html#abaa99b919759028bdc9a65b4c7277703">PatternFunctions</a>[i];</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a> == <a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a>)</div>
+<div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>      rc = fn-&gt;<a class="code hl_variable" href="structPatternFunction.html#aaf5109d682a4213fb7da4434337112dd">function</a>(pd, <a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a>);</div>
+<div class="line"><span class="lineno">   99</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  100</span>    }</div>
+<div class="line"><span class="lineno">  101</span>  }</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
+<div class="line"><span class="lineno">  107</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a>), <a class="code hl_variable" href="structPatternFunction.html#aa34d85c77f8632fa351b8252fca21468">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno">  108</span> </div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  110</span>}</div>
 <div class="ttc" id="apattern_2functions_8c_html_abaa99b919759028bdc9a65b4c7277703"><div class="ttname"><a href="pattern_2functions_8c.html#abaa99b919759028bdc9a65b4c7277703">PatternFunctions</a></div><div class="ttdeci">static const struct PatternFunction PatternFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Pattern supports.</div><div class="ttdef"><b>Definition</b> <a href="pattern_2functions_8c_source.html#l00070">functions.c:70</a></div></div>
 <div class="ttc" id="astructPatternData_html"><div class="ttname"><a href="structPatternData.html">PatternData</a></div><div class="ttdoc">Data to pass to the Pattern Functions.</div><div class="ttdef"><b>Definition</b> <a href="pattern__data_8h_source.html#l00046">pattern_data.h:47</a></div></div>
 <div class="ttc" id="astructPatternData_html_a25f67f8706d1c1e91364c512b35e3c38"><div class="ttname"><a href="structPatternData.html#a25f67f8706d1c1e91364c512b35e3c38">PatternData::menu</a></div><div class="ttdeci">struct Menu * menu</div><div class="ttdoc">Pattern Menu.</div><div class="ttdef"><b>Definition</b> <a href="pattern__data_8h_source.html#l00051">pattern_data.h:51</a></div></div>
@@ -1508,36 +1508,36 @@ Functions</h2></td></tr>
 
 <p>Perform a Postpone function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00185">185</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  186</span>{</div>
-<div class="line"><span class="lineno">  187</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
-<div class="line"><span class="lineno">  188</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
-<div class="line"><span class="lineno">  189</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  191</span> </div>
-<div class="line"><span class="lineno">  192</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  193</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPostponeData.html">PostponeData</a> *pd = <a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
-<div class="line"><span class="lineno">  194</span> </div>
-<div class="line"><span class="lineno">  195</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">  196</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="postpone_2functions_8c.html#adf2486d2ff6ea7381936cdcf05e72488">PostponeFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">  197</span>  {</div>
-<div class="line"><span class="lineno">  198</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structPostponeFunction.html">PostponeFunction</a> *fn = &amp;<a class="code hl_variable" href="postpone_2functions_8c.html#adf2486d2ff6ea7381936cdcf05e72488">PostponeFunctions</a>[i];</div>
-<div class="line"><span class="lineno">  199</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a> == <a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a>)</div>
-<div class="line"><span class="lineno">  200</span>    {</div>
-<div class="line"><span class="lineno">  201</span>      rc = fn-&gt;<a class="code hl_variable" href="structPostponeFunction.html#a6d99519a80e00ccf5e6c36f877e6fe6d">function</a>(pd, <a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a>);</div>
-<div class="line"><span class="lineno">  202</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  203</span>    }</div>
-<div class="line"><span class="lineno">  204</span>  }</div>
-<div class="line"><span class="lineno">  205</span> </div>
-<div class="line"><span class="lineno">  206</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  208</span> </div>
-<div class="line"><span class="lineno">  209</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
-<div class="line"><span class="lineno">  210</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a>), <a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
-<div class="line"><span class="lineno">  211</span> </div>
-<div class="line"><span class="lineno">  212</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  213</span>}</div>
-<div class="ttc" id="apostpone_2functions_8c_html_adf2486d2ff6ea7381936cdcf05e72488"><div class="ttname"><a href="postpone_2functions_8c.html#adf2486d2ff6ea7381936cdcf05e72488">PostponeFunctions</a></div><div class="ttdeci">static const struct PostponeFunction PostponeFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Postpone supports.</div><div class="ttdef"><b>Definition</b> <a href="postpone_2functions_8c_source.html#l00168">functions.c:168</a></div></div>
+<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00192">192</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  193</span>{</div>
+<div class="line"><span class="lineno">  194</span>  <span class="comment">// The Dispatcher may be called on any Window in the Dialog</span></div>
+<div class="line"><span class="lineno">  195</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win);</div>
+<div class="line"><span class="lineno">  196</span>  <span class="keywordflow">if</span> (!dlg || !dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  199</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  200</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPostponeData.html">PostponeData</a> *pd = <a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">  203</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="postpone_2functions_8c.html#adf2486d2ff6ea7381936cdcf05e72488">PostponeFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">  204</span>  {</div>
+<div class="line"><span class="lineno">  205</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structPostponeFunction.html">PostponeFunction</a> *fn = &amp;<a class="code hl_variable" href="postpone_2functions_8c.html#adf2486d2ff6ea7381936cdcf05e72488">PostponeFunctions</a>[i];</div>
+<div class="line"><span class="lineno">  206</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a> == <a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a>)</div>
+<div class="line"><span class="lineno">  207</span>    {</div>
+<div class="line"><span class="lineno">  208</span>      rc = fn-&gt;<a class="code hl_variable" href="structPostponeFunction.html#a6d99519a80e00ccf5e6c36f877e6fe6d">function</a>(pd, <a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a>);</div>
+<div class="line"><span class="lineno">  209</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  210</span>    }</div>
+<div class="line"><span class="lineno">  211</span>  }</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
+<div class="line"><span class="lineno">  217</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a>), <a class="code hl_variable" href="structPostponeFunction.html#ad1a97319c7dd5362ee953a8f003f94b6">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  220</span>}</div>
+<div class="ttc" id="apostpone_2functions_8c_html_adf2486d2ff6ea7381936cdcf05e72488"><div class="ttname"><a href="postpone_2functions_8c.html#adf2486d2ff6ea7381936cdcf05e72488">PostponeFunctions</a></div><div class="ttdeci">static const struct PostponeFunction PostponeFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Postpone supports.</div><div class="ttdef"><b>Definition</b> <a href="postpone_2functions_8c_source.html#l00175">functions.c:175</a></div></div>
 <div class="ttc" id="astructPostponeData_html"><div class="ttname"><a href="structPostponeData.html">PostponeData</a></div><div class="ttdoc">Data to pass to the Postpone Functions.</div><div class="ttdef"><b>Definition</b> <a href="postpone_2functions_8h_source.html#l00033">functions.h:34</a></div></div>
 <div class="ttc" id="astructPostponeData_html_aca04be299f0d2f2c5a3d893f256ef20a"><div class="ttname"><a href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">PostponeData::menu</a></div><div class="ttdeci">struct Menu * menu</div><div class="ttdoc">Postponed Menu.</div><div class="ttdef"><b>Definition</b> <a href="postpone_2functions_8h_source.html#l00036">functions.h:36</a></div></div>
 <div class="ttc" id="astructPostponeFunction_html"><div class="ttname"><a href="structPostponeFunction.html">PostponeFunction</a></div><div class="ttdoc">A NeoMutt function.</div><div class="ttdef"><b>Definition</b> <a href="postpone_2functions_8h_source.html#l00057">functions.h:58</a></div></div>
@@ -1581,32 +1581,32 @@ Functions</h2></td></tr>
 
 <p>Perform a Sidebar function - Implements <a class="el" href="dispatcher_8h.html#a4162d8309df48f2832104faa8288d47c">function_dispatcher_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="sidebar_2functions_8c_source.html#l00375">375</a> of file <a class="el" href="sidebar_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  376</span>{</div>
-<div class="line"><span class="lineno">  377</span>  <span class="keywordflow">if</span> (!win || !win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
-<div class="line"><span class="lineno">  378</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">  379</span> </div>
-<div class="line"><span class="lineno">  380</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = <a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  381</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
-<div class="line"><span class="lineno">  382</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="sidebar_2functions_8c.html#a23fe1c5d3aa0063215cf5ed3492aeabf">SidebarFunctions</a>[i].op != OP_NULL; i++)</div>
-<div class="line"><span class="lineno">  383</span>  {</div>
-<div class="line"><span class="lineno">  384</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarFunction.html">SidebarFunction</a> *fn = &amp;<a class="code hl_variable" href="sidebar_2functions_8c.html#a23fe1c5d3aa0063215cf5ed3492aeabf">SidebarFunctions</a>[i];</div>
-<div class="line"><span class="lineno">  385</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a> == <a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a>)</div>
-<div class="line"><span class="lineno">  386</span>    {</div>
-<div class="line"><span class="lineno">  387</span>      rc = fn-&gt;<a class="code hl_variable" href="structSidebarFunction.html#a3ef722689bbe273d218add64e26adf26">function</a>(wdata, <a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a>);</div>
-<div class="line"><span class="lineno">  388</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  389</span>    }</div>
-<div class="line"><span class="lineno">  390</span>  }</div>
-<div class="line"><span class="lineno">  391</span> </div>
-<div class="line"><span class="lineno">  392</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
-<div class="line"><span class="lineno">  393</span>    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  394</span> </div>
-<div class="line"><span class="lineno">  395</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
-<div class="line"><span class="lineno">  396</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a>), <a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
-<div class="line"><span class="lineno">  397</span> </div>
-<div class="line"><span class="lineno">  398</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>; <span class="comment">// Whatever the outcome, we handled it</span></div>
-<div class="line"><span class="lineno">  399</span>}</div>
-<div class="ttc" id="asidebar_2functions_8c_html_a23fe1c5d3aa0063215cf5ed3492aeabf"><div class="ttname"><a href="sidebar_2functions_8c.html#a23fe1c5d3aa0063215cf5ed3492aeabf">SidebarFunctions</a></div><div class="ttdeci">static const struct SidebarFunction SidebarFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Sidebar supports.</div><div class="ttdef"><b>Definition</b> <a href="sidebar_2functions_8c_source.html#l00355">functions.c:355</a></div></div>
+<p class="definition">Definition at line <a class="el" href="sidebar_2functions_8c_source.html#l00420">420</a> of file <a class="el" href="sidebar_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  421</span>{</div>
+<div class="line"><span class="lineno">  422</span>  <span class="keywordflow">if</span> (!win || !win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>)</div>
+<div class="line"><span class="lineno">  423</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">  424</span> </div>
+<div class="line"><span class="lineno">  425</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = <a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  426</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>;</div>
+<div class="line"><span class="lineno">  427</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; <a class="code hl_variable" href="sidebar_2functions_8c.html#a23fe1c5d3aa0063215cf5ed3492aeabf">SidebarFunctions</a>[i].op != OP_NULL; i++)</div>
+<div class="line"><span class="lineno">  428</span>  {</div>
+<div class="line"><span class="lineno">  429</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarFunction.html">SidebarFunction</a> *fn = &amp;<a class="code hl_variable" href="sidebar_2functions_8c.html#a23fe1c5d3aa0063215cf5ed3492aeabf">SidebarFunctions</a>[i];</div>
+<div class="line"><span class="lineno">  430</span>    <span class="keywordflow">if</span> (fn-&gt;<a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a> == <a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a>)</div>
+<div class="line"><span class="lineno">  431</span>    {</div>
+<div class="line"><span class="lineno">  432</span>      rc = fn-&gt;<a class="code hl_variable" href="structSidebarFunction.html#a3ef722689bbe273d218add64e26adf26">function</a>(wdata, <a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a>);</div>
+<div class="line"><span class="lineno">  433</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  434</span>    }</div>
+<div class="line"><span class="lineno">  435</span>  }</div>
+<div class="line"><span class="lineno">  436</span> </div>
+<div class="line"><span class="lineno">  437</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa">FR_UNKNOWN</a>) <span class="comment">// Not our function</span></div>
+<div class="line"><span class="lineno">  438</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  439</span> </div>
+<div class="line"><span class="lineno">  440</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *result = <a class="code hl_function" href="dispatcher_8c.html#a7522b1f6b422dfe470e82b463c9c79ff">dispatcher_get_retval_name</a>(rc);</div>
+<div class="line"><span class="lineno">  441</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Handled %s (%d) -&gt; %s\n&quot;</span>, <a class="code hl_function" href="opcodes_8c.html#ae0f924b381cbef15a0aa71993b74215d">opcodes_get_name</a>(<a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a>), <a class="code hl_variable" href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">op</a>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(result));</div>
+<div class="line"><span class="lineno">  442</span> </div>
+<div class="line"><span class="lineno">  443</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>; <span class="comment">// Whatever the outcome, we handled it</span></div>
+<div class="line"><span class="lineno">  444</span>}</div>
+<div class="ttc" id="asidebar_2functions_8c_html_a23fe1c5d3aa0063215cf5ed3492aeabf"><div class="ttname"><a href="sidebar_2functions_8c.html#a23fe1c5d3aa0063215cf5ed3492aeabf">SidebarFunctions</a></div><div class="ttdeci">static const struct SidebarFunction SidebarFunctions[]</div><div class="ttdoc">All the NeoMutt functions that the Sidebar supports.</div><div class="ttdef"><b>Definition</b> <a href="sidebar_2functions_8c_source.html#l00400">functions.c:400</a></div></div>
 <div class="ttc" id="astructSidebarFunction_html"><div class="ttname"><a href="structSidebarFunction.html">SidebarFunction</a></div><div class="ttdoc">A NeoMutt function.</div><div class="ttdef"><b>Definition</b> <a href="sidebar_2functions_8h_source.html#l00043">functions.h:44</a></div></div>
 <div class="ttc" id="astructSidebarFunction_html_a12453f05d71332b9788914bbbcdd4f43"><div class="ttname"><a href="structSidebarFunction.html#a12453f05d71332b9788914bbbcdd4f43">SidebarFunction::op</a></div><div class="ttdeci">int op</div><div class="ttdoc">Op code, e.g. OP_SIDEBAR_NEXT.</div><div class="ttdef"><b>Definition</b> <a href="sidebar_2functions_8h_source.html#l00045">functions.h:45</a></div></div>
 <div class="ttc" id="astructSidebarFunction_html_a3ef722689bbe273d218add64e26adf26"><div class="ttname"><a href="structSidebarFunction.html#a3ef722689bbe273d218add64e26adf26">SidebarFunction::function</a></div><div class="ttdeci">sidebar_function_t function</div><div class="ttdoc">Function to call.</div><div class="ttdef"><b>Definition</b> <a href="sidebar_2functions_8h_source.html#l00046">functions.h:46</a></div></div>

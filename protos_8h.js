@@ -19,6 +19,5 @@ var protos_8h =
     [ "mutt_thread_set_flag", "protos_8h.html#ab0b3fdf72da46166bf7d6866dbfc0c09", null ],
     [ "wcscasecmp", "protos_8h.html#aece8f8a0bf2359e8f8cfc6b7c9f6303f", null ],
     [ "mutt_reply_observer", "protos_8h.html#a296baf961ccb5bdc1ea1c9692e9a5d0c", null ],
-    [ "init_config", "protos_8h.html#a658814930c6efec504cc721154db865f", null ],
     [ "PostCount", "protos_8h.html#a813a6eba284cc0eb882c66dcc4a9ba31", null ]
 ];

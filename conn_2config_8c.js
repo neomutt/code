@@ -1,6 +1,5 @@
 var conn_2config_8c =
 [
-    [ "config_init_conn", "group__cfg__module__api.html#ga86f39c85acdec1116d68920c0f8da071", null ],
     [ "ConnVars", "conn_2config_8c.html#a8ec57748425ff01157045416d4512fc5", null ],
     [ "ConnVarsSsl", "conn_2config_8c.html#a81e672eb7e6a9ac2b74850392f307d5a", null ],
     [ "ConnVarsGnutls", "conn_2config_8c.html#ad326a9bf7e2cdc6d3f69bcad9b451011", null ],

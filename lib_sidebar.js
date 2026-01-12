@@ -4,6 +4,7 @@ var lib_sidebar =
     [ "Config used by libsidebar", "sidebar_config.html", null ],
     [ "Sidebar Expando definitions", "sidebar_expando.html", null ],
     [ "Sidebar functions", "sidebar_functions.html", null ],
+    [ "Definition of the Sidebar Module", "sidebar_module.html", null ],
     [ "Sidebar observers", "sidebar_observers.html", null ],
     [ "GUI display the mailboxes in a side panel", "sidebar_sidebar.html", null ],
     [ "Sidebar sort functions", "sidebar_sort.html", null ],

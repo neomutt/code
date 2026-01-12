@@ -5,6 +5,7 @@ var lib_browser =
     [ "File/Mailbox Browser Dialog", "browser_dlg_browser.html", null ],
     [ "Browser Expando definitions", "browser_expando.html", null ],
     [ "Browser functions", "browser_functions.html", null ],
+    [ "Definition of the Browser Module", "browser_module.html", null ],
     [ "Private data for the Browser", "browser_private_data.html", null ],
     [ "Browser sorting", "browser_sorting.html", null ]
 ];

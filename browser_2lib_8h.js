@@ -32,7 +32,7 @@ var browser_2lib_8h =
       [ "ED_FOL_UNREAD_COUNT", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a71535eaf02e697a5cea30db93c5e4139", null ]
     ] ],
     [ "ARRAY_HEAD", "browser_2lib_8h.html#abed1e88a07c9b822f0412ff00d9d9a45", null ],
-    [ "browser_init_keys", "browser_2lib_8h.html#a261d7a4e6c941da42a2f7e327bdfb2ea", null ],
+    [ "browser_init_keys", "browser_2lib_8h.html#a45d23de60e080ebc64aead7ad44d3321", null ],
     [ "dlg_browser", "group__gui__dlg.html#ga0772d3d88c6b65815188e5d56d1498fb", null ],
     [ "mutt_browser_select_dir", "browser_2lib_8h.html#a9fbed4ed086e8d9c2907e8f43d6143f2", null ],
     [ "mutt_browser_cleanup", "browser_2lib_8h.html#ae57ac9cc2f16e09d897d2c37177da2cd", null ],

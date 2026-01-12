@@ -14,6 +14,7 @@ var dir_959358b93da0cc1b7b624951864bb412 =
     [ "functions.c", "compose_2functions_8c.html", "compose_2functions_8c" ],
     [ "functions.h", "compose_2functions_8h.html", "compose_2functions_8h" ],
     [ "lib.h", "compose_2lib_8h.html", "compose_2lib_8h" ],
+    [ "module.c", "compose_2module_8c.html", "compose_2module_8c" ],
     [ "preview.c", "preview_8c.html", "preview_8c" ],
     [ "private.h", "compose_2private_8h.html", "compose_2private_8h" ],
     [ "shared_data.c", "compose_2shared__data_8c.html", "compose_2shared__data_8c" ],

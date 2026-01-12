@@ -67,6 +67,7 @@ var files_dup =
     [ "maillist.c", "maillist_8c.html", "maillist_8c" ],
     [ "maillist.h", "maillist_8h.html", "maillist_8h" ],
     [ "main.c", "main_8c.html", "main_8c" ],
+    [ "module.c", "module_8c.html", "module_8c" ],
     [ "monitor.c", "monitor_8c.html", "monitor_8c" ],
     [ "monitor.h", "monitor_8h.html", "monitor_8h" ],
     [ "mutt.h", "mutt_8h.html", "mutt_8h" ],

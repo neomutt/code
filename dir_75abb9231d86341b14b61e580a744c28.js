@@ -9,6 +9,7 @@ var dir_75abb9231d86341b14b61e580a744c28 =
     [ "functions.h", "pager_2functions_8h.html", "pager_2functions_8h" ],
     [ "lib.h", "pager_2lib_8h.html", "pager_2lib_8h" ],
     [ "message.c", "pager_2message_8c.html", "pager_2message_8c" ],
+    [ "module.c", "pager_2module_8c.html", "pager_2module_8c" ],
     [ "pager.c", "pager_2pager_8c.html", "pager_2pager_8c" ],
     [ "pbar.c", "pbar_8c.html", "pbar_8c" ],
     [ "pbar.h", "pbar_8h.html", "pbar_8h" ],

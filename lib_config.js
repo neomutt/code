@@ -7,6 +7,7 @@ var lib_config =
     [ "Helper functions to get config values", "config_helpers.html", null ],
     [ "Type: Long", "config_long.html", null ],
     [ "Type: Multi-byte character table", "config_mbtable.html", null ],
+    [ "Definition of the Config Module", "config_module.html", null ],
     [ "Type: MyVar", "config_myvar.html", null ],
     [ "Type: Number", "config_number.html", null ],
     [ "Type: Path", "config_path.html", null ],

@@ -15,7 +15,6 @@ var searchData=
   ['tmp_2ec_12',['tmp.c',['../tmp_8c.html',1,'']]],
   ['tmp_2eh_13',['tmp.h',['../tmp_8h.html',1,'']]],
   ['tunnel_2ec_14',['tunnel.c',['../tunnel_8c.html',1,'']]],
-  ['type_2ec_15',['type.c',['../type_8c.html',1,'']]],
-  ['type_2eh_16',['type.h',['../type_8h.html',1,'']]],
-  ['types_2eh_17',['types.h',['../types_8h.html',1,'']]]
+  ['type_2eh_15',['type.h',['../type_8h.html',1,'']]],
+  ['types_2eh_16',['types.h',['../types_8h.html',1,'']]]
 ];
