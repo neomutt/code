@@ -63,5 +63,7 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "state.c", "mutt_2state_8c.html", "mutt_2state_8c" ],
     [ "state.h", "mutt_2state_8h.html", "mutt_2state_8h" ],
     [ "string.c", "mutt_2string_8c.html", "mutt_2string_8c" ],
-    [ "string2.h", "string2_8h.html", "string2_8h" ]
+    [ "string2.h", "string2_8h.html", "string2_8h" ],
+    [ "timegm.c", "timegm_8c.html", "timegm_8c" ],
+    [ "wcscasecmp.c", "wcscasecmp_8c.html", "wcscasecmp_8c" ]
 ];

@@ -9,6 +9,7 @@ var lib_command =
     [ "Definition of the Commands Module", "commands_module.html", null ],
     [ "Parse My-header Commands", "commands_my_header.html", null ],
     [ "Parse Simple Commands", "commands_parse.html", null ],
+    [ "Routines for adding user scores to emails", "commands_score.html", null ],
     [ "Parse Setenv Commands", "commands_setenv.html", null ],
     [ "Parse Source Commands", "commands_source.html", null ],
     [ "Parse Spam Commands", "commands_spam.html", null ],

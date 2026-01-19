@@ -9,7 +9,7 @@ var key_2commands_8c =
     [ "set_default_bindings", "key_2commands_8c.html#ae76b2ee4a8a6f698193bfdd85c193354", null ],
     [ "notify_binding_name", "key_2commands_8c.html#a30c4d4a94b4f193413e07177bad085f7", null ],
     [ "parse_unbind_args", "key_2commands_8c.html#aca7c17d6d920aba5639ac0698a1fe14b", null ],
-    [ "parse_unbind_execute", "key_2commands_8c.html#af84ed0a4c741df39d88a52daea6d5f94", null ],
+    [ "parse_unbind_exec", "key_2commands_8c.html#a6acaac54c48d2ce0d67bd37bb8631a53", null ],
     [ "parse_unbind", "group__command__parse.html#gaf2cf5727cd4c3b3c4d92b42640b0de2d", null ],
     [ "parse_macro", "group__command__parse.html#ga727bd820b00f1f2e40405a32ecc2df5b", null ],
     [ "parse_exec", "group__command__parse.html#ga91bb4f235f1b7d4acff9adf169fee394", null ]

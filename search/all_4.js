@@ -61,7 +61,7 @@ var searchData=
   ['body_20cache_20functions_58',['Body Cache functions',['../bcache_bcache.html',1,'lib_bcache']]],
   ['body_20message_20cache_59',['Body (Message) Cache',['../lib_bcache.html',1,'']]],
   ['body_20of_20an_20email_60',['Body of an Email',['../email_body.html',1,'lib_email']]],
-  ['body_20of_20an_20email_61',['Representation of the body of an email',['../neo_mutt_body.html',1,'index']]],
+  ['body_20of_20an_20email_61',['Copy the body of an email',['../email_copy_body.html',1,'lib_email']]],
   ['body_2ec_62',['body.c',['../email_2body_8c.html',1,'(Global Namespace)'],['../send_2body_8c.html',1,'(Global Namespace)']]],
   ['body_2eh_63',['body.h',['../email_2body_8h.html',1,'(Global Namespace)'],['../send_2body_8h.html',1,'(Global Namespace)']]],
   ['body_5fattach_5fcount_5fnum_64',['body_attach_count_num',['../group__expando__get__number__api.html#ga62fd43016ed8fda08c3e68c27e8bff1b',1,'expando.c']]],

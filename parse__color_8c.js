@@ -8,5 +8,5 @@ var parse__color_8c =
     [ "parse_color_pair", "group__parser__callback__api.html#ga26cc8a7afeb576e7af8c1bee02948a2d", null ],
     [ "parse_attr_spec", "group__parser__callback__api.html#gac103b102a9824aae1c49563a269b2e50", null ],
     [ "ColorNames", "parse__color_8c.html#a25fdf40f5b2aca2f5c006703f86d8b73", null ],
-    [ "AttributeNames", "parse__color_8c.html#a32de089101f36403a7c4a7bbe8b0e83f", null ]
+    [ "AttributeNames", "parse__color_8c.html#a2597445a2800a3461712ce3b842af6cb", null ]
 ];

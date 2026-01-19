@@ -62,7 +62,7 @@ var searchData=
   ['colornames_59',['ColorNames',['../parse__color_8c.html#a25fdf40f5b2aca2f5c006703f86d8b73',1,'ColorNames:&#160;parse_color.c'],['../parse__color_8h.html#a25fdf40f5b2aca2f5c006703f86d8b73',1,'ColorNames:&#160;parse_color.c']]],
   ['colorsnotify_60',['ColorsNotify',['../color_2notify_8c.html#a2b883cd45394142b4177f21b81bc1d41',1,'ColorsNotify:&#160;notify.c'],['../notify2_8h.html#a2b883cd45394142b4177f21b81bc1d41',1,'ColorsNotify:&#160;notify.c']]],
   ['cols_61',['cols',['../structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43',1,'WindowState']]],
-  ['command_62',['command',['../structHook.html#aa4ee5764f7c353182f66e90520a77420',1,'Hook::command'],['../structMailcapEntry.html#ad682bf5b0b80e72f2a9b9196728514e3',1,'MailcapEntry::command']]],
+  ['command_62',['command',['../structMailcapEntry.html#ad682bf5b0b80e72f2a9b9196728514e3',1,'MailcapEntry::command'],['../structHook.html#aa4ee5764f7c353182f66e90520a77420',1,'Hook::command']]],
   ['commands_63',['commands',['../structCliShared.html#a7e8e66575595e655edb94ed7971106ee',1,'CliShared::commands'],['../structNeoMutt.html#a3024ae27b85ddf7c9c3ff11299d01b05',1,'NeoMutt::commands']]],
   ['commands_5fregister_64',['commands_register',['../structModule.html#ade2ca5c5c0a45f67c7e0580aefd3a630',1,'Module']]],
   ['commandscommands_65',['CommandsCommands',['../commands_2commands_8c.html#a811ec0e255ad21e3f0d5959628ae3ce8',1,'CommandsCommands:&#160;commands.c'],['../commands_2module_8c.html#a811ec0e255ad21e3f0d5959628ae3ce8',1,'CommandsCommands:&#160;commands.c']]],

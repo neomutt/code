@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['s_20header_0',['Manipulate an email&apos;s header',['../neo_mutt_header.html',1,'index']]],
+  ['s_20header_0',['Manipulate an email&apos;s header',['../email_header.html',1,'lib_email']]],
   ['s_20position_20selection_1',['Change the Menu&apos;s position/selection',['../menu_move.html',1,'lib_menu']]],
   ['sasl_20authentication_2',['SASL authentication',['../imap_auth_gsasl.html',1,'GNU SASL authentication'],['../conn_sasl.html',1,'SASL authentication'],['../imap_auth_sasl.html',1,'SASL authentication']]],
   ['sasl_20authentication_20support_3',['GNU SASL authentication support',['../conn_gsasl.html',1,'lib_conn']]],
   ['sasl_20plain_20authentication_4',['SASL plain authentication',['../conn_sasl_plain.html',1,'lib_conn']]],
   ['schema_5',['Autocrypt database schema',['../autocrypt_schema.html',1,'lib_autocrypt']]],
   ['schemes_6',['Parse URL schemes',['../email_url.html',1,'lib_email']]],
-  ['scores_20to_20emails_7',['Routines for adding user scores to emails',['../neo_score.html',1,'index']]],
+  ['scores_20to_20emails_7',['scores to emails',['../commands_score.html',1,'Routines for adding user scores to emails'],['../email_score.html',1,'Routines for adding user scores to emails']]],
   ['screen_8',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
   ['scripting_9',['scripting',['../lib_lua.html',1,'Integrated Lua scripting'],['../lua_lua.html',1,'Integrated Lua scripting']]],
   ['search_10',['Holds state of a search',['../pattern_search_state.html',1,'lib_pattern']]],
@@ -21,7 +21,7 @@ var searchData=
   ['send_20email_20using_20sendmail_18',['Send email using sendmail',['../send_sendmail.html',1,'lib_send']]],
   ['send_20module_19',['Definition of the Send Module',['../send_module.html',1,'lib_send']]],
   ['send_20receive_20commands_20',['Send/receive commands',['../imap_command.html',1,'lib_imap']]],
-  ['send_20reply_20with_20an_20attachment_21',['Send/reply with an attachment',['../neo_recvcmd.html',1,'index']]],
+  ['send_20reply_20with_20an_20attachment_21',['Send/reply with an attachment',['../attach_recvcmd.html',1,'lib_attach']]],
   ['sending_20an_20email_22',['Miscellaneous functions for sending an email',['../send_sendlib.html',1,'lib_send']]],
   ['sendmail_23',['Send email using sendmail',['../send_sendmail.html',1,'lib_send']]],
   ['separated_20list_20of_20strings_24',['A separated list of strings',['../mutt_slist.html',1,'lib_mutt']]],
@@ -108,13 +108,13 @@ var searchData=
   ['string_20processing_20routines_20to_20generate_20the_20mail_20index_105',['String processing routines to generate the mail index',['../index_expando_index.html',1,'lib_index']]],
   ['strings_106',['strings',['../mutt_slist.html',1,'A separated list of strings'],['../mutt_buffer.html',1,'Helper object for storing and parsing strings'],['../config_slist.html',1,'Type: List of strings']]],
   ['structure_107',['Hash Table data structure',['../mutt_hash.html',1,'lib_mutt']]],
-  ['structure_20of_20an_20entire_20email_108',['Duplicate the structure of an entire email',['../neo_copy.html',1,'index']]],
+  ['structure_20of_20an_20entire_20email_108',['Duplicate the structure of an entire email',['../email_copy_email.html',1,'lib_email']]],
   ['style_109',['Quoted style',['../color_qstyle.html',1,'lib_color']]],
   ['subject_20regex_20commands_110',['Parse subject-regex Commands',['../commands_subjectrx.html',1,'lib_command']]],
   ['submenus_111',['Maniplate Menus and SubMenus',['../key_menu.html',1,'lib_key']]],
   ['subscribed_20newsgroups_112',['Read/write a file of subscribed newsgroups',['../nntp_newsrc.html',1,'lib_nntp']]],
   ['subset_20of_20config_20items_113',['Subset of config items',['../config_subset.html',1,'lib_config']]],
   ['support_114',['support',['../conn_gsasl.html',1,'GNU SASL authentication support'],['../menu_tagging.html',1,'Tagging support']]],
-  ['systems_20lacking_20timegm_115',['For systems lacking timegm()',['../neo_timegm.html',1,'index']]],
-  ['systems_20lacking_20wcscasecmp_116',['For systems lacking wcscasecmp()',['../neo_wcscasecmp.html',1,'index']]]
+  ['systems_20lacking_20timegm_115',['For systems lacking timegm()',['../mutt_timegm.html',1,'lib_mutt']]],
+  ['systems_20lacking_20wcscasecmp_116',['For systems lacking wcscasecmp()',['../mutt_wcscasecmp.html',1,'lib_mutt']]]
 ];

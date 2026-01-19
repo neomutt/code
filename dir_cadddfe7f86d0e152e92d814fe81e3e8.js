@@ -19,5 +19,7 @@ var dir_cadddfe7f86d0e152e92d814fe81e3e8 =
     [ "private_data.c", "attach_2private__data_8c.html", "attach_2private__data_8c" ],
     [ "private_data.h", "attach_2private__data_8h.html", "attach_2private__data_8h" ],
     [ "recvattach.c", "recvattach_8c.html", "recvattach_8c" ],
-    [ "recvattach.h", "recvattach_8h.html", "recvattach_8h" ]
+    [ "recvattach.h", "recvattach_8h.html", "recvattach_8h" ],
+    [ "recvcmd.c", "recvcmd_8c.html", "recvcmd_8c" ],
+    [ "recvcmd.h", "recvcmd_8h.html", "recvcmd_8h" ]
 ];

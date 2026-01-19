@@ -6,7 +6,6 @@ var get_8c =
     [ "array_to_endcond", "get_8c.html#a607eda89991600c0be751bbbd8ddce5d", null ],
     [ "mutt_unget_ch", "get_8c.html#ae568d7843782964d3ab8566aa9c59e7b", null ],
     [ "mutt_unget_op", "get_8c.html#a8a7310e8fd6bf845a7754c8787d7333e", null ],
-    [ "mutt_unget_string", "get_8c.html#a6ef7b1ace696713f403479e10c391642", null ],
     [ "mutt_push_macro_event", "get_8c.html#a6fb1a3233123b74771ce95c448b22b79", null ],
     [ "mutt_flush_macro_to_endcond", "get_8c.html#aac5ad0a72c840ff5912ae61615321a5a", null ],
     [ "mutt_monitor_getch", "get_8c.html#aa2129e97fe764cad2e5109cd922b15f5", null ],

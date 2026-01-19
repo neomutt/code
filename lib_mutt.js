@@ -30,5 +30,7 @@ var lib_mutt =
     [ "Signal handling", "mutt_signal.html", null ],
     [ "A separated list of strings", "mutt_slist.html", null ],
     [ "Keep track when processing files", "mutt_state.html", null ],
-    [ "String manipulation functions", "mutt_string.html", null ]
+    [ "String manipulation functions", "mutt_string.html", null ],
+    [ "For systems lacking timegm()", "mutt_timegm.html", null ],
+    [ "For systems lacking wcscasecmp()", "mutt_wcscasecmp.html", null ]
 ];

@@ -273,6 +273,6 @@ var searchData=
   ['ept_5ffill_5feol_270',['EPT_FILL_EOL',['../node__padding_8h.html#a960376317c626504a73ba1e64689d182a29f85a351cb5a186ab3f9c7c6d8a4020',1,'node_padding.h']]],
   ['ept_5fhard_5ffill_271',['EPT_HARD_FILL',['../node__padding_8h.html#a960376317c626504a73ba1e64689d182abd6ee993407ddad49181d76cd9ae325f',1,'node_padding.h']]],
   ['ept_5fsoft_5ffill_272',['EPT_SOFT_FILL',['../node__padding_8h.html#a960376317c626504a73ba1e64689d182a51bc0385e6bc169a869bac1c17736a97',1,'node_padding.h']]],
-  ['evm_5fedit_273',['EVM_EDIT',['../protos_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71fae33ec9ab23d604adf95bb79757427fdb',1,'protos.h']]],
-  ['evm_5fview_274',['EVM_VIEW',['../protos_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71fa9cbf6c5027d20909e3f61fbdacd4c4d1',1,'protos.h']]]
+  ['evm_5fedit_273',['EVM_EDIT',['../mutt_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71fae33ec9ab23d604adf95bb79757427fdb',1,'mutt.h']]],
+  ['evm_5fview_274',['EVM_VIEW',['../mutt_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71fa9cbf6c5027d20909e3f61fbdacd4c4d1',1,'mutt.h']]]
 ];

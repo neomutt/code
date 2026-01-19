@@ -20,7 +20,7 @@ var searchData=
   ['body_20cache_20functions_17',['Body Cache functions',['../bcache_bcache.html',1,'lib_bcache']]],
   ['body_20message_20cache_18',['Body (Message) Cache',['../lib_bcache.html',1,'']]],
   ['body_20of_20an_20email_19',['Body of an Email',['../email_body.html',1,'lib_email']]],
-  ['body_20of_20an_20email_20',['Representation of the body of an email',['../neo_mutt_body.html',1,'index']]],
+  ['body_20of_20an_20email_20',['Copy the body of an email',['../email_copy_body.html',1,'lib_email']]],
   ['book_20dialog_21',['Address Book Dialog',['../alias_dlg_alias.html',1,'lib_alias']]],
   ['boolean_22',['Type: Boolean',['../config_bool.html',1,'lib_config']]],
   ['boolean_20node_23',['Condition Boolean Node',['../expando_node_condbool.html',1,'lib_expando']]],

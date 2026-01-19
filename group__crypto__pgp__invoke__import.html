@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -155,100 +155,100 @@ Functions</h2></td></tr>
 
 <p>Import a key from a message into the user's public key ring - Implements <a class="el" href="structCryptModuleSpecs.html#a1023662632e226a84a7d7c6002edce19">CryptModuleSpecs::pgp_invoke_import()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l02305">2305</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2306</span>{</div>
-<div class="line"><span class="lineno"> 2307</span>  gpgme_ctx_t ctx = <a class="code hl_function" href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno"> 2308</span>  gpgme_data_t keydata = NULL;</div>
-<div class="line"><span class="lineno"> 2309</span>  gpgme_import_result_t impres = NULL;</div>
-<div class="line"><span class="lineno"> 2310</span>  gpgme_import_status_t st = NULL;</div>
-<div class="line"><span class="lineno"> 2311</span>  <span class="keywordtype">bool</span> any;</div>
-<div class="line"><span class="lineno"> 2312</span> </div>
-<div class="line"><span class="lineno"> 2313</span>  FILE *fp_in = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(fname, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2314</span>  <span class="keywordflow">if</span> (!fp_in)</div>
-<div class="line"><span class="lineno"> 2315</span>  {</div>
-<div class="line"><span class="lineno"> 2316</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, fname);</div>
-<div class="line"><span class="lineno"> 2317</span>    <span class="keywordflow">goto</span> leave;</div>
-<div class="line"><span class="lineno"> 2318</span>  }</div>
-<div class="line"><span class="lineno"> 2319</span>  <span class="comment">/* Note that the stream, &quot;fp_in&quot;, needs to be kept open while the keydata</span></div>
-<div class="line"><span class="lineno"> 2320</span><span class="comment">   * is used.  */</span></div>
-<div class="line"><span class="lineno"> 2321</span>  gpgme_error_t err = gpgme_data_new_from_stream(&amp;keydata, fp_in);</div>
-<div class="line"><span class="lineno"> 2322</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
-<div class="line"><span class="lineno"> 2323</span>  {</div>
-<div class="line"><span class="lineno"> 2324</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;error allocating data object: %s&quot;</span>), gpgme_strerror(err));</div>
-<div class="line"><span class="lineno"> 2325</span>    <span class="keywordflow">goto</span> leave;</div>
-<div class="line"><span class="lineno"> 2326</span>  }</div>
-<div class="line"><span class="lineno"> 2327</span> </div>
-<div class="line"><span class="lineno"> 2328</span>  err = gpgme_op_import(ctx, keydata);</div>
-<div class="line"><span class="lineno"> 2329</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
-<div class="line"><span class="lineno"> 2330</span>  {</div>
-<div class="line"><span class="lineno"> 2331</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error importing key: %s&quot;</span>), gpgme_strerror(err));</div>
-<div class="line"><span class="lineno"> 2332</span>    <span class="keywordflow">goto</span> leave;</div>
-<div class="line"><span class="lineno"> 2333</span>  }</div>
-<div class="line"><span class="lineno"> 2334</span> </div>
-<div class="line"><span class="lineno"> 2335</span>  <span class="comment">/* Print infos about the imported keys to stdout.  */</span></div>
-<div class="line"><span class="lineno"> 2336</span>  impres = gpgme_op_import_result(ctx);</div>
-<div class="line"><span class="lineno"> 2337</span>  <span class="keywordflow">if</span> (!impres)</div>
-<div class="line"><span class="lineno"> 2338</span>  {</div>
-<div class="line"><span class="lineno"> 2339</span>    fputs(<span class="stringliteral">&quot;oops: no import result returned\n&quot;</span>, stdout);</div>
-<div class="line"><span class="lineno"> 2340</span>    <span class="keywordflow">goto</span> leave;</div>
-<div class="line"><span class="lineno"> 2341</span>  }</div>
-<div class="line"><span class="lineno"> 2342</span> </div>
-<div class="line"><span class="lineno"> 2343</span>  <span class="keywordflow">for</span> (st = impres-&gt;imports; st; st = st-&gt;next)</div>
-<div class="line"><span class="lineno"> 2344</span>  {</div>
-<div class="line"><span class="lineno"> 2345</span>    <span class="keywordflow">if</span> (st-&gt;result)</div>
-<div class="line"><span class="lineno"> 2346</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 2347</span>    printf(<span class="stringliteral">&quot;key %s imported (&quot;</span>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(st-&gt;fpr));</div>
-<div class="line"><span class="lineno"> 2348</span>    <span class="comment">/* Note that we use the singular even if it is possible that</span></div>
-<div class="line"><span class="lineno"> 2349</span><span class="comment">     * several uids etc are new.  This simply looks better.  */</span></div>
-<div class="line"><span class="lineno"> 2350</span>    any = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 2351</span>    <span class="keywordflow">if</span> (st-&gt;status &amp; GPGME_IMPORT_SECRET)</div>
-<div class="line"><span class="lineno"> 2352</span>    {</div>
-<div class="line"><span class="lineno"> 2353</span>      printf(<span class="stringliteral">&quot;secret parts&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2354</span>      any = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2355</span>    }</div>
-<div class="line"><span class="lineno"> 2356</span>    <span class="keywordflow">if</span> ((st-&gt;status &amp; GPGME_IMPORT_NEW))</div>
-<div class="line"><span class="lineno"> 2357</span>    {</div>
-<div class="line"><span class="lineno"> 2358</span>      printf(<span class="stringliteral">&quot;%snew key&quot;</span>, any ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2359</span>      any = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2360</span>    }</div>
-<div class="line"><span class="lineno"> 2361</span>    <span class="keywordflow">if</span> ((st-&gt;status &amp; GPGME_IMPORT_UID))</div>
-<div class="line"><span class="lineno"> 2362</span>    {</div>
-<div class="line"><span class="lineno"> 2363</span>      printf(<span class="stringliteral">&quot;%snew uid&quot;</span>, any ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2364</span>      any = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2365</span>    }</div>
-<div class="line"><span class="lineno"> 2366</span>    <span class="keywordflow">if</span> ((st-&gt;status &amp; GPGME_IMPORT_SIG))</div>
-<div class="line"><span class="lineno"> 2367</span>    {</div>
-<div class="line"><span class="lineno"> 2368</span>      printf(<span class="stringliteral">&quot;%snew sig&quot;</span>, any ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2369</span>      any = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2370</span>    }</div>
-<div class="line"><span class="lineno"> 2371</span>    <span class="keywordflow">if</span> ((st-&gt;status &amp; GPGME_IMPORT_SUBKEY))</div>
-<div class="line"><span class="lineno"> 2372</span>    {</div>
-<div class="line"><span class="lineno"> 2373</span>      printf(<span class="stringliteral">&quot;%snew subkey&quot;</span>, any ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2374</span>      any = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2375</span>    }</div>
-<div class="line"><span class="lineno"> 2376</span>    printf(<span class="stringliteral">&quot;%s)\n&quot;</span>, any ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;not changed&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2377</span>    <span class="comment">/* Fixme: Should we lookup each imported key and print more infos? */</span></div>
-<div class="line"><span class="lineno"> 2378</span>  }</div>
-<div class="line"><span class="lineno"> 2379</span>  <span class="comment">/* Now print keys which failed the import.  Unfortunately in most</span></div>
-<div class="line"><span class="lineno"> 2380</span><span class="comment">   * cases gpg will bail out early and not tell GPGME about.  */</span></div>
-<div class="line"><span class="lineno"> 2381</span>  <span class="comment">/* FIXME: We could instead use the new GPGME_AUDITLOG_DIAG to show</span></div>
-<div class="line"><span class="lineno"> 2382</span><span class="comment">   * the actual gpg diagnostics.  But I fear that would clutter the</span></div>
-<div class="line"><span class="lineno"> 2383</span><span class="comment">   * output too much.  Maybe a dedicated prompt or option to do this</span></div>
-<div class="line"><span class="lineno"> 2384</span><span class="comment">   * would be helpful.  */</span></div>
-<div class="line"><span class="lineno"> 2385</span>  <span class="keywordflow">for</span> (st = impres-&gt;imports; st; st = st-&gt;next)</div>
-<div class="line"><span class="lineno"> 2386</span>  {</div>
-<div class="line"><span class="lineno"> 2387</span>    <span class="keywordflow">if</span> (st-&gt;result == 0)</div>
-<div class="line"><span class="lineno"> 2388</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 2389</span>    printf(<span class="stringliteral">&quot;key %s import failed: %s\n&quot;</span>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(st-&gt;fpr), gpgme_strerror(st-&gt;result));</div>
-<div class="line"><span class="lineno"> 2390</span>  }</div>
-<div class="line"><span class="lineno"> 2391</span>  fflush(stdout);</div>
-<div class="line"><span class="lineno"> 2392</span> </div>
-<div class="line"><span class="lineno"> 2393</span>leave:</div>
-<div class="line"><span class="lineno"> 2394</span>  gpgme_release(ctx);</div>
-<div class="line"><span class="lineno"> 2395</span>  gpgme_data_release(keydata);</div>
-<div class="line"><span class="lineno"> 2396</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_in);</div>
-<div class="line"><span class="lineno"> 2397</span>}</div>
-<div class="ttc" id="acrypt__gpgme_8c_html_a54ca8638b13c6da904a48009a8bba358"><div class="ttname"><a href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a></div><div class="ttdeci">gpgme_ctx_t create_gpgme_context(bool for_smime)</div><div class="ttdoc">Create a new GPGME context.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00362">crypt_gpgme.c:362</a></div></div>
+<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l02304">2304</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2305</span>{</div>
+<div class="line"><span class="lineno"> 2306</span>  gpgme_ctx_t ctx = <a class="code hl_function" href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno"> 2307</span>  gpgme_data_t keydata = NULL;</div>
+<div class="line"><span class="lineno"> 2308</span>  gpgme_import_result_t impres = NULL;</div>
+<div class="line"><span class="lineno"> 2309</span>  gpgme_import_status_t st = NULL;</div>
+<div class="line"><span class="lineno"> 2310</span>  <span class="keywordtype">bool</span> any;</div>
+<div class="line"><span class="lineno"> 2311</span> </div>
+<div class="line"><span class="lineno"> 2312</span>  FILE *fp_in = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(fname, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2313</span>  <span class="keywordflow">if</span> (!fp_in)</div>
+<div class="line"><span class="lineno"> 2314</span>  {</div>
+<div class="line"><span class="lineno"> 2315</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, fname);</div>
+<div class="line"><span class="lineno"> 2316</span>    <span class="keywordflow">goto</span> leave;</div>
+<div class="line"><span class="lineno"> 2317</span>  }</div>
+<div class="line"><span class="lineno"> 2318</span>  <span class="comment">/* Note that the stream, &quot;fp_in&quot;, needs to be kept open while the keydata</span></div>
+<div class="line"><span class="lineno"> 2319</span><span class="comment">   * is used.  */</span></div>
+<div class="line"><span class="lineno"> 2320</span>  gpgme_error_t err = gpgme_data_new_from_stream(&amp;keydata, fp_in);</div>
+<div class="line"><span class="lineno"> 2321</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
+<div class="line"><span class="lineno"> 2322</span>  {</div>
+<div class="line"><span class="lineno"> 2323</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;error allocating data object: %s&quot;</span>), gpgme_strerror(err));</div>
+<div class="line"><span class="lineno"> 2324</span>    <span class="keywordflow">goto</span> leave;</div>
+<div class="line"><span class="lineno"> 2325</span>  }</div>
+<div class="line"><span class="lineno"> 2326</span> </div>
+<div class="line"><span class="lineno"> 2327</span>  err = gpgme_op_import(ctx, keydata);</div>
+<div class="line"><span class="lineno"> 2328</span>  <span class="keywordflow">if</span> (err != GPG_ERR_NO_ERROR)</div>
+<div class="line"><span class="lineno"> 2329</span>  {</div>
+<div class="line"><span class="lineno"> 2330</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error importing key: %s&quot;</span>), gpgme_strerror(err));</div>
+<div class="line"><span class="lineno"> 2331</span>    <span class="keywordflow">goto</span> leave;</div>
+<div class="line"><span class="lineno"> 2332</span>  }</div>
+<div class="line"><span class="lineno"> 2333</span> </div>
+<div class="line"><span class="lineno"> 2334</span>  <span class="comment">/* Print infos about the imported keys to stdout.  */</span></div>
+<div class="line"><span class="lineno"> 2335</span>  impres = gpgme_op_import_result(ctx);</div>
+<div class="line"><span class="lineno"> 2336</span>  <span class="keywordflow">if</span> (!impres)</div>
+<div class="line"><span class="lineno"> 2337</span>  {</div>
+<div class="line"><span class="lineno"> 2338</span>    fputs(<span class="stringliteral">&quot;oops: no import result returned\n&quot;</span>, stdout);</div>
+<div class="line"><span class="lineno"> 2339</span>    <span class="keywordflow">goto</span> leave;</div>
+<div class="line"><span class="lineno"> 2340</span>  }</div>
+<div class="line"><span class="lineno"> 2341</span> </div>
+<div class="line"><span class="lineno"> 2342</span>  <span class="keywordflow">for</span> (st = impres-&gt;imports; st; st = st-&gt;next)</div>
+<div class="line"><span class="lineno"> 2343</span>  {</div>
+<div class="line"><span class="lineno"> 2344</span>    <span class="keywordflow">if</span> (st-&gt;result)</div>
+<div class="line"><span class="lineno"> 2345</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2346</span>    printf(<span class="stringliteral">&quot;key %s imported (&quot;</span>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(st-&gt;fpr));</div>
+<div class="line"><span class="lineno"> 2347</span>    <span class="comment">/* Note that we use the singular even if it is possible that</span></div>
+<div class="line"><span class="lineno"> 2348</span><span class="comment">     * several uids etc are new.  This simply looks better.  */</span></div>
+<div class="line"><span class="lineno"> 2349</span>    any = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 2350</span>    <span class="keywordflow">if</span> (st-&gt;status &amp; GPGME_IMPORT_SECRET)</div>
+<div class="line"><span class="lineno"> 2351</span>    {</div>
+<div class="line"><span class="lineno"> 2352</span>      printf(<span class="stringliteral">&quot;secret parts&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2353</span>      any = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2354</span>    }</div>
+<div class="line"><span class="lineno"> 2355</span>    <span class="keywordflow">if</span> ((st-&gt;status &amp; GPGME_IMPORT_NEW))</div>
+<div class="line"><span class="lineno"> 2356</span>    {</div>
+<div class="line"><span class="lineno"> 2357</span>      printf(<span class="stringliteral">&quot;%snew key&quot;</span>, any ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2358</span>      any = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2359</span>    }</div>
+<div class="line"><span class="lineno"> 2360</span>    <span class="keywordflow">if</span> ((st-&gt;status &amp; GPGME_IMPORT_UID))</div>
+<div class="line"><span class="lineno"> 2361</span>    {</div>
+<div class="line"><span class="lineno"> 2362</span>      printf(<span class="stringliteral">&quot;%snew uid&quot;</span>, any ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2363</span>      any = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2364</span>    }</div>
+<div class="line"><span class="lineno"> 2365</span>    <span class="keywordflow">if</span> ((st-&gt;status &amp; GPGME_IMPORT_SIG))</div>
+<div class="line"><span class="lineno"> 2366</span>    {</div>
+<div class="line"><span class="lineno"> 2367</span>      printf(<span class="stringliteral">&quot;%snew sig&quot;</span>, any ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2368</span>      any = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2369</span>    }</div>
+<div class="line"><span class="lineno"> 2370</span>    <span class="keywordflow">if</span> ((st-&gt;status &amp; GPGME_IMPORT_SUBKEY))</div>
+<div class="line"><span class="lineno"> 2371</span>    {</div>
+<div class="line"><span class="lineno"> 2372</span>      printf(<span class="stringliteral">&quot;%snew subkey&quot;</span>, any ? <span class="stringliteral">&quot;, &quot;</span> : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2373</span>      any = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2374</span>    }</div>
+<div class="line"><span class="lineno"> 2375</span>    printf(<span class="stringliteral">&quot;%s)\n&quot;</span>, any ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;not changed&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2376</span>    <span class="comment">/* Fixme: Should we lookup each imported key and print more infos? */</span></div>
+<div class="line"><span class="lineno"> 2377</span>  }</div>
+<div class="line"><span class="lineno"> 2378</span>  <span class="comment">/* Now print keys which failed the import.  Unfortunately in most</span></div>
+<div class="line"><span class="lineno"> 2379</span><span class="comment">   * cases gpg will bail out early and not tell GPGME about.  */</span></div>
+<div class="line"><span class="lineno"> 2380</span>  <span class="comment">/* FIXME: We could instead use the new GPGME_AUDITLOG_DIAG to show</span></div>
+<div class="line"><span class="lineno"> 2381</span><span class="comment">   * the actual gpg diagnostics.  But I fear that would clutter the</span></div>
+<div class="line"><span class="lineno"> 2382</span><span class="comment">   * output too much.  Maybe a dedicated prompt or option to do this</span></div>
+<div class="line"><span class="lineno"> 2383</span><span class="comment">   * would be helpful.  */</span></div>
+<div class="line"><span class="lineno"> 2384</span>  <span class="keywordflow">for</span> (st = impres-&gt;imports; st; st = st-&gt;next)</div>
+<div class="line"><span class="lineno"> 2385</span>  {</div>
+<div class="line"><span class="lineno"> 2386</span>    <span class="keywordflow">if</span> (st-&gt;result == 0)</div>
+<div class="line"><span class="lineno"> 2387</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2388</span>    printf(<span class="stringliteral">&quot;key %s import failed: %s\n&quot;</span>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(st-&gt;fpr), gpgme_strerror(st-&gt;result));</div>
+<div class="line"><span class="lineno"> 2389</span>  }</div>
+<div class="line"><span class="lineno"> 2390</span>  fflush(stdout);</div>
+<div class="line"><span class="lineno"> 2391</span> </div>
+<div class="line"><span class="lineno"> 2392</span>leave:</div>
+<div class="line"><span class="lineno"> 2393</span>  gpgme_release(ctx);</div>
+<div class="line"><span class="lineno"> 2394</span>  gpgme_data_release(keydata);</div>
+<div class="line"><span class="lineno"> 2395</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_in);</div>
+<div class="line"><span class="lineno"> 2396</span>}</div>
+<div class="ttc" id="acrypt__gpgme_8c_html_a54ca8638b13c6da904a48009a8bba358"><div class="ttname"><a href="crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358">create_gpgme_context</a></div><div class="ttdeci">gpgme_ctx_t create_gpgme_context(bool for_smime)</div><div class="ttdoc">Create a new GPGME context.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l00361">crypt_gpgme.c:361</a></div></div>
 <div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00139">file.h:139</a></div></div>
 <div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00138">file.h:138</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
@@ -300,7 +300,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  302</span> </div>
 <div class="line"><span class="lineno">  303</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structExpando.html">Expando</a> *c_pgp_import_command = <a class="code hl_function" href="config_2helpers_8h.html#afadba3dd7a0ec53c70d047005b2efcef">cs_subset_expando</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pgp_import_command&quot;</span>);</div>
 <div class="line"><span class="lineno">  304</span>  <a class="code hl_function" href="pgpinvoke_8c.html#a98751ec36c88d40ac3419b1a24085b0b">mutt_pgp_command</a>(cmd, &amp;cctx, c_pgp_import_command);</div>
-<div class="line"><span class="lineno">  305</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="protos_8h.html#aa1d4ad04b000036513ca3f741059942c">mutt_system</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(cmd)) != 0)</div>
+<div class="line"><span class="lineno">  305</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_8h.html#aa1d4ad04b000036513ca3f741059942c">mutt_system</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(cmd)) != 0)</div>
 <div class="line"><span class="lineno">  306</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error running \&quot;%s\&quot;\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(cmd));</div>
 <div class="line"><span class="lineno">  307</span> </div>
 <div class="line"><span class="lineno">  308</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf_fname);</div>
@@ -312,10 +312,10 @@ Functions</h2></td></tr>
 <div class="ttc" id="afile_8c_html_a0da2bc91bbaabcf0c3c403a1d61c8526"><div class="ttname"><a href="file_8c.html#a0da2bc91bbaabcf0c3c403a1d61c8526">buf_quote_filename</a></div><div class="ttdeci">void buf_quote_filename(struct Buffer *buf, const char *filename, bool add_outer)</div><div class="ttdoc">Quote a filename to survive the shell&#39;s quoting rules.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00811">file.c:811</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
+<div class="ttc" id="amutt_8h_html_aa1d4ad04b000036513ca3f741059942c"><div class="ttname"><a href="mutt_8h.html#aa1d4ad04b000036513ca3f741059942c">mutt_system</a></div><div class="ttdeci">int mutt_system(const char *cmd)</div><div class="ttdoc">Run an external command.</div><div class="ttdef"><b>Definition</b> <a href="system_8c_source.html#l00051">system.c:51</a></div></div>
 <div class="ttc" id="apgpinvoke_8c_html_a98751ec36c88d40ac3419b1a24085b0b"><div class="ttname"><a href="pgpinvoke_8c.html#a98751ec36c88d40ac3419b1a24085b0b">mutt_pgp_command</a></div><div class="ttdeci">static void mutt_pgp_command(struct Buffer *buf, struct PgpCommandContext *cctx, const struct Expando *exp)</div><div class="ttdoc">Prepare a PGP Command.</div><div class="ttdef"><b>Definition</b> <a href="pgpinvoke_8c_source.html#l00060">pgpinvoke.c:60</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
-<div class="ttc" id="aprotos_8h_html_aa1d4ad04b000036513ca3f741059942c"><div class="ttname"><a href="protos_8h.html#aa1d4ad04b000036513ca3f741059942c">mutt_system</a></div><div class="ttdeci">int mutt_system(const char *cmd)</div><div class="ttdoc">Run an external command.</div><div class="ttdef"><b>Definition</b> <a href="system_8c_source.html#l00052">system.c:52</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
 <div class="ttc" id="astructExpando_html"><div class="ttname"><a href="structExpando.html">Expando</a></div><div class="ttdoc">Parsed Expando trees.</div><div class="ttdef"><b>Definition</b> <a href="expando_2expando_8h_source.html#l00040">expando.h:41</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00127">neomutt.h:128</a></div></div>

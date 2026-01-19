@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -185,106 +185,106 @@ Functions</h2></td></tr>
 
 <p>Decrypt an encrypted MIME part - Implements <a class="el" href="structCryptModuleSpecs.html#a18cf5903d388ba3cc91431e5076271ee">CryptModuleSpecs::decrypt_mime()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l01895">1895</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1896</span>{</div>
-<div class="line"><span class="lineno"> 1897</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structState.html">State</a> state = { 0 };</div>
-<div class="line"><span class="lineno"> 1898</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *first_part = b;</div>
-<div class="line"><span class="lineno"> 1899</span>  <span class="keywordtype">int</span> is_signed = 0;</div>
-<div class="line"><span class="lineno"> 1900</span>  <span class="keywordtype">bool</span> need_decode = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1901</span>  LOFF_T saved_offset = 0;</div>
-<div class="line"><span class="lineno"> 1902</span>  <span class="keywordtype">size_t</span> saved_length = 0;</div>
-<div class="line"><span class="lineno"> 1903</span>  FILE *fp_decoded = NULL;</div>
-<div class="line"><span class="lineno"> 1904</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno"> 1905</span> </div>
-<div class="line"><span class="lineno"> 1906</span>  first_part-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1907</span>  first_part-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1908</span> </div>
-<div class="line"><span class="lineno"> 1909</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a51806f872069460bb7f4fa16d1d92710">mutt_is_valid_multipart_pgp_encrypted</a>(b))</div>
-<div class="line"><span class="lineno"> 1910</span>  {</div>
-<div class="line"><span class="lineno"> 1911</span>    b = b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>;</div>
-<div class="line"><span class="lineno"> 1912</span>    <span class="comment">/* Some clients improperly encode the octetstream part. */</span></div>
-<div class="line"><span class="lineno"> 1913</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="structBody.html#ad2f05b8ff24813de41988e63de5d6a31">encoding</a> != <a class="code hl_enumvalue" href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61a0bc13f416d890a95b7d7e7c77b155f8e">ENC_7BIT</a>)</div>
-<div class="line"><span class="lineno"> 1914</span>      need_decode = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1915</span>  }</div>
-<div class="line"><span class="lineno"> 1916</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a9edb0262eaed7c522977a75b76c15770">mutt_is_malformed_multipart_pgp_encrypted</a>(b))</div>
-<div class="line"><span class="lineno"> 1917</span>  {</div>
-<div class="line"><span class="lineno"> 1918</span>    b = b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>;</div>
-<div class="line"><span class="lineno"> 1919</span>    need_decode = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1920</span>  }</div>
-<div class="line"><span class="lineno"> 1921</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1922</span>  {</div>
-<div class="line"><span class="lineno"> 1923</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1924</span>  }</div>
-<div class="line"><span class="lineno"> 1925</span> </div>
-<div class="line"><span class="lineno"> 1926</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_in;</div>
-<div class="line"><span class="lineno"> 1927</span> </div>
-<div class="line"><span class="lineno"> 1928</span>  <span class="keywordflow">if</span> (need_decode)</div>
-<div class="line"><span class="lineno"> 1929</span>  {</div>
-<div class="line"><span class="lineno"> 1930</span>    saved_offset = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
-<div class="line"><span class="lineno"> 1931</span>    saved_length = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
-<div class="line"><span class="lineno"> 1932</span> </div>
-<div class="line"><span class="lineno"> 1933</span>    fp_decoded = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 1934</span>    <span class="keywordflow">if</span> (!fp_decoded)</div>
-<div class="line"><span class="lineno"> 1935</span>    {</div>
-<div class="line"><span class="lineno"> 1936</span>      <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1937</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1938</span>    }</div>
-<div class="line"><span class="lineno"> 1939</span> </div>
-<div class="line"><span class="lineno"> 1940</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
-<div class="line"><span class="lineno"> 1941</span>    {</div>
-<div class="line"><span class="lineno"> 1942</span>      rc = -1;</div>
-<div class="line"><span class="lineno"> 1943</span>      <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 1944</span>    }</div>
-<div class="line"><span class="lineno"> 1945</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_decoded;</div>
-<div class="line"><span class="lineno"> 1946</span> </div>
-<div class="line"><span class="lineno"> 1947</span>    <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(b, &amp;state);</div>
-<div class="line"><span class="lineno"> 1948</span> </div>
-<div class="line"><span class="lineno"> 1949</span>    fflush(fp_decoded);</div>
-<div class="line"><span class="lineno"> 1950</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(fp_decoded);</div>
-<div class="line"><span class="lineno"> 1951</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
-<div class="line"><span class="lineno"> 1952</span>    rewind(fp_decoded);</div>
-<div class="line"><span class="lineno"> 1953</span>    state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_decoded;</div>
-<div class="line"><span class="lineno"> 1954</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
-<div class="line"><span class="lineno"> 1955</span>  }</div>
-<div class="line"><span class="lineno"> 1956</span> </div>
-<div class="line"><span class="lineno"> 1957</span>  *fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 1958</span>  <span class="keywordflow">if</span> (!*fp_out)</div>
-<div class="line"><span class="lineno"> 1959</span>  {</div>
-<div class="line"><span class="lineno"> 1960</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1961</span>    rc = -1;</div>
-<div class="line"><span class="lineno"> 1962</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 1963</span>  }</div>
-<div class="line"><span class="lineno"> 1964</span> </div>
-<div class="line"><span class="lineno"> 1965</span>  *b_dec = <a class="code hl_function" href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a>(b, &amp;state, *fp_out, <span class="keyword">false</span>, &amp;is_signed);</div>
-<div class="line"><span class="lineno"> 1966</span>  <span class="keywordflow">if</span> (*b_dec)</div>
-<div class="line"><span class="lineno"> 1967</span>  {</div>
-<div class="line"><span class="lineno"> 1968</span>    rewind(*fp_out);</div>
-<div class="line"><span class="lineno"> 1969</span>    <span class="keywordflow">if</span> (is_signed &gt; 0)</div>
-<div class="line"><span class="lineno"> 1970</span>      first_part-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1971</span>  }</div>
-<div class="line"><span class="lineno"> 1972</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1973</span>  {</div>
-<div class="line"><span class="lineno"> 1974</span>    rc = -1;</div>
-<div class="line"><span class="lineno"> 1975</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(fp_out);</div>
-<div class="line"><span class="lineno"> 1976</span>  }</div>
-<div class="line"><span class="lineno"> 1977</span> </div>
-<div class="line"><span class="lineno"> 1978</span>bail:</div>
-<div class="line"><span class="lineno"> 1979</span>  <span class="keywordflow">if</span> (need_decode)</div>
-<div class="line"><span class="lineno"> 1980</span>  {</div>
-<div class="line"><span class="lineno"> 1981</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = saved_length;</div>
-<div class="line"><span class="lineno"> 1982</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = saved_offset;</div>
-<div class="line"><span class="lineno"> 1983</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_decoded);</div>
-<div class="line"><span class="lineno"> 1984</span>  }</div>
-<div class="line"><span class="lineno"> 1985</span> </div>
-<div class="line"><span class="lineno"> 1986</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1987</span>}</div>
-<div class="ttc" id="acrypt_8c_html_a51806f872069460bb7f4fa16d1d92710"><div class="ttname"><a href="crypt_8c.html#a51806f872069460bb7f4fa16d1d92710">mutt_is_valid_multipart_pgp_encrypted</a></div><div class="ttdeci">int mutt_is_valid_multipart_pgp_encrypted(struct Body *b)</div><div class="ttdoc">Is this a valid multi-part encrypted message?</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00469">crypt.c:469</a></div></div>
-<div class="ttc" id="acrypt_8c_html_a9edb0262eaed7c522977a75b76c15770"><div class="ttname"><a href="crypt_8c.html#a9edb0262eaed7c522977a75b76c15770">mutt_is_malformed_multipart_pgp_encrypted</a></div><div class="ttdeci">SecurityFlags mutt_is_malformed_multipart_pgp_encrypted(struct Body *b)</div><div class="ttdoc">Check for malformed layout.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00506">crypt.c:506</a></div></div>
-<div class="ttc" id="acrypt__gpgme_8c_html_aa009033da100651a4083dc6f419469be"><div class="ttname"><a href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a></div><div class="ttdeci">static struct Body * decrypt_part(struct Body *b, struct State *state, FILE *fp_out, bool is_smime, int *r_is_signed)</div><div class="ttdoc">Decrypt a PGP or SMIME message.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l01733">crypt_gpgme.c:1733</a></div></div>
+<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l01894">1894</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1895</span>{</div>
+<div class="line"><span class="lineno"> 1896</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structState.html">State</a> state = { 0 };</div>
+<div class="line"><span class="lineno"> 1897</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *first_part = b;</div>
+<div class="line"><span class="lineno"> 1898</span>  <span class="keywordtype">int</span> is_signed = 0;</div>
+<div class="line"><span class="lineno"> 1899</span>  <span class="keywordtype">bool</span> need_decode = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1900</span>  LOFF_T saved_offset = 0;</div>
+<div class="line"><span class="lineno"> 1901</span>  <span class="keywordtype">size_t</span> saved_length = 0;</div>
+<div class="line"><span class="lineno"> 1902</span>  FILE *fp_decoded = NULL;</div>
+<div class="line"><span class="lineno"> 1903</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno"> 1904</span> </div>
+<div class="line"><span class="lineno"> 1905</span>  first_part-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1906</span>  first_part-&gt;<a class="code hl_variable" href="structBody.html#af3cd45c954a643a57bba4dc5ff36e323">warnsig</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1907</span> </div>
+<div class="line"><span class="lineno"> 1908</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a51806f872069460bb7f4fa16d1d92710">mutt_is_valid_multipart_pgp_encrypted</a>(b))</div>
+<div class="line"><span class="lineno"> 1909</span>  {</div>
+<div class="line"><span class="lineno"> 1910</span>    b = b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>;</div>
+<div class="line"><span class="lineno"> 1911</span>    <span class="comment">/* Some clients improperly encode the octetstream part. */</span></div>
+<div class="line"><span class="lineno"> 1912</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="structBody.html#ad2f05b8ff24813de41988e63de5d6a31">encoding</a> != <a class="code hl_enumvalue" href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61a0bc13f416d890a95b7d7e7c77b155f8e">ENC_7BIT</a>)</div>
+<div class="line"><span class="lineno"> 1913</span>      need_decode = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1914</span>  }</div>
+<div class="line"><span class="lineno"> 1915</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a9edb0262eaed7c522977a75b76c15770">mutt_is_malformed_multipart_pgp_encrypted</a>(b))</div>
+<div class="line"><span class="lineno"> 1916</span>  {</div>
+<div class="line"><span class="lineno"> 1917</span>    b = b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>;</div>
+<div class="line"><span class="lineno"> 1918</span>    need_decode = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1919</span>  }</div>
+<div class="line"><span class="lineno"> 1920</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1921</span>  {</div>
+<div class="line"><span class="lineno"> 1922</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1923</span>  }</div>
+<div class="line"><span class="lineno"> 1924</span> </div>
+<div class="line"><span class="lineno"> 1925</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_in;</div>
+<div class="line"><span class="lineno"> 1926</span> </div>
+<div class="line"><span class="lineno"> 1927</span>  <span class="keywordflow">if</span> (need_decode)</div>
+<div class="line"><span class="lineno"> 1928</span>  {</div>
+<div class="line"><span class="lineno"> 1929</span>    saved_offset = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
+<div class="line"><span class="lineno"> 1930</span>    saved_length = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
+<div class="line"><span class="lineno"> 1931</span> </div>
+<div class="line"><span class="lineno"> 1932</span>    fp_decoded = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 1933</span>    <span class="keywordflow">if</span> (!fp_decoded)</div>
+<div class="line"><span class="lineno"> 1934</span>    {</div>
+<div class="line"><span class="lineno"> 1935</span>      <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1936</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1937</span>    }</div>
+<div class="line"><span class="lineno"> 1938</span> </div>
+<div class="line"><span class="lineno"> 1939</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
+<div class="line"><span class="lineno"> 1940</span>    {</div>
+<div class="line"><span class="lineno"> 1941</span>      rc = -1;</div>
+<div class="line"><span class="lineno"> 1942</span>      <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 1943</span>    }</div>
+<div class="line"><span class="lineno"> 1944</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_decoded;</div>
+<div class="line"><span class="lineno"> 1945</span> </div>
+<div class="line"><span class="lineno"> 1946</span>    <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(b, &amp;state);</div>
+<div class="line"><span class="lineno"> 1947</span> </div>
+<div class="line"><span class="lineno"> 1948</span>    fflush(fp_decoded);</div>
+<div class="line"><span class="lineno"> 1949</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(fp_decoded);</div>
+<div class="line"><span class="lineno"> 1950</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
+<div class="line"><span class="lineno"> 1951</span>    rewind(fp_decoded);</div>
+<div class="line"><span class="lineno"> 1952</span>    state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_decoded;</div>
+<div class="line"><span class="lineno"> 1953</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
+<div class="line"><span class="lineno"> 1954</span>  }</div>
+<div class="line"><span class="lineno"> 1955</span> </div>
+<div class="line"><span class="lineno"> 1956</span>  *fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 1957</span>  <span class="keywordflow">if</span> (!*fp_out)</div>
+<div class="line"><span class="lineno"> 1958</span>  {</div>
+<div class="line"><span class="lineno"> 1959</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1960</span>    rc = -1;</div>
+<div class="line"><span class="lineno"> 1961</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 1962</span>  }</div>
+<div class="line"><span class="lineno"> 1963</span> </div>
+<div class="line"><span class="lineno"> 1964</span>  *b_dec = <a class="code hl_function" href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a>(b, &amp;state, *fp_out, <span class="keyword">false</span>, &amp;is_signed);</div>
+<div class="line"><span class="lineno"> 1965</span>  <span class="keywordflow">if</span> (*b_dec)</div>
+<div class="line"><span class="lineno"> 1966</span>  {</div>
+<div class="line"><span class="lineno"> 1967</span>    rewind(*fp_out);</div>
+<div class="line"><span class="lineno"> 1968</span>    <span class="keywordflow">if</span> (is_signed &gt; 0)</div>
+<div class="line"><span class="lineno"> 1969</span>      first_part-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1970</span>  }</div>
+<div class="line"><span class="lineno"> 1971</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1972</span>  {</div>
+<div class="line"><span class="lineno"> 1973</span>    rc = -1;</div>
+<div class="line"><span class="lineno"> 1974</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(fp_out);</div>
+<div class="line"><span class="lineno"> 1975</span>  }</div>
+<div class="line"><span class="lineno"> 1976</span> </div>
+<div class="line"><span class="lineno"> 1977</span>bail:</div>
+<div class="line"><span class="lineno"> 1978</span>  <span class="keywordflow">if</span> (need_decode)</div>
+<div class="line"><span class="lineno"> 1979</span>  {</div>
+<div class="line"><span class="lineno"> 1980</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = saved_length;</div>
+<div class="line"><span class="lineno"> 1981</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = saved_offset;</div>
+<div class="line"><span class="lineno"> 1982</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_decoded);</div>
+<div class="line"><span class="lineno"> 1983</span>  }</div>
+<div class="line"><span class="lineno"> 1984</span> </div>
+<div class="line"><span class="lineno"> 1985</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1986</span>}</div>
+<div class="ttc" id="acrypt_8c_html_a51806f872069460bb7f4fa16d1d92710"><div class="ttname"><a href="crypt_8c.html#a51806f872069460bb7f4fa16d1d92710">mutt_is_valid_multipart_pgp_encrypted</a></div><div class="ttdeci">int mutt_is_valid_multipart_pgp_encrypted(struct Body *b)</div><div class="ttdoc">Is this a valid multi-part encrypted message?</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00467">crypt.c:467</a></div></div>
+<div class="ttc" id="acrypt_8c_html_a9edb0262eaed7c522977a75b76c15770"><div class="ttname"><a href="crypt_8c.html#a9edb0262eaed7c522977a75b76c15770">mutt_is_malformed_multipart_pgp_encrypted</a></div><div class="ttdeci">SecurityFlags mutt_is_malformed_multipart_pgp_encrypted(struct Body *b)</div><div class="ttdoc">Check for malformed layout.</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00504">crypt.c:504</a></div></div>
+<div class="ttc" id="acrypt__gpgme_8c_html_aa009033da100651a4083dc6f419469be"><div class="ttname"><a href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a></div><div class="ttdeci">static struct Body * decrypt_part(struct Body *b, struct State *state, FILE *fp_out, bool is_smime, int *r_is_signed)</div><div class="ttdoc">Decrypt a PGP or SMIME message.</div><div class="ttdef"><b>Definition</b> <a href="crypt__gpgme_8c_source.html#l01732">crypt_gpgme.c:1732</a></div></div>
 <div class="ttc" id="afile_8c_html_a6b60cb2044041374689e6e6641c5cc05"><div class="ttname"><a href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a></div><div class="ttdeci">bool mutt_file_seek(FILE *fp, LOFF_T offset, int whence)</div><div class="ttdoc">Wrapper for fseeko with error handling.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00656">file.c:656</a></div></div>
 <div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00139">file.h:139</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00095">logging2.h:95</a></div></div>
-<div class="ttc" id="ahandler_8c_html_ad6e9c66285fee73e4d9553c565e10fa2"><div class="ttname"><a href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a></div><div class="ttdeci">void mutt_decode_attachment(const struct Body *b, struct State *state)</div><div class="ttdoc">Decode an email&#39;s attachment.</div><div class="ttdef"><b>Definition</b> <a href="handler_8c_source.html#l01907">handler.c:1907</a></div></div>
+<div class="ttc" id="ahandler_8c_html_ad6e9c66285fee73e4d9553c565e10fa2"><div class="ttname"><a href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a></div><div class="ttdeci">void mutt_decode_attachment(const struct Body *b, struct State *state)</div><div class="ttdoc">Decode an email&#39;s attachment.</div><div class="ttdef"><b>Definition</b> <a href="handler_8c_source.html#l01911">handler.c:1911</a></div></div>
 <div class="ttc" id="amime_8h_html_a1757cddbe4d3d273bf8fbffde3489a61a0bc13f416d890a95b7d7e7c77b155f8e"><div class="ttname"><a href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61a0bc13f416d890a95b7d7e7c77b155f8e">ENC_7BIT</a></div><div class="ttdeci">@ ENC_7BIT</div><div class="ttdoc">7-bit text</div><div class="ttdef"><b>Definition</b> <a href="mime_8h_source.html#l00049">mime.h:49</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 <div class="ttc" id="astructBody_html"><div class="ttname"><a href="structBody.html">Body</a></div><div class="ttdoc">The body of an email.</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00035">body.h:36</a></div></div>
@@ -347,119 +347,119 @@ Functions</h2></td></tr>
 
 <p>Decrypt an encrypted MIME part - Implements <a class="el" href="structCryptModuleSpecs.html#a18cf5903d388ba3cc91431e5076271ee">CryptModuleSpecs::decrypt_mime()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l01992">1992</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1993</span>{</div>
-<div class="line"><span class="lineno"> 1994</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structState.html">State</a> state = { 0 };</div>
-<div class="line"><span class="lineno"> 1995</span>  <span class="keywordtype">int</span> is_signed;</div>
-<div class="line"><span class="lineno"> 1996</span>  LOFF_T saved_b_offset;</div>
-<div class="line"><span class="lineno"> 1997</span>  <span class="keywordtype">size_t</span> saved_b_length;</div>
-<div class="line"><span class="lineno"> 1998</span> </div>
-<div class="line"><span class="lineno"> 1999</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e">mutt_is_application_smime</a>(b) == <a class="code hl_define" href="ncrypt_2lib_8h.html#a95845954210adfc850d5602843f858d4">SEC_NO_FLAGS</a>)</div>
-<div class="line"><span class="lineno"> 2000</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2001</span> </div>
-<div class="line"><span class="lineno"> 2002</span>  <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>)</div>
-<div class="line"><span class="lineno"> 2003</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2004</span> </div>
-<div class="line"><span class="lineno"> 2005</span>  <span class="comment">/* Decode the body - we need to pass binary CMS to the</span></div>
-<div class="line"><span class="lineno"> 2006</span><span class="comment">   * backend.  The backend allows for Base64 encoded data but it does</span></div>
-<div class="line"><span class="lineno"> 2007</span><span class="comment">   * not allow for QP which I have seen in some messages.  So better</span></div>
-<div class="line"><span class="lineno"> 2008</span><span class="comment">   * do it here. */</span></div>
-<div class="line"><span class="lineno"> 2009</span>  saved_b_offset = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
-<div class="line"><span class="lineno"> 2010</span>  saved_b_length = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
-<div class="line"><span class="lineno"> 2011</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = <a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>;</div>
-<div class="line"><span class="lineno"> 2012</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
-<div class="line"><span class="lineno"> 2013</span>  {</div>
-<div class="line"><span class="lineno"> 2014</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2015</span>  }</div>
-<div class="line"><span class="lineno"> 2016</span>  FILE *fp_tmp = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 2017</span>  <span class="keywordflow">if</span> (!fp_tmp)</div>
-<div class="line"><span class="lineno"> 2018</span>  {</div>
-<div class="line"><span class="lineno"> 2019</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2020</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2021</span>  }</div>
-<div class="line"><span class="lineno"> 2022</span> </div>
-<div class="line"><span class="lineno"> 2023</span>  state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_tmp;</div>
-<div class="line"><span class="lineno"> 2024</span>  <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(b, &amp;state);</div>
-<div class="line"><span class="lineno"> 2025</span>  fflush(fp_tmp);</div>
-<div class="line"><span class="lineno"> 2026</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
-<div class="line"><span class="lineno"> 2027</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
-<div class="line"><span class="lineno"> 2028</span>  rewind(fp_tmp);</div>
-<div class="line"><span class="lineno"> 2029</span> </div>
-<div class="line"><span class="lineno"> 2030</span>  memset(&amp;state, 0, <span class="keyword">sizeof</span>(state));</div>
-<div class="line"><span class="lineno"> 2031</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_tmp;</div>
-<div class="line"><span class="lineno"> 2032</span>  state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
-<div class="line"><span class="lineno"> 2033</span>  *<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 2034</span>  <span class="keywordflow">if</span> (!*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>)</div>
-<div class="line"><span class="lineno"> 2035</span>  {</div>
-<div class="line"><span class="lineno"> 2036</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2037</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
-<div class="line"><span class="lineno"> 2038</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2039</span>  }</div>
-<div class="line"><span class="lineno"> 2040</span> </div>
-<div class="line"><span class="lineno"> 2041</span>  *b_dec = <a class="code hl_function" href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a>(b, &amp;state, *<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="keyword">true</span>, &amp;is_signed);</div>
-<div class="line"><span class="lineno"> 2042</span>  <span class="keywordflow">if</span> (*b_dec)</div>
-<div class="line"><span class="lineno"> 2043</span>    (*b_dec)-&gt;goodsig = is_signed &gt; 0;</div>
-<div class="line"><span class="lineno"> 2044</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = saved_b_length;</div>
-<div class="line"><span class="lineno"> 2045</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = saved_b_offset;</div>
-<div class="line"><span class="lineno"> 2046</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
-<div class="line"><span class="lineno"> 2047</span>  rewind(*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
-<div class="line"><span class="lineno"> 2048</span>  <span class="keywordflow">if</span> (*b_dec &amp;&amp; !is_signed &amp;&amp; !(*b_dec)-&gt;parts &amp;&amp; <a class="code hl_function" href="crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e">mutt_is_application_smime</a>(*b_dec))</div>
-<div class="line"><span class="lineno"> 2049</span>  {</div>
-<div class="line"><span class="lineno"> 2050</span>    <span class="comment">/* Assume that this is a opaque signed s/mime message.  This is an ugly way</span></div>
-<div class="line"><span class="lineno"> 2051</span><span class="comment">     * of doing it but we have anyway a problem with arbitrary encoded S/MIME</span></div>
-<div class="line"><span class="lineno"> 2052</span><span class="comment">     * messages: Only the outer part may be encrypted.  The entire mime parsing</span></div>
-<div class="line"><span class="lineno"> 2053</span><span class="comment">     * should be revamped, probably by keeping the temporary files so that we</span></div>
-<div class="line"><span class="lineno"> 2054</span><span class="comment">     * don&#39;t need to decrypt them all the time.  Inner parts of an encrypted</span></div>
-<div class="line"><span class="lineno"> 2055</span><span class="comment">     * part can then point into this file and there won&#39;t ever be a need to</span></div>
-<div class="line"><span class="lineno"> 2056</span><span class="comment">     * decrypt again.  This needs a partial rewrite of the MIME engine. */</span></div>
-<div class="line"><span class="lineno"> 2057</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *bb = *b_dec;</div>
-<div class="line"><span class="lineno"> 2058</span> </div>
-<div class="line"><span class="lineno"> 2059</span>    saved_b_offset = bb-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
-<div class="line"><span class="lineno"> 2060</span>    saved_b_length = bb-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
-<div class="line"><span class="lineno"> 2061</span>    memset(&amp;state, 0, <span class="keyword">sizeof</span>(state));</div>
-<div class="line"><span class="lineno"> 2062</span>    state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = *fp_out;</div>
-<div class="line"><span class="lineno"> 2063</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, bb-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
-<div class="line"><span class="lineno"> 2064</span>    {</div>
-<div class="line"><span class="lineno"> 2065</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2066</span>    }</div>
-<div class="line"><span class="lineno"> 2067</span>    FILE *fp_tmp2 = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 2068</span>    <span class="keywordflow">if</span> (!fp_tmp2)</div>
-<div class="line"><span class="lineno"> 2069</span>    {</div>
-<div class="line"><span class="lineno"> 2070</span>      <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2071</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2072</span>    }</div>
-<div class="line"><span class="lineno"> 2073</span> </div>
-<div class="line"><span class="lineno"> 2074</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_tmp2;</div>
-<div class="line"><span class="lineno"> 2075</span>    <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(bb, &amp;state);</div>
-<div class="line"><span class="lineno"> 2076</span>    fflush(fp_tmp2);</div>
-<div class="line"><span class="lineno"> 2077</span>    bb-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
-<div class="line"><span class="lineno"> 2078</span>    bb-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
-<div class="line"><span class="lineno"> 2079</span>    rewind(fp_tmp2);</div>
-<div class="line"><span class="lineno"> 2080</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(fp_out);</div>
-<div class="line"><span class="lineno"> 2081</span> </div>
-<div class="line"><span class="lineno"> 2082</span>    memset(&amp;state, 0, <span class="keyword">sizeof</span>(state));</div>
-<div class="line"><span class="lineno"> 2083</span>    state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_tmp2;</div>
-<div class="line"><span class="lineno"> 2084</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
-<div class="line"><span class="lineno"> 2085</span>    *fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 2086</span>    <span class="keywordflow">if</span> (!*fp_out)</div>
-<div class="line"><span class="lineno"> 2087</span>    {</div>
-<div class="line"><span class="lineno"> 2088</span>      <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 2089</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2090</span>    }</div>
-<div class="line"><span class="lineno"> 2091</span> </div>
-<div class="line"><span class="lineno"> 2092</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *b_tmp = <a class="code hl_function" href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a>(bb, &amp;state, *fp_out, <span class="keyword">true</span>, &amp;is_signed);</div>
-<div class="line"><span class="lineno"> 2093</span>    <span class="keywordflow">if</span> (b_tmp)</div>
-<div class="line"><span class="lineno"> 2094</span>      b_tmp-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = is_signed &gt; 0;</div>
-<div class="line"><span class="lineno"> 2095</span>    bb-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = saved_b_length;</div>
-<div class="line"><span class="lineno"> 2096</span>    bb-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = saved_b_offset;</div>
-<div class="line"><span class="lineno"> 2097</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp2);</div>
-<div class="line"><span class="lineno"> 2098</span>    rewind(*fp_out);</div>
-<div class="line"><span class="lineno"> 2099</span>    <a class="code hl_function" href="email_2body_8c.html#a129af1c316fcbc26b55fb48957bab2cb">mutt_body_free</a>(b_dec);</div>
-<div class="line"><span class="lineno"> 2100</span>    *b_dec = b_tmp;</div>
-<div class="line"><span class="lineno"> 2101</span>  }</div>
-<div class="line"><span class="lineno"> 2102</span>  <span class="keywordflow">return</span> *b_dec ? 0 : -1;</div>
-<div class="line"><span class="lineno"> 2103</span>}</div>
-<div class="ttc" id="acrypt_8c_html_a4073ce5b5fcec6e245dbfa9369016b8e"><div class="ttname"><a href="crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e">mutt_is_application_smime</a></div><div class="ttdeci">SecurityFlags mutt_is_application_smime(struct Body *b)</div><div class="ttdoc">Does the message use S/MIME?</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00611">crypt.c:611</a></div></div>
+<p class="definition">Definition at line <a class="el" href="crypt__gpgme_8c_source.html#l01991">1991</a> of file <a class="el" href="crypt__gpgme_8c_source.html">crypt_gpgme.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1992</span>{</div>
+<div class="line"><span class="lineno"> 1993</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structState.html">State</a> state = { 0 };</div>
+<div class="line"><span class="lineno"> 1994</span>  <span class="keywordtype">int</span> is_signed;</div>
+<div class="line"><span class="lineno"> 1995</span>  LOFF_T saved_b_offset;</div>
+<div class="line"><span class="lineno"> 1996</span>  <span class="keywordtype">size_t</span> saved_b_length;</div>
+<div class="line"><span class="lineno"> 1997</span> </div>
+<div class="line"><span class="lineno"> 1998</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e">mutt_is_application_smime</a>(b) == <a class="code hl_define" href="ncrypt_2lib_8h.html#a95845954210adfc850d5602843f858d4">SEC_NO_FLAGS</a>)</div>
+<div class="line"><span class="lineno"> 1999</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2000</span> </div>
+<div class="line"><span class="lineno"> 2001</span>  <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>)</div>
+<div class="line"><span class="lineno"> 2002</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2003</span> </div>
+<div class="line"><span class="lineno"> 2004</span>  <span class="comment">/* Decode the body - we need to pass binary CMS to the</span></div>
+<div class="line"><span class="lineno"> 2005</span><span class="comment">   * backend.  The backend allows for Base64 encoded data but it does</span></div>
+<div class="line"><span class="lineno"> 2006</span><span class="comment">   * not allow for QP which I have seen in some messages.  So better</span></div>
+<div class="line"><span class="lineno"> 2007</span><span class="comment">   * do it here. */</span></div>
+<div class="line"><span class="lineno"> 2008</span>  saved_b_offset = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
+<div class="line"><span class="lineno"> 2009</span>  saved_b_length = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
+<div class="line"><span class="lineno"> 2010</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = <a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>;</div>
+<div class="line"><span class="lineno"> 2011</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
+<div class="line"><span class="lineno"> 2012</span>  {</div>
+<div class="line"><span class="lineno"> 2013</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2014</span>  }</div>
+<div class="line"><span class="lineno"> 2015</span>  FILE *fp_tmp = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 2016</span>  <span class="keywordflow">if</span> (!fp_tmp)</div>
+<div class="line"><span class="lineno"> 2017</span>  {</div>
+<div class="line"><span class="lineno"> 2018</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2019</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2020</span>  }</div>
+<div class="line"><span class="lineno"> 2021</span> </div>
+<div class="line"><span class="lineno"> 2022</span>  state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_tmp;</div>
+<div class="line"><span class="lineno"> 2023</span>  <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(b, &amp;state);</div>
+<div class="line"><span class="lineno"> 2024</span>  fflush(fp_tmp);</div>
+<div class="line"><span class="lineno"> 2025</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
+<div class="line"><span class="lineno"> 2026</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
+<div class="line"><span class="lineno"> 2027</span>  rewind(fp_tmp);</div>
+<div class="line"><span class="lineno"> 2028</span> </div>
+<div class="line"><span class="lineno"> 2029</span>  memset(&amp;state, 0, <span class="keyword">sizeof</span>(state));</div>
+<div class="line"><span class="lineno"> 2030</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_tmp;</div>
+<div class="line"><span class="lineno"> 2031</span>  state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
+<div class="line"><span class="lineno"> 2032</span>  *<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 2033</span>  <span class="keywordflow">if</span> (!*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>)</div>
+<div class="line"><span class="lineno"> 2034</span>  {</div>
+<div class="line"><span class="lineno"> 2035</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2036</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
+<div class="line"><span class="lineno"> 2037</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2038</span>  }</div>
+<div class="line"><span class="lineno"> 2039</span> </div>
+<div class="line"><span class="lineno"> 2040</span>  *b_dec = <a class="code hl_function" href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a>(b, &amp;state, *<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>, <span class="keyword">true</span>, &amp;is_signed);</div>
+<div class="line"><span class="lineno"> 2041</span>  <span class="keywordflow">if</span> (*b_dec)</div>
+<div class="line"><span class="lineno"> 2042</span>    (*b_dec)-&gt;goodsig = is_signed &gt; 0;</div>
+<div class="line"><span class="lineno"> 2043</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = saved_b_length;</div>
+<div class="line"><span class="lineno"> 2044</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = saved_b_offset;</div>
+<div class="line"><span class="lineno"> 2045</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
+<div class="line"><span class="lineno"> 2046</span>  rewind(*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
+<div class="line"><span class="lineno"> 2047</span>  <span class="keywordflow">if</span> (*b_dec &amp;&amp; !is_signed &amp;&amp; !(*b_dec)-&gt;parts &amp;&amp; <a class="code hl_function" href="crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e">mutt_is_application_smime</a>(*b_dec))</div>
+<div class="line"><span class="lineno"> 2048</span>  {</div>
+<div class="line"><span class="lineno"> 2049</span>    <span class="comment">/* Assume that this is a opaque signed s/mime message.  This is an ugly way</span></div>
+<div class="line"><span class="lineno"> 2050</span><span class="comment">     * of doing it but we have anyway a problem with arbitrary encoded S/MIME</span></div>
+<div class="line"><span class="lineno"> 2051</span><span class="comment">     * messages: Only the outer part may be encrypted.  The entire mime parsing</span></div>
+<div class="line"><span class="lineno"> 2052</span><span class="comment">     * should be revamped, probably by keeping the temporary files so that we</span></div>
+<div class="line"><span class="lineno"> 2053</span><span class="comment">     * don&#39;t need to decrypt them all the time.  Inner parts of an encrypted</span></div>
+<div class="line"><span class="lineno"> 2054</span><span class="comment">     * part can then point into this file and there won&#39;t ever be a need to</span></div>
+<div class="line"><span class="lineno"> 2055</span><span class="comment">     * decrypt again.  This needs a partial rewrite of the MIME engine. */</span></div>
+<div class="line"><span class="lineno"> 2056</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *bb = *b_dec;</div>
+<div class="line"><span class="lineno"> 2057</span> </div>
+<div class="line"><span class="lineno"> 2058</span>    saved_b_offset = bb-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
+<div class="line"><span class="lineno"> 2059</span>    saved_b_length = bb-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
+<div class="line"><span class="lineno"> 2060</span>    memset(&amp;state, 0, <span class="keyword">sizeof</span>(state));</div>
+<div class="line"><span class="lineno"> 2061</span>    state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = *fp_out;</div>
+<div class="line"><span class="lineno"> 2062</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, bb-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
+<div class="line"><span class="lineno"> 2063</span>    {</div>
+<div class="line"><span class="lineno"> 2064</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2065</span>    }</div>
+<div class="line"><span class="lineno"> 2066</span>    FILE *fp_tmp2 = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 2067</span>    <span class="keywordflow">if</span> (!fp_tmp2)</div>
+<div class="line"><span class="lineno"> 2068</span>    {</div>
+<div class="line"><span class="lineno"> 2069</span>      <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2070</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2071</span>    }</div>
+<div class="line"><span class="lineno"> 2072</span> </div>
+<div class="line"><span class="lineno"> 2073</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_tmp2;</div>
+<div class="line"><span class="lineno"> 2074</span>    <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(bb, &amp;state);</div>
+<div class="line"><span class="lineno"> 2075</span>    fflush(fp_tmp2);</div>
+<div class="line"><span class="lineno"> 2076</span>    bb-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
+<div class="line"><span class="lineno"> 2077</span>    bb-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
+<div class="line"><span class="lineno"> 2078</span>    rewind(fp_tmp2);</div>
+<div class="line"><span class="lineno"> 2079</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(fp_out);</div>
+<div class="line"><span class="lineno"> 2080</span> </div>
+<div class="line"><span class="lineno"> 2081</span>    memset(&amp;state, 0, <span class="keyword">sizeof</span>(state));</div>
+<div class="line"><span class="lineno"> 2082</span>    state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_tmp2;</div>
+<div class="line"><span class="lineno"> 2083</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
+<div class="line"><span class="lineno"> 2084</span>    *fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 2085</span>    <span class="keywordflow">if</span> (!*fp_out)</div>
+<div class="line"><span class="lineno"> 2086</span>    {</div>
+<div class="line"><span class="lineno"> 2087</span>      <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 2088</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2089</span>    }</div>
+<div class="line"><span class="lineno"> 2090</span> </div>
+<div class="line"><span class="lineno"> 2091</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *b_tmp = <a class="code hl_function" href="crypt__gpgme_8c.html#aa009033da100651a4083dc6f419469be">decrypt_part</a>(bb, &amp;state, *fp_out, <span class="keyword">true</span>, &amp;is_signed);</div>
+<div class="line"><span class="lineno"> 2092</span>    <span class="keywordflow">if</span> (b_tmp)</div>
+<div class="line"><span class="lineno"> 2093</span>      b_tmp-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a> = is_signed &gt; 0;</div>
+<div class="line"><span class="lineno"> 2094</span>    bb-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = saved_b_length;</div>
+<div class="line"><span class="lineno"> 2095</span>    bb-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = saved_b_offset;</div>
+<div class="line"><span class="lineno"> 2096</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp2);</div>
+<div class="line"><span class="lineno"> 2097</span>    rewind(*fp_out);</div>
+<div class="line"><span class="lineno"> 2098</span>    <a class="code hl_function" href="email_2body_8c.html#a129af1c316fcbc26b55fb48957bab2cb">mutt_body_free</a>(b_dec);</div>
+<div class="line"><span class="lineno"> 2099</span>    *b_dec = b_tmp;</div>
+<div class="line"><span class="lineno"> 2100</span>  }</div>
+<div class="line"><span class="lineno"> 2101</span>  <span class="keywordflow">return</span> *b_dec ? 0 : -1;</div>
+<div class="line"><span class="lineno"> 2102</span>}</div>
+<div class="ttc" id="acrypt_8c_html_a4073ce5b5fcec6e245dbfa9369016b8e"><div class="ttname"><a href="crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e">mutt_is_application_smime</a></div><div class="ttdeci">SecurityFlags mutt_is_application_smime(struct Body *b)</div><div class="ttdoc">Does the message use S/MIME?</div><div class="ttdef"><b>Definition</b> <a href="crypt_8c_source.html#l00609">crypt.c:609</a></div></div>
 <div class="ttc" id="aemail_2body_8c_html_a129af1c316fcbc26b55fb48957bab2cb"><div class="ttname"><a href="email_2body_8c.html#a129af1c316fcbc26b55fb48957bab2cb">mutt_body_free</a></div><div class="ttdeci">void mutt_body_free(struct Body **ptr)</div><div class="ttdoc">Free a Body.</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8c_source.html#l00058">body.c:58</a></div></div>
 <div class="ttc" id="ancrypt_2lib_8h_html_a95845954210adfc850d5602843f858d4"><div class="ttname"><a href="ncrypt_2lib_8h.html#a95845954210adfc850d5602843f858d4">SEC_NO_FLAGS</a></div><div class="ttdeci">#define SEC_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition</b> <a href="ncrypt_2lib_8h_source.html#l00085">lib.h:85</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -503,88 +503,88 @@ Functions</h2></td></tr>
 
 <p>Decrypt an encrypted MIME part - Implements <a class="el" href="structCryptModuleSpecs.html#a18cf5903d388ba3cc91431e5076271ee">CryptModuleSpecs::decrypt_mime()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="pgp_8c_source.html#l01162">1162</a> of file <a class="el" href="pgp_8c_source.html">pgp.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1163</span>{</div>
-<div class="line"><span class="lineno"> 1164</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structState.html">State</a> state = { 0 };</div>
-<div class="line"><span class="lineno"> 1165</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *p = b;</div>
-<div class="line"><span class="lineno"> 1166</span>  <span class="keywordtype">bool</span> need_decode = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1167</span>  LOFF_T saved_offset = 0;</div>
-<div class="line"><span class="lineno"> 1168</span>  <span class="keywordtype">size_t</span> saved_length = 0;</div>
-<div class="line"><span class="lineno"> 1169</span>  FILE *fp_decoded = NULL;</div>
-<div class="line"><span class="lineno"> 1170</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno"> 1171</span> </div>
-<div class="line"><span class="lineno"> 1172</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a51806f872069460bb7f4fa16d1d92710">mutt_is_valid_multipart_pgp_encrypted</a>(b))</div>
-<div class="line"><span class="lineno"> 1173</span>  {</div>
-<div class="line"><span class="lineno"> 1174</span>    b = b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>;</div>
-<div class="line"><span class="lineno"> 1175</span>    <span class="comment">/* Some clients improperly encode the octetstream part. */</span></div>
-<div class="line"><span class="lineno"> 1176</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="structBody.html#ad2f05b8ff24813de41988e63de5d6a31">encoding</a> != <a class="code hl_enumvalue" href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61a0bc13f416d890a95b7d7e7c77b155f8e">ENC_7BIT</a>)</div>
-<div class="line"><span class="lineno"> 1177</span>      need_decode = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1178</span>  }</div>
-<div class="line"><span class="lineno"> 1179</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a9edb0262eaed7c522977a75b76c15770">mutt_is_malformed_multipart_pgp_encrypted</a>(b))</div>
-<div class="line"><span class="lineno"> 1180</span>  {</div>
-<div class="line"><span class="lineno"> 1181</span>    b = b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>;</div>
-<div class="line"><span class="lineno"> 1182</span>    need_decode = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 1183</span>  }</div>
-<div class="line"><span class="lineno"> 1184</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 1185</span>  {</div>
-<div class="line"><span class="lineno"> 1186</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1187</span>  }</div>
-<div class="line"><span class="lineno"> 1188</span> </div>
-<div class="line"><span class="lineno"> 1189</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_in;</div>
-<div class="line"><span class="lineno"> 1190</span> </div>
-<div class="line"><span class="lineno"> 1191</span>  <span class="keywordflow">if</span> (need_decode)</div>
-<div class="line"><span class="lineno"> 1192</span>  {</div>
-<div class="line"><span class="lineno"> 1193</span>    saved_offset = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
-<div class="line"><span class="lineno"> 1194</span>    saved_length = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
-<div class="line"><span class="lineno"> 1195</span> </div>
-<div class="line"><span class="lineno"> 1196</span>    fp_decoded = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 1197</span>    <span class="keywordflow">if</span> (!fp_decoded)</div>
-<div class="line"><span class="lineno"> 1198</span>    {</div>
-<div class="line"><span class="lineno"> 1199</span>      <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1200</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1201</span>    }</div>
-<div class="line"><span class="lineno"> 1202</span> </div>
-<div class="line"><span class="lineno"> 1203</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
-<div class="line"><span class="lineno"> 1204</span>    {</div>
-<div class="line"><span class="lineno"> 1205</span>      rc = -1;</div>
-<div class="line"><span class="lineno"> 1206</span>      <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 1207</span>    }</div>
-<div class="line"><span class="lineno"> 1208</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_decoded;</div>
-<div class="line"><span class="lineno"> 1209</span> </div>
-<div class="line"><span class="lineno"> 1210</span>    <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(b, &amp;state);</div>
-<div class="line"><span class="lineno"> 1211</span> </div>
-<div class="line"><span class="lineno"> 1212</span>    fflush(fp_decoded);</div>
-<div class="line"><span class="lineno"> 1213</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(fp_decoded);</div>
-<div class="line"><span class="lineno"> 1214</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
-<div class="line"><span class="lineno"> 1215</span>    rewind(fp_decoded);</div>
-<div class="line"><span class="lineno"> 1216</span>    state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_decoded;</div>
-<div class="line"><span class="lineno"> 1217</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
-<div class="line"><span class="lineno"> 1218</span>  }</div>
-<div class="line"><span class="lineno"> 1219</span> </div>
-<div class="line"><span class="lineno"> 1220</span>  *fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 1221</span>  <span class="keywordflow">if</span> (!*fp_out)</div>
-<div class="line"><span class="lineno"> 1222</span>  {</div>
-<div class="line"><span class="lineno"> 1223</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1224</span>    rc = -1;</div>
-<div class="line"><span class="lineno"> 1225</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 1226</span>  }</div>
-<div class="line"><span class="lineno"> 1227</span> </div>
-<div class="line"><span class="lineno"> 1228</span>  *b_dec = <a class="code hl_function" href="pgp_8c.html#a2710f9de758f312094ad0e30e69a40da">pgp_decrypt_part</a>(b, &amp;state, *fp_out, p);</div>
-<div class="line"><span class="lineno"> 1229</span>  <span class="keywordflow">if</span> (!*b_dec)</div>
-<div class="line"><span class="lineno"> 1230</span>    rc = -1;</div>
-<div class="line"><span class="lineno"> 1231</span>  rewind(*fp_out);</div>
-<div class="line"><span class="lineno"> 1232</span> </div>
-<div class="line"><span class="lineno"> 1233</span>bail:</div>
-<div class="line"><span class="lineno"> 1234</span>  <span class="keywordflow">if</span> (need_decode)</div>
-<div class="line"><span class="lineno"> 1235</span>  {</div>
-<div class="line"><span class="lineno"> 1236</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = saved_length;</div>
-<div class="line"><span class="lineno"> 1237</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = saved_offset;</div>
-<div class="line"><span class="lineno"> 1238</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_decoded);</div>
-<div class="line"><span class="lineno"> 1239</span>  }</div>
-<div class="line"><span class="lineno"> 1240</span> </div>
-<div class="line"><span class="lineno"> 1241</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1242</span>}</div>
-<div class="ttc" id="apgp_8c_html_a2710f9de758f312094ad0e30e69a40da"><div class="ttname"><a href="pgp_8c.html#a2710f9de758f312094ad0e30e69a40da">pgp_decrypt_part</a></div><div class="ttdeci">static struct Body * pgp_decrypt_part(struct Body *a, struct State *state, FILE *fp_out, struct Body *p)</div><div class="ttdoc">Decrypt part of a PGP message.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l01026">pgp.c:1026</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pgp_8c_source.html#l01161">1161</a> of file <a class="el" href="pgp_8c_source.html">pgp.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1162</span>{</div>
+<div class="line"><span class="lineno"> 1163</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structState.html">State</a> state = { 0 };</div>
+<div class="line"><span class="lineno"> 1164</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *p = b;</div>
+<div class="line"><span class="lineno"> 1165</span>  <span class="keywordtype">bool</span> need_decode = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1166</span>  LOFF_T saved_offset = 0;</div>
+<div class="line"><span class="lineno"> 1167</span>  <span class="keywordtype">size_t</span> saved_length = 0;</div>
+<div class="line"><span class="lineno"> 1168</span>  FILE *fp_decoded = NULL;</div>
+<div class="line"><span class="lineno"> 1169</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno"> 1170</span> </div>
+<div class="line"><span class="lineno"> 1171</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a51806f872069460bb7f4fa16d1d92710">mutt_is_valid_multipart_pgp_encrypted</a>(b))</div>
+<div class="line"><span class="lineno"> 1172</span>  {</div>
+<div class="line"><span class="lineno"> 1173</span>    b = b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>;</div>
+<div class="line"><span class="lineno"> 1174</span>    <span class="comment">/* Some clients improperly encode the octetstream part. */</span></div>
+<div class="line"><span class="lineno"> 1175</span>    <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="structBody.html#ad2f05b8ff24813de41988e63de5d6a31">encoding</a> != <a class="code hl_enumvalue" href="mime_8h.html#a1757cddbe4d3d273bf8fbffde3489a61a0bc13f416d890a95b7d7e7c77b155f8e">ENC_7BIT</a>)</div>
+<div class="line"><span class="lineno"> 1176</span>      need_decode = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1177</span>  }</div>
+<div class="line"><span class="lineno"> 1178</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="crypt_8c.html#a9edb0262eaed7c522977a75b76c15770">mutt_is_malformed_multipart_pgp_encrypted</a>(b))</div>
+<div class="line"><span class="lineno"> 1179</span>  {</div>
+<div class="line"><span class="lineno"> 1180</span>    b = b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>-&gt;<a class="code hl_variable" href="structBody.html#ac55cdfce46eed13151dcfe9b329d254c">next</a>;</div>
+<div class="line"><span class="lineno"> 1181</span>    need_decode = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 1182</span>  }</div>
+<div class="line"><span class="lineno"> 1183</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 1184</span>  {</div>
+<div class="line"><span class="lineno"> 1185</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1186</span>  }</div>
+<div class="line"><span class="lineno"> 1187</span> </div>
+<div class="line"><span class="lineno"> 1188</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_in;</div>
+<div class="line"><span class="lineno"> 1189</span> </div>
+<div class="line"><span class="lineno"> 1190</span>  <span class="keywordflow">if</span> (need_decode)</div>
+<div class="line"><span class="lineno"> 1191</span>  {</div>
+<div class="line"><span class="lineno"> 1192</span>    saved_offset = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
+<div class="line"><span class="lineno"> 1193</span>    saved_length = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
+<div class="line"><span class="lineno"> 1194</span> </div>
+<div class="line"><span class="lineno"> 1195</span>    fp_decoded = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 1196</span>    <span class="keywordflow">if</span> (!fp_decoded)</div>
+<div class="line"><span class="lineno"> 1197</span>    {</div>
+<div class="line"><span class="lineno"> 1198</span>      <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1199</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1200</span>    }</div>
+<div class="line"><span class="lineno"> 1201</span> </div>
+<div class="line"><span class="lineno"> 1202</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
+<div class="line"><span class="lineno"> 1203</span>    {</div>
+<div class="line"><span class="lineno"> 1204</span>      rc = -1;</div>
+<div class="line"><span class="lineno"> 1205</span>      <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 1206</span>    }</div>
+<div class="line"><span class="lineno"> 1207</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_decoded;</div>
+<div class="line"><span class="lineno"> 1208</span> </div>
+<div class="line"><span class="lineno"> 1209</span>    <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(b, &amp;state);</div>
+<div class="line"><span class="lineno"> 1210</span> </div>
+<div class="line"><span class="lineno"> 1211</span>    fflush(fp_decoded);</div>
+<div class="line"><span class="lineno"> 1212</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(fp_decoded);</div>
+<div class="line"><span class="lineno"> 1213</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
+<div class="line"><span class="lineno"> 1214</span>    rewind(fp_decoded);</div>
+<div class="line"><span class="lineno"> 1215</span>    state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_decoded;</div>
+<div class="line"><span class="lineno"> 1216</span>    state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
+<div class="line"><span class="lineno"> 1217</span>  }</div>
+<div class="line"><span class="lineno"> 1218</span> </div>
+<div class="line"><span class="lineno"> 1219</span>  *fp_out = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 1220</span>  <span class="keywordflow">if</span> (!*fp_out)</div>
+<div class="line"><span class="lineno"> 1221</span>  {</div>
+<div class="line"><span class="lineno"> 1222</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1223</span>    rc = -1;</div>
+<div class="line"><span class="lineno"> 1224</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 1225</span>  }</div>
+<div class="line"><span class="lineno"> 1226</span> </div>
+<div class="line"><span class="lineno"> 1227</span>  *b_dec = <a class="code hl_function" href="pgp_8c.html#a2710f9de758f312094ad0e30e69a40da">pgp_decrypt_part</a>(b, &amp;state, *fp_out, p);</div>
+<div class="line"><span class="lineno"> 1228</span>  <span class="keywordflow">if</span> (!*b_dec)</div>
+<div class="line"><span class="lineno"> 1229</span>    rc = -1;</div>
+<div class="line"><span class="lineno"> 1230</span>  rewind(*fp_out);</div>
+<div class="line"><span class="lineno"> 1231</span> </div>
+<div class="line"><span class="lineno"> 1232</span>bail:</div>
+<div class="line"><span class="lineno"> 1233</span>  <span class="keywordflow">if</span> (need_decode)</div>
+<div class="line"><span class="lineno"> 1234</span>  {</div>
+<div class="line"><span class="lineno"> 1235</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = saved_length;</div>
+<div class="line"><span class="lineno"> 1236</span>    b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = saved_offset;</div>
+<div class="line"><span class="lineno"> 1237</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_decoded);</div>
+<div class="line"><span class="lineno"> 1238</span>  }</div>
+<div class="line"><span class="lineno"> 1239</span> </div>
+<div class="line"><span class="lineno"> 1240</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1241</span>}</div>
+<div class="ttc" id="apgp_8c_html_a2710f9de758f312094ad0e30e69a40da"><div class="ttname"><a href="pgp_8c.html#a2710f9de758f312094ad0e30e69a40da">pgp_decrypt_part</a></div><div class="ttdeci">static struct Body * pgp_decrypt_part(struct Body *a, struct State *state, FILE *fp_out, struct Body *p)</div><div class="ttdoc">Decrypt part of a PGP message.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l01025">pgp.c:1025</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -626,66 +626,66 @@ Functions</h2></td></tr>
 
 <p>Decrypt an encrypted MIME part - Implements <a class="el" href="structCryptModuleSpecs.html#a18cf5903d388ba3cc91431e5076271ee">CryptModuleSpecs::decrypt_mime()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l01920">1920</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1921</span>{</div>
-<div class="line"><span class="lineno"> 1922</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structState.html">State</a> state = { 0 };</div>
-<div class="line"><span class="lineno"> 1923</span>  LOFF_T tmpoffset = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
-<div class="line"><span class="lineno"> 1924</span>  <span class="keywordtype">size_t</span> tmplength = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
-<div class="line"><span class="lineno"> 1925</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno"> 1926</span> </div>
-<div class="line"><span class="lineno"> 1927</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e">mutt_is_application_smime</a>(b))</div>
-<div class="line"><span class="lineno"> 1928</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1929</span> </div>
-<div class="line"><span class="lineno"> 1930</span>  <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>)</div>
-<div class="line"><span class="lineno"> 1931</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1932</span> </div>
-<div class="line"><span class="lineno"> 1933</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = <a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>;</div>
-<div class="line"><span class="lineno"> 1934</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
-<div class="line"><span class="lineno"> 1935</span>  {</div>
-<div class="line"><span class="lineno"> 1936</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1937</span>  }</div>
-<div class="line"><span class="lineno"> 1938</span> </div>
-<div class="line"><span class="lineno"> 1939</span>  FILE *fp_tmp = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 1940</span>  <span class="keywordflow">if</span> (!fp_tmp)</div>
-<div class="line"><span class="lineno"> 1941</span>  {</div>
-<div class="line"><span class="lineno"> 1942</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1943</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 1944</span>  }</div>
-<div class="line"><span class="lineno"> 1945</span> </div>
-<div class="line"><span class="lineno"> 1946</span>  state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_tmp;</div>
-<div class="line"><span class="lineno"> 1947</span>  <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(b, &amp;state);</div>
-<div class="line"><span class="lineno"> 1948</span>  fflush(fp_tmp);</div>
-<div class="line"><span class="lineno"> 1949</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
-<div class="line"><span class="lineno"> 1950</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
-<div class="line"><span class="lineno"> 1951</span>  rewind(fp_tmp);</div>
-<div class="line"><span class="lineno"> 1952</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_tmp;</div>
-<div class="line"><span class="lineno"> 1953</span>  state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
-<div class="line"><span class="lineno"> 1954</span> </div>
-<div class="line"><span class="lineno"> 1955</span>  *<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
-<div class="line"><span class="lineno"> 1956</span>  <span class="keywordflow">if</span> (!*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>)</div>
-<div class="line"><span class="lineno"> 1957</span>  {</div>
-<div class="line"><span class="lineno"> 1958</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1959</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 1960</span>  }</div>
-<div class="line"><span class="lineno"> 1961</span> </div>
-<div class="line"><span class="lineno"> 1962</span>  *b_dec = <a class="code hl_function" href="smime_8c.html#a83eb7260d3b15365720064e2db623b34">smime_handle_entity</a>(b, &amp;state, *<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
-<div class="line"><span class="lineno"> 1963</span>  <span class="keywordflow">if</span> (!*b_dec)</div>
-<div class="line"><span class="lineno"> 1964</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno"> 1965</span> </div>
-<div class="line"><span class="lineno"> 1966</span>  (*b_dec)-&gt;goodsig = b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a>;</div>
-<div class="line"><span class="lineno"> 1967</span>  (*b_dec)-&gt;badsig = b-&gt;<a class="code hl_variable" href="structBody.html#a4de063a5f09cb7376f9fde6bb0fe48bc">badsig</a>;</div>
-<div class="line"><span class="lineno"> 1968</span>  rc = 0;</div>
-<div class="line"><span class="lineno"> 1969</span> </div>
-<div class="line"><span class="lineno"> 1970</span>bail:</div>
-<div class="line"><span class="lineno"> 1971</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = tmplength;</div>
-<div class="line"><span class="lineno"> 1972</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = tmpoffset;</div>
-<div class="line"><span class="lineno"> 1973</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
-<div class="line"><span class="lineno"> 1974</span>  <span class="keywordflow">if</span> (*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>)</div>
-<div class="line"><span class="lineno"> 1975</span>    rewind(*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
-<div class="line"><span class="lineno"> 1976</span> </div>
-<div class="line"><span class="lineno"> 1977</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1978</span>}</div>
-<div class="ttc" id="asmime_8c_html_a83eb7260d3b15365720064e2db623b34"><div class="ttname"><a href="smime_8c.html#a83eb7260d3b15365720064e2db623b34">smime_handle_entity</a></div><div class="ttdeci">static struct Body * smime_handle_entity(struct Body *b, struct State *state, FILE *fp_out_file)</div><div class="ttdoc">Handle type application/pkcs7-mime.</div><div class="ttdef"><b>Definition</b> <a href="smime_8c_source.html#l01682">smime.c:1682</a></div></div>
+<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l01918">1918</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1919</span>{</div>
+<div class="line"><span class="lineno"> 1920</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structState.html">State</a> state = { 0 };</div>
+<div class="line"><span class="lineno"> 1921</span>  LOFF_T tmpoffset = b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>;</div>
+<div class="line"><span class="lineno"> 1922</span>  <span class="keywordtype">size_t</span> tmplength = b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a>;</div>
+<div class="line"><span class="lineno"> 1923</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno"> 1924</span> </div>
+<div class="line"><span class="lineno"> 1925</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="crypt_8c.html#a4073ce5b5fcec6e245dbfa9369016b8e">mutt_is_application_smime</a>(b))</div>
+<div class="line"><span class="lineno"> 1926</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1927</span> </div>
+<div class="line"><span class="lineno"> 1928</span>  <span class="keywordflow">if</span> (b-&gt;<a class="code hl_variable" href="structBody.html#a0b87b7bdb6faef44d9aac4854975f805">parts</a>)</div>
+<div class="line"><span class="lineno"> 1929</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1930</span> </div>
+<div class="line"><span class="lineno"> 1931</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = <a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>;</div>
+<div class="line"><span class="lineno"> 1932</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="file_8c.html#a6b60cb2044041374689e6e6641c5cc05">mutt_file_seek</a>(state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a>, b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a>, SEEK_SET))</div>
+<div class="line"><span class="lineno"> 1933</span>  {</div>
+<div class="line"><span class="lineno"> 1934</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1935</span>  }</div>
+<div class="line"><span class="lineno"> 1936</span> </div>
+<div class="line"><span class="lineno"> 1937</span>  FILE *fp_tmp = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 1938</span>  <span class="keywordflow">if</span> (!fp_tmp)</div>
+<div class="line"><span class="lineno"> 1939</span>  {</div>
+<div class="line"><span class="lineno"> 1940</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1941</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 1942</span>  }</div>
+<div class="line"><span class="lineno"> 1943</span> </div>
+<div class="line"><span class="lineno"> 1944</span>  state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = fp_tmp;</div>
+<div class="line"><span class="lineno"> 1945</span>  <a class="code hl_function" href="handler_8c.html#ad6e9c66285fee73e4d9553c565e10fa2">mutt_decode_attachment</a>(b, &amp;state);</div>
+<div class="line"><span class="lineno"> 1946</span>  fflush(fp_tmp);</div>
+<div class="line"><span class="lineno"> 1947</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = ftello(state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
+<div class="line"><span class="lineno"> 1948</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = 0;</div>
+<div class="line"><span class="lineno"> 1949</span>  rewind(fp_tmp);</div>
+<div class="line"><span class="lineno"> 1950</span>  state.<a class="code hl_variable" href="structState.html#a9cf7e1f0c5c12399def5ca38b13054ae">fp_in</a> = fp_tmp;</div>
+<div class="line"><span class="lineno"> 1951</span>  state.<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = 0;</div>
+<div class="line"><span class="lineno"> 1952</span> </div>
+<div class="line"><span class="lineno"> 1953</span>  *<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a> = <a class="code hl_define" href="tmp_8h.html#a4ad1bdd71a5077a9e7dfc4890e1089f6">mutt_file_mkstemp</a>();</div>
+<div class="line"><span class="lineno"> 1954</span>  <span class="keywordflow">if</span> (!*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>)</div>
+<div class="line"><span class="lineno"> 1955</span>  {</div>
+<div class="line"><span class="lineno"> 1956</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1957</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 1958</span>  }</div>
+<div class="line"><span class="lineno"> 1959</span> </div>
+<div class="line"><span class="lineno"> 1960</span>  *b_dec = <a class="code hl_function" href="smime_8c.html#a83eb7260d3b15365720064e2db623b34">smime_handle_entity</a>(b, &amp;state, *<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
+<div class="line"><span class="lineno"> 1961</span>  <span class="keywordflow">if</span> (!*b_dec)</div>
+<div class="line"><span class="lineno"> 1962</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno"> 1963</span> </div>
+<div class="line"><span class="lineno"> 1964</span>  (*b_dec)-&gt;goodsig = b-&gt;<a class="code hl_variable" href="structBody.html#ae4b2706a5c4601ae1497a96e047d8f5e">goodsig</a>;</div>
+<div class="line"><span class="lineno"> 1965</span>  (*b_dec)-&gt;badsig = b-&gt;<a class="code hl_variable" href="structBody.html#a4de063a5f09cb7376f9fde6bb0fe48bc">badsig</a>;</div>
+<div class="line"><span class="lineno"> 1966</span>  rc = 0;</div>
+<div class="line"><span class="lineno"> 1967</span> </div>
+<div class="line"><span class="lineno"> 1968</span>bail:</div>
+<div class="line"><span class="lineno"> 1969</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = tmplength;</div>
+<div class="line"><span class="lineno"> 1970</span>  b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> = tmpoffset;</div>
+<div class="line"><span class="lineno"> 1971</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
+<div class="line"><span class="lineno"> 1972</span>  <span class="keywordflow">if</span> (*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>)</div>
+<div class="line"><span class="lineno"> 1973</span>    rewind(*<a class="code hl_variable" href="structState.html#a88fc722d3012ebf69d3a061cbf6bc296">fp_out</a>);</div>
+<div class="line"><span class="lineno"> 1974</span> </div>
+<div class="line"><span class="lineno"> 1975</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1976</span>}</div>
+<div class="ttc" id="asmime_8c_html_a83eb7260d3b15365720064e2db623b34"><div class="ttname"><a href="smime_8c.html#a83eb7260d3b15365720064e2db623b34">smime_handle_entity</a></div><div class="ttdeci">static struct Body * smime_handle_entity(struct Body *b, struct State *state, FILE *fp_out_file)</div><div class="ttdoc">Handle type application/pkcs7-mime.</div><div class="ttdef"><b>Definition</b> <a href="smime_8c_source.html#l01680">smime.c:1680</a></div></div>
 <div class="ttc" id="astructBody_html_a4de063a5f09cb7376f9fde6bb0fe48bc"><div class="ttname"><a href="structBody.html#a4de063a5f09cb7376f9fde6bb0fe48bc">Body::badsig</a></div><div class="ttdeci">bool badsig</div><div class="ttdoc">Bad cryptographic signature (needed to check encrypted s/mime-signatures)</div><div class="ttdef"><b>Definition</b> <a href="email_2body_8h_source.html#l00043">body.h:43</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -185,6 +185,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a5f04ca102be20813d8c3ab0776a2786b" id="r_a5f04ca102be20813d8c3ab0776a2786b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f04ca102be20813d8c3ab0776a2786b">mutt_list_write</a> (const struct ListHead *h, struct <a class="el" href="structBuffer.html">Buffer</a> *buf)</td></tr>
 <tr class="memdesc:a5f04ca102be20813d8c3ab0776a2786b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a list to a buffer.  <br /></td></tr>
 <tr class="separator:a5f04ca102be20813d8c3ab0776a2786b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3c864ac49cfb7bc862c32416baf81d" id="r_a2e3c864ac49cfb7bc862c32416baf81d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e3c864ac49cfb7bc862c32416baf81d">add_to_stailq</a> (struct ListHead *head, const char *str)</td></tr>
+<tr class="memdesc:a2e3c864ac49cfb7bc862c32416baf81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a string to a list.  <br /></td></tr>
+<tr class="separator:a2e3c864ac49cfb7bc862c32416baf81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b422ce225f4eb96e3ce8e276467ae9f" id="r_a1b422ce225f4eb96e3ce8e276467ae9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b422ce225f4eb96e3ce8e276467ae9f">remove_from_stailq</a> (struct ListHead *head, const char *str)</td></tr>
+<tr class="memdesc:a1b422ce225f4eb96e3ce8e276467ae9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an item, matching a string, from a List.  <br /></td></tr>
+<tr class="separator:a1b422ce225f4eb96e3ce8e276467ae9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Singly-linked list type. </p>
@@ -976,6 +982,138 @@ The case of the strings is ignored. </dd></dl>
 </div>
 <div id="dynsection-19-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="list_8h_a5f04ca102be20813d8c3ab0776a2786b_icgraph.svg" width="347" height="60"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a2e3c864ac49cfb7bc862c32416baf81d" name="a2e3c864ac49cfb7bc862c32416baf81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3c864ac49cfb7bc862c32416baf81d">&#9670;&#160;</a></span>add_to_stailq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_to_stailq </td>
+          <td>(</td>
+          <td class="paramtype">struct ListHead *</td>          <td class="paramname"><span class="paramname"><em>head</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a string to a list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>String list </td></tr>
+    <tr><td class="paramname">str</td><td>String to add</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Duplicate or empty strings will not be added </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00316">316</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  317</span>{</div>
+<div class="line"><span class="lineno">  318</span>  <span class="comment">/* don&#39;t add a NULL or empty string to the list */</span></div>
+<div class="line"><span class="lineno">  319</span>  <span class="keywordflow">if</span> (!str || (*str == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><span class="lineno">  320</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  321</span> </div>
+<div class="line"><span class="lineno">  322</span>  <span class="comment">/* check to make sure the item is not already on this list */</span></div>
+<div class="line"><span class="lineno">  323</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
+<div class="line"><span class="lineno">  324</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, head, entries)</div>
+<div class="line"><span class="lineno">  325</span>  {</div>
+<div class="line"><span class="lineno">  326</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(str, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
+<div class="line"><span class="lineno">  327</span>    {</div>
+<div class="line"><span class="lineno">  328</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  329</span>    }</div>
+<div class="line"><span class="lineno">  330</span>  }</div>
+<div class="line"><span class="lineno">  331</span>  <a class="code hl_function" href="list_8c.html#a47252e2b00de607c64a5fec8dc16058d">mutt_list_insert_tail</a>(head, <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(str));</div>
+<div class="line"><span class="lineno">  332</span>}</div>
+<div class="ttc" id="amutt_2string_8c_html_a29db81d6f5a7dd216cbea75ecf8a5885"><div class="ttname"><a href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a></div><div class="ttdeci">bool mutt_istr_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00674">string.c:674</a></div></div>
+</div><!-- fragment --><div id="dynsection-20" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8h_a2e3c864ac49cfb7bc862c32416baf81d_cgraph.svg" width="300" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-21" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8h_a2e3c864ac49cfb7bc862c32416baf81d_icgraph.svg" width="294" height="254"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1b422ce225f4eb96e3ce8e276467ae9f" name="a1b422ce225f4eb96e3ce8e276467ae9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b422ce225f4eb96e3ce8e276467ae9f">&#9670;&#160;</a></span>remove_from_stailq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_from_stailq </td>
+          <td>(</td>
+          <td class="paramtype">struct ListHead *</td>          <td class="paramname"><span class="paramname"><em>head</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove an item, matching a string, from a List. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>Head of the List </td></tr>
+    <tr><td class="paramname">str</td><td>String to match</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The string comparison is case-insensitive </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list_8c_source.html#l00341">341</a> of file <a class="el" href="list_8c_source.html">list.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  342</span>{</div>
+<div class="line"><span class="lineno">  343</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;*&quot;</span>, str))</div>
+<div class="line"><span class="lineno">  344</span>  {</div>
+<div class="line"><span class="lineno">  345</span>    <a class="code hl_function" href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a>(head); <span class="comment">/* &quot;unCMD *&quot; means delete all current entries */</span></div>
+<div class="line"><span class="lineno">  346</span>  }</div>
+<div class="line"><span class="lineno">  347</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  348</span>  {</div>
+<div class="line"><span class="lineno">  349</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL, *tmp = NULL;</div>
+<div class="line"><span class="lineno">  350</span>    <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, head, entries, tmp)</div>
+<div class="line"><span class="lineno">  351</span>    {</div>
+<div class="line"><span class="lineno">  352</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(str, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
+<div class="line"><span class="lineno">  353</span>      {</div>
+<div class="line"><span class="lineno">  354</span>        <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(head, np, <a class="code hl_struct" href="structListNode.html">ListNode</a>, entries);</div>
+<div class="line"><span class="lineno">  355</span>        <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
+<div class="line"><span class="lineno">  356</span>        <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
+<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  358</span>      }</div>
+<div class="line"><span class="lineno">  359</span>    }</div>
+<div class="line"><span class="lineno">  360</span>  }</div>
+<div class="line"><span class="lineno">  361</span>}</div>
+<div class="ttc" id="alist_8c_html_ab5c53ce94cc2aafa4299dbc81a37f4a4"><div class="ttname"><a href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a></div><div class="ttdeci">void mutt_list_free(struct ListHead *h)</div><div class="ttdoc">Free a List AND its strings.</div><div class="ttdef"><b>Definition</b> <a href="list_8c_source.html#l00123">list.c:123</a></div></div>
+</div><!-- fragment --><div id="dynsection-22" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8h_a1b422ce225f4eb96e3ce8e276467ae9f_cgraph.svg" width="320" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div id="dynsection-23" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="list_8h_a1b422ce225f4eb96e3ce8e276467ae9f_icgraph.svg" width="352" height="200"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

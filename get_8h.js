@@ -29,7 +29,6 @@ var get_8h =
     [ "mutt_push_macro_event", "get_8h.html#a6fb1a3233123b74771ce95c448b22b79", null ],
     [ "mutt_unget_ch", "get_8h.html#ae568d7843782964d3ab8566aa9c59e7b", null ],
     [ "mutt_unget_op", "get_8h.html#a8a7310e8fd6bf845a7754c8787d7333e", null ],
-    [ "mutt_unget_string", "get_8h.html#a6ef7b1ace696713f403479e10c391642", null ],
     [ "MacroEvents", "get_8h.html#a0c281396388a64a625221bd9da0b3cdb", null ],
     [ "UngetKeyEvents", "get_8h.html#a373b5ab01bae42f52b0d60a972ce110c", null ]
 ];

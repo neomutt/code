@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['wcscasecmp_0',['For systems lacking wcscasecmp()',['../neo_wcscasecmp.html',1,'index']]],
+  ['wcscasecmp_0',['For systems lacking wcscasecmp()',['../mutt_wcscasecmp.html',1,'lib_mutt']]],
   ['when_20processing_20files_1',['Keep track when processing files',['../mutt_state.html',1,'lib_mutt']]],
   ['where_20the_20email_20is_20piped_20to_20external_20commands_2',['Manage where the email is piped to external commands',['../neo_external.html',1,'index']]],
   ['who_20is_20the_20email_20from_3',['Who is the email from?',['../email_from.html',1,'lib_email']]],
@@ -15,7 +15,7 @@ var searchData=
   ['window_20wrapper_20around_20a_20menu_12',['Window wrapper around a Menu',['../menu_window.html',1,'lib_menu']]],
   ['windows_13',['Windows',['../gui_dialog.html',1,'Dialog Windows'],['../debug_window.html',1,'Dump the Windows']]],
   ['with_20a_20selectable_20list_14',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]],
-  ['with_20an_20attachment_15',['Send/reply with an attachment',['../neo_recvcmd.html',1,'index']]],
+  ['with_20an_20attachment_15',['Send/reply with an attachment',['../attach_recvcmd.html',1,'lib_attach']]],
   ['wrapper_20around_20a_20menu_16',['Window wrapper around a Menu',['../menu_window.html',1,'lib_menu']]],
   ['wrapper_20around_20calls_20to_20external_20pgp_20program_17',['Wrapper around calls to external PGP program',['../crypt_pgpinvoke.html',1,'lib_ncrypt']]],
   ['wrapper_20around_20crypto_20functions_18',['Wrapper around crypto functions',['../crypt_cryptglue.html',1,'lib_ncrypt']]],

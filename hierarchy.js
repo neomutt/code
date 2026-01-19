@@ -213,6 +213,7 @@ var hierarchy =
     [ "PagerPrivateData", "structPagerPrivateData.html", null ],
     [ "PagerView", "structPagerView.html", null ],
     [ "Parameter", "structParameter.html", null ],
+    [ "ParseMailbox", "structParseMailbox.html", null ],
     [ "ParseUnbind", "structParseUnbind.html", null ],
     [ "Pattern", "structPattern.html", null ],
     [ "PatternCache", "structPatternCache.html", null ],

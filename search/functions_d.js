@@ -46,7 +46,7 @@ var searchData=
   ['native_5fset_43',['native_set',['../number_8c.html#a262527b65d66a569b56f715488b14907',1,'number.c']]],
   ['native_5ftoggle_44',['native_toggle',['../number_8c.html#a52f2317ea97c0235fd08ee43273db19c',1,'number.c']]],
   ['ncrypt_5fconfig_5fdefine_5fvariables_45',['ncrypt_config_define_variables',['../ncrypt_2module_8c.html#a541e013d9408c361c93fd3c05367307f',1,'module.c']]],
-  ['need_5fdisplay_5fsubject_46',['need_display_subject',['../mutt__thread_8c.html#acce2e33f71f8f2ab4797ce26a057d5ce',1,'mutt_thread.c']]],
+  ['need_5fdisplay_5fsubject_46',['need_display_subject',['../gui_2thread_8c.html#acce2e33f71f8f2ab4797ce26a057d5ce',1,'thread.c']]],
   ['neomutt_5faccount_5fadd_47',['neomutt_account_add',['../neomutt_8c.html#a719e4995956628c3e2286051fd2448ee',1,'neomutt_account_add(struct NeoMutt *n, struct Account *a):&#160;neomutt.c'],['../neomutt_8h.html#a719e4995956628c3e2286051fd2448ee',1,'neomutt_account_add(struct NeoMutt *n, struct Account *a):&#160;neomutt.c']]],
   ['neomutt_5faccount_5fremove_48',['neomutt_account_remove',['../neomutt_8c.html#a39717f8b683362414a68df94f9b30217',1,'neomutt_account_remove(struct NeoMutt *n, struct Account *a):&#160;neomutt.c'],['../neomutt_8h.html#a39717f8b683362414a68df94f9b30217',1,'neomutt_account_remove(struct NeoMutt *n, struct Account *a):&#160;neomutt.c']]],
   ['neomutt_5faccounts_5ffree_49',['neomutt_accounts_free',['../neomutt_8c.html#ac2adb3e05612a5a7136ca897c645836e',1,'neomutt_accounts_free(struct NeoMutt *n):&#160;neomutt.c'],['../neomutt_8h.html#ac2adb3e05612a5a7136ca897c645836e',1,'neomutt_accounts_free(struct NeoMutt *n):&#160;neomutt.c']]],

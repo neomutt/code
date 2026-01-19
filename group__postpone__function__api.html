@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -180,43 +180,43 @@ Functions</h2></td></tr>
 
 <p>Delete the current entry - Implements <a class="el" href="postpone_2functions_8h.html#a5a3ba6b33cfed4e60535a36d796794ae">postpone_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00088">88</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   89</span>{</div>
-<div class="line"><span class="lineno">   90</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>;</div>
-<div class="line"><span class="lineno">   91</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxView.html">MailboxView</a> *mv = pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91">mailbox_view</a>;</div>
-<div class="line"><span class="lineno">   92</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a>;</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> index = <a class="code hl_function" href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a>(menu);</div>
-<div class="line"><span class="lineno">   95</span>  <span class="comment">/* should deleted draft messages be saved in the trash folder? */</span></div>
-<div class="line"><span class="lineno">   96</span>  <a class="code hl_function" href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a>(m, m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[index], <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>, (op == OP_DELETE), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">   97</span>  <a class="code hl_variable" href="postpone_8c.html#a813a6eba284cc0eb882c66dcc4a9ba31">PostCount</a> = m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a> - m-&gt;<a class="code hl_variable" href="structMailbox.html#ab5863d8f516c6db52e2fadb531bf8557">msg_deleted</a>;</div>
-<div class="line"><span class="lineno">   98</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_resolve = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;resolve&quot;</span>);</div>
-<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">if</span> (c_resolve &amp;&amp; (index &lt; (menu-&gt;<a class="code hl_variable" href="structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b">max</a> - 1)))</div>
-<div class="line"><span class="lineno">  100</span>  {</div>
-<div class="line"><span class="lineno">  101</span>    <a class="code hl_function" href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a>(menu, index + 1);</div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">if</span> (index &gt;= (menu-&gt;<a class="code hl_variable" href="structMenu.html#a9b6a0ee3837c582e8cf70e985cde69cc">top</a> + menu-&gt;<a class="code hl_variable" href="structMenu.html#aef983750ad6113420634d1ba2544faf4">page_len</a>))</div>
-<div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>      menu-&gt;<a class="code hl_variable" href="structMenu.html#a9b6a0ee3837c582e8cf70e985cde69cc">top</a> = index;</div>
-<div class="line"><span class="lineno">  105</span>      <a class="code hl_function" href="menu_2lib_8h.html#a5a9733924cc01176ee916515a3683268">menu_queue_redraw</a>(menu, <a class="code hl_define" href="menu_2lib_8h.html#a294a94cf45be93fa7677adb7116ce60b">MENU_REDRAW_INDEX</a>);</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
-<div class="line"><span class="lineno">  107</span>  }</div>
-<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  109</span>  {</div>
-<div class="line"><span class="lineno">  110</span>    <a class="code hl_function" href="menu_2lib_8h.html#a5a9733924cc01176ee916515a3683268">menu_queue_redraw</a>(menu, <a class="code hl_define" href="menu_2lib_8h.html#ada2a150b4a42da80d12b7e3be6d396f9">MENU_REDRAW_CURRENT</a>);</div>
-<div class="line"><span class="lineno">  111</span>  }</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  114</span>}</div>
+<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00086">86</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>{</div>
+<div class="line"><span class="lineno">   88</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>;</div>
+<div class="line"><span class="lineno">   89</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxView.html">MailboxView</a> *mv = pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91">mailbox_view</a>;</div>
+<div class="line"><span class="lineno">   90</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a>;</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> index = <a class="code hl_function" href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a>(menu);</div>
+<div class="line"><span class="lineno">   93</span>  <span class="comment">/* should deleted draft messages be saved in the trash folder? */</span></div>
+<div class="line"><span class="lineno">   94</span>  <a class="code hl_function" href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a>(m, m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[index], <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>, (op == OP_DELETE), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   95</span>  <a class="code hl_variable" href="mutt_8h.html#a813a6eba284cc0eb882c66dcc4a9ba31">PostCount</a> = m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a> - m-&gt;<a class="code hl_variable" href="structMailbox.html#ab5863d8f516c6db52e2fadb531bf8557">msg_deleted</a>;</div>
+<div class="line"><span class="lineno">   96</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_resolve = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;resolve&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> (c_resolve &amp;&amp; (index &lt; (menu-&gt;<a class="code hl_variable" href="structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b">max</a> - 1)))</div>
+<div class="line"><span class="lineno">   98</span>  {</div>
+<div class="line"><span class="lineno">   99</span>    <a class="code hl_function" href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a>(menu, index + 1);</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">if</span> (index &gt;= (menu-&gt;<a class="code hl_variable" href="structMenu.html#a9b6a0ee3837c582e8cf70e985cde69cc">top</a> + menu-&gt;<a class="code hl_variable" href="structMenu.html#aef983750ad6113420634d1ba2544faf4">page_len</a>))</div>
+<div class="line"><span class="lineno">  101</span>    {</div>
+<div class="line"><span class="lineno">  102</span>      menu-&gt;<a class="code hl_variable" href="structMenu.html#a9b6a0ee3837c582e8cf70e985cde69cc">top</a> = index;</div>
+<div class="line"><span class="lineno">  103</span>      <a class="code hl_function" href="menu_2lib_8h.html#a5a9733924cc01176ee916515a3683268">menu_queue_redraw</a>(menu, <a class="code hl_define" href="menu_2lib_8h.html#a294a94cf45be93fa7677adb7116ce60b">MENU_REDRAW_INDEX</a>);</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+<div class="line"><span class="lineno">  105</span>  }</div>
+<div class="line"><span class="lineno">  106</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  107</span>  {</div>
+<div class="line"><span class="lineno">  108</span>    <a class="code hl_function" href="menu_2lib_8h.html#a5a9733924cc01176ee916515a3683268">menu_queue_redraw</a>(menu, <a class="code hl_define" href="menu_2lib_8h.html#ada2a150b4a42da80d12b7e3be6d396f9">MENU_REDRAW_CURRENT</a>);</div>
+<div class="line"><span class="lineno">  109</span>  }</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  112</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00047">helpers.c:47</a></div></div>
 <div class="ttc" id="adispatcher_8h_html_a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670"><div class="ttname"><a href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a></div><div class="ttdeci">@ FR_SUCCESS</div><div class="ttdoc">Valid function - successfully performed.</div><div class="ttdef"><b>Definition</b> <a href="dispatcher_8h_source.html#l00039">dispatcher.h:39</a></div></div>
-<div class="ttc" id="aflags_8c_html_a29547b9c7c39eb22039ff4b8f1c03829"><div class="ttname"><a href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a></div><div class="ttdeci">void mutt_set_flag(struct Mailbox *m, struct Email *e, enum MessageType flag, bool bf, bool upd_mbox)</div><div class="ttdoc">Set a flag on an email.</div><div class="ttdef"><b>Definition</b> <a href="flags_8c_source.html#l00056">flags.c:56</a></div></div>
+<div class="ttc" id="aflags_8c_html_a29547b9c7c39eb22039ff4b8f1c03829"><div class="ttname"><a href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a></div><div class="ttdeci">void mutt_set_flag(struct Mailbox *m, struct Email *e, enum MessageType flag, bool bf, bool upd_mbox)</div><div class="ttdoc">Set a flag on an email.</div><div class="ttdef"><b>Definition</b> <a href="flags_8c_source.html#l00054">flags.c:54</a></div></div>
 <div class="ttc" id="amenu_2lib_8h_html_a294a94cf45be93fa7677adb7116ce60b"><div class="ttname"><a href="menu_2lib_8h.html#a294a94cf45be93fa7677adb7116ce60b">MENU_REDRAW_INDEX</a></div><div class="ttdeci">#define MENU_REDRAW_INDEX</div><div class="ttdoc">Redraw the index.</div><div class="ttdef"><b>Definition</b> <a href="menu_2lib_8h_source.html#l00056">lib.h:56</a></div></div>
-<div class="ttc" id="amenu_2lib_8h_html_a5a9733924cc01176ee916515a3683268"><div class="ttname"><a href="menu_2lib_8h.html#a5a9733924cc01176ee916515a3683268">menu_queue_redraw</a></div><div class="ttdeci">void menu_queue_redraw(struct Menu *menu, MenuRedrawFlags redraw)</div><div class="ttdoc">Queue a request for a redraw.</div><div class="ttdef"><b>Definition</b> <a href="menu_2menu_8c_source.html#l00185">menu.c:185</a></div></div>
-<div class="ttc" id="amenu_2lib_8h_html_a67ee9260e41986eb4487124b004cff18"><div class="ttname"><a href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a></div><div class="ttdeci">int menu_get_index(struct Menu *menu)</div><div class="ttdoc">Get the current selection in the Menu.</div><div class="ttdef"><b>Definition</b> <a href="menu_2menu_8c_source.html#l00161">menu.c:161</a></div></div>
+<div class="ttc" id="amenu_2lib_8h_html_a5a9733924cc01176ee916515a3683268"><div class="ttname"><a href="menu_2lib_8h.html#a5a9733924cc01176ee916515a3683268">menu_queue_redraw</a></div><div class="ttdeci">void menu_queue_redraw(struct Menu *menu, MenuRedrawFlags redraw)</div><div class="ttdoc">Queue a request for a redraw.</div><div class="ttdef"><b>Definition</b> <a href="menu_2menu_8c_source.html#l00186">menu.c:186</a></div></div>
+<div class="ttc" id="amenu_2lib_8h_html_a67ee9260e41986eb4487124b004cff18"><div class="ttname"><a href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a></div><div class="ttdeci">int menu_get_index(struct Menu *menu)</div><div class="ttdoc">Get the current selection in the Menu.</div><div class="ttdef"><b>Definition</b> <a href="menu_2menu_8c_source.html#l00162">menu.c:162</a></div></div>
 <div class="ttc" id="amenu_2lib_8h_html_ada2a150b4a42da80d12b7e3be6d396f9"><div class="ttname"><a href="menu_2lib_8h.html#ada2a150b4a42da80d12b7e3be6d396f9">MENU_REDRAW_CURRENT</a></div><div class="ttdeci">#define MENU_REDRAW_CURRENT</div><div class="ttdoc">Redraw the current line of the menu.</div><div class="ttdef"><b>Definition</b> <a href="menu_2lib_8h_source.html#l00058">lib.h:58</a></div></div>
-<div class="ttc" id="amenu_2lib_8h_html_ae279bb826b97fcc88c0714b2a6383851"><div class="ttname"><a href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a></div><div class="ttdeci">MenuRedrawFlags menu_set_index(struct Menu *menu, int index)</div><div class="ttdoc">Set the current selection in the Menu.</div><div class="ttdef"><b>Definition</b> <a href="menu_2menu_8c_source.html#l00175">menu.c:175</a></div></div>
-<div class="ttc" id="amutt_8h_html_ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf"><div class="ttname"><a href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a></div><div class="ttdeci">@ MUTT_DELETE</div><div class="ttdoc">Messages to be deleted.</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00075">mutt.h:75</a></div></div>
-<div class="ttc" id="apostpone_8c_html_a813a6eba284cc0eb882c66dcc4a9ba31"><div class="ttname"><a href="postpone_8c.html#a813a6eba284cc0eb882c66dcc4a9ba31">PostCount</a></div><div class="ttdeci">short PostCount</div><div class="ttdoc">Number of postponed (draft) emails.</div><div class="ttdef"><b>Definition</b> <a href="postpone_8c_source.html#l00058">postpone.c:58</a></div></div>
+<div class="ttc" id="amenu_2lib_8h_html_ae279bb826b97fcc88c0714b2a6383851"><div class="ttname"><a href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a></div><div class="ttdeci">MenuRedrawFlags menu_set_index(struct Menu *menu, int index)</div><div class="ttdoc">Set the current selection in the Menu.</div><div class="ttdef"><b>Definition</b> <a href="menu_2menu_8c_source.html#l00176">menu.c:176</a></div></div>
+<div class="ttc" id="amutt_8h_html_a813a6eba284cc0eb882c66dcc4a9ba31"><div class="ttname"><a href="mutt_8h.html#a813a6eba284cc0eb882c66dcc4a9ba31">PostCount</a></div><div class="ttdeci">short PostCount</div><div class="ttdoc">Number of postponed (draft) emails.</div><div class="ttdef"><b>Definition</b> <a href="postpone_8c_source.html#l00055">postpone.c:55</a></div></div>
+<div class="ttc" id="amutt_8h_html_ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf"><div class="ttname"><a href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a></div><div class="ttdeci">@ MUTT_DELETE</div><div class="ttdoc">Messages to be deleted.</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00094">mutt.h:94</a></div></div>
 <div class="ttc" id="astructMailboxView_html"><div class="ttname"><a href="structMailboxView.html">MailboxView</a></div><div class="ttdoc">View of a Mailbox.</div><div class="ttdef"><b>Definition</b> <a href="mview_8h_source.html#l00039">mview.h:40</a></div></div>
 <div class="ttc" id="astructMailboxView_html_acc1ad6ff0a3ac9c635ac2a68399d3280"><div class="ttname"><a href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">MailboxView::mailbox</a></div><div class="ttdeci">struct Mailbox * mailbox</div><div class="ttdoc">Current Mailbox.</div><div class="ttdef"><b>Definition</b> <a href="mview_8h_source.html#l00051">mview.h:51</a></div></div>
 <div class="ttc" id="astructMailbox_html"><div class="ttname"><a href="structMailbox.html">Mailbox</a></div><div class="ttdoc">A mailbox.</div><div class="ttdef"><b>Definition</b> <a href="core_2mailbox_8h_source.html#l00078">mailbox.h:79</a></div></div>
@@ -270,11 +270,11 @@ Functions</h2></td></tr>
 
 <p>Exit this menu - Implements <a class="el" href="postpone_2functions_8h.html#a5a3ba6b33cfed4e60535a36d796794ae">postpone_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00119">119</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  120</span>{</div>
-<div class="line"><span class="lineno">  121</span>  pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6">done</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  122</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  123</span>}</div>
+<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00117">117</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
+<div class="line"><span class="lineno">  119</span>  pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6">done</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  121</span>}</div>
 <div class="ttc" id="astructPostponeData_html_a40745f7a3bbbf82656a1306bb23b6cb6"><div class="ttname"><a href="structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6">PostponeData::done</a></div><div class="ttdeci">bool done</div><div class="ttdoc">Should we close the Dialog?</div><div class="ttdef"><b>Definition</b> <a href="postpone_2functions_8h_source.html#l00038">functions.h:38</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -308,15 +308,15 @@ Functions</h2></td></tr>
 
 <p>Select the current entry - Implements <a class="el" href="postpone_2functions_8h.html#a5a3ba6b33cfed4e60535a36d796794ae">postpone_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00128">128</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
-<div class="line"><span class="lineno">  130</span>  <span class="keywordtype">int</span> index = <a class="code hl_function" href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a>(pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>);</div>
-<div class="line"><span class="lineno">  131</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxView.html">MailboxView</a> *mv = pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91">mailbox_view</a>;</div>
-<div class="line"><span class="lineno">  132</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a>;</div>
-<div class="line"><span class="lineno">  133</span>  pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a10c3536efabab61b4ef602d9225fe37e">email</a> = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[index];</div>
-<div class="line"><span class="lineno">  134</span>  pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6">done</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  136</span>}</div>
+<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00126">126</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>{</div>
+<div class="line"><span class="lineno">  128</span>  <span class="keywordtype">int</span> index = <a class="code hl_function" href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a>(pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>);</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxView.html">MailboxView</a> *mv = pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91">mailbox_view</a>;</div>
+<div class="line"><span class="lineno">  130</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a>;</div>
+<div class="line"><span class="lineno">  131</span>  pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a10c3536efabab61b4ef602d9225fe37e">email</a> = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[index];</div>
+<div class="line"><span class="lineno">  132</span>  pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a40745f7a3bbbf82656a1306bb23b6cb6">done</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  134</span>}</div>
 <div class="ttc" id="astructPostponeData_html_a10c3536efabab61b4ef602d9225fe37e"><div class="ttname"><a href="structPostponeData.html#a10c3536efabab61b4ef602d9225fe37e">PostponeData::email</a></div><div class="ttdeci">struct Email * email</div><div class="ttdoc">Selected Email.</div><div class="ttdef"><b>Definition</b> <a href="postpone_2functions_8h_source.html#l00037">functions.h:37</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -357,35 +357,35 @@ Functions</h2></td></tr>
 
 <p>Search for a regular expression - Implements <a class="el" href="postpone_2functions_8h.html#a5a3ba6b33cfed4e60535a36d796794ae">postpone_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00141">141</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>{</div>
-<div class="line"><span class="lineno">  143</span>  <a class="code hl_typedef" href="search__state_8h.html#a2ec659bdd167342ab2cea28580ee5c1b">SearchFlags</a> flags = <a class="code hl_define" href="search__state_8h.html#a3e3d4f6526e6172491656d0242558012">SEARCH_NO_FLAGS</a>;</div>
-<div class="line"><span class="lineno">  144</span>  <span class="keywordflow">switch</span> (op)</div>
-<div class="line"><span class="lineno">  145</span>  {</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">case</span> OP_SEARCH:</div>
-<div class="line"><span class="lineno">  147</span>      flags |= <a class="code hl_define" href="search__state_8h.html#ab5e2186220d000b31a02450c072628e7">SEARCH_PROMPT</a>;</div>
-<div class="line"><span class="lineno">  148</span>      pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6">search_state</a>-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  149</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">case</span> OP_SEARCH_REVERSE:</div>
-<div class="line"><span class="lineno">  151</span>      flags |= <a class="code hl_define" href="search__state_8h.html#ab5e2186220d000b31a02450c072628e7">SEARCH_PROMPT</a>;</div>
-<div class="line"><span class="lineno">  152</span>      pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6">search_state</a>-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a> = <span class="keyword">true</span>;</div>
+<p class="definition">Definition at line <a class="el" href="postpone_2functions_8c_source.html#l00139">139</a> of file <a class="el" href="postpone_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>{</div>
+<div class="line"><span class="lineno">  141</span>  <a class="code hl_typedef" href="search__state_8h.html#a2ec659bdd167342ab2cea28580ee5c1b">SearchFlags</a> flags = <a class="code hl_define" href="search__state_8h.html#a3e3d4f6526e6172491656d0242558012">SEARCH_NO_FLAGS</a>;</div>
+<div class="line"><span class="lineno">  142</span>  <span class="keywordflow">switch</span> (op)</div>
+<div class="line"><span class="lineno">  143</span>  {</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">case</span> OP_SEARCH:</div>
+<div class="line"><span class="lineno">  145</span>      flags |= <a class="code hl_define" href="search__state_8h.html#ab5e2186220d000b31a02450c072628e7">SEARCH_PROMPT</a>;</div>
+<div class="line"><span class="lineno">  146</span>      pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6">search_state</a>-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  147</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">case</span> OP_SEARCH_REVERSE:</div>
+<div class="line"><span class="lineno">  149</span>      flags |= <a class="code hl_define" href="search__state_8h.html#ab5e2186220d000b31a02450c072628e7">SEARCH_PROMPT</a>;</div>
+<div class="line"><span class="lineno">  150</span>      pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6">search_state</a>-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  151</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">case</span> OP_SEARCH_NEXT:</div>
 <div class="line"><span class="lineno">  153</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">case</span> OP_SEARCH_NEXT:</div>
-<div class="line"><span class="lineno">  155</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  156</span>    <span class="keywordflow">case</span> OP_SEARCH_OPPOSITE:</div>
-<div class="line"><span class="lineno">  157</span>      flags |= <a class="code hl_define" href="search__state_8h.html#a208bf38d21acd38ffea2d9b7da797ac8">SEARCH_OPPOSITE</a>;</div>
-<div class="line"><span class="lineno">  158</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  159</span>  }</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>  <span class="keywordtype">int</span> index = <a class="code hl_function" href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a>(pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>);</div>
-<div class="line"><span class="lineno">  162</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxView.html">MailboxView</a> *mv = pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91">mailbox_view</a>;</div>
-<div class="line"><span class="lineno">  163</span>  index = <a class="code hl_function" href="pattern_2lib_8h.html#a70e5676b2d2d700d5c1ad5d25ec479b5">mutt_search_command</a>(mv, pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>, index, pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6">search_state</a>, flags);</div>
-<div class="line"><span class="lineno">  164</span>  <span class="keywordflow">if</span> (index != -1)</div>
-<div class="line"><span class="lineno">  165</span>    <a class="code hl_function" href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a>(pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>, index);</div>
-<div class="line"><span class="lineno">  166</span> </div>
-<div class="line"><span class="lineno">  167</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  168</span>}</div>
-<div class="ttc" id="apattern_2lib_8h_html_a70e5676b2d2d700d5c1ad5d25ec479b5"><div class="ttname"><a href="pattern_2lib_8h.html#a70e5676b2d2d700d5c1ad5d25ec479b5">mutt_search_command</a></div><div class="ttdeci">int mutt_search_command(struct MailboxView *mv, struct Menu *menu, int cur, struct SearchState *state, SearchFlags flags)</div><div class="ttdoc">Perform a search.</div><div class="ttdef"><b>Definition</b> <a href="pattern_8c_source.html#l00475">pattern.c:475</a></div></div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">case</span> OP_SEARCH_OPPOSITE:</div>
+<div class="line"><span class="lineno">  155</span>      flags |= <a class="code hl_define" href="search__state_8h.html#a208bf38d21acd38ffea2d9b7da797ac8">SEARCH_OPPOSITE</a>;</div>
+<div class="line"><span class="lineno">  156</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  157</span>  }</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>  <span class="keywordtype">int</span> index = <a class="code hl_function" href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a>(pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>);</div>
+<div class="line"><span class="lineno">  160</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailboxView.html">MailboxView</a> *mv = pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a58a855e12c3ee31651e8433ea697fb91">mailbox_view</a>;</div>
+<div class="line"><span class="lineno">  161</span>  index = <a class="code hl_function" href="pattern_2lib_8h.html#a70e5676b2d2d700d5c1ad5d25ec479b5">mutt_search_command</a>(mv, pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>, index, pd-&gt;<a class="code hl_variable" href="structPostponeData.html#a39a4c8d879dbc842b6c081003d0fe4b6">search_state</a>, flags);</div>
+<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">if</span> (index != -1)</div>
+<div class="line"><span class="lineno">  163</span>    <a class="code hl_function" href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a>(pd-&gt;<a class="code hl_variable" href="structPostponeData.html#aca04be299f0d2f2c5a3d893f256ef20a">menu</a>, index);</div>
+<div class="line"><span class="lineno">  164</span> </div>
+<div class="line"><span class="lineno">  165</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  166</span>}</div>
+<div class="ttc" id="apattern_2lib_8h_html_a70e5676b2d2d700d5c1ad5d25ec479b5"><div class="ttname"><a href="pattern_2lib_8h.html#a70e5676b2d2d700d5c1ad5d25ec479b5">mutt_search_command</a></div><div class="ttdeci">int mutt_search_command(struct MailboxView *mv, struct Menu *menu, int cur, struct SearchState *state, SearchFlags flags)</div><div class="ttdoc">Perform a search.</div><div class="ttdef"><b>Definition</b> <a href="pattern_8c_source.html#l00473">pattern.c:473</a></div></div>
 <div class="ttc" id="asearch__state_8h_html_a208bf38d21acd38ffea2d9b7da797ac8"><div class="ttname"><a href="search__state_8h.html#a208bf38d21acd38ffea2d9b7da797ac8">SEARCH_OPPOSITE</a></div><div class="ttdeci">#define SEARCH_OPPOSITE</div><div class="ttdoc">Search in the opposite direction.</div><div class="ttdef"><b>Definition</b> <a href="search__state_8h_source.html#l00046">search_state.h:46</a></div></div>
 <div class="ttc" id="asearch__state_8h_html_a2ec659bdd167342ab2cea28580ee5c1b"><div class="ttname"><a href="search__state_8h.html#a2ec659bdd167342ab2cea28580ee5c1b">SearchFlags</a></div><div class="ttdeci">uint8_t SearchFlags</div><div class="ttdoc">Flags for a specific search, e.g. SEARCH_PROMPT.</div><div class="ttdef"><b>Definition</b> <a href="search__state_8h_source.html#l00043">search_state.h:43</a></div></div>
 <div class="ttc" id="asearch__state_8h_html_a3e3d4f6526e6172491656d0242558012"><div class="ttname"><a href="search__state_8h.html#a3e3d4f6526e6172491656d0242558012">SEARCH_NO_FLAGS</a></div><div class="ttdeci">#define SEARCH_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition</b> <a href="search__state_8h_source.html#l00044">search_state.h:44</a></div></div>

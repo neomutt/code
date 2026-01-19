@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"cid_8h.html#ad9ca67dad4234a2cd06f1ee2b8d0b2a4":[2,0,2,3,6],
+"cid_8h.html#aed54252a3604cd8dc1dac5ce2045c3a8":[2,0,2,3,4],
 "cid_8h_source.html":[2,0,2,3],
 "classes.html":[1,1],
 "cli_2lib_8h.html":[2,0,6,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa8b1be87d49bec9f69e883ebf1e57ae6a":[2,0,16,3,7,40],
 "command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa8c8592e03a79fd4c574398787525095f":[2,0,16,3,7,71],
 "command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc":[2,0,16,3,7,0],
-"command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa943bec04312c4ce33606fbaf655802f3":[2,0,16,3,7,60],
-"command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa94d40cf2792074c619efe4e46b938a1d":[2,0,16,3,7,32],
-"command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa970af52817ad817241ed2e6b3c6d199a":[2,0,16,3,7,3]
+"command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa943bec04312c4ce33606fbaf655802f3":[2,0,16,3,7,60]
 };

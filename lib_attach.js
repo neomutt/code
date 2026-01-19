@@ -10,5 +10,6 @@ var lib_attach =
     [ "Definition of the Attach Module", "attach_module.html", null ],
     [ "Shared attachments functions", "attach_mutt_attach.html", null ],
     [ "Private state data for Attachments", "attach_private_data.html", null ],
-    [ "Attachment functions", "attach_recvattach.html", null ]
+    [ "Attachment functions", "attach_recvattach.html", null ],
+    [ "Send/reply with an attachment", "attach_recvcmd.html", null ]
 ];

@@ -9,5 +9,7 @@ var dir_7c4da566fc26790d35e426e8356dec56 =
     [ "idna.c", "idna_8c.html", "idna_8c" ],
     [ "idna2.h", "idna2_8h.html", "idna2_8h" ],
     [ "lib.h", "address_2lib_8h.html", null ],
+    [ "maillist.c", "maillist_8c.html", "maillist_8c" ],
+    [ "maillist.h", "maillist_8h.html", "maillist_8h" ],
     [ "module.c", "address_2module_8c.html", "address_2module_8c" ]
 ];

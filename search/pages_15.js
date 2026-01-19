@@ -34,7 +34,7 @@ var searchData=
   ['user_20defined_20hooks_31',['User-defined Hooks',['../hooks_hook.html',1,'lib_hooks']]],
   ['user_20defined_20hooks_32',['user defined Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks']]],
   ['user_20functions_33',['Definitions of user functions',['../gui_functions.html',1,'lib_gui']]],
-  ['user_20scores_20to_20emails_34',['Routines for adding user scores to emails',['../neo_score.html',1,'index']]],
+  ['user_20scores_20to_20emails_34',['user scores to emails',['../commands_score.html',1,'Routines for adding user scores to emails'],['../email_score.html',1,'Routines for adding user scores to emails']]],
   ['user_20to_20enter_20a_20string_35',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],
   ['user_20with_20a_20selectable_20list_36',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]],
   ['using_20data_37',['Render Expandos using Data',['../expando_render.html',1,'lib_expando']]],

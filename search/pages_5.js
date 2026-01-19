@@ -23,7 +23,7 @@ var searchData=
   ['debug_20code_20',['Shared debug code',['../debug_common.html',1,'lib_debug']]],
   ['debug_20names_21',['Debug names',['../debug_names.html',1,'lib_debug']]],
   ['debugging_22',['Debugging',['../color_debug.html',1,'Colour Debugging'],['../debug_pager.html',1,'Pager Debugging']]],
-  ['decide_20how_20to_20display_20email_20content_23',['Decide how to display email content',['../neo_handler.html',1,'index']]],
+  ['decide_20how_20to_20display_20email_20content_23',['Decide how to display email content',['../email_handler.html',1,'lib_email']]],
   ['decoding_24',['RFC2047 encoding / decoding',['../email_rfc2047.html',1,'lib_email']]],
   ['defined_20hooks_25',['defined Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
   ['definition_20of_20the_20address_20module_26',['Definition of the Address Module',['../addr_module.html',1,'lib_address']]],
@@ -87,7 +87,7 @@ var searchData=
   ['dispatcher_20of_20functions_84',['Dispatcher of functions',['../core_dispatcher.html',1,'lib_core']]],
   ['display_85',['Pager Display',['../pager_display.html',1,'lib_pager']]],
   ['display_20a_20user_20configurable_20status_20line_86',['display a user configurable status line',['../index_expando_status.html',1,'GUI display a user-configurable status line'],['../index_status.html',1,'GUI display a user-configurable status line']]],
-  ['display_20email_20content_87',['Decide how to display email content',['../neo_handler.html',1,'index']]],
+  ['display_20email_20content_87',['Decide how to display email content',['../email_handler.html',1,'lib_email']]],
   ['display_20in_20the_20pager_88',['Process a message for display in the pager',['../pager_message.html',1,'lib_pager']]],
   ['display_20it_89',['Generate the help-page and GUI display it',['../neo_help.html',1,'index']]],
   ['display_20the_20mailboxes_20in_20a_20side_20panel_90',['GUI display the mailboxes in a side panel',['../sidebar_sidebar.html',1,'lib_sidebar']]],
@@ -107,5 +107,5 @@ var searchData=
   ['dump_20the_20details_20of_20an_20expando_20tree_104',['Dump the details of an Expando Tree',['../expando_serial.html',1,'lib_expando']]],
   ['dump_20the_20hooks_20to_20the_20pager_105',['Dump the Hooks to the Pager',['../hooks_dump.html',1,'lib_hooks']]],
   ['dump_20the_20windows_106',['Dump the Windows',['../debug_window.html',1,'lib_debug']]],
-  ['duplicate_20the_20structure_20of_20an_20entire_20email_107',['Duplicate the structure of an entire email',['../neo_copy.html',1,'index']]]
+  ['duplicate_20the_20structure_20of_20an_20entire_20email_107',['Duplicate the structure of an entire email',['../email_copy_email.html',1,'lib_email']]]
 ];

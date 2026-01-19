@@ -27,6 +27,8 @@ var group__command__parse =
     [ "parse_cd", "group__command__parse.html#ga16cdeea9166660519d527849dab1c77c", null ],
     [ "parse_echo", "group__command__parse.html#gae25de883eb426be9c30a20c71a00480b", null ],
     [ "parse_version", "group__command__parse.html#ga3397504345268e8f15f7ca2202e96bed", null ],
+    [ "parse_score", "group__command__parse.html#ga4a0f45e68ad536df89555ba4fef2eb43", null ],
+    [ "parse_unscore", "group__command__parse.html#ga1ca28a758d975118c108d14007dfb965", null ],
     [ "parse_setenv", "group__command__parse.html#gacdd09691d8d5ff8b2c13af5fb45eb730", null ],
     [ "parse_source", "group__command__parse.html#ga921328edb45bd0c6121fb1be4d0222db", null ],
     [ "parse_nospam", "group__command__parse.html#gaa6b02f787ed01ad3d8a958e02f1e2cb1", null ],
@@ -60,8 +62,6 @@ var group__command__parse =
     [ "parse_lua", "group__command__parse.html#gad4795027174065eafbb5e54ba67c31cb", null ],
     [ "parse_lua_source", "group__command__parse.html#ga6136bc5edcef58dcf6f332253d0a1454", null ],
     [ "parse_set", "group__command__parse.html#ga9b9b16f5640cbd5ff73b8f834008bd31", null ],
-    [ "parse_score", "group__command__parse.html#ga4a0f45e68ad536df89555ba4fef2eb43", null ],
-    [ "parse_unscore", "group__command__parse.html#ga1ca28a758d975118c108d14007dfb965", null ],
     [ "parse_sidebar_pin", "group__command__parse.html#ga4773fb18f096548fbe29830b01cfd744", null ],
     [ "parse_sidebar_unpin", "group__command__parse.html#ga1a90378d2905ffb1b43db4a068cdcbe4", null ]
 ];

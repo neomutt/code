@@ -47,7 +47,7 @@ var searchData=
   ['get_5fsort_5fstr_44',['get_sort_str',['../expando__status_8c.html#a85ac44e0e4f04e61caff65973adccbfd',1,'expando_status.c']]],
   ['get_5fthreads_45',['get_threads',['../notmuch_8c.html#a0256045c9befd9a5bf7ec50373f7b431',1,'notmuch.c']]],
   ['get_5ftoplevel_5fencoding_46',['get_toplevel_encoding',['../multipart_8c.html#a2971e087b3204abafa47adb0ded71055',1,'multipart.c']]],
-  ['get_5fuse_5fthreads_5fstr_47',['get_use_threads_str',['../mutt__thread_8c.html#a849aee4fafabc93f47d0aa2beba610fb',1,'get_use_threads_str(enum UseThreads value):&#160;mutt_thread.c'],['../mutt__thread_8h.html#a849aee4fafabc93f47d0aa2beba610fb',1,'get_use_threads_str(enum UseThreads value):&#160;mutt_thread.c']]],
+  ['get_5fuse_5fthreads_5fstr_47',['get_use_threads_str',['../gui_2thread_8c.html#a849aee4fafabc93f47d0aa2beba610fb',1,'get_use_threads_str(enum UseThreads value):&#160;thread.c'],['../gui_2thread_8h.html#a849aee4fafabc93f47d0aa2beba610fb',1,'get_use_threads_str(enum UseThreads value):&#160;thread.c']]],
   ['get_5fuser_5finfo_48',['get_user_info',['../main_8c.html#ab1ab96b05777c73f61c060778657ec38',1,'main.c']]],
   ['getdnsdomainname_49',['getdnsdomainname',['../getdomain_8c.html#a0ce5421f78cc2c1589d43205b5730c7a',1,'getdnsdomainname(struct Buffer *result):&#160;getdomain.c'],['../conn_2lib_8h.html#a0ce5421f78cc2c1589d43205b5730c7a',1,'getdnsdomainname(struct Buffer *result):&#160;getdomain.c']]],
   ['getkeys_50',['getkeys',['../smime_8c.html#a4477a016ba21f15dd55a65c753c47b01',1,'smime.c']]],

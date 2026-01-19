@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['lacking_20timegm_0',['For systems lacking timegm()',['../neo_timegm.html',1,'index']]],
-  ['lacking_20wcscasecmp_1',['For systems lacking wcscasecmp()',['../neo_wcscasecmp.html',1,'index']]],
+  ['lacking_20timegm_0',['For systems lacking timegm()',['../mutt_timegm.html',1,'lib_mutt']]],
+  ['lacking_20wcscasecmp_1',['For systems lacking wcscasecmp()',['../mutt_wcscasecmp.html',1,'lib_mutt']]],
   ['leave_20the_20program_20now_2',['Leave the program NOW',['../mutt_exit.html',1,'lib_mutt']]],
   ['level_20socket_20code_3',['Low-level socket code',['../conn_raw.html',1,'lib_conn']]],
   ['level_20socket_20handling_4',['Low-level socket handling',['../conn_socket.html',1,'lib_conn']]],
@@ -29,7 +29,7 @@ var searchData=
   ['list_20of_20strings_26',['Type: List of strings',['../config_slist.html',1,'lib_config']]],
   ['list_20of_20strings_27',['A separated list of strings',['../mutt_slist.html',1,'lib_mutt']]],
   ['list_20type_28',['Singly-linked list type',['../mutt_list.html',1,'lib_mutt']]],
-  ['lists_29',['Handle mailing lists',['../neo_maillist.html',1,'index']]],
+  ['lists_29',['Handle mailing lists',['../addr_maillist.html',1,'lib_address']]],
   ['lists_20commands_30',['Parse Group/Lists Commands',['../commands_group.html',1,'lib_command']]],
   ['lmdb_31',['Lightning Memory-Mapped Database (LMDB)',['../store_lmdb.html',1,'lib_store']]],
   ['local_20email_32',['Local email',['../core_message.html',1,'lib_core']]],

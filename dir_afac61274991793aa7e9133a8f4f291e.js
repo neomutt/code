@@ -18,6 +18,8 @@ var dir_afac61274991793aa7e9133a8f4f291e =
     [ "my_header.h", "my__header_8h.html", "my__header_8h" ],
     [ "parse.c", "commands_2parse_8c.html", "commands_2parse_8c" ],
     [ "parse.h", "commands_2parse_8h.html", "commands_2parse_8h" ],
+    [ "score.c", "commands_2score_8c.html", "commands_2score_8c" ],
+    [ "score.h", "commands_2score_8h.html", "commands_2score_8h" ],
     [ "setenv.c", "setenv_8c.html", "setenv_8c" ],
     [ "setenv.h", "setenv_8h.html", "setenv_8h" ],
     [ "source.c", "source_8c.html", "source_8c" ],

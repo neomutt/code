@@ -229,7 +229,7 @@ var searchData=
   ['init_5fsmime_226',['init_smime',['../crypt__gpgme_8c.html#aab62fa83c30ed25209d5fac293cdb59d',1,'crypt_gpgme.c']]],
   ['init_5fstate_227',['init_state',['../dlg__browser_8c.html#aa28f53565f3a3c69250813a02b512167',1,'init_state(struct BrowserState *state):&#160;dlg_browser.c'],['../browser_2lib_8h.html#aa28f53565f3a3c69250813a02b512167',1,'init_state(struct BrowserState *state):&#160;dlg_browser.c']]],
   ['inline_5fforward_5fattachments_228',['inline_forward_attachments',['../send_8c.html#ae0accb8ca6f488f8a6d77cd9fac7672b',1,'send.c']]],
-  ['insert_5fmessage_229',['insert_message',['../thread_8c.html#a459d73c8b753c6704bead8525a7dbc7d',1,'insert_message(struct MuttThread **add, struct MuttThread *parent, struct MuttThread *cur):&#160;thread.c'],['../thread_8h.html#a459d73c8b753c6704bead8525a7dbc7d',1,'insert_message(struct MuttThread **add, struct MuttThread *parent, struct MuttThread *cur):&#160;thread.c']]],
+  ['insert_5fmessage_229',['insert_message',['../email_2thread_8c.html#a459d73c8b753c6704bead8525a7dbc7d',1,'insert_message(struct MuttThread **add, struct MuttThread *parent, struct MuttThread *cur):&#160;thread.c'],['../email_2thread_8h.html#a459d73c8b753c6704bead8525a7dbc7d',1,'insert_message(struct MuttThread **add, struct MuttThread *parent, struct MuttThread *cur):&#160;thread.c']]],
   ['interactive_5fcheck_5fcert_230',['interactive_check_cert',['../openssl_8c.html#ae0a15dc5df31b626a42f31bd6a5ea7f4',1,'openssl.c']]],
   ['invoke_5fmta_231',['invoke_mta',['../send_8c.html#a859ddbab5f9384328fd06bf9c18c02f2',1,'send.c']]],
   ['ipanel_5fconfig_5fobserver_232',['ipanel_config_observer',['../group__observer__api.html#gab5e61646dad824b5e509fb97bbc3fb87',1,'ipanel.c']]],
@@ -239,7 +239,7 @@ var searchData=
   ['is_5fautoview_236',['is_autoview',['../handler_8c.html#a09f27e2821153040ea4cad0b9ade6153',1,'handler.c']]],
   ['is_5fbound_237',['is_bound',['../key_2menu_8c.html#a9b034267e4d863132e876952a54f4244',1,'is_bound(const struct MenuDefinition *md, int op):&#160;menu.c'],['../menu_8h.html#a9b034267e4d863132e876952a54f4244',1,'is_bound(const struct MenuDefinition *md, int op):&#160;menu.c']]],
   ['is_5fcolor_5fobject_238',['is_color_object',['../ifdef_8c.html#a24e753457aba43a6e749eda649c6b953',1,'ifdef.c']]],
-  ['is_5fdescendant_239',['is_descendant',['../thread_8c.html#a270ef45b668941a460185742a798a9d4',1,'is_descendant(const struct MuttThread *a, const struct MuttThread *b):&#160;thread.c'],['../thread_8h.html#a270ef45b668941a460185742a798a9d4',1,'is_descendant(const struct MuttThread *a, const struct MuttThread *b):&#160;thread.c']]],
+  ['is_5fdescendant_239',['is_descendant',['../email_2thread_8c.html#a270ef45b668941a460185742a798a9d4',1,'is_descendant(const struct MuttThread *a, const struct MuttThread *b):&#160;thread.c'],['../email_2thread_8h.html#a270ef45b668941a460185742a798a9d4',1,'is_descendant(const struct MuttThread *a, const struct MuttThread *b):&#160;thread.c']]],
   ['is_5ffrom_240',['is_from',['../from_8c.html#af485f9451b398a9beb14a61aaa68ddeb',1,'is_from(const char *s, char *path, size_t pathlen, time_t *tp):&#160;from.c'],['../from_8h.html#af485f9451b398a9beb14a61aaa68ddeb',1,'is_from(const char *s, char *path, size_t pathlen, time_t *tp):&#160;from.c']]],
   ['is_5ffunction_241',['is_function',['../ifdef_8c.html#afafced1b84e7868cb29d1cde26c7c74a',1,'ifdef.c']]],
   ['is_5fleap_5fyear_242',['is_leap_year',['../timegm_8c.html#ad39bbc616f603879f066cec4948a3abe',1,'timegm.c']]],
@@ -253,5 +253,5 @@ var searchData=
   ['is_5fsame_5fmailbox_250',['is_same_mailbox',['../mutt__mailbox_8c.html#ac15f82d9e76f46262014e3072cd3d15f',1,'mutt_mailbox.c']]],
   ['is_5ftext_5fplain_251',['is_text_plain',['../send_8c.html#adaad7f2e93eb41299f638d224d90f82b',1,'send.c']]],
   ['is_5fvalid_5fnotmuch_5furl_252',['is_valid_notmuch_url',['../notmuch_2config_8c.html#a504134ea1c1e6b8bdb24a83539a3bf34',1,'config.c']]],
-  ['is_5fvisible_253',['is_visible',['../mutt__thread_8c.html#af6f89eb1fe9177d9a3484842f7d5c1cc',1,'mutt_thread.c']]]
+  ['is_5fvisible_253',['is_visible',['../gui_2thread_8c.html#af6f89eb1fe9177d9a3484842f7d5c1cc',1,'thread.c']]]
 ];

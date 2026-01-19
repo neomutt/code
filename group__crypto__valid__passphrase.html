@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -229,55 +229,55 @@ Functions</h2></td></tr>
 
 <p>Ensure we have a valid passphrase - Implements <a class="el" href="structCryptModuleSpecs.html#a8e4fee6a5203c68d854e1d328559889a">CryptModuleSpecs::valid_passphrase()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="pgp_8c_source.html#l00085">85</a> of file <a class="el" href="pgp_8c_source.html">pgp.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   86</span>{</div>
-<div class="line"><span class="lineno">   87</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="pgp_8c.html#ab97e1713bb20da422b5a71b68747edf9">pgp_use_gpg_agent</a>())</div>
-<div class="line"><span class="lineno">   88</span>  {</div>
-<div class="line"><span class="lineno">   89</span>    *<a class="code hl_variable" href="pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d">PgpPass</a> = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">/* handled by gpg-agent */</span></div>
-<div class="line"><span class="lineno">   91</span>  }</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a>() &lt; <a class="code hl_variable" href="pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1">PgpExptime</a>)</div>
-<div class="line"><span class="lineno">   94</span>  {</div>
-<div class="line"><span class="lineno">   95</span>    <span class="comment">/* Use cached copy.  */</span></div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   97</span>  }</div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>  <a class="code hl_function" href="group__crypto__void__passphrase.html#ga5f22ad399cd8c0e467f61969e762aba0">pgp_class_void_passphrase</a>();</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  102</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> rc = <a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Enter PGP passphrase:&quot;</span>), buf,</div>
-<div class="line"><span class="lineno">  103</span>                              <a class="code hl_define" href="mutt_8h.html#a356890cce1c2b54d0b24d3014c67b4a6">MUTT_COMP_PASS</a> | <a class="code hl_define" href="mutt_8h.html#a46ba7ec4f446acf2e7d1d06e22e56414">MUTT_COMP_UNBUFFERED</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL);</div>
-<div class="line"><span class="lineno">  104</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(<a class="code hl_variable" href="pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d">PgpPass</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="keyword">sizeof</span>(<a class="code hl_variable" href="pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d">PgpPass</a>));</div>
-<div class="line"><span class="lineno">  105</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>  <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  108</span>  {</div>
-<div class="line"><span class="lineno">  109</span>    <span class="keyword">const</span> <span class="keywordtype">long</span> c_pgp_timeout = <a class="code hl_function" href="config_2helpers_8c.html#aaa3d1087514bcd9d7ea4347bed337c5b">cs_subset_long</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pgp_timeout&quot;</span>);</div>
-<div class="line"><span class="lineno">  110</span>    <a class="code hl_variable" href="pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1">PgpExptime</a> = <a class="code hl_function" href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a>(<a class="code hl_function" href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a>(), c_pgp_timeout);</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  112</span>  }</div>
-<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  114</span>  {</div>
-<div class="line"><span class="lineno">  115</span>    <a class="code hl_variable" href="pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1">PgpExptime</a> = 0;</div>
-<div class="line"><span class="lineno">  116</span>  }</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  119</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pgp_8c_source.html#l00084">84</a> of file <a class="el" href="pgp_8c_source.html">pgp.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>{</div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="pgp_8c.html#ab97e1713bb20da422b5a71b68747edf9">pgp_use_gpg_agent</a>())</div>
+<div class="line"><span class="lineno">   87</span>  {</div>
+<div class="line"><span class="lineno">   88</span>    *<a class="code hl_variable" href="pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d">PgpPass</a> = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">/* handled by gpg-agent */</span></div>
+<div class="line"><span class="lineno">   90</span>  }</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a>() &lt; <a class="code hl_variable" href="pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1">PgpExptime</a>)</div>
+<div class="line"><span class="lineno">   93</span>  {</div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">/* Use cached copy.  */</span></div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   96</span>  }</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>  <a class="code hl_function" href="group__crypto__void__passphrase.html#ga5f22ad399cd8c0e467f61969e762aba0">pgp_class_void_passphrase</a>();</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  101</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> rc = <a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Enter PGP passphrase:&quot;</span>), buf,</div>
+<div class="line"><span class="lineno">  102</span>                              <a class="code hl_define" href="editor_2wdata_8h.html#a356890cce1c2b54d0b24d3014c67b4a6">MUTT_COMP_PASS</a> | <a class="code hl_define" href="editor_2wdata_8h.html#a46ba7ec4f446acf2e7d1d06e22e56414">MUTT_COMP_UNBUFFERED</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL);</div>
+<div class="line"><span class="lineno">  103</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(<a class="code hl_variable" href="pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d">PgpPass</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="keyword">sizeof</span>(<a class="code hl_variable" href="pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d">PgpPass</a>));</div>
+<div class="line"><span class="lineno">  104</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>  <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  107</span>  {</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keyword">const</span> <span class="keywordtype">long</span> c_pgp_timeout = <a class="code hl_function" href="config_2helpers_8c.html#aaa3d1087514bcd9d7ea4347bed337c5b">cs_subset_long</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pgp_timeout&quot;</span>);</div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_variable" href="pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1">PgpExptime</a> = <a class="code hl_function" href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a>(<a class="code hl_function" href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a>(), c_pgp_timeout);</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  111</span>  }</div>
+<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  113</span>  {</div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_variable" href="pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1">PgpExptime</a> = 0;</div>
+<div class="line"><span class="lineno">  115</span>  }</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  118</span>}</div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_aaa3d1087514bcd9d7ea4347bed337c5b"><div class="ttname"><a href="config_2helpers_8c.html#aaa3d1087514bcd9d7ea4347bed337c5b">cs_subset_long</a></div><div class="ttdeci">long cs_subset_long(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a long config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00095">helpers.c:95</a></div></div>
-<div class="ttc" id="agroup__crypto__void__passphrase_html_ga5f22ad399cd8c0e467f61969e762aba0"><div class="ttname"><a href="group__crypto__void__passphrase.html#ga5f22ad399cd8c0e467f61969e762aba0">pgp_class_void_passphrase</a></div><div class="ttdeci">void pgp_class_void_passphrase(void)</div><div class="ttdoc">Forget the cached passphrase - Implements CryptModuleSpecs::void_passphrase() -.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00076">pgp.c:76</a></div></div>
+<div class="ttc" id="aeditor_2wdata_8h_html_a356890cce1c2b54d0b24d3014c67b4a6"><div class="ttname"><a href="editor_2wdata_8h.html#a356890cce1c2b54d0b24d3014c67b4a6">MUTT_COMP_PASS</a></div><div class="ttdeci">#define MUTT_COMP_PASS</div><div class="ttdoc">Password mode (no echo)</div><div class="ttdef"><b>Definition</b> <a href="editor_2wdata_8h_source.html#l00045">wdata.h:45</a></div></div>
+<div class="ttc" id="aeditor_2wdata_8h_html_a46ba7ec4f446acf2e7d1d06e22e56414"><div class="ttname"><a href="editor_2wdata_8h.html#a46ba7ec4f446acf2e7d1d06e22e56414">MUTT_COMP_UNBUFFERED</a></div><div class="ttdeci">#define MUTT_COMP_UNBUFFERED</div><div class="ttdoc">Ignore macro buffer.</div><div class="ttdef"><b>Definition</b> <a href="editor_2wdata_8h_source.html#l00046">wdata.h:46</a></div></div>
+<div class="ttc" id="agroup__crypto__void__passphrase_html_ga5f22ad399cd8c0e467f61969e762aba0"><div class="ttname"><a href="group__crypto__void__passphrase.html#ga5f22ad399cd8c0e467f61969e762aba0">pgp_class_void_passphrase</a></div><div class="ttdeci">void pgp_class_void_passphrase(void)</div><div class="ttdoc">Forget the cached passphrase - Implements CryptModuleSpecs::void_passphrase() -.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00075">pgp.c:75</a></div></div>
 <div class="ttc" id="agroup__gui__mw_html_gabcbd2498b412e9f8e9d953cafc01989c"><div class="ttname"><a href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a></div><div class="ttdeci">int mw_get_field(const char *prompt, struct Buffer *buf, CompletionFlags complete, enum HistoryClass hclass, const struct CompleteOps *comp_api, void *cdata)</div><div class="ttdoc">Ask the user for a string -.</div><div class="ttdef"><b>Definition</b> <a href="editor_2window_8c_source.html#l00272">window.c:272</a></div></div>
 <div class="ttc" id="ahistory_2lib_8h_html_acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a"><div class="ttname"><a href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a></div><div class="ttdeci">@ HC_OTHER</div><div class="ttdoc">Miscellaneous strings.</div><div class="ttdef"><b>Definition</b> <a href="history_2lib_8h_source.html#l00060">lib.h:60</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_ac0abb4d8ad7cd26e1dea5ac43a20a329"><div class="ttname"><a href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a></div><div class="ttdeci">time_t mutt_date_add_timeout(time_t now, time_t timeout)</div><div class="ttdoc">Safely add a timeout to a given time_t value.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2date_8c_source.html#l00891">date.c:891</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_ad1e6304a91c7b6f3c266a9b17c1740fe"><div class="ttname"><a href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a></div><div class="ttdeci">time_t mutt_date_now(void)</div><div class="ttdoc">Return the number of seconds since the Unix epoch.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2date_8c_source.html#l00457">date.c:457</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_ad20e00309de897a1e882fc7400335b83"><div class="ttname"><a href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a></div><div class="ttdeci">size_t mutt_str_copy(char *dest, const char *src, size_t dsize)</div><div class="ttdoc">Copy a string into a buffer (guaranteeing NUL-termination)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00583">string.c:583</a></div></div>
-<div class="ttc" id="amutt_8h_html_a356890cce1c2b54d0b24d3014c67b4a6"><div class="ttname"><a href="mutt_8h.html#a356890cce1c2b54d0b24d3014c67b4a6">MUTT_COMP_PASS</a></div><div class="ttdeci">#define MUTT_COMP_PASS</div><div class="ttdoc">Password mode (no echo)</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00058">mutt.h:58</a></div></div>
-<div class="ttc" id="amutt_8h_html_a46ba7ec4f446acf2e7d1d06e22e56414"><div class="ttname"><a href="mutt_8h.html#a46ba7ec4f446acf2e7d1d06e22e56414">MUTT_COMP_UNBUFFERED</a></div><div class="ttdeci">#define MUTT_COMP_UNBUFFERED</div><div class="ttdoc">Ignore macro buffer.</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00059">mutt.h:59</a></div></div>
-<div class="ttc" id="apgp_8c_html_a4bff03001e5dff05a97e4e071e1a1a4d"><div class="ttname"><a href="pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d">PgpPass</a></div><div class="ttdeci">static char PgpPass[1024]</div><div class="ttdoc">Cached PGP Passphrase.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00069">pgp.c:69</a></div></div>
-<div class="ttc" id="apgp_8c_html_a67c928e6b6f8be62b399745abd9029e1"><div class="ttname"><a href="pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1">PgpExptime</a></div><div class="ttdeci">static time_t PgpExptime</div><div class="ttdoc">Unix time when PgpPass expires.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00071">pgp.c:71</a></div></div>
-<div class="ttc" id="apgp_8c_html_ab97e1713bb20da422b5a71b68747edf9"><div class="ttname"><a href="pgp_8c.html#ab97e1713bb20da422b5a71b68747edf9">pgp_use_gpg_agent</a></div><div class="ttdeci">bool pgp_use_gpg_agent(void)</div><div class="ttdoc">Does the user want to use the gpg agent?</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00127">pgp.c:127</a></div></div>
+<div class="ttc" id="apgp_8c_html_a4bff03001e5dff05a97e4e071e1a1a4d"><div class="ttname"><a href="pgp_8c.html#a4bff03001e5dff05a97e4e071e1a1a4d">PgpPass</a></div><div class="ttdeci">static char PgpPass[1024]</div><div class="ttdoc">Cached PGP Passphrase.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00068">pgp.c:68</a></div></div>
+<div class="ttc" id="apgp_8c_html_a67c928e6b6f8be62b399745abd9029e1"><div class="ttname"><a href="pgp_8c.html#a67c928e6b6f8be62b399745abd9029e1">PgpExptime</a></div><div class="ttdeci">static time_t PgpExptime</div><div class="ttdoc">Unix time when PgpPass expires.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00070">pgp.c:70</a></div></div>
+<div class="ttc" id="apgp_8c_html_ab97e1713bb20da422b5a71b68747edf9"><div class="ttname"><a href="pgp_8c.html#ab97e1713bb20da422b5a71b68747edf9">pgp_use_gpg_agent</a></div><div class="ttdeci">bool pgp_use_gpg_agent(void)</div><div class="ttdoc">Does the user want to use the gpg agent?</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00126">pgp.c:126</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
@@ -317,40 +317,40 @@ Functions</h2></td></tr>
 
 <p>Ensure we have a valid passphrase - Implements <a class="el" href="structCryptModuleSpecs.html#a8e4fee6a5203c68d854e1d328559889a">CryptModuleSpecs::valid_passphrase()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l00157">157</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>{</div>
-<div class="line"><span class="lineno">  159</span>  <span class="keyword">const</span> time_t now = <a class="code hl_function" href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a>();</div>
-<div class="line"><span class="lineno">  160</span>  <span class="keywordflow">if</span> (now &lt; <a class="code hl_variable" href="smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7">SmimeExpTime</a>)</div>
-<div class="line"><span class="lineno">  161</span>  {</div>
-<div class="line"><span class="lineno">  162</span>    <span class="comment">/* Use cached copy.  */</span></div>
-<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  164</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="smime_8c_source.html#l00155">155</a> of file <a class="el" href="smime_8c_source.html">smime.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>{</div>
+<div class="line"><span class="lineno">  157</span>  <span class="keyword">const</span> time_t now = <a class="code hl_function" href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a>();</div>
+<div class="line"><span class="lineno">  158</span>  <span class="keywordflow">if</span> (now &lt; <a class="code hl_variable" href="smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7">SmimeExpTime</a>)</div>
+<div class="line"><span class="lineno">  159</span>  {</div>
+<div class="line"><span class="lineno">  160</span>    <span class="comment">/* Use cached copy.  */</span></div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  162</span>  }</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>  <a class="code hl_function" href="group__crypto__void__passphrase.html#gadb364b3c8158f09603b981b70bbee2eb">smime_class_void_passphrase</a>();</div>
 <div class="line"><span class="lineno">  165</span> </div>
-<div class="line"><span class="lineno">  166</span>  <a class="code hl_function" href="group__crypto__void__passphrase.html#gadb364b3c8158f09603b981b70bbee2eb">smime_class_void_passphrase</a>();</div>
-<div class="line"><span class="lineno">  167</span> </div>
-<div class="line"><span class="lineno">  168</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  169</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> rc = <a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Enter S/MIME passphrase:&quot;</span>), buf,</div>
-<div class="line"><span class="lineno">  170</span>                              <a class="code hl_define" href="mutt_8h.html#a356890cce1c2b54d0b24d3014c67b4a6">MUTT_COMP_PASS</a> | <a class="code hl_define" href="mutt_8h.html#a46ba7ec4f446acf2e7d1d06e22e56414">MUTT_COMP_UNBUFFERED</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL);</div>
-<div class="line"><span class="lineno">  171</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(<a class="code hl_variable" href="smime_8c.html#a34dd93b9b68b65428e25c44739a51349">SmimePass</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="keyword">sizeof</span>(<a class="code hl_variable" href="smime_8c.html#a34dd93b9b68b65428e25c44739a51349">SmimePass</a>));</div>
-<div class="line"><span class="lineno">  172</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>  <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  175</span>  {</div>
-<div class="line"><span class="lineno">  176</span>    <span class="keyword">const</span> <span class="keywordtype">short</span> c_smime_timeout = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_timeout&quot;</span>);</div>
-<div class="line"><span class="lineno">  177</span>    <a class="code hl_variable" href="smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7">SmimeExpTime</a> = <a class="code hl_function" href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a>(now, c_smime_timeout);</div>
-<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  179</span>  }</div>
-<div class="line"><span class="lineno">  180</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  181</span>  {</div>
-<div class="line"><span class="lineno">  182</span>    <a class="code hl_variable" href="smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7">SmimeExpTime</a> = 0;</div>
-<div class="line"><span class="lineno">  183</span>  }</div>
-<div class="line"><span class="lineno">  184</span> </div>
-<div class="line"><span class="lineno">  185</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  186</span>}</div>
+<div class="line"><span class="lineno">  166</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  167</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> rc = <a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Enter S/MIME passphrase:&quot;</span>), buf,</div>
+<div class="line"><span class="lineno">  168</span>                              <a class="code hl_define" href="editor_2wdata_8h.html#a356890cce1c2b54d0b24d3014c67b4a6">MUTT_COMP_PASS</a> | <a class="code hl_define" href="editor_2wdata_8h.html#a46ba7ec4f446acf2e7d1d06e22e56414">MUTT_COMP_UNBUFFERED</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL);</div>
+<div class="line"><span class="lineno">  169</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(<a class="code hl_variable" href="smime_8c.html#a34dd93b9b68b65428e25c44739a51349">SmimePass</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="keyword">sizeof</span>(<a class="code hl_variable" href="smime_8c.html#a34dd93b9b68b65428e25c44739a51349">SmimePass</a>));</div>
+<div class="line"><span class="lineno">  170</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>  <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  173</span>  {</div>
+<div class="line"><span class="lineno">  174</span>    <span class="keyword">const</span> <span class="keywordtype">short</span> c_smime_timeout = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;smime_timeout&quot;</span>);</div>
+<div class="line"><span class="lineno">  175</span>    <a class="code hl_variable" href="smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7">SmimeExpTime</a> = <a class="code hl_function" href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a>(now, c_smime_timeout);</div>
+<div class="line"><span class="lineno">  176</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  177</span>  }</div>
+<div class="line"><span class="lineno">  178</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  179</span>  {</div>
+<div class="line"><span class="lineno">  180</span>    <a class="code hl_variable" href="smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7">SmimeExpTime</a> = 0;</div>
+<div class="line"><span class="lineno">  181</span>  }</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  184</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a96039a9f8d37daad993ae7b490510339"><div class="ttname"><a href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a></div><div class="ttdeci">short cs_subset_number(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a number config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00143">helpers.c:143</a></div></div>
-<div class="ttc" id="agroup__crypto__void__passphrase_html_gadb364b3c8158f09603b981b70bbee2eb"><div class="ttname"><a href="group__crypto__void__passphrase.html#gadb364b3c8158f09603b981b70bbee2eb">smime_class_void_passphrase</a></div><div class="ttdeci">void smime_class_void_passphrase(void)</div><div class="ttdoc">Forget the cached passphrase - Implements CryptModuleSpecs::void_passphrase() -.</div><div class="ttdef"><b>Definition</b> <a href="smime_8c_source.html#l00148">smime.c:148</a></div></div>
-<div class="ttc" id="asmime_8c_html_a34dd93b9b68b65428e25c44739a51349"><div class="ttname"><a href="smime_8c.html#a34dd93b9b68b65428e25c44739a51349">SmimePass</a></div><div class="ttdeci">static char SmimePass[256]</div><div class="ttdoc">Cached Smime Passphrase.</div><div class="ttdef"><b>Definition</b> <a href="smime_8c_source.html#l00067">smime.c:67</a></div></div>
-<div class="ttc" id="asmime_8c_html_a4009b05bed4b2cee11d0e78bc8d67ba7"><div class="ttname"><a href="smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7">SmimeExpTime</a></div><div class="ttdeci">static time_t SmimeExpTime</div><div class="ttdoc">Unix time when SmimePass expires.</div><div class="ttdef"><b>Definition</b> <a href="smime_8c_source.html#l00069">smime.c:69</a></div></div>
+<div class="ttc" id="agroup__crypto__void__passphrase_html_gadb364b3c8158f09603b981b70bbee2eb"><div class="ttname"><a href="group__crypto__void__passphrase.html#gadb364b3c8158f09603b981b70bbee2eb">smime_class_void_passphrase</a></div><div class="ttdeci">void smime_class_void_passphrase(void)</div><div class="ttdoc">Forget the cached passphrase - Implements CryptModuleSpecs::void_passphrase() -.</div><div class="ttdef"><b>Definition</b> <a href="smime_8c_source.html#l00146">smime.c:146</a></div></div>
+<div class="ttc" id="asmime_8c_html_a34dd93b9b68b65428e25c44739a51349"><div class="ttname"><a href="smime_8c.html#a34dd93b9b68b65428e25c44739a51349">SmimePass</a></div><div class="ttdeci">static char SmimePass[256]</div><div class="ttdoc">Cached Smime Passphrase.</div><div class="ttdef"><b>Definition</b> <a href="smime_8c_source.html#l00065">smime.c:65</a></div></div>
+<div class="ttc" id="asmime_8c_html_a4009b05bed4b2cee11d0e78bc8d67ba7"><div class="ttname"><a href="smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7">SmimeExpTime</a></div><div class="ttdeci">static time_t SmimeExpTime</div><div class="ttdoc">Unix time when SmimePass expires.</div><div class="ttdef"><b>Definition</b> <a href="smime_8c_source.html#l00067">smime.c:67</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">

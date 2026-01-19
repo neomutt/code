@@ -18,7 +18,5 @@ var muttlib_8h =
     [ "mutt_save_confirm", "muttlib_8h.html#aec67d3d77b0418f6ae01995579c09ad2", null ],
     [ "mutt_save_path", "muttlib_8h.html#a1fd6bc6316a4a762b67e8c5eba776682", null ],
     [ "mutt_sleep", "muttlib_8h.html#a6fbcbe533be7c4e05d99b0eb9cdb2581", null ],
-    [ "mutt_str_pretty_size", "muttlib_8h.html#a68a20bb1a92b933179acfe8157e423b1", null ],
-    [ "add_to_stailq", "muttlib_8h.html#a2e3c864ac49cfb7bc862c32416baf81d", null ],
-    [ "remove_from_stailq", "muttlib_8h.html#a1b422ce225f4eb96e3ce8e276467ae9f", null ]
+    [ "mutt_str_pretty_size", "muttlib_8h.html#a68a20bb1a92b933179acfe8157e423b1", null ]
 ];

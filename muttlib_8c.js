@@ -20,8 +20,6 @@ var muttlib_8c =
     [ "mutt_get_parent_path", "muttlib_8c.html#a18edb91c53ec5ae71e0dad16f14eef27", null ],
     [ "buf_sanitize_filename", "muttlib_8c.html#ac104d843cb36fbb5e37cd24faa65dac0", null ],
     [ "mutt_str_pretty_size", "muttlib_8c.html#a68a20bb1a92b933179acfe8157e423b1", null ],
-    [ "add_to_stailq", "muttlib_8c.html#a2e3c864ac49cfb7bc862c32416baf81d", null ],
-    [ "remove_from_stailq", "muttlib_8c.html#a1b422ce225f4eb96e3ce8e276467ae9f", null ],
     [ "mutt_exit", "muttlib_8c.html#a65be75bf998d2462599b7d391676554c", null ],
     [ "XdgEnvVars", "muttlib_8c.html#aba682f487dd08b9a7bc7e579a0cada07", null ],
     [ "XdgDefaults", "muttlib_8c.html#aeb5382a9fd36c9df9e15a8bb5f9287da", null ]

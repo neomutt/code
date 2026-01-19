@@ -1,9 +1,9 @@
 var searchData=
 [
   ['h_5fto_5fintl_0',['H_TO_INTL',['../envelope_8c.html#a9ddc5b683d5a87677c1756fe44ff4217',1,'envelope.c']]],
-  ['handle_20mailing_20lists_1',['Handle mailing lists',['../neo_maillist.html',1,'index']]],
+  ['handle_20mailing_20lists_1',['Handle mailing lists',['../addr_maillist.html',1,'lib_address']]],
   ['handle_20the_20resizing_20of_20the_20screen_2',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
-  ['handler_3',['handler',['../autocrypt_gpgme.html',1,'Autocrypt GPGME handler'],['../neo_enriched.html',1,'Rich text handler']]],
+  ['handler_3',['handler',['../autocrypt_gpgme.html',1,'Autocrypt GPGME handler'],['../email_enriched.html',1,'Rich text handler']]],
   ['handler_20api_4',['Mime Handler API',['../group__handler__api.html',1,'']]],
   ['handler_2ec_5',['handler.c',['../handler_8c.html',1,'']]],
   ['handler_2eh_6',['handler.h',['../handler_8h.html',1,'']]],
@@ -110,7 +110,7 @@ var searchData=
   ['hdr_5fxcommentto_107',['HDR_XCOMMENTTO',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afefa94aacb3c16ece8df6abc9f1bf5b4ac4e',1,'private.h']]],
   ['he_108',['he',['../structEventConfig.html#ad357e11c6045fd7146490c9abce91c03',1,'EventConfig']]],
   ['head_109',['head',['../structSlist.html#a6abed005cd7946996bcf80e0daa53c3b',1,'Slist']]],
-  ['header_110',['header',['../email_envelope.html',1,'Envelope (Email header)'],['../structEventHeader.html#a403d7f2e474b30ca41a5c7cad319e8fd',1,'EventHeader::header'],['../neo_mutt_header.html',1,'Manipulate an email&apos;s header'],['../neo_flags.html',1,'Manipulate the flags in an email header']]],
+  ['header_110',['header',['../email_envelope.html',1,'Envelope (Email header)'],['../structEventHeader.html#a403d7f2e474b30ca41a5c7cad319e8fd',1,'EventHeader::header'],['../email_header.html',1,'Manipulate an email&apos;s header'],['../neo_flags.html',1,'Manipulate the flags in an email header']]],
   ['header_20cache_111',['Header Cache',['../hc_config.html',1,'Config used by Header Cache'],['../lib_hcache.html',1,'Email Header Cache'],['../maildir_hcache.html',1,'Maildir Header Cache']]],
   ['header_20cache_20multiplexor_112',['Header cache multiplexor',['../hc_hcache.html',1,'lib_hcache']]],
   ['header_20cache_20naming_20api_113',['Header Cache Naming API',['../group__hcache__namer__api.html',1,'']]],
@@ -119,8 +119,8 @@ var searchData=
   ['header_20security_20sec_5fautocrypt_20tt_116',['&lt;tt&gt;header-\&gt;security | SEC_AUTOCRYPT&lt;/tt&gt;',['../lib_autocrypt.html#autotoc_md14',1,'']]],
   ['header_20security_20sec_5fautocrypt_5foverride_20tt_117',['&lt;tt&gt;header-\&gt;security | SEC_AUTOCRYPT_OVERRIDE&lt;/tt&gt;',['../lib_autocrypt.html#autotoc_md15',1,'']]],
   ['header_20to_20a_20file_118',['Write a MIME Email Header to a file',['../send_header.html',1,'lib_send']]],
-  ['header_2ec_119',['header.c',['../header_8c.html',1,'']]],
-  ['header_2eh_120',['header.h',['../header_8h.html',1,'']]],
+  ['header_2ec_119',['header.c',['../email_2header_8c.html',1,'(Global Namespace)'],['../send_2header_8c.html',1,'(Global Namespace)']]],
+  ['header_2eh_120',['header.h',['../email_2header_8h.html',1,'(Global Namespace)'],['../send_2header_8h.html',1,'(Global Namespace)']]],
   ['header_5fadd_121',['header_add',['../email_2email_8c.html#ad388addf64f1fc80598dd8cf70307ef9',1,'header_add(struct ListHead *hdrlist, const char *header):&#160;email.c'],['../email_8h.html#ad388addf64f1fc80598dd8cf70307ef9',1,'header_add(struct ListHead *hdrlist, const char *header):&#160;email.c']]],
   ['header_5ffind_122',['header_find',['../email_2email_8c.html#afe01890a3071413e9cc8e41f159720ad',1,'header_find(const struct ListHead *hdrlist, const char *header):&#160;email.c'],['../email_8h.html#afe01890a3071413e9cc8e41f159720ad',1,'header_find(const struct ListHead *hdrlist, const char *header):&#160;email.c']]],
   ['header_5ffree_123',['header_free',['../email_2email_8c.html#a5703ece919269004eecd74af794b424b',1,'header_free(struct ListHead *hdrlist, struct ListNode *target):&#160;email.c'],['../email_8h.html#a5703ece919269004eecd74af794b424b',1,'header_free(struct ListHead *hdrlist, struct ListNode *target):&#160;email.c']]],
@@ -224,10 +224,9 @@ var searchData=
   ['hooks_5fdump_5fone_221',['hooks_dump_one',['../hooks_2dump_8c.html#ad663a560cf4e3c840fcb4a6217fd8064',1,'dump.c']]],
   ['hooks_5fdump_5fsimple_222',['hooks_dump_simple',['../hooks_2dump_8c.html#adf8cbcc3af4a8c2af9210a528a782cc1',1,'dump.c']]],
   ['hookscommands_223',['HooksCommands',['../hooks_2commands_8c.html#a8e168e3350903d73ed663312d4d4abbc',1,'HooksCommands:&#160;commands.c'],['../hooks_2module_8c.html#a8e168e3350903d73ed663312d4d4abbc',1,'HooksCommands:&#160;commands.c']]],
-  ['hooksvars_224',['HooksVars',['../hooks_2module_8c.html#aadf3decf8e41fde10e48c4b6d1ecbb8e',1,'module.c']]],
-  ['host_225',['host',['../structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a',1,'ConnAccount::host'],['../structUrl.html#a565d3391c8b8114a97ad6f1b7c75b5f6',1,'Url::host']]],
-  ['hostexdataindex_226',['HostExDataIndex',['../openssl_8c.html#ab43c12dc4d5c8504c852b18a43ef0f8a',1,'openssl.c']]],
-  ['hostname_5fmatch_227',['hostname_match',['../openssl_8c.html#ae39adc817bff49725d338570174c4a0b',1,'openssl.c']]],
-  ['how_20to_20display_20email_20content_228',['Decide how to display email content',['../neo_handler.html',1,'index']]],
-  ['hspace_229',['HSPACE',['../rfc2047_8c.html#ae5a216c48811ce4274751b1ffed405da',1,'rfc2047.c']]]
+  ['host_224',['host',['../structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a',1,'ConnAccount::host'],['../structUrl.html#a565d3391c8b8114a97ad6f1b7c75b5f6',1,'Url::host']]],
+  ['hostexdataindex_225',['HostExDataIndex',['../openssl_8c.html#ab43c12dc4d5c8504c852b18a43ef0f8a',1,'openssl.c']]],
+  ['hostname_5fmatch_226',['hostname_match',['../openssl_8c.html#ae39adc817bff49725d338570174c4a0b',1,'openssl.c']]],
+  ['how_20to_20display_20email_20content_227',['Decide how to display email content',['../email_handler.html',1,'lib_email']]],
+  ['hspace_228',['HSPACE',['../rfc2047_8c.html#ae5a216c48811ce4274751b1ffed405da',1,'rfc2047.c']]]
 ];

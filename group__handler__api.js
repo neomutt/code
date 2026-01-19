@@ -10,10 +10,10 @@ var group__handler__api =
     [ "multipart_handler", "group__handler__api.html#gac1b8e821ab05eee2180e82f0ae4c7421", null ],
     [ "valid_pgp_encrypted_handler", "group__handler__api.html#gaaef1af1685b1d85753ac8ab8c1fc9339", null ],
     [ "malformed_pgp_encrypted_handler", "group__handler__api.html#gaadf7c637f58f34e7a58ac5b2c2b0f42f", null ],
+    [ "rfc3676_handler", "group__handler__api.html#gaadbb7eb9de333071b51c4ff88b45315b", null ],
     [ "mutt_protected_headers_handler", "group__handler__api.html#ga7ccf06ce10b9aed658fcc6c7a40c64b8", null ],
     [ "mutt_signed_handler", "group__handler__api.html#gad8f7563b8c9aba96de145d0e17e58437", null ],
     [ "crypt_pgp_application_handler", "group__handler__api.html#ga2de61c155f3d4ff8b010e2e4f615ea94", null ],
     [ "crypt_pgp_encrypted_handler", "group__handler__api.html#ga7b445e21874bc1e1ec681a2626df13f9", null ],
-    [ "crypt_smime_application_handler", "group__handler__api.html#ga570796cc91abc82fbc16bcd285137688", null ],
-    [ "rfc3676_handler", "group__handler__api.html#gaadbb7eb9de333071b51c4ff88b45315b", null ]
+    [ "crypt_smime_application_handler", "group__handler__api.html#ga570796cc91abc82fbc16bcd285137688", null ]
 ];

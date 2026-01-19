@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -191,87 +191,87 @@ Functions</h2></td></tr>
 </dl>
 <p>Collapse the pathname using ~ or = when possible </p>
 
-<p class="definition">Definition at line <a class="el" href="muttlib_8c_source.html#l00440">440</a> of file <a class="el" href="muttlib_8c_source.html">muttlib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  441</span>{</div>
-<div class="line"><span class="lineno">  442</span>  <span class="keywordflow">if</span> (!buf)</div>
-<div class="line"><span class="lineno">  443</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  444</span> </div>
-<div class="line"><span class="lineno">  445</span>  <span class="keywordtype">char</span> *p = buf, *q = buf;</div>
-<div class="line"><span class="lineno">  446</span>  <span class="keywordtype">size_t</span> len;</div>
-<div class="line"><span class="lineno">  447</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243">UrlScheme</a> scheme;</div>
-<div class="line"><span class="lineno">  448</span>  <span class="keywordtype">char</span> tmp[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">  449</span> </div>
-<div class="line"><span class="lineno">  450</span>  scheme = <a class="code hl_function" href="url_8c.html#a8f42b58bf1296286da36c329472f135f">url_check_scheme</a>(buf);</div>
-<div class="line"><span class="lineno">  451</span> </div>
-<div class="line"><span class="lineno">  452</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_folder = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;folder&quot;</span>);</div>
-<div class="line"><span class="lineno">  453</span>  <span class="keywordflow">if</span> ((scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a942f2be085af2ad4e3fd87f9eb9856bc">U_IMAP</a>) || (scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243ad9302ef173d70c1dc8c9b813d23ea0c8">U_IMAPS</a>))</div>
-<div class="line"><span class="lineno">  454</span>  {</div>
-<div class="line"><span class="lineno">  455</span>    <a class="code hl_function" href="imap_2lib_8h.html#a99de91a4d9fc2f36a4655277554e2c8f">imap_pretty_mailbox</a>(buf, buflen, c_folder);</div>
-<div class="line"><span class="lineno">  456</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  457</span>  }</div>
-<div class="line"><span class="lineno">  458</span> </div>
-<div class="line"><span class="lineno">  459</span>  <span class="keywordflow">if</span> (scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a0b455eb7070416ae3bc1d00e9977dfb0">U_NOTMUCH</a>)</div>
-<div class="line"><span class="lineno">  460</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  461</span> </div>
-<div class="line"><span class="lineno">  462</span>  <span class="comment">/* if buf is an url, only collapse path component */</span></div>
-<div class="line"><span class="lineno">  463</span>  <span class="keywordflow">if</span> (scheme != <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e">U_UNKNOWN</a>)</div>
-<div class="line"><span class="lineno">  464</span>  {</div>
-<div class="line"><span class="lineno">  465</span>    p = strchr(buf, <span class="charliteral">&#39;:&#39;</span>) + 1;</div>
-<div class="line"><span class="lineno">  466</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(p, <span class="stringliteral">&quot;//&quot;</span>, 2))</div>
-<div class="line"><span class="lineno">  467</span>      q = strchr(p + 2, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  468</span>    <span class="keywordflow">if</span> (!q)</div>
-<div class="line"><span class="lineno">  469</span>      q = strchr(p, <span class="charliteral">&#39;\0&#39;</span>);</div>
-<div class="line"><span class="lineno">  470</span>    p = q;</div>
-<div class="line"><span class="lineno">  471</span>  }</div>
-<div class="line"><span class="lineno">  472</span> </div>
-<div class="line"><span class="lineno">  473</span>  <span class="comment">/* cleanup path */</span></div>
-<div class="line"><span class="lineno">  474</span>  <span class="keywordflow">if</span> (strstr(p, <span class="stringliteral">&quot;//&quot;</span>) || strstr(p, <span class="stringliteral">&quot;/./&quot;</span>))</div>
-<div class="line"><span class="lineno">  475</span>  {</div>
-<div class="line"><span class="lineno">  476</span>    <span class="comment">/* first attempt to collapse the pathname, this is more</span></div>
-<div class="line"><span class="lineno">  477</span><span class="comment">     * lightweight than realpath() and doesn&#39;t resolve links */</span></div>
-<div class="line"><span class="lineno">  478</span>    <span class="keywordflow">while</span> (*p)</div>
-<div class="line"><span class="lineno">  479</span>    {</div>
-<div class="line"><span class="lineno">  480</span>      <span class="keywordflow">if</span> ((p[0] == <span class="charliteral">&#39;/&#39;</span>) &amp;&amp; (p[1] == <span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno">  481</span>      {</div>
-<div class="line"><span class="lineno">  482</span>        *q++ = <span class="charliteral">&#39;/&#39;</span>;</div>
-<div class="line"><span class="lineno">  483</span>        p += 2;</div>
-<div class="line"><span class="lineno">  484</span>      }</div>
-<div class="line"><span class="lineno">  485</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((p[0] == <span class="charliteral">&#39;/&#39;</span>) &amp;&amp; (p[1] == <span class="charliteral">&#39;.&#39;</span>) &amp;&amp; (p[2] == <span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno">  486</span>      {</div>
-<div class="line"><span class="lineno">  487</span>        *q++ = <span class="charliteral">&#39;/&#39;</span>;</div>
-<div class="line"><span class="lineno">  488</span>        p += 3;</div>
-<div class="line"><span class="lineno">  489</span>      }</div>
-<div class="line"><span class="lineno">  490</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  491</span>      {</div>
-<div class="line"><span class="lineno">  492</span>        *q++ = *p++;</div>
-<div class="line"><span class="lineno">  493</span>      }</div>
-<div class="line"><span class="lineno">  494</span>    }</div>
-<div class="line"><span class="lineno">  495</span>    *q = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  496</span>  }</div>
-<div class="line"><span class="lineno">  497</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strstr(p, <span class="stringliteral">&quot;..&quot;</span>) &amp;&amp; ((scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e">U_UNKNOWN</a>) || (scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a34ba69060ab91f8e745be20b21493d51">U_FILE</a>)) &amp;&amp;</div>
-<div class="line"><span class="lineno">  498</span>           realpath(p, tmp))</div>
-<div class="line"><span class="lineno">  499</span>  {</div>
-<div class="line"><span class="lineno">  500</span>    <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(p, tmp, buflen - (p - buf));</div>
-<div class="line"><span class="lineno">  501</span>  }</div>
-<div class="line"><span class="lineno">  502</span> </div>
-<div class="line"><span class="lineno">  503</span>  <span class="keywordflow">if</span> ((len = <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(buf, c_folder)) &amp;&amp; (buf[len] == <span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno">  504</span>  {</div>
-<div class="line"><span class="lineno">  505</span>    *buf++ = <span class="charliteral">&#39;=&#39;</span>;</div>
-<div class="line"><span class="lineno">  506</span>    memmove(buf, buf + len, <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(buf + len) + 1);</div>
-<div class="line"><span class="lineno">  507</span>  }</div>
-<div class="line"><span class="lineno">  508</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((len = <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(buf, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08">home_dir</a>)) &amp;&amp; (buf[len] == <span class="charliteral">&#39;/&#39;</span>))</div>
-<div class="line"><span class="lineno">  509</span>  {</div>
-<div class="line"><span class="lineno">  510</span>    *buf++ = <span class="charliteral">&#39;~&#39;</span>;</div>
-<div class="line"><span class="lineno">  511</span>    memmove(buf, buf + len - 1, <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(buf + len - 1) + 1);</div>
-<div class="line"><span class="lineno">  512</span>  }</div>
-<div class="line"><span class="lineno">  513</span>}</div>
+<p class="definition">Definition at line <a class="el" href="muttlib_8c_source.html#l00439">439</a> of file <a class="el" href="muttlib_8c_source.html">muttlib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>{</div>
+<div class="line"><span class="lineno">  441</span>  <span class="keywordflow">if</span> (!buf)</div>
+<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  443</span> </div>
+<div class="line"><span class="lineno">  444</span>  <span class="keywordtype">char</span> *p = buf, *q = buf;</div>
+<div class="line"><span class="lineno">  445</span>  <span class="keywordtype">size_t</span> len;</div>
+<div class="line"><span class="lineno">  446</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243">UrlScheme</a> scheme;</div>
+<div class="line"><span class="lineno">  447</span>  <span class="keywordtype">char</span> tmp[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno">  448</span> </div>
+<div class="line"><span class="lineno">  449</span>  scheme = <a class="code hl_function" href="url_8c.html#a8f42b58bf1296286da36c329472f135f">url_check_scheme</a>(buf);</div>
+<div class="line"><span class="lineno">  450</span> </div>
+<div class="line"><span class="lineno">  451</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_folder = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;folder&quot;</span>);</div>
+<div class="line"><span class="lineno">  452</span>  <span class="keywordflow">if</span> ((scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a942f2be085af2ad4e3fd87f9eb9856bc">U_IMAP</a>) || (scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243ad9302ef173d70c1dc8c9b813d23ea0c8">U_IMAPS</a>))</div>
+<div class="line"><span class="lineno">  453</span>  {</div>
+<div class="line"><span class="lineno">  454</span>    <a class="code hl_function" href="imap_2lib_8h.html#a99de91a4d9fc2f36a4655277554e2c8f">imap_pretty_mailbox</a>(buf, buflen, c_folder);</div>
+<div class="line"><span class="lineno">  455</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  456</span>  }</div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>  <span class="keywordflow">if</span> (scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a0b455eb7070416ae3bc1d00e9977dfb0">U_NOTMUCH</a>)</div>
+<div class="line"><span class="lineno">  459</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>  <span class="comment">/* if buf is an url, only collapse path component */</span></div>
+<div class="line"><span class="lineno">  462</span>  <span class="keywordflow">if</span> (scheme != <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e">U_UNKNOWN</a>)</div>
+<div class="line"><span class="lineno">  463</span>  {</div>
+<div class="line"><span class="lineno">  464</span>    p = strchr(buf, <span class="charliteral">&#39;:&#39;</span>) + 1;</div>
+<div class="line"><span class="lineno">  465</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(p, <span class="stringliteral">&quot;//&quot;</span>, 2))</div>
+<div class="line"><span class="lineno">  466</span>      q = strchr(p + 2, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  467</span>    <span class="keywordflow">if</span> (!q)</div>
+<div class="line"><span class="lineno">  468</span>      q = strchr(p, <span class="charliteral">&#39;\0&#39;</span>);</div>
+<div class="line"><span class="lineno">  469</span>    p = q;</div>
+<div class="line"><span class="lineno">  470</span>  }</div>
+<div class="line"><span class="lineno">  471</span> </div>
+<div class="line"><span class="lineno">  472</span>  <span class="comment">/* cleanup path */</span></div>
+<div class="line"><span class="lineno">  473</span>  <span class="keywordflow">if</span> (strstr(p, <span class="stringliteral">&quot;//&quot;</span>) || strstr(p, <span class="stringliteral">&quot;/./&quot;</span>))</div>
+<div class="line"><span class="lineno">  474</span>  {</div>
+<div class="line"><span class="lineno">  475</span>    <span class="comment">/* first attempt to collapse the pathname, this is more</span></div>
+<div class="line"><span class="lineno">  476</span><span class="comment">     * lightweight than realpath() and doesn&#39;t resolve links */</span></div>
+<div class="line"><span class="lineno">  477</span>    <span class="keywordflow">while</span> (*p)</div>
+<div class="line"><span class="lineno">  478</span>    {</div>
+<div class="line"><span class="lineno">  479</span>      <span class="keywordflow">if</span> ((p[0] == <span class="charliteral">&#39;/&#39;</span>) &amp;&amp; (p[1] == <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">  480</span>      {</div>
+<div class="line"><span class="lineno">  481</span>        *q++ = <span class="charliteral">&#39;/&#39;</span>;</div>
+<div class="line"><span class="lineno">  482</span>        p += 2;</div>
+<div class="line"><span class="lineno">  483</span>      }</div>
+<div class="line"><span class="lineno">  484</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((p[0] == <span class="charliteral">&#39;/&#39;</span>) &amp;&amp; (p[1] == <span class="charliteral">&#39;.&#39;</span>) &amp;&amp; (p[2] == <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">  485</span>      {</div>
+<div class="line"><span class="lineno">  486</span>        *q++ = <span class="charliteral">&#39;/&#39;</span>;</div>
+<div class="line"><span class="lineno">  487</span>        p += 3;</div>
+<div class="line"><span class="lineno">  488</span>      }</div>
+<div class="line"><span class="lineno">  489</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  490</span>      {</div>
+<div class="line"><span class="lineno">  491</span>        *q++ = *p++;</div>
+<div class="line"><span class="lineno">  492</span>      }</div>
+<div class="line"><span class="lineno">  493</span>    }</div>
+<div class="line"><span class="lineno">  494</span>    *q = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  495</span>  }</div>
+<div class="line"><span class="lineno">  496</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strstr(p, <span class="stringliteral">&quot;..&quot;</span>) &amp;&amp; ((scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e">U_UNKNOWN</a>) || (scheme == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a34ba69060ab91f8e745be20b21493d51">U_FILE</a>)) &amp;&amp;</div>
+<div class="line"><span class="lineno">  497</span>           realpath(p, tmp))</div>
+<div class="line"><span class="lineno">  498</span>  {</div>
+<div class="line"><span class="lineno">  499</span>    <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(p, tmp, buflen - (p - buf));</div>
+<div class="line"><span class="lineno">  500</span>  }</div>
+<div class="line"><span class="lineno">  501</span> </div>
+<div class="line"><span class="lineno">  502</span>  <span class="keywordflow">if</span> ((len = <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(buf, c_folder)) &amp;&amp; (buf[len] == <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">  503</span>  {</div>
+<div class="line"><span class="lineno">  504</span>    *buf++ = <span class="charliteral">&#39;=&#39;</span>;</div>
+<div class="line"><span class="lineno">  505</span>    memmove(buf, buf + len, <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(buf + len) + 1);</div>
+<div class="line"><span class="lineno">  506</span>  }</div>
+<div class="line"><span class="lineno">  507</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((len = <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(buf, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08">home_dir</a>)) &amp;&amp; (buf[len] == <span class="charliteral">&#39;/&#39;</span>))</div>
+<div class="line"><span class="lineno">  508</span>  {</div>
+<div class="line"><span class="lineno">  509</span>    *buf++ = <span class="charliteral">&#39;~&#39;</span>;</div>
+<div class="line"><span class="lineno">  510</span>    memmove(buf, buf + len - 1, <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(buf + len - 1) + 1);</div>
+<div class="line"><span class="lineno">  511</span>  }</div>
+<div class="line"><span class="lineno">  512</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a6b1589ee93ff51ef31f1d9324e138078"><div class="ttname"><a href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a></div><div class="ttdeci">const char * cs_subset_string(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a string config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00291">helpers.c:291</a></div></div>
 <div class="ttc" id="aimap_2lib_8h_html_a99de91a4d9fc2f36a4655277554e2c8f"><div class="ttname"><a href="imap_2lib_8h.html#a99de91a4d9fc2f36a4655277554e2c8f">imap_pretty_mailbox</a></div><div class="ttdeci">void imap_pretty_mailbox(char *path, size_t pathlen, const char *folder)</div><div class="ttdoc">Prettify an IMAP mailbox name.</div><div class="ttdef"><b>Definition</b> <a href="util_8c_source.html#l00585">util.c:585</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00429">string.c:429</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a9bf968304f4f9b49e24215cb2e28d22d"><div class="ttname"><a href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a></div><div class="ttdeci">size_t mutt_str_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00234">string.c:234</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00500">string.c:500</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_ad20e00309de897a1e882fc7400335b83"><div class="ttname"><a href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a></div><div class="ttdeci">size_t mutt_str_copy(char *dest, const char *src, size_t dsize)</div><div class="ttdoc">Copy a string into a buffer (guaranteeing NUL-termination)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00583">string.c:583</a></div></div>
-<div class="ttc" id="amutt_8h_html_ae688d728e1acdfe5988c7db45d6f0166"><div class="ttname"><a href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a></div><div class="ttdeci">#define PATH_MAX</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00042">mutt.h:42</a></div></div>
+<div class="ttc" id="amutt_8h_html_ae688d728e1acdfe5988c7db45d6f0166"><div class="ttname"><a href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a></div><div class="ttdeci">#define PATH_MAX</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00049">mutt.h:49</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00127">neomutt.h:128</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_ac181d2dd4b8f4acbcfe0b1878ebbfa08"><div class="ttname"><a href="structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08">NeoMutt::home_dir</a></div><div class="ttdeci">char * home_dir</div><div class="ttdoc">User&#39;s home directory.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00141">neomutt.h:141</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00134">neomutt.h:134</a></div></div>
@@ -754,7 +754,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00395">buffer.c:395</a></div></div>
 <div class="ttc" id="aconfig_2dump_8c_html_a276cdae2ea9e186548c4a6f247cc0e58"><div class="ttname"><a href="#a276cdae2ea9e186548c4a6f247cc0e58">pretty_var</a></div><div class="ttdeci">size_t pretty_var(const char *str, struct Buffer *buf)</div><div class="ttdoc">Escape and stringify a config item value.</div><div class="ttdef"><b>Definition</b> <a href="config_2dump_8c_source.html#l00088">dump.c:88</a></div></div>
 <div class="ttc" id="aconfig_2dump_8c_html_a98a7ec58cbc4628935b32f23d6066945"><div class="ttname"><a href="#a98a7ec58cbc4628935b32f23d6066945">dump_config_neo</a></div><div class="ttdeci">void dump_config_neo(struct ConfigSet *cs, struct HashElem *he, struct Buffer *value, struct Buffer *initial, ConfigDumpFlags flags, FILE *fp)</div><div class="ttdoc">Dump the config in the style of NeoMutt.</div><div class="ttdef"><b>Definition</b> <a href="config_2dump_8c_source.html#l00111">dump.c:111</a></div></div>
-<div class="ttc" id="aconfig_2dump_8c_html_ab9cf3d06c285c7d21065ef96a32aa6c6"><div class="ttname"><a href="#ab9cf3d06c285c7d21065ef96a32aa6c6">mutt_pretty_mailbox</a></div><div class="ttdeci">void mutt_pretty_mailbox(char *buf, size_t buflen)</div><div class="ttdoc">Shorten a mailbox path using &#39;~&#39; or &#39;=&#39;.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00440">muttlib.c:440</a></div></div>
+<div class="ttc" id="aconfig_2dump_8c_html_ab9cf3d06c285c7d21065ef96a32aa6c6"><div class="ttname"><a href="#ab9cf3d06c285c7d21065ef96a32aa6c6">mutt_pretty_mailbox</a></div><div class="ttdeci">void mutt_pretty_mailbox(char *buf, size_t buflen)</div><div class="ttdoc">Shorten a mailbox path using &#39;~&#39; or &#39;=&#39;.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00439">muttlib.c:439</a></div></div>
 <div class="ttc" id="aconfig_2dump_8h_html_a6271d015acaa9757171e604ea1e16fa9"><div class="ttname"><a href="config_2dump_8h.html#a6271d015acaa9757171e604ea1e16fa9">CS_DUMP_NO_ESCAPING</a></div><div class="ttdeci">#define CS_DUMP_NO_ESCAPING</div><div class="ttdoc">Do not escape special chars, or quote the string.</div><div class="ttdef"><b>Definition</b> <a href="config_2dump_8h_source.html#l00039">dump.h:39</a></div></div>
 <div class="ttc" id="aconfig_2dump_8h_html_a87203403e9db65fe322c7ab9b5e927b8"><div class="ttname"><a href="config_2dump_8h.html#a87203403e9db65fe322c7ab9b5e927b8">CS_DUMP_HIDE_SENSITIVE</a></div><div class="ttdeci">#define CS_DUMP_HIDE_SENSITIVE</div><div class="ttdoc">Obscure sensitive information like passwords.</div><div class="ttdef"><b>Definition</b> <a href="config_2dump_8h_source.html#l00038">dump.h:38</a></div></div>
 <div class="ttc" id="aconfig_2set_8c_html_aae8bc50e36b926998d926687f97c8b48"><div class="ttname"><a href="config_2set_8c.html#aae8bc50e36b926998d926687f97c8b48">cs_he_string_get</a></div><div class="ttdeci">int cs_he_string_get(const struct ConfigSet *cs, struct HashElem *he, struct Buffer *result)</div><div class="ttdoc">Get a config item as a string.</div><div class="ttdef"><b>Definition</b> <a href="config_2set_8c_source.html#l00692">set.c:692</a></div></div>

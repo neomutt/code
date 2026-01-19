@@ -19,7 +19,7 @@ var searchData=
   ['in_20a_20side_20panel_16',['GUI display the mailboxes in a side panel',['../sidebar_sidebar.html',1,'lib_sidebar']]],
   ['in_20a_20string_17',['Parse a number in a string',['../mutt_atoi.html',1,'lib_mutt']]],
   ['in_20an_20email_20header_18',['Manipulate the flags in an email header',['../neo_flags.html',1,'index']]],
-  ['in_20emails_19',['Create/manipulate threading in emails',['../neo_mutt_thread.html',1,'index']]],
+  ['in_20emails_19',['Create/manipulate threading in emails',['../gui_thread.html',1,'lib_gui']]],
   ['in_20the_20pager_20',['Process a message for display in the pager',['../pager_message.html',1,'lib_pager']]],
   ['index_21',['Index',['../index_config.html',1,'Config used by the Index'],['../lib_index.html',1,'Index'],['../index_private_data.html',1,'Private data for the Index']]],
   ['index_22',['String processing routines to generate the mail index',['../index_expando_index.html',1,'lib_index']]],

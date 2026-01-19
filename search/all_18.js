@@ -29,7 +29,7 @@ var searchData=
   ['version_2eh_26',['version.h',['../version_8h.html',1,'']]],
   ['version_5ffree_27',['version_free',['../version_8c.html#a37f94ebdd1e2ca27d5cd5c88c3e4a8b4',1,'version_free(struct NeoMuttVersion **ptr):&#160;version.c'],['../version_8h.html#a37f94ebdd1e2ca27d5cd5c88c3e4a8b4',1,'version_free(struct NeoMuttVersion **ptr):&#160;version.c']]],
   ['version_5fget_28',['version_get',['../version_8c.html#adcd7f1116b3c598b6aeb8e8c1b99ed4b',1,'version_get(void):&#160;version.c'],['../version_8h.html#adcd7f1116b3c598b6aeb8e8c1b99ed4b',1,'version_get(void):&#160;version.c']]],
-  ['view_20of_20a_20mailbox_29',['View of a Mailbox',['../neo_mview.html',1,'index']]],
+  ['view_20of_20a_20mailbox_29',['View of a Mailbox',['../gui_mview.html',1,'lib_gui']]],
   ['viewattachmode_30',['ViewAttachMode',['../mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946',1,'mutt_attach.h']]],
   ['views_31',['Array of Alias Views',['../alias_array.html',1,'lib_alias']]],
   ['virtual_20mailbox_20type_32',['Notmuch virtual mailbox type',['../nm_notmuch.html',1,'lib_notmuch']]],

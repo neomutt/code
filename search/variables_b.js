@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['label_0',['label',['../structSmimeKey.html#ab9df91118c710284278ceaeb98769f7c',1,'SmimeKey']]],
+  ['label_0',['label',['../structParseMailbox.html#aaeac599504520bd77df458e289cbd9fd',1,'ParseMailbox::label'],['../structSmimeKey.html#ab9df91118c710284278ceaeb98769f7c',1,'SmimeKey::label']]],
   ['label_5fhash_1',['label_hash',['../structMailbox.html#ad3ce1409940ec031d15f8814a9c29112',1,'Mailbox']]],
   ['language_2',['language',['../structBody.html#a043f55e8f15bc6f1324d35cb5d7f061c',1,'Body']]],
   ['last_3',['last',['../structHistory.html#a282b96ae54687fc0fff518d1808c924f',1,'History::last'],['../structHashWalkState.html#aff744f61e1660b26610b35b87001ec8c',1,'HashWalkState::last'],['../structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565',1,'NewsrcEntry::last'],['../structFetchCtx.html#a3199c3e92846192d7f6a9a771267a82a',1,'FetchCtx::last'],['../structTextSyntax.html#a48dff524c25602c11e40a68a677cc210',1,'TextSyntax::last']]],

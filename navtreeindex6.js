@@ -1,5 +1,12 @@
 var NAVTREEINDEX6 =
 {
+"compose_2shared__data_8h.html#addc0c0ea3dec777c74647a14ac529947a7d2f8752f16fbd1fd8ea63f7b560ac3c":[2,0,11,18,1,0],
+"compose_2shared__data_8h.html#addc0c0ea3dec777c74647a14ac529947ab1323ebb295930744c71fd99d28fa4fc":[2,0,11,18,1,1],
+"compose_2shared__data_8h_source.html":[2,0,11,18],
+"compose_attach.html":[14,0],
+"compose_attach_data.html":[14,1],
+"compose_cbar.html":[14,2],
+"compose_cbar_data.html":[14,3],
 "compose_config.html":[14,4],
 "compose_dlg_compose.html":[14,5],
 "compose_expando.html":[14,6],
@@ -27,8 +34,8 @@ var NAVTREEINDEX6 =
 "compress_2private_8h.html#ab1ff8dc4176d4b51300f0df987e853d2":[2,0,12,4,0],
 "compress_2private_8h_source.html":[2,0,12,4],
 "compress_compress.html":[15,0],
-"compress_compress.html#autotoc_md250":[1,0],
-"compress_compress.html#autotoc_md251":[1,1],
+"compress_compress.html#autotoc_md252":[1,0],
+"compress_compress.html#autotoc_md253":[1,1],
 "compress_lz4.html":[15,2],
 "compress_module.html":[15,1],
 "compress_zlib.html":[15,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX6 =
 "config_enum.html":[16,3],
 "config_helpers.html":[16,4],
 "config_long.html":[16,5],
-"config_mbtable.html":[16,6],
-"config_module.html":[16,7],
-"config_myvar.html":[16,8],
-"config_number.html":[16,9],
-"config_path.html":[16,10],
-"config_quad.html":[16,11],
-"config_regex.html":[16,12],
-"config_set.html":[16,13]
+"config_mbtable.html":[16,6]
 };

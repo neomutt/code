@@ -1,11 +1,14 @@
 var mutt_8h =
 [
     [ "PATH_MAX", "mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166", null ],
-    [ "MUTT_COMP_NO_FLAGS", "mutt_8h.html#ab0d3fda521b45dec654ff46bac59c8c2", null ],
-    [ "MUTT_COMP_CLEAR", "mutt_8h.html#aff320b29c6010a53a17749f6423834a3", null ],
-    [ "MUTT_COMP_PASS", "mutt_8h.html#a356890cce1c2b54d0b24d3014c67b4a6", null ],
-    [ "MUTT_COMP_UNBUFFERED", "mutt_8h.html#a46ba7ec4f446acf2e7d1d06e22e56414", null ],
-    [ "CompletionFlags", "mutt_8h.html#a1b1b36a26c40bdaaa10c65ca5f54a54c", null ],
+    [ "XdgType", "mutt_8h.html#a1dcac3705b40d7ef68b3b3c3f6581c0f", [
+      [ "XDG_CONFIG_HOME", "mutt_8h.html#a1dcac3705b40d7ef68b3b3c3f6581c0fa239f7469373769d2e133eb044b09a8b9", null ],
+      [ "XDG_CONFIG_DIRS", "mutt_8h.html#a1dcac3705b40d7ef68b3b3c3f6581c0fa931fb3b71248336ed08e292cbc352fd7", null ]
+    ] ],
+    [ "EvMessage", "mutt_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71f", [
+      [ "EVM_VIEW", "mutt_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71fa9cbf6c5027d20909e3f61fbdacd4c4d1", null ],
+      [ "EVM_EDIT", "mutt_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71fae33ec9ab23d604adf95bb79757427fdb", null ]
+    ] ],
     [ "MessageType", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013", [
       [ "MUTT_ALL", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a03f808d156e1c0c39b5e986980b748e9", null ],
       [ "MUTT_NONE", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a8cf735750339fbf3eb1d3c33de09dc41", null ],
@@ -27,6 +30,16 @@ var mutt_8h =
       [ "MUTT_TRASH", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a31ab4665e994c9b34ba3aa3175f59a39", null ],
       [ "MUTT_MT_MAX", "mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a5d5b2c187b266abd3ccc0b6bbf579eeb", null ]
     ] ],
-    [ "reset_value", "mutt_8h.html#a7d4c46669b95c76ce52d540fc592834f", null ],
-    [ "StartupComplete", "mutt_8h.html#aaf8eacd4749948bf6d877a63eb886322", null ]
+    [ "mutt_ev_message", "mutt_8h.html#aaa5155713fdb3ef73a0bbd67588d3017", null ],
+    [ "mutt_system", "mutt_8h.html#aa1d4ad04b000036513ca3f741059942c", null ],
+    [ "mutt_set_xdg_path", "mutt_8h.html#aaa27303d43dc65ef87fa448ddd08c41f", null ],
+    [ "mutt_help", "mutt_8h.html#ac6179843b87f01ba1a8dda459daca237", null ],
+    [ "mutt_set_flag", "mutt_8h.html#a29547b9c7c39eb22039ff4b8f1c03829", null ],
+    [ "mutt_signal_init", "mutt_8h.html#a91ee7d4aca86a7dc55c9ffda2f494c37", null ],
+    [ "mutt_emails_set_flag", "mutt_8h.html#a7f3a51c26f4900e9af4c09e084e74b0b", null ],
+    [ "mw_change_flag", "group__gui__mw.html#ga2a5efb59f6952f4516be81b58a32d5a9", null ],
+    [ "mutt_thread_set_flag", "mutt_8h.html#ab0b3fdf72da46166bf7d6866dbfc0c09", null ],
+    [ "mutt_reply_observer", "mutt_8h.html#a296baf961ccb5bdc1ea1c9692e9a5d0c", null ],
+    [ "StartupComplete", "mutt_8h.html#aaf8eacd4749948bf6d877a63eb886322", null ],
+    [ "PostCount", "mutt_8h.html#a813a6eba284cc0eb882c66dcc4a9ba31", null ]
 ];

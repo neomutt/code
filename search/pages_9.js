@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['handle_20mailing_20lists_0',['Handle mailing lists',['../neo_maillist.html',1,'index']]],
+  ['handle_20mailing_20lists_0',['Handle mailing lists',['../addr_maillist.html',1,'lib_address']]],
   ['handle_20the_20resizing_20of_20the_20screen_1',['GUI handle the resizing of the screen',['../gui_resize.html',1,'lib_gui']]],
-  ['handler_2',['handler',['../autocrypt_gpgme.html',1,'Autocrypt GPGME handler'],['../neo_enriched.html',1,'Rich text handler']]],
+  ['handler_2',['handler',['../autocrypt_gpgme.html',1,'Autocrypt GPGME handler'],['../email_enriched.html',1,'Rich text handler']]],
   ['handling_3',['handling',['../autocrypt_db.html',1,'Autocrypt database handling'],['../history_history.html',1,'History file handling'],['../key_keymap.html',1,'Keymap handling'],['../conn_socket.html',1,'Low-level socket handling'],['../maildir_path.html',1,'Maildir Path handling'],['../nm_db.html',1,'Notmuch database handling'],['../mutt_signal.html',1,'Signal handling'],['../neo_mutt_signal.html',1,'Signal handling']]],
   ['handling_20for_20messages_4',['Pattern handling for messages',['../pattern_message.html',1,'lib_pattern']]],
   ['handling_20routines_5',['Time and date handling routines',['../mutt_date.html',1,'lib_mutt']]],
   ['hash_20algorithm_20from_20a_20pgp_20signature_6',['Identify the hash algorithm from a PGP signature',['../crypt_pgpmicalg.html',1,'lib_ncrypt']]],
   ['hash_20table_20data_20structure_7',['Hash Table data structure',['../mutt_hash.html',1,'lib_mutt']]],
   ['hcache_20module_8',['Definition of the Hcache Module',['../hc_module.html',1,'lib_hcache']]],
-  ['header_9',['header',['../email_envelope.html',1,'Envelope (Email header)'],['../neo_mutt_header.html',1,'Manipulate an email&apos;s header'],['../neo_flags.html',1,'Manipulate the flags in an email header']]],
+  ['header_9',['header',['../email_envelope.html',1,'Envelope (Email header)'],['../email_header.html',1,'Manipulate an email&apos;s header'],['../neo_flags.html',1,'Manipulate the flags in an email header']]],
   ['header_20cache_10',['Header Cache',['../hc_config.html',1,'Config used by Header Cache'],['../lib_hcache.html',1,'Email Header Cache'],['../maildir_hcache.html',1,'Maildir Header Cache']]],
   ['header_20cache_20multiplexor_11',['Header cache multiplexor',['../hc_hcache.html',1,'lib_hcache']]],
   ['header_20commands_12',['Parse My-header Commands',['../commands_my_header.html',1,'lib_command']]],
@@ -38,5 +38,5 @@ var searchData=
   ['hooks_35',['Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
   ['hooks_20module_36',['Definition of the Hooks Module',['../hooks_module.html',1,'lib_hooks']]],
   ['hooks_20to_20the_20pager_37',['Dump the Hooks to the Pager',['../hooks_dump.html',1,'lib_hooks']]],
-  ['how_20to_20display_20email_20content_38',['Decide how to display email content',['../neo_handler.html',1,'index']]]
+  ['how_20to_20display_20email_20content_38',['Decide how to display email content',['../email_handler.html',1,'lib_email']]]
 ];

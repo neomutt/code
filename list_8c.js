@@ -11,5 +11,7 @@ var list_8c =
     [ "mutt_list_equal", "list_8c.html#a9a276a1da7b53eff1dccd4c2cb3d9251", null ],
     [ "mutt_list_str_split", "list_8c.html#a8452a5e19043ca17f9b80b4443399e3b", null ],
     [ "mutt_list_copy_tail", "list_8c.html#a3df8a4dc742babace631d82e71321678", null ],
-    [ "mutt_list_write", "list_8c.html#a5f04ca102be20813d8c3ab0776a2786b", null ]
+    [ "mutt_list_write", "list_8c.html#a5f04ca102be20813d8c3ab0776a2786b", null ],
+    [ "add_to_stailq", "list_8c.html#a2e3c864ac49cfb7bc862c32416baf81d", null ],
+    [ "remove_from_stailq", "list_8c.html#a1b422ce225f4eb96e3ce8e276467ae9f", null ]
 ];

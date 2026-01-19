@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -323,9 +323,55 @@ $(function(){initNavTree('list_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(buf);</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>}</div>
 </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span></div>
+<div class="foldopen" id="foldopen00316" data-start="{" data-end="}">
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="list_8c.html#a2e3c864ac49cfb7bc862c32416baf81d">  316</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="list_8c.html#a2e3c864ac49cfb7bc862c32416baf81d">add_to_stailq</a>(<span class="keyword">struct</span> ListHead *head, <span class="keyword">const</span> <span class="keywordtype">char</span> *str)</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>{</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="comment">/* don&#39;t add a NULL or empty string to the list */</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  <span class="keywordflow">if</span> (!str || (*str == <span class="charliteral">&#39;\0&#39;</span>))</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="comment">/* check to make sure the item is not already on this list */</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, head, entries)</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(str, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    }</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>  }</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <a class="code hl_function" href="list_8c.html#a47252e2b00de607c64a5fec8dc16058d">mutt_list_insert_tail</a>(head, <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(str));</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>}</div>
+</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span></div>
+<div class="foldopen" id="foldopen00341" data-start="{" data-end="}">
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="list_8c.html#a1b422ce225f4eb96e3ce8e276467ae9f">  341</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="list_8c.html#a1b422ce225f4eb96e3ce8e276467ae9f">remove_from_stailq</a>(<span class="keyword">struct</span> ListHead *head, <span class="keyword">const</span> <span class="keywordtype">char</span> *str)</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>{</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;*&quot;</span>, str))</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <a class="code hl_function" href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a>(head); <span class="comment">/* &quot;unCMD *&quot; means delete all current entries */</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>  {</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL, *tmp = NULL;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, head, entries, tmp)</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    {</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(str, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>))</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(head, np, <a class="code hl_struct" href="structListNode.html">ListNode</a>, entries);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      }</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    }</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>  }</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>}</div>
+</div>
 <div class="ttc" id="abuffer_8c_html_a2914dc2d9a9d77e4c9970b4249be9370"><div class="ttname"><a href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a></div><div class="ttdeci">size_t buf_len(const struct Buffer *buf)</div><div class="ttdoc">Calculate the length of a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00491">buffer.c:491</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9924e74ddcb5280ab380e4627d1fba99"><div class="ttname"><a href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a></div><div class="ttdeci">size_t buf_addstr(struct Buffer *buf, const char *s)</div><div class="ttdoc">Add a string to a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00226">buffer.c:226</a></div></div>
 <div class="ttc" id="abuffer_8h_html"><div class="ttname"><a href="buffer_8h.html">buffer.h</a></div><div class="ttdoc">General purpose object for storing and parsing strings.</div></div>
+<div class="ttc" id="alist_8c_html_a1b422ce225f4eb96e3ce8e276467ae9f"><div class="ttname"><a href="list_8c.html#a1b422ce225f4eb96e3ce8e276467ae9f">remove_from_stailq</a></div><div class="ttdeci">void remove_from_stailq(struct ListHead *head, const char *str)</div><div class="ttdoc">Remove an item, matching a string, from a List.</div><div class="ttdef"><b>Definition</b> <a href="#l00341">list.c:341</a></div></div>
+<div class="ttc" id="alist_8c_html_a2e3c864ac49cfb7bc862c32416baf81d"><div class="ttname"><a href="list_8c.html#a2e3c864ac49cfb7bc862c32416baf81d">add_to_stailq</a></div><div class="ttdeci">void add_to_stailq(struct ListHead *head, const char *str)</div><div class="ttdoc">Add a string to a list.</div><div class="ttdef"><b>Definition</b> <a href="#l00316">list.c:316</a></div></div>
 <div class="ttc" id="alist_8c_html_a3df8a4dc742babace631d82e71321678"><div class="ttname"><a href="list_8c.html#a3df8a4dc742babace631d82e71321678">mutt_list_copy_tail</a></div><div class="ttdeci">void mutt_list_copy_tail(struct ListHead *dst, const struct ListHead *src)</div><div class="ttdoc">Copy a list into another list.</div><div class="ttdef"><b>Definition</b> <a href="#l00275">list.c:275</a></div></div>
 <div class="ttc" id="alist_8c_html_a47252e2b00de607c64a5fec8dc16058d"><div class="ttname"><a href="list_8c.html#a47252e2b00de607c64a5fec8dc16058d">mutt_list_insert_tail</a></div><div class="ttdeci">struct ListNode * mutt_list_insert_tail(struct ListHead *h, char *s)</div><div class="ttdoc">Append a string to the end of a List.</div><div class="ttdef"><b>Definition</b> <a href="#l00065">list.c:65</a></div></div>
 <div class="ttc" id="alist_8c_html_a4dfda7348290a9903470e7f135fc1ae4"><div class="ttname"><a href="list_8c.html#a4dfda7348290a9903470e7f135fc1ae4">mutt_list_find</a></div><div class="ttdeci">struct ListNode * mutt_list_find(const struct ListHead *h, const char *data)</div><div class="ttdoc">Find a string in a List.</div><div class="ttdef"><b>Definition</b> <a href="#l00103">list.c:103</a></div></div>
@@ -344,6 +390,7 @@ $(function(){initNavTree('list_8c_source.html',''); initResizable(true); });
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00063">memory.h:63</a></div></div>
 <div class="ttc" id="amemory_8h_html_a9aaf8f21a29735767a069ff1aee9d7d9"><div class="ttname"><a href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a></div><div class="ttdeci">#define MUTT_MEM_CALLOC(n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00048">memory.h:48</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a116d1d2391bc57f2ba3a9d9cfb15db76"><div class="ttname"><a href="mutt_2string_8c.html#a116d1d2391bc57f2ba3a9d9cfb15db76">mutt_strn_dup</a></div><div class="ttdeci">char * mutt_strn_dup(const char *begin, size_t len)</div><div class="ttdoc">Duplicate a sub-string.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00384">string.c:384</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a29db81d6f5a7dd216cbea75ecf8a5885"><div class="ttname"><a href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a></div><div class="ttdeci">bool mutt_istr_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00674">string.c:674</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00257">string.c:257</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00662">string.c:662</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_aebd2a8a3f8a30062c31fa1474d87cc41"><div class="ttname"><a href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a></div><div class="ttdeci">size_t mutt_istr_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00246">string.c:246</a></div></div>

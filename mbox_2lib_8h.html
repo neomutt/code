@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -252,33 +252,33 @@ Variables</h2></td></tr>
 </dl>
 <p>if mailbox has at least 1 new message, sets mtime &gt; atime of mailbox so mailbox check reports new mail </p>
 
-<p class="definition">Definition at line <a class="el" href="mbox_8c_source.html#l00747">747</a> of file <a class="el" href="mbox_8c_source.html">mbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  748</span>{</div>
-<div class="line"><span class="lineno">  749</span>  <span class="keyword">struct </span>stat st2 = { 0 };</div>
-<div class="line"><span class="lineno">  750</span>  <span class="keywordflow">if</span> (!st)</div>
-<div class="line"><span class="lineno">  751</span>  {</div>
-<div class="line"><span class="lineno">  752</span>    <span class="keywordflow">if</span> (stat(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m), &amp;st2) &lt; 0)</div>
-<div class="line"><span class="lineno">  753</span>      <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  754</span>    st = &amp;st2;</div>
-<div class="line"><span class="lineno">  755</span>  }</div>
-<div class="line"><span class="lineno">  756</span> </div>
-<div class="line"><span class="lineno">  757</span>  <span class="keyword">struct </span>utimbuf utimebuf = { 0 };</div>
-<div class="line"><span class="lineno">  758</span>  utimebuf.actime = st-&gt;st_atime;</div>
-<div class="line"><span class="lineno">  759</span>  utimebuf.modtime = st-&gt;st_mtime;</div>
-<div class="line"><span class="lineno">  760</span> </div>
-<div class="line"><span class="lineno">  761</span>  <span class="comment">/* When $mbox_check_recent is set, existing new mail is ignored, so do not</span></div>
-<div class="line"><span class="lineno">  762</span><span class="comment">   * reset the atime to mtime-1 to signal new mail.  */</span></div>
-<div class="line"><span class="lineno">  763</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_mail_check_recent = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;mail_check_recent&quot;</span>);</div>
-<div class="line"><span class="lineno">  764</span>  <span class="keywordflow">if</span> (!c_mail_check_recent &amp;&amp; (utimebuf.actime &gt;= utimebuf.modtime) &amp;&amp; <a class="code hl_function" href="mbox_8c.html#a1b48e889cb30d3c7d9c4eacc3fddd936">mbox_has_new</a>(m))</div>
-<div class="line"><span class="lineno">  765</span>  {</div>
-<div class="line"><span class="lineno">  766</span>    utimebuf.actime = utimebuf.modtime - 1;</div>
-<div class="line"><span class="lineno">  767</span>  }</div>
-<div class="line"><span class="lineno">  768</span> </div>
-<div class="line"><span class="lineno">  769</span>  utime(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m), &amp;utimebuf);</div>
-<div class="line"><span class="lineno">  770</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mbox_8c_source.html#l00744">744</a> of file <a class="el" href="mbox_8c_source.html">mbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  745</span>{</div>
+<div class="line"><span class="lineno">  746</span>  <span class="keyword">struct </span>stat st2 = { 0 };</div>
+<div class="line"><span class="lineno">  747</span>  <span class="keywordflow">if</span> (!st)</div>
+<div class="line"><span class="lineno">  748</span>  {</div>
+<div class="line"><span class="lineno">  749</span>    <span class="keywordflow">if</span> (stat(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m), &amp;st2) &lt; 0)</div>
+<div class="line"><span class="lineno">  750</span>      <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  751</span>    st = &amp;st2;</div>
+<div class="line"><span class="lineno">  752</span>  }</div>
+<div class="line"><span class="lineno">  753</span> </div>
+<div class="line"><span class="lineno">  754</span>  <span class="keyword">struct </span>utimbuf utimebuf = { 0 };</div>
+<div class="line"><span class="lineno">  755</span>  utimebuf.actime = st-&gt;st_atime;</div>
+<div class="line"><span class="lineno">  756</span>  utimebuf.modtime = st-&gt;st_mtime;</div>
+<div class="line"><span class="lineno">  757</span> </div>
+<div class="line"><span class="lineno">  758</span>  <span class="comment">/* When $mbox_check_recent is set, existing new mail is ignored, so do not</span></div>
+<div class="line"><span class="lineno">  759</span><span class="comment">   * reset the atime to mtime-1 to signal new mail.  */</span></div>
+<div class="line"><span class="lineno">  760</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_mail_check_recent = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;mail_check_recent&quot;</span>);</div>
+<div class="line"><span class="lineno">  761</span>  <span class="keywordflow">if</span> (!c_mail_check_recent &amp;&amp; (utimebuf.actime &gt;= utimebuf.modtime) &amp;&amp; <a class="code hl_function" href="mbox_8c.html#a1b48e889cb30d3c7d9c4eacc3fddd936">mbox_has_new</a>(m))</div>
+<div class="line"><span class="lineno">  762</span>  {</div>
+<div class="line"><span class="lineno">  763</span>    utimebuf.actime = utimebuf.modtime - 1;</div>
+<div class="line"><span class="lineno">  764</span>  }</div>
+<div class="line"><span class="lineno">  765</span> </div>
+<div class="line"><span class="lineno">  766</span>  utime(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m), &amp;utimebuf);</div>
+<div class="line"><span class="lineno">  767</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00047">helpers.c:47</a></div></div>
 <div class="ttc" id="acore_2mailbox_8h_html_a7e9739eb3e94344633f7051c2fb9453e"><div class="ttname"><a href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a></div><div class="ttdeci">static const char * mailbox_path(const struct Mailbox *m)</div><div class="ttdoc">Get the Mailbox&#39;s path string.</div><div class="ttdef"><b>Definition</b> <a href="core_2mailbox_8h_source.html#l00214">mailbox.h:214</a></div></div>
-<div class="ttc" id="ambox_8c_html_a1b48e889cb30d3c7d9c4eacc3fddd936"><div class="ttname"><a href="mbox_8c.html#a1b48e889cb30d3c7d9c4eacc3fddd936">mbox_has_new</a></div><div class="ttdeci">static bool mbox_has_new(struct Mailbox *m)</div><div class="ttdoc">Does the mailbox have new mail.</div><div class="ttdef"><b>Definition</b> <a href="mbox_8c_source.html#l00726">mbox.c:726</a></div></div>
+<div class="ttc" id="ambox_8c_html_a1b48e889cb30d3c7d9c4eacc3fddd936"><div class="ttname"><a href="mbox_8c.html#a1b48e889cb30d3c7d9c4eacc3fddd936">mbox_has_new</a></div><div class="ttdeci">static bool mbox_has_new(struct Mailbox *m)</div><div class="ttdoc">Does the mailbox have new mail.</div><div class="ttdef"><b>Definition</b> <a href="mbox_8c_source.html#l00723">mbox.c:723</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00127">neomutt.h:128</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00134">neomutt.h:134</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">

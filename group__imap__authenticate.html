@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-117-gc1a713</span>
+   &#160;<span id="projectnumber">2025-12-11-169-g3d4008</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -1121,223 +1121,223 @@ Functions</h2></td></tr>
 
 <p>SASL authenticator - Implements <a class="el" href="structImapAuth.html#ae626ffacba170b0ca2744fbb3acc4029">ImapAuth::authenticate()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="auth__sasl_8c_source.html#l00047">47</a> of file <a class="el" href="auth__sasl_8c_source.html">auth_sasl.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   48</span>{</div>
-<div class="line"><span class="lineno">   49</span>  sasl_conn_t *saslconn = NULL;</div>
-<div class="line"><span class="lineno">   50</span>  sasl_interact_t *interaction = NULL;</div>
-<div class="line"><span class="lineno">   51</span>  <span class="keywordtype">int</span> rc, irc;</div>
-<div class="line"><span class="lineno">   52</span>  <span class="keywordtype">char</span> *buf = NULL;</div>
-<div class="line"><span class="lineno">   53</span>  <span class="keywordtype">size_t</span> bufsize = 0;</div>
-<div class="line"><span class="lineno">   54</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *mech = NULL;</div>
-<div class="line"><span class="lineno">   55</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *pc = NULL;</div>
-<div class="line"><span class="lineno">   56</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len = 0, olen = 0;</div>
-<div class="line"><span class="lineno">   57</span>  <span class="keywordtype">bool</span> client_start;</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="sasl_8c.html#ad6e1863eb3486324234dea5b32516ccf">mutt_sasl_client_new</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, &amp;saslconn) &lt; 0)</div>
-<div class="line"><span class="lineno">   60</span>  {</div>
-<div class="line"><span class="lineno">   61</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error allocating SASL connection\n&quot;</span>);</div>
-<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">   63</span>  }</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>  rc = SASL_FAIL;</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>  <span class="comment">/* If the user hasn&#39;t specified a method, use any available */</span></div>
-<div class="line"><span class="lineno">   68</span>  <span class="keywordflow">if</span> (!method)</div>
-<div class="line"><span class="lineno">   69</span>  {</div>
-<div class="line"><span class="lineno">   70</span>    method = adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ac0c66b610779cc9411060acf5f2ce68d">capstr</a>;</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>    <span class="comment">/* hack for SASL ANONYMOUS support:</span></div>
-<div class="line"><span class="lineno">   73</span><span class="comment">     * 1. Fetch username. If it&#39;s &quot;&quot; or &quot;anonymous&quot; then</span></div>
-<div class="line"><span class="lineno">   74</span><span class="comment">     * 2. attempt sasl_client_start with only &quot;AUTH=ANONYMOUS&quot; capability</span></div>
-<div class="line"><span class="lineno">   75</span><span class="comment">     * 3. if sasl_client_start fails, fall through... */</span></div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2e00de19727c4db19f452dde494a770a">mutt_account_getuser</a>(&amp;adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) &lt; 0)</div>
-<div class="line"><span class="lineno">   78</span>    {</div>
-<div class="line"><span class="lineno">   79</span>      sasl_dispose(&amp;saslconn);</div>
-<div class="line"><span class="lineno">   80</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> ((adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_define" href="imap_2private_8h.html#a4906490e77084e992c96436fb48c70cd">IMAP_CAP_AUTH_ANONYMOUS</a>) &amp;&amp;</div>
-<div class="line"><span class="lineno">   84</span>        (!adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>[0] ||</div>
-<div class="line"><span class="lineno">   85</span>         <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>, <span class="stringliteral">&quot;anonymous&quot;</span>)))</div>
-<div class="line"><span class="lineno">   86</span>    {</div>
-<div class="line"><span class="lineno">   87</span>      rc = sasl_client_start(saslconn, <span class="stringliteral">&quot;AUTH=ANONYMOUS&quot;</span>, NULL, &amp;pc, &amp;olen, &amp;mech);</div>
-<div class="line"><span class="lineno">   88</span>    }</div>
-<div class="line"><span class="lineno">   89</span>  }</div>
-<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(<span class="stringliteral">&quot;login&quot;</span>, method) &amp;&amp; !strstr(<a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ac0c66b610779cc9411060acf5f2ce68d">capstr</a>), <span class="stringliteral">&quot;AUTH=LOGIN&quot;</span>))</div>
-<div class="line"><span class="lineno">   91</span>  {</div>
-<div class="line"><span class="lineno">   92</span>    <span class="comment">/* do not use SASL login for regular IMAP login */</span></div>
-<div class="line"><span class="lineno">   93</span>    sasl_dispose(&amp;saslconn);</div>
-<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">   95</span>  }</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> ((rc != SASL_OK) &amp;&amp; (rc != SASL_CONTINUE))</div>
-<div class="line"><span class="lineno">   98</span>  {</div>
-<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  100</span>    {</div>
-<div class="line"><span class="lineno">  101</span>      rc = sasl_client_start(saslconn, method, &amp;interaction, &amp;pc, &amp;olen, &amp;mech);</div>
-<div class="line"><span class="lineno">  102</span>      <span class="keywordflow">if</span> (rc == SASL_INTERACT)</div>
-<div class="line"><span class="lineno">  103</span>        <a class="code hl_function" href="sasl_8c.html#a69d46ce6a265526da2e547529fe2d44b">mutt_sasl_interact</a>(interaction);</div>
-<div class="line"><span class="lineno">  104</span>    } <span class="keywordflow">while</span> (rc == SASL_INTERACT);</div>
-<div class="line"><span class="lineno">  105</span>  }</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>  client_start = (olen &gt; 0);</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">if</span> ((rc != SASL_OK) &amp;&amp; (rc != SASL_CONTINUE))</div>
-<div class="line"><span class="lineno">  110</span>  {</div>
-<div class="line"><span class="lineno">  111</span>    <span class="keywordflow">if</span> (method)</div>
-<div class="line"><span class="lineno">  112</span>    {</div>
-<div class="line"><span class="lineno">  113</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s unavailable\n&quot;</span>, method);</div>
-<div class="line"><span class="lineno">  114</span>    }</div>
-<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  116</span>    {</div>
-<div class="line"><span class="lineno">  117</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Failure starting authentication exchange. No shared mechanisms?\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  118</span>    }</div>
-<div class="line"><span class="lineno">  119</span>    <span class="comment">/* SASL doesn&#39;t support LOGIN, so fall back */</span></div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>    sasl_dispose(&amp;saslconn);</div>
-<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  123</span>  }</div>
-<div class="line"><span class="lineno">  124</span> </div>
-<div class="line"><span class="lineno">  125</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  126</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), mech);</div>
-<div class="line"><span class="lineno">  127</span> </div>
-<div class="line"><span class="lineno">  128</span>  bufsize = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>((olen * 2), 1024);</div>
-<div class="line"><span class="lineno">  129</span>  buf = <a class="code hl_define" href="memory_8h.html#af997cb3719dc7abbeabae655d0ee1b9e">MUTT_MEM_MALLOC</a>(bufsize, <span class="keywordtype">char</span>);</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>  snprintf(buf, bufsize, <span class="stringliteral">&quot;AUTHENTICATE %s&quot;</span>, mech);</div>
-<div class="line"><span class="lineno">  132</span>  <span class="keywordflow">if</span> ((adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_define" href="imap_2private_8h.html#ac836bc99d7385c67d608a18c999352d2">IMAP_CAP_SASL_IR</a>) &amp;&amp; client_start)</div>
-<div class="line"><span class="lineno">  133</span>  {</div>
-<div class="line"><span class="lineno">  134</span>    len = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(buf);</div>
-<div class="line"><span class="lineno">  135</span>    buf[len++] = <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span> (sasl_encode64(pc, olen, buf + len, bufsize - len, &amp;olen) != SASL_OK)</div>
-<div class="line"><span class="lineno">  137</span>    {</div>
-<div class="line"><span class="lineno">  138</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;#1 error base64-encoding client response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  139</span>      <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  140</span>    }</div>
-<div class="line"><span class="lineno">  141</span>    client_start = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  142</span>    olen = 0;</div>
-<div class="line"><span class="lineno">  143</span>  }</div>
-<div class="line"><span class="lineno">  144</span>  <a class="code hl_function" href="imap_2command_8c.html#a07786a21982bd266c8faca5423b7f2cf">imap_cmd_start</a>(adata, buf);</div>
-<div class="line"><span class="lineno">  145</span>  irc = <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>;</div>
-<div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>  <span class="comment">/* looping protocol */</span></div>
-<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">while</span> ((rc == SASL_CONTINUE) || (olen &gt; 0))</div>
-<div class="line"><span class="lineno">  149</span>  {</div>
-<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  151</span>    {</div>
-<div class="line"><span class="lineno">  152</span>      irc = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  153</span>    } <span class="keywordflow">while</span> (irc == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno">  154</span> </div>
-<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">if</span> ((irc == <a class="code hl_define" href="imap_2private_8h.html#adfc53d745dae338372ac370a8243d181">IMAP_RES_BAD</a>) || (irc == <a class="code hl_define" href="imap_2private_8h.html#ac10fb2fab1bc13f077a3c973883d8088">IMAP_RES_NO</a>))</div>
-<div class="line"><span class="lineno">  156</span>      <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  157</span> </div>
-<div class="line"><span class="lineno">  158</span>    <span class="keywordflow">if</span> (irc == <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
-<div class="line"><span class="lineno">  159</span>    {</div>
-<div class="line"><span class="lineno">  160</span>      <span class="comment">/* Exchange incorrectly returns +\r\n instead of + \r\n */</span></div>
-<div class="line"><span class="lineno">  161</span>      <span class="keywordflow">if</span> (adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>[1] == <span class="charliteral">&#39;\0&#39;</span>)</div>
-<div class="line"><span class="lineno">  162</span>      {</div>
-<div class="line"><span class="lineno">  163</span>        buf[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  164</span>        len = 0;</div>
-<div class="line"><span class="lineno">  165</span>      }</div>
-<div class="line"><span class="lineno">  166</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  167</span>      {</div>
-<div class="line"><span class="lineno">  168</span>        len = strlen(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2);</div>
-<div class="line"><span class="lineno">  169</span>        <span class="keywordflow">if</span> (len &gt; bufsize)</div>
-<div class="line"><span class="lineno">  170</span>        {</div>
-<div class="line"><span class="lineno">  171</span>          bufsize = len;</div>
-<div class="line"><span class="lineno">  172</span>          <a class="code hl_define" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a>(&amp;buf, bufsize, <span class="keywordtype">char</span>);</div>
-<div class="line"><span class="lineno">  173</span>        }</div>
-<div class="line"><span class="lineno">  174</span>        <span class="comment">/* For sasl_decode64, the fourth parameter, outmax, doesn&#39;t</span></div>
-<div class="line"><span class="lineno">  175</span><span class="comment">         * include space for the trailing null */</span></div>
-<div class="line"><span class="lineno">  176</span>        <span class="keywordflow">if</span> (sasl_decode64(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2, len, buf, bufsize - 1, &amp;len) != SASL_OK)</div>
-<div class="line"><span class="lineno">  177</span>        {</div>
-<div class="line"><span class="lineno">  178</span>          <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;error base64-decoding server response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  179</span>          <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  180</span>        }</div>
-<div class="line"><span class="lineno">  181</span>      }</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
-<div class="line"><span class="lineno">  183</span> </div>
-<div class="line"><span class="lineno">  184</span>    <span class="comment">/* client-start is only available with the SASL-IR extension, but</span></div>
-<div class="line"><span class="lineno">  185</span><span class="comment">     * SASL 2.1 seems to want to use it regardless, at least for DIGEST</span></div>
-<div class="line"><span class="lineno">  186</span><span class="comment">     * fast reauth. Override if the server sent an initial continuation */</span></div>
-<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">if</span> (!client_start || buf[0])</div>
-<div class="line"><span class="lineno">  188</span>    {</div>
-<div class="line"><span class="lineno">  189</span>      <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  190</span>      {</div>
-<div class="line"><span class="lineno">  191</span>        rc = sasl_client_step(saslconn, buf, len, &amp;interaction, &amp;pc, &amp;olen);</div>
-<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">if</span> (rc == SASL_INTERACT)</div>
-<div class="line"><span class="lineno">  193</span>          <a class="code hl_function" href="sasl_8c.html#a69d46ce6a265526da2e547529fe2d44b">mutt_sasl_interact</a>(interaction);</div>
-<div class="line"><span class="lineno">  194</span>      } <span class="keywordflow">while</span> (rc == SASL_INTERACT);</div>
-<div class="line"><span class="lineno">  195</span>    }</div>
-<div class="line"><span class="lineno">  196</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  197</span>    {</div>
-<div class="line"><span class="lineno">  198</span>      client_start = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  199</span>    }</div>
-<div class="line"><span class="lineno">  200</span> </div>
-<div class="line"><span class="lineno">  201</span>    <span class="comment">/* send out response, or line break if none needed */</span></div>
-<div class="line"><span class="lineno">  202</span>    <span class="keywordflow">if</span> (olen)</div>
-<div class="line"><span class="lineno">  203</span>    {</div>
-<div class="line"><span class="lineno">  204</span>      <span class="keywordflow">if</span> ((olen * 2) &gt; bufsize)</div>
-<div class="line"><span class="lineno">  205</span>      {</div>
-<div class="line"><span class="lineno">  206</span>        bufsize = olen * 2;</div>
-<div class="line"><span class="lineno">  207</span>        <a class="code hl_define" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a>(&amp;buf, bufsize, <span class="keywordtype">char</span>);</div>
-<div class="line"><span class="lineno">  208</span>      }</div>
-<div class="line"><span class="lineno">  209</span>      <span class="keywordflow">if</span> (sasl_encode64(pc, olen, buf, bufsize, &amp;olen) != SASL_OK)</div>
-<div class="line"><span class="lineno">  210</span>      {</div>
-<div class="line"><span class="lineno">  211</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;#2 error base64-encoding client response\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  213</span>      }</div>
-<div class="line"><span class="lineno">  214</span>    }</div>
-<div class="line"><span class="lineno">  215</span> </div>
-<div class="line"><span class="lineno">  216</span>    <span class="keywordflow">if</span> (irc == <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
-<div class="line"><span class="lineno">  217</span>    {</div>
-<div class="line"><span class="lineno">  218</span>      <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf + olen, <span class="stringliteral">&quot;\r\n&quot;</span>, bufsize - olen);</div>
-<div class="line"><span class="lineno">  219</span>      <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, buf);</div>
-<div class="line"><span class="lineno">  220</span>    }</div>
-<div class="line"><span class="lineno">  221</span> </div>
-<div class="line"><span class="lineno">  222</span>    <span class="comment">/* If SASL has errored out, send an abort string to the server */</span></div>
-<div class="line"><span class="lineno">  223</span>    <span class="keywordflow">if</span> (rc &lt; 0)</div>
-<div class="line"><span class="lineno">  224</span>    {</div>
-<div class="line"><span class="lineno">  225</span>      <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <span class="stringliteral">&quot;*\r\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  226</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;sasl_client_step error %d\n&quot;</span>, rc);</div>
-<div class="line"><span class="lineno">  227</span>    }</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>    olen = 0;</div>
-<div class="line"><span class="lineno">  230</span>  }</div>
-<div class="line"><span class="lineno">  231</span> </div>
-<div class="line"><span class="lineno">  232</span>  <span class="keywordflow">while</span> (irc != <a class="code hl_define" href="imap_2private_8h.html#a3e63d724ab73ca87b3f8f43a772d32ba">IMAP_RES_OK</a>)</div>
-<div class="line"><span class="lineno">  233</span>  {</div>
-<div class="line"><span class="lineno">  234</span>    irc = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno">  235</span>    <span class="keywordflow">if</span> (irc != <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>)</div>
-<div class="line"><span class="lineno">  236</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  237</span>  }</div>
-<div class="line"><span class="lineno">  238</span> </div>
-<div class="line"><span class="lineno">  239</span>  <span class="keywordflow">if</span> (rc != SASL_OK)</div>
-<div class="line"><span class="lineno">  240</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  241</span> </div>
-<div class="line"><span class="lineno">  242</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="imap_2command_8c.html#abf593435042f4db0db8d4594443b0c96">imap_code</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>))</div>
-<div class="line"><span class="lineno">  243</span>  {</div>
-<div class="line"><span class="lineno">  244</span>    <a class="code hl_function" href="sasl_8c.html#af737590d183a661ad5cc6bd2de7fe280">mutt_sasl_setup_conn</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, saslconn);</div>
-<div class="line"><span class="lineno">  245</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada544df33a559dae35b9b71951782eb897">IMAP_AUTH_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  247</span>  }</div>
-<div class="line"><span class="lineno">  248</span> </div>
-<div class="line"><span class="lineno">  249</span>bail:</div>
-<div class="line"><span class="lineno">  250</span>  sasl_dispose(&amp;saslconn);</div>
-<div class="line"><span class="lineno">  251</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  252</span> </div>
-<div class="line"><span class="lineno">  253</span>  <span class="keywordflow">if</span> (method)</div>
-<div class="line"><span class="lineno">  254</span>  {</div>
-<div class="line"><span class="lineno">  255</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s failed\n&quot;</span>, method);</div>
-<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
-<div class="line"><span class="lineno">  257</span>  }</div>
-<div class="line"><span class="lineno">  258</span> </div>
-<div class="line"><span class="lineno">  259</span>  <span class="comment">// L10N: %s is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
-<div class="line"><span class="lineno">  260</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s authentication failed&quot;</span>), <span class="stringliteral">&quot;SASL &quot;</span>);</div>
-<div class="line"><span class="lineno">  261</span> </div>
-<div class="line"><span class="lineno">  262</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
-<div class="line"><span class="lineno">  263</span>}</div>
+<p class="definition">Definition at line <a class="el" href="auth__sasl_8c_source.html#l00046">46</a> of file <a class="el" href="auth__sasl_8c_source.html">auth_sasl.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
+<div class="line"><span class="lineno">   48</span>  sasl_conn_t *saslconn = NULL;</div>
+<div class="line"><span class="lineno">   49</span>  sasl_interact_t *interaction = NULL;</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordtype">int</span> rc, irc;</div>
+<div class="line"><span class="lineno">   51</span>  <span class="keywordtype">char</span> *buf = NULL;</div>
+<div class="line"><span class="lineno">   52</span>  <span class="keywordtype">size_t</span> bufsize = 0;</div>
+<div class="line"><span class="lineno">   53</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *mech = NULL;</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *pc = NULL;</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len = 0, olen = 0;</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordtype">bool</span> client_start;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="sasl_8c.html#ad6e1863eb3486324234dea5b32516ccf">mutt_sasl_client_new</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, &amp;saslconn) &lt; 0)</div>
+<div class="line"><span class="lineno">   59</span>  {</div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Error allocating SASL connection\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">   62</span>  }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>  rc = SASL_FAIL;</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>  <span class="comment">/* If the user hasn&#39;t specified a method, use any available */</span></div>
+<div class="line"><span class="lineno">   67</span>  <span class="keywordflow">if</span> (!method)</div>
+<div class="line"><span class="lineno">   68</span>  {</div>
+<div class="line"><span class="lineno">   69</span>    method = adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ac0c66b610779cc9411060acf5f2ce68d">capstr</a>;</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="comment">/* hack for SASL ANONYMOUS support:</span></div>
+<div class="line"><span class="lineno">   72</span><span class="comment">     * 1. Fetch username. If it&#39;s &quot;&quot; or &quot;anonymous&quot; then</span></div>
+<div class="line"><span class="lineno">   73</span><span class="comment">     * 2. attempt sasl_client_start with only &quot;AUTH=ANONYMOUS&quot; capability</span></div>
+<div class="line"><span class="lineno">   74</span><span class="comment">     * 3. if sasl_client_start fails, fall through... */</span></div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="connaccount_8c.html#a2e00de19727c4db19f452dde494a770a">mutt_account_getuser</a>(&amp;adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>) &lt; 0)</div>
+<div class="line"><span class="lineno">   77</span>    {</div>
+<div class="line"><span class="lineno">   78</span>      sasl_dispose(&amp;saslconn);</div>
+<div class="line"><span class="lineno">   79</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">if</span> ((adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_define" href="imap_2private_8h.html#a4906490e77084e992c96436fb48c70cd">IMAP_CAP_AUTH_ANONYMOUS</a>) &amp;&amp;</div>
+<div class="line"><span class="lineno">   83</span>        (!adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>[0] ||</div>
+<div class="line"><span class="lineno">   84</span>         <a class="code hl_function" href="mutt_2string_8c.html#a9bf968304f4f9b49e24215cb2e28d22d">mutt_str_startswith</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>-&gt;<a class="code hl_variable" href="structConnection.html#ac3c39549b6611c8eaed2a25573b5c432">account</a>.<a class="code hl_variable" href="structConnAccount.html#a48b8084b2dd1ef3d4e051a01cf15c7ca">user</a>, <span class="stringliteral">&quot;anonymous&quot;</span>)))</div>
+<div class="line"><span class="lineno">   85</span>    {</div>
+<div class="line"><span class="lineno">   86</span>      rc = sasl_client_start(saslconn, <span class="stringliteral">&quot;AUTH=ANONYMOUS&quot;</span>, NULL, &amp;pc, &amp;olen, &amp;mech);</div>
+<div class="line"><span class="lineno">   87</span>    }</div>
+<div class="line"><span class="lineno">   88</span>  }</div>
+<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a>(<span class="stringliteral">&quot;login&quot;</span>, method) &amp;&amp; !strstr(<a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ac0c66b610779cc9411060acf5f2ce68d">capstr</a>), <span class="stringliteral">&quot;AUTH=LOGIN&quot;</span>))</div>
+<div class="line"><span class="lineno">   90</span>  {</div>
+<div class="line"><span class="lineno">   91</span>    <span class="comment">/* do not use SASL login for regular IMAP login */</span></div>
+<div class="line"><span class="lineno">   92</span>    sasl_dispose(&amp;saslconn);</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">   94</span>  }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>  <span class="keywordflow">if</span> ((rc != SASL_OK) &amp;&amp; (rc != SASL_CONTINUE))</div>
+<div class="line"><span class="lineno">   97</span>  {</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">   99</span>    {</div>
+<div class="line"><span class="lineno">  100</span>      rc = sasl_client_start(saslconn, method, &amp;interaction, &amp;pc, &amp;olen, &amp;mech);</div>
+<div class="line"><span class="lineno">  101</span>      <span class="keywordflow">if</span> (rc == SASL_INTERACT)</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_function" href="sasl_8c.html#a69d46ce6a265526da2e547529fe2d44b">mutt_sasl_interact</a>(interaction);</div>
+<div class="line"><span class="lineno">  103</span>    } <span class="keywordflow">while</span> (rc == SASL_INTERACT);</div>
+<div class="line"><span class="lineno">  104</span>  }</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>  client_start = (olen &gt; 0);</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">if</span> ((rc != SASL_OK) &amp;&amp; (rc != SASL_CONTINUE))</div>
+<div class="line"><span class="lineno">  109</span>  {</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> (method)</div>
+<div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s unavailable\n&quot;</span>, method);</div>
+<div class="line"><span class="lineno">  113</span>    }</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  115</span>    {</div>
+<div class="line"><span class="lineno">  116</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Failure starting authentication exchange. No shared mechanisms?\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  117</span>    }</div>
+<div class="line"><span class="lineno">  118</span>    <span class="comment">/* SASL doesn&#39;t support LOGIN, so fall back */</span></div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>    sasl_dispose(&amp;saslconn);</div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  122</span>  }</div>
+<div class="line"><span class="lineno">  123</span> </div>
+<div class="line"><span class="lineno">  124</span>  <span class="comment">// L10N: (%s) is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  125</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Authenticating (%s)...&quot;</span>), mech);</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>  bufsize = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>((olen * 2), 1024);</div>
+<div class="line"><span class="lineno">  128</span>  buf = <a class="code hl_define" href="memory_8h.html#af997cb3719dc7abbeabae655d0ee1b9e">MUTT_MEM_MALLOC</a>(bufsize, <span class="keywordtype">char</span>);</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>  snprintf(buf, bufsize, <span class="stringliteral">&quot;AUTHENTICATE %s&quot;</span>, mech);</div>
+<div class="line"><span class="lineno">  131</span>  <span class="keywordflow">if</span> ((adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_define" href="imap_2private_8h.html#ac836bc99d7385c67d608a18c999352d2">IMAP_CAP_SASL_IR</a>) &amp;&amp; client_start)</div>
+<div class="line"><span class="lineno">  132</span>  {</div>
+<div class="line"><span class="lineno">  133</span>    len = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(buf);</div>
+<div class="line"><span class="lineno">  134</span>    buf[len++] = <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">if</span> (sasl_encode64(pc, olen, buf + len, bufsize - len, &amp;olen) != SASL_OK)</div>
+<div class="line"><span class="lineno">  136</span>    {</div>
+<div class="line"><span class="lineno">  137</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;#1 error base64-encoding client response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>      <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
+<div class="line"><span class="lineno">  140</span>    client_start = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  141</span>    olen = 0;</div>
+<div class="line"><span class="lineno">  142</span>  }</div>
+<div class="line"><span class="lineno">  143</span>  <a class="code hl_function" href="imap_2command_8c.html#a07786a21982bd266c8faca5423b7f2cf">imap_cmd_start</a>(adata, buf);</div>
+<div class="line"><span class="lineno">  144</span>  irc = <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>;</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>  <span class="comment">/* looping protocol */</span></div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">while</span> ((rc == SASL_CONTINUE) || (olen &gt; 0))</div>
+<div class="line"><span class="lineno">  148</span>  {</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  150</span>    {</div>
+<div class="line"><span class="lineno">  151</span>      irc = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  152</span>    } <span class="keywordflow">while</span> (irc == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">if</span> ((irc == <a class="code hl_define" href="imap_2private_8h.html#adfc53d745dae338372ac370a8243d181">IMAP_RES_BAD</a>) || (irc == <a class="code hl_define" href="imap_2private_8h.html#ac10fb2fab1bc13f077a3c973883d8088">IMAP_RES_NO</a>))</div>
+<div class="line"><span class="lineno">  155</span>      <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span> (irc == <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
+<div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>      <span class="comment">/* Exchange incorrectly returns +\r\n instead of + \r\n */</span></div>
+<div class="line"><span class="lineno">  160</span>      <span class="keywordflow">if</span> (adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>[1] == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><span class="lineno">  161</span>      {</div>
+<div class="line"><span class="lineno">  162</span>        buf[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  163</span>        len = 0;</div>
+<div class="line"><span class="lineno">  164</span>      }</div>
+<div class="line"><span class="lineno">  165</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  166</span>      {</div>
+<div class="line"><span class="lineno">  167</span>        len = strlen(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2);</div>
+<div class="line"><span class="lineno">  168</span>        <span class="keywordflow">if</span> (len &gt; bufsize)</div>
+<div class="line"><span class="lineno">  169</span>        {</div>
+<div class="line"><span class="lineno">  170</span>          bufsize = len;</div>
+<div class="line"><span class="lineno">  171</span>          <a class="code hl_define" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a>(&amp;buf, bufsize, <span class="keywordtype">char</span>);</div>
+<div class="line"><span class="lineno">  172</span>        }</div>
+<div class="line"><span class="lineno">  173</span>        <span class="comment">/* For sasl_decode64, the fourth parameter, outmax, doesn&#39;t</span></div>
+<div class="line"><span class="lineno">  174</span><span class="comment">         * include space for the trailing null */</span></div>
+<div class="line"><span class="lineno">  175</span>        <span class="keywordflow">if</span> (sasl_decode64(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a> + 2, len, buf, bufsize - 1, &amp;len) != SASL_OK)</div>
+<div class="line"><span class="lineno">  176</span>        {</div>
+<div class="line"><span class="lineno">  177</span>          <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;error base64-decoding server response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  178</span>          <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+<div class="line"><span class="lineno">  180</span>      }</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>    <span class="comment">/* client-start is only available with the SASL-IR extension, but</span></div>
+<div class="line"><span class="lineno">  184</span><span class="comment">     * SASL 2.1 seems to want to use it regardless, at least for DIGEST</span></div>
+<div class="line"><span class="lineno">  185</span><span class="comment">     * fast reauth. Override if the server sent an initial continuation */</span></div>
+<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">if</span> (!client_start || buf[0])</div>
+<div class="line"><span class="lineno">  187</span>    {</div>
+<div class="line"><span class="lineno">  188</span>      <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  189</span>      {</div>
+<div class="line"><span class="lineno">  190</span>        rc = sasl_client_step(saslconn, buf, len, &amp;interaction, &amp;pc, &amp;olen);</div>
+<div class="line"><span class="lineno">  191</span>        <span class="keywordflow">if</span> (rc == SASL_INTERACT)</div>
+<div class="line"><span class="lineno">  192</span>          <a class="code hl_function" href="sasl_8c.html#a69d46ce6a265526da2e547529fe2d44b">mutt_sasl_interact</a>(interaction);</div>
+<div class="line"><span class="lineno">  193</span>      } <span class="keywordflow">while</span> (rc == SASL_INTERACT);</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  196</span>    {</div>
+<div class="line"><span class="lineno">  197</span>      client_start = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>    <span class="comment">/* send out response, or line break if none needed */</span></div>
+<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">if</span> (olen)</div>
+<div class="line"><span class="lineno">  202</span>    {</div>
+<div class="line"><span class="lineno">  203</span>      <span class="keywordflow">if</span> ((olen * 2) &gt; bufsize)</div>
+<div class="line"><span class="lineno">  204</span>      {</div>
+<div class="line"><span class="lineno">  205</span>        bufsize = olen * 2;</div>
+<div class="line"><span class="lineno">  206</span>        <a class="code hl_define" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a>(&amp;buf, bufsize, <span class="keywordtype">char</span>);</div>
+<div class="line"><span class="lineno">  207</span>      }</div>
+<div class="line"><span class="lineno">  208</span>      <span class="keywordflow">if</span> (sasl_encode64(pc, olen, buf, bufsize, &amp;olen) != SASL_OK)</div>
+<div class="line"><span class="lineno">  209</span>      {</div>
+<div class="line"><span class="lineno">  210</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;#2 error base64-encoding client response\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  212</span>      }</div>
+<div class="line"><span class="lineno">  213</span>    }</div>
+<div class="line"><span class="lineno">  214</span> </div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">if</span> (irc == <a class="code hl_define" href="imap_2private_8h.html#a2c3e5fa097a47e603645d26620269b62">IMAP_RES_RESPOND</a>)</div>
+<div class="line"><span class="lineno">  216</span>    {</div>
+<div class="line"><span class="lineno">  217</span>      <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf + olen, <span class="stringliteral">&quot;\r\n&quot;</span>, bufsize - olen);</div>
+<div class="line"><span class="lineno">  218</span>      <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, buf);</div>
+<div class="line"><span class="lineno">  219</span>    }</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>    <span class="comment">/* If SASL has errored out, send an abort string to the server */</span></div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">if</span> (rc &lt; 0)</div>
+<div class="line"><span class="lineno">  223</span>    {</div>
+<div class="line"><span class="lineno">  224</span>      <a class="code hl_define" href="socket_8h.html#acddd830551629051c41026a4bc13d916">mutt_socket_send</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, <span class="stringliteral">&quot;*\r\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  225</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;sasl_client_step error %d\n&quot;</span>, rc);</div>
+<div class="line"><span class="lineno">  226</span>    }</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>    olen = 0;</div>
+<div class="line"><span class="lineno">  229</span>  }</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>  <span class="keywordflow">while</span> (irc != <a class="code hl_define" href="imap_2private_8h.html#a3e63d724ab73ca87b3f8f43a772d32ba">IMAP_RES_OK</a>)</div>
+<div class="line"><span class="lineno">  232</span>  {</div>
+<div class="line"><span class="lineno">  233</span>    irc = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">if</span> (irc != <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>)</div>
+<div class="line"><span class="lineno">  235</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  236</span>  }</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>  <span class="keywordflow">if</span> (rc != SASL_OK)</div>
+<div class="line"><span class="lineno">  239</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="imap_2command_8c.html#abf593435042f4db0db8d4594443b0c96">imap_code</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>))</div>
+<div class="line"><span class="lineno">  242</span>  {</div>
+<div class="line"><span class="lineno">  243</span>    <a class="code hl_function" href="sasl_8c.html#af737590d183a661ad5cc6bd2de7fe280">mutt_sasl_setup_conn</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4">conn</a>, saslconn);</div>
+<div class="line"><span class="lineno">  244</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  245</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada544df33a559dae35b9b71951782eb897">IMAP_AUTH_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  246</span>  }</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>bail:</div>
+<div class="line"><span class="lineno">  249</span>  sasl_dispose(&amp;saslconn);</div>
+<div class="line"><span class="lineno">  250</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>  <span class="keywordflow">if</span> (method)</div>
+<div class="line"><span class="lineno">  253</span>  {</div>
+<div class="line"><span class="lineno">  254</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s failed\n&quot;</span>, method);</div>
+<div class="line"><span class="lineno">  255</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbadaddf2ec71f2502b2e4684bfe42fc2fd40">IMAP_AUTH_UNAVAIL</a>;</div>
+<div class="line"><span class="lineno">  256</span>  }</div>
+<div class="line"><span class="lineno">  257</span> </div>
+<div class="line"><span class="lineno">  258</span>  <span class="comment">// L10N: %s is the method name, e.g. Anonymous, CRAM-MD5, GSSAPI, SASL</span></div>
+<div class="line"><span class="lineno">  259</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s authentication failed&quot;</span>), <span class="stringliteral">&quot;SASL &quot;</span>);</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="auth_8h.html#aba20e35487bf461507e63b783243dbada4e84acd157fdc566eafb0f8963a179f2">IMAP_AUTH_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  262</span>}</div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00063">memory.h:63</a></div></div>
 <div class="ttc" id="amemory_8h_html_abd7aad5fe8f11bcd476c64b4243081ba"><div class="ttname"><a href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a></div><div class="ttdeci">#define MUTT_MEM_REALLOC(pptr, n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00051">memory.h:51</a></div></div>
 <div class="ttc" id="amemory_8h_html_af997cb3719dc7abbeabae655d0ee1b9e"><div class="ttname"><a href="memory_8h.html#af997cb3719dc7abbeabae655d0ee1b9e">MUTT_MEM_MALLOC</a></div><div class="ttdeci">#define MUTT_MEM_MALLOC(n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00049">memory.h:49</a></div></div>

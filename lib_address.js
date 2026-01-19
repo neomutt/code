@@ -4,5 +4,6 @@ var lib_address =
     [ "Config type: Email address", "addr_config_type.html", null ],
     [ "Address groups", "addr_group.html", null ],
     [ "International domain names", "addr_idna.html", null ],
+    [ "Handle mailing lists", "addr_maillist.html", null ],
     [ "Definition of the Address Module", "addr_module.html", null ]
 ];
