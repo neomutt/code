@@ -1,5 +1,10 @@
 var NAVTREEINDEX51 =
 {
+"structMailcapEntry.html#adcea89b25743514d268e8fde508d6295":[1,0,146,9],
+"structMailcapEntry.html#af711c81e4798bf4790fb6dd58d739d68":[1,0,146,10],
+"structMailcapEntry.html#af91c521a75699979b652fc4b319870ff":[1,0,146,7],
+"structMailcapEntry.html#af97dc2368515b5451ce9212d681f30f4":[1,0,146,11],
+"structMaildirEmailData.html":[1,0,147],
 "structMaildirEmailData.html#ad30ba2d02862be9fdc092574efe58607":[1,0,147,0],
 "structMaildirMboxData.html":[1,0,148],
 "structMaildirMboxData.html#a432d4f7db70109845edca85319390763":[1,0,148,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX51 =
 "structNmEmailData.html":[1,0,182],
 "structNmEmailData.html#ab0f65adbf106a79e0a3875a128f15e0f":[1,0,182,0],
 "structNmEmailData.html#ac95286a6a9f4b7d1649cb4bed151ec97":[1,0,182,2],
-"structNmEmailData.html#acf4be7bb9a32ea7d75d34eef4de9b64c":[1,0,182,1],
-"structNmEmailData.html#afb9a8e94a3b200cbbe366c2ce14657bf":[1,0,182,3],
-"structNmMboxData.html":[1,0,183],
-"structNmMboxData.html#a22d80b4f9f022ae1dae0a6592eab53d4":[1,0,183,0],
-"structNmMboxData.html#a22d92645edc04adcf160739785f1704f":[1,0,183,5],
-"structNmMboxData.html#a4b076b009cfbd704791dcb517c7e9edf":[1,0,183,4]
+"structNmEmailData.html#acf4be7bb9a32ea7d75d34eef4de9b64c":[1,0,182,1]
 };

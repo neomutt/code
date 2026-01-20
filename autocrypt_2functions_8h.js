@@ -1,6 +1,6 @@
 var autocrypt_2functions_8h =
 [
     [ "AutocryptFunction", "structAutocryptFunction.html", "structAutocryptFunction" ],
-    [ "autocrypt_function_t", "autocrypt_2functions_8h.html#a4d9fb068d6d08100a4676729881c470d", null ],
-    [ "autocrypt_function_dispatcher", "group__dispatcher__api.html#ga671eb6f0f5227620ad6282c2fc4a2edd", null ]
+    [ "autocrypt_function_t", "autocrypt_2functions_8h.html#a07dbe7636c73cc4956a826aa1866e3dc", null ],
+    [ "autocrypt_function_dispatcher", "group__dispatcher__api.html#ga76f9e39b416ed48f57de3daa209937dc", null ]
 ];

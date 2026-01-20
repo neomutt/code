@@ -69,5 +69,6 @@ var searchData=
   ['format_5fattribution_66',['format_attribution',['../send_8c.html#a98117235d1c6eb0c923b1114b6f3ff85',1,'send.c']]],
   ['format_5fline_67',['format_line',['../display_8c.html#a09395942e7a1607668bfaf87009eb233',1,'display.c']]],
   ['format_5fstring_68',['format_string',['../format_8c.html#a3dbbcf9e5e2e90ae39dd5571f34ebd17',1,'format_string(struct Buffer *buf, int min_cols, int max_cols, enum FormatJustify justify, char pad_char, const char *str, size_t n, bool arboreal):&#160;format.c'],['../format_8h.html#a3dbbcf9e5e2e90ae39dd5571f34ebd17',1,'format_string(struct Buffer *buf, int min_cols, int max_cols, enum FormatJustify justify, char pad_char, const char *str, size_t n, bool arboreal):&#160;format.c']]],
-  ['free_5fraw_69',['free_raw',['../hcache_2hcache_8c.html#a82a990727c9f0e254d510805919890c1',1,'hcache.c']]]
+  ['free_5fargs_69',['free_args',['../cli_8c.html#a009495fb11414ccec6c76add6a024a60',1,'cli.c']]],
+  ['free_5fraw_70',['free_raw',['../hcache_2hcache_8c.html#a82a990727c9f0e254d510805919890c1',1,'hcache.c']]]
 ];

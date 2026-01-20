@@ -1,5 +1,10 @@
 var NAVTREEINDEX47 =
 {
+"structAnsiColor.html#a87daadf84d4b6a20b6acc774cf95d7d6":[1,0,7,1],
+"structAnsiColor.html#ae8d76de12d91edfd3b0d52a83fa79c27":[1,0,7,0],
+"structAttachCtx.html":[1,0,8],
+"structAttachCtx.html#a0dfc8b92b72351536f7bd3cfbc08eb30":[1,0,8,6],
+"structAttachCtx.html#a2a640066cd23ee29a8608ff2755526fc":[1,0,8,11],
 "structAttachCtx.html#a6bd678fc233b795a978f78f786f89f1c":[1,0,8,1],
 "structAttachCtx.html#a7ccc5aab103dffe2142c01d9d2d8faed":[1,0,8,9],
 "structAttachCtx.html#a8753a1c1a51b26d4a628861dfd56294f":[1,0,8,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX47 =
 "structCompileOption.html":[1,0,42],
 "structCompileOption.html#a3332f6412399342ceb410a9dfb9e2018":[1,0,42,0],
 "structCompileOption.html#a6f92e3d19cf7b95d052cd4a763fe8942":[1,0,42,1],
-"structCompleteOps.html":[1,0,43],
-"structCompleteOps.html#a362759a7c8bd5d5a507f4282a0b9d7a3":[1,0,43,0],
-"structCompletionData.html":[1,0,44],
-"structCompletionData.html#a2bfd704a3f09f1519bdcb29ef80ef5cb":[1,0,44,4],
-"structCompletionData.html#a3545eef7154b6e4aea4b355ea5bf9525":[1,0,44,5],
-"structCompletionData.html#a76655a797e574f519462c8c05875927f":[1,0,44,0]
+"structCompleteOps.html":[1,0,43]
 };

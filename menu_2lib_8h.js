@@ -43,6 +43,6 @@ var menu_2lib_8h =
     [ "menu_move_view_relative", "menu_2lib_8h.html#a30f159117fc26c514be92783e72cc0eb", null ],
     [ "menu_set_and_notify", "menu_2lib_8h.html#a5f44643f5154585945ca0fa8eb6e6174", null ],
     [ "menu_adjust", "menu_2lib_8h.html#a1914b8aef6e55520e0d4fa5de1fe26f2", null ],
-    [ "menu_function_dispatcher", "group__dispatcher__api.html#gac00aa5fb65018e7719a6567aac6f41a6", null ],
-    [ "menu_tagging_dispatcher", "group__dispatcher__api.html#ga5e8255587939773540dbea386c99e08d", null ]
+    [ "menu_function_dispatcher", "group__dispatcher__api.html#gad454afae4ce796a49a888da9d0fe6a2b", null ],
+    [ "menu_tagging_dispatcher", "group__dispatcher__api.html#gaba2973f42737d632b376733a5ab9edec", null ]
 ];

@@ -1,5 +1,10 @@
 var NAVTREEINDEX23 =
 {
+"group__store__close.html#gaa8c42e1f94d301f5a7f7dafb71addde7":[52,46,5,7],
+"group__store__close.html#gac55530119fd5c0a448ba8a08c9df950f":[52,46,5,5],
+"group__store__close.html#gac6a32548120f3a0481428bb2d963d3b8":[52,46,5,1],
+"group__store__close.html#gadbe923defef1e1f79d16423753939707":[52,46,5,0],
+"group__store__close.html#gaeb26f1a770d5c49510d8f9e3600534c0":[52,46,5,3],
 "group__store__delete__record.html":[52,46,4],
 "group__store__delete__record.html#ga2a737c19c4d3683fa9d80af25d730969":[52,46,4,7],
 "group__store__delete__record.html#ga9f4f92cc440381a0cb27f9a044c82d0a":[52,46,4,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX23 =
 "gui_8h.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa":[2,0,1,13,4],
 "gui_8h.html#afce757c3254bb43f346f7431a7e44f32":[2,0,1,13,2],
 "gui_8h_source.html":[2,0,1,13],
-"gui_curs_lib.html":[25,0],
-"gui_curses.html":[25,8],
-"gui_dialog.html":[25,1],
-"gui_functions.html":[25,2],
-"gui_global.html":[25,3],
-"gui_module.html":[25,4]
+"gui_curs_lib.html":[25,0]
 };

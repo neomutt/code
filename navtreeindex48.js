@@ -1,5 +1,10 @@
 var NAVTREEINDEX48 =
 {
+"structCompleteOps.html#a362759a7c8bd5d5a507f4282a0b9d7a3":[1,0,43,0],
+"structCompletionData.html":[1,0,44],
+"structCompletionData.html#a2bfd704a3f09f1519bdcb29ef80ef5cb":[1,0,44,4],
+"structCompletionData.html#a3545eef7154b6e4aea4b355ea5bf9525":[1,0,44,5],
+"structCompletionData.html#a76655a797e574f519462c8c05875927f":[1,0,44,0],
 "structCompletionData.html#a91f193b2c990f984c630f0247c9e7472":[1,0,44,2],
 "structCompletionData.html#aa5758465f226fb4363eec2a57ef5856d":[1,0,44,1],
 "structCompletionData.html#ab9497ed215f2a456de8f2fe9f2195b82":[1,0,44,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX48 =
 "structEnrichedState.html#aefb17717977e343b9c178b934c65830e":[1,0,71,6],
 "structEnrichedState.html#afed741d4664b2201a4bd28b23f776b26":[1,0,71,13],
 "structEnrichedState.html#aff30327d80e7c33db452c719aeea9c7a":[1,0,71,7],
-"structEnterFunction.html":[1,0,72],
-"structEnterFunction.html#a77ed0382dd776cf2393b7334f5b910f2":[1,0,72,0],
-"structEnterFunction.html#ad60ac2b3178400703613c8a91e58c20d":[1,0,72,1],
-"structEnterState.html":[1,0,73],
-"structEnterState.html#a1f5daab31c407100c8ed9266b4d8e5f8":[1,0,73,3],
-"structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6":[1,0,73,1]
+"structEnterFunction.html":[1,0,72]
 };
