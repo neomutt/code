@@ -34,7 +34,7 @@ var searchData=
   ['check_5ftime_31',['check_time',['../structNntpAccountData.html#a68b41ff885dd90f05aec9c882f245a75',1,'NntpAccountData::check_time'],['../structPopAccountData.html#a7d3b3740a49e6a24a9b89dce7c140df2',1,'PopAccountData::check_time']]],
   ['child_32',['child',['../structMuttThread.html#a7067492dadd86f81def9036474086211',1,'MuttThread::child'],['../structChildCtx.html#a1d6b966a78f9523bd3ad8f42b8cc3cff',1,'ChildCtx::child'],['../structPattern.html#a203448c6706d65c4fa65e494e1782194',1,'Pattern::child']]],
   ['child_5fops_33',['child_ops',['../structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472',1,'CompressInfo']]],
-  ['children_34',['children',['../structExpandoNode.html#adc733309e276118e9d3ef72bf8de33d8',1,'ExpandoNode::children'],['../structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae',1,'MuttWindow::children']]],
+  ['children_34',['children',['../structExpandoNode.html#adc733309e276118e9d3ef72bf8de33d8',1,'ExpandoNode::children'],['../structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42',1,'MuttWindow::children']]],
   ['cid_35',['cid',['../structCidMap.html#a7efa1dd6dcb8b04e494ea464c1ae2122',1,'CidMap::cid'],['../structEventColor.html#a944299806d9ebd09fa12892dd156f191',1,'EventColor::cid'],['../structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef',1,'Line::cid']]],
   ['cleanup_36',['cleanup',['../structModule.html#a6b24dc7304da6c2ab480b91aa4c0d7d6',1,'Module::cleanup'],['../structCryptModuleSpecs.html#a964e577093325ada36eccd27f2077799',1,'CryptModuleSpecs::cleanup']]],
   ['clear_5fcache_37',['clear_cache',['../structPopAccountData.html#a4b1f71d4fefd265f465f0cbadcf237b8',1,'PopAccountData']]],

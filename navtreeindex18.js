@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"group__cfg__type__string__minus__equals.html#ga39b01edee80144f697d61eabac90f6ec":[52,8,5,2],
 "group__cfg__type__string__minus__equals.html#ga9ff1478280a1a545aa43c94cf00c126c":[52,8,5,0],
 "group__cfg__type__string__minus__equals.html#gaf932395546f14c7ec28da574b8190c7b":[52,8,5,1],
 "group__cfg__type__string__plus__equals.html":[52,8,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "group__crypto__pgp__invoke__import.html":[52,41,17],
 "group__crypto__pgp__invoke__import.html#ga9b73f1b32f324051fd9c955173f4acec":[52,41,17,0],
 "group__crypto__pgp__invoke__import.html#gacee2a4b90d106433cf7840a98171491f":[52,41,17,1],
-"group__crypto__pgp__make__key__attachment.html":[52,41,13],
-"group__crypto__pgp__make__key__attachment.html#ga9c2457db7807a83563f0ffcddb6705df":[52,41,13,1]
+"group__crypto__pgp__make__key__attachment.html":[52,41,13]
 };

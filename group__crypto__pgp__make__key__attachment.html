@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-177-g48e272</span>
+   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -265,76 +265,76 @@ Functions</h2></td></tr>
 
 <p>Generate a public key attachment - Implements <a class="el" href="structCryptModuleSpecs.html#a8331dbbb3603bed062e7e80342a97b4f">CryptModuleSpecs::pgp_make_key_attachment()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="pgpkey_8c_source.html#l00259">259</a> of file <a class="el" href="pgpkey_8c_source.html">pgpkey.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  260</span>{</div>
-<div class="line"><span class="lineno">  261</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *att = NULL;</div>
-<div class="line"><span class="lineno">  262</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
-<div class="line"><span class="lineno">  263</span>  <span class="keywordtype">char</span> tmp[256] = { 0 };</div>
-<div class="line"><span class="lineno">  264</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
-<div class="line"><span class="lineno">  265</span>  pid_t pid;</div>
-<div class="line"><span class="lineno">  266</span>  <a class="code hl_variable" href="globals_8c.html#a3cf441307286abc7db5e6b8213cfad98">OptPgpCheckTrust</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  267</span> </div>
-<div class="line"><span class="lineno">  268</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *key = <a class="code hl_function" href="pgpkey_8c.html#a50e73af5bd70fc451b5f0170732e19ae">pgp_ask_for_key</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Please enter the key ID: &quot;</span>), NULL,</div>
-<div class="line"><span class="lineno">  269</span>                                           <a class="code hl_define" href="ncrypt_2lib_8h.html#a827146354c736ec416508944692e52b2">KEYFLAG_NO_FLAGS</a>, <a class="code hl_enumvalue" href="pgpkey_8h.html#a0aea3392606559730f643808f9a864e6ab5ce327a30051bb49efdf113b51a1fc5">PGP_PUBRING</a>);</div>
-<div class="line"><span class="lineno">  270</span> </div>
-<div class="line"><span class="lineno">  271</span>  <span class="keywordflow">if</span> (!key)</div>
-<div class="line"><span class="lineno">  272</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;0x%s&quot;</span>, <a class="code hl_function" href="pgp_8c.html#a692583986765bc89f4fb41de97b3d372">pgp_fpr_or_lkeyid</a>(<a class="code hl_function" href="pgpkey_8c.html#afeb400f3575d05ef0aadc9a6c064a4d0">pgp_principal_key</a>(key)));</div>
-<div class="line"><span class="lineno">  275</span>  <a class="code hl_function" href="pgplib_8c.html#a59a66720e87cdb92c505bdf50e49c7aa">pgp_key_free</a>(&amp;key);</div>
-<div class="line"><span class="lineno">  276</span> </div>
-<div class="line"><span class="lineno">  277</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempfile = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  278</span>  <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempfile);</div>
-<div class="line"><span class="lineno">  279</span>  FILE *fp_tmp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile), <span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><span class="lineno">  280</span>  <span class="keywordflow">if</span> (!fp_tmp)</div>
-<div class="line"><span class="lineno">  281</span>  {</div>
-<div class="line"><span class="lineno">  282</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
-<div class="line"><span class="lineno">  283</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  284</span>  }</div>
-<div class="line"><span class="lineno">  285</span> </div>
-<div class="line"><span class="lineno">  286</span>  FILE *fp_null = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
-<div class="line"><span class="lineno">  287</span>  <span class="keywordflow">if</span> (!fp_null)</div>
-<div class="line"><span class="lineno">  288</span>  {</div>
-<div class="line"><span class="lineno">  289</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t open /dev/null&quot;</span>));</div>
-<div class="line"><span class="lineno">  290</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
-<div class="line"><span class="lineno">  291</span>    unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
-<div class="line"><span class="lineno">  292</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  293</span>  }</div>
-<div class="line"><span class="lineno">  294</span> </div>
-<div class="line"><span class="lineno">  295</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invoking PGP...&quot;</span>));</div>
-<div class="line"><span class="lineno">  296</span> </div>
-<div class="line"><span class="lineno">  297</span>  pid = <a class="code hl_function" href="pgpinvoke_8c.html#a6ce58fd133819e138da6a9294ee081bb">pgp_invoke_export</a>(NULL, NULL, NULL, -1, fileno(fp_tmp), fileno(fp_null), tmp);</div>
-<div class="line"><span class="lineno">  298</span>  <span class="keywordflow">if</span> (pid == -1)</div>
-<div class="line"><span class="lineno">  299</span>  {</div>
-<div class="line"><span class="lineno">  300</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create filter&quot;</span>));</div>
-<div class="line"><span class="lineno">  301</span>    unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
-<div class="line"><span class="lineno">  302</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
-<div class="line"><span class="lineno">  303</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_null);</div>
-<div class="line"><span class="lineno">  304</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  305</span>  }</div>
-<div class="line"><span class="lineno">  306</span> </div>
-<div class="line"><span class="lineno">  307</span>  <a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
-<div class="line"><span class="lineno">  308</span> </div>
-<div class="line"><span class="lineno">  309</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
-<div class="line"><span class="lineno">  310</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_null);</div>
-<div class="line"><span class="lineno">  311</span> </div>
-<div class="line"><span class="lineno">  312</span>  att = <a class="code hl_function" href="email_2body_8c.html#a37b346253e3b97aa64bb38ffc8d1ea0c">mutt_body_new</a>();</div>
-<div class="line"><span class="lineno">  313</span>  att-&gt;<a class="code hl_variable" href="structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a">filename</a> = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(tempfile);</div>
-<div class="line"><span class="lineno">  314</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a47191eabf16d34d0deb412c898ed629b">unlink</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  315</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a86721d1d557276cbc9cf69777af8c305">use_disp</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  316</span>  att-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> = <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>;</div>
-<div class="line"><span class="lineno">  317</span>  att-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<span class="stringliteral">&quot;pgp-keys&quot;</span>);</div>
-<div class="line"><span class="lineno">  318</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;PGP Key %s&quot;</span>), tmp);</div>
-<div class="line"><span class="lineno">  319</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a90db5151872e23e56a8f31d68925c121">description</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(buf);</div>
-<div class="line"><span class="lineno">  320</span>  <a class="code hl_function" href="sendlib_8c.html#a3360a74ad39f0bb8e7ae4f84cc52f3be">mutt_update_encoding</a>(att, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
-<div class="line"><span class="lineno">  321</span> </div>
-<div class="line"><span class="lineno">  322</span>  stat(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile), &amp;st);</div>
-<div class="line"><span class="lineno">  323</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = st.st_size;</div>
-<div class="line"><span class="lineno">  324</span> </div>
-<div class="line"><span class="lineno">  325</span>cleanup:</div>
-<div class="line"><span class="lineno">  326</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfile);</div>
-<div class="line"><span class="lineno">  327</span>  <span class="keywordflow">return</span> att;</div>
-<div class="line"><span class="lineno">  328</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pgpkey_8c_source.html#l00258">258</a> of file <a class="el" href="pgpkey_8c_source.html">pgpkey.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  259</span>{</div>
+<div class="line"><span class="lineno">  260</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *att = NULL;</div>
+<div class="line"><span class="lineno">  261</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno">  262</span>  <span class="keywordtype">char</span> tmp[256] = { 0 };</div>
+<div class="line"><span class="lineno">  263</span>  <span class="keyword">struct </span>stat st = { 0 };</div>
+<div class="line"><span class="lineno">  264</span>  pid_t pid;</div>
+<div class="line"><span class="lineno">  265</span>  <a class="code hl_variable" href="globals_8c.html#a3cf441307286abc7db5e6b8213cfad98">OptPgpCheckTrust</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *key = <a class="code hl_function" href="pgpkey_8c.html#a50e73af5bd70fc451b5f0170732e19ae">pgp_ask_for_key</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Please enter the key ID: &quot;</span>), NULL,</div>
+<div class="line"><span class="lineno">  268</span>                                           <a class="code hl_define" href="ncrypt_2lib_8h.html#a827146354c736ec416508944692e52b2">KEYFLAG_NO_FLAGS</a>, <a class="code hl_enumvalue" href="pgpkey_8h.html#a0aea3392606559730f643808f9a864e6ab5ce327a30051bb49efdf113b51a1fc5">PGP_PUBRING</a>);</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>  <span class="keywordflow">if</span> (!key)</div>
+<div class="line"><span class="lineno">  271</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;0x%s&quot;</span>, <a class="code hl_function" href="pgp_8c.html#a692583986765bc89f4fb41de97b3d372">pgp_fpr_or_lkeyid</a>(<a class="code hl_function" href="pgpkey_8c.html#afeb400f3575d05ef0aadc9a6c064a4d0">pgp_principal_key</a>(key)));</div>
+<div class="line"><span class="lineno">  274</span>  <a class="code hl_function" href="pgplib_8c.html#a59a66720e87cdb92c505bdf50e49c7aa">pgp_key_free</a>(&amp;key);</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tempfile = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  277</span>  <a class="code hl_define" href="tmp_8h.html#a271a7828888985955df49205d7846a45">buf_mktemp</a>(tempfile);</div>
+<div class="line"><span class="lineno">  278</span>  FILE *fp_tmp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile), <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">  279</span>  <span class="keywordflow">if</span> (!fp_tmp)</div>
+<div class="line"><span class="lineno">  280</span>  {</div>
+<div class="line"><span class="lineno">  281</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create temporary file&quot;</span>));</div>
+<div class="line"><span class="lineno">  282</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  283</span>  }</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>  FILE *fp_null = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(<span class="stringliteral">&quot;/dev/null&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">  286</span>  <span class="keywordflow">if</span> (!fp_null)</div>
+<div class="line"><span class="lineno">  287</span>  {</div>
+<div class="line"><span class="lineno">  288</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t open /dev/null&quot;</span>));</div>
+<div class="line"><span class="lineno">  289</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
+<div class="line"><span class="lineno">  290</span>    unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
+<div class="line"><span class="lineno">  291</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  292</span>  }</div>
+<div class="line"><span class="lineno">  293</span> </div>
+<div class="line"><span class="lineno">  294</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invoking PGP...&quot;</span>));</div>
+<div class="line"><span class="lineno">  295</span> </div>
+<div class="line"><span class="lineno">  296</span>  pid = <a class="code hl_function" href="pgpinvoke_8c.html#a6ce58fd133819e138da6a9294ee081bb">pgp_invoke_export</a>(NULL, NULL, NULL, -1, fileno(fp_tmp), fileno(fp_null), tmp);</div>
+<div class="line"><span class="lineno">  297</span>  <span class="keywordflow">if</span> (pid == -1)</div>
+<div class="line"><span class="lineno">  298</span>  {</div>
+<div class="line"><span class="lineno">  299</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Can&#39;t create filter&quot;</span>));</div>
+<div class="line"><span class="lineno">  300</span>    unlink(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile));</div>
+<div class="line"><span class="lineno">  301</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
+<div class="line"><span class="lineno">  302</span>    <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_null);</div>
+<div class="line"><span class="lineno">  303</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  304</span>  }</div>
+<div class="line"><span class="lineno">  305</span> </div>
+<div class="line"><span class="lineno">  306</span>  <a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
+<div class="line"><span class="lineno">  307</span> </div>
+<div class="line"><span class="lineno">  308</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_tmp);</div>
+<div class="line"><span class="lineno">  309</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp_null);</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>  att = <a class="code hl_function" href="email_2body_8c.html#a37b346253e3b97aa64bb38ffc8d1ea0c">mutt_body_new</a>();</div>
+<div class="line"><span class="lineno">  312</span>  att-&gt;<a class="code hl_variable" href="structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a">filename</a> = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(tempfile);</div>
+<div class="line"><span class="lineno">  313</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a47191eabf16d34d0deb412c898ed629b">unlink</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  314</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a86721d1d557276cbc9cf69777af8c305">use_disp</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  315</span>  att-&gt;<a class="code hl_variable" href="structBody.html#af77d79aadb278bef8f2829c268f2486f">type</a> = <a class="code hl_enumvalue" href="mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ac5074066199e3f540550ca0b1a38978e">TYPE_APPLICATION</a>;</div>
+<div class="line"><span class="lineno">  316</span>  att-&gt;<a class="code hl_variable" href="structBody.html#ace00f9cba9b46a2d434764335d2fa43a">subtype</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<span class="stringliteral">&quot;pgp-keys&quot;</span>);</div>
+<div class="line"><span class="lineno">  317</span>  snprintf(buf, <span class="keyword">sizeof</span>(buf), <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;PGP Key %s&quot;</span>), tmp);</div>
+<div class="line"><span class="lineno">  318</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a90db5151872e23e56a8f31d68925c121">description</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(buf);</div>
+<div class="line"><span class="lineno">  319</span>  <a class="code hl_function" href="sendlib_8c.html#a3360a74ad39f0bb8e7ae4f84cc52f3be">mutt_update_encoding</a>(att, <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>);</div>
+<div class="line"><span class="lineno">  320</span> </div>
+<div class="line"><span class="lineno">  321</span>  stat(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tempfile), &amp;st);</div>
+<div class="line"><span class="lineno">  322</span>  att-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> = st.st_size;</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>cleanup:</div>
+<div class="line"><span class="lineno">  325</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tempfile);</div>
+<div class="line"><span class="lineno">  326</span>  <span class="keywordflow">return</span> att;</div>
+<div class="line"><span class="lineno">  327</span>}</div>
 <div class="ttc" id="abuffer_8c_html_ad76477cc0c660bc50162393e997233eb"><div class="ttname"><a href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a></div><div class="ttdeci">char * buf_strdup(const struct Buffer *buf)</div><div class="ttdoc">Copy a Buffer&#39;s string.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00571">buffer.c:571</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
 <div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00139">file.h:139</a></div></div>
@@ -344,8 +344,8 @@ Functions</h2></td></tr>
 <div class="ttc" id="amutt_2filter_8c_html_a22c6912b837b1114c3276c990e73dca3"><div class="ttname"><a href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a></div><div class="ttdeci">int filter_wait(pid_t pid)</div><div class="ttdoc">Wait for the exit of a process and return its status.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2filter_8c_source.html#l00220">filter.c:220</a></div></div>
 <div class="ttc" id="apgp_8c_html_a692583986765bc89f4fb41de97b3d372"><div class="ttname"><a href="pgp_8c.html#a692583986765bc89f4fb41de97b3d372">pgp_fpr_or_lkeyid</a></div><div class="ttdeci">char * pgp_fpr_or_lkeyid(struct PgpKeyInfo *k)</div><div class="ttdoc">Get the fingerprint or long keyid.</div><div class="ttdef"><b>Definition</b> <a href="pgp_8c_source.html#l00233">pgp.c:233</a></div></div>
 <div class="ttc" id="apgpinvoke_8c_html_a6ce58fd133819e138da6a9294ee081bb"><div class="ttname"><a href="pgpinvoke_8c.html#a6ce58fd133819e138da6a9294ee081bb">pgp_invoke_export</a></div><div class="ttdeci">pid_t pgp_invoke_export(FILE **fp_pgp_in, FILE **fp_pgp_out, FILE **fp_pgp_err, int fd_pgp_in, int fd_pgp_out, int fd_pgp_err, const char *uids)</div><div class="ttdoc">Use PGP to export a key from the user&#39;s keyring.</div><div class="ttdef"><b>Definition</b> <a href="pgpinvoke_8c_source.html#l00374">pgpinvoke.c:374</a></div></div>
-<div class="ttc" id="apgpkey_8c_html_a50e73af5bd70fc451b5f0170732e19ae"><div class="ttname"><a href="pgpkey_8c.html#a50e73af5bd70fc451b5f0170732e19ae">pgp_ask_for_key</a></div><div class="ttdeci">struct PgpKeyInfo * pgp_ask_for_key(char *tag, const char *whatfor, KeyFlags abilities, enum PgpRing keyring)</div><div class="ttdoc">Ask the user for a PGP key.</div><div class="ttdef"><b>Definition</b> <a href="pgpkey_8c_source.html#l00199">pgpkey.c:199</a></div></div>
-<div class="ttc" id="apgpkey_8c_html_afeb400f3575d05ef0aadc9a6c064a4d0"><div class="ttname"><a href="pgpkey_8c.html#afeb400f3575d05ef0aadc9a6c064a4d0">pgp_principal_key</a></div><div class="ttdeci">struct PgpKeyInfo * pgp_principal_key(struct PgpKeyInfo *key)</div><div class="ttdoc">Get the main (parent) PGP key.</div><div class="ttdef"><b>Definition</b> <a href="pgpkey_8c_source.html#l00092">pgpkey.c:92</a></div></div>
+<div class="ttc" id="apgpkey_8c_html_a50e73af5bd70fc451b5f0170732e19ae"><div class="ttname"><a href="pgpkey_8c.html#a50e73af5bd70fc451b5f0170732e19ae">pgp_ask_for_key</a></div><div class="ttdeci">struct PgpKeyInfo * pgp_ask_for_key(char *tag, const char *whatfor, KeyFlags abilities, enum PgpRing keyring)</div><div class="ttdoc">Ask the user for a PGP key.</div><div class="ttdef"><b>Definition</b> <a href="pgpkey_8c_source.html#l00198">pgpkey.c:198</a></div></div>
+<div class="ttc" id="apgpkey_8c_html_afeb400f3575d05ef0aadc9a6c064a4d0"><div class="ttname"><a href="pgpkey_8c.html#afeb400f3575d05ef0aadc9a6c064a4d0">pgp_principal_key</a></div><div class="ttdeci">struct PgpKeyInfo * pgp_principal_key(struct PgpKeyInfo *key)</div><div class="ttdoc">Get the main (parent) PGP key.</div><div class="ttdef"><b>Definition</b> <a href="pgpkey_8c_source.html#l00091">pgpkey.c:91</a></div></div>
 <div class="ttc" id="apgpkey_8h_html_a0aea3392606559730f643808f9a864e6ab5ce327a30051bb49efdf113b51a1fc5"><div class="ttname"><a href="pgpkey_8h.html#a0aea3392606559730f643808f9a864e6ab5ce327a30051bb49efdf113b51a1fc5">PGP_PUBRING</a></div><div class="ttdeci">@ PGP_PUBRING</div><div class="ttdoc">Public keys.</div><div class="ttdef"><b>Definition</b> <a href="pgpkey_8h_source.html#l00039">pgpkey.h:39</a></div></div>
 <div class="ttc" id="apgplib_8c_html_a59a66720e87cdb92c505bdf50e49c7aa"><div class="ttname"><a href="pgplib_8c.html#a59a66720e87cdb92c505bdf50e49c7aa">pgp_key_free</a></div><div class="ttdeci">void pgp_key_free(struct PgpKeyInfo **kpp)</div><div class="ttdoc">Free a PGP key info.</div><div class="ttdef"><b>Definition</b> <a href="pgplib_8c_source.html#l00201">pgplib.c:201</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>

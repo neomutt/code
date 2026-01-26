@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"core_2mailbox_8h.html#a7ada20153d03e30afe22e55e32d61fea":[2,0,16,10,5],
 "core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e":[2,0,16,10,33],
 "core_2mailbox_8h.html#a84aa4e5fc418eb5f51c6af6e5a7a0388":[2,0,16,10,15],
 "core_2mailbox_8h.html#a88305ccec7ea2352238fad314006d4d4":[2,0,16,10,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "cryptglue_8c.html#a9f42f50373941a87a03df3424ce1b7c4":[2,0,37,11,22],
 "cryptglue_8c.html#a9f57744c7bcac595aa1a8838f83dc369":[2,0,37,11,35],
 "cryptglue_8c.html#aa21c1df7a3803c79c0a79426ec2f4aa2":[2,0,37,11,25],
-"cryptglue_8c.html#aade609beeedeadec75f1c15cfa4b1e61":[2,0,37,11,33],
-"cryptglue_8c.html#aaecf706c319966f9eafd582b58ba531f":[2,0,37,11,2]
+"cryptglue_8c.html#aade609beeedeadec75f1c15cfa4b1e61":[2,0,37,11,33]
 };

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-177-g48e272</span>
+   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -2125,7 +2125,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  973</span>    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">  974</span> </div>
 <div class="line"><span class="lineno">  975</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Fcc: initial mailbox = &#39;%s&#39;\n&quot;</span>, tok);</div>
-<div class="line"><span class="lineno">  976</span>  <span class="comment">/* buf_expand_path already called above for the first token */</span></div>
+<div class="line"><span class="lineno">  976</span>  <span class="comment">/* expand_path already called above for the first token */</span></div>
 <div class="line"><span class="lineno">  977</span>  <span class="keywordtype">int</span> status = <a class="code hl_function" href="#acd4f22db21ca81a6a845ffe6888d141f">mutt_write_fcc</a>(tok, e, msgid, post, fcc, finalpath, sub);</div>
 <div class="line"><span class="lineno">  978</span>  <span class="keywordflow">if</span> (status != 0)</div>
 <div class="line"><span class="lineno">  979</span>    <span class="keywordflow">return</span> status;</div>
@@ -2136,10 +2136,10 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  984</span>    <span class="keywordflow">if</span> (*tok == <span class="charliteral">&#39;\0&#39;</span>)</div>
 <div class="line"><span class="lineno">  985</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  986</span> </div>
-<div class="line"><span class="lineno">  987</span>    <span class="comment">/* Only call buf_expand_path if tok has some data */</span></div>
+<div class="line"><span class="lineno">  987</span>    <span class="comment">/* Only call expand_path if tok has some data */</span></div>
 <div class="line"><span class="lineno">  988</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Fcc: additional mailbox token = &#39;%s&#39;\n&quot;</span>, tok);</div>
 <div class="line"><span class="lineno">  989</span>    <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(fcc_expanded, tok);</div>
-<div class="line"><span class="lineno">  990</span>    <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(fcc_expanded);</div>
+<div class="line"><span class="lineno">  990</span>    <a class="code hl_function" href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a>(fcc_expanded, <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">  991</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;     Additional mailbox expanded = &#39;%s&#39;\n&quot;</span>,</div>
 <div class="line"><span class="lineno">  992</span>               <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(fcc_expanded));</div>
 <div class="line"><span class="lineno">  993</span>    status = <a class="code hl_function" href="#acd4f22db21ca81a6a845ffe6888d141f">mutt_write_fcc</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(fcc_expanded), e, msgid, post, fcc, finalpath, sub);</div>
@@ -2153,14 +2153,14 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno"> 1001</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;fcc_expanded);</div>
 <div class="line"><span class="lineno"> 1002</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno"> 1003</span>}</div>
-<div class="ttc" id="amuttlib_8c_html_adde3990a0490dfba609fc94dbdbfd6b3"><div class="ttname"><a href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a></div><div class="ttdeci">void buf_expand_path(struct Buffer *buf)</div><div class="ttdoc">Create the canonical path.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00314">muttlib.c:314</a></div></div>
+<div class="ttc" id="amuttlib_8c_html_ab8f797f0a3b645c549e1503369a9832b"><div class="ttname"><a href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a></div><div class="ttdeci">void expand_path(struct Buffer *buf, bool regex)</div><div class="ttdoc">Create the canonical path.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00121">muttlib.c:121</a></div></div>
 <div class="ttc" id="asendlib_8c_html_acd4f22db21ca81a6a845ffe6888d141f"><div class="ttname"><a href="#acd4f22db21ca81a6a845ffe6888d141f">mutt_write_fcc</a></div><div class="ttdeci">int mutt_write_fcc(const char *path, struct Email *e, const char *msgid, bool post, const char *fcc, char **finalpath, struct ConfigSubset *sub)</div><div class="ttdoc">Write email to FCC mailbox.</div><div class="ttdef"><b>Definition</b> <a href="sendlib_8c_source.html#l01017">sendlib.c:1017</a></div></div>
 </div><!-- fragment --><div id="dynsection-33" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-33-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-33-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="sendlib_8c_a8957ce367f6683e839e4ddb7245d466c_cgraph.svg" width="530" height="352"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="sendlib_8c_a8957ce367f6683e839e4ddb7245d466c_cgraph.svg" width="514" height="302"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-34" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>

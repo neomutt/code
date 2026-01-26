@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-177-g48e272</span>
+   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -191,38 +191,38 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   45</span>  <span class="keywordtype">int</span> space = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
 <div class="line"><span class="lineno">   46</span> </div>
 <div class="line"><span class="lineno">   47</span>  <span class="comment">// Pass one - minimal allocation</span></div>
-<div class="line"><span class="lineno">   48</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *np = NULL;</div>
-<div class="line"><span class="lineno">   49</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae">children</a>, entries)</div>
+<div class="line"><span class="lineno">   48</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> **wp = NULL;</div>
+<div class="line"><span class="lineno">   49</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(wp, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42">children</a>)</div>
 <div class="line"><span class="lineno">   50</span>  {</div>
-<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b">visible</a>)</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">if</span> (!(*wp)-&gt;state.visible)</div>
 <div class="line"><span class="lineno">   52</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">switch</span> (np-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54">size</a>)</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">switch</span> ((*wp)-&gt;size)</div>
 <div class="line"><span class="lineno">   55</span>    {</div>
 <div class="line"><span class="lineno">   56</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0075b8525a52aaf6af06522984f56d0f">MUTT_WIN_SIZE_FIXED</a>:</div>
 <div class="line"><span class="lineno">   57</span>      {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> avail = <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(space, np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a3d852a60f45c3df06d64dc20114fa3df">req_cols</a>);</div>
-<div class="line"><span class="lineno">   59</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a> = avail;</div>
-<div class="line"><span class="lineno">   60</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
+<div class="line"><span class="lineno">   58</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> avail = <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(space, (*wp)-&gt;req_cols);</div>
+<div class="line"><span class="lineno">   59</span>        (*wp)-&gt;state.cols = avail;</div>
+<div class="line"><span class="lineno">   60</span>        (*wp)-&gt;state.rows = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
 <div class="line"><span class="lineno">   61</span>        space -= avail;</div>
 <div class="line"><span class="lineno">   62</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   63</span>      }</div>
 <div class="line"><span class="lineno">   64</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a">MUTT_WIN_SIZE_MAXIMISE</a>:</div>
 <div class="line"><span class="lineno">   65</span>      {</div>
-<div class="line"><span class="lineno">   66</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a> = 1;</div>
-<div class="line"><span class="lineno">   67</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
+<div class="line"><span class="lineno">   66</span>        (*wp)-&gt;state.cols = 1;</div>
+<div class="line"><span class="lineno">   67</span>        (*wp)-&gt;state.rows = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
 <div class="line"><span class="lineno">   68</span>        max_count++;</div>
 <div class="line"><span class="lineno">   69</span>        space -= 1;</div>
 <div class="line"><span class="lineno">   70</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   71</span>      }</div>
 <div class="line"><span class="lineno">   72</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0112ebcfb8215976b1b148189cf1af28">MUTT_WIN_SIZE_MINIMISE</a>:</div>
 <div class="line"><span class="lineno">   73</span>      {</div>
-<div class="line"><span class="lineno">   74</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
-<div class="line"><span class="lineno">   75</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
-<div class="line"><span class="lineno">   76</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a>;</div>
-<div class="line"><span class="lineno">   77</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a>;</div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_function" href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a>(np);</div>
-<div class="line"><span class="lineno">   79</span>        space -= np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
+<div class="line"><span class="lineno">   74</span>        (*wp)-&gt;state.rows = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
+<div class="line"><span class="lineno">   75</span>        (*wp)-&gt;state.cols = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
+<div class="line"><span class="lineno">   76</span>        (*wp)-&gt;state.row_offset = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a>;</div>
+<div class="line"><span class="lineno">   77</span>        (*wp)-&gt;state.col_offset = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a>;</div>
+<div class="line"><span class="lineno">   78</span>        <a class="code hl_function" href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a>(*wp);</div>
+<div class="line"><span class="lineno">   79</span>        space -= (*wp)-&gt;state.cols;</div>
 <div class="line"><span class="lineno">   80</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   81</span>      }</div>
 <div class="line"><span class="lineno">   82</span>    }</div>
@@ -232,33 +232,33 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   86</span>  <span class="keywordflow">if</span> ((max_count &gt; 0) &amp;&amp; (space &gt; 0))</div>
 <div class="line"><span class="lineno">   87</span>  {</div>
 <div class="line"><span class="lineno">   88</span>    <span class="keywordtype">int</span> alloc = (space + max_count - 1) / max_count;</div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae">children</a>, entries)</div>
+<div class="line"><span class="lineno">   89</span>    <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(wp, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42">children</a>)</div>
 <div class="line"><span class="lineno">   90</span>    {</div>
 <div class="line"><span class="lineno">   91</span>      <span class="keywordflow">if</span> (space == 0)</div>
 <div class="line"><span class="lineno">   92</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   93</span>      <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b">visible</a>)</div>
+<div class="line"><span class="lineno">   93</span>      <span class="keywordflow">if</span> (!(*wp)-&gt;state.visible)</div>
 <div class="line"><span class="lineno">   94</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   95</span>      <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54">size</a> != <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a">MUTT_WIN_SIZE_MAXIMISE</a>)</div>
+<div class="line"><span class="lineno">   95</span>      <span class="keywordflow">if</span> ((*wp)-&gt;size != <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a">MUTT_WIN_SIZE_MAXIMISE</a>)</div>
 <div class="line"><span class="lineno">   96</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">   97</span> </div>
 <div class="line"><span class="lineno">   98</span>      alloc = <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(space, alloc);</div>
-<div class="line"><span class="lineno">   99</span>      np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a> += alloc;</div>
+<div class="line"><span class="lineno">   99</span>      (*wp)-&gt;state.cols += alloc;</div>
 <div class="line"><span class="lineno">  100</span>      space -= alloc;</div>
 <div class="line"><span class="lineno">  101</span>    }</div>
 <div class="line"><span class="lineno">  102</span>  }</div>
 <div class="line"><span class="lineno">  103</span> </div>
 <div class="line"><span class="lineno">  104</span>  <span class="comment">// Pass three - position and recursion</span></div>
 <div class="line"><span class="lineno">  105</span>  <span class="keywordtype">int</span> col = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a>;</div>
-<div class="line"><span class="lineno">  106</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae">children</a>, entries)</div>
+<div class="line"><span class="lineno">  106</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(wp, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42">children</a>)</div>
 <div class="line"><span class="lineno">  107</span>  {</div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b">visible</a>)</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (!(*wp)-&gt;state.visible)</div>
 <div class="line"><span class="lineno">  109</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>    np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a> = col;</div>
-<div class="line"><span class="lineno">  112</span>    np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a>;</div>
-<div class="line"><span class="lineno">  113</span>    col += np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
+<div class="line"><span class="lineno">  111</span>    (*wp)-&gt;state.col_offset = col;</div>
+<div class="line"><span class="lineno">  112</span>    (*wp)-&gt;state.row_offset = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a>;</div>
+<div class="line"><span class="lineno">  113</span>    col += (*wp)-&gt;state.cols;</div>
 <div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>    <a class="code hl_function" href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a>(np);</div>
+<div class="line"><span class="lineno">  115</span>    <a class="code hl_function" href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a>(*wp);</div>
 <div class="line"><span class="lineno">  116</span>  }</div>
 <div class="line"><span class="lineno">  117</span> </div>
 <div class="line"><span class="lineno">  118</span>  <span class="keywordflow">if</span> ((space &gt; 0) &amp;&amp; (win-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54">size</a> == <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0112ebcfb8215976b1b148189cf1af28">MUTT_WIN_SIZE_MINIMISE</a>))</div>
@@ -266,18 +266,16 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  120</span>    win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a> -= space;</div>
 <div class="line"><span class="lineno">  121</span>  }</div>
 <div class="line"><span class="lineno">  122</span>}</div>
+<div class="ttc" id="aarray_8h_html_a6b8ea5fb2f366d7716f5042b347093a6"><div class="ttname"><a href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a></div><div class="ttdeci">#define ARRAY_FOREACH(elem, head)</div><div class="ttdoc">Iterate over all elements of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00223">array.h:223</a></div></div>
 <div class="ttc" id="amemory_8h_html_a3acffbd305ee72dcd4593c0d8af64a4f"><div class="ttname"><a href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a></div><div class="ttdeci">#define MIN(a, b)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00038">memory.h:38</a></div></div>
 <div class="ttc" id="amutt__window_8h_html_ab9e27e42bfb65a070e2e29d16a527929a0075b8525a52aaf6af06522984f56d0f"><div class="ttname"><a href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0075b8525a52aaf6af06522984f56d0f">MUTT_WIN_SIZE_FIXED</a></div><div class="ttdeci">@ MUTT_WIN_SIZE_FIXED</div><div class="ttdoc">Window has a fixed size.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00048">mutt_window.h:48</a></div></div>
 <div class="ttc" id="amutt__window_8h_html_ab9e27e42bfb65a070e2e29d16a527929a0112ebcfb8215976b1b148189cf1af28"><div class="ttname"><a href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0112ebcfb8215976b1b148189cf1af28">MUTT_WIN_SIZE_MINIMISE</a></div><div class="ttdeci">@ MUTT_WIN_SIZE_MINIMISE</div><div class="ttdoc">Window size depends on its children.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00050">mutt_window.h:50</a></div></div>
 <div class="ttc" id="amutt__window_8h_html_ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a"><div class="ttname"><a href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a">MUTT_WIN_SIZE_MAXIMISE</a></div><div class="ttdeci">@ MUTT_WIN_SIZE_MAXIMISE</div><div class="ttdoc">Window wants as much space as possible.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00049">mutt_window.h:49</a></div></div>
-<div class="ttc" id="aqueue_8h_html_a16e5fc168e7f3494d4b1df54447d871e"><div class="ttname"><a href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a></div><div class="ttdeci">#define TAILQ_FOREACH(var, head, field)</div><div class="ttdef"><b>Definition</b> <a href="queue_8h_source.html#l00782">queue.h:782</a></div></div>
 <div class="ttc" id="areflow_8c_html_a50e81ea47b75f474efabdfce6231fe7f"><div class="ttname"><a href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a></div><div class="ttdeci">void window_reflow(struct MuttWindow *win)</div><div class="ttdoc">Reflow Windows.</div><div class="ttdef"><b>Definition</b> <a href="reflow_8c_source.html#l00220">reflow.c:220</a></div></div>
 <div class="ttc" id="astructMuttWindow_html"><div class="ttname"><a href="structMuttWindow.html">MuttWindow</a></div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00122">mutt_window.h:123</a></div></div>
-<div class="ttc" id="astructMuttWindow_html_a3d852a60f45c3df06d64dc20114fa3df"><div class="ttname"><a href="structMuttWindow.html#a3d852a60f45c3df06d64dc20114fa3df">MuttWindow::req_cols</a></div><div class="ttdeci">short req_cols</div><div class="ttdoc">Number of columns required.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00124">mutt_window.h:124</a></div></div>
+<div class="ttc" id="astructMuttWindow_html_a39e689a308070fec97d4c6cb94eb9a42"><div class="ttname"><a href="structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42">MuttWindow::children</a></div><div class="ttdeci">struct MuttWindowArray children</div><div class="ttdoc">Children Windows.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00135">mutt_window.h:135</a></div></div>
 <div class="ttc" id="astructMuttWindow_html_a406b976fc50b1cb5beca6c85e7a3be7f"><div class="ttname"><a href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">MuttWindow::state</a></div><div class="ttdeci">struct WindowState state</div><div class="ttdoc">Current state of the Window.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00127">mutt_window.h:127</a></div></div>
-<div class="ttc" id="astructMuttWindow_html_a97c3ca3910fbe0870259d0f7b8cc5cae"><div class="ttname"><a href="structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae">MuttWindow::children</a></div><div class="ttdeci">struct MuttWindowList children</div><div class="ttdoc">Children Windows.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00136">mutt_window.h:136</a></div></div>
 <div class="ttc" id="astructMuttWindow_html_ac9097698a9f6bd1c84e5a20c1dee5d54"><div class="ttname"><a href="structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54">MuttWindow::size</a></div><div class="ttdeci">enum MuttWindowSize size</div><div class="ttdoc">Type of Window, e.g. MUTT_WIN_SIZE_FIXED.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00131">mutt_window.h:131</a></div></div>
-<div class="ttc" id="astructWindowState_html_a12d3d9c7a7e36ad03cd9004157d2902b"><div class="ttname"><a href="structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b">WindowState::visible</a></div><div class="ttdeci">bool visible</div><div class="ttdoc">Window is visible.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00060">mutt_window.h:60</a></div></div>
 <div class="ttc" id="astructWindowState_html_a557cf2197f9df8fe60f6e1dbfd49ec43"><div class="ttname"><a href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">WindowState::cols</a></div><div class="ttdeci">short cols</div><div class="ttdoc">Number of columns, can be MUTT_WIN_SIZE_UNLIMITED.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00061">mutt_window.h:61</a></div></div>
 <div class="ttc" id="astructWindowState_html_a5f16dfc8603af222e79759ea1f965b13"><div class="ttname"><a href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">WindowState::row_offset</a></div><div class="ttdeci">short row_offset</div><div class="ttdoc">Absolute on-screen row.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00064">mutt_window.h:64</a></div></div>
 <div class="ttc" id="astructWindowState_html_a96421ee35a1d5ec017a8feebeffd5b65"><div class="ttname"><a href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">WindowState::col_offset</a></div><div class="ttdeci">short col_offset</div><div class="ttdoc">Absolute on-screen column.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00063">mutt_window.h:63</a></div></div>
@@ -339,38 +337,38 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  134</span>  <span class="keywordtype">int</span> space = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
 <div class="line"><span class="lineno">  135</span> </div>
 <div class="line"><span class="lineno">  136</span>  <span class="comment">// Pass one - minimal allocation</span></div>
-<div class="line"><span class="lineno">  137</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *np = NULL;</div>
-<div class="line"><span class="lineno">  138</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae">children</a>, entries)</div>
+<div class="line"><span class="lineno">  137</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> **wp = NULL;</div>
+<div class="line"><span class="lineno">  138</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(wp, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42">children</a>)</div>
 <div class="line"><span class="lineno">  139</span>  {</div>
-<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b">visible</a>)</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">if</span> (!(*wp)-&gt;state.visible)</div>
 <div class="line"><span class="lineno">  141</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">switch</span> (np-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54">size</a>)</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">switch</span> ((*wp)-&gt;size)</div>
 <div class="line"><span class="lineno">  144</span>    {</div>
 <div class="line"><span class="lineno">  145</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0075b8525a52aaf6af06522984f56d0f">MUTT_WIN_SIZE_FIXED</a>:</div>
 <div class="line"><span class="lineno">  146</span>      {</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> avail = <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(space, np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a5f230c86f48f70162d2c408b0e9ad6c3">req_rows</a>);</div>
-<div class="line"><span class="lineno">  148</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> = avail;</div>
-<div class="line"><span class="lineno">  149</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
+<div class="line"><span class="lineno">  147</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> avail = <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(space, (*wp)-&gt;req_rows);</div>
+<div class="line"><span class="lineno">  148</span>        (*wp)-&gt;state.rows = avail;</div>
+<div class="line"><span class="lineno">  149</span>        (*wp)-&gt;state.cols = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
 <div class="line"><span class="lineno">  150</span>        space -= avail;</div>
 <div class="line"><span class="lineno">  151</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  152</span>      }</div>
 <div class="line"><span class="lineno">  153</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a">MUTT_WIN_SIZE_MAXIMISE</a>:</div>
 <div class="line"><span class="lineno">  154</span>      {</div>
-<div class="line"><span class="lineno">  155</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> = 1;</div>
-<div class="line"><span class="lineno">  156</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
+<div class="line"><span class="lineno">  155</span>        (*wp)-&gt;state.rows = 1;</div>
+<div class="line"><span class="lineno">  156</span>        (*wp)-&gt;state.cols = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
 <div class="line"><span class="lineno">  157</span>        max_count++;</div>
 <div class="line"><span class="lineno">  158</span>        space -= 1;</div>
 <div class="line"><span class="lineno">  159</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  160</span>      }</div>
 <div class="line"><span class="lineno">  161</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0112ebcfb8215976b1b148189cf1af28">MUTT_WIN_SIZE_MINIMISE</a>:</div>
 <div class="line"><span class="lineno">  162</span>      {</div>
-<div class="line"><span class="lineno">  163</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
-<div class="line"><span class="lineno">  164</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
-<div class="line"><span class="lineno">  165</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a>;</div>
-<div class="line"><span class="lineno">  166</span>        np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a>;</div>
-<div class="line"><span class="lineno">  167</span>        <a class="code hl_function" href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a>(np);</div>
-<div class="line"><span class="lineno">  168</span>        space -= np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
+<div class="line"><span class="lineno">  163</span>        (*wp)-&gt;state.rows = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
+<div class="line"><span class="lineno">  164</span>        (*wp)-&gt;state.cols = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a557cf2197f9df8fe60f6e1dbfd49ec43">cols</a>;</div>
+<div class="line"><span class="lineno">  165</span>        (*wp)-&gt;state.row_offset = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a>;</div>
+<div class="line"><span class="lineno">  166</span>        (*wp)-&gt;state.col_offset = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a>;</div>
+<div class="line"><span class="lineno">  167</span>        <a class="code hl_function" href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a>(*wp);</div>
+<div class="line"><span class="lineno">  168</span>        space -= (*wp)-&gt;state.rows;</div>
 <div class="line"><span class="lineno">  169</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  170</span>      }</div>
 <div class="line"><span class="lineno">  171</span>    }</div>
@@ -380,33 +378,33 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  175</span>  <span class="keywordflow">if</span> ((max_count &gt; 0) &amp;&amp; (space &gt; 0))</div>
 <div class="line"><span class="lineno">  176</span>  {</div>
 <div class="line"><span class="lineno">  177</span>    <span class="keywordtype">int</span> alloc = (space + max_count - 1) / max_count;</div>
-<div class="line"><span class="lineno">  178</span>    <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae">children</a>, entries)</div>
+<div class="line"><span class="lineno">  178</span>    <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(wp, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42">children</a>)</div>
 <div class="line"><span class="lineno">  179</span>    {</div>
 <div class="line"><span class="lineno">  180</span>      <span class="keywordflow">if</span> (space == 0)</div>
 <div class="line"><span class="lineno">  181</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  182</span>      <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b">visible</a>)</div>
+<div class="line"><span class="lineno">  182</span>      <span class="keywordflow">if</span> (!(*wp)-&gt;state.visible)</div>
 <div class="line"><span class="lineno">  183</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  184</span>      <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54">size</a> != <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a">MUTT_WIN_SIZE_MAXIMISE</a>)</div>
+<div class="line"><span class="lineno">  184</span>      <span class="keywordflow">if</span> ((*wp)-&gt;size != <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a63205ec18861a4943cc0f13fce390b7a">MUTT_WIN_SIZE_MAXIMISE</a>)</div>
 <div class="line"><span class="lineno">  185</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  186</span> </div>
 <div class="line"><span class="lineno">  187</span>      alloc = <a class="code hl_define" href="memory_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(space, alloc);</div>
-<div class="line"><span class="lineno">  188</span>      np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> += alloc;</div>
+<div class="line"><span class="lineno">  188</span>      (*wp)-&gt;state.rows += alloc;</div>
 <div class="line"><span class="lineno">  189</span>      space -= alloc;</div>
 <div class="line"><span class="lineno">  190</span>    }</div>
 <div class="line"><span class="lineno">  191</span>  }</div>
 <div class="line"><span class="lineno">  192</span> </div>
 <div class="line"><span class="lineno">  193</span>  <span class="comment">// Pass three - position and recursion</span></div>
 <div class="line"><span class="lineno">  194</span>  <span class="keywordtype">int</span> row = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a>;</div>
-<div class="line"><span class="lineno">  195</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(np, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae">children</a>, entries)</div>
+<div class="line"><span class="lineno">  195</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(wp, &amp;win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42">children</a>)</div>
 <div class="line"><span class="lineno">  196</span>  {</div>
-<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">if</span> (!np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a12d3d9c7a7e36ad03cd9004157d2902b">visible</a>)</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">if</span> (!(*wp)-&gt;state.visible)</div>
 <div class="line"><span class="lineno">  198</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  199</span> </div>
-<div class="line"><span class="lineno">  200</span>    np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a5f16dfc8603af222e79759ea1f965b13">row_offset</a> = row;</div>
-<div class="line"><span class="lineno">  201</span>    np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a> = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a>;</div>
-<div class="line"><span class="lineno">  202</span>    row += np-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>;</div>
+<div class="line"><span class="lineno">  200</span>    (*wp)-&gt;state.row_offset = row;</div>
+<div class="line"><span class="lineno">  201</span>    (*wp)-&gt;state.col_offset = win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#a96421ee35a1d5ec017a8feebeffd5b65">col_offset</a>;</div>
+<div class="line"><span class="lineno">  202</span>    row += (*wp)-&gt;state.rows;</div>
 <div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>    <a class="code hl_function" href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a>(np);</div>
+<div class="line"><span class="lineno">  204</span>    <a class="code hl_function" href="#a50e81ea47b75f474efabdfce6231fe7f">window_reflow</a>(*wp);</div>
 <div class="line"><span class="lineno">  205</span>  }</div>
 <div class="line"><span class="lineno">  206</span> </div>
 <div class="line"><span class="lineno">  207</span>  <span class="keywordflow">if</span> ((space &gt; 0) &amp;&amp; (win-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54">size</a> == <a class="code hl_enumvalue" href="mutt__window_8h.html#ab9e27e42bfb65a070e2e29d16a527929a0112ebcfb8215976b1b148189cf1af28">MUTT_WIN_SIZE_MINIMISE</a>))</div>
@@ -414,7 +412,6 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  209</span>    win-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> -= space;</div>
 <div class="line"><span class="lineno">  210</span>  }</div>
 <div class="line"><span class="lineno">  211</span>}</div>
-<div class="ttc" id="astructMuttWindow_html_a5f230c86f48f70162d2c408b0e9ad6c3"><div class="ttname"><a href="structMuttWindow.html#a5f230c86f48f70162d2c408b0e9ad6c3">MuttWindow::req_rows</a></div><div class="ttdeci">short req_rows</div><div class="ttdoc">Number of rows required.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00125">mutt_window.h:125</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">

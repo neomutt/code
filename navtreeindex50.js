@@ -1,7 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"structHistory.html":[1,0,116],
-"structHistory.html#a1d6f19dfb70d55a01f7238903eb7c0e7":[1,0,116,1],
 "structHistory.html#a282b96ae54687fc0fff518d1808c924f":[1,0,116,2],
 "structHistory.html#a586cfe2bee4f1b7ee52280a147a419b1":[1,0,116,0],
 "structHistoryData.html":[1,0,117],
@@ -249,5 +247,7 @@ var NAVTREEINDEX50 =
 "structMailcapEntry.html#a90972f1dcf7a2510be293e77065e6108":[1,0,146,5],
 "structMailcapEntry.html#a9465c493bab0bd5d9ee072025bad7afd":[1,0,146,3],
 "structMailcapEntry.html#ac195e10d836eb0b886580310c2cf0554":[1,0,146,4],
-"structMailcapEntry.html#ad682bf5b0b80e72f2a9b9196728514e3":[1,0,146,0]
+"structMailcapEntry.html#ad682bf5b0b80e72f2a9b9196728514e3":[1,0,146,0],
+"structMailcapEntry.html#adcea89b25743514d268e8fde508d6295":[1,0,146,9],
+"structMailcapEntry.html#af711c81e4798bf4790fb6dd58d739d68":[1,0,146,10]
 };

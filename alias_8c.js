@@ -13,8 +13,8 @@ var alias_8c =
     [ "mutt_addr_is_user", "alias_8c.html#a9d6f6b4ea9d79c9c33ddd7c6b6ef764b", null ],
     [ "alias_new", "alias_8c.html#aa8bb09e1ec41cd6e59b7de5d00b19380", null ],
     [ "alias_free", "alias_8c.html#a027ff288eb965c15ce16ca26b6467d44", null ],
-    [ "aliaslist_clear", "alias_8c.html#acd9d138830f1b82dfcdc2d39ed3fc38f", null ],
+    [ "aliaslist_clear", "alias_8c.html#a39abd8119598e5448bd20a92d83b6323", null ],
     [ "alias_init", "alias_8c.html#a9f4083666781c1d9d1775c15409a521f", null ],
     [ "alias_cleanup", "alias_8c.html#a0069edd2245ed38eb75ce3835896311c", null ],
-    [ "Aliases", "alias_8c.html#a0831e7ca6080141051db5bde20cb45f7", null ]
+    [ "Aliases", "alias_8c.html#a0a7ce8a9f2b33c91a165e241996c1693", null ]
 ];

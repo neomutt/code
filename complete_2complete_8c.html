@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-177-g48e272</span>
+   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -115,6 +115,7 @@ $(function(){initNavTree('complete_2complete_8c.html',''); initResizable(true); 
 <div class="textblock"><code>#include &quot;config.h&quot;</code><br />
 <code>#include &lt;dirent.h&gt;</code><br />
 <code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="mutt_2lib_8h_source.html">mutt/lib.h</a>&quot;</code><br />
@@ -130,7 +131,7 @@ $(function(){initNavTree('complete_2complete_8c.html',''); initResizable(true); 
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="complete_2complete_8c__incl.svg" width="1179" height="196"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="complete_2complete_8c__incl.svg" width="1199" height="196"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="complete_2complete_8c_source.html">Go to the source code of this file.</a></p>
@@ -191,198 +192,198 @@ Functions</h2></td></tr>
 </dl>
 <p>Given a partial pathname, fill in as much of the rest of the path as is unique. </p>
 
-<p class="definition">Definition at line <a class="el" href="complete_2complete_8c_source.html#l00057">57</a> of file <a class="el" href="complete_2complete_8c_source.html">complete.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
-<div class="line"><span class="lineno">   59</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *p = NULL;</div>
-<div class="line"><span class="lineno">   60</span>  DIR *dir = NULL;</div>
-<div class="line"><span class="lineno">   61</span>  <span class="keyword">struct </span>dirent *de = NULL;</div>
-<div class="line"><span class="lineno">   62</span>  <span class="keywordtype">int</span> init = 0;</div>
-<div class="line"><span class="lineno">   63</span>  <span class="keywordtype">size_t</span> len;</div>
-<div class="line"><span class="lineno">   64</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *dirpart = NULL;</div>
-<div class="line"><span class="lineno">   65</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *exp_dirpart = NULL;</div>
-<div class="line"><span class="lineno">   66</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *filepart = NULL;</div>
-<div class="line"><span class="lineno">   67</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = NULL;</div>
-<div class="line"><span class="lineno">   68</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *imap_path = NULL;</div>
-<div class="line"><span class="lineno">   69</span>  <span class="keywordtype">int</span> rc;</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;completing %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c2f0c035df413a8722b4897d5a88317">OptNews</a>)</div>
-<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="nntp_2complete_8c.html#a308b3b2673b7f280d9dc16b42da7d1b6">nntp_complete</a>(buf);</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_spool_file = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;spool_file&quot;</span>);</div>
-<div class="line"><span class="lineno">   77</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_folder = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;folder&quot;</span>);</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>  imap_path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">   80</span>  <span class="comment">/* we can use &#39;/&#39; as a delimiter, imap_complete rewrites it */</span></div>
-<div class="line"><span class="lineno">   81</span>  <span class="keywordtype">char</span> ch = <a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(buf, 0);</div>
-<div class="line"><span class="lineno">   82</span>  <span class="keywordflow">if</span> ((ch == <span class="charliteral">&#39;=&#39;</span>) || (ch == <span class="charliteral">&#39;+&#39;</span>) || (ch == <span class="charliteral">&#39;!&#39;</span>))</div>
-<div class="line"><span class="lineno">   83</span>  {</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;!&#39;</span>)</div>
-<div class="line"><span class="lineno">   85</span>      p = <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_spool_file);</div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   87</span>      p = <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_folder);</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>    <a class="code hl_function" href="buffer_8c.html#adaa2f71e71ace3ab78dacac4dabe99cf">buf_concat_path</a>(imap_path, p, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) + 1);</div>
-<div class="line"><span class="lineno">   90</span>  }</div>
-<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   92</span>  {</div>
-<div class="line"><span class="lineno">   93</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(imap_path, buf);</div>
-<div class="line"><span class="lineno">   94</span>  }</div>
-<div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="group__mx__path__probe.html#gab4f27af8eb857a20834f445be3f498de">imap_path_probe</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(imap_path), NULL) == <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da7f541a03089370b1a260e344f8d1809b">MUTT_IMAP</a>)</div>
-<div class="line"><span class="lineno">   97</span>  {</div>
-<div class="line"><span class="lineno">   98</span>    rc = <a class="code hl_function" href="imap_8c.html#a62122ec7ec3d9da81be09a650bf27977">imap_complete</a>(buf, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(imap_path));</div>
-<div class="line"><span class="lineno">   99</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;imap_path);</div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  101</span>  }</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;imap_path);</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>  dirpart = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  106</span>  exp_dirpart = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  107</span>  filepart = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  108</span>  tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>  ch = <a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(buf, 0);</div>
-<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">if</span> ((ch == <span class="charliteral">&#39;=&#39;</span>) || (ch == <span class="charliteral">&#39;+&#39;</span>) || (ch == <span class="charliteral">&#39;!&#39;</span>))</div>
-<div class="line"><span class="lineno">  112</span>  {</div>
-<div class="line"><span class="lineno">  113</span>    <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dirpart, ch);</div>
-<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;!&#39;</span>)</div>
-<div class="line"><span class="lineno">  115</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(exp_dirpart, c_spool_file);</div>
-<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  117</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(exp_dirpart, c_folder);</div>
-<div class="line"><span class="lineno">  118</span>    p = strrchr(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">if</span> (p)</div>
-<div class="line"><span class="lineno">  120</span>    {</div>
-<div class="line"><span class="lineno">  121</span>      <a class="code hl_function" href="buffer_8c.html#a790eb01e3d4134cf179573893840ab7c">buf_concatn_path</a>(tmp, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(exp_dirpart), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(exp_dirpart),</div>
-<div class="line"><span class="lineno">  122</span>                       <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) + 1, (<span class="keywordtype">size_t</span>) (p - <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) - 1));</div>
-<div class="line"><span class="lineno">  123</span>      <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(exp_dirpart, tmp);</div>
-<div class="line"><span class="lineno">  124</span>      <a class="code hl_function" href="buffer_8c.html#af1ca165104451f7e0b00aa684cd93d37">buf_substrcpy</a>(dirpart, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), p + 1);</div>
-<div class="line"><span class="lineno">  125</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, p + 1);</div>
-<div class="line"><span class="lineno">  126</span>    }</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  128</span>    {</div>
-<div class="line"><span class="lineno">  129</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) + 1);</div>
-<div class="line"><span class="lineno">  130</span>    }</div>
-<div class="line"><span class="lineno">  131</span>    dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(exp_dirpart), <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>);</div>
-<div class="line"><span class="lineno">  132</span>  }</div>
-<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  134</span>  {</div>
-<div class="line"><span class="lineno">  135</span>    p = strrchr(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span> (p)</div>
-<div class="line"><span class="lineno">  137</span>    {</div>
-<div class="line"><span class="lineno">  138</span>      <span class="keywordflow">if</span> (p == <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf)) <span class="comment">/* absolute path */</span></div>
-<div class="line"><span class="lineno">  139</span>      {</div>
-<div class="line"><span class="lineno">  140</span>        p = <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) + 1;</div>
-<div class="line"><span class="lineno">  141</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(dirpart, <span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><span class="lineno">  142</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, p);</div>
-<div class="line"><span class="lineno">  143</span>        dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dirpart), <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>);</div>
-<div class="line"><span class="lineno">  144</span>      }</div>
-<div class="line"><span class="lineno">  145</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  146</span>      {</div>
-<div class="line"><span class="lineno">  147</span>        <a class="code hl_function" href="buffer_8c.html#af1ca165104451f7e0b00aa684cd93d37">buf_substrcpy</a>(dirpart, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), p);</div>
-<div class="line"><span class="lineno">  148</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, p + 1);</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(exp_dirpart, dirpart);</div>
-<div class="line"><span class="lineno">  150</span>        <a class="code hl_function" href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a>(exp_dirpart);</div>
-<div class="line"><span class="lineno">  151</span>        dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(exp_dirpart), <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>);</div>
-<div class="line"><span class="lineno">  152</span>      }</div>
-<div class="line"><span class="lineno">  153</span>    }</div>
-<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  155</span>    {</div>
-<div class="line"><span class="lineno">  156</span>      <span class="comment">/* no directory name, so assume current directory. */</span></div>
-<div class="line"><span class="lineno">  157</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
-<div class="line"><span class="lineno">  158</span>      dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(<span class="stringliteral">&quot;.&quot;</span>, <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>);</div>
-<div class="line"><span class="lineno">  159</span>    }</div>
-<div class="line"><span class="lineno">  160</span>  }</div>
-<div class="line"><span class="lineno">  161</span> </div>
-<div class="line"><span class="lineno">  162</span>  <span class="keywordflow">if</span> (!dir)</div>
-<div class="line"><span class="lineno">  163</span>  {</div>
-<div class="line"><span class="lineno">  164</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;%s: %s (errno %d)\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(exp_dirpart),</div>
-<div class="line"><span class="lineno">  165</span>               strerror(errno), errno);</div>
-<div class="line"><span class="lineno">  166</span>    <span class="keywordflow">goto</span> cleanup;</div>
-<div class="line"><span class="lineno">  167</span>  }</div>
-<div class="line"><span class="lineno">  168</span> </div>
-<div class="line"><span class="lineno">  169</span>  <span class="comment">/* special case to handle when there is no filepart yet.  find the first</span></div>
-<div class="line"><span class="lineno">  170</span><span class="comment">   * file/directory which is not &quot;.&quot; or &quot;..&quot; */</span></div>
-<div class="line"><span class="lineno">  171</span>  len = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(filepart);</div>
-<div class="line"><span class="lineno">  172</span>  <span class="keywordflow">if</span> (len == 0)</div>
-<div class="line"><span class="lineno">  173</span>  {</div>
-<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">while</span> ((de = readdir(dir)))</div>
-<div class="line"><span class="lineno">  175</span>    {</div>
-<div class="line"><span class="lineno">  176</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;.&quot;</span>, de-&gt;d_name) &amp;&amp; !<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;..&quot;</span>, de-&gt;d_name))</div>
-<div class="line"><span class="lineno">  177</span>      {</div>
-<div class="line"><span class="lineno">  178</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, de-&gt;d_name);</div>
-<div class="line"><span class="lineno">  179</span>        init++;</div>
-<div class="line"><span class="lineno">  180</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  181</span>      }</div>
-<div class="line"><span class="lineno">  182</span>    }</div>
-<div class="line"><span class="lineno">  183</span>  }</div>
-<div class="line"><span class="lineno">  184</span> </div>
-<div class="line"><span class="lineno">  185</span>  <span class="keywordflow">while</span> ((de = readdir(dir)))</div>
-<div class="line"><span class="lineno">  186</span>  {</div>
-<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(de-&gt;d_name, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(filepart), len))</div>
-<div class="line"><span class="lineno">  188</span>    {</div>
-<div class="line"><span class="lineno">  189</span>      <span class="keywordflow">if</span> (init)</div>
-<div class="line"><span class="lineno">  190</span>      {</div>
-<div class="line"><span class="lineno">  191</span>        <span class="keywordtype">char</span> *cp = filepart-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
-<div class="line"><span class="lineno">  192</span> </div>
-<div class="line"><span class="lineno">  193</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (*cp != <span class="charliteral">&#39;\0&#39;</span>) &amp;&amp; (de-&gt;d_name[i] != <span class="charliteral">&#39;\0&#39;</span>); i++, cp++)</div>
-<div class="line"><span class="lineno">  194</span>        {</div>
-<div class="line"><span class="lineno">  195</span>          <span class="keywordflow">if</span> (*cp != de-&gt;d_name[i])</div>
-<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  197</span>        }</div>
-<div class="line"><span class="lineno">  198</span>        *cp = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  199</span>        <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(filepart);</div>
-<div class="line"><span class="lineno">  200</span>      }</div>
-<div class="line"><span class="lineno">  201</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  202</span>      {</div>
-<div class="line"><span class="lineno">  203</span>        <span class="keyword">struct </span>stat st = { 0 };</div>
-<div class="line"><span class="lineno">  204</span> </div>
-<div class="line"><span class="lineno">  205</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, de-&gt;d_name);</div>
-<div class="line"><span class="lineno">  206</span> </div>
-<div class="line"><span class="lineno">  207</span>        <span class="comment">/* check to see if it is a directory */</span></div>
-<div class="line"><span class="lineno">  208</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(dirpart))</div>
-<div class="line"><span class="lineno">  209</span>        {</div>
-<div class="line"><span class="lineno">  210</span>          <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(tmp);</div>
-<div class="line"><span class="lineno">  211</span>        }</div>
-<div class="line"><span class="lineno">  212</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  213</span>        {</div>
-<div class="line"><span class="lineno">  214</span>          <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(tmp, exp_dirpart);</div>
-<div class="line"><span class="lineno">  215</span>          <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(tmp, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  216</span>        }</div>
-<div class="line"><span class="lineno">  217</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(tmp, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(filepart));</div>
-<div class="line"><span class="lineno">  218</span>        <span class="keywordflow">if</span> ((stat(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tmp), &amp;st) != -1) &amp;&amp; (st.st_mode &amp; S_IFDIR))</div>
-<div class="line"><span class="lineno">  219</span>          <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(filepart, <span class="charliteral">&#39;/&#39;</span>);</div>
-<div class="line"><span class="lineno">  220</span>        init = 1;</div>
-<div class="line"><span class="lineno">  221</span>      }</div>
-<div class="line"><span class="lineno">  222</span>    }</div>
-<div class="line"><span class="lineno">  223</span>  }</div>
-<div class="line"><span class="lineno">  224</span>  closedir(dir);</div>
-<div class="line"><span class="lineno">  225</span> </div>
-<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(dirpart))</div>
-<div class="line"><span class="lineno">  227</span>  {</div>
-<div class="line"><span class="lineno">  228</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(buf, filepart);</div>
-<div class="line"><span class="lineno">  229</span>  }</div>
-<div class="line"><span class="lineno">  230</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  231</span>  {</div>
-<div class="line"><span class="lineno">  232</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(buf, dirpart);</div>
-<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;/&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dirpart)) &amp;&amp;</div>
-<div class="line"><span class="lineno">  234</span>        (<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dirpart)[0] != <span class="charliteral">&#39;=&#39;</span>) &amp;&amp; (<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dirpart)[0] != <span class="charliteral">&#39;+&#39;</span>))</div>
-<div class="line"><span class="lineno">  235</span>    {</div>
-<div class="line"><span class="lineno">  236</span>      <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><span class="lineno">  237</span>    }</div>
-<div class="line"><span class="lineno">  238</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(filepart));</div>
-<div class="line"><span class="lineno">  239</span>  }</div>
-<div class="line"><span class="lineno">  240</span> </div>
-<div class="line"><span class="lineno">  241</span>cleanup:</div>
-<div class="line"><span class="lineno">  242</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;dirpart);</div>
-<div class="line"><span class="lineno">  243</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;exp_dirpart);</div>
-<div class="line"><span class="lineno">  244</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;filepart);</div>
-<div class="line"><span class="lineno">  245</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
-<div class="line"><span class="lineno">  246</span> </div>
-<div class="line"><span class="lineno">  247</span>  <span class="keywordflow">return</span> init ? 0 : -1;</div>
-<div class="line"><span class="lineno">  248</span>}</div>
+<p class="definition">Definition at line <a class="el" href="complete_2complete_8c_source.html#l00058">58</a> of file <a class="el" href="complete_2complete_8c_source.html">complete.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>{</div>
+<div class="line"><span class="lineno">   60</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *p = NULL;</div>
+<div class="line"><span class="lineno">   61</span>  DIR *dir = NULL;</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keyword">struct </span>dirent *de = NULL;</div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordtype">int</span> init = 0;</div>
+<div class="line"><span class="lineno">   64</span>  <span class="keywordtype">size_t</span> len;</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *dirpart = NULL;</div>
+<div class="line"><span class="lineno">   66</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *exp_dirpart = NULL;</div>
+<div class="line"><span class="lineno">   67</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *filepart = NULL;</div>
+<div class="line"><span class="lineno">   68</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = NULL;</div>
+<div class="line"><span class="lineno">   69</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *imap_path = NULL;</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordtype">int</span> rc;</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;completing %s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="globals_8c.html#a0c2f0c035df413a8722b4897d5a88317">OptNews</a>)</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="nntp_2complete_8c.html#a308b3b2673b7f280d9dc16b42da7d1b6">nntp_complete</a>(buf);</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_spool_file = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;spool_file&quot;</span>);</div>
+<div class="line"><span class="lineno">   78</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_folder = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;folder&quot;</span>);</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>  imap_path = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">   81</span>  <span class="comment">/* we can use &#39;/&#39; as a delimiter, imap_complete rewrites it */</span></div>
+<div class="line"><span class="lineno">   82</span>  <span class="keywordtype">char</span> ch = <a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(buf, 0);</div>
+<div class="line"><span class="lineno">   83</span>  <span class="keywordflow">if</span> ((ch == <span class="charliteral">&#39;=&#39;</span>) || (ch == <span class="charliteral">&#39;+&#39;</span>) || (ch == <span class="charliteral">&#39;!&#39;</span>))</div>
+<div class="line"><span class="lineno">   84</span>  {</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;!&#39;</span>)</div>
+<div class="line"><span class="lineno">   86</span>      p = <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_spool_file);</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   88</span>      p = <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_folder);</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_function" href="buffer_8c.html#adaa2f71e71ace3ab78dacac4dabe99cf">buf_concat_path</a>(imap_path, p, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) + 1);</div>
+<div class="line"><span class="lineno">   91</span>  }</div>
+<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   93</span>  {</div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(imap_path, buf);</div>
+<div class="line"><span class="lineno">   95</span>  }</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="group__mx__path__probe.html#gab4f27af8eb857a20834f445be3f498de">imap_path_probe</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(imap_path), NULL) == <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da7f541a03089370b1a260e344f8d1809b">MUTT_IMAP</a>)</div>
+<div class="line"><span class="lineno">   98</span>  {</div>
+<div class="line"><span class="lineno">   99</span>    rc = <a class="code hl_function" href="imap_8c.html#a62122ec7ec3d9da81be09a650bf27977">imap_complete</a>(buf, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(imap_path));</div>
+<div class="line"><span class="lineno">  100</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;imap_path);</div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  102</span>  }</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;imap_path);</div>
+<div class="line"><span class="lineno">  105</span> </div>
+<div class="line"><span class="lineno">  106</span>  dirpart = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  107</span>  exp_dirpart = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  108</span>  filepart = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  109</span>  tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>  ch = <a class="code hl_function" href="buffer_8c.html#a52e24da79941dc16d5577dac9dfc2698">buf_at</a>(buf, 0);</div>
+<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">if</span> ((ch == <span class="charliteral">&#39;=&#39;</span>) || (ch == <span class="charliteral">&#39;+&#39;</span>) || (ch == <span class="charliteral">&#39;!&#39;</span>))</div>
+<div class="line"><span class="lineno">  113</span>  {</div>
+<div class="line"><span class="lineno">  114</span>    <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(dirpart, ch);</div>
+<div class="line"><span class="lineno">  115</span>    <span class="keywordflow">if</span> (ch == <span class="charliteral">&#39;!&#39;</span>)</div>
+<div class="line"><span class="lineno">  116</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(exp_dirpart, c_spool_file);</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  118</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(exp_dirpart, c_folder);</div>
+<div class="line"><span class="lineno">  119</span>    p = strrchr(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">if</span> (p)</div>
+<div class="line"><span class="lineno">  121</span>    {</div>
+<div class="line"><span class="lineno">  122</span>      <a class="code hl_function" href="buffer_8c.html#a790eb01e3d4134cf179573893840ab7c">buf_concatn_path</a>(tmp, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(exp_dirpart), <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(exp_dirpart),</div>
+<div class="line"><span class="lineno">  123</span>                       <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) + 1, (<span class="keywordtype">size_t</span>) (p - <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) - 1));</div>
+<div class="line"><span class="lineno">  124</span>      <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(exp_dirpart, tmp);</div>
+<div class="line"><span class="lineno">  125</span>      <a class="code hl_function" href="buffer_8c.html#af1ca165104451f7e0b00aa684cd93d37">buf_substrcpy</a>(dirpart, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), p + 1);</div>
+<div class="line"><span class="lineno">  126</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, p + 1);</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  129</span>    {</div>
+<div class="line"><span class="lineno">  130</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) + 1);</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span>    dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(exp_dirpart), <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>);</div>
+<div class="line"><span class="lineno">  133</span>  }</div>
+<div class="line"><span class="lineno">  134</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  135</span>  {</div>
+<div class="line"><span class="lineno">  136</span>    p = strrchr(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">if</span> (p)</div>
+<div class="line"><span class="lineno">  138</span>    {</div>
+<div class="line"><span class="lineno">  139</span>      <span class="keywordflow">if</span> (p == <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf)) <span class="comment">/* absolute path */</span></div>
+<div class="line"><span class="lineno">  140</span>      {</div>
+<div class="line"><span class="lineno">  141</span>        p = <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf) + 1;</div>
+<div class="line"><span class="lineno">  142</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(dirpart, <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><span class="lineno">  143</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, p);</div>
+<div class="line"><span class="lineno">  144</span>        dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dirpart), <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>);</div>
+<div class="line"><span class="lineno">  145</span>      }</div>
+<div class="line"><span class="lineno">  146</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  147</span>      {</div>
+<div class="line"><span class="lineno">  148</span>        <a class="code hl_function" href="buffer_8c.html#af1ca165104451f7e0b00aa684cd93d37">buf_substrcpy</a>(dirpart, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), p);</div>
+<div class="line"><span class="lineno">  149</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, p + 1);</div>
+<div class="line"><span class="lineno">  150</span>        <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(exp_dirpart, dirpart);</div>
+<div class="line"><span class="lineno">  151</span>        <a class="code hl_function" href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a>(exp_dirpart, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  152</span>        dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(exp_dirpart), <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>);</div>
+<div class="line"><span class="lineno">  153</span>      }</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="line"><span class="lineno">  155</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  156</span>    {</div>
+<div class="line"><span class="lineno">  157</span>      <span class="comment">/* no directory name, so assume current directory. */</span></div>
+<div class="line"><span class="lineno">  158</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
+<div class="line"><span class="lineno">  159</span>      dir = <a class="code hl_function" href="file_8c.html#a69da918c66c3f22815d6e4aed88b6122">mutt_file_opendir</a>(<span class="stringliteral">&quot;.&quot;</span>, <a class="code hl_enumvalue" href="file_8h.html#a222e4f679593f00cd8c126212b3cdb3ba88d03a1ea19c4b7fdccd5dfc936a7a60">MUTT_OPENDIR_NONE</a>);</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="line"><span class="lineno">  161</span>  }</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>  <span class="keywordflow">if</span> (!dir)</div>
+<div class="line"><span class="lineno">  164</span>  {</div>
+<div class="line"><span class="lineno">  165</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;%s: %s (errno %d)\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(exp_dirpart),</div>
+<div class="line"><span class="lineno">  166</span>               strerror(errno), errno);</div>
+<div class="line"><span class="lineno">  167</span>    <span class="keywordflow">goto</span> cleanup;</div>
+<div class="line"><span class="lineno">  168</span>  }</div>
+<div class="line"><span class="lineno">  169</span> </div>
+<div class="line"><span class="lineno">  170</span>  <span class="comment">/* special case to handle when there is no filepart yet.  find the first</span></div>
+<div class="line"><span class="lineno">  171</span><span class="comment">   * file/directory which is not &quot;.&quot; or &quot;..&quot; */</span></div>
+<div class="line"><span class="lineno">  172</span>  len = <a class="code hl_function" href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a>(filepart);</div>
+<div class="line"><span class="lineno">  173</span>  <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><span class="lineno">  174</span>  {</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">while</span> ((de = readdir(dir)))</div>
+<div class="line"><span class="lineno">  176</span>    {</div>
+<div class="line"><span class="lineno">  177</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;.&quot;</span>, de-&gt;d_name) &amp;&amp; !<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;..&quot;</span>, de-&gt;d_name))</div>
+<div class="line"><span class="lineno">  178</span>      {</div>
+<div class="line"><span class="lineno">  179</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, de-&gt;d_name);</div>
+<div class="line"><span class="lineno">  180</span>        init++;</div>
+<div class="line"><span class="lineno">  181</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  182</span>      }</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+<div class="line"><span class="lineno">  184</span>  }</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  186</span>  <span class="keywordflow">while</span> ((de = readdir(dir)))</div>
+<div class="line"><span class="lineno">  187</span>  {</div>
+<div class="line"><span class="lineno">  188</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(de-&gt;d_name, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(filepart), len))</div>
+<div class="line"><span class="lineno">  189</span>    {</div>
+<div class="line"><span class="lineno">  190</span>      <span class="keywordflow">if</span> (init)</div>
+<div class="line"><span class="lineno">  191</span>      {</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordtype">char</span> *cp = filepart-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; (*cp != <span class="charliteral">&#39;\0&#39;</span>) &amp;&amp; (de-&gt;d_name[i] != <span class="charliteral">&#39;\0&#39;</span>); i++, cp++)</div>
+<div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>          <span class="keywordflow">if</span> (*cp != de-&gt;d_name[i])</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  198</span>        }</div>
+<div class="line"><span class="lineno">  199</span>        *cp = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  200</span>        <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(filepart);</div>
+<div class="line"><span class="lineno">  201</span>      }</div>
+<div class="line"><span class="lineno">  202</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  203</span>      {</div>
+<div class="line"><span class="lineno">  204</span>        <span class="keyword">struct </span>stat st = { 0 };</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(filepart, de-&gt;d_name);</div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>        <span class="comment">/* check to see if it is a directory */</span></div>
+<div class="line"><span class="lineno">  209</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(dirpart))</div>
+<div class="line"><span class="lineno">  210</span>        {</div>
+<div class="line"><span class="lineno">  211</span>          <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(tmp);</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+<div class="line"><span class="lineno">  213</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  214</span>        {</div>
+<div class="line"><span class="lineno">  215</span>          <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(tmp, exp_dirpart);</div>
+<div class="line"><span class="lineno">  216</span>          <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(tmp, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  217</span>        }</div>
+<div class="line"><span class="lineno">  218</span>        <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(tmp, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(filepart));</div>
+<div class="line"><span class="lineno">  219</span>        <span class="keywordflow">if</span> ((stat(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tmp), &amp;st) != -1) &amp;&amp; (st.st_mode &amp; S_IFDIR))</div>
+<div class="line"><span class="lineno">  220</span>          <a class="code hl_function" href="buffer_8c.html#a9765efbb7f2c32e46fb1cb271a02ba20">buf_addch</a>(filepart, <span class="charliteral">&#39;/&#39;</span>);</div>
+<div class="line"><span class="lineno">  221</span>        init = 1;</div>
+<div class="line"><span class="lineno">  222</span>      }</div>
+<div class="line"><span class="lineno">  223</span>    }</div>
+<div class="line"><span class="lineno">  224</span>  }</div>
+<div class="line"><span class="lineno">  225</span>  closedir(dir);</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(dirpart))</div>
+<div class="line"><span class="lineno">  228</span>  {</div>
+<div class="line"><span class="lineno">  229</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(buf, filepart);</div>
+<div class="line"><span class="lineno">  230</span>  }</div>
+<div class="line"><span class="lineno">  231</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  232</span>  {</div>
+<div class="line"><span class="lineno">  233</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(buf, dirpart);</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(<span class="stringliteral">&quot;/&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dirpart)) &amp;&amp;</div>
+<div class="line"><span class="lineno">  235</span>        (<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dirpart)[0] != <span class="charliteral">&#39;=&#39;</span>) &amp;&amp; (<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(dirpart)[0] != <span class="charliteral">&#39;+&#39;</span>))</div>
+<div class="line"><span class="lineno">  236</span>    {</div>
+<div class="line"><span class="lineno">  237</span>      <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><span class="lineno">  238</span>    }</div>
+<div class="line"><span class="lineno">  239</span>    <a class="code hl_function" href="buffer_8c.html#a9924e74ddcb5280ab380e4627d1fba99">buf_addstr</a>(buf, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(filepart));</div>
+<div class="line"><span class="lineno">  240</span>  }</div>
+<div class="line"><span class="lineno">  241</span> </div>
+<div class="line"><span class="lineno">  242</span>cleanup:</div>
+<div class="line"><span class="lineno">  243</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;dirpart);</div>
+<div class="line"><span class="lineno">  244</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;exp_dirpart);</div>
+<div class="line"><span class="lineno">  245</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;filepart);</div>
+<div class="line"><span class="lineno">  246</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>  <span class="keywordflow">return</span> init ? 0 : -1;</div>
+<div class="line"><span class="lineno">  249</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a2914dc2d9a9d77e4c9970b4249be9370"><div class="ttname"><a href="buffer_8c.html#a2914dc2d9a9d77e4c9970b4249be9370">buf_len</a></div><div class="ttdeci">size_t buf_len(const struct Buffer *buf)</div><div class="ttdoc">Calculate the length of a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00491">buffer.c:491</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00076">buffer.c:76</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00291">buffer.c:291</a></div></div>
@@ -408,7 +409,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00662">string.c:662</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a6f574867aa9db4d434adbc8af1f5f7e7"><div class="ttname"><a href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a></div><div class="ttdeci">bool mutt_strn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings (to a maximum), safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00429">string.c:429</a></div></div>
-<div class="ttc" id="amuttlib_8c_html_adde3990a0490dfba609fc94dbdbfd6b3"><div class="ttname"><a href="muttlib_8c.html#adde3990a0490dfba609fc94dbdbfd6b3">buf_expand_path</a></div><div class="ttdeci">void buf_expand_path(struct Buffer *buf)</div><div class="ttdoc">Create the canonical path.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00314">muttlib.c:314</a></div></div>
+<div class="ttc" id="amuttlib_8c_html_ab8f797f0a3b645c549e1503369a9832b"><div class="ttname"><a href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a></div><div class="ttdeci">void expand_path(struct Buffer *buf, bool regex)</div><div class="ttdoc">Create the canonical path.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00121">muttlib.c:121</a></div></div>
 <div class="ttc" id="anntp_2complete_8c_html_a308b3b2673b7f280d9dc16b42da7d1b6"><div class="ttname"><a href="nntp_2complete_8c.html#a308b3b2673b7f280d9dc16b42da7d1b6">nntp_complete</a></div><div class="ttdeci">int nntp_complete(struct Buffer *buf)</div><div class="ttdoc">Auto-complete NNTP newsgroups.</div><div class="ttdef"><b>Definition</b> <a href="nntp_2complete_8c_source.html#l00046">complete.c:46</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00082">pool.c:82</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00096">pool.c:96</a></div></div>
@@ -422,7 +423,7 @@ Functions</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="complete_2complete_8c_a270c75621efdb47cc597be454c1c77a2_cgraph.svg" width="616" height="1180"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="complete_2complete_8c_a270c75621efdb47cc597be454c1c77a2_cgraph.svg" width="619" height="1178"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>

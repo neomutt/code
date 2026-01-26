@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-177-g48e272</span>
+   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -1649,162 +1649,162 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pattern_8c_source.html#l00306">306</a> of file <a class="el" href="pattern_8c_source.html">pattern.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  307</span>{</div>
-<div class="line"><span class="lineno">  308</span>  <span class="keywordflow">if</span> (!mv || !mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a>)</div>
-<div class="line"><span class="lineno">  309</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  310</span> </div>
-<div class="line"><span class="lineno">  311</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a>;</div>
-<div class="line"><span class="lineno">  312</span> </div>
-<div class="line"><span class="lineno">  313</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = NULL;</div>
-<div class="line"><span class="lineno">  314</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">  315</span>  <span class="keyword">struct </span>Progress *progress = NULL;</div>
-<div class="line"><span class="lineno">  316</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  317</span>  <span class="keywordtype">bool</span> interrupted = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  318</span> </div>
-<div class="line"><span class="lineno">  319</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(buf, mv-&gt;<a class="code hl_variable" href="structMailboxView.html#af8fca3e8597f3f4fd45d49666e2772d3">pattern</a>);</div>
-<div class="line"><span class="lineno">  320</span>  <span class="keywordflow">if</span> (prompt || (op != <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a37fea75d3b203adad99419b9f369ccd0">MUTT_LIMIT</a>))</div>
-<div class="line"><span class="lineno">  321</span>  {</div>
-<div class="line"><span class="lineno">  322</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(prompt, buf, <a class="code hl_define" href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b">HC_PATTERN</a>, &amp;<a class="code hl_variable" href="pattern_2complete_8c.html#afd86dbf76bd277050b61b4b556f57ced">CompletePatternOps</a>, NULL) != 0) ||</div>
-<div class="line"><span class="lineno">  323</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
-<div class="line"><span class="lineno">  324</span>    {</div>
-<div class="line"><span class="lineno">  325</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  326</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  327</span>    }</div>
-<div class="line"><span class="lineno">  328</span>  }</div>
-<div class="line"><span class="lineno">  329</span> </div>
-<div class="line"><span class="lineno">  330</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Compiling search pattern...&quot;</span>));</div>
-<div class="line"><span class="lineno">  331</span> </div>
-<div class="line"><span class="lineno">  332</span>  <span class="keywordtype">char</span> *simple = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
-<div class="line"><span class="lineno">  333</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_simple_search = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;simple_search&quot;</span>);</div>
-<div class="line"><span class="lineno">  334</span>  <a class="code hl_function" href="pattern_8c.html#ac4be56068a28743c1ca64c1e61e76ae2">mutt_check_simple</a>(buf, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_simple_search));</div>
-<div class="line"><span class="lineno">  335</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *pbuf = buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
-<div class="line"><span class="lineno">  336</span>  <span class="keywordflow">while</span> (*pbuf == <span class="charliteral">&#39; &#39;</span>)</div>
-<div class="line"><span class="lineno">  337</span>    pbuf++;</div>
-<div class="line"><span class="lineno">  338</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> match_all = <a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(pbuf, <span class="stringliteral">&quot;~A&quot;</span>);</div>
-<div class="line"><span class="lineno">  339</span> </div>
-<div class="line"><span class="lineno">  340</span>  err = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  341</span>  <span class="keyword">struct </span>PatternList *pat = <a class="code hl_function" href="compile_8c.html#a43039fbeb001087dad2a07081ca9526e">mutt_pattern_comp</a>(mv, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, <a class="code hl_define" href="#a258bbc9499cea3d5d1c3c0454ee8b31a">MUTT_PC_FULL_MSG</a>, err);</div>
-<div class="line"><span class="lineno">  342</span>  <span class="keywordflow">if</span> (!pat)</div>
-<div class="line"><span class="lineno">  343</span>  {</div>
-<div class="line"><span class="lineno">  344</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
-<div class="line"><span class="lineno">  345</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  346</span>  }</div>
-<div class="line"><span class="lineno">  347</span> </div>
-<div class="line"><span class="lineno">  348</span>  <span class="keywordflow">if</span> ((m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> == <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da7f541a03089370b1a260e344f8d1809b">MUTT_IMAP</a>) &amp;&amp; (!<a class="code hl_function" href="imap_2lib_8h.html#ac55dfb1446427e7f3cb17405877d585a">imap_search</a>(m, pat)))</div>
-<div class="line"><span class="lineno">  349</span>    <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  350</span> </div>
-<div class="line"><span class="lineno">  351</span>  progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75adc0a9dcc8b2f53e3698038e7164b6489">MUTT_PROGRESS_READ</a>, (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a37fea75d3b203adad99419b9f369ccd0">MUTT_LIMIT</a>) ? m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a> : m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>);</div>
-<div class="line"><span class="lineno">  352</span>  <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Executing command on matching messages...&quot;</span>));</div>
-<div class="line"><span class="lineno">  353</span> </div>
-<div class="line"><span class="lineno">  354</span>  <span class="keywordflow">if</span> (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a37fea75d3b203adad99419b9f369ccd0">MUTT_LIMIT</a>)</div>
-<div class="line"><span class="lineno">  355</span>  {</div>
-<div class="line"><span class="lineno">  356</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a> = 0;</div>
-<div class="line"><span class="lineno">  357</span>    mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a3bcbce2c2279478256f0bcc98f2b8ec4">vsize</a> = 0;</div>
-<div class="line"><span class="lineno">  358</span>    mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a05feda14fc6a512f8327f903d0185307">collapsed</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  359</span>    <span class="keywordtype">int</span> padding = <a class="code hl_function" href="mx_8c.html#a4721eba787445b6c9ab9a6366b5e816d">mx_msg_padding_size</a>(m);</div>
-<div class="line"><span class="lineno">  360</span> </div>
-<div class="line"><span class="lineno">  361</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
-<div class="line"><span class="lineno">  362</span>    {</div>
-<div class="line"><span class="lineno">  363</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i];</div>
-<div class="line"><span class="lineno">  364</span>      <span class="keywordflow">if</span> (!e)</div>
-<div class="line"><span class="lineno">  365</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  366</span> </div>
-<div class="line"><span class="lineno">  367</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>)</div>
-<div class="line"><span class="lineno">  368</span>      {</div>
-<div class="line"><span class="lineno">  369</span>        interrupted = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  370</span>        <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  372</span>      }</div>
-<div class="line"><span class="lineno">  373</span>      <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, i, -1);</div>
-<div class="line"><span class="lineno">  374</span>      <span class="comment">/* new limit pattern implicitly uncollapses all threads */</span></div>
-<div class="line"><span class="lineno">  375</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#aa5e274ea0f8ce3482f226752fcccad12">vnum</a> = -1;</div>
-<div class="line"><span class="lineno">  376</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a1b48457d5e16b021ada7d227b689f516">visible</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  377</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a358598c8753f64980370c6b06be25cc4">limit_visited</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  378</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a511f080349cca94d2e3dd531f76351ee">collapsed</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  379</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a71f1e37390a5400b182e0724c1f61769">num_hidden</a> = 0;</div>
-<div class="line"><span class="lineno">  380</span> </div>
-<div class="line"><span class="lineno">  381</span>      <span class="keywordflow">if</span> (match_all ||</div>
-<div class="line"><span class="lineno">  382</span>          <a class="code hl_function" href="exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(pat), <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, m, e, NULL))</div>
-<div class="line"><span class="lineno">  383</span>      {</div>
-<div class="line"><span class="lineno">  384</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#aa5e274ea0f8ce3482f226752fcccad12">vnum</a> = m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>;</div>
-<div class="line"><span class="lineno">  385</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a1b48457d5e16b021ada7d227b689f516">visible</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  386</span>        m-&gt;<a class="code hl_variable" href="structMailbox.html#a29d550d9a2d2a6a65b4b6ba1c625ef36">v2r</a>[m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>] = i;</div>
-<div class="line"><span class="lineno">  387</span>        m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>++;</div>
-<div class="line"><span class="lineno">  388</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *b = e-&gt;<a class="code hl_variable" href="structEmail.html#a57ad6ac618c0f685804f6f5bb390b3a6">body</a>;</div>
-<div class="line"><span class="lineno">  389</span>        mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a3bcbce2c2279478256f0bcc98f2b8ec4">vsize</a> += b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> + b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> - b-&gt;<a class="code hl_variable" href="structBody.html#ae6ebb9758689003ed9ae055272420dd9">hdr_offset</a> + padding;</div>
-<div class="line"><span class="lineno">  390</span>      }</div>
-<div class="line"><span class="lineno">  391</span>    }</div>
-<div class="line"><span class="lineno">  392</span>  }</div>
-<div class="line"><span class="lineno">  393</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  394</span>  {</div>
-<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>; i++)</div>
-<div class="line"><span class="lineno">  396</span>    {</div>
-<div class="line"><span class="lineno">  397</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = <a class="code hl_function" href="mview_8c.html#a1859332ec86bc1394a46665b33f847b9">mutt_get_virt_email</a>(m, i);</div>
-<div class="line"><span class="lineno">  398</span>      <span class="keywordflow">if</span> (!e)</div>
-<div class="line"><span class="lineno">  399</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  400</span> </div>
-<div class="line"><span class="lineno">  401</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>)</div>
-<div class="line"><span class="lineno">  402</span>      {</div>
-<div class="line"><span class="lineno">  403</span>        interrupted = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  404</span>        <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  405</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  406</span>      }</div>
-<div class="line"><span class="lineno">  407</span>      <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, i, -1);</div>
-<div class="line"><span class="lineno">  408</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(pat), <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, m, e, NULL))</div>
-<div class="line"><span class="lineno">  409</span>      {</div>
-<div class="line"><span class="lineno">  410</span>        <span class="keywordflow">switch</span> (op)</div>
-<div class="line"><span class="lineno">  411</span>        {</div>
-<div class="line"><span class="lineno">  412</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a24e191404c5e656bccdfe1a0af4a202f">MUTT_UNDELETE</a>:</div>
-<div class="line"><span class="lineno">  413</span>            <a class="code hl_function" href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a>(m, e, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a7fb7b2e9048606a37d4c34802ea38c77">MUTT_PURGE</a>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  414</span>            <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
-<div class="line"><span class="lineno">  415</span> </div>
-<div class="line"><span class="lineno">  416</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>:</div>
-<div class="line"><span class="lineno">  417</span>            <a class="code hl_function" href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a>(m, e, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>, (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  418</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  419</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a919d368fd60d2e1c19d331b78f415f3e">MUTT_TAG</a>:</div>
-<div class="line"><span class="lineno">  420</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a4015ed34cb5410a96d5b3c50a8909df2">MUTT_UNTAG</a>:</div>
-<div class="line"><span class="lineno">  421</span>            <a class="code hl_function" href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a>(m, e, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a919d368fd60d2e1c19d331b78f415f3e">MUTT_TAG</a>, (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a919d368fd60d2e1c19d331b78f415f3e">MUTT_TAG</a>), <span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  422</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  423</span>        }</div>
-<div class="line"><span class="lineno">  424</span>      }</div>
-<div class="line"><span class="lineno">  425</span>    }</div>
-<div class="line"><span class="lineno">  426</span>  }</div>
-<div class="line"><span class="lineno">  427</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
-<div class="line"><span class="lineno">  428</span> </div>
-<div class="line"><span class="lineno">  429</span>  <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
-<div class="line"><span class="lineno">  430</span> </div>
-<div class="line"><span class="lineno">  431</span>  <span class="keywordflow">if</span> (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a37fea75d3b203adad99419b9f369ccd0">MUTT_LIMIT</a>)</div>
-<div class="line"><span class="lineno">  432</span>  {</div>
-<div class="line"><span class="lineno">  433</span>    <span class="comment">/* drop previous limit pattern */</span></div>
-<div class="line"><span class="lineno">  434</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mv-&gt;<a class="code hl_variable" href="structMailboxView.html#af8fca3e8597f3f4fd45d49666e2772d3">pattern</a>);</div>
-<div class="line"><span class="lineno">  435</span>    <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a5f6b9a232c6e56c58b33ad05f912f6c1">limit_pattern</a>);</div>
-<div class="line"><span class="lineno">  436</span> </div>
-<div class="line"><span class="lineno">  437</span>    <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a> &amp;&amp; !m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>)</div>
-<div class="line"><span class="lineno">  438</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;No messages matched criteria&quot;</span>));</div>
-<div class="line"><span class="lineno">  439</span> </div>
-<div class="line"><span class="lineno">  440</span>    <span class="comment">/* record new limit pattern, unless match all */</span></div>
-<div class="line"><span class="lineno">  441</span>    <span class="keywordflow">if</span> (!match_all)</div>
-<div class="line"><span class="lineno">  442</span>    {</div>
-<div class="line"><span class="lineno">  443</span>      mv-&gt;<a class="code hl_variable" href="structMailboxView.html#af8fca3e8597f3f4fd45d49666e2772d3">pattern</a> = simple;</div>
-<div class="line"><span class="lineno">  444</span>      simple = NULL; <span class="comment">/* don&#39;t clobber it */</span></div>
-<div class="line"><span class="lineno">  445</span>      mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a5f6b9a232c6e56c58b33ad05f912f6c1">limit_pattern</a> = <a class="code hl_function" href="compile_8c.html#a43039fbeb001087dad2a07081ca9526e">mutt_pattern_comp</a>(mv, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, <a class="code hl_define" href="#a258bbc9499cea3d5d1c3c0454ee8b31a">MUTT_PC_FULL_MSG</a>, err);</div>
-<div class="line"><span class="lineno">  446</span>    }</div>
-<div class="line"><span class="lineno">  447</span>  }</div>
-<div class="line"><span class="lineno">  448</span> </div>
-<div class="line"><span class="lineno">  449</span>  <span class="keywordflow">if</span> (interrupted)</div>
-<div class="line"><span class="lineno">  450</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search interrupted&quot;</span>));</div>
-<div class="line"><span class="lineno">  451</span> </div>
-<div class="line"><span class="lineno">  452</span>  rc = 0;</div>
-<div class="line"><span class="lineno">  453</span> </div>
-<div class="line"><span class="lineno">  454</span>bail:</div>
-<div class="line"><span class="lineno">  455</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  456</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;err);</div>
-<div class="line"><span class="lineno">  457</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;simple);</div>
-<div class="line"><span class="lineno">  458</span>  <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;pat);</div>
-<div class="line"><span class="lineno">  459</span> </div>
-<div class="line"><span class="lineno">  460</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  461</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pattern_8c_source.html#l00307">307</a> of file <a class="el" href="pattern_8c_source.html">pattern.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  308</span>{</div>
+<div class="line"><span class="lineno">  309</span>  <span class="keywordflow">if</span> (!mv || !mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a>)</div>
+<div class="line"><span class="lineno">  310</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a>;</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = NULL;</div>
+<div class="line"><span class="lineno">  315</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">  316</span>  <span class="keyword">struct </span>Progress *progress = NULL;</div>
+<div class="line"><span class="lineno">  317</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  318</span>  <span class="keywordtype">bool</span> interrupted = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  319</span> </div>
+<div class="line"><span class="lineno">  320</span>  <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(buf, mv-&gt;<a class="code hl_variable" href="structMailboxView.html#af8fca3e8597f3f4fd45d49666e2772d3">pattern</a>);</div>
+<div class="line"><span class="lineno">  321</span>  <span class="keywordflow">if</span> (prompt || (op != <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a37fea75d3b203adad99419b9f369ccd0">MUTT_LIMIT</a>))</div>
+<div class="line"><span class="lineno">  322</span>  {</div>
+<div class="line"><span class="lineno">  323</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(prompt, buf, <a class="code hl_define" href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b">HC_PATTERN</a>, &amp;<a class="code hl_variable" href="pattern_2complete_8c.html#afd86dbf76bd277050b61b4b556f57ced">CompletePatternOps</a>, NULL) != 0) ||</div>
+<div class="line"><span class="lineno">  324</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
+<div class="line"><span class="lineno">  325</span>    {</div>
+<div class="line"><span class="lineno">  326</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  327</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  328</span>    }</div>
+<div class="line"><span class="lineno">  329</span>  }</div>
+<div class="line"><span class="lineno">  330</span> </div>
+<div class="line"><span class="lineno">  331</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Compiling search pattern...&quot;</span>));</div>
+<div class="line"><span class="lineno">  332</span> </div>
+<div class="line"><span class="lineno">  333</span>  <span class="keywordtype">char</span> *simple = <a class="code hl_function" href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a>(buf);</div>
+<div class="line"><span class="lineno">  334</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_simple_search = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;simple_search&quot;</span>);</div>
+<div class="line"><span class="lineno">  335</span>  <a class="code hl_function" href="pattern_8c.html#ac4be56068a28743c1ca64c1e61e76ae2">mutt_check_simple</a>(buf, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_simple_search));</div>
+<div class="line"><span class="lineno">  336</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *pbuf = buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>;</div>
+<div class="line"><span class="lineno">  337</span>  <span class="keywordflow">while</span> (*pbuf == <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><span class="lineno">  338</span>    pbuf++;</div>
+<div class="line"><span class="lineno">  339</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> match_all = <a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(pbuf, <span class="stringliteral">&quot;~A&quot;</span>);</div>
+<div class="line"><span class="lineno">  340</span> </div>
+<div class="line"><span class="lineno">  341</span>  err = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  342</span>  <span class="keyword">struct </span>PatternList *pat = <a class="code hl_function" href="compile_8c.html#a43039fbeb001087dad2a07081ca9526e">mutt_pattern_comp</a>(mv, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, <a class="code hl_define" href="#a258bbc9499cea3d5d1c3c0454ee8b31a">MUTT_PC_FULL_MSG</a>, err);</div>
+<div class="line"><span class="lineno">  343</span>  <span class="keywordflow">if</span> (!pat)</div>
+<div class="line"><span class="lineno">  344</span>  {</div>
+<div class="line"><span class="lineno">  345</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
+<div class="line"><span class="lineno">  346</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  347</span>  }</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>  <span class="keywordflow">if</span> ((m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> == <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da7f541a03089370b1a260e344f8d1809b">MUTT_IMAP</a>) &amp;&amp; (!<a class="code hl_function" href="imap_2lib_8h.html#ac55dfb1446427e7f3cb17405877d585a">imap_search</a>(m, pat)))</div>
+<div class="line"><span class="lineno">  350</span>    <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  351</span> </div>
+<div class="line"><span class="lineno">  352</span>  progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75adc0a9dcc8b2f53e3698038e7164b6489">MUTT_PROGRESS_READ</a>, (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a37fea75d3b203adad99419b9f369ccd0">MUTT_LIMIT</a>) ? m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a> : m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>);</div>
+<div class="line"><span class="lineno">  353</span>  <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Executing command on matching messages...&quot;</span>));</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>  <span class="keywordflow">if</span> (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a37fea75d3b203adad99419b9f369ccd0">MUTT_LIMIT</a>)</div>
+<div class="line"><span class="lineno">  356</span>  {</div>
+<div class="line"><span class="lineno">  357</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a> = 0;</div>
+<div class="line"><span class="lineno">  358</span>    mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a3bcbce2c2279478256f0bcc98f2b8ec4">vsize</a> = 0;</div>
+<div class="line"><span class="lineno">  359</span>    mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a05feda14fc6a512f8327f903d0185307">collapsed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  360</span>    <span class="keywordtype">int</span> padding = <a class="code hl_function" href="mx_8c.html#a4721eba787445b6c9ab9a6366b5e816d">mx_msg_padding_size</a>(m);</div>
+<div class="line"><span class="lineno">  361</span> </div>
+<div class="line"><span class="lineno">  362</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
+<div class="line"><span class="lineno">  363</span>    {</div>
+<div class="line"><span class="lineno">  364</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i];</div>
+<div class="line"><span class="lineno">  365</span>      <span class="keywordflow">if</span> (!e)</div>
+<div class="line"><span class="lineno">  366</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  367</span> </div>
+<div class="line"><span class="lineno">  368</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>)</div>
+<div class="line"><span class="lineno">  369</span>      {</div>
+<div class="line"><span class="lineno">  370</span>        interrupted = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  371</span>        <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  372</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  373</span>      }</div>
+<div class="line"><span class="lineno">  374</span>      <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, i, -1);</div>
+<div class="line"><span class="lineno">  375</span>      <span class="comment">/* new limit pattern implicitly uncollapses all threads */</span></div>
+<div class="line"><span class="lineno">  376</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#aa5e274ea0f8ce3482f226752fcccad12">vnum</a> = -1;</div>
+<div class="line"><span class="lineno">  377</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a1b48457d5e16b021ada7d227b689f516">visible</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  378</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a358598c8753f64980370c6b06be25cc4">limit_visited</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  379</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a511f080349cca94d2e3dd531f76351ee">collapsed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  380</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a71f1e37390a5400b182e0724c1f61769">num_hidden</a> = 0;</div>
+<div class="line"><span class="lineno">  381</span> </div>
+<div class="line"><span class="lineno">  382</span>      <span class="keywordflow">if</span> (match_all ||</div>
+<div class="line"><span class="lineno">  383</span>          <a class="code hl_function" href="exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(pat), <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, m, e, NULL))</div>
+<div class="line"><span class="lineno">  384</span>      {</div>
+<div class="line"><span class="lineno">  385</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#aa5e274ea0f8ce3482f226752fcccad12">vnum</a> = m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>;</div>
+<div class="line"><span class="lineno">  386</span>        e-&gt;<a class="code hl_variable" href="structEmail.html#a1b48457d5e16b021ada7d227b689f516">visible</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  387</span>        m-&gt;<a class="code hl_variable" href="structMailbox.html#a29d550d9a2d2a6a65b4b6ba1c625ef36">v2r</a>[m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>] = i;</div>
+<div class="line"><span class="lineno">  388</span>        m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>++;</div>
+<div class="line"><span class="lineno">  389</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structBody.html">Body</a> *b = e-&gt;<a class="code hl_variable" href="structEmail.html#a57ad6ac618c0f685804f6f5bb390b3a6">body</a>;</div>
+<div class="line"><span class="lineno">  390</span>        mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a3bcbce2c2279478256f0bcc98f2b8ec4">vsize</a> += b-&gt;<a class="code hl_variable" href="structBody.html#a6f92d7ec8568ca04ae07931c56dd0790">length</a> + b-&gt;<a class="code hl_variable" href="structBody.html#a1969dfeb0a155ccb16153fe777a103b0">offset</a> - b-&gt;<a class="code hl_variable" href="structBody.html#ae6ebb9758689003ed9ae055272420dd9">hdr_offset</a> + padding;</div>
+<div class="line"><span class="lineno">  391</span>      }</div>
+<div class="line"><span class="lineno">  392</span>    }</div>
+<div class="line"><span class="lineno">  393</span>  }</div>
+<div class="line"><span class="lineno">  394</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  395</span>  {</div>
+<div class="line"><span class="lineno">  396</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>; i++)</div>
+<div class="line"><span class="lineno">  397</span>    {</div>
+<div class="line"><span class="lineno">  398</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = <a class="code hl_function" href="mview_8c.html#a1859332ec86bc1394a46665b33f847b9">mutt_get_virt_email</a>(m, i);</div>
+<div class="line"><span class="lineno">  399</span>      <span class="keywordflow">if</span> (!e)</div>
+<div class="line"><span class="lineno">  400</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  401</span> </div>
+<div class="line"><span class="lineno">  402</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>)</div>
+<div class="line"><span class="lineno">  403</span>      {</div>
+<div class="line"><span class="lineno">  404</span>        interrupted = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  405</span>        <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  406</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  407</span>      }</div>
+<div class="line"><span class="lineno">  408</span>      <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, i, -1);</div>
+<div class="line"><span class="lineno">  409</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(pat), <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, m, e, NULL))</div>
+<div class="line"><span class="lineno">  410</span>      {</div>
+<div class="line"><span class="lineno">  411</span>        <span class="keywordflow">switch</span> (op)</div>
+<div class="line"><span class="lineno">  412</span>        {</div>
+<div class="line"><span class="lineno">  413</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a24e191404c5e656bccdfe1a0af4a202f">MUTT_UNDELETE</a>:</div>
+<div class="line"><span class="lineno">  414</span>            <a class="code hl_function" href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a>(m, e, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a7fb7b2e9048606a37d4c34802ea38c77">MUTT_PURGE</a>, <span class="keyword">false</span>, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  415</span>            <a class="code hl_define" href="mutt_2lib_8h.html#a0cf2d82c57a09723ab59e6f4dcc45b84">FALLTHROUGH</a>;</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>:</div>
+<div class="line"><span class="lineno">  418</span>            <a class="code hl_function" href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a>(m, e, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>, (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  419</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  420</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a919d368fd60d2e1c19d331b78f415f3e">MUTT_TAG</a>:</div>
+<div class="line"><span class="lineno">  421</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a4015ed34cb5410a96d5b3c50a8909df2">MUTT_UNTAG</a>:</div>
+<div class="line"><span class="lineno">  422</span>            <a class="code hl_function" href="flags_8c.html#a29547b9c7c39eb22039ff4b8f1c03829">mutt_set_flag</a>(m, e, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a919d368fd60d2e1c19d331b78f415f3e">MUTT_TAG</a>, (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a919d368fd60d2e1c19d331b78f415f3e">MUTT_TAG</a>), <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  423</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  424</span>        }</div>
+<div class="line"><span class="lineno">  425</span>      }</div>
+<div class="line"><span class="lineno">  426</span>    }</div>
+<div class="line"><span class="lineno">  427</span>  }</div>
+<div class="line"><span class="lineno">  428</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
+<div class="line"><span class="lineno">  429</span> </div>
+<div class="line"><span class="lineno">  430</span>  <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
+<div class="line"><span class="lineno">  431</span> </div>
+<div class="line"><span class="lineno">  432</span>  <span class="keywordflow">if</span> (op == <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a37fea75d3b203adad99419b9f369ccd0">MUTT_LIMIT</a>)</div>
+<div class="line"><span class="lineno">  433</span>  {</div>
+<div class="line"><span class="lineno">  434</span>    <span class="comment">/* drop previous limit pattern */</span></div>
+<div class="line"><span class="lineno">  435</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mv-&gt;<a class="code hl_variable" href="structMailboxView.html#af8fca3e8597f3f4fd45d49666e2772d3">pattern</a>);</div>
+<div class="line"><span class="lineno">  436</span>    <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a5f6b9a232c6e56c58b33ad05f912f6c1">limit_pattern</a>);</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>    <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a> &amp;&amp; !m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>)</div>
+<div class="line"><span class="lineno">  439</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;No messages matched criteria&quot;</span>));</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>    <span class="comment">/* record new limit pattern, unless match all */</span></div>
+<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">if</span> (!match_all)</div>
+<div class="line"><span class="lineno">  443</span>    {</div>
+<div class="line"><span class="lineno">  444</span>      mv-&gt;<a class="code hl_variable" href="structMailboxView.html#af8fca3e8597f3f4fd45d49666e2772d3">pattern</a> = simple;</div>
+<div class="line"><span class="lineno">  445</span>      simple = NULL; <span class="comment">/* don&#39;t clobber it */</span></div>
+<div class="line"><span class="lineno">  446</span>      mv-&gt;<a class="code hl_variable" href="structMailboxView.html#a5f6b9a232c6e56c58b33ad05f912f6c1">limit_pattern</a> = <a class="code hl_function" href="compile_8c.html#a43039fbeb001087dad2a07081ca9526e">mutt_pattern_comp</a>(mv, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, <a class="code hl_define" href="#a258bbc9499cea3d5d1c3c0454ee8b31a">MUTT_PC_FULL_MSG</a>, err);</div>
+<div class="line"><span class="lineno">  447</span>    }</div>
+<div class="line"><span class="lineno">  448</span>  }</div>
+<div class="line"><span class="lineno">  449</span> </div>
+<div class="line"><span class="lineno">  450</span>  <span class="keywordflow">if</span> (interrupted)</div>
+<div class="line"><span class="lineno">  451</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search interrupted&quot;</span>));</div>
+<div class="line"><span class="lineno">  452</span> </div>
+<div class="line"><span class="lineno">  453</span>  rc = 0;</div>
+<div class="line"><span class="lineno">  454</span> </div>
+<div class="line"><span class="lineno">  455</span>bail:</div>
+<div class="line"><span class="lineno">  456</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  457</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;err);</div>
+<div class="line"><span class="lineno">  458</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;simple);</div>
+<div class="line"><span class="lineno">  459</span>  <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;pat);</div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  462</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00291">buffer.c:291</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ad76477cc0c660bc50162393e997233eb"><div class="ttname"><a href="buffer_8c.html#ad76477cc0c660bc50162393e997233eb">buf_strdup</a></div><div class="ttdeci">char * buf_strdup(const struct Buffer *buf)</div><div class="ttdoc">Copy a Buffer&#39;s string.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00571">buffer.c:571</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a6b1589ee93ff51ef31f1d9324e138078"><div class="ttname"><a href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a></div><div class="ttdeci">const char * cs_subset_string(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a string config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00291">helpers.c:291</a></div></div>
@@ -1962,78 +1962,79 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  222</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;err);</div>
 <div class="line"><span class="lineno">  223</span>      <span class="keywordflow">goto</span> bail;</div>
 <div class="line"><span class="lineno">  224</span>    }</div>
-<div class="line"><span class="lineno">  225</span>  }</div>
-<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  227</span>  {</div>
-<div class="line"><span class="lineno">  228</span>    match_all = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  229</span>  }</div>
-<div class="line"><span class="lineno">  230</span> </div>
-<div class="line"><span class="lineno">  231</span>  progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75adc0a9dcc8b2f53e3698038e7164b6489">MUTT_PROGRESS_READ</a>, <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>));</div>
-<div class="line"><span class="lineno">  232</span>  <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Executing command on matching messages...&quot;</span>));</div>
-<div class="line"><span class="lineno">  233</span> </div>
-<div class="line"><span class="lineno">  234</span>  <span class="keywordtype">int</span> vcounter = 0;</div>
-<div class="line"><span class="lineno">  235</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *avp = NULL;</div>
-<div class="line"><span class="lineno">  236</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
-<div class="line"><span class="lineno">  237</span>  {</div>
-<div class="line"><span class="lineno">  238</span>    <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, ARRAY_FOREACH_IDX_avp, -1);</div>
-<div class="line"><span class="lineno">  239</span> </div>
-<div class="line"><span class="lineno">  240</span>    <span class="keywordflow">if</span> (match_all ||</div>
-<div class="line"><span class="lineno">  241</span>        <a class="code hl_function" href="exec_8c.html#a3e5c6984e80a84d451642c66acc8dcf1">mutt_pattern_alias_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(pat), <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, avp, NULL))</div>
-<div class="line"><span class="lineno">  242</span>    {</div>
-<div class="line"><span class="lineno">  243</span>      <span class="keywordflow">switch</span> (action)</div>
-<div class="line"><span class="lineno">  244</span>      {</div>
-<div class="line"><span class="lineno">  245</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda51d2a6d81034dd9de5fab0a01f42e26f">PAA_TAG</a>:</div>
-<div class="line"><span class="lineno">  246</span>          avp-&gt;<a class="code hl_variable" href="structAliasView.html#a683663ebafec086d5d253cd55fb7b209">is_tagged</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  247</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6ddaf37c33caf919790d47db1cad10fd0219">PAA_UNTAG</a>:</div>
-<div class="line"><span class="lineno">  249</span>          avp-&gt;<a class="code hl_variable" href="structAliasView.html#a683663ebafec086d5d253cd55fb7b209">is_tagged</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  250</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  251</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c">PAA_VISIBLE</a>:</div>
-<div class="line"><span class="lineno">  252</span>          avp-&gt;<a class="code hl_variable" href="structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4">is_visible</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  253</span>          vcounter++;</div>
-<div class="line"><span class="lineno">  254</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  255</span>      }</div>
-<div class="line"><span class="lineno">  256</span>    }</div>
-<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  258</span>    {</div>
-<div class="line"><span class="lineno">  259</span>      <span class="keywordflow">switch</span> (action)</div>
-<div class="line"><span class="lineno">  260</span>      {</div>
-<div class="line"><span class="lineno">  261</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda51d2a6d81034dd9de5fab0a01f42e26f">PAA_TAG</a>:</div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6ddaf37c33caf919790d47db1cad10fd0219">PAA_UNTAG</a>:</div>
-<div class="line"><span class="lineno">  263</span>          <span class="comment">// Do nothing</span></div>
-<div class="line"><span class="lineno">  264</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c">PAA_VISIBLE</a>:</div>
-<div class="line"><span class="lineno">  266</span>          avp-&gt;<a class="code hl_variable" href="structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4">is_visible</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  267</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  268</span>      }</div>
-<div class="line"><span class="lineno">  269</span>    }</div>
-<div class="line"><span class="lineno">  270</span>  }</div>
-<div class="line"><span class="lineno">  271</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
-<div class="line"><span class="lineno">  272</span> </div>
-<div class="line"><span class="lineno">  273</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a>);</div>
-<div class="line"><span class="lineno">  274</span>  <span class="keywordflow">if</span> (!match_all)</div>
-<div class="line"><span class="lineno">  275</span>  {</div>
-<div class="line"><span class="lineno">  276</span>    mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a> = simple;</div>
-<div class="line"><span class="lineno">  277</span>    simple = NULL;</div>
-<div class="line"><span class="lineno">  278</span>  }</div>
-<div class="line"><span class="lineno">  279</span> </div>
-<div class="line"><span class="lineno">  280</span>  <span class="keywordflow">if</span> (menu &amp;&amp; (action == <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c">PAA_VISIBLE</a>))</div>
-<div class="line"><span class="lineno">  281</span>  {</div>
-<div class="line"><span class="lineno">  282</span>    menu-&gt;<a class="code hl_variable" href="structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b">max</a> = vcounter;</div>
-<div class="line"><span class="lineno">  283</span>    <a class="code hl_function" href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a>(menu, 0);</div>
-<div class="line"><span class="lineno">  284</span>  }</div>
-<div class="line"><span class="lineno">  285</span> </div>
-<div class="line"><span class="lineno">  286</span>  <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
-<div class="line"><span class="lineno">  287</span> </div>
-<div class="line"><span class="lineno">  288</span>  rc = 0;</div>
-<div class="line"><span class="lineno">  289</span> </div>
-<div class="line"><span class="lineno">  290</span>bail:</div>
-<div class="line"><span class="lineno">  291</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  292</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;simple);</div>
-<div class="line"><span class="lineno">  293</span>  <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;pat);</div>
-<div class="line"><span class="lineno">  294</span> </div>
-<div class="line"><span class="lineno">  295</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  296</span>}</div>
+<div class="line"><span class="lineno">  225</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;err);</div>
+<div class="line"><span class="lineno">  226</span>  }</div>
+<div class="line"><span class="lineno">  227</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  228</span>  {</div>
+<div class="line"><span class="lineno">  229</span>    match_all = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  230</span>  }</div>
+<div class="line"><span class="lineno">  231</span> </div>
+<div class="line"><span class="lineno">  232</span>  progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75adc0a9dcc8b2f53e3698038e7164b6489">MUTT_PROGRESS_READ</a>, <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>));</div>
+<div class="line"><span class="lineno">  233</span>  <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Executing command on matching messages...&quot;</span>));</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>  <span class="keywordtype">int</span> vcounter = 0;</div>
+<div class="line"><span class="lineno">  236</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *avp = NULL;</div>
+<div class="line"><span class="lineno">  237</span>  <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(avp, &amp;mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>)</div>
+<div class="line"><span class="lineno">  238</span>  {</div>
+<div class="line"><span class="lineno">  239</span>    <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, ARRAY_FOREACH_IDX_avp, -1);</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">if</span> (match_all ||</div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_function" href="exec_8c.html#a3e5c6984e80a84d451642c66acc8dcf1">mutt_pattern_alias_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(pat), <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, avp, NULL))</div>
+<div class="line"><span class="lineno">  243</span>    {</div>
+<div class="line"><span class="lineno">  244</span>      <span class="keywordflow">switch</span> (action)</div>
+<div class="line"><span class="lineno">  245</span>      {</div>
+<div class="line"><span class="lineno">  246</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda51d2a6d81034dd9de5fab0a01f42e26f">PAA_TAG</a>:</div>
+<div class="line"><span class="lineno">  247</span>          avp-&gt;<a class="code hl_variable" href="structAliasView.html#a683663ebafec086d5d253cd55fb7b209">is_tagged</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  248</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6ddaf37c33caf919790d47db1cad10fd0219">PAA_UNTAG</a>:</div>
+<div class="line"><span class="lineno">  250</span>          avp-&gt;<a class="code hl_variable" href="structAliasView.html#a683663ebafec086d5d253cd55fb7b209">is_tagged</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  251</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c">PAA_VISIBLE</a>:</div>
+<div class="line"><span class="lineno">  253</span>          avp-&gt;<a class="code hl_variable" href="structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4">is_visible</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  254</span>          vcounter++;</div>
+<div class="line"><span class="lineno">  255</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  256</span>      }</div>
+<div class="line"><span class="lineno">  257</span>    }</div>
+<div class="line"><span class="lineno">  258</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  259</span>    {</div>
+<div class="line"><span class="lineno">  260</span>      <span class="keywordflow">switch</span> (action)</div>
+<div class="line"><span class="lineno">  261</span>      {</div>
+<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda51d2a6d81034dd9de5fab0a01f42e26f">PAA_TAG</a>:</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6ddaf37c33caf919790d47db1cad10fd0219">PAA_UNTAG</a>:</div>
+<div class="line"><span class="lineno">  264</span>          <span class="comment">// Do nothing</span></div>
+<div class="line"><span class="lineno">  265</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c">PAA_VISIBLE</a>:</div>
+<div class="line"><span class="lineno">  267</span>          avp-&gt;<a class="code hl_variable" href="structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4">is_visible</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  268</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  269</span>      }</div>
+<div class="line"><span class="lineno">  270</span>    }</div>
+<div class="line"><span class="lineno">  271</span>  }</div>
+<div class="line"><span class="lineno">  272</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a>);</div>
+<div class="line"><span class="lineno">  275</span>  <span class="keywordflow">if</span> (!match_all)</div>
+<div class="line"><span class="lineno">  276</span>  {</div>
+<div class="line"><span class="lineno">  277</span>    mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a15fb0e818e82fc50a653260a4a11c160">limit</a> = simple;</div>
+<div class="line"><span class="lineno">  278</span>    simple = NULL;</div>
+<div class="line"><span class="lineno">  279</span>  }</div>
+<div class="line"><span class="lineno">  280</span> </div>
+<div class="line"><span class="lineno">  281</span>  <span class="keywordflow">if</span> (menu &amp;&amp; (action == <a class="code hl_enumvalue" href="#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c">PAA_VISIBLE</a>))</div>
+<div class="line"><span class="lineno">  282</span>  {</div>
+<div class="line"><span class="lineno">  283</span>    menu-&gt;<a class="code hl_variable" href="structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b">max</a> = vcounter;</div>
+<div class="line"><span class="lineno">  284</span>    <a class="code hl_function" href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a>(menu, 0);</div>
+<div class="line"><span class="lineno">  285</span>  }</div>
+<div class="line"><span class="lineno">  286</span> </div>
+<div class="line"><span class="lineno">  287</span>  <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>  rc = 0;</div>
+<div class="line"><span class="lineno">  290</span> </div>
+<div class="line"><span class="lineno">  291</span>bail:</div>
+<div class="line"><span class="lineno">  292</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  293</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;simple);</div>
+<div class="line"><span class="lineno">  294</span>  <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;pat);</div>
+<div class="line"><span class="lineno">  295</span> </div>
+<div class="line"><span class="lineno">  296</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  297</span>}</div>
 <div class="ttc" id="aarray_8h_html_a6b8ea5fb2f366d7716f5042b347093a6"><div class="ttname"><a href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a></div><div class="ttdeci">#define ARRAY_FOREACH(elem, head)</div><div class="ttdoc">Iterate over all elements of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00223">array.h:223</a></div></div>
 <div class="ttc" id="aarray_8h_html_a7f1bf469a48c0a2618c94b7b8281c5bf"><div class="ttname"><a href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a></div><div class="ttdeci">#define ARRAY_SIZE(head)</div><div class="ttdoc">The number of elements stored.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00087">array.h:87</a></div></div>
 <div class="ttc" id="aexec_8c_html_a3e5c6984e80a84d451642c66acc8dcf1"><div class="ttname"><a href="exec_8c.html#a3e5c6984e80a84d451642c66acc8dcf1">mutt_pattern_alias_exec</a></div><div class="ttdeci">bool mutt_pattern_alias_exec(struct Pattern *pat, PatternExecFlags flags, struct AliasView *av, struct PatternCache *cache)</div><div class="ttdoc">Match a pattern against an alias.</div><div class="ttdef"><b>Definition</b> <a href="exec_8c_source.html#l01173">exec.c:1173</a></div></div>
@@ -2115,152 +2116,152 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pattern_8c_source.html#l00473">473</a> of file <a class="el" href="pattern_8c_source.html">pattern.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  475</span>{</div>
-<div class="line"><span class="lineno">  476</span>  <span class="keyword">struct </span>Progress *progress = NULL;</div>
-<div class="line"><span class="lineno">  477</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">  478</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = mv ? mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a> : NULL;</div>
-<div class="line"><span class="lineno">  479</span>  <span class="keywordflow">if</span> (!m)</div>
-<div class="line"><span class="lineno">  480</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  481</span>  <span class="keywordtype">bool</span> pattern_changed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  482</span> </div>
-<div class="line"><span class="lineno">  483</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>) || (flags &amp; <a class="code hl_define" href="search__state_8h.html#ab5e2186220d000b31a02450c072628e7">SEARCH_PROMPT</a>))</div>
-<div class="line"><span class="lineno">  484</span>  {</div>
-<div class="line"><span class="lineno">  485</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>((state-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a>) ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Reverse search for: &quot;</span>) : <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search for: &quot;</span>),</div>
-<div class="line"><span class="lineno">  486</span>                      state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>, <a class="code hl_define" href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b">HC_PATTERN</a>,</div>
-<div class="line"><span class="lineno">  487</span>                      &amp;<a class="code hl_variable" href="pattern_2complete_8c.html#afd86dbf76bd277050b61b4b556f57ced">CompletePatternOps</a>, NULL) != 0) ||</div>
-<div class="line"><span class="lineno">  488</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>))</div>
-<div class="line"><span class="lineno">  489</span>    {</div>
-<div class="line"><span class="lineno">  490</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  491</span>    }</div>
-<div class="line"><span class="lineno">  492</span> </div>
-<div class="line"><span class="lineno">  493</span>    <span class="comment">/* compare the *expanded* version of the search pattern in case</span></div>
-<div class="line"><span class="lineno">  494</span><span class="comment">     * $simple_search has changed while we were searching */</span></div>
-<div class="line"><span class="lineno">  495</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  496</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(tmp, state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>);</div>
-<div class="line"><span class="lineno">  497</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_simple_search = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;simple_search&quot;</span>);</div>
-<div class="line"><span class="lineno">  498</span>    <a class="code hl_function" href="pattern_8c.html#ac4be56068a28743c1ca64c1e61e76ae2">mutt_check_simple</a>(tmp, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_simple_search));</div>
-<div class="line"><span class="lineno">  499</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a9e3dd78a86aea77a654037a7549accd4">buf_str_equal</a>(tmp, state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>))</div>
-<div class="line"><span class="lineno">  500</span>    {</div>
-<div class="line"><span class="lineno">  501</span>      <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>);</div>
-<div class="line"><span class="lineno">  502</span>      <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>, tmp);</div>
-<div class="line"><span class="lineno">  503</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
-<div class="line"><span class="lineno">  504</span>    }</div>
-<div class="line"><span class="lineno">  505</span>  }</div>
-<div class="line"><span class="lineno">  506</span> </div>
-<div class="line"><span class="lineno">  507</span>  <span class="keywordflow">if</span> (!state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)</div>
-<div class="line"><span class="lineno">  508</span>  {</div>
-<div class="line"><span class="lineno">  509</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Compiling search pattern...&quot;</span>));</div>
-<div class="line"><span class="lineno">  510</span>    <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>);</div>
-<div class="line"><span class="lineno">  511</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  512</span>    state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a> = <a class="code hl_function" href="compile_8c.html#a43039fbeb001087dad2a07081ca9526e">mutt_pattern_comp</a>(mv, state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, <a class="code hl_define" href="#a258bbc9499cea3d5d1c3c0454ee8b31a">MUTT_PC_FULL_MSG</a>, err);</div>
-<div class="line"><span class="lineno">  513</span>    pattern_changed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  514</span>    <span class="keywordflow">if</span> (!state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)</div>
-<div class="line"><span class="lineno">  515</span>    {</div>
-<div class="line"><span class="lineno">  516</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
-<div class="line"><span class="lineno">  517</span>      <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;err);</div>
-<div class="line"><span class="lineno">  518</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>);</div>
-<div class="line"><span class="lineno">  519</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>);</div>
-<div class="line"><span class="lineno">  520</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  521</span>    }</div>
-<div class="line"><span class="lineno">  522</span>    <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;err);</div>
-<div class="line"><span class="lineno">  523</span>    <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
-<div class="line"><span class="lineno">  524</span>  }</div>
-<div class="line"><span class="lineno">  525</span> </div>
-<div class="line"><span class="lineno">  526</span>  <span class="keywordflow">if</span> (pattern_changed)</div>
-<div class="line"><span class="lineno">  527</span>  {</div>
-<div class="line"><span class="lineno">  528</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
-<div class="line"><span class="lineno">  529</span>      m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]-&gt;<a class="code hl_variable" href="structEmail.html#a0168d790a0a31e79bf4e74a7bdf61436">searched</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  530</span>    <span class="keywordflow">if</span> ((m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> == <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da7f541a03089370b1a260e344f8d1809b">MUTT_IMAP</a>) &amp;&amp; (!<a class="code hl_function" href="imap_2lib_8h.html#ac55dfb1446427e7f3cb17405877d585a">imap_search</a>(m, state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)))</div>
-<div class="line"><span class="lineno">  531</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  532</span>  }</div>
-<div class="line"><span class="lineno">  533</span> </div>
-<div class="line"><span class="lineno">  534</span>  <span class="keywordtype">int</span> incr = state-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a> ? -1 : 1;</div>
-<div class="line"><span class="lineno">  535</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="search__state_8h.html#a208bf38d21acd38ffea2d9b7da797ac8">SEARCH_OPPOSITE</a>)</div>
-<div class="line"><span class="lineno">  536</span>    incr = -incr;</div>
-<div class="line"><span class="lineno">  537</span> </div>
-<div class="line"><span class="lineno">  538</span>  progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75adc0a9dcc8b2f53e3698038e7164b6489">MUTT_PROGRESS_READ</a>, m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>);</div>
-<div class="line"><span class="lineno">  539</span>  <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Searching...&quot;</span>));</div>
-<div class="line"><span class="lineno">  540</span> </div>
-<div class="line"><span class="lineno">  541</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_wrap_search = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;wrap_search&quot;</span>);</div>
-<div class="line"><span class="lineno">  542</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = cur + incr, j = 0; j != m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>; j++)</div>
-<div class="line"><span class="lineno">  543</span>  {</div>
-<div class="line"><span class="lineno">  544</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *msg = NULL;</div>
-<div class="line"><span class="lineno">  545</span>    <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, j, -1);</div>
-<div class="line"><span class="lineno">  546</span>    <span class="keywordflow">if</span> (i &gt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a> - 1)</div>
-<div class="line"><span class="lineno">  547</span>    {</div>
-<div class="line"><span class="lineno">  548</span>      i = 0;</div>
-<div class="line"><span class="lineno">  549</span>      <span class="keywordflow">if</span> (c_wrap_search)</div>
-<div class="line"><span class="lineno">  550</span>      {</div>
-<div class="line"><span class="lineno">  551</span>        msg = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to top&quot;</span>);</div>
-<div class="line"><span class="lineno">  552</span>      }</div>
-<div class="line"><span class="lineno">  553</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  554</span>      {</div>
-<div class="line"><span class="lineno">  555</span>        <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search hit bottom without finding match&quot;</span>));</div>
-<div class="line"><span class="lineno">  556</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  557</span>      }</div>
-<div class="line"><span class="lineno">  558</span>    }</div>
-<div class="line"><span class="lineno">  559</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &lt; 0)</div>
-<div class="line"><span class="lineno">  560</span>    {</div>
-<div class="line"><span class="lineno">  561</span>      i = m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a> - 1;</div>
-<div class="line"><span class="lineno">  562</span>      <span class="keywordflow">if</span> (c_wrap_search)</div>
-<div class="line"><span class="lineno">  563</span>      {</div>
-<div class="line"><span class="lineno">  564</span>        msg = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to bottom&quot;</span>);</div>
-<div class="line"><span class="lineno">  565</span>      }</div>
-<div class="line"><span class="lineno">  566</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  567</span>      {</div>
-<div class="line"><span class="lineno">  568</span>        <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search hit top without finding match&quot;</span>));</div>
-<div class="line"><span class="lineno">  569</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  570</span>      }</div>
-<div class="line"><span class="lineno">  571</span>    }</div>
-<div class="line"><span class="lineno">  572</span> </div>
-<div class="line"><span class="lineno">  573</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = <a class="code hl_function" href="mview_8c.html#a1859332ec86bc1394a46665b33f847b9">mutt_get_virt_email</a>(m, i);</div>
-<div class="line"><span class="lineno">  574</span>    <span class="keywordflow">if</span> (!e)</div>
-<div class="line"><span class="lineno">  575</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  576</span> </div>
-<div class="line"><span class="lineno">  577</span>    <span class="keywordflow">if</span> (e-&gt;<a class="code hl_variable" href="structEmail.html#a0168d790a0a31e79bf4e74a7bdf61436">searched</a>)</div>
-<div class="line"><span class="lineno">  578</span>    {</div>
-<div class="line"><span class="lineno">  579</span>      <span class="comment">/* if we&#39;ve already evaluated this message, use the cached value */</span></div>
-<div class="line"><span class="lineno">  580</span>      <span class="keywordflow">if</span> (e-&gt;<a class="code hl_variable" href="structEmail.html#a176c9555da85be4329562050056c0071">matched</a>)</div>
-<div class="line"><span class="lineno">  581</span>      {</div>
-<div class="line"><span class="lineno">  582</span>        <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
-<div class="line"><span class="lineno">  583</span>        <span class="keywordflow">if</span> (msg &amp;&amp; *msg)</div>
-<div class="line"><span class="lineno">  584</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  585</span>        rc = i;</div>
-<div class="line"><span class="lineno">  586</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  587</span>      }</div>
-<div class="line"><span class="lineno">  588</span>    }</div>
-<div class="line"><span class="lineno">  589</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  590</span>    {</div>
-<div class="line"><span class="lineno">  591</span>      <span class="comment">/* remember that we&#39;ve already searched this message */</span></div>
-<div class="line"><span class="lineno">  592</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a0168d790a0a31e79bf4e74a7bdf61436">searched</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  593</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a176c9555da85be4329562050056c0071">matched</a> = <a class="code hl_function" href="exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>),</div>
-<div class="line"><span class="lineno">  594</span>                                     <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, m, e, NULL);</div>
-<div class="line"><span class="lineno">  595</span>      <span class="keywordflow">if</span> (e-&gt;<a class="code hl_variable" href="structEmail.html#a176c9555da85be4329562050056c0071">matched</a>)</div>
-<div class="line"><span class="lineno">  596</span>      {</div>
-<div class="line"><span class="lineno">  597</span>        <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
-<div class="line"><span class="lineno">  598</span>        <span class="keywordflow">if</span> (msg &amp;&amp; *msg)</div>
-<div class="line"><span class="lineno">  599</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  600</span>        rc = i;</div>
-<div class="line"><span class="lineno">  601</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  602</span>      }</div>
-<div class="line"><span class="lineno">  603</span>    }</div>
-<div class="line"><span class="lineno">  604</span> </div>
-<div class="line"><span class="lineno">  605</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>)</div>
-<div class="line"><span class="lineno">  606</span>    {</div>
-<div class="line"><span class="lineno">  607</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search interrupted&quot;</span>));</div>
-<div class="line"><span class="lineno">  608</span>      <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  609</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  610</span>    }</div>
-<div class="line"><span class="lineno">  611</span> </div>
-<div class="line"><span class="lineno">  612</span>    i += incr;</div>
-<div class="line"><span class="lineno">  613</span>  }</div>
-<div class="line"><span class="lineno">  614</span> </div>
-<div class="line"><span class="lineno">  615</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Not found&quot;</span>));</div>
-<div class="line"><span class="lineno">  616</span>done:</div>
-<div class="line"><span class="lineno">  617</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
-<div class="line"><span class="lineno">  618</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  619</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pattern_8c_source.html#l00474">474</a> of file <a class="el" href="pattern_8c_source.html">pattern.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  476</span>{</div>
+<div class="line"><span class="lineno">  477</span>  <span class="keyword">struct </span>Progress *progress = NULL;</div>
+<div class="line"><span class="lineno">  478</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">  479</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = mv ? mv-&gt;<a class="code hl_variable" href="structMailboxView.html#acc1ad6ff0a3ac9c635ac2a68399d3280">mailbox</a> : NULL;</div>
+<div class="line"><span class="lineno">  480</span>  <span class="keywordflow">if</span> (!m)</div>
+<div class="line"><span class="lineno">  481</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  482</span>  <span class="keywordtype">bool</span> pattern_changed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  483</span> </div>
+<div class="line"><span class="lineno">  484</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>) || (flags &amp; <a class="code hl_define" href="search__state_8h.html#ab5e2186220d000b31a02450c072628e7">SEARCH_PROMPT</a>))</div>
+<div class="line"><span class="lineno">  485</span>  {</div>
+<div class="line"><span class="lineno">  486</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>((state-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a>) ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Reverse search for: &quot;</span>) : <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search for: &quot;</span>),</div>
+<div class="line"><span class="lineno">  487</span>                      state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>, <a class="code hl_define" href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b">HC_PATTERN</a>,</div>
+<div class="line"><span class="lineno">  488</span>                      &amp;<a class="code hl_variable" href="pattern_2complete_8c.html#afd86dbf76bd277050b61b4b556f57ced">CompletePatternOps</a>, NULL) != 0) ||</div>
+<div class="line"><span class="lineno">  489</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>))</div>
+<div class="line"><span class="lineno">  490</span>    {</div>
+<div class="line"><span class="lineno">  491</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  492</span>    }</div>
+<div class="line"><span class="lineno">  493</span> </div>
+<div class="line"><span class="lineno">  494</span>    <span class="comment">/* compare the *expanded* version of the search pattern in case</span></div>
+<div class="line"><span class="lineno">  495</span><span class="comment">     * $simple_search has changed while we were searching */</span></div>
+<div class="line"><span class="lineno">  496</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  497</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(tmp, state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>);</div>
+<div class="line"><span class="lineno">  498</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_simple_search = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;simple_search&quot;</span>);</div>
+<div class="line"><span class="lineno">  499</span>    <a class="code hl_function" href="pattern_8c.html#ac4be56068a28743c1ca64c1e61e76ae2">mutt_check_simple</a>(tmp, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_simple_search));</div>
+<div class="line"><span class="lineno">  500</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a9e3dd78a86aea77a654037a7549accd4">buf_str_equal</a>(tmp, state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>))</div>
+<div class="line"><span class="lineno">  501</span>    {</div>
+<div class="line"><span class="lineno">  502</span>      <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>);</div>
+<div class="line"><span class="lineno">  503</span>      <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>, tmp);</div>
+<div class="line"><span class="lineno">  504</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
+<div class="line"><span class="lineno">  505</span>    }</div>
+<div class="line"><span class="lineno">  506</span>  }</div>
+<div class="line"><span class="lineno">  507</span> </div>
+<div class="line"><span class="lineno">  508</span>  <span class="keywordflow">if</span> (!state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)</div>
+<div class="line"><span class="lineno">  509</span>  {</div>
+<div class="line"><span class="lineno">  510</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Compiling search pattern...&quot;</span>));</div>
+<div class="line"><span class="lineno">  511</span>    <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>);</div>
+<div class="line"><span class="lineno">  512</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  513</span>    state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a> = <a class="code hl_function" href="compile_8c.html#a43039fbeb001087dad2a07081ca9526e">mutt_pattern_comp</a>(mv, state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, <a class="code hl_define" href="#a258bbc9499cea3d5d1c3c0454ee8b31a">MUTT_PC_FULL_MSG</a>, err);</div>
+<div class="line"><span class="lineno">  514</span>    pattern_changed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  515</span>    <span class="keywordflow">if</span> (!state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)</div>
+<div class="line"><span class="lineno">  516</span>    {</div>
+<div class="line"><span class="lineno">  517</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
+<div class="line"><span class="lineno">  518</span>      <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;err);</div>
+<div class="line"><span class="lineno">  519</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>);</div>
+<div class="line"><span class="lineno">  520</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>);</div>
+<div class="line"><span class="lineno">  521</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  522</span>    }</div>
+<div class="line"><span class="lineno">  523</span>    <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;err);</div>
+<div class="line"><span class="lineno">  524</span>    <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
+<div class="line"><span class="lineno">  525</span>  }</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span>  <span class="keywordflow">if</span> (pattern_changed)</div>
+<div class="line"><span class="lineno">  528</span>  {</div>
+<div class="line"><span class="lineno">  529</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
+<div class="line"><span class="lineno">  530</span>      m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]-&gt;<a class="code hl_variable" href="structEmail.html#a0168d790a0a31e79bf4e74a7bdf61436">searched</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  531</span>    <span class="keywordflow">if</span> ((m-&gt;<a class="code hl_variable" href="structMailbox.html#a5638329fb2ebd4bbe1f4a949ec8de174">type</a> == <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da7f541a03089370b1a260e344f8d1809b">MUTT_IMAP</a>) &amp;&amp; (!<a class="code hl_function" href="imap_2lib_8h.html#ac55dfb1446427e7f3cb17405877d585a">imap_search</a>(m, state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)))</div>
+<div class="line"><span class="lineno">  532</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  533</span>  }</div>
+<div class="line"><span class="lineno">  534</span> </div>
+<div class="line"><span class="lineno">  535</span>  <span class="keywordtype">int</span> incr = state-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a> ? -1 : 1;</div>
+<div class="line"><span class="lineno">  536</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="search__state_8h.html#a208bf38d21acd38ffea2d9b7da797ac8">SEARCH_OPPOSITE</a>)</div>
+<div class="line"><span class="lineno">  537</span>    incr = -incr;</div>
+<div class="line"><span class="lineno">  538</span> </div>
+<div class="line"><span class="lineno">  539</span>  progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75adc0a9dcc8b2f53e3698038e7164b6489">MUTT_PROGRESS_READ</a>, m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>);</div>
+<div class="line"><span class="lineno">  540</span>  <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Searching...&quot;</span>));</div>
+<div class="line"><span class="lineno">  541</span> </div>
+<div class="line"><span class="lineno">  542</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_wrap_search = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;wrap_search&quot;</span>);</div>
+<div class="line"><span class="lineno">  543</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = cur + incr, j = 0; j != m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>; j++)</div>
+<div class="line"><span class="lineno">  544</span>  {</div>
+<div class="line"><span class="lineno">  545</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *msg = NULL;</div>
+<div class="line"><span class="lineno">  546</span>    <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, j, -1);</div>
+<div class="line"><span class="lineno">  547</span>    <span class="keywordflow">if</span> (i &gt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a> - 1)</div>
+<div class="line"><span class="lineno">  548</span>    {</div>
+<div class="line"><span class="lineno">  549</span>      i = 0;</div>
+<div class="line"><span class="lineno">  550</span>      <span class="keywordflow">if</span> (c_wrap_search)</div>
+<div class="line"><span class="lineno">  551</span>      {</div>
+<div class="line"><span class="lineno">  552</span>        msg = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to top&quot;</span>);</div>
+<div class="line"><span class="lineno">  553</span>      }</div>
+<div class="line"><span class="lineno">  554</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  555</span>      {</div>
+<div class="line"><span class="lineno">  556</span>        <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search hit bottom without finding match&quot;</span>));</div>
+<div class="line"><span class="lineno">  557</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  558</span>      }</div>
+<div class="line"><span class="lineno">  559</span>    }</div>
+<div class="line"><span class="lineno">  560</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &lt; 0)</div>
+<div class="line"><span class="lineno">  561</span>    {</div>
+<div class="line"><span class="lineno">  562</span>      i = m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a> - 1;</div>
+<div class="line"><span class="lineno">  563</span>      <span class="keywordflow">if</span> (c_wrap_search)</div>
+<div class="line"><span class="lineno">  564</span>      {</div>
+<div class="line"><span class="lineno">  565</span>        msg = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to bottom&quot;</span>);</div>
+<div class="line"><span class="lineno">  566</span>      }</div>
+<div class="line"><span class="lineno">  567</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  568</span>      {</div>
+<div class="line"><span class="lineno">  569</span>        <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search hit top without finding match&quot;</span>));</div>
+<div class="line"><span class="lineno">  570</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  571</span>      }</div>
+<div class="line"><span class="lineno">  572</span>    }</div>
+<div class="line"><span class="lineno">  573</span> </div>
+<div class="line"><span class="lineno">  574</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = <a class="code hl_function" href="mview_8c.html#a1859332ec86bc1394a46665b33f847b9">mutt_get_virt_email</a>(m, i);</div>
+<div class="line"><span class="lineno">  575</span>    <span class="keywordflow">if</span> (!e)</div>
+<div class="line"><span class="lineno">  576</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  577</span> </div>
+<div class="line"><span class="lineno">  578</span>    <span class="keywordflow">if</span> (e-&gt;<a class="code hl_variable" href="structEmail.html#a0168d790a0a31e79bf4e74a7bdf61436">searched</a>)</div>
+<div class="line"><span class="lineno">  579</span>    {</div>
+<div class="line"><span class="lineno">  580</span>      <span class="comment">/* if we&#39;ve already evaluated this message, use the cached value */</span></div>
+<div class="line"><span class="lineno">  581</span>      <span class="keywordflow">if</span> (e-&gt;<a class="code hl_variable" href="structEmail.html#a176c9555da85be4329562050056c0071">matched</a>)</div>
+<div class="line"><span class="lineno">  582</span>      {</div>
+<div class="line"><span class="lineno">  583</span>        <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
+<div class="line"><span class="lineno">  584</span>        <span class="keywordflow">if</span> (msg &amp;&amp; *msg)</div>
+<div class="line"><span class="lineno">  585</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  586</span>        rc = i;</div>
+<div class="line"><span class="lineno">  587</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  588</span>      }</div>
+<div class="line"><span class="lineno">  589</span>    }</div>
+<div class="line"><span class="lineno">  590</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  591</span>    {</div>
+<div class="line"><span class="lineno">  592</span>      <span class="comment">/* remember that we&#39;ve already searched this message */</span></div>
+<div class="line"><span class="lineno">  593</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a0168d790a0a31e79bf4e74a7bdf61436">searched</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  594</span>      e-&gt;<a class="code hl_variable" href="structEmail.html#a176c9555da85be4329562050056c0071">matched</a> = <a class="code hl_function" href="exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>),</div>
+<div class="line"><span class="lineno">  595</span>                                     <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, m, e, NULL);</div>
+<div class="line"><span class="lineno">  596</span>      <span class="keywordflow">if</span> (e-&gt;<a class="code hl_variable" href="structEmail.html#a176c9555da85be4329562050056c0071">matched</a>)</div>
+<div class="line"><span class="lineno">  597</span>      {</div>
+<div class="line"><span class="lineno">  598</span>        <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
+<div class="line"><span class="lineno">  599</span>        <span class="keywordflow">if</span> (msg &amp;&amp; *msg)</div>
+<div class="line"><span class="lineno">  600</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  601</span>        rc = i;</div>
+<div class="line"><span class="lineno">  602</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  603</span>      }</div>
+<div class="line"><span class="lineno">  604</span>    }</div>
+<div class="line"><span class="lineno">  605</span> </div>
+<div class="line"><span class="lineno">  606</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>)</div>
+<div class="line"><span class="lineno">  607</span>    {</div>
+<div class="line"><span class="lineno">  608</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search interrupted&quot;</span>));</div>
+<div class="line"><span class="lineno">  609</span>      <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  610</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  611</span>    }</div>
+<div class="line"><span class="lineno">  612</span> </div>
+<div class="line"><span class="lineno">  613</span>    i += incr;</div>
+<div class="line"><span class="lineno">  614</span>  }</div>
+<div class="line"><span class="lineno">  615</span> </div>
+<div class="line"><span class="lineno">  616</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Not found&quot;</span>));</div>
+<div class="line"><span class="lineno">  617</span>done:</div>
+<div class="line"><span class="lineno">  618</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
+<div class="line"><span class="lineno">  619</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  620</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00076">buffer.c:76</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a608a2d4559c47be18b5e56cf520dfd73"><div class="ttname"><a href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a></div><div class="ttdeci">void buf_free(struct Buffer **ptr)</div><div class="ttdoc">Deallocates a buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00319">buffer.c:319</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a9e3dd78a86aea77a654037a7549accd4"><div class="ttname"><a href="buffer_8c.html#a9e3dd78a86aea77a654037a7549accd4">buf_str_equal</a></div><div class="ttdeci">bool buf_str_equal(const struct Buffer *a, const struct Buffer *b)</div><div class="ttdoc">Return if two buffers are equal.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00683">buffer.c:683</a></div></div>
@@ -2338,147 +2339,147 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pattern_8c_source.html#l00630">630</a> of file <a class="el" href="pattern_8c_source.html">pattern.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  632</span>{</div>
-<div class="line"><span class="lineno">  633</span>  <span class="keyword">struct </span>Progress *progress = NULL;</div>
-<div class="line"><span class="lineno">  634</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAliasMenuData.html">AliasMenuData</a> *<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a> = <a class="code hl_variable" href="structAliasMenuData.html#a80c31195ea34deeb083d2a044b98d1ca">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
-<div class="line"><span class="lineno">  635</span>  <span class="keyword">const</span> <span class="keyword">struct </span>AliasViewArray *ava = &amp;mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>;</div>
-<div class="line"><span class="lineno">  636</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">  637</span>  <span class="keywordtype">bool</span> pattern_changed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  638</span> </div>
-<div class="line"><span class="lineno">  639</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>) || flags &amp; <a class="code hl_define" href="search__state_8h.html#ab5e2186220d000b31a02450c072628e7">SEARCH_PROMPT</a>)</div>
-<div class="line"><span class="lineno">  640</span>  {</div>
-<div class="line"><span class="lineno">  641</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>((flags &amp; OP_SEARCH_REVERSE) ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Reverse search for: &quot;</span>) : <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search for: &quot;</span>),</div>
-<div class="line"><span class="lineno">  642</span>                      state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>, <a class="code hl_define" href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b">HC_PATTERN</a>,</div>
-<div class="line"><span class="lineno">  643</span>                      &amp;<a class="code hl_variable" href="pattern_2complete_8c.html#afd86dbf76bd277050b61b4b556f57ced">CompletePatternOps</a>, NULL) != 0) ||</div>
-<div class="line"><span class="lineno">  644</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>))</div>
-<div class="line"><span class="lineno">  645</span>    {</div>
-<div class="line"><span class="lineno">  646</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  647</span>    }</div>
-<div class="line"><span class="lineno">  648</span> </div>
-<div class="line"><span class="lineno">  649</span>    <span class="comment">/* compare the *expanded* version of the search pattern in case</span></div>
-<div class="line"><span class="lineno">  650</span><span class="comment">     * $simple_search has changed while we were searching */</span></div>
-<div class="line"><span class="lineno">  651</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  652</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(tmp, state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>);</div>
-<div class="line"><span class="lineno">  653</span>    <a class="code hl_function" href="pattern_8c.html#ac4be56068a28743c1ca64c1e61e76ae2">mutt_check_simple</a>(tmp, <a class="code hl_define" href="#abbd0506e535c65e267f08fbc0c4d33ef">MUTT_ALIAS_SIMPLESEARCH</a>);</div>
-<div class="line"><span class="lineno">  654</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a9e3dd78a86aea77a654037a7549accd4">buf_str_equal</a>(tmp, state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>))</div>
-<div class="line"><span class="lineno">  655</span>    {</div>
-<div class="line"><span class="lineno">  656</span>      <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>);</div>
-<div class="line"><span class="lineno">  657</span>      <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>, tmp);</div>
-<div class="line"><span class="lineno">  658</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
-<div class="line"><span class="lineno">  659</span>    }</div>
-<div class="line"><span class="lineno">  660</span>  }</div>
-<div class="line"><span class="lineno">  661</span> </div>
-<div class="line"><span class="lineno">  662</span>  <span class="keywordflow">if</span> (!state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)</div>
-<div class="line"><span class="lineno">  663</span>  {</div>
-<div class="line"><span class="lineno">  664</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Compiling search pattern...&quot;</span>));</div>
-<div class="line"><span class="lineno">  665</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  666</span>    state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a> = <a class="code hl_function" href="compile_8c.html#a43039fbeb001087dad2a07081ca9526e">mutt_pattern_comp</a>(NULL, state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, <a class="code hl_define" href="#a258bbc9499cea3d5d1c3c0454ee8b31a">MUTT_PC_FULL_MSG</a>, err);</div>
-<div class="line"><span class="lineno">  667</span>    pattern_changed = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  668</span>    <span class="keywordflow">if</span> (!state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)</div>
-<div class="line"><span class="lineno">  669</span>    {</div>
-<div class="line"><span class="lineno">  670</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
-<div class="line"><span class="lineno">  671</span>      <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;err);</div>
-<div class="line"><span class="lineno">  672</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>);</div>
-<div class="line"><span class="lineno">  673</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>);</div>
-<div class="line"><span class="lineno">  674</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  675</span>    }</div>
-<div class="line"><span class="lineno">  676</span>    <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;err);</div>
-<div class="line"><span class="lineno">  677</span>    <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
-<div class="line"><span class="lineno">  678</span>  }</div>
-<div class="line"><span class="lineno">  679</span> </div>
-<div class="line"><span class="lineno">  680</span>  <span class="keywordflow">if</span> (pattern_changed)</div>
-<div class="line"><span class="lineno">  681</span>  {</div>
-<div class="line"><span class="lineno">  682</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *av = NULL;</div>
-<div class="line"><span class="lineno">  683</span>    <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(av, ava)</div>
-<div class="line"><span class="lineno">  684</span>    {</div>
-<div class="line"><span class="lineno">  685</span>      av-&gt;<a class="code hl_variable" href="structAliasView.html#a71a64de73888c57232ff738a1cf8dc91">is_searched</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  686</span>    }</div>
-<div class="line"><span class="lineno">  687</span>  }</div>
-<div class="line"><span class="lineno">  688</span> </div>
-<div class="line"><span class="lineno">  689</span>  <span class="keywordtype">int</span> incr = state-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a> ? -1 : 1;</div>
-<div class="line"><span class="lineno">  690</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="search__state_8h.html#a208bf38d21acd38ffea2d9b7da797ac8">SEARCH_OPPOSITE</a>)</div>
-<div class="line"><span class="lineno">  691</span>    incr = -incr;</div>
-<div class="line"><span class="lineno">  692</span> </div>
-<div class="line"><span class="lineno">  693</span>  progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75adc0a9dcc8b2f53e3698038e7164b6489">MUTT_PROGRESS_READ</a>, <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(ava));</div>
-<div class="line"><span class="lineno">  694</span>  <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Searching...&quot;</span>));</div>
-<div class="line"><span class="lineno">  695</span> </div>
-<div class="line"><span class="lineno">  696</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_wrap_search = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;wrap_search&quot;</span>);</div>
-<div class="line"><span class="lineno">  697</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = cur + incr, j = 0; j != <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(ava); j++)</div>
-<div class="line"><span class="lineno">  698</span>  {</div>
-<div class="line"><span class="lineno">  699</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *msg = NULL;</div>
-<div class="line"><span class="lineno">  700</span>    <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, j, -1);</div>
-<div class="line"><span class="lineno">  701</span>    <span class="keywordflow">if</span> (i &gt; <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(ava) - 1)</div>
-<div class="line"><span class="lineno">  702</span>    {</div>
-<div class="line"><span class="lineno">  703</span>      i = 0;</div>
-<div class="line"><span class="lineno">  704</span>      <span class="keywordflow">if</span> (c_wrap_search)</div>
-<div class="line"><span class="lineno">  705</span>      {</div>
-<div class="line"><span class="lineno">  706</span>        msg = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to top&quot;</span>);</div>
-<div class="line"><span class="lineno">  707</span>      }</div>
-<div class="line"><span class="lineno">  708</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  709</span>      {</div>
-<div class="line"><span class="lineno">  710</span>        <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search hit bottom without finding match&quot;</span>));</div>
-<div class="line"><span class="lineno">  711</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  712</span>      }</div>
-<div class="line"><span class="lineno">  713</span>    }</div>
-<div class="line"><span class="lineno">  714</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &lt; 0)</div>
-<div class="line"><span class="lineno">  715</span>    {</div>
-<div class="line"><span class="lineno">  716</span>      i = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(ava) - 1;</div>
-<div class="line"><span class="lineno">  717</span>      <span class="keywordflow">if</span> (c_wrap_search)</div>
-<div class="line"><span class="lineno">  718</span>      {</div>
-<div class="line"><span class="lineno">  719</span>        msg = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to bottom&quot;</span>);</div>
-<div class="line"><span class="lineno">  720</span>      }</div>
-<div class="line"><span class="lineno">  721</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  722</span>      {</div>
-<div class="line"><span class="lineno">  723</span>        <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search hit top without finding match&quot;</span>));</div>
-<div class="line"><span class="lineno">  724</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  725</span>      }</div>
-<div class="line"><span class="lineno">  726</span>    }</div>
-<div class="line"><span class="lineno">  727</span> </div>
-<div class="line"><span class="lineno">  728</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *av = <a class="code hl_define" href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a>(ava, i);</div>
-<div class="line"><span class="lineno">  729</span>    <span class="keywordflow">if</span> (av-&gt;<a class="code hl_variable" href="structAliasView.html#a71a64de73888c57232ff738a1cf8dc91">is_searched</a>)</div>
-<div class="line"><span class="lineno">  730</span>    {</div>
-<div class="line"><span class="lineno">  731</span>      <span class="comment">/* if we&#39;ve already evaluated this message, use the cached value */</span></div>
-<div class="line"><span class="lineno">  732</span>      <span class="keywordflow">if</span> (av-&gt;<a class="code hl_variable" href="structAliasView.html#a2415ea4839d043b562c0a79d51618f3c">is_matched</a>)</div>
-<div class="line"><span class="lineno">  733</span>      {</div>
-<div class="line"><span class="lineno">  734</span>        <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
-<div class="line"><span class="lineno">  735</span>        <span class="keywordflow">if</span> (msg &amp;&amp; *msg)</div>
-<div class="line"><span class="lineno">  736</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  737</span>        rc = i;</div>
-<div class="line"><span class="lineno">  738</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  739</span>      }</div>
-<div class="line"><span class="lineno">  740</span>    }</div>
-<div class="line"><span class="lineno">  741</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  742</span>    {</div>
-<div class="line"><span class="lineno">  743</span>      <span class="comment">/* remember that we&#39;ve already searched this message */</span></div>
-<div class="line"><span class="lineno">  744</span>      av-&gt;<a class="code hl_variable" href="structAliasView.html#a71a64de73888c57232ff738a1cf8dc91">is_searched</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  745</span>      av-&gt;<a class="code hl_variable" href="structAliasView.html#a2415ea4839d043b562c0a79d51618f3c">is_matched</a> = <a class="code hl_function" href="exec_8c.html#a3e5c6984e80a84d451642c66acc8dcf1">mutt_pattern_alias_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>),</div>
-<div class="line"><span class="lineno">  746</span>                                               <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, av, NULL);</div>
-<div class="line"><span class="lineno">  747</span>      <span class="keywordflow">if</span> (av-&gt;<a class="code hl_variable" href="structAliasView.html#a2415ea4839d043b562c0a79d51618f3c">is_matched</a>)</div>
-<div class="line"><span class="lineno">  748</span>      {</div>
-<div class="line"><span class="lineno">  749</span>        <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
-<div class="line"><span class="lineno">  750</span>        <span class="keywordflow">if</span> (msg &amp;&amp; *msg)</div>
-<div class="line"><span class="lineno">  751</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
-<div class="line"><span class="lineno">  752</span>        rc = i;</div>
-<div class="line"><span class="lineno">  753</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  754</span>      }</div>
-<div class="line"><span class="lineno">  755</span>    }</div>
-<div class="line"><span class="lineno">  756</span> </div>
-<div class="line"><span class="lineno">  757</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>)</div>
-<div class="line"><span class="lineno">  758</span>    {</div>
-<div class="line"><span class="lineno">  759</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search interrupted&quot;</span>));</div>
-<div class="line"><span class="lineno">  760</span>      <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  761</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  762</span>    }</div>
-<div class="line"><span class="lineno">  763</span> </div>
-<div class="line"><span class="lineno">  764</span>    i += incr;</div>
-<div class="line"><span class="lineno">  765</span>  }</div>
-<div class="line"><span class="lineno">  766</span> </div>
-<div class="line"><span class="lineno">  767</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Not found&quot;</span>));</div>
-<div class="line"><span class="lineno">  768</span>done:</div>
-<div class="line"><span class="lineno">  769</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
-<div class="line"><span class="lineno">  770</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  771</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pattern_8c_source.html#l00631">631</a> of file <a class="el" href="pattern_8c_source.html">pattern.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  633</span>{</div>
+<div class="line"><span class="lineno">  634</span>  <span class="keyword">struct </span>Progress *progress = NULL;</div>
+<div class="line"><span class="lineno">  635</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAliasMenuData.html">AliasMenuData</a> *<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a> = <a class="code hl_variable" href="structAliasMenuData.html#a80c31195ea34deeb083d2a044b98d1ca">menu</a>-&gt;<a class="code hl_variable" href="structMenu.html#adc6d277fec333aca5b57f1156e6dabfc">mdata</a>;</div>
+<div class="line"><span class="lineno">  636</span>  <span class="keyword">const</span> <span class="keyword">struct </span>AliasViewArray *ava = &amp;mdata-&gt;<a class="code hl_variable" href="structAliasMenuData.html#a3f64d82cb5275ce3572628fce93a56fc">ava</a>;</div>
+<div class="line"><span class="lineno">  637</span>  <span class="keywordtype">int</span> rc = -1;</div>
+<div class="line"><span class="lineno">  638</span>  <span class="keywordtype">bool</span> pattern_changed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  639</span> </div>
+<div class="line"><span class="lineno">  640</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>) || flags &amp; <a class="code hl_define" href="search__state_8h.html#ab5e2186220d000b31a02450c072628e7">SEARCH_PROMPT</a>)</div>
+<div class="line"><span class="lineno">  641</span>  {</div>
+<div class="line"><span class="lineno">  642</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>((flags &amp; OP_SEARCH_REVERSE) ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Reverse search for: &quot;</span>) : <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search for: &quot;</span>),</div>
+<div class="line"><span class="lineno">  643</span>                      state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>, <a class="code hl_define" href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b">HC_PATTERN</a>,</div>
+<div class="line"><span class="lineno">  644</span>                      &amp;<a class="code hl_variable" href="pattern_2complete_8c.html#afd86dbf76bd277050b61b4b556f57ced">CompletePatternOps</a>, NULL) != 0) ||</div>
+<div class="line"><span class="lineno">  645</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>))</div>
+<div class="line"><span class="lineno">  646</span>    {</div>
+<div class="line"><span class="lineno">  647</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  648</span>    }</div>
+<div class="line"><span class="lineno">  649</span> </div>
+<div class="line"><span class="lineno">  650</span>    <span class="comment">/* compare the *expanded* version of the search pattern in case</span></div>
+<div class="line"><span class="lineno">  651</span><span class="comment">     * $simple_search has changed while we were searching */</span></div>
+<div class="line"><span class="lineno">  652</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  653</span>    <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(tmp, state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>);</div>
+<div class="line"><span class="lineno">  654</span>    <a class="code hl_function" href="pattern_8c.html#ac4be56068a28743c1ca64c1e61e76ae2">mutt_check_simple</a>(tmp, <a class="code hl_define" href="#abbd0506e535c65e267f08fbc0c4d33ef">MUTT_ALIAS_SIMPLESEARCH</a>);</div>
+<div class="line"><span class="lineno">  655</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="buffer_8c.html#a9e3dd78a86aea77a654037a7549accd4">buf_str_equal</a>(tmp, state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>))</div>
+<div class="line"><span class="lineno">  656</span>    {</div>
+<div class="line"><span class="lineno">  657</span>      <a class="code hl_function" href="compile_8c.html#ae447e834babbe84bef7005199ec39962">mutt_pattern_free</a>(&amp;state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>);</div>
+<div class="line"><span class="lineno">  658</span>      <a class="code hl_function" href="buffer_8c.html#ad68834195d667b0932da5133a5402d70">buf_copy</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>, tmp);</div>
+<div class="line"><span class="lineno">  659</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
+<div class="line"><span class="lineno">  660</span>    }</div>
+<div class="line"><span class="lineno">  661</span>  }</div>
+<div class="line"><span class="lineno">  662</span> </div>
+<div class="line"><span class="lineno">  663</span>  <span class="keywordflow">if</span> (!state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)</div>
+<div class="line"><span class="lineno">  664</span>  {</div>
+<div class="line"><span class="lineno">  665</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Compiling search pattern...&quot;</span>));</div>
+<div class="line"><span class="lineno">  666</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  667</span>    state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a> = <a class="code hl_function" href="compile_8c.html#a43039fbeb001087dad2a07081ca9526e">mutt_pattern_comp</a>(NULL, state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, <a class="code hl_define" href="#a258bbc9499cea3d5d1c3c0454ee8b31a">MUTT_PC_FULL_MSG</a>, err);</div>
+<div class="line"><span class="lineno">  668</span>    pattern_changed = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  669</span>    <span class="keywordflow">if</span> (!state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>)</div>
+<div class="line"><span class="lineno">  670</span>    {</div>
+<div class="line"><span class="lineno">  671</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(err));</div>
+<div class="line"><span class="lineno">  672</span>      <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;err);</div>
+<div class="line"><span class="lineno">  673</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a09b871630482499d27724fb324864273">string</a>);</div>
+<div class="line"><span class="lineno">  674</span>      <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a10ed9ec626b19daf21013cead8d19218">string_expn</a>);</div>
+<div class="line"><span class="lineno">  675</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  676</span>    }</div>
+<div class="line"><span class="lineno">  677</span>    <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;err);</div>
+<div class="line"><span class="lineno">  678</span>    <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
+<div class="line"><span class="lineno">  679</span>  }</div>
+<div class="line"><span class="lineno">  680</span> </div>
+<div class="line"><span class="lineno">  681</span>  <span class="keywordflow">if</span> (pattern_changed)</div>
+<div class="line"><span class="lineno">  682</span>  {</div>
+<div class="line"><span class="lineno">  683</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *av = NULL;</div>
+<div class="line"><span class="lineno">  684</span>    <a class="code hl_define" href="array_8h.html#a6b8ea5fb2f366d7716f5042b347093a6">ARRAY_FOREACH</a>(av, ava)</div>
+<div class="line"><span class="lineno">  685</span>    {</div>
+<div class="line"><span class="lineno">  686</span>      av-&gt;<a class="code hl_variable" href="structAliasView.html#a71a64de73888c57232ff738a1cf8dc91">is_searched</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  687</span>    }</div>
+<div class="line"><span class="lineno">  688</span>  }</div>
+<div class="line"><span class="lineno">  689</span> </div>
+<div class="line"><span class="lineno">  690</span>  <span class="keywordtype">int</span> incr = state-&gt;<a class="code hl_variable" href="structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada">reverse</a> ? -1 : 1;</div>
+<div class="line"><span class="lineno">  691</span>  <span class="keywordflow">if</span> (flags &amp; <a class="code hl_define" href="search__state_8h.html#a208bf38d21acd38ffea2d9b7da797ac8">SEARCH_OPPOSITE</a>)</div>
+<div class="line"><span class="lineno">  692</span>    incr = -incr;</div>
+<div class="line"><span class="lineno">  693</span> </div>
+<div class="line"><span class="lineno">  694</span>  progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75adc0a9dcc8b2f53e3698038e7164b6489">MUTT_PROGRESS_READ</a>, <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(ava));</div>
+<div class="line"><span class="lineno">  695</span>  <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Searching...&quot;</span>));</div>
+<div class="line"><span class="lineno">  696</span> </div>
+<div class="line"><span class="lineno">  697</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_wrap_search = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;wrap_search&quot;</span>);</div>
+<div class="line"><span class="lineno">  698</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = cur + incr, j = 0; j != <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(ava); j++)</div>
+<div class="line"><span class="lineno">  699</span>  {</div>
+<div class="line"><span class="lineno">  700</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *msg = NULL;</div>
+<div class="line"><span class="lineno">  701</span>    <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, j, -1);</div>
+<div class="line"><span class="lineno">  702</span>    <span class="keywordflow">if</span> (i &gt; <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(ava) - 1)</div>
+<div class="line"><span class="lineno">  703</span>    {</div>
+<div class="line"><span class="lineno">  704</span>      i = 0;</div>
+<div class="line"><span class="lineno">  705</span>      <span class="keywordflow">if</span> (c_wrap_search)</div>
+<div class="line"><span class="lineno">  706</span>      {</div>
+<div class="line"><span class="lineno">  707</span>        msg = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to top&quot;</span>);</div>
+<div class="line"><span class="lineno">  708</span>      }</div>
+<div class="line"><span class="lineno">  709</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  710</span>      {</div>
+<div class="line"><span class="lineno">  711</span>        <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search hit bottom without finding match&quot;</span>));</div>
+<div class="line"><span class="lineno">  712</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  713</span>      }</div>
+<div class="line"><span class="lineno">  714</span>    }</div>
+<div class="line"><span class="lineno">  715</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i &lt; 0)</div>
+<div class="line"><span class="lineno">  716</span>    {</div>
+<div class="line"><span class="lineno">  717</span>      i = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(ava) - 1;</div>
+<div class="line"><span class="lineno">  718</span>      <span class="keywordflow">if</span> (c_wrap_search)</div>
+<div class="line"><span class="lineno">  719</span>      {</div>
+<div class="line"><span class="lineno">  720</span>        msg = <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to bottom&quot;</span>);</div>
+<div class="line"><span class="lineno">  721</span>      }</div>
+<div class="line"><span class="lineno">  722</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  723</span>      {</div>
+<div class="line"><span class="lineno">  724</span>        <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search hit top without finding match&quot;</span>));</div>
+<div class="line"><span class="lineno">  725</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  726</span>      }</div>
+<div class="line"><span class="lineno">  727</span>    }</div>
+<div class="line"><span class="lineno">  728</span> </div>
+<div class="line"><span class="lineno">  729</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structAliasView.html">AliasView</a> *av = <a class="code hl_define" href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a>(ava, i);</div>
+<div class="line"><span class="lineno">  730</span>    <span class="keywordflow">if</span> (av-&gt;<a class="code hl_variable" href="structAliasView.html#a71a64de73888c57232ff738a1cf8dc91">is_searched</a>)</div>
+<div class="line"><span class="lineno">  731</span>    {</div>
+<div class="line"><span class="lineno">  732</span>      <span class="comment">/* if we&#39;ve already evaluated this message, use the cached value */</span></div>
+<div class="line"><span class="lineno">  733</span>      <span class="keywordflow">if</span> (av-&gt;<a class="code hl_variable" href="structAliasView.html#a2415ea4839d043b562c0a79d51618f3c">is_matched</a>)</div>
+<div class="line"><span class="lineno">  734</span>      {</div>
+<div class="line"><span class="lineno">  735</span>        <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
+<div class="line"><span class="lineno">  736</span>        <span class="keywordflow">if</span> (msg &amp;&amp; *msg)</div>
+<div class="line"><span class="lineno">  737</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  738</span>        rc = i;</div>
+<div class="line"><span class="lineno">  739</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  740</span>      }</div>
+<div class="line"><span class="lineno">  741</span>    }</div>
+<div class="line"><span class="lineno">  742</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  743</span>    {</div>
+<div class="line"><span class="lineno">  744</span>      <span class="comment">/* remember that we&#39;ve already searched this message */</span></div>
+<div class="line"><span class="lineno">  745</span>      av-&gt;<a class="code hl_variable" href="structAliasView.html#a71a64de73888c57232ff738a1cf8dc91">is_searched</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  746</span>      av-&gt;<a class="code hl_variable" href="structAliasView.html#a2415ea4839d043b562c0a79d51618f3c">is_matched</a> = <a class="code hl_function" href="exec_8c.html#a3e5c6984e80a84d451642c66acc8dcf1">mutt_pattern_alias_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(state-&gt;<a class="code hl_variable" href="structSearchState.html#a9ae675072a20827591b01a54becd5832">pattern</a>),</div>
+<div class="line"><span class="lineno">  747</span>                                               <a class="code hl_define" href="#a92c3a3987120f4e5b64f420613a13311">MUTT_MATCH_FULL_ADDRESS</a>, av, NULL);</div>
+<div class="line"><span class="lineno">  748</span>      <span class="keywordflow">if</span> (av-&gt;<a class="code hl_variable" href="structAliasView.html#a2415ea4839d043b562c0a79d51618f3c">is_matched</a>)</div>
+<div class="line"><span class="lineno">  749</span>      {</div>
+<div class="line"><span class="lineno">  750</span>        <a class="code hl_function" href="mutt__logging_8c.html#af068b3f524a31fad293b2fb61dfc4534">mutt_clear_error</a>();</div>
+<div class="line"><span class="lineno">  751</span>        <span class="keywordflow">if</span> (msg &amp;&amp; *msg)</div>
+<div class="line"><span class="lineno">  752</span>          <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg);</div>
+<div class="line"><span class="lineno">  753</span>        rc = i;</div>
+<div class="line"><span class="lineno">  754</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  755</span>      }</div>
+<div class="line"><span class="lineno">  756</span>    }</div>
+<div class="line"><span class="lineno">  757</span> </div>
+<div class="line"><span class="lineno">  758</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a>)</div>
+<div class="line"><span class="lineno">  759</span>    {</div>
+<div class="line"><span class="lineno">  760</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search interrupted&quot;</span>));</div>
+<div class="line"><span class="lineno">  761</span>      <a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  762</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  763</span>    }</div>
+<div class="line"><span class="lineno">  764</span> </div>
+<div class="line"><span class="lineno">  765</span>    i += incr;</div>
+<div class="line"><span class="lineno">  766</span>  }</div>
+<div class="line"><span class="lineno">  767</span> </div>
+<div class="line"><span class="lineno">  768</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Not found&quot;</span>));</div>
+<div class="line"><span class="lineno">  769</span>done:</div>
+<div class="line"><span class="lineno">  770</span>  <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
+<div class="line"><span class="lineno">  771</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  772</span>}</div>
 <div class="ttc" id="aarray_8h_html_aebd057bb37aec75b6bdbed9e76715803"><div class="ttname"><a href="array_8h.html#aebd057bb37aec75b6bdbed9e76715803">ARRAY_GET</a></div><div class="ttdeci">#define ARRAY_GET(head, idx)</div><div class="ttdoc">Return the element at index.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00109">array.h:109</a></div></div>
 <div class="ttc" id="astructAliasMenuData_html"><div class="ttname"><a href="structAliasMenuData.html">AliasMenuData</a></div><div class="ttdoc">AliasView array wrapper with Pattern information -.</div><div class="ttdef"><b>Definition</b> <a href="gui_8h_source.html#l00053">gui.h:54</a></div></div>
 <div class="ttc" id="astructAliasMenuData_html_a80c31195ea34deeb083d2a044b98d1ca"><div class="ttname"><a href="structAliasMenuData.html#a80c31195ea34deeb083d2a044b98d1ca">AliasMenuData::menu</a></div><div class="ttdeci">struct Menu * menu</div><div class="ttdoc">Menu.</div><div class="ttdef"><b>Definition</b> <a href="gui_8h_source.html#l00058">gui.h:58</a></div></div>

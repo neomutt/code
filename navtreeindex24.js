@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"gui_curs_lib.html":[25,0],
 "gui_curses.html":[25,8],
 "gui_dialog.html":[25,1],
 "gui_functions.html":[25,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "history_8c.html":[2,0,26,6],
 "history_8c.html#a115238984c7cbc554e1526f7ce460f60":[2,0,26,6,8],
 "history_8c.html#a1387086248fb136b81b00cd2924538ee":[2,0,26,6,13],
-"history_8c.html#a19a7f7a6c55b6ca543e9f2a2cc7fe482":[2,0,26,6,22],
-"history_8c.html#a282fdccadb31bf6aaf2a45c392a46f88":[2,0,26,6,16]
+"history_8c.html#a19a7f7a6c55b6ca543e9f2a2cc7fe482":[2,0,26,6,22]
 };

@@ -8,9 +8,9 @@ var alias_8h =
       [ "NT_ALIAS_DELETE_ALL", "alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7ba242bee407f8bcd387070cb3551dd9374", null ],
       [ "NT_ALIAS_CHANGE", "alias_8h.html#a62b52be6266dd0fae07e4133e7b97d7babdeea2e55e2413c8b164ab97337bba2f", null ]
     ] ],
-    [ "TAILQ_HEAD", "alias_8h.html#ac8b2a934090d6906291ff2772ee26dc9", null ],
+    [ "ARRAY_HEAD", "alias_8h.html#a4eea61096f36760ab9ecb18fef7bcf0a", null ],
     [ "alias_free", "alias_8h.html#a027ff288eb965c15ce16ca26b6467d44", null ],
     [ "alias_new", "alias_8h.html#aa8bb09e1ec41cd6e59b7de5d00b19380", null ],
-    [ "aliaslist_clear", "alias_8h.html#acd9d138830f1b82dfcdc2d39ed3fc38f", null ],
-    [ "Aliases", "alias_8h.html#a0831e7ca6080141051db5bde20cb45f7", null ]
+    [ "aliaslist_clear", "alias_8h.html#a39abd8119598e5448bd20a92d83b6323", null ],
+    [ "Aliases", "alias_8h.html#a0a7ce8a9f2b33c91a165e241996c1693", null ]
 ];

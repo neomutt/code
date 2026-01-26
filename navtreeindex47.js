@@ -1,7 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"structAnsiColor.html#a87daadf84d4b6a20b6acc774cf95d7d6":[1,0,7,1],
-"structAnsiColor.html#ae8d76de12d91edfd3b0d52a83fa79c27":[1,0,7,0],
 "structAttachCtx.html":[1,0,8],
 "structAttachCtx.html#a0dfc8b92b72351536f7bd3cfbc08eb30":[1,0,8,6],
 "structAttachCtx.html#a2a640066cd23ee29a8608ff2755526fc":[1,0,8,11],
@@ -249,5 +247,7 @@ var NAVTREEINDEX47 =
 "structCompileOption.html":[1,0,42],
 "structCompileOption.html#a3332f6412399342ceb410a9dfb9e2018":[1,0,42,0],
 "structCompileOption.html#a6f92e3d19cf7b95d052cd4a763fe8942":[1,0,42,1],
-"structCompleteOps.html":[1,0,43]
+"structCompleteOps.html":[1,0,43],
+"structCompleteOps.html#a362759a7c8bd5d5a507f4282a0b9d7a3":[1,0,43,0],
+"structCompletionData.html":[1,0,44]
 };

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-177-g48e272</span>
+   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -275,56 +275,70 @@ $(function(){initNavTree('array_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">  (elem - (head)-&gt;entries)</span></div>
 </div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span></div>
-<div class="foldopen" id="foldopen00332" data-start="" data-end="">
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="array_8h.html#a5a50ba3db41d864890c1a6f176c5b1a1">  332</a></span><span class="preprocessor">#define ARRAY_REMOVE(head, elem)                                               \</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">  do                                                                           \</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="preprocessor">  {                                                                            \</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="preprocessor">    if (ARRAY_SIZE(head) &gt; ARRAY_IDX(head, elem) + 1)                          \</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="preprocessor">    {                                                                          \</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">      memmove(elem, (elem) + 1,                                                \</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="preprocessor">              ARRAY_ELEM_SIZE(head) *                                          \</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor">              (ARRAY_SIZE(head) - ARRAY_IDX(head, elem) - 1));                 \</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">    }                                                                          \</span></div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">    ARRAY_SHRINK(head, 1);                                                     \</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="preprocessor">  } while (0)</span></div>
+<div class="foldopen" id="foldopen00338" data-start="" data-end="">
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="array_8h.html#a432f380e058246b74a7a825767031a24">  338</a></span><span class="preprocessor">#define ARRAY_INSERT(head, idx, elem)                                          \</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor">  (((head)-&gt;capacity &gt; (head)-&gt;size                                            \</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">    ? true                                                                     \</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="preprocessor">    : ARRAY_RESERVE((head), (head)-&gt;size + 1)),                                \</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="preprocessor">   ((idx) &lt;= (head)-&gt;size                                                      \</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="preprocessor">    ? (memmove(&amp;(head)-&gt;entries[(idx) + 1], &amp;(head)-&gt;entries[(idx)],           \</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="preprocessor">               ARRAY_ELEM_SIZE((head)) * ((head)-&gt;size - (idx))),              \</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="preprocessor">       (head)-&gt;entries[(idx)] = (elem),                                        \</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="preprocessor">       (head)-&gt;size++,                                                         \</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="preprocessor">       true)                                                                   \</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="preprocessor">    : false))</span></div>
 </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span></div>
-<div class="foldopen" id="foldopen00350" data-start="" data-end="">
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="array_8h.html#a3b58598337ec447421a317fa2f836ebd">  350</a></span><span class="preprocessor">#define ARRAY_SORT(head, fn, sdata)                                            \</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">  ({                                                                           \</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">    if ((head)-&gt;entries != NULL)                                               \</span></div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="preprocessor">      mutt_qsort_r((head)-&gt;entries, ARRAY_SIZE(head), ARRAY_ELEM_SIZE(head), fn, sdata);\</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="preprocessor">    !!(head)-&gt;entries;                                                         \</span></div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="preprocessor">  })</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span></div>
+<div class="foldopen" id="foldopen00355" data-start="" data-end="">
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="array_8h.html#a5a50ba3db41d864890c1a6f176c5b1a1">  355</a></span><span class="preprocessor">#define ARRAY_REMOVE(head, elem)                                               \</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="preprocessor">  do                                                                           \</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="preprocessor">  {                                                                            \</span></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="preprocessor">    if (ARRAY_SIZE(head) &gt; ARRAY_IDX(head, elem) + 1)                          \</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">    {                                                                          \</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="preprocessor">      memmove(elem, (elem) + 1,                                                \</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="preprocessor">              ARRAY_ELEM_SIZE(head) *                                          \</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="preprocessor">              (ARRAY_SIZE(head) - ARRAY_IDX(head, elem) - 1));                 \</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="preprocessor">    }                                                                          \</span></div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="preprocessor">    ARRAY_SHRINK(head, 1);                                                     \</span></div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="preprocessor">  } while (0)</span></div>
 </div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="comment">/******************************************************************************</span></div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="comment"> * Internal APIs</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="comment"> *****************************************************************************/</span></div>
-<div class="foldopen" id="foldopen00360" data-start="" data-end="">
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno"><a class="line" href="array_8h.html#a7e8bd3238e25d762f17dd0950001a13f">  360</a></span><span class="preprocessor">#define ARRAY_SET_NORESERVE(head, idx, elem)                                   \</span></div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="preprocessor">  ({                                                                           \</span></div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="preprocessor">    if ((head)-&gt;capacity &gt; (idx))                                              \</span></div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="preprocessor">    {                                                                          \</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="preprocessor">      (head)-&gt;size = MAX((head)-&gt;size, (idx) + 1);                             \</span></div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="preprocessor">      (head)-&gt;entries[(idx)] = (elem);                                         \</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span><span class="preprocessor">    }                                                                          \</span></div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="preprocessor">    (head)-&gt;capacity &gt; (idx);                                                  \</span></div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="preprocessor">  })</span></div>
-</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="preprocessor">#ifndef __COVERITY__</span></div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="array_8h.html#a9882b8b47eef4d380d07a70e9bfd1bf2">  371</a></span><span class="preprocessor">#define __coverity_escape__(x) 0</span></div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span></div>
 <div class="foldopen" id="foldopen00373" data-start="" data-end="">
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno"><a class="line" href="array_8h.html#a7d53783c015122a6eee10abe2c26aa5d">  373</a></span><span class="preprocessor">#define ARRAY_ADD_NORESERVE(head, elem)                                        \</span></div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="preprocessor">  ((head)-&gt;capacity &gt; (head)-&gt;size                                             \</span></div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="preprocessor">   ? (((head)-&gt;entries[(head)-&gt;size++] = (elem)),                              \</span></div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="preprocessor">     ((void)__coverity_escape__(elem), true))                                  \</span></div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="preprocessor">   : ((void)__coverity_escape__(elem), false))</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno"><a class="line" href="array_8h.html#a3b58598337ec447421a317fa2f836ebd">  373</a></span><span class="preprocessor">#define ARRAY_SORT(head, fn, sdata)                                            \</span></div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="preprocessor">  ({                                                                           \</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="preprocessor">    if ((head)-&gt;entries != NULL)                                               \</span></div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="preprocessor">      mutt_qsort_r((head)-&gt;entries, ARRAY_SIZE(head), ARRAY_ELEM_SIZE(head), fn, sdata);\</span></div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="preprocessor">    !!(head)-&gt;entries;                                                         \</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="preprocessor">  })</span></div>
 </div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="preprocessor">#endif </span><span class="comment">/* MUTT_MUTT_ARRAY_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="comment"> * Internal APIs</span></div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="foldopen" id="foldopen00383" data-start="" data-end="">
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="array_8h.html#a7e8bd3238e25d762f17dd0950001a13f">  383</a></span><span class="preprocessor">#define ARRAY_SET_NORESERVE(head, idx, elem)                                   \</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="preprocessor">  ({                                                                           \</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="preprocessor">    if ((head)-&gt;capacity &gt; (idx))                                              \</span></div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="preprocessor">    {                                                                          \</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="preprocessor">      (head)-&gt;size = MAX((head)-&gt;size, (idx) + 1);                             \</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="preprocessor">      (head)-&gt;entries[(idx)] = (elem);                                         \</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span><span class="preprocessor">    }                                                                          \</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="preprocessor">    (head)-&gt;capacity &gt; (idx);                                                  \</span></div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="preprocessor">  })</span></div>
+</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="preprocessor">#ifndef __COVERITY__</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="array_8h.html#a9882b8b47eef4d380d07a70e9bfd1bf2">  394</a></span><span class="preprocessor">#define __coverity_escape__(x) 0</span></div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="preprocessor">#endif</span></div>
+<div class="foldopen" id="foldopen00396" data-start="" data-end="">
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno"><a class="line" href="array_8h.html#a7d53783c015122a6eee10abe2c26aa5d">  396</a></span><span class="preprocessor">#define ARRAY_ADD_NORESERVE(head, elem)                                        \</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="preprocessor">  ((head)-&gt;capacity &gt; (head)-&gt;size                                             \</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="preprocessor">   ? (((head)-&gt;entries[(head)-&gt;size++] = (elem)),                              \</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="preprocessor">     ((void)__coverity_escape__(elem), true))                                  \</span></div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="preprocessor">   : ((void)__coverity_escape__(elem), false))</span></div>
+</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="preprocessor">#endif </span><span class="comment">/* MUTT_MUTT_ARRAY_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="amemory_8h_html"><div class="ttname"><a href="memory_8h.html">memory.h</a></div><div class="ttdoc">Memory management wrappers.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

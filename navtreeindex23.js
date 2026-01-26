@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"group__store__close.html#ga8cf9980aa1d67bb93dd4a7f3bbc92001":[52,46,5,6],
 "group__store__close.html#gaa8c42e1f94d301f5a7f7dafb71addde7":[52,46,5,7],
 "group__store__close.html#gac55530119fd5c0a448ba8a08c9df950f":[52,46,5,5],
 "group__store__close.html#gac6a32548120f3a0481428bb2d963d3b8":[52,46,5,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "gui_8h.html#a9c78e2b166bb256af16994fe2003e505":[2,0,1,13,7],
 "gui_8h.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa":[2,0,1,13,4],
 "gui_8h.html#afce757c3254bb43f346f7431a7e44f32":[2,0,1,13,2],
-"gui_8h_source.html":[2,0,1,13],
-"gui_curs_lib.html":[25,0]
+"gui_8h_source.html":[2,0,1,13]
 };

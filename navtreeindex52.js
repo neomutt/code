@@ -1,8 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"structNmEmailData.html#afb9a8e94a3b200cbbe366c2ce14657bf":[1,0,182,3],
-"structNmMboxData.html":[1,0,183],
-"structNmMboxData.html#a22d80b4f9f022ae1dae0a6592eab53d4":[1,0,183,0],
 "structNmMboxData.html#a22d92645edc04adcf160739785f1704f":[1,0,183,5],
 "structNmMboxData.html#a4b076b009cfbd704791dcb517c7e9edf":[1,0,183,4],
 "structNmMboxData.html#a4f64263b206f43a6bf79de732b95b1a0":[1,0,183,7],
@@ -249,5 +246,8 @@ var NAVTREEINDEX52 =
 "structPopAccountData.html#a7d3de3e152f1f729768beaddf1c774f3":[1,0,217,8],
 "structPopAccountData.html#a84cf659582c28abdd77d78e74257143f":[1,0,217,18],
 "structPopAccountData.html#a9a44d4bc626dbc9fbb085cff6e0b790c":[1,0,217,1],
-"structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18":[1,0,217,0]
+"structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18":[1,0,217,0],
+"structPopAccountData.html#aaa1c5a4eb3595519593174ba6504cc78":[1,0,217,2],
+"structPopAccountData.html#aad2e94674fb9bc43561cc360270aad3d":[1,0,217,10],
+"structPopAccountData.html#aadce35e87e9856c32c910537a2961054":[1,0,217,14]
 };

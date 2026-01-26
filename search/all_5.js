@@ -183,7 +183,7 @@ var searchData=
   ['child_180',['child',['../structMuttThread.html#a7067492dadd86f81def9036474086211',1,'MuttThread::child'],['../structChildCtx.html#a1d6b966a78f9523bd3ad8f42b8cc3cff',1,'ChildCtx::child'],['../structPattern.html#a203448c6706d65c4fa65e494e1782194',1,'Pattern::child']]],
   ['child_5fops_181',['child_ops',['../structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472',1,'CompressInfo']]],
   ['childctx_182',['ChildCtx',['../structChildCtx.html',1,'']]],
-  ['children_183',['children',['../structExpandoNode.html#adc733309e276118e9d3ef72bf8de33d8',1,'ExpandoNode::children'],['../structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae',1,'MuttWindow::children']]],
+  ['children_183',['children',['../structExpandoNode.html#adc733309e276118e9d3ef72bf8de33d8',1,'ExpandoNode::children'],['../structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42',1,'MuttWindow::children']]],
   ['choose_5fblock_184',['choose_block',['../rfc2047_8c.html#a68424d046b66d891da1b80929074f616',1,'rfc2047.c']]],
   ['choose_5fdefault_5fto_185',['choose_default_to',['../send_8c.html#a4bd501aa5eb91b97bc7c0ec116b76baa',1,'send.c']]],
   ['choose_5fincrement_186',['choose_increment',['../progress_8c.html#acd92e8710b026cf04443f6710656302a',1,'progress.c']]],

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-177-g48e272</span>
+   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -209,6 +209,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a10248ed1fa20ea5a7c9f4025c1abd5c8" id="r_a10248ed1fa20ea5a7c9f4025c1abd5c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10248ed1fa20ea5a7c9f4025c1abd5c8">ARRAY_IDX</a>(head,  elem)</td></tr>
 <tr class="memdesc:a10248ed1fa20ea5a7c9f4025c1abd5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index of an element of the array.  <br /></td></tr>
 <tr class="separator:a10248ed1fa20ea5a7c9f4025c1abd5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432f380e058246b74a7a825767031a24" id="r_a432f380e058246b74a7a825767031a24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a432f380e058246b74a7a825767031a24">ARRAY_INSERT</a>(head,  idx,  elem)</td></tr>
+<tr class="memdesc:a432f380e058246b74a7a825767031a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert an element into the, shifting up the subsequent entries.  <br /></td></tr>
+<tr class="separator:a432f380e058246b74a7a825767031a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a50ba3db41d864890c1a6f176c5b1a1" id="r_a5a50ba3db41d864890c1a6f176c5b1a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a50ba3db41d864890c1a6f176c5b1a1">ARRAY_REMOVE</a>(head,  elem)</td></tr>
 <tr class="memdesc:a5a50ba3db41d864890c1a6f176c5b1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an entry from the array, shifting down the subsequent entries.  <br /></td></tr>
 <tr class="separator:a5a50ba3db41d864890c1a6f176c5b1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1278,6 +1281,76 @@ Macros</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a432f380e058246b74a7a825767031a24" name="a432f380e058246b74a7a825767031a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432f380e058246b74a7a825767031a24">&#9670;&#160;</a></span>ARRAY_INSERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ARRAY_INSERT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>head</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>elem</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  (((head)-&gt;capacity &gt; (head)-&gt;size                                            \</div>
+<div class="line">    ? <span class="keyword">true</span>                                                                     \</div>
+<div class="line">    : <a class="code hl_define" href="#aa7df17d1549180492434bf21d7ac6270">ARRAY_RESERVE</a>((head), (head)-&gt;size + 1)),                                \</div>
+<div class="line">   ((idx) &lt;= (head)-&gt;size                                                      \</div>
+<div class="line">    ? (memmove(&amp;(head)-&gt;entries[(idx) + 1], &amp;(head)-&gt;entries[(idx)],           \</div>
+<div class="line">               <a class="code hl_define" href="#a0d1d706abb177b6574c71aa7e89ae0b9">ARRAY_ELEM_SIZE</a>((head)) * ((head)-&gt;size - (idx))),              \</div>
+<div class="line">       (head)-&gt;entries[(idx)] = (elem),                                        \</div>
+<div class="line">       (head)-&gt;size++,                                                         \</div>
+<div class="line">       <span class="keyword">true</span>)                                                                   \</div>
+<div class="line">    : <span class="keyword">false</span>))</div>
+<div class="ttc" id="aarray_8h_html_aa7df17d1549180492434bf21d7ac6270"><div class="ttname"><a href="#aa7df17d1549180492434bf21d7ac6270">ARRAY_RESERVE</a></div><div class="ttdeci">#define ARRAY_RESERVE(head, n)</div><div class="ttdoc">Reserve memory for the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00191">array.h:191</a></div></div>
+</div><!-- fragment -->
+<p>Insert an element into the, shifting up the subsequent entries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>Pointer to a struct defined using <a class="el" href="#ac44283dfdb980974e4996a781fbac6f7" title="Define a named struct for arrays of elements of a certain type.">ARRAY_HEAD()</a> </td></tr>
+    <tr><td class="paramname">idx</td><td>Index where the element should be inserted </td></tr>
+    <tr><td class="paramname">elem</td><td>Element to insert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>Element was inserted </td></tr>
+    <tr><td class="paramname">false</td><td>Index was out of bounds (idx &gt; ARRAY_SIZE)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>idx must be between 0 and <a class="el" href="#a7f1bf469a48c0a2618c94b7b8281c5bf" title="The number of elements stored.">ARRAY_SIZE(head)</a> (inclusive) </dd>
+<dd>
+To append to the end, use <a class="el" href="#a4f570f2382025383e4b2cc46ede6ebd0" title="Add an element at the end of the array.">ARRAY_ADD()</a> instead. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00338">338</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  338</span><span class="preprocessor">#define ARRAY_INSERT(head, idx, elem)                                          \</span></div>
+<div class="line"><span class="lineno">  339</span><span class="preprocessor">  (((head)-&gt;capacity &gt; (head)-&gt;size                                            \</span></div>
+<div class="line"><span class="lineno">  340</span><span class="preprocessor">    ? true                                                                     \</span></div>
+<div class="line"><span class="lineno">  341</span><span class="preprocessor">    : ARRAY_RESERVE((head), (head)-&gt;size + 1)),                                \</span></div>
+<div class="line"><span class="lineno">  342</span><span class="preprocessor">   ((idx) &lt;= (head)-&gt;size                                                      \</span></div>
+<div class="line"><span class="lineno">  343</span><span class="preprocessor">    ? (memmove(&amp;(head)-&gt;entries[(idx) + 1], &amp;(head)-&gt;entries[(idx)],           \</span></div>
+<div class="line"><span class="lineno">  344</span><span class="preprocessor">               ARRAY_ELEM_SIZE((head)) * ((head)-&gt;size - (idx))),              \</span></div>
+<div class="line"><span class="lineno">  345</span><span class="preprocessor">       (head)-&gt;entries[(idx)] = (elem),                                        \</span></div>
+<div class="line"><span class="lineno">  346</span><span class="preprocessor">       (head)-&gt;size++,                                                         \</span></div>
+<div class="line"><span class="lineno">  347</span><span class="preprocessor">       true)                                                                   \</span></div>
+<div class="line"><span class="lineno">  348</span><span class="preprocessor">    : false))</span></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a5a50ba3db41d864890c1a6f176c5b1a1" name="a5a50ba3db41d864890c1a6f176c5b1a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a50ba3db41d864890c1a6f176c5b1a1">&#9670;&#160;</a></span>ARRAY_REMOVE</h2>
 
@@ -1317,18 +1390,18 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00332">332</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  332</span><span class="preprocessor">#define ARRAY_REMOVE(head, elem)                                               \</span></div>
-<div class="line"><span class="lineno">  333</span><span class="preprocessor">  do                                                                           \</span></div>
-<div class="line"><span class="lineno">  334</span><span class="preprocessor">  {                                                                            \</span></div>
-<div class="line"><span class="lineno">  335</span><span class="preprocessor">    if (ARRAY_SIZE(head) &gt; ARRAY_IDX(head, elem) + 1)                          \</span></div>
-<div class="line"><span class="lineno">  336</span><span class="preprocessor">    {                                                                          \</span></div>
-<div class="line"><span class="lineno">  337</span><span class="preprocessor">      memmove(elem, (elem) + 1,                                                \</span></div>
-<div class="line"><span class="lineno">  338</span><span class="preprocessor">              ARRAY_ELEM_SIZE(head) *                                          \</span></div>
-<div class="line"><span class="lineno">  339</span><span class="preprocessor">              (ARRAY_SIZE(head) - ARRAY_IDX(head, elem) - 1));                 \</span></div>
-<div class="line"><span class="lineno">  340</span><span class="preprocessor">    }                                                                          \</span></div>
-<div class="line"><span class="lineno">  341</span><span class="preprocessor">    ARRAY_SHRINK(head, 1);                                                     \</span></div>
-<div class="line"><span class="lineno">  342</span><span class="preprocessor">  } while (0)</span></div>
+<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00355">355</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  355</span><span class="preprocessor">#define ARRAY_REMOVE(head, elem)                                               \</span></div>
+<div class="line"><span class="lineno">  356</span><span class="preprocessor">  do                                                                           \</span></div>
+<div class="line"><span class="lineno">  357</span><span class="preprocessor">  {                                                                            \</span></div>
+<div class="line"><span class="lineno">  358</span><span class="preprocessor">    if (ARRAY_SIZE(head) &gt; ARRAY_IDX(head, elem) + 1)                          \</span></div>
+<div class="line"><span class="lineno">  359</span><span class="preprocessor">    {                                                                          \</span></div>
+<div class="line"><span class="lineno">  360</span><span class="preprocessor">      memmove(elem, (elem) + 1,                                                \</span></div>
+<div class="line"><span class="lineno">  361</span><span class="preprocessor">              ARRAY_ELEM_SIZE(head) *                                          \</span></div>
+<div class="line"><span class="lineno">  362</span><span class="preprocessor">              (ARRAY_SIZE(head) - ARRAY_IDX(head, elem) - 1));                 \</span></div>
+<div class="line"><span class="lineno">  363</span><span class="preprocessor">    }                                                                          \</span></div>
+<div class="line"><span class="lineno">  364</span><span class="preprocessor">    ARRAY_SHRINK(head, 1);                                                     \</span></div>
+<div class="line"><span class="lineno">  365</span><span class="preprocessor">  } while (0)</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1371,13 +1444,13 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00350">350</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  350</span><span class="preprocessor">#define ARRAY_SORT(head, fn, sdata)                                            \</span></div>
-<div class="line"><span class="lineno">  351</span><span class="preprocessor">  ({                                                                           \</span></div>
-<div class="line"><span class="lineno">  352</span><span class="preprocessor">    if ((head)-&gt;entries != NULL)                                               \</span></div>
-<div class="line"><span class="lineno">  353</span><span class="preprocessor">      mutt_qsort_r((head)-&gt;entries, ARRAY_SIZE(head), ARRAY_ELEM_SIZE(head), fn, sdata);\</span></div>
-<div class="line"><span class="lineno">  354</span><span class="preprocessor">    !!(head)-&gt;entries;                                                         \</span></div>
-<div class="line"><span class="lineno">  355</span><span class="preprocessor">  })</span></div>
+<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00373">373</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  373</span><span class="preprocessor">#define ARRAY_SORT(head, fn, sdata)                                            \</span></div>
+<div class="line"><span class="lineno">  374</span><span class="preprocessor">  ({                                                                           \</span></div>
+<div class="line"><span class="lineno">  375</span><span class="preprocessor">    if ((head)-&gt;entries != NULL)                                               \</span></div>
+<div class="line"><span class="lineno">  376</span><span class="preprocessor">      mutt_qsort_r((head)-&gt;entries, ARRAY_SIZE(head), ARRAY_ELEM_SIZE(head), fn, sdata);\</span></div>
+<div class="line"><span class="lineno">  377</span><span class="preprocessor">    !!(head)-&gt;entries;                                                         \</span></div>
+<div class="line"><span class="lineno">  378</span><span class="preprocessor">  })</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1414,16 +1487,16 @@ Macros</h2></td></tr>
 <div class="line">  })</div>
 <div class="ttc" id="amemory_8h_html_afa99ec4acc4ecb2dc3c2d05da15d0e3f"><div class="ttname"><a href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a></div><div class="ttdeci">#define MAX(a, b)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00037">memory.h:37</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00360">360</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  360</span><span class="preprocessor">#define ARRAY_SET_NORESERVE(head, idx, elem)                                   \</span></div>
-<div class="line"><span class="lineno">  361</span><span class="preprocessor">  ({                                                                           \</span></div>
-<div class="line"><span class="lineno">  362</span><span class="preprocessor">    if ((head)-&gt;capacity &gt; (idx))                                              \</span></div>
-<div class="line"><span class="lineno">  363</span><span class="preprocessor">    {                                                                          \</span></div>
-<div class="line"><span class="lineno">  364</span><span class="preprocessor">      (head)-&gt;size = MAX((head)-&gt;size, (idx) + 1);                             \</span></div>
-<div class="line"><span class="lineno">  365</span><span class="preprocessor">      (head)-&gt;entries[(idx)] = (elem);                                         \</span></div>
-<div class="line"><span class="lineno">  366</span><span class="preprocessor">    }                                                                          \</span></div>
-<div class="line"><span class="lineno">  367</span><span class="preprocessor">    (head)-&gt;capacity &gt; (idx);                                                  \</span></div>
-<div class="line"><span class="lineno">  368</span><span class="preprocessor">  })</span></div>
+<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00383">383</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  383</span><span class="preprocessor">#define ARRAY_SET_NORESERVE(head, idx, elem)                                   \</span></div>
+<div class="line"><span class="lineno">  384</span><span class="preprocessor">  ({                                                                           \</span></div>
+<div class="line"><span class="lineno">  385</span><span class="preprocessor">    if ((head)-&gt;capacity &gt; (idx))                                              \</span></div>
+<div class="line"><span class="lineno">  386</span><span class="preprocessor">    {                                                                          \</span></div>
+<div class="line"><span class="lineno">  387</span><span class="preprocessor">      (head)-&gt;size = MAX((head)-&gt;size, (idx) + 1);                             \</span></div>
+<div class="line"><span class="lineno">  388</span><span class="preprocessor">      (head)-&gt;entries[(idx)] = (elem);                                         \</span></div>
+<div class="line"><span class="lineno">  389</span><span class="preprocessor">    }                                                                          \</span></div>
+<div class="line"><span class="lineno">  390</span><span class="preprocessor">    (head)-&gt;capacity &gt; (idx);                                                  \</span></div>
+<div class="line"><span class="lineno">  391</span><span class="preprocessor">  })</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1443,7 +1516,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">0</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00371">371</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00394">394</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
 
 </div>
 </div>
@@ -1469,14 +1542,14 @@ Macros</h2></td></tr>
 <div class="line">   ? (((head)-&gt;entries[(head)-&gt;size++] = (elem)),                              \</div>
 <div class="line">     ((void)<a class="code hl_define" href="#a9882b8b47eef4d380d07a70e9bfd1bf2">__coverity_escape__</a>(elem), <span class="keyword">true</span>))                                  \</div>
 <div class="line">   : ((void)<a class="code hl_define" href="#a9882b8b47eef4d380d07a70e9bfd1bf2">__coverity_escape__</a>(elem), <span class="keyword">false</span>))</div>
-<div class="ttc" id="aarray_8h_html_a9882b8b47eef4d380d07a70e9bfd1bf2"><div class="ttname"><a href="#a9882b8b47eef4d380d07a70e9bfd1bf2">__coverity_escape__</a></div><div class="ttdeci">#define __coverity_escape__(x)</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00371">array.h:371</a></div></div>
+<div class="ttc" id="aarray_8h_html_a9882b8b47eef4d380d07a70e9bfd1bf2"><div class="ttname"><a href="#a9882b8b47eef4d380d07a70e9bfd1bf2">__coverity_escape__</a></div><div class="ttdeci">#define __coverity_escape__(x)</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00394">array.h:394</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00373">373</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  373</span><span class="preprocessor">#define ARRAY_ADD_NORESERVE(head, elem)                                        \</span></div>
-<div class="line"><span class="lineno">  374</span><span class="preprocessor">  ((head)-&gt;capacity &gt; (head)-&gt;size                                             \</span></div>
-<div class="line"><span class="lineno">  375</span><span class="preprocessor">   ? (((head)-&gt;entries[(head)-&gt;size++] = (elem)),                              \</span></div>
-<div class="line"><span class="lineno">  376</span><span class="preprocessor">     ((void)__coverity_escape__(elem), true))                                  \</span></div>
-<div class="line"><span class="lineno">  377</span><span class="preprocessor">   : ((void)__coverity_escape__(elem), false))</span></div>
+<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00396">396</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  396</span><span class="preprocessor">#define ARRAY_ADD_NORESERVE(head, elem)                                        \</span></div>
+<div class="line"><span class="lineno">  397</span><span class="preprocessor">  ((head)-&gt;capacity &gt; (head)-&gt;size                                             \</span></div>
+<div class="line"><span class="lineno">  398</span><span class="preprocessor">   ? (((head)-&gt;entries[(head)-&gt;size++] = (elem)),                              \</span></div>
+<div class="line"><span class="lineno">  399</span><span class="preprocessor">     ((void)__coverity_escape__(elem), true))                                  \</span></div>
+<div class="line"><span class="lineno">  400</span><span class="preprocessor">   : ((void)__coverity_escape__(elem), false))</span></div>
 </div><!-- fragment -->
 </div>
 </div>

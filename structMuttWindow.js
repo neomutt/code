@@ -1,6 +1,5 @@
 var structMuttWindow =
 [
-    [ "TAILQ_ENTRY", "structMuttWindow.html#aeaccbf58d05885c1c85fdb1c6887a428", null ],
     [ "req_cols", "structMuttWindow.html#a3d852a60f45c3df06d64dc20114fa3df", null ],
     [ "req_rows", "structMuttWindow.html#a5f230c86f48f70162d2c408b0e9ad6c3", null ],
     [ "state", "structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f", null ],
@@ -9,7 +8,7 @@ var structMuttWindow =
     [ "size", "structMuttWindow.html#ac9097698a9f6bd1c84e5a20c1dee5d54", null ],
     [ "actions", "structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253", null ],
     [ "parent", "structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3", null ],
-    [ "children", "structMuttWindow.html#a97c3ca3910fbe0870259d0f7b8cc5cae", null ],
+    [ "children", "structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42", null ],
     [ "notify", "structMuttWindow.html#a5bf1302122ef2778be449cde2f1909e6", null ],
     [ "focus", "structMuttWindow.html#a510c0f4f152bac0d2dd5526eadd28b85", null ],
     [ "help_menu", "structMuttWindow.html#aac6b813dcc579c43bb32789834c2a253", null ],

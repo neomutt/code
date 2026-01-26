@@ -1,5 +1,6 @@
 var NAVTREEINDEX28 =
 {
+"list_8c.html#a6cd8f2f5c5e48a6eac0c24ae664898ee":[2,0,36,25,6],
 "list_8c.html#a8452a5e19043ca17f9b80b4443399e3b":[2,0,36,25,9],
 "list_8c.html#a9a276a1da7b53eff1dccd4c2cb3d9251":[2,0,36,25,8],
 "list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4":[2,0,36,25,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX28 =
 "maildir_2shared_8c_source.html":[2,0,32,20],
 "maildir_2shared_8h.html":[2,0,32,21],
 "maildir_2shared_8h.html#a49c388b83b6bff2417a68bb09b00103b":[2,0,32,21,11],
-"maildir_2shared_8h.html#a5b3866322416ead2f4f1fd899702f649":[2,0,32,21,8],
-"maildir_2shared_8h.html#a5c65f6a672a0bb2b822e2d2fbcc662df":[2,0,32,21,13]
+"maildir_2shared_8h.html#a5b3866322416ead2f4f1fd899702f649":[2,0,32,21,8]
 };

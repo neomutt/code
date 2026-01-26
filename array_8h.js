@@ -25,6 +25,7 @@ var array_8h =
     [ "ARRAY_FOREACH_REVERSE_TO", "array_8h.html#aef116eceb24f3efd59a4b4a7a2f2e29d", null ],
     [ "ARRAY_FOREACH_REVERSE_FROM_TO", "array_8h.html#a28e933ebf312103b4f89940c521e5368", null ],
     [ "ARRAY_IDX", "array_8h.html#a10248ed1fa20ea5a7c9f4025c1abd5c8", null ],
+    [ "ARRAY_INSERT", "array_8h.html#a432f380e058246b74a7a825767031a24", null ],
     [ "ARRAY_REMOVE", "array_8h.html#a5a50ba3db41d864890c1a6f176c5b1a1", null ],
     [ "ARRAY_SORT", "array_8h.html#a3b58598337ec447421a317fa2f836ebd", null ],
     [ "ARRAY_SET_NORESERVE", "array_8h.html#a7e8bd3238e25d762f17dd0950001a13f", null ],
