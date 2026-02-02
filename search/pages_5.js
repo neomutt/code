@@ -25,7 +25,7 @@ var searchData=
   ['debugging_22',['Debugging',['../color_debug.html',1,'Colour Debugging'],['../debug_pager.html',1,'Pager Debugging']]],
   ['decide_20how_20to_20display_20email_20content_23',['Decide how to display email content',['../email_handler.html',1,'lib_email']]],
   ['decoding_24',['RFC2047 encoding / decoding',['../email_rfc2047.html',1,'lib_email']]],
-  ['defined_20hooks_25',['defined Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
+  ['defined_20hooks_25',['defined Hooks',['../hooks_exec.html',1,'Execute user-defined Hooks'],['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
   ['definition_20of_20the_20address_20module_26',['Definition of the Address Module',['../addr_module.html',1,'lib_address']]],
   ['definition_20of_20the_20alias_20module_27',['Definition of the Alias Module',['../alias_module.html',1,'lib_alias']]],
   ['definition_20of_20the_20attach_20module_28',['Definition of the Attach Module',['../attach_module.html',1,'lib_attach']]],

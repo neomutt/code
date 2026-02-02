@@ -11,8 +11,8 @@ var mailboxes_8h =
     [ "parse_mailbox_array_free", "mailboxes_8h.html#a533e72b95aea5b54f58b274650aa514e", null ],
     [ "parse_mailboxes_args", "mailboxes_8h.html#a5aaa49bbef333536ac2a2ab287a37c71", null ],
     [ "parse_mailboxes_exec", "mailboxes_8h.html#ab7e3183cfec24fd450befe512f38eb66", null ],
-    [ "parse_mailboxes", "group__command__parse.html#gaffa5ff30f5414f2eb4f109bf79d887d3", null ],
-    [ "parse_unmailboxes", "group__command__parse.html#ga4dd0ed6bd66a9e5975e826d7278f2897", null ],
+    [ "parse_mailboxes", "group__command__parse.html#gadadcfe738b9a48479975878fd148d629", null ],
+    [ "parse_unmailboxes", "group__command__parse.html#gaac24a7ed7a76699fdf84008c471ec512", null ],
     [ "mailbox_add_simple", "mailboxes_8h.html#ac986cda38f3082d420d4056efc824ac3", null ],
     [ "mailbox_remove_simple", "mailboxes_8h.html#a1b2c90f08dfb9013c117c91af40a45ca", null ]
 ];

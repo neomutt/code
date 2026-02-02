@@ -7,8 +7,8 @@ var alternates_8h =
     ] ],
     [ "alternates_init", "alternates_8h.html#a2a78e8d449aa5e8e73aba79be1ebe151", null ],
     [ "alternates_cleanup", "alternates_8h.html#a0a4b00e60f2ecc10aaf25eb48ec087fd", null ],
-    [ "parse_alternates", "group__command__parse.html#ga875a13d06277bb4f7e2520efdaad7849", null ],
-    [ "parse_unalternates", "group__command__parse.html#gaec68dd393ddc2329466f5ca78dc6100b", null ],
+    [ "parse_alternates", "group__command__parse.html#ga5a89dcfd018c500ebd879bdbd9dc5e0b", null ],
+    [ "parse_unalternates", "group__command__parse.html#ga90075701957687aa5dafaa52d455116a", null ],
     [ "mutt_alternates_match", "alternates_8h.html#a4f084235b327b37b2b8dffd94389ee94", null ],
     [ "mutt_alternates_reset", "alternates_8h.html#a807fcfb8c79cfc82c0b56dbebc0af7e3", null ]
 ];

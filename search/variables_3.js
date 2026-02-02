@@ -53,8 +53,9 @@ var searchData=
   ['draft_50',['draft',['../structMessage.html#a7a53f3b9c450c29d93793c0d2b0608f7',1,'Message']]],
   ['draft_5ffile_51',['draft_file',['../structCliSend.html#a064e5e3667f6eb5c295c81723dc84712',1,'CliSend']]],
   ['dsize_52',['dsize',['../structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995',1,'Buffer']]],
-  ['dump_5fchanged_53',['dump_changed',['../structCliInfo.html#af4b38b7a3fb929191965cb55d1faaece',1,'CliInfo']]],
-  ['dump_5fconfig_54',['dump_config',['../structCliInfo.html#a92986df41e8f2757287727e9e57b7259',1,'CliInfo']]],
-  ['duplicate_5fthread_55',['duplicate_thread',['../structMuttThread.html#add9fafa2e72810244df9eee34eff25fa',1,'MuttThread']]],
-  ['dynamic_56',['dynamic',['../structPattern.html#a7f4991ea8f62a8a90ec55dedaedc17ff',1,'Pattern']]]
+  ['dummy_53',['dummy',['../structParseContext.html#aaa90a0c36392a82ed910d646714aed8e',1,'ParseContext']]],
+  ['dump_5fchanged_54',['dump_changed',['../structCliInfo.html#af4b38b7a3fb929191965cb55d1faaece',1,'CliInfo']]],
+  ['dump_5fconfig_55',['dump_config',['../structCliInfo.html#a92986df41e8f2757287727e9e57b7259',1,'CliInfo']]],
+  ['duplicate_5fthread_56',['duplicate_thread',['../structMuttThread.html#add9fafa2e72810244df9eee34eff25fa',1,'MuttThread']]],
+  ['dynamic_57',['dynamic',['../structPattern.html#a7f4991ea8f62a8a90ec55dedaedc17ff',1,'Pattern']]]
 ];

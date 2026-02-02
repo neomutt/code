@@ -252,10 +252,7 @@ var searchData=
   ['rows_249',['rows',['../structMsgWinWindowData.html#a8883c152b6c452d9a4771904e1df6a4a',1,'MsgWinWindowData::rows'],['../structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5',1,'WindowState::rows']]],
   ['rs_250',['rs',['../structGroup.html#a43e209bd3d746d2e18ca8d3387712f90',1,'Group']]],
   ['rstrip_5fin_5fplace_251',['rstrip_in_place',['../version_8c.html#aca22ace82fa2c72b841190797c94c1df',1,'version.c']]],
-  ['run_20user_20defined_20hooks_252',['Run user-defined Hooks',['../hooks_run.html',1,'lib_hooks']]],
-  ['run_2ec_253',['run.c',['../run_8c.html',1,'']]],
-  ['run_2eh_254',['run.h',['../run_8h.html',1,'']]],
-  ['run_5fdecode_5fand_5fhandler_255',['run_decode_and_handler',['../handler_8c.html#a88df4ca81c59bfc2464df374863edfd9',1,'handler.c']]],
-  ['run_5fmime_5ftype_5fquery_256',['run_mime_type_query',['../sendlib_8c.html#aa4255b4325a4c4204096172fa941339b',1,'sendlib.c']]],
-  ['rxspecialchars_257',['RxSpecialChars',['../file_8c.html#ab7dabb24458c5df2588d6cea769b8393',1,'file.c']]]
+  ['run_5fdecode_5fand_5fhandler_252',['run_decode_and_handler',['../handler_8c.html#a88df4ca81c59bfc2464df374863edfd9',1,'handler.c']]],
+  ['run_5fmime_5ftype_5fquery_253',['run_mime_type_query',['../sendlib_8c.html#aa4255b4325a4c4204096172fa941339b',1,'sendlib.c']]],
+  ['rxspecialchars_254',['RxSpecialChars',['../file_8c.html#ab7dabb24458c5df2588d6cea769b8393',1,'file.c']]]
 ];

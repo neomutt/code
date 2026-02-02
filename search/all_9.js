@@ -59,7 +59,7 @@ var searchData=
   ['get_5fnumber_56',['get_number',['../structExpandoRenderCallback.html#ad0b151b1682fd0adc94aca385977d831',1,'ExpandoRenderCallback']]],
   ['get_5fnumber_5ft_57',['get_number_t',['../render_8h.html#a75f776223e01be28f85bb98f1bd51c6f',1,'render.h']]],
   ['get_5foffset_58',['get_offset',['../compile_8c.html#a7b92e81222c2b3f618b62b1617e26144',1,'compile.c']]],
-  ['get_5fpattern_5fcache_5fvalue_59',['get_pattern_cache_value',['../exec_8c.html#ae2ebd28f2c473f7b6a8d385c87c3b657',1,'exec.c']]],
+  ['get_5fpattern_5fcache_5fvalue_59',['get_pattern_cache_value',['../pattern_2exec_8c.html#ae2ebd28f2c473f7b6a8d385c87c3b657',1,'exec.c']]],
   ['get_5fquery_60',['get_query',['../notmuch_8c.html#aa5c63cadd458794511139952c08abf77',1,'notmuch.c']]],
   ['get_5fquery_5fstring_61',['get_query_string',['../notmuch_8c.html#a03dd129a289f7f6abe0451cef4ee5ee1',1,'notmuch.c']]],
   ['get_5fquote_5flevel_62',['get_quote_level',['../rfc3676_8c.html#aae9c55042003c431c7a004bab1f93860',1,'rfc3676.c']]],

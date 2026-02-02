@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
+   &#160;<span id="projectnumber">2025-12-11-219-g274730</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -442,68 +442,68 @@ Variables</h2></td></tr>
 
 <p>Read data from an SASL connection - Implements <a class="el" href="structConnection.html#afdd852b383b3926639ec9132c048590a">Connection::read()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="sasl_8c_source.html#l00467">467</a> of file <a class="el" href="sasl_8c_source.html">sasl.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  468</span>{</div>
-<div class="line"><span class="lineno">  469</span>  <span class="keywordtype">int</span> rc;</div>
-<div class="line"><span class="lineno">  470</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> olen;</div>
-<div class="line"><span class="lineno">  471</span> </div>
-<div class="line"><span class="lineno">  472</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSaslSockData.html">SaslSockData</a> *sasldata = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
-<div class="line"><span class="lineno">  473</span> </div>
-<div class="line"><span class="lineno">  474</span>  <span class="comment">/* if we still have data in our read buffer, copy it into buf */</span></div>
-<div class="line"><span class="lineno">  475</span>  <span class="keywordflow">if</span> (sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> &gt; sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>)</div>
-<div class="line"><span class="lineno">  476</span>  {</div>
-<div class="line"><span class="lineno">  477</span>    olen = ((sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> - sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>) &gt; count) ?</div>
-<div class="line"><span class="lineno">  478</span>               count :</div>
-<div class="line"><span class="lineno">  479</span>               sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> - sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>;</div>
-<div class="line"><span class="lineno">  480</span> </div>
-<div class="line"><span class="lineno">  481</span>    memcpy(<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a> + sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>, olen);</div>
-<div class="line"><span class="lineno">  482</span>    sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a> += olen;</div>
-<div class="line"><span class="lineno">  483</span> </div>
-<div class="line"><span class="lineno">  484</span>    <span class="keywordflow">return</span> olen;</div>
-<div class="line"><span class="lineno">  485</span>  }</div>
-<div class="line"><span class="lineno">  486</span> </div>
-<div class="line"><span class="lineno">  487</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a> = sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a044647bc4a3b343bf1a63dbd4d1aad48">sockdata</a>;</div>
-<div class="line"><span class="lineno">  488</span> </div>
-<div class="line"><span class="lineno">  489</span>  sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a> = 0;</div>
-<div class="line"><span class="lineno">  490</span>  sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> = 0;</div>
-<div class="line"><span class="lineno">  491</span> </div>
-<div class="line"><span class="lineno">  492</span>  <span class="comment">/* and decode the result, if necessary */</span></div>
-<div class="line"><span class="lineno">  493</span>  <span class="keywordflow">if</span> (*sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ac1696c8df3989cd03300992fa4ddcacc">ssf</a> != 0)</div>
-<div class="line"><span class="lineno">  494</span>  {</div>
-<div class="line"><span class="lineno">  495</span>    <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  496</span>    {</div>
-<div class="line"><span class="lineno">  497</span>      <span class="comment">/* call the underlying read function to fill the buffer */</span></div>
-<div class="line"><span class="lineno">  498</span>      rc = sasldata-&gt;<a class="code hl_variable" href="#gabe6d944ead0a2be3010e7cbe9fdc7846">read</a>(conn, <a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, count);</div>
-<div class="line"><span class="lineno">  499</span>      <span class="keywordflow">if</span> (rc &lt;= 0)</div>
-<div class="line"><span class="lineno">  500</span>        <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno">  501</span> </div>
-<div class="line"><span class="lineno">  502</span>      rc = sasl_decode(sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ad702b7b3435e05ceac455f632dfd1864">saslconn</a>, <a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, rc, &amp;sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, &amp;sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a>);</div>
-<div class="line"><span class="lineno">  503</span>      <span class="keywordflow">if</span> (rc != SASL_OK)</div>
-<div class="line"><span class="lineno">  504</span>      {</div>
-<div class="line"><span class="lineno">  505</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;SASL decode failed: %s\n&quot;</span>, sasl_errstring(rc, NULL, NULL));</div>
-<div class="line"><span class="lineno">  506</span>        <span class="keywordflow">goto</span> out;</div>
-<div class="line"><span class="lineno">  507</span>      }</div>
-<div class="line"><span class="lineno">  508</span>    } <span class="keywordflow">while</span> (sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> == 0);</div>
+<p class="definition">Definition at line <a class="el" href="sasl_8c_source.html#l00463">463</a> of file <a class="el" href="sasl_8c_source.html">sasl.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  464</span>{</div>
+<div class="line"><span class="lineno">  465</span>  <span class="keywordtype">int</span> rc;</div>
+<div class="line"><span class="lineno">  466</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> olen;</div>
+<div class="line"><span class="lineno">  467</span> </div>
+<div class="line"><span class="lineno">  468</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSaslSockData.html">SaslSockData</a> *sasldata = conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a>;</div>
+<div class="line"><span class="lineno">  469</span> </div>
+<div class="line"><span class="lineno">  470</span>  <span class="comment">/* if we still have data in our read buffer, copy it into buf */</span></div>
+<div class="line"><span class="lineno">  471</span>  <span class="keywordflow">if</span> (sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> &gt; sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>)</div>
+<div class="line"><span class="lineno">  472</span>  {</div>
+<div class="line"><span class="lineno">  473</span>    olen = ((sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> - sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>) &gt; count) ?</div>
+<div class="line"><span class="lineno">  474</span>               count :</div>
+<div class="line"><span class="lineno">  475</span>               sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> - sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>;</div>
+<div class="line"><span class="lineno">  476</span> </div>
+<div class="line"><span class="lineno">  477</span>    memcpy(<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a> + sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>, olen);</div>
+<div class="line"><span class="lineno">  478</span>    sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a> += olen;</div>
+<div class="line"><span class="lineno">  479</span> </div>
+<div class="line"><span class="lineno">  480</span>    <span class="keywordflow">return</span> olen;</div>
+<div class="line"><span class="lineno">  481</span>  }</div>
+<div class="line"><span class="lineno">  482</span> </div>
+<div class="line"><span class="lineno">  483</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a> = sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a044647bc4a3b343bf1a63dbd4d1aad48">sockdata</a>;</div>
+<div class="line"><span class="lineno">  484</span> </div>
+<div class="line"><span class="lineno">  485</span>  sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a> = 0;</div>
+<div class="line"><span class="lineno">  486</span>  sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> = 0;</div>
+<div class="line"><span class="lineno">  487</span> </div>
+<div class="line"><span class="lineno">  488</span>  <span class="comment">/* and decode the result, if necessary */</span></div>
+<div class="line"><span class="lineno">  489</span>  <span class="keywordflow">if</span> (*sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ac1696c8df3989cd03300992fa4ddcacc">ssf</a> != 0)</div>
+<div class="line"><span class="lineno">  490</span>  {</div>
+<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  492</span>    {</div>
+<div class="line"><span class="lineno">  493</span>      <span class="comment">/* call the underlying read function to fill the buffer */</span></div>
+<div class="line"><span class="lineno">  494</span>      rc = sasldata-&gt;<a class="code hl_variable" href="#gabe6d944ead0a2be3010e7cbe9fdc7846">read</a>(conn, <a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, count);</div>
+<div class="line"><span class="lineno">  495</span>      <span class="keywordflow">if</span> (rc &lt;= 0)</div>
+<div class="line"><span class="lineno">  496</span>        <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno">  497</span> </div>
+<div class="line"><span class="lineno">  498</span>      rc = sasl_decode(sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ad702b7b3435e05ceac455f632dfd1864">saslconn</a>, <a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, rc, &amp;sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, &amp;sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a>);</div>
+<div class="line"><span class="lineno">  499</span>      <span class="keywordflow">if</span> (rc != SASL_OK)</div>
+<div class="line"><span class="lineno">  500</span>      {</div>
+<div class="line"><span class="lineno">  501</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;SASL decode failed: %s\n&quot;</span>, sasl_errstring(rc, NULL, NULL));</div>
+<div class="line"><span class="lineno">  502</span>        <span class="keywordflow">goto</span> out;</div>
+<div class="line"><span class="lineno">  503</span>      }</div>
+<div class="line"><span class="lineno">  504</span>    } <span class="keywordflow">while</span> (sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> == 0);</div>
+<div class="line"><span class="lineno">  505</span> </div>
+<div class="line"><span class="lineno">  506</span>    olen = ((sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> - sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>) &gt; count) ?</div>
+<div class="line"><span class="lineno">  507</span>               count :</div>
+<div class="line"><span class="lineno">  508</span>               sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> - sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>;</div>
 <div class="line"><span class="lineno">  509</span> </div>
-<div class="line"><span class="lineno">  510</span>    olen = ((sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> - sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>) &gt; count) ?</div>
-<div class="line"><span class="lineno">  511</span>               count :</div>
-<div class="line"><span class="lineno">  512</span>               sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a755d3147cbda3009940ffb142b5c998a">blen</a> - sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a>;</div>
-<div class="line"><span class="lineno">  513</span> </div>
-<div class="line"><span class="lineno">  514</span>    memcpy(<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, olen);</div>
-<div class="line"><span class="lineno">  515</span>    sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a> += olen;</div>
-<div class="line"><span class="lineno">  516</span> </div>
-<div class="line"><span class="lineno">  517</span>    rc = olen;</div>
+<div class="line"><span class="lineno">  510</span>    memcpy(<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, olen);</div>
+<div class="line"><span class="lineno">  511</span>    sasldata-&gt;<a class="code hl_variable" href="structSaslSockData.html#a9d2b0f5c50dd8abd8abc37282a63641d">bpos</a> += olen;</div>
+<div class="line"><span class="lineno">  512</span> </div>
+<div class="line"><span class="lineno">  513</span>    rc = olen;</div>
+<div class="line"><span class="lineno">  514</span>  }</div>
+<div class="line"><span class="lineno">  515</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  516</span>  {</div>
+<div class="line"><span class="lineno">  517</span>    rc = sasldata-&gt;<a class="code hl_variable" href="#gabe6d944ead0a2be3010e7cbe9fdc7846">read</a>(conn, <a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, count);</div>
 <div class="line"><span class="lineno">  518</span>  }</div>
-<div class="line"><span class="lineno">  519</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  520</span>  {</div>
-<div class="line"><span class="lineno">  521</span>    rc = sasldata-&gt;<a class="code hl_variable" href="#gabe6d944ead0a2be3010e7cbe9fdc7846">read</a>(conn, <a class="code hl_variable" href="structSaslSockData.html#ac2f2602d9d3c970401b9df9f3d035672">buf</a>, count);</div>
-<div class="line"><span class="lineno">  522</span>  }</div>
-<div class="line"><span class="lineno">  523</span> </div>
-<div class="line"><span class="lineno">  524</span>out:</div>
-<div class="line"><span class="lineno">  525</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a> = sasldata;</div>
-<div class="line"><span class="lineno">  526</span> </div>
-<div class="line"><span class="lineno">  527</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  528</span>}</div>
+<div class="line"><span class="lineno">  519</span> </div>
+<div class="line"><span class="lineno">  520</span>out:</div>
+<div class="line"><span class="lineno">  521</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a2baa91d494f612c8bf43302bb96543f0">sockdata</a> = sasldata;</div>
+<div class="line"><span class="lineno">  522</span> </div>
+<div class="line"><span class="lineno">  523</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  524</span>}</div>
 <div class="ttc" id="agroup__connection__read_html_gabe6d944ead0a2be3010e7cbe9fdc7846"><div class="ttname"><a href="#gabe6d944ead0a2be3010e7cbe9fdc7846">SaslSockData::read</a></div><div class="ttdeci">int(* read)(struct Connection *conn, char *buf, size_t count)</div><div class="ttdoc">Read from a socket Connection - Implements Connection::read() -.</div><div class="ttdef"><b>Definition</b> <a href="sasl_8c_source.html#l00084">sasl.c:84</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>

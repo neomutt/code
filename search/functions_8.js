@@ -247,11 +247,12 @@ var searchData=
   ['is_5fmenu_5favailable_244',['is_menu_available',['../pattern_2message_8c.html#af765120cb544bb31952199d7d509d974',1,'message.c']]],
   ['is_5fmmnoask_245',['is_mmnoask',['../handler_8c.html#af5f495f5053bf85394ccb3499315d2fb',1,'handler.c']]],
   ['is_5fparent_246',['is_parent',['../recvcmd_8c.html#ab652eac4f094f01a62e4581f9a498696',1,'recvcmd.c']]],
-  ['is_5fpattern_5fcache_5fset_247',['is_pattern_cache_set',['../exec_8c.html#a87fc380b9026d97286e330b169ce16f4',1,'exec.c']]],
-  ['is_5fpka_5fnotation_248',['is_pka_notation',['../crypt__gpgme_8c.html#acdcdf90f5684da72dc5c8d26b8d1b0b9',1,'crypt_gpgme.c']]],
-  ['is_5freply_249',['is_reply',['../send_8c.html#a19cc8b134c97bc3752c778d8b4977e8c',1,'send.c']]],
-  ['is_5fsame_5fmailbox_250',['is_same_mailbox',['../mutt__mailbox_8c.html#ac15f82d9e76f46262014e3072cd3d15f',1,'mutt_mailbox.c']]],
-  ['is_5ftext_5fplain_251',['is_text_plain',['../send_8c.html#adaad7f2e93eb41299f638d224d90f82b',1,'send.c']]],
-  ['is_5fvalid_5fnotmuch_5furl_252',['is_valid_notmuch_url',['../notmuch_2config_8c.html#a504134ea1c1e6b8bdb24a83539a3bf34',1,'config.c']]],
-  ['is_5fvisible_253',['is_visible',['../gui_2thread_8c.html#af6f89eb1fe9177d9a3484842f7d5c1cc',1,'thread.c']]]
+  ['is_5fpattern_5fcache_5fset_247',['is_pattern_cache_set',['../pattern_2exec_8c.html#a87fc380b9026d97286e330b169ce16f4',1,'exec.c']]],
+  ['is_5fpattern_5fprefix_248',['is_pattern_prefix',['../pattern_2complete_8c.html#a06a0bd66a77fd698ac03d50c77587b81',1,'complete.c']]],
+  ['is_5fpka_5fnotation_249',['is_pka_notation',['../crypt__gpgme_8c.html#acdcdf90f5684da72dc5c8d26b8d1b0b9',1,'crypt_gpgme.c']]],
+  ['is_5freply_250',['is_reply',['../send_8c.html#a19cc8b134c97bc3752c778d8b4977e8c',1,'send.c']]],
+  ['is_5fsame_5fmailbox_251',['is_same_mailbox',['../mutt__mailbox_8c.html#ac15f82d9e76f46262014e3072cd3d15f',1,'mutt_mailbox.c']]],
+  ['is_5ftext_5fplain_252',['is_text_plain',['../send_8c.html#adaad7f2e93eb41299f638d224d90f82b',1,'send.c']]],
+  ['is_5fvalid_5fnotmuch_5furl_253',['is_valid_notmuch_url',['../notmuch_2config_8c.html#a504134ea1c1e6b8bdb24a83539a3bf34',1,'config.c']]],
+  ['is_5fvisible_254',['is_visible',['../gui_2thread_8c.html#af6f89eb1fe9177d9a3484842f7d5c1cc',1,'thread.c']]]
 ];

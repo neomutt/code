@@ -38,7 +38,7 @@ var searchData=
   ['get_5fmutt_5femail_35',['get_mutt_email',['../notmuch_8c.html#af8ae1c5e8502f9a61c6bc3f3f51ddc35',1,'notmuch.c']]],
   ['get_5fnm_5fmessage_36',['get_nm_message',['../notmuch_8c.html#a5ea2e0203ec9a6bf6c9d346d7178c9da',1,'notmuch.c']]],
   ['get_5foffset_37',['get_offset',['../compile_8c.html#a7b92e81222c2b3f618b62b1617e26144',1,'compile.c']]],
-  ['get_5fpattern_5fcache_5fvalue_38',['get_pattern_cache_value',['../exec_8c.html#ae2ebd28f2c473f7b6a8d385c87c3b657',1,'exec.c']]],
+  ['get_5fpattern_5fcache_5fvalue_38',['get_pattern_cache_value',['../pattern_2exec_8c.html#ae2ebd28f2c473f7b6a8d385c87c3b657',1,'exec.c']]],
   ['get_5fquery_39',['get_query',['../notmuch_8c.html#aa5c63cadd458794511139952c08abf77',1,'notmuch.c']]],
   ['get_5fquery_5fstring_40',['get_query_string',['../notmuch_8c.html#a03dd129a289f7f6abe0451cef4ee5ee1',1,'notmuch.c']]],
   ['get_5fquote_5flevel_41',['get_quote_level',['../rfc3676_8c.html#aae9c55042003c431c7a004bab1f93860',1,'rfc3676.c']]],

@@ -15,11 +15,10 @@ var NAVTREEINDEX4 =
 "cli_2parse_8c.html#aa99314403e2d6ec7841f9e65479ad9cf":[2,0,6,3,0],
 "cli_2parse_8c_source.html":[2,0,6,3],
 "cli_8c.html":[2,0,22,1],
-"cli_8c.html#a009495fb11414ccec6c76add6a024a60":[2,0,22,1,2],
-"cli_8c.html#a3b29e947ed8f19fef60160cec278c096":[2,0,22,1,1],
-"cli_8c.html#a91ce7c16e9840492202299da2b451e60":[2,0,22,1,3],
-"cli_8c.html#aaf8eacd4749948bf6d877a63eb886322":[2,0,22,1,4],
-"cli_8c.html#ga8f27fdb017db5eb2b5541951602421f3":[2,0,22,1,0],
+"cli_8c.html#a009495fb11414ccec6c76add6a024a60":[2,0,22,1,1],
+"cli_8c.html#a3b29e947ed8f19fef60160cec278c096":[2,0,22,1,0],
+"cli_8c.html#a91ce7c16e9840492202299da2b451e60":[2,0,22,1,2],
+"cli_8c.html#aaf8eacd4749948bf6d877a63eb886322":[2,0,22,1,3],
 "cli_8c_source.html":[2,0,22,1],
 "cli_objects.html":[9,1],
 "cli_parse.html":[9,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX4 =
 "command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa7eaa57b88d9564ffa02441c4bedda324":[2,0,16,3,7,29],
 "command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa7ec4ff02eb8f11e737cffcff25ab2e75":[2,0,16,3,7,56],
 "command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa817d72c6797728afec1be6185c8e5675":[2,0,16,3,7,7],
-"command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa81fe0fb2fd85cf600affbaae14b94931":[2,0,16,3,7,66]
+"command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa81fe0fb2fd85cf600affbaae14b94931":[2,0,16,3,7,66],
+"command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa832dd35d1a3d0ccb34741f99ce818d6f":[2,0,16,3,7,68]
 };

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-189-gceedb6</span>
+   &#160;<span id="projectnumber">2025-12-11-219-g274730</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -162,6 +162,15 @@ Variables</h2></td></tr>
 <tr class="memitem:ac3bd0e66bffc188075385e1da86d31c6" id="r_ac3bd0e66bffc188075385e1da86d31c6"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structBuffer.html">Buffer</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a> = NULL</td></tr>
 <tr class="memdesc:ac3bd0e66bffc188075385e1da86d31c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pool of buffers.  <br /></td></tr>
 <tr class="separator:ac3bd0e66bffc188075385e1da86d31c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeabfdbd751c0cdaba657420ad56d05ef" id="r_aeabfdbd751c0cdaba657420ad56d05ef"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeabfdbd751c0cdaba657420ad56d05ef">BufferPoolGetCount</a> = 0</td></tr>
+<tr class="memdesc:aeabfdbd751c0cdaba657420ad56d05ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statistics: total number of <a class="el" href="#a41cba27c25d33cb6822789a2856093f2" title="Get a Buffer from the pool.">buf_pool_get()</a> calls.  <br /></td></tr>
+<tr class="separator:aeabfdbd751c0cdaba657420ad56d05ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af04b3b045e4b723aaa10e9b6583a23c5" id="r_af04b3b045e4b723aaa10e9b6583a23c5"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af04b3b045e4b723aaa10e9b6583a23c5">BufferPoolGivenOut</a> = 0</td></tr>
+<tr class="memdesc:af04b3b045e4b723aaa10e9b6583a23c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statistics: number of buffers currently given out.  <br /></td></tr>
+<tr class="separator:af04b3b045e4b723aaa10e9b6583a23c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a50202dc2d95d483c2cbf1a8039b604" id="r_a2a50202dc2d95d483c2cbf1a8039b604"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a50202dc2d95d483c2cbf1a8039b604">BufferPoolMaxGivenOut</a> = 0</td></tr>
+<tr class="memdesc:a2a50202dc2d95d483c2cbf1a8039b604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statistics: maximum number of buffers given out concurrently.  <br /></td></tr>
+<tr class="separator:a2a50202dc2d95d483c2cbf1a8039b604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A global pool of Buffers. </p>
@@ -200,24 +209,24 @@ Variables</h2></td></tr>
 
 <p>Increase the size of the <a class="el" href="structBuffer.html" title="String manipulation buffer.">Buffer</a> pool. </p>
 
-<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00051">51</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
-<div class="line"><span class="lineno">   53</span>  <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a> += <a class="code hl_variable" href="#a83ccc552be3a547195bb7808dac3974f">BufferPoolIncrement</a>;</div>
-<div class="line"><span class="lineno">   54</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;%zu\n&quot;</span>, <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a>);</div>
-<div class="line"><span class="lineno">   55</span> </div>
-<div class="line"><span class="lineno">   56</span>  <a class="code hl_define" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a>(&amp;<a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>, <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a>, <span class="keyword">struct</span> <a class="code hl_struct" href="structBuffer.html">Buffer</a> *);</div>
-<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">while</span> (<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a> &lt; <a class="code hl_variable" href="#a83ccc552be3a547195bb7808dac3974f">BufferPoolIncrement</a>)</div>
-<div class="line"><span class="lineno">   58</span>  {</div>
-<div class="line"><span class="lineno">   59</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *newbuf = <a class="code hl_function" href="buffer_8c.html#a7f93abaa65bfc8c15c6ea5d02889c19d">buf_new</a>(NULL);</div>
-<div class="line"><span class="lineno">   60</span>    <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(newbuf, <a class="code hl_variable" href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a>);</div>
-<div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>[<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>++] = newbuf;</div>
-<div class="line"><span class="lineno">   62</span>  }</div>
-<div class="line"><span class="lineno">   63</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00058">58</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>{</div>
+<div class="line"><span class="lineno">   60</span>  <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a> += <a class="code hl_variable" href="#a83ccc552be3a547195bb7808dac3974f">BufferPoolIncrement</a>;</div>
+<div class="line"><span class="lineno">   61</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;%zu\n&quot;</span>, <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a>);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>  <a class="code hl_define" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a>(&amp;<a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>, <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a>, <span class="keyword">struct</span> <a class="code hl_struct" href="structBuffer.html">Buffer</a> *);</div>
+<div class="line"><span class="lineno">   64</span>  <span class="keywordflow">while</span> (<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a> &lt; <a class="code hl_variable" href="#a83ccc552be3a547195bb7808dac3974f">BufferPoolIncrement</a>)</div>
+<div class="line"><span class="lineno">   65</span>  {</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *newbuf = <a class="code hl_function" href="buffer_8c.html#a7f93abaa65bfc8c15c6ea5d02889c19d">buf_new</a>(NULL);</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(newbuf, <a class="code hl_variable" href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a>);</div>
+<div class="line"><span class="lineno">   68</span>    <a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>[<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>++] = newbuf;</div>
+<div class="line"><span class="lineno">   69</span>  }</div>
+<div class="line"><span class="lineno">   70</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a7f93abaa65bfc8c15c6ea5d02889c19d"><div class="ttname"><a href="buffer_8c.html#a7f93abaa65bfc8c15c6ea5d02889c19d">buf_new</a></div><div class="ttdeci">struct Buffer * buf_new(const char *str)</div><div class="ttdoc">Allocate a new Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00304">buffer.c:304</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ae144a736bd5f9de289bdc8f27fecf96a"><div class="ttname"><a href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a></div><div class="ttdeci">void buf_alloc(struct Buffer *buf, size_t new_size)</div><div class="ttdoc">Make sure a buffer can store at least new_size bytes.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00337">buffer.c:337</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
-<div class="ttc" id="amemory_8h_html_abd7aad5fe8f11bcd476c64b4243081ba"><div class="ttname"><a href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a></div><div class="ttdeci">#define MUTT_MEM_REALLOC(pptr, n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00051">memory.h:51</a></div></div>
+<div class="ttc" id="amemory_8h_html_abd7aad5fe8f11bcd476c64b4243081ba"><div class="ttname"><a href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a></div><div class="ttdeci">#define MUTT_MEM_REALLOC(pptr, n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00055">memory.h:55</a></div></div>
 <div class="ttc" id="apool_8c_html_a0734d4491bffbb722a52d8f178dd4637"><div class="ttname"><a href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a></div><div class="ttdeci">static const size_t BufferPoolInitialBufferSize</div><div class="ttdoc">Minimum size for a buffer.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00044">pool.c:44</a></div></div>
 <div class="ttc" id="apool_8c_html_a83ccc552be3a547195bb7808dac3974f"><div class="ttname"><a href="#a83ccc552be3a547195bb7808dac3974f">BufferPoolIncrement</a></div><div class="ttdeci">static const size_t BufferPoolIncrement</div><div class="ttdoc">Amount to increase the size of the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00042">pool.c:42</a></div></div>
 <div class="ttc" id="apool_8c_html_a8d9bf7e185b764b8f7880f86126c5e85"><div class="ttname"><a href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a></div><div class="ttdeci">static size_t BufferPoolLen</div><div class="ttdoc">Total size of the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00040">pool.c:40</a></div></div>
@@ -258,17 +267,22 @@ Variables</h2></td></tr>
 
 <p>Release the <a class="el" href="structBuffer.html" title="String manipulation buffer.">Buffer</a> pool. </p>
 
-<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00068">68</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>{</div>
-<div class="line"><span class="lineno">   70</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;%zu of %zu returned to pool\n&quot;</span>, <a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>, <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a>);</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">while</span> (<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>)</div>
-<div class="line"><span class="lineno">   73</span>    <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;<a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>[--<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>]);</div>
-<div class="line"><span class="lineno">   74</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>);</div>
-<div class="line"><span class="lineno">   75</span>  <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a> = 0;</div>
-<div class="line"><span class="lineno">   76</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00075">75</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{</div>
+<div class="line"><span class="lineno">   77</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;%zu of %zu returned to pool\n&quot;</span>, <a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>, <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a>);</div>
+<div class="line"><span class="lineno">   78</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;pool stats: %zu gets, %zu max buffers in use\n&quot;</span>,</div>
+<div class="line"><span class="lineno">   79</span>             <a class="code hl_variable" href="#aeabfdbd751c0cdaba657420ad56d05ef">BufferPoolGetCount</a>, <a class="code hl_variable" href="#a2a50202dc2d95d483c2cbf1a8039b604">BufferPoolMaxGivenOut</a>);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">while</span> (<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>)</div>
+<div class="line"><span class="lineno">   82</span>    <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(&amp;<a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>[--<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>]);</div>
+<div class="line"><span class="lineno">   83</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;<a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>);</div>
+<div class="line"><span class="lineno">   84</span>  <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a> = 0;</div>
+<div class="line"><span class="lineno">   85</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a608a2d4559c47be18b5e56cf520dfd73"><div class="ttname"><a href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a></div><div class="ttdeci">void buf_free(struct Buffer **ptr)</div><div class="ttdoc">Deallocates a buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00319">buffer.c:319</a></div></div>
-<div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00063">memory.h:63</a></div></div>
+<div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a></div><div class="ttdeci">@ LL_DEBUG3</div><div class="ttdoc">Log at debug level 3.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00047">logging2.h:47</a></div></div>
+<div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdoc">Free memory and set the pointer to NULL.</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00068">memory.h:68</a></div></div>
+<div class="ttc" id="apool_8c_html_a2a50202dc2d95d483c2cbf1a8039b604"><div class="ttname"><a href="#a2a50202dc2d95d483c2cbf1a8039b604">BufferPoolMaxGivenOut</a></div><div class="ttdeci">static size_t BufferPoolMaxGivenOut</div><div class="ttdoc">Statistics: maximum number of buffers given out concurrently.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00053">pool.c:53</a></div></div>
+<div class="ttc" id="apool_8c_html_aeabfdbd751c0cdaba657420ad56d05ef"><div class="ttname"><a href="#aeabfdbd751c0cdaba657420ad56d05ef">BufferPoolGetCount</a></div><div class="ttdeci">static size_t BufferPoolGetCount</div><div class="ttdoc">Statistics: total number of buf_pool_get() calls.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00049">pool.c:49</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
@@ -309,14 +323,21 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00082">82</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>{</div>
-<div class="line"><span class="lineno">   84</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a> == 0)</div>
-<div class="line"><span class="lineno">   85</span>    <a class="code hl_function" href="#a1ffb163ddd556b189baf00a7d674f16e">pool_increase_size</a>();</div>
-<div class="line"><span class="lineno">   86</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a> &gt; 0);</div>
-<div class="line"><span class="lineno">   87</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>[--<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>];</div>
-<div class="line"><span class="lineno">   88</span>}</div>
-<div class="ttc" id="apool_8c_html_a1ffb163ddd556b189baf00a7d674f16e"><div class="ttname"><a href="#a1ffb163ddd556b189baf00a7d674f16e">pool_increase_size</a></div><div class="ttdeci">static void pool_increase_size(void)</div><div class="ttdoc">Increase the size of the Buffer pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00051">pool.c:51</a></div></div>
+<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00091">91</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>{</div>
+<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a> == 0)</div>
+<div class="line"><span class="lineno">   94</span>    <a class="code hl_function" href="#a1ffb163ddd556b189baf00a7d674f16e">pool_increase_size</a>();</div>
+<div class="line"><span class="lineno">   95</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a> &gt; 0);</div>
+<div class="line"><span class="lineno">   96</span> </div>
+<div class="line"><span class="lineno">   97</span>  <a class="code hl_variable" href="#aeabfdbd751c0cdaba657420ad56d05ef">BufferPoolGetCount</a>++;</div>
+<div class="line"><span class="lineno">   98</span>  <a class="code hl_variable" href="#af04b3b045e4b723aaa10e9b6583a23c5">BufferPoolGivenOut</a>++;</div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af04b3b045e4b723aaa10e9b6583a23c5">BufferPoolGivenOut</a> &gt; <a class="code hl_variable" href="#a2a50202dc2d95d483c2cbf1a8039b604">BufferPoolMaxGivenOut</a>)</div>
+<div class="line"><span class="lineno">  100</span>    <a class="code hl_variable" href="#a2a50202dc2d95d483c2cbf1a8039b604">BufferPoolMaxGivenOut</a> = <a class="code hl_variable" href="#af04b3b045e4b723aaa10e9b6583a23c5">BufferPoolGivenOut</a>;</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>[--<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>];</div>
+<div class="line"><span class="lineno">  103</span>}</div>
+<div class="ttc" id="apool_8c_html_a1ffb163ddd556b189baf00a7d674f16e"><div class="ttname"><a href="#a1ffb163ddd556b189baf00a7d674f16e">pool_increase_size</a></div><div class="ttdeci">static void pool_increase_size(void)</div><div class="ttdoc">Increase the size of the Buffer pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00058">pool.c:58</a></div></div>
+<div class="ttc" id="apool_8c_html_af04b3b045e4b723aaa10e9b6583a23c5"><div class="ttname"><a href="#af04b3b045e4b723aaa10e9b6583a23c5">BufferPoolGivenOut</a></div><div class="ttdeci">static size_t BufferPoolGivenOut</div><div class="ttdoc">Statistics: number of buffers currently given out.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00051">pool.c:51</a></div></div>
 <div class="ttc" id="asignal2_8h_html_a903f9b298be75defd8a3043ebf62bd99"><div class="ttname"><a href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a></div><div class="ttdeci">#define ASSERT(COND)</div><div class="ttdef"><b>Definition</b> <a href="signal2_8h_source.html#l00060">signal2.h:60</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -352,33 +373,36 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The pointer will be NULL'd </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00096">96</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   97</span>{</div>
-<div class="line"><span class="lineno">   98</span>  <span class="keywordflow">if</span> (!ptr || !*ptr)</div>
-<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a> &gt;= <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a>)</div>
-<div class="line"><span class="lineno">  102</span>  {</div>
-<div class="line"><span class="lineno">  103</span>    <span class="comment">// LCOV_EXCL_START</span></div>
-<div class="line"><span class="lineno">  104</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Internal buffer pool error\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  105</span>    <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(ptr);</div>
-<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  107</span>    <span class="comment">// LCOV_EXCL_STOP</span></div>
-<div class="line"><span class="lineno">  108</span>  }</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>  <span class="comment">// Reset the size if it&#39;s too big or too small</span></div>
-<div class="line"><span class="lineno">  111</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = *ptr;</div>
-<div class="line"><span class="lineno">  112</span>  <span class="keywordflow">if</span> ((buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> &gt; (2 * <a class="code hl_variable" href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a>)) ||</div>
-<div class="line"><span class="lineno">  113</span>      (buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> &lt; <a class="code hl_variable" href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a>))</div>
-<div class="line"><span class="lineno">  114</span>  {</div>
-<div class="line"><span class="lineno">  115</span>    buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> = <a class="code hl_variable" href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a>;</div>
-<div class="line"><span class="lineno">  116</span>    <a class="code hl_define" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a>(&amp;buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>, <span class="keywordtype">char</span>);</div>
-<div class="line"><span class="lineno">  117</span>  }</div>
-<div class="line"><span class="lineno">  118</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
-<div class="line"><span class="lineno">  119</span>  <a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>[<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>++] = buf;</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>  *ptr = NULL;</div>
-<div class="line"><span class="lineno">  122</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00111">111</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>{</div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">if</span> (!ptr || !*ptr)</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  115</span> </div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#af04b3b045e4b723aaa10e9b6583a23c5">BufferPoolGivenOut</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  117</span>    <a class="code hl_variable" href="#af04b3b045e4b723aaa10e9b6583a23c5">BufferPoolGivenOut</a>--;</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a> &gt;= <a class="code hl_variable" href="#a8d9bf7e185b764b8f7880f86126c5e85">BufferPoolLen</a>)</div>
+<div class="line"><span class="lineno">  120</span>  {</div>
+<div class="line"><span class="lineno">  121</span>    <span class="comment">// LCOV_EXCL_START</span></div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Internal buffer pool error\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  123</span>    <a class="code hl_function" href="buffer_8c.html#a608a2d4559c47be18b5e56cf520dfd73">buf_free</a>(ptr);</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  125</span>    <span class="comment">// LCOV_EXCL_STOP</span></div>
+<div class="line"><span class="lineno">  126</span>  }</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  <span class="comment">// Reset the size if it&#39;s too big or too small</span></div>
+<div class="line"><span class="lineno">  129</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = *ptr;</div>
+<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">if</span> ((buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> &gt; (2 * <a class="code hl_variable" href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a>)) ||</div>
+<div class="line"><span class="lineno">  131</span>      (buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> &lt; <a class="code hl_variable" href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a>))</div>
+<div class="line"><span class="lineno">  132</span>  {</div>
+<div class="line"><span class="lineno">  133</span>    buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a> = <a class="code hl_variable" href="#a0734d4491bffbb722a52d8f178dd4637">BufferPoolInitialBufferSize</a>;</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_define" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a>(&amp;buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>, <span class="keywordtype">char</span>);</div>
+<div class="line"><span class="lineno">  135</span>  }</div>
+<div class="line"><span class="lineno">  136</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(buf);</div>
+<div class="line"><span class="lineno">  137</span>  <a class="code hl_variable" href="#ac3bd0e66bffc188075385e1da86d31c6">BufferPool</a>[<a class="code hl_variable" href="#aad7953cc0e0bc51d8f4dc13e1cbeddb3">BufferPoolCount</a>++] = buf;</div>
+<div class="line"><span class="lineno">  138</span> </div>
+<div class="line"><span class="lineno">  139</span>  *ptr = NULL;</div>
+<div class="line"><span class="lineno">  140</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a3b1f80652b37dc26046f9acdd85a0b05"><div class="ttname"><a href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a></div><div class="ttdeci">void buf_reset(struct Buffer *buf)</div><div class="ttdoc">Reset an existing Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00076">buffer.c:76</a></div></div>
 <div class="ttc" id="astructBuffer_html_a1d9ee60bcf94de702b15ec2b5d811995"><div class="ttname"><a href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">Buffer::dsize</a></div><div class="ttdeci">size_t dsize</div><div class="ttdoc">Length of data.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00039">buffer.h:39</a></div></div>
 <div class="ttc" id="astructBuffer_html_aeec1fd4af0ddf6765b0187466d4361b8"><div class="ttname"><a href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">Buffer::data</a></div><div class="ttdeci">char * data</div><div class="ttdoc">Pointer to data.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00037">buffer.h:37</a></div></div>
@@ -520,6 +544,84 @@ Variables</h2></td></tr>
 <p>A pool of buffers. </p>
 
 <p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00046">46</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
+
+</div>
+</div>
+<a id="aeabfdbd751c0cdaba657420ad56d05ef" name="aeabfdbd751c0cdaba657420ad56d05ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeabfdbd751c0cdaba657420ad56d05ef">&#9670;&#160;</a></span>BufferPoolGetCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t BufferPoolGetCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Statistics: total number of <a class="el" href="#a41cba27c25d33cb6822789a2856093f2" title="Get a Buffer from the pool.">buf_pool_get()</a> calls. </p>
+
+<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00049">49</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
+
+</div>
+</div>
+<a id="af04b3b045e4b723aaa10e9b6583a23c5" name="af04b3b045e4b723aaa10e9b6583a23c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af04b3b045e4b723aaa10e9b6583a23c5">&#9670;&#160;</a></span>BufferPoolGivenOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t BufferPoolGivenOut = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Statistics: number of buffers currently given out. </p>
+
+<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00051">51</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
+
+</div>
+</div>
+<a id="a2a50202dc2d95d483c2cbf1a8039b604" name="a2a50202dc2d95d483c2cbf1a8039b604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a50202dc2d95d483c2cbf1a8039b604">&#9670;&#160;</a></span>BufferPoolMaxGivenOut</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t BufferPoolMaxGivenOut = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Statistics: maximum number of buffers given out concurrently. </p>
+
+<p class="definition">Definition at line <a class="el" href="pool_8c_source.html#l00053">53</a> of file <a class="el" href="pool_8c_source.html">pool.c</a>.</p>
 
 </div>
 </div>

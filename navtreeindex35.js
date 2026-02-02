@@ -1,11 +1,5 @@
 var NAVTREEINDEX35 =
 {
-"names__expando_8c.html#a3770dac3bc353144ef8fa3cb4543c6d3":[2,0,17,8,9],
-"names__expando_8c.html#a4726b3e05a0ee670df9466fc05ca3818":[2,0,17,8,24],
-"names__expando_8c.html#a5e97e6aad91c815f00a83989c5daba12":[2,0,17,8,17],
-"names__expando_8c.html#a62ac22ac54080ee5690c91931d94614c":[2,0,17,8,7],
-"names__expando_8c.html#a6f338e5c5b8d581447e5fbcca2af71da":[2,0,17,8,13],
-"names__expando_8c.html#a744033ffa7f87277e0f53eacde4af2cd":[2,0,17,8,2],
 "names__expando_8c.html#a753a660c208d860fbc77fe72cf54ca97":[2,0,17,8,25],
 "names__expando_8c.html#a7ab710389f473f1470a646b6cfd8bbf0":[2,0,17,8,23],
 "names__expando_8c.html#a92a88de67eb442ec4a84baf971515c14":[2,0,17,8,6],
@@ -149,7 +143,7 @@ var NAVTREEINDEX35 =
 "ncrypt_expando_smime.html":[39,15],
 "ncrypt_module.html":[39,19],
 "neo_editmsg.html":[0,0],
-"neo_editmsg.html#autotoc_md741":[3,0],
+"neo_editmsg.html#autotoc_md743":[3,0],
 "neo_external.html":[0,1],
 "neo_flags.html":[0,2],
 "neo_globals.html":[0,3],
@@ -249,5 +243,11 @@ var NAVTREEINDEX35 =
 "nntp_2adata_8h_source.html":[2,0,38,1],
 "nntp_2complete_8c.html":[2,0,38,2],
 "nntp_2complete_8c.html#a308b3b2673b7f280d9dc16b42da7d1b6":[2,0,38,2,0],
-"nntp_2complete_8c_source.html":[2,0,38,2]
+"nntp_2complete_8c_source.html":[2,0,38,2],
+"nntp_2config_8c.html":[2,0,38,3],
+"nntp_2config_8c.html#a283336aa9e22831dcd4bb1f553b48d03":[2,0,38,3,0],
+"nntp_2config_8c.html#ad7e528619096fa2b3150f8ed1f0a1721":[2,0,38,3,1],
+"nntp_2config_8c_source.html":[2,0,38,3],
+"nntp_2edata_8c.html":[2,0,38,4],
+"nntp_2edata_8c.html#a78e1fab53bc6f3d3813bcef508414349":[2,0,38,4,2]
 };

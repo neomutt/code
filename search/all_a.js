@@ -215,7 +215,7 @@ var searchData=
   ['hook_2eh_212',['hook.h',['../hook_8h.html',1,'']]],
   ['hook_5ffree_213',['hook_free',['../hook_8c.html#a3f101664bc43a354d5fc8210209ba7e3',1,'hook_free(struct Hook **ptr):&#160;hook.c'],['../hook_8h.html#a3f101664bc43a354d5fc8210209ba7e3',1,'hook_free(struct Hook **ptr):&#160;hook.c']]],
   ['hook_5fnew_214',['hook_new',['../hook_8c.html#a56a2eaebdff2ef8176e66bbdc1ac74d7',1,'hook_new(void):&#160;hook.c'],['../hook_8h.html#a56a2eaebdff2ef8176e66bbdc1ac74d7',1,'hook_new(void):&#160;hook.c']]],
-  ['hooks_215',['Hooks',['../hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64',1,'Hooks:&#160;parse.c'],['../hooks_2parse_8h.html#a972b6dffb799adc5f7e8d91438317d64',1,'Hooks:&#160;parse.c'],['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
+  ['hooks_215',['Hooks',['../hooks_exec.html',1,'Execute user-defined Hooks'],['../hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64',1,'Hooks:&#160;parse.c'],['../hooks_2parse_8h.html#a972b6dffb799adc5f7e8d91438317d64',1,'Hooks:&#160;parse.c'],['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
   ['hooks_20module_216',['Definition of the Hooks Module',['../hooks_module.html',1,'lib_hooks']]],
   ['hooks_20to_20the_20pager_217',['Dump the Hooks to the Pager',['../hooks_dump.html',1,'lib_hooks']]],
   ['hooks_5fcommands_5fregister_218',['hooks_commands_register',['../hooks_2module_8c.html#a7a4ca31d028b7f29c7b20c8efdcab00f',1,'module.c']]],

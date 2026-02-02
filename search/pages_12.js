@@ -22,6 +22,5 @@ var searchData=
   ['root_20window_19',['Root Window',['../gui_rootwin.html',1,'lib_gui']]],
   ['routines_20',['routines',['../crypt_pgplib.html',1,'Misc PGP helper routines'],['../crypt_pgpkey.html',1,'PGP key management routines'],['../crypt_pgp.html',1,'PGP sign, encrypt, check routines'],['../pop_lib.html',1,'POP helper routines'],['../email_mailcap.html',1,'RFC1524 Mailcap routines'],['../email_rfc3676.html',1,'RFC3676 Format Flowed routines'],['../imap_search.html',1,'Search routines'],['../crypt_smime.html',1,'SMIME helper routines'],['../complete_complete.html',1,'String auto-completion routines'],['../mutt_date.html',1,'Time and date handling routines']]],
   ['routines_20for_20adding_20user_20scores_20to_20emails_21',['Routines for adding user scores to emails',['../commands_score.html',1,'Routines for adding user scores to emails'],['../email_score.html',1,'Routines for adding user scores to emails']]],
-  ['routines_20to_20generate_20the_20mail_20index_22',['String processing routines to generate the mail index',['../index_expando_index.html',1,'lib_index']]],
-  ['run_20user_20defined_20hooks_23',['Run user-defined Hooks',['../hooks_run.html',1,'lib_hooks']]]
+  ['routines_20to_20generate_20the_20mail_20index_22',['String processing routines to generate the mail index',['../index_expando_index.html',1,'lib_index']]]
 ];

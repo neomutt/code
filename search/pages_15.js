@@ -32,7 +32,7 @@ var searchData=
   ['user_20callable_20functions_29',['All user-callable functions',['../gui_opcode.html',1,'lib_gui']]],
   ['user_20configurable_20status_20line_30',['user configurable status line',['../index_expando_status.html',1,'GUI display a user-configurable status line'],['../index_status.html',1,'GUI display a user-configurable status line']]],
   ['user_20defined_20hooks_31',['User-defined Hooks',['../hooks_hook.html',1,'lib_hooks']]],
-  ['user_20defined_20hooks_32',['user defined Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks']]],
+  ['user_20defined_20hooks_32',['user defined Hooks',['../hooks_exec.html',1,'Execute user-defined Hooks'],['../hooks_parse.html',1,'Parse user-defined Hooks']]],
   ['user_20functions_33',['Definitions of user functions',['../gui_functions.html',1,'lib_gui']]],
   ['user_20scores_20to_20emails_34',['user scores to emails',['../commands_score.html',1,'Routines for adding user scores to emails'],['../email_score.html',1,'Routines for adding user scores to emails']]],
   ['user_20to_20enter_20a_20string_35',['GUI ask the user to enter a string',['../editor_window.html',1,'lib_editor']]],

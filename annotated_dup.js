@@ -201,6 +201,8 @@ var annotated_dup =
     [ "PagerPrivateData", "structPagerPrivateData.html", "structPagerPrivateData" ],
     [ "PagerView", "structPagerView.html", "structPagerView" ],
     [ "Parameter", "structParameter.html", "structParameter" ],
+    [ "ParseContext", "structParseContext.html", "structParseContext" ],
+    [ "ParseError", "structParseError.html", "structParseError" ],
     [ "ParseMailbox", "structParseMailbox.html", "structParseMailbox" ],
     [ "ParseUnbind", "structParseUnbind.html", "structParseUnbind" ],
     [ "Pattern", "structPattern.html", "structPattern" ],

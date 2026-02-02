@@ -35,7 +35,7 @@ var searchData=
   ['history_20selection_20dialog_32',['History Selection Dialog',['../history_dlg_history.html',1,'lib_history']]],
   ['holds_20state_20of_20a_20search_33',['Holds state of a search',['../pattern_search_state.html',1,'lib_pattern']]],
   ['hook_20commands_34',['Hook Commands',['../hooks_commands.html',1,'Hook Commands'],['../lib_hooks.html',1,'Hook Commands']]],
-  ['hooks_35',['Hooks',['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_run.html',1,'Run user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
+  ['hooks_35',['Hooks',['../hooks_exec.html',1,'Execute user-defined Hooks'],['../hooks_parse.html',1,'Parse user-defined Hooks'],['../hooks_hook.html',1,'User-defined Hooks']]],
   ['hooks_20module_36',['Definition of the Hooks Module',['../hooks_module.html',1,'lib_hooks']]],
   ['hooks_20to_20the_20pager_37',['Dump the Hooks to the Pager',['../hooks_dump.html',1,'lib_hooks']]],
   ['how_20to_20display_20email_20content_38',['Decide how to display email content',['../email_handler.html',1,'lib_email']]]

@@ -1,7 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"config__type_8h_source.html":[2,0,0,3],
-"config_bool.html":[16,0],
 "config_charset.html":[16,1],
 "config_dump.html":[16,2],
 "config_enum.html":[16,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX7 =
 "core_2mailbox_8h.html#a37de3f1244a5121c3902e9213bed58b7a2e4e20ef31b77a9624217e8ac3269eb7":[2,0,16,10,17,2],
 "core_2mailbox_8h.html#a37de3f1244a5121c3902e9213bed58b7a415838fd47a7d885032d69346e6f5d9a":[2,0,16,10,17,0],
 "core_2mailbox_8h.html#a3dc345445c24e4c7ab02dfdfe0093d60":[2,0,16,10,8],
-"core_2mailbox_8h.html#a764a9d8daf2de305b5a3f777a76e4a41":[2,0,16,10,24]
+"core_2mailbox_8h.html#a764a9d8daf2de305b5a3f777a76e4a41":[2,0,16,10,24],
+"core_2mailbox_8h.html#a7ada20153d03e30afe22e55e32d61fea":[2,0,16,10,5],
+"core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e":[2,0,16,10,33]
 };

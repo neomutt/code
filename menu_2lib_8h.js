@@ -31,7 +31,6 @@ var menu_2lib_8h =
     [ "menu_redraw_index", "menu_2lib_8h.html#a39b631a566b12a37364e82049e708dfa", null ],
     [ "menu_redraw_motion", "menu_2lib_8h.html#adb45718706531be131e704b8af873338", null ],
     [ "menu_redraw", "menu_2lib_8h.html#a3da31793ff9ae935dccab75ae653a064", null ],
-    [ "menu_add_dialog_row", "menu_2lib_8h.html#ad1b40df559906e4e799c7fdf9ece7c21", null ],
     [ "menu_cleanup", "menu_2lib_8h.html#a14ee2c5a6e8d6e3dd5b3702a77317d5b", null ],
     [ "menu_get_current_type", "menu_2lib_8h.html#a013e9479d1c73c84da1994c44a61c30a", null ],
     [ "menu_init", "menu_2lib_8h.html#a06928afa5c7f6b2572306f21cd7d2d31", null ],

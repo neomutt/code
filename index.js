@@ -5,7 +5,7 @@ var index =
       [ "Miscellaneous files", "index.html#autotoc_md85", null ],
       [ "Building these Docs", "index.html#autotoc_md86", null ],
       [ "Installing the Docs", "index.html#autotoc_md87", [
-        [ "Functions", "neo_editmsg.html#autotoc_md741", null ]
+        [ "Functions", "neo_editmsg.html#autotoc_md743", null ]
       ] ]
     ] ],
     [ "Manage where the email is piped to external commands", "neo_external.html", null ],
