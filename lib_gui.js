@@ -1,5 +1,6 @@
 var lib_gui =
 [
+    [ "Config used by libgui", "gui_config.html", null ],
     [ "Window drawing code", "gui_curs_lib.html", null ],
     [ "Dialog Windows", "gui_dialog.html", null ],
     [ "Definitions of user functions", "gui_functions.html", null ],

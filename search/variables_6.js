@@ -35,5 +35,6 @@ var searchData=
   ['groups_5fmax_32',['groups_max',['../structNntpAccountData.html#a9d74636989a2ad52c90363e982997b9a',1,'NntpAccountData']]],
   ['groups_5fnum_33',['groups_num',['../structNntpAccountData.html#a37bf5f2141a2488012a0441694bae9bf',1,'NntpAccountData']]],
   ['gui_5fcleanup_34',['gui_cleanup',['../structModule.html#a2e81f272f8a5813d8b50c0eff0a53a46',1,'Module']]],
-  ['gui_5finit_35',['gui_init',['../structModule.html#a16c0b01643b613ad4a7e35525eb464c9',1,'Module']]]
+  ['gui_5finit_35',['gui_init',['../structModule.html#a16c0b01643b613ad4a7e35525eb464c9',1,'Module']]],
+  ['guivars_36',['GuiVars',['../gui_2config_8c.html#a12fc72161143ee32390f5187a1de3de9',1,'GuiVars:&#160;config.c'],['../gui_2module_8c.html#a12fc72161143ee32390f5187a1de3de9',1,'GuiVars:&#160;config.c']]]
 ];

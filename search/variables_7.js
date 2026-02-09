@@ -57,6 +57,7 @@ var searchData=
   ['home_5fdir_54',['home_dir',['../structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08',1,'NeoMutt']]],
   ['hooks_55',['Hooks',['../hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64',1,'Hooks:&#160;parse.c'],['../hooks_2parse_8h.html#a972b6dffb799adc5f7e8d91438317d64',1,'Hooks:&#160;parse.c']]],
   ['hookscommands_56',['HooksCommands',['../hooks_2commands_8c.html#a8e168e3350903d73ed663312d4d4abbc',1,'HooksCommands:&#160;commands.c'],['../hooks_2module_8c.html#a8e168e3350903d73ed663312d4d4abbc',1,'HooksCommands:&#160;commands.c']]],
-  ['host_57',['host',['../structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a',1,'ConnAccount::host'],['../structUrl.html#a565d3391c8b8114a97ad6f1b7c75b5f6',1,'Url::host']]],
-  ['hostexdataindex_58',['HostExDataIndex',['../openssl_8c.html#ab43c12dc4d5c8504c852b18a43ef0f8a',1,'openssl.c']]]
+  ['hooksvars_57',['HooksVars',['../hooks_2config_8c.html#aadf3decf8e41fde10e48c4b6d1ecbb8e',1,'HooksVars:&#160;config.c'],['../hooks_2module_8c.html#aadf3decf8e41fde10e48c4b6d1ecbb8e',1,'HooksVars:&#160;config.c']]],
+  ['host_58',['host',['../structConnAccount.html#aa440323ef3111e1faaf33f6a57103a3a',1,'ConnAccount::host'],['../structUrl.html#a565d3391c8b8114a97ad6f1b7c75b5f6',1,'Url::host']]],
+  ['hostexdataindex_59',['HostExDataIndex',['../openssl_8c.html#ab43c12dc4d5c8504c852b18a43ef0f8a',1,'openssl.c']]]
 ];

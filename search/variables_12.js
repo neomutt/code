@@ -120,7 +120,7 @@ var searchData=
   ['status_117',['status',['../structImapAccountData.html#ac6488a600297eee1e5d203872e93f9d2',1,'ImapAccountData::status'],['../structNntpAccountData.html#a2a1c6e75563a61693936d8d82acc1321',1,'NntpAccountData::status'],['../structPopAccountData.html#a9a44d4bc626dbc9fbb085cff6e0b790c',1,'PopAccountData::status']]],
   ['status_5fformat_118',['status_format',['../structIBarPrivateData.html#abaeb72cc68c63ddf795a891b1db7957a',1,'IBarPrivateData']]],
   ['statusformatdef_119',['StatusFormatDef',['../index_2config_8c.html#a44f783fe72392aa9a0569081b4147dcc',1,'StatusFormatDef:&#160;config.c'],['../index_2lib_8h.html#a44f783fe72392aa9a0569081b4147dcc',1,'StatusFormatDef:&#160;config.c']]],
-  ['statusformatdefnopadding_120',['StatusFormatDefNoPadding',['../mutt__config_8c.html#a9b690a40e3fcd22a0c29aee47a4739a2',1,'mutt_config.c']]],
+  ['statusformatdefnopadding_120',['StatusFormatDefNoPadding',['../index_2config_8c.html#a9b690a40e3fcd22a0c29aee47a4739a2',1,'config.c']]],
   ['statuslist_121',['StatusList',['../color_2regex_8c.html#a5e0db8d55228f1fe8efe4b99f0d9a540',1,'regex.c']]],
   ['statusrendercallbacks_122',['StatusRenderCallbacks',['../expando__status_8c.html#a059b649175299a90d7c0406607666a41',1,'StatusRenderCallbacks:&#160;expando_status.c'],['../expando__status_8h.html#a059b649175299a90d7c0406607666a41',1,'StatusRenderCallbacks:&#160;expando_status.c']]],
   ['stop_5fmatching_123',['stop_matching',['../structRegexColor.html#a92b0c1b73f9bdd75b8aaf3740740ca2c',1,'RegexColor']]],

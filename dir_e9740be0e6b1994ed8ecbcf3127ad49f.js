@@ -2,6 +2,7 @@ var dir_e9740be0e6b1994ed8ecbcf3127ad49f =
 [
     [ "commands.c", "hooks_2commands_8c.html", "hooks_2commands_8c" ],
     [ "commands.h", "hooks_2commands_8h.html", null ],
+    [ "config.c", "hooks_2config_8c.html", "hooks_2config_8c" ],
     [ "dump.c", "hooks_2dump_8c.html", "hooks_2dump_8c" ],
     [ "dump.h", "hooks_2dump_8h.html", "hooks_2dump_8h" ],
     [ "exec.c", "hooks_2exec_8c.html", "hooks_2exec_8c" ],

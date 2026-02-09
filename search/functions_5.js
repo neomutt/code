@@ -33,7 +33,7 @@ var searchData=
   ['find_5fsubject_30',['find_subject',['../gui_2thread_8c.html#ade53690995c9c0c41164aea914536fc7',1,'thread.c']]],
   ['find_5ftz_31',['find_tz',['../mutt_2date_8c.html#a6e3d63ce76dd4fc2a64fd8150f059ebb',1,'date.c']]],
   ['find_5fvirtual_32',['find_virtual',['../email_2thread_8c.html#a935c58e8d42dc12e4ed901702fd9f7f3',1,'find_virtual(struct MuttThread *cur, bool reverse):&#160;thread.c'],['../email_2thread_8h.html#a935c58e8d42dc12e4ed901702fd9f7f3',1,'find_virtual(struct MuttThread *cur, bool reverse):&#160;thread.c']]],
-  ['first_5fmailing_5flist_33',['first_mailing_list',['../maillist_8c.html#a643495f76455c793820d55aada5597e1',1,'first_mailing_list(char *buf, size_t buflen, struct AddressList *al):&#160;maillist.c'],['../maillist_8h.html#a643495f76455c793820d55aada5597e1',1,'first_mailing_list(char *buf, size_t buflen, struct AddressList *al):&#160;maillist.c']]],
+  ['first_5fmailing_5flist_33',['first_mailing_list',['../maillist_8c.html#aa63ede8ef479f6182551505413a07ff7',1,'first_mailing_list(struct AddressList *al, struct Buffer *buf):&#160;maillist.c'],['../maillist_8h.html#aa63ede8ef479f6182551505413a07ff7',1,'first_mailing_list(struct AddressList *al, struct Buffer *buf):&#160;maillist.c']]],
   ['fix_5fend_5fof_5ffile_34',['fix_end_of_file',['../send_8c.html#ad5e73f6a253107a7f55ee7388fbbf92f',1,'send.c']]],
   ['fix_5fuid_35',['fix_uid',['../gnupgparse_8c.html#a18dfeec11744f1c9a301dbbfaec153bc',1,'gnupgparse.c']]],
   ['flush_5fbuffer_36',['flush_buffer',['../imap_2message_8c.html#a6d20c017931a27796e7462278f74defe',1,'message.c']]],

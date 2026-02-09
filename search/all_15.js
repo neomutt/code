@@ -751,7 +751,7 @@ var searchData=
   ['status_5fformat_748',['status_format',['../structIBarPrivateData.html#abaeb72cc68c63ddf795a891b1db7957a',1,'IBarPrivateData']]],
   ['statuschars_749',['StatusChars',['../expando__status_8h.html#a79101cb57c3f3878796a41e0f0475b3d',1,'expando_status.h']]],
   ['statusformatdef_750',['StatusFormatDef',['../index_2config_8c.html#a44f783fe72392aa9a0569081b4147dcc',1,'StatusFormatDef:&#160;config.c'],['../index_2lib_8h.html#a44f783fe72392aa9a0569081b4147dcc',1,'StatusFormatDef:&#160;config.c']]],
-  ['statusformatdefnopadding_751',['StatusFormatDefNoPadding',['../mutt__config_8c.html#a9b690a40e3fcd22a0c29aee47a4739a2',1,'mutt_config.c']]],
+  ['statusformatdefnopadding_751',['StatusFormatDefNoPadding',['../index_2config_8c.html#a9b690a40e3fcd22a0c29aee47a4739a2',1,'config.c']]],
   ['statuslist_752',['StatusList',['../color_2regex_8c.html#a5e0db8d55228f1fe8efe4b99f0d9a540',1,'regex.c']]],
   ['statusrendercallbacks_753',['StatusRenderCallbacks',['../expando__status_8c.html#a059b649175299a90d7c0406607666a41',1,'StatusRenderCallbacks:&#160;expando_status.c'],['../expando__status_8h.html#a059b649175299a90d7c0406607666a41',1,'StatusRenderCallbacks:&#160;expando_status.c']]],
   ['still_20todo_754',['Still Todo',['../lib_autocrypt.html#autotoc_md12',1,'']]],

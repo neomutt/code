@@ -6,6 +6,7 @@ var dir_cadddfe7f86d0e152e92d814fe81e3e8 =
     [ "cid.h", "cid_8h.html", "cid_8h" ],
     [ "commands.c", "attach_2commands_8c.html", "attach_2commands_8c" ],
     [ "commands.h", "attach_2commands_8h.html", "attach_2commands_8h" ],
+    [ "config.c", "attach_2config_8c.html", "attach_2config_8c" ],
     [ "dlg_attach.c", "dlg__attach_8c.html", "dlg__attach_8c" ],
     [ "expando.c", "attach_2expando_8c.html", "attach_2expando_8c" ],
     [ "expando.h", "attach_2expando_8h.html", "attach_2expando_8h" ],

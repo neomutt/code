@@ -1,5 +1,6 @@
 var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
 [
+    [ "config.c", "gui_2config_8c.html", "gui_2config_8c" ],
     [ "curs_lib.c", "curs__lib_8c.html", "curs__lib_8c" ],
     [ "curs_lib.h", "curs__lib_8h.html", "curs__lib_8h" ],
     [ "dialog.c", "dialog_8c.html", "dialog_8c" ],
