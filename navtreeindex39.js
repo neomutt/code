@@ -1,12 +1,5 @@
 var NAVTREEINDEX39 =
 {
-"pattern_2lib_8h.html#a1d78529336f13dffb6168735b63f0384":[2,0,42,10,9],
-"pattern_2lib_8h.html#a258bbc9499cea3d5d1c3c0454ee8b31a":[2,0,42,10,4],
-"pattern_2lib_8h.html#a2bfd0ca84e9773d600ef85243eeb4550":[2,0,42,10,13],
-"pattern_2lib_8h.html#a2ded8206754efca5312918c92bf5e6dd":[2,0,42,10,12],
-"pattern_2lib_8h.html#a2ded8206754efca5312918c92bf5e6dda410ca224515942a054c5f6f27745d63c":[2,0,42,10,12,2],
-"pattern_2lib_8h.html#a2ded8206754efca5312918c92bf5e6dda51d2a6d81034dd9de5fab0a01f42e26f":[2,0,42,10,12,0],
-"pattern_2lib_8h.html#a2ded8206754efca5312918c92bf5e6ddaf37c33caf919790d47db1cad10fd0219":[2,0,42,10,12,1],
 "pattern_2lib_8h.html#a351dc5aa88481a949638aeb6cc5e6754":[2,0,42,10,11],
 "pattern_2lib_8h.html#a351dc5aa88481a949638aeb6cc5e6754a0468285666663ba3b7bf078a6d95183e":[2,0,42,10,11,19],
 "pattern_2lib_8h.html#a351dc5aa88481a949638aeb6cc5e6754a073bb669df1effcc0d163eb855c60215":[2,0,42,10,11,21],
@@ -230,7 +223,6 @@ var NAVTREEINDEX39 =
 "pgp__functions_8h.html":[2,0,37,34],
 "pgp__functions_8h.html#a0ead454884b20657cea829d929d3b898":[2,0,37,34,2],
 "pgp__functions_8h_source.html":[2,0,37,34],
-"pgp_functions.html":[39,21],
 "pgpinvoke_8c.html":[2,0,37,35],
 "pgpinvoke_8c.html#a07a1392c06efa0eaa3e02b39cc2e4571":[2,0,37,35,11],
 "pgpinvoke_8c.html#a20c6ffdd8d441f667f3be7de29fea174":[2,0,37,35,6],
@@ -249,5 +241,13 @@ var NAVTREEINDEX39 =
 "pgpinvoke_8h.html#a20c6ffdd8d441f667f3be7de29fea174":[2,0,37,36,4],
 "pgpinvoke_8h.html#a407b2ceab1cb744122e3cb5e9e9b0fd5":[2,0,37,36,2],
 "pgpinvoke_8h.html#a56bcf68282aea0a51774c08a7f283054":[2,0,37,36,8],
-"pgpinvoke_8h.html#a626be470c9585e938f353bf56b1e774f":[2,0,37,36,7]
+"pgpinvoke_8h.html#a626be470c9585e938f353bf56b1e774f":[2,0,37,36,7],
+"pgpinvoke_8h.html#a65bfacfc8067ed58d224aeefc6f99905":[2,0,37,36,9],
+"pgpinvoke_8h.html#a6ce58fd133819e138da6a9294ee081bb":[2,0,37,36,5],
+"pgpinvoke_8h.html#a9922a095eaa2b9f874028bd0ae5332ef":[2,0,37,36,6],
+"pgpinvoke_8h.html#ab0b11dcf9aef414365590f9f6ac0c5a4":[2,0,37,36,3],
+"pgpinvoke_8h_source.html":[2,0,37,36],
+"pgpkey_8c.html":[2,0,37,37],
+"pgpkey_8c.html#a0a2d46a37ed92125eed6c9cea5543909":[2,0,37,37,12],
+"pgpkey_8c.html#a0bfe8fe961efecdedbf5f47cd0c75500":[2,0,37,37,1]
 };

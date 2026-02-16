@@ -5,8 +5,8 @@ var searchData=
   ['receive_20commands_2',['Send/receive commands',['../imap_command.html',1,'lib_imap']]],
   ['reflowing_3',['Window reflowing',['../gui_reflow.html',1,'lib_gui']]],
   ['regex_20colour_4',['Regex Colour',['../color_regex.html',1,'lib_color']]],
-  ['regex_20commands_5',['Parse subject-regex Commands',['../commands_subjectrx.html',1,'lib_command']]],
-  ['register_20crypto_20modules_6',['Register crypto modules',['../crypt_crypt_mod.html',1,'lib_ncrypt']]],
+  ['regex_20commands_5',['Parse subject-regex Commands',['../index_subjectrx.html',1,'lib_index']]],
+  ['register_20crypto_20modules_6',['Register crypto modules',['../ncrypt_crypt_mod.html',1,'lib_ncrypt']]],
   ['regular_20expression_7',['Type: Regular expression',['../config_regex.html',1,'lib_config']]],
   ['regular_20expressions_8',['regular expressions',['../mutt_prex.html',1,'Manage precompiled / predefined regular expressions'],['../mutt_regex.html',1,'Manage regular expressions']]],
   ['render_20expandos_20using_20data_9',['Render Expandos using Data',['../expando_render.html',1,'lib_expando']]],
@@ -20,7 +20,7 @@ var searchData=
   ['rich_20text_20handler_17',['Rich text handler',['../email_enriched.html',1,'lib_email']]],
   ['rocksdb_18',['RocksDB',['../store_rocksdb.html',1,'lib_store']]],
   ['root_20window_19',['Root Window',['../gui_rootwin.html',1,'lib_gui']]],
-  ['routines_20',['routines',['../crypt_pgplib.html',1,'Misc PGP helper routines'],['../crypt_pgpkey.html',1,'PGP key management routines'],['../crypt_pgp.html',1,'PGP sign, encrypt, check routines'],['../pop_lib.html',1,'POP helper routines'],['../email_mailcap.html',1,'RFC1524 Mailcap routines'],['../email_rfc3676.html',1,'RFC3676 Format Flowed routines'],['../imap_search.html',1,'Search routines'],['../crypt_smime.html',1,'SMIME helper routines'],['../complete_complete.html',1,'String auto-completion routines'],['../mutt_date.html',1,'Time and date handling routines']]],
-  ['routines_20for_20adding_20user_20scores_20to_20emails_21',['Routines for adding user scores to emails',['../commands_score.html',1,'Routines for adding user scores to emails'],['../email_score.html',1,'Routines for adding user scores to emails']]],
+  ['routines_20',['routines',['../ncrypt_pgplib.html',1,'Misc PGP helper routines'],['../ncrypt_pgpkey.html',1,'PGP key management routines'],['../ncrypt_pgp.html',1,'PGP sign, encrypt, check routines'],['../pop_lib.html',1,'POP helper routines'],['../email_mailcap.html',1,'RFC1524 Mailcap routines'],['../email_rfc3676.html',1,'RFC3676 Format Flowed routines'],['../imap_search.html',1,'Search routines'],['../ncrypt_smime.html',1,'SMIME helper routines'],['../complete_complete.html',1,'String auto-completion routines'],['../mutt_date.html',1,'Time and date handling routines']]],
+  ['routines_20for_20adding_20user_20scores_20to_20emails_21',['Routines for adding user scores to emails',['../email_score.html',1,'lib_email']]],
   ['routines_20to_20generate_20the_20mail_20index_22',['String processing routines to generate the mail index',['../index_expando_index.html',1,'lib_index']]]
 ];

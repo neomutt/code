@@ -10,7 +10,8 @@ var searchData=
   ['imaplist_7',['ImapList',['../structImapList.html',1,'']]],
   ['imapmboxdata_8',['ImapMboxData',['../structImapMboxData.html',1,'']]],
   ['indexfunction_9',['IndexFunction',['../structIndexFunction.html',1,'']]],
-  ['indexprivatedata_10',['IndexPrivateData',['../structIndexPrivateData.html',1,'']]],
-  ['indexshareddata_11',['IndexSharedData',['../structIndexSharedData.html',1,'']]],
-  ['inheritance_12',['Inheritance',['../structInheritance.html',1,'']]]
+  ['indexmoduledata_10',['IndexModuleData',['../structIndexModuleData.html',1,'']]],
+  ['indexprivatedata_11',['IndexPrivateData',['../structIndexPrivateData.html',1,'']]],
+  ['indexshareddata_12',['IndexSharedData',['../structIndexSharedData.html',1,'']]],
+  ['inheritance_13',['Inheritance',['../structInheritance.html',1,'']]]
 ];

@@ -1,6 +1,7 @@
 var lib_alias =
 [
     [ "Alias for an email address", "alias_alias.html", null ],
+    [ "Parse Alternate Commands", "alias_alternates.html", null ],
     [ "Array of Alias Views", "alias_array.html", null ],
     [ "Alias commands", "alias_commands.html", null ],
     [ "Alias Auto-Completion", "alias_complete.html", null ],

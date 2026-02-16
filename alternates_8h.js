@@ -5,8 +5,6 @@ var alternates_8h =
       [ "NT_ALTERN_DELETE", "alternates_8h.html#ab0e2b7b767e108a74d4bc21d44538f1da78b9703066c72946b396419d64755141", null ],
       [ "NT_ALTERN_DELETE_ALL", "alternates_8h.html#ab0e2b7b767e108a74d4bc21d44538f1da9c4c96515f2bd8ab7d9a638dc2b02465", null ]
     ] ],
-    [ "alternates_init", "alternates_8h.html#a2a78e8d449aa5e8e73aba79be1ebe151", null ],
-    [ "alternates_cleanup", "alternates_8h.html#a0a4b00e60f2ecc10aaf25eb48ec087fd", null ],
     [ "parse_alternates", "group__command__parse.html#ga5a89dcfd018c500ebd879bdbd9dc5e0b", null ],
     [ "parse_unalternates", "group__command__parse.html#ga90075701957687aa5dafaa52d455116a", null ],
     [ "mutt_alternates_match", "alternates_8h.html#a4f084235b327b37b2b8dffd94389ee94", null ],

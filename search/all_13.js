@@ -49,7 +49,7 @@ var searchData=
   ['queries_46',['queries',['../structCliInfo.html#a3bffd7556046c544b4212484ae013deb',1,'CliInfo']]],
   ['query_47',['query',['../structAliasMenuData.html#aac5de712e06fcb42cea41aae0adcc62a',1,'AliasMenuData']]],
   ['query_20dialog_48',['Address Query Dialog',['../alias_dlg_query.html',1,'lib_alias']]],
-  ['query_20functions_49',['Notmuch query functions',['../nm_query.html',1,'lib_notmuch']]],
+  ['query_20functions_49',['Notmuch query functions',['../notmuch_query.html',1,'lib_notmuch']]],
   ['query_2ec_50',['query.c',['../query_8c.html',1,'']]],
   ['query_2eh_51',['query.h',['../query_8h.html',1,'']]],
   ['query_5fabort_5fheader_5fdownload_52',['query_abort_header_download',['../imap_2message_8c.html#aa881016bc7aba8e6c29a910459cfa260',1,'message.c']]],

@@ -7,6 +7,7 @@ var lib_core =
     [ "Mailbox object", "core_mailbox.html", null ],
     [ "Local email", "core_message.html", null ],
     [ "Definition of the Core Module", "core_module.html", null ],
+    [ "Module API", "core_module_api.html", null ],
     [ "NeoMutt object", "core_neomutt.html", null ],
     [ "Create Temporary Files", "core_tmp.html", null ]
 ];

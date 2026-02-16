@@ -1,6 +1,7 @@
 var lib_email =
 [
     [ "Body of an Email", "email_body.html", null ],
+    [ "Email commands", "email_commands.html", null ],
     [ "Config used by the Email library", "email_config.html", null ],
     [ "Copy the body of an email", "email_copy_body.html", null ],
     [ "Duplicate the structure of an entire email", "email_copy_email.html", null ],
@@ -8,9 +9,10 @@ var lib_email =
     [ "Rich text handler", "email_enriched.html", null ],
     [ "Envelope (Email header)", "email_envelope.html", null ],
     [ "Who is the email from?", "email_from.html", null ],
-    [ "Global Variables", "email_globals.html", null ],
+    [ "Parse Group/Lists Commands", "email_group.html", null ],
     [ "Decide how to display email content", "email_handler.html", null ],
     [ "Manipulate an email's header", "email_header.html", null ],
+    [ "Parse Ignore Commands", "email_ignore.html", null ],
     [ "RFC1524 Mailcap routines", "email_mailcap.html", null ],
     [ "Data for MIME encoding", "email_mime.html", null ],
     [ "Definition of the Email Module", "email_module.html", null ],
@@ -21,6 +23,7 @@ var lib_email =
     [ "RFC3676 Format Flowed routines", "email_rfc3676.html", null ],
     [ "Routines for adding user scores to emails", "email_score.html", null ],
     [ "Email sorting methods", "email_sort.html", null ],
+    [ "Parse Spam Commands", "email_spam.html", null ],
     [ "Email tags", "email_tags.html", null ],
     [ "Email threading", "email_thread.html", null ],
     [ "Parse URL schemes", "email_url.html", null ]

@@ -7,6 +7,7 @@ var lib_send =
     [ "Write a MIME Email Header to a file", "send_header.html", null ],
     [ "Definition of the Send Module", "send_module.html", null ],
     [ "Manipulate multipart Emails", "send_multipart.html", null ],
+    [ "Parse My-header Commands", "send_my_header.html", null ],
     [ "Prepare and send an email", "send_send.html", null ],
     [ "Miscellaneous functions for sending an email", "send_sendlib.html", null ],
     [ "Send email using sendmail", "send_sendmail.html", null ],

@@ -36,7 +36,7 @@ var searchData=
   ['child_5fops_33',['child_ops',['../structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472',1,'CompressInfo']]],
   ['children_34',['children',['../structExpandoNode.html#adc733309e276118e9d3ef72bf8de33d8',1,'ExpandoNode::children'],['../structMuttWindow.html#a39e689a308070fec97d4c6cb94eb9a42',1,'MuttWindow::children']]],
   ['cid_35',['cid',['../structCidMap.html#a7efa1dd6dcb8b04e494ea464c1ae2122',1,'CidMap::cid'],['../structEventColor.html#a944299806d9ebd09fa12892dd156f191',1,'EventColor::cid'],['../structLine.html#a2b7e272af8db7a741a6b2a8bbe00efef',1,'Line::cid']]],
-  ['cleanup_36',['cleanup',['../structModule.html#a6b24dc7304da6c2ab480b91aa4c0d7d6',1,'Module::cleanup'],['../structCryptModuleSpecs.html#a964e577093325ada36eccd27f2077799',1,'CryptModuleSpecs::cleanup']]],
+  ['cleanup_36',['cleanup',['../structModule.html#a7432d140eea6dbec2af4baf97a6bb2df',1,'Module::cleanup'],['../structCryptModuleSpecs.html#a964e577093325ada36eccd27f2077799',1,'CryptModuleSpecs::cleanup']]],
   ['clear_5fcache_37',['clear_cache',['../structPopAccountData.html#a4b1f71d4fefd265f465f0cbadcf237b8',1,'PopAccountData']]],
   ['close_38',['close',['../structComprOps.html#adba0c7a5be5b03f182bad1ef8513503f',1,'ComprOps::close'],['../structConnection.html#a7a40be1f125477cf01ced6817be10bbc',1,'Connection::close'],['../group__connection__close.html#gaa50d59049dda18070a01610b71c2fd38',1,'SaslSockData::close'],['../structStoreOps.html#a1fe12316bda9cb585a91e6c455796513',1,'StoreOps::close']]],
   ['closing_39',['closing',['../structImapAccountData.html#a7ed31d012f389db2e60adfe46c7b1622',1,'ImapAccountData']]],

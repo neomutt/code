@@ -16,7 +16,7 @@ var searchData=
   ['notifyheader_13',['NotifyHeader',['../email_8h.html#a32e989d0071364c3086b2f4b93beac1d',1,'email.h']]],
   ['notifymailbox_14',['NotifyMailbox',['../core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4',1,'mailbox.h']]],
   ['notifymview_15',['NotifyMview',['../mview_8h.html#a199b0cff07bd49ca8a0d3884c5e3a6a9',1,'mview.h']]],
-  ['notifysubjrx_16',['NotifySubjRx',['../subjectrx_8h.html#a087faf9e4ba38d97770e69333a4ce6c8',1,'subjectrx.h']]],
+  ['notifysubjectrx_16',['NotifySubjectRx',['../subjectrx_8h.html#ad86234aa67a6ef5a2ac0928f7add49a2',1,'subjectrx.h']]],
   ['notifytype_17',['NotifyType',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8',1,'notify_type.h']]],
   ['notifywindow_18',['NotifyWindow',['../mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138c',1,'mutt_window.h']]]
 ];

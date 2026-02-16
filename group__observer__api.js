@@ -59,7 +59,7 @@ var group__observer__api =
     [ "index_index_observer", "group__observer__api.html#ga23f0ee4166ac9193386a3be2da0ab011", null ],
     [ "index_menu_observer", "group__observer__api.html#ga2699fb39ea255b8c7b7ff43d2d460478", null ],
     [ "index_score_observer", "group__observer__api.html#ga6e6c8b21682ed52ad1e9d8a4fc3859e1", null ],
-    [ "index_subjrx_observer", "group__observer__api.html#gae47f21781105d8627d091e4caf1a0d7d", null ],
+    [ "index_subjectrx_observer", "group__observer__api.html#gaa8b7ddb08dd0d6875cab88f8b3fb9c16", null ],
     [ "index_window_observer", "group__observer__api.html#gaff90e0bb8540ce8685f191b319000148", null ],
     [ "ipanel_config_observer", "group__observer__api.html#gab5e61646dad824b5e509fb97bbc3fb87", null ],
     [ "ipanel_window_observer", "group__observer__api.html#gac97ba3dcc8206296620c579d1b152315", null ],

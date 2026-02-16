@@ -1,5 +1,6 @@
 var dir_d65448580e9217255cc008a16a3f25d3 =
 [
+    [ "commands.c", "index_2commands_8c.html", "index_2commands_8c" ],
     [ "config.c", "index_2config_8c.html", "index_2config_8c" ],
     [ "dlg_index.c", "dlg__index_8c.html", "dlg__index_8c" ],
     [ "expando_index.c", "expando__index_8c.html", "expando__index_8c" ],
@@ -14,11 +15,14 @@ var dir_d65448580e9217255cc008a16a3f25d3 =
     [ "ipanel.c", "ipanel_8c.html", "ipanel_8c" ],
     [ "lib.h", "index_2lib_8h.html", "index_2lib_8h" ],
     [ "module.c", "index_2module_8c.html", "index_2module_8c" ],
+    [ "module_data.h", "index_2module__data_8h.html", "index_2module__data_8h" ],
     [ "private.h", "index_2private_8h.html", "index_2private_8h" ],
     [ "private_data.c", "index_2private__data_8c.html", "index_2private__data_8c" ],
     [ "private_data.h", "index_2private__data_8h.html", "index_2private__data_8h" ],
     [ "shared_data.c", "index_2shared__data_8c.html", "index_2shared__data_8c" ],
     [ "shared_data.h", "index_2shared__data_8h.html", "index_2shared__data_8h" ],
     [ "status.c", "status_8c.html", "status_8c" ],
-    [ "status.h", "status_8h.html", "status_8h" ]
+    [ "status.h", "status_8h.html", "status_8h" ],
+    [ "subjectrx.c", "subjectrx_8c.html", "subjectrx_8c" ],
+    [ "subjectrx.h", "subjectrx_8h.html", "subjectrx_8h" ]
 ];

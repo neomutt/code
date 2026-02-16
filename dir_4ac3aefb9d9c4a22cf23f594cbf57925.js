@@ -2,6 +2,8 @@ var dir_4ac3aefb9d9c4a22cf23f594cbf57925 =
 [
     [ "alias.c", "alias_8c.html", "alias_8c" ],
     [ "alias.h", "alias_8h.html", "alias_8h" ],
+    [ "alternates.c", "alternates_8c.html", "alternates_8c" ],
+    [ "alternates.h", "alternates_8h.html", "alternates_8h" ],
     [ "array.c", "array_8c.html", "array_8c" ],
     [ "commands.c", "alias_2commands_8c.html", "alias_2commands_8c" ],
     [ "complete.c", "alias_2complete_8c.html", "alias_2complete_8c" ],
@@ -16,6 +18,7 @@ var dir_4ac3aefb9d9c4a22cf23f594cbf57925 =
     [ "gui.h", "gui_8h.html", "gui_8h" ],
     [ "lib.h", "alias_2lib_8h.html", "alias_2lib_8h" ],
     [ "module.c", "alias_2module_8c.html", "alias_2module_8c" ],
+    [ "module_data.h", "alias_2module__data_8h.html", "alias_2module__data_8h" ],
     [ "reverse.c", "reverse_8c.html", "reverse_8c" ],
     [ "reverse.h", "reverse_8h.html", "reverse_8h" ],
     [ "sort.c", "alias_2sort_8c.html", "alias_2sort_8c" ],

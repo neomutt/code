@@ -3,7 +3,7 @@ var searchData=
   ['qdbm_0',['Quick Database Manager (QDBM)',['../store_qdbm.html',1,'lib_store']]],
   ['quad_20option_1',['Type: Quad-option',['../config_quad.html',1,'lib_config']]],
   ['query_20dialog_2',['Address Query Dialog',['../alias_dlg_query.html',1,'lib_alias']]],
-  ['query_20functions_3',['Notmuch query functions',['../nm_query.html',1,'lib_notmuch']]],
+  ['query_20functions_3',['Notmuch query functions',['../notmuch_query.html',1,'lib_notmuch']]],
   ['question_4',['Question',['../lib_question.html',1,'']]],
   ['question_5',['Ask the user a question',['../question_question.html',1,'lib_question']]],
   ['question_20module_6',['Definition of the Question Module',['../question_module.html',1,'lib_question']]],

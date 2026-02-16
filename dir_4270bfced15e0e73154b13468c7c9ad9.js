@@ -14,6 +14,7 @@ var dir_4270bfced15e0e73154b13468c7c9ad9 =
     [ "message.c", "core_2message_8c.html", "core_2message_8c" ],
     [ "message.h", "core_2message_8h.html", "core_2message_8h" ],
     [ "module.c", "core_2module_8c.html", "core_2module_8c" ],
+    [ "module_api.h", "module__api_8h.html", "module__api_8h" ],
     [ "mxapi.h", "mxapi_8h.html", "mxapi_8h" ],
     [ "neomutt.c", "neomutt_8c.html", "neomutt_8c" ],
     [ "neomutt.h", "neomutt_8h.html", "neomutt_8h" ],
