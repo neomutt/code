@@ -5,6 +5,7 @@ var sidebar_2expando_8c =
     [ "sidebar_description", "group__expando__get__string__api.html#gabe734a9fe033b538ed25b9e29a6c9cd0", null ],
     [ "sidebar_flagged", "group__expando__get__string__api.html#gac17ab75dba353ef9124efd00ccefae6e", null ],
     [ "sidebar_flagged_count_num", "group__expando__get__number__api.html#gadf8bcadafd561df0084b58315b09b433", null ],
+    [ "sidebar_fuzzy_score_num", "group__expando__get__number__api.html#gaf94c1343c1d76537dd150a005857eb57", null ],
     [ "sidebar_limited_count_num", "group__expando__get__number__api.html#ga9f5968a04d96b9012c43a811dbf97e2a", null ],
     [ "sidebar_message_count_num", "group__expando__get__number__api.html#ga3ae4a031f358ecb37b22d0b5cee2185c", null ],
     [ "sidebar_name", "group__expando__get__string__api.html#ga27c73c7048e4197781213cb6564b2162", null ],

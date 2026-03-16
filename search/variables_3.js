@@ -2,7 +2,7 @@ var searchData=
 [
   ['d_0',['D',['../structMd5Ctx.html#a6be4b06ff54cc0b71d0be55d2d48ad5f',1,'Md5Ctx']]],
   ['d_5ffilename_1',['d_filename',['../structBody.html#a0a77f105609a64f37c359b9c81d1f263',1,'Body']]],
-  ['data_2',['data',['../structConfigDef.html#a5125b3fa1932065447f5811dda756b05',1,'ConfigDef::data'],['../structCommand.html#aa5fe18d852766cc28e9641ff4d0e3b6f',1,'Command::data'],['../structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8',1,'Buffer::data'],['../structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365',1,'HashElem::data'],['../structListNode.html#aafe688d670318196766392d8235d00a7',1,'ListNode::data']]],
+  ['data_2',['data',['../structConfigDef.html#a5125b3fa1932065447f5811dda756b05',1,'ConfigDef::data'],['../structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8',1,'Buffer::data'],['../structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365',1,'HashElem::data'],['../structListNode.html#aafe688d670318196766392d8235d00a7',1,'ListNode::data']]],
   ['date_3',['date',['../structEnvelope.html#adb752a72d48a701571b3c1784bc4b59b',1,'Envelope']]],
   ['date_5fsent_4',['date_sent',['../structEmail.html#a9e3cda5dab6d53f68cad95d28068d962',1,'Email']]],
   ['db_5',['db',['../structNmAccountData.html#a76f9a37a987a8e6057f4d89cdd27ea36',1,'NmAccountData::db'],['../structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd',1,'BdbStoreData::db'],['../structLmdbStoreData.html#a91cc6b5301d64e9cd6d5bdebdd97568f',1,'LmdbStoreData::db'],['../structRocksDbStoreData.html#a46019b575b6df81ed81ecdbd83f271eb',1,'RocksDbStoreData::db']]],
@@ -29,7 +29,7 @@ var searchData=
   ['devel_26',['devel',['../structNeoMuttVersion.html#a913111b163d60834c6fae7d139493a69',1,'NeoMuttVersion']]],
   ['developts_27',['DevelOpts',['../version_8c.html#a14251e38e59af2405cb47e3fd8e2ddba',1,'version.c']]],
   ['dflt_28',['dflt',['../structCryptCache.html#a8dd12b5c42e7430529eb9f41807b9331',1,'CryptCache::dflt'],['../structPgpCache.html#a27971ba1f4f97f5421cba3c374ccdb10',1,'PgpCache::dflt']]],
-  ['dialogdefaultbindings_29',['DialogDefaultBindings',['../gui_2functions_8c.html#ae0546fc4f3687c9d8592712bb161bc51',1,'DialogDefaultBindings:&#160;functions.c'],['../gui_2functions_8h.html#ae0546fc4f3687c9d8592712bb161bc51',1,'DialogDefaultBindings:&#160;functions.c']]],
+  ['dialogdefaultbindings_29',['DialogDefaultBindings',['../gui_2functions_8c.html#ae0546fc4f3687c9d8592712bb161bc51',1,'functions.c']]],
   ['did_30',['did',['../structExpandoDefinition.html#ac9ce21146072b7cbeb611ba202d8048d',1,'ExpandoDefinition::did'],['../structExpandoNode.html#a874cf8c66bbdc23cb1068015997d0b7a',1,'ExpandoNode::did'],['../structExpandoRenderCallback.html#a83a3d26c68b5da6e9a13e6b36b4b56d8',1,'ExpandoRenderCallback::did']]],
   ['digestalg_31',['digestalg',['../structSmimeCommandContext.html#a3dee10ce395177b61300c96086c22ea4',1,'SmimeCommandContext']]],
   ['disable_5fsystem_32',['disable_system',['../structCliShared.html#ab94174ac1d6f25a4f67b031ff54912a7',1,'CliShared']]],
@@ -53,8 +53,9 @@ var searchData=
   ['draft_50',['draft',['../structMessage.html#a7a53f3b9c450c29d93793c0d2b0608f7',1,'Message']]],
   ['draft_5ffile_51',['draft_file',['../structCliSend.html#a064e5e3667f6eb5c295c81723dc84712',1,'CliSend']]],
   ['dsize_52',['dsize',['../structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995',1,'Buffer']]],
-  ['dump_5fchanged_53',['dump_changed',['../structCliInfo.html#af4b38b7a3fb929191965cb55d1faaece',1,'CliInfo']]],
-  ['dump_5fconfig_54',['dump_config',['../structCliInfo.html#a92986df41e8f2757287727e9e57b7259',1,'CliInfo']]],
-  ['duplicate_5fthread_55',['duplicate_thread',['../structMuttThread.html#add9fafa2e72810244df9eee34eff25fa',1,'MuttThread']]],
-  ['dynamic_56',['dynamic',['../structPattern.html#a7f4991ea8f62a8a90ec55dedaedc17ff',1,'Pattern']]]
+  ['dummy_53',['dummy',['../structParseContext.html#aaa90a0c36392a82ed910d646714aed8e',1,'ParseContext']]],
+  ['dump_5fchanged_54',['dump_changed',['../structCliInfo.html#af4b38b7a3fb929191965cb55d1faaece',1,'CliInfo']]],
+  ['dump_5fconfig_55',['dump_config',['../structCliInfo.html#a92986df41e8f2757287727e9e57b7259',1,'CliInfo']]],
+  ['duplicate_5fthread_56',['duplicate_thread',['../structMuttThread.html#add9fafa2e72810244df9eee34eff25fa',1,'MuttThread']]],
+  ['dynamic_57',['dynamic',['../structPattern.html#a7f4991ea8f62a8a90ec55dedaedc17ff',1,'Pattern']]]
 ];

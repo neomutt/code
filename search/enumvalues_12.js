@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['tb_5ffalse_0',['TB_FALSE',['../commands_8c.html#ac5b9e412e210f45a19bec2bcbfbb0b8aa2ae7813f4b666113132e3d5d1b704b64',1,'commands.c']]],
-  ['tb_5ftrue_1',['TB_TRUE',['../commands_8c.html#ac5b9e412e210f45a19bec2bcbfbb0b8aa3e8425b49b43e6d4de2b9d44d3d3088c',1,'commands.c']]],
-  ['tb_5funset_2',['TB_UNSET',['../commands_8c.html#ac5b9e412e210f45a19bec2bcbfbb0b8aa8590765ebea0944ef7d20b3ca011b132',1,'commands.c']]],
+  ['tb_5ffalse_0',['TB_FALSE',['../mailboxes_8h.html#ac5b9e412e210f45a19bec2bcbfbb0b8aa2ae7813f4b666113132e3d5d1b704b64',1,'mailboxes.h']]],
+  ['tb_5ftrue_1',['TB_TRUE',['../mailboxes_8h.html#ac5b9e412e210f45a19bec2bcbfbb0b8aa3e8425b49b43e6d4de2b9d44d3d3088c',1,'mailboxes.h']]],
+  ['tb_5funset_2',['TB_UNSET',['../mailboxes_8h.html#ac5b9e412e210f45a19bec2bcbfbb0b8aa8590765ebea0944ef7d20b3ca011b132',1,'mailboxes.h']]],
   ['transform_5fdecode_3',['TRANSFORM_DECODE',['../external_8h.html#a43ad43eab306bcad26dd46d38f3516c6ac07e8dac7f128886eb172d58377a419a',1,'external.h']]],
   ['transform_5fdecrypt_4',['TRANSFORM_DECRYPT',['../external_8h.html#a43ad43eab306bcad26dd46d38f3516c6afe5c0988e77034fdd7dc573b36d4248f',1,'external.h']]],
   ['transform_5fnone_5',['TRANSFORM_NONE',['../external_8h.html#a43ad43eab306bcad26dd46d38f3516c6a45bf4825b31827e943d5cda99f44b925',1,'external.h']]],

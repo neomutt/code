@@ -1,5 +1,8 @@
 var ncrypt_2functions_8c =
 [
+    [ "pgp_init_keys", "ncrypt_2functions_8c.html#a9d22b7a9e454b7c368c1a88090bfd400", null ],
+    [ "MdPgp", "ncrypt_2functions_8c.html#a2ec8e405cb41e489f34501adab970ed2", null ],
+    [ "MdSmime", "ncrypt_2functions_8c.html#af3f9a2d542c426e55444496064955d18", null ],
     [ "OpPgp", "ncrypt_2functions_8c.html#aa5c6f7d7fdadc007f235a9139df2f251", null ],
     [ "OpSmime", "ncrypt_2functions_8c.html#a47c640809ce529499a23e88bf0ceac0f", null ],
     [ "PgpDefaultBindings", "ncrypt_2functions_8c.html#ac34ba5661fc49da744196b10ac4fb60c", null ],

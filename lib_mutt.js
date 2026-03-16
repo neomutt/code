@@ -19,6 +19,7 @@ var lib_mutt =
     [ "Multi-byte String manipulation functions", "mutt_mbyte.html", null ],
     [ "Calculate the MD5 checksum of a buffer", "mutt_md5.html", null ],
     [ "Memory management wrappers", "mutt_memory.html", null ],
+    [ "Definition of the Mutt Module", "mutt_module.html", null ],
     [ "Notification API", "mutt_notify.html", null ],
     [ "Path manipulation functions", "mutt_path.html", null ],
     [ "A global pool of Buffers", "mutt_pool.html", null ],
@@ -29,5 +30,7 @@ var lib_mutt =
     [ "Signal handling", "mutt_signal.html", null ],
     [ "A separated list of strings", "mutt_slist.html", null ],
     [ "Keep track when processing files", "mutt_state.html", null ],
-    [ "String manipulation functions", "mutt_string.html", null ]
+    [ "String manipulation functions", "mutt_string.html", null ],
+    [ "For systems lacking timegm()", "mutt_timegm.html", null ],
+    [ "For systems lacking wcscasecmp()", "mutt_wcscasecmp.html", null ]
 ];

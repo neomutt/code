@@ -8,5 +8,5 @@ var tagging_8c =
     [ "menu_abort", "tagging_8c.html#a48cf669f938752e6860a602c87f63493", null ],
     [ "menu_timeout", "tagging_8c.html#afd5a3990e649ccf4e103985ec1b6d93c", null ],
     [ "menu_other", "tagging_8c.html#a0371c6b460164235c8cfc70110cfc6e3", null ],
-    [ "menu_tagging_dispatcher", "group__dispatcher__api.html#ga5e8255587939773540dbea386c99e08d", null ]
+    [ "menu_tagging_dispatcher", "group__dispatcher__api.html#gaba2973f42737d632b376733a5ab9edec", null ]
 ];

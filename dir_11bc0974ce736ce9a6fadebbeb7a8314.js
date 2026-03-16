@@ -1,5 +1,6 @@
 var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
 [
+    [ "config.c", "gui_2config_8c.html", "gui_2config_8c" ],
     [ "curs_lib.c", "curs__lib_8c.html", "curs__lib_8c" ],
     [ "curs_lib.h", "curs__lib_8h.html", "curs__lib_8h" ],
     [ "dialog.c", "dialog_8c.html", "dialog_8c" ],
@@ -9,6 +10,7 @@ var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
     [ "global.c", "global_8c.html", "global_8c" ],
     [ "global.h", "global_8h.html", "global_8h" ],
     [ "lib.h", "gui_2lib_8h.html", null ],
+    [ "module.c", "gui_2module_8c.html", "gui_2module_8c" ],
     [ "msgcont.c", "msgcont_8c.html", "msgcont_8c" ],
     [ "msgcont.h", "msgcont_8h.html", "msgcont_8h" ],
     [ "msgwin.c", "msgwin_8c.html", "msgwin_8c" ],
@@ -19,6 +21,8 @@ var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
     [ "mutt_curses.h", "mutt__curses_8h.html", "mutt__curses_8h" ],
     [ "mutt_window.c", "mutt__window_8c.html", "mutt__window_8c" ],
     [ "mutt_window.h", "mutt__window_8h.html", "mutt__window_8h" ],
+    [ "mview.c", "mview_8c.html", "mview_8c" ],
+    [ "mview.h", "mview_8h.html", "mview_8h" ],
     [ "opcodes.c", "opcodes_8c.html", "opcodes_8c" ],
     [ "opcodes.h", "opcodes_8h.html", "opcodes_8h" ],
     [ "reflow.c", "reflow_8c.html", "reflow_8c" ],
@@ -31,5 +35,7 @@ var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
     [ "simple.c", "gui_2simple_8c.html", "gui_2simple_8c" ],
     [ "simple.h", "simple_8h.html", "simple_8h" ],
     [ "terminal.c", "terminal_8c.html", "terminal_8c" ],
-    [ "terminal.h", "terminal_8h.html", "terminal_8h" ]
+    [ "terminal.h", "terminal_8h.html", "terminal_8h" ],
+    [ "thread.c", "gui_2thread_8c.html", "gui_2thread_8c" ],
+    [ "thread.h", "gui_2thread_8h.html", "gui_2thread_8h" ]
 ];

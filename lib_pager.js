@@ -6,6 +6,7 @@ var lib_pager =
     [ "Simple Pager Dialog", "pager_dopager.html", null ],
     [ "Pager functions", "pager_functions.html", null ],
     [ "Process a message for display in the pager", "pager_message.html", null ],
+    [ "Definition of the Pager Module", "pager_module.html", null ],
     [ "Pager Window", "pager_pager.html", null ],
     [ "Pager Bar", "pager_pbar.html", null ],
     [ "Pager Panel", "pager_ppanel.html", null ],

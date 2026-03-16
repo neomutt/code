@@ -17,6 +17,7 @@ var lib_imap =
     [ "IMAP network mailbox", "imap_imap.html", null ],
     [ "Imap-specific Mailbox data", "imap_mdata.html", null ],
     [ "IMAP messages", "imap_message.html", null ],
+    [ "Definition of the Imap Module", "imap_module.html", null ],
     [ "IMAP Message Sets", "imap_msg_set.html", null ],
     [ "MSN helper functions", "imap_msn.html", null ],
     [ "Search routines", "imap_search.html", null ],

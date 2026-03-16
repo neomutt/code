@@ -1,6 +1,7 @@
 var imap_8c =
 [
-    [ "imap_init", "imap_8c.html#afa7993bff64be4e3f095e7644493c902", null ],
+    [ "parse_subscribe_to", "group__command__parse.html#ga1faaad74c57f92cd80a6d4cb10d6280b", null ],
+    [ "parse_unsubscribe_from", "group__command__parse.html#gadebf9d203444aa2afe22afaabfb5f31d", null ],
     [ "check_capabilities", "imap_8c.html#aaecd74a7bdcaae43f8a404d59607bb0b", null ],
     [ "get_flags", "imap_8c.html#ad0c94b5dea653ee8d1b5974a80c772a3", null ],
     [ "set_flag", "imap_8c.html#ae14b10a5f378e027cc7024701d5486f9", null ],

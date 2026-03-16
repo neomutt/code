@@ -6,7 +6,7 @@ var searchData=
   ['enpad_3',['ENPad',['../node__padding_8h.html#a3d20bf10d10e45c145e50f305df56f0e',1,'node_padding.h']]],
   ['entercase_4',['EnterCase',['../enter_8h.html#a47ba310e485fea70142834ffdffb7889',1,'enter.h']]],
   ['enterredrawflags_5',['EnterRedrawFlags',['../editor_2wdata_8h.html#afc807bd170b70c27ead3ffca2e621fee',1,'wdata.h']]],
-  ['evmessage_6',['EvMessage',['../protos_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71f',1,'protos.h']]],
+  ['evmessage_6',['EvMessage',['../mutt_8h.html#a34dd2ae767f2ed79ffb8642e4c5ed71f',1,'mutt.h']]],
   ['expandodataalias_7',['ExpandoDataAlias',['../alias_2expando_8h.html#a7cc8182b455391a9e35cb2a04c07c092',1,'expando.h']]],
   ['expandodataattach_8',['ExpandoDataAttach',['../attach_8h.html#a799656f05ec6e2302edec4e19a289035',1,'attach.h']]],
   ['expandodataautocrypt_9',['ExpandoDataAutocrypt',['../autocrypt_2private_8h.html#a011d2ca4289f1cb2fb764df0f1929973',1,'private.h']]],

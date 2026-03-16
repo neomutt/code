@@ -1,7 +1,6 @@
 var file_8c =
 [
     [ "MAX_LOCK_ATTEMPTS", "file_8c.html#a3703357f73aac7f0e1508977fdf9bd6a", null ],
-    [ "O_NOFOLLOW", "file_8c.html#a82d4d551b214905742c9e045185d352a", null ],
     [ "stat_equal", "file_8c.html#a72dc039c8768837b1adaf98124823047", null ],
     [ "mutt_file_fclose_full", "file_8c.html#a6de5078ec4b567311db1cef7224def0a", null ],
     [ "mutt_file_fsync_close", "file_8c.html#ae6b2571365b85d78aa796fd220c740ce", null ],

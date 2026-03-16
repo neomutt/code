@@ -9,6 +9,7 @@ var lib_pattern =
     [ "Pattern definitions", "pattern_flags.html", null ],
     [ "Pattern functions", "pattern_functions.html", null ],
     [ "Pattern handling for messages", "pattern_message.html", null ],
+    [ "Definition of the Pattern Module", "pattern_module.html", null ],
     [ "Match patterns to emails", "pattern_pattern.html", null ],
     [ "Private Pattern Data", "pattern_pattern_data.html", null ],
     [ "Holds state of a search", "pattern_search_state.html", null ]

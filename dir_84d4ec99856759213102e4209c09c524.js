@@ -4,7 +4,7 @@ var dir_84d4ec99856759213102e4209c09c524 =
     [ "common.c", "common_8c.html", "common_8c" ],
     [ "email.c", "debug_2email_8c.html", "debug_2email_8c" ],
     [ "graphviz.c", "graphviz_8c.html", "graphviz_8c" ],
-    [ "keymap.c", "keymap_8c.html", "keymap_8c" ],
+    [ "keymap.c", "debug_2keymap_8c.html", "debug_2keymap_8c" ],
     [ "lib.h", "debug_2lib_8h.html", "debug_2lib_8h" ],
     [ "logging.c", "debug_2logging_8c.html", "debug_2logging_8c" ],
     [ "names.c", "names_8c.html", "names_8c" ],

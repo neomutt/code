@@ -23,6 +23,7 @@ var dir_33230cbb4c8c9ca898085a867988d207 =
     [ "mdata.h", "imap_2mdata_8h.html", "imap_2mdata_8h" ],
     [ "message.c", "imap_2message_8c.html", "imap_2message_8c" ],
     [ "message.h", "imap_2message_8h.html", "imap_2message_8h" ],
+    [ "module.c", "imap_2module_8c.html", "imap_2module_8c" ],
     [ "msg_set.c", "msg__set_8c.html", "msg__set_8c" ],
     [ "msg_set.h", "msg__set_8h.html", "msg__set_8h" ],
     [ "msn.c", "msn_8c.html", "msn_8c" ],

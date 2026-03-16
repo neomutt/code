@@ -13,6 +13,7 @@ var dir_3964b18c0581b4bf6bd3caf7ae7211c9 =
     [ "lib.h", "nntp_2lib_8h.html", "nntp_2lib_8h" ],
     [ "mdata.c", "nntp_2mdata_8c.html", "nntp_2mdata_8c" ],
     [ "mdata.h", "nntp_2mdata_8h.html", "nntp_2mdata_8h" ],
+    [ "module.c", "nntp_2module_8c.html", "nntp_2module_8c" ],
     [ "newsrc.c", "newsrc_8c.html", "newsrc_8c" ],
     [ "nntp.c", "nntp_8c.html", "nntp_8c" ],
     [ "private.h", "nntp_2private_8h.html", "nntp_2private_8h" ]

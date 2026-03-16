@@ -31,11 +31,10 @@ var menu_2lib_8h =
     [ "menu_redraw_index", "menu_2lib_8h.html#a39b631a566b12a37364e82049e708dfa", null ],
     [ "menu_redraw_motion", "menu_2lib_8h.html#adb45718706531be131e704b8af873338", null ],
     [ "menu_redraw", "menu_2lib_8h.html#a3da31793ff9ae935dccab75ae653a064", null ],
-    [ "menu_add_dialog_row", "menu_2lib_8h.html#ad1b40df559906e4e799c7fdf9ece7c21", null ],
     [ "menu_cleanup", "menu_2lib_8h.html#a14ee2c5a6e8d6e3dd5b3702a77317d5b", null ],
     [ "menu_get_current_type", "menu_2lib_8h.html#a013e9479d1c73c84da1994c44a61c30a", null ],
     [ "menu_init", "menu_2lib_8h.html#a06928afa5c7f6b2572306f21cd7d2d31", null ],
-    [ "menu_window_new", "menu_2lib_8h.html#ac911110dac95bf0c57e49e1b0ca162ee", null ],
+    [ "menu_window_new", "menu_2lib_8h.html#a10e58a55c7bfcabb0201412c4ae01af0", null ],
     [ "menu_get_index", "menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18", null ],
     [ "menu_set_index", "menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851", null ],
     [ "menu_move_selection", "menu_2lib_8h.html#a9441a239cf202a3f5500db6bf88e18c5", null ],
@@ -43,6 +42,6 @@ var menu_2lib_8h =
     [ "menu_move_view_relative", "menu_2lib_8h.html#a30f159117fc26c514be92783e72cc0eb", null ],
     [ "menu_set_and_notify", "menu_2lib_8h.html#a5f44643f5154585945ca0fa8eb6e6174", null ],
     [ "menu_adjust", "menu_2lib_8h.html#a1914b8aef6e55520e0d4fa5de1fe26f2", null ],
-    [ "menu_function_dispatcher", "group__dispatcher__api.html#gac00aa5fb65018e7719a6567aac6f41a6", null ],
-    [ "menu_tagging_dispatcher", "group__dispatcher__api.html#ga5e8255587939773540dbea386c99e08d", null ]
+    [ "menu_function_dispatcher", "group__dispatcher__api.html#gad454afae4ce796a49a888da9d0fe6a2b", null ],
+    [ "menu_tagging_dispatcher", "group__dispatcher__api.html#gaba2973f42737d632b376733a5ab9edec", null ]
 ];

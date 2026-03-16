@@ -110,7 +110,7 @@ var imap_2private_8h =
     [ "imap_fix_path", "imap_2private_8h.html#aaa27889366256c85c7b8bd6448ed13f7", null ],
     [ "imap_fix_path_with_delim", "imap_2private_8h.html#ab45aec0ef81d429de1f6f8e9786f3c7e", null ],
     [ "imap_cachepath", "imap_2private_8h.html#a9bede694e925aeacd965557e3b86d291", null ],
-    [ "imap_get_literal_count", "imap_2private_8h.html#a3a3aa36d9170dbd75353b08e9c54f0ae", null ],
+    [ "imap_get_literal_count", "imap_2private_8h.html#a8f43dfc5bf6052e726e9960b17eb480d", null ],
     [ "imap_get_qualifier", "imap_2private_8h.html#af7e377ed18e6573f09e3fc0ead565064", null ],
     [ "imap_next_word", "imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a", null ],
     [ "imap_qualify_path", "imap_2private_8h.html#a1d2910263e453d3a53faa5c17afa0946", null ],

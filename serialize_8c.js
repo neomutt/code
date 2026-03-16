@@ -1,5 +1,7 @@
 var serialize_8c =
 [
+    [ "SERIAL_MAX_CHAR_SIZE", "serialize_8c.html#ac2d851a258dcd72e74a3e113bd4c4c29", null ],
+    [ "SERIAL_MAX_LIST_COUNT", "serialize_8c.html#ab7e844ed92a49e0b7db458e929efc78c", null ],
     [ "lazy_realloc", "serialize_8c.html#a8743cdacf78e84234da08650c0210580", null ],
     [ "serial_dump_int", "serialize_8c.html#a4882a5995511d5e7842fd5ff47b0045c", null ],
     [ "serial_dump_uint32_t", "serialize_8c.html#aba4d71f78fc73b132e6e97a2d9347d13", null ],

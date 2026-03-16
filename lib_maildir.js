@@ -9,6 +9,7 @@ var lib_maildir =
     [ "Maildir-specific Mailbox data", "maildir_mdata.html", null ],
     [ "Maildir Email helper", "maildir_mdemail.html", null ],
     [ "Maildir Message", "maildir_message.html", null ],
+    [ "Definition of the Maildir Module", "maildir_module.html", null ],
     [ "Maildir Path handling", "maildir_path.html", null ],
     [ "Maildir shared functions", "maildir_shared.html", null ]
 ];

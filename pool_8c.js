@@ -8,5 +8,8 @@ var pool_8c =
     [ "BufferPoolLen", "pool_8c.html#a8d9bf7e185b764b8f7880f86126c5e85", null ],
     [ "BufferPoolIncrement", "pool_8c.html#a83ccc552be3a547195bb7808dac3974f", null ],
     [ "BufferPoolInitialBufferSize", "pool_8c.html#a0734d4491bffbb722a52d8f178dd4637", null ],
-    [ "BufferPool", "pool_8c.html#ac3bd0e66bffc188075385e1da86d31c6", null ]
+    [ "BufferPool", "pool_8c.html#ac3bd0e66bffc188075385e1da86d31c6", null ],
+    [ "BufferPoolGetCount", "pool_8c.html#aeabfdbd751c0cdaba657420ad56d05ef", null ],
+    [ "BufferPoolGivenOut", "pool_8c.html#af04b3b045e4b723aaa10e9b6583a23c5", null ],
+    [ "BufferPoolMaxGivenOut", "pool_8c.html#a2a50202dc2d95d483c2cbf1a8039b604", null ]
 ];

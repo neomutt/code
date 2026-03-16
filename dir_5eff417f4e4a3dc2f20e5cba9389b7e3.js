@@ -17,6 +17,7 @@ var dir_5eff417f4e4a3dc2f20e5cba9389b7e3 =
     [ "mdemail.h", "mdemail_8h.html", "mdemail_8h" ],
     [ "message.c", "maildir_2message_8c.html", "maildir_2message_8c" ],
     [ "message.h", "maildir_2message_8h.html", "maildir_2message_8h" ],
+    [ "module.c", "maildir_2module_8c.html", "maildir_2module_8c" ],
     [ "path.c", "maildir_2path_8c.html", "maildir_2path_8c" ],
     [ "path.h", "maildir_2path_8h.html", "maildir_2path_8h" ],
     [ "shared.c", "maildir_2shared_8c.html", "maildir_2shared_8c" ],

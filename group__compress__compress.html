@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-58-g09398d</span>
+   &#160;<span id="projectnumber">2025-12-11-600-ge0eaf0</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -276,37 +276,37 @@ Functions</h2></td></tr>
 
 <p>Compress header cache data - Implements <a class="el" href="structComprOps.html#abf598bd81ed7c964c32c09a03b40099d">ComprOps::compress()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="zlib_8c_source.html#l00101">101</a> of file <a class="el" href="zlib_8c_source.html">zlib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>{</div>
-<div class="line"><span class="lineno">  104</span>  <span class="keywordflow">if</span> (!handle)</div>
-<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>  <span class="comment">// Decloak an opaque pointer</span></div>
-<div class="line"><span class="lineno">  108</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structZlibComprData.html">ZlibComprData</a> *cdata = handle;</div>
-<div class="line"><span class="lineno">  109</span> </div>
-<div class="line"><span class="lineno">  110</span>  uLong len = compressBound(dlen);</div>
-<div class="line"><span class="lineno">  111</span>  <a class="code hl_function" href="memory_8c.html#a96ad341eb83948f7ffafb6fd7d7b43d3">mutt_mem_realloc</a>(&amp;cdata-&gt;<a class="code hl_variable" href="structZlibComprData.html#ab01611bc24d8c8ec1fe596bfa3f34285">buf</a>, len + 4);</div>
-<div class="line"><span class="lineno">  112</span>  Bytef *cbuf = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) cdata-&gt;<a class="code hl_variable" href="structZlibComprData.html#ab01611bc24d8c8ec1fe596bfa3f34285">buf</a> + 4;</div>
-<div class="line"><span class="lineno">  113</span>  <span class="keyword">const</span> <span class="keywordtype">void</span> *ubuf = data;</div>
-<div class="line"><span class="lineno">  114</span>  <span class="keywordtype">int</span> rc = compress2(cbuf, &amp;len, ubuf, dlen, cdata-&gt;level);</div>
-<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">if</span> (rc != Z_OK)</div>
-<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">return</span> NULL; <span class="comment">// LCOV_EXCL_LINE</span></div>
-<div class="line"><span class="lineno">  117</span>  *clen = len + 4;</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>  <span class="comment">/* save ulen to first 4 bytes */</span></div>
-<div class="line"><span class="lineno">  120</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cs = cdata-&gt;buf;</div>
-<div class="line"><span class="lineno">  121</span>  cs[0] = dlen &amp; 0xff;</div>
-<div class="line"><span class="lineno">  122</span>  dlen &gt;&gt;= 8;</div>
-<div class="line"><span class="lineno">  123</span>  cs[1] = dlen &amp; 0xff;</div>
-<div class="line"><span class="lineno">  124</span>  dlen &gt;&gt;= 8;</div>
-<div class="line"><span class="lineno">  125</span>  cs[2] = dlen &amp; 0xff;</div>
-<div class="line"><span class="lineno">  126</span>  dlen &gt;&gt;= 8;</div>
-<div class="line"><span class="lineno">  127</span>  cs[3] = dlen &amp; 0xff;</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">return</span> cdata-&gt;buf;</div>
-<div class="line"><span class="lineno">  130</span>}</div>
-<div class="ttc" id="astructZlibComprData_html"><div class="ttname"><a href="structZlibComprData.html">ZlibComprData</a></div><div class="ttdoc">Private Zlib Compression Data.</div><div class="ttdef"><b>Definition</b> <a href="zlib_8c_source.html#l00046">zlib.c:47</a></div></div>
-<div class="ttc" id="astructZlibComprData_html_ab01611bc24d8c8ec1fe596bfa3f34285"><div class="ttname"><a href="structZlibComprData.html#ab01611bc24d8c8ec1fe596bfa3f34285">ZlibComprData::buf</a></div><div class="ttdeci">void * buf</div><div class="ttdoc">Temporary buffer.</div><div class="ttdef"><b>Definition</b> <a href="zlib_8c_source.html#l00048">zlib.c:48</a></div></div>
+<p class="definition">Definition at line <a class="el" href="zlib_8c_source.html#l00102">102</a> of file <a class="el" href="zlib_8c_source.html">zlib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>{</div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">if</span> (!handle || (dlen &gt; UINT32_MAX))</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>  <span class="comment">// Decloak an opaque pointer</span></div>
+<div class="line"><span class="lineno">  109</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structZlibComprData.html">ZlibComprData</a> *cdata = handle;</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>  uLong len = compressBound(dlen);</div>
+<div class="line"><span class="lineno">  112</span>  <a class="code hl_function" href="memory_8c.html#a96ad341eb83948f7ffafb6fd7d7b43d3">mutt_mem_realloc</a>(&amp;cdata-&gt;<a class="code hl_variable" href="structZlibComprData.html#ab01611bc24d8c8ec1fe596bfa3f34285">buf</a>, len + 4);</div>
+<div class="line"><span class="lineno">  113</span>  Bytef *cbuf = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *) cdata-&gt;<a class="code hl_variable" href="structZlibComprData.html#ab01611bc24d8c8ec1fe596bfa3f34285">buf</a> + 4;</div>
+<div class="line"><span class="lineno">  114</span>  <span class="keyword">const</span> <span class="keywordtype">void</span> *ubuf = data;</div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordtype">int</span> rc = compress2(cbuf, &amp;len, ubuf, dlen, cdata-&gt;level);</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">if</span> (rc != Z_OK)</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> NULL; <span class="comment">// LCOV_EXCL_LINE</span></div>
+<div class="line"><span class="lineno">  118</span>  *clen = len + 4;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>  <span class="comment">/* save ulen to first 4 bytes */</span></div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *cs = cdata-&gt;buf;</div>
+<div class="line"><span class="lineno">  122</span>  cs[0] = dlen &amp; 0xff;</div>
+<div class="line"><span class="lineno">  123</span>  dlen &gt;&gt;= 8;</div>
+<div class="line"><span class="lineno">  124</span>  cs[1] = dlen &amp; 0xff;</div>
+<div class="line"><span class="lineno">  125</span>  dlen &gt;&gt;= 8;</div>
+<div class="line"><span class="lineno">  126</span>  cs[2] = dlen &amp; 0xff;</div>
+<div class="line"><span class="lineno">  127</span>  dlen &gt;&gt;= 8;</div>
+<div class="line"><span class="lineno">  128</span>  cs[3] = dlen &amp; 0xff;</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">return</span> cdata-&gt;buf;</div>
+<div class="line"><span class="lineno">  131</span>}</div>
+<div class="ttc" id="astructZlibComprData_html"><div class="ttname"><a href="structZlibComprData.html">ZlibComprData</a></div><div class="ttdoc">Private Zlib Compression Data.</div><div class="ttdef"><b>Definition</b> <a href="zlib_8c_source.html#l00047">zlib.c:48</a></div></div>
+<div class="ttc" id="astructZlibComprData_html_ab01611bc24d8c8ec1fe596bfa3f34285"><div class="ttname"><a href="structZlibComprData.html#ab01611bc24d8c8ec1fe596bfa3f34285">ZlibComprData::buf</a></div><div class="ttdeci">void * buf</div><div class="ttdoc">Temporary buffer.</div><div class="ttdef"><b>Definition</b> <a href="zlib_8c_source.html#l00049">zlib.c:49</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">

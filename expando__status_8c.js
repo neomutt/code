@@ -1,7 +1,7 @@
 var expando__status_8c =
 [
     [ "index_mailbox_path", "group__expando__get__string__api.html#ga2dab6a5c83fccae7f9630f522259ead4", null ],
-    [ "get_sort_str", "expando__status_8c.html#a85ac44e0e4f04e61caff65973adccbfd", null ],
+    [ "get_sort_str", "expando__status_8c.html#a51633c7a056560f1da7fe7663ee4dc98", null ],
     [ "global_config_sort", "group__expando__get__string__api.html#ga116c6494fd6ae610f0fb6790eee83aac", null ],
     [ "global_config_sort_aux", "group__expando__get__string__api.html#ga11e2c850d8c13e0c1ef39a30a37a1651", null ],
     [ "global_config_use_threads", "group__expando__get__string__api.html#gaeff3a698cd8ae9e14f720e18de8c246e", null ],

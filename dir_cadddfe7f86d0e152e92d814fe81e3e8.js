@@ -6,6 +6,7 @@ var dir_cadddfe7f86d0e152e92d814fe81e3e8 =
     [ "cid.h", "cid_8h.html", "cid_8h" ],
     [ "commands.c", "attach_2commands_8c.html", "attach_2commands_8c" ],
     [ "commands.h", "attach_2commands_8h.html", "attach_2commands_8h" ],
+    [ "config.c", "attach_2config_8c.html", "attach_2config_8c" ],
     [ "dlg_attach.c", "dlg__attach_8c.html", "dlg__attach_8c" ],
     [ "expando.c", "attach_2expando_8c.html", "attach_2expando_8c" ],
     [ "expando.h", "attach_2expando_8h.html", "attach_2expando_8h" ],
@@ -13,10 +14,14 @@ var dir_cadddfe7f86d0e152e92d814fe81e3e8 =
     [ "functions.h", "attach_2functions_8h.html", "attach_2functions_8h" ],
     [ "lib.c", "attach_2lib_8c.html", "attach_2lib_8c" ],
     [ "lib.h", "attach_2lib_8h.html", "attach_2lib_8h" ],
+    [ "module.c", "attach_2module_8c.html", "attach_2module_8c" ],
+    [ "module_data.h", "attach_2module__data_8h.html", "attach_2module__data_8h" ],
     [ "mutt_attach.c", "mutt__attach_8c.html", "mutt__attach_8c" ],
     [ "mutt_attach.h", "mutt__attach_8h.html", "mutt__attach_8h" ],
     [ "private_data.c", "attach_2private__data_8c.html", "attach_2private__data_8c" ],
     [ "private_data.h", "attach_2private__data_8h.html", "attach_2private__data_8h" ],
     [ "recvattach.c", "recvattach_8c.html", "recvattach_8c" ],
-    [ "recvattach.h", "recvattach_8h.html", "recvattach_8h" ]
+    [ "recvattach.h", "recvattach_8h.html", "recvattach_8h" ],
+    [ "recvcmd.c", "recvcmd_8c.html", "recvcmd_8c" ],
+    [ "recvcmd.h", "recvcmd_8h.html", "recvcmd_8h" ]
 ];

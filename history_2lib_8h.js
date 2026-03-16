@@ -9,7 +9,8 @@ var history_2lib_8h =
       [ "HC_PATTERN", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aede85bc3dcca6122e349576277dcef4b", null ],
       [ "HC_OTHER", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a", null ],
       [ "HC_MAILBOX", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234a3747a064ce42a7f4357acb012d2455ba", null ],
-      [ "HC_MAX", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234ac8174c35ca7e43a17e8f9b3e80cbb737", null ]
+      [ "HC_MAX", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234ac8174c35ca7e43a17e8f9b3e80cbb737", null ],
+      [ "HC_NONE", "history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aa56e3990f0e6fc6e0535e92183937076", null ]
     ] ],
     [ "ExpandoDataHistory", "history_2lib_8h.html#aaaa49dee7cdbca5fe0d736b831838405", [
       [ "ED_HIS_MATCH", "history_2lib_8h.html#aaaa49dee7cdbca5fe0d736b831838405a930b25e7d034b8e3ce1799c17641add8", null ],

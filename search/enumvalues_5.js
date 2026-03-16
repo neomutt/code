@@ -29,5 +29,6 @@ var searchData=
   ['fr_5fno_5faction_26',['FR_NO_ACTION',['../dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e',1,'dispatcher.h']]],
   ['fr_5fnot_5fimpl_27',['FR_NOT_IMPL',['../dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a72a092f633fa507866658693c77bb64b',1,'dispatcher.h']]],
   ['fr_5fsuccess_28',['FR_SUCCESS',['../dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670',1,'dispatcher.h']]],
-  ['fr_5funknown_29',['FR_UNKNOWN',['../dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa',1,'dispatcher.h']]]
+  ['fr_5funknown_29',['FR_UNKNOWN',['../dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a4100730ad033bc59fcec7faa6d5380aa',1,'dispatcher.h']]],
+  ['fuzzy_5falgo_5fsubseq_30',['FUZZY_ALGO_SUBSEQ',['../fuzzy_2lib_8h.html#a7395b6c315d37ebef7e1dbe2c353e6f4ab6026570b694d32947f1d5e6addf591a',1,'lib.h']]]
 ];

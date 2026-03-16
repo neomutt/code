@@ -1,8 +1,11 @@
 var structNeoMutt =
 [
+    [ "modules", "structNeoMutt.html#a0d2efde1c2ed7929c5edfcabd32a1f58", null ],
+    [ "module_data", "structNeoMutt.html#a6e61bcfd2612782e7b561ce6a3d6b1cb", null ],
     [ "notify", "structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b", null ],
     [ "notify_resize", "structNeoMutt.html#a49906a21787be2a36fd08fccb54d8911", null ],
     [ "notify_timeout", "structNeoMutt.html#a29f4831264d622680eb43c7ee691f22f", null ],
+    [ "cs", "structNeoMutt.html#ad4ec4734e054a435df6461289fa25a91", null ],
     [ "sub", "structNeoMutt.html#af98065e32243ce9331f93b7f30247d47", null ],
     [ "accounts", "structNeoMutt.html#a2e28c145ba5138522ae8aad32b107687", null ],
     [ "time_c_locale", "structNeoMutt.html#afd5cdbd92e7d707ccb91240702ae36b2", null ],

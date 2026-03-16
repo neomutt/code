@@ -24,7 +24,7 @@ var util_8c =
     [ "imap_fix_path", "util_8c.html#aaa27889366256c85c7b8bd6448ed13f7", null ],
     [ "imap_fix_path_with_delim", "util_8c.html#abcbc7cf2a7b7f6667750e017f06b9ee1", null ],
     [ "imap_cachepath", "util_8c.html#a9bede694e925aeacd965557e3b86d291", null ],
-    [ "imap_get_literal_count", "util_8c.html#a3a3aa36d9170dbd75353b08e9c54f0ae", null ],
+    [ "imap_get_literal_count", "util_8c.html#a8f43dfc5bf6052e726e9960b17eb480d", null ],
     [ "imap_get_qualifier", "util_8c.html#af7e377ed18e6573f09e3fc0ead565064", null ],
     [ "imap_next_word", "util_8c.html#adeb5e149a78c8a6dc9e5763fd015577a", null ],
     [ "imap_qualify_path", "util_8c.html#a1296b618672321d89e3753bcb2123ab1", null ],

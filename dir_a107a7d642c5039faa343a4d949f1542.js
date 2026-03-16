@@ -10,6 +10,7 @@ var dir_a107a7d642c5039faa343a4d949f1542 =
     [ "lib.h", "notmuch_2lib_8h.html", "notmuch_2lib_8h" ],
     [ "mdata.c", "notmuch_2mdata_8c.html", "notmuch_2mdata_8c" ],
     [ "mdata.h", "notmuch_2mdata_8h.html", "notmuch_2mdata_8h" ],
+    [ "module.c", "notmuch_2module_8c.html", "notmuch_2module_8c" ],
     [ "notmuch.c", "notmuch_8c.html", "notmuch_8c" ],
     [ "private.h", "notmuch_2private_8h.html", "notmuch_2private_8h" ],
     [ "query.c", "query_8c.html", "query_8c" ],

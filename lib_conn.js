@@ -7,6 +7,7 @@ var lib_conn =
     [ "DNS lookups", "conn_getdomain.html", null ],
     [ "GnuTLS encryption", "conn_gnutls.html", null ],
     [ "GNU SASL authentication support", "conn_gsasl.html", null ],
+    [ "Definition of the Conn Module", "conn_module.html", null ],
     [ "ConnAccount object used by POP and IMAP", "conn_mutt_account.html", null ],
     [ "OpenSSL encryption", "conn_openssl.html", null ],
     [ "Low-level socket code", "conn_raw.html", null ],

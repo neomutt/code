@@ -41,7 +41,7 @@ var color_8h =
       [ "MT_COLOR_SIDEBAR_INDICATOR", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dad484c90d82b11ec985322e3e42a1d0a9", null ],
       [ "MT_COLOR_SIDEBAR_NEW", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da24912066795fd1258dd1f3f1126aff51", null ],
       [ "MT_COLOR_SIDEBAR_ORDINARY", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da4d9cc84c478d58dc301fb1726acb4683", null ],
-      [ "MT_COLOR_SIDEBAR_SPOOLFILE", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da401847de7aebfcd32eb6dab8a93d6537", null ],
+      [ "MT_COLOR_SIDEBAR_SPOOL_FILE", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da026b0364d5894aea54604a1c04e0f867", null ],
       [ "MT_COLOR_SIDEBAR_UNREAD", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da3344e621c7047c8c932d8122be8c7daf", null ],
       [ "MT_COLOR_SIGNATURE", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070dae847a012e03a5549ccd88f6de022fe69", null ],
       [ "MT_COLOR_STATUS", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da30bbf7c99313309daedcbd0e0f8c7166", null ],

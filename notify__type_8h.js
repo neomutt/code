@@ -21,7 +21,7 @@ var notify__type_8h =
       [ "NT_RESIZE", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8aea83b2fc98e0ce85bfac3545957c62ac", null ],
       [ "NT_PAGER", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a750b3dfdfeae54bfe01446090f65cf42", null ],
       [ "NT_SCORE", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a5ebb0f1ba8509709603c47a8ac5d41b1", null ],
-      [ "NT_SUBJRX", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8ade428b222669b3e9a9c344f7cdb9d3ba", null ],
+      [ "NT_SUBJECTRX", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a9a3c4985379b981e5e45bfe71a3a4477", null ],
       [ "NT_TIMEOUT", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a088bbbccfaad0d51d146783af114d73c", null ],
       [ "NT_WINDOW", "notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a0effa043e3256fe597161d6fa95f7442", null ]
     ] ]

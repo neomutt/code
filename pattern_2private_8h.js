@@ -24,11 +24,13 @@ var pattern_2private_8h =
     ] ],
     [ "PatternEat", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966", [
       [ "EAT_NONE", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966a36ef5be3f8cce865f85ad9478e9cdfa9", null ],
-      [ "EAT_REGEX", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966af21308a01a872a0400fc564160bf2d13", null ],
       [ "EAT_DATE", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966aa78e72652f458e2de58d0389c2f65ccf", null ],
-      [ "EAT_RANGE", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966a5bcab0fe0d5e8fed3c83d6a2e51ee0fb", null ],
+      [ "EAT_GROUP", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966a6e54c8f6cb54232f45853ebdef5150d4", null ],
       [ "EAT_MESSAGE_RANGE", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966a91d58cf5de4da971a2822446774acfb1", null ],
-      [ "EAT_QUERY", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966acac0b3b971e7b203e4e650270d45bf2f", null ]
+      [ "EAT_QUERY", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966acac0b3b971e7b203e4e650270d45bf2f", null ],
+      [ "EAT_RANGE", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966a5bcab0fe0d5e8fed3c83d6a2e51ee0fb", null ],
+      [ "EAT_REGEX", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966af21308a01a872a0400fc564160bf2d13", null ],
+      [ "EAT_STRING", "pattern_2private_8h.html#a57f07529ff90b88a2ca3a09904161966a205ac559b1e15a3cd2d1f8c5dc5976df", null ]
     ] ],
     [ "RangeType", "pattern_2private_8h.html#af90c032fde5982a5e2f6b6ca160fd52e", [
       [ "RANGE_K_REL", "pattern_2private_8h.html#af90c032fde5982a5e2f6b6ca160fd52ea06d7865e7b5fc8f44f078ee1c093fff4", null ],
@@ -44,7 +46,7 @@ var pattern_2private_8h =
     ] ],
     [ "email_msgno", "pattern_2private_8h.html#af6dff9c00f2c48b69936c04ba0aa0455", null ],
     [ "lookup_op", "pattern_2private_8h.html#aa98636f6060577ad270a6891822e4de4", null ],
-    [ "lookup_tag", "pattern_2private_8h.html#a73ac7860e4cbee77e1810d972957c3eb", null ],
+    [ "lookup_tag", "pattern_2private_8h.html#a971c243294cbec30a3cf10bdced84955", null ],
     [ "eval_date_minmax", "pattern_2private_8h.html#a20e645effab0dbabefd7a5ff7970ad1e", null ],
     [ "eat_message_range", "group__eat__arg__api.html#gaa141da7b17f334440dcf0efe0c8e9e75", null ],
     [ "RangeRegexes", "pattern_2private_8h.html#a9a19a053b71cbf5ef0e5ab425bcd9669", null ],

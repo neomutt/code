@@ -5,6 +5,7 @@ var sidebar_2window_8c =
     [ "abbrev_url", "sidebar_2window_8c.html#a09168752ea6a450a481d92b9cbfd40e7", null ],
     [ "calc_color", "sidebar_2window_8c.html#a5d46d0cc3c83179706a0011dde1eec50", null ],
     [ "calc_path_depth", "sidebar_2window_8c.html#ab3c4643d10cb335f27654df87e28c38d", null ],
+    [ "sb_entry_set_display_name", "sidebar_2window_8c.html#a8c067ef1ed7008d55ca36daef2496e37", null ],
     [ "make_sidebar_entry", "sidebar_2window_8c.html#ad5221bb6030b36213c744a68fd46c87d", null ],
     [ "update_entries_visibility", "sidebar_2window_8c.html#a47d2e337bda5a709d78e0b652189daee", null ],
     [ "prepare_sidebar", "sidebar_2window_8c.html#ab8a9af911d8a1bb904a3dc3cb8b5edee", null ],

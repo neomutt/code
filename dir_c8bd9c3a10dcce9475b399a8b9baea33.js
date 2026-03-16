@@ -38,8 +38,9 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "memory.c", "memory_8c.html", "memory_8c" ],
     [ "memory.h", "memory_8h.html", "memory_8h" ],
     [ "message.h", "mutt_2message_8h.html", "mutt_2message_8h" ],
+    [ "module.c", "mutt_2module_8c.html", "mutt_2module_8c" ],
     [ "notify.c", "mutt_2notify_8c.html", "mutt_2notify_8c" ],
-    [ "notify.h", "notify_8h.html", "notify_8h" ],
+    [ "notify.h", "mutt_2notify_8h.html", "mutt_2notify_8h" ],
     [ "notify_type.h", "notify__type_8h.html", "notify__type_8h" ],
     [ "observer.h", "observer_8h.html", "observer_8h" ],
     [ "path.c", "mutt_2path_8c.html", "mutt_2path_8c" ],
@@ -62,5 +63,7 @@ var dir_c8bd9c3a10dcce9475b399a8b9baea33 =
     [ "state.c", "mutt_2state_8c.html", "mutt_2state_8c" ],
     [ "state.h", "mutt_2state_8h.html", "mutt_2state_8h" ],
     [ "string.c", "mutt_2string_8c.html", "mutt_2string_8c" ],
-    [ "string2.h", "string2_8h.html", "string2_8h" ]
+    [ "string2.h", "string2_8h.html", "string2_8h" ],
+    [ "timegm.c", "timegm_8c.html", "timegm_8c" ],
+    [ "wcscasecmp.c", "wcscasecmp_8c.html", "wcscasecmp_8c" ]
 ];

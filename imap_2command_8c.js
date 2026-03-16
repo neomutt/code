@@ -1,6 +1,9 @@
 var imap_2command_8c =
 [
     [ "IMAP_CMD_BUFSIZE", "imap_2command_8c.html#aee1aede4d24879146b5fbab5887c81ab", null ],
+    [ "IMAP_MAX_RETRIES", "imap_2command_8c.html#a345c985d6ea34c50e4845bb017495160", null ],
+    [ "IMAP_MAX_BACKOFF", "imap_2command_8c.html#a6277711d3645dac1a046463a5728a820", null ],
+    [ "IMAP_CONN_STALE_THRESHOLD", "imap_2command_8c.html#a380976e6b4134baa3c040028cf919abd", null ],
     [ "cmd_queue_full", "imap_2command_8c.html#adb2c06aa4ad0909e834953aeabb8b2b0", null ],
     [ "cmd_new", "imap_2command_8c.html#aeddc840462220a85d99210342fde2e38", null ],
     [ "cmd_queue", "imap_2command_8c.html#ab18ae45670f5529426882eb0cc1d6af8", null ],

@@ -5,6 +5,7 @@ var dir_bac5aa69239d34ac960582aca466258e =
     [ "functions.c", "editor_2functions_8c.html", "editor_2functions_8c" ],
     [ "functions.h", "editor_2functions_8h.html", "editor_2functions_8h" ],
     [ "lib.h", "editor_2lib_8h.html", "editor_2lib_8h" ],
+    [ "module.c", "editor_2module_8c.html", "editor_2module_8c" ],
     [ "state.c", "editor_2state_8c.html", "editor_2state_8c" ],
     [ "state.h", "editor_2state_8h.html", "editor_2state_8h" ],
     [ "wdata.h", "editor_2wdata_8h.html", "editor_2wdata_8h" ],

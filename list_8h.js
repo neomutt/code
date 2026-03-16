@@ -14,5 +14,7 @@ var list_8h =
     [ "mutt_list_insert_tail", "list_8h.html#a47252e2b00de607c64a5fec8dc16058d", null ],
     [ "mutt_list_match", "list_8h.html#ae6e78596bbf371c69064967d7386def0", null ],
     [ "mutt_list_str_split", "list_8h.html#a8452a5e19043ca17f9b80b4443399e3b", null ],
-    [ "mutt_list_write", "list_8h.html#a5f04ca102be20813d8c3ab0776a2786b", null ]
+    [ "mutt_list_write", "list_8h.html#a5f04ca102be20813d8c3ab0776a2786b", null ],
+    [ "add_to_stailq", "list_8h.html#a2e3c864ac49cfb7bc862c32416baf81d", null ],
+    [ "remove_from_stailq", "list_8h.html#a1b422ce225f4eb96e3ce8e276467ae9f", null ]
 ];

@@ -32,6 +32,6 @@ var searchData=
   ['do_5fpager_2ec_29',['do_pager.c',['../do__pager_8c.html',1,'']]],
   ['domain_2eh_30',['domain.h',['../domain_8h.html',1,'']]],
   ['draw_2ec_31',['draw.c',['../draw_8c.html',1,'']]],
-  ['dump_2ec_32',['dump.c',['../color_2dump_8c.html',1,'(Global Namespace)'],['../config_2dump_8c.html',1,'(Global Namespace)'],['../key_2dump_8c.html',1,'(Global Namespace)']]],
-  ['dump_2eh_33',['dump.h',['../color_2dump_8h.html',1,'(Global Namespace)'],['../config_2dump_8h.html',1,'(Global Namespace)']]]
+  ['dump_2ec_32',['dump.c',['../color_2dump_8c.html',1,'(Global Namespace)'],['../config_2dump_8c.html',1,'(Global Namespace)'],['../hooks_2dump_8c.html',1,'(Global Namespace)'],['../key_2dump_8c.html',1,'(Global Namespace)'],['../parse_2dump_8c.html',1,'(Global Namespace)']]],
+  ['dump_2eh_33',['dump.h',['../color_2dump_8h.html',1,'(Global Namespace)'],['../config_2dump_8h.html',1,'(Global Namespace)'],['../hooks_2dump_8h.html',1,'(Global Namespace)'],['../key_2dump_8h.html',1,'(Global Namespace)'],['../parse_2dump_8h.html',1,'(Global Namespace)']]]
 ];

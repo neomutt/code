@@ -1,6 +1,5 @@
 var notmuch_2lib_8h =
 [
-    [ "nm_init", "notmuch_2lib_8h.html#ac14b20cce8965804b7da03772f8d6f0b", null ],
     [ "nm_db_debug_check", "notmuch_2lib_8h.html#ad215367f2af6e2789dd7b4cae9770380", null ],
     [ "nm_db_longrun_done", "notmuch_2lib_8h.html#a5ea3e33d475ed6242190666b7e70838e", null ],
     [ "nm_db_longrun_init", "notmuch_2lib_8h.html#aca97e4209036f41430d270c44c20cd51", null ],

@@ -1,12 +1,12 @@
 var lib_store =
 [
-    [ "Shared store code", "store_store.html", [
-      [ "Interface", "lib_store.html#autotoc_md126", null ],
-      [ "Source", "lib_store.html#autotoc_md127", [
-        [ "Data", "store_store.html#autotoc_md659", null ],
-        [ "Functions", "store_store.html#autotoc_md660", null ]
+    [ "Definition of the Store Module", "store_module.html", [
+      [ "Interface", "lib_store.html#autotoc_md143", null ],
+      [ "Source", "lib_store.html#autotoc_md144", [
+        [ "Data", "store_module.html#autotoc_md769", null ]
       ] ]
     ] ],
+    [ "Shared store code", "store_store.html", null ],
     [ "Berkeley DB (BDB)", "store_bdb.html", null ],
     [ "GNU dbm (GDBM)", "store_gdbm.html", null ],
     [ "Kyoto Cabinet", "store_kc.html", null ],

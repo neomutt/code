@@ -18,7 +18,7 @@ var mutt__window_8c =
     [ "mutt_window_printf", "mutt__window_8c.html#a63059030b8604ec4fec0fce8f873c3c0", null ],
     [ "mutt_window_add_child", "mutt__window_8c.html#a5e30d98341ba1a4b358e4add06c97597", null ],
     [ "mutt_window_remove_child", "mutt__window_8c.html#aae444055a3be04307aff9d9e01eb8f98", null ],
-    [ "mutt_winlist_free", "mutt__window_8c.html#abfa1b39d20cf0aa3e71bd4639c1b8b3f", null ],
+    [ "mutt_winlist_free", "mutt__window_8c.html#a87bf95c9d6c029cbfe863b2029aed444", null ],
     [ "mutt_window_is_visible", "mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6", null ],
     [ "window_find_child", "mutt__window_8c.html#ac6aa291ba325a5ae33d27611895e5454", null ],
     [ "window_find_parent", "mutt__window_8c.html#a0f795efae05ecc48e24cb02219e31006", null ],

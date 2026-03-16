@@ -18,7 +18,8 @@ var version_8c =
     [ "Thanks", "version_8c.html#a274a70ce29753c12781d31c7f6c49da8", null ],
     [ "License", "version_8c.html#a289cfedeacecbae604e6ecc14a007b84", null ],
     [ "ReachingUs", "version_8c.html#a440c5f4913af8663a4d6c5626b44c11d", null ],
-    [ "Notice", "version_8c.html#ad14b6ea1a185fff5feee38dddf4366e7", null ],
+    [ "Notice1", "version_8c.html#a55fa30ed8011187988bc3f5551b0895c", null ],
+    [ "Notice2", "version_8c.html#aa72c73971832842ab7345e2c78159fd2", null ],
     [ "CompOpts", "version_8c.html#aea01875178710655e8e6007ffbf6a1e9", null ],
     [ "DevelOpts", "version_8c.html#a14251e38e59af2405cb47e3fd8e2ddba", null ]
 ];

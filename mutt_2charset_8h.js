@@ -1,6 +1,7 @@
 var mutt_2charset_8h =
 [
     [ "FgetConv", "structFgetConv.html", "structFgetConv" ],
+    [ "Lookup", "structLookup.html", "structLookup" ],
     [ "MUTT_ICONV_NO_FLAGS", "mutt_2charset_8h.html#a7e8b71716e5c874b2997a2304be23081", null ],
     [ "MUTT_ICONV_HOOK_FROM", "mutt_2charset_8h.html#a1807a22585916adccafa5e09bda9b6a7", null ],
     [ "mutt_ch_is_utf8", "mutt_2charset_8h.html#a56cbec4a6366d637d41d151d10dc5b87", null ],
@@ -12,6 +13,7 @@ var mutt_2charset_8h =
       [ "MUTT_LOOKUP_CHARSET", "mutt_2charset_8h.html#a677743e89f8cc2c57a0e6e91a47bdc4aaf70d36a04a9e6e5ecd554392626886d4", null ],
       [ "MUTT_LOOKUP_ICONV", "mutt_2charset_8h.html#a677743e89f8cc2c57a0e6e91a47bdc4aadb54e12de4bd2494e86573e4728b4956", null ]
     ] ],
+    [ "TAILQ_HEAD", "mutt_2charset_8h.html#a5af9267b27b67cda3a18b4f0adaa4857", null ],
     [ "mutt_ch_canonical_charset", "mutt_2charset_8h.html#a4b347dd75af05a18dbe328c354c18fe8", null ],
     [ "mutt_ch_charset_lookup", "mutt_2charset_8h.html#a82415c52a83b63f4a8ce5110e86525a2", null ],
     [ "mutt_ch_check", "mutt_2charset_8h.html#a81959a5c114f585575d5116c50a51638", null ],
@@ -35,5 +37,6 @@ var mutt_2charset_8h =
     [ "mutt_ch_cache_cleanup", "mutt_2charset_8h.html#a52a634eff18853e0a34a06876717fa4c", null ],
     [ "iconv_t_valid", "mutt_2charset_8h.html#af99f0dca1b479b94f1287bc8aa050e4c", null ],
     [ "CharsetIsUtf8", "mutt_2charset_8h.html#a7bcd93869f482805be7e6d437d29f54d", null ],
-    [ "ReplacementChar", "mutt_2charset_8h.html#ac31e11b5fb12abda40361188af9105ef", null ]
+    [ "ReplacementChar", "mutt_2charset_8h.html#ac31e11b5fb12abda40361188af9105ef", null ],
+    [ "Lookups", "mutt_2charset_8h.html#a34621a4d59512ce0d1f14d66d2c6abde", null ]
 ];

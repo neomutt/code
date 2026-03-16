@@ -4,7 +4,7 @@ var progress_2window_8c =
     [ "progress_window_recalc", "group__window__recalc.html#ga3c7d93c3722aa11337b72a6cbee417ac", null ],
     [ "progress_window_repaint", "group__window__repaint.html#ga5b0dcb3aa430404dd56270549a4264c5", null ],
     [ "percent_needs_update", "progress_2window_8c.html#a3a29a882ec8cdbd6f21a65ad2a25cc6c", null ],
-    [ "pos_needs_update", "progress_2window_8c.html#ae92594e356bc731c4ade5b51f361bb52", null ],
+    [ "pos_needs_update", "progress_2window_8c.html#aad1a4841d2c2e184cafb6d9c420ac959", null ],
     [ "time_needs_update", "progress_2window_8c.html#ae1b01be868071529a138cc2537bbe956", null ],
     [ "progress_window_update", "progress_2window_8c.html#a861124005e152ae8530ba1b6607407bf", null ],
     [ "progress_window_new", "progress_2window_8c.html#aeda79fddfda07756dd7b62ba8747f254", null ],

@@ -1,16 +1,16 @@
 var group__envelope__function__api =
 [
-    [ "op_envelope_edit_bcc", "group__envelope__function__api.html#ga0508d2df061c22d0acf36564496fa81c", null ],
-    [ "op_envelope_edit_cc", "group__envelope__function__api.html#gab9bdd62d2d0b04d91e5e1cee005ffda3", null ],
-    [ "op_envelope_edit_fcc", "group__envelope__function__api.html#gab6467d471720b3cfef266767adffbd5a", null ],
-    [ "op_envelope_edit_from", "group__envelope__function__api.html#ga7291a42bc4219312a147bf2605d8f4df", null ],
-    [ "op_envelope_edit_reply_to", "group__envelope__function__api.html#gaa05146ebd0af06f970fa10d6f04803fb", null ],
-    [ "op_envelope_edit_subject", "group__envelope__function__api.html#ga1dd533875d71b0100113081a02ea27c0", null ],
-    [ "op_envelope_edit_to", "group__envelope__function__api.html#ga5250aab6d73297a59d8f171b35ff9b57", null ],
-    [ "op_compose_pgp_menu", "group__envelope__function__api.html#ga5874d90ca9eb96501509d351b9d5e61e", null ],
-    [ "op_compose_smime_menu", "group__envelope__function__api.html#gadc17f715a9c80dbc25ab68a2b4b06545", null ],
-    [ "op_compose_autocrypt_menu", "group__envelope__function__api.html#ga5a857a3314714e521647c5b9f2760422", null ],
-    [ "op_envelope_edit_followup_to", "group__envelope__function__api.html#ga56b77680619bf651a0d46d60823b7b2f", null ],
-    [ "op_envelope_edit_newsgroups", "group__envelope__function__api.html#gacfaac9d2021d6fdeb21646ad328521b3", null ],
-    [ "op_envelope_edit_x_comment_to", "group__envelope__function__api.html#gaa1d15e47e6cae5df2797d7a65c149a23", null ]
+    [ "op_envelope_edit_bcc", "group__envelope__function__api.html#gacb4e94d66c60d4b8ae3f1e2fd0083844", null ],
+    [ "op_envelope_edit_cc", "group__envelope__function__api.html#ga4b951d28a52fa7cd3e169e52a02b82da", null ],
+    [ "op_envelope_edit_fcc", "group__envelope__function__api.html#ga5de0c9ed1e26d50876b9e997f2a3b0b5", null ],
+    [ "op_envelope_edit_from", "group__envelope__function__api.html#ga73e0c45e5b073196edc64ad2babaf2b6", null ],
+    [ "op_envelope_edit_reply_to", "group__envelope__function__api.html#ga5f50dc625e59aacf829c9f53893987ce", null ],
+    [ "op_envelope_edit_subject", "group__envelope__function__api.html#ga7703525239f799b63399d9b4ea31db6a", null ],
+    [ "op_envelope_edit_to", "group__envelope__function__api.html#ga9ce62ed1e4e5ab72e711e710c0a16818", null ],
+    [ "op_compose_pgp_menu", "group__envelope__function__api.html#ga543bdee73d6f163efa67878fa5ca3734", null ],
+    [ "op_compose_smime_menu", "group__envelope__function__api.html#ga8f1392fff823426c119d10cf63aa1407", null ],
+    [ "op_compose_autocrypt_menu", "group__envelope__function__api.html#gac4d5cb182cafb0e34932023ae8083b7b", null ],
+    [ "op_envelope_edit_followup_to", "group__envelope__function__api.html#ga0bb960900d6ec612520e15f8956bdd41", null ],
+    [ "op_envelope_edit_newsgroups", "group__envelope__function__api.html#gaafa7277481fb2318d646f0988ee7a110", null ],
+    [ "op_envelope_edit_x_comment_to", "group__envelope__function__api.html#ga8f783d34fb53dd632bccf12fbc0c290d", null ]
 ];

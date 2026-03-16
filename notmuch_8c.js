@@ -1,6 +1,5 @@
 var notmuch_8c =
 [
-    [ "nm_init", "notmuch_8c.html#ac14b20cce8965804b7da03772f8d6f0b", null ],
     [ "nm_hcache_open", "notmuch_8c.html#a99bcf8d4cf20029c6285d28d681efe00", null ],
     [ "nm_hcache_close", "notmuch_8c.html#aea09d673b9d50ceb497435f800bb4075", null ],
     [ "nm_get_default_url", "notmuch_8c.html#a0ee14876a4916eff9cbdd7678abce919", null ],
@@ -19,12 +18,12 @@ var notmuch_8c =
     [ "get_folder_from_path", "notmuch_8c.html#abf60a7d578968ef9a84a0e9dc1f7999a", null ],
     [ "nm2mutt_message_id", "notmuch_8c.html#ac447f33fb05b39c0d8efe128872ead37", null ],
     [ "init_email", "notmuch_8c.html#a61864e0bbe54304156a22768894a95e3", null ],
-    [ "get_message_last_filename", "notmuch_8c.html#abb073f4dc73187e300d73278fd74b918", null ],
+    [ "get_message_last_filename", "notmuch_8c.html#a9e547b319ef9e66abb1ef112e7b3ee39", null ],
     [ "progress_setup", "notmuch_8c.html#ae623124dfaf26d5005567bda66b288ff", null ],
     [ "nm_progress_update", "notmuch_8c.html#af4d63e598d37c1d204fcc56bdb0e2bae", null ],
     [ "get_mutt_email", "notmuch_8c.html#af8ae1c5e8502f9a61c6bc3f3f51ddc35", null ],
     [ "append_message", "notmuch_8c.html#ad6f3a25ff7aa400b362b784d0c302750", null ],
-    [ "append_replies", "notmuch_8c.html#abbaff67a7811e3ced0df0b62f3aebf8d", null ],
+    [ "append_replies", "notmuch_8c.html#aa78d99f1d6efa66c5cd6f398a988d53f", null ],
     [ "append_thread", "notmuch_8c.html#a8baa89ed93ca9ac6c16520fb488d8f87", null ],
     [ "get_messages", "notmuch_8c.html#aef6aa22d4cc0a066fe9b9b428ab70f44", null ],
     [ "read_mesgs_query", "notmuch_8c.html#abaf21ab5cf16eed638156c611e65e22f", null ],

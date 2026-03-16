@@ -3,7 +3,7 @@ var structMenu =
     [ "current", "structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1", null ],
     [ "max", "structMenu.html#ae696b2e2b9b7686cb17dfe2f4e4e2b8b", null ],
     [ "redraw", "structMenu.html#a3c9e5e3441ed2efa5839a3f9be5d5644", null ],
-    [ "type", "structMenu.html#a9fc12a9cc0614626cff484f1b0120bbf", null ],
+    [ "md", "structMenu.html#aaed86ba5b08ad7d67a2f131dab298950", null ],
     [ "page_len", "structMenu.html#aef983750ad6113420634d1ba2544faf4", null ],
     [ "tag_prefix", "structMenu.html#ae3e67808ddefbe6fb0052de6c3019882", null ],
     [ "show_indicator", "structMenu.html#a4667a656dbefbe212a65cd466f8b3037", null ],

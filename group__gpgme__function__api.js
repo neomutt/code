@@ -1,7 +1,7 @@
 var group__gpgme__function__api =
 [
-    [ "op_exit", "group__gpgme__function__api.html#ga1dadb5c51e70d2b291a1cc2dbcdf0fff", null ],
-    [ "op_generic_select_entry", "group__gpgme__function__api.html#ga686511543da4164983c5bd707df3f8a9", null ],
-    [ "op_verify_key", "group__gpgme__function__api.html#gad2b641ff97954f3386ad570325b5a6ca", null ],
-    [ "op_view_id", "group__gpgme__function__api.html#gaa9e32bd583c2891f9bdccdfe7197212b", null ]
+    [ "op_exit", "group__gpgme__function__api.html#ga0a17a07791bd6a6ddc7299d7e03b401b", null ],
+    [ "op_generic_select_entry", "group__gpgme__function__api.html#ga04f774abdd543457aa0aa78154d38e05", null ],
+    [ "op_verify_key", "group__gpgme__function__api.html#ga47fd43d99ea3f2cb4c59710c254c705b", null ],
+    [ "op_view_id", "group__gpgme__function__api.html#gab8ba823d7ba9e05ae2457bde90fbedf9", null ]
 ];

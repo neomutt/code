@@ -78,6 +78,7 @@ var group__expando__get__number__api =
     [ "msgid_year_num", "group__expando__get__number__api.html#ga63ee2e13677cfc9b5e6679b118d0c365", null ],
     [ "sidebar_deleted_count_num", "group__expando__get__number__api.html#ga9a7c9bf601b5944c475aa2dde792b64e", null ],
     [ "sidebar_flagged_count_num", "group__expando__get__number__api.html#gadf8bcadafd561df0084b58315b09b433", null ],
+    [ "sidebar_fuzzy_score_num", "group__expando__get__number__api.html#gaf94c1343c1d76537dd150a005857eb57", null ],
     [ "sidebar_limited_count_num", "group__expando__get__number__api.html#ga9f5968a04d96b9012c43a811dbf97e2a", null ],
     [ "sidebar_message_count_num", "group__expando__get__number__api.html#ga3ae4a031f358ecb37b22d0b5cee2185c", null ],
     [ "sidebar_new_mail_num", "group__expando__get__number__api.html#gad58d3a477aa4d47f1d69bc352c1a5043", null ],

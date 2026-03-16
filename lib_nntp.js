@@ -7,6 +7,7 @@ var lib_nntp =
     [ "Browse NNTP groups", "nntp_expando_browser.html", null ],
     [ "Browse NNTP groups", "nntp_expando_newsrc.html", null ],
     [ "Nntp-specific Mailbox data", "nntp_mdata.html", null ],
+    [ "Definition of the Nntp Module", "nntp_module.html", null ],
     [ "Read/write a file of subscribed newsgroups", "nntp_newsrc.html", null ],
     [ "Talk to an NNTP server", "nntp_nntp.html", null ]
 ];
