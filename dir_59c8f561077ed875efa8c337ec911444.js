@@ -4,6 +4,7 @@ var dir_59c8f561077ed875efa8c337ec911444 =
     [ "hcache.c", "hcache_2hcache_8c.html", "hcache_2hcache_8c" ],
     [ "lib.h", "hcache_2lib_8h.html", "hcache_2lib_8h" ],
     [ "module.c", "hcache_2module_8c.html", "hcache_2module_8c" ],
+    [ "module_data.h", "hcache_2module__data_8h.html", "hcache_2module__data_8h" ],
     [ "serialize.c", "serialize_8c.html", "serialize_8c" ],
     [ "serialize.h", "serialize_8h.html", "serialize_8h" ]
 ];

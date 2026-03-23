@@ -1,7 +1,7 @@
 var base64_8c =
 [
     [ "BAD", "base64_8c.html#afd3fc9004925132db4faf607ebbf9db7", null ],
-    [ "b64_encode", "base64_8c.html#a622ac48ec3c6f1f5fd2bedf079284a08", null ],
+    [ "b64_encode_common", "base64_8c.html#acaf3f5fe2218c7b4a5cee08b24bc038f", null ],
     [ "mutt_b64_encode", "base64_8c.html#a19ef6d7010ebd0b203c0e6da4119ba0f", null ],
     [ "mutt_b64_encode_urlsafe", "base64_8c.html#a2e95c58da2c4d998070bb1d65a1379be", null ],
     [ "mutt_b64_decode", "base64_8c.html#a46d7ee223a298c936fe501e37b06ac58", null ],

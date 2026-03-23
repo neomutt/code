@@ -16,12 +16,17 @@ var index_2lib_8h =
     [ "CHECK_ATTACH", "index_2lib_8h.html#a397bc5725fce5f47f8019284280cc606", null ],
     [ "NotifyIndex", "index_2lib_8h.html#a46d350542f65b8ef5720eab7daf36a9a", null ],
     [ "CheckFlags", "index_2lib_8h.html#a0fbf75fa988aa37198039a83614ef2f8", null ],
+    [ "CollapseMode", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3", [
+      [ "COLLAPSE_MODE_TOGGLE", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3a824588afa6fd1880d1dc3458b8623a5b", null ],
+      [ "COLLAPSE_MODE_CLOSE", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3af43ceb349d75431712751ec315dee3c3", null ],
+      [ "COLLAPSE_MODE_OPEN", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3afcf1558b0f9872bb167a7110debae87c", null ]
+    ] ],
     [ "index_init_keys", "index_2lib_8h.html#acc3bf74d647af683c6b1f0206993e8c8", null ],
     [ "change_folder_mailbox", "index_2lib_8h.html#a2f01349e640f3de95d4477b256148cc7", null ],
     [ "change_folder_notmuch", "index_2lib_8h.html#a38c0b435d8faefbb863bbb0d6860cc7e", null ],
     [ "change_folder_string", "index_2lib_8h.html#add72c0d04cf5de2184826b4cba8cdf5e", null ],
     [ "check_acl", "index_2lib_8h.html#a0ae2dda8c87e81d6a3e8f8a15103e6c1", null ],
-    [ "collapse_all", "index_2lib_8h.html#ad5ded0a39e25617ee2bcb6f2c6b13180", null ],
+    [ "collapse_all", "index_2lib_8h.html#afe6dbec10cc91807f266999eb2a68dfb", null ],
     [ "dlg_index", "group__gui__dlg.html#gaf4266da82ada988b3b2482b910ddb15a", null ],
     [ "find_first_message", "index_2lib_8h.html#a8616bd5da51b97ee3d7f18c81e79ce1b", null ],
     [ "find_next_undeleted", "index_2lib_8h.html#a9dacfcb89fcd14cae6bdd61849220ea2", null ],

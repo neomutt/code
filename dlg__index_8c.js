@@ -1,7 +1,7 @@
 var dlg__index_8c =
 [
     [ "check_acl", "dlg__index_8c.html#a0ae2dda8c87e81d6a3e8f8a15103e6c1", null ],
-    [ "collapse_all", "dlg__index_8c.html#ad5ded0a39e25617ee2bcb6f2c6b13180", null ],
+    [ "collapse_all", "dlg__index_8c.html#afe6dbec10cc91807f266999eb2a68dfb", null ],
     [ "uncollapse_thread", "dlg__index_8c.html#afc482a1617d5942bcd6c59fd2b87b9da", null ],
     [ "find_next_undeleted", "dlg__index_8c.html#a9dacfcb89fcd14cae6bdd61849220ea2", null ],
     [ "find_previous_undeleted", "dlg__index_8c.html#af67a4bfc2e8e2781fa29baad634b6efc", null ],

@@ -31,6 +31,7 @@ var dir_880caa4cc75494b45961a8ebdc8ca26e =
     [ "gpgme_functions.h", "gpgme__functions_8h.html", "gpgme__functions_8h" ],
     [ "lib.h", "ncrypt_2lib_8h.html", "ncrypt_2lib_8h" ],
     [ "module.c", "ncrypt_2module_8c.html", "ncrypt_2module_8c" ],
+    [ "module_data.h", "ncrypt_2module__data_8h.html", "ncrypt_2module__data_8h" ],
     [ "pgp.c", "pgp_8c.html", "pgp_8c" ],
     [ "pgp.h", "pgp_8h.html", "pgp_8h" ],
     [ "pgp_functions.c", "pgp__functions_8c.html", "pgp__functions_8c" ],

@@ -13,6 +13,7 @@ var dir_47745d6485dde5574778d0591394c2bf =
     [ "gpgme.c", "gpgme_8c.html", "gpgme_8c" ],
     [ "lib.h", "autocrypt_2lib_8h.html", "autocrypt_2lib_8h" ],
     [ "module.c", "autocrypt_2module_8c.html", "autocrypt_2module_8c" ],
+    [ "module_data.h", "autocrypt_2module__data_8h.html", "autocrypt_2module__data_8h" ],
     [ "private.h", "autocrypt_2private_8h.html", "autocrypt_2private_8h" ],
     [ "schema.c", "schema_8c.html", "schema_8c" ]
 ];

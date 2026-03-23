@@ -11,6 +11,7 @@ var dir_e9740be0e6b1994ed8ecbcf3127ad49f =
     [ "hook.h", "hook_8h.html", "hook_8h" ],
     [ "lib.h", "hooks_2lib_8h.html", null ],
     [ "module.c", "hooks_2module_8c.html", "hooks_2module_8c" ],
+    [ "module_data.h", "hooks_2module__data_8h.html", "hooks_2module__data_8h" ],
     [ "parse.c", "hooks_2parse_8c.html", "hooks_2parse_8c" ],
     [ "parse.h", "hooks_2parse_8h.html", "hooks_2parse_8h" ]
 ];

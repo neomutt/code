@@ -1,7 +1,7 @@
 var group__index__function__api =
 [
     [ "op_alias_dialog", "group__index__function__api.html#ga2285b1d5f83706a3568f454afcadc8c9", null ],
-    [ "op_attachment_edit_type", "group__index__function__api.html#ga2623c5cf41d25dba319b400c2d7c76dc", null ],
+    [ "op_attach_edit_type", "group__index__function__api.html#ga00e3fbbba601957d581c3b9670e32dfa", null ],
     [ "op_bounce_message", "group__index__function__api.html#ga7e71f16a373bca052b3ffb82bd92ef57", null ],
     [ "op_check_traditional", "group__index__function__api.html#ga49b087611690bf8c6123b1d8284ead2a", null ],
     [ "op_compose_to_sender", "group__index__function__api.html#ga02a12e3b63512df4ddc78455e78704e7", null ],
@@ -29,7 +29,11 @@ var group__index__function__api =
     [ "op_main_break_thread", "group__index__function__api.html#ga25a67ab041c1ab20afa1698bf08ff303", null ],
     [ "op_main_change_folder", "group__index__function__api.html#ga7fca0846e33e0cf708503f18582db5a3", null ],
     [ "op_main_collapse_all", "group__index__function__api.html#ga9d79db227876e098636d717b01654d9a", null ],
+    [ "op_main_close_all_threads", "group__index__function__api.html#ga6cbfdbf0bc92de0ea4a964dc2088554e", null ],
+    [ "op_main_close_thread", "group__index__function__api.html#ga6452bf02a01ab4ef227e60e17636082c", null ],
     [ "op_main_collapse_thread", "group__index__function__api.html#gad1851146311bd38ef32c63e939d68732", null ],
+    [ "op_main_open_all_threads", "group__index__function__api.html#gac2b8652d698cb6a0d3cb136995d4adfc", null ],
+    [ "op_main_open_thread", "group__index__function__api.html#ga28466d6d6284c932411b8258de3fa609", null ],
     [ "op_main_delete_pattern", "group__index__function__api.html#ga4135d44117fa4a61c0a9f2b1c97642d4", null ],
     [ "op_main_limit", "group__index__function__api.html#ga7194f66d71a1b4a0bdec86e3335a7f87", null ],
     [ "op_main_link_threads", "group__index__function__api.html#ga102e0a23dc5a3e8c8c9280273a9167c1", null ],

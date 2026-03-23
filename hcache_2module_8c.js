@@ -1,6 +1,8 @@
 var hcache_2module_8c =
 [
+    [ "hcache_init", "hcache_2module_8c.html#ac09a0ffb060e282280225a1659c91e51", null ],
     [ "hcache_config_define_variables", "hcache_2module_8c.html#a33ec3d4d4ccc42a6494b9ef9a565a48d", null ],
+    [ "hcache_cleanup", "hcache_2module_8c.html#acee82be4a1b3758cdfacce51449c55cc", null ],
     [ "HcacheVars", "hcache_2module_8c.html#a742b1cc596ceffbc75d6902a0229ecfd", null ],
     [ "HcacheVarsComp", "hcache_2module_8c.html#a9c9f451bf18f00e0f707ed2c120b061f", null ],
     [ "HcacheVarsComp2", "hcache_2module_8c.html#ab56872f9ec3ab62075fb6637729c2d94", null ],

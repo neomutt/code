@@ -1,6 +1,8 @@
 var muttlib_8h =
 [
-    [ "mutt_adv_mktemp", "muttlib_8h.html#acf3a46e57ab84223b270c763ccb166ca", null ],
+    [ "mutt_adv_mktemp", "muttlib_8h.html#a160b41f77aa87e063804510448b254ac", null ],
+    [ "mutt_adv_mktemp_draft", "muttlib_8h.html#ad1d405db6c5c0696eb1a55f2b698675d", null ],
+    [ "mutt_adv_mktemp_cfg", "muttlib_8h.html#acf7dfbaa57c5b9bc1237ed81cfab6a24", null ],
     [ "expand_path", "muttlib_8h.html#ab8f797f0a3b645c549e1503369a9832b", null ],
     [ "pretty_mailbox", "muttlib_8h.html#a71b1eca76ac5b320e531498febfe1aba", null ],
     [ "buf_sanitize_filename", "muttlib_8h.html#ac104d843cb36fbb5e37cd24faa65dac0", null ],

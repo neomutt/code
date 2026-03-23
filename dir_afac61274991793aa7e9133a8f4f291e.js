@@ -8,6 +8,7 @@ var dir_afac61274991793aa7e9133a8f4f291e =
     [ "mailboxes.c", "mailboxes_8c.html", "mailboxes_8c" ],
     [ "mailboxes.h", "mailboxes_8h.html", "mailboxes_8h" ],
     [ "module.c", "commands_2module_8c.html", "commands_2module_8c" ],
+    [ "module_data.h", "commands_2module__data_8h.html", "commands_2module__data_8h" ],
     [ "parse.c", "commands_2parse_8c.html", "commands_2parse_8c" ],
     [ "parse.h", "commands_2parse_8h.html", "commands_2parse_8h" ],
     [ "setenv.c", "setenv_8c.html", "setenv_8c" ],

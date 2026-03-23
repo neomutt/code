@@ -9,6 +9,7 @@ var dir_45a2d94df49408f8b6e36d4e0210a693 =
     [ "functions.h", "browser_2functions_8h.html", "browser_2functions_8h" ],
     [ "lib.h", "browser_2lib_8h.html", "browser_2lib_8h" ],
     [ "module.c", "browser_2module_8c.html", "browser_2module_8c" ],
+    [ "module_data.h", "browser_2module__data_8h.html", "browser_2module__data_8h" ],
     [ "private_data.c", "browser_2private__data_8c.html", "browser_2private__data_8c" ],
     [ "private_data.h", "browser_2private__data_8h.html", "browser_2private__data_8h" ],
     [ "sort.c", "browser_2sort_8c.html", "browser_2sort_8c" ],

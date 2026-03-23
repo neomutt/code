@@ -12,5 +12,6 @@ var dir_7c4da566fc26790d35e426e8356dec56 =
     [ "lib.h", "address_2lib_8h.html", null ],
     [ "maillist.c", "maillist_8c.html", "maillist_8c" ],
     [ "maillist.h", "maillist_8h.html", "maillist_8h" ],
-    [ "module.c", "address_2module_8c.html", "address_2module_8c" ]
+    [ "module.c", "address_2module_8c.html", "address_2module_8c" ],
+    [ "module_data.h", "address_2module__data_8h.html", "address_2module__data_8h" ]
 ];

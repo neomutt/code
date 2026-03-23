@@ -16,5 +16,6 @@ var dir_92ddae6c8b6535f88cdb370049e1d22d =
     [ "menu.c", "key_2menu_8c.html", "key_2menu_8c" ],
     [ "menu.h", "menu_8h.html", "menu_8h" ],
     [ "module.c", "key_2module_8c.html", "key_2module_8c" ],
+    [ "module_data.h", "key_2module__data_8h.html", "key_2module__data_8h" ],
     [ "notify.h", "key_2notify_8h.html", "key_2notify_8h" ]
 ];

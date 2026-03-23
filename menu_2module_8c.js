@@ -1,6 +1,8 @@
 var menu_2module_8c =
 [
+    [ "menu_init", "menu_2module_8c.html#a68ec2515fa6c06c24cd3d7fca3cef5ab", null ],
     [ "menu_config_define_variables", "menu_2module_8c.html#ac7942d1454950789b4b780c33ddeba81", null ],
+    [ "menu_cleanup", "menu_2module_8c.html#a03d6cb083a8a0f329a798155b81f814b", null ],
     [ "MenuVars", "menu_2module_8c.html#ae03555c504cc6316d16bf0e8fffbe426", null ],
     [ "ModuleMenu", "menu_2module_8c.html#a6eb05085ff58fa53e32ce694a4a7ee13", null ]
 ];

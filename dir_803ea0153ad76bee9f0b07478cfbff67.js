@@ -13,6 +13,7 @@ var dir_803ea0153ad76bee9f0b07478cfbff67 =
     [ "gsasl2.h", "gsasl2_8h.html", "gsasl2_8h" ],
     [ "lib.h", "conn_2lib_8h.html", "conn_2lib_8h" ],
     [ "module.c", "conn_2module_8c.html", "conn_2module_8c" ],
+    [ "module_data.h", "conn_2module__data_8h.html", "conn_2module__data_8h" ],
     [ "mutt_account.c", "mutt__account_8c.html", "mutt__account_8c" ],
     [ "mutt_account.h", "mutt__account_8h.html", "mutt__account_8h" ],
     [ "openssl.c", "openssl_8c.html", "openssl_8c" ],

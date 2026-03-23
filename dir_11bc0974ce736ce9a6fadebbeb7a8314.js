@@ -11,6 +11,7 @@ var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
     [ "global.h", "global_8h.html", "global_8h" ],
     [ "lib.h", "gui_2lib_8h.html", null ],
     [ "module.c", "gui_2module_8c.html", "gui_2module_8c" ],
+    [ "module_data.h", "gui_2module__data_8h.html", "gui_2module__data_8h" ],
     [ "msgcont.c", "msgcont_8c.html", "msgcont_8c" ],
     [ "msgcont.h", "msgcont_8h.html", "msgcont_8h" ],
     [ "msgwin.c", "msgwin_8c.html", "msgwin_8c" ],

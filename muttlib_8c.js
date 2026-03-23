@@ -1,6 +1,6 @@
 var muttlib_8c =
 [
-    [ "mutt_adv_mktemp", "muttlib_8c.html#acf3a46e57ab84223b270c763ccb166ca", null ],
+    [ "mutt_adv_mktemp_cfg", "muttlib_8c.html#acf7dfbaa57c5b9bc1237ed81cfab6a24", null ],
     [ "expand_path", "muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b", null ],
     [ "mutt_gecos_name", "muttlib_8c.html#a23e2405002a60eaa1507f7f6d677f696", null ],
     [ "mutt_needs_mailcap", "muttlib_8c.html#a8973b2e5185609bfc5e0ef136fcd3177", null ],

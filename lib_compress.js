@@ -3,8 +3,8 @@ var lib_compress =
     [ "Shared compression code", "compress_compress.html", [
       [ "Interface", "lib_compress.html#autotoc_md37", null ],
       [ "Source", "lib_compress.html#autotoc_md38", [
-        [ "Data", "compress_compress.html#autotoc_md273", null ],
-        [ "Functions", "compress_compress.html#autotoc_md274", null ]
+        [ "Data", "compress_compress.html#autotoc_md276", null ],
+        [ "Functions", "compress_compress.html#autotoc_md277", null ]
       ] ]
     ] ],
     [ "Definition of the Compress Module", "compress_module.html", null ],

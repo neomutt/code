@@ -6,11 +6,15 @@ var searchData=
   ['hashtable_3',['HashTable',['../structHashTable.html',1,'']]],
   ['hashwalkstate_4',['HashWalkState',['../structHashWalkState.html',1,'']]],
   ['hcacheentry_5',['HCacheEntry',['../structHCacheEntry.html',1,'']]],
-  ['headercache_6',['HeaderCache',['../structHeaderCache.html',1,'']]],
-  ['helpbarwindowdata_7',['HelpbarWindowData',['../structHelpbarWindowData.html',1,'']]],
-  ['history_8',['History',['../structHistory.html',1,'']]],
-  ['historydata_9',['HistoryData',['../structHistoryData.html',1,'']]],
-  ['historyentry_10',['HistoryEntry',['../structHistoryEntry.html',1,'']]],
-  ['historyfunction_11',['HistoryFunction',['../structHistoryFunction.html',1,'']]],
-  ['hook_12',['Hook',['../structHook.html',1,'']]]
+  ['hcachemoduledata_6',['HcacheModuleData',['../structHcacheModuleData.html',1,'']]],
+  ['headercache_7',['HeaderCache',['../structHeaderCache.html',1,'']]],
+  ['helpbarmoduledata_8',['HelpbarModuleData',['../structHelpbarModuleData.html',1,'']]],
+  ['helpbarwindowdata_9',['HelpbarWindowData',['../structHelpbarWindowData.html',1,'']]],
+  ['history_10',['History',['../structHistory.html',1,'']]],
+  ['historydata_11',['HistoryData',['../structHistoryData.html',1,'']]],
+  ['historyentry_12',['HistoryEntry',['../structHistoryEntry.html',1,'']]],
+  ['historyfunction_13',['HistoryFunction',['../structHistoryFunction.html',1,'']]],
+  ['historymoduledata_14',['HistoryModuleData',['../structHistoryModuleData.html',1,'']]],
+  ['hook_15',['Hook',['../structHook.html',1,'']]],
+  ['hooksmoduledata_16',['HooksModuleData',['../structHooksModuleData.html',1,'']]]
 ];

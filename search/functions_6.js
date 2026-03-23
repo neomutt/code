@@ -112,5 +112,7 @@ var searchData=
   ['groups_5fremove_5faddrlist_109',['groups_remove_addrlist',['../address_2group_8c.html#a22ff063ae20dddfa93ee971f91898ed8',1,'groups_remove_addrlist(struct HashTable *groups, struct GroupList *gl, struct AddressList *al):&#160;group.c'],['../address_2group_8h.html#a22ff063ae20dddfa93ee971f91898ed8',1,'groups_remove_addrlist(struct HashTable *groups, struct GroupList *gl, struct AddressList *al):&#160;group.c']]],
   ['groups_5fremove_5fgrouplist_110',['groups_remove_grouplist',['../address_2group_8c.html#a35bc3a8ad81c5cbf8d10f91b34cf8c3c',1,'groups_remove_grouplist(struct HashTable *groups, struct GroupList *gl):&#160;group.c'],['../address_2group_8h.html#a35bc3a8ad81c5cbf8d10f91b34cf8c3c',1,'groups_remove_grouplist(struct HashTable *groups, struct GroupList *gl):&#160;group.c']]],
   ['groups_5fremove_5fregex_111',['groups_remove_regex',['../address_2group_8c.html#a45c5d737283f135e8b8c6e6ff9db04ea',1,'groups_remove_regex(struct HashTable *groups, struct GroupList *gl, const char *str):&#160;group.c'],['../address_2group_8h.html#a45c5d737283f135e8b8c6e6ff9db04ea',1,'groups_remove_regex(struct HashTable *groups, struct GroupList *gl, const char *str):&#160;group.c']]],
-  ['gui_5fconfig_5fdefine_5fvariables_112',['gui_config_define_variables',['../gui_2module_8c.html#a5b6f737cb1c52548149c0a91d2d1d454',1,'module.c']]]
+  ['gui_5fcleanup_112',['gui_cleanup',['../gui_2module_8c.html#a71b22ed7444e638745a43481adb78695',1,'module.c']]],
+  ['gui_5fconfig_5fdefine_5fvariables_113',['gui_config_define_variables',['../gui_2module_8c.html#a5b6f737cb1c52548149c0a91d2d1d454',1,'module.c']]],
+  ['gui_5finit_114',['gui_init',['../gui_2module_8c.html#aec0dc0706266ae3a13ff937ab31b34f3',1,'module.c']]]
 ];

@@ -1,6 +1,8 @@
 var conn_2module_8c =
 [
+    [ "conn_init", "conn_2module_8c.html#af38345af5eacbdcc6fb9f75f935e03c8", null ],
     [ "conn_config_define_variables", "conn_2module_8c.html#ae2aa72b6d7c3545557ae21c35c5f5cdf", null ],
+    [ "conn_cleanup", "conn_2module_8c.html#a1522b91913e4371979b8be6ff623311a", null ],
     [ "ConnVars", "conn_2module_8c.html#a8ec57748425ff01157045416d4512fc5", null ],
     [ "ConnVarsGetaddr", "conn_2module_8c.html#ab645204fa9183ea08b88f04865bb8750", null ],
     [ "ConnVarsGnutls", "conn_2module_8c.html#ad326a9bf7e2cdc6d3f69bcad9b451011", null ],

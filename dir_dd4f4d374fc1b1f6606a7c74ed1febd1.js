@@ -18,6 +18,7 @@ var dir_dd4f4d374fc1b1f6606a7c74ed1febd1 =
     [ "merged.c", "merged_8c.html", "merged_8c" ],
     [ "merged.h", "merged_8h.html", "merged_8h" ],
     [ "module.c", "color_2module_8c.html", "color_2module_8c" ],
+    [ "module_data.h", "color_2module__data_8h.html", "color_2module__data_8h" ],
     [ "notify.c", "color_2notify_8c.html", "color_2notify_8c" ],
     [ "notify2.h", "notify2_8h.html", "notify2_8h" ],
     [ "parse_ansi.c", "parse__ansi_8c.html", "parse__ansi_8c" ],

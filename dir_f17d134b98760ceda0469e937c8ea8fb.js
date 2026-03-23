@@ -9,6 +9,7 @@ var dir_f17d134b98760ceda0469e937c8ea8fb =
     [ "lib.c", "pop_2lib_8c.html", "pop_2lib_8c" ],
     [ "lib.h", "pop_2lib_8h.html", "pop_2lib_8h" ],
     [ "module.c", "pop_2module_8c.html", "pop_2module_8c" ],
+    [ "module_data.h", "pop_2module__data_8h.html", "pop_2module__data_8h" ],
     [ "pop.c", "pop_8c.html", "pop_8c" ],
     [ "private.h", "pop_2private_8h.html", "pop_2private_8h" ]
 ];

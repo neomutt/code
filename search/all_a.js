@@ -230,9 +230,10 @@ var searchData=
   ['gui_2eh_227',['gui.h',['../gui_8h.html',1,'']]],
   ['gui_3a_20dialog_20windows_228',['GUI: Dialog Windows',['../group__gui__dlg.html',1,'']]],
   ['gui_3a_20message_20windows_229',['GUI: Message Windows',['../group__gui__mw.html',1,'']]],
-  ['gui_5fcleanup_230',['gui_cleanup',['../structModule.html#a2e81f272f8a5813d8b50c0eff0a53a46',1,'Module::gui_cleanup'],['../group__module__gui__cleanup.html',1,'gui_cleanup()']]],
+  ['gui_5fcleanup_230',['gui_cleanup',['../structModule.html#a2e81f272f8a5813d8b50c0eff0a53a46',1,'Module::gui_cleanup'],['../gui_2module_8c.html#a71b22ed7444e638745a43481adb78695',1,'gui_cleanup(struct NeoMutt *n):&#160;module.c'],['../group__module__gui__cleanup.html',1,'gui_cleanup()']]],
   ['gui_5fconfig_5fdefine_5fvariables_231',['gui_config_define_variables',['../gui_2module_8c.html#a5b6f737cb1c52548149c0a91d2d1d454',1,'module.c']]],
-  ['gui_5finit_232',['gui_init',['../structModule.html#a16c0b01643b613ad4a7e35525eb464c9',1,'Module::gui_init'],['../group__module__gui__init.html',1,'gui_init()']]],
-  ['guivars_233',['GuiVars',['../gui_2config_8c.html#a12fc72161143ee32390f5187a1de3de9',1,'GuiVars:&#160;config.c'],['../gui_2module_8c.html#a12fc72161143ee32390f5187a1de3de9',1,'GuiVars:&#160;config.c']]],
-  ['gv_5fhide_5fmview_5fcontents_234',['GV_HIDE_MVIEW_CONTENTS',['../graphviz_8c.html#aa52b4d0c93c7c886ff3fb3fe634f865f',1,'graphviz.c']]]
+  ['gui_5finit_232',['gui_init',['../structModule.html#a16c0b01643b613ad4a7e35525eb464c9',1,'Module::gui_init'],['../gui_2module_8c.html#aec0dc0706266ae3a13ff937ab31b34f3',1,'gui_init(struct NeoMutt *n):&#160;module.c'],['../group__module__gui__init.html',1,'gui_init()']]],
+  ['guimoduledata_233',['GuiModuleData',['../structGuiModuleData.html',1,'']]],
+  ['guivars_234',['GuiVars',['../gui_2config_8c.html#a12fc72161143ee32390f5187a1de3de9',1,'GuiVars:&#160;config.c'],['../gui_2module_8c.html#a12fc72161143ee32390f5187a1de3de9',1,'GuiVars:&#160;config.c']]],
+  ['gv_5fhide_5fmview_5fcontents_235',['GV_HIDE_MVIEW_CONTENTS',['../graphviz_8c.html#aa52b4d0c93c7c886ff3fb3fe634f865f',1,'graphviz.c']]]
 ];

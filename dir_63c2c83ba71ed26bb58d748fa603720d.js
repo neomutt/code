@@ -6,6 +6,7 @@ var dir_63c2c83ba71ed26bb58d748fa603720d =
     [ "extract.h", "extract_8h.html", "extract_8h" ],
     [ "lib.h", "parse_2lib_8h.html", null ],
     [ "module.c", "parse_2module_8c.html", "parse_2module_8c" ],
+    [ "module_data.h", "parse_2module__data_8h.html", "parse_2module__data_8h" ],
     [ "pcontext.c", "pcontext_8c.html", "pcontext_8c" ],
     [ "pcontext.h", "pcontext_8h.html", "pcontext_8h" ],
     [ "perror.c", "perror_8c.html", "perror_8c" ],

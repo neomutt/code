@@ -3,7 +3,7 @@ var opcodes_8h =
     [ "OP_REPAINT", "opcodes_8h.html#a93af396c035b85cf082bcbaa05693ec2", null ],
     [ "OP_TIMEOUT", "opcodes_8h.html#a1edfa98369961982b96768d8816754dc", null ],
     [ "OP_ABORT", "opcodes_8h.html#a9d285ee08aa8460023a7c730fabf3c94", null ],
-    [ "OPS_ATTACHMENT", "opcodes_8h.html#a7726469daa83b044b358e0725101d9ff", null ],
+    [ "OPS_ATTACH", "opcodes_8h.html#a293cca85332e220c121412693643ed96", null ],
     [ "OPS_AUTOCRYPT", "opcodes_8h.html#ae3f5f30e23125c206c53581d239b9143", null ],
     [ "OPS_CORE", "opcodes_8h.html#a02f0daf9d5f73550e2978678f8ada319", null ],
     [ "OPS_CRYPT", "opcodes_8h.html#a10dc02264bc5e92c86f14516e6165760", null ],

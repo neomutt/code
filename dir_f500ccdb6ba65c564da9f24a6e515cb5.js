@@ -6,5 +6,6 @@ var dir_f500ccdb6ba65c564da9f24a6e515cb5 =
     [ "data.h", "data_8h.html", "data_8h" ],
     [ "helpers.c", "complete_2helpers_8c.html", "complete_2helpers_8c" ],
     [ "lib.h", "complete_2lib_8h.html", "complete_2lib_8h" ],
-    [ "module.c", "complete_2module_8c.html", "complete_2module_8c" ]
+    [ "module.c", "complete_2module_8c.html", "complete_2module_8c" ],
+    [ "module_data.h", "complete_2module__data_8h.html", "complete_2module__data_8h" ]
 ];

@@ -9,6 +9,7 @@ var gui_2thread_8c =
     [ "calculate_visibility", "gui_2thread_8c.html#a065e55c8886d9e2850e6f9cfdaf7bdb7", null ],
     [ "mutt_thread_ctx_init", "gui_2thread_8c.html#a3887239c945c4eef7b5efd942754ca24", null ],
     [ "mutt_thread_ctx_free", "gui_2thread_8c.html#a83a0025fb6c71b19d45e8ba006346303", null ],
+    [ "thread_check_integrity", "gui_2thread_8c.html#ae4aa9bcef4304c606a63f248c6f359dd", null ],
     [ "mutt_draw_tree", "gui_2thread_8c.html#a726f16b8fb688c688a6d0147052103d8", null ],
     [ "make_subject_list", "gui_2thread_8c.html#a7f28bcf6516e018638aa30d7d7d33e2b", null ],
     [ "find_subject", "gui_2thread_8c.html#ade53690995c9c0c41164aea914536fc7", null ],

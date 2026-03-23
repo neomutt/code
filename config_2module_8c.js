@@ -1,6 +1,8 @@
 var config_2module_8c =
 [
+    [ "config_init", "config_2module_8c.html#aaa73e6c446cd311403fa27e25c258a2d", null ],
     [ "config_config_define_types", "config_2module_8c.html#ad5863cf48023a0db9184d6cad0fa3511", null ],
+    [ "config_cleanup", "config_2module_8c.html#ad496aca702c4490b59f31dce3c6ca4c4", null ],
     [ "CstBool", "config_2module_8c.html#a23c5bae2dc68cbdc28ebf4db439e8583", null ],
     [ "CstEnum", "config_2module_8c.html#a3b541a4ab3bad31b496b5d30a05d03bc", null ],
     [ "CstLong", "config_2module_8c.html#a3719b195acce72f98e46fc5aad0e06ec", null ],

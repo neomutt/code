@@ -89,11 +89,14 @@ var searchData=
   ['cmd_5funsubscribe_86',['CMD_UNSUBSCRIBE',['../command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa0249ce5e5d88f04caa361310d316f21b',1,'command.h']]],
   ['cmd_5funsubscribe_5ffrom_87',['CMD_UNSUBSCRIBE_FROM',['../command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa316c092f4c52ab1dd2705fe2212bcdc5',1,'command.h']]],
   ['cmd_5fversion_88',['CMD_VERSION',['../command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa775afaef84c85d8173a20debb1a9e2ef',1,'command.h']]],
-  ['color_5fprefix_5falert_89',['COLOR_PREFIX_ALERT',['../attr_8h.html#a4ee37284f288a9808428793858e1add2aadaef82b08cfb55bac374e18bae1accc',1,'attr.h']]],
-  ['color_5fprefix_5fbright_90',['COLOR_PREFIX_BRIGHT',['../attr_8h.html#a4ee37284f288a9808428793858e1add2af3746eaa37c5ede9f25b40ffcc0f3ea3',1,'attr.h']]],
-  ['color_5fprefix_5flight_91',['COLOR_PREFIX_LIGHT',['../attr_8h.html#a4ee37284f288a9808428793858e1add2ae29b0b42d3c492b56a701e42a3547b98',1,'attr.h']]],
-  ['color_5fprefix_5fnone_92',['COLOR_PREFIX_NONE',['../attr_8h.html#a4ee37284f288a9808428793858e1add2a66a7d84f8af23a6585fcbb7303511498',1,'attr.h']]],
-  ['ct_5fpalette_93',['CT_PALETTE',['../attr_8h.html#a5e133660cf9d4bcd1cb6a49e3ec16f83ab620160d7d2fa7551c43a41276203168',1,'attr.h']]],
-  ['ct_5frgb_94',['CT_RGB',['../attr_8h.html#a5e133660cf9d4bcd1cb6a49e3ec16f83ae821de3cc3b1545bbe02f3d970b31554',1,'attr.h']]],
-  ['ct_5fsimple_95',['CT_SIMPLE',['../attr_8h.html#a5e133660cf9d4bcd1cb6a49e3ec16f83a2dd92bfef1b983a91982e21238d25a5d',1,'attr.h']]]
+  ['collapse_5fmode_5fclose_89',['COLLAPSE_MODE_CLOSE',['../index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3af43ceb349d75431712751ec315dee3c3',1,'lib.h']]],
+  ['collapse_5fmode_5fopen_90',['COLLAPSE_MODE_OPEN',['../index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3afcf1558b0f9872bb167a7110debae87c',1,'lib.h']]],
+  ['collapse_5fmode_5ftoggle_91',['COLLAPSE_MODE_TOGGLE',['../index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3a824588afa6fd1880d1dc3458b8623a5b',1,'lib.h']]],
+  ['color_5fprefix_5falert_92',['COLOR_PREFIX_ALERT',['../attr_8h.html#a4ee37284f288a9808428793858e1add2aadaef82b08cfb55bac374e18bae1accc',1,'attr.h']]],
+  ['color_5fprefix_5fbright_93',['COLOR_PREFIX_BRIGHT',['../attr_8h.html#a4ee37284f288a9808428793858e1add2af3746eaa37c5ede9f25b40ffcc0f3ea3',1,'attr.h']]],
+  ['color_5fprefix_5flight_94',['COLOR_PREFIX_LIGHT',['../attr_8h.html#a4ee37284f288a9808428793858e1add2ae29b0b42d3c492b56a701e42a3547b98',1,'attr.h']]],
+  ['color_5fprefix_5fnone_95',['COLOR_PREFIX_NONE',['../attr_8h.html#a4ee37284f288a9808428793858e1add2a66a7d84f8af23a6585fcbb7303511498',1,'attr.h']]],
+  ['ct_5fpalette_96',['CT_PALETTE',['../attr_8h.html#a5e133660cf9d4bcd1cb6a49e3ec16f83ab620160d7d2fa7551c43a41276203168',1,'attr.h']]],
+  ['ct_5frgb_97',['CT_RGB',['../attr_8h.html#a5e133660cf9d4bcd1cb6a49e3ec16f83ae821de3cc3b1545bbe02f3d970b31554',1,'attr.h']]],
+  ['ct_5fsimple_98',['CT_SIMPLE',['../attr_8h.html#a5e133660cf9d4bcd1cb6a49e3ec16f83a2dd92bfef1b983a91982e21238d25a5d',1,'attr.h']]]
 ];

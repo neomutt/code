@@ -4,5 +4,6 @@ var dir_f5f2d4ec245666a771f2716a34348b76 =
     [ "expando.c", "compmbox_2expando_8c.html", "compmbox_2expando_8c" ],
     [ "expando.h", "compmbox_2expando_8h.html", "compmbox_2expando_8h" ],
     [ "lib.h", "compmbox_2lib_8h.html", "compmbox_2lib_8h" ],
-    [ "module.c", "compmbox_2module_8c.html", "compmbox_2module_8c" ]
+    [ "module.c", "compmbox_2module_8c.html", "compmbox_2module_8c" ],
+    [ "module_data.h", "compmbox_2module__data_8h.html", "compmbox_2module__data_8h" ]
 ];
