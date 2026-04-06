@@ -5,7 +5,7 @@ var searchData=
   ['data_2',['data',['../structConfigDef.html#a5125b3fa1932065447f5811dda756b05',1,'ConfigDef::data'],['../structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8',1,'Buffer::data'],['../structHashElem.html#ac7e80f63ba2f82457ff68aa0cd360365',1,'HashElem::data'],['../structListNode.html#aafe688d670318196766392d8235d00a7',1,'ListNode::data']]],
   ['date_3',['date',['../structEnvelope.html#adb752a72d48a701571b3c1784bc4b59b',1,'Envelope']]],
   ['date_5fsent_4',['date_sent',['../structEmail.html#a9e3cda5dab6d53f68cad95d28068d962',1,'Email']]],
-  ['db_5',['db',['../structNmAccountData.html#a76f9a37a987a8e6057f4d89cdd27ea36',1,'NmAccountData::db'],['../structBdbStoreData.html#a2b7e1c73764eb22c628ed83e3b0e65cd',1,'BdbStoreData::db'],['../structLmdbStoreData.html#a91cc6b5301d64e9cd6d5bdebdd97568f',1,'LmdbStoreData::db'],['../structRocksDbStoreData.html#a46019b575b6df81ed81ecdbd83f271eb',1,'RocksDbStoreData::db']]],
+  ['db_5',['db',['../structNmAccountData.html#a76f9a37a987a8e6057f4d89cdd27ea36',1,'NmAccountData::db'],['../structLmdbStoreData.html#a91cc6b5301d64e9cd6d5bdebdd97568f',1,'LmdbStoreData::db'],['../structRocksDbStoreData.html#a46019b575b6df81ed81ecdbd83f271eb',1,'RocksDbStoreData::db']]],
   ['db_5flimit_6',['db_limit',['../structNmMboxData.html#acbb63acef384ecdbfe563aebaeb810a0',1,'NmMboxData']]],
   ['db_5fquery_7',['db_query',['../structNmMboxData.html#ae4b9cce3520ac3e2a97b1032545eda56',1,'NmMboxData']]],
   ['db_5furl_8',['db_url',['../structNmMboxData.html#a22d80b4f9f022ae1dae0a6592eab53d4',1,'NmMboxData']]],

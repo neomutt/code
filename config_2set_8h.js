@@ -14,6 +14,7 @@ var config_2set_8h =
     [ "CSR_INV_TYPE", "config_2set_8h.html#a3f971a05f55756597a0128c1181fa671", null ],
     [ "CSR_INV_VALIDATOR", "config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6", null ],
     [ "CSV_INV_NOT_IMPL", "config_2set_8h.html#a3e19f461501927d7ef0b7f6ffc959c90", null ],
+    [ "CSR_INV_WARNING", "config_2set_8h.html#a829398794c3cd305b1a6fdc2f63e2152", null ],
     [ "CSR_RESULT_MASK", "config_2set_8h.html#ae0a97d3df30f7df4c5c0f204b92b1462", null ],
     [ "CSR_RESULT", "config_2set_8h.html#a8c1bfe87f83706f7d397c257401504f4", null ],
     [ "IP", "config_2set_8h.html#af00e4b63d736381e1c527ac5ef2c8f3c", null ],

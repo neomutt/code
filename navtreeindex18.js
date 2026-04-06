@@ -1,10 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"group__cfg__type__string__get.html#gad45f829eb11cf056f7d04485ccf6169a":[55,8,1,8],
-"group__cfg__type__string__minus__equals.html":[55,8,5],
-"group__cfg__type__string__minus__equals.html#ga39b01edee80144f697d61eabac90f6ec":[55,8,5,2],
-"group__cfg__type__string__minus__equals.html#ga9ff1478280a1a545aa43c94cf00c126c":[55,8,5,0],
-"group__cfg__type__string__minus__equals.html#gaf932395546f14c7ec28da574b8190c7b":[55,8,5,1],
 "group__cfg__type__string__plus__equals.html":[55,8,4],
 "group__cfg__type__string__plus__equals.html#ga47dc22104683852a4f9d27062e5700ff":[55,8,4,0],
 "group__cfg__type__string__plus__equals.html#ga5bc2f40f96a14622798dc005a18e4835":[55,8,4,5],
@@ -249,5 +244,10 @@ var NAVTREEINDEX18 =
 "group__crypto__pgp__encrypt__message.html#ga584d50284fb41599fafdb6337f0faa6a":[55,42,12,0],
 "group__crypto__pgp__encrypt__message.html#gafe8a926773c49bff3b9c1480150aa23f":[55,42,12,1],
 "group__crypto__pgp__extract__key__from__attachment.html":[55,42,18],
-"group__crypto__pgp__extract__key__from__attachment.html#gabbed31f62b13dc442e28f334de2dba25":[55,42,18,0]
+"group__crypto__pgp__extract__key__from__attachment.html#gabbed31f62b13dc442e28f334de2dba25":[55,42,18,0],
+"group__crypto__pgp__invoke__getkeys.html":[55,42,16],
+"group__crypto__pgp__invoke__getkeys.html#ga41108b7fbffaf50678e9299b62a8fc7a":[55,42,16,0],
+"group__crypto__pgp__invoke__import.html":[55,42,17],
+"group__crypto__pgp__invoke__import.html#ga9b73f1b32f324051fd9c955173f4acec":[55,42,17,0],
+"group__crypto__pgp__invoke__import.html#gacee2a4b90d106433cf7840a98171491f":[55,42,17,1]
 };

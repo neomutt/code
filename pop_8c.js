@@ -7,7 +7,7 @@ var pop_8c =
     [ "pop_read_header", "pop_8c.html#ac8590e3bcca739faf5b19884475fa008", null ],
     [ "fetch_uidl", "group__pop__fetch__api.html#gac2b98a8e580cfbd41e57db2b4132ea59", null ],
     [ "pop_bcache_delete", "group__bcache__list__api.html#ga09e9892b91976ad32580d3e3e6696e6e", null ],
-    [ "pop_hcache_namer", "group__hcache__namer__api.html#ga38f44bd1528545c8c77a842e2a9f7e0d", null ],
+    [ "pop_hcache_namer", "group__hcache__namer__api.html#ga82b69256e3483ecbb46aa4ad1f08460d", null ],
     [ "pop_hcache_open", "pop_8c.html#aa0a6ddc22898d702a5ea50cb2f16bb11", null ],
     [ "pop_fetch_headers", "pop_8c.html#aed296290f911b6522df2dd97ce554f65", null ],
     [ "pop_clear_cache", "pop_8c.html#a306deeb158f76bd338f04b1a5494d6a9", null ],

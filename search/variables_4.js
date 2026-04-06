@@ -24,7 +24,7 @@ var searchData=
   ['enterfunctions_21',['EnterFunctions',['../editor_2functions_8c.html#ac9afed5146fe8ba8b7310248920e408a',1,'functions.c']]],
   ['entries_22',['entries',['../structAutocryptData.html#ae4688728a7199b43647a3335e6e9fd03',1,'AutocryptData::entries'],['../structPatternData.html#a26425dd479c87614350bc00bf0d7822a',1,'PatternData::entries'],['../structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f',1,'SidebarWindowData::entries']]],
   ['entry_23',['entry',['../structBrowserState.html#aa9f0e9b3778d58224e831a9e48863c5b',1,'BrowserState::entry'],['../structSidebarData.html#a29b2b46bee00b8e89acf16078259b50b',1,'SidebarData::entry']]],
-  ['env_24',['env',['../structNeoMutt.html#a5410041863c473ba1f27b415c0a40482',1,'NeoMutt::env'],['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env'],['../structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646',1,'BdbStoreData::env'],['../structLmdbStoreData.html#a72e81e8c77bc8cf3e33da373fb5cda8f',1,'LmdbStoreData::env']]],
+  ['env_24',['env',['../structNeoMutt.html#a5410041863c473ba1f27b415c0a40482',1,'NeoMutt::env'],['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env'],['../structLmdbStoreData.html#a72e81e8c77bc8cf3e33da373fb5cda8f',1,'LmdbStoreData::env']]],
   ['envelopefunctions_25',['EnvelopeFunctions',['../envelope_2functions_8c.html#a3bde6f847604f59c535f69e8d0ca4e6a',1,'functions.c']]],
   ['environ_26',['environ',['../sendmail_8c.html#aa006daaf11f1e2e45a6ababaf463212b',1,'sendmail.c']]],
   ['eostr_27',['eostr',['../structSeqsetIterator.html#a26751cac5a01df780c75aad85206a8da',1,'SeqsetIterator']]],

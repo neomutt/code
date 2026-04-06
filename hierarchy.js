@@ -32,7 +32,6 @@ var hierarchy =
     [ "AutocryptPeerHistory", "structAutocryptPeerHistory.html", null ],
     [ "B64Context", "structB64Context.html", null ],
     [ "BcacheModuleData", "structBcacheModuleData.html", null ],
-    [ "BdbStoreData", "structBdbStoreData.html", null ],
     [ "BindingInfo", "structBindingInfo.html", null ],
     [ "Body", "structBody.html", null ],
     [ "BodyCache", "structBodyCache.html", null ],

@@ -503,7 +503,7 @@ var searchData=
   ['enum_5fstring_5fset_500',['enum_string_set',['../group__cfg__type__string__set.html#ga03ddb2d8fde356e79602538362635813',1,'enum.c']]],
   ['enumdef_501',['EnumDef',['../structEnumDef.html',1,'']]],
   ['enumeration_502',['Type: Enumeration',['../config_enum.html',1,'lib_config']]],
-  ['env_503',['env',['../structNeoMutt.html#a5410041863c473ba1f27b415c0a40482',1,'NeoMutt::env'],['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env'],['../structBdbStoreData.html#a2d506eff52e67f0f485d3b9da6135646',1,'BdbStoreData::env'],['../structLmdbStoreData.html#a72e81e8c77bc8cf3e33da373fb5cda8f',1,'LmdbStoreData::env']]],
+  ['env_503',['env',['../structNeoMutt.html#a5410041863c473ba1f27b415c0a40482',1,'NeoMutt::env'],['../structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec',1,'Email::env'],['../structLmdbStoreData.html#a72e81e8c77bc8cf3e33da373fb5cda8f',1,'LmdbStoreData::env']]],
   ['env_5fcolor_5fobserver_504',['env_color_observer',['../group__observer__api.html#ga11b33e59d9fc332ca9d5bb81aaf4b01f',1,'window.c']]],
   ['env_5fconfig_5fobserver_505',['env_config_observer',['../group__observer__api.html#ga88c4cf4a3223d641e216990e9192c86b',1,'window.c']]],
   ['env_5femail_5fobserver_506',['env_email_observer',['../group__observer__api.html#ga02a84da95839b84b1ca6374aacb2533f',1,'window.c']]],

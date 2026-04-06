@@ -11,6 +11,5 @@ var searchData=
   ['key_20sorting_8',['Key Sorting',['../ncrypt_sort_gpgme.html',1,'GPGME Key Sorting'],['../ncrypt_sort_pgp.html',1,'PGP Key Sorting']]],
   ['keybindings_9',['Dump keybindings',['../debug_keymap.html',1,'lib_debug']]],
   ['keymap_20handling_10',['Keymap handling',['../key_keymap.html',1,'lib_key']]],
-  ['keys_11',['Set up the extended keys',['../key_extended.html',1,'lib_key']]],
-  ['kyoto_20cabinet_12',['Kyoto Cabinet',['../store_kc.html',1,'lib_store']]]
+  ['keys_11',['Set up the extended keys',['../key_extended.html',1,'lib_key']]]
 ];

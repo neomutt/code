@@ -3,7 +3,7 @@ var searchData=
   ['fake_5fthread_0',['fake_thread',['../structMuttThread.html#a68156e7ac570e245272ba291dfd840fd',1,'MuttThread']]],
   ['fcc_1',['fcc',['../structComposeSharedData.html#ac61b3f5c9c303e5b6f6cbc7b52ce181c',1,'ComposeSharedData::fcc'],['../structEnvelopeWindowData.html#a61326fc7d6f64bd229987051a1ddbe87',1,'EnvelopeWindowData::fcc']]],
   ['fcc_5fset_2',['fcc_set',['../structComposeSharedData.html#a6736c2130d450d730b43059fddc54d89',1,'ComposeSharedData']]],
-  ['fd_3',['fd',['../structConnection.html#af805fad417c8fa7c5079ef741d8233e2',1,'Connection::fd'],['../structBdbStoreData.html#a72977340d8fe51cd813ef83081c398fd',1,'BdbStoreData::fd']]],
+  ['fd_3',['fd',['../structConnection.html#af805fad417c8fa7c5079ef741d8233e2',1,'Connection']]],
   ['fd_5fread_4',['fd_read',['../structTunnelSockData.html#a18fb506beba61ce8f7d5938d0f76bd43',1,'TunnelSockData']]],
   ['fd_5fwrite_5',['fd_write',['../structTunnelSockData.html#a4e02ed7f3f09ed0df42e3528c89b19ed',1,'TunnelSockData']]],
   ['feature_6',['feature',['../structNeoMuttVersion.html#acebc3df88ab992f4ad9506621f551657',1,'NeoMuttVersion']]],

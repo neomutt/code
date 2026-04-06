@@ -652,7 +652,7 @@ var searchData=
   ['pop_5ffetch_5fmail_649',['pop_fetch_mail',['../pop_2lib_8h.html#ae41e43ca791955eb76c5709db39a21d7',1,'pop_fetch_mail(void):&#160;pop.c'],['../pop_8c.html#ae41e43ca791955eb76c5709db39a21d7',1,'pop_fetch_mail(void):&#160;pop.c']]],
   ['pop_5ffetch_5ft_650',['pop_fetch_t',['../pop_2private_8h.html#a6f34d9779646083fed3b121e1997f4f6',1,'private.h']]],
   ['pop_5fget_5ffield_651',['pop_get_field',['../group__conn__account__get__field.html#ga50ccf4f452e4e5a3630c44de452173a1',1,'pop_get_field(enum ConnAccountField field, void *gf_data):&#160;lib.c'],['../group__conn__account__get__field.html#ga50ccf4f452e4e5a3630c44de452173a1',1,'pop_get_field(enum ConnAccountField field, void *gf_data):&#160;lib.c']]],
-  ['pop_5fhcache_5fnamer_652',['pop_hcache_namer',['../group__hcache__namer__api.html#ga38f44bd1528545c8c77a842e2a9f7e0d',1,'pop.c']]],
+  ['pop_5fhcache_5fnamer_652',['pop_hcache_namer',['../group__hcache__namer__api.html#ga82b69256e3483ecbb46aa4ad1f08460d',1,'pop.c']]],
   ['pop_5fhcache_5fopen_653',['pop_hcache_open',['../pop_8c.html#aa0a6ddc22898d702a5ea50cb2f16bb11',1,'pop.c']]],
   ['pop_5finit_654',['pop_init',['../pop_2module_8c.html#a55a281e6ac9f8814a8cfaa421d1f1350',1,'module.c']]],
   ['pop_5flogout_655',['pop_logout',['../pop_2lib_8c.html#aeb87c461c48395e38564034b64ec2d37',1,'pop_logout(struct Mailbox *m):&#160;lib.c'],['../pop_2private_8h.html#aeb87c461c48395e38564034b64ec2d37',1,'pop_logout(struct Mailbox *m):&#160;lib.c']]],

@@ -27,7 +27,6 @@ var annotated_dup =
     [ "AutocryptPeerHistory", "structAutocryptPeerHistory.html", "structAutocryptPeerHistory" ],
     [ "B64Context", "structB64Context.html", "structB64Context" ],
     [ "BcacheModuleData", "structBcacheModuleData.html", "structBcacheModuleData" ],
-    [ "BdbStoreData", "structBdbStoreData.html", "structBdbStoreData" ],
     [ "BindingInfo", "structBindingInfo.html", "structBindingInfo" ],
     [ "Body", "structBody.html", "structBody" ],
     [ "BodyCache", "structBodyCache.html", "structBodyCache" ],
