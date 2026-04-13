@@ -3,7 +3,7 @@ var mutt_2date_8c =
     [ "compute_tz", "mutt_2date_8c.html#a387e18e72b5a6858a1e490567153cf5e", null ],
     [ "add_tz_offset", "mutt_2date_8c.html#afebb3c39355c12efcf484c5645ace65b", null ],
     [ "find_tz", "mutt_2date_8c.html#a6e3d63ce76dd4fc2a64fd8150f059ebb", null ],
-    [ "is_leap_year_feb", "mutt_2date_8c.html#a8d648b2e81fc1413097598f9fc3a71a5", null ],
+    [ "is_leap_year_feb", "mutt_2date_8c.html#a81c37d1f78534423e7e2f038c4a4e120", null ],
     [ "mutt_date_local_tz", "mutt_2date_8c.html#abba12f7ad4dc9c7e2d836742d360a81e", null ],
     [ "mutt_date_make_time", "mutt_2date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e", null ],
     [ "mutt_date_normalize_time", "mutt_2date_8c.html#ae62f60a70955bfdf32b669f4cac02571", null ],

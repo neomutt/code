@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-688-gbb0e17</span>
+   &#160;<span id="projectnumber">2025-12-11-694-ga89709</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -6731,31 +6731,28 @@ pe is not NULL </dd></dl>
 <div class="line"><span class="lineno">   65</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557abf2ec27eecf60bcf6f5696b0ce8d7b72">MUTT_CMD_WARNING</a>;</div>
 <div class="line"><span class="lineno">   66</span>  }</div>
 <div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *token = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">   68</span>  <span class="comment">// From here on, use the remainder of `line`, raw</span></div>
 <div class="line"><span class="lineno">   69</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="command_8h.html#ab263ddf6663365ed434ab750bf339557">CommandResult</a> rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>;</div>
 <div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>  <a class="code hl_function" href="extract_8c.html#aabf9d6ea465d5c12bfa99c6b3d8dcf94">parse_extract_token</a>(token, line, <a class="code hl_define" href="extract_8h.html#ac836dbb7a5321eb5e81497298499263c">TOKEN_NO_FLAGS</a>);</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>  <a class="code hl_function" href="lua_2commands_8c.html#a1ca6931a0511c595fa9fae834e356d3b">lua_init_state</a>(&amp;<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>);</div>
-<div class="line"><span class="lineno">   74</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(token));</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>  <span class="keywordflow">if</span> (luaL_dostring(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(token)) != LUA_OK)</div>
-<div class="line"><span class="lineno">   77</span>  {</div>
-<div class="line"><span class="lineno">   78</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s -&gt; failure\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(token));</div>
-<div class="line"><span class="lineno">   79</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <span class="stringliteral">&quot;%s: %s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(token), lua_tostring(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, -1));</div>
-<div class="line"><span class="lineno">   80</span>    <span class="comment">/* pop error message from the stack */</span></div>
-<div class="line"><span class="lineno">   81</span>    lua_pop(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, 1);</div>
-<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">   83</span>  }</div>
-<div class="line"><span class="lineno">   84</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s -&gt; success\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(token));</div>
-<div class="line"><span class="lineno">   85</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(line); <span class="comment">// Clear the rest of the line</span></div>
+<div class="line"><span class="lineno">   71</span>  <a class="code hl_function" href="lua_2commands_8c.html#a1ca6931a0511c595fa9fae834e356d3b">lua_init_state</a>(&amp;<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>);</div>
+<div class="line"><span class="lineno">   72</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s\n&quot;</span>, line-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>);</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>  <span class="keywordflow">if</span> (luaL_dostring(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, line-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>) != LUA_OK)</div>
+<div class="line"><span class="lineno">   75</span>  {</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s -&gt; failure\n&quot;</span>, line-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>);</div>
+<div class="line"><span class="lineno">   77</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <span class="stringliteral">&quot;%s: %s&quot;</span>, line-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>, lua_tostring(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, -1));</div>
+<div class="line"><span class="lineno">   78</span>    <span class="comment">/* pop error message from the stack */</span></div>
+<div class="line"><span class="lineno">   79</span>    lua_pop(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, 1);</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">   81</span>  }</div>
+<div class="line"><span class="lineno">   82</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;%s -&gt; success\n&quot;</span>, line-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>);</div>
+<div class="line"><span class="lineno">   83</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(line); <span class="comment">// Clear the rest of the line</span></div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>  rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a0cfdcd0b200729536b895b8a420f6215">MUTT_CMD_SUCCESS</a>;</div>
 <div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span>  rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a0cfdcd0b200729536b895b8a420f6215">MUTT_CMD_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>done:</div>
-<div class="line"><span class="lineno">   90</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;token);</div>
-<div class="line"><span class="lineno">   91</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">   92</span>}</div>
+<div class="line"><span class="lineno">   87</span>done:</div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">   89</span>}</div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a></div><div class="ttdeci">@ LL_DEBUG2</div><div class="ttdoc">Log at debug level 2.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00046">logging2.h:46</a></div></div>
 <div class="ttc" id="alua_2commands_8c_html_a1ca6931a0511c595fa9fae834e356d3b"><div class="ttname"><a href="lua_2commands_8c.html#a1ca6931a0511c595fa9fae834e356d3b">lua_init_state</a></div><div class="ttdeci">bool lua_init_state(lua_State **l)</div><div class="ttdoc">Initialise a Lua State.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00446">lua.c:446</a></div></div>
 <div class="ttc" id="alua_2commands_8c_html_a8af176d3e7c60ee4905f03742bd621da"><div class="ttname"><a href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a></div><div class="ttdeci">lua_State * LuaState</div><div class="ttdoc">Global Lua State.</div><div class="ttdef"><b>Definition</b> <a href="lua_8c_source.html#l00056">lua.c:56</a></div></div>
@@ -6764,7 +6761,7 @@ pe is not NULL </dd></dl>
 <div id="dynsection-66-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-66-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="group__command__parse_gaca4230cb2945dc8c949baa6dd0666189_cgraph.svg" width="588" height="376"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="group__command__parse_gaca4230cb2945dc8c949baa6dd0666189_cgraph.svg" width="370" height="144"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -6803,50 +6800,50 @@ pe is not NULL </dd></dl>
 <li><code>lua-source &lt;filename&gt;</code> </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="lua_2commands_8c_source.html#l00100">100</a> of file <a class="el" href="lua_2commands_8c_source.html">commands.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  102</span>{</div>
-<div class="line"><span class="lineno">  103</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>;</div>
-<div class="line"><span class="lineno">  104</span> </div>
-<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">if</span> (!<a class="code hl_define" href="extract_8h.html#a7d49d6e1f1a75e5c1ee281a8f8c242fa">MoreArgs</a>(line))</div>
-<div class="line"><span class="lineno">  106</span>  {</div>
-<div class="line"><span class="lineno">  107</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s: too few arguments&quot;</span>), cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>);</div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557abf2ec27eecf60bcf6f5696b0ce8d7b72">MUTT_CMD_WARNING</a>;</div>
-<div class="line"><span class="lineno">  109</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="lua_2commands_8c_source.html#l00097">97</a> of file <a class="el" href="lua_2commands_8c_source.html">commands.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>{</div>
+<div class="line"><span class="lineno">  100</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *err = pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>;</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">if</span> (!<a class="code hl_define" href="extract_8h.html#a7d49d6e1f1a75e5c1ee281a8f8c242fa">MoreArgs</a>(line))</div>
+<div class="line"><span class="lineno">  103</span>  {</div>
+<div class="line"><span class="lineno">  104</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s: too few arguments&quot;</span>), cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>);</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557abf2ec27eecf60bcf6f5696b0ce8d7b72">MUTT_CMD_WARNING</a>;</div>
+<div class="line"><span class="lineno">  106</span>  }</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *token = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  109</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="command_8h.html#ab263ddf6663365ed434ab750bf339557">CommandResult</a> rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>;</div>
 <div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *token = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  112</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="command_8h.html#ab263ddf6663365ed434ab750bf339557">CommandResult</a> rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>;</div>
-<div class="line"><span class="lineno">  113</span> </div>
-<div class="line"><span class="lineno">  114</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
-<div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>  <a class="code hl_function" href="lua_2commands_8c.html#a1ca6931a0511c595fa9fae834e356d3b">lua_init_state</a>(&amp;<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>);</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="extract_8c.html#aabf9d6ea465d5c12bfa99c6b3d8dcf94">parse_extract_token</a>(token, line, <a class="code hl_define" href="extract_8h.html#ac836dbb7a5321eb5e81497298499263c">TOKEN_NO_FLAGS</a>) != 0)</div>
-<div class="line"><span class="lineno">  119</span>  {</div>
-<div class="line"><span class="lineno">  120</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;source: error at %s&quot;</span>), line-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>);</div>
-<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  122</span>  }</div>
-<div class="line"><span class="lineno">  123</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="extract_8h.html#a7d49d6e1f1a75e5c1ee281a8f8c242fa">MoreArgs</a>(line))</div>
-<div class="line"><span class="lineno">  124</span>  {</div>
-<div class="line"><span class="lineno">  125</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s: too many arguments&quot;</span>), cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>);</div>
-<div class="line"><span class="lineno">  126</span>    rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557abf2ec27eecf60bcf6f5696b0ce8d7b72">MUTT_CMD_WARNING</a>;</div>
-<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  128</span>  }</div>
-<div class="line"><span class="lineno">  129</span> </div>
-<div class="line"><span class="lineno">  130</span>  <a class="code hl_function" href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a>(token, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>  <span class="keywordflow">if</span> (luaL_dofile(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(token)) != LUA_OK)</div>
-<div class="line"><span class="lineno">  133</span>  {</div>
-<div class="line"><span class="lineno">  134</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Couldn&#39;t source lua source: %s&quot;</span>), lua_tostring(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, -1));</div>
-<div class="line"><span class="lineno">  135</span>    lua_pop(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, 1);</div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  137</span>  }</div>
-<div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>  rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a0cfdcd0b200729536b895b8a420f6215">MUTT_CMD_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>done:</div>
-<div class="line"><span class="lineno">  142</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;token);</div>
-<div class="line"><span class="lineno">  143</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  144</span>}</div>
+<div class="line"><span class="lineno">  111</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;enter\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>  <a class="code hl_function" href="lua_2commands_8c.html#a1ca6931a0511c595fa9fae834e356d3b">lua_init_state</a>(&amp;<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>);</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="extract_8c.html#aabf9d6ea465d5c12bfa99c6b3d8dcf94">parse_extract_token</a>(token, line, <a class="code hl_define" href="extract_8h.html#ac836dbb7a5321eb5e81497298499263c">TOKEN_NO_FLAGS</a>) != 0)</div>
+<div class="line"><span class="lineno">  116</span>  {</div>
+<div class="line"><span class="lineno">  117</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;source: error at %s&quot;</span>), line-&gt;<a class="code hl_variable" href="structBuffer.html#a058d67252184c2eeaf57059544f8cdcf">dptr</a>);</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  119</span>  }</div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="extract_8h.html#a7d49d6e1f1a75e5c1ee281a8f8c242fa">MoreArgs</a>(line))</div>
+<div class="line"><span class="lineno">  121</span>  {</div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(err, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s: too many arguments&quot;</span>), cmd-&gt;<a class="code hl_variable" href="structCommand.html#aaac7db0461198bc84c6bb01e64ae82e3">name</a>);</div>
+<div class="line"><span class="lineno">  123</span>    rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557abf2ec27eecf60bcf6f5696b0ce8d7b72">MUTT_CMD_WARNING</a>;</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  125</span>  }</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>  <a class="code hl_function" href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a>(token, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">if</span> (luaL_dofile(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(token)) != LUA_OK)</div>
+<div class="line"><span class="lineno">  130</span>  {</div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Couldn&#39;t source lua source: %s&quot;</span>), lua_tostring(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, -1));</div>
+<div class="line"><span class="lineno">  132</span>    lua_pop(<a class="code hl_variable" href="lua_2commands_8c.html#a8af176d3e7c60ee4905f03742bd621da">LuaState</a>, 1);</div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  134</span>  }</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>  rc = <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a0cfdcd0b200729536b895b8a420f6215">MUTT_CMD_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>done:</div>
+<div class="line"><span class="lineno">  139</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;token);</div>
+<div class="line"><span class="lineno">  140</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  141</span>}</div>
 </div><!-- fragment --><div id="dynsection-67" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-67-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-67-summary" class="dynsummary" style="display:block;">

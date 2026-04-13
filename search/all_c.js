@@ -475,7 +475,7 @@ var searchData=
   ['is_5finbox_472',['IS_INBOX',['../mutt_2string_8c.html#ab9478e5b8879a485f1aa405e03986fdc',1,'string.c']]],
   ['is_5fintl_473',['is_intl',['../structAddress.html#aed173c346bd8a8e002bdc5c1691fc3d2',1,'Address']]],
   ['is_5fleap_5fyear_474',['is_leap_year',['../timegm_8c.html#ad39bbc616f603879f066cec4948a3abe',1,'timegm.c']]],
-  ['is_5fleap_5fyear_5ffeb_475',['is_leap_year_feb',['../mutt_2date_8c.html#a8d648b2e81fc1413097598f9fc3a71a5',1,'date.c']]],
+  ['is_5fleap_5fyear_5ffeb_475',['is_leap_year_feb',['../mutt_2date_8c.html#a81c37d1f78534423e7e2f038c4a4e120',1,'date.c']]],
   ['is_5flocal_476',['is_local',['../structMxOps.html#a15a6d1b3b3a214b6e23a36e4b82e1353',1,'MxOps']]],
   ['is_5fmailbox_477',['IS_MAILBOX',['../types_8h.html#a0fb5dbb0eb019a3889836deb991aae7b',1,'types.h']]],
   ['is_5fmailbox_5flist_478',['is_mailbox_list',['../structBrowserState.html#a7ea6ab380d7b4206a2a2438e94176524',1,'BrowserState']]],
