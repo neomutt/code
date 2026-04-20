@@ -1,7 +1,7 @@
 var group__dispatcher__api =
 [
     [ "Alias Function API", "group__alias__function__api.html", "group__alias__function__api" ],
-    [ "Attachment Function API", "group__attach__function__api.html", "group__attach__function__api" ],
+    [ "Attach Function API", "group__attach__function__api.html", "group__attach__function__api" ],
     [ "Autocrypt Function API", "group__autocrypt__function__api.html", "group__autocrypt__function__api" ],
     [ "Compose Function API", "group__compose__function__api.html", "group__compose__function__api" ],
     [ "Preview Function API", "group__preview__function__api.html", "group__preview__function__api" ],

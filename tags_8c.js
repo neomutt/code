@@ -11,6 +11,6 @@ var tags_8c =
     [ "driver_tags_get_transformed_for", "tags_8c.html#af74871b62c31994a28ea0193c3150a01", null ],
     [ "driver_tags_replace", "tags_8c.html#a10c39befc2124fd8e712dc4f42eaca12", null ],
     [ "tags_deleter", "group__hash__hdata__free__api.html#ga1a605f357da3b4621820c51780b6ed5c", null ],
-    [ "driver_tags_init", "tags_8c.html#a806a04421fac2856227df0c1ea089fec", null ],
-    [ "driver_tags_cleanup", "tags_8c.html#ab03cd0cddd57374a2ee676386f92ebee", null ]
+    [ "driver_tags_init", "tags_8c.html#a00d65485b890748ce550eaf3e0dafb4f", null ],
+    [ "driver_tags_cleanup", "tags_8c.html#a202ae293c1fe0bb99b66e016b1bbdccd", null ]
 ];

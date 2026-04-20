@@ -10,6 +10,7 @@ var lib_alias =
     [ "Address Query Dialog", "alias_dlg_query.html", null ],
     [ "Alias Expando definitions", "alias_expando.html", null ],
     [ "Alias functions", "alias_functions.html", null ],
+    [ "Parse Group/Lists Commands", "alias_group.html", null ],
     [ "Shared code for alias dialogs", "alias_gui.html", null ],
     [ "Definition of the Alias Module", "alias_module.html", null ],
     [ "Reverse Alias lookups", "alias_reverse.html", null ],

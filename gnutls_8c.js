@@ -32,6 +32,5 @@ var gnutls_8c =
     [ "tls_socket_write", "group__connection__write.html#gaea266b86c800530b1aa9b91e359e75f5", null ],
     [ "tls_starttls_close", "group__connection__close.html#ga0c11cb8253f1e3cd4df8ba1a92ef3252", null ],
     [ "mutt_ssl_socket_setup", "gnutls_8c.html#ae6341b74ebed0751e68285e6bf379fab", null ],
-    [ "mutt_ssl_starttls", "gnutls_8c.html#a23591e82bf992ceb5e62c459fd787b8a", null ],
-    [ "ProtocolPriority", "gnutls_8c.html#a4fb652432d59816ffb027177af766a7a", null ]
+    [ "mutt_ssl_starttls", "gnutls_8c.html#a23591e82bf992ceb5e62c459fd787b8a", null ]
 ];

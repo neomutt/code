@@ -8,8 +8,5 @@ var init_8h =
     [ "km_register_menu", "init_8h.html#a81051c057f01605eaff2b42e0efc0138", null ],
     [ "km_register_submenu", "init_8h.html#a7db6cea2e427166643aa3aacd084787f", null ],
     [ "km_set_abort_key", "init_8h.html#a89ba73a6855887ed8098fe0e99edb211", null ],
-    [ "km_sort", "init_8h.html#a8682e47f8c246a3f44cdd0343395b9bf", null ],
-    [ "AbortKey", "init_8h.html#a22bced2c7fdf47916ddc963f43432541", null ],
-    [ "SubMenus", "init_8h.html#a329a05581c82ecba6d9e9fd32b94305f", null ],
-    [ "MenuDefs", "init_8h.html#a1b8f5dc5b68988420075be7285ececae", null ]
+    [ "km_sort", "init_8h.html#a8682e47f8c246a3f44cdd0343395b9bf", null ]
 ];

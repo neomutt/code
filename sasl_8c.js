@@ -20,7 +20,5 @@ var sasl_8c =
     [ "mutt_sasl_interact", "sasl_8c.html#a69d46ce6a265526da2e547529fe2d44b", null ],
     [ "mutt_sasl_setup_conn", "sasl_8c.html#af737590d183a661ad5cc6bd2de7fe280", null ],
     [ "mutt_sasl_cleanup", "sasl_8c.html#a40170e4263cf2874982633d54f96a817", null ],
-    [ "SaslAuthenticators", "sasl_8c.html#aa6ad9591a5d757e78f2ff4a2f9938910", null ],
-    [ "MuttSaslCallbacks", "sasl_8c.html#ab02e9323fe900c1a21b2846b03a2d402", null ],
-    [ "SecretPtr", "sasl_8c.html#aff04948363cd0e984efd19ae985d30a9", null ]
+    [ "SaslAuthenticators", "sasl_8c.html#aa6ad9591a5d757e78f2ff4a2f9938910", null ]
 ];

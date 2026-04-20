@@ -12,20 +12,5 @@ var color_2regex_8c =
     [ "add_pattern", "color_2regex_8c.html#a18c029b7ffefd9545300ad82e662d5ae", null ],
     [ "regex_colors_parse_color_list", "color_2regex_8c.html#a5187f65585ac423b0da9b8d9da8c7fb5", null ],
     [ "regex_colors_parse_status_list", "color_2regex_8c.html#a473f22f7766c6b9289368abb6183b71b", null ],
-    [ "regex_colors_parse_uncolor", "color_2regex_8c.html#a9c342ce59dddaa83477b65c9aebfa1cd", null ],
-    [ "AttachList", "color_2regex_8c.html#ab6d627257af91a38d3d437bb363ac51e", null ],
-    [ "BodyList", "color_2regex_8c.html#a68dc9113140ad146746d18e8cedfd376", null ],
-    [ "HeaderList", "color_2regex_8c.html#aa36442790e7628a85f9cbd5aedb49a07", null ],
-    [ "IndexAuthorList", "color_2regex_8c.html#a19770f05e20969aa3d8d00bd9084aa77", null ],
-    [ "IndexCollapsedList", "color_2regex_8c.html#a03ecb24e5af3ec1bb0523ff94d7ffa63", null ],
-    [ "IndexDateList", "color_2regex_8c.html#ac6f774d2fda428b23a8ebc61e706bd75", null ],
-    [ "IndexFlagsList", "color_2regex_8c.html#a07861c080c83be36736a1ed516ab3f8e", null ],
-    [ "IndexLabelList", "color_2regex_8c.html#a3b438e1542b19271a0537e463c677342", null ],
-    [ "IndexList", "color_2regex_8c.html#a609be864266e90c171dcfdf27945b1d1", null ],
-    [ "IndexNumberList", "color_2regex_8c.html#ae5988f181a572cc7e2060c7271e4c7e2", null ],
-    [ "IndexSizeList", "color_2regex_8c.html#aef70b1b6233b968b2f90589debe3279f", null ],
-    [ "IndexSubjectList", "color_2regex_8c.html#a30e52a1f8bb4cecbdcc74db28a9d7b05", null ],
-    [ "IndexTagList", "color_2regex_8c.html#a655923052374c7e60c8ff1ba9d0d75b3", null ],
-    [ "IndexTagsList", "color_2regex_8c.html#a752e9e561bf891c1a5a6b342a785c236", null ],
-    [ "StatusList", "color_2regex_8c.html#a5e0db8d55228f1fe8efe4b99f0d9a540", null ]
+    [ "regex_colors_parse_uncolor", "color_2regex_8c.html#a9c342ce59dddaa83477b65c9aebfa1cd", null ]
 ];

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-694-ga89709</span>
+   &#160;<span id="projectnumber">2025-12-11-769-g906513</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -173,15 +173,15 @@ $(function(){initNavTree('maildir_2path_8c_source.html',''); initResizable(true)
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordtype">char</span> sub[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keyword">struct </span>stat stsub = { 0 };</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordtype">char</span> *subs[] = { <span class="stringliteral">&quot;cur&quot;</span>, <span class="stringliteral">&quot;new&quot;</span> };</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordtype">char</span> *subs[] = { <span class="stringliteral">&quot;cur&quot;</span>, <span class="stringliteral">&quot;new&quot;</span>, <span class="stringliteral">&quot;tmp&quot;</span> };</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_define" href="memory_8h.html#a13aaf9e9e194ebfd84f90bcf4e264aca">countof</a>(subs); i++)</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    snprintf(sub, <span class="keyword">sizeof</span>(sub), <span class="stringliteral">&quot;%s/%s&quot;</span>, path, subs[i]);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">if</span> ((stat(sub, &amp;stsub) == 0) &amp;&amp; S_ISDIR(stsub.st_mode))</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dafd4cdaa9851e1c936b2f648b4bdc6ad4">MUTT_MAILDIR</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">if</span> ((stat(sub, &amp;stsub) != 0) || !S_ISDIR(stsub.st_mode))</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921daf14aa0761bb43e33a26f31276a5cd608">MUTT_UNKNOWN</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dafd4cdaa9851e1c936b2f648b4bdc6ad4">MUTT_MAILDIR</a>;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
 </div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
@@ -200,7 +200,7 @@ $(function(){initNavTree('maildir_2path_8c_source.html',''); initResizable(true)
 <div class="ttc" id="amutt_8h_html_ae688d728e1acdfe5988c7db45d6f0166"><div class="ttname"><a href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a></div><div class="ttdeci">#define PATH_MAX</div><div class="ttdef"><b>Definition</b> <a href="mutt_8h_source.html#l00049">mutt.h:49</a></div></div>
 <div class="ttc" id="astructBuffer_html"><div class="ttname"><a href="structBuffer.html">Buffer</a></div><div class="ttdoc">String manipulation buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00035">buffer.h:36</a></div></div>
 <div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00040">neomutt.h:41</a></div></div>
-<div class="ttc" id="astructNeoMutt_html_ac181d2dd4b8f4acbcfe0b1878ebbfa08"><div class="ttname"><a href="structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08">NeoMutt::home_dir</a></div><div class="ttdeci">char * home_dir</div><div class="ttdoc">User&#39;s home directory.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00056">neomutt.h:56</a></div></div>
+<div class="ttc" id="astructNeoMutt_html_ac181d2dd4b8f4acbcfe0b1878ebbfa08"><div class="ttname"><a href="structNeoMutt.html#ac181d2dd4b8f4acbcfe0b1878ebbfa08">NeoMutt::home_dir</a></div><div class="ttdeci">char * home_dir</div><div class="ttdoc">User&#39;s home directory.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00055">neomutt.h:55</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.13.2-->

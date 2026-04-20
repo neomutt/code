@@ -1,4 +1,5 @@
 var structComposeModuleData =
 [
-    [ "dummy", "structComposeModuleData.html#a9519b4c2e13f39c39eb90f3049b535d2", null ]
+    [ "notify", "structComposeModuleData.html#a0ac4411343e4efa4bcf1cbf547cdd753", null ],
+    [ "md_compose", "structComposeModuleData.html#a82760e91b527cd0ab80bbc6990b3ad88", null ]
 ];

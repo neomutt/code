@@ -1,6 +1,5 @@
 var email_2parse_8h =
 [
-    [ "mutt_auto_subscribe", "email_2parse_8h.html#a2a830caa65e6f462ab0ecae77bce746b", null ],
     [ "mutt_check_encoding", "email_2parse_8h.html#a8692f01c25d10e357dbeee470ba26c2c", null ],
     [ "mutt_check_mime_type", "email_2parse_8h.html#a6c22ec026399e230ecedab86f831a754", null ],
     [ "mutt_extract_message_id", "email_2parse_8h.html#aa7b7d3d9446a52fbc31ef18eea1b52c2", null ],

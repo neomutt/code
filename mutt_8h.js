@@ -40,6 +40,5 @@ var mutt_8h =
     [ "mw_change_flag", "group__gui__mw.html#ga2a5efb59f6952f4516be81b58a32d5a9", null ],
     [ "mutt_thread_set_flag", "mutt_8h.html#ab0b3fdf72da46166bf7d6866dbfc0c09", null ],
     [ "mutt_reply_observer", "mutt_8h.html#a296baf961ccb5bdc1ea1c9692e9a5d0c", null ],
-    [ "StartupComplete", "mutt_8h.html#aaf8eacd4749948bf6d877a63eb886322", null ],
-    [ "PostCount", "mutt_8h.html#a813a6eba284cc0eb882c66dcc4a9ba31", null ]
+    [ "StartupComplete", "mutt_8h.html#aaf8eacd4749948bf6d877a63eb886322", null ]
 ];

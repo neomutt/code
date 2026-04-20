@@ -8,6 +8,7 @@ var dir_dd4f4d374fc1b1f6606a7c74ed1febd1 =
     [ "color.h", "color_8h.html", "color_8h" ],
     [ "commands.c", "color_2commands_8c.html", "color_2commands_8c" ],
     [ "commands.h", "color_2commands_8h.html", "color_2commands_8h" ],
+    [ "config.c", "color_2config_8c.html", "color_2config_8c" ],
     [ "curses.c", "curses_8c.html", "curses_8c" ],
     [ "curses2.h", "curses2_8h.html", "curses2_8h" ],
     [ "debug.c", "debug_8c.html", "debug_8c" ],

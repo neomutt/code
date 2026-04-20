@@ -1,4 +1,4 @@
 var structStoreModuleData =
 [
-    [ "dummy", "structStoreModuleData.html#ac11a3db4e5d7f12c304a4521316124ea", null ]
+    [ "notify", "structStoreModuleData.html#af3e6229e8b7c54a5aaf5469cebe158a8", null ]
 ];

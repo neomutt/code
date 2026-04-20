@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-694-ga89709</span>
+   &#160;<span id="projectnumber">2025-12-11-769-g906513</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -125,7 +125,7 @@ $(function(){initNavTree('exec_8h.html',''); initResizable(true); });
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h__dep__incl.svg" width="115" height="119"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h__dep__incl.svg" width="246" height="119"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="exec_8h_source.html">Go to the source code of this file.</a></p>
@@ -201,70 +201,75 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00323">323</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  324</span>{</div>
-<div class="line"><span class="lineno">  325</span>  <span class="comment">/* parsing commands with URLs in an account hook can cause a recursive</span></div>
-<div class="line"><span class="lineno">  326</span><span class="comment">   * call. We just skip processing if this occurs. Typically such commands</span></div>
-<div class="line"><span class="lineno">  327</span><span class="comment">   * belong in a folder-hook -- perhaps we should warn the user. */</span></div>
-<div class="line"><span class="lineno">  328</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> inhook = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  329</span>  <span class="keywordflow">if</span> (inhook)</div>
-<div class="line"><span class="lineno">  330</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  331</span> </div>
-<div class="line"><span class="lineno">  332</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
-<div class="line"><span class="lineno">  333</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
-<div class="line"><span class="lineno">  334</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
-<div class="line"><span class="lineno">  335</span> </div>
-<div class="line"><span class="lineno">  336</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa869fff97da4afff580e80ece269d0f4">CMD_ACCOUNT_HOOK</a>;</div>
-<div class="line"><span class="lineno">  337</span> </div>
-<div class="line"><span class="lineno">  338</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;<a class="code hl_variable" href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a>, entries)</div>
-<div class="line"><span class="lineno">  339</span>  {</div>
-<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">if</span> (!(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a> &amp;&amp; (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa869fff97da4afff580e80ece269d0f4">CMD_ACCOUNT_HOOK</a>)))</div>
-<div class="line"><span class="lineno">  341</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  342</span> </div>
-<div class="line"><span class="lineno">  343</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(&amp;hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>, url))</div>
-<div class="line"><span class="lineno">  344</span>    {</div>
-<div class="line"><span class="lineno">  345</span>      inhook = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  346</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;account-hook &#39;%s&#39; matches &#39;%s&#39;\n&quot;</span>, hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>.<a class="code hl_variable" href="structRegex.html#a91a347ac006d49f161382d291f0edd99">pattern</a>, url);</div>
-<div class="line"><span class="lineno">  347</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;    %s\n&quot;</span>, hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>);</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00328">328</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  329</span>{</div>
+<div class="line"><span class="lineno">  330</span>  <span class="comment">/* parsing commands with URLs in an account hook can cause a recursive</span></div>
+<div class="line"><span class="lineno">  331</span><span class="comment">   * call. We just skip processing if this occurs. Typically such commands</span></div>
+<div class="line"><span class="lineno">  332</span><span class="comment">   * belong in a folder-hook -- perhaps we should warn the user. */</span></div>
+<div class="line"><span class="lineno">  333</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> inhook = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  334</span>  <span class="keywordflow">if</span> (inhook)</div>
+<div class="line"><span class="lineno">  335</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  336</span> </div>
+<div class="line"><span class="lineno">  337</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHooksModuleData.html">HooksModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a>);</div>
+<div class="line"><span class="lineno">  338</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
+<div class="line"><span class="lineno">  339</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
+<div class="line"><span class="lineno">  340</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
+<div class="line"><span class="lineno">  341</span> </div>
+<div class="line"><span class="lineno">  342</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa869fff97da4afff580e80ece269d0f4">CMD_ACCOUNT_HOOK</a>;</div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">hooks</a>, entries)</div>
+<div class="line"><span class="lineno">  345</span>  {</div>
+<div class="line"><span class="lineno">  346</span>    <span class="keywordflow">if</span> (!(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a> &amp;&amp; (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa869fff97da4afff580e80ece269d0f4">CMD_ACCOUNT_HOOK</a>)))</div>
+<div class="line"><span class="lineno">  347</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  348</span> </div>
-<div class="line"><span class="lineno">  349</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
-<div class="line"><span class="lineno">  350</span>      {</div>
-<div class="line"><span class="lineno">  351</span>        <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
-<div class="line"><span class="lineno">  352</span>        inhook = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  353</span>        <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  354</span>      }</div>
-<div class="line"><span class="lineno">  355</span> </div>
-<div class="line"><span class="lineno">  356</span>      inhook = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  357</span>    }</div>
-<div class="line"><span class="lineno">  358</span>  }</div>
-<div class="line"><span class="lineno">  359</span> </div>
-<div class="line"><span class="lineno">  360</span>done:</div>
-<div class="line"><span class="lineno">  361</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
-<div class="line"><span class="lineno">  362</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
-<div class="line"><span class="lineno">  363</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
-<div class="line"><span class="lineno">  364</span>}</div>
+<div class="line"><span class="lineno">  349</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(&amp;hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>, url))</div>
+<div class="line"><span class="lineno">  350</span>    {</div>
+<div class="line"><span class="lineno">  351</span>      inhook = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  352</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;account-hook &#39;%s&#39; matches &#39;%s&#39;\n&quot;</span>, hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>.<a class="code hl_variable" href="structRegex.html#a91a347ac006d49f161382d291f0edd99">pattern</a>, url);</div>
+<div class="line"><span class="lineno">  353</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;    %s\n&quot;</span>, hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>);</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
+<div class="line"><span class="lineno">  356</span>      {</div>
+<div class="line"><span class="lineno">  357</span>        <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
+<div class="line"><span class="lineno">  358</span>        inhook = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  360</span>      }</div>
+<div class="line"><span class="lineno">  361</span> </div>
+<div class="line"><span class="lineno">  362</span>      inhook = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  363</span>    }</div>
+<div class="line"><span class="lineno">  364</span>  }</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>done:</div>
+<div class="line"><span class="lineno">  367</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
+<div class="line"><span class="lineno">  368</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
+<div class="line"><span class="lineno">  369</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
+<div class="line"><span class="lineno">  370</span>}</div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a></div><div class="ttdeci">@ CMD_NONE</div><div class="ttdoc">No Command.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00059">command.h:59</a></div></div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aaa869fff97da4afff580e80ece269d0f4"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa869fff97da4afff580e80ece269d0f4">CMD_ACCOUNT_HOOK</a></div><div class="ttdeci">@ CMD_ACCOUNT_HOOK</div><div class="ttdoc">:account-hook</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00060">command.h:60</a></div></div>
 <div class="ttc" id="acommand_8h_html_ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd"><div class="ttname"><a href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a></div><div class="ttdeci">@ MUTT_CMD_ERROR</div><div class="ttdoc">Error: Can&#39;t help the user.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00038">command.h:38</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
-<div class="ttc" id="ahooks_2parse_8c_html_a035dff239b7396d32e5ac65490c31cac"><div class="ttname"><a href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a></div><div class="ttdeci">enum CommandId CurrentHookId</div><div class="ttdoc">The ID of the Hook currently being executed, e.g. CMD_SAVE_HOOK.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2parse_8c_source.html#l00055">parse.c:55</a></div></div>
-<div class="ttc" id="ahooks_2parse_8c_html_a972b6dffb799adc5f7e8d91438317d64"><div class="ttname"><a href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a></div><div class="ttdeci">struct HookList Hooks</div><div class="ttdoc">All simple hooks, e.g. CMD_FOLDER_HOOK.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2parse_8c_source.html#l00049">parse.c:49</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a></div><div class="ttdeci">@ LL_DEBUG5</div><div class="ttdoc">Log at debug level 5.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00049">logging2.h:49</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
+<div class="ttc" id="amodule__api_8h_html_a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4"><div class="ttname"><a href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a></div><div class="ttdeci">@ MODULE_ID_HOOKS</div><div class="ttdoc">ModuleHooks, Hook Commands</div><div class="ttdef"><b>Definition</b> <a href="module__api_8h_source.html#l00070">module_api.h:70</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_ad25947e610db74945537b99edf428982"><div class="ttname"><a href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a></div><div class="ttdeci">bool mutt_regex_match(const struct Regex *regex, const char *str)</div><div class="ttdoc">Shorthand to mutt_regex_capture()</div><div class="ttdef"><b>Definition</b> <a href="mutt_2regex_8c_source.html#l00614">regex.c:614</a></div></div>
+<div class="ttc" id="aneomutt_8c_html_ab58efd47fa66c8187cfdce43078c94fa"><div class="ttname"><a href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a></div><div class="ttdeci">void * neomutt_get_module_data(struct NeoMutt *n, enum ModuleId id)</div><div class="ttdoc">Get the private data for a Module.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8c_source.html#l00665">neomutt.c:665</a></div></div>
 <div class="ttc" id="apcontext_8c_html_a76b570ca1639465112b9cbb47504cf0d"><div class="ttname"><a href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a></div><div class="ttdeci">void parse_context_free(struct ParseContext **pptr)</div><div class="ttdoc">Free a ParseContext.</div><div class="ttdef"><b>Definition</b> <a href="pcontext_8c_source.html#l00048">pcontext.c:48</a></div></div>
 <div class="ttc" id="apcontext_8c_html_a9a0ebd9fd2a8a8a36c6aecfe898959da"><div class="ttname"><a href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a></div><div class="ttdeci">struct ParseContext * parse_context_new(void)</div><div class="ttdoc">Create a new ParseContext.</div><div class="ttdef"><b>Definition</b> <a href="pcontext_8c_source.html#l00037">pcontext.c:37</a></div></div>
 <div class="ttc" id="aperror_8c_html_a8b578a787a42b035c174b56fc8ecb74f"><div class="ttname"><a href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a></div><div class="ttdeci">void parse_error_free(struct ParseError **pptr)</div><div class="ttdoc">Free a ParseError.</div><div class="ttdef"><b>Definition</b> <a href="perror_8c_source.html#l00050">perror.c:50</a></div></div>
 <div class="ttc" id="aperror_8c_html_ae6fd7905e3e9ca6f8772dd3730998dab"><div class="ttname"><a href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a></div><div class="ttdeci">struct ParseError * parse_error_new(void)</div><div class="ttdoc">Create a new ParseError.</div><div class="ttdef"><b>Definition</b> <a href="perror_8c_source.html#l00037">perror.c:37</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a16e5fc168e7f3494d4b1df54447d871e"><div class="ttname"><a href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a></div><div class="ttdeci">#define TAILQ_FOREACH(var, head, field)</div><div class="ttdef"><b>Definition</b> <a href="queue_8h_source.html#l00782">queue.h:782</a></div></div>
-<div class="ttc" id="asource_8c_html_a248d13ca62547484f7fe682a25257920"><div class="ttname"><a href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a></div><div class="ttdeci">enum CommandResult parse_rc_line_cwd(const char *line, char *cwd, struct ParseContext *pc, struct ParseError *pe)</div><div class="ttdoc">Parse and run a muttrc line in a relative directory.</div><div class="ttdef"><b>Definition</b> <a href="source_8c_source.html#l00287">source.c:287</a></div></div>
+<div class="ttc" id="asource_8c_html_a248d13ca62547484f7fe682a25257920"><div class="ttname"><a href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a></div><div class="ttdeci">enum CommandResult parse_rc_line_cwd(const char *line, char *cwd, struct ParseContext *pc, struct ParseError *pe)</div><div class="ttdoc">Parse and run a muttrc line in a relative directory.</div><div class="ttdef"><b>Definition</b> <a href="source_8c_source.html#l00286">source.c:286</a></div></div>
 <div class="ttc" id="astructHook_html"><div class="ttname"><a href="structHook.html">Hook</a></div><div class="ttdoc">A list of user hooks.</div><div class="ttdef"><b>Definition</b> <a href="hook_8h_source.html#l00032">hook.h:33</a></div></div>
 <div class="ttc" id="astructHook_html_a1c6336f4645125bf795ad741e925bd86"><div class="ttname"><a href="structHook.html#a1c6336f4645125bf795ad741e925bd86">Hook::regex</a></div><div class="ttdeci">struct Regex regex</div><div class="ttdoc">Regular expression.</div><div class="ttdef"><b>Definition</b> <a href="hook_8h_source.html#l00035">hook.h:35</a></div></div>
 <div class="ttc" id="astructHook_html_aa4ee5764f7c353182f66e90520a77420"><div class="ttname"><a href="structHook.html#aa4ee5764f7c353182f66e90520a77420">Hook::command</a></div><div class="ttdeci">char * command</div><div class="ttdoc">Filename, command or pattern to execute.</div><div class="ttdef"><b>Definition</b> <a href="hook_8h_source.html#l00036">hook.h:36</a></div></div>
 <div class="ttc" id="astructHook_html_ac8569451e3f3cdfc4b5fde7ddd5b0846"><div class="ttname"><a href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">Hook::id</a></div><div class="ttdeci">enum CommandId id</div><div class="ttdoc">Hook CommandId, e.g. CMD_FOLDER_HOOK.</div><div class="ttdef"><b>Definition</b> <a href="hook_8h_source.html#l00034">hook.h:34</a></div></div>
 <div class="ttc" id="astructHook_html_ae2de65a4826224a0380d0d78f30cb20b"><div class="ttname"><a href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">Hook::source_file</a></div><div class="ttdeci">char * source_file</div><div class="ttdoc">Used for relative-directory source.</div><div class="ttdef"><b>Definition</b> <a href="hook_8h_source.html#l00037">hook.h:37</a></div></div>
+<div class="ttc" id="astructHooksModuleData_html"><div class="ttname"><a href="structHooksModuleData.html">HooksModuleData</a></div><div class="ttdoc">Hooks private Module data.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2module__data_8h_source.html#l00032">module_data.h:33</a></div></div>
+<div class="ttc" id="astructHooksModuleData_html_a8d51456a4b4ae37db53c12068064e016"><div class="ttname"><a href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">HooksModuleData::hooks</a></div><div class="ttdeci">struct HookList hooks</div><div class="ttdoc">All simple hooks, e.g. CMD_FOLDER_HOOK.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2module__data_8h_source.html#l00035">module_data.h:35</a></div></div>
+<div class="ttc" id="astructHooksModuleData_html_aabff4f978891c8dffb324c5e97c669a8"><div class="ttname"><a href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">HooksModuleData::current_hook_id</a></div><div class="ttdeci">int current_hook_id</div><div class="ttdoc">The ID of the Hook currently being executed.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2module__data_8h_source.html#l00037">module_data.h:37</a></div></div>
+<div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00040">neomutt.h:41</a></div></div>
 <div class="ttc" id="astructParseContext_html"><div class="ttname"><a href="structParseContext.html">ParseContext</a></div><div class="ttdoc">Context for config parsing (history/backtrace)</div><div class="ttdef"><b>Definition</b> <a href="pcontext_8h_source.html#l00033">pcontext.h:34</a></div></div>
 <div class="ttc" id="astructParseError_html"><div class="ttname"><a href="structParseError.html">ParseError</a></div><div class="ttdoc">Detailed error information from config parsing.</div><div class="ttdef"><b>Definition</b> <a href="perror_8h_source.html#l00033">perror.h:34</a></div></div>
 <div class="ttc" id="astructParseError_html_a8eff038c0accfbbe454d934200636741"><div class="ttname"><a href="structParseError.html#a8eff038c0accfbbe454d934200636741">ParseError::message</a></div><div class="ttdeci">struct Buffer * message</div><div class="ttdoc">Error message.</div><div class="ttdef"><b>Definition</b> <a href="perror_8h_source.html#l00035">perror.h:35</a></div></div>
@@ -274,7 +279,7 @@ Functions</h2></td></tr>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_adf3a4f28ace7e3c3732b5158d67aa699_cgraph.svg" width="340" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_adf3a4f28ace7e3c3732b5158d67aa699_cgraph.svg" width="576" height="435"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -319,49 +324,50 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   66</span>  <span class="keywordflow">if</span> (!path &amp;&amp; !desc)</div>
 <div class="line"><span class="lineno">   67</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
-<div class="line"><span class="lineno">   70</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
-<div class="line"><span class="lineno">   71</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aacdf368d1e145b071d20c9d3fa7d40112">CMD_FOLDER_HOOK</a>;</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;<a class="code hl_variable" href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a>, entries)</div>
-<div class="line"><span class="lineno">   76</span>  {</div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span> (!hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>)</div>
-<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span> (!(hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aacdf368d1e145b071d20c9d3fa7d40112">CMD_FOLDER_HOOK</a>))</div>
-<div class="line"><span class="lineno">   81</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *match = NULL;</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(&amp;hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>, path))</div>
-<div class="line"><span class="lineno">   85</span>      match = path;</div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(&amp;hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>, desc))</div>
-<div class="line"><span class="lineno">   87</span>      match = desc;</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span> (match)</div>
-<div class="line"><span class="lineno">   90</span>    {</div>
-<div class="line"><span class="lineno">   91</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;folder-hook &#39;%s&#39; matches &#39;%s&#39;\n&quot;</span>, hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>.<a class="code hl_variable" href="structRegex.html#a91a347ac006d49f161382d291f0edd99">pattern</a>, match);</div>
-<div class="line"><span class="lineno">   92</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;    %s\n&quot;</span>, hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>);</div>
-<div class="line"><span class="lineno">   93</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
-<div class="line"><span class="lineno">   94</span>      {</div>
-<div class="line"><span class="lineno">   95</span>        <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">   97</span>      }</div>
-<div class="line"><span class="lineno">   98</span>    }</div>
-<div class="line"><span class="lineno">   99</span>  }</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
-<div class="line"><span class="lineno">  102</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
-<div class="line"><span class="lineno">  103</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
-<div class="line"><span class="lineno">  104</span>}</div>
+<div class="line"><span class="lineno">   69</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHooksModuleData.html">HooksModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a>);</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
+<div class="line"><span class="lineno">   71</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
+<div class="line"><span class="lineno">   72</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aacdf368d1e145b071d20c9d3fa7d40112">CMD_FOLDER_HOOK</a>;</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">hooks</a>, entries)</div>
+<div class="line"><span class="lineno">   77</span>  {</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span> (!hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>)</div>
+<div class="line"><span class="lineno">   79</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">if</span> (!(hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aacdf368d1e145b071d20c9d3fa7d40112">CMD_FOLDER_HOOK</a>))</div>
+<div class="line"><span class="lineno">   82</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *match = NULL;</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(&amp;hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>, path))</div>
+<div class="line"><span class="lineno">   86</span>      match = path;</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(&amp;hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>, desc))</div>
+<div class="line"><span class="lineno">   88</span>      match = desc;</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">if</span> (match)</div>
+<div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;folder-hook &#39;%s&#39; matches &#39;%s&#39;\n&quot;</span>, hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>.<a class="code hl_variable" href="structRegex.html#a91a347ac006d49f161382d291f0edd99">pattern</a>, match);</div>
+<div class="line"><span class="lineno">   93</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;    %s\n&quot;</span>, hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>);</div>
+<div class="line"><span class="lineno">   94</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
+<div class="line"><span class="lineno">   95</span>      {</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">   98</span>      }</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="line"><span class="lineno">  100</span>  }</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
+<div class="line"><span class="lineno">  103</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
+<div class="line"><span class="lineno">  104</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
+<div class="line"><span class="lineno">  105</span>}</div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aacdf368d1e145b071d20c9d3fa7d40112"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aacdf368d1e145b071d20c9d3fa7d40112">CMD_FOLDER_HOOK</a></div><div class="ttdeci">@ CMD_FOLDER_HOOK</div><div class="ttdoc">:folder-hook</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00078">command.h:78</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a7d6a51075a1def07faeea14cf524c6aa_cgraph.svg" width="330" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a7d6a51075a1def07faeea14cf524c6aa_cgraph.svg" width="566" height="435"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -407,42 +413,43 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00135">135</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>{</div>
-<div class="line"><span class="lineno">  137</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
-<div class="line"><span class="lineno">  138</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPatternCache.html">PatternCache</a> cache = { 0 };</div>
-<div class="line"><span class="lineno">  139</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
-<div class="line"><span class="lineno">  140</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = id;</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;<a class="code hl_variable" href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a>, entries)</div>
-<div class="line"><span class="lineno">  145</span>  {</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">if</span> (!hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>)</div>
-<div class="line"><span class="lineno">  147</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span> (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  150</span>    {</div>
-<div class="line"><span class="lineno">  151</span>      <span class="keywordflow">if</span> ((<a class="code hl_function" href="pattern_2exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#a1c1956f17958dd3142d9cb2c171fb035">pattern</a>), 0, m, e, &amp;cache) &gt; 0) ^</div>
-<div class="line"><span class="lineno">  152</span>          hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>.<a class="code hl_variable" href="structRegex.html#adf40b2d25dabe5abb853946f35fe7c44">pat_not</a>)</div>
-<div class="line"><span class="lineno">  153</span>      {</div>
-<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
-<div class="line"><span class="lineno">  155</span>        {</div>
-<div class="line"><span class="lineno">  156</span>          <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
-<div class="line"><span class="lineno">  157</span>          <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  158</span>        }</div>
-<div class="line"><span class="lineno">  159</span>        <span class="comment">/* Executing arbitrary commands could affect the pattern results,</span></div>
-<div class="line"><span class="lineno">  160</span><span class="comment">         * so the cache has to be wiped */</span></div>
-<div class="line"><span class="lineno">  161</span>        memset(&amp;cache, 0, <span class="keyword">sizeof</span>(cache));</div>
-<div class="line"><span class="lineno">  162</span>      }</div>
-<div class="line"><span class="lineno">  163</span>    }</div>
-<div class="line"><span class="lineno">  164</span>  }</div>
-<div class="line"><span class="lineno">  165</span> </div>
-<div class="line"><span class="lineno">  166</span>done:</div>
-<div class="line"><span class="lineno">  167</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
-<div class="line"><span class="lineno">  168</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
-<div class="line"><span class="lineno">  169</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
-<div class="line"><span class="lineno">  170</span>}</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00137">137</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>{</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHooksModuleData.html">HooksModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a>);</div>
+<div class="line"><span class="lineno">  140</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
+<div class="line"><span class="lineno">  141</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPatternCache.html">PatternCache</a> cache = { 0 };</div>
+<div class="line"><span class="lineno">  142</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
+<div class="line"><span class="lineno">  143</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = id;</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">hooks</a>, entries)</div>
+<div class="line"><span class="lineno">  148</span>  {</div>
+<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span> (!hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>)</div>
+<div class="line"><span class="lineno">  150</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>    <span class="keywordflow">if</span> (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  153</span>    {</div>
+<div class="line"><span class="lineno">  154</span>      <span class="keywordflow">if</span> ((<a class="code hl_function" href="pattern_2exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(<a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#a1c1956f17958dd3142d9cb2c171fb035">pattern</a>), 0, m, e, &amp;cache) &gt; 0) ^</div>
+<div class="line"><span class="lineno">  155</span>          hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>.<a class="code hl_variable" href="structRegex.html#adf40b2d25dabe5abb853946f35fe7c44">pat_not</a>)</div>
+<div class="line"><span class="lineno">  156</span>      {</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
+<div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>          <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
+<div class="line"><span class="lineno">  160</span>          <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  161</span>        }</div>
+<div class="line"><span class="lineno">  162</span>        <span class="comment">/* Executing arbitrary commands could affect the pattern results,</span></div>
+<div class="line"><span class="lineno">  163</span><span class="comment">         * so the cache has to be wiped */</span></div>
+<div class="line"><span class="lineno">  164</span>        memset(&amp;cache, 0, <span class="keyword">sizeof</span>(cache));</div>
+<div class="line"><span class="lineno">  165</span>      }</div>
+<div class="line"><span class="lineno">  166</span>    }</div>
+<div class="line"><span class="lineno">  167</span>  }</div>
+<div class="line"><span class="lineno">  168</span> </div>
+<div class="line"><span class="lineno">  169</span>done:</div>
+<div class="line"><span class="lineno">  170</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
+<div class="line"><span class="lineno">  171</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
+<div class="line"><span class="lineno">  172</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
+<div class="line"><span class="lineno">  173</span>}</div>
 <div class="ttc" id="apattern_2exec_8c_html_af131fa5d7ea39b2d806ed30369f401ac"><div class="ttname"><a href="pattern_2exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a></div><div class="ttdeci">bool mutt_pattern_exec(struct Pattern *pat, PatternExecFlags flags, struct Mailbox *m, struct Email *e, struct PatternCache *cache)</div><div class="ttdoc">Match a pattern against an email header.</div><div class="ttdef"><b>Definition</b> <a href="pattern_2exec_8c_source.html#l01151">exec.c:1151</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a91bac7d0d32e3ec56bc579ace45ed8cd"><div class="ttname"><a href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a></div><div class="ttdeci">#define SLIST_FIRST(head)</div><div class="ttdef"><b>Definition</b> <a href="queue_8h_source.html#l00227">queue.h:227</a></div></div>
 <div class="ttc" id="astructHook_html_a1c1956f17958dd3142d9cb2c171fb035"><div class="ttname"><a href="structHook.html#a1c1956f17958dd3142d9cb2c171fb035">Hook::pattern</a></div><div class="ttdeci">struct PatternList * pattern</div><div class="ttdoc">Used for fcc,save,send-hook.</div><div class="ttdef"><b>Definition</b> <a href="hook_8h_source.html#l00038">hook.h:38</a></div></div>
@@ -453,7 +460,7 @@ Functions</h2></td></tr>
 <div id="dynsection-6-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_ab8440ad38319fcc7ba6280645e21e62f_cgraph.svg" width="347" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_ab8440ad38319fcc7ba6280645e21e62f_cgraph.svg" width="583" height="435"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -489,37 +496,38 @@ Functions</h2></td></tr>
 </dl>
 <p>The user can configure hooks to be run on startup/shutdown. This function finds all the matching hooks and executes them. </p>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00410">410</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  411</span>{</div>
-<div class="line"><span class="lineno">  412</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
-<div class="line"><span class="lineno">  413</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
-<div class="line"><span class="lineno">  414</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
-<div class="line"><span class="lineno">  415</span> </div>
-<div class="line"><span class="lineno">  416</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = id;</div>
-<div class="line"><span class="lineno">  417</span> </div>
-<div class="line"><span class="lineno">  418</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;<a class="code hl_variable" href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a>, entries)</div>
-<div class="line"><span class="lineno">  419</span>  {</div>
-<div class="line"><span class="lineno">  420</span>    <span class="keywordflow">if</span> (!(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a> &amp;&amp; (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <span class="keywordtype">id</span>)))</div>
-<div class="line"><span class="lineno">  421</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  422</span> </div>
-<div class="line"><span class="lineno">  423</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
-<div class="line"><span class="lineno">  424</span>    {</div>
-<div class="line"><span class="lineno">  425</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
-<div class="line"><span class="lineno">  426</span>      <a class="code hl_function" href="perror_8c.html#a2e9146f0454e9bf6fb053bac1a087241">parse_error_reset</a>(pe);</div>
-<div class="line"><span class="lineno">  427</span>    }</div>
-<div class="line"><span class="lineno">  428</span>  }</div>
-<div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
-<div class="line"><span class="lineno">  431</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
-<div class="line"><span class="lineno">  432</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
-<div class="line"><span class="lineno">  433</span>}</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00417">417</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  418</span>{</div>
+<div class="line"><span class="lineno">  419</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHooksModuleData.html">HooksModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a>);</div>
+<div class="line"><span class="lineno">  420</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
+<div class="line"><span class="lineno">  421</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
+<div class="line"><span class="lineno">  422</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
+<div class="line"><span class="lineno">  423</span> </div>
+<div class="line"><span class="lineno">  424</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = id;</div>
+<div class="line"><span class="lineno">  425</span> </div>
+<div class="line"><span class="lineno">  426</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">hooks</a>, entries)</div>
+<div class="line"><span class="lineno">  427</span>  {</div>
+<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">if</span> (!(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a> &amp;&amp; (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <span class="keywordtype">id</span>)))</div>
+<div class="line"><span class="lineno">  429</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  430</span> </div>
+<div class="line"><span class="lineno">  431</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
+<div class="line"><span class="lineno">  432</span>    {</div>
+<div class="line"><span class="lineno">  433</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
+<div class="line"><span class="lineno">  434</span>      <a class="code hl_function" href="perror_8c.html#a2e9146f0454e9bf6fb053bac1a087241">parse_error_reset</a>(pe);</div>
+<div class="line"><span class="lineno">  435</span>    }</div>
+<div class="line"><span class="lineno">  436</span>  }</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
+<div class="line"><span class="lineno">  439</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
+<div class="line"><span class="lineno">  440</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
+<div class="line"><span class="lineno">  441</span>}</div>
 <div class="ttc" id="aperror_8c_html_a2e9146f0454e9bf6fb053bac1a087241"><div class="ttname"><a href="perror_8c.html#a2e9146f0454e9bf6fb053bac1a087241">parse_error_reset</a></div><div class="ttdeci">void parse_error_reset(struct ParseError *pe)</div><div class="ttdoc">Clear the contents of a ParseError.</div><div class="ttdef"><b>Definition</b> <a href="perror_8c_source.html#l00066">perror.c:66</a></div></div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a2d7a6c83c979a14454dfa50cc9fb3ff6_cgraph.svg" width="404" height="384"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a2d7a6c83c979a14454dfa50cc9fb3ff6_cgraph.svg" width="640" height="435"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -549,36 +557,37 @@ Functions</h2></td></tr>
 <p>Execute any timeout hooks. </p>
 <p>The user can configure hooks to be run on timeout. This function finds all the matching hooks and executes them. </p>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00372">372</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  373</span>{</div>
-<div class="line"><span class="lineno">  374</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
-<div class="line"><span class="lineno">  375</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
-<div class="line"><span class="lineno">  376</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
-<div class="line"><span class="lineno">  377</span> </div>
-<div class="line"><span class="lineno">  378</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa6cf1d75c4be72eccedac53354e25beb">CMD_TIMEOUT_HOOK</a>;</div>
-<div class="line"><span class="lineno">  379</span> </div>
-<div class="line"><span class="lineno">  380</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;<a class="code hl_variable" href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a>, entries)</div>
-<div class="line"><span class="lineno">  381</span>  {</div>
-<div class="line"><span class="lineno">  382</span>    <span class="keywordflow">if</span> (!(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a> &amp;&amp; (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa6cf1d75c4be72eccedac53354e25beb">CMD_TIMEOUT_HOOK</a>)))</div>
-<div class="line"><span class="lineno">  383</span>      <span class="keywordflow">continue</span>;</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00378">378</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  379</span>{</div>
+<div class="line"><span class="lineno">  380</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHooksModuleData.html">HooksModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a>);</div>
+<div class="line"><span class="lineno">  381</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
+<div class="line"><span class="lineno">  382</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseContext.html">ParseContext</a> *pc = <a class="code hl_function" href="pcontext_8c.html#a9a0ebd9fd2a8a8a36c6aecfe898959da">parse_context_new</a>();</div>
+<div class="line"><span class="lineno">  383</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structParseError.html">ParseError</a> *pe = <a class="code hl_function" href="perror_8c.html#ae6fd7905e3e9ca6f8772dd3730998dab">parse_error_new</a>();</div>
 <div class="line"><span class="lineno">  384</span> </div>
-<div class="line"><span class="lineno">  385</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
-<div class="line"><span class="lineno">  386</span>    {</div>
-<div class="line"><span class="lineno">  387</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
-<div class="line"><span class="lineno">  388</span>      <a class="code hl_function" href="perror_8c.html#a2e9146f0454e9bf6fb053bac1a087241">parse_error_reset</a>(pe);</div>
-<div class="line"><span class="lineno">  389</span> </div>
-<div class="line"><span class="lineno">  390</span>      <span class="comment">/* The hooks should be independent of each other, so even though this one</span></div>
-<div class="line"><span class="lineno">  391</span><span class="comment">       * failed, we&#39;ll carry on with the others. */</span></div>
-<div class="line"><span class="lineno">  392</span>    }</div>
-<div class="line"><span class="lineno">  393</span>  }</div>
-<div class="line"><span class="lineno">  394</span> </div>
-<div class="line"><span class="lineno">  395</span>  <span class="comment">/* Delete temporary attachment files */</span></div>
-<div class="line"><span class="lineno">  396</span>  <a class="code hl_function" href="mutt__attach_8c.html#a6276b87d132d5b4e7590eb3d9265c0f8">mutt_temp_attachments_cleanup</a>();</div>
-<div class="line"><span class="lineno">  397</span> </div>
-<div class="line"><span class="lineno">  398</span>  <a class="code hl_variable" href="hooks_2parse_8c.html#a035dff239b7396d32e5ac65490c31cac">CurrentHookId</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
-<div class="line"><span class="lineno">  399</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
-<div class="line"><span class="lineno">  400</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
-<div class="line"><span class="lineno">  401</span>}</div>
+<div class="line"><span class="lineno">  385</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa6cf1d75c4be72eccedac53354e25beb">CMD_TIMEOUT_HOOK</a>;</div>
+<div class="line"><span class="lineno">  386</span> </div>
+<div class="line"><span class="lineno">  387</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">hooks</a>, entries)</div>
+<div class="line"><span class="lineno">  388</span>  {</div>
+<div class="line"><span class="lineno">  389</span>    <span class="keywordflow">if</span> (!(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a> &amp;&amp; (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa6cf1d75c4be72eccedac53354e25beb">CMD_TIMEOUT_HOOK</a>)))</div>
+<div class="line"><span class="lineno">  390</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  391</span> </div>
+<div class="line"><span class="lineno">  392</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="source_8c.html#a248d13ca62547484f7fe682a25257920">parse_rc_line_cwd</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>, hook-&gt;<a class="code hl_variable" href="structHook.html#ae2de65a4826224a0380d0d78f30cb20b">source_file</a>, pc, pe) == <a class="code hl_enumvalue" href="command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd">MUTT_CMD_ERROR</a>)</div>
+<div class="line"><span class="lineno">  393</span>    {</div>
+<div class="line"><span class="lineno">  394</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(pe-&gt;<a class="code hl_variable" href="structParseError.html#a8eff038c0accfbbe454d934200636741">message</a>));</div>
+<div class="line"><span class="lineno">  395</span>      <a class="code hl_function" href="perror_8c.html#a2e9146f0454e9bf6fb053bac1a087241">parse_error_reset</a>(pe);</div>
+<div class="line"><span class="lineno">  396</span> </div>
+<div class="line"><span class="lineno">  397</span>      <span class="comment">/* The hooks should be independent of each other, so even though this one</span></div>
+<div class="line"><span class="lineno">  398</span><span class="comment">       * failed, we&#39;ll carry on with the others. */</span></div>
+<div class="line"><span class="lineno">  399</span>    }</div>
+<div class="line"><span class="lineno">  400</span>  }</div>
+<div class="line"><span class="lineno">  401</span> </div>
+<div class="line"><span class="lineno">  402</span>  <span class="comment">/* Delete temporary attachment files */</span></div>
+<div class="line"><span class="lineno">  403</span>  <a class="code hl_function" href="mutt__attach_8c.html#a6276b87d132d5b4e7590eb3d9265c0f8">mutt_temp_attachments_cleanup</a>();</div>
+<div class="line"><span class="lineno">  404</span> </div>
+<div class="line"><span class="lineno">  405</span>  mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#aabff4f978891c8dffb324c5e97c669a8">current_hook_id</a> = <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>;</div>
+<div class="line"><span class="lineno">  406</span>  <a class="code hl_function" href="pcontext_8c.html#a76b570ca1639465112b9cbb47504cf0d">parse_context_free</a>(&amp;pc);</div>
+<div class="line"><span class="lineno">  407</span>  <a class="code hl_function" href="perror_8c.html#a8b578a787a42b035c174b56fc8ecb74f">parse_error_free</a>(&amp;pe);</div>
+<div class="line"><span class="lineno">  408</span>}</div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aaa6cf1d75c4be72eccedac53354e25beb"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aaa6cf1d75c4be72eccedac53354e25beb">CMD_TIMEOUT_HOOK</a></div><div class="ttdeci">@ CMD_TIMEOUT_HOOK</div><div class="ttdoc">:timeout-hook</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00121">command.h:121</a></div></div>
 <div class="ttc" id="amutt__attach_8c_html_a6276b87d132d5b4e7590eb3d9265c0f8"><div class="ttname"><a href="mutt__attach_8c.html#a6276b87d132d5b4e7590eb3d9265c0f8">mutt_temp_attachments_cleanup</a></div><div class="ttdeci">void mutt_temp_attachments_cleanup(void)</div><div class="ttdoc">Delete all temporary attachments.</div><div class="ttdef"><b>Definition</b> <a href="mutt__attach_8c_source.html#l01307">mutt_attach.c:1307</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -586,7 +595,7 @@ Functions</h2></td></tr>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a9ff610317e209b8e8ff71d1ac1ab5219_cgraph.svg" width="374" height="456"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a9ff610317e209b8e8ff71d1ac1ab5219_cgraph.svg" width="610" height="507"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-11" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -627,12 +636,12 @@ Functions</h2></td></tr>
 </dl>
 <p>The crypt-hook associates keys with addresses. </p>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00314">314</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  315</span>{</div>
-<div class="line"><span class="lineno">  316</span>  <a class="code hl_function" href="hooks_2exec_8c.html#a9a09263604705f7ea0a16dc90fb13ce3">list_hook</a>(list, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(addr-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>), <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aab4690bf4721596a29585d6668737b2cc">CMD_CRYPT_HOOK</a>);</div>
-<div class="line"><span class="lineno">  317</span>}</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00319">319</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  320</span>{</div>
+<div class="line"><span class="lineno">  321</span>  <a class="code hl_function" href="hooks_2exec_8c.html#a9a09263604705f7ea0a16dc90fb13ce3">list_hook</a>(list, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(addr-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>), <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aab4690bf4721596a29585d6668737b2cc">CMD_CRYPT_HOOK</a>);</div>
+<div class="line"><span class="lineno">  322</span>}</div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aab4690bf4721596a29585d6668737b2cc"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aab4690bf4721596a29585d6668737b2cc">CMD_CRYPT_HOOK</a></div><div class="ttdeci">@ CMD_CRYPT_HOOK</div><div class="ttdoc">:crypt-hook</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00072">command.h:72</a></div></div>
-<div class="ttc" id="ahooks_2exec_8c_html_a9a09263604705f7ea0a16dc90fb13ce3"><div class="ttname"><a href="hooks_2exec_8c.html#a9a09263604705f7ea0a16dc90fb13ce3">list_hook</a></div><div class="ttdeci">static void list_hook(struct ListHead *matches, const char *match, enum CommandId id)</div><div class="ttdoc">Find hook strings matching.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2exec_8c_source.html#l00294">exec.c:294</a></div></div>
+<div class="ttc" id="ahooks_2exec_8c_html_a9a09263604705f7ea0a16dc90fb13ce3"><div class="ttname"><a href="hooks_2exec_8c.html#a9a09263604705f7ea0a16dc90fb13ce3">list_hook</a></div><div class="ttdeci">static void list_hook(struct ListHead *matches, const char *match, enum CommandId id)</div><div class="ttdoc">Find hook strings matching.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2exec_8c_source.html#l00298">exec.c:298</a></div></div>
 <div class="ttc" id="astructAddress_html_a45cd47ee76ef04b63f55a0345c691fe8"><div class="ttname"><a href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">Address::mailbox</a></div><div class="ttdeci">struct Buffer * mailbox</div><div class="ttdoc">Mailbox and host address.</div><div class="ttdef"><b>Definition</b> <a href="address_8h_source.html#l00037">address.h:37</a></div></div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -679,43 +688,43 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00214">214</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  215</span>{</div>
-<div class="line"><span class="lineno">  216</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_cur = <a class="code hl_function" href="index_8c.html#a798c826c6ad972b975c8c51070008f99">get_current_mailbox</a>();</div>
-<div class="line"><span class="lineno">  217</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="hooks_2exec_8c.html#a8865bc311360265962b08cf12378675d">addr_hook</a>(path, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa9ed8999d92e4eef1e1fbe869238449c9">CMD_SAVE_HOOK</a>, m_cur, e) == 0)</div>
-<div class="line"><span class="lineno">  218</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  219</span> </div>
-<div class="line"><span class="lineno">  220</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEnvelope.html">Envelope</a> *env = e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>;</div>
-<div class="line"><span class="lineno">  221</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *from = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>);</div>
-<div class="line"><span class="lineno">  222</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *reply_to = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a4b75ab1853f95878dec079371bb0d799">reply_to</a>);</div>
-<div class="line"><span class="lineno">  223</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *to = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>);</div>
-<div class="line"><span class="lineno">  224</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *cc = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>);</div>
-<div class="line"><span class="lineno">  225</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *addr = NULL;</div>
-<div class="line"><span class="lineno">  226</span>  <span class="keywordtype">bool</span> from_me = <a class="code hl_function" href="alias_8c.html#a9d6f6b4ea9d79c9c33ddd7c6b6ef764b">mutt_addr_is_user</a>(from);</div>
-<div class="line"><span class="lineno">  227</span> </div>
-<div class="line"><span class="lineno">  228</span>  <span class="keywordflow">if</span> (!from_me &amp;&amp; reply_to &amp;&amp; reply_to-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
-<div class="line"><span class="lineno">  229</span>    addr = reply_to;</div>
-<div class="line"><span class="lineno">  230</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!from_me &amp;&amp; from &amp;&amp; from-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
-<div class="line"><span class="lineno">  231</span>    addr = from;</div>
-<div class="line"><span class="lineno">  232</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (to &amp;&amp; to-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
-<div class="line"><span class="lineno">  233</span>    addr = to;</div>
-<div class="line"><span class="lineno">  234</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cc &amp;&amp; cc-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
-<div class="line"><span class="lineno">  235</span>    addr = cc;</div>
-<div class="line"><span class="lineno">  236</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  237</span>    addr = NULL;</div>
-<div class="line"><span class="lineno">  238</span>  <span class="keywordflow">if</span> (addr)</div>
-<div class="line"><span class="lineno">  239</span>  {</div>
-<div class="line"><span class="lineno">  240</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  241</span>    <a class="code hl_function" href="muttlib_8c.html#a74724ace5a8d1890f9087f1bee0ceb54">generate_save_path</a>(tmp, addr);</div>
-<div class="line"><span class="lineno">  242</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(path, <span class="stringliteral">&quot;=%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tmp));</div>
-<div class="line"><span class="lineno">  243</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
-<div class="line"><span class="lineno">  244</span>  }</div>
-<div class="line"><span class="lineno">  245</span>}</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00218">218</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>{</div>
+<div class="line"><span class="lineno">  220</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_cur = <a class="code hl_function" href="index_8c.html#a798c826c6ad972b975c8c51070008f99">get_current_mailbox</a>();</div>
+<div class="line"><span class="lineno">  221</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="hooks_2exec_8c.html#a8865bc311360265962b08cf12378675d">addr_hook</a>(path, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa9ed8999d92e4eef1e1fbe869238449c9">CMD_SAVE_HOOK</a>, m_cur, e) == 0)</div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  223</span> </div>
+<div class="line"><span class="lineno">  224</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structEnvelope.html">Envelope</a> *env = e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>;</div>
+<div class="line"><span class="lineno">  225</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *from = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#af1aa00aed4b8767cf98f08e45a432ad8">from</a>);</div>
+<div class="line"><span class="lineno">  226</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *reply_to = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a4b75ab1853f95878dec079371bb0d799">reply_to</a>);</div>
+<div class="line"><span class="lineno">  227</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *to = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>);</div>
+<div class="line"><span class="lineno">  228</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *cc = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;env-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>);</div>
+<div class="line"><span class="lineno">  229</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *addr = NULL;</div>
+<div class="line"><span class="lineno">  230</span>  <span class="keywordtype">bool</span> from_me = <a class="code hl_function" href="alias_8c.html#a9d6f6b4ea9d79c9c33ddd7c6b6ef764b">mutt_addr_is_user</a>(from);</div>
+<div class="line"><span class="lineno">  231</span> </div>
+<div class="line"><span class="lineno">  232</span>  <span class="keywordflow">if</span> (!from_me &amp;&amp; reply_to &amp;&amp; reply_to-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
+<div class="line"><span class="lineno">  233</span>    addr = reply_to;</div>
+<div class="line"><span class="lineno">  234</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!from_me &amp;&amp; from &amp;&amp; from-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
+<div class="line"><span class="lineno">  235</span>    addr = from;</div>
+<div class="line"><span class="lineno">  236</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (to &amp;&amp; to-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
+<div class="line"><span class="lineno">  237</span>    addr = to;</div>
+<div class="line"><span class="lineno">  238</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cc &amp;&amp; cc-&gt;<a class="code hl_variable" href="structAddress.html#a45cd47ee76ef04b63f55a0345c691fe8">mailbox</a>)</div>
+<div class="line"><span class="lineno">  239</span>    addr = cc;</div>
+<div class="line"><span class="lineno">  240</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  241</span>    addr = NULL;</div>
+<div class="line"><span class="lineno">  242</span>  <span class="keywordflow">if</span> (addr)</div>
+<div class="line"><span class="lineno">  243</span>  {</div>
+<div class="line"><span class="lineno">  244</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *tmp = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  245</span>    <a class="code hl_function" href="muttlib_8c.html#a74724ace5a8d1890f9087f1bee0ceb54">generate_save_path</a>(tmp, addr);</div>
+<div class="line"><span class="lineno">  246</span>    <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(path, <span class="stringliteral">&quot;=%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(tmp));</div>
+<div class="line"><span class="lineno">  247</span>    <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;tmp);</div>
+<div class="line"><span class="lineno">  248</span>  }</div>
+<div class="line"><span class="lineno">  249</span>}</div>
 <div class="ttc" id="aalias_8c_html_a9d6f6b4ea9d79c9c33ddd7c6b6ef764b"><div class="ttname"><a href="alias_8c.html#a9d6f6b4ea9d79c9c33ddd7c6b6ef764b">mutt_addr_is_user</a></div><div class="ttdeci">bool mutt_addr_is_user(const struct Address *addr)</div><div class="ttdoc">Does the address belong to the user.</div><div class="ttdef"><b>Definition</b> <a href="alias_8c_source.html#l00600">alias.c:600</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a0849b79217aad19e4bf9381d532d59d1"><div class="ttname"><a href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a></div><div class="ttdeci">int buf_add_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string appending a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00204">buffer.c:204</a></div></div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aa9ed8999d92e4eef1e1fbe869238449c9"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa9ed8999d92e4eef1e1fbe869238449c9">CMD_SAVE_HOOK</a></div><div class="ttdeci">@ CMD_SAVE_HOOK</div><div class="ttdoc">:save-hook</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00104">command.h:104</a></div></div>
-<div class="ttc" id="ahooks_2exec_8c_html_a8865bc311360265962b08cf12378675d"><div class="ttname"><a href="hooks_2exec_8c.html#a8865bc311360265962b08cf12378675d">addr_hook</a></div><div class="ttdeci">static int addr_hook(struct Buffer *path, enum CommandId id, struct Mailbox *m, struct Email *e)</div><div class="ttdoc">Perform an address hook (get a path)</div><div class="ttdef"><b>Definition</b> <a href="hooks_2exec_8c_source.html#l00181">exec.c:181</a></div></div>
-<div class="ttc" id="aindex_8c_html_a798c826c6ad972b975c8c51070008f99"><div class="ttname"><a href="index_8c.html#a798c826c6ad972b975c8c51070008f99">get_current_mailbox</a></div><div class="ttdeci">struct Mailbox * get_current_mailbox(void)</div><div class="ttdoc">Get the current Mailbox.</div><div class="ttdef"><b>Definition</b> <a href="index_8c_source.html#l00721">index.c:721</a></div></div>
+<div class="ttc" id="ahooks_2exec_8c_html_a8865bc311360265962b08cf12378675d"><div class="ttname"><a href="hooks_2exec_8c.html#a8865bc311360265962b08cf12378675d">addr_hook</a></div><div class="ttdeci">static int addr_hook(struct Buffer *path, enum CommandId id, struct Mailbox *m, struct Email *e)</div><div class="ttdoc">Perform an address hook (get a path)</div><div class="ttdef"><b>Definition</b> <a href="hooks_2exec_8c_source.html#l00184">exec.c:184</a></div></div>
+<div class="ttc" id="aindex_8c_html_a798c826c6ad972b975c8c51070008f99"><div class="ttname"><a href="index_8c.html#a798c826c6ad972b975c8c51070008f99">get_current_mailbox</a></div><div class="ttdeci">struct Mailbox * get_current_mailbox(void)</div><div class="ttdoc">Get the current Mailbox.</div><div class="ttdef"><b>Definition</b> <a href="index_8c_source.html#l00726">index.c:726</a></div></div>
 <div class="ttc" id="amuttlib_8c_html_a74724ace5a8d1890f9087f1bee0ceb54"><div class="ttname"><a href="muttlib_8c.html#a74724ace5a8d1890f9087f1bee0ceb54">generate_save_path</a></div><div class="ttdeci">void generate_save_path(struct Buffer *dest, const struct Address *a)</div><div class="ttdoc">Make a safe filename from an email address.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00608">muttlib.c:608</a></div></div>
 <div class="ttc" id="apool_8c_html_a41cba27c25d33cb6822789a2856093f2"><div class="ttname"><a href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a></div><div class="ttdeci">struct Buffer * buf_pool_get(void)</div><div class="ttdoc">Get a Buffer from the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00091">pool.c:91</a></div></div>
 <div class="ttc" id="apool_8c_html_a4cc6068279461cb8628219586dfa35a1"><div class="ttname"><a href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a></div><div class="ttdeci">void buf_pool_release(struct Buffer **ptr)</div><div class="ttdoc">Return a Buffer to the pool.</div><div class="ttdef"><b>Definition</b> <a href="pool_8c_source.html#l00111">pool.c:111</a></div></div>
@@ -772,18 +781,19 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="hooks_2parse_8c_source.html#l01019">1019</a> of file <a class="el" href="hooks_2parse_8c_source.html">parse.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1020</span>{</div>
-<div class="line"><span class="lineno"> 1021</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *h = NULL;</div>
-<div class="line"><span class="lineno"> 1022</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *tmp = NULL;</div>
-<div class="line"><span class="lineno"> 1023</span> </div>
-<div class="line"><span class="lineno"> 1024</span>  <a class="code hl_define" href="queue_8h.html#a2a85f19896399eecd0ebf91cb8176166">TAILQ_FOREACH_SAFE</a>(h, &amp;<a class="code hl_variable" href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a>, entries, tmp)</div>
-<div class="line"><span class="lineno"> 1025</span>  {</div>
-<div class="line"><span class="lineno"> 1026</span>    <span class="keywordflow">if</span> ((<span class="keywordtype">id</span> == <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>) || (<span class="keywordtype">id</span> == h-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a>))</div>
-<div class="line"><span class="lineno"> 1027</span>    {</div>
-<div class="line"><span class="lineno"> 1028</span>      <a class="code hl_define" href="queue_8h.html#aaae87ca18c28066e1a96221e762d1209">TAILQ_REMOVE</a>(&amp;<a class="code hl_variable" href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a>, h, entries);</div>
-<div class="line"><span class="lineno"> 1029</span>      <a class="code hl_function" href="hook_8c.html#a3f101664bc43a354d5fc8210209ba7e3">hook_free</a>(&amp;h);</div>
-<div class="line"><span class="lineno"> 1030</span>    }</div>
-<div class="line"><span class="lineno"> 1031</span>  }</div>
-<div class="line"><span class="lineno"> 1032</span>}</div>
+<div class="line"><span class="lineno"> 1021</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHooksModuleData.html">HooksModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a>);</div>
+<div class="line"><span class="lineno"> 1022</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *h = NULL;</div>
+<div class="line"><span class="lineno"> 1023</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *tmp = NULL;</div>
+<div class="line"><span class="lineno"> 1024</span> </div>
+<div class="line"><span class="lineno"> 1025</span>  <a class="code hl_define" href="queue_8h.html#a2a85f19896399eecd0ebf91cb8176166">TAILQ_FOREACH_SAFE</a>(h, &amp;mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">hooks</a>, entries, tmp)</div>
+<div class="line"><span class="lineno"> 1026</span>  {</div>
+<div class="line"><span class="lineno"> 1027</span>    <span class="keywordflow">if</span> ((<span class="keywordtype">id</span> == <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>) || (<span class="keywordtype">id</span> == h-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a>))</div>
+<div class="line"><span class="lineno"> 1028</span>    {</div>
+<div class="line"><span class="lineno"> 1029</span>      <a class="code hl_define" href="queue_8h.html#aaae87ca18c28066e1a96221e762d1209">TAILQ_REMOVE</a>(&amp;mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">hooks</a>, h, entries);</div>
+<div class="line"><span class="lineno"> 1030</span>      <a class="code hl_function" href="hook_8c.html#a3f101664bc43a354d5fc8210209ba7e3">hook_free</a>(&amp;h);</div>
+<div class="line"><span class="lineno"> 1031</span>    }</div>
+<div class="line"><span class="lineno"> 1032</span>  }</div>
+<div class="line"><span class="lineno"> 1033</span>}</div>
 <div class="ttc" id="ahook_8c_html_a3f101664bc43a354d5fc8210209ba7e3"><div class="ttname"><a href="hook_8c.html#a3f101664bc43a354d5fc8210209ba7e3">hook_free</a></div><div class="ttdeci">void hook_free(struct Hook **ptr)</div><div class="ttdoc">Free a Hook.</div><div class="ttdef"><b>Definition</b> <a href="hook_8c_source.html#l00047">hook.c:47</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a2a85f19896399eecd0ebf91cb8176166"><div class="ttname"><a href="queue_8h.html#a2a85f19896399eecd0ebf91cb8176166">TAILQ_FOREACH_SAFE</a></div><div class="ttdeci">#define TAILQ_FOREACH_SAFE(var, head, field, tvar)</div><div class="ttdef"><b>Definition</b> <a href="queue_8h_source.html#l00792">queue.h:792</a></div></div>
 <div class="ttc" id="aqueue_8h_html_aaae87ca18c28066e1a96221e762d1209"><div class="ttname"><a href="queue_8h.html#aaae87ca18c28066e1a96221e762d1209">TAILQ_REMOVE</a></div><div class="ttdeci">#define TAILQ_REMOVE(head, elm, field)</div><div class="ttdef"><b>Definition</b> <a href="queue_8h_source.html#l00901">queue.h:901</a></div></div>
@@ -792,14 +802,14 @@ Functions</h2></td></tr>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-16-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a45d192929924e15580eca983319585d4_cgraph.svg" width="284" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a45d192929924e15580eca983319585d4_cgraph.svg" width="388" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-17" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-17-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a45d192929924e15580eca983319585d4_icgraph.svg" width="308" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a45d192929924e15580eca983319585d4_icgraph.svg" width="312" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -839,26 +849,27 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The returned string must not be freed. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00114">114</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>{</div>
-<div class="line"><span class="lineno">  116</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;<a class="code hl_variable" href="hooks_2parse_8c.html#a972b6dffb799adc5f7e8d91438317d64">Hooks</a>, entries)</div>
-<div class="line"><span class="lineno">  119</span>  {</div>
-<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">if</span> (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <span class="keywordtype">id</span>)</div>
-<div class="line"><span class="lineno">  121</span>    {</div>
-<div class="line"><span class="lineno">  122</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(&amp;hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>, pat))</div>
-<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">return</span> hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>;</div>
-<div class="line"><span class="lineno">  124</span>    }</div>
-<div class="line"><span class="lineno">  125</span>  }</div>
-<div class="line"><span class="lineno">  126</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  127</span>}</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00115">115</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>{</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHooksModuleData.html">HooksModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a>);</div>
+<div class="line"><span class="lineno">  118</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, &amp;mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a8d51456a4b4ae37db53c12068064e016">hooks</a>, entries)</div>
+<div class="line"><span class="lineno">  121</span>  {</div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">if</span> (hook-&gt;<a class="code hl_variable" href="structHook.html#ac8569451e3f3cdfc4b5fde7ddd5b0846">id</a> == <span class="keywordtype">id</span>)</div>
+<div class="line"><span class="lineno">  123</span>    {</div>
+<div class="line"><span class="lineno">  124</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(&amp;hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>, pat))</div>
+<div class="line"><span class="lineno">  125</span>        <span class="keywordflow">return</span> hook-&gt;<a class="code hl_variable" href="structHook.html#aa4ee5764f7c353182f66e90520a77420">command</a>;</div>
+<div class="line"><span class="lineno">  126</span>    }</div>
+<div class="line"><span class="lineno">  127</span>  }</div>
+<div class="line"><span class="lineno">  128</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  129</span>}</div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-18-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a6a4e53eede6a373cf513ab0a71dddae7_cgraph.svg" width="314" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a6a4e53eede6a373cf513ab0a71dddae7_cgraph.svg" width="366" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-19" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -911,42 +922,43 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00443">443</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  444</span>{</div>
-<div class="line"><span class="lineno">  445</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="hooks_2parse_8c.html#a1ca53f19587562575952e7626c839056">IdxFmtHooks</a>)</div>
-<div class="line"><span class="lineno">  446</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  447</span> </div>
-<div class="line"><span class="lineno">  448</span>  <span class="keyword">struct </span>HookList *hl = <a class="code hl_function" href="hash_8c.html#a21cfc2c56db496fc57d3d85a71c03215">mutt_hash_find</a>(<a class="code hl_variable" href="hooks_2parse_8c.html#a1ca53f19587562575952e7626c839056">IdxFmtHooks</a>, name);</div>
-<div class="line"><span class="lineno">  449</span>  <span class="keywordflow">if</span> (!hl)</div>
-<div class="line"><span class="lineno">  450</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  451</span> </div>
-<div class="line"><span class="lineno">  452</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPatternCache.html">PatternCache</a> cache = { 0 };</div>
-<div class="line"><span class="lineno">  453</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structExpando.html">Expando</a> *exp = NULL;</div>
-<div class="line"><span class="lineno">  454</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
-<div class="line"><span class="lineno">  455</span> </div>
-<div class="line"><span class="lineno">  456</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, hl, entries)</div>
-<div class="line"><span class="lineno">  457</span>  {</div>
-<div class="line"><span class="lineno">  458</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structPattern.html">Pattern</a> *pat = <a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#a1c1956f17958dd3142d9cb2c171fb035">pattern</a>);</div>
-<div class="line"><span class="lineno">  459</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="pattern_2exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(pat, 0, m, e, &amp;cache) &gt; 0) ^ hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>.<a class="code hl_variable" href="structRegex.html#adf40b2d25dabe5abb853946f35fe7c44">pat_not</a>)</div>
-<div class="line"><span class="lineno">  460</span>    {</div>
-<div class="line"><span class="lineno">  461</span>      exp = hook-&gt;<a class="code hl_variable" href="structHook.html#ac53e0f153a033bf8dba3f71d0a200647">expando</a>;</div>
-<div class="line"><span class="lineno">  462</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  463</span>    }</div>
-<div class="line"><span class="lineno">  464</span>  }</div>
-<div class="line"><span class="lineno">  465</span> </div>
-<div class="line"><span class="lineno">  466</span>  <span class="keywordflow">return</span> exp;</div>
-<div class="line"><span class="lineno">  467</span>}</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00451">451</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  452</span>{</div>
+<div class="line"><span class="lineno">  453</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHooksModuleData.html">HooksModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6af97c16a8c0d4ef21497042905e6dfcc4">MODULE_ID_HOOKS</a>);</div>
+<div class="line"><span class="lineno">  454</span>  <span class="keywordflow">if</span> (!mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a0357bb0d7f1786ae7501e0d0b55c9dc9">idx_fmt_hooks</a>)</div>
+<div class="line"><span class="lineno">  455</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  456</span> </div>
+<div class="line"><span class="lineno">  457</span>  <span class="keyword">struct </span>HookList *hl = <a class="code hl_function" href="hash_8c.html#a21cfc2c56db496fc57d3d85a71c03215">mutt_hash_find</a>(mod_data-&gt;<a class="code hl_variable" href="structHooksModuleData.html#a0357bb0d7f1786ae7501e0d0b55c9dc9">idx_fmt_hooks</a>, name);</div>
+<div class="line"><span class="lineno">  458</span>  <span class="keywordflow">if</span> (!hl)</div>
+<div class="line"><span class="lineno">  459</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPatternCache.html">PatternCache</a> cache = { 0 };</div>
+<div class="line"><span class="lineno">  462</span>  <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structExpando.html">Expando</a> *exp = NULL;</div>
+<div class="line"><span class="lineno">  463</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHook.html">Hook</a> *hook = NULL;</div>
+<div class="line"><span class="lineno">  464</span> </div>
+<div class="line"><span class="lineno">  465</span>  <a class="code hl_define" href="queue_8h.html#a16e5fc168e7f3494d4b1df54447d871e">TAILQ_FOREACH</a>(hook, hl, entries)</div>
+<div class="line"><span class="lineno">  466</span>  {</div>
+<div class="line"><span class="lineno">  467</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structPattern.html">Pattern</a> *pat = <a class="code hl_define" href="queue_8h.html#a91bac7d0d32e3ec56bc579ace45ed8cd">SLIST_FIRST</a>(hook-&gt;<a class="code hl_variable" href="structHook.html#a1c1956f17958dd3142d9cb2c171fb035">pattern</a>);</div>
+<div class="line"><span class="lineno">  468</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="pattern_2exec_8c.html#af131fa5d7ea39b2d806ed30369f401ac">mutt_pattern_exec</a>(pat, 0, m, e, &amp;cache) &gt; 0) ^ hook-&gt;<a class="code hl_variable" href="structHook.html#a1c6336f4645125bf795ad741e925bd86">regex</a>.<a class="code hl_variable" href="structRegex.html#adf40b2d25dabe5abb853946f35fe7c44">pat_not</a>)</div>
+<div class="line"><span class="lineno">  469</span>    {</div>
+<div class="line"><span class="lineno">  470</span>      exp = hook-&gt;<a class="code hl_variable" href="structHook.html#ac53e0f153a033bf8dba3f71d0a200647">expando</a>;</div>
+<div class="line"><span class="lineno">  471</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  472</span>    }</div>
+<div class="line"><span class="lineno">  473</span>  }</div>
+<div class="line"><span class="lineno">  474</span> </div>
+<div class="line"><span class="lineno">  475</span>  <span class="keywordflow">return</span> exp;</div>
+<div class="line"><span class="lineno">  476</span>}</div>
 <div class="ttc" id="ahash_8c_html_a21cfc2c56db496fc57d3d85a71c03215"><div class="ttname"><a href="hash_8c.html#a21cfc2c56db496fc57d3d85a71c03215">mutt_hash_find</a></div><div class="ttdeci">void * mutt_hash_find(const struct HashTable *table, const char *strkey)</div><div class="ttdoc">Find the HashElem data in a Hash Table element using a key.</div><div class="ttdef"><b>Definition</b> <a href="hash_8c_source.html#l00364">hash.c:364</a></div></div>
-<div class="ttc" id="ahooks_2parse_8c_html_a1ca53f19587562575952e7626c839056"><div class="ttname"><a href="hooks_2parse_8c.html#a1ca53f19587562575952e7626c839056">IdxFmtHooks</a></div><div class="ttdeci">struct HashTable * IdxFmtHooks</div><div class="ttdoc">All Index Format hooks.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2parse_8c_source.html#l00052">parse.c:52</a></div></div>
 <div class="ttc" id="astructExpando_html"><div class="ttname"><a href="structExpando.html">Expando</a></div><div class="ttdoc">Parsed Expando trees.</div><div class="ttdef"><b>Definition</b> <a href="expando_2expando_8h_source.html#l00040">expando.h:41</a></div></div>
 <div class="ttc" id="astructHook_html_ac53e0f153a033bf8dba3f71d0a200647"><div class="ttname"><a href="structHook.html#ac53e0f153a033bf8dba3f71d0a200647">Hook::expando</a></div><div class="ttdeci">struct Expando * expando</div><div class="ttdoc">Used for format hooks.</div><div class="ttdef"><b>Definition</b> <a href="hook_8h_source.html#l00039">hook.h:39</a></div></div>
+<div class="ttc" id="astructHooksModuleData_html_a0357bb0d7f1786ae7501e0d0b55c9dc9"><div class="ttname"><a href="structHooksModuleData.html#a0357bb0d7f1786ae7501e0d0b55c9dc9">HooksModuleData::idx_fmt_hooks</a></div><div class="ttdeci">struct HashTable * idx_fmt_hooks</div><div class="ttdoc">All Index Format hooks.</div><div class="ttdef"><b>Definition</b> <a href="hooks_2module__data_8h_source.html#l00036">module_data.h:36</a></div></div>
 <div class="ttc" id="astructPattern_html"><div class="ttname"><a href="structPattern.html">Pattern</a></div><div class="ttdoc">A simple (non-regex) pattern.</div><div class="ttdef"><b>Definition</b> <a href="pattern_2lib_8h_source.html#l00077">lib.h:78</a></div></div>
 </div><!-- fragment --><div id="dynsection-20" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-20-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a80917be2e7aeae0a2bcbc801d5762a6e_cgraph.svg" width="332" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="exec_8h_a80917be2e7aeae0a2bcbc801d5762a6e_cgraph.svg" width="382" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-21" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -986,41 +998,41 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00252">252</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  253</span>{</div>
-<div class="line"><span class="lineno">  254</span>  <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(path, <a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>);</div>
-<div class="line"><span class="lineno">  255</span> </div>
-<div class="line"><span class="lineno">  256</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="hooks_2exec_8c.html#a8865bc311360265962b08cf12378675d">addr_hook</a>(path, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa48a814ab790724b70285f2f484b3581f">CMD_FCC_HOOK</a>, NULL, e) != 0)</div>
-<div class="line"><span class="lineno">  257</span>  {</div>
-<div class="line"><span class="lineno">  258</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *to = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>);</div>
-<div class="line"><span class="lineno">  259</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *cc = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>);</div>
-<div class="line"><span class="lineno">  260</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *bcc = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6">bcc</a>);</div>
-<div class="line"><span class="lineno">  261</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> c_save_name = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;save_name&quot;</span>);</div>
-<div class="line"><span class="lineno">  262</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> c_force_name = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;force_name&quot;</span>);</div>
-<div class="line"><span class="lineno">  263</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_record = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;record&quot;</span>);</div>
-<div class="line"><span class="lineno">  264</span>    <span class="keywordflow">if</span> ((c_save_name || c_force_name) &amp;&amp; (to || cc || bcc))</div>
-<div class="line"><span class="lineno">  265</span>    {</div>
-<div class="line"><span class="lineno">  266</span>      <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *addr = to ? to : (cc ? cc : bcc);</div>
-<div class="line"><span class="lineno">  267</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  268</span>      <a class="code hl_function" href="muttlib_8c.html#a74724ace5a8d1890f9087f1bee0ceb54">generate_save_path</a>(buf, addr);</div>
-<div class="line"><span class="lineno">  269</span>      <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_folder = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;folder&quot;</span>);</div>
-<div class="line"><span class="lineno">  270</span>      <a class="code hl_function" href="buffer_8c.html#adaa2f71e71ace3ab78dacac4dabe99cf">buf_concat_path</a>(path, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_folder), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
-<div class="line"><span class="lineno">  271</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  272</span>      <span class="keywordflow">if</span> (!c_force_name &amp;&amp; (<a class="code hl_function" href="mx_8c.html#a3a49664b99f8c9e57f94c02c922922cd">mx_access</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), W_OK) != 0))</div>
-<div class="line"><span class="lineno">  273</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, c_record);</div>
-<div class="line"><span class="lineno">  274</span>    }</div>
-<div class="line"><span class="lineno">  275</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  276</span>    {</div>
-<div class="line"><span class="lineno">  277</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, c_record);</div>
+<p class="definition">Definition at line <a class="el" href="hooks_2exec_8c_source.html#l00256">256</a> of file <a class="el" href="hooks_2exec_8c_source.html">exec.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  257</span>{</div>
+<div class="line"><span class="lineno">  258</span>  <a class="code hl_function" href="buffer_8c.html#ae144a736bd5f9de289bdc8f27fecf96a">buf_alloc</a>(path, <a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>);</div>
+<div class="line"><span class="lineno">  259</span> </div>
+<div class="line"><span class="lineno">  260</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="hooks_2exec_8c.html#a8865bc311360265962b08cf12378675d">addr_hook</a>(path, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa48a814ab790724b70285f2f484b3581f">CMD_FCC_HOOK</a>, NULL, e) != 0)</div>
+<div class="line"><span class="lineno">  261</span>  {</div>
+<div class="line"><span class="lineno">  262</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *to = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a2d927371b3b80e025d6f7522b7361fe7">to</a>);</div>
+<div class="line"><span class="lineno">  263</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *cc = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#a6b00837b3cb4b41898b42307135be8b6">cc</a>);</div>
+<div class="line"><span class="lineno">  264</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *bcc = <a class="code hl_define" href="queue_8h.html#a7d6894360bd1c41e0e6f6d84998c1362">TAILQ_FIRST</a>(&amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a34cc4493729d7a3b1f4ed783e739a9ec">env</a>-&gt;<a class="code hl_variable" href="structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6">bcc</a>);</div>
+<div class="line"><span class="lineno">  265</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> c_save_name = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;save_name&quot;</span>);</div>
+<div class="line"><span class="lineno">  266</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> c_force_name = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;force_name&quot;</span>);</div>
+<div class="line"><span class="lineno">  267</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_record = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;record&quot;</span>);</div>
+<div class="line"><span class="lineno">  268</span>    <span class="keywordflow">if</span> ((c_save_name || c_force_name) &amp;&amp; (to || cc || bcc))</div>
+<div class="line"><span class="lineno">  269</span>    {</div>
+<div class="line"><span class="lineno">  270</span>      <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structAddress.html">Address</a> *addr = to ? to : (cc ? cc : bcc);</div>
+<div class="line"><span class="lineno">  271</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  272</span>      <a class="code hl_function" href="muttlib_8c.html#a74724ace5a8d1890f9087f1bee0ceb54">generate_save_path</a>(buf, addr);</div>
+<div class="line"><span class="lineno">  273</span>      <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_folder = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;folder&quot;</span>);</div>
+<div class="line"><span class="lineno">  274</span>      <a class="code hl_function" href="buffer_8c.html#adaa2f71e71ace3ab78dacac4dabe99cf">buf_concat_path</a>(path, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(c_folder), <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
+<div class="line"><span class="lineno">  275</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  276</span>      <span class="keywordflow">if</span> (!c_force_name &amp;&amp; (<a class="code hl_function" href="mx_8c.html#a3a49664b99f8c9e57f94c02c922922cd">mx_access</a>(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(path), W_OK) != 0))</div>
+<div class="line"><span class="lineno">  277</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, c_record);</div>
 <div class="line"><span class="lineno">  278</span>    }</div>
-<div class="line"><span class="lineno">  279</span>  }</div>
-<div class="line"><span class="lineno">  280</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  281</span>  {</div>
-<div class="line"><span class="lineno">  282</span>    <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(path);</div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  280</span>    {</div>
+<div class="line"><span class="lineno">  281</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(path, c_record);</div>
+<div class="line"><span class="lineno">  282</span>    }</div>
 <div class="line"><span class="lineno">  283</span>  }</div>
-<div class="line"><span class="lineno">  284</span> </div>
-<div class="line"><span class="lineno">  285</span>  <a class="code hl_function" href="muttlib_8c.html#a795f96cfea0cbef439e21b16e4613c70">pretty_mailbox</a>(path);</div>
-<div class="line"><span class="lineno">  286</span>}</div>
+<div class="line"><span class="lineno">  284</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  285</span>  {</div>
+<div class="line"><span class="lineno">  286</span>    <a class="code hl_function" href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a>(path);</div>
+<div class="line"><span class="lineno">  287</span>  }</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>  <a class="code hl_function" href="muttlib_8c.html#a795f96cfea0cbef439e21b16e4613c70">pretty_mailbox</a>(path);</div>
+<div class="line"><span class="lineno">  290</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a4964d146427002ec3b52e121513b6078"><div class="ttname"><a href="buffer_8c.html#a4964d146427002ec3b52e121513b6078">buf_fix_dptr</a></div><div class="ttdeci">void buf_fix_dptr(struct Buffer *buf)</div><div class="ttdoc">Move the dptr to end of the Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00182">buffer.c:182</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00395">buffer.c:395</a></div></div>
 <div class="ttc" id="abuffer_8c_html_adaa2f71e71ace3ab78dacac4dabe99cf"><div class="ttname"><a href="buffer_8c.html#adaa2f71e71ace3ab78dacac4dabe99cf">buf_concat_path</a></div><div class="ttdeci">size_t buf_concat_path(struct Buffer *buf, const char *dir, const char *fname)</div><div class="ttdoc">Join a directory name and a filename.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00509">buffer.c:509</a></div></div>
@@ -1033,7 +1045,6 @@ Functions</h2></td></tr>
 <div class="ttc" id="amx_8c_html_a3a49664b99f8c9e57f94c02c922922cd"><div class="ttname"><a href="mx_8c.html#a3a49664b99f8c9e57f94c02c922922cd">mx_access</a></div><div class="ttdeci">int mx_access(const char *path, int flags)</div><div class="ttdoc">Wrapper for access, checks permissions on a given mailbox.</div><div class="ttdef"><b>Definition</b> <a href="mx_8c_source.html#l00167">mx.c:167</a></div></div>
 <div class="ttc" id="astring2_8h_html_a7e0481bed27661ea2679f256b24e0283"><div class="ttname"><a href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a></div><div class="ttdeci">#define NONULL(x)</div><div class="ttdef"><b>Definition</b> <a href="string2_8h_source.html#l00044">string2.h:44</a></div></div>
 <div class="ttc" id="astructEnvelope_html_aad427832f4ae422f1b16d0896c1d3af6"><div class="ttname"><a href="structEnvelope.html#aad427832f4ae422f1b16d0896c1d3af6">Envelope::bcc</a></div><div class="ttdeci">struct AddressList bcc</div><div class="ttdoc">Email&#39;s &#39;Bcc&#39; list.</div><div class="ttdef"><b>Definition</b> <a href="envelope_8h_source.html#l00062">envelope.h:62</a></div></div>
-<div class="ttc" id="astructNeoMutt_html"><div class="ttname"><a href="structNeoMutt.html">NeoMutt</a></div><div class="ttdoc">Container for Accounts, Notifications.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00040">neomutt.h:41</a></div></div>
 <div class="ttc" id="astructNeoMutt_html_af98065e32243ce9331f93b7f30247d47"><div class="ttname"><a href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">NeoMutt::sub</a></div><div class="ttdeci">struct ConfigSubset * sub</div><div class="ttdoc">Inherited config items.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00049">neomutt.h:49</a></div></div>
 </div><!-- fragment --><div id="dynsection-22" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

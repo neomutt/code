@@ -1,4 +1,5 @@
 var structHcacheModuleData =
 [
-    [ "dummy", "structHcacheModuleData.html#a340911caa76ff8e494e6bdcf3ba4869e", null ]
+    [ "notify", "structHcacheModuleData.html#aca172a8ba3b0cdb82dcc59d955f637f7", null ],
+    [ "hcache_ver", "structHcacheModuleData.html#a860a63af56061d349b0f39357f0b994b", null ]
 ];

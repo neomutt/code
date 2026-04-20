@@ -6,6 +6,5 @@ var sendmail_8c =
     [ "add_args_one", "sendmail_8c.html#a775a6900fd7b558911bce67d12309efb", null ],
     [ "add_args", "sendmail_8c.html#a492b848b5a5c33e12921abfce28cf710", null ],
     [ "mutt_invoke_sendmail", "sendmail_8c.html#a5562a863571c41379b43fd780735776c", null ],
-    [ "environ", "sendmail_8c.html#aa006daaf11f1e2e45a6ababaf463212b", null ],
-    [ "SigAlrm", "sendmail_8c.html#a99dca806fe630b3dc17a66c37aaa522b", null ]
+    [ "environ", "sendmail_8c.html#aa006daaf11f1e2e45a6ababaf463212b", null ]
 ];

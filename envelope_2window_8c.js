@@ -2,7 +2,7 @@ var envelope_2window_8c =
 [
     [ "MAX_ADDR_ROWS", "envelope_2window_8c.html#ae0a35f3369b4cd706f92571c89a99b34", null ],
     [ "MAX_USER_HDR_ROWS", "envelope_2window_8c.html#a5d9bfff8fe9b32f6ffa8df2576ef0e88", null ],
-    [ "calc_header_width_padding", "envelope_2window_8c.html#aef0c67b5c00c17dd35738a4fdc6b65a3", null ],
+    [ "calc_header_width_padding", "envelope_2window_8c.html#a0234894985975c28a07b3ac4e127af09", null ],
     [ "init_header_padding", "envelope_2window_8c.html#afc34fec9cb024fbc4c2e4d1b72e90ac5", null ],
     [ "calc_address", "envelope_2window_8c.html#a99e5972d260ada77dbf5e88459809306", null ],
     [ "calc_security", "envelope_2window_8c.html#ad8a877791bfe53ca05c98d5fb6446618", null ],
@@ -23,8 +23,6 @@ var envelope_2window_8c =
     [ "env_header_observer", "group__observer__api.html#gacdc7c66fc574f737b04ed0b1656606f8", null ],
     [ "env_window_observer", "group__observer__api.html#ga40426dda1c3cd4ab6e14652d2e9864c6", null ],
     [ "env_window_new", "envelope_2window_8c.html#aa48c162ddd86aad8444f441051033e8f", null ],
-    [ "HeaderPadding", "envelope_2window_8c.html#a2dc7f233f069332ab5fd13ebb6a32934", null ],
-    [ "MaxHeaderWidth", "envelope_2window_8c.html#aa57902c74e4b99785680a0bc4e263029", null ],
     [ "Prompts", "envelope_2window_8c.html#a577b891ac761db94d93ff7d31e9670bb", null ],
     [ "AutocryptRecUiFlags", "envelope_2window_8c.html#a13b77578cd363a96a5d4a5d8478716fd", null ]
 ];

@@ -1,4 +1,25 @@
 var structColorModuleData =
 [
-    [ "dummy", "structColorModuleData.html#ac8b2c8395c2a73e0b59123e4f90f879e", null ]
+    [ "notify", "structColorModuleData.html#ab776ea04c890f4b9558ad639bd2b6ceb", null ],
+    [ "curses_colors", "structColorModuleData.html#a8f69a8372e6ab08bd55464bdb82b5c9b", null ],
+    [ "num_curses_colors", "structColorModuleData.html#a85fd4dd7d5a04b4f515e0f56e3f06cc1", null ],
+    [ "merged_colors", "structColorModuleData.html#a51d571aebda7537078c075be05877016", null ],
+    [ "colors_notify", "structColorModuleData.html#ab359dd9c08b0342dffac3d23981ee377", null ],
+    [ "num_quoted_colors", "structColorModuleData.html#ae4fa75e0843c38f375a0a8b95bee323c", null ],
+    [ "simple_colors", "structColorModuleData.html#abeb5cceecc94f8c977e5d29fa1cdf60d", null ],
+    [ "attach_list", "structColorModuleData.html#a3ca33f79b81ef61da85c93e4ad02c2e5", null ],
+    [ "body_list", "structColorModuleData.html#a53dfe22309d9abe17207906570da7c34", null ],
+    [ "header_list", "structColorModuleData.html#ac4a9df1a9708781ab53932c8db9be2cd", null ],
+    [ "index_author_list", "structColorModuleData.html#abe49a702e273bf33f2a0ee251862189c", null ],
+    [ "index_collapsed_list", "structColorModuleData.html#a0e7d476986a42926f5e128bdb676b19d", null ],
+    [ "index_date_list", "structColorModuleData.html#aca26cd0a7506173501e7bda84221c078", null ],
+    [ "index_flags_list", "structColorModuleData.html#a6ea705013ee890bf85e021e761069b6c", null ],
+    [ "index_label_list", "structColorModuleData.html#a7ae21586989d04c4d42d0201a0f85937", null ],
+    [ "index_list", "structColorModuleData.html#aab37a88837c729c47ee9ccf9231f23e4", null ],
+    [ "index_number_list", "structColorModuleData.html#ae5ffe472748eab600bccc2f90b6c8ec7", null ],
+    [ "index_size_list", "structColorModuleData.html#aa9a3869a2185c5f597947f4727222dc3", null ],
+    [ "index_subject_list", "structColorModuleData.html#a180e8f47a105c245a2e989c863fd8479", null ],
+    [ "index_tag_list", "structColorModuleData.html#aef9177b58756e1a6640c9422fa708b2c", null ],
+    [ "index_tags_list", "structColorModuleData.html#a93082a4c626b0da7f3a7a172d2cd4504", null ],
+    [ "status_list", "structColorModuleData.html#ae7d81653db24a2d792961674afb248b3", null ]
 ];

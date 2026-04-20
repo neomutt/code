@@ -1,4 +1,4 @@
 var structBcacheModuleData =
 [
-    [ "dummy", "structBcacheModuleData.html#a96cc50dac773616b660a6fae397b8502", null ]
+    [ "notify", "structBcacheModuleData.html#ab15f0683f2ffa96dd44af4d7656bb5e5", null ]
 ];

@@ -1,4 +1,4 @@
 var structPopModuleData =
 [
-    [ "dummy", "structPopModuleData.html#a491c62891d8fbb479814b58d37751c50", null ]
+    [ "notify", "structPopModuleData.html#a0851d9e98fa5fc68c0259e3e8ed86d5f", null ]
 ];

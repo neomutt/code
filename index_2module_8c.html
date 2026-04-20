@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-694-ga89709</span>
+   &#160;<span id="projectnumber">2025-12-11-769-g906513</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -197,23 +197,30 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00045">45</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   46</span>{</div>
-<div class="line"><span class="lineno">   47</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a> *md = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a>);</div>
-<div class="line"><span class="lineno">   48</span>  <a class="code hl_function" href="neomutt_8c.html#a011703fce5587658fecea69131a65630">neomutt_set_module_data</a>(n, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>, md);</div>
+<div class="line"><span class="lineno">   47</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a> *mod_data = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a>);</div>
+<div class="line"><span class="lineno">   48</span>  <a class="code hl_function" href="neomutt_8c.html#a011703fce5587658fecea69131a65630">neomutt_set_module_data</a>(n, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>, mod_data);</div>
 <div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span>  <a class="code hl_function" href="subjectrx_8c.html#a42d78b2db7b6fa9ec566f57e480129d3">subjectrx_init</a>(n, md);</div>
-<div class="line"><span class="lineno">   51</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   52</span>}</div>
+<div class="line"><span class="lineno">   50</span>  mod_data-&gt;<a class="code hl_variable" href="structIndexModuleData.html#ac59c12d5357de124ed544947ffe6316a">notify</a> = <a class="code hl_function" href="mutt_2notify_8c.html#aab089bbeb68401c414defe73e53e4af1">notify_new</a>();</div>
+<div class="line"><span class="lineno">   51</span>  <a class="code hl_function" href="mutt_2notify_8c.html#ae467a73cac36feec67e38b695f67d0a5">notify_set_parent</a>(mod_data-&gt;<a class="code hl_variable" href="structIndexModuleData.html#ac59c12d5357de124ed544947ffe6316a">notify</a>, n-&gt;<a class="code hl_variable" href="structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b">notify</a>);</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>  <a class="code hl_function" href="subjectrx_8c.html#af4ff3962ca4be5f874112201cf5e8d25">subjectrx_init</a>(n, mod_data);</div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   55</span>}</div>
 <div class="ttc" id="amemory_8h_html_a9aaf8f21a29735767a069ff1aee9d7d9"><div class="ttname"><a href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a></div><div class="ttdeci">#define MUTT_MEM_CALLOC(n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00052">memory.h:52</a></div></div>
 <div class="ttc" id="amodule__api_8h_html_a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9"><div class="ttname"><a href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a></div><div class="ttdeci">@ MODULE_ID_INDEX</div><div class="ttdoc">ModuleIndex, Index</div><div class="ttdef"><b>Definition</b> <a href="module__api_8h_source.html#l00072">module_api.h:72</a></div></div>
-<div class="ttc" id="aneomutt_8c_html_a011703fce5587658fecea69131a65630"><div class="ttname"><a href="neomutt_8c.html#a011703fce5587658fecea69131a65630">neomutt_set_module_data</a></div><div class="ttdeci">void neomutt_set_module_data(struct NeoMutt *n, enum ModuleId id, void *data)</div><div class="ttdoc">Set the private data for a Module.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8c_source.html#l00599">neomutt.c:599</a></div></div>
+<div class="ttc" id="amutt_2notify_8c_html_aab089bbeb68401c414defe73e53e4af1"><div class="ttname"><a href="mutt_2notify_8c.html#aab089bbeb68401c414defe73e53e4af1">notify_new</a></div><div class="ttdeci">struct Notify * notify_new(void)</div><div class="ttdoc">Create a new notifications handler.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2notify_8c_source.html#l00062">notify.c:62</a></div></div>
+<div class="ttc" id="amutt_2notify_8c_html_ae467a73cac36feec67e38b695f67d0a5"><div class="ttname"><a href="mutt_2notify_8c.html#ae467a73cac36feec67e38b695f67d0a5">notify_set_parent</a></div><div class="ttdeci">void notify_set_parent(struct Notify *notify, struct Notify *parent)</div><div class="ttdoc">Set the parent notification handler.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2notify_8c_source.html#l00095">notify.c:95</a></div></div>
+<div class="ttc" id="aneomutt_8c_html_a011703fce5587658fecea69131a65630"><div class="ttname"><a href="neomutt_8c.html#a011703fce5587658fecea69131a65630">neomutt_set_module_data</a></div><div class="ttdeci">void neomutt_set_module_data(struct NeoMutt *n, enum ModuleId id, void *data)</div><div class="ttdoc">Set the private data for a Module.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8c_source.html#l00679">neomutt.c:679</a></div></div>
 <div class="ttc" id="astructIndexModuleData_html"><div class="ttname"><a href="structIndexModuleData.html">IndexModuleData</a></div><div class="ttdoc">Index private Module data.</div><div class="ttdef"><b>Definition</b> <a href="index_2module__data_8h_source.html#l00031">module_data.h:32</a></div></div>
-<div class="ttc" id="asubjectrx_8c_html_a42d78b2db7b6fa9ec566f57e480129d3"><div class="ttname"><a href="subjectrx_8c.html#a42d78b2db7b6fa9ec566f57e480129d3">subjectrx_init</a></div><div class="ttdeci">void subjectrx_init(struct NeoMutt *n, struct IndexModuleData *md)</div><div class="ttdoc">Create new Subject Regex List.</div><div class="ttdef"><b>Definition</b> <a href="subjectrx_8c_source.html#l00042">subjectrx.c:42</a></div></div>
+<div class="ttc" id="astructIndexModuleData_html_ac59c12d5357de124ed544947ffe6316a"><div class="ttname"><a href="structIndexModuleData.html#ac59c12d5357de124ed544947ffe6316a">IndexModuleData::notify</a></div><div class="ttdeci">struct Notify * notify</div><div class="ttdoc">Notifications.</div><div class="ttdef"><b>Definition</b> <a href="index_2module__data_8h_source.html#l00033">module_data.h:33</a></div></div>
+<div class="ttc" id="astructNeoMutt_html_adaa5ed0e6cc9e642769b0df74594700b"><div class="ttname"><a href="structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b">NeoMutt::notify</a></div><div class="ttdeci">struct Notify * notify</div><div class="ttdoc">Notifications handler.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00045">neomutt.h:45</a></div></div>
+<div class="ttc" id="asubjectrx_8c_html_af4ff3962ca4be5f874112201cf5e8d25"><div class="ttname"><a href="subjectrx_8c.html#af4ff3962ca4be5f874112201cf5e8d25">subjectrx_init</a></div><div class="ttdeci">void subjectrx_init(struct NeoMutt *n, struct IndexModuleData *mod_data)</div><div class="ttdoc">Create new Subject Regex List.</div><div class="ttdef"><b>Definition</b> <a href="subjectrx_8c_source.html#l00042">subjectrx.c:42</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="index_2module_8c_a5caf1129b5b91c6a3ab370450d919ad2_cgraph.svg" width="324" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="index_2module_8c_a5caf1129b5b91c6a3ab370450d919ad2_cgraph.svg" width="502" height="174"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -247,10 +254,10 @@ Variables</h2></td></tr>
 
 <p>Define the Config Variables - Implements <a class="el" href="structModule.html#ae830ace5a3287021f74d2469bfab9dd5">Module::config_define_variables()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00057">57</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
-<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="config_2set_8c.html#aa45f10fa8d9dc8fa21a3ae722ac309fe">cs_register_variables</a>(cs, <a class="code hl_variable" href="index_2config_8c.html#a58abece13f295a641288d6ec98534c5c">IndexVars</a>);</div>
-<div class="line"><span class="lineno">   60</span>}</div>
+<p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00060">60</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>{</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="config_2set_8c.html#aa45f10fa8d9dc8fa21a3ae722ac309fe">cs_register_variables</a>(cs, <a class="code hl_variable" href="index_2config_8c.html#a58abece13f295a641288d6ec98534c5c">IndexVars</a>);</div>
+<div class="line"><span class="lineno">   63</span>}</div>
 <div class="ttc" id="aconfig_2set_8c_html_aa45f10fa8d9dc8fa21a3ae722ac309fe"><div class="ttname"><a href="config_2set_8c.html#aa45f10fa8d9dc8fa21a3ae722ac309fe">cs_register_variables</a></div><div class="ttdeci">bool cs_register_variables(const struct ConfigSet *cs, struct ConfigDef vars[])</div><div class="ttdoc">Register a set of config items.</div><div class="ttdef"><b>Definition</b> <a href="config_2set_8c_source.html#l00290">set.c:290</a></div></div>
 <div class="ttc" id="aindex_2config_8c_html_a58abece13f295a641288d6ec98534c5c"><div class="ttname"><a href="index_2config_8c.html#a58abece13f295a641288d6ec98534c5c">IndexVars</a></div><div class="ttdeci">struct ConfigDef IndexVars[]</div><div class="ttdoc">Config definitions for the Index.</div><div class="ttdef"><b>Definition</b> <a href="index_2config_8c_source.html#l00087">config.c:87</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -292,10 +299,10 @@ Variables</h2></td></tr>
 
 <p>Register <a class="el" href="structNeoMutt.html" title="Container for Accounts, Notifications.">NeoMutt</a> Commands - Implements <a class="el" href="structModule.html#ade2ca5c5c0a45f67c7e0580aefd3a630">Module::commands_register()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00065">65</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>{</div>
-<div class="line"><span class="lineno">   67</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="core_2command_8c.html#a1763d41d44392438fea7833979888888">commands_register</a>(ca, <a class="code hl_variable" href="index_2commands_8c.html#a3e762c37674ae14d4cd1b60af92236f8">IndexCommands</a>);</div>
-<div class="line"><span class="lineno">   68</span>}</div>
+<p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00068">68</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   69</span>{</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="core_2command_8c.html#a1763d41d44392438fea7833979888888">commands_register</a>(ca, <a class="code hl_variable" href="index_2commands_8c.html#a3e762c37674ae14d4cd1b60af92236f8">IndexCommands</a>);</div>
+<div class="line"><span class="lineno">   71</span>}</div>
 <div class="ttc" id="acore_2command_8c_html_a1763d41d44392438fea7833979888888"><div class="ttname"><a href="core_2command_8c.html#a1763d41d44392438fea7833979888888">commands_register</a></div><div class="ttdeci">bool commands_register(struct CommandArray *ca, const struct Command *cmds)</div><div class="ttdoc">Add commands to Commands array.</div><div class="ttdef"><b>Definition</b> <a href="core_2command_8c_source.html#l00051">command.c:51</a></div></div>
 <div class="ttc" id="aindex_2commands_8c_html_a3e762c37674ae14d4cd1b60af92236f8"><div class="ttname"><a href="index_2commands_8c.html#a3e762c37674ae14d4cd1b60af92236f8">IndexCommands</a></div><div class="ttdeci">const struct Command IndexCommands[]</div><div class="ttdoc">Index Commands.</div><div class="ttdef"><b>Definition</b> <a href="index_2commands_8c_source.html#l00038">commands.c:38</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -333,26 +340,29 @@ Variables</h2></td></tr>
 
 <p>Clean up a <a class="el" href="structModule.html">Module</a> - Implements <a class="el" href="structModule.html#a7432d140eea6dbec2af4baf97a6bb2df">Module::cleanup()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00073">73</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
-<div class="line"><span class="lineno">   75</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a> *md = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(n, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>);</div>
-<div class="line"><span class="lineno">   76</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(md);</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>  <a class="code hl_function" href="subjectrx_8c.html#a9a1541a42d58c6d6ebdfc139476796b7">subjectrx_cleanup</a>(md);</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;md);</div>
-<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   82</span>}</div>
+<p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00076">76</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>{</div>
+<div class="line"><span class="lineno">   78</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(n, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>);</div>
+<div class="line"><span class="lineno">   79</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(mod_data);</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>  <a class="code hl_function" href="mutt_2notify_8c.html#ae7fe885788b891a9f2b0bf6c5aae2613">notify_free</a>(&amp;mod_data-&gt;<a class="code hl_variable" href="structIndexModuleData.html#ac59c12d5357de124ed544947ffe6316a">notify</a>);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>  <a class="code hl_function" href="subjectrx_8c.html#a870c6475b25119931d6724d402d6582c">subjectrx_cleanup</a>(mod_data);</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mod_data);</div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   87</span>}</div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdoc">Free memory and set the pointer to NULL.</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00068">memory.h:68</a></div></div>
-<div class="ttc" id="aneomutt_8c_html_ab58efd47fa66c8187cfdce43078c94fa"><div class="ttname"><a href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a></div><div class="ttdeci">void * neomutt_get_module_data(struct NeoMutt *n, enum ModuleId id)</div><div class="ttdoc">Get the private data for a Module.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8c_source.html#l00585">neomutt.c:585</a></div></div>
+<div class="ttc" id="amutt_2notify_8c_html_ae7fe885788b891a9f2b0bf6c5aae2613"><div class="ttname"><a href="mutt_2notify_8c.html#ae7fe885788b891a9f2b0bf6c5aae2613">notify_free</a></div><div class="ttdeci">void notify_free(struct Notify **ptr)</div><div class="ttdoc">Free a notification handler.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2notify_8c_source.html#l00075">notify.c:75</a></div></div>
+<div class="ttc" id="aneomutt_8c_html_ab58efd47fa66c8187cfdce43078c94fa"><div class="ttname"><a href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a></div><div class="ttdeci">void * neomutt_get_module_data(struct NeoMutt *n, enum ModuleId id)</div><div class="ttdoc">Get the private data for a Module.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8c_source.html#l00665">neomutt.c:665</a></div></div>
 <div class="ttc" id="asignal2_8h_html_a903f9b298be75defd8a3043ebf62bd99"><div class="ttname"><a href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a></div><div class="ttdeci">#define ASSERT(COND)</div><div class="ttdef"><b>Definition</b> <a href="signal2_8h_source.html#l00059">signal2.h:59</a></div></div>
-<div class="ttc" id="asubjectrx_8c_html_a9a1541a42d58c6d6ebdfc139476796b7"><div class="ttname"><a href="subjectrx_8c.html#a9a1541a42d58c6d6ebdfc139476796b7">subjectrx_cleanup</a></div><div class="ttdeci">void subjectrx_cleanup(struct IndexModuleData *md)</div><div class="ttdoc">Free the Subject Regex List.</div><div class="ttdef"><b>Definition</b> <a href="subjectrx_8c_source.html#l00053">subjectrx.c:53</a></div></div>
+<div class="ttc" id="asubjectrx_8c_html_a870c6475b25119931d6724d402d6582c"><div class="ttname"><a href="subjectrx_8c.html#a870c6475b25119931d6724d402d6582c">subjectrx_cleanup</a></div><div class="ttdeci">void subjectrx_cleanup(struct IndexModuleData *mod_data)</div><div class="ttdoc">Free the Subject Regex List.</div><div class="ttdef"><b>Definition</b> <a href="subjectrx_8c_source.html#l00053">subjectrx.c:53</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="index_2module_8c_ad118ec31d45f2b122750e6e0571b6fd8_cgraph.svg" width="356" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="index_2module_8c_ad118ec31d45f2b122750e6e0571b6fd8_cgraph.svg" width="494" height="144"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -543,25 +553,25 @@ Variables</h2></td></tr>
 <div class="line">  NULL, </div>
 <div class="line">  <a class="code hl_function" href="#ad118ec31d45f2b122750e6e0571b6fd8">index_cleanup</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="aindex_2module_8c_html_a3d487f54ef37c710ff31c2d334c65238"><div class="ttname"><a href="#a3d487f54ef37c710ff31c2d334c65238">index_config_define_variables</a></div><div class="ttdeci">static bool index_config_define_variables(struct NeoMutt *n, struct ConfigSet *cs)</div><div class="ttdoc">Define the Config Variables - Implements Module::config_define_variables()</div><div class="ttdef"><b>Definition</b> <a href="index_2module_8c_source.html#l00057">module.c:57</a></div></div>
+<div class="ttc" id="aindex_2module_8c_html_a3d487f54ef37c710ff31c2d334c65238"><div class="ttname"><a href="#a3d487f54ef37c710ff31c2d334c65238">index_config_define_variables</a></div><div class="ttdeci">static bool index_config_define_variables(struct NeoMutt *n, struct ConfigSet *cs)</div><div class="ttdoc">Define the Config Variables - Implements Module::config_define_variables()</div><div class="ttdef"><b>Definition</b> <a href="index_2module_8c_source.html#l00060">module.c:60</a></div></div>
 <div class="ttc" id="aindex_2module_8c_html_a5caf1129b5b91c6a3ab370450d919ad2"><div class="ttname"><a href="#a5caf1129b5b91c6a3ab370450d919ad2">index_init</a></div><div class="ttdeci">static bool index_init(struct NeoMutt *n)</div><div class="ttdoc">Initialise a Module - Implements Module::init()</div><div class="ttdef"><b>Definition</b> <a href="index_2module_8c_source.html#l00045">module.c:45</a></div></div>
-<div class="ttc" id="aindex_2module_8c_html_aaa71290648dc3e821bf74b1bd04ba4f3"><div class="ttname"><a href="#aaa71290648dc3e821bf74b1bd04ba4f3">index_commands_register</a></div><div class="ttdeci">static bool index_commands_register(struct NeoMutt *n, struct CommandArray *ca)</div><div class="ttdoc">Register NeoMutt Commands - Implements Module::commands_register()</div><div class="ttdef"><b>Definition</b> <a href="index_2module_8c_source.html#l00065">module.c:65</a></div></div>
-<div class="ttc" id="aindex_2module_8c_html_ad118ec31d45f2b122750e6e0571b6fd8"><div class="ttname"><a href="#ad118ec31d45f2b122750e6e0571b6fd8">index_cleanup</a></div><div class="ttdeci">static bool index_cleanup(struct NeoMutt *n)</div><div class="ttdoc">Clean up a Module - Implements Module::cleanup()</div><div class="ttdef"><b>Definition</b> <a href="index_2module_8c_source.html#l00073">module.c:73</a></div></div>
+<div class="ttc" id="aindex_2module_8c_html_aaa71290648dc3e821bf74b1bd04ba4f3"><div class="ttname"><a href="#aaa71290648dc3e821bf74b1bd04ba4f3">index_commands_register</a></div><div class="ttdeci">static bool index_commands_register(struct NeoMutt *n, struct CommandArray *ca)</div><div class="ttdoc">Register NeoMutt Commands - Implements Module::commands_register()</div><div class="ttdef"><b>Definition</b> <a href="index_2module_8c_source.html#l00068">module.c:68</a></div></div>
+<div class="ttc" id="aindex_2module_8c_html_ad118ec31d45f2b122750e6e0571b6fd8"><div class="ttname"><a href="#ad118ec31d45f2b122750e6e0571b6fd8">index_cleanup</a></div><div class="ttdeci">static bool index_cleanup(struct NeoMutt *n)</div><div class="ttdoc">Clean up a Module - Implements Module::cleanup()</div><div class="ttdef"><b>Definition</b> <a href="index_2module_8c_source.html#l00076">module.c:76</a></div></div>
 </div><!-- fragment -->
 <p><a class="el" href="structModule.html">Module</a> for the Index library. </p>
 
-<p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00087">87</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                                  {</div>
-<div class="line"><span class="lineno">   88</span>  <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>,</div>
-<div class="line"><span class="lineno">   89</span>  <span class="stringliteral">&quot;index&quot;</span>,</div>
-<div class="line"><span class="lineno">   90</span>  <a class="code hl_function" href="#a5caf1129b5b91c6a3ab370450d919ad2">index_init</a>,</div>
-<div class="line"><span class="lineno">   91</span>  NULL, <span class="comment">// config_define_types</span></div>
-<div class="line"><span class="lineno">   92</span>  <a class="code hl_function" href="#a3d487f54ef37c710ff31c2d334c65238">index_config_define_variables</a>,</div>
-<div class="line"><span class="lineno">   93</span>  <a class="code hl_function" href="#aaa71290648dc3e821bf74b1bd04ba4f3">index_commands_register</a>,</div>
-<div class="line"><span class="lineno">   94</span>  NULL, <span class="comment">// gui_init</span></div>
-<div class="line"><span class="lineno">   95</span>  NULL, <span class="comment">// gui_cleanup</span></div>
-<div class="line"><span class="lineno">   96</span>  <a class="code hl_function" href="#ad118ec31d45f2b122750e6e0571b6fd8">index_cleanup</a>,</div>
-<div class="line"><span class="lineno">   97</span>};</div>
+<p class="definition">Definition at line <a class="el" href="index_2module_8c_source.html#l00092">92</a> of file <a class="el" href="index_2module_8c_source.html">module.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   92</span>                                  {</div>
+<div class="line"><span class="lineno">   93</span>  <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>,</div>
+<div class="line"><span class="lineno">   94</span>  <span class="stringliteral">&quot;index&quot;</span>,</div>
+<div class="line"><span class="lineno">   95</span>  <a class="code hl_function" href="#a5caf1129b5b91c6a3ab370450d919ad2">index_init</a>,</div>
+<div class="line"><span class="lineno">   96</span>  NULL, <span class="comment">// config_define_types</span></div>
+<div class="line"><span class="lineno">   97</span>  <a class="code hl_function" href="#a3d487f54ef37c710ff31c2d334c65238">index_config_define_variables</a>,</div>
+<div class="line"><span class="lineno">   98</span>  <a class="code hl_function" href="#aaa71290648dc3e821bf74b1bd04ba4f3">index_commands_register</a>,</div>
+<div class="line"><span class="lineno">   99</span>  NULL, <span class="comment">// gui_init</span></div>
+<div class="line"><span class="lineno">  100</span>  NULL, <span class="comment">// gui_cleanup</span></div>
+<div class="line"><span class="lineno">  101</span>  <a class="code hl_function" href="#ad118ec31d45f2b122750e6e0571b6fd8">index_cleanup</a>,</div>
+<div class="line"><span class="lineno">  102</span>};</div>
 </div><!-- fragment -->
 </div>
 </div>

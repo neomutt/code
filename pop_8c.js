@@ -2,6 +2,7 @@ var pop_8c =
 [
     [ "HC_FNAME", "pop_8c.html#a33dd225b4dd2d3c29644e01b60cf4723", null ],
     [ "HC_FEXT", "pop_8c.html#ab0029aa20b987416bdcd51e73e7091b5", null ],
+    [ "POP_MAX_MESSAGES", "pop_8c.html#ac804c10fa30e0e65cab6da1af5befe4d", null ],
     [ "cache_id", "pop_8c.html#a8028dffa5685f875d203a82270d9dcc0", null ],
     [ "fetch_message", "group__pop__fetch__api.html#ga3cc06c4686cd79cfa3177fca6a868fa2", null ],
     [ "pop_read_header", "pop_8c.html#ac8590e3bcca739faf5b19884475fa008", null ],

@@ -1,7 +1,7 @@
 var browser_2functions_8c =
 [
     [ "op_subscribe_pattern", "group__browser__function__api.html#gab09ef3c37070ba99d6615bb435ea4aca", null ],
-    [ "browser_init_keys", "browser_2functions_8c.html#a45d23de60e080ebc64aead7ad44d3321", null ],
+    [ "browser_init_keys", "browser_2functions_8c.html#a71be83234d04d6eeaa2e082d4a1a9a6c", null ],
     [ "destroy_state", "browser_2functions_8c.html#aaff67d90e29ac36d805fd778fca74225", null ],
     [ "op_browser_new_file", "group__browser__function__api.html#ga0bccf946b41c27d0b96eda61c2051107", null ],
     [ "op_browser_subscribe", "group__browser__function__api.html#ga8e93c936702312b969a62b0b32611109", null ],
@@ -21,7 +21,6 @@ var browser_2functions_8c =
     [ "op_sort", "group__browser__function__api.html#gaf07f0fc42d6df79cefdadd1a6c91f855", null ],
     [ "op_toggle_mailboxes", "group__browser__function__api.html#gabdc4fc2227cefc2b4aa3505aab214e0b", null ],
     [ "browser_function_dispatcher", "browser_2functions_8c.html#ab213fe098422aa77d777dbca70a54536", null ],
-    [ "MdBrowser", "browser_2functions_8c.html#a0f6bcf89b46291788057125d347258fc", null ],
     [ "OpBrowser", "browser_2functions_8c.html#a55fe14d3ed8aaa06fd626170368f7bfe", null ],
     [ "BrowserDefaultBindings", "browser_2functions_8c.html#a44b64cc2f259cfbc2dfef33096461a97", null ],
     [ "BrowserFunctions", "browser_2functions_8c.html#ae678937f9a350be7f44cce7beca12284", null ]

@@ -16,6 +16,8 @@ var neomutt_8h =
     [ "neomutt_set_module_data", "neomutt_8h.html#a011703fce5587658fecea69131a65630", null ],
     [ "neomutt_init", "neomutt_8h.html#a7d969b52986d9f9b4792df545b1fce3b", null ],
     [ "neomutt_cleanup", "neomutt_8h.html#a72a28bdb53b99fb38404fb4402d6fdae", null ],
+    [ "neomutt_gui_init", "neomutt_8h.html#afe904e2069a1bd55105564729f013ed0", null ],
+    [ "neomutt_gui_cleanup", "neomutt_8h.html#ac78e563eea88e9cc2452b2d9facf3b44", null ],
     [ "neomutt_mailboxes_get", "neomutt_8h.html#a0ab1ee9d8b5db4e46543039bc6aa2d58", null ],
     [ "NeoMutt", "neomutt_8h.html#af4e00a7436ecc725b5a801685fadf3f4", null ]
 ];

@@ -1,4 +1,4 @@
 var structHelpbarModuleData =
 [
-    [ "dummy", "structHelpbarModuleData.html#ac6f260ae38eca67342abac98b91e7bdf", null ]
+    [ "notify", "structHelpbarModuleData.html#ac8a20fbf87f17e4d006975e513c19f67", null ]
 ];

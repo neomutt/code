@@ -1,4 +1,4 @@
 var structCompleteModuleData =
 [
-    [ "dummy", "structCompleteModuleData.html#ae7ecb5edaa4a3a059bf700786cc4d404", null ]
+    [ "notify", "structCompleteModuleData.html#ad922a903cc424b0d4ea2a08daef7db58", null ]
 ];

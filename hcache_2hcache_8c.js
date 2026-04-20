@@ -24,6 +24,5 @@ var hcache_2hcache_8c =
     [ "hcache_store_email", "hcache_2hcache_8c.html#a9e0172956ca278dc113eefc10baef638", null ],
     [ "hcache_store_raw", "hcache_2hcache_8c.html#acca0b66c75e59b1400da46b646e6bb9c", null ],
     [ "hcache_delete_email", "hcache_2hcache_8c.html#a66e48b640205127c7a4bb987b8d0192d", null ],
-    [ "hcache_delete_raw", "hcache_2hcache_8c.html#aaceee97c4d9607a5d2ce3569f2e17a01", null ],
-    [ "HcacheVer", "hcache_2hcache_8c.html#a1b15c2ded777ad141f333765bdf1827c", null ]
+    [ "hcache_delete_raw", "hcache_2hcache_8c.html#aaceee97c4d9607a5d2ce3569f2e17a01", null ]
 ];

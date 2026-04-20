@@ -33,10 +33,5 @@ var smime_8c =
     [ "smime_handle_entity", "smime_8c.html#a83eb7260d3b15365720064e2db623b34", null ],
     [ "smime_class_decrypt_mime", "group__crypto__decrypt__mime.html#ga9885e7131d9a5d4053b196bbe146af40", null ],
     [ "smime_class_application_handler", "group__crypto__application__handler.html#ga77eef2288f13097abdd210ac1ed1e4d1", null ],
-    [ "smime_class_send_menu", "group__crypto__send__menu.html#ga95da8ee8b6073935efb814164ff9ee78", null ],
-    [ "SmimePass", "smime_8c.html#a34dd93b9b68b65428e25c44739a51349", null ],
-    [ "SmimeExpTime", "smime_8c.html#a4009b05bed4b2cee11d0e78bc8d67ba7", null ],
-    [ "SmimeKeyToUse", "smime_8c.html#aa6e38e9a28b61f5b2a7040931e58afaa", null ],
-    [ "SmimeCertToUse", "smime_8c.html#ad37cb485abe0aeafae99190ea323d3c4", null ],
-    [ "SmimeIntermediateToUse", "smime_8c.html#a19c9a640138167646b8df02dcd2a7234", null ]
+    [ "smime_class_send_menu", "group__crypto__send__menu.html#ga95da8ee8b6073935efb814164ff9ee78", null ]
 ];

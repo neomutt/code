@@ -1,4 +1,4 @@
 var structMaildirModuleData =
 [
-    [ "dummy", "structMaildirModuleData.html#a0700982f3e695cb585ea781990545228", null ]
+    [ "notify", "structMaildirModuleData.html#a0025f2326533083fdc30fa50ea4c964b", null ]
 ];

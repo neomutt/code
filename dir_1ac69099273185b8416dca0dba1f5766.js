@@ -18,8 +18,6 @@ var dir_1ac69099273185b8416dca0dba1f5766 =
     [ "envelope.h", "envelope_8h.html", "envelope_8h" ],
     [ "from.c", "from_8c.html", "from_8c" ],
     [ "from.h", "from_8h.html", "from_8h" ],
-    [ "group.c", "email_2group_8c.html", "email_2group_8c" ],
-    [ "group.h", "email_2group_8h.html", "email_2group_8h" ],
     [ "handler.c", "handler_8c.html", "handler_8c" ],
     [ "handler.h", "handler_8h.html", "handler_8h" ],
     [ "header.c", "email_2header_8c.html", "email_2header_8c" ],

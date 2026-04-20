@@ -1,7 +1,7 @@
 var group__menu__function__api =
 [
-    [ "menu_movement", "group__menu__function__api.html#gaedcbc2d6a8780e1caa74d1ddfa093652", null ],
-    [ "menu_search", "group__menu__function__api.html#ga52ad9c258d141f607e29c333bb932f31", null ],
-    [ "op_help", "group__menu__function__api.html#gac6e96ae28970b02e29f88afae6919f06", null ],
-    [ "op_jump", "group__menu__function__api.html#gaebe39c70cf43c8f8fe3c39a6f64726ed", null ]
+    [ "menu_movement", "group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52", null ],
+    [ "menu_search", "group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783", null ],
+    [ "op_help", "group__menu__function__api.html#gab57f7be67514f508ddc45019ce270479", null ],
+    [ "op_jump", "group__menu__function__api.html#ga2d94029dbe3961edbc485a988293cf47", null ]
 ];

@@ -14,6 +14,5 @@ var lua_8c =
     [ "lua_expose_commands", "lua_8c.html#a2152dd402b1484208ec5c1b20a79ea10", null ],
     [ "lua_expose_mutt", "lua_8c.html#a2b014668f818722f5c776e3d630a7c8d", null ],
     [ "lua_init_state", "lua_8c.html#a1ca6931a0511c595fa9fae834e356d3b", null ],
-    [ "LuaState", "lua_8c.html#a8af176d3e7c60ee4905f03742bd621da", null ],
     [ "LuaMuttCommands", "lua_8c.html#a8b3ff0dc3907975a08de0c6fc6df7e73", null ]
 ];

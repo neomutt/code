@@ -9,7 +9,6 @@ var lib_email =
     [ "Rich text handler", "email_enriched.html", null ],
     [ "Envelope (Email header)", "email_envelope.html", null ],
     [ "Who is the email from?", "email_from.html", null ],
-    [ "Parse Group/Lists Commands", "email_group.html", null ],
     [ "Decide how to display email content", "email_handler.html", null ],
     [ "Manipulate an email's header", "email_header.html", null ],
     [ "Parse Ignore Commands", "email_ignore.html", null ],

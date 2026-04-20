@@ -49,6 +49,5 @@ var pattern_2private_8h =
     [ "lookup_tag", "pattern_2private_8h.html#a971c243294cbec30a3cf10bdced84955", null ],
     [ "eval_date_minmax", "pattern_2private_8h.html#a20e645effab0dbabefd7a5ff7970ad1e", null ],
     [ "eat_message_range", "group__eat__arg__api.html#gaa141da7b17f334440dcf0efe0c8e9e75", null ],
-    [ "RangeRegexes", "pattern_2private_8h.html#a9a19a053b71cbf5ef0e5ab425bcd9669", null ],
     [ "Flags", "pattern_2private_8h.html#a669a98acfe6bfc0997fc263c94eab77b", null ]
 ];

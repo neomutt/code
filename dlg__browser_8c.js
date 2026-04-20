@@ -1,7 +1,5 @@
 var dlg__browser_8c =
 [
-    [ "init_lastdir", "dlg__browser_8c.html#a3a2a586cddbc6bf0aae67ea4b85eae81", null ],
-    [ "mutt_browser_cleanup", "dlg__browser_8c.html#ae57ac9cc2f16e09d897d2c37177da2cd", null ],
     [ "link_is_dir", "dlg__browser_8c.html#afed209a69c8a1ba27282de9d6972b744", null ],
     [ "browser_add_folder", "dlg__browser_8c.html#ace60dbe18a29af9387994ce9905074d5", null ],
     [ "init_state", "dlg__browser_8c.html#aa28f53565f3a3c69250813a02b512167", null ],
@@ -18,7 +16,5 @@ var dlg__browser_8c =
     [ "mutt_browser_select_dir", "dlg__browser_8c.html#a9fbed4ed086e8d9c2907e8f43d6143f2", null ],
     [ "dlg_browser", "group__gui__dlg.html#ga0772d3d88c6b65815188e5d56d1498fb", null ],
     [ "FolderHelp", "dlg__browser_8c.html#ac8e1c032b65d1d5ba98e737571215bb1", null ],
-    [ "FolderNewsHelp", "dlg__browser_8c.html#a4c2145b2c5c5bce768e8c77d335a45cc", null ],
-    [ "LastDir", "dlg__browser_8c.html#a7b9330cfc3900716b46bcb97f0a65f04", null ],
-    [ "LastDirBackup", "dlg__browser_8c.html#ac52844664e29705d1ff9110ad6c62bf0", null ]
+    [ "FolderNewsHelp", "dlg__browser_8c.html#a4c2145b2c5c5bce768e8c77d335a45cc", null ]
 ];

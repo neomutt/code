@@ -19,5 +19,6 @@ var rfc2047_8c =
     [ "rfc2047_encode_addrlist", "rfc2047_8c.html#a4f979b4ba087d3291049da868935e005", null ],
     [ "rfc2047_decode_addrlist", "rfc2047_8c.html#ac7aa3c6d84c8eaa435d161cc2c227b88", null ],
     [ "rfc2047_decode_envelope", "rfc2047_8c.html#a79026f5cfec0b561058f7021e19b9601", null ],
-    [ "rfc2047_encode_envelope", "rfc2047_8c.html#aceeb3a044de1c06a649af033af856486", null ]
+    [ "rfc2047_encode_envelope", "rfc2047_8c.html#aceeb3a044de1c06a649af033af856486", null ],
+    [ "RFC2047Specials", "rfc2047_8c.html#a97fb8d32d4e5a5d17d5ce3e8e35ac9ad", null ]
 ];

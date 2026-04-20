@@ -2,6 +2,7 @@ var keymap_8h =
 [
     [ "Keymap", "structKeymap.html", "structKeymap" ],
     [ "keycode_t", "keymap_8h.html#aa19669081ba051c79ced78b2b7ea889c", null ],
+    [ "keymap_get_key_names", "keymap_8h.html#a68230e0362c72c9a5326f57b1afb5d16", null ],
     [ "STAILQ_HEAD", "keymap_8h.html#a576a53279d5bc717c6404e91a0c78ef8", null ],
     [ "keymap_alloc", "keymap_8h.html#ac1d7fa25b9696888f8dc7dae2078dea0", null ],
     [ "keymap_free", "keymap_8h.html#a98ec45974502069bbbca9044d5d83c2b", null ],
@@ -12,6 +13,5 @@ var keymap_8h =
     [ "keymap_get_name", "keymap_8h.html#a395d79db4e39e2240b6e8ecc726b5c97", null ],
     [ "parse_fkey", "keymap_8h.html#ab192f10b00a14c439c62129cccfe97bc", null ],
     [ "parse_keycode", "keymap_8h.html#afa044d3890eaa76627785a287e94982a", null ],
-    [ "parse_keys", "keymap_8h.html#ab05824836ef9ed995aa1d45d3f387198", null ],
-    [ "KeyNames", "keymap_8h.html#ac969492dae41de846590e2257f260d3b", null ]
+    [ "parse_keys", "keymap_8h.html#ab05824836ef9ed995aa1d45d3f387198", null ]
 ];

@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-694-ga89709</span>
+   &#160;<span id="projectnumber">2025-12-11-769-g906513</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -114,6 +114,7 @@ $(function(){initNavTree('lua_2module_8c.html',''); initResizable(true); });
 <p>Definition of the Lua <a class="el" href="structModule.html">Module</a>.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;config.h&quot;</code><br />
+<code>#include &lt;lua.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="mutt_2lib_8h_source.html">mutt/lib.h</a>&quot;</code><br />
@@ -124,7 +125,7 @@ $(function(){initNavTree('lua_2module_8c.html',''); initResizable(true); });
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lua_2module_8c__incl.svg" width="507" height="196"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lua_2module_8c__incl.svg" width="542" height="196"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="lua_2module_8c_source.html">Go to the source code of this file.</a></p>
@@ -187,14 +188,32 @@ Variables</h2></td></tr>
 
 <p>Initialise a <a class="el" href="structModule.html">Module</a> - Implements <a class="el" href="structModule.html#acafe0768e3cb6a1e70aaaeb14473ca7c">Module::init()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="lua_2module_8c_source.html#l00041">41</a> of file <a class="el" href="lua_2module_8c_source.html">module.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>{</div>
-<div class="line"><span class="lineno">   43</span>  <span class="comment">// struct LuaModuleData *md = MUTT_MEM_CALLOC(1, struct LuaModuleData);</span></div>
-<div class="line"><span class="lineno">   44</span>  <span class="comment">// neomutt_set_module_data(n, MODULE_ID_LUA, md);</span></div>
-<div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   47</span>}</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="lua_2module_8c_source.html#l00042">42</a> of file <a class="el" href="lua_2module_8c_source.html">module.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
+<div class="line"><span class="lineno">   44</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structLuaModuleData.html">LuaModuleData</a> *mod_data = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structLuaModuleData.html">LuaModuleData</a>);</div>
+<div class="line"><span class="lineno">   45</span>  <a class="code hl_function" href="neomutt_8c.html#a011703fce5587658fecea69131a65630">neomutt_set_module_data</a>(n, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a7560855792d290b7ae6fea14af720040">MODULE_ID_LUA</a>, mod_data);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  mod_data-&gt;<a class="code hl_variable" href="structLuaModuleData.html#ab278a7c0449e71b62fe66f5241ca6e34">notify</a> = <a class="code hl_function" href="mutt_2notify_8c.html#aab089bbeb68401c414defe73e53e4af1">notify_new</a>();</div>
+<div class="line"><span class="lineno">   48</span>  <a class="code hl_function" href="mutt_2notify_8c.html#ae467a73cac36feec67e38b695f67d0a5">notify_set_parent</a>(mod_data-&gt;<a class="code hl_variable" href="structLuaModuleData.html#ab278a7c0449e71b62fe66f5241ca6e34">notify</a>, n-&gt;<a class="code hl_variable" href="structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b">notify</a>);</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   51</span>}</div>
+<div class="ttc" id="amemory_8h_html_a9aaf8f21a29735767a069ff1aee9d7d9"><div class="ttname"><a href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a></div><div class="ttdeci">#define MUTT_MEM_CALLOC(n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00052">memory.h:52</a></div></div>
+<div class="ttc" id="amodule__api_8h_html_a2af2c6f2596e5cc6b96f738b48bd35d6a7560855792d290b7ae6fea14af720040"><div class="ttname"><a href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a7560855792d290b7ae6fea14af720040">MODULE_ID_LUA</a></div><div class="ttdeci">@ MODULE_ID_LUA</div><div class="ttdoc">ModuleLua, Integrated Lua scripting</div><div class="ttdef"><b>Definition</b> <a href="module__api_8h_source.html#l00074">module_api.h:74</a></div></div>
+<div class="ttc" id="amutt_2notify_8c_html_aab089bbeb68401c414defe73e53e4af1"><div class="ttname"><a href="mutt_2notify_8c.html#aab089bbeb68401c414defe73e53e4af1">notify_new</a></div><div class="ttdeci">struct Notify * notify_new(void)</div><div class="ttdoc">Create a new notifications handler.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2notify_8c_source.html#l00062">notify.c:62</a></div></div>
+<div class="ttc" id="amutt_2notify_8c_html_ae467a73cac36feec67e38b695f67d0a5"><div class="ttname"><a href="mutt_2notify_8c.html#ae467a73cac36feec67e38b695f67d0a5">notify_set_parent</a></div><div class="ttdeci">void notify_set_parent(struct Notify *notify, struct Notify *parent)</div><div class="ttdoc">Set the parent notification handler.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2notify_8c_source.html#l00095">notify.c:95</a></div></div>
+<div class="ttc" id="aneomutt_8c_html_a011703fce5587658fecea69131a65630"><div class="ttname"><a href="neomutt_8c.html#a011703fce5587658fecea69131a65630">neomutt_set_module_data</a></div><div class="ttdeci">void neomutt_set_module_data(struct NeoMutt *n, enum ModuleId id, void *data)</div><div class="ttdoc">Set the private data for a Module.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8c_source.html#l00679">neomutt.c:679</a></div></div>
+<div class="ttc" id="astructLuaModuleData_html"><div class="ttname"><a href="structLuaModuleData.html">LuaModuleData</a></div><div class="ttdoc">Lua private Module data.</div><div class="ttdef"><b>Definition</b> <a href="lua_2module__data_8h_source.html#l00034">module_data.h:35</a></div></div>
+<div class="ttc" id="astructLuaModuleData_html_ab278a7c0449e71b62fe66f5241ca6e34"><div class="ttname"><a href="structLuaModuleData.html#ab278a7c0449e71b62fe66f5241ca6e34">LuaModuleData::notify</a></div><div class="ttdeci">struct Notify * notify</div><div class="ttdoc">Notifications.</div><div class="ttdef"><b>Definition</b> <a href="lua_2module__data_8h_source.html#l00036">module_data.h:36</a></div></div>
+<div class="ttc" id="astructNeoMutt_html_adaa5ed0e6cc9e642769b0df74594700b"><div class="ttname"><a href="structNeoMutt.html#adaa5ed0e6cc9e642769b0df74594700b">NeoMutt::notify</a></div><div class="ttdeci">struct Notify * notify</div><div class="ttdoc">Notifications handler.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8h_source.html#l00045">neomutt.h:45</a></div></div>
+</div><!-- fragment --><div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lua_2module_8c_a4c682e2b3465093ff9aaf071b7c946fc_cgraph.svg" width="310" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <a id="a960efef14c3fc1ee4b78f1d430bac5d9" name="a960efef14c3fc1ee4b78f1d430bac5d9"></a>
@@ -226,17 +245,17 @@ Variables</h2></td></tr>
 
 <p>Register <a class="el" href="structNeoMutt.html" title="Container for Accounts, Notifications.">NeoMutt</a> Commands - Implements <a class="el" href="structModule.html#ade2ca5c5c0a45f67c7e0580aefd3a630">Module::commands_register()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="lua_2module_8c_source.html#l00052">52</a> of file <a class="el" href="lua_2module_8c_source.html">module.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>{</div>
-<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="core_2command_8c.html#a1763d41d44392438fea7833979888888">commands_register</a>(ca, <a class="code hl_variable" href="lua_2commands_8c.html#acd4abe6e1bce2bf73a95ca55eb0f6d66">LuaCommands</a>);</div>
-<div class="line"><span class="lineno">   55</span>}</div>
+<p class="definition">Definition at line <a class="el" href="lua_2module_8c_source.html#l00056">56</a> of file <a class="el" href="lua_2module_8c_source.html">module.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{</div>
+<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="core_2command_8c.html#a1763d41d44392438fea7833979888888">commands_register</a>(ca, <a class="code hl_variable" href="lua_2commands_8c.html#acd4abe6e1bce2bf73a95ca55eb0f6d66">LuaCommands</a>);</div>
+<div class="line"><span class="lineno">   59</span>}</div>
 <div class="ttc" id="acore_2command_8c_html_a1763d41d44392438fea7833979888888"><div class="ttname"><a href="core_2command_8c.html#a1763d41d44392438fea7833979888888">commands_register</a></div><div class="ttdeci">bool commands_register(struct CommandArray *ca, const struct Command *cmds)</div><div class="ttdoc">Add commands to Commands array.</div><div class="ttdef"><b>Definition</b> <a href="core_2command_8c_source.html#l00051">command.c:51</a></div></div>
-<div class="ttc" id="alua_2commands_8c_html_acd4abe6e1bce2bf73a95ca55eb0f6d66"><div class="ttname"><a href="lua_2commands_8c.html#acd4abe6e1bce2bf73a95ca55eb0f6d66">LuaCommands</a></div><div class="ttdeci">const struct Command LuaCommands[]</div><div class="ttdoc">List of NeoMutt commands to register.</div><div class="ttdef"><b>Definition</b> <a href="lua_2commands_8c_source.html#l00146">commands.c:146</a></div></div>
-</div><!-- fragment --><div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<div class="ttc" id="alua_2commands_8c_html_acd4abe6e1bce2bf73a95ca55eb0f6d66"><div class="ttname"><a href="lua_2commands_8c.html#acd4abe6e1bce2bf73a95ca55eb0f6d66">LuaCommands</a></div><div class="ttdeci">const struct Command LuaCommands[]</div><div class="ttdoc">List of NeoMutt commands to register.</div><div class="ttdef"><b>Definition</b> <a href="lua_2commands_8c_source.html#l00151">commands.c:151</a></div></div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="lua_2module_8c_a960efef14c3fc1ee4b78f1d430bac5d9_cgraph.svg" width="370" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
@@ -267,15 +286,36 @@ Variables</h2></td></tr>
 
 <p>Clean up a <a class="el" href="structModule.html">Module</a> - Implements <a class="el" href="structModule.html#a7432d140eea6dbec2af4baf97a6bb2df">Module::cleanup()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="lua_2module_8c_source.html#l00060">60</a> of file <a class="el" href="lua_2module_8c_source.html">module.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>{</div>
-<div class="line"><span class="lineno">   62</span>  <span class="comment">// struct LuaModuleData *md = neomutt_get_module_data(n, MODULE_ID_LUA);</span></div>
-<div class="line"><span class="lineno">   63</span>  <span class="comment">// ASSERT(md);</span></div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>  <span class="comment">// FREE(&amp;md);</span></div>
-<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   67</span>}</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="lua_2module_8c_source.html#l00064">64</a> of file <a class="el" href="lua_2module_8c_source.html">module.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>{</div>
+<div class="line"><span class="lineno">   66</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structLuaModuleData.html">LuaModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(n, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a7560855792d290b7ae6fea14af720040">MODULE_ID_LUA</a>);</div>
+<div class="line"><span class="lineno">   67</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(mod_data);</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>  <a class="code hl_function" href="mutt_2notify_8c.html#ae7fe885788b891a9f2b0bf6c5aae2613">notify_free</a>(&amp;mod_data-&gt;<a class="code hl_variable" href="structLuaModuleData.html#ab278a7c0449e71b62fe66f5241ca6e34">notify</a>);</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>  lua_State *<a class="code hl_variable" href="structLuaModuleData.html#a3e5c80f93d9f76fc1b4f358e4c20067a">lua_state</a> = mod_data-&gt;<a class="code hl_variable" href="structLuaModuleData.html#a3e5c80f93d9f76fc1b4f358e4c20067a">lua_state</a>;</div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="structLuaModuleData.html#a3e5c80f93d9f76fc1b4f358e4c20067a">lua_state</a>)</div>
+<div class="line"><span class="lineno">   73</span>  {</div>
+<div class="line"><span class="lineno">   74</span>    lua_close(<a class="code hl_variable" href="structLuaModuleData.html#a3e5c80f93d9f76fc1b4f358e4c20067a">lua_state</a>);</div>
+<div class="line"><span class="lineno">   75</span>    mod_data-&gt;<a class="code hl_variable" href="structLuaModuleData.html#a3e5c80f93d9f76fc1b4f358e4c20067a">lua_state</a> = NULL;</div>
+<div class="line"><span class="lineno">   76</span>  }</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;mod_data);</div>
+<div class="line"><span class="lineno">   79</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   80</span>}</div>
+<div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdoc">Free memory and set the pointer to NULL.</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00068">memory.h:68</a></div></div>
+<div class="ttc" id="amutt_2notify_8c_html_ae7fe885788b891a9f2b0bf6c5aae2613"><div class="ttname"><a href="mutt_2notify_8c.html#ae7fe885788b891a9f2b0bf6c5aae2613">notify_free</a></div><div class="ttdeci">void notify_free(struct Notify **ptr)</div><div class="ttdoc">Free a notification handler.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2notify_8c_source.html#l00075">notify.c:75</a></div></div>
+<div class="ttc" id="aneomutt_8c_html_ab58efd47fa66c8187cfdce43078c94fa"><div class="ttname"><a href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a></div><div class="ttdeci">void * neomutt_get_module_data(struct NeoMutt *n, enum ModuleId id)</div><div class="ttdoc">Get the private data for a Module.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8c_source.html#l00665">neomutt.c:665</a></div></div>
+<div class="ttc" id="asignal2_8h_html_a903f9b298be75defd8a3043ebf62bd99"><div class="ttname"><a href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a></div><div class="ttdeci">#define ASSERT(COND)</div><div class="ttdef"><b>Definition</b> <a href="signal2_8h_source.html#l00059">signal2.h:59</a></div></div>
+<div class="ttc" id="astructLuaModuleData_html_a3e5c80f93d9f76fc1b4f358e4c20067a"><div class="ttname"><a href="structLuaModuleData.html#a3e5c80f93d9f76fc1b4f358e4c20067a">LuaModuleData::lua_state</a></div><div class="ttdeci">lua_State * lua_state</div><div class="ttdoc">Lua State.</div><div class="ttdef"><b>Definition</b> <a href="lua_2module__data_8h_source.html#l00037">module_data.h:37</a></div></div>
+</div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lua_2module_8c_af08e46d1afc9b01c43d1d787d42b1038_cgraph.svg" width="340" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -301,27 +341,27 @@ Variables</h2></td></tr>
 
 <p>List of <a class="el" href="structNeoMutt.html" title="Container for Accounts, Notifications.">NeoMutt</a> commands to register. </p>
 
-<p class="definition">Definition at line <a class="el" href="lua_2commands_8c_source.html#l00146">146</a> of file <a class="el" href="lua_2commands_8c_source.html">commands.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                     {</div>
-<div class="line"><span class="lineno">  147</span>  <span class="comment">// clang-format off</span></div>
-<div class="line"><span class="lineno">  148</span>  { <span class="stringliteral">&quot;lua&quot;</span>, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa7eaa57b88d9564ffa02441c4bedda324">CMD_LUA</a>, <a class="code hl_function" href="group__command__parse.html#gaca4230cb2945dc8c949baa6dd0666189">parse_lua</a>,</div>
-<div class="line"><span class="lineno">  149</span>        <a class="code hl_define" href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a>(<span class="stringliteral">&quot;Run a Lua expression or call a Lua function&quot;</span>),</div>
-<div class="line"><span class="lineno">  150</span>        <a class="code hl_define" href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a>(<span class="stringliteral">&quot;lua &lt;lua-command&gt;&quot;</span>),</div>
-<div class="line"><span class="lineno">  151</span>        <span class="stringliteral">&quot;optionalfeatures.html#lua&quot;</span> },</div>
-<div class="line"><span class="lineno">  152</span>  { <span class="stringliteral">&quot;lua-source&quot;</span>, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa12027f55140d64dc6b20867853dd99d8">CMD_LUA_SOURCE</a>, <a class="code hl_function" href="group__command__parse.html#ga42a3d09e7ded9c579d67c1c4104b1581">parse_lua_source</a>,</div>
-<div class="line"><span class="lineno">  153</span>        <a class="code hl_define" href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a>(<span class="stringliteral">&quot;Execute a Lua script file&quot;</span>),</div>
-<div class="line"><span class="lineno">  154</span>        <a class="code hl_define" href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a>(<span class="stringliteral">&quot;lua-source &lt;filename&gt;&quot;</span>),</div>
-<div class="line"><span class="lineno">  155</span>        <span class="stringliteral">&quot;optionalfeatures.html#lua&quot;</span> },</div>
-<div class="line"><span class="lineno">  156</span> </div>
-<div class="line"><span class="lineno">  157</span>  { NULL, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>, NULL, NULL, NULL, NULL, <a class="code hl_define" href="command_8h.html#aa035d15081f8bd486050adef7de295b0">CF_NO_FLAGS</a> },</div>
-<div class="line"><span class="lineno">  158</span>  <span class="comment">// clang-format on</span></div>
-<div class="line"><span class="lineno">  159</span>};</div>
+<p class="definition">Definition at line <a class="el" href="lua_2commands_8c_source.html#l00151">151</a> of file <a class="el" href="lua_2commands_8c_source.html">commands.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  151</span>                                     {</div>
+<div class="line"><span class="lineno">  152</span>  <span class="comment">// clang-format off</span></div>
+<div class="line"><span class="lineno">  153</span>  { <span class="stringliteral">&quot;lua&quot;</span>, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa7eaa57b88d9564ffa02441c4bedda324">CMD_LUA</a>, <a class="code hl_function" href="group__command__parse.html#gaca4230cb2945dc8c949baa6dd0666189">parse_lua</a>,</div>
+<div class="line"><span class="lineno">  154</span>        <a class="code hl_define" href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a>(<span class="stringliteral">&quot;Run a Lua expression or call a Lua function&quot;</span>),</div>
+<div class="line"><span class="lineno">  155</span>        <a class="code hl_define" href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a>(<span class="stringliteral">&quot;lua &lt;lua-command&gt;&quot;</span>),</div>
+<div class="line"><span class="lineno">  156</span>        <span class="stringliteral">&quot;optionalfeatures.html#lua&quot;</span> },</div>
+<div class="line"><span class="lineno">  157</span>  { <span class="stringliteral">&quot;lua-source&quot;</span>, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa12027f55140d64dc6b20867853dd99d8">CMD_LUA_SOURCE</a>, <a class="code hl_function" href="group__command__parse.html#ga42a3d09e7ded9c579d67c1c4104b1581">parse_lua_source</a>,</div>
+<div class="line"><span class="lineno">  158</span>        <a class="code hl_define" href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a>(<span class="stringliteral">&quot;Execute a Lua script file&quot;</span>),</div>
+<div class="line"><span class="lineno">  159</span>        <a class="code hl_define" href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a>(<span class="stringliteral">&quot;lua-source &lt;filename&gt;&quot;</span>),</div>
+<div class="line"><span class="lineno">  160</span>        <span class="stringliteral">&quot;optionalfeatures.html#lua&quot;</span> },</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>  { NULL, <a class="code hl_enumvalue" href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a>, NULL, NULL, NULL, NULL, <a class="code hl_define" href="command_8h.html#aa035d15081f8bd486050adef7de295b0">CF_NO_FLAGS</a> },</div>
+<div class="line"><span class="lineno">  163</span>  <span class="comment">// clang-format on</span></div>
+<div class="line"><span class="lineno">  164</span>};</div>
 <div class="ttc" id="acommand_8h_html_aa035d15081f8bd486050adef7de295b0"><div class="ttname"><a href="command_8h.html#aa035d15081f8bd486050adef7de295b0">CF_NO_FLAGS</a></div><div class="ttdeci">#define CF_NO_FLAGS</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00048">command.h:48</a></div></div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aa12027f55140d64dc6b20867853dd99d8"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa12027f55140d64dc6b20867853dd99d8">CMD_LUA_SOURCE</a></div><div class="ttdeci">@ CMD_LUA_SOURCE</div><div class="ttdoc">:lua-source</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00089">command.h:89</a></div></div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aa7eaa57b88d9564ffa02441c4bedda324"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa7eaa57b88d9564ffa02441c4bedda324">CMD_LUA</a></div><div class="ttdeci">@ CMD_LUA</div><div class="ttdoc">:lua</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00088">command.h:88</a></div></div>
 <div class="ttc" id="acommand_8h_html_aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc"><div class="ttname"><a href="command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc">CMD_NONE</a></div><div class="ttdeci">@ CMD_NONE</div><div class="ttdoc">No Command.</div><div class="ttdef"><b>Definition</b> <a href="command_8h_source.html#l00059">command.h:59</a></div></div>
-<div class="ttc" id="agroup__command__parse_html_ga42a3d09e7ded9c579d67c1c4104b1581"><div class="ttname"><a href="group__command__parse.html#ga42a3d09e7ded9c579d67c1c4104b1581">parse_lua_source</a></div><div class="ttdeci">enum CommandResult parse_lua_source(const struct Command *cmd, struct Buffer *line, const struct ParseContext *pc, struct ParseError *pe)</div><div class="ttdoc">Parse the &#39;lua-source&#39; command - Implements Command::parse() -.</div><div class="ttdef"><b>Definition</b> <a href="lua_2commands_8c_source.html#l00097">commands.c:97</a></div></div>
-<div class="ttc" id="agroup__command__parse_html_gaca4230cb2945dc8c949baa6dd0666189"><div class="ttname"><a href="group__command__parse.html#gaca4230cb2945dc8c949baa6dd0666189">parse_lua</a></div><div class="ttdeci">enum CommandResult parse_lua(const struct Command *cmd, struct Buffer *line, const struct ParseContext *pc, struct ParseError *pe)</div><div class="ttdoc">Parse the &#39;lua&#39; command - Implements Command::parse() -.</div><div class="ttdef"><b>Definition</b> <a href="lua_2commands_8c_source.html#l00057">commands.c:57</a></div></div>
+<div class="ttc" id="agroup__command__parse_html_ga42a3d09e7ded9c579d67c1c4104b1581"><div class="ttname"><a href="group__command__parse.html#ga42a3d09e7ded9c579d67c1c4104b1581">parse_lua_source</a></div><div class="ttdeci">enum CommandResult parse_lua_source(const struct Command *cmd, struct Buffer *line, const struct ParseContext *pc, struct ParseError *pe)</div><div class="ttdoc">Parse the &#39;lua-source&#39; command - Implements Command::parse() -.</div><div class="ttdef"><b>Definition</b> <a href="lua_2commands_8c_source.html#l00099">commands.c:99</a></div></div>
+<div class="ttc" id="agroup__command__parse_html_gaca4230cb2945dc8c949baa6dd0666189"><div class="ttname"><a href="group__command__parse.html#gaca4230cb2945dc8c949baa6dd0666189">parse_lua</a></div><div class="ttdeci">enum CommandResult parse_lua(const struct Command *cmd, struct Buffer *line, const struct ParseContext *pc, struct ParseError *pe)</div><div class="ttdoc">Parse the &#39;lua&#39; command - Implements Command::parse() -.</div><div class="ttdef"><b>Definition</b> <a href="lua_2commands_8c_source.html#l00056">commands.c:56</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html_a31ded3def3488d88308bf46040b4ca19"><div class="ttname"><a href="mutt_2message_8h.html#a31ded3def3488d88308bf46040b4ca19">N_</a></div><div class="ttdeci">#define N_(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00032">message.h:32</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -346,27 +386,26 @@ Variables</h2></td></tr>
 <div class="line">  <a class="code hl_function" href="#a960efef14c3fc1ee4b78f1d430bac5d9">lua_commands_register</a>,</div>
 <div class="line">  NULL, </div>
 <div class="line">  NULL, </div>
-<div class="line">  <a class="code hl_function" href="lua_2commands_8c.html#a8bf2f2fa3133ca10b47fdd6e1ac11593">lua_cleanup</a>,</div>
+<div class="line">  <a class="code hl_function" href="#af08e46d1afc9b01c43d1d787d42b1038">lua_cleanup</a>,</div>
 <div class="line">}</div>
-<div class="ttc" id="alua_2commands_8c_html_a8bf2f2fa3133ca10b47fdd6e1ac11593"><div class="ttname"><a href="lua_2commands_8c.html#a8bf2f2fa3133ca10b47fdd6e1ac11593">lua_cleanup</a></div><div class="ttdeci">void lua_cleanup(void)</div><div class="ttdoc">Clean up Lua.</div><div class="ttdef"><b>Definition</b> <a href="lua_2commands_8c_source.html#l00164">commands.c:164</a></div></div>
-<div class="ttc" id="alua_2module_8c_html_a4c682e2b3465093ff9aaf071b7c946fc"><div class="ttname"><a href="#a4c682e2b3465093ff9aaf071b7c946fc">lua_init</a></div><div class="ttdeci">static bool lua_init(struct NeoMutt *n)</div><div class="ttdoc">Initialise a Module - Implements Module::init()</div><div class="ttdef"><b>Definition</b> <a href="lua_2module_8c_source.html#l00041">module.c:41</a></div></div>
-<div class="ttc" id="alua_2module_8c_html_a960efef14c3fc1ee4b78f1d430bac5d9"><div class="ttname"><a href="#a960efef14c3fc1ee4b78f1d430bac5d9">lua_commands_register</a></div><div class="ttdeci">static bool lua_commands_register(struct NeoMutt *n, struct CommandArray *ca)</div><div class="ttdoc">Register NeoMutt Commands - Implements Module::commands_register()</div><div class="ttdef"><b>Definition</b> <a href="lua_2module_8c_source.html#l00052">module.c:52</a></div></div>
-<div class="ttc" id="amodule__api_8h_html_a2af2c6f2596e5cc6b96f738b48bd35d6a7560855792d290b7ae6fea14af720040"><div class="ttname"><a href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a7560855792d290b7ae6fea14af720040">MODULE_ID_LUA</a></div><div class="ttdeci">@ MODULE_ID_LUA</div><div class="ttdoc">ModuleLua, Integrated Lua scripting</div><div class="ttdef"><b>Definition</b> <a href="module__api_8h_source.html#l00074">module_api.h:74</a></div></div>
+<div class="ttc" id="alua_2module_8c_html_a4c682e2b3465093ff9aaf071b7c946fc"><div class="ttname"><a href="#a4c682e2b3465093ff9aaf071b7c946fc">lua_init</a></div><div class="ttdeci">static bool lua_init(struct NeoMutt *n)</div><div class="ttdoc">Initialise a Module - Implements Module::init()</div><div class="ttdef"><b>Definition</b> <a href="lua_2module_8c_source.html#l00042">module.c:42</a></div></div>
+<div class="ttc" id="alua_2module_8c_html_a960efef14c3fc1ee4b78f1d430bac5d9"><div class="ttname"><a href="#a960efef14c3fc1ee4b78f1d430bac5d9">lua_commands_register</a></div><div class="ttdeci">static bool lua_commands_register(struct NeoMutt *n, struct CommandArray *ca)</div><div class="ttdoc">Register NeoMutt Commands - Implements Module::commands_register()</div><div class="ttdef"><b>Definition</b> <a href="lua_2module_8c_source.html#l00056">module.c:56</a></div></div>
+<div class="ttc" id="alua_2module_8c_html_af08e46d1afc9b01c43d1d787d42b1038"><div class="ttname"><a href="#af08e46d1afc9b01c43d1d787d42b1038">lua_cleanup</a></div><div class="ttdeci">static bool lua_cleanup(struct NeoMutt *n)</div><div class="ttdoc">Clean up a Module - Implements Module::cleanup()</div><div class="ttdef"><b>Definition</b> <a href="lua_2module_8c_source.html#l00064">module.c:64</a></div></div>
 </div><!-- fragment -->
 <p><a class="el" href="structModule.html">Module</a> for the Lua library. </p>
 
-<p class="definition">Definition at line <a class="el" href="lua_2module_8c_source.html#l00072">72</a> of file <a class="el" href="lua_2module_8c_source.html">module.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>                                {</div>
-<div class="line"><span class="lineno">   73</span>  <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a7560855792d290b7ae6fea14af720040">MODULE_ID_LUA</a>,</div>
-<div class="line"><span class="lineno">   74</span>  <span class="stringliteral">&quot;lua&quot;</span>,</div>
-<div class="line"><span class="lineno">   75</span>  <a class="code hl_function" href="#a4c682e2b3465093ff9aaf071b7c946fc">lua_init</a>,</div>
-<div class="line"><span class="lineno">   76</span>  NULL, <span class="comment">// config_define_types</span></div>
-<div class="line"><span class="lineno">   77</span>  NULL, <span class="comment">// config_define_variables</span></div>
-<div class="line"><span class="lineno">   78</span>  <a class="code hl_function" href="#a960efef14c3fc1ee4b78f1d430bac5d9">lua_commands_register</a>,</div>
-<div class="line"><span class="lineno">   79</span>  NULL, <span class="comment">// gui_init</span></div>
-<div class="line"><span class="lineno">   80</span>  NULL, <span class="comment">// gui_cleanup</span></div>
-<div class="line"><span class="lineno">   81</span>  <a class="code hl_function" href="lua_2commands_8c.html#a8bf2f2fa3133ca10b47fdd6e1ac11593">lua_cleanup</a>,</div>
-<div class="line"><span class="lineno">   82</span>};</div>
+<p class="definition">Definition at line <a class="el" href="lua_2module_8c_source.html#l00085">85</a> of file <a class="el" href="lua_2module_8c_source.html">module.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>                                {</div>
+<div class="line"><span class="lineno">   86</span>  <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a7560855792d290b7ae6fea14af720040">MODULE_ID_LUA</a>,</div>
+<div class="line"><span class="lineno">   87</span>  <span class="stringliteral">&quot;lua&quot;</span>,</div>
+<div class="line"><span class="lineno">   88</span>  <a class="code hl_function" href="#a4c682e2b3465093ff9aaf071b7c946fc">lua_init</a>,</div>
+<div class="line"><span class="lineno">   89</span>  NULL, <span class="comment">// config_define_types</span></div>
+<div class="line"><span class="lineno">   90</span>  NULL, <span class="comment">// config_define_variables</span></div>
+<div class="line"><span class="lineno">   91</span>  <a class="code hl_function" href="#a960efef14c3fc1ee4b78f1d430bac5d9">lua_commands_register</a>,</div>
+<div class="line"><span class="lineno">   92</span>  NULL, <span class="comment">// gui_init</span></div>
+<div class="line"><span class="lineno">   93</span>  NULL, <span class="comment">// gui_cleanup</span></div>
+<div class="line"><span class="lineno">   94</span>  <a class="code hl_function" href="#af08e46d1afc9b01c43d1d787d42b1038">lua_cleanup</a>,</div>
+<div class="line"><span class="lineno">   95</span>};</div>
 </div><!-- fragment -->
 </div>
 </div>

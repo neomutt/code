@@ -1,7 +1,7 @@
 var alias_2lib_8h =
 [
     [ "alias_init", "alias_2lib_8h.html#a9f4083666781c1d9d1775c15409a521f", null ],
-    [ "alias_init_keys", "alias_2lib_8h.html#aa52ebe1cb27e3485cc16c1c2455c1706", null ],
+    [ "alias_init_keys", "alias_2lib_8h.html#aaa6c0d43cc22bc1d42a318a7a4a42371", null ],
     [ "alias_cleanup", "alias_2lib_8h.html#a0069edd2245ed38eb75ce3835896311c", null ],
     [ "alias_create", "alias_2lib_8h.html#a9a5bce1105cd6bfb1f7a614f680dfef2", null ],
     [ "alias_lookup", "alias_2lib_8h.html#a7a4df76d0f95394e6f02fd3fa8fee709", null ],
@@ -19,5 +19,6 @@ var alias_2lib_8h =
     [ "query_complete", "alias_2lib_8h.html#a93393632c1b6302a6c2db4c8fe4be8ee", null ],
     [ "query_index", "alias_2lib_8h.html#acdfc08deb336296bc49da8c2916f4cde", null ],
     [ "alias_reverse_lookup", "alias_2lib_8h.html#ad84f260167dd1100a7208b59bde8a953", null ],
+    [ "mutt_auto_subscribe", "alias_2lib_8h.html#a2a830caa65e6f462ab0ecae77bce746b", null ],
     [ "CompleteAliasOps", "alias_2lib_8h.html#a88ecc4c4cbc99cdba5fed7e26b8b65e9", null ]
 ];

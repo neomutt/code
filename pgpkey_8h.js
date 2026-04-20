@@ -12,5 +12,6 @@ var pgpkey_8h =
     [ "pgp_id_is_valid", "pgpkey_8h.html#a0a2d46a37ed92125eed6c9cea5543909", null ],
     [ "pgp_keys_are_valid", "pgpkey_8h.html#a6f3ff50b73993524cde060dcf542bc1b", null ],
     [ "pgp_key_is_valid", "pgpkey_8h.html#aad0a99e470d5d329e7cfa07f703d64b7", null ],
-    [ "pgp_principal_key", "pgpkey_8h.html#afeb400f3575d05ef0aadc9a6c064a4d0", null ]
+    [ "pgp_principal_key", "pgpkey_8h.html#afeb400f3575d05ef0aadc9a6c064a4d0", null ],
+    [ "pgp_id_defaults_cleanup", "pgpkey_8h.html#a84db225013002063d3842b1874aafcc1", null ]
 ];

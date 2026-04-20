@@ -4,7 +4,7 @@ var searchData=
   ['was_5fcr_1',['was_cr',['../structContentState.html#a4695d6d270f8dad90692b74b583095b1',1,'ContentState']]],
   ['wbuf_2',['wbuf',['../structEnterState.html#a8f8b1e34aea240cc5d59a70643fe7012',1,'EnterState']]],
   ['wbuflen_3',['wbuflen',['../structEnterState.html#a5d9c1199297f13de8875dbf00d4fb5f6',1,'EnterState']]],
-  ['wdata_4',['wdata',['../structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc',1,'MuttWindow']]],
+  ['wdata_4',['wdata',['../structAliasFunctionData.html#ad5fac069dcd76638a4f8d8076880f3fc',1,'AliasFunctionData::wdata'],['../structEnterFunctionData.html#aae23ad5ea322dce9fb34a76e08e8874a',1,'EnterFunctionData::wdata'],['../structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc',1,'MuttWindow::wdata'],['../structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a',1,'SidebarFunctionData::wdata']]],
   ['wdata_5ffree_5',['wdata_free',['../structMuttWindow.html#a78011dd7f37a6a39f0d404a76d133a5d',1,'MuttWindow']]],
   ['weekdays_6',['Weekdays',['../mutt_2date_8c.html#aa5d24504b23bed6ab0ecb092806303e7',1,'date.c']]],
   ['what_7',['what',['../structCryptCache.html#a5fca95213bd24b267517e0dcfaf15c24',1,'CryptCache::what'],['../structPgpCache.html#ac00837b2f448d7de0de62e4d96154aa0',1,'PgpCache::what']]],

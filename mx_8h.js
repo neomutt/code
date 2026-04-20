@@ -3,6 +3,7 @@ var mx_8h =
     [ "MUTT_MSG_NO_FLAGS", "mx_8h.html#a4f461719ebd7d96d0b2f2492c595fc26", null ],
     [ "MUTT_ADD_FROM", "mx_8h.html#a49087f3940d59f9624011017e42d9444", null ],
     [ "MUTT_SET_DRAFT", "mx_8h.html#ae766b38813f1364775c5160cc3802b9b", null ],
+    [ "MBOX_SEP", "mx_8h.html#acd0df0c01a17a239891c05b0efbdd470", null ],
     [ "MsgOpenFlags", "mx_8h.html#a3c2b592b42c4c70ba32b8fb9ce869750", null ],
     [ "mx_mbox_check", "mx_8h.html#ae1a77c15ee90fe85716badfd92e856ba", null ],
     [ "mx_mbox_check_stats", "mx_8h.html#a57093c6b257f41763f5f9d2633c003ed", null ],

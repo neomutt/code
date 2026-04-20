@@ -2,7 +2,7 @@ var searchData=
 [
   ['range_5fcur_0',['range_cur',['../structSeqsetIterator.html#ae10c87c51d30bb4210827fbb23826c84',1,'SeqsetIterator']]],
   ['range_5fend_1',['range_end',['../structSeqsetIterator.html#a40cdf6884f007351960e5c7fbce96fd8',1,'SeqsetIterator']]],
-  ['rangeregexes_2',['RangeRegexes',['../pattern_8c.html#a9a19a053b71cbf5ef0e5ab425bcd9669',1,'RangeRegexes:&#160;pattern.c'],['../pattern_2private_8h.html#a9a19a053b71cbf5ef0e5ab425bcd9669',1,'RangeRegexes:&#160;pattern.c']]],
+  ['range_5fregexes_2',['range_regexes',['../structPatternModuleData.html#a4444014e489aaf41ff13fd9534628c21',1,'PatternModuleData']]],
   ['raw_3',['raw',['../structRangeRegex.html#af7bb292bc1d13955aae8df3cbf40c652',1,'RangeRegex']]],
   ['rc_4',['rc',['../structComposeSharedData.html#a900f6971bf89850d537505f82d9db16a',1,'ComposeSharedData::rc'],['../structPagerPrivateData.html#a07969b38974b3ce97eea73edd4de3610',1,'PagerPrivateData::rc']]],
   ['re_5',['re',['../structPrexStorage.html#aa92ecca35e86301c0d93d8607aba281d',1,'PrexStorage']]],
@@ -45,12 +45,13 @@ var searchData=
   ['retvalnames_42',['RetvalNames',['../dispatcher_8c.html#a7b80db1c7ed2016030109143b4df1d46',1,'dispatcher.c']]],
   ['reverse_43',['reverse',['../structSearchState.html#a72b5bab8d43a78752e4645ac27f89ada',1,'SearchState']]],
   ['reverse_5faliases_44',['reverse_aliases',['../structAliasModuleData.html#a1f62c54a318efc0fdb8af021d523523d',1,'AliasModuleData']]],
-  ['rgrp_45',['rgrp',['../structRangeRegex.html#ac4e25ea4b622354a12208d2e8e0375b6',1,'RangeRegex']]],
-  ['rights_46',['rights',['../structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73',1,'Mailbox']]],
-  ['rootwindow_47',['RootWindow',['../rootwin_8c.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow:&#160;rootwin.c'],['../rootwin_8h.html#abac196af46545fe9bebd15dabb91a8b2',1,'RootWindow:&#160;rootwin.c']]],
-  ['row_48',['row',['../structEnterWindowData.html#a46bc2b27c9f2c17d0d560f77eeac62ca',1,'EnterWindowData::row'],['../structMsgWinWindowData.html#a8dcf5ad1e080617746d7f86120f4616c',1,'MsgWinWindowData::row']]],
-  ['row_5foffset_49',['row_offset',['../structWindowState.html#a5f16dfc8603af222e79759ea1f965b13',1,'WindowState']]],
-  ['rows_50',['rows',['../structMsgWinWindowData.html#a8883c152b6c452d9a4771904e1df6a4a',1,'MsgWinWindowData::rows'],['../structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5',1,'WindowState::rows']]],
-  ['rs_51',['rs',['../structGroup.html#a43e209bd3d746d2e18ca8d3387712f90',1,'Group']]],
-  ['rxspecialchars_52',['RxSpecialChars',['../file_8c.html#ab7dabb24458c5df2588d6cea769b8393',1,'file.c']]]
+  ['rfc2047specials_45',['RFC2047Specials',['../rfc2047_8c.html#a97fb8d32d4e5a5d17d5ce3e8e35ac9ad',1,'rfc2047.c']]],
+  ['rgrp_46',['rgrp',['../structRangeRegex.html#ac4e25ea4b622354a12208d2e8e0375b6',1,'RangeRegex']]],
+  ['rights_47',['rights',['../structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73',1,'Mailbox']]],
+  ['root_5fwindow_48',['root_window',['../structGuiModuleData.html#a34aeab99ba32343edf17890560de155a',1,'GuiModuleData']]],
+  ['row_49',['row',['../structEnterWindowData.html#a46bc2b27c9f2c17d0d560f77eeac62ca',1,'EnterWindowData::row'],['../structMsgWinWindowData.html#a8dcf5ad1e080617746d7f86120f4616c',1,'MsgWinWindowData::row']]],
+  ['row_5foffset_50',['row_offset',['../structWindowState.html#a5f16dfc8603af222e79759ea1f965b13',1,'WindowState']]],
+  ['rows_51',['rows',['../structMsgWinWindowData.html#a8883c152b6c452d9a4771904e1df6a4a',1,'MsgWinWindowData::rows'],['../structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5',1,'WindowState::rows']]],
+  ['rs_52',['rs',['../structGroup.html#a43e209bd3d746d2e18ca8d3387712f90',1,'Group']]],
+  ['rxspecialchars_53',['RxSpecialChars',['../file_8c.html#ab7dabb24458c5df2588d6cea769b8393',1,'file.c']]]
 ];

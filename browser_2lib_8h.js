@@ -32,10 +32,9 @@ var browser_2lib_8h =
       [ "ED_FOL_UNREAD_COUNT", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a71535eaf02e697a5cea30db93c5e4139", null ]
     ] ],
     [ "ARRAY_HEAD", "browser_2lib_8h.html#abed1e88a07c9b822f0412ff00d9d9a45", null ],
-    [ "browser_init_keys", "browser_2lib_8h.html#a45d23de60e080ebc64aead7ad44d3321", null ],
+    [ "browser_init_keys", "browser_2lib_8h.html#a71be83234d04d6eeaa2e082d4a1a9a6c", null ],
     [ "dlg_browser", "group__gui__dlg.html#ga0772d3d88c6b65815188e5d56d1498fb", null ],
     [ "mutt_browser_select_dir", "browser_2lib_8h.html#a9fbed4ed086e8d9c2907e8f43d6143f2", null ],
-    [ "mutt_browser_cleanup", "browser_2lib_8h.html#ae57ac9cc2f16e09d897d2c37177da2cd", null ],
     [ "browser_sort", "browser_2lib_8h.html#a1fb68dfcd0418c277eb7d28aeb2d175f", null ],
     [ "browser_add_folder", "browser_2lib_8h.html#ace60dbe18a29af9387994ce9905074d5", null ],
     [ "browser_highlight_default", "browser_2lib_8h.html#aeeaf086f04f00f0d0c691b6275f2ae22", null ],
@@ -46,8 +45,6 @@ var browser_2lib_8h =
     [ "link_is_dir", "browser_2lib_8h.html#afed209a69c8a1ba27282de9d6972b744", null ],
     [ "destroy_state", "browser_2lib_8h.html#aaff67d90e29ac36d805fd778fca74225", null ],
     [ "dump_state", "browser_2lib_8h.html#af91763276c454725a791b94bbee33075", null ],
-    [ "LastDir", "browser_2lib_8h.html#a7b9330cfc3900716b46bcb97f0a65f04", null ],
-    [ "LastDirBackup", "browser_2lib_8h.html#ac52844664e29705d1ff9110ad6c62bf0", null ],
     [ "CompleteFileOps", "browser_2lib_8h.html#a6bd4da54e7d75404519878f3ef32c87e", null ],
     [ "CompleteMailboxOps", "browser_2lib_8h.html#ac57f87803bae8c5218f363629e2502e6", null ]
 ];

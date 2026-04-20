@@ -8,5 +8,6 @@ var color_2commands_8c =
     [ "parse_unmono", "group__command__parse.html#ga62a0d2867c65021951286fd976523b8a", null ],
     [ "parse_color", "group__command__parse.html#gaf20dd48172d0aa8898d91f7ade4f6e8b", null ],
     [ "parse_mono", "group__command__parse.html#ga74170f44e384f9c53da2eea1e96443f6", null ],
-    [ "ColorFields", "color_2commands_8c.html#a4476932702aa028f1fcdc565633c03cf", null ]
+    [ "ColorFields", "color_2commands_8c.html#a4476932702aa028f1fcdc565633c03cf", null ],
+    [ "ColorCommands", "color_2commands_8c.html#ac3f7161bc9eeffb5c25fc930c4b3cbf5", null ]
 ];

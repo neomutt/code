@@ -33,7 +33,7 @@ var searchData=
   ['list_20of_20strings_30',['A separated list of strings',['../mutt_slist.html',1,'lib_mutt']]],
   ['list_20type_31',['Singly-linked list type',['../mutt_list.html',1,'lib_mutt']]],
   ['lists_32',['Handle mailing lists',['../address_maillist.html',1,'lib_address']]],
-  ['lists_20commands_33',['Parse Group/Lists Commands',['../email_group.html',1,'lib_email']]],
+  ['lists_20commands_33',['Parse Group/Lists Commands',['../alias_group.html',1,'lib_alias']]],
   ['lmdb_34',['Lightning Memory-Mapped Database (LMDB)',['../store_lmdb.html',1,'lib_store']]],
   ['local_20email_35',['Local email',['../core_message.html',1,'lib_core']]],
   ['local_20mailbox_20type_36',['local mailbox type',['../maildir_maildir.html',1,'Maildir local mailbox type'],['../mbox_mbox.html',1,'Mbox local mailbox type'],['../mh_mh.html',1,'MH local mailbox type']]],

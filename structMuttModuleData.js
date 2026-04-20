@@ -1,4 +1,4 @@
 var structMuttModuleData =
 [
-    [ "dummy", "structMuttModuleData.html#a67475b74654aed413c97a7e17963e092", null ]
+    [ "notify", "structMuttModuleData.html#ab8c30404b0c414f2ded456c95fee1a96", null ]
 ];

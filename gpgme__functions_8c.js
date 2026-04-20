@@ -16,7 +16,6 @@ var gpgme__functions_8c =
     [ "op_verify_key", "group__gpgme__function__api.html#ga47fd43d99ea3f2cb4c59710c254c705b", null ],
     [ "op_view_id", "group__gpgme__function__api.html#gab8ba823d7ba9e05ae2457bde90fbedf9", null ],
     [ "gpgme_function_dispatcher", "group__dispatcher__api.html#ga07cc5849d7a417eaf4be3e9227a3aa82", null ],
-    [ "KeyInfoPadding", "gpgme__functions_8c.html#a3b64b606796cca0a29f5dd879b6d0b06", null ],
     [ "KeyInfoPrompts", "gpgme__functions_8c.html#a382b63ab4c0e21cdee8b0e2763ad5c69", null ],
     [ "GpgmeFunctions", "gpgme__functions_8c.html#a14d0817f9e5614879d5c38bdaaa7e9e7", null ]
 ];

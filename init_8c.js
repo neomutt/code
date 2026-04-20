@@ -10,8 +10,5 @@ var init_8c =
     [ "km_sort", "init_8c.html#a8682e47f8c246a3f44cdd0343395b9bf", null ],
     [ "km_cleanup", "init_8c.html#a47853da99e5a1db7c47d067dec03e008", null ],
     [ "km_set_abort_key", "init_8c.html#a89ba73a6855887ed8098fe0e99edb211", null ],
-    [ "MenuDefs", "init_8c.html#a1b8f5dc5b68988420075be7285ececae", null ],
-    [ "SubMenus", "init_8c.html#a329a05581c82ecba6d9e9fd32b94305f", null ],
-    [ "AbortKey", "init_8c.html#a22bced2c7fdf47916ddc963f43432541", null ],
     [ "KeyCommands", "init_8c.html#aafb1c70a658753e8d87762aa9b9589d1", null ]
 ];

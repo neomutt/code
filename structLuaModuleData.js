@@ -1,4 +1,5 @@
 var structLuaModuleData =
 [
-    [ "dummy", "structLuaModuleData.html#abb1a55fb947e9ec1ef721ee9dfee70ad", null ]
+    [ "notify", "structLuaModuleData.html#ab278a7c0449e71b62fe66f5241ca6e34", null ],
+    [ "lua_state", "structLuaModuleData.html#a3e5c80f93d9f76fc1b4f358e4c20067a", null ]
 ];

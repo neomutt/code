@@ -1,4 +1,4 @@
 var structProgressModuleData =
 [
-    [ "dummy", "structProgressModuleData.html#add1292cdba7abb7a103ce0e3c5e9baba", null ]
+    [ "notify", "structProgressModuleData.html#aa01b456fe10d1f29a963c9329c935eb0", null ]
 ];

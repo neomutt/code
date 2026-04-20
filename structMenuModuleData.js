@@ -1,4 +1,5 @@
 var structMenuModuleData =
 [
-    [ "dummy", "structMenuModuleData.html#ae4fcc489003dbd3ed79db8fa38362739", null ]
+    [ "notify", "structMenuModuleData.html#ad953717811efb4302ff8e3ed20ce33ab", null ],
+    [ "search_buffers", "structMenuModuleData.html#abc262802a04e018c6695adedaf178d67", null ]
 ];

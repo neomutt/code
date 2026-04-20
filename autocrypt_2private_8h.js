@@ -41,6 +41,5 @@ var autocrypt_2private_8h =
     [ "mutt_autocrypt_gpgme_is_valid_key", "autocrypt_2private_8h.html#a1688864ad42e9772f4c1de8e297b097b", null ],
     [ "mutt_autocrypt_gpgme_select_key", "autocrypt_2private_8h.html#a2894737dbf5865d40fa9807c20d9a51f", null ],
     [ "mutt_autocrypt_gpgme_select_or_create_key", "autocrypt_2private_8h.html#afe4f6c496561dd2b14a6d576d369889a", null ],
-    [ "populate_menu", "autocrypt_2private_8h.html#ad24c7e95a9f01bed3d6d38b54aff24b2", null ],
-    [ "AutocryptDB", "autocrypt_2private_8h.html#a2ac699259f5467de8e9280229ffe9c56", null ]
+    [ "populate_menu", "autocrypt_2private_8h.html#ad24c7e95a9f01bed3d6d38b54aff24b2", null ]
 ];

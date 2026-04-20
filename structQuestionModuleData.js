@@ -1,4 +1,4 @@
 var structQuestionModuleData =
 [
-    [ "dummy", "structQuestionModuleData.html#a7cbea06347ff7d97ef73baf043643275", null ]
+    [ "notify", "structQuestionModuleData.html#a502e59423c43a4bb47d990debcae53c6", null ]
 ];

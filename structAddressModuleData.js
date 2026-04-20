@@ -1,4 +1,4 @@
 var structAddressModuleData =
 [
-    [ "dummy", "structAddressModuleData.html#ab8e8b9bfd2388fd1a139da9af009a62e", null ]
+    [ "notify", "structAddressModuleData.html#aa9b48e946bbe2ec7c241d4f2b8db1626", null ]
 ];

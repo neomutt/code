@@ -21,7 +21,7 @@ var index_2lib_8h =
       [ "COLLAPSE_MODE_CLOSE", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3af43ceb349d75431712751ec315dee3c3", null ],
       [ "COLLAPSE_MODE_OPEN", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3afcf1558b0f9872bb167a7110debae87c", null ]
     ] ],
-    [ "index_init_keys", "index_2lib_8h.html#acc3bf74d647af683c6b1f0206993e8c8", null ],
+    [ "index_init_keys", "index_2lib_8h.html#a5bd1d1a9f1bc99a996224f3567a7de66", null ],
     [ "change_folder_mailbox", "index_2lib_8h.html#a2f01349e640f3de95d4477b256148cc7", null ],
     [ "change_folder_notmuch", "index_2lib_8h.html#a38c0b435d8faefbb863bbb0d6860cc7e", null ],
     [ "change_folder_string", "index_2lib_8h.html#add72c0d04cf5de2184826b4cba8cdf5e", null ],

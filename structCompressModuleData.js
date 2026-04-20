@@ -1,4 +1,4 @@
 var structCompressModuleData =
 [
-    [ "dummy", "structCompressModuleData.html#ab43fd3e88defd615873aaae0840cb922", null ]
+    [ "notify", "structCompressModuleData.html#a38e4e71d0495bf6f4a9ed1d106bf7e4c", null ]
 ];

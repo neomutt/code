@@ -1,10 +1,11 @@
 var editor_2functions_8h =
 [
+    [ "EnterFunctionData", "structEnterFunctionData.html", "structEnterFunctionData" ],
     [ "EnterFunction", "structEnterFunction.html", "structEnterFunction" ],
-    [ "enter_function_t", "editor_2functions_8h.html#a1f7e32ea3e6e6ead78b1e5cf9cd4e994", null ],
+    [ "MdEditor", "editor_2functions_8h.html#ac442cda508d0e38c5ce3c825e0fe2a95", null ],
+    [ "enter_function_t", "editor_2functions_8h.html#afbf2fcad66c3bcea662be7e42699162b", null ],
+    [ "editor_get_menu_definition", "editor_2functions_8h.html#a0b38a015c8d3ac27223a1b23d220ce4e", null ],
     [ "enter_function_dispatcher", "group__dispatcher__api.html#ga49aac7d6f001dce4953fc7c5f8534192", null ],
     [ "self_insert", "editor_2functions_8h.html#ae97582af5919a128251070d8d67543dc", null ],
-    [ "replace_part", "editor_2functions_8h.html#ad2f6f39bb1405a4a86c08f04b5102b27", null ],
-    [ "MdEditor", "editor_2functions_8h.html#ad3063e4226de2d0d54cb427998ff1950", null ],
-    [ "SmEditor", "editor_2functions_8h.html#a6ffbf084f812e64b02e20ddedfafb9b2", null ]
+    [ "replace_part", "editor_2functions_8h.html#ad2f6f39bb1405a4a86c08f04b5102b27", null ]
 ];

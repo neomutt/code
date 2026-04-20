@@ -40,7 +40,7 @@ var pager_2lib_8h =
       [ "PAGER_LOOP_QUIT", "pager_2lib_8h.html#a0d5091765709adcea5775d9dce06cd9aa2552720d9735cc662d65ca65d8016f66", null ],
       [ "PAGER_LOOP_RELOAD", "pager_2lib_8h.html#a0d5091765709adcea5775d9dce06cd9aa168c5f5203de8e5fceee72b94099be41", null ]
     ] ],
-    [ "pager_init_keys", "pager_2lib_8h.html#a3967089782b835741383e3a3eeb5f5e5", null ],
+    [ "pager_init_keys", "pager_2lib_8h.html#a0c92187abffad0a5699ca42505ae6c95", null ],
     [ "dlg_pager", "group__gui__dlg.html#gaa0492e04d356a4dc2eed8a5ac9dd16d7", null ],
     [ "mutt_do_pager", "pager_2lib_8h.html#a9d3af21b7fdf24249c261a9a1aa9f3be", null ],
     [ "buf_strip_formatting", "pager_2lib_8h.html#a73742be224ef1cc275d4b6c7d585d44a", null ],
@@ -53,7 +53,5 @@ var pager_2lib_8h =
     [ "pager_get_pager", "pager_2lib_8h.html#a3f9c594c9fdc97ee3fd49052f0914892", null ],
     [ "mutt_clear_pager_position", "pager_2lib_8h.html#a52cb29b8a518d62062551b6ff7a3cb4f", null ],
     [ "dump_text_syntax", "pager_2lib_8h.html#a1694de57ddab1d0171e39dbe9a9b2cda", null ],
-    [ "dump_line", "pager_2lib_8h.html#ae5b4e3e6d5435298d70bfdc069888bb8", null ],
-    [ "BrailleRow", "pager_2lib_8h.html#a3490b6b810e8a21aa55b285983ab06b3", null ],
-    [ "BrailleCol", "pager_2lib_8h.html#a555e902447ceeb65bbcb35988b8d09c9", null ]
+    [ "dump_line", "pager_2lib_8h.html#ae5b4e3e6d5435298d70bfdc069888bb8", null ]
 ];

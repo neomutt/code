@@ -24,15 +24,5 @@ var autocrypt_2db_8c =
     [ "mutt_autocrypt_db_peer_history_insert", "autocrypt_2db_8c.html#aff9a9d353dd568fa3989b0555769d172", null ],
     [ "mutt_autocrypt_db_gossip_history_new", "autocrypt_2db_8c.html#a1efde65b9b90a045e06e53238bff2eab", null ],
     [ "mutt_autocrypt_db_gossip_history_free", "autocrypt_2db_8c.html#ac64386ceb7551f4d92eb76cf750051ba", null ],
-    [ "mutt_autocrypt_db_gossip_history_insert", "autocrypt_2db_8c.html#a3232f54bb8c81c043037aaf8454b5f4c", null ],
-    [ "AccountGetStmt", "autocrypt_2db_8c.html#ad59785b79d676d49d46db0f095faadda", null ],
-    [ "AccountInsertStmt", "autocrypt_2db_8c.html#a784b83d4ac3b7a315b720fa93ebf9fbf", null ],
-    [ "AccountUpdateStmt", "autocrypt_2db_8c.html#aaa4ccb4012ae52f10375616cf2770114", null ],
-    [ "AccountDeleteStmt", "autocrypt_2db_8c.html#ae5f8db547e9c953b8e1d151bdad402d0", null ],
-    [ "PeerGetStmt", "autocrypt_2db_8c.html#a14ea324044dc79deee0e30ff8fa9e3db", null ],
-    [ "PeerInsertStmt", "autocrypt_2db_8c.html#aff0072c821e680a2c0e0ccc21ac2b9a1", null ],
-    [ "PeerUpdateStmt", "autocrypt_2db_8c.html#a0f742adea596c0b718cc44b5f533ab01", null ],
-    [ "PeerHistoryInsertStmt", "autocrypt_2db_8c.html#a84ce468a01d60186082e483812a9883c", null ],
-    [ "GossipHistoryInsertStmt", "autocrypt_2db_8c.html#a9c401461f82bbd761feed64166fb7802", null ],
-    [ "AutocryptDB", "autocrypt_2db_8c.html#a2ac699259f5467de8e9280229ffe9c56", null ]
+    [ "mutt_autocrypt_db_gossip_history_insert", "autocrypt_2db_8c.html#a3232f54bb8c81c043037aaf8454b5f4c", null ]
 ];

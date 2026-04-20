@@ -34,7 +34,5 @@ var openssl_8c =
     [ "ssl_socket_write", "group__connection__write.html#ga40b2b0f0a706d96487919a4b0489026a", null ],
     [ "ssl_socket_close", "group__connection__close.html#gaafcc34fa7bf9d54a9323c36761353e6a", null ],
     [ "mutt_ssl_starttls", "openssl_8c.html#a23591e82bf992ceb5e62c459fd787b8a", null ],
-    [ "mutt_ssl_socket_setup", "openssl_8c.html#ae6341b74ebed0751e68285e6bf379fab", null ],
-    [ "HostExDataIndex", "openssl_8c.html#ab43c12dc4d5c8504c852b18a43ef0f8a", null ],
-    [ "SkipModeExDataIndex", "openssl_8c.html#af84a999f737b3cc63228cecc117a5d87", null ]
+    [ "mutt_ssl_socket_setup", "openssl_8c.html#ae6341b74ebed0751e68285e6bf379fab", null ]
 ];

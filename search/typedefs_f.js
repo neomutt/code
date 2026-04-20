@@ -4,7 +4,7 @@ var searchData=
   ['securityflags_1',['SecurityFlags',['../ncrypt_2lib_8h.html#a2073a168ca3a64c3c30d13fa4917a05d',1,'lib.h']]],
   ['selectfileflags_2',['SelectFileFlags',['../browser_2lib_8h.html#afde6c0a2b0c99baa6b2ee3a0c855e966',1,'lib.h']]],
   ['sendflags_3',['SendFlags',['../send_8h.html#a3f25bb31648a5f49a537d8df89a77506',1,'send.h']]],
-  ['sidebar_5ffunction_5ft_4',['sidebar_function_t',['../sidebar_2functions_8h.html#a0eb8758f1181264f8812a63d324f0bcf',1,'functions.h']]],
+  ['sidebar_5ffunction_5ft_4',['sidebar_function_t',['../sidebar_2functions_8h.html#a33ac9a3748fb77f099ff7734599a34df',1,'functions.h']]],
   ['sig_5fhandler_5ft_5',['sig_handler_t',['../signal2_8h.html#a60d3777917d4b61a09ecb88574a935e1',1,'signal2.h']]],
   ['smime_5ffunction_5ft_6',['smime_function_t',['../smime__functions_8h.html#ac0ddbb56ea6c87b23b6f2a8dc181b904',1,'smime_functions.h']]],
   ['smtpcapflags_7',['SmtpCapFlags',['../smtp_8c.html#a206bf9f5e94a73ce8408fd4a513b9c11',1,'smtp.c']]],

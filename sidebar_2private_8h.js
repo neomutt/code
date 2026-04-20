@@ -41,6 +41,5 @@ var sidebar_2private_8h =
     [ "sb_wdata_new", "sidebar_2private_8h.html#a56263b986cb78f05af665a959255363e", null ],
     [ "sb_entry_set_display_name", "sidebar_2private_8h.html#a8c067ef1ed7008d55ca36daef2496e37", null ],
     [ "sb_recalc", "group__window__recalc.html#gae8fdf0a222141e5e18f6caa9a15f93f6", null ],
-    [ "sb_repaint", "group__window__repaint.html#ga2c99e3fef7afb5a11d15e0fc49cd5469", null ],
-    [ "SidebarPinned", "sidebar_2private_8h.html#a768683f4d2b31ce8ac58c332b10d6ebd", null ]
+    [ "sb_repaint", "group__window__repaint.html#ga2c99e3fef7afb5a11d15e0fc49cd5469", null ]
 ];

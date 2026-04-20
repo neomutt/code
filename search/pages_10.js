@@ -24,7 +24,7 @@ var searchData=
   ['parse_20context_21',['Parse Context',['../parse_context.html',1,'lib_parse']]],
   ['parse_20error_22',['Parse Error',['../parse_error.html',1,'lib_parse']]],
   ['parse_20expando_20string_23',['Parse Expando string',['../lib_expando.html',1,'']]],
-  ['parse_20group_20lists_20commands_24',['Parse Group/Lists Commands',['../email_group.html',1,'lib_email']]],
+  ['parse_20group_20lists_20commands_24',['Parse Group/Lists Commands',['../alias_group.html',1,'lib_alias']]],
   ['parse_20ifdef_20commands_25',['Parse Ifdef Commands',['../commands_ifdef.html',1,'lib_commands']]],
   ['parse_20ignore_20commands_26',['Parse Ignore Commands',['../email_ignore.html',1,'lib_email']]],
   ['parse_20key_20binding_20commands_27',['Parse key binding commands',['../key_commands.html',1,'lib_key']]],

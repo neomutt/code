@@ -1,4 +1,4 @@
 var structMboxModuleData =
 [
-    [ "dummy", "structMboxModuleData.html#a1baaa7c01b612832214e55940668fe77", null ]
+    [ "notify", "structMboxModuleData.html#a2ec4f71a1d7a63114bf406dd96ba423f", null ]
 ];

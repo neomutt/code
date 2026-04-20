@@ -1,4 +1,4 @@
 var structCompmboxModuleData =
 [
-    [ "dummy", "structCompmboxModuleData.html#a76a7646a525dad92e9b4cab018b07d73", null ]
+    [ "notify", "structCompmboxModuleData.html#a23d4555ce744995f9f99166502ee5dad", null ]
 ];

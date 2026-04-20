@@ -1,4 +1,4 @@
 var structCoreModuleData =
 [
-    [ "dummy", "structCoreModuleData.html#a38ca2c62548d3ea4e85a3e19348bef78", null ]
+    [ "notify", "structCoreModuleData.html#a845eef9ee9046e1e89948d1d5a3d9af8", null ]
 ];

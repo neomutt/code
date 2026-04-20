@@ -1,4 +1,4 @@
 var structParseModuleData =
 [
-    [ "dummy", "structParseModuleData.html#a6f6a32abdca055bfb6f11287d939c9d3", null ]
+    [ "notify", "structParseModuleData.html#a4af0075d576fc36f9e0c9f518b280907", null ]
 ];

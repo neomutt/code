@@ -23,7 +23,6 @@ var nntp_2lib_8h =
     [ "nntp_sort_unsorted", "group__sort__email__api.html#ga17502e8a1d89586a90f1be161546bd09", null ],
     [ "nntp_path_probe", "group__mx__path__probe.html#ga0af5851670960cce257a6e5f9f9805ff", null ],
     [ "nntp_complete", "nntp_2lib_8h.html#a308b3b2673b7f280d9dc16b42da7d1b6", null ],
-    [ "CurrentNewsSrv", "nntp_2lib_8h.html#ae58e3a5dcd99b6bbd0354b133fc220ce", null ],
     [ "MxNntpOps", "group__mx__api.html#ga24562d83c3ae18d95f817c611452ac87", null ],
     [ "NntpRenderCallbacks", "nntp_2lib_8h.html#aceb81cc70350b6de0506358f4c657778", null ]
 ];

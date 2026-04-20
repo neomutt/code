@@ -11,7 +11,5 @@ var hooks_2parse_8h =
     [ "parse_pattern_hook", "group__command__parse.html#ga095d4e6bcd37973595bf2c7b5903e11b", null ],
     [ "parse_regex_hook", "group__command__parse.html#ga33be89799a95c4bab03abc5fd4efaacd", null ],
     [ "parse_unhook", "group__command__parse.html#ga44b2664079587da17d63037f29be69b1", null ],
-    [ "Hooks", "hooks_2parse_8h.html#a972b6dffb799adc5f7e8d91438317d64", null ],
-    [ "IdxFmtHooks", "hooks_2parse_8h.html#a1ca53f19587562575952e7626c839056", null ],
-    [ "CurrentHookId", "hooks_2parse_8h.html#a035dff239b7396d32e5ac65490c31cac", null ]
+    [ "delete_idxfmt_hooks", "hooks_2parse_8h.html#a677c0dc6bfb7667d21465a89ee364383", null ]
 ];
