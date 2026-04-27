@@ -5,10 +5,10 @@ var init_8c =
     [ "km_menu_add_submenu", "init_8c.html#a23b5f610e26fbbd1cc8dfd47eac6ce9d", null ],
     [ "km_menu_add_bindings", "init_8c.html#afec2a961d00f0e273c37fb4f322b29dc", null ],
     [ "km_config_observer", "group__observer__api.html#ga3316a87047b8fe18c0cf53110c3be36c", null ],
-    [ "km_init", "init_8c.html#a58e38a78c1e289c77166b7239ee843b0", null ],
+    [ "km_init", "init_8c.html#a78778df8433dcfbe6591e94b180c05c0", null ],
     [ "menu_defs_sort", "group__sort__api.html#ga54b9ccb475fcb9f107c6fe7a0e2cc3db", null ],
     [ "km_sort", "init_8c.html#a8682e47f8c246a3f44cdd0343395b9bf", null ],
-    [ "km_cleanup", "init_8c.html#a47853da99e5a1db7c47d067dec03e008", null ],
-    [ "km_set_abort_key", "init_8c.html#a89ba73a6855887ed8098fe0e99edb211", null ],
+    [ "km_cleanup", "init_8c.html#a294f41268095c5b4b33ca3d56b8de681", null ],
+    [ "km_set_abort_key", "init_8c.html#a8d24ff9ed0393902845ce6ff5ee049b1", null ],
     [ "KeyCommands", "init_8c.html#aafb1c70a658753e8d87762aa9b9589d1", null ]
 ];

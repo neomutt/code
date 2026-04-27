@@ -3,7 +3,7 @@ var imap_2module_8c =
     [ "imap_init", "imap_2module_8c.html#ad18f9e9cfaeaa718882b5726fedc8910", null ],
     [ "imap_config_define_variables", "imap_2module_8c.html#a515da9f8fb205cb2f0e420137272d70e", null ],
     [ "imap_commands_register", "imap_2module_8c.html#a00fe82901d23ae1700057448b382eb11", null ],
-    [ "imap_cleanup", "imap_2module_8c.html#ac61978522f13d0e2bb4c2a411440e4df", null ],
+    [ "imap_cleanup", "imap_2module_8c.html#a5a642d2a97fc44aac394c64360f7f66f", null ],
     [ "ImapVars", "imap_2module_8c.html#ab56b7541d09cf736573e64462a184f83", null ],
     [ "ImapVarsZlib", "imap_2module_8c.html#ae4f09aa03a90d2f8ee4a6dbfa42f6013", null ],
     [ "ImapCommands", "imap_2module_8c.html#aed858dc8f9133f4a2c8505753b8ad97a", null ],

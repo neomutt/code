@@ -64,7 +64,7 @@ var searchData=
   ['lua_5fcb_5fglobal_5fget_61',['lua_cb_global_get',['../lua_8c.html#abb4def978f984c233255ef50fcccd40e',1,'lua.c']]],
   ['lua_5fcb_5fglobal_5fmessage_62',['lua_cb_global_message',['../lua_8c.html#a6214f1ac1da824e998b0a5610dee5984',1,'lua.c']]],
   ['lua_5fcb_5fglobal_5fset_63',['lua_cb_global_set',['../lua_8c.html#a271f8515e68aba9d287b93c8cbfad75b',1,'lua.c']]],
-  ['lua_5fcleanup_64',['lua_cleanup',['../lua_2module_8c.html#af08e46d1afc9b01c43d1d787d42b1038',1,'module.c']]],
+  ['lua_5fcleanup_64',['lua_cleanup',['../lua_2module_8c.html#a1996e53cf1b48a65462ec59ec3d8dcfd',1,'module.c']]],
   ['lua_5fcommands_5fregister_65',['lua_commands_register',['../lua_2module_8c.html#a960efef14c3fc1ee4b78f1d430bac5d9',1,'module.c']]],
   ['lua_5fexpose_5fcommand_66',['lua_expose_command',['../lua_8c.html#a3f5f4eca3d18b58262710dc8864d4521',1,'lua.c']]],
   ['lua_5fexpose_5fcommands_67',['lua_expose_commands',['../lua_8c.html#a2152dd402b1484208ec5c1b20a79ea10',1,'lua.c']]],

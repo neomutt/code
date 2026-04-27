@@ -88,5 +88,5 @@ var crypt__gpgme_8c =
     [ "smime_gpgme_verify_sender", "group__crypto__smime__verify__sender.html#gab0747bb2c899ab90cd4370b696415906", null ],
     [ "pgp_gpgme_set_sender", "group__crypto__set__sender.html#ga192c41e1923f64fd284a130d27328cb2", null ],
     [ "mutt_gpgme_print_version", "crypt__gpgme_8c.html#a326949d15c60fb5c5de5361c4a88a934", null ],
-    [ "gpgme_id_defaults_cleanup", "crypt__gpgme_8c.html#ac5dd6373e3d6397d1d17c2efca7212f5", null ]
+    [ "gpgme_id_defaults_cleanup", "crypt__gpgme_8c.html#a35e29541b589f470ada84b388d27f359", null ]
 ];

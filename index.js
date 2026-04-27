@@ -1,11 +1,11 @@
 var index =
 [
     [ "Prepare an email to be edited", "main_editmsg.html", [
-      [ "Libraries", "index.html#autotoc_md101", null ],
-      [ "Miscellaneous files", "index.html#autotoc_md102", null ],
-      [ "Building these Docs", "index.html#autotoc_md103", null ],
-      [ "Installing the Docs", "index.html#autotoc_md104", [
-        [ "Functions", "main_editmsg.html#autotoc_md773", null ]
+      [ "Libraries", "index.html#autotoc_md107", null ],
+      [ "Miscellaneous files", "index.html#autotoc_md108", null ],
+      [ "Building these Docs", "index.html#autotoc_md109", null ],
+      [ "Installing the Docs", "index.html#autotoc_md110", [
+        [ "Functions", "main_editmsg.html#autotoc_md781", null ]
       ] ]
     ] ],
     [ "Manage where the email is piped to external commands", "main_external.html", null ],

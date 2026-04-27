@@ -18,7 +18,7 @@ var autocrypt_2private_8h =
     [ "mutt_autocrypt_db_account_insert", "autocrypt_2private_8h.html#a63c568751c51464a8f0c1e7bb1164292", null ],
     [ "mutt_autocrypt_db_account_new", "autocrypt_2private_8h.html#a6b54cd4109b04172b5b924d2e9e1d105", null ],
     [ "mutt_autocrypt_db_account_update", "autocrypt_2private_8h.html#aa1a5925a985592bad3eba18f803386e5", null ],
-    [ "mutt_autocrypt_db_close", "autocrypt_2private_8h.html#a278e65c7972b3237d176caeca0ca4a02", null ],
+    [ "mutt_autocrypt_db_close", "autocrypt_2private_8h.html#ace7863447d9506ca795f7dffcbc763a4", null ],
     [ "mutt_autocrypt_db_gossip_history_free", "autocrypt_2private_8h.html#ac64386ceb7551f4d92eb76cf750051ba", null ],
     [ "mutt_autocrypt_db_gossip_history_insert", "autocrypt_2private_8h.html#a3232f54bb8c81c043037aaf8454b5f4c", null ],
     [ "mutt_autocrypt_db_gossip_history_new", "autocrypt_2private_8h.html#a1efde65b9b90a045e06e53238bff2eab", null ],

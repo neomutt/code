@@ -4,6 +4,7 @@ var alias_2functions_8c =
     [ "op_create_alias", "group__alias__function__api.html#ga47cf9d2ee3ffed089003f85c62ba4854", null ],
     [ "op_delete", "group__alias__function__api.html#ga94740d93f164051e999857ee0326e29c", null ],
     [ "op_exit", "group__alias__function__api.html#ga804cd75e47e1637974fc2cc1b661bdda", null ],
+    [ "op_jump", "group__alias__function__api.html#ga564fdd79de43cc482df4017ed6109115", null ],
     [ "op_generic_select_entry", "group__alias__function__api.html#gae294785720f6e4b72dec29ac30a75597", null ],
     [ "op_main_limit", "group__alias__function__api.html#ga35fdc34caef81da8e0752c47c03c35f7", null ],
     [ "op_main_tag_pattern", "group__alias__function__api.html#ga75d1231fcc710b6aeb7eb267c1cbb61a", null ],

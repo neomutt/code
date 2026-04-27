@@ -34,5 +34,6 @@ var searchData=
   ['userhdrsoverrideheaders_31',['UserhdrsOverrideHeaders',['../send_2header_8c.html#a520c5ce2825ef71a466e3f751bb5ac51',1,'header.c']]],
   ['username_32',['username',['../structNeoMutt.html#a5c2d30a2f734f94412bd5b3a7367b981',1,'NeoMutt']]],
   ['usethreadsmethods_33',['UseThreadsMethods',['../gui_2thread_8c.html#a5c2a82bc1766950548a5d97a7dbd8d2a',1,'thread.c']]],
-  ['usethreadstypedef_34',['UseThreadsTypeDef',['../gui_2thread_8c.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef:&#160;thread.c'],['../gui_2thread_8h.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef:&#160;thread.c']]]
+  ['usethreadstypedef_34',['UseThreadsTypeDef',['../gui_2thread_8c.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef:&#160;thread.c'],['../gui_2thread_8h.html#ad0da49fbb8f920960daef313c3fc7ee2',1,'UseThreadsTypeDef:&#160;thread.c']]],
+  ['utility_5fwindow_35',['utility_window',['../structGuiModuleData.html#ab561344de37de4125a86584523fb5838',1,'GuiModuleData']]]
 ];

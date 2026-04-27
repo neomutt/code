@@ -39,6 +39,8 @@ var group__observer__api =
     [ "sbar_window_observer", "group__observer__api.html#gafbb6345f237d83b864d3986ecb1f8022", null ],
     [ "simple_config_observer", "group__observer__api.html#ga2cfd80d7ebfde77725c79291395d3449", null ],
     [ "simple_window_observer", "group__observer__api.html#gae0ace52a1afee975fe951d22c35706c5", null ],
+    [ "utilwin_key_observer", "group__observer__api.html#ga6348a5b0626efb784062a480933efe71", null ],
+    [ "utilwin_window_observer", "group__observer__api.html#ga1d5bc138d183d2f9eb441a6c63bbfcd6", null ],
     [ "helpbar_binding_observer", "group__observer__api.html#gab0329ccef8dd2aef381a44436e4a2020", null ],
     [ "helpbar_color_observer", "group__observer__api.html#ga40dca5830610c5304bea0d59e4d5f284", null ],
     [ "helpbar_config_observer", "group__observer__api.html#gaf5bdd54ad5934b0056562ce7f07f38be", null ],

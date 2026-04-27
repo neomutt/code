@@ -2,7 +2,7 @@ var maildir_2module_8c =
 [
     [ "maildir_init", "maildir_2module_8c.html#a12d20ccd3ab710143d990f4c06bf2e29", null ],
     [ "maildir_config_define_variables", "maildir_2module_8c.html#a58ee5d611e2d6317bf68c7bce8b95838", null ],
-    [ "maildir_cleanup", "maildir_2module_8c.html#a07204ca171a0a9dfa38acd3e678f1032", null ],
+    [ "maildir_cleanup", "maildir_2module_8c.html#a05068ab8dc32686b0e15ff62f86e3a01", null ],
     [ "MaildirVars", "maildir_2module_8c.html#a5a0f65a3cfb197eafd4aa3687f6c2e7f", null ],
     [ "MaildirVarsHcache", "maildir_2module_8c.html#a7abf1894201e47362a87d574ace005f7", null ],
     [ "ModuleMaildir", "maildir_2module_8c.html#a1db00dd3b8116827160df66c9cd022d0", null ]

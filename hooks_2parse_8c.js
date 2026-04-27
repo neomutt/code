@@ -10,9 +10,9 @@ var hooks_2parse_8c =
     [ "parse_crypt_hook", "group__command__parse.html#ga96da0493ea4e68ea37706850ab00fe8c", null ],
     [ "parse_mbox_hook", "group__command__parse.html#gabcabbdbafbf414688338eadbb52eba45", null ],
     [ "parse_compress_hook", "group__command__parse.html#ga22d97eef290b7923b96e68c14dfaa060", null ],
-    [ "mutt_delete_hooks", "hooks_2parse_8c.html#a45d192929924e15580eca983319585d4", null ],
+    [ "mutt_delete_hooks", "hooks_2parse_8c.html#a300c28934505b92bd1a61992aa19abc3", null ],
     [ "idxfmt_hashelem_free", "group__hash__hdata__free__api.html#ga6c55d68e0ab13d9aaf342c1fd33f3399", null ],
-    [ "delete_idxfmt_hooks", "hooks_2parse_8c.html#a677c0dc6bfb7667d21465a89ee364383", null ],
+    [ "delete_idxfmt_hooks", "hooks_2parse_8c.html#a9738f8b3f197218c44f294bca64eeb94", null ],
     [ "parse_index_hook", "group__command__parse.html#gaec564b59d96c2b635ad23e39e6408ac0", null ],
     [ "parse_unhook", "group__command__parse.html#ga44b2664079587da17d63037f29be69b1", null ],
     [ "IndexFormatDef", "hooks_2parse_8c.html#ae75adf8afa54d4ede302cc797b0a7ab1", null ]

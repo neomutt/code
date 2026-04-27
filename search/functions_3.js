@@ -16,7 +16,7 @@ var searchData=
   ['default_5fcolor_13',['default_color',['../group__menu__color.html#ga4eee58fec6fb73fda50ee303853dfbe3',1,'menu.c']]],
   ['default_5fto_14',['default_to',['../send_8c.html#ab5edea027c9fa45beef0a68fb707789d',1,'send.c']]],
   ['delete_5fattachment_15',['delete_attachment',['../compose_2functions_8c.html#a9db1307c028e5f4b903bb9a312c627fd',1,'functions.c']]],
-  ['delete_5fidxfmt_5fhooks_16',['delete_idxfmt_hooks',['../hooks_2parse_8c.html#a677c0dc6bfb7667d21465a89ee364383',1,'delete_idxfmt_hooks(void):&#160;parse.c'],['../hooks_2parse_8h.html#a677c0dc6bfb7667d21465a89ee364383',1,'delete_idxfmt_hooks(void):&#160;parse.c']]],
+  ['delete_5fidxfmt_5fhooks_16',['delete_idxfmt_hooks',['../hooks_2parse_8c.html#a9738f8b3f197218c44f294bca64eeb94',1,'delete_idxfmt_hooks(struct HashTable **idx_fmt_hooks):&#160;parse.c'],['../hooks_2parse_8h.html#a9738f8b3f197218c44f294bca64eeb94',1,'delete_idxfmt_hooks(struct HashTable **idx_fmt_hooks):&#160;parse.c']]],
   ['destroy_5fstate_17',['destroy_state',['../browser_2functions_8c.html#aaff67d90e29ac36d805fd778fca74225',1,'destroy_state(struct BrowserState *state):&#160;functions.c'],['../browser_2lib_8h.html#aaff67d90e29ac36d805fd778fca74225',1,'destroy_state(struct BrowserState *state):&#160;functions.c']]],
   ['dialog_5ffind_18',['dialog_find',['../dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada',1,'dialog_find(struct MuttWindow *win):&#160;dialog.c'],['../dialog_8h.html#ae9143ce9323ae3351fd9b612a6063ada',1,'dialog_find(struct MuttWindow *win):&#160;dialog.c']]],
   ['dialog_5fpop_19',['dialog_pop',['../dialog_8c.html#a82616808183352fb315931b2bb3518c0',1,'dialog_pop(void):&#160;dialog.c'],['../dialog_8h.html#a82616808183352fb315931b2bb3518c0',1,'dialog_pop(void):&#160;dialog.c']]],

@@ -5,7 +5,6 @@ var menu_8h =
     [ "MenuFunctionOp", "structMenuFunctionOp.html", "structMenuFunctionOp" ],
     [ "SubMenu", "structSubMenu.html", "structSubMenu" ],
     [ "MenuDefinition", "structMenuDefinition.html", "structMenuDefinition" ],
-    [ "MAX_SEQ", "menu_8h.html#ae22870a5cb59343e903a29d446eb3aac", null ],
     [ "init_keys_t", "menu_8h.html#a0cc25988f400cf0cae0c1ee04a665e25", null ],
     [ "ARRAY_HEAD", "menu_8h.html#ab782de6607367d4eb189c254b0de1002", null ],
     [ "ARRAY_HEAD", "menu_8h.html#ab1cca549bcc742601b9b93574df6723e", null ],

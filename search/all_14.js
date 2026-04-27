@@ -76,7 +76,7 @@ var searchData=
   ['question_73',['Ask the user a question',['../question_question.html',1,'lib_question']]],
   ['question_20module_74',['Definition of the Question Module',['../question_module.html',1,'lib_question']]],
   ['question_2ec_75',['question.c',['../question_8c.html',1,'']]],
-  ['question_5fcleanup_76',['question_cleanup',['../question_2module_8c.html#a0ac430bba113ddb260b1327f88505735',1,'module.c']]],
+  ['question_5fcleanup_76',['question_cleanup',['../question_2module_8c.html#ace41c337a3013c164e7dc7cbcfcc0d9c',1,'module.c']]],
   ['question_5finit_77',['question_init',['../question_2module_8c.html#ae047b21b987669cf03ad57e74b9d8dfd',1,'module.c']]],
   ['questionmoduledata_78',['QuestionModuleData',['../structQuestionModuleData.html',1,'']]],
   ['queue_2eh_79',['queue.h',['../queue_8h.html',1,'']]],
@@ -91,11 +91,11 @@ var searchData=
   ['quoted_2ec_88',['quoted.c',['../quoted_8c.html',1,'']]],
   ['quoted_2eh_89',['quoted.h',['../quoted_8h.html',1,'']]],
   ['quoted_5fcolor_5fobserver_90',['quoted_color_observer',['../group__observer__api.html#ga6084e254ff3d86ff7d2a6079e008cbbe',1,'quoted.c']]],
-  ['quoted_5fcolors_5fcleanup_91',['quoted_colors_cleanup',['../quoted_8c.html#ade718f4e6f82585ac99117faa225d247',1,'quoted_colors_cleanup(void):&#160;quoted.c'],['../quoted_8h.html#ade718f4e6f82585ac99117faa225d247',1,'quoted_colors_cleanup(void):&#160;quoted.c']]],
+  ['quoted_5fcolors_5fcleanup_91',['quoted_colors_cleanup',['../quoted_8c.html#a8225d849a71d37cb94400544b04c5b9e',1,'quoted_colors_cleanup(int *num_quoted_colors):&#160;quoted.c'],['../quoted_8h.html#a8225d849a71d37cb94400544b04c5b9e',1,'quoted_colors_cleanup(int *num_quoted_colors):&#160;quoted.c']]],
   ['quoted_5fcolors_5fdump_92',['quoted_colors_dump',['../color_2dump_8c.html#a72bfe6ca449164ce08083c64dc40dc91',1,'dump.c']]],
   ['quoted_5fcolors_5fget_93',['quoted_colors_get',['../quoted_8c.html#a40480938c71869132265641f69df574c',1,'quoted_colors_get(int q):&#160;quoted.c'],['../quoted_8h.html#a40480938c71869132265641f69df574c',1,'quoted_colors_get(int q):&#160;quoted.c']]],
   ['quoted_5fcolors_5finit_94',['quoted_colors_init',['../quoted_8c.html#aa1d264cca61a2070b58dcef705d9fb87',1,'quoted_colors_init(void):&#160;quoted.c'],['../quoted_8h.html#aa1d264cca61a2070b58dcef705d9fb87',1,'quoted_colors_init(void):&#160;quoted.c']]],
   ['quoted_5fcolors_5fnum_5fused_95',['quoted_colors_num_used',['../quoted_8c.html#a4516dfe2716c7ebd2ea5cf1d0759a3a6',1,'quoted_colors_num_used(void):&#160;quoted.c'],['../quoted_8h.html#a4516dfe2716c7ebd2ea5cf1d0759a3a6',1,'quoted_colors_num_used(void):&#160;quoted.c']]],
-  ['quoted_5fcolors_5freset_96',['quoted_colors_reset',['../quoted_8c.html#aa5af51e5b601c6835f5dc616fadd8241',1,'quoted_colors_reset(void):&#160;quoted.c'],['../quoted_8h.html#aa5af51e5b601c6835f5dc616fadd8241',1,'quoted_colors_reset(void):&#160;quoted.c']]],
+  ['quoted_5fcolors_5freset_96',['quoted_colors_reset',['../quoted_8c.html#a2f930493ceda906ad04c91ae663ad0a9',1,'quoted_colors_reset(int *num_quoted_colors):&#160;quoted.c'],['../quoted_8h.html#a2f930493ceda906ad04c91ae663ad0a9',1,'quoted_colors_reset(int *num_quoted_colors):&#160;quoted.c']]],
   ['quotestyle_97',['QuoteStyle',['../structQuoteStyle.html',1,'']]]
 ];

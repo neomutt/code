@@ -36,5 +36,13 @@ var searchData=
   ['utf7_5fto_5futf8_33',['utf7_to_utf8',['../utf7_8c.html#ad5c3e1174762249432cba15cd4330871',1,'utf7.c']]],
   ['utf8_5fchar_5flen_34',['utf8_char_len',['../subseq_8c.html#a1065a0c8f4fd2697c301652d4ef8ad43',1,'subseq.c']]],
   ['utf8_5fis_5fcontinuation_35',['utf8_is_continuation',['../subseq_8c.html#a1280dc71c22f4ab8834f62e6bd6bbfe6',1,'subseq.c']]],
-  ['utf8_5fto_5futf7_36',['utf8_to_utf7',['../utf7_8c.html#a9890d5981d6dd007456212a0d37d77ed',1,'utf7.c']]]
+  ['utf8_5fto_5futf7_36',['utf8_to_utf7',['../utf7_8c.html#a9890d5981d6dd007456212a0d37d77ed',1,'utf7.c']]],
+  ['utilwin_5fget_5ftext_37',['utilwin_get_text',['../utilwin_8c.html#a20ebfd02c0915b4662a1864a8681c1bb',1,'utilwin_get_text(struct MuttWindow *win):&#160;utilwin.c'],['../utilwin_8h.html#a20ebfd02c0915b4662a1864a8681c1bb',1,'utilwin_get_text(struct MuttWindow *win):&#160;utilwin.c']]],
+  ['utilwin_5fkey_5fobserver_38',['utilwin_key_observer',['../group__observer__api.html#ga6348a5b0626efb784062a480933efe71',1,'utilwin.c']]],
+  ['utilwin_5fnew_39',['utilwin_new',['../utilwin_8c.html#ac28089c6d293b4d2c88820f02513a0e9',1,'utilwin_new(void):&#160;utilwin.c'],['../utilwin_8h.html#ac28089c6d293b4d2c88820f02513a0e9',1,'utilwin_new(void):&#160;utilwin.c']]],
+  ['utilwin_5frecalc_40',['utilwin_recalc',['../group__window__recalc.html#ga5215cab4f6ec0faf9981e547aa0f9f32',1,'utilwin.c']]],
+  ['utilwin_5frepaint_41',['utilwin_repaint',['../group__window__repaint.html#ga318f9c502fd1e44afee34663c86d3254',1,'utilwin.c']]],
+  ['utilwin_5fset_5ftext_42',['utilwin_set_text',['../utilwin_8c.html#a28f47665f258479b8674284f9c99391c',1,'utilwin_set_text(struct MuttWindow *win, const char *text):&#160;utilwin.c'],['../utilwin_8h.html#a28f47665f258479b8674284f9c99391c',1,'utilwin_set_text(struct MuttWindow *win, const char *text):&#160;utilwin.c']]],
+  ['utilwin_5fwdata_5ffree_43',['utilwin_wdata_free',['../group__window__wdata__free.html#gaede866b2cc45ed80ade1fb465421375c',1,'utilwin.c']]],
+  ['utilwin_5fwindow_5fobserver_44',['utilwin_window_observer',['../group__observer__api.html#ga1d5bc138d183d2f9eb441a6c63bbfcd6',1,'utilwin.c']]]
 ];

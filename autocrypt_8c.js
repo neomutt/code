@@ -2,7 +2,7 @@ var autocrypt_8c =
 [
     [ "autocrypt_dir_init", "autocrypt_8c.html#a33b9a5f3a296e1bcaaeebda77f86ab44", null ],
     [ "mutt_autocrypt_init", "autocrypt_8c.html#ac2a58142d9962d1108cf66d8386a70bd", null ],
-    [ "mutt_autocrypt_cleanup", "autocrypt_8c.html#a6ccee2b006fad28ea865139d135e5d59", null ],
+    [ "mutt_autocrypt_cleanup", "autocrypt_8c.html#a93991ceb371670309b99ccf1e6792913", null ],
     [ "mutt_autocrypt_account_init", "autocrypt_8c.html#aa6a1d41202dd88cfe7d34655352e437e", null ],
     [ "mutt_autocrypt_process_autocrypt_header", "autocrypt_8c.html#a0477a928cf8c6b79a25b42e63f4647b8", null ],
     [ "mutt_autocrypt_process_gossip_header", "autocrypt_8c.html#af4b307317d8b6fba7c6321e93fc21194", null ],

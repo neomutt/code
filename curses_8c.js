@@ -1,6 +1,6 @@
 var curses_8c =
 [
-    [ "curses_colors_init", "curses_8c.html#ae758168199e780e9b2beb81b6de399c4", null ],
+    [ "curses_colors_init", "curses_8c.html#a29bda7e51b1bebfaccf5cb3ce227f7f2", null ],
     [ "curses_colors_find", "curses_8c.html#aed429a5a44d68ec659dede56e6670492", null ],
     [ "curses_color_init", "curses_8c.html#a2753b4d42382db87f398c3805fb46210", null ],
     [ "curses_color_free", "curses_8c.html#a7a144d56e3ee00c37e6355069dc8f5c1", null ],

@@ -64,9 +64,9 @@ var color_8h =
       [ "MT_COLOR_INDEX_TAGS", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da4ea3888f22ae56868968453aa4fe678d", null ],
       [ "MT_COLOR_MAX", "color_8h.html#ac0dddfeb58e0f6855f22796d240b070da1c77279f0083c3283080aee86cbb1285", null ]
     ] ],
-    [ "colors_init", "color_8h.html#a7f2103d066df78cbf75de5083c02dd74", null ],
-    [ "colors_reset", "color_8h.html#aec44cbbfbd9198585b2c1f532416c8d4", null ],
-    [ "colors_cleanup", "color_8h.html#a4446c94565fccfad7ca90b914bfe3ff5", null ],
+    [ "colors_init", "color_8h.html#ae5ad77463d812fd1826417fec05e2d2d", null ],
+    [ "colors_reset", "color_8h.html#ac3c02b54affe6227b64ea183618b3631", null ],
+    [ "colors_cleanup", "color_8h.html#ab7c2261cce075c5ea449109eddef86b6", null ],
     [ "mutt_color_has_pattern", "color_8h.html#a8f62b76a0baef9936162697d43edddf3", null ],
     [ "ColorFields", "color_8h.html#a4476932702aa028f1fcdc565633c03cf", null ]
 ];

@@ -7,6 +7,7 @@ var group__window__wdata__free =
     [ "env_wdata_free", "group__window__wdata__free.html#ga6626946cb05367b4d328a3d19949693c", null ],
     [ "msgwin_wdata_free", "group__window__wdata__free.html#ga6e44a23594bc757166043e886fa3e9c6", null ],
     [ "sbar_wdata_free", "group__window__wdata__free.html#ga0ff77912c114b6a21a1de3b3ebaf8943", null ],
+    [ "utilwin_wdata_free", "group__window__wdata__free.html#gaede866b2cc45ed80ade1fb465421375c", null ],
     [ "helpbar_wdata_free", "group__window__wdata__free.html#ga593915c2b1e7db1c5711a28d4ef40ef2", null ],
     [ "ibar_data_free", "group__window__wdata__free.html#gad3048340f700cabc3a7b9f8a33545197", null ],
     [ "index_private_data_free", "group__window__wdata__free.html#ga1ec4487e0522141faefc4ae14000423b", null ],

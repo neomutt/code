@@ -10,6 +10,7 @@ var group__cfg__def__validator =
     [ "compress_level_validator", "group__cfg__def__validator.html#ga92fbd6702ed51d28bda1eb3ecce03e1e", null ],
     [ "imap_auth_validator", "group__cfg__def__validator.html#ga1946c14fc82524c3225377b14904fff3", null ],
     [ "maildir_field_delimiter_validator", "group__cfg__def__validator.html#ga39171f849f17396ebea4fcc57dce77da", null ],
+    [ "key_timeout_validator", "group__cfg__def__validator.html#ga3fc4cb6c61819697596d172f53101fc0", null ],
     [ "debug_level_validator", "group__cfg__def__validator.html#gafedbf4e374c18673b783480557bfb9bf", null ],
     [ "nm_default_url_validator", "group__cfg__def__validator.html#ga31c0f4e3f9775e19ff55babb50d180a9", null ],
     [ "pop_auth_validator", "group__cfg__def__validator.html#gaca711dc000431dd275e48ddbd800db4e", null ],

@@ -1,5 +1,7 @@
 var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
 [
+    [ "bottombar.c", "bottombar_8c.html", "bottombar_8c" ],
+    [ "bottombar.h", "bottombar_8h.html", "bottombar_8h" ],
     [ "config.c", "gui_2config_8c.html", "gui_2config_8c" ],
     [ "curs_lib.c", "curs__lib_8c.html", "curs__lib_8c" ],
     [ "curs_lib.h", "curs__lib_8h.html", "curs__lib_8h" ],
@@ -38,5 +40,7 @@ var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
     [ "terminal.c", "terminal_8c.html", "terminal_8c" ],
     [ "terminal.h", "terminal_8h.html", "terminal_8h" ],
     [ "thread.c", "gui_2thread_8c.html", "gui_2thread_8c" ],
-    [ "thread.h", "gui_2thread_8h.html", "gui_2thread_8h" ]
+    [ "thread.h", "gui_2thread_8h.html", "gui_2thread_8h" ],
+    [ "utilwin.c", "utilwin_8c.html", "utilwin_8c" ],
+    [ "utilwin.h", "utilwin_8h.html", "utilwin_8h" ]
 ];

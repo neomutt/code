@@ -9,6 +9,8 @@ var mutt__mailbox_8c =
     [ "find_next_mailbox", "mutt__mailbox_8c.html#ae8e833b5ab27ac153c581115f39712ff", null ],
     [ "mutt_mailbox_next", "mutt__mailbox_8c.html#aaa63cce0d13314b09e8a0824ba8fb234", null ],
     [ "mutt_mailbox_next_unread", "mutt__mailbox_8c.html#a8f806bcfdbc1f01cb85a5d29ff4f6d27", null ],
+    [ "find_prev_mailbox", "mutt__mailbox_8c.html#a7613db5ae3b05581e38efe89562cc558", null ],
+    [ "mutt_mailbox_prev_unread", "mutt__mailbox_8c.html#af4e8d5efe6020e267189b86c7fd68912", null ],
     [ "mailbox_restore_timestamp", "mutt__mailbox_8c.html#afa60f2a531e9ede8365732e146a7b3f9", null ],
     [ "MailboxTime", "mutt__mailbox_8c.html#aeb7307ad9fd4cae39c95358e38484fb0", null ],
     [ "MailboxStatsTime", "mutt__mailbox_8c.html#a0158b0a6ecc3627c41905aab3d02ad3d", null ],

@@ -9,7 +9,9 @@ var searchData=
   ['body_2eh_6',['body.h',['../email_2body_8h.html',1,'(Global Namespace)'],['../send_2body_8h.html',1,'(Global Namespace)']]],
   ['bool_2ec_7',['bool.c',['../bool_8c.html',1,'']]],
   ['bool_2eh_8',['bool.h',['../bool_8h.html',1,'']]],
-  ['browse_2ec_9',['browse.c',['../browse_8c.html',1,'']]],
-  ['buffer_2ec_10',['buffer.c',['../buffer_8c.html',1,'']]],
-  ['buffer_2eh_11',['buffer.h',['../buffer_8h.html',1,'']]]
+  ['bottombar_2ec_9',['bottombar.c',['../bottombar_8c.html',1,'']]],
+  ['bottombar_2eh_10',['bottombar.h',['../bottombar_8h.html',1,'']]],
+  ['browse_2ec_11',['browse.c',['../browse_8c.html',1,'']]],
+  ['buffer_2ec_12',['buffer.c',['../buffer_8c.html',1,'']]],
+  ['buffer_2eh_13',['buffer.h',['../buffer_8h.html',1,'']]]
 ];

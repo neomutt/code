@@ -15,9 +15,10 @@ var searchData=
   ['notifyenvelope_12',['NotifyEnvelope',['../envelope_8h.html#a4344892727c804ab1e45e1bd0a33deea',1,'envelope.h']]],
   ['notifyglobal_13',['NotifyGlobal',['../neomutt_8h.html#a2b0b0460af92e2d12631993935b4db5d',1,'neomutt.h']]],
   ['notifyheader_14',['NotifyHeader',['../email_8h.html#a32e989d0071364c3086b2f4b93beac1d',1,'email.h']]],
-  ['notifymailbox_15',['NotifyMailbox',['../core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4',1,'mailbox.h']]],
-  ['notifymview_16',['NotifyMview',['../mview_8h.html#a199b0cff07bd49ca8a0d3884c5e3a6a9',1,'mview.h']]],
-  ['notifysubjectrx_17',['NotifySubjectRx',['../subjectrx_8h.html#ad86234aa67a6ef5a2ac0928f7add49a2',1,'subjectrx.h']]],
-  ['notifytype_18',['NotifyType',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8',1,'notify_type.h']]],
-  ['notifywindow_19',['NotifyWindow',['../mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138c',1,'mutt_window.h']]]
+  ['notifykey_15',['NotifyKey',['../key_2notify_8h.html#a882ac5740c218dc04529628b38840859',1,'notify.h']]],
+  ['notifymailbox_16',['NotifyMailbox',['../core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4',1,'mailbox.h']]],
+  ['notifymview_17',['NotifyMview',['../mview_8h.html#a199b0cff07bd49ca8a0d3884c5e3a6a9',1,'mview.h']]],
+  ['notifysubjectrx_18',['NotifySubjectRx',['../subjectrx_8h.html#ad86234aa67a6ef5a2ac0928f7add49a2',1,'subjectrx.h']]],
+  ['notifytype_19',['NotifyType',['../notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8',1,'notify_type.h']]],
+  ['notifywindow_20',['NotifyWindow',['../mutt__window_8h.html#a6a4ff69f02a5c359071cd8093453138c',1,'mutt_window.h']]]
 ];

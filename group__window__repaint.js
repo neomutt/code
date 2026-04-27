@@ -6,6 +6,7 @@ var group__window__repaint =
     [ "env_repaint", "group__window__repaint.html#ga715d5c2bca7741c1cb933636b6e6cfa9", null ],
     [ "msgwin_repaint", "group__window__repaint.html#gae7583a8406cfc0e3602be902ab8cac8e", null ],
     [ "sbar_repaint", "group__window__repaint.html#ga4441485e6a706e71ae4b3341e43d27d9", null ],
+    [ "utilwin_repaint", "group__window__repaint.html#ga318f9c502fd1e44afee34663c86d3254", null ],
     [ "helpbar_repaint", "group__window__repaint.html#ga744700a753aeb8f87e50e57706bfb08d", null ],
     [ "ibar_repaint", "group__window__repaint.html#gaf6f41d2558a333c1bc37b842c312db3c", null ],
     [ "index_repaint", "group__window__repaint.html#ga3a77e69451f3977b5f554d8d3aa08c0e", null ],

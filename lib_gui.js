@@ -1,5 +1,6 @@
 var lib_gui =
 [
+    [ "Bottom Bar Container", "gui_bottombar.html", null ],
     [ "Config used by libgui", "gui_config.html", null ],
     [ "Window drawing code", "gui_curs_lib.html", null ],
     [ "Dialog Windows", "gui_dialog.html", null ],
@@ -19,5 +20,6 @@ var lib_gui =
     [ "Simple Bar (status)", "gui_sbar.html", null ],
     [ "Simple Dialog", "gui_simple.html", null ],
     [ "Set the terminal title/icon", "gui_terminal.html", null ],
-    [ "Create/manipulate threading in emails", "gui_thread.html", null ]
+    [ "Create/manipulate threading in emails", "gui_thread.html", null ],
+    [ "Utility Window", "gui_utilwin.html", null ]
 ];

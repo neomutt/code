@@ -8,5 +8,5 @@ var structModule =
     [ "commands_register", "structModule.html#ade2ca5c5c0a45f67c7e0580aefd3a630", null ],
     [ "gui_init", "structModule.html#a16c0b01643b613ad4a7e35525eb464c9", null ],
     [ "gui_cleanup", "structModule.html#a2e81f272f8a5813d8b50c0eff0a53a46", null ],
-    [ "cleanup", "structModule.html#a7432d140eea6dbec2af4baf97a6bb2df", null ]
+    [ "cleanup", "structModule.html#ab25175304468144caf3e410ba966264a", null ]
 ];

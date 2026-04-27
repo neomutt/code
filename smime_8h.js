@@ -14,7 +14,7 @@ var smime_8h =
     ] ],
     [ "ARRAY_HEAD", "smime_8h.html#a3602fdce27e88954fecd060b5f8189db", null ],
     [ "smime_init", "smime_8h.html#a6f582853bd091e5fda82a82dc049a38d", null ],
-    [ "smime_cleanup", "smime_8h.html#a7d3eec74fc4e57062dd82ab74beea573", null ],
+    [ "smime_cleanup", "smime_8h.html#a733c1fe8a07b599fc7ab67991ee251f4", null ],
     [ "smime_class_application_handler", "group__crypto__application__handler.html#ga77eef2288f13097abdd210ac1ed1e4d1", null ],
     [ "smime_class_build_smime_entity", "group__crypto__smime__build__smime__entity.html#ga36daf9001cadaf09a8684d135b44fc6c", null ],
     [ "smime_class_decrypt_mime", "group__crypto__decrypt__mime.html#ga9885e7131d9a5d4053b196bbe146af40", null ],

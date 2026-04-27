@@ -4,7 +4,7 @@ var menu_2module_8c =
     [ "menu_config_define_variables", "menu_2module_8c.html#ac7942d1454950789b4b780c33ddeba81", null ],
     [ "menu_gui_init", "menu_2module_8c.html#aab6631faf733fdf87c977e0f004d6504", null ],
     [ "menu_gui_cleanup", "menu_2module_8c.html#aa67616f56ccfa6a6552dbe4f21f7aea8", null ],
-    [ "menu_cleanup", "menu_2module_8c.html#a03d6cb083a8a0f329a798155b81f814b", null ],
+    [ "menu_cleanup", "menu_2module_8c.html#ac8710acd66d5d07d4d72afe22006ff64", null ],
     [ "MenuVars", "menu_2module_8c.html#ae03555c504cc6316d16bf0e8fffbe426", null ],
     [ "ModuleMenu", "menu_2module_8c.html#a6eb05085ff58fa53e32ce694a4a7ee13", null ]
 ];

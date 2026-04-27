@@ -20,5 +20,5 @@ var pgpkey_8c =
     [ "pgp_get_lastp", "pgpkey_8c.html#a72663a0e1ca8135ce304529938453890", null ],
     [ "pgp_getkeybyaddr", "pgpkey_8c.html#a8b9c5f5d6aa601cd3a3e14a85733b97d", null ],
     [ "pgp_getkeybystr", "pgpkey_8c.html#aaddba522e6c8515d7e72a9995ff71c7f", null ],
-    [ "pgp_id_defaults_cleanup", "pgpkey_8c.html#a84db225013002063d3842b1874aafcc1", null ]
+    [ "pgp_id_defaults_cleanup", "pgpkey_8c.html#a05716343748c1d356f467e91b2c6815b", null ]
 ];

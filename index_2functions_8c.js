@@ -6,6 +6,7 @@ var index_2functions_8c =
       [ "RESOLVE_NEXT_THREAD", "index_2functions_8c.html#aea03692781e579bff799cf5199e3b999a94864a6927a89688e5b64e61ab181149", null ],
       [ "RESOLVE_NEXT_SUBTHREAD", "index_2functions_8c.html#aea03692781e579bff799cf5199e3b999a220d4aaf8778a8bd2a353b3817992c90", null ]
     ] ],
+    [ "op_jump", "group__index__function__api.html#ga740c90565ea1186b448584e5478a5272", null ],
     [ "index_init_keys", "index_2functions_8c.html#a5bd1d1a9f1bc99a996224f3567a7de66", null ],
     [ "resolve_email", "index_2functions_8c.html#a79974324b9d926c3f2ef8a07c93bcfe3", null ],
     [ "index_next_undeleted", "index_2functions_8c.html#a6e09a10a71d4891eef264ce0cb3504e9", null ],
@@ -28,7 +29,6 @@ var index_2functions_8c =
     [ "op_forget_passphrase", "group__index__function__api.html#ga7c4e47e26b4e909fb3f81c1adc238db9", null ],
     [ "op_forward_message", "group__index__function__api.html#ga2e249ce1e9cc4ff43dfeae3a9e71203e", null ],
     [ "op_group_reply", "group__index__function__api.html#ga7f3cee7bd1ce9b1d088908c7eda744df", null ],
-    [ "op_jump", "group__index__function__api.html#ga740c90565ea1186b448584e5478a5272", null ],
     [ "op_list_reply", "group__index__function__api.html#ga5157ee847d5b7e48c519335735700bc7", null ],
     [ "op_list_subscribe", "group__index__function__api.html#ga374a1ae034241c107d9aa790d5b39ee8", null ],
     [ "op_list_unsubscribe", "group__index__function__api.html#ga1696afd10be65a040d9ff41eceb17ffa", null ],
@@ -51,6 +51,7 @@ var index_2functions_8c =
     [ "op_main_next_thread", "group__index__function__api.html#gabf3d8980eb9f57dbd12c530cf9ff39a3", null ],
     [ "op_main_next_undeleted", "group__index__function__api.html#gaaaf568a417b49781910a291baa4069db", null ],
     [ "op_main_next_unread_mailbox", "group__index__function__api.html#ga5a8e8ff7bbba11a4b2e5c75b675d2964", null ],
+    [ "op_main_prev_unread_mailbox", "group__index__function__api.html#gaa92c89a73b869713096b09cb5c04d591", null ],
     [ "op_main_prev_undeleted", "group__index__function__api.html#ga3872b0dd7731c99b3ab09075d1381d7c", null ],
     [ "op_main_quasi_delete", "group__index__function__api.html#gacc547ced89fb315e59b9e81b4e076074", null ],
     [ "op_main_read_thread", "group__index__function__api.html#gae58cb953165271732f225c456d69e85d", null ],

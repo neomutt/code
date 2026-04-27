@@ -18,7 +18,7 @@ var searchData=
   ['templ_15',['templ',['../structReplace.html#a1eb937e11ef810cd39f1738eb20df1e9',1,'Replace']]],
   ['templen_16',['templen',['../structEnterWindowData.html#afe965458ee10d8e26e324bc24973f78c',1,'EnterWindowData']]],
   ['testcommand_17',['testcommand',['../structMailcapEntry.html#a545b63069c50022f46b179e77c312a0f',1,'MailcapEntry']]],
-  ['text_18',['text',['../structExpandoNode.html#a8bcba302c1b074f1e9327745397e8796',1,'ExpandoNode::text'],['../structMsgWinWindowData.html#a6046b3d7e5d1a5a83c0da9c5d03267ce',1,'MsgWinWindowData::text']]],
+  ['text_18',['text',['../structExpandoNode.html#a8bcba302c1b074f1e9327745397e8796',1,'ExpandoNode::text'],['../structMsgWinWindowData.html#a6046b3d7e5d1a5a83c0da9c5d03267ce',1,'MsgWinWindowData::text'],['../structUtilWinData.html#a65c99565c46157bd0d9d5cc86525f826',1,'UtilWinData::text']]],
   ['thanks_19',['Thanks',['../version_8c.html#a274a70ce29753c12781d31c7f6c49da8',1,'version.c']]],
   ['thread_20',['thread',['../structEmail.html#af7fd9d5febf878edc4b6965ec40f312e',1,'Email']]],
   ['threaded_21',['threaded',['../structEmail.html#a95029ac9edf984e229faefb6c8630fa9',1,'Email']]],

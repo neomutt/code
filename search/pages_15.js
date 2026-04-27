@@ -44,5 +44,6 @@ var searchData=
   ['user_20with_20a_20selectable_20list_41',['GUI present the user with a selectable list',['../menu_menu.html',1,'lib_menu']]],
   ['using_20data_42',['Render Expandos using Data',['../expando_render.html',1,'lib_expando']]],
   ['using_20sendmail_43',['Send email using sendmail',['../send_sendmail.html',1,'lib_send']]],
-  ['utf_207_20manipulation_44',['UTF-7 Manipulation',['../imap_utf7.html',1,'lib_imap']]]
+  ['utf_207_20manipulation_44',['UTF-7 Manipulation',['../imap_utf7.html',1,'lib_imap']]],
+  ['utility_20window_45',['Utility Window',['../gui_utilwin.html',1,'lib_gui']]]
 ];

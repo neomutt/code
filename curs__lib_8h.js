@@ -11,7 +11,7 @@ var curs__lib_8h =
     [ "mutt_paddstr", "curs__lib_8h.html#a861e3d2f47099563f8c21a1bb0eb2092", null ],
     [ "mutt_query_exit", "curs__lib_8h.html#ac7ca868e51ee14c92ab7a7b09487258e", null ],
     [ "mutt_refresh", "curs__lib_8h.html#a99dc8e687f3d5688695d0d7a1bab3c3f", null ],
-    [ "mutt_str_expand_tabs", "curs__lib_8h.html#aefe403cf07bbeee669678ab3087e2055", null ],
+    [ "mutt_str_expand_tabs", "curs__lib_8h.html#ab8c1541b5d9d83664fd8c28546ec9936", null ],
     [ "mutt_strwidth", "curs__lib_8h.html#ad506c0f8d5c549c330f49e2fa56e207b", null ],
     [ "mutt_strnwidth", "curs__lib_8h.html#a56f61b461d106fcc36eb09c0690f9abb", null ],
     [ "mutt_wstr_trunc", "curs__lib_8h.html#a48a9fd66de2ef76e2b72704badd3c40b", null ],

@@ -21,7 +21,7 @@ var crypt__gpgme_8h =
       [ "KEY_CAP_CAN_CERTIFY", "crypt__gpgme_8h.html#aedb110bc0a5b06622df514a7b1f9bca7a6c74ebab89ddf2395613214f1de91e10", null ]
     ] ],
     [ "ARRAY_HEAD", "crypt__gpgme_8h.html#a1f77d9fe6ca9a17ff13d9960ead57a07", null ],
-    [ "gpgme_id_defaults_cleanup", "crypt__gpgme_8h.html#ac5dd6373e3d6397d1d17c2efca7212f5", null ],
+    [ "gpgme_id_defaults_cleanup", "crypt__gpgme_8h.html#a35e29541b589f470ada84b388d27f359", null ],
     [ "pgp_gpgme_set_sender", "group__crypto__set__sender.html#ga192c41e1923f64fd284a130d27328cb2", null ],
     [ "pgp_gpgme_application_handler", "group__crypto__application__handler.html#ga48e1f722685182a612ea634c0518df58", null ],
     [ "pgp_gpgme_check_traditional", "group__crypto__pgp__check__traditional.html#ga5ecb76917f272ca7a569bf0e14104c95", null ],

@@ -42,6 +42,7 @@ var group__index__function__api =
     [ "op_main_next_thread", "group__index__function__api.html#gabf3d8980eb9f57dbd12c530cf9ff39a3", null ],
     [ "op_main_next_undeleted", "group__index__function__api.html#gaaaf568a417b49781910a291baa4069db", null ],
     [ "op_main_next_unread_mailbox", "group__index__function__api.html#ga5a8e8ff7bbba11a4b2e5c75b675d2964", null ],
+    [ "op_main_prev_unread_mailbox", "group__index__function__api.html#gaa92c89a73b869713096b09cb5c04d591", null ],
     [ "op_main_prev_undeleted", "group__index__function__api.html#ga3872b0dd7731c99b3ab09075d1381d7c", null ],
     [ "op_main_quasi_delete", "group__index__function__api.html#gacc547ced89fb315e59b9e81b4e076074", null ],
     [ "op_main_read_thread", "group__index__function__api.html#gae58cb953165271732f225c456d69e85d", null ],

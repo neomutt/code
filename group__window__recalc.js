@@ -9,6 +9,7 @@ var group__window__recalc =
     [ "env_recalc", "group__window__recalc.html#ga2ac8b6e6ab2aa7c3c9d4d8e4041d7b67", null ],
     [ "msgwin_recalc", "group__window__recalc.html#ga0f2cf24711bdbc3c5704cf8cce07e1ea", null ],
     [ "sbar_recalc", "group__window__recalc.html#gaf4ad1527459c4c39f28ebdee0f3e61a9", null ],
+    [ "utilwin_recalc", "group__window__recalc.html#ga5215cab4f6ec0faf9981e547aa0f9f32", null ],
     [ "helpbar_recalc", "group__window__recalc.html#ga5165a2f8ed1418aba9747d98572b104b", null ],
     [ "ibar_recalc", "group__window__recalc.html#gad5da1f46db353b9022654f5d929f3c58", null ],
     [ "index_recalc", "group__window__recalc.html#ga21327fe06863fb4547dae55df7b69eba", null ],

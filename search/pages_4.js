@@ -125,7 +125,7 @@ var searchData=
   ['connection_20credentials_20external_20command_122',['Connection Credentials External Command',['../conn_account_ext_cmd.html',1,'lib_conn']]],
   ['connections_123',['connections',['../main_mutt_socket.html',1,'NeoMutt connections'],['../lib_conn.html',1,'Network connections']]],
   ['constant_124',['Map between a string and a constant',['../mutt_mapping.html',1,'lib_mutt']]],
-  ['container_125',['Message Container',['../gui_msgcont.html',1,'lib_gui']]],
+  ['container_125',['Container',['../gui_bottombar.html',1,'Bottom Bar Container'],['../gui_msgcont.html',1,'Message Container']]],
   ['container_20node_126',['Container Node',['../expando_node_container.html',1,'lib_expando']]],
   ['content_127',['Decide how to display email content',['../email_handler.html',1,'lib_email']]],
   ['content_20id_20header_20functions_128',['Attachment Content-ID header functions',['../attach_cid.html',1,'lib_attach']]],

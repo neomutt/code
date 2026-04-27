@@ -24,5 +24,5 @@ var mutt__attach_8h =
     [ "mutt_print_attachment", "mutt__attach_8h.html#ac0daefbc4f9a1ba1179aa5f2ff9e537c", null ],
     [ "mutt_save_attachment", "mutt__attach_8h.html#a87e1ea8a7b0c926e02ed3db8b7d3dbd5", null ],
     [ "mutt_add_temp_attachment", "mutt__attach_8h.html#acc6c49a75e5a6fce41d18c1d95a45948", null ],
-    [ "mutt_temp_attachments_cleanup", "mutt__attach_8h.html#a6276b87d132d5b4e7590eb3d9265c0f8", null ]
+    [ "mutt_temp_attachments_cleanup", "mutt__attach_8h.html#a2bae887df2b9855cd0bfba6b1edfd7ef", null ]
 ];

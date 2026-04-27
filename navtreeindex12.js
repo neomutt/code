@@ -1,5 +1,11 @@
 var NAVTREEINDEX12 =
 {
+"email_2sort_8h.html#aefa89e4f16231d09e09e4693bebf6dd4a730d62b5269cf1067e0712be430985c6":[2,0,19,44,1,0],
+"email_2sort_8h.html#aefa89e4f16231d09e09e4693bebf6dd4a877f1379faba3adfe224a0f564cfa245":[2,0,19,44,1,8],
+"email_2sort_8h.html#aefa89e4f16231d09e09e4693bebf6dd4a881adabc2efbd907429d63c33796a9c3":[2,0,19,44,1,7],
+"email_2sort_8h.html#aefa89e4f16231d09e09e4693bebf6dd4aa33aa359af51dc6fba79681404a94de2":[2,0,19,44,1,2],
+"email_2sort_8h.html#aefa89e4f16231d09e09e4693bebf6dd4aa5fa714c8f7a789cb67f5d22cd014361":[2,0,19,44,1,10],
+"email_2sort_8h.html#aefa89e4f16231d09e09e4693bebf6dd4ab54715d08961e0ba189b6566844adf03":[2,0,19,44,1,5],
 "email_2sort_8h.html#aefa89e4f16231d09e09e4693bebf6dd4af120f8348ece0173052ee904ee48e640":[2,0,19,44,1,9],
 "email_2sort_8h_source.html":[2,0,19,44],
 "email_2thread_8c.html":[2,0,19,49],
@@ -180,7 +186,7 @@ var NAVTREEINDEX12 =
 "envelope_2lib_8h.html#aa48c162ddd86aad8444f441051033e8f":[2,0,20,2,0],
 "envelope_2lib_8h_source.html":[2,0,20,2],
 "envelope_2module_8c.html":[2,0,20,3],
-"envelope_2module_8c.html#a51f7770d41d9c2c57897648a3aaba977":[2,0,20,3,1],
+"envelope_2module_8c.html#a63f9e119800689d9b528dfba3bae3dfb":[2,0,20,3,1],
 "envelope_2module_8c.html#adafaeedb6de98052d7b10e8e61e96ffe":[2,0,20,3,2],
 "envelope_2module_8c.html#ae52c1d926669d5417e169588e6ff3735":[2,0,20,3,0],
 "envelope_2module_8c_source.html":[2,0,20,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX12 =
 "envelope_8c.html#a9ddc5b683d5a87677c1756fe44ff4217":[2,0,19,14,4],
 "envelope_8c.html#aa3f6a39659650d1ebb164d75d449635a":[2,0,19,14,3],
 "envelope_8c.html#ad0241decff4e270a16c8f39fb55addce":[2,0,19,14,10],
-"envelope_8c.html#ae2a0adc41fba1815de39e238ed9c129a":[2,0,19,14,12],
-"envelope_8c.html#ae9775769d2a2c71c04649e2bd5eab7af":[2,0,19,14,7],
-"envelope_8c.html#aeb4e0ebb67680c74374f046bce5bc84a":[2,0,19,14,8],
-"envelope_8c.html#afd00cc8d84947cbd55e082420b5732f1":[2,0,19,14,13],
-"envelope_8c_source.html":[2,0,19,14],
-"envelope_8h.html":[2,0,19,15],
-"envelope_8h.html#a0108f989ca58622df272cf31b610395e":[2,0,19,15,14]
+"envelope_8c.html#ae2a0adc41fba1815de39e238ed9c129a":[2,0,19,14,12]
 };

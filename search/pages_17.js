@@ -4,7 +4,7 @@ var searchData=
   ['when_20processing_20files_1',['Keep track when processing files',['../mutt_state.html',1,'lib_mutt']]],
   ['where_20the_20email_20is_20piped_20to_20external_20commands_2',['Manage where the email is piped to external commands',['../main_external.html',1,'index']]],
   ['who_20is_20the_20email_20from_3',['Who is the email from?',['../email_from.html',1,'lib_email']]],
-  ['window_4',['Window',['../envelope_window.html',1,'Envelope Window'],['../lib_envelope.html',1,'Envelope-editing Window'],['../helpbar_helpbar.html',1,'Help Bar Window'],['../index_index.html',1,'Index Window'],['../compose_preview.html',1,'Message Preview Window'],['../gui_msgwin.html',1,'Message Window'],['../pager_pager.html',1,'Pager Window'],['../progress_window.html',1,'Progress Bar Window'],['../gui_rootwin.html',1,'Root Window'],['../sidebar_window.html',1,'Sidebar Window']]],
+  ['window_4',['Window',['../envelope_window.html',1,'Envelope Window'],['../lib_envelope.html',1,'Envelope-editing Window'],['../helpbar_helpbar.html',1,'Help Bar Window'],['../index_index.html',1,'Index Window'],['../compose_preview.html',1,'Message Preview Window'],['../gui_msgwin.html',1,'Message Window'],['../pager_pager.html',1,'Pager Window'],['../progress_window.html',1,'Progress Bar Window'],['../gui_rootwin.html',1,'Root Window'],['../sidebar_window.html',1,'Sidebar Window'],['../gui_utilwin.html',1,'Utility Window']]],
   ['window_5',['Attachments window',['../compose_attach.html',1,'lib_compose']]],
   ['window_20data_6',['Window Data',['../envelope_wdata.html',1,'Envelope Window Data'],['../progress_wdata.html',1,'Progress Bar Window Data']]],
   ['window_20data_7',['Sidebar Window data',['../sidebar_wdata.html',1,'lib_sidebar']]],

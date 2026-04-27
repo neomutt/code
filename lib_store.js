@@ -1,10 +1,10 @@
 var lib_store =
 [
     [ "Definition of the Store Module", "store_module.html", [
-      [ "Interface", "lib_store.html#autotoc_md143", null ],
-      [ "Source", "lib_store.html#autotoc_md144", [
-        [ "Data", "store_module.html#autotoc_md767", null ],
-        [ "Functions", "store_module.html#autotoc_md768", null ]
+      [ "Interface", "lib_store.html#autotoc_md149", null ],
+      [ "Source", "lib_store.html#autotoc_md150", [
+        [ "Data", "store_module.html#autotoc_md775", null ],
+        [ "Functions", "store_module.html#autotoc_md776", null ]
       ] ]
     ] ],
     [ "Shared store code", "store_store.html", null ],

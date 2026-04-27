@@ -2,9 +2,9 @@ var regex4_8h =
 [
     [ "RegexColor", "structRegexColor.html", "structRegexColor" ],
     [ "STAILQ_HEAD", "regex4_8h.html#aede4474b1c5e615457d68c9964b74463", null ],
-    [ "regex_colors_init", "regex4_8h.html#a5f094eec32e3cc83f98c26375d01b739", null ],
-    [ "regex_colors_reset", "regex4_8h.html#a92fed79a6fd6d0163bce28f3f2f541ee", null ],
-    [ "regex_colors_cleanup", "regex4_8h.html#abebda380e37bcdd67111add8ed7940c4", null ],
+    [ "regex_colors_init", "regex4_8h.html#ae37ca0ea047255382dc1ef4104a20fc3", null ],
+    [ "regex_colors_reset", "regex4_8h.html#aac4af37e06591960568e68c720626e54", null ],
+    [ "regex_colors_cleanup", "regex4_8h.html#a9ebf4b618b53acbf7772773c0ecc91db", null ],
     [ "regex_color_clear", "regex4_8h.html#afe34d897552bbed1c7dd96438abcc6fe", null ],
     [ "regex_color_free", "regex4_8h.html#a993e456bd06e063c31ab883047c2f503", null ],
     [ "regex_color_new", "regex4_8h.html#ad24af99b0c9bb92910ef400cb8a17451", null ],
