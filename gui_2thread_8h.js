@@ -60,7 +60,7 @@ var gui_2thread_8h =
     [ "mutt_link_threads", "gui_2thread_8h.html#a6414f40cab1603a6cdb8e6c91a6c3c84", null ],
     [ "mutt_make_id_hash", "gui_2thread_8h.html#ae8501253bd895f865daea90b51817425", null ],
     [ "mutt_messages_in_thread", "gui_2thread_8h.html#a7ea1d8cc762023c88ee9152f9d0a7ce0", null ],
-    [ "mutt_parent_message", "gui_2thread_8h.html#ae021dae3b838ebc7f688d4c9204a2308", null ],
+    [ "mutt_parent_message", "gui_2thread_8h.html#a50612e51b26bab5824e1c8353716e065", null ],
     [ "mutt_set_vnum", "gui_2thread_8h.html#ad208699eb4bc42837530572fbe4caf8d", null ],
     [ "mutt_sort_threads", "gui_2thread_8h.html#ac7bcb788cdd39c241efce4af04d2f3dc", null ],
     [ "UseThreadsTypeDef", "gui_2thread_8h.html#ad0da49fbb8f920960daef313c3fc7ee2", null ]

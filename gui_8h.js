@@ -3,6 +3,7 @@ var gui_8h =
     [ "AliasView", "structAliasView.html", "structAliasView" ],
     [ "AliasMenuData", "structAliasMenuData.html", "structAliasMenuData" ],
     [ "ARRAY_HEAD", "gui_8h.html#afce757c3254bb43f346f7431a7e44f32", null ],
+    [ "ARRAY_HEAD", "gui_8h.html#a4914da37514bc24305f6f7b163887237", null ],
     [ "alias_config_observer", "group__observer__api.html#ga8030c7a80380e064f9b2e1e076d0d83f", null ],
     [ "alias_array_alias_add", "gui_8h.html#ae61ddd1b0e8b8a6e2395801f5dcf4eaa", null ],
     [ "alias_array_alias_delete", "gui_8h.html#a769918633fddd68c830f8fd97baa12e9", null ],

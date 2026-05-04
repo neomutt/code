@@ -8,6 +8,5 @@ var utilwin_8c =
     [ "utilwin_key_observer", "group__observer__api.html#ga6348a5b0626efb784062a480933efe71", null ],
     [ "utilwin_window_observer", "group__observer__api.html#ga1d5bc138d183d2f9eb441a6c63bbfcd6", null ],
     [ "utilwin_new", "utilwin_8c.html#ac28089c6d293b4d2c88820f02513a0e9", null ],
-    [ "utilwin_get_text", "utilwin_8c.html#a20ebfd02c0915b4662a1864a8681c1bb", null ],
     [ "utilwin_set_text", "utilwin_8c.html#a28f47665f258479b8674284f9c99391c", null ]
 ];

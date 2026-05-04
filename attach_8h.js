@@ -7,6 +7,7 @@ var attach_8h =
       [ "ED_ATT_NUMBER", "attach_8h.html#a799656f05ec6e2302edec4e19a289035a1a88e9f33b591c4f208f133ec8e3b8a0", null ],
       [ "ED_ATT_TREE", "attach_8h.html#a799656f05ec6e2302edec4e19a289035a59ad17ac5cefea391021b786847d7aff", null ]
     ] ],
+    [ "ARRAY_HEAD", "attach_8h.html#a3636d0e8058c65d5314720a0bb310166", null ],
     [ "mutt_actx_add_attach", "attach_8h.html#a1ac389e189d5c0cbb84711076812f103", null ],
     [ "mutt_actx_ins_attach", "attach_8h.html#a1eab9e48b9d6abe7ab6583614f2c62b7", null ],
     [ "mutt_actx_add_body", "attach_8h.html#a64e257d879b4035ace04e1a632a081f4", null ],

@@ -37,6 +37,8 @@ var imap_8c =
     [ "imap_ac_add", "group__mx__ac__add.html#ga17c8a7069e5923662f22fe1e475a0bdf", null ],
     [ "imap_mbox_select", "imap_8c.html#ae508cb6f612071ea4549814aa3532c89", null ],
     [ "imap_login", "imap_8c.html#aeb15c04fee226298708dc044645df651", null ],
+    [ "imap_select_and_poll", "imap_8c.html#a4e9de6206c9244c75af6d4fb56fbd9ae", null ],
+    [ "imap_reopen_mailbox", "imap_8c.html#a572a980a9e1ed3f0e4c69668897c5137", null ],
     [ "imap_mbox_open", "group__mx__mbox__open.html#gac97da7839145e4cf23c319967ecc7001", null ],
     [ "imap_mbox_open_append", "group__mx__mbox__open__append.html#ga71ba8593edd07989dee356ec829be873", null ],
     [ "imap_mbox_check", "group__mx__mbox__check.html#gab274718bd33e0eb6ce4e102d9483d085", null ],

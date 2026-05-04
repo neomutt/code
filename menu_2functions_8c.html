@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-800-ga0ee0f</span>
+   &#160;<span id="projectnumber">2025-12-11-860-g80c9cc</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -149,9 +149,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab29e0b2dbd98a3fcd6204ae4dfcfd4cb" id="r_ab29e0b2dbd98a3fcd6204ae4dfcfd4cb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab29e0b2dbd98a3fcd6204ae4dfcfd4cb">search</a> (struct <a class="el" href="structMenu.html">Menu</a> *menu, int op)</td></tr>
-<tr class="memdesc:ab29e0b2dbd98a3fcd6204ae4dfcfd4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search a menu.  <br /></td></tr>
-<tr class="separator:ab29e0b2dbd98a3fcd6204ae4dfcfd4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ab4387c297dbbaaf0ecde6a20b52f9" id="r_a69ab4387c297dbbaaf0ecde6a20b52f9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69ab4387c297dbbaaf0ecde6a20b52f9">search</a> (struct <a class="el" href="structMenu.html">Menu</a> *menu, int op, int *match)</td></tr>
+<tr class="memdesc:a69ab4387c297dbbaaf0ecde6a20b52f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search a menu.  <br /></td></tr>
+<tr class="separator:a69ab4387c297dbbaaf0ecde6a20b52f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabd4eae12d496f7be983024018cd86a52" id="r_gabd4eae12d496f7be983024018cd86a52"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> (struct <a class="el" href="structMenuFunctionData.html">MenuFunctionData</a> *fdata, const struct <a class="el" href="structKeyEvent.html">KeyEvent</a> *event)</td></tr>
 <tr class="memdesc:gabd4eae12d496f7be983024018cd86a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle all the common <a class="el" href="structMenu.html">Menu</a> movements - Implements <a class="el" href="menu_2functions_8h.html#ae60c869b67a6ff8581bfdcb8ce938e86">menu_function_t</a> -.  <br /></td></tr>
 <tr class="separator:gabd4eae12d496f7be983024018cd86a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,8 +220,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab29e0b2dbd98a3fcd6204ae4dfcfd4cb" name="ab29e0b2dbd98a3fcd6204ae4dfcfd4cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab29e0b2dbd98a3fcd6204ae4dfcfd4cb">&#9670;&#160;</a></span>search()</h2>
+<a id="a69ab4387c297dbbaaf0ecde6a20b52f9" name="a69ab4387c297dbbaaf0ecde6a20b52f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ab4387c297dbbaaf0ecde6a20b52f9">&#9670;&#160;</a></span>search()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +237,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>op</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>op</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>match</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -250,102 +255,110 @@ Variables</h2></td></tr>
 <p>Search a menu. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">menu</td><td><a class="el" href="structMenu.html">Menu</a> to search </td></tr>
-    <tr><td class="paramname">op</td><td>Search operation, e.g. OP_SEARCH_NEXT </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">menu</td><td><a class="el" href="structMenu.html">Menu</a> to search </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">op</td><td>Search operation, e.g. OP_SEARCH_NEXT </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">match</td><td>Index of matching item, or -1 on failure </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">&gt;=0</td><td>Index of matching item </td></tr>
-    <tr><td class="paramname">-1</td><td>Search failed, or was cancelled </td></tr>
+    <tr><td class="paramname">FR_SUCCESS</td><td>Match found </td></tr>
+    <tr><td class="paramname">FR_NO_ACTION</td><td>Search was cancelled </td></tr>
+    <tr><td class="paramname">FR_ERROR</td><td>Search failed </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="menu_2functions_8c_source.html#l00057">57</a> of file <a class="el" href="menu_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
-<div class="line"><span class="lineno">   59</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenuModuleData.html">MenuModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6ae1bf01d398ec15164d8f0bc14ca2fb09">MODULE_ID_MENU</a>);</div>
-<div class="line"><span class="lineno">   60</span>  <span class="keywordtype">int</span> rc = -1;</div>
-<div class="line"><span class="lineno">   61</span>  <span class="keywordtype">int</span> wrap = 0;</div>
-<div class="line"><span class="lineno">   62</span>  <span class="keywordtype">int</span> search_dir;</div>
-<div class="line"><span class="lineno">   63</span>  regex_t re = { 0 };</div>
-<div class="line"><span class="lineno">   64</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>  <span class="keywordtype">char</span> *search_buf = (menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a> &amp;&amp; (menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a> &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>)) ?</div>
-<div class="line"><span class="lineno">   67</span>                         mod_data-&gt;<a class="code hl_variable" href="structMenuModuleData.html#abc262802a04e018c6695adedaf178d67">search_buffers</a>[menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a>] :</div>
-<div class="line"><span class="lineno">   68</span>                         NULL;</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">if</span> (!(search_buf &amp;&amp; *search_buf) || ((op != OP_SEARCH_NEXT) &amp;&amp; (op != OP_SEARCH_OPPOSITE)))</div>
-<div class="line"><span class="lineno">   71</span>  {</div>
-<div class="line"><span class="lineno">   72</span>    <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(buf, search_buf &amp;&amp; (search_buf[0] != <span class="charliteral">&#39;\0&#39;</span>) ? search_buf : <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(((op == OP_SEARCH) || (op == OP_SEARCH_NEXT)) ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search for: &quot;</span>) : <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Reverse search for: &quot;</span>),</div>
-<div class="line"><span class="lineno">   74</span>                      buf, <a class="code hl_define" href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL) != 0) ||</div>
-<div class="line"><span class="lineno">   75</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
-<div class="line"><span class="lineno">   76</span>    {</div>
-<div class="line"><span class="lineno">   77</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">   78</span>    }</div>
-<div class="line"><span class="lineno">   79</span>    <span class="keywordflow">if</span> (menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a> &amp;&amp; (menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a> &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>))</div>
-<div class="line"><span class="lineno">   80</span>    {</div>
-<div class="line"><span class="lineno">   81</span>      <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;mod_data-&gt;<a class="code hl_variable" href="structMenuModuleData.html#abc262802a04e018c6695adedaf178d67">search_buffers</a>[menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a>], <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
-<div class="line"><span class="lineno">   82</span>      search_buf = mod_data-&gt;<a class="code hl_variable" href="structMenuModuleData.html#abc262802a04e018c6695adedaf178d67">search_buffers</a>[menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a>];</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="line"><span class="lineno">   84</span>    menu-&gt;<a class="code hl_variable" href="structMenu.html#a103ef41d81b44ee5b7a280d660fbdf37">search_dir</a> = ((op == OP_SEARCH) || (op == OP_SEARCH_NEXT)) ?</div>
-<div class="line"><span class="lineno">   85</span>                           <a class="code hl_define" href="#a54cbaf41671f4484bb2b3ad0611abc90">MUTT_SEARCH_DOWN</a> :</div>
-<div class="line"><span class="lineno">   86</span>                           <a class="code hl_define" href="#a7c629d8623387c7f913c6b160f9b32e2">MUTT_SEARCH_UP</a>;</div>
-<div class="line"><span class="lineno">   87</span>  }</div>
-<div class="line"><span class="lineno">   88</span> </div>
-<div class="line"><span class="lineno">   89</span>  search_dir = (menu-&gt;<a class="code hl_variable" href="structMenu.html#a103ef41d81b44ee5b7a280d660fbdf37">search_dir</a> == <a class="code hl_define" href="#a7c629d8623387c7f913c6b160f9b32e2">MUTT_SEARCH_UP</a>) ? -1 : 1;</div>
-<div class="line"><span class="lineno">   90</span>  <span class="keywordflow">if</span> (op == OP_SEARCH_OPPOSITE)</div>
-<div class="line"><span class="lineno">   91</span>    search_dir = -search_dir;</div>
-<div class="line"><span class="lineno">   92</span> </div>
-<div class="line"><span class="lineno">   93</span>  <span class="keywordflow">if</span> (search_buf)</div>
-<div class="line"><span class="lineno">   94</span>  {</div>
-<div class="line"><span class="lineno">   95</span>    uint16_t flags = <a class="code hl_function" href="mbyte_8c.html#ac501dbdcd18344eeab59157ccb3b91f5">mutt_mb_is_lower</a>(search_buf) ? REG_ICASE : 0;</div>
-<div class="line"><span class="lineno">   96</span>    rc = <a class="code hl_define" href="regex3_8h.html#a349838a3143be1dd9b0500bfbe54d48f">REG_COMP</a>(&amp;re, search_buf, REG_NOSUB | flags);</div>
-<div class="line"><span class="lineno">   97</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="menu_2functions_8c_source.html#l00059">59</a> of file <a class="el" href="menu_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>{</div>
+<div class="line"><span class="lineno">   61</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenuModuleData.html">MenuModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6ae1bf01d398ec15164d8f0bc14ca2fb09">MODULE_ID_MENU</a>);</div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordtype">int</span> reg_rc = 0;</div>
+<div class="line"><span class="lineno">   63</span>  <span class="keywordtype">int</span> wrap = 0;</div>
+<div class="line"><span class="lineno">   64</span>  <span class="keywordtype">int</span> search_dir;</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">   66</span>  regex_t re = { 0 };</div>
+<div class="line"><span class="lineno">   67</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>  *match = -1;</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordtype">char</span> *search_buf = (menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a> &amp;&amp; (menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a> &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>)) ?</div>
+<div class="line"><span class="lineno">   72</span>                         mod_data-&gt;<a class="code hl_variable" href="structMenuModuleData.html#abc262802a04e018c6695adedaf178d67">search_buffers</a>[menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a>] :</div>
+<div class="line"><span class="lineno">   73</span>                         NULL;</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>  <span class="keywordflow">if</span> (!(search_buf &amp;&amp; *search_buf) || ((op != OP_SEARCH_NEXT) &amp;&amp; (op != OP_SEARCH_OPPOSITE)))</div>
+<div class="line"><span class="lineno">   76</span>  {</div>
+<div class="line"><span class="lineno">   77</span>    <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(buf, search_buf &amp;&amp; (search_buf[0] != <span class="charliteral">&#39;\0&#39;</span>) ? search_buf : <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   78</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(((op == OP_SEARCH) || (op == OP_SEARCH_NEXT)) ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search for: &quot;</span>) : <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Reverse search for: &quot;</span>),</div>
+<div class="line"><span class="lineno">   79</span>                      buf, <a class="code hl_define" href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL) != 0) ||</div>
+<div class="line"><span class="lineno">   80</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
+<div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>      rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">   83</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a> &amp;&amp; (menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a> &lt; <a class="code hl_enumvalue" href="type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cc8139b769f0c2947988d54dfb1eae">MENU_MAX</a>))</div>
+<div class="line"><span class="lineno">   86</span>    {</div>
+<div class="line"><span class="lineno">   87</span>      <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;mod_data-&gt;<a class="code hl_variable" href="structMenuModuleData.html#abc262802a04e018c6695adedaf178d67">search_buffers</a>[menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a>], <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
+<div class="line"><span class="lineno">   88</span>      search_buf = mod_data-&gt;<a class="code hl_variable" href="structMenuModuleData.html#abc262802a04e018c6695adedaf178d67">search_buffers</a>[menu-&gt;<a class="code hl_variable" href="structMenu.html#aaed86ba5b08ad7d67a2f131dab298950">md</a>-&gt;<a class="code hl_variable" href="structMenuDefinition.html#a915a3ce9d7117c08beb3d3b1e1380f33">id</a>];</div>
+<div class="line"><span class="lineno">   89</span>    }</div>
+<div class="line"><span class="lineno">   90</span>    menu-&gt;<a class="code hl_variable" href="structMenu.html#a103ef41d81b44ee5b7a280d660fbdf37">search_dir</a> = ((op == OP_SEARCH) || (op == OP_SEARCH_NEXT)) ?</div>
+<div class="line"><span class="lineno">   91</span>                           <a class="code hl_define" href="#a54cbaf41671f4484bb2b3ad0611abc90">MUTT_SEARCH_DOWN</a> :</div>
+<div class="line"><span class="lineno">   92</span>                           <a class="code hl_define" href="#a7c629d8623387c7f913c6b160f9b32e2">MUTT_SEARCH_UP</a>;</div>
+<div class="line"><span class="lineno">   93</span>  }</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>  search_dir = (menu-&gt;<a class="code hl_variable" href="structMenu.html#a103ef41d81b44ee5b7a280d660fbdf37">search_dir</a> == <a class="code hl_define" href="#a7c629d8623387c7f913c6b160f9b32e2">MUTT_SEARCH_UP</a>) ? -1 : 1;</div>
+<div class="line"><span class="lineno">   96</span>  <span class="keywordflow">if</span> (op == OP_SEARCH_OPPOSITE)</div>
+<div class="line"><span class="lineno">   97</span>    search_dir = -search_dir;</div>
 <div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">if</span> (rc != 0)</div>
+<div class="line"><span class="lineno">   99</span>  <span class="keywordflow">if</span> (search_buf)</div>
 <div class="line"><span class="lineno">  100</span>  {</div>
-<div class="line"><span class="lineno">  101</span>    regerror(rc, &amp;re, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>);</div>
-<div class="line"><span class="lineno">  102</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
-<div class="line"><span class="lineno">  103</span>    rc = -1;</div>
-<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  105</span>  }</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>  rc = menu-&gt;<a class="code hl_variable" href="structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1">current</a> + search_dir;</div>
-<div class="line"><span class="lineno">  108</span>search_next:</div>
-<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">if</span> (wrap)</div>
-<div class="line"><span class="lineno">  110</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to top&quot;</span>));</div>
-<div class="line"><span class="lineno">  111</span>  <span class="keywordflow">while</span> ((rc &gt;= 0) &amp;&amp; (rc &lt; menu-&gt;max))</div>
-<div class="line"><span class="lineno">  112</span>  {</div>
-<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">if</span> (menu-&gt;<a class="code hl_variable" href="structMenu.html#a8a45572a1ba92aedfb9327d3c203ccb7">search</a>(menu, &amp;re, rc) == 0)</div>
-<div class="line"><span class="lineno">  114</span>    {</div>
-<div class="line"><span class="lineno">  115</span>      regfree(&amp;re);</div>
-<div class="line"><span class="lineno">  116</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>    rc += search_dir;</div>
-<div class="line"><span class="lineno">  120</span>  }</div>
-<div class="line"><span class="lineno">  121</span> </div>
-<div class="line"><span class="lineno">  122</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_wrap_search = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(menu-&gt;<a class="code hl_variable" href="structMenu.html#acb934ac63ef71f6efe720281b2e6bb1b">sub</a>, <span class="stringliteral">&quot;wrap_search&quot;</span>);</div>
-<div class="line"><span class="lineno">  123</span>  <span class="keywordflow">if</span> (c_wrap_search &amp;&amp; (wrap++ == 0))</div>
-<div class="line"><span class="lineno">  124</span>  {</div>
-<div class="line"><span class="lineno">  125</span>    rc = (search_dir == 1) ? 0 : menu-&gt;max - 1;</div>
-<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">goto</span> search_next;</div>
-<div class="line"><span class="lineno">  127</span>  }</div>
-<div class="line"><span class="lineno">  128</span>  regfree(&amp;re);</div>
-<div class="line"><span class="lineno">  129</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Not found&quot;</span>));</div>
-<div class="line"><span class="lineno">  130</span>  rc = -1;</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>done:</div>
-<div class="line"><span class="lineno">  133</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  134</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  135</span>}</div>
+<div class="line"><span class="lineno">  101</span>    uint16_t flags = <a class="code hl_function" href="mbyte_8c.html#ac501dbdcd18344eeab59157ccb3b91f5">mutt_mb_is_lower</a>(search_buf) ? REG_ICASE : 0;</div>
+<div class="line"><span class="lineno">  102</span>    reg_rc = <a class="code hl_define" href="regex3_8h.html#a349838a3143be1dd9b0500bfbe54d48f">REG_COMP</a>(&amp;re, search_buf, REG_NOSUB | flags);</div>
+<div class="line"><span class="lineno">  103</span>  }</div>
+<div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>  <span class="keywordflow">if</span> (reg_rc != 0)</div>
+<div class="line"><span class="lineno">  106</span>  {</div>
+<div class="line"><span class="lineno">  107</span>    regerror(reg_rc, &amp;re, buf-&gt;<a class="code hl_variable" href="structBuffer.html#aeec1fd4af0ddf6765b0187466d4361b8">data</a>, buf-&gt;<a class="code hl_variable" href="structBuffer.html#a1d9ee60bcf94de702b15ec2b5d811995">dsize</a>);</div>
+<div class="line"><span class="lineno">  108</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf));</div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  110</span>  }</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>  *match = menu-&gt;<a class="code hl_variable" href="structMenu.html#a289b71aff9e001a96d4a4a0ebd5280e1">current</a> + search_dir;</div>
+<div class="line"><span class="lineno">  113</span>search_next:</div>
+<div class="line"><span class="lineno">  114</span>  <span class="keywordflow">if</span> (wrap)</div>
+<div class="line"><span class="lineno">  115</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Search wrapped to top&quot;</span>));</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">while</span> ((*match &gt;= 0) &amp;&amp; (*match &lt; menu-&gt;max))</div>
+<div class="line"><span class="lineno">  117</span>  {</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">if</span> (menu-&gt;<a class="code hl_variable" href="structMenu.html#a8a45572a1ba92aedfb9327d3c203ccb7">search</a>(menu, &amp;re, *match) == 0)</div>
+<div class="line"><span class="lineno">  119</span>    {</div>
+<div class="line"><span class="lineno">  120</span>      regfree(&amp;re);</div>
+<div class="line"><span class="lineno">  121</span>      rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  122</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  123</span>    }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    *match += search_dir;</div>
+<div class="line"><span class="lineno">  126</span>  }</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_wrap_search = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(menu-&gt;<a class="code hl_variable" href="structMenu.html#acb934ac63ef71f6efe720281b2e6bb1b">sub</a>, <span class="stringliteral">&quot;wrap_search&quot;</span>);</div>
+<div class="line"><span class="lineno">  129</span>  <span class="keywordflow">if</span> (c_wrap_search &amp;&amp; (wrap++ == 0))</div>
+<div class="line"><span class="lineno">  130</span>  {</div>
+<div class="line"><span class="lineno">  131</span>    *match = (search_dir == 1) ? 0 : menu-&gt;max - 1;</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">goto</span> search_next;</div>
+<div class="line"><span class="lineno">  133</span>  }</div>
+<div class="line"><span class="lineno">  134</span>  regfree(&amp;re);</div>
+<div class="line"><span class="lineno">  135</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Not found&quot;</span>));</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>done:</div>
+<div class="line"><span class="lineno">  138</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  140</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a4245e227baa2a9beb6991917404aab0d"><div class="ttname"><a href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a></div><div class="ttdeci">bool buf_is_empty(const struct Buffer *buf)</div><div class="ttdoc">Is the Buffer empty?</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00291">buffer.c:291</a></div></div>
 <div class="ttc" id="abuffer_8c_html_ac958acbd189e463a2c3bbc2f23aaeb1e"><div class="ttname"><a href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a></div><div class="ttdeci">size_t buf_strcpy(struct Buffer *buf, const char *s)</div><div class="ttdoc">Copy a string into a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00395">buffer.c:395</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00047">helpers.c:47</a></div></div>
+<div class="ttc" id="adispatcher_8h_html_a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670"><div class="ttname"><a href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a></div><div class="ttdeci">@ FR_SUCCESS</div><div class="ttdoc">Valid function - successfully performed.</div><div class="ttdef"><b>Definition</b> <a href="dispatcher_8h_source.html#l00040">dispatcher.h:40</a></div></div>
+<div class="ttc" id="adispatcher_8h_html_a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa"><div class="ttname"><a href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a></div><div class="ttdeci">@ FR_ERROR</div><div class="ttdoc">Valid function - error occurred.</div><div class="ttdef"><b>Definition</b> <a href="dispatcher_8h_source.html#l00039">dispatcher.h:39</a></div></div>
+<div class="ttc" id="adispatcher_8h_html_a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e"><div class="ttname"><a href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a></div><div class="ttdeci">@ FR_NO_ACTION</div><div class="ttdoc">Valid function - no action performed.</div><div class="ttdef"><b>Definition</b> <a href="dispatcher_8h_source.html#l00038">dispatcher.h:38</a></div></div>
 <div class="ttc" id="aeditor_2wdata_8h_html_aff320b29c6010a53a17749f6423834a3"><div class="ttname"><a href="editor_2wdata_8h.html#aff320b29c6010a53a17749f6423834a3">MUTT_COMP_CLEAR</a></div><div class="ttdeci">#define MUTT_COMP_CLEAR</div><div class="ttdoc">Clear input if printable character is pressed.</div><div class="ttdef"><b>Definition</b> <a href="editor_2wdata_8h_source.html#l00043">wdata.h:43</a></div></div>
 <div class="ttc" id="agroup__gui__mw_html_gabcbd2498b412e9f8e9d953cafc01989c"><div class="ttname"><a href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a></div><div class="ttdeci">int mw_get_field(const char *prompt, struct Buffer *buf, CompletionFlags complete, enum HistoryClass hclass, const struct CompleteOps *comp_api, void *cdata)</div><div class="ttdoc">Ask the user for a string -.</div><div class="ttdef"><b>Definition</b> <a href="editor_2window_8c_source.html#l00467">window.c:467</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
@@ -379,14 +392,14 @@ Variables</h2></td></tr>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu_2functions_8c_ab29e0b2dbd98a3fcd6204ae4dfcfd4cb_cgraph.svg" width="308" height="544"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu_2functions_8c_a69ab4387c297dbbaaf0ecde6a20b52f9_cgraph.svg" width="308" height="544"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-2" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="menu_2functions_8c_ab29e0b2dbd98a3fcd6204ae4dfcfd4cb_icgraph.svg" width="282" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="menu_2functions_8c_a69ab4387c297dbbaaf0ecde6a20b52f9_icgraph.svg" width="282" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -438,41 +451,41 @@ Variables</h2></td></tr>
 <div class="line">  { 0, NULL },</div>
 <div class="line">  </div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__alias__function__api_html_ga564fdd79de43cc482df4017ed6109115"><div class="ttname"><a href="group__alias__function__api.html#ga564fdd79de43cc482df4017ed6109115">op_jump</a></div><div class="ttdeci">static int op_jump(struct AliasFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Jump to an index number - Implements alias_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="alias_2functions_8c_source.html#l00243">functions.c:243</a></div></div>
-<div class="ttc" id="agroup__enter__function__api_html_ga6f56cb43d70c7d31d218c87f0ad6a223"><div class="ttname"><a href="group__enter__function__api.html#ga6f56cb43d70c7d31d218c87f0ad6a223">op_help</a></div><div class="ttdeci">static int op_help(struct EnterFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Display Help - Implements enter_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="editor_2functions_8c_source.html#l00474">functions.c:474</a></div></div>
-<div class="ttc" id="agroup__menu__function__api_html_ga084e17a2ca2ced20a3c0b6d14d2e6783"><div class="ttname"><a href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a></div><div class="ttdeci">static int menu_search(struct MenuFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Handle Menu searching - Implements menu_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="menu_2functions_8c_source.html#l00219">functions.c:219</a></div></div>
-<div class="ttc" id="agroup__menu__function__api_html_gabd4eae12d496f7be983024018cd86a52"><div class="ttname"><a href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a></div><div class="ttdeci">static int menu_movement(struct MenuFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Handle all the common Menu movements - Implements menu_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="menu_2functions_8c_source.html#l00142">functions.c:142</a></div></div>
+<div class="ttc" id="agroup__alias__function__api_html_ga564fdd79de43cc482df4017ed6109115"><div class="ttname"><a href="group__alias__function__api.html#ga564fdd79de43cc482df4017ed6109115">op_jump</a></div><div class="ttdeci">static int op_jump(struct AliasFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Jump to an index number - Implements alias_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="alias_2functions_8c_source.html#l00320">functions.c:320</a></div></div>
+<div class="ttc" id="agroup__enter__function__api_html_ga6f56cb43d70c7d31d218c87f0ad6a223"><div class="ttname"><a href="group__enter__function__api.html#ga6f56cb43d70c7d31d218c87f0ad6a223">op_help</a></div><div class="ttdeci">static int op_help(struct EnterFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Display Help - Implements enter_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="editor_2functions_8c_source.html#l00475">functions.c:475</a></div></div>
+<div class="ttc" id="agroup__menu__function__api_html_ga084e17a2ca2ced20a3c0b6d14d2e6783"><div class="ttname"><a href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a></div><div class="ttdeci">static int menu_search(struct MenuFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Handle Menu searching - Implements menu_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="menu_2functions_8c_source.html#l00265">functions.c:265</a></div></div>
+<div class="ttc" id="agroup__menu__function__api_html_gabd4eae12d496f7be983024018cd86a52"><div class="ttname"><a href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a></div><div class="ttdeci">static int menu_movement(struct MenuFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Handle all the common Menu movements - Implements menu_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="menu_2functions_8c_source.html#l00165">functions.c:165</a></div></div>
 </div><!-- fragment -->
 <p>All the <a class="el" href="structNeoMutt.html" title="Container for Accounts, Notifications.">NeoMutt</a> functions that the <a class="el" href="structMenu.html">Menu</a> supports. </p>
 
-<p class="definition">Definition at line <a class="el" href="menu_2functions_8c_source.html#l00287">287</a> of file <a class="el" href="menu_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  287</span>                                                   {</div>
-<div class="line"><span class="lineno">  288</span>  <span class="comment">// clang-format off</span></div>
-<div class="line"><span class="lineno">  289</span>  { OP_BOTTOM_PAGE,            <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  290</span>  { OP_CURRENT_BOTTOM,         <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  291</span>  { OP_CURRENT_MIDDLE,         <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  292</span>  { OP_CURRENT_TOP,            <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  293</span>  { OP_FIRST_ENTRY,            <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  294</span>  { OP_HALF_DOWN,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  295</span>  { OP_HALF_UP,                <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  296</span>  { OP_HELP,                   <a class="code hl_function" href="group__enter__function__api.html#ga6f56cb43d70c7d31d218c87f0ad6a223">op_help</a> },</div>
-<div class="line"><span class="lineno">  297</span>  { OP_JUMP,                   <a class="code hl_function" href="group__alias__function__api.html#ga564fdd79de43cc482df4017ed6109115">op_jump</a> },</div>
-<div class="line"><span class="lineno">  298</span>  { OP_LAST_ENTRY,             <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  299</span>  { OP_MIDDLE_PAGE,            <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  300</span>  { OP_NEXT_ENTRY,             <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  301</span>  { OP_NEXT_LINE,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  302</span>  { OP_NEXT_PAGE,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  303</span>  { OP_PREV_ENTRY,             <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  304</span>  { OP_PREV_LINE,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  305</span>  { OP_PREV_PAGE,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  306</span>  { OP_SEARCH,                 <a class="code hl_function" href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a> },</div>
-<div class="line"><span class="lineno">  307</span>  { OP_SEARCH_NEXT,            <a class="code hl_function" href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a> },</div>
-<div class="line"><span class="lineno">  308</span>  { OP_SEARCH_OPPOSITE,        <a class="code hl_function" href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a> },</div>
-<div class="line"><span class="lineno">  309</span>  { OP_SEARCH_REVERSE,         <a class="code hl_function" href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a> },</div>
-<div class="line"><span class="lineno">  310</span>  { OP_TOP_PAGE,               <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
-<div class="line"><span class="lineno">  311</span>  { 0, NULL },</div>
-<div class="line"><span class="lineno">  312</span>  <span class="comment">// clang-format on</span></div>
-<div class="line"><span class="lineno">  313</span>};</div>
+<p class="definition">Definition at line <a class="el" href="menu_2functions_8c_source.html#l00335">335</a> of file <a class="el" href="menu_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  335</span>                                                   {</div>
+<div class="line"><span class="lineno">  336</span>  <span class="comment">// clang-format off</span></div>
+<div class="line"><span class="lineno">  337</span>  { OP_BOTTOM_PAGE,            <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  338</span>  { OP_CURRENT_BOTTOM,         <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  339</span>  { OP_CURRENT_MIDDLE,         <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  340</span>  { OP_CURRENT_TOP,            <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  341</span>  { OP_FIRST_ENTRY,            <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  342</span>  { OP_HALF_DOWN,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  343</span>  { OP_HALF_UP,                <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  344</span>  { OP_HELP,                   <a class="code hl_function" href="group__enter__function__api.html#ga6f56cb43d70c7d31d218c87f0ad6a223">op_help</a> },</div>
+<div class="line"><span class="lineno">  345</span>  { OP_JUMP,                   <a class="code hl_function" href="group__alias__function__api.html#ga564fdd79de43cc482df4017ed6109115">op_jump</a> },</div>
+<div class="line"><span class="lineno">  346</span>  { OP_LAST_ENTRY,             <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  347</span>  { OP_MIDDLE_PAGE,            <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  348</span>  { OP_NEXT_ENTRY,             <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  349</span>  { OP_NEXT_LINE,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  350</span>  { OP_NEXT_PAGE,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  351</span>  { OP_PREV_ENTRY,             <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  352</span>  { OP_PREV_LINE,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  353</span>  { OP_PREV_PAGE,              <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  354</span>  { OP_SEARCH,                 <a class="code hl_function" href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a> },</div>
+<div class="line"><span class="lineno">  355</span>  { OP_SEARCH_NEXT,            <a class="code hl_function" href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a> },</div>
+<div class="line"><span class="lineno">  356</span>  { OP_SEARCH_OPPOSITE,        <a class="code hl_function" href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a> },</div>
+<div class="line"><span class="lineno">  357</span>  { OP_SEARCH_REVERSE,         <a class="code hl_function" href="group__menu__function__api.html#ga084e17a2ca2ced20a3c0b6d14d2e6783">menu_search</a> },</div>
+<div class="line"><span class="lineno">  358</span>  { OP_TOP_PAGE,               <a class="code hl_function" href="group__menu__function__api.html#gabd4eae12d496f7be983024018cd86a52">menu_movement</a> },</div>
+<div class="line"><span class="lineno">  359</span>  { 0, NULL },</div>
+<div class="line"><span class="lineno">  360</span>  <span class="comment">// clang-format on</span></div>
+<div class="line"><span class="lineno">  361</span>};</div>
 </div><!-- fragment -->
 </div>
 </div>

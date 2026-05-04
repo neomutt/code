@@ -7,5 +7,6 @@ var recvattach_8h =
     [ "current_attachment", "recvattach_8h.html#a718168300f4a21fa0c1a28321aeaa6ee", null ],
     [ "mutt_update_recvattach_menu", "recvattach_8h.html#a2ebb5a39bf8782104e464889b1d76b92", null ],
     [ "recvattach_edit_content_type", "recvattach_8h.html#afcd17795d6d83e3769c264607cfcc3a7", null ],
-    [ "ba_add_tagged", "recvattach_8h.html#afe651b768f8b166c7f6386a49f31bc25", null ]
+    [ "aa_add_selection", "recvattach_8h.html#acaf0e5bd5b28ada558814f7b4204eedc", null ],
+    [ "ba_add_selection", "recvattach_8h.html#adbad664818e76aec192bfb13b91ef69a", null ]
 ];

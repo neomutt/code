@@ -1,6 +1,8 @@
 var postpone_2functions_8c =
 [
     [ "postponed_init_keys", "postpone_2functions_8c.html#adfd06b2f8c40066d93a028902e23ed91", null ],
+    [ "postpone_add_selection", "postpone_2functions_8c.html#a7f6d5f159ea7a81a043b6d5341fba5f1", null ],
+    [ "postpone_apply_set_deleted", "postpone_2functions_8c.html#a707ea892a9746f1ec5fa45cb12e0345e", null ],
     [ "op_delete", "group__postpone__function__api.html#ga756f61ac1e8d4c34f6f747e3032a3a3b", null ],
     [ "op_exit", "group__postpone__function__api.html#gad9529ce34a017b695af8f286ae2562a9", null ],
     [ "op_generic_select_entry", "group__postpone__function__api.html#ga3eae90a3ccdcd9b465ffe254586dc2eb", null ],

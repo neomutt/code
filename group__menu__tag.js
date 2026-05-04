@@ -4,5 +4,6 @@ var group__menu__tag =
     [ "query_tag", "group__menu__tag.html#ga9be22e1702401b4845efffd8059a3605", null ],
     [ "attach_tag", "group__menu__tag.html#gacff66a710677c3332c467f57f59074b8", null ],
     [ "file_tag", "group__menu__tag.html#gaf4d5441e6e33296a9fb742390153a099", null ],
-    [ "compose_attach_tag", "group__menu__tag.html#ga6cc3dc0987c5cd14bc1b7509d9003f1f", null ]
+    [ "compose_attach_tag", "group__menu__tag.html#ga6cc3dc0987c5cd14bc1b7509d9003f1f", null ],
+    [ "post_tag", "group__menu__tag.html#gaf7ebb34b6cba6518723e3b927f856d3f", null ]
 ];

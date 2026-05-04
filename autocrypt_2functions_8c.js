@@ -1,8 +1,8 @@
 var autocrypt_2functions_8c =
 [
     [ "autocrypt_init_keys", "autocrypt_2functions_8c.html#a6afd5a737e2edc9f8832a3dfaaa5d1a8", null ],
-    [ "toggle_active", "autocrypt_2functions_8c.html#a1457d95507bf4ee7a4bd4a15e3545f32", null ],
-    [ "toggle_prefer_encrypt", "autocrypt_2functions_8c.html#afb946e389ae112c24e849bd35daa43f3", null ],
+    [ "toggle_active", "autocrypt_2functions_8c.html#aa18136f638e997af82e6c460609fd220", null ],
+    [ "toggle_prefer_encrypt", "autocrypt_2functions_8c.html#afe65406aaadf99330c651e70a73391de", null ],
     [ "op_autocrypt_create_acct", "group__autocrypt__function__api.html#ga610d51ccbf10b9ac919ba41cf676284c", null ],
     [ "op_autocrypt_delete_acct", "group__autocrypt__function__api.html#ga69ef556ebf9a762cfd657685f33cc95a", null ],
     [ "op_autocrypt_toggle_active", "group__autocrypt__function__api.html#ga1e748d108e73ca2d9828f0865fa81b7b", null ],

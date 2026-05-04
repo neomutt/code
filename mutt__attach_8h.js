@@ -11,9 +11,9 @@ var mutt__attach_8h =
       [ "MUTT_SAVE_APPEND", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaa3f82d6dcb02891511fe91907b398aa1c", null ]
     ] ],
     [ "mutt_attach_display_loop", "mutt__attach_8h.html#a72c9e19b893d8d4afc5593d9d2b399ff", null ],
-    [ "mutt_save_attachment_list", "mutt__attach_8h.html#a588a5719b699c5d062f263711598836e", null ],
-    [ "mutt_pipe_attachment_list", "mutt__attach_8h.html#a864d3327398fde25536c45736abde530", null ],
-    [ "mutt_print_attachment_list", "mutt__attach_8h.html#ac869ec7f92735053d33d3143d9866af5", null ],
+    [ "mutt_save_attachment_list", "mutt__attach_8h.html#a0ac43fb934951458a145a3b3d8322f80", null ],
+    [ "mutt_pipe_attachment_list", "mutt__attach_8h.html#a2b11e2ccb4b4e9d5e44195888774adda", null ],
+    [ "mutt_print_attachment_list", "mutt__attach_8h.html#a757d381a8b9eb9627917d2d9ec8c255c", null ],
     [ "mutt_view_attachment", "mutt__attach_8h.html#ab2e07f4628b9c8e41529a62c27d1b51a", null ],
     [ "mutt_check_lookup_list", "mutt__attach_8h.html#a1a97d711180c816108d8866ef7b120cc", null ],
     [ "mutt_compose_attachment", "mutt__attach_8h.html#a492006c267947f1d6466f2c32f17aa55", null ],

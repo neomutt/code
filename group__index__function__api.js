@@ -38,7 +38,7 @@ var group__index__function__api =
     [ "op_main_limit", "group__index__function__api.html#ga91d1e5153039e9a9ac0ace92c77ee59a", null ],
     [ "op_main_link_threads", "group__index__function__api.html#ga20e488d5ad68379b745fc648d37a09ca", null ],
     [ "op_main_modify_tags", "group__index__function__api.html#gaf69b5e20007a4b931f6c298a30d2f74d", null ],
-    [ "op_main_next_new", "group__index__function__api.html#gaf4d10c7d4274934b9390b00af81f9cd9", null ],
+    [ "find_next_new_email", "group__index__function__api.html#gab28d402b2318747118313cffb30ff016", null ],
     [ "op_main_next_thread", "group__index__function__api.html#gabf3d8980eb9f57dbd12c530cf9ff39a3", null ],
     [ "op_main_next_undeleted", "group__index__function__api.html#gaaaf568a417b49781910a291baa4069db", null ],
     [ "op_main_next_unread_mailbox", "group__index__function__api.html#ga5a8e8ff7bbba11a4b2e5c75b675d2964", null ],

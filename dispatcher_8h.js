@@ -10,5 +10,6 @@ var dispatcher_8h =
       [ "FR_ERROR", "dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa", null ],
       [ "FR_SUCCESS", "dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670", null ]
     ] ],
-    [ "dispatcher_get_retval_name", "dispatcher_8h.html#a7522b1f6b422dfe470e82b463c9c79ff", null ]
+    [ "dispatcher_get_retval_name", "dispatcher_8h.html#a7522b1f6b422dfe470e82b463c9c79ff", null ],
+    [ "dispatcher_flush_on_error", "dispatcher_8h.html#a7f7e98d4febdf9d639018f54d1f5f4fc", null ]
 ];

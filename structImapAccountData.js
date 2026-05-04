@@ -3,6 +3,7 @@ var structImapAccountData =
     [ "conn", "structImapAccountData.html#af7d73598916e5b0b789c78c904ff47a4", null ],
     [ "recovering", "structImapAccountData.html#aed4131604e365b20fbfa5cc7e0cf88d8", null ],
     [ "closing", "structImapAccountData.html#a7ed31d012f389db2e60adfe46c7b1622", null ],
+    [ "checking", "structImapAccountData.html#aac805d532a1eb47301309b60a26e9ca6", null ],
     [ "state", "structImapAccountData.html#aafe97c07683cbc20007c8dd315b2d19e", null ],
     [ "status", "structImapAccountData.html#ac6488a600297eee1e5d203872e93f9d2", null ],
     [ "capstr", "structImapAccountData.html#ac0c66b610779cc9411060acf5f2ce68d", null ],

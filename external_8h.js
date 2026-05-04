@@ -16,7 +16,7 @@ var external_8h =
     [ "mutt_edit_content_type", "external_8h.html#a9b5874c3558cb300404bb50f60fc6a31", null ],
     [ "mutt_enter_command", "external_8h.html#ab51ef03945c18d5c7c620d9194eb061a", null ],
     [ "mutt_pipe_message", "external_8h.html#a127f4916f0ac22474bf6e777fc838eb4", null ],
-    [ "mutt_print_message", "external_8h.html#a030d89d55ad4799fd1615a86c52dba77", null ],
+    [ "mutt_print_message", "external_8h.html#ad0c7b3ec500ae425d031dd6158fbe518", null ],
     [ "mutt_save_message", "external_8h.html#a5c1000cf97c9c8aa7b15007980f7ca86", null ],
     [ "mutt_save_message_mbox", "external_8h.html#a4c419f7909ff49b07b99ccee463e6269", null ],
     [ "mutt_select_sort", "external_8h.html#a034de4f4b1a1e0bc0441a866a6d09d58", null ],

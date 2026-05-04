@@ -6,7 +6,7 @@ var external_8c =
     [ "pipe_msg", "external_8c.html#ae4d23abacf682ae58ea7dd61f979309c", null ],
     [ "pipe_message", "external_8c.html#ad7c942e16d652d052815e1f092413b16", null ],
     [ "mutt_pipe_message", "external_8c.html#a127f4916f0ac22474bf6e777fc838eb4", null ],
-    [ "mutt_print_message", "external_8c.html#a030d89d55ad4799fd1615a86c52dba77", null ],
+    [ "mutt_print_message", "external_8c.html#ad0c7b3ec500ae425d031dd6158fbe518", null ],
     [ "mutt_select_sort", "external_8c.html#a034de4f4b1a1e0bc0441a866a6d09d58", null ],
     [ "mutt_shell_escape", "external_8c.html#a83a20586633321eab21727982a90e1ea", null ],
     [ "mutt_enter_command", "external_8c.html#ab51ef03945c18d5c7c620d9194eb061a", null ],

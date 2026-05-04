@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-800-ga0ee0f</span>
+   &#160;<span id="projectnumber">2025-12-11-860-g80c9cc</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -966,173 +966,171 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  540</span>  <span class="keywordtype">int</span> last = 0, msgs = 0, bytes = 0, rset = 0, rc;</div>
 <div class="line"><span class="lineno">  541</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structConnAccount.html">ConnAccount</a> cac = { { 0 } };</div>
 <div class="line"><span class="lineno">  542</span> </div>
-<div class="line"><span class="lineno">  543</span>  <span class="keywordtype">char</span> *p = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(strlen(c_pop_host) + 7, <span class="keywordtype">char</span>);</div>
-<div class="line"><span class="lineno">  544</span>  <span class="keywordtype">char</span> *url = p;</div>
-<div class="line"><span class="lineno">  545</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="url_8c.html#a8f42b58bf1296286da36c329472f135f">url_check_scheme</a>(c_pop_host) == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e">U_UNKNOWN</a>)</div>
-<div class="line"><span class="lineno">  546</span>  {</div>
-<div class="line"><span class="lineno">  547</span>    strcpy(url, <span class="stringliteral">&quot;pop://&quot;</span>);</div>
-<div class="line"><span class="lineno">  548</span>    p = strchr(url, <span class="charliteral">&#39;\0&#39;</span>);</div>
-<div class="line"><span class="lineno">  549</span>  }</div>
-<div class="line"><span class="lineno">  550</span>  strcpy(p, c_pop_host);</div>
-<div class="line"><span class="lineno">  551</span> </div>
-<div class="line"><span class="lineno">  552</span>  rc = <a class="code hl_function" href="pop_2lib_8c.html#a6838234c95ab9171c2edcf35aa8e6526">pop_parse_path</a>(url, &amp;cac);</div>
-<div class="line"><span class="lineno">  553</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;url);</div>
-<div class="line"><span class="lineno">  554</span>  <span class="keywordflow">if</span> (rc)</div>
-<div class="line"><span class="lineno">  555</span>  {</div>
-<div class="line"><span class="lineno">  556</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s is an invalid POP path&quot;</span>), c_pop_host);</div>
-<div class="line"><span class="lineno">  557</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  558</span>  }</div>
-<div class="line"><span class="lineno">  559</span> </div>
-<div class="line"><span class="lineno">  560</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structConnection.html">Connection</a> *conn = <a class="code hl_function" href="mutt__socket_8c.html#ab79e92d0c88e3061f590cb1874b8b59d">mutt_conn_find</a>(&amp;cac);</div>
-<div class="line"><span class="lineno">  561</span>  <span class="keywordflow">if</span> (!conn)</div>
-<div class="line"><span class="lineno">  562</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  543</span>  <span class="keywordtype">char</span> *url = NULL;</div>
+<div class="line"><span class="lineno">  544</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="url_8c.html#a8f42b58bf1296286da36c329472f135f">url_check_scheme</a>(c_pop_host) == <a class="code hl_enumvalue" href="url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e">U_UNKNOWN</a>)</div>
+<div class="line"><span class="lineno">  545</span>    <a class="code hl_function" href="mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595">mutt_str_asprintf</a>(&amp;url, <span class="stringliteral">&quot;pop://%s&quot;</span>, c_pop_host);</div>
+<div class="line"><span class="lineno">  546</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  547</span>    url = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(c_pop_host);</div>
+<div class="line"><span class="lineno">  548</span> </div>
+<div class="line"><span class="lineno">  549</span>  rc = <a class="code hl_function" href="pop_2lib_8c.html#a6838234c95ab9171c2edcf35aa8e6526">pop_parse_path</a>(url, &amp;cac);</div>
+<div class="line"><span class="lineno">  550</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;url);</div>
+<div class="line"><span class="lineno">  551</span>  <span class="keywordflow">if</span> (rc)</div>
+<div class="line"><span class="lineno">  552</span>  {</div>
+<div class="line"><span class="lineno">  553</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;%s is an invalid POP path&quot;</span>), c_pop_host);</div>
+<div class="line"><span class="lineno">  554</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  555</span>  }</div>
+<div class="line"><span class="lineno">  556</span> </div>
+<div class="line"><span class="lineno">  557</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structConnection.html">Connection</a> *conn = <a class="code hl_function" href="mutt__socket_8c.html#ab79e92d0c88e3061f590cb1874b8b59d">mutt_conn_find</a>(&amp;cac);</div>
+<div class="line"><span class="lineno">  558</span>  <span class="keywordflow">if</span> (!conn)</div>
+<div class="line"><span class="lineno">  559</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  560</span> </div>
+<div class="line"><span class="lineno">  561</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPopAccountData.html">PopAccountData</a> *<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a> = <a class="code hl_function" href="pop_2adata_8c.html#a83237cf63034bd33bf3a7c0d263cd0a7">pop_adata_new</a>();</div>
+<div class="line"><span class="lineno">  562</span>  <a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>-&gt;conn = <a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>;</div>
 <div class="line"><span class="lineno">  563</span> </div>
-<div class="line"><span class="lineno">  564</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPopAccountData.html">PopAccountData</a> *<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a> = <a class="code hl_function" href="pop_2adata_8c.html#a83237cf63034bd33bf3a7c0d263cd0a7">pop_adata_new</a>();</div>
-<div class="line"><span class="lineno">  565</span>  <a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>-&gt;conn = <a class="code hl_variable" href="structPopAccountData.html#a9b4f6edb28624aaec1821d52f7cb8d18">conn</a>;</div>
-<div class="line"><span class="lineno">  566</span> </div>
-<div class="line"><span class="lineno">  567</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="pop_2lib_8c.html#a531ae6abd6cf75fb0004bf019944a3b9">pop_open_connection</a>(<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>) &lt; 0)</div>
-<div class="line"><span class="lineno">  568</span>  {</div>
-<div class="line"><span class="lineno">  569</span>    <a class="code hl_function" href="group__account__adata__free.html#gaeb0ea187608ddd92a6e3fc05abdeb322">pop_adata_free</a>((<span class="keywordtype">void</span> **) &amp;<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>);</div>
-<div class="line"><span class="lineno">  570</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  571</span>  }</div>
-<div class="line"><span class="lineno">  572</span> </div>
-<div class="line"><span class="lineno">  573</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Checking for new messages...&quot;</span>));</div>
-<div class="line"><span class="lineno">  574</span> </div>
-<div class="line"><span class="lineno">  575</span>  <span class="comment">/* find out how many messages are in the mailbox. */</span></div>
-<div class="line"><span class="lineno">  576</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;STAT\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  577</span>  rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>, buf, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  578</span>  <span class="keywordflow">if</span> (rc == -1)</div>
-<div class="line"><span class="lineno">  579</span>    <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  580</span>  <span class="keywordflow">if</span> (rc == -2)</div>
-<div class="line"><span class="lineno">  581</span>  {</div>
-<div class="line"><span class="lineno">  582</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>-&gt;err_msg);</div>
-<div class="line"><span class="lineno">  583</span>    <span class="keywordflow">goto</span> finish;</div>
-<div class="line"><span class="lineno">  584</span>  }</div>
-<div class="line"><span class="lineno">  585</span> </div>
-<div class="line"><span class="lineno">  586</span>  sscanf(buf, <span class="stringliteral">&quot;+OK %d %d&quot;</span>, &amp;msgs, &amp;bytes);</div>
-<div class="line"><span class="lineno">  587</span> </div>
-<div class="line"><span class="lineno">  588</span>  <span class="comment">/* only get unread messages */</span></div>
-<div class="line"><span class="lineno">  589</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_pop_last = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pop_last&quot;</span>);</div>
-<div class="line"><span class="lineno">  590</span>  <span class="keywordflow">if</span> ((msgs &gt; 0) &amp;&amp; c_pop_last)</div>
-<div class="line"><span class="lineno">  591</span>  {</div>
-<div class="line"><span class="lineno">  592</span>    <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;LAST\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  593</span>    rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>, buf, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  594</span>    <span class="keywordflow">if</span> (rc == -1)</div>
-<div class="line"><span class="lineno">  595</span>      <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  596</span>    <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  597</span>      sscanf(buf, <span class="stringliteral">&quot;+OK %d&quot;</span>, &amp;last);</div>
-<div class="line"><span class="lineno">  598</span>  }</div>
-<div class="line"><span class="lineno">  599</span> </div>
-<div class="line"><span class="lineno">  600</span>  <span class="keywordflow">if</span> (msgs &lt;= last)</div>
-<div class="line"><span class="lineno">  601</span>  {</div>
-<div class="line"><span class="lineno">  602</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;No new mail in POP mailbox&quot;</span>));</div>
-<div class="line"><span class="lineno">  603</span>    <span class="keywordflow">goto</span> finish;</div>
-<div class="line"><span class="lineno">  604</span>  }</div>
+<div class="line"><span class="lineno">  564</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="pop_2lib_8c.html#a531ae6abd6cf75fb0004bf019944a3b9">pop_open_connection</a>(<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>) &lt; 0)</div>
+<div class="line"><span class="lineno">  565</span>  {</div>
+<div class="line"><span class="lineno">  566</span>    <a class="code hl_function" href="group__account__adata__free.html#gaeb0ea187608ddd92a6e3fc05abdeb322">pop_adata_free</a>((<span class="keywordtype">void</span> **) &amp;<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>);</div>
+<div class="line"><span class="lineno">  567</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  568</span>  }</div>
+<div class="line"><span class="lineno">  569</span> </div>
+<div class="line"><span class="lineno">  570</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Checking for new messages...&quot;</span>));</div>
+<div class="line"><span class="lineno">  571</span> </div>
+<div class="line"><span class="lineno">  572</span>  <span class="comment">/* find out how many messages are in the mailbox. */</span></div>
+<div class="line"><span class="lineno">  573</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;STAT\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  574</span>  rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>, buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  575</span>  <span class="keywordflow">if</span> (rc == -1)</div>
+<div class="line"><span class="lineno">  576</span>    <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno">  577</span>  <span class="keywordflow">if</span> (rc == -2)</div>
+<div class="line"><span class="lineno">  578</span>  {</div>
+<div class="line"><span class="lineno">  579</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>-&gt;err_msg);</div>
+<div class="line"><span class="lineno">  580</span>    <span class="keywordflow">goto</span> finish;</div>
+<div class="line"><span class="lineno">  581</span>  }</div>
+<div class="line"><span class="lineno">  582</span> </div>
+<div class="line"><span class="lineno">  583</span>  sscanf(buf, <span class="stringliteral">&quot;+OK %d %d&quot;</span>, &amp;msgs, &amp;bytes);</div>
+<div class="line"><span class="lineno">  584</span> </div>
+<div class="line"><span class="lineno">  585</span>  <span class="comment">/* only get unread messages */</span></div>
+<div class="line"><span class="lineno">  586</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_pop_last = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pop_last&quot;</span>);</div>
+<div class="line"><span class="lineno">  587</span>  <span class="keywordflow">if</span> ((msgs &gt; 0) &amp;&amp; c_pop_last)</div>
+<div class="line"><span class="lineno">  588</span>  {</div>
+<div class="line"><span class="lineno">  589</span>    <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;LAST\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  590</span>    rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a>, buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  591</span>    <span class="keywordflow">if</span> (rc == -1)</div>
+<div class="line"><span class="lineno">  592</span>      <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno">  593</span>    <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  594</span>      sscanf(buf, <span class="stringliteral">&quot;+OK %d&quot;</span>, &amp;last);</div>
+<div class="line"><span class="lineno">  595</span>  }</div>
+<div class="line"><span class="lineno">  596</span> </div>
+<div class="line"><span class="lineno">  597</span>  <span class="keywordflow">if</span> (msgs &lt;= last)</div>
+<div class="line"><span class="lineno">  598</span>  {</div>
+<div class="line"><span class="lineno">  599</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;No new mail in POP mailbox&quot;</span>));</div>
+<div class="line"><span class="lineno">  600</span>    <span class="keywordflow">goto</span> finish;</div>
+<div class="line"><span class="lineno">  601</span>  }</div>
+<div class="line"><span class="lineno">  602</span> </div>
+<div class="line"><span class="lineno">  603</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_spool_file = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;spool_file&quot;</span>);</div>
+<div class="line"><span class="lineno">  604</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_spool = <a class="code hl_function" href="mx_8c.html#addbeb100364d5be4dd89b74ac73ef067">mx_path_resolve</a>(c_spool_file);</div>
 <div class="line"><span class="lineno">  605</span> </div>
-<div class="line"><span class="lineno">  606</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> c_spool_file = <a class="code hl_function" href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;spool_file&quot;</span>);</div>
-<div class="line"><span class="lineno">  607</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m_spool = <a class="code hl_function" href="mx_8c.html#addbeb100364d5be4dd89b74ac73ef067">mx_path_resolve</a>(c_spool_file);</div>
-<div class="line"><span class="lineno">  608</span> </div>
-<div class="line"><span class="lineno">  609</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mx_8c.html#a6c4f4c51fa0b086d86a8638197c40578">mx_mbox_open</a>(m_spool, <a class="code hl_define" href="mxapi_8h.html#ad32c5821121dddb7fa99ad0de0a9e719">MUTT_OPEN_NO_FLAGS</a>))</div>
-<div class="line"><span class="lineno">  610</span>  {</div>
-<div class="line"><span class="lineno">  611</span>    <a class="code hl_function" href="core_2mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9">mailbox_free</a>(&amp;m_spool);</div>
-<div class="line"><span class="lineno">  612</span>    <span class="keywordflow">goto</span> finish;</div>
-<div class="line"><span class="lineno">  613</span>  }</div>
-<div class="line"><span class="lineno">  614</span>  <span class="keywordtype">bool</span> old_append = m_spool-&gt;<a class="code hl_variable" href="structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79">append</a>;</div>
-<div class="line"><span class="lineno">  615</span>  m_spool-&gt;<a class="code hl_variable" href="structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79">append</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  606</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mx_8c.html#a6c4f4c51fa0b086d86a8638197c40578">mx_mbox_open</a>(m_spool, <a class="code hl_define" href="mxapi_8h.html#ad32c5821121dddb7fa99ad0de0a9e719">MUTT_OPEN_NO_FLAGS</a>))</div>
+<div class="line"><span class="lineno">  607</span>  {</div>
+<div class="line"><span class="lineno">  608</span>    <a class="code hl_function" href="core_2mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9">mailbox_free</a>(&amp;m_spool);</div>
+<div class="line"><span class="lineno">  609</span>    <span class="keywordflow">goto</span> finish;</div>
+<div class="line"><span class="lineno">  610</span>  }</div>
+<div class="line"><span class="lineno">  611</span>  <span class="keywordtype">bool</span> old_append = m_spool-&gt;<a class="code hl_variable" href="structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79">append</a>;</div>
+<div class="line"><span class="lineno">  612</span>  m_spool-&gt;<a class="code hl_variable" href="structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79">append</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  613</span> </div>
+<div class="line"><span class="lineno">  614</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35db">QuadOption</a> delanswer = <a class="code hl_function" href="question_2lib_8h.html#a8ba883bf53e8ab425a03d17368de84b4">query_quadoption</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Delete messages from server?&quot;</span>),</div>
+<div class="line"><span class="lineno">  615</span>                                               <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pop_delete&quot;</span>);</div>
 <div class="line"><span class="lineno">  616</span> </div>
-<div class="line"><span class="lineno">  617</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35db">QuadOption</a> delanswer = <a class="code hl_function" href="question_2lib_8h.html#a8ba883bf53e8ab425a03d17368de84b4">query_quadoption</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Delete messages from server?&quot;</span>),</div>
-<div class="line"><span class="lineno">  618</span>                                               <a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;pop_delete&quot;</span>);</div>
-<div class="line"><span class="lineno">  619</span> </div>
-<div class="line"><span class="lineno">  620</span>  snprintf(msgbuf, <span class="keyword">sizeof</span>(msgbuf),</div>
-<div class="line"><span class="lineno">  621</span>           ngettext(<span class="stringliteral">&quot;Reading new messages (%d byte)...&quot;</span>,</div>
-<div class="line"><span class="lineno">  622</span>                    <span class="stringliteral">&quot;Reading new messages (%d bytes)...&quot;</span>, bytes),</div>
-<div class="line"><span class="lineno">  623</span>           bytes);</div>
-<div class="line"><span class="lineno">  624</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msgbuf);</div>
-<div class="line"><span class="lineno">  625</span> </div>
-<div class="line"><span class="lineno">  626</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = last + 1; i &lt;= msgs; i++)</div>
-<div class="line"><span class="lineno">  627</span>  {</div>
-<div class="line"><span class="lineno">  628</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMessage.html">Message</a> *msg = <a class="code hl_function" href="mx_8c.html#ad7adbbda58c642107eadf33b1fbf0c13">mx_msg_open_new</a>(m_spool, NULL, <a class="code hl_define" href="mx_8h.html#a49087f3940d59f9624011017e42d9444">MUTT_ADD_FROM</a>);</div>
-<div class="line"><span class="lineno">  629</span>    <span class="keywordflow">if</span> (msg)</div>
-<div class="line"><span class="lineno">  630</span>    {</div>
-<div class="line"><span class="lineno">  631</span>      snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;RETR %d\r\n&quot;</span>, i);</div>
-<div class="line"><span class="lineno">  632</span>      rc = <a class="code hl_function" href="pop_2lib_8c.html#abc1591da707c3c85897c8b450e661dcf">pop_fetch_data</a>(adata, buf, NULL, <a class="code hl_function" href="group__pop__fetch__api.html#ga3cc06c4686cd79cfa3177fca6a868fa2">fetch_message</a>, msg-&gt;<a class="code hl_variable" href="structMessage.html#a11d53ee4319e8735c1677d8780a7b517">fp</a>);</div>
-<div class="line"><span class="lineno">  633</span>      <span class="keywordflow">if</span> (rc == -3)</div>
-<div class="line"><span class="lineno">  634</span>        rset = 1;</div>
-<div class="line"><span class="lineno">  635</span> </div>
-<div class="line"><span class="lineno">  636</span>      <span class="keywordflow">if</span> ((rc == 0) &amp;&amp; (<a class="code hl_function" href="mx_8c.html#add0e192c5f27bf6bd096ae2eb7c0b67b">mx_msg_commit</a>(m_spool, msg) != 0))</div>
-<div class="line"><span class="lineno">  637</span>      {</div>
-<div class="line"><span class="lineno">  638</span>        rset = 1;</div>
-<div class="line"><span class="lineno">  639</span>        rc = -3;</div>
-<div class="line"><span class="lineno">  640</span>      }</div>
-<div class="line"><span class="lineno">  641</span> </div>
-<div class="line"><span class="lineno">  642</span>      <a class="code hl_function" href="mx_8c.html#a2610a2afe8887bb874131a4ba092aa6a">mx_msg_close</a>(m_spool, &amp;msg);</div>
-<div class="line"><span class="lineno">  643</span>    }</div>
-<div class="line"><span class="lineno">  644</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  645</span>    {</div>
-<div class="line"><span class="lineno">  646</span>      rc = -3;</div>
-<div class="line"><span class="lineno">  647</span>    }</div>
-<div class="line"><span class="lineno">  648</span> </div>
-<div class="line"><span class="lineno">  649</span>    <span class="keywordflow">if</span> ((rc == 0) &amp;&amp; (delanswer == <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a>))</div>
-<div class="line"><span class="lineno">  650</span>    {</div>
-<div class="line"><span class="lineno">  651</span>      <span class="comment">/* delete the message on the server */</span></div>
-<div class="line"><span class="lineno">  652</span>      snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;DELE %d\r\n&quot;</span>, i);</div>
-<div class="line"><span class="lineno">  653</span>      rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  654</span>    }</div>
-<div class="line"><span class="lineno">  655</span> </div>
-<div class="line"><span class="lineno">  656</span>    <span class="keywordflow">if</span> (rc == -1)</div>
-<div class="line"><span class="lineno">  657</span>    {</div>
-<div class="line"><span class="lineno">  658</span>      m_spool-&gt;<a class="code hl_variable" href="structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79">append</a> = old_append;</div>
-<div class="line"><span class="lineno">  659</span>      <a class="code hl_function" href="mx_8c.html#af9e949965d56e69eb9a6a9aa640614bb">mx_mbox_close</a>(m_spool);</div>
-<div class="line"><span class="lineno">  660</span>      <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  661</span>    }</div>
-<div class="line"><span class="lineno">  662</span>    <span class="keywordflow">if</span> (rc == -2)</div>
-<div class="line"><span class="lineno">  663</span>    {</div>
-<div class="line"><span class="lineno">  664</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>);</div>
-<div class="line"><span class="lineno">  665</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  666</span>    }</div>
-<div class="line"><span class="lineno">  667</span>    <span class="keywordflow">if</span> (rc == -3)</div>
-<div class="line"><span class="lineno">  668</span>    {</div>
-<div class="line"><span class="lineno">  669</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error while writing mailbox&quot;</span>));</div>
-<div class="line"><span class="lineno">  670</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  671</span>    }</div>
-<div class="line"><span class="lineno">  672</span> </div>
-<div class="line"><span class="lineno">  673</span>    <span class="comment">/* L10N: The plural is picked by the second numerical argument, i.e.</span></div>
-<div class="line"><span class="lineno">  674</span><span class="comment">       the %d right before &#39;messages&#39;, i.e. the total number of messages. */</span></div>
-<div class="line"><span class="lineno">  675</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(ngettext(<span class="stringliteral">&quot;%s [%d of %d message read]&quot;</span>,</div>
-<div class="line"><span class="lineno">  676</span>                          <span class="stringliteral">&quot;%s [%d of %d messages read]&quot;</span>, msgs - last),</div>
-<div class="line"><span class="lineno">  677</span>                 msgbuf, i - last, msgs - last);</div>
-<div class="line"><span class="lineno">  678</span>  }</div>
+<div class="line"><span class="lineno">  617</span>  snprintf(msgbuf, <span class="keyword">sizeof</span>(msgbuf),</div>
+<div class="line"><span class="lineno">  618</span>           ngettext(<span class="stringliteral">&quot;Reading new messages (%d byte)...&quot;</span>,</div>
+<div class="line"><span class="lineno">  619</span>                    <span class="stringliteral">&quot;Reading new messages (%d bytes)...&quot;</span>, bytes),</div>
+<div class="line"><span class="lineno">  620</span>           bytes);</div>
+<div class="line"><span class="lineno">  621</span>  <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<span class="stringliteral">&quot;%s&quot;</span>, msgbuf);</div>
+<div class="line"><span class="lineno">  622</span> </div>
+<div class="line"><span class="lineno">  623</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = last + 1; i &lt;= msgs; i++)</div>
+<div class="line"><span class="lineno">  624</span>  {</div>
+<div class="line"><span class="lineno">  625</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMessage.html">Message</a> *msg = <a class="code hl_function" href="mx_8c.html#ad7adbbda58c642107eadf33b1fbf0c13">mx_msg_open_new</a>(m_spool, NULL, <a class="code hl_define" href="mx_8h.html#a49087f3940d59f9624011017e42d9444">MUTT_ADD_FROM</a>);</div>
+<div class="line"><span class="lineno">  626</span>    <span class="keywordflow">if</span> (msg)</div>
+<div class="line"><span class="lineno">  627</span>    {</div>
+<div class="line"><span class="lineno">  628</span>      snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;RETR %d\r\n&quot;</span>, i);</div>
+<div class="line"><span class="lineno">  629</span>      rc = <a class="code hl_function" href="pop_2lib_8c.html#abc1591da707c3c85897c8b450e661dcf">pop_fetch_data</a>(adata, buf, NULL, <a class="code hl_function" href="group__pop__fetch__api.html#ga3cc06c4686cd79cfa3177fca6a868fa2">fetch_message</a>, msg-&gt;<a class="code hl_variable" href="structMessage.html#a11d53ee4319e8735c1677d8780a7b517">fp</a>);</div>
+<div class="line"><span class="lineno">  630</span>      <span class="keywordflow">if</span> (rc == -3)</div>
+<div class="line"><span class="lineno">  631</span>        rset = 1;</div>
+<div class="line"><span class="lineno">  632</span> </div>
+<div class="line"><span class="lineno">  633</span>      <span class="keywordflow">if</span> ((rc == 0) &amp;&amp; (<a class="code hl_function" href="mx_8c.html#add0e192c5f27bf6bd096ae2eb7c0b67b">mx_msg_commit</a>(m_spool, msg) != 0))</div>
+<div class="line"><span class="lineno">  634</span>      {</div>
+<div class="line"><span class="lineno">  635</span>        rset = 1;</div>
+<div class="line"><span class="lineno">  636</span>        rc = -3;</div>
+<div class="line"><span class="lineno">  637</span>      }</div>
+<div class="line"><span class="lineno">  638</span> </div>
+<div class="line"><span class="lineno">  639</span>      <a class="code hl_function" href="mx_8c.html#a2610a2afe8887bb874131a4ba092aa6a">mx_msg_close</a>(m_spool, &amp;msg);</div>
+<div class="line"><span class="lineno">  640</span>    }</div>
+<div class="line"><span class="lineno">  641</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  642</span>    {</div>
+<div class="line"><span class="lineno">  643</span>      rc = -3;</div>
+<div class="line"><span class="lineno">  644</span>    }</div>
+<div class="line"><span class="lineno">  645</span> </div>
+<div class="line"><span class="lineno">  646</span>    <span class="keywordflow">if</span> ((rc == 0) &amp;&amp; (delanswer == <a class="code hl_enumvalue" href="quad_8h.html#a738f558a271fe5035e0ee3b700ee35dbafee7088606c4724651c799a6a0b182b7">MUTT_YES</a>))</div>
+<div class="line"><span class="lineno">  647</span>    {</div>
+<div class="line"><span class="lineno">  648</span>      <span class="comment">/* delete the message on the server */</span></div>
+<div class="line"><span class="lineno">  649</span>      snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;DELE %d\r\n&quot;</span>, i);</div>
+<div class="line"><span class="lineno">  650</span>      rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  651</span>    }</div>
+<div class="line"><span class="lineno">  652</span> </div>
+<div class="line"><span class="lineno">  653</span>    <span class="keywordflow">if</span> (rc == -1)</div>
+<div class="line"><span class="lineno">  654</span>    {</div>
+<div class="line"><span class="lineno">  655</span>      m_spool-&gt;<a class="code hl_variable" href="structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79">append</a> = old_append;</div>
+<div class="line"><span class="lineno">  656</span>      <a class="code hl_function" href="mx_8c.html#af9e949965d56e69eb9a6a9aa640614bb">mx_mbox_close</a>(m_spool);</div>
+<div class="line"><span class="lineno">  657</span>      <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno">  658</span>    }</div>
+<div class="line"><span class="lineno">  659</span>    <span class="keywordflow">if</span> (rc == -2)</div>
+<div class="line"><span class="lineno">  660</span>    {</div>
+<div class="line"><span class="lineno">  661</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>);</div>
+<div class="line"><span class="lineno">  662</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  663</span>    }</div>
+<div class="line"><span class="lineno">  664</span>    <span class="keywordflow">if</span> (rc == -3)</div>
+<div class="line"><span class="lineno">  665</span>    {</div>
+<div class="line"><span class="lineno">  666</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Error while writing mailbox&quot;</span>));</div>
+<div class="line"><span class="lineno">  667</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  668</span>    }</div>
+<div class="line"><span class="lineno">  669</span> </div>
+<div class="line"><span class="lineno">  670</span>    <span class="comment">/* L10N: The plural is picked by the second numerical argument, i.e.</span></div>
+<div class="line"><span class="lineno">  671</span><span class="comment">       the %d right before &#39;messages&#39;, i.e. the total number of messages. */</span></div>
+<div class="line"><span class="lineno">  672</span>    <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(ngettext(<span class="stringliteral">&quot;%s [%d of %d message read]&quot;</span>,</div>
+<div class="line"><span class="lineno">  673</span>                          <span class="stringliteral">&quot;%s [%d of %d messages read]&quot;</span>, msgs - last),</div>
+<div class="line"><span class="lineno">  674</span>                 msgbuf, i - last, msgs - last);</div>
+<div class="line"><span class="lineno">  675</span>  }</div>
+<div class="line"><span class="lineno">  676</span> </div>
+<div class="line"><span class="lineno">  677</span>  m_spool-&gt;<a class="code hl_variable" href="structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79">append</a> = old_append;</div>
+<div class="line"><span class="lineno">  678</span>  <a class="code hl_function" href="mx_8c.html#af9e949965d56e69eb9a6a9aa640614bb">mx_mbox_close</a>(m_spool);</div>
 <div class="line"><span class="lineno">  679</span> </div>
-<div class="line"><span class="lineno">  680</span>  m_spool-&gt;<a class="code hl_variable" href="structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79">append</a> = old_append;</div>
-<div class="line"><span class="lineno">  681</span>  <a class="code hl_function" href="mx_8c.html#af9e949965d56e69eb9a6a9aa640614bb">mx_mbox_close</a>(m_spool);</div>
-<div class="line"><span class="lineno">  682</span> </div>
-<div class="line"><span class="lineno">  683</span>  <span class="keywordflow">if</span> (rset)</div>
-<div class="line"><span class="lineno">  684</span>  {</div>
-<div class="line"><span class="lineno">  685</span>    <span class="comment">/* make sure no messages get deleted */</span></div>
-<div class="line"><span class="lineno">  686</span>    <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;RSET\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  687</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf)) == -1)</div>
-<div class="line"><span class="lineno">  688</span>      <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  689</span>  }</div>
-<div class="line"><span class="lineno">  690</span> </div>
-<div class="line"><span class="lineno">  691</span>finish:</div>
-<div class="line"><span class="lineno">  692</span>  <span class="comment">/* exit gracefully */</span></div>
-<div class="line"><span class="lineno">  693</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;QUIT\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  694</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf)) == -1)</div>
-<div class="line"><span class="lineno">  695</span>    <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno">  696</span>  <a class="code hl_function" href="socket_8c.html#a432eed609a221c68f457302d6e40c383">mutt_socket_close</a>(conn);</div>
-<div class="line"><span class="lineno">  697</span>  <a class="code hl_function" href="group__account__adata__free.html#gaeb0ea187608ddd92a6e3fc05abdeb322">pop_adata_free</a>((<span class="keywordtype">void</span> **) &amp;adata);</div>
-<div class="line"><span class="lineno">  698</span>  <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  699</span> </div>
-<div class="line"><span class="lineno">  700</span>fail:</div>
-<div class="line"><span class="lineno">  701</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Server closed connection&quot;</span>));</div>
-<div class="line"><span class="lineno">  702</span>  <a class="code hl_function" href="socket_8c.html#a432eed609a221c68f457302d6e40c383">mutt_socket_close</a>(conn);</div>
-<div class="line"><span class="lineno">  703</span>  <a class="code hl_function" href="group__account__adata__free.html#gaeb0ea187608ddd92a6e3fc05abdeb322">pop_adata_free</a>((<span class="keywordtype">void</span> **) &amp;adata);</div>
-<div class="line"><span class="lineno">  704</span>}</div>
+<div class="line"><span class="lineno">  680</span>  <span class="keywordflow">if</span> (rset)</div>
+<div class="line"><span class="lineno">  681</span>  {</div>
+<div class="line"><span class="lineno">  682</span>    <span class="comment">/* make sure no messages get deleted */</span></div>
+<div class="line"><span class="lineno">  683</span>    <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;RSET\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  684</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf)) == -1)</div>
+<div class="line"><span class="lineno">  685</span>      <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno">  686</span>  }</div>
+<div class="line"><span class="lineno">  687</span> </div>
+<div class="line"><span class="lineno">  688</span>finish:</div>
+<div class="line"><span class="lineno">  689</span>  <span class="comment">/* exit gracefully */</span></div>
+<div class="line"><span class="lineno">  690</span>  <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;QUIT\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  691</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf)) == -1)</div>
+<div class="line"><span class="lineno">  692</span>    <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno">  693</span>  <a class="code hl_function" href="socket_8c.html#a432eed609a221c68f457302d6e40c383">mutt_socket_close</a>(conn);</div>
+<div class="line"><span class="lineno">  694</span>  <a class="code hl_function" href="group__account__adata__free.html#gaeb0ea187608ddd92a6e3fc05abdeb322">pop_adata_free</a>((<span class="keywordtype">void</span> **) &amp;adata);</div>
+<div class="line"><span class="lineno">  695</span>  <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  696</span> </div>
+<div class="line"><span class="lineno">  697</span>fail:</div>
+<div class="line"><span class="lineno">  698</span>  <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Server closed connection&quot;</span>));</div>
+<div class="line"><span class="lineno">  699</span>  <a class="code hl_function" href="socket_8c.html#a432eed609a221c68f457302d6e40c383">mutt_socket_close</a>(conn);</div>
+<div class="line"><span class="lineno">  700</span>  <a class="code hl_function" href="group__account__adata__free.html#gaeb0ea187608ddd92a6e3fc05abdeb322">pop_adata_free</a>((<span class="keywordtype">void</span> **) &amp;adata);</div>
+<div class="line"><span class="lineno">  701</span>}</div>
 <div class="ttc" id="aconfig_2helpers_8c_html_a6b1589ee93ff51ef31f1d9324e138078"><div class="ttname"><a href="config_2helpers_8c.html#a6b1589ee93ff51ef31f1d9324e138078">cs_subset_string</a></div><div class="ttdeci">const char * cs_subset_string(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a string config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00291">helpers.c:291</a></div></div>
 <div class="ttc" id="acore_2mailbox_8c_html_aba915aae97477d1ecc6428a06f92dac9"><div class="ttname"><a href="core_2mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9">mailbox_free</a></div><div class="ttdeci">void mailbox_free(struct Mailbox **ptr)</div><div class="ttdoc">Free a Mailbox.</div><div class="ttdef"><b>Definition</b> <a href="core_2mailbox_8c_source.html#l00090">mailbox.c:90</a></div></div>
 <div class="ttc" id="agroup__account__adata__free_html_gaeb0ea187608ddd92a6e3fc05abdeb322"><div class="ttname"><a href="group__account__adata__free.html#gaeb0ea187608ddd92a6e3fc05abdeb322">pop_adata_free</a></div><div class="ttdeci">void pop_adata_free(void **ptr)</div><div class="ttdoc">Free the private Account data - Implements Account::adata_free() -.</div><div class="ttdef"><b>Definition</b> <a href="pop_2adata_8c_source.html#l00041">adata.c:41</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
-<div class="ttc" id="amemory_8h_html_a9aaf8f21a29735767a069ff1aee9d7d9"><div class="ttname"><a href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a></div><div class="ttdeci">#define MUTT_MEM_CALLOC(n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00052">memory.h:52</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00257">string.c:257</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a4388c16988fac9a7596dee4d4af89595"><div class="ttname"><a href="mutt_2string_8c.html#a4388c16988fac9a7596dee4d4af89595">mutt_str_asprintf</a></div><div class="ttdeci">int mutt_str_asprintf(char **strp, const char *fmt,...)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00808">string.c:808</a></div></div>
 <div class="ttc" id="amutt__socket_8c_html_ab79e92d0c88e3061f590cb1874b8b59d"><div class="ttname"><a href="mutt__socket_8c.html#ab79e92d0c88e3061f590cb1874b8b59d">mutt_conn_find</a></div><div class="ttdeci">struct Connection * mutt_conn_find(const struct ConnAccount *cac)</div><div class="ttdoc">Find a connection from a list.</div><div class="ttdef"><b>Definition</b> <a href="mutt__socket_8c_source.html#l00088">mutt_socket.c:88</a></div></div>
 <div class="ttc" id="amx_8c_html_a2610a2afe8887bb874131a4ba092aa6a"><div class="ttname"><a href="mx_8c.html#a2610a2afe8887bb874131a4ba092aa6a">mx_msg_close</a></div><div class="ttdeci">int mx_msg_close(struct Mailbox *m, struct Message **ptr)</div><div class="ttdoc">Close a message.</div><div class="ttdef"><b>Definition</b> <a href="mx_8c_source.html#l01182">mx.c:1182</a></div></div>
 <div class="ttc" id="amx_8c_html_a6c4f4c51fa0b086d86a8638197c40578"><div class="ttname"><a href="mx_8c.html#a6c4f4c51fa0b086d86a8638197c40578">mx_mbox_open</a></div><div class="ttdeci">bool mx_mbox_open(struct Mailbox *m, OpenMailboxFlags flags)</div><div class="ttdoc">Open a mailbox and parse it.</div><div class="ttdef"><b>Definition</b> <a href="mx_8c_source.html#l00285">mx.c:285</a></div></div>
@@ -1162,7 +1160,7 @@ Variables</h2></td></tr>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="pop_8c_ae41e43ca791955eb76c5709db39a21d7_cgraph.svg" width="684" height="1052"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="pop_8c_ae41e43ca791955eb76c5709db39a21d7_cgraph.svg" width="684" height="1160"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div id="dynsection-11" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>

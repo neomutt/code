@@ -3,6 +3,8 @@ var sidebar_2functions_8c =
     [ "sidebar_init_keys", "sidebar_2functions_8c.html#a7aa1097781445f7369e644ba15fad757", null ],
     [ "sidebar_get_submenu", "sidebar_2functions_8c.html#ab17de98dd673d37cef12db1e1f862c9b", null ],
     [ "sb_next", "sidebar_2functions_8c.html#ae64f05f5fb7aafc3184d3e1fcf132ed5", null ],
+    [ "sb_next_n", "sidebar_2functions_8c.html#ad504bf0664f21fba9e08716391651099", null ],
+    [ "sb_prev_n", "sidebar_2functions_8c.html#aebb93acfd59a39af5e7d010d64a263af", null ],
     [ "sb_next_new", "sidebar_2functions_8c.html#aed4fcca069d222dfe60f3274b565611e", null ],
     [ "sb_prev", "sidebar_2functions_8c.html#a4c5570fc54f15ab6b010868392791b25", null ],
     [ "sb_prev_new", "sidebar_2functions_8c.html#a935f1a465443c537ffac8bb3cc729ccc", null ],

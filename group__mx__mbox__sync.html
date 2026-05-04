@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-800-ga0ee0f</span>
+   &#160;<span id="projectnumber">2025-12-11-860-g80c9cc</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -1287,92 +1287,92 @@ Functions</h2></td></tr>
 <p>Save changes to the <a class="el" href="structMailbox.html" title="A mailbox.">Mailbox</a> - Implements <a class="el" href="structMxOps.html#aebbfeec5651637ec053cc47b95c124af">MxOps::mbox_sync()</a> -. </p>
 <p>Update POP mailbox, delete messages from server </p>
 
-<p class="definition">Definition at line <a class="el" href="pop_8c_source.html#l00876">876</a> of file <a class="el" href="pop_8c_source.html">pop.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  877</span>{</div>
-<div class="line"><span class="lineno">  878</span>  <span class="keywordtype">int</span> i, j, rc = 0;</div>
-<div class="line"><span class="lineno">  879</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
-<div class="line"><span class="lineno">  880</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPopAccountData.html">PopAccountData</a> *<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a> = <a class="code hl_function" href="pop_2adata_8c.html#a4471b5a6fcc25d086f1ff563370297f4">pop_adata_get</a>(m);</div>
-<div class="line"><span class="lineno">  881</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
-<div class="line"><span class="lineno">  882</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHeaderCache.html">HeaderCache</a> *hc = NULL;</div>
-<div class="line"><span class="lineno">  883</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  884</span> </div>
-<div class="line"><span class="lineno">  885</span>  adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a7d3b3740a49e6a24a9b89dce7c140df2">check_time</a> = 0;</div>
-<div class="line"><span class="lineno">  886</span> </div>
-<div class="line"><span class="lineno">  887</span>  <span class="keywordtype">int</span> num_deleted = 0;</div>
-<div class="line"><span class="lineno">  888</span>  <span class="keywordflow">for</span> (i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
-<div class="line"><span class="lineno">  889</span>  {</div>
-<div class="line"><span class="lineno">  890</span>    <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]-&gt;<a class="code hl_variable" href="structEmail.html#ac5db33e3d6d9723d8e496078d5769567">deleted</a>)</div>
-<div class="line"><span class="lineno">  891</span>      num_deleted++;</div>
-<div class="line"><span class="lineno">  892</span>  }</div>
-<div class="line"><span class="lineno">  893</span> </div>
-<div class="line"><span class="lineno">  894</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
-<div class="line"><span class="lineno">  895</span>  {</div>
-<div class="line"><span class="lineno">  896</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="pop_2lib_8c.html#af75fadb2503181ccec226915d3e1984f">pop_reconnect</a>(m) &lt; 0)</div>
-<div class="line"><span class="lineno">  897</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160">MX_STATUS_ERROR</a>;</div>
-<div class="line"><span class="lineno">  898</span> </div>
-<div class="line"><span class="lineno">  899</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
-<div class="line"><span class="lineno">  900</span>    hc = <a class="code hl_function" href="pop_8c.html#aa0a6ddc22898d702a5ea50cb2f16bb11">pop_hcache_open</a>(adata, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  901</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  902</span> </div>
-<div class="line"><span class="lineno">  903</span>    <span class="keyword">struct </span>Progress *progress = NULL;</div>
-<div class="line"><span class="lineno">  904</span>    <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#af1ff47b8f14a4503c9b8473582b13d5a">verbose</a>)</div>
-<div class="line"><span class="lineno">  905</span>    {</div>
-<div class="line"><span class="lineno">  906</span>      progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75ae89b45d8e4dad79ccfd4fc6df66c6bfe">MUTT_PROGRESS_WRITE</a>, num_deleted);</div>
-<div class="line"><span class="lineno">  907</span>      <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Marking messages deleted...&quot;</span>));</div>
-<div class="line"><span class="lineno">  908</span>    }</div>
-<div class="line"><span class="lineno">  909</span> </div>
-<div class="line"><span class="lineno">  910</span>    <span class="keywordflow">for</span> (i = 0, j = 0, rc = 0; (rc == 0) &amp;&amp; (i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>); i++)</div>
-<div class="line"><span class="lineno">  911</span>    {</div>
-<div class="line"><span class="lineno">  912</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structPopEmailData.html">PopEmailData</a> *<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a> = <a class="code hl_function" href="pop_2edata_8c.html#ad4dcf65aac92ae7178a31e362bf62166">pop_edata_get</a>(m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]);</div>
-<div class="line"><span class="lineno">  913</span>      <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]-&gt;<a class="code hl_variable" href="structEmail.html#ac5db33e3d6d9723d8e496078d5769567">deleted</a> &amp;&amp; (<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;refno != -1))</div>
-<div class="line"><span class="lineno">  914</span>      {</div>
-<div class="line"><span class="lineno">  915</span>        j++;</div>
-<div class="line"><span class="lineno">  916</span>        <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, j, -1);</div>
-<div class="line"><span class="lineno">  917</span>        snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;DELE %d\r\n&quot;</span>, <a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;refno);</div>
-<div class="line"><span class="lineno">  918</span>        rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  919</span>        <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  920</span>        {</div>
-<div class="line"><span class="lineno">  921</span>          <a class="code hl_function" href="bcache_8c.html#a81a73e04de0e74abec304abb57f9a21a">mutt_bcache_del</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#ad54e1437730d092d35f53d7c4aba6e5a">bcache</a>, <a class="code hl_function" href="pop_8c.html#a8028dffa5685f875d203a82270d9dcc0">cache_id</a>(<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid));</div>
-<div class="line"><span class="lineno">  922</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
-<div class="line"><span class="lineno">  923</span>          <a class="code hl_function" href="hcache_2hcache_8c.html#a66e48b640205127c7a4bb987b8d0192d">hcache_delete_email</a>(hc, <a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid, strlen(<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid));</div>
-<div class="line"><span class="lineno">  924</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  925</span>        }</div>
-<div class="line"><span class="lineno">  926</span>      }</div>
-<div class="line"><span class="lineno">  927</span> </div>
-<div class="line"><span class="lineno">  928</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
-<div class="line"><span class="lineno">  929</span>      <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]-&gt;<a class="code hl_variable" href="structEmail.html#a8b1e186b9d388e199ba9c6239c612627">changed</a>)</div>
-<div class="line"><span class="lineno">  930</span>      {</div>
-<div class="line"><span class="lineno">  931</span>        <a class="code hl_function" href="hcache_2hcache_8c.html#a9e0172956ca278dc113eefc10baef638">hcache_store_email</a>(hc, <a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid, strlen(<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid), m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i], 0);</div>
-<div class="line"><span class="lineno">  932</span>      }</div>
-<div class="line"><span class="lineno">  933</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  934</span>    }</div>
-<div class="line"><span class="lineno">  935</span>    <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
-<div class="line"><span class="lineno">  936</span> </div>
-<div class="line"><span class="lineno">  937</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
-<div class="line"><span class="lineno">  938</span>    <a class="code hl_function" href="hcache_2hcache_8c.html#a791c8437997aca5d8747271ff4c75e98">hcache_close</a>(&amp;hc);</div>
-<div class="line"><span class="lineno">  939</span><span class="preprocessor">#endif</span></div>
-<div class="line"><span class="lineno">  940</span> </div>
-<div class="line"><span class="lineno">  941</span>    <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  942</span>    {</div>
-<div class="line"><span class="lineno">  943</span>      <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;QUIT\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  944</span>      rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf));</div>
-<div class="line"><span class="lineno">  945</span>    }</div>
-<div class="line"><span class="lineno">  946</span> </div>
-<div class="line"><span class="lineno">  947</span>    <span class="keywordflow">if</span> (rc == 0)</div>
-<div class="line"><span class="lineno">  948</span>    {</div>
-<div class="line"><span class="lineno">  949</span>      adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a4b1f71d4fefd265f465f0cbadcf237b8">clear_cache</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  950</span>      <a class="code hl_function" href="pop_8c.html#a306deeb158f76bd338f04b1a5494d6a9">pop_clear_cache</a>(adata);</div>
-<div class="line"><span class="lineno">  951</span>      adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9a44d4bc626dbc9fbb085cff6e0b790c">status</a> = <a class="code hl_enumvalue" href="pop_2private_8h.html#abf5ce360d246b1f6d637d953c182ea39a05f59c3c4b782d93659d94ca5df16b7d">POP_DISCONNECTED</a>;</div>
-<div class="line"><span class="lineno">  952</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432acc30aaa1797601a158bcead39ef19a4b">MX_STATUS_OK</a>;</div>
-<div class="line"><span class="lineno">  953</span>    }</div>
-<div class="line"><span class="lineno">  954</span> </div>
-<div class="line"><span class="lineno">  955</span>    <span class="keywordflow">if</span> (rc == -2)</div>
-<div class="line"><span class="lineno">  956</span>    {</div>
-<div class="line"><span class="lineno">  957</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>);</div>
-<div class="line"><span class="lineno">  958</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160">MX_STATUS_ERROR</a>;</div>
-<div class="line"><span class="lineno">  959</span>    }</div>
-<div class="line"><span class="lineno">  960</span>  }</div>
-<div class="line"><span class="lineno">  961</span>}</div>
+<p class="definition">Definition at line <a class="el" href="pop_8c_source.html#l00873">873</a> of file <a class="el" href="pop_8c_source.html">pop.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  874</span>{</div>
+<div class="line"><span class="lineno">  875</span>  <span class="keywordtype">int</span> i, j, rc = 0;</div>
+<div class="line"><span class="lineno">  876</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno">  877</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPopAccountData.html">PopAccountData</a> *<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a> = <a class="code hl_function" href="pop_2adata_8c.html#a4471b5a6fcc25d086f1ff563370297f4">pop_adata_get</a>(m);</div>
+<div class="line"><span class="lineno">  878</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
+<div class="line"><span class="lineno">  879</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structHeaderCache.html">HeaderCache</a> *hc = NULL;</div>
+<div class="line"><span class="lineno">  880</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  881</span> </div>
+<div class="line"><span class="lineno">  882</span>  adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a7d3b3740a49e6a24a9b89dce7c140df2">check_time</a> = 0;</div>
+<div class="line"><span class="lineno">  883</span> </div>
+<div class="line"><span class="lineno">  884</span>  <span class="keywordtype">int</span> num_deleted = 0;</div>
+<div class="line"><span class="lineno">  885</span>  <span class="keywordflow">for</span> (i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
+<div class="line"><span class="lineno">  886</span>  {</div>
+<div class="line"><span class="lineno">  887</span>    <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]-&gt;<a class="code hl_variable" href="structEmail.html#ac5db33e3d6d9723d8e496078d5769567">deleted</a>)</div>
+<div class="line"><span class="lineno">  888</span>      num_deleted++;</div>
+<div class="line"><span class="lineno">  889</span>  }</div>
+<div class="line"><span class="lineno">  890</span> </div>
+<div class="line"><span class="lineno">  891</span>  <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line"><span class="lineno">  892</span>  {</div>
+<div class="line"><span class="lineno">  893</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="pop_2lib_8c.html#af75fadb2503181ccec226915d3e1984f">pop_reconnect</a>(m) &lt; 0)</div>
+<div class="line"><span class="lineno">  894</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160">MX_STATUS_ERROR</a>;</div>
+<div class="line"><span class="lineno">  895</span> </div>
+<div class="line"><span class="lineno">  896</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
+<div class="line"><span class="lineno">  897</span>    hc = <a class="code hl_function" href="pop_8c.html#aa0a6ddc22898d702a5ea50cb2f16bb11">pop_hcache_open</a>(adata, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  898</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  899</span> </div>
+<div class="line"><span class="lineno">  900</span>    <span class="keyword">struct </span>Progress *progress = NULL;</div>
+<div class="line"><span class="lineno">  901</span>    <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#af1ff47b8f14a4503c9b8473582b13d5a">verbose</a>)</div>
+<div class="line"><span class="lineno">  902</span>    {</div>
+<div class="line"><span class="lineno">  903</span>      progress = <a class="code hl_function" href="progress_2lib_8h.html#a551a8d9e844532e2851d6bee121c09b3">progress_new</a>(<a class="code hl_enumvalue" href="progress_2lib_8h.html#a0a558d538b8742adf8b1251f2848ba75ae89b45d8e4dad79ccfd4fc6df66c6bfe">MUTT_PROGRESS_WRITE</a>, num_deleted);</div>
+<div class="line"><span class="lineno">  904</span>      <a class="code hl_function" href="progress_2lib_8h.html#abd7142bf1b3c664cf1c3edca7c9b41d8">progress_set_message</a>(progress, <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Marking messages deleted...&quot;</span>));</div>
+<div class="line"><span class="lineno">  905</span>    }</div>
+<div class="line"><span class="lineno">  906</span> </div>
+<div class="line"><span class="lineno">  907</span>    <span class="keywordflow">for</span> (i = 0, j = 0, rc = 0; (rc == 0) &amp;&amp; (i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>); i++)</div>
+<div class="line"><span class="lineno">  908</span>    {</div>
+<div class="line"><span class="lineno">  909</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structPopEmailData.html">PopEmailData</a> *<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a> = <a class="code hl_function" href="pop_2edata_8c.html#ad4dcf65aac92ae7178a31e362bf62166">pop_edata_get</a>(m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]);</div>
+<div class="line"><span class="lineno">  910</span>      <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]-&gt;<a class="code hl_variable" href="structEmail.html#ac5db33e3d6d9723d8e496078d5769567">deleted</a> &amp;&amp; (<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;refno != -1))</div>
+<div class="line"><span class="lineno">  911</span>      {</div>
+<div class="line"><span class="lineno">  912</span>        j++;</div>
+<div class="line"><span class="lineno">  913</span>        <a class="code hl_function" href="progress_2lib_8h.html#ae0ca330f9059a039a4ece5cb1b00155b">progress_update</a>(progress, j, -1);</div>
+<div class="line"><span class="lineno">  914</span>        snprintf(buf, <span class="keyword">sizeof</span>(buf), <span class="stringliteral">&quot;DELE %d\r\n&quot;</span>, <a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;refno);</div>
+<div class="line"><span class="lineno">  915</span>        rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  916</span>        <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  917</span>        {</div>
+<div class="line"><span class="lineno">  918</span>          <a class="code hl_function" href="bcache_8c.html#a81a73e04de0e74abec304abb57f9a21a">mutt_bcache_del</a>(adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#ad54e1437730d092d35f53d7c4aba6e5a">bcache</a>, <a class="code hl_function" href="pop_8c.html#a8028dffa5685f875d203a82270d9dcc0">cache_id</a>(<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid));</div>
+<div class="line"><span class="lineno">  919</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
+<div class="line"><span class="lineno">  920</span>          <a class="code hl_function" href="hcache_2hcache_8c.html#a66e48b640205127c7a4bb987b8d0192d">hcache_delete_email</a>(hc, <a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid, strlen(<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid));</div>
+<div class="line"><span class="lineno">  921</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  922</span>        }</div>
+<div class="line"><span class="lineno">  923</span>      }</div>
+<div class="line"><span class="lineno">  924</span> </div>
+<div class="line"><span class="lineno">  925</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
+<div class="line"><span class="lineno">  926</span>      <span class="keywordflow">if</span> (m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]-&gt;<a class="code hl_variable" href="structEmail.html#a8b1e186b9d388e199ba9c6239c612627">changed</a>)</div>
+<div class="line"><span class="lineno">  927</span>      {</div>
+<div class="line"><span class="lineno">  928</span>        <a class="code hl_function" href="hcache_2hcache_8c.html#a9e0172956ca278dc113eefc10baef638">hcache_store_email</a>(hc, <a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid, strlen(<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>-&gt;uid), m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i], 0);</div>
+<div class="line"><span class="lineno">  929</span>      }</div>
+<div class="line"><span class="lineno">  930</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  931</span>    }</div>
+<div class="line"><span class="lineno">  932</span>    <a class="code hl_function" href="progress_2lib_8h.html#ab4c7a63427cdcaae2b1147ff6f010af4">progress_free</a>(&amp;progress);</div>
+<div class="line"><span class="lineno">  933</span> </div>
+<div class="line"><span class="lineno">  934</span><span class="preprocessor">#ifdef USE_HCACHE</span></div>
+<div class="line"><span class="lineno">  935</span>    <a class="code hl_function" href="hcache_2hcache_8c.html#a791c8437997aca5d8747271ff4c75e98">hcache_close</a>(&amp;hc);</div>
+<div class="line"><span class="lineno">  936</span><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="lineno">  937</span> </div>
+<div class="line"><span class="lineno">  938</span>    <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  939</span>    {</div>
+<div class="line"><span class="lineno">  940</span>      <a class="code hl_function" href="mutt_2string_8c.html#ad20e00309de897a1e882fc7400335b83">mutt_str_copy</a>(buf, <span class="stringliteral">&quot;QUIT\r\n&quot;</span>, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  941</span>      rc = <a class="code hl_define" href="pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f">pop_query</a>(adata, buf, <span class="keyword">sizeof</span>(buf));</div>
+<div class="line"><span class="lineno">  942</span>    }</div>
+<div class="line"><span class="lineno">  943</span> </div>
+<div class="line"><span class="lineno">  944</span>    <span class="keywordflow">if</span> (rc == 0)</div>
+<div class="line"><span class="lineno">  945</span>    {</div>
+<div class="line"><span class="lineno">  946</span>      adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a4b1f71d4fefd265f465f0cbadcf237b8">clear_cache</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  947</span>      <a class="code hl_function" href="pop_8c.html#a306deeb158f76bd338f04b1a5494d6a9">pop_clear_cache</a>(adata);</div>
+<div class="line"><span class="lineno">  948</span>      adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a9a44d4bc626dbc9fbb085cff6e0b790c">status</a> = <a class="code hl_enumvalue" href="pop_2private_8h.html#abf5ce360d246b1f6d637d953c182ea39a05f59c3c4b782d93659d94ca5df16b7d">POP_DISCONNECTED</a>;</div>
+<div class="line"><span class="lineno">  949</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432acc30aaa1797601a158bcead39ef19a4b">MX_STATUS_OK</a>;</div>
+<div class="line"><span class="lineno">  950</span>    }</div>
+<div class="line"><span class="lineno">  951</span> </div>
+<div class="line"><span class="lineno">  952</span>    <span class="keywordflow">if</span> (rc == -2)</div>
+<div class="line"><span class="lineno">  953</span>    {</div>
+<div class="line"><span class="lineno">  954</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, adata-&gt;<a class="code hl_variable" href="structPopAccountData.html#a84cf659582c28abdd77d78e74257143f">err_msg</a>);</div>
+<div class="line"><span class="lineno">  955</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160">MX_STATUS_ERROR</a>;</div>
+<div class="line"><span class="lineno">  956</span>    }</div>
+<div class="line"><span class="lineno">  957</span>  }</div>
+<div class="line"><span class="lineno">  958</span>}</div>
 <div class="ttc" id="ahcache_2hcache_8c_html_a66e48b640205127c7a4bb987b8d0192d"><div class="ttname"><a href="hcache_2hcache_8c.html#a66e48b640205127c7a4bb987b8d0192d">hcache_delete_email</a></div><div class="ttdeci">int hcache_delete_email(struct HeaderCache *hc, const char *key, size_t keylen)</div><div class="ttdoc">Multiplexor for StoreOps::delete_record.</div><div class="ttdef"><b>Definition</b> <a href="hcache_2hcache_8c_source.html#l00752">hcache.c:752</a></div></div>
 <div class="ttc" id="apop_2adata_8c_html_a4471b5a6fcc25d086f1ff563370297f4"><div class="ttname"><a href="pop_2adata_8c.html#a4471b5a6fcc25d086f1ff563370297f4">pop_adata_get</a></div><div class="ttdeci">struct PopAccountData * pop_adata_get(struct Mailbox *m)</div><div class="ttdoc">Get the Account data for this mailbox.</div><div class="ttdef"><b>Definition</b> <a href="pop_2adata_8c_source.html#l00073">adata.c:73</a></div></div>
 <div class="ttc" id="apop_2edata_8c_html_ad4dcf65aac92ae7178a31e362bf62166"><div class="ttname"><a href="pop_2edata_8c.html#ad4dcf65aac92ae7178a31e362bf62166">pop_edata_get</a></div><div class="ttdeci">struct PopEmailData * pop_edata_get(struct Email *e)</div><div class="ttdoc">Get the private data for this Email.</div><div class="ttdef"><b>Definition</b> <a href="pop_2edata_8c_source.html#l00068">edata.c:68</a></div></div>

@@ -30,6 +30,7 @@ var get_8h =
     [ "mutt_getch", "get_8h.html#a7d47b607e72adbec2c1963d6ae164a85", null ],
     [ "mutt_monitor_getch", "get_8h.html#aa2129e97fe764cad2e5109cd922b15f5", null ],
     [ "mutt_push_macro_event", "get_8h.html#a6fb1a3233123b74771ce95c448b22b79", null ],
+    [ "mutt_push_macro_repeated", "get_8h.html#a29dc3771b4bfb8edafad44d4967abd98", null ],
     [ "mutt_unget_ch", "get_8h.html#ae568d7843782964d3ab8566aa9c59e7b", null ],
     [ "mutt_unget_op", "get_8h.html#a8a7310e8fd6bf845a7754c8787d7333e", null ]
 ];

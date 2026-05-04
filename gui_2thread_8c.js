@@ -22,7 +22,7 @@ var gui_2thread_8c =
     [ "thread_hash_destructor", "group__hash__hdata__free__api.html#gac7a6c714d618e4154a6c7380db506729", null ],
     [ "mutt_sort_threads", "gui_2thread_8c.html#ac7bcb788cdd39c241efce4af04d2f3dc", null ],
     [ "mutt_aside_thread", "gui_2thread_8c.html#adb66f40987e98d64c631d45ee1bda645", null ],
-    [ "mutt_parent_message", "gui_2thread_8c.html#ae021dae3b838ebc7f688d4c9204a2308", null ],
+    [ "mutt_parent_message", "gui_2thread_8c.html#a50612e51b26bab5824e1c8353716e065", null ],
     [ "mutt_set_vnum", "gui_2thread_8c.html#ad208699eb4bc42837530572fbe4caf8d", null ],
     [ "mutt_traverse_thread", "gui_2thread_8c.html#a249d2b866bc0b7a8ef5c4954fd4c33b0", null ],
     [ "mutt_messages_in_thread", "gui_2thread_8c.html#a7ea1d8cc762023c88ee9152f9d0a7ce0", null ],
