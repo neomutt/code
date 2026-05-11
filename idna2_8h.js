@@ -1,6 +1,6 @@
 var idna2_8h =
 [
-    [ "MI_NO_FLAGS", "idna2_8h.html#a2abe500bb5f079aa0de9ec94590e1b71", null ],
+    [ "MI_NONE", "idna2_8h.html#a309c3ff7ad902a2d4cbae7568225db36", null ],
     [ "MI_MAY_BE_IRREVERSIBLE", "idna2_8h.html#ab40529e31f6b69f2100259d071629268", null ],
     [ "mutt_idna_intl_to_local", "idna2_8h.html#a7848b42db2f7ef0747bb472934aa58d9", null ],
     [ "mutt_idna_local_to_intl", "idna2_8h.html#a3d77f8b741cb5c14002bf4977bb7928a", null ],

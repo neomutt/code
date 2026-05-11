@@ -2,7 +2,7 @@ var mutt_2charset_8h =
 [
     [ "FgetConv", "structFgetConv.html", "structFgetConv" ],
     [ "Lookup", "structLookup.html", "structLookup" ],
-    [ "MUTT_ICONV_NO_FLAGS", "mutt_2charset_8h.html#a7e8b71716e5c874b2997a2304be23081", null ],
+    [ "MUTT_ICONV_NONE", "mutt_2charset_8h.html#a10c6ceed816180c85cc28d948a4e5174", null ],
     [ "MUTT_ICONV_HOOK_FROM", "mutt_2charset_8h.html#a1807a22585916adccafa5e09bda9b6a7", null ],
     [ "mutt_ch_is_utf8", "mutt_2charset_8h.html#a56cbec4a6366d637d41d151d10dc5b87", null ],
     [ "mutt_ch_is_us_ascii", "mutt_2charset_8h.html#a3ef43eece2b49fd708887669f556a15b", null ],

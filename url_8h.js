@@ -2,7 +2,7 @@ var url_8h =
 [
     [ "UrlQuery", "structUrlQuery.html", "structUrlQuery" ],
     [ "Url", "structUrl.html", "structUrl" ],
-    [ "U_NO_FLAGS", "url_8h.html#a04ddf99a809afcc240e4b3d517c98d20", null ],
+    [ "U_NONE", "url_8h.html#a3f616bd38057c10e66796f612c3d2740", null ],
     [ "U_PATH", "url_8h.html#a2f7d340c7b07a0b212e6ba7c9d1c52fa", null ],
     [ "UrlScheme", "url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243", [
       [ "U_UNKNOWN", "url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a117ae9f397e22fb87ac3f4ebed15863e", null ],

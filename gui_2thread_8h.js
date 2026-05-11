@@ -1,12 +1,6 @@
 var gui_2thread_8h =
 [
     [ "ThreadsContext", "structThreadsContext.html", "structThreadsContext" ],
-    [ "MUTT_THREAD_NO_FLAGS", "gui_2thread_8h.html#a6d6ffceab96ebca73d64b8d5ce65003a", null ],
-    [ "MUTT_THREAD_COLLAPSE", "gui_2thread_8h.html#ab40a63660eea2761a07f1c1d822ed543", null ],
-    [ "MUTT_THREAD_UNCOLLAPSE", "gui_2thread_8h.html#a9b9da255ba8ce2770efec5c8d0135a25", null ],
-    [ "MUTT_THREAD_UNREAD", "gui_2thread_8h.html#a090c2765b566eca8e7a627a6c2f5fbbb", null ],
-    [ "MUTT_THREAD_NEXT_UNREAD", "gui_2thread_8h.html#aa7fd1a156da623691ef4457793752f15", null ],
-    [ "MUTT_THREAD_FLAGGED", "gui_2thread_8h.html#ae0b1f2b690a2e8cfe4d759a30c046207", null ],
     [ "mutt_collapse_thread", "gui_2thread_8h.html#adf7b9bf7a6d119b7ead6e1c2683b8371", null ],
     [ "mutt_uncollapse_thread", "gui_2thread_8h.html#a6fd84fba7f90e5a429bcfe71126679cb", null ],
     [ "mutt_thread_contains_unread", "gui_2thread_8h.html#ab24bca6a05e2a2ff5b79baff6f3d22c2", null ],
@@ -34,6 +28,14 @@ var gui_2thread_8h =
       [ "MUTT_TREE_MISSING", "gui_2thread_8h.html#af79cb849efb74c3d732652b647bacb85ac8ccd947afb68604d3d7c7a5cc79b462", null ],
       [ "MUTT_TREE_MAX", "gui_2thread_8h.html#af79cb849efb74c3d732652b647bacb85a0f2e54b6b3832abf24684d61c4d2df70", null ],
       [ "MUTT_SPECIAL_INDEX", "gui_2thread_8h.html#af79cb849efb74c3d732652b647bacb85a31098dfec133f32d32dece65acc8cb38", null ]
+    ] ],
+    [ "MuttThreadFlag", "gui_2thread_8h.html#abcab1dfcbcf6d477c0d8e3731c322529", [
+      [ "MUTT_THREAD_NONE", "gui_2thread_8h.html#abcab1dfcbcf6d477c0d8e3731c322529a96e09b08b589aff55868ae9cc146568c", null ],
+      [ "MUTT_THREAD_COLLAPSE", "gui_2thread_8h.html#abcab1dfcbcf6d477c0d8e3731c322529afa22f42c6e96d5c82d173fd716056215", null ],
+      [ "MUTT_THREAD_UNCOLLAPSE", "gui_2thread_8h.html#abcab1dfcbcf6d477c0d8e3731c322529a1db5c0edfd2e7706e76f7744a93fa46d", null ],
+      [ "MUTT_THREAD_UNREAD", "gui_2thread_8h.html#abcab1dfcbcf6d477c0d8e3731c322529a5a71d13385a2dc9e5c0b56d335013fbe", null ],
+      [ "MUTT_THREAD_NEXT_UNREAD", "gui_2thread_8h.html#abcab1dfcbcf6d477c0d8e3731c322529ace3d6af09b411c6d132b97619cc01f03", null ],
+      [ "MUTT_THREAD_FLAGGED", "gui_2thread_8h.html#abcab1dfcbcf6d477c0d8e3731c322529ac22dfb7de822ef3a31a49b33c99701d5", null ]
     ] ],
     [ "MessageInThread", "gui_2thread_8h.html#a7fd1879ba8179c12165019a4f005e1f4", [
       [ "MIT_NUM_MESSAGES", "gui_2thread_8h.html#a7fd1879ba8179c12165019a4f005e1f4a4f4aff892a97ab76ab1d1448a4145a49", null ],

@@ -1,13 +1,15 @@
 var file_8h =
 [
     [ "MuttFileIter", "structMuttFileIter.html", "structMuttFileIter" ],
-    [ "MUTT_RL_NO_FLAGS", "file_8h.html#abb6d0dccab49bda4ed23948c7f5d0eaa", null ],
-    [ "MUTT_RL_CONT", "file_8h.html#a3f3715ab3aa19a4c3ac0d90eb99ccf08", null ],
-    [ "MUTT_RL_EOL", "file_8h.html#abe1097c37ebef71bc2d9b68c1ab453d2", null ],
     [ "mutt_file_fopen", "file_8h.html#a9fa358d76519cb6bc8ffca5850976d46", null ],
     [ "mutt_file_fclose", "file_8h.html#a9b519e795f098be88b93cd72c49a35ec", null ],
     [ "ReadLineFlags", "file_8h.html#ad87720c152fab801e9bbcf987057d317", null ],
     [ "mutt_file_map_t", "file_8h.html#aaaf529d5bd4c473f5be88b45cbed18a2", null ],
+    [ "ReadLineFlag", "file_8h.html#aeb20f12c0c1b93bbaebf890d23cdeb5b", [
+      [ "MUTT_RL_NONE", "file_8h.html#aeb20f12c0c1b93bbaebf890d23cdeb5baf47a7b80aa8cdda19a8f17137385c26d", null ],
+      [ "MUTT_RL_CONT", "file_8h.html#aeb20f12c0c1b93bbaebf890d23cdeb5ba809bf951d19dbe7792cdc0a4b17ec2cc", null ],
+      [ "MUTT_RL_EOL", "file_8h.html#aeb20f12c0c1b93bbaebf890d23cdeb5ba4e234ac2c516f6534914072f552e20ff", null ]
+    ] ],
     [ "MuttStatType", "file_8h.html#ad852389693b4c5a8d79c25e84b2d1139", [
       [ "MUTT_STAT_ATIME", "file_8h.html#ad852389693b4c5a8d79c25e84b2d1139aaebe13aad5970939f4383a8ed082201f", null ],
       [ "MUTT_STAT_MTIME", "file_8h.html#ad852389693b4c5a8d79c25e84b2d1139ab6a80eef142816f3ad6e880fc23fb2df", null ],

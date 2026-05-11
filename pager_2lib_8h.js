@@ -2,7 +2,7 @@ var pager_2lib_8h =
 [
     [ "PagerData", "structPagerData.html", "structPagerData" ],
     [ "PagerView", "structPagerView.html", "structPagerView" ],
-    [ "MUTT_PAGER_NO_FLAGS", "pager_2lib_8h.html#a0a536da5cd7ad9b881a8079052853818", null ],
+    [ "MUTT_PAGER_NONE", "pager_2lib_8h.html#a58086a64e388267ab19b294b56f8fbc8", null ],
     [ "MUTT_SHOWFLAT", "pager_2lib_8h.html#a9de40b1f09f9cfecdf91e9caf90d76ae", null ],
     [ "MUTT_SHOWCOLOR", "pager_2lib_8h.html#a6a24d55872e15f42b6dfcf7d560953e2", null ],
     [ "MUTT_HIDE", "pager_2lib_8h.html#a3a522d77e5eb5a2535ee3f19eb9076b4", null ],
@@ -17,12 +17,6 @@ var pager_2lib_8h =
     [ "MUTT_PAGER_STRIPES", "pager_2lib_8h.html#a5e8eebd7bad2d534e6a4b9064c55e898", null ],
     [ "MUTT_PAGER_MESSAGE", "pager_2lib_8h.html#ac14f9120c844296965a8a2c87dc5f541", null ],
     [ "MUTT_DISPLAYFLAGS", "pager_2lib_8h.html#a45c117fe5bfea2a2e42c6571eb637b38", null ],
-    [ "NT_PAGER_NO_FLAGS", "pager_2lib_8h.html#a58bd079b9afe7af9a2c179e7f2f9050f", null ],
-    [ "NT_PAGER_DELETE", "pager_2lib_8h.html#a76a8a7215f6c42abf1840f2380423a13", null ],
-    [ "NT_PAGER_VIEW", "pager_2lib_8h.html#a1e409194ff546ddebc5d6a3af8c9afd9", null ],
-    [ "PAGER_REDRAW_NO_FLAGS", "pager_2lib_8h.html#ac7fa8b233d8500888175fd5cad6b2c25", null ],
-    [ "PAGER_REDRAW_PAGER", "pager_2lib_8h.html#a9bc93df97895244b2247fab28e18f782", null ],
-    [ "PAGER_REDRAW_FLOW", "pager_2lib_8h.html#a82fee693c9e567839812b56c5245ca6a", null ],
     [ "PagerFlags", "pager_2lib_8h.html#a4b89dc870e3d48afbacfc74da0533898", null ],
     [ "NotifyPager", "pager_2lib_8h.html#a478c3d445c6b280b8d3585e3c44ddbf8", null ],
     [ "PagerRedrawFlags", "pager_2lib_8h.html#ac5514bf8b78b3f31e4e3b06d60a735b8", null ],
@@ -39,6 +33,16 @@ var pager_2lib_8h =
       [ "PAGER_LOOP_CONTINUE", "pager_2lib_8h.html#a0d5091765709adcea5775d9dce06cd9aab5a55dce0810ea24e254bb3da257428e", null ],
       [ "PAGER_LOOP_QUIT", "pager_2lib_8h.html#a0d5091765709adcea5775d9dce06cd9aa2552720d9735cc662d65ca65d8016f66", null ],
       [ "PAGER_LOOP_RELOAD", "pager_2lib_8h.html#a0d5091765709adcea5775d9dce06cd9aa168c5f5203de8e5fceee72b94099be41", null ]
+    ] ],
+    [ "NotifyPagerFlag", "pager_2lib_8h.html#a0089a4e8b716a6b54f15d797581f6f1b", [
+      [ "NT_PAGER_NONE", "pager_2lib_8h.html#a0089a4e8b716a6b54f15d797581f6f1ba7f301b0c2a86fc90385c634d2206d57a", null ],
+      [ "NT_PAGER_DELETE", "pager_2lib_8h.html#a0089a4e8b716a6b54f15d797581f6f1baa3a1671345b7a4b2992753c9293bf0f5", null ],
+      [ "NT_PAGER_VIEW", "pager_2lib_8h.html#a0089a4e8b716a6b54f15d797581f6f1ba503f304b7e9b049dbb9843f1c6c3dda5", null ]
+    ] ],
+    [ "PagerRedrawFlag", "pager_2lib_8h.html#a143df124795823eca30edcd2fd6b01c4", [
+      [ "PAGER_REDRAW_NONE", "pager_2lib_8h.html#a143df124795823eca30edcd2fd6b01c4add3fda63ad5f85c86ddf3005978269c7", null ],
+      [ "PAGER_REDRAW_PAGER", "pager_2lib_8h.html#a143df124795823eca30edcd2fd6b01c4ab91ff04e310f6ba06b4757acc9ea1c82", null ],
+      [ "PAGER_REDRAW_FLOW", "pager_2lib_8h.html#a143df124795823eca30edcd2fd6b01c4a25468d99131961e4b93d428103b690e8", null ]
     ] ],
     [ "pager_init_keys", "pager_2lib_8h.html#a0c92187abffad0a5699ca42505ae6c95", null ],
     [ "dlg_pager", "group__gui__dlg.html#gaa0492e04d356a4dc2eed8a5ac9dd16d7", null ],

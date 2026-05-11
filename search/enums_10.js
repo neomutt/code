@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['saveattach_0',['SaveAttach',['../mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faa',1,'mutt_attach.h']]],
-  ['sidebarsorttype_1',['SidebarSortType',['../sidebar_2sort_8h.html#a175c7d0dcf095a17336771ffa89ea08c',1,'sort.h']]],
-  ['statuschars_2',['StatusChars',['../expando__status_8h.html#a79101cb57c3f3878796a41e0f0475b3d',1,'expando_status.h']]]
+  ['rangeside_0',['RangeSide',['../pattern_2private_8h.html#a09872fe8f93087d0e0eeb65513bd8c79',1,'private.h']]],
+  ['rangetype_1',['RangeType',['../pattern_2private_8h.html#af90c032fde5982a5e2f6b6ca160fd52e',1,'private.h']]],
+  ['readlineflag_2',['ReadLineFlag',['../file_8h.html#aeb20f12c0c1b93bbaebf890d23cdeb5b',1,'file.h']]],
+  ['resolvemethod_3',['ResolveMethod',['../index_2functions_8c.html#aea03692781e579bff799cf5199e3b999',1,'functions.c']]],
+  ['resolveresult_4',['ResolveResult',['../monitor_8c.html#a687aed9f23f0f38376d8b7dd57372580',1,'monitor.c']]],
+  ['richattribs_5',['RichAttribs',['../enriched_8c.html#a4148209775369a82f56b9fde2cf2dd2d',1,'enriched.c']]]
 ];

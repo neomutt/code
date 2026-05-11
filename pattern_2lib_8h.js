@@ -3,14 +3,18 @@ var pattern_2lib_8h =
     [ "Pattern", "structPattern.html", "structPattern" ],
     [ "PatternCache", "structPatternCache.html", "structPatternCache" ],
     [ "MUTT_ALIAS_SIMPLESEARCH", "pattern_2lib_8h.html#abbd0506e535c65e267f08fbc0c4d33ef", null ],
-    [ "MUTT_PC_NO_FLAGS", "pattern_2lib_8h.html#a80fbfd937c06de3e40a261d2a2bc3c90", null ],
-    [ "MUTT_PC_FULL_MSG", "pattern_2lib_8h.html#a258bbc9499cea3d5d1c3c0454ee8b31a", null ],
-    [ "MUTT_PC_PATTERN_DYNAMIC", "pattern_2lib_8h.html#af80a0826f8de1e8a8580be5eb2b00535", null ],
-    [ "MUTT_PC_SEND_MODE_SEARCH", "pattern_2lib_8h.html#a19e1fc1179278ed2bfa410eed8be237b", null ],
-    [ "MUTT_PAT_EXEC_NO_FLAGS", "pattern_2lib_8h.html#a61239a1cc46ef59e942773d86ffad098", null ],
-    [ "MUTT_MATCH_FULL_ADDRESS", "pattern_2lib_8h.html#a92c3a3987120f4e5b64f420613a13311", null ],
     [ "PatternCompFlags", "pattern_2lib_8h.html#a1d78529336f13dffb6168735b63f0384", null ],
     [ "PatternExecFlags", "pattern_2lib_8h.html#afc18a7b0cd352fb9ea17aedb748aaff9", null ],
+    [ "PatternCompFlag", "pattern_2lib_8h.html#af2552a70d85f3293974194775cdac075", [
+      [ "MUTT_PC_NONE", "pattern_2lib_8h.html#af2552a70d85f3293974194775cdac075a7c2d10e3f1f8c0dae4638451843a6eaf", null ],
+      [ "MUTT_PC_FULL_MSG", "pattern_2lib_8h.html#af2552a70d85f3293974194775cdac075ae47fb71ee61071561d81587094ef75de", null ],
+      [ "MUTT_PC_PATTERN_DYNAMIC", "pattern_2lib_8h.html#af2552a70d85f3293974194775cdac075a04ce3ec43a81148894849129a31f433d", null ],
+      [ "MUTT_PC_SEND_MODE_SEARCH", "pattern_2lib_8h.html#af2552a70d85f3293974194775cdac075ad44bb770a321aa06a2643b76ceaa01ab", null ]
+    ] ],
+    [ "PatternExecFlag", "pattern_2lib_8h.html#a05883edd78e0810349279b4eddb6955f", [
+      [ "MUTT_PAT_EXEC_NONE", "pattern_2lib_8h.html#a05883edd78e0810349279b4eddb6955fa14ca4aa72c7a762c20a547a560708181", null ],
+      [ "MUTT_MATCH_FULL_ADDRESS", "pattern_2lib_8h.html#a05883edd78e0810349279b4eddb6955fab638ce440e0ed0a784e96a17f7465645", null ]
+    ] ],
     [ "PatternType", "pattern_2lib_8h.html#a351dc5aa88481a949638aeb6cc5e6754", [
       [ "MUTT_PAT_AND", "pattern_2lib_8h.html#a351dc5aa88481a949638aeb6cc5e6754aa2d2b413b9781ce26fa59f30e1b92243", null ],
       [ "MUTT_PAT_OR", "pattern_2lib_8h.html#a351dc5aa88481a949638aeb6cc5e6754a1878342a63254e514b86594dd71a911c", null ],

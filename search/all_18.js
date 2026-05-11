@@ -6,7 +6,7 @@ var searchData=
   ['u_5fmailto_3',['U_MAILTO',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a37e57b950d3261812a4af815c0505411',1,'url.h']]],
   ['u_5fnntp_4',['U_NNTP',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a867c7d440d5858e5c749d595a7e971a1',1,'url.h']]],
   ['u_5fnntps_5',['U_NNTPS',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a36622ec19979218e1af310e5e17fba76',1,'url.h']]],
-  ['u_5fno_5fflags_6',['U_NO_FLAGS',['../url_8h.html#a04ddf99a809afcc240e4b3d517c98d20',1,'url.h']]],
+  ['u_5fnone_6',['U_NONE',['../url_8h.html#a3f616bd38057c10e66796f612c3d2740',1,'url.h']]],
   ['u_5fnotmuch_7',['U_NOTMUCH',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243a0b455eb7070416ae3bc1d00e9977dfb0',1,'url.h']]],
   ['u_5fpath_8',['U_PATH',['../url_8h.html#a2f7d340c7b07a0b212e6ba7c9d1c52fa',1,'url.h']]],
   ['u_5fpop_9',['U_POP',['../url_8h.html#a10b37ccf31f8e23024ff3ba628aa4243ade7d15f0ce183fc87df80c1d48340ce5',1,'url.h']]],

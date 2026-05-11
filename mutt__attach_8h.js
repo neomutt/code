@@ -7,7 +7,7 @@ var mutt__attach_8h =
       [ "MUTT_VA_PAGER", "mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946ab4f9fd68dbd70c2bd8f4e3795bed15cc", null ]
     ] ],
     [ "SaveAttach", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faa", [
-      [ "MUTT_SAVE_NO_FLAGS", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaaed4c57bafee22c671cdc621feed0b224", null ],
+      [ "MUTT_SAVE_NONE", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaaee57d5f784d3ac859bfb15e43301a57f", null ],
       [ "MUTT_SAVE_APPEND", "mutt__attach_8h.html#a5675c7a41890711ec4871b592c840faaa3f82d6dcb02891511fe91907b398aa1c", null ]
     ] ],
     [ "mutt_attach_display_loop", "mutt__attach_8h.html#a72c9e19b893d8d4afc5593d9d2b399ff", null ],

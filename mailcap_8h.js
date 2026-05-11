@@ -2,7 +2,7 @@ var mailcap_8h =
 [
     [ "MailcapEntry", "structMailcapEntry.html", "structMailcapEntry" ],
     [ "MailcapLookup", "mailcap_8h.html#a0716f6351a9229990024889ec22b33c1", [
-      [ "MUTT_MC_NO_FLAGS", "mailcap_8h.html#a0716f6351a9229990024889ec22b33c1abe09e527550677b514f34f0fd421d8f8", null ],
+      [ "MUTT_MC_NONE", "mailcap_8h.html#a0716f6351a9229990024889ec22b33c1a60e3b3cbc9dd06fd2cbe72ecb5a8edc5", null ],
       [ "MUTT_MC_EDIT", "mailcap_8h.html#a0716f6351a9229990024889ec22b33c1a573dc2a7dcdf2058404b201a98906fdc", null ],
       [ "MUTT_MC_COMPOSE", "mailcap_8h.html#a0716f6351a9229990024889ec22b33c1adf2bd2611de86e55bd3b472569c40ed9", null ],
       [ "MUTT_MC_PRINT", "mailcap_8h.html#a0716f6351a9229990024889ec22b33c1a52af6785e1b3d732fe50654ede5041b2", null ],

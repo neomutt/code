@@ -18,6 +18,7 @@ var lib_gui =
     [ "GUI handle the resizing of the screen", "gui_resize.html", null ],
     [ "Root Window", "gui_rootwin.html", null ],
     [ "Simple Bar (status)", "gui_sbar.html", null ],
+    [ "Build a selection of Emails for an action", "gui_selection.html", null ],
     [ "Simple Dialog", "gui_simple.html", null ],
     [ "Set the terminal title/icon", "gui_terminal.html", null ],
     [ "Create/manipulate threading in emails", "gui_thread.html", null ],

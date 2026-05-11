@@ -1,12 +1,6 @@
 var connaccount_8h =
 [
     [ "ConnAccount", "structConnAccount.html", "structConnAccount" ],
-    [ "MUTT_ACCT_NO_FLAGS", "connaccount_8h.html#a3745080fbfe114df01308d1f00ce5640", null ],
-    [ "MUTT_ACCT_PORT", "connaccount_8h.html#ae39ab0365d254c609b3f488ed00fdf11", null ],
-    [ "MUTT_ACCT_USER", "connaccount_8h.html#ab496cae7636af7b356aad973a4a2e675", null ],
-    [ "MUTT_ACCT_LOGIN", "connaccount_8h.html#ab5599042f07efbed4f70a19cd322370a", null ],
-    [ "MUTT_ACCT_PASS", "connaccount_8h.html#a9c5c05c3447f2884a5bbf1ab219e3f37", null ],
-    [ "MUTT_ACCT_SSL", "connaccount_8h.html#a4a13697bc3f261ea3949d4dbe3869863", null ],
     [ "MuttAccountFlags", "connaccount_8h.html#a25025c559ef26ae8bbd9349cfea83d49", null ],
     [ "ConnAccountField", "connaccount_8h.html#a25419e97b0149cb541a4f3906ce852fb", [
       [ "MUTT_CA_HOST", "connaccount_8h.html#a25419e97b0149cb541a4f3906ce852fbadafaa864647a6d5a008fe14a7fb8b138", null ],
@@ -14,6 +8,14 @@ var connaccount_8h =
       [ "MUTT_CA_USER", "connaccount_8h.html#a25419e97b0149cb541a4f3906ce852fba88e08ced0262113ed414eb31dac201f1", null ],
       [ "MUTT_CA_PASS", "connaccount_8h.html#a25419e97b0149cb541a4f3906ce852fbae477f9be6711da6e0abb96409c566798", null ],
       [ "MUTT_CA_OAUTH_CMD", "connaccount_8h.html#a25419e97b0149cb541a4f3906ce852fba2dd535022f1ea5d13a342df0f7fda4d4", null ]
+    ] ],
+    [ "MuttAccountFlag", "connaccount_8h.html#ab316670442159422ef1dbaf2277404da", [
+      [ "MUTT_ACCT_NONE", "connaccount_8h.html#ab316670442159422ef1dbaf2277404daaa4d5ff1c1508e86789b2963606a3828e", null ],
+      [ "MUTT_ACCT_PORT", "connaccount_8h.html#ab316670442159422ef1dbaf2277404daa3fcd5f2a8edb94dd4caa880ce1dca87c", null ],
+      [ "MUTT_ACCT_USER", "connaccount_8h.html#ab316670442159422ef1dbaf2277404daa935ff63a48b8d14230a8bc194ad6e9a3", null ],
+      [ "MUTT_ACCT_LOGIN", "connaccount_8h.html#ab316670442159422ef1dbaf2277404daa9d428cea5309ff35bd5d3a3c5dc94004", null ],
+      [ "MUTT_ACCT_PASS", "connaccount_8h.html#ab316670442159422ef1dbaf2277404daa67010e78f5f36e0898ecacea324e13a4", null ],
+      [ "MUTT_ACCT_SSL", "connaccount_8h.html#ab316670442159422ef1dbaf2277404daa53f2c86af795c75846642e4c6b85c4de", null ]
     ] ],
     [ "ExpandoDataNntp", "connaccount_8h.html#a66f0ae92b1de1e7e8b78a2c24c78f829", [
       [ "ED_NTP_ACCOUNT", "connaccount_8h.html#a66f0ae92b1de1e7e8b78a2c24c78f829af56e46b79c5acb8e2751711c82777a6b", null ],

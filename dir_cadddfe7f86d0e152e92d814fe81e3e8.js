@@ -23,5 +23,6 @@ var dir_cadddfe7f86d0e152e92d814fe81e3e8 =
     [ "recvattach.c", "recvattach_8c.html", "recvattach_8c" ],
     [ "recvattach.h", "recvattach_8h.html", "recvattach_8h" ],
     [ "recvcmd.c", "recvcmd_8c.html", "recvcmd_8c" ],
-    [ "recvcmd.h", "recvcmd_8h.html", "recvcmd_8h" ]
+    [ "recvcmd.h", "recvcmd_8h.html", "recvcmd_8h" ],
+    [ "selection.c", "attach_2selection_8c.html", "attach_2selection_8c" ]
 ];

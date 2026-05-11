@@ -1,13 +1,15 @@
 var pgpkey_8c =
 [
     [ "PgpCache", "structPgpCache.html", "structPgpCache" ],
-    [ "PGP_KV_NO_FLAGS", "pgpkey_8c.html#a0bfe8fe961efecdedbf5f47cd0c75500", null ],
-    [ "PGP_KV_VALID", "pgpkey_8c.html#a5403e07f6af4309818f8f3c470116833", null ],
-    [ "PGP_KV_ADDR", "pgpkey_8c.html#a6e39bb3b1a46448f00f6591543553baf", null ],
-    [ "PGP_KV_STRING", "pgpkey_8c.html#a6def4a22eecb2b0aadca924b534f71c7", null ],
-    [ "PGP_KV_STRONGID", "pgpkey_8c.html#a3834779d4fa65b6cd9afc052e8dcc723", null ],
     [ "PGP_KV_MATCH", "pgpkey_8c.html#a40d5acd8017ff315f8840d04c56cc8ca", null ],
     [ "PgpKeyValidFlags", "pgpkey_8c.html#afa1aa4d0dec2040afc7e3d72d3ffc6b3", null ],
+    [ "PgpKeyValidFlag", "pgpkey_8c.html#a740c29108890255482c902ef3876c6b1", [
+      [ "PGP_KV_NONE", "pgpkey_8c.html#a740c29108890255482c902ef3876c6b1a0161397e1e013943c3f2303169567dbe", null ],
+      [ "PGP_KV_VALID", "pgpkey_8c.html#a740c29108890255482c902ef3876c6b1aa98cd08dde0f23eacf09ed5530520436", null ],
+      [ "PGP_KV_ADDR", "pgpkey_8c.html#a740c29108890255482c902ef3876c6b1a26b2a7c46b8f1b3349a8655b55e45bc3", null ],
+      [ "PGP_KV_STRING", "pgpkey_8c.html#a740c29108890255482c902ef3876c6b1a06a0ad3ac5e63369d5cf2306fdad4e83", null ],
+      [ "PGP_KV_STRONGID", "pgpkey_8c.html#a740c29108890255482c902ef3876c6b1acefaffc92996edb5db097ee6ab978204", null ]
+    ] ],
     [ "pgp_principal_key", "pgpkey_8c.html#afeb400f3575d05ef0aadc9a6c064a4d0", null ],
     [ "pgp_key_is_valid", "pgpkey_8c.html#aad0a99e470d5d329e7cfa07f703d64b7", null ],
     [ "pgp_keys_are_valid", "pgpkey_8c.html#a6f3ff50b73993524cde060dcf542bc1b", null ],

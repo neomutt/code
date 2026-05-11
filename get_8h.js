@@ -2,20 +2,26 @@ var get_8h =
 [
     [ "KeyEvent", "structKeyEvent.html", "structKeyEvent" ],
     [ "KeymapMatch", "structKeymapMatch.html", "structKeymapMatch" ],
-    [ "GETCH_NO_FLAGS", "get_8h.html#a95278987011dd0b2efeeced0765deeb2", null ],
-    [ "GETCH_IGNORE_MACRO", "get_8h.html#a271cd6518e23dd7f0f789d2bf8145b2d", null ],
-    [ "GETCH_NO_COUNTER", "get_8h.html#a3ca71821a199814790dfbf5a4264c435", null ],
-    [ "GETCH_NO_FEEDBACK", "get_8h.html#a76d4d35af8aa0c3e354754c6bb1f131a", null ],
     [ "KEY_COUNT_MAX_DIGITS", "get_8h.html#a5660c7382071ce80eb5c32e98987b733", null ],
     [ "KEY_SEQ_MAX_LEN", "get_8h.html#a5c833c2cbe268672381d5fb727d9f7f9", null ],
-    [ "KEY_GATHER_NO_MATCH", "get_8h.html#a5e35af34c6ebeae122fa6d51904aabd6", null ],
-    [ "KEY_GATHER_MATCH", "get_8h.html#ac4e8f507ca747d9c3d5ea39bfe85bb15", null ],
-    [ "KEY_GATHER_LONGER", "get_8h.html#a35eda0af002e0cbbe6d343a9714c306e", null ],
-    [ "MFF_NO_FLAGS", "get_8h.html#a8967d1ccd3ec02d0f02bec956c84bb28", null ],
-    [ "MFF_DEPRECATED", "get_8h.html#ab5e053f5c8df9f76b0d573d00f0d8dad", null ],
     [ "GetChFlags", "get_8h.html#a062691fba109226647ad88c481c32408", null ],
     [ "KeyGatherFlags", "get_8h.html#aa9566e7bdd4342abc8eb7e7274c41209", null ],
     [ "MenuFuncFlags", "get_8h.html#ab9c8d65ea49f2975c54848784d3f200b", null ],
+    [ "GetChFlag", "get_8h.html#a22f8e5a3fd35a038b410c77dd8b7a78c", [
+      [ "GETCH_NONE", "get_8h.html#a22f8e5a3fd35a038b410c77dd8b7a78ca043942bf91d4e49541391a5c1aa091be", null ],
+      [ "GETCH_IGNORE_MACRO", "get_8h.html#a22f8e5a3fd35a038b410c77dd8b7a78ca5160cd218e4b6c610cd2397cdc880f14", null ],
+      [ "GETCH_NO_COUNTER", "get_8h.html#a22f8e5a3fd35a038b410c77dd8b7a78cab47521ba4d1e5b7bd0ba2457e5b2a8f2", null ],
+      [ "GETCH_NO_FEEDBACK", "get_8h.html#a22f8e5a3fd35a038b410c77dd8b7a78ca65ccfc7be587c87cc5b57281d589f071", null ]
+    ] ],
+    [ "KeyGatherFlag", "get_8h.html#a2ba3888543cebe5953ed60e7e50e0f90", [
+      [ "KEY_GATHER_NO_MATCH", "get_8h.html#a2ba3888543cebe5953ed60e7e50e0f90ada268569cb8bdc9decf41923815fe645", null ],
+      [ "KEY_GATHER_MATCH", "get_8h.html#a2ba3888543cebe5953ed60e7e50e0f90aedb4c4217fe499c72a91d103a41f6c8d", null ],
+      [ "KEY_GATHER_LONGER", "get_8h.html#a2ba3888543cebe5953ed60e7e50e0f90ae842976e4ac4c39b963fe5e57b4ecbee", null ]
+    ] ],
+    [ "MenuFuncFlag", "get_8h.html#aefb25e4d2edec73d53d23340199da680", [
+      [ "MFF_NONE", "get_8h.html#aefb25e4d2edec73d53d23340199da680aa56fc9384075a368ea9298ddb9452933", null ],
+      [ "MFF_DEPRECATED", "get_8h.html#aefb25e4d2edec73d53d23340199da680a9d596c7f40fc0f79ad9c50c222c2d743", null ]
+    ] ],
     [ "ARRAY_HEAD", "get_8h.html#aca0253730e587fe70e4d5c32f97f11d3", null ],
     [ "ARRAY_HEAD", "get_8h.html#ae33af9023e4a639f229cdc8501eae18c", null ],
     [ "array_add", "get_8h.html#a58537a7c27fb16838e4e8450d066967b", null ],

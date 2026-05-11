@@ -2,18 +2,6 @@ var core_2mailbox_8h =
 [
     [ "Mailbox", "structMailbox.html", "structMailbox" ],
     [ "EventMailbox", "structEventMailbox.html", "structEventMailbox" ],
-    [ "MUTT_ACL_NO_FLAGS", "core_2mailbox_8h.html#a92f7d8c4183cbb790d60d1979e6dc5ea", null ],
-    [ "MUTT_ACL_ADMIN", "core_2mailbox_8h.html#afdf7230ac2d28f46a527c939198f23f0", null ],
-    [ "MUTT_ACL_CREATE", "core_2mailbox_8h.html#a006b7689f9d9582b246d4761ba6e2585", null ],
-    [ "MUTT_ACL_DELETE", "core_2mailbox_8h.html#a7ada20153d03e30afe22e55e32d61fea", null ],
-    [ "MUTT_ACL_DELMX", "core_2mailbox_8h.html#a0839cdd5cc0880c906f5826652ddee13", null ],
-    [ "MUTT_ACL_EXPUNGE", "core_2mailbox_8h.html#abe9efc292e8727ad857358c96157ecc3", null ],
-    [ "MUTT_ACL_INSERT", "core_2mailbox_8h.html#a3dc345445c24e4c7ab02dfdfe0093d60", null ],
-    [ "MUTT_ACL_LOOKUP", "core_2mailbox_8h.html#a2f00180fcee84fde51fd10c718a21201", null ],
-    [ "MUTT_ACL_POST", "core_2mailbox_8h.html#a1860842fb9744ebdd3d7bfeffb4f60be", null ],
-    [ "MUTT_ACL_READ", "core_2mailbox_8h.html#aff498ce9ba288f7b247c4a408721a6db", null ],
-    [ "MUTT_ACL_SEEN", "core_2mailbox_8h.html#af726790bdcf33b797e735f03aab88730", null ],
-    [ "MUTT_ACL_WRITE", "core_2mailbox_8h.html#ac495d1273b7f2399403a2932b6ff2fd3", null ],
     [ "MUTT_ACL_ALL", "core_2mailbox_8h.html#ac16c75570c67dd14df17037a0a22e129", null ],
     [ "AclFlags", "core_2mailbox_8h.html#a84aa4e5fc418eb5f51c6af6e5a7a0388", null ],
     [ "MailboxType", "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921d", [
@@ -29,6 +17,20 @@ var core_2mailbox_8h =
       [ "MUTT_NOTMUCH", "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da05c2d20da557ac5b2c45a349eec1fba6", null ],
       [ "MUTT_POP", "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921da3b55e432fcbfdbd550d0aea5b03679de", null ],
       [ "MUTT_COMPRESSED", "core_2mailbox_8h.html#af65addf714c28dd5d483cb426100921dabe3e473aa651d6b7030b5ef08953eb4e", null ]
+    ] ],
+    [ "AclFlag", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79", [
+      [ "MUTT_ACL_NONE", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79aad3763bb1d1b8f3c43343dc512e7d840", null ],
+      [ "MUTT_ACL_ADMIN", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a78ff5c83255b558cb00a4cc9f15c039d", null ],
+      [ "MUTT_ACL_CREATE", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a9b94d4715561b4bda93fd008a14b22d9", null ],
+      [ "MUTT_ACL_DELETE", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79ab96d23d41e901084f957168329d353b6", null ],
+      [ "MUTT_ACL_DELMX", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a729e51eb504a9bc85eee080c8722fabc", null ],
+      [ "MUTT_ACL_EXPUNGE", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79abefb5b957fc70326fc8d17aacf422ab1", null ],
+      [ "MUTT_ACL_INSERT", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a617bbf49f435cfcc203680ed4465e3d2", null ],
+      [ "MUTT_ACL_LOOKUP", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79ae5c64b7fc9b75021c1b1b155296114cb", null ],
+      [ "MUTT_ACL_POST", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a95bb95a4901cdad234d1904c3005cb61", null ],
+      [ "MUTT_ACL_READ", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a949c1ee1b71cf7eb5dad6b1332be1cd0", null ],
+      [ "MUTT_ACL_SEEN", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79ac3c89a989df1b6ce02047d2bde266616", null ],
+      [ "MUTT_ACL_WRITE", "core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a5998f3e34aec2c9372c03ff076f4ff46", null ]
     ] ],
     [ "ExpandoDataMailbox", "core_2mailbox_8h.html#a37de3f1244a5121c3902e9213bed58b7", [
       [ "ED_MBX_MAILBOX_NAME", "core_2mailbox_8h.html#a37de3f1244a5121c3902e9213bed58b7a415838fd47a7d885032d69346e6f5d9a", null ],

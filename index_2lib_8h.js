@@ -1,21 +1,25 @@
 var index_2lib_8h =
 [
-    [ "NT_INDEX_NO_FLAGS", "index_2lib_8h.html#ad65396861263c5e1de450a89dafbf196", null ],
-    [ "NT_INDEX_ADD", "index_2lib_8h.html#a899a251a15a2862f659a780a5e12f156", null ],
-    [ "NT_INDEX_DELETE", "index_2lib_8h.html#a2a1d0adfb40c3682459f4f9f6d14fea1", null ],
-    [ "NT_INDEX_SUBSET", "index_2lib_8h.html#a5222e7dc1b64f5d7464f3cf4c11211d8", null ],
-    [ "NT_INDEX_ACCOUNT", "index_2lib_8h.html#a953140e16e1c40798ad98cb74075934f", null ],
-    [ "NT_INDEX_MVIEW", "index_2lib_8h.html#a6a988da85246baa0cce51c7f099b77c8", null ],
-    [ "NT_INDEX_MAILBOX", "index_2lib_8h.html#a3729c609d6e7d746bb47b83bb72e030c", null ],
-    [ "NT_INDEX_EMAIL", "index_2lib_8h.html#acbfc305ebc4d440fcf0b66ab10fbcc64", null ],
-    [ "CHECK_NO_FLAGS", "index_2lib_8h.html#a12478fe2cb97430346f77696249a1627", null ],
-    [ "CHECK_IN_MAILBOX", "index_2lib_8h.html#a8eea2ef028439402e2bacfafe7789752", null ],
-    [ "CHECK_MSGCOUNT", "index_2lib_8h.html#ab3538aca98e4d53a915bf89f940f2774", null ],
-    [ "CHECK_VISIBLE", "index_2lib_8h.html#a54a7a7f900ccd38f3ceaeb2f587f132d", null ],
-    [ "CHECK_READONLY", "index_2lib_8h.html#a9bb432bd5d6e9dd5a0a2ded079bc3238", null ],
-    [ "CHECK_ATTACH", "index_2lib_8h.html#a397bc5725fce5f47f8019284280cc606", null ],
     [ "NotifyIndex", "index_2lib_8h.html#a46d350542f65b8ef5720eab7daf36a9a", null ],
     [ "CheckFlags", "index_2lib_8h.html#a0fbf75fa988aa37198039a83614ef2f8", null ],
+    [ "NotifyIndexFlag", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bd", [
+      [ "NT_INDEX_NONE", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bdae14617a2fdf9c0f2170e92f586b7debb", null ],
+      [ "NT_INDEX_ADD", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bdadf989158bf6b15b25dda16d860fbdb4d", null ],
+      [ "NT_INDEX_DELETE", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bda3e891306595833bb7667d0a82b34de2b", null ],
+      [ "NT_INDEX_SUBSET", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bda3798f3e942bb128ecefc6be1a7e7d5bf", null ],
+      [ "NT_INDEX_ACCOUNT", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bdab61e63240381a538cc04f8b1221ec8d5", null ],
+      [ "NT_INDEX_MVIEW", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bdad0d66dc587ecde785ddebdb59699aacf", null ],
+      [ "NT_INDEX_MAILBOX", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bda42cb7de8a2bdb325b3c22dca9e62ffc5", null ],
+      [ "NT_INDEX_EMAIL", "index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bda805c23af411e8ac699987871efbab886", null ]
+    ] ],
+    [ "CheckFlag", "index_2lib_8h.html#acd1e6c44331aeccc6110cfacdaf29d48", [
+      [ "CHECK_NONE", "index_2lib_8h.html#acd1e6c44331aeccc6110cfacdaf29d48a64a0f00066d21c6a8e97a5977591388a", null ],
+      [ "CHECK_IN_MAILBOX", "index_2lib_8h.html#acd1e6c44331aeccc6110cfacdaf29d48adae34a2ba816248d3a24c09223c2533e", null ],
+      [ "CHECK_MSGCOUNT", "index_2lib_8h.html#acd1e6c44331aeccc6110cfacdaf29d48a77484b1752a826930aad3ce1ba21ba2c", null ],
+      [ "CHECK_VISIBLE", "index_2lib_8h.html#acd1e6c44331aeccc6110cfacdaf29d48a5cc919207a76aae909e4bde61fff6289", null ],
+      [ "CHECK_READONLY", "index_2lib_8h.html#acd1e6c44331aeccc6110cfacdaf29d48a705fe6873a99bb30f5fe2a3ff53a58df", null ],
+      [ "CHECK_ATTACH", "index_2lib_8h.html#acd1e6c44331aeccc6110cfacdaf29d48aeee4bd371a63f0b4b449e3d550c66c4d", null ]
+    ] ],
     [ "CollapseMode", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3", [
       [ "COLLAPSE_MODE_TOGGLE", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3a824588afa6fd1880d1dc3458b8623a5b", null ],
       [ "COLLAPSE_MODE_CLOSE", "index_2lib_8h.html#a46c33a8cb4c10667d11ad9930d7b29e3af43ceb349d75431712751ec315dee3c3", null ],

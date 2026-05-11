@@ -1,15 +1,17 @@
 var command_8h =
 [
     [ "Command", "structCommand.html", "structCommand" ],
-    [ "CF_NO_FLAGS", "command_8h.html#aa035d15081f8bd486050adef7de295b0", null ],
-    [ "CF_SYNONYM", "command_8h.html#a1a3618a807d7eb4b20736d312950214c", null ],
-    [ "CF_DEPRECATED", "command_8h.html#adc979f493ea0a34b2fd210de46d88f71", null ],
     [ "CommandFlags", "command_8h.html#ad4b1ddd6158147a9538115a7fd2cd5bd", null ],
     [ "CommandResult", "command_8h.html#ab263ddf6663365ed434ab750bf339557", [
       [ "MUTT_CMD_ERROR", "command_8h.html#ab263ddf6663365ed434ab750bf339557a62b96a9042e720ccacd52f761e9230fd", null ],
       [ "MUTT_CMD_WARNING", "command_8h.html#ab263ddf6663365ed434ab750bf339557abf2ec27eecf60bcf6f5696b0ce8d7b72", null ],
       [ "MUTT_CMD_SUCCESS", "command_8h.html#ab263ddf6663365ed434ab750bf339557a0cfdcd0b200729536b895b8a420f6215", null ],
       [ "MUTT_CMD_FINISH", "command_8h.html#ab263ddf6663365ed434ab750bf339557ad52789638730c5e54305f009c8bec83e", null ]
+    ] ],
+    [ "CommandFlag", "command_8h.html#a3138a0ec633f87ead2cd32eead20303a", [
+      [ "CF_NONE", "command_8h.html#a3138a0ec633f87ead2cd32eead20303aab5fbdef2ff2606428375c68b7b303652", null ],
+      [ "CF_SYNONYM", "command_8h.html#a3138a0ec633f87ead2cd32eead20303aa9de0ce8462af12a0973dd5da4decfa4a", null ],
+      [ "CF_DEPRECATED", "command_8h.html#a3138a0ec633f87ead2cd32eead20303aa4b971fc856fa3c5e86ae792f703f2be7", null ]
     ] ],
     [ "CommandId", "command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8a", [
       [ "CMD_NONE", "command_8h.html#aaf8d2069e2c6bbecf4aa8f9819028e8aa93c1ce1fac89139d9f4df4b6db21b1cc", null ],

@@ -1,19 +1,23 @@
 var mxapi_8h =
 [
     [ "MxOps", "structMxOps.html", "structMxOps" ],
-    [ "MUTT_OPEN_NO_FLAGS", "mxapi_8h.html#ad32c5821121dddb7fa99ad0de0a9e719", null ],
-    [ "MUTT_NOSORT", "mxapi_8h.html#a9aa2964ccc101dbfdb11771b00b1de90", null ],
-    [ "MUTT_APPEND", "mxapi_8h.html#a6168431d3be24912b33a6c486fa11366", null ],
-    [ "MUTT_READONLY", "mxapi_8h.html#a11b97885a0fc04bcd13572076e8a17ab", null ],
-    [ "MUTT_QUIET", "mxapi_8h.html#a75f314042a266df29efcc524d35c4b2d", null ],
-    [ "MUTT_PEEK", "mxapi_8h.html#a968f688cbe0d506670853e20a623c15c", null ],
-    [ "MUTT_APPENDNEW", "mxapi_8h.html#ac3c0a14560d66d5c3ae9c905d3b4bb26", null ],
-    [ "MUTT_MAILBOX_CHECK_NO_FLAGS", "mxapi_8h.html#a20db67a082f406914d798b8caa9686a3", null ],
-    [ "MUTT_MAILBOX_CHECK_POSTPONED", "mxapi_8h.html#ad946cb3f4b6851fe0d3b5842fd65948e", null ],
-    [ "MUTT_MAILBOX_CHECK_STATS", "mxapi_8h.html#a57620b9bfb2acdd39940f3a6dfc13799", null ],
-    [ "MUTT_MAILBOX_CHECK_IMMEDIATE", "mxapi_8h.html#ac2da347125142a85497d6bfed6ac58ec", null ],
     [ "OpenMailboxFlags", "mxapi_8h.html#a12d50555671e01ef64b027974fc5acfa", null ],
     [ "CheckStatsFlags", "mxapi_8h.html#ae650e4672a71962abeaa7a4aaaa42841", null ],
+    [ "OpenMailboxFlag", "mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3", [
+      [ "MUTT_OPEN_NONE", "mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3af265b97a72637c620e41fc3e3b54eac6", null ],
+      [ "MUTT_NOSORT", "mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3a927f83ff213e55b4c35dfda8bdd84fee", null ],
+      [ "MUTT_APPEND", "mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3ac4cbe9d44092ecf10352dca3eb8d93c0", null ],
+      [ "MUTT_READONLY", "mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3a659eecda25a0574fd407fb971cb66e3c", null ],
+      [ "MUTT_QUIET", "mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3a282963710f87cfc22bde74ffb7772b93", null ],
+      [ "MUTT_PEEK", "mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3af560e387560c38c97429ac308565d8a8", null ],
+      [ "MUTT_APPENDNEW", "mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3a567847a4200d2ca171855700b1a87f89", null ]
+    ] ],
+    [ "CheckStatsFlag", "mxapi_8h.html#ae16961e5c7c28bb8c983c6288e501546", [
+      [ "MUTT_MAILBOX_CHECK_NONE", "mxapi_8h.html#ae16961e5c7c28bb8c983c6288e501546adbd586f1b346de4b8ae8aa4bb18bad59", null ],
+      [ "MUTT_MAILBOX_CHECK_POSTPONED", "mxapi_8h.html#ae16961e5c7c28bb8c983c6288e501546ada73866d66cb17d3d00b89640561e309", null ],
+      [ "MUTT_MAILBOX_CHECK_STATS", "mxapi_8h.html#ae16961e5c7c28bb8c983c6288e501546a0738b8e422b5807dc6e888e8903ebad4", null ],
+      [ "MUTT_MAILBOX_CHECK_IMMEDIATE", "mxapi_8h.html#ae16961e5c7c28bb8c983c6288e501546ae66ff1ab1250fc5d505ab2a4c53e8ece", null ]
+    ] ],
     [ "MxStatus", "mxapi_8h.html#af414aea967025ea4ba10b86268488432", [
       [ "MX_STATUS_ERROR", "mxapi_8h.html#af414aea967025ea4ba10b86268488432aa482eddd52e9811eaef42b91a7e38160", null ],
       [ "MX_STATUS_OK", "mxapi_8h.html#af414aea967025ea4ba10b86268488432acc30aaa1797601a158bcead39ef19a4b", null ],

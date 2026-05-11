@@ -35,6 +35,7 @@ var dir_11bc0974ce736ce9a6fadebbeb7a8314 =
     [ "rootwin.h", "rootwin_8h.html", "rootwin_8h" ],
     [ "sbar.c", "sbar_8c.html", "sbar_8c" ],
     [ "sbar.h", "sbar_8h.html", "sbar_8h" ],
+    [ "selection.c", "gui_2selection_8c.html", "gui_2selection_8c" ],
     [ "simple.c", "gui_2simple_8c.html", "gui_2simple_8c" ],
     [ "simple.h", "simple_8h.html", "simple_8h" ],
     [ "terminal.c", "terminal_8c.html", "terminal_8c" ],

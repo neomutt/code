@@ -1,12 +1,14 @@
 var menu_2lib_8h =
 [
     [ "Menu", "structMenu.html", "structMenu" ],
-    [ "MENU_REDRAW_NO_FLAGS", "menu_2lib_8h.html#a706500e7867ed450e8cd6ffde3601395", null ],
-    [ "MENU_REDRAW_INDEX", "menu_2lib_8h.html#a294a94cf45be93fa7677adb7116ce60b", null ],
-    [ "MENU_REDRAW_MOTION", "menu_2lib_8h.html#afd1295f0c36408826d642e4771b89a1b", null ],
-    [ "MENU_REDRAW_CURRENT", "menu_2lib_8h.html#ada2a150b4a42da80d12b7e3be6d396f9", null ],
-    [ "MENU_REDRAW_FULL", "menu_2lib_8h.html#a073caf105025cd1e03e766c7e4e9ec2f", null ],
     [ "MenuRedrawFlags", "menu_2lib_8h.html#a82f105585171a6bd277a5edcb3496318", null ],
+    [ "MenuRedrawFlag", "menu_2lib_8h.html#a8c8bda242d474e0c2388df7698b63305", [
+      [ "MENU_REDRAW_NONE", "menu_2lib_8h.html#a8c8bda242d474e0c2388df7698b63305a3fba60162634a807dd45346c19c583d9", null ],
+      [ "MENU_REDRAW_INDEX", "menu_2lib_8h.html#a8c8bda242d474e0c2388df7698b63305a10932b98be005ec180153720863f82fb", null ],
+      [ "MENU_REDRAW_MOTION", "menu_2lib_8h.html#a8c8bda242d474e0c2388df7698b63305ae7675d98d456a6a9a52d1ff5b235706f", null ],
+      [ "MENU_REDRAW_CURRENT", "menu_2lib_8h.html#a8c8bda242d474e0c2388df7698b63305a2edde83ebc968307eea1a6f6744bf3c1", null ],
+      [ "MENU_REDRAW_FULL", "menu_2lib_8h.html#a8c8bda242d474e0c2388df7698b63305a22c0cf6f74c5d478cef6247eb29acdfd", null ]
+    ] ],
     [ "ExpandoDataMenu", "menu_2lib_8h.html#a39da8e47030c620e81ed4ac988fcc8dd", [
       [ "ED_MEN_PERCENTAGE", "menu_2lib_8h.html#a39da8e47030c620e81ed4ac988fcc8dda378ecf7d1dbb4b5463ac5f2e4676d711", null ]
     ] ],

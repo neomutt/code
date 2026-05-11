@@ -7,7 +7,6 @@ var mview_8c =
     [ "update_tables", "mview_8c.html#a7c2f42c26ede170f097e084e947a75b8", null ],
     [ "mview_mailbox_observer", "group__observer__api.html#ga7759908cb82aa254ec40a38c3a3675ae", null ],
     [ "message_is_tagged", "mview_8c.html#abfba0f2643d1fa54927eb2257b7e7cd4", null ],
-    [ "ea_add_tagged", "mview_8c.html#ab741b6f8f1f2a5f4f1e33f488881699c", null ],
     [ "mutt_get_virt_email", "mview_8c.html#a1859332ec86bc1394a46665b33f847b9", null ],
     [ "mview_has_limit", "mview_8c.html#af2645242f7bbbc38af01bf2f5cb2877f", null ],
     [ "mview_mailbox", "mview_8c.html#a41c38301c246a378a35d01c92a60ce42", null ],

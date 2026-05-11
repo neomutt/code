@@ -4,7 +4,7 @@ var searchData=
   ['b64_5fflush_1',['b64_flush',['../send_2body_8c.html#a8f82e55d423ce5471321fada03744eca',1,'body.c']]],
   ['b64_5fputc_2',['b64_putc',['../send_2body_8c.html#ad09d6d4a59f331560b543740a19b9f29',1,'body.c']]],
   ['b_5fencoder_3',['b_encoder',['../group__encoder__api.html#ga3eedcf9e2c7f60af22ef8bfc5face403',1,'rfc2047.c']]],
-  ['ba_5fadd_5fselection_4',['ba_add_selection',['../recvattach_8c.html#adbad664818e76aec192bfb13b91ef69a',1,'ba_add_selection(struct BodyArray *ba, struct AttachCtx *actx, struct Menu *menu, bool use_tagged, int count):&#160;recvattach.c'],['../recvattach_8h.html#adbad664818e76aec192bfb13b91ef69a',1,'ba_add_selection(struct BodyArray *ba, struct AttachCtx *actx, struct Menu *menu, bool use_tagged, int count):&#160;recvattach.c']]],
+  ['ba_5fadd_5fselection_4',['ba_add_selection',['../recvattach_8h.html#adbad664818e76aec192bfb13b91ef69a',1,'ba_add_selection(struct BodyArray *ba, struct AttachCtx *actx, struct Menu *menu, bool use_tagged, int count):&#160;selection.c'],['../attach_2selection_8c.html#adbad664818e76aec192bfb13b91ef69a',1,'ba_add_selection(struct BodyArray *ba, struct AttachCtx *actx, struct Menu *menu, bool use_tagged, int count):&#160;selection.c']]],
   ['bcache_5fcleanup_5',['bcache_cleanup',['../bcache_2module_8c.html#a96c24d6db9f3c2acfa7eb765ba387cb8',1,'module.c']]],
   ['bcache_5finit_6',['bcache_init',['../bcache_2module_8c.html#a1695471ee23ab306bc68609a7e632464',1,'module.c']]],
   ['bcache_5fpath_7',['bcache_path',['../bcache_8c.html#a5a6da9a92e635c11bf3af21611c6ea5f',1,'bcache.c']]],

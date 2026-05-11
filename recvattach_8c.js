@@ -20,8 +20,5 @@ var recvattach_8c =
     [ "mutt_attach_display_loop", "recvattach_8c.html#a72c9e19b893d8d4afc5593d9d2b399ff", null ],
     [ "mutt_generate_recvattach_list", "recvattach_8c.html#a0bcb0072bf0ee2929a8fdeae86644700", null ],
     [ "mutt_attach_init", "recvattach_8c.html#aa21744623c750c6f114a93f06ac5e257", null ],
-    [ "mutt_update_recvattach_menu", "recvattach_8c.html#a2ebb5a39bf8782104e464889b1d76b92", null ],
-    [ "aa_add_tagged", "recvattach_8c.html#a65675eada1af73254f8ca65ad47d29f5", null ],
-    [ "aa_add_selection", "recvattach_8c.html#acaf0e5bd5b28ada558814f7b4204eedc", null ],
-    [ "ba_add_selection", "recvattach_8c.html#adbad664818e76aec192bfb13b91ef69a", null ]
+    [ "mutt_update_recvattach_menu", "recvattach_8c.html#a2ebb5a39bf8782104e464889b1d76b92", null ]
 ];

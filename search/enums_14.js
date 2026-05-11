@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['windowtype_0',['WindowType',['../mutt__window_8h.html#a476342970f954b62d70552bcbb5ee509',1,'mutt_window.h']]]
+  ['viewattachmode_0',['ViewAttachMode',['../mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946',1,'mutt_attach.h']]]
 ];

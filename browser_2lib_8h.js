@@ -3,11 +3,13 @@ var browser_2lib_8h =
     [ "Folder", "structFolder.html", "structFolder" ],
     [ "FolderFile", "structFolderFile.html", "structFolderFile" ],
     [ "BrowserState", "structBrowserState.html", "structBrowserState" ],
-    [ "MUTT_SEL_NO_FLAGS", "browser_2lib_8h.html#aef17206dea5302001a39f3c633e731d3", null ],
-    [ "MUTT_SEL_MAILBOX", "browser_2lib_8h.html#a0264d8194c2a80ca40416bb661d3cd27", null ],
-    [ "MUTT_SEL_MULTI", "browser_2lib_8h.html#a3c8fc96890e5df4412f83fbc2a87cc91", null ],
-    [ "MUTT_SEL_FOLDER", "browser_2lib_8h.html#a3bdfd6d174ddcbbd6488554080d54889", null ],
     [ "SelectFileFlags", "browser_2lib_8h.html#afde6c0a2b0c99baa6b2ee3a0c855e966", null ],
+    [ "SelectFileFlag", "browser_2lib_8h.html#aa179158c15250025813d74e5d21538cf", [
+      [ "MUTT_SEL_NONE", "browser_2lib_8h.html#aa179158c15250025813d74e5d21538cfae0b33a586bf79d5d4e491a0ab2c293ac", null ],
+      [ "MUTT_SEL_MAILBOX", "browser_2lib_8h.html#aa179158c15250025813d74e5d21538cfa1346ec5ef895c840f5e58ce6d9812f40", null ],
+      [ "MUTT_SEL_MULTI", "browser_2lib_8h.html#aa179158c15250025813d74e5d21538cfa5fcb5651ae46d71b27d3ccb1775a66aa", null ],
+      [ "MUTT_SEL_FOLDER", "browser_2lib_8h.html#aa179158c15250025813d74e5d21538cfade6a54b656ed16efff47d780264cfee6", null ]
+    ] ],
     [ "ExpandoDataFolder", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257", [
       [ "ED_FOL_DATE", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257ac3b7da0308ceb8da09f6706f78bb7a8e", null ],
       [ "ED_FOL_DATE_FORMAT", "browser_2lib_8h.html#a325aff11944f26a3cacc44170868a257a48579c3019c6f4c07241474f76b57a15", null ],
