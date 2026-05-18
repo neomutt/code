@@ -207,7 +207,7 @@ var searchData=
   ['rfc2231_5fdecode_5fparameters_204',['rfc2231_decode_parameters',['../rfc2231_8c.html#a95eb6a825f563e45d47c100ea43954c6',1,'rfc2231_decode_parameters(struct ParameterList *pl):&#160;rfc2231.c'],['../rfc2231_8h.html#a95eb6a825f563e45d47c100ea43954c6',1,'rfc2231_decode_parameters(struct ParameterList *pl):&#160;rfc2231.c']]],
   ['rfc2231_5fencode_5fstring_205',['rfc2231_encode_string',['../rfc2231_8c.html#aca9032d6ef162cc900d4b96455c341ee',1,'rfc2231_encode_string(struct ParameterList *head, const char *attribute, char *value):&#160;rfc2231.c'],['../rfc2231_8h.html#aca9032d6ef162cc900d4b96455c341ee',1,'rfc2231_encode_string(struct ParameterList *head, const char *attribute, char *value):&#160;rfc2231.c']]],
   ['rfc2231parameter_206',['Rfc2231Parameter',['../structRfc2231Parameter.html',1,'']]],
-  ['rfc2369_5ffirst_5fmailto_207',['rfc2369_first_mailto',['../email_2parse_8c.html#a60bcab5634e02e9173938bb7ae4fec8b',1,'parse.c']]],
+  ['rfc2369listheaders_207',['Rfc2369ListHeaders',['../structRfc2369ListHeaders.html',1,'']]],
   ['rfc3676_20format_20flowed_20routines_208',['RFC3676 Format Flowed routines',['../email_rfc3676.html',1,'lib_email']]],
   ['rfc3676_2ec_209',['rfc3676.c',['../rfc3676_8c.html',1,'']]],
   ['rfc3676_2eh_210',['rfc3676.h',['../rfc3676_8h.html',1,'']]],

@@ -22,7 +22,7 @@ var crypt__gpgme_8c =
     [ "crypt_copy_key", "crypt__gpgme_8c.html#a1a312249829b10264dc386a2657abce5", null ],
     [ "crypt_key_free", "crypt__gpgme_8c.html#ae007f214cde6d7245c8a5ca70da0e4de", null ],
     [ "crypt_id_is_strong", "crypt__gpgme_8c.html#a62e8dd3b32254251fb76bd1969a3403d", null ],
-    [ "crypt_id_is_valid", "crypt__gpgme_8c.html#a3e2ecd88211e846a6f486f1a7df1aa32", null ],
+    [ "crypt_id_is_valid", "crypt__gpgme_8c.html#a44510013dfda6d4c4138b244fb9e8874", null ],
     [ "crypt_id_matches_addr", "crypt__gpgme_8c.html#a629d74d88f1e5bf918c2b836d4e6ada9", null ],
     [ "create_gpgme_context", "crypt__gpgme_8c.html#a54ca8638b13c6da904a48009a8bba358", null ],
     [ "create_gpgme_data", "crypt__gpgme_8c.html#a433e35eb7b66902025d1a6eced7c17c8", null ],

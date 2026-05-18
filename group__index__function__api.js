@@ -20,6 +20,7 @@ var group__index__function__api =
     [ "op_forward_message", "group__index__function__api.html#ga2e249ce1e9cc4ff43dfeae3a9e71203e", null ],
     [ "op_group_reply", "group__index__function__api.html#ga7f3cee7bd1ce9b1d088908c7eda744df", null ],
     [ "op_jump", "group__index__function__api.html#ga740c90565ea1186b448584e5478a5272", null ],
+    [ "op_list_action", "group__index__function__api.html#ga5aaf56af2f35be9cec0998adedf01c14", null ],
     [ "op_list_reply", "group__index__function__api.html#ga5157ee847d5b7e48c519335735700bc7", null ],
     [ "op_list_subscribe", "group__index__function__api.html#ga374a1ae034241c107d9aa790d5b39ee8", null ],
     [ "op_list_unsubscribe", "group__index__function__api.html#ga1696afd10be65a040d9ff41eceb17ffa", null ],

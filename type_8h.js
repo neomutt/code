@@ -10,6 +10,7 @@ var type_8h =
       [ "MENU_EDITOR", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae2cddde362090e3d9d1da10828ef9270", null ],
       [ "MENU_GENERIC", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ac5a62e5c029514c6565e602d2632f40b", null ],
       [ "MENU_INDEX", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4a0afea51eb66be4c2e856b047b0db4cd7", null ],
+      [ "MENU_LIST", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4af1e82f696f0b01dd91bd2b594a1d2dae", null ],
       [ "MENU_PAGER", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ad2dbad14a5308b356d33192607ee4929", null ],
       [ "MENU_PGP", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4abde0a6cb18588a44a6d0a63828f1c603", null ],
       [ "MENU_POSTPONE", "type_8h.html#ae5c7b6b4f6e696391cd7faaea6571bb4ae3bac19aa562fffef334b1f17ea074d5", null ],

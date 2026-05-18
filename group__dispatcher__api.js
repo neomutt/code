@@ -26,6 +26,7 @@ var group__dispatcher__api =
     [ "env_function_dispatcher", "group__dispatcher__api.html#gabe0552d21dc94df02312f485807b3fa2", null ],
     [ "global_function_dispatcher", "group__dispatcher__api.html#gac7fdd018d82bde8b5b89be1f2af9a74e", null ],
     [ "history_function_dispatcher", "group__dispatcher__api.html#gaf0e30e9fad71050e69a048c87f900b37", null ],
+    [ "list_function_dispatcher", "group__dispatcher__api.html#ga87fff5c9a833fb30600b25ac56fa8bb2", null ],
     [ "index_function_dispatcher", "group__dispatcher__api.html#gab4c6e64de62f0f914b428b29d4bd3b32", null ],
     [ "menu_function_dispatcher", "group__dispatcher__api.html#gad454afae4ce796a49a888da9d0fe6a2b", null ],
     [ "menu_tagging_dispatcher", "group__dispatcher__api.html#gaba2973f42737d632b376733a5ab9edec", null ],

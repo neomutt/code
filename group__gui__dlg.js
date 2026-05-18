@@ -9,6 +9,7 @@ var group__gui__dlg =
     [ "dlg_certificate", "group__gui__dlg.html#ga2a3679347f519661d55ad954c6b8f8b3", null ],
     [ "dlg_history", "group__gui__dlg.html#ga62db297c2561b6ccee8223a38735b997", null ],
     [ "dlg_index", "group__gui__dlg.html#gaf4266da82ada988b3b2482b910ddb15a", null ],
+    [ "dlg_list", "group__gui__dlg.html#ga0124767fd64c34f7f58d0f182573a52d", null ],
     [ "dlg_gpgme", "group__gui__dlg.html#ga067e027820ea20630ff23e4774c206ea", null ],
     [ "dlg_pgp", "group__gui__dlg.html#gaad46a16a4fdb23a65bd97ea311291cad", null ],
     [ "dlg_smime", "group__gui__dlg.html#gaf7f866a50b02f14c12ad47a0b20ce0fc", null ],

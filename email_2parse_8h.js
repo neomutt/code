@@ -1,5 +1,6 @@
 var email_2parse_8h =
 [
+    [ "Rfc2369ListHeaders", "structRfc2369ListHeaders.html", "structRfc2369ListHeaders" ],
     [ "mutt_check_encoding", "email_2parse_8h.html#a8692f01c25d10e357dbeee470ba26c2c", null ],
     [ "mutt_check_mime_type", "email_2parse_8h.html#a6c22ec026399e230ecedab86f831a754", null ],
     [ "mutt_extract_message_id", "email_2parse_8h.html#aa7b7d3d9446a52fbc31ef18eea1b52c2", null ],
@@ -7,6 +8,9 @@ var email_2parse_8h =
     [ "mutt_matches_ignore", "email_2parse_8h.html#a5f2728949322a1a6210d61d9629005d1", null ],
     [ "mutt_parse_content_type", "email_2parse_8h.html#a1c0bcb79c2ff930b4131a1ede5828762", null ],
     [ "mutt_parse_mailto", "email_2parse_8h.html#a85f5f11a70b04f611f3e131f67644fbf", null ],
+    [ "mutt_rfc2369_first_mailto", "email_2parse_8h.html#a2c750568daf4f60f3807f91e464b9323", null ],
+    [ "mutt_rfc2369_list_headers_free", "email_2parse_8h.html#ae489d2fc3bab6ce6549a53a130a55bb6", null ],
+    [ "mutt_rfc2369_read_headers", "email_2parse_8h.html#af326ade352ef00337c05112e05104b29", null ],
     [ "mutt_parse_multipart", "email_2parse_8h.html#a9c098e697548d0ad0809a1ac49b91f8e", null ],
     [ "mutt_parse_part", "email_2parse_8h.html#a0b38ac4f44b3414d0e18d26324861369", null ],
     [ "mutt_read_mime_header", "email_2parse_8h.html#a2cfe061d82e6381b14e355c0937ecfc1", null ],

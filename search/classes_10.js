@@ -7,5 +7,6 @@ var searchData=
   ['regexnode_4',['RegexNode',['../structRegexNode.html',1,'']]],
   ['replace_5',['Replace',['../structReplace.html',1,'']]],
   ['rfc2231parameter_6',['Rfc2231Parameter',['../structRfc2231Parameter.html',1,'']]],
-  ['rocksdbstoredata_7',['RocksDbStoreData',['../structRocksDbStoreData.html',1,'']]]
+  ['rfc2369listheaders_7',['Rfc2369ListHeaders',['../structRfc2369ListHeaders.html',1,'']]],
+  ['rocksdbstoredata_8',['RocksDbStoreData',['../structRocksDbStoreData.html',1,'']]]
 ];

@@ -22,7 +22,7 @@ var index_2functions_8c =
     [ "op_create_alias", "group__index__function__api.html#ga43f4397dbb617d34245b73ffdf5765b2", null ],
     [ "op_delete", "group__index__function__api.html#gafb572d4e772ff3e2a1c41b0f6b160392", null ],
     [ "update_thread_email", "index_2functions_8c.html#a10ec0abca7244022e14a8d891a28a391", null ],
-    [ "op_main_change_thread", "index_2functions_8c.html#a38ee15fe955ce9097fcf901e89d7f4cf", null ],
+    [ "op_main_change_thread", "index_2functions_8c.html#a08d87cd77c96d9ff0ecf7ab9b39d93d6", null ],
     [ "op_delete_thread", "group__index__function__api.html#ga7afb4c2f230f5c9942ac3eb127c86c7a", null ],
     [ "op_display_address", "group__index__function__api.html#ga1853c7f896b4dce6d8c269a601b9a7a8", null ],
     [ "op_display_message", "group__index__function__api.html#ga4d9423bc12c1c579cfab7ebd9c2c43f2", null ],
@@ -35,6 +35,7 @@ var index_2functions_8c =
     [ "op_forget_passphrase", "group__index__function__api.html#ga7c4e47e26b4e909fb3f81c1adc238db9", null ],
     [ "op_forward_message", "group__index__function__api.html#ga2e249ce1e9cc4ff43dfeae3a9e71203e", null ],
     [ "op_group_reply", "group__index__function__api.html#ga7f3cee7bd1ce9b1d088908c7eda744df", null ],
+    [ "op_list_action", "group__index__function__api.html#ga5aaf56af2f35be9cec0998adedf01c14", null ],
     [ "op_list_reply", "group__index__function__api.html#ga5157ee847d5b7e48c519335735700bc7", null ],
     [ "op_list_subscribe", "group__index__function__api.html#ga374a1ae034241c107d9aa790d5b39ee8", null ],
     [ "op_list_unsubscribe", "group__index__function__api.html#ga1696afd10be65a040d9ff41eceb17ffa", null ],
@@ -105,6 +106,8 @@ var index_2functions_8c =
     [ "index_function_dispatcher", "group__dispatcher__api.html#gab4c6e64de62f0f914b428b29d4bd3b32", null ],
     [ "index_get_menu_definition", "index_2functions_8c.html#a7654fb86f49b8de1fec61baa10882ef6", null ],
     [ "OpIndex", "index_2functions_8c.html#a2680735dfe321d9c8ecfab713c1a8fd1", null ],
+    [ "OpList", "index_2functions_8c.html#a4e4e1ad2a3df5bf3dc7496d7bfe3a333", null ],
     [ "IndexDefaultBindings", "index_2functions_8c.html#aaa03f8f82b66fb9a6a44315d518cb348", null ],
+    [ "ListDefaultBindings", "index_2functions_8c.html#a9e4749e276a6ec5c49152abb8b46d2f8", null ],
     [ "IndexFunctions", "index_2functions_8c.html#ae06ba5eb2a6e9306868c3afe4753bb67", null ]
 ];

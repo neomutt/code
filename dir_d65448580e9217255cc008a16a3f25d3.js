@@ -3,6 +3,7 @@ var dir_d65448580e9217255cc008a16a3f25d3 =
     [ "commands.c", "index_2commands_8c.html", "index_2commands_8c" ],
     [ "config.c", "index_2config_8c.html", "index_2config_8c" ],
     [ "dlg_index.c", "dlg__index_8c.html", "dlg__index_8c" ],
+    [ "dlg_list.c", "dlg__list_8c.html", "dlg__list_8c" ],
     [ "expando_index.c", "expando__index_8c.html", "expando__index_8c" ],
     [ "expando_index.h", "expando__index_8h.html", "expando__index_8h" ],
     [ "expando_status.c", "expando__status_8c.html", "expando__status_8c" ],
