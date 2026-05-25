@@ -1,6 +1,5 @@
 var NAVTREEINDEX25 =
 {
-"helpbar_8c_source.html":[2,0,26,1],
 "helpbar_config.html":[30,1],
 "helpbar_helpbar.html":[30,0],
 "helpbar_module.html":[30,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX25 =
 "imap_2lib_8h.html":[2,0,29,18],
 "imap_2lib_8h.html#a0b252c6e7f2cc646db9414ea27a11a55":[2,0,29,18,5],
 "imap_2lib_8h.html#a0d5f24d9ba8d3ef9e95134cae1198408":[2,0,29,18,4],
-"imap_2lib_8h.html#a0fdb4b19c276d28f6f1a014da9e860d5":[2,0,29,18,19]
+"imap_2lib_8h.html#a0fdb4b19c276d28f6f1a014da9e860d5":[2,0,29,18,19],
+"imap_2lib_8h.html#a12008dfceea99a26fa88f26b625637a8":[2,0,29,18,11]
 };

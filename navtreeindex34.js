@@ -1,5 +1,10 @@
 var NAVTREEINDEX34 =
 {
+"mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946":[2,0,2,17,0],
+"mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946a0dcfd8a67792775ae3506d2a99bf1b67":[2,0,2,17,0,1],
+"mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946a805f2934d475a513bb1294baa8e5d00b":[2,0,2,17,0,0],
+"mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946ab4f9fd68dbd70c2bd8f4e3795bed15cc":[2,0,2,17,0,3],
+"mutt__attach_8h.html#a5dd95d385576ba1b957d7e9c523ec946ae2885fe7d47c03a1f0246d054739da79":[2,0,2,17,0,2],
 "mutt__attach_8h.html#a72c9e19b893d8d4afc5593d9d2b399ff":[2,0,2,17,2],
 "mutt__attach_8h.html#a757d381a8b9eb9627917d2d9ec8c255c":[2,0,2,17,5],
 "mutt__attach_8h.html#a87e1ea8a7b0c926e02ed3db8b7d3dbd5":[2,0,2,17,14],
@@ -244,10 +249,5 @@ var NAVTREEINDEX34 =
 "mutt_mapping.html":[41,15],
 "mutt_mbyte.html":[41,16],
 "mutt_md5.html":[41,17],
-"mutt_memory.html":[41,18],
-"mutt_module.html":[41,19],
-"mutt_notify.html":[41,20],
-"mutt_path.html":[41,21],
-"mutt_pool.html":[41,22],
-"mutt_prex.html":[41,23]
+"mutt_memory.html":[41,18]
 };

@@ -13,5 +13,6 @@ var msgwin_8c =
     [ "msgwin_add_text_n", "msgwin_8c.html#aa8ac670a15b90c79e01e89448e0b0f5e", null ],
     [ "msgwin_set_text", "msgwin_8c.html#ac1dc426af34116e8de4ebfb20d0cb44f", null ],
     [ "msgwin_clear_text", "msgwin_8c.html#a6281c19688604bf8bf2e5631d8326380", null ],
-    [ "msgwin_get_window", "msgwin_8c.html#a97bc529f9075f3d1dd64877bd7980751", null ]
+    [ "msgwin_get_window", "msgwin_8c.html#a97bc529f9075f3d1dd64877bd7980751", null ],
+    [ "msgwin_has_text", "msgwin_8c.html#a17435f188b66e8d10a6c2b0347f73c65", null ]
 ];

@@ -1,5 +1,10 @@
 var NAVTREEINDEX36 =
 {
+"ncrypt_2config_8c.html":[2,0,38,0],
+"ncrypt_2config_8c.html#a0441bac0dc047b8cab61853a50eb309f":[2,0,38,0,6],
+"ncrypt_2config_8c.html#a0757e42dc232912f9ddfb855b9bf126e":[2,0,38,0,7],
+"ncrypt_2config_8c.html#a5301a0b4718c155e18bb8b5516176fed":[2,0,38,0,2],
+"ncrypt_2config_8c.html#a6bceb101ade0a748b4dfc2515ccb222d":[2,0,38,0,8],
 "ncrypt_2config_8c.html#a89323ff16879af1b184eb4432774e9df":[2,0,38,0,1],
 "ncrypt_2config_8c.html#acf726da3e60d09d7204b957f2d13e67a":[2,0,38,0,3],
 "ncrypt_2config_8c.html#adb6605be2f8eac8386d586e07308ece4":[2,0,38,0,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX36 =
 "nntp_2edata_8c_source.html":[2,0,39,4],
 "nntp_2edata_8h.html":[2,0,39,5],
 "nntp_2edata_8h.html#a78e1fab53bc6f3d3813bcef508414349":[2,0,39,5,3],
-"nntp_2edata_8h.html#ae9966ecbbc4bcf1109eeef0a02e34269":[2,0,39,5,2],
-"nntp_2edata_8h_source.html":[2,0,39,5],
-"nntp_2lib_8h.html":[2,0,39,10],
-"nntp_2lib_8h.html#a0e31da3560e7296a47d444775b42b8f3":[2,0,39,10,13],
-"nntp_2lib_8h.html#a0e57436b35d68983c6fe44815f3ad505":[2,0,39,10,19],
-"nntp_2lib_8h.html#a17459a2b096832129b7878bfea7300c9":[2,0,39,10,14]
+"nntp_2edata_8h.html#ae9966ecbbc4bcf1109eeef0a02e34269":[2,0,39,5,2]
 };

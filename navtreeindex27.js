@@ -1,6 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"imap_msg_set.html":[33,18],
 "imap_msn.html":[33,19],
 "imap_search.html":[33,20],
 "imap_utf7.html":[33,21],
@@ -249,5 +248,6 @@ var NAVTREEINDEX27 =
 "key_2keymap_8c.html#aacc382fdd2a18cf1ba7061846f552e55":[2,0,31,10,4],
 "key_2keymap_8c.html#ab05824836ef9ed995aa1d45d3f387198":[2,0,31,10,10],
 "key_2keymap_8c.html#ab192f10b00a14c439c62129cccfe97bc":[2,0,31,10,8],
-"key_2keymap_8c.html#ac1d7fa25b9696888f8dc7dae2078dea0":[2,0,31,10,1]
+"key_2keymap_8c.html#ac1d7fa25b9696888f8dc7dae2078dea0":[2,0,31,10,1],
+"key_2keymap_8c.html#ac969492dae41de846590e2257f260d3b":[2,0,31,10,11]
 };

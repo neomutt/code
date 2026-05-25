@@ -1,5 +1,10 @@
 var NAVTREEINDEX50 =
 {
+"structConfigSetType.html#a4bdee7778a8c43243d6f6002c1fee45f":[1,0,68,0],
+"structConfigSetType.html#a52e56669cc1d1a8d4c75a0f9b2a6a1aa":[1,0,68,8],
+"structConfigSetType.html#a818267ba2bcd246332facd32fbd6aa9e":[1,0,68,9],
+"structConfigSetType.html#a94f05f7427b26380b25647e50642e3cf":[1,0,68,3],
+"structConfigSetType.html#aa547c6d34a2912c20e0d3bd33ef773f3":[1,0,68,10],
 "structConfigSetType.html#adbe9f9398e4f2fd34e950d949a95ea61":[1,0,68,7],
 "structConfigSetType.html#af600e498c50ed017bf0950a737af8d95":[1,0,68,1],
 "structConfigSubset.html":[1,0,69],
@@ -244,10 +249,5 @@ var NAVTREEINDEX50 =
 "structEnterWindowData.html#af8c83670ffb679676ca485c6a94084f6":[1,0,95,3],
 "structEnterWindowData.html#afe965458ee10d8e26e324bc24973f78c":[1,0,95,11],
 "structEnumDef.html":[1,0,96],
-"structEnumDef.html#a441eb3fc660518d4c32b8a76f5401d91":[1,0,96,1],
-"structEnumDef.html#a6a707e9bd9d63e1dab2e45dcf13e4161":[1,0,96,0],
-"structEnumDef.html#a726c7b035c6ac8bb2e9b8aff86797087":[1,0,96,2],
-"structEnvelope.html":[1,0,97],
-"structEnvelope.html#a005f4bd665ae1ae362add27948753fe1":[1,0,97,27],
-"structEnvelope.html#a09d7a8358a1951c4408fbea46e2e4972":[1,0,97,16]
+"structEnumDef.html#a441eb3fc660518d4c32b8a76f5401d91":[1,0,96,1]
 };

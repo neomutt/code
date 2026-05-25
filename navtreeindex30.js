@@ -1,6 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"main_monitor.html":[0,7],
 "main_mutt_config.html":[0,9],
 "main_mutt_logging.html":[0,10],
 "main_mutt_mailbox.html":[0,11],
@@ -249,5 +248,6 @@ var NAVTREEINDEX30 =
 "menu_2observer_8c.html":[2,0,35,9],
 "menu_2observer_8c.html#a04957deead5e0811519c30e83302dd23":[2,0,35,9,3],
 "menu_2observer_8c_source.html":[2,0,35,9],
-"menu_2private_8h.html":[2,0,35,10]
+"menu_2private_8h.html":[2,0,35,10],
+"menu_2private_8h.html#a04957deead5e0811519c30e83302dd23":[2,0,35,10,2]
 };

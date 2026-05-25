@@ -24,6 +24,7 @@ var group__observer__api =
     [ "preview_email_observer", "group__observer__api.html#ga254c68a47c3824cf8ffde238124f4bf4", null ],
     [ "preview_window_observer", "group__observer__api.html#ga25af24c3cdb0aa6ca8d371bab184a695", null ],
     [ "cc_config_observer", "group__observer__api.html#gaf9b419185930c14019282bd319ff5e1f", null ],
+    [ "enter_window_observer", "group__observer__api.html#ga482489dc9ad2df6d210693cd77a60b74", null ],
     [ "env_color_observer", "group__observer__api.html#ga11b33e59d9fc332ca9d5bb81aaf4b01f", null ],
     [ "env_config_observer", "group__observer__api.html#ga88c4cf4a3223d641e216990e9192c86b", null ],
     [ "env_email_observer", "group__observer__api.html#ga02a84da95839b84b1ca6374aacb2533f", null ],

@@ -1,5 +1,10 @@
 var NAVTREEINDEX52 =
 {
+"structHeaderCache.html#a70c1a9921a59f63eb065e43768e9e9b6":[1,0,142,2],
+"structHeaderCache.html#aa3dbee309b4040e10348d089e0cfe9b8":[1,0,142,3],
+"structHeaderCache.html#aa5791d506eed6ed34656d6e5eadd6d0e":[1,0,142,4],
+"structHelpbarModuleData.html":[1,0,143],
+"structHelpbarModuleData.html#ac8a20fbf87f17e4d006975e513c19f67":[1,0,143,0],
 "structHelpbarWindowData.html":[1,0,144],
 "structHelpbarWindowData.html#a383b346643f35c6b5e95c48f0ad705a6":[1,0,144,2],
 "structHelpbarWindowData.html#a476adab363f0af0d04ad972c9dcce918":[1,0,144,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX52 =
 "structMUpdate.html#ac4ff1f4e3d6bfa6d2a0ea29d95934965":[1,0,215,0],
 "structMailbox.html":[1,0,183],
 "structMailbox.html#a015fb45ad1a08cf8e44e3553202834fb":[1,0,183,40],
-"structMailbox.html#a0e1673cdf63976b1d148786457666f84":[1,0,183,15],
-"structMailbox.html#a12ba98c349220ae172753f4f3294ed59":[1,0,183,23],
-"structMailbox.html#a185d46a268fdf1e34ee061a28d51414e":[1,0,183,5],
-"structMailbox.html#a1f36c27b2c78a6c7c216e3aca9f0c89f":[1,0,183,1],
-"structMailbox.html#a2481e68c768eb0cb6e17cfcd0f255f79":[1,0,183,22],
-"structMailbox.html#a29d550d9a2d2a6a65b4b6ba1c625ef36":[1,0,183,14]
+"structMailbox.html#a0e1673cdf63976b1d148786457666f84":[1,0,183,15]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX35 =
 {
+"mutt_module.html":[41,19],
+"mutt_notify.html":[41,20],
+"mutt_path.html":[41,21],
+"mutt_pool.html":[41,22],
+"mutt_prex.html":[41,23],
 "mutt_qsort_r.html":[41,24],
 "mutt_random.html":[41,25],
 "mutt_regex.html":[41,26],
@@ -244,10 +249,5 @@ var NAVTREEINDEX35 =
 "names__expando_8c.html#af82b1bb4c6dc20255e25ac441cb93f1e":[2,0,17,8,14],
 "names__expando_8c.html#af9a081316760a9678cbc5f3877ec769c":[2,0,17,8,20],
 "names__expando_8c.html#affbe7997b2b97435874325c179f2d3fe":[2,0,17,8,26],
-"names__expando_8c_source.html":[2,0,17,8],
-"ncrypt_2config_8c.html":[2,0,38,0],
-"ncrypt_2config_8c.html#a0441bac0dc047b8cab61853a50eb309f":[2,0,38,0,6],
-"ncrypt_2config_8c.html#a0757e42dc232912f9ddfb855b9bf126e":[2,0,38,0,7],
-"ncrypt_2config_8c.html#a5301a0b4718c155e18bb8b5516176fed":[2,0,38,0,2],
-"ncrypt_2config_8c.html#a6bceb101ade0a748b4dfc2515ccb222d":[2,0,38,0,8]
+"names__expando_8c_source.html":[2,0,17,8]
 };

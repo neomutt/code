@@ -1,6 +1,7 @@
 var msgwin_8h =
 [
     [ "msgwin_clear_text", "msgwin_8h.html#a6281c19688604bf8bf2e5631d8326380", null ],
+    [ "msgwin_has_text", "msgwin_8h.html#a17435f188b66e8d10a6c2b0347f73c65", null ],
     [ "msgwin_new", "msgwin_8h.html#a265a7fe33d69d23d8d485f90fd14ff31", null ],
     [ "msgwin_add_text", "msgwin_8h.html#a7afedab303914dc5d7b943d9b63feca4", null ],
     [ "msgwin_add_text_n", "msgwin_8h.html#aa8ac670a15b90c79e01e89448e0b0f5e", null ],
