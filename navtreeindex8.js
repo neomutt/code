@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"copy__email_8h.html#ad2bb23044829213b02741f4f10814e56afe22cdc0688d4b39e87455a3351bcc58":[2,0,19,9,4,8],
 "copy__email_8h.html#adc738493d51f47c7dd372f3ebd53223a":[2,0,19,9,1],
 "copy__email_8h_source.html":[2,0,19,9],
 "core_2account_8c.html":[2,0,16,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "crypt__gpgme_8h.html#a80db1b75499135b0c823096dd459d932af886926cc6dc2d1ccc1a881bc3e20f7f":[2,0,38,4,2,3],
 "crypt__gpgme_8h.html#aa6f37478ebd949c46ad620ad1acd2d6e":[2,0,38,4,33],
 "crypt__gpgme_8h.html#abb291e3ef82be0b81dd87945790b1ab8":[2,0,38,4,34],
-"crypt__gpgme_8h.html#abc67bef5541f788bbc5f87f502514eed":[2,0,38,4,32],
-"crypt__gpgme_8h.html#aedb110bc0a5b06622df514a7b1f9bca7":[2,0,38,4,3]
+"crypt__gpgme_8h.html#abc67bef5541f788bbc5f87f502514eed":[2,0,38,4,32]
 };

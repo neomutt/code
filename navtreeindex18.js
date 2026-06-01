@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"group__cfg__type__reset.html#gaa6a4d31cd291ffd52ff7431b17bc368a":[56,8,7,0],
+"group__cfg__type__reset.html#gabe1ce7e1082fd374dc66221927eaaf06":[56,8,7,10],
 "group__cfg__type__reset.html#gae977656d5b808d314d03a617f77bf1de":[56,8,7,6],
 "group__cfg__type__reset.html#gaefb219da7c80e2e694dd0ead80bacd7c":[56,8,7,12],
 "group__cfg__type__reset.html#gafa96513780bb2c4b8f963872c8111468":[56,8,7,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "group__crypto__decrypt__mime.html#ga43e8362aa45c7f09b13383545fa7a647":[56,42,4,2],
 "group__crypto__decrypt__mime.html#ga5d822f6985e4a58d377b8d37367ccc84":[56,42,4,0],
 "group__crypto__decrypt__mime.html#ga9885e7131d9a5d4053b196bbe146af40":[56,42,4,3],
-"group__crypto__encrypted__handler.html":[56,42,6],
-"group__crypto__encrypted__handler.html#ga977d571785aa92dcb76ce1d84491fca8":[56,42,6,0],
-"group__crypto__encrypted__handler.html#gaf900efa29f642fc76db86fd46b2da83d":[56,42,6,1]
+"group__crypto__encrypted__handler.html":[56,42,6]
 };

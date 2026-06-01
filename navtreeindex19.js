@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"group__crypto__encrypted__handler.html#ga977d571785aa92dcb76ce1d84491fca8":[56,42,6,0],
+"group__crypto__encrypted__handler.html#gaf900efa29f642fc76db86fd46b2da83d":[56,42,6,1],
 "group__crypto__find__keys.html":[56,42,7],
 "group__crypto__find__keys.html#ga036a67cfeedc0089deb1af6dcaca7ce5":[56,42,7,1],
 "group__crypto__find__keys.html#ga40152e7ee93270c805c7ff0f1c99d24a":[56,42,7,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "group__expando__get__string__api.html#ga142337cf70512cbbb065cb17dcffd827":[56,25,0,51],
 "group__expando__get__string__api.html#ga163d8122aaac0590160937d2a8489788":[56,25,0,25],
 "group__expando__get__string__api.html#ga17dcd9a829062ca3a060a0e1a0436911":[56,25,0,154],
-"group__expando__get__string__api.html#ga17f4e4a0d1d25cc139f6077d964d31ba":[56,25,0,98],
-"group__expando__get__string__api.html#ga1b2e1a2a63a871a04e9bbae5d62ff3d1":[56,25,0,116],
-"group__expando__get__string__api.html#ga1c7d12260dca7f16481a0ef2cf518007":[56,25,0,55]
+"group__expando__get__string__api.html#ga17f4e4a0d1d25cc139f6077d964d31ba":[56,25,0,98]
 };

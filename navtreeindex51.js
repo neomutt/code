@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"structEnumDef.html":[1,0,96],
+"structEnumDef.html#a441eb3fc660518d4c32b8a76f5401d91":[1,0,96,1],
 "structEnumDef.html#a6a707e9bd9d63e1dab2e45dcf13e4161":[1,0,96,0],
 "structEnumDef.html#a726c7b035c6ac8bb2e9b8aff86797087":[1,0,96,2],
 "structEnvelope.html":[1,0,97],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "structHcacheModuleData.html#a860a63af56061d349b0f39357f0b994b":[1,0,141,1],
 "structHcacheModuleData.html#aca172a8ba3b0cdb82dcc59d955f637f7":[1,0,141,0],
 "structHeaderCache.html":[1,0,142],
-"structHeaderCache.html#a11a84f4577509d7a782b8f695886a1c0":[1,0,142,5],
-"structHeaderCache.html#a48bc8a680626d25eb1e2e10438e89271":[1,0,142,1],
-"structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95":[1,0,142,0]
+"structHeaderCache.html#a11a84f4577509d7a782b8f695886a1c0":[1,0,142,5]
 };

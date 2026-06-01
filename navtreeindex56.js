@@ -1,5 +1,7 @@
 var NAVTREEINDEX56 =
 {
+"structRocksDbStoreData.html#ac26ba866b907ed161a38155a8273ae42":[1,0,295,3],
+"structRocksDbStoreData.html#ac9557bc90cbcc20699f30edf31494217":[1,0,295,4],
 "structSBarPrivateData.html":[1,0,297],
 "structSBarPrivateData.html#ae23e0b60e98ab98654d65abbf2e56d81":[1,0,297,0],
 "structSaslSockData.html":[1,0,296],
@@ -247,7 +249,5 @@ var NAVTREEINDEX56 =
 "subset_8c.html#a8d7d5e60bd8f7f0f8ffd8522de126b12":[2,0,13,31,14],
 "subset_8c.html#a92d611c1cf202d2af68ef259eb6f3ce9":[2,0,13,31,1],
 "subset_8c.html#a96772da248b8a2c4f0caf6b170c1e8e8":[2,0,13,31,5],
-"subset_8c.html#a9e18bf67c546cd800bed08b710902daa":[2,0,13,31,3],
-"subset_8c.html#aa13d98edef88b0563dd96102fc8bc22b":[2,0,13,31,2],
-"subset_8c.html#ab59a02826031bae9f3688c2474e44af5":[2,0,13,31,18]
+"subset_8c.html#a9e18bf67c546cd800bed08b710902daa":[2,0,13,31,3]
 };

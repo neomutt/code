@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"sendmail_8c.html#a42ba6d04d786c9969238b76a80138cfa":[2,0,48,21,2],
+"sendmail_8c.html#a492b848b5a5c33e12921abfce28cf710":[2,0,48,21,4],
 "sendmail_8c.html#a5562a863571c41379b43fd780735776c":[2,0,48,21,5],
 "sendmail_8c.html#a775a6900fd7b558911bce67d12309efb":[2,0,48,21,3],
 "sendmail_8c.html#aa006daaf11f1e2e45a6ababaf463212b":[2,0,48,21,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "sidebar_observers.html":[54,5],
 "sidebar_sidebar.html":[54,6],
 "sidebar_sort.html":[54,7],
-"sidebar_wdata.html":[54,8],
-"sidebar_window.html":[54,9],
-"signal2_8h.html":[2,0,37,58]
+"sidebar_wdata.html":[54,8]
 };

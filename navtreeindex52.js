@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"structHeaderCache.html#a48bc8a680626d25eb1e2e10438e89271":[1,0,142,1],
+"structHeaderCache.html#a54ad1dd524ef2400d7b363333801fa95":[1,0,142,0],
 "structHeaderCache.html#a70c1a9921a59f63eb065e43768e9e9b6":[1,0,142,2],
 "structHeaderCache.html#aa3dbee309b4040e10348d089e0cfe9b8":[1,0,142,3],
 "structHeaderCache.html#aa5791d506eed6ed34656d6e5eadd6d0e":[1,0,142,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "structMUpdate.html#ab068c45a3e06d118bea30898066a3737":[1,0,215,4],
 "structMUpdate.html#ab4ab3bf8092f0bde3e1ecc84bab30e21":[1,0,215,2],
 "structMUpdate.html#ac4ff1f4e3d6bfa6d2a0ea29d95934965":[1,0,215,0],
-"structMailbox.html":[1,0,183],
-"structMailbox.html#a015fb45ad1a08cf8e44e3553202834fb":[1,0,183,40],
-"structMailbox.html#a0e1673cdf63976b1d148786457666f84":[1,0,183,15]
+"structMailbox.html":[1,0,183]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX26 =
 {
+"imap_2lib_8h.html#a0fdb4b19c276d28f6f1a014da9e860d5":[2,0,29,18,19],
+"imap_2lib_8h.html#a12008dfceea99a26fa88f26b625637a8":[2,0,29,18,11],
 "imap_2lib_8h.html#a3148406431ca84d8cfaae786e47c5c8d":[2,0,29,18,14],
 "imap_2lib_8h.html#a62122ec7ec3d9da81be09a650bf27977":[2,0,29,18,7],
 "imap_2lib_8h.html#a6f4e11266212cfbe82f0a123bfd27a8f":[2,0,29,18,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX26 =
 "imap_edata.html":[33,13],
 "imap_imap.html":[33,14],
 "imap_mdata.html":[33,15],
-"imap_message.html":[33,16],
-"imap_module.html":[33,17],
-"imap_msg_set.html":[33,18]
+"imap_message.html":[33,16]
 };

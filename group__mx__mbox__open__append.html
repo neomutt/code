@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-899-ga9216f</span>
+   &#160;<span id="projectnumber">2025-12-11-911-gd8d604</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -393,56 +393,56 @@ Functions</h2></td></tr>
 
 <p>Open a <a class="el" href="structMailbox.html" title="A mailbox.">Mailbox</a> for appending - Implements <a class="el" href="structMxOps.html#af201c2c2f87a1253cbaf8ae24f062ef3">MxOps::mbox_open_append()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="maildir_2mailbox_8c_source.html#l00757">757</a> of file <a class="el" href="maildir_2mailbox_8c_source.html">mailbox.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  758</span>{</div>
-<div class="line"><span class="lineno">  759</span>  <span class="keywordflow">if</span> (!(flags &amp; (<a class="code hl_enumvalue" href="mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3ac4cbe9d44092ecf10352dca3eb8d93c0">MUTT_APPEND</a> | <a class="code hl_enumvalue" href="mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3a567847a4200d2ca171855700b1a87f89">MUTT_APPENDNEW</a>)))</div>
-<div class="line"><span class="lineno">  760</span>  {</div>
-<div class="line"><span class="lineno">  761</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  762</span>  }</div>
-<div class="line"><span class="lineno">  763</span> </div>
-<div class="line"><span class="lineno">  764</span>  errno = 0;</div>
-<div class="line"><span class="lineno">  765</span>  <span class="keywordflow">if</span> ((<a class="code hl_function" href="file_8c.html#a42b89c4ae9ca386c22de502b37cdf45e">mutt_file_mkdir</a>(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m), S_IRWXU) != 0) &amp;&amp; (errno != EEXIST))</div>
-<div class="line"><span class="lineno">  766</span>  {</div>
-<div class="line"><span class="lineno">  767</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  768</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  769</span>  }</div>
-<div class="line"><span class="lineno">  770</span> </div>
-<div class="line"><span class="lineno">  771</span>  <span class="keywordtype">char</span> tmp[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
-<div class="line"><span class="lineno">  772</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/cur&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  773</span>  errno = 0;</div>
-<div class="line"><span class="lineno">  774</span>  <span class="keywordflow">if</span> ((mkdir(tmp, S_IRWXU) != 0) &amp;&amp; (errno != EEXIST))</div>
-<div class="line"><span class="lineno">  775</span>  {</div>
-<div class="line"><span class="lineno">  776</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, tmp);</div>
-<div class="line"><span class="lineno">  777</span>    rmdir(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  778</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  779</span>  }</div>
-<div class="line"><span class="lineno">  780</span> </div>
-<div class="line"><span class="lineno">  781</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/new&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  782</span>  errno = 0;</div>
-<div class="line"><span class="lineno">  783</span>  <span class="keywordflow">if</span> ((mkdir(tmp, S_IRWXU) != 0) &amp;&amp; (errno != EEXIST))</div>
-<div class="line"><span class="lineno">  784</span>  {</div>
-<div class="line"><span class="lineno">  785</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, tmp);</div>
-<div class="line"><span class="lineno">  786</span>    snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/cur&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  787</span>    rmdir(tmp);</div>
-<div class="line"><span class="lineno">  788</span>    rmdir(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  789</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  790</span>  }</div>
-<div class="line"><span class="lineno">  791</span> </div>
-<div class="line"><span class="lineno">  792</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/tmp&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  793</span>  errno = 0;</div>
-<div class="line"><span class="lineno">  794</span>  <span class="keywordflow">if</span> ((mkdir(tmp, S_IRWXU) != 0) &amp;&amp; (errno != EEXIST))</div>
-<div class="line"><span class="lineno">  795</span>  {</div>
-<div class="line"><span class="lineno">  796</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, tmp);</div>
-<div class="line"><span class="lineno">  797</span>    snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/cur&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  798</span>    rmdir(tmp);</div>
-<div class="line"><span class="lineno">  799</span>    snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/new&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  800</span>    rmdir(tmp);</div>
-<div class="line"><span class="lineno">  801</span>    rmdir(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
-<div class="line"><span class="lineno">  802</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  803</span>  }</div>
-<div class="line"><span class="lineno">  804</span> </div>
-<div class="line"><span class="lineno">  805</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  806</span>}</div>
+<p class="definition">Definition at line <a class="el" href="maildir_2mailbox_8c_source.html#l00758">758</a> of file <a class="el" href="maildir_2mailbox_8c_source.html">mailbox.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  759</span>{</div>
+<div class="line"><span class="lineno">  760</span>  <span class="keywordflow">if</span> (!(flags &amp; (<a class="code hl_enumvalue" href="mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3ac4cbe9d44092ecf10352dca3eb8d93c0">MUTT_APPEND</a> | <a class="code hl_enumvalue" href="mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3a567847a4200d2ca171855700b1a87f89">MUTT_APPENDNEW</a>)))</div>
+<div class="line"><span class="lineno">  761</span>  {</div>
+<div class="line"><span class="lineno">  762</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  763</span>  }</div>
+<div class="line"><span class="lineno">  764</span> </div>
+<div class="line"><span class="lineno">  765</span>  errno = 0;</div>
+<div class="line"><span class="lineno">  766</span>  <span class="keywordflow">if</span> ((<a class="code hl_function" href="file_8c.html#a42b89c4ae9ca386c22de502b37cdf45e">mutt_file_mkdir</a>(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m), S_IRWXU) != 0) &amp;&amp; (errno != EEXIST))</div>
+<div class="line"><span class="lineno">  767</span>  {</div>
+<div class="line"><span class="lineno">  768</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  769</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  770</span>  }</div>
+<div class="line"><span class="lineno">  771</span> </div>
+<div class="line"><span class="lineno">  772</span>  <span class="keywordtype">char</span> tmp[<a class="code hl_define" href="mutt_8h.html#ae688d728e1acdfe5988c7db45d6f0166">PATH_MAX</a>] = { 0 };</div>
+<div class="line"><span class="lineno">  773</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/cur&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  774</span>  errno = 0;</div>
+<div class="line"><span class="lineno">  775</span>  <span class="keywordflow">if</span> ((mkdir(tmp, S_IRWXU) != 0) &amp;&amp; (errno != EEXIST))</div>
+<div class="line"><span class="lineno">  776</span>  {</div>
+<div class="line"><span class="lineno">  777</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, tmp);</div>
+<div class="line"><span class="lineno">  778</span>    rmdir(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  779</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  780</span>  }</div>
+<div class="line"><span class="lineno">  781</span> </div>
+<div class="line"><span class="lineno">  782</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/new&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  783</span>  errno = 0;</div>
+<div class="line"><span class="lineno">  784</span>  <span class="keywordflow">if</span> ((mkdir(tmp, S_IRWXU) != 0) &amp;&amp; (errno != EEXIST))</div>
+<div class="line"><span class="lineno">  785</span>  {</div>
+<div class="line"><span class="lineno">  786</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, tmp);</div>
+<div class="line"><span class="lineno">  787</span>    snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/cur&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  788</span>    rmdir(tmp);</div>
+<div class="line"><span class="lineno">  789</span>    rmdir(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  790</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  791</span>  }</div>
+<div class="line"><span class="lineno">  792</span> </div>
+<div class="line"><span class="lineno">  793</span>  snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/tmp&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  794</span>  errno = 0;</div>
+<div class="line"><span class="lineno">  795</span>  <span class="keywordflow">if</span> ((mkdir(tmp, S_IRWXU) != 0) &amp;&amp; (errno != EEXIST))</div>
+<div class="line"><span class="lineno">  796</span>  {</div>
+<div class="line"><span class="lineno">  797</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;%s&quot;</span>, tmp);</div>
+<div class="line"><span class="lineno">  798</span>    snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/cur&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  799</span>    rmdir(tmp);</div>
+<div class="line"><span class="lineno">  800</span>    snprintf(tmp, <span class="keyword">sizeof</span>(tmp), <span class="stringliteral">&quot;%s/new&quot;</span>, <a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  801</span>    rmdir(tmp);</div>
+<div class="line"><span class="lineno">  802</span>    rmdir(<a class="code hl_function" href="core_2mailbox_8h.html#a7e9739eb3e94344633f7051c2fb9453e">mailbox_path</a>(m));</div>
+<div class="line"><span class="lineno">  803</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  804</span>  }</div>
+<div class="line"><span class="lineno">  805</span> </div>
+<div class="line"><span class="lineno">  806</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  807</span>}</div>
 <div class="ttc" id="afile_8c_html_a42b89c4ae9ca386c22de502b37cdf45e"><div class="ttname"><a href="file_8c.html#a42b89c4ae9ca386c22de502b37cdf45e">mutt_file_mkdir</a></div><div class="ttdeci">int mutt_file_mkdir(const char *path, mode_t mode)</div><div class="ttdoc">Recursively create directories.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00844">file.c:844</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00095">logging2.h:95</a></div></div>
 <div class="ttc" id="amxapi_8h_html_a1fd3677fe6e7d499ab4f4b86661ea8d3a567847a4200d2ca171855700b1a87f89"><div class="ttname"><a href="mxapi_8h.html#a1fd3677fe6e7d499ab4f4b86661ea8d3a567847a4200d2ca171855700b1a87f89">MUTT_APPENDNEW</a></div><div class="ttdeci">@ MUTT_APPENDNEW</div><div class="ttdoc">Set in mx_open_mailbox_append if the mailbox doesn&#39;t exist.</div><div class="ttdef"><b>Definition</b> <a href="mxapi_8h_source.html#l00048">mxapi.h:48</a></div></div>

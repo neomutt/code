@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"store_gdbm.html":[55,2],
+"store_lmdb.html":[55,3],
 "store_module.html":[55,0],
 "store_module.html#autotoc_md776":[1,0],
 "store_module.html#autotoc_md777":[1,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "structBindingInfo.html#a9e9905455f853ec7c70a372b62079f38":[1,0,29,0],
 "structBody.html":[1,0,30],
 "structBody.html#a043f55e8f15bc6f1324d35cb5d7f061c":[1,0,30,28],
-"structBody.html#a04d719ada605ac008d4bf548db758480":[1,0,30,14],
-"structBody.html#a0a77f105609a64f37c359b9c81d1f263":[1,0,30,13],
-"structBody.html#a0b87b7bdb6faef44d9aac4854975f805":[1,0,30,23]
+"structBody.html#a04d719ada605ac008d4bf548db758480":[1,0,30,14]
 };

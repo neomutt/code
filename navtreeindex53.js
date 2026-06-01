@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"structMailbox.html#a015fb45ad1a08cf8e44e3553202834fb":[1,0,183,40],
+"structMailbox.html#a0e1673cdf63976b1d148786457666f84":[1,0,183,15],
 "structMailbox.html#a12ba98c349220ae172753f4f3294ed59":[1,0,183,23],
 "structMailbox.html#a185d46a268fdf1e34ee061a28d51414e":[1,0,183,5],
 "structMailbox.html#a1f36c27b2c78a6c7c216e3aca9f0c89f":[1,0,183,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc":[1,0,219,14],
 "structMuttWindow.html#a5b3418a2f98cc9588f1483c47079ce3f":[1,0,219,4],
 "structMuttWindow.html#a5bf1302122ef2778be449cde2f1909e6":[1,0,219,9],
-"structMuttWindow.html#a5f230c86f48f70162d2c408b0e9ad6c3":[1,0,219,1],
-"structMuttWindow.html#a6fab13b319ae04d592fdc7eed5a33339":[1,0,219,16],
-"structMuttWindow.html#a78011dd7f37a6a39f0d404a76d133a5d":[1,0,219,15]
+"structMuttWindow.html#a5f230c86f48f70162d2c408b0e9ad6c3":[1,0,219,1]
 };
