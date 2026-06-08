@@ -45,11 +45,10 @@ var searchData=
   ['bufferpoolinitialbuffersize_42',['BufferPoolInitialBufferSize',['../pool_8c.html#a0734d4491bffbb722a52d8f178dd4637',1,'pool.c']]],
   ['bufferpoollen_43',['BufferPoolLen',['../pool_8c.html#a8d9bf7e185b764b8f7880f86126c5e85',1,'pool.c']]],
   ['bufferpoolmaxgivenout_44',['BufferPoolMaxGivenOut',['../pool_8c.html#a2a50202dc2d95d483c2cbf1a8039b604',1,'pool.c']]],
-  ['bufferstepsize_45',['BufferStepSize',['../buffer_8c.html#ae86a9aea4125cce2d02dec5cba07d815',1,'buffer.c']]],
-  ['bufi_46',['bufi',['../structFgetConv.html#a0326b518fb9c485d2f32c2ad2fc9843c',1,'FgetConv']]],
-  ['buflen_47',['buflen',['../structMd5Ctx.html#a8774f9a271d6ff5d340e5918956be841',1,'Md5Ctx']]],
-  ['bufo_48',['bufo',['../structFgetConv.html#a0e82782ef364c7d6bf7a34981e3325e5',1,'FgetConv']]],
-  ['bufpos_49',['bufpos',['../structConnection.html#a6c86ddad667d9db254dff142ceed42dd',1,'Connection']]],
-  ['bytes_50',['bytes',['../structMwChar.html#aa4e0407909ae464a6f0b7ee420c4eaf7',1,'MwChar::bytes'],['../structMwChunk.html#a18c001c08f55a84957ccca1a4bd73f2a',1,'MwChunk::bytes']]],
-  ['bytes_5fread_51',['bytes_read',['../structPagerPrivateData.html#aaa3bd178c2849f17c98a09085ab46e0f',1,'PagerPrivateData']]]
+  ['bufi_45',['bufi',['../structFgetConv.html#a0326b518fb9c485d2f32c2ad2fc9843c',1,'FgetConv']]],
+  ['buflen_46',['buflen',['../structMd5Ctx.html#a8774f9a271d6ff5d340e5918956be841',1,'Md5Ctx']]],
+  ['bufo_47',['bufo',['../structFgetConv.html#a0e82782ef364c7d6bf7a34981e3325e5',1,'FgetConv']]],
+  ['bufpos_48',['bufpos',['../structConnection.html#a6c86ddad667d9db254dff142ceed42dd',1,'Connection']]],
+  ['bytes_49',['bytes',['../structMwChar.html#aa4e0407909ae464a6f0b7ee420c4eaf7',1,'MwChar::bytes'],['../structMwChunk.html#a18c001c08f55a84957ccca1a4bd73f2a',1,'MwChunk::bytes']]],
+  ['bytes_5fread_50',['bytes_read',['../structPagerPrivateData.html#aaa3bd178c2849f17c98a09085ab46e0f',1,'PagerPrivateData']]]
 ];

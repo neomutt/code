@@ -1,5 +1,7 @@
 var notmuch_2complete_8c =
 [
+    [ "nm_complete_data_init", "notmuch_2complete_8c.html#a4782bc11dc84a98a93a0585ca1151157", null ],
+    [ "complete_all_nm_tags_fresh", "notmuch_2complete_8c.html#aad8b225ad60c3bd89b1e50760c4fd0e3", null ],
     [ "complete_all_nm_tags", "notmuch_2complete_8c.html#a859ec89a92fa6582c414dcaf2bd2dfff", null ],
     [ "mutt_nm_query_complete", "notmuch_2complete_8c.html#a91c2850c66aa738cc70346ab923a802b", null ],
     [ "mutt_nm_tag_complete", "notmuch_2complete_8c.html#aaf3b71b049d0d15abe95056914e245d2", null ],

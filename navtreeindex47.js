@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"sidebar_sort.html":[54,7],
+"sidebar_wdata.html":[54,8],
 "sidebar_window.html":[54,9],
 "signal2_8h.html":[2,0,37,58],
 "signal2_8h.html#a079bd657ae3ccdcf07507d85097abfd8":[2,0,37,58,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "store_8c.html#a0772438711aba8c88831e363f14985bb":[2,0,50,6,4],
 "store_8c.html#a2231ae5a5085e1c2c7dba244713b576f":[2,0,50,6,3],
 "store_8c.html#a348da980c0b02317fb3e7a02ae3e1af6":[2,0,50,6,0],
-"store_8c.html#abcb5ecf619dbbb21233e9ed058700473":[2,0,50,6,1],
-"store_8c.html#adcfbb4e1d37c31224b8baaabb773cb8b":[2,0,50,6,2],
-"store_8c_source.html":[2,0,50,6]
+"store_8c.html#abcb5ecf619dbbb21233e9ed058700473":[2,0,50,6,1]
 };

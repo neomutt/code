@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"structEnterWindowData.html#af8c83670ffb679676ca485c6a94084f6":[1,0,95,3],
+"structEnterWindowData.html#afe965458ee10d8e26e324bc24973f78c":[1,0,95,11],
 "structEnumDef.html":[1,0,96],
 "structEnumDef.html#a441eb3fc660518d4c32b8a76f5401d91":[1,0,96,1],
 "structEnumDef.html#a6a707e9bd9d63e1dab2e45dcf13e4161":[1,0,96,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "structHashWalkState.html#aff744f61e1660b26610b35b87001ec8c":[1,0,139,1],
 "structHcacheModuleData.html":[1,0,141],
 "structHcacheModuleData.html#a860a63af56061d349b0f39357f0b994b":[1,0,141,1],
-"structHcacheModuleData.html#aca172a8ba3b0cdb82dcc59d955f637f7":[1,0,141,0],
-"structHeaderCache.html":[1,0,142],
-"structHeaderCache.html#a11a84f4577509d7a782b8f695886a1c0":[1,0,142,5]
+"structHcacheModuleData.html#aca172a8ba3b0cdb82dcc59d955f637f7":[1,0,141,0]
 };
