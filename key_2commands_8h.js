@@ -1,6 +1,6 @@
 var key_2commands_8h =
 [
-    [ "km_bind", "key_2commands_8h.html#a8329a38b3fd03e6b5d2d05dfb0c5d465", null ],
+    [ "km_bind", "key_2commands_8h.html#a2a695ab52af215f4c7e52beb146a9501", null ],
     [ "parse_keymap", "key_2commands_8h.html#ac4bde9d14c4caf6a315cda411d96482a", null ],
     [ "parse_menu", "key_2commands_8h.html#ad6c41090e28a5d370032f33b76e78153", null ],
     [ "parse_bind", "group__command__parse.html#ga126b2cdb9d5d79a90ef959917699faee", null ],

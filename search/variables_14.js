@@ -14,7 +14,7 @@ var searchData=
   ['unowned_11',['unowned',['../structAttachPtr.html#a85722c8044f044e59047c3c8b12ef279',1,'AttachPtr']]],
   ['unread_12',['unread',['../structNntpMboxData.html#a98dfbd45b53b18796fa524f87b8ce32e',1,'NntpMboxData']]],
   ['unseen_13',['unseen',['../structImapMboxData.html#add06baf96fd584f61a318a84ccbd3bf1',1,'ImapMboxData']]],
-  ['unsubscribe_14',['unsubscribe',['../structRfc2369ListHeaders.html#aff9e7422a7dab86f4c80e344b7a619b6',1,'Rfc2369ListHeaders']]],
+  ['unsubscribe_14',['unsubscribe',['../structRfc2369ListHeaders.html#abbc7c6c5e4d8fb3366df555a16128c72',1,'Rfc2369ListHeaders']]],
   ['unsubscribed_15',['unsubscribed',['../structAliasModuleData.html#ab81c6c723cf764c24eadd90efa99ccfe',1,'AliasModuleData']]],
   ['up_16',['up',['../structQuoteStyle.html#a3af6cc0eb9033d74b08a87bc2a50cba2',1,'QuoteStyle']]],
   ['update_5fnum_5fpostponed_17',['update_num_postponed',['../structPostponeModuleData.html#aabc5f4f529bd876301b458443cc0c1aa',1,'PostponeModuleData']]],

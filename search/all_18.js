@@ -40,7 +40,7 @@ var searchData=
   ['unr_5fpctenc_5fsubdel_37',['UNR_PCTENC_SUBDEL',['../prex_8c.html#aecb557628850b6570f2c105ec3135a21',1,'prex.c']]],
   ['unread_38',['unread',['../structNntpMboxData.html#a98dfbd45b53b18796fa524f87b8ce32e',1,'NntpMboxData']]],
   ['unseen_39',['unseen',['../structImapMboxData.html#add06baf96fd584f61a318a84ccbd3bf1',1,'ImapMboxData']]],
-  ['unsubscribe_40',['unsubscribe',['../structRfc2369ListHeaders.html#aff9e7422a7dab86f4c80e344b7a619b6',1,'Rfc2369ListHeaders']]],
+  ['unsubscribe_40',['unsubscribe',['../structRfc2369ListHeaders.html#abbc7c6c5e4d8fb3366df555a16128c72',1,'Rfc2369ListHeaders']]],
   ['unsubscribed_41',['unsubscribed',['../structAliasModuleData.html#ab81c6c723cf764c24eadd90efa99ccfe',1,'AliasModuleData']]],
   ['up_42',['up',['../structQuoteStyle.html#a3af6cc0eb9033d74b08a87bc2a50cba2',1,'QuoteStyle']]],
   ['up_20the_20extended_20keys_43',['Set up the extended keys',['../key_extended.html',1,'lib_key']]],

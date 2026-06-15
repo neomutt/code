@@ -8,6 +8,7 @@ var email_2parse_8h =
     [ "mutt_matches_ignore", "email_2parse_8h.html#a5f2728949322a1a6210d61d9629005d1", null ],
     [ "mutt_parse_content_type", "email_2parse_8h.html#a1c0bcb79c2ff930b4131a1ede5828762", null ],
     [ "mutt_parse_mailto", "email_2parse_8h.html#a85f5f11a70b04f611f3e131f67644fbf", null ],
+    [ "mutt_rfc2369_parse", "email_2parse_8h.html#a9fb8edf2f65cf3ee70de1dc8fb5c522c", null ],
     [ "mutt_rfc2369_first_mailto", "email_2parse_8h.html#a2c750568daf4f60f3807f91e464b9323", null ],
     [ "mutt_rfc2369_list_headers_free", "email_2parse_8h.html#ae489d2fc3bab6ce6549a53a130a55bb6", null ],
     [ "mutt_rfc2369_read_headers", "email_2parse_8h.html#af326ade352ef00337c05112e05104b29", null ],

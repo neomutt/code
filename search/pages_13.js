@@ -53,7 +53,7 @@ var searchData=
   ['sidebar_50',['Sidebar',['../lib_sidebar.html',1,'']]],
   ['sidebar_20commands_51',['Sidebar commands',['../sidebar_commands.html',1,'lib_sidebar']]],
   ['sidebar_20expando_20definitions_52',['Sidebar Expando definitions',['../sidebar_expando.html',1,'lib_sidebar']]],
-  ['sidebar_20functions_53',['Sidebar functions',['../sidebar_functions.html',1,'lib_sidebar']]],
+  ['sidebar_20functions_53',['Sidebar functions',['../sidebar_functions_sidebar.html',1,'lib_sidebar']]],
   ['sidebar_20module_54',['Definition of the Sidebar Module',['../sidebar_module.html',1,'lib_sidebar']]],
   ['sidebar_20observers_55',['Sidebar observers',['../sidebar_observers.html',1,'lib_sidebar']]],
   ['sidebar_20sort_20functions_56',['Sidebar sort functions',['../sidebar_sort.html',1,'lib_sidebar']]],

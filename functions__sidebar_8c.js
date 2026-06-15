@@ -1,0 +1,26 @@
+var functions__sidebar_8c =
+[
+    [ "sidebar_init_keys", "functions__sidebar_8c.html#a7aa1097781445f7369e644ba15fad757", null ],
+    [ "sidebar_get_submenu", "functions__sidebar_8c.html#ab17de98dd673d37cef12db1e1f862c9b", null ],
+    [ "sb_next", "functions__sidebar_8c.html#ae64f05f5fb7aafc3184d3e1fcf132ed5", null ],
+    [ "sb_next_n", "functions__sidebar_8c.html#ad504bf0664f21fba9e08716391651099", null ],
+    [ "sb_prev_n", "functions__sidebar_8c.html#aebb93acfd59a39af5e7d010d64a263af", null ],
+    [ "sb_next_new", "functions__sidebar_8c.html#aed4fcca069d222dfe60f3274b565611e", null ],
+    [ "sb_prev", "functions__sidebar_8c.html#a4c5570fc54f15ab6b010868392791b25", null ],
+    [ "sb_prev_new", "functions__sidebar_8c.html#a935f1a465443c537ffac8bb3cc729ccc", null ],
+    [ "op_sidebar_first", "group__sidebar__function__api.html#ga90dd496bf459297027e64412e3465a2b", null ],
+    [ "op_sidebar_last", "group__sidebar__function__api.html#gaeaf1a1dfad88e196419f6dc80b9a27fd", null ],
+    [ "op_sidebar_next", "group__sidebar__function__api.html#ga7650f0b40b807abb900c91ea6913eca4", null ],
+    [ "op_sidebar_next_new", "group__sidebar__function__api.html#gaca5389637d4a5c0345126283f76553c3", null ],
+    [ "op_sidebar_open", "group__sidebar__function__api.html#ga16cd1af5907bb371ce02deb142806989", null ],
+    [ "op_sidebar_page_down", "group__sidebar__function__api.html#ga3b6e691729d46ead46bb55f743999bd9", null ],
+    [ "op_sidebar_page_up", "group__sidebar__function__api.html#ga541e0d2113a78d1c8e04742c5c6f0964", null ],
+    [ "op_sidebar_prev", "group__sidebar__function__api.html#ga4c2a532a59d23f913e604aa10345320d", null ],
+    [ "op_sidebar_prev_new", "group__sidebar__function__api.html#gace09e3e3bf9e191ff2195ab2e1adef3c", null ],
+    [ "op_sidebar_toggle_visible", "group__sidebar__function__api.html#ga5a7f2bbb0cac3022c3ef7cc7f236fc96", null ],
+    [ "op_sidebar_toggle_virtual", "group__sidebar__function__api.html#ga64a677e0b12a61fc679c23d2cd8a8219", null ],
+    [ "sb_function_dispatcher", "group__dispatcher__api.html#ga05923dea014c9fa45e7f82abb224ab0a", null ],
+    [ "OpSidebar", "functions__sidebar_8c.html#aebe6e8ae33c98bb469f70b9141b54713", null ],
+    [ "SidebarDefaultBindings", "functions__sidebar_8c.html#a497b97c389f87e8ec41a71879224a92c", null ],
+    [ "SidebarFunctions", "functions__sidebar_8c.html#a23fe1c5d3aa0063215cf5ed3492aeabf", null ]
+];

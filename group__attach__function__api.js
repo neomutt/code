@@ -14,7 +14,7 @@ var group__attach__function__api =
     [ "op_bounce_message", "group__attach__function__api.html#gaeb4d7487ae7fb91f02b778d5a3a05552", null ],
     [ "op_check_traditional", "group__attach__function__api.html#gab0bbebf30bdaf87c3a62eead58394d5b", null ],
     [ "op_compose_to_sender", "group__attach__function__api.html#ga6eea09bb13a26112e4172547373aec5b", null ],
-    [ "op_exit", "group__attach__function__api.html#ga106f1857930607606fb30b6a7f0bad23", null ],
+    [ "op_quit", "group__attach__function__api.html#ga69c3873eccdfecf5129ccdc5522bc462", null ],
     [ "op_extract_keys", "group__attach__function__api.html#gac08eeae5efd84fa744be5485cb634f27", null ],
     [ "op_forget_passphrase", "group__attach__function__api.html#gaebba949d7b39655f3593f508569e0892", null ],
     [ "op_forward_message", "group__attach__function__api.html#ga2eb5aeb42ffbbc9da2c4ddc5871b7c69", null ],

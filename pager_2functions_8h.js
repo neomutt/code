@@ -2,7 +2,6 @@ var pager_2functions_8h =
 [
     [ "PagerFunctionData", "structPagerFunctionData.html", "structPagerFunctionData" ],
     [ "PagerFunction", "structPagerFunction.html", "structPagerFunction" ],
-    [ "MdPager", "pager_2functions_8h.html#a947792f4ba46e92d90b67355dd47a431", null ],
     [ "pager_function_t", "pager_2functions_8h.html#ab8e8fc898912d9f2056f00c4d36cf2f2", null ],
     [ "pager_function_dispatcher", "group__dispatcher__api.html#ga265e1256bb004b6ccd1b0fd1df2709be", null ],
     [ "jump_to_bottom", "pager_2functions_8h.html#a88f2a80293f7c62bcfb83c4708ea4d41", null ],

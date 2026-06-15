@@ -2,7 +2,6 @@ var editor_2functions_8h =
 [
     [ "EnterFunctionData", "structEnterFunctionData.html", "structEnterFunctionData" ],
     [ "EnterFunction", "structEnterFunction.html", "structEnterFunction" ],
-    [ "MdEditor", "editor_2functions_8h.html#ac442cda508d0e38c5ce3c825e0fe2a95", null ],
     [ "enter_function_t", "editor_2functions_8h.html#afbf2fcad66c3bcea662be7e42699162b", null ],
     [ "editor_get_menu_definition", "editor_2functions_8h.html#a0b38a015c8d3ac27223a1b23d220ce4e", null ],
     [ "enter_function_dispatcher", "group__dispatcher__api.html#ga49aac7d6f001dce4953fc7c5f8534192", null ],

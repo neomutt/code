@@ -22,7 +22,7 @@ var searchData=
   ['gossip_5ftimestamp_19',['gossip_timestamp',['../structAutocryptPeer.html#acaefee844147a0219b241986646aa36b',1,'AutocryptPeer']]],
   ['goto_5fswapper_20',['goto_swapper',['../structBrowserPrivateData.html#afed0a0fa4ab04df470c1ee6773dd050c',1,'BrowserPrivateData']]],
   ['gpgme_5fid_5fdefaults_21',['gpgme_id_defaults',['../structNcryptModuleData.html#a7928c8fcb92cbd76fda0d1d5fbd07b5b',1,'NcryptModuleData']]],
-  ['gpgmefunctions_22',['GpgmeFunctions',['../gpgme__functions_8c.html#a14d0817f9e5614879d5c38bdaaa7e9e7',1,'gpgme_functions.c']]],
+  ['gpgmefunctions_22',['GpgmeFunctions',['../functions__gpgme_8c.html#a14d0817f9e5614879d5c38bdaaa7e9e7',1,'functions_gpgme.c']]],
   ['gpgmehelp_23',['GpgmeHelp',['../dlg__gpgme_8c.html#aef081963c1fd0287be5bfff4fc37912a',1,'dlg_gpgme.c']]],
   ['greetingformatdef_24',['GreetingFormatDef',['../send_2config_8c.html#ad3f1580e2437dcfe0ef6fae43d136eee',1,'config.c']]],
   ['greetingrendercallbacks_25',['GreetingRenderCallbacks',['../expando__greeting_8c.html#ac0a239eaf282f770941d49d43894c905',1,'GreetingRenderCallbacks:&#160;expando_greeting.c'],['../expando__greeting_8h.html#ac0a239eaf282f770941d49d43894c905',1,'GreetingRenderCallbacks:&#160;expando_greeting.c']]],

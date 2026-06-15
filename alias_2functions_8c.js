@@ -5,7 +5,7 @@ var alias_2functions_8c =
     [ "alias_add_selection", "alias_2functions_8c.html#a49db3e7007670333749ad3b52369277f", null ],
     [ "alias_apply_set_deleted", "alias_2functions_8c.html#a9742e78353cc0c0ec24b2a9f6b9b5aa7", null ],
     [ "op_delete", "group__alias__function__api.html#ga94740d93f164051e999857ee0326e29c", null ],
-    [ "op_exit", "group__alias__function__api.html#ga804cd75e47e1637974fc2cc1b661bdda", null ],
+    [ "op_quit", "group__alias__function__api.html#ga34e02d0c215aa2318b62cf0c3f047a89", null ],
     [ "op_jump", "group__alias__function__api.html#ga564fdd79de43cc482df4017ed6109115", null ],
     [ "alias_select_entries", "alias_2functions_8c.html#ad92f2386e6b1a12700af63e187adcd3b", null ],
     [ "op_generic_select_entry", "group__alias__function__api.html#gae294785720f6e4b72dec29ac30a75597", null ],

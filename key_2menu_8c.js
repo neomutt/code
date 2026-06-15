@@ -1,6 +1,6 @@
 var key_2menu_8c =
 [
-    [ "km_bind", "key_2menu_8c.html#a8329a38b3fd03e6b5d2d05dfb0c5d465", null ],
+    [ "km_bind", "key_2menu_8c.html#a2a695ab52af215f4c7e52beb146a9501", null ],
     [ "km_find_func", "key_2menu_8c.html#a95c0205a96340844a506d48c92c4ae09", null ],
     [ "km_get_op", "key_2menu_8c.html#aebe45d5bacb7e26f1bd8c7c77b35e11c", null ],
     [ "km_get_op_menu", "key_2menu_8c.html#a23fea881a21d404870e180fdb890056d", null ],

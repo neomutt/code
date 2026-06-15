@@ -21,7 +21,7 @@ var attach_2functions_8c =
     [ "op_bounce_message", "group__attach__function__api.html#gaeb4d7487ae7fb91f02b778d5a3a05552", null ],
     [ "op_check_traditional", "group__attach__function__api.html#gab0bbebf30bdaf87c3a62eead58394d5b", null ],
     [ "op_compose_to_sender", "group__attach__function__api.html#ga6eea09bb13a26112e4172547373aec5b", null ],
-    [ "op_exit", "group__attach__function__api.html#ga106f1857930607606fb30b6a7f0bad23", null ],
+    [ "op_quit", "group__attach__function__api.html#ga69c3873eccdfecf5129ccdc5522bc462", null ],
     [ "op_extract_keys", "group__attach__function__api.html#gac08eeae5efd84fa744be5485cb634f27", null ],
     [ "op_forget_passphrase", "group__attach__function__api.html#gaebba949d7b39655f3593f508569e0892", null ],
     [ "op_forward_message", "group__attach__function__api.html#ga2eb5aeb42ffbbc9da2c4ddc5871b7c69", null ],
@@ -34,6 +34,6 @@ var attach_2functions_8c =
     [ "attach_function_dispatcher", "group__dispatcher__api.html#ga539d9c120b47828fd817a448232d3ac5", null ],
     [ "Function_not_permitted_in_attach_message_mode", "attach_2functions_8c.html#a902bce6ff62a5b8e0c4c05e0c10e8c2e", null ],
     [ "OpAttach", "attach_2functions_8c.html#a0bd6fc2c8497246232d8e5f09f1020c9", null ],
-    [ "AttachmentDefaultBindings", "attach_2functions_8c.html#a164613fa5d7feec9b9c8a9f73e009565", null ],
+    [ "AttachDefaultBindings", "attach_2functions_8c.html#a8c4a3dc8e2e46aac06f8d1155a6d8191", null ],
     [ "AttachFunctions", "attach_2functions_8c.html#ab6272403a46d39ad3c8c61e4717587df", null ]
 ];

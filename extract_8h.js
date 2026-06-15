@@ -12,7 +12,6 @@ var extract_8h =
       [ "TOKEN_PATTERN", "extract_8h.html#a99917bf50f58616e23290f94afb5b450a681bb0e874c5aa90689ee549a04d72f5", null ],
       [ "TOKEN_COMMENT", "extract_8h.html#a99917bf50f58616e23290f94afb5b450a0fe00080531042db460071402c40f763", null ],
       [ "TOKEN_SEMICOLON", "extract_8h.html#a99917bf50f58616e23290f94afb5b450ac8c74b281e178c87923363a90f6ff371", null ],
-      [ "TOKEN_BACKTICK_VARS", "extract_8h.html#a99917bf50f58616e23290f94afb5b450abad94feab3e5d3f9e7aba39db7637107", null ],
       [ "TOKEN_NOSHELL", "extract_8h.html#a99917bf50f58616e23290f94afb5b450a87a8e13ddf2ec6d1f2719879956d3505", null ],
       [ "TOKEN_QUESTION", "extract_8h.html#a99917bf50f58616e23290f94afb5b450ae9d8c03a94ac5b659addd3bd0a69072c", null ],
       [ "TOKEN_PLUS", "extract_8h.html#a99917bf50f58616e23290f94afb5b450a7f0601b40fea37f0d4598b0a61f828f2", null ],

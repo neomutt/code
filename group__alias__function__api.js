@@ -2,7 +2,7 @@ var group__alias__function__api =
 [
     [ "op_create_alias", "group__alias__function__api.html#ga47cf9d2ee3ffed089003f85c62ba4854", null ],
     [ "op_delete", "group__alias__function__api.html#ga94740d93f164051e999857ee0326e29c", null ],
-    [ "op_exit", "group__alias__function__api.html#ga804cd75e47e1637974fc2cc1b661bdda", null ],
+    [ "op_quit", "group__alias__function__api.html#ga34e02d0c215aa2318b62cf0c3f047a89", null ],
     [ "op_jump", "group__alias__function__api.html#ga564fdd79de43cc482df4017ed6109115", null ],
     [ "op_generic_select_entry", "group__alias__function__api.html#gae294785720f6e4b72dec29ac30a75597", null ],
     [ "op_mail", "group__alias__function__api.html#ga9130ff9f05cd2e5bc0a2e1c7aa224b80", null ],

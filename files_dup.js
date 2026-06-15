@@ -37,6 +37,7 @@ var files_dup =
     [ "mbox", "dir_fc3eb84acc9d0eec6d0898eb238a09ab.html", "dir_fc3eb84acc9d0eec6d0898eb238a09ab" ],
     [ "menu", "dir_baddde578d762c90c1d949a22a636838.html", "dir_baddde578d762c90c1d949a22a636838" ],
     [ "mh", "dir_9787aee6b318e7158c982fb5567cbd8b.html", "dir_9787aee6b318e7158c982fb5567cbd8b" ],
+    [ "mlist", "dir_09f2f200a39b07aee086ff0ae8468d04.html", "dir_09f2f200a39b07aee086ff0ae8468d04" ],
     [ "mutt", "dir_c8bd9c3a10dcce9475b399a8b9baea33.html", "dir_c8bd9c3a10dcce9475b399a8b9baea33" ],
     [ "ncrypt", "dir_880caa4cc75494b45961a8ebdc8ca26e.html", "dir_880caa4cc75494b45961a8ebdc8ca26e" ],
     [ "nntp", "dir_3964b18c0581b4bf6bd3caf7ae7211c9.html", "dir_3964b18c0581b4bf6bd3caf7ae7211c9" ],

@@ -9,7 +9,7 @@ var group__menu__make__entry =
     [ "cert_make_entry", "group__menu__make__entry.html#ga54426e7c96b9c31cc09e77ff982fbce6", null ],
     [ "history_make_entry", "group__menu__make__entry.html#ga9249c08cccfb4df603237c1a0eb98281", null ],
     [ "index_make_entry", "group__menu__make__entry.html#ga3fe3f5bd655d5d45e9c814eb0ff75005", null ],
-    [ "list_make_entry", "group__menu__make__entry.html#ga75e32c5d440318a7c4f3cf21267d4d07", null ],
+    [ "mlist_make_entry", "group__menu__make__entry.html#ga62eeea1d96846619fad8d981ec51678f", null ],
     [ "crypt_make_entry", "group__menu__make__entry.html#ga1b475b036b99c9860b06fac0caa4f568", null ],
     [ "pgp_make_entry", "group__menu__make__entry.html#ga3fa9a61672824b8e7b310137b3cf8888", null ],
     [ "smime_make_entry", "group__menu__make__entry.html#gaa795d473459ac19d687817265650dc59", null ],

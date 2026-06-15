@@ -22,7 +22,7 @@ var searchData=
   ['dlg_5fgpgme_2ec_19',['dlg_gpgme.c',['../dlg__gpgme_8c.html',1,'']]],
   ['dlg_5fhistory_2ec_20',['dlg_history.c',['../dlg__history_8c.html',1,'']]],
   ['dlg_5findex_2ec_21',['dlg_index.c',['../dlg__index_8c.html',1,'']]],
-  ['dlg_5flist_2ec_22',['dlg_list.c',['../dlg__list_8c.html',1,'']]],
+  ['dlg_5fmlist_2ec_22',['dlg_mlist.c',['../dlg__mlist_8c.html',1,'']]],
   ['dlg_5fpager_2ec_23',['dlg_pager.c',['../dlg__pager_8c.html',1,'']]],
   ['dlg_5fpattern_2ec_24',['dlg_pattern.c',['../dlg__pattern_8c.html',1,'']]],
   ['dlg_5fpgp_2ec_25',['dlg_pgp.c',['../dlg__pgp_8c.html',1,'']]],

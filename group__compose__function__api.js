@@ -35,6 +35,6 @@ var group__compose__function__api =
     [ "op_compose_send_message", "group__compose__function__api.html#ga80e16eefef0acdda1183a0552e96dc10", null ],
     [ "op_compose_write_message", "group__compose__function__api.html#ga0b7b4ac46b2982e8e3ef4f27b1fca2fb", null ],
     [ "op_display_headers", "group__compose__function__api.html#gaac8c2b8462a485b094b992db3f1fa85b", null ],
-    [ "op_exit", "group__compose__function__api.html#gaa5ca6d429443cbe3519ec95d150575e4", null ],
+    [ "op_quit", "group__compose__function__api.html#ga628887d877b64ed90b597bf88b31dc98", null ],
     [ "op_forget_passphrase", "group__compose__function__api.html#ga51b0c32c5100c3f56e4950a0cec574f7", null ]
 ];

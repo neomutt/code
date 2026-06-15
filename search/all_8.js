@@ -503,7 +503,7 @@ var searchData=
   ['enterstate_500',['EnterState',['../structEnterState.html',1,'']]],
   ['enterwindowdata_501',['EnterWindowData',['../structEnterWindowData.html',1,'']]],
   ['entire_20email_502',['Duplicate the structure of an entire email',['../email_copy_email.html',1,'lib_email']]],
-  ['entries_503',['entries',['../structAutocryptData.html#ae4688728a7199b43647a3335e6e9fd03',1,'AutocryptData::entries'],['../structPatternData.html#a26425dd479c87614350bc00bf0d7822a',1,'PatternData::entries'],['../structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f',1,'SidebarWindowData::entries']]],
+  ['entries_503',['entries',['../structAutocryptData.html#ae4688728a7199b43647a3335e6e9fd03',1,'AutocryptData::entries'],['../structListData.html#a98b6823291b22f079f63327c7abe7298',1,'ListData::entries'],['../structPatternData.html#a26425dd479c87614350bc00bf0d7822a',1,'PatternData::entries'],['../structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f',1,'SidebarWindowData::entries']]],
   ['entry_504',['entry',['../structBrowserState.html#aa9f0e9b3778d58224e831a9e48863c5b',1,'BrowserState::entry'],['../structSidebarData.html#a29b2b46bee00b8e89acf16078259b50b',1,'SidebarData::entry'],['../editor_state.html',1,'State of text entry']]],
   ['enum_2ec_505',['enum.c',['../enum_8c.html',1,'']]],
   ['enum_2eh_506',['enum.h',['../enum_8h.html',1,'']]],

@@ -138,7 +138,7 @@ var searchData=
   ['headercache_135',['HeaderCache',['../structHeaderCache.html',1,'']]],
   ['headerfield_136',['HeaderField',['../envelope_2private_8h.html#adaffad40d353965ad6b52804bc72afef',1,'private.h']]],
   ['headers_137',['headers',['../structListData.html#aba582d2174b4f1f24329c68e81353f1b',1,'ListData']]],
-  ['help_138',['help',['../structCliHelp.html#a8c9dfa852379ab59d20494916c4e2e88',1,'CliHelp::help'],['../structCommandLine.html#a45570bdc8fcea9d953e3bec627feeb9b',1,'CommandLine::help'],['../structCommand.html#a4c78e4ec9cd040290170f159c0a6c111',1,'Command::help'],['../structRfc2369ListHeaders.html#a1395af81198c47dbb8cc454ae34abf14',1,'Rfc2369ListHeaders::help']]],
+  ['help_138',['help',['../structCliHelp.html#a8c9dfa852379ab59d20494916c4e2e88',1,'CliHelp::help'],['../structCommandLine.html#a45570bdc8fcea9d953e3bec627feeb9b',1,'CommandLine::help'],['../structCommand.html#a4c78e4ec9cd040290170f159c0a6c111',1,'Command::help'],['../structRfc2369ListHeaders.html#aec48d91bad8d26e43f050f1de03b7aac',1,'Rfc2369ListHeaders::help']]],
   ['help_20bar_139',['Help Bar',['../helpbar_config.html',1,'Config used by Help Bar'],['../helpbar_wdata.html',1,'Data for the Help Bar']]],
   ['help_20bar_140',['Help bar',['../lib_helpbar.html',1,'']]],
   ['help_20bar_20window_141',['Help Bar Window',['../helpbar_helpbar.html',1,'lib_helpbar']]],

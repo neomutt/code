@@ -8,6 +8,7 @@ var index_2functions_8c =
     ] ],
     [ "op_jump", "group__index__function__api.html#ga740c90565ea1186b448584e5478a5272", null ],
     [ "index_init_keys", "index_2functions_8c.html#a5bd1d1a9f1bc99a996224f3567a7de66", null ],
+    [ "index_get_submenu", "index_2functions_8c.html#a88b9f9e8e2258c5e42e16d3a737d0efc", null ],
     [ "resolve_email", "index_2functions_8c.html#a794588f64204d9fe931777fad424977a", null ],
     [ "index_next_undeleted", "index_2functions_8c.html#a6e09a10a71d4891eef264ce0cb3504e9", null ],
     [ "ea_add_selection", "index_2functions_8c.html#a29abff6fd0d67c46bd9a0b2bb71c302a", null ],
@@ -106,8 +107,6 @@ var index_2functions_8c =
     [ "index_function_dispatcher", "group__dispatcher__api.html#gab4c6e64de62f0f914b428b29d4bd3b32", null ],
     [ "index_get_menu_definition", "index_2functions_8c.html#a7654fb86f49b8de1fec61baa10882ef6", null ],
     [ "OpIndex", "index_2functions_8c.html#a2680735dfe321d9c8ecfab713c1a8fd1", null ],
-    [ "OpList", "index_2functions_8c.html#a4e4e1ad2a3df5bf3dc7496d7bfe3a333", null ],
     [ "IndexDefaultBindings", "index_2functions_8c.html#aaa03f8f82b66fb9a6a44315d518cb348", null ],
-    [ "ListDefaultBindings", "index_2functions_8c.html#a9e4749e276a6ec5c49152abb8b46d2f8", null ],
     [ "IndexFunctions", "index_2functions_8c.html#ae06ba5eb2a6e9306868c3afe4753bb67", null ]
 ];

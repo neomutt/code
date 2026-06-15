@@ -31,7 +31,6 @@ var index_2lib_8h =
     [ "change_folder_string", "index_2lib_8h.html#add72c0d04cf5de2184826b4cba8cdf5e", null ],
     [ "check_acl", "index_2lib_8h.html#a0ae2dda8c87e81d6a3e8f8a15103e6c1", null ],
     [ "collapse_all", "index_2lib_8h.html#afe6dbec10cc91807f266999eb2a68dfb", null ],
-    [ "dlg_list", "group__gui__dlg.html#ga0124767fd64c34f7f58d0f182573a52d", null ],
     [ "dlg_index", "group__gui__dlg.html#gaf4266da82ada988b3b2482b910ddb15a", null ],
     [ "find_first_message", "index_2lib_8h.html#a8616bd5da51b97ee3d7f18c81e79ce1b", null ],
     [ "find_next_undeleted", "index_2lib_8h.html#a9dacfcb89fcd14cae6bdd61849220ea2", null ],
