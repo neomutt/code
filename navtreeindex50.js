@@ -1,6 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"structCompletionData.html#a3545eef7154b6e4aea4b355ea5bf9525":[1,0,54,5],
 "structCompletionData.html#a76655a797e574f519462c8c05875927f":[1,0,54,0],
 "structCompletionData.html#a91f193b2c990f984c630f0247c9e7472":[1,0,54,2],
 "structCompletionData.html#aa5758465f226fb4363eec2a57ef5856d":[1,0,54,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX50 =
 "structEmailFormatInfo.html":[1,0,87],
 "structEmailFormatInfo.html#a0bbf30f2b3be053b16f450a88319e102":[1,0,87,2],
 "structEmailFormatInfo.html#a1416d92acb2f3225da906cd4ccb81d7a":[1,0,87,0],
-"structEmailFormatInfo.html#a6b2b651b00301de89b93203aebe60203":[1,0,87,1]
+"structEmailFormatInfo.html#a6b2b651b00301de89b93203aebe60203":[1,0,87,1],
+"structEmailFormatInfo.html#a931f6c23564aa27622ec4e276747e850":[1,0,87,3]
 };

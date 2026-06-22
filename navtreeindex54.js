@@ -1,6 +1,5 @@
 var NAVTREEINDEX54 =
 {
-"structMlistFunction.html":[1,0,211],
 "structMlistFunction.html#a56617274283bb974dd5100785b2f01e8":[1,0,211,1],
 "structMlistFunction.html#aa3b9285c05587b08b68e80e58ec364da":[1,0,211,0],
 "structMlistModuleData.html":[1,0,212],
@@ -249,5 +248,6 @@ var NAVTREEINDEX54 =
 "structNotify.html#ab75dfdc2899b7ebaea1658293237bf22":[1,0,242,0],
 "structNotify.html#ac6c35d379fe85d02b4242cbdb516a5e2":[1,0,242,1],
 "structNotifyCallback.html":[1,0,243],
-"structNotifyCallback.html#a08fb4baa3870315c80e1a1a2c0d2a354":[1,0,243,3]
+"structNotifyCallback.html#a08fb4baa3870315c80e1a1a2c0d2a354":[1,0,243,3],
+"structNotifyCallback.html#a310cf079dceac403a8a71fd19c85a487":[1,0,243,1]
 };

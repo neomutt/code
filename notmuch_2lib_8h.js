@@ -5,7 +5,6 @@ var notmuch_2lib_8h =
     [ "nm_db_longrun_init", "notmuch_2lib_8h.html#aca97e4209036f41430d270c44c20cd51", null ],
     [ "nm_email_get_folder", "notmuch_2lib_8h.html#ad4b565dda9a762faf390ee6a5a7022e7", null ],
     [ "nm_email_get_folder_rel_db", "notmuch_2lib_8h.html#a72acf31f947469459b612276f8619ab3", null ],
-    [ "nm_get_all_tags", "notmuch_2lib_8h.html#a424ba19f36b097c879ff65793c8ef1d9", null ],
     [ "nm_message_is_still_queried", "notmuch_2lib_8h.html#ad84349cdd5669f38ce04692c048dcfc8", null ],
     [ "nm_path_probe", "group__mx__path__probe.html#gad7557498adc7575505d1d53c70b64194", null ],
     [ "nm_query_window_available", "notmuch_2lib_8h.html#aae60593aef46b9214e075f66103c956c", null ],

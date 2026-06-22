@@ -1,6 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9":[1,0,18,4],
 "structAutocryptAccount.html":[1,0,19],
 "structAutocryptAccount.html#a1491a84008983c09066e20941cae2171":[1,0,19,0],
 "structAutocryptAccount.html#a99412fab072ae203bca2fcbcaca18495":[1,0,19,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX49 =
 "structCompleteOps.html":[1,0,53],
 "structCompleteOps.html#a362759a7c8bd5d5a507f4282a0b9d7a3":[1,0,53,0],
 "structCompletionData.html":[1,0,54],
-"structCompletionData.html#a2bfd704a3f09f1519bdcb29ef80ef5cb":[1,0,54,4]
+"structCompletionData.html#a2bfd704a3f09f1519bdcb29ef80ef5cb":[1,0,54,4],
+"structCompletionData.html#a3545eef7154b6e4aea4b355ea5bf9525":[1,0,54,5]
 };

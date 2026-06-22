@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-949-g4870ee</span>
+   &#160;<span id="projectnumber">2025-12-11-956-g1154e4</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -451,11 +451,11 @@ $(function(){initNavTree('mutt_2date_8c_source.html',''); initResizable(true); }
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span> </div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>  <span class="keywordtype">char</span> buf[4] = { 0 };</div>
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>  memcpy(buf, s, 3);</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>  uint32_t sv;</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>  uint32_t sv = 0;</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>  memcpy(&amp;sv, buf, <span class="keyword">sizeof</span>(sv));</div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_define" href="memory_8h.html#a13aaf9e9e194ebfd84f90bcf4e264aca">countof</a>(<a class="code hl_variable" href="mutt_2date_8c.html#a461b0ddf34d1b407ddcf91009968358f">Months</a>); i++)</div>
 <div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>  {</div>
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>    uint32_t mv;</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>    uint32_t mv = 0;</div>
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>    memcpy(&amp;mv, <a class="code hl_variable" href="mutt_2date_8c.html#a461b0ddf34d1b407ddcf91009968358f">Months</a>[i], <span class="keyword">sizeof</span>(mv));</div>
 <div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>    <span class="keywordflow">if</span> (sv == mv)</div>
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>      <span class="keywordflow">return</span> i;</div>
@@ -731,191 +731,194 @@ $(function(){initNavTree('mutt_2date_8c_source.html',''); initResizable(true); }
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    tm.tm_year -= 1900;</div>
 <div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span> </div>
 <div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>  <span class="comment">/* Time */</span></div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>  <span class="keywordtype">int</span> hour = 0, min = 0, sec = 0;</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mhour), <span class="stringliteral">&quot;%d&quot;</span>, &amp;hour);</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mminute), <span class="stringliteral">&quot;%d&quot;</span>, &amp;min);</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(msecond) != -1)</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>    sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(msecond), <span class="stringliteral">&quot;%d&quot;</span>, &amp;sec);</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>  <span class="keywordflow">if</span> ((hour &gt; 23) || (min &gt; 59) || (sec &gt; 60))</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>  tm.tm_hour = hour;</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>  tm.tm_min = min;</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>  tm.tm_sec = sec;</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span> </div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  <span class="comment">/* Time zone */</span></div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>  <span class="keywordtype">int</span> zhours = 0;</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>  <span class="keywordtype">int</span> zminutes = 0;</div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>  <span class="keywordtype">bool</span> zoccident = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtz) != -1)</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>  {</div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>    <span class="keywordtype">char</span> direction = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtz), <span class="stringliteral">&quot;%c%02d%02d&quot;</span>, &amp;direction, &amp;zhours, &amp;zminutes);</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>    zoccident = (direction == <span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>  }</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtzobs) != -1)</div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>  {</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structTz.html">Tz</a> *tz = <a class="code hl_function" href="mutt_2date_8c.html#a6e3d63ce76dd4fc2a64fd8150f059ebb">find_tz</a>(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtzobs),</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>                                  <a class="code hl_function" href="regex3_8h.html#a67ed3f37a5cbaab7f957bf5d842a9ff9">mutt_regmatch_len</a>(mtzobs));</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>    <span class="keywordflow">if</span> (tz)</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>    {</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>      <a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a> = tz-&gt;<a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a>;</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>      <a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a> = tz-&gt;<a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a>;</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>      <a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a> = tz-&gt;<a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a>;</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    }</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>  }</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span> </div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>  <span class="keywordflow">if</span> (tz_out)</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>  {</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    tz_out-&gt;<a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a> = <a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a>;</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    tz_out-&gt;<a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a> = <a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a>;</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    tz_out-&gt;<a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a> = <a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a>;</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  }</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span> </div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2date_8c.html#afebb3c39355c12efcf484c5645ace65b">add_tz_offset</a>(<a class="code hl_function" href="mutt_2date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e">mutt_date_make_time</a>(&amp;tm, <span class="keyword">false</span>), <a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a>, <a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a>, <a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a>);</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>}</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>  <span class="keywordtype">int</span> hour = 0;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>  <span class="keywordtype">int</span> min = 0;</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>  <span class="keywordtype">int</span> sec = 0;</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mhour), <span class="stringliteral">&quot;%d&quot;</span>, &amp;hour);</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mminute), <span class="stringliteral">&quot;%d&quot;</span>, &amp;min);</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(msecond) != -1)</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(msecond), <span class="stringliteral">&quot;%d&quot;</span>, &amp;sec);</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>  <span class="keywordflow">if</span> ((hour &gt; 23) || (min &gt; 59) || (sec &gt; 60))</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>  tm.tm_hour = hour;</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>  tm.tm_min = min;</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  tm.tm_sec = sec;</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span> </div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>  <span class="comment">/* Time zone */</span></div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>  <span class="keywordtype">int</span> zhours = 0;</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>  <span class="keywordtype">int</span> zminutes = 0;</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>  <span class="keywordtype">bool</span> zoccident = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtz) != -1)</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>  {</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>    <span class="keywordtype">char</span> direction = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtz), <span class="stringliteral">&quot;%c%02d%02d&quot;</span>, &amp;direction, &amp;zhours, &amp;zminutes);</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    zoccident = (direction == <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>  }</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtzobs) != -1)</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>  {</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structTz.html">Tz</a> *tz = <a class="code hl_function" href="mutt_2date_8c.html#a6e3d63ce76dd4fc2a64fd8150f059ebb">find_tz</a>(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtzobs),</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>                                  <a class="code hl_function" href="regex3_8h.html#a67ed3f37a5cbaab7f957bf5d842a9ff9">mutt_regmatch_len</a>(mtzobs));</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    <span class="keywordflow">if</span> (tz)</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    {</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>      <a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a> = tz-&gt;<a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a>;</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>      <a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a> = tz-&gt;<a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a>;</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>      <a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a> = tz-&gt;<a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a>;</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    }</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>  }</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span> </div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>  <span class="keywordflow">if</span> (tz_out)</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>  {</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    tz_out-&gt;<a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a> = <a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a>;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>    tz_out-&gt;<a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a> = <a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a>;</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>    tz_out-&gt;<a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a> = <a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a>;</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>  }</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span> </div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2date_8c.html#afebb3c39355c12efcf484c5645ace65b">add_tz_offset</a>(<a class="code hl_function" href="mutt_2date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e">mutt_date_make_time</a>(&amp;tm, <span class="keyword">false</span>), <a class="code hl_variable" href="structTz.html#a36e79394164d2eb87797dc51797bfea2">zoccident</a>, <a class="code hl_variable" href="structTz.html#aef24900adb513ba510b97c4c77426caa">zhours</a>, <a class="code hl_variable" href="structTz.html#a1282be686c83afb2659e014b855d9335">zminutes</a>);</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>}</div>
 </div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span></div>
-<div class="foldopen" id="foldopen00812" data-start="{" data-end="}">
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a871b4f63007a26f13156262ff04f0286">  812</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mutt_2date_8c.html#a871b4f63007a26f13156262ff04f0286">mutt_date_make_imap</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf, time_t <a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>)</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>{</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>  <span class="keywordflow">if</span> (!buf)</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span> </div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>  <span class="keyword">struct </span>tm tm = <a class="code hl_function" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a>(<a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>);</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>  <span class="keywordtype">int</span> tz = <a class="code hl_function" href="mutt_2date_8c.html#abba12f7ad4dc9c7e2d836742d360a81e">mutt_date_local_tz</a>(<a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>);</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span> </div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>  tz /= 60;</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span></div>
+<div class="foldopen" id="foldopen00814" data-start="{" data-end="}">
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a871b4f63007a26f13156262ff04f0286">  814</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mutt_2date_8c.html#a871b4f63007a26f13156262ff04f0286">mutt_date_make_imap</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf, time_t <a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>)</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>{</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>  <span class="keywordflow">if</span> (!buf)</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span> </div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>  <span class="keyword">struct </span>tm tm = <a class="code hl_function" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a>(<a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>);</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>  <span class="keywordtype">int</span> tz = <a class="code hl_function" href="mutt_2date_8c.html#abba12f7ad4dc9c7e2d836742d360a81e">mutt_date_local_tz</a>(<a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>);</div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span> </div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%02d-%s-%d %02d:%02d:%02d %+03d%02d&quot;</span>, tm.tm_mday,</div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>                    <a class="code hl_variable" href="mutt_2date_8c.html#a461b0ddf34d1b407ddcf91009968358f">Months</a>[tm.tm_mon], tm.tm_year + 1900, tm.tm_hour, tm.tm_min,</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>                    tm.tm_sec, tz / 60, abs(tz) % 60);</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>}</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  tz /= 60;</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span> </div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%02d-%s-%d %02d:%02d:%02d %+03d%02d&quot;</span>, tm.tm_mday,</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>                    <a class="code hl_variable" href="mutt_2date_8c.html#a461b0ddf34d1b407ddcf91009968358f">Months</a>[tm.tm_mon], tm.tm_year + 1900, tm.tm_hour, tm.tm_min,</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                    tm.tm_sec, tz / 60, abs(tz) % 60);</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>}</div>
 </div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span></div>
-<div class="foldopen" id="foldopen00838" data-start="{" data-end="}">
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a8193091a9ad44eba4b0db60e950c57e6">  838</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mutt_2date_8c.html#a8193091a9ad44eba4b0db60e950c57e6">mutt_date_make_tls</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen, time_t <a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>)</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>{</div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>  <span class="keywordflow">if</span> (!buf)</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span> </div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>  <span class="keyword">struct </span>tm tm = <a class="code hl_function" href="mutt_2date_8c.html#a76f10949abf7521c519bced738be2694">mutt_date_gmtime</a>(<a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>);</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>  <span class="keywordflow">return</span> snprintf(buf, buflen, <span class="stringliteral">&quot;%s, %d %s %d %02d:%02d:%02d UTC&quot;</span>,</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>                  <a class="code hl_variable" href="mutt_2date_8c.html#aa5d24504b23bed6ab0ecb092806303e7">Weekdays</a>[tm.tm_wday], tm.tm_mday, <a class="code hl_variable" href="mutt_2date_8c.html#a461b0ddf34d1b407ddcf91009968358f">Months</a>[tm.tm_mon],</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>                  tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec);</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>}</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span></div>
+<div class="foldopen" id="foldopen00840" data-start="{" data-end="}">
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a8193091a9ad44eba4b0db60e950c57e6">  840</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mutt_2date_8c.html#a8193091a9ad44eba4b0db60e950c57e6">mutt_date_make_tls</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen, time_t <a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>)</div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>{</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>  <span class="keywordflow">if</span> (!buf)</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span> </div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>  <span class="keyword">struct </span>tm tm = <a class="code hl_function" href="mutt_2date_8c.html#a76f10949abf7521c519bced738be2694">mutt_date_gmtime</a>(<a class="code hl_function" href="mutt_2logging_8c.html#a8f6dd6e267d7ced245bd4cdc0dc86f01">timestamp</a>);</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>  <span class="keywordflow">return</span> snprintf(buf, buflen, <span class="stringliteral">&quot;%s, %d %s %d %02d:%02d:%02d UTC&quot;</span>,</div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>                  <a class="code hl_variable" href="mutt_2date_8c.html#aa5d24504b23bed6ab0ecb092806303e7">Weekdays</a>[tm.tm_wday], tm.tm_mday, <a class="code hl_variable" href="mutt_2date_8c.html#a461b0ddf34d1b407ddcf91009968358f">Months</a>[tm.tm_mon],</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>                  tm.tm_year + 1900, tm.tm_hour, tm.tm_min, tm.tm_sec);</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>}</div>
 </div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span></div>
-<div class="foldopen" id="foldopen00855" data-start="{" data-end="}">
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#adf19e8285681d19c7858a66cd0eba84d">  855</a></span>time_t <a class="code hl_function" href="mutt_2date_8c.html#adf19e8285681d19c7858a66cd0eba84d">mutt_date_parse_imap</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *s)</div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>{</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>  <span class="keyword">const</span> regmatch_t *match = <a class="code hl_function" href="prex_8c.html#a204aa135b8b80f39730506b82385612d">mutt_prex_capture</a>(<a class="code hl_enumvalue" href="prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488ab34a6edbc0b95cc71f52dfca3011122d">PREX_IMAP_DATE</a>, s);</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>  <span class="keywordflow">if</span> (!match)</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span> </div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>  <span class="keyword">const</span> regmatch_t *mday = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa124fd2ffca1ff6a91462e556b3fa92a6">PREX_IMAP_DATE_MATCH_DAY</a>];</div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>  <span class="keyword">const</span> regmatch_t *mmonth = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa47cdf4c57d9bce77165cfd1dd3e3287b">PREX_IMAP_DATE_MATCH_MONTH</a>];</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>  <span class="keyword">const</span> regmatch_t *myear = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa0f17178174f9010e9ecf43ab4408dafd">PREX_IMAP_DATE_MATCH_YEAR</a>];</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>  <span class="keyword">const</span> regmatch_t *mtime = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa0d5abd6cd81fd0094712c1579d776a50">PREX_IMAP_DATE_MATCH_TIME</a>];</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>  <span class="keyword">const</span> regmatch_t *mtz = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa232a01729086ce310437c42be156d82c">PREX_IMAP_DATE_MATCH_TZ</a>];</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span> </div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>  <span class="keyword">struct </span>tm tm = { 0 };</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span></div>
+<div class="foldopen" id="foldopen00857" data-start="{" data-end="}">
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#adf19e8285681d19c7858a66cd0eba84d">  857</a></span>time_t <a class="code hl_function" href="mutt_2date_8c.html#adf19e8285681d19c7858a66cd0eba84d">mutt_date_parse_imap</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *s)</div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>{</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>  <span class="keyword">const</span> regmatch_t *match = <a class="code hl_function" href="prex_8c.html#a204aa135b8b80f39730506b82385612d">mutt_prex_capture</a>(<a class="code hl_enumvalue" href="prex_8h.html#a94868f2b3ee14f09fb7b9e236d752488ab34a6edbc0b95cc71f52dfca3011122d">PREX_IMAP_DATE</a>, s);</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>  <span class="keywordflow">if</span> (!match)</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span> </div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>  <span class="keyword">const</span> regmatch_t *mday = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa124fd2ffca1ff6a91462e556b3fa92a6">PREX_IMAP_DATE_MATCH_DAY</a>];</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>  <span class="keyword">const</span> regmatch_t *mmonth = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa47cdf4c57d9bce77165cfd1dd3e3287b">PREX_IMAP_DATE_MATCH_MONTH</a>];</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>  <span class="keyword">const</span> regmatch_t *myear = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa0f17178174f9010e9ecf43ab4408dafd">PREX_IMAP_DATE_MATCH_YEAR</a>];</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>  <span class="keyword">const</span> regmatch_t *mtime = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa0d5abd6cd81fd0094712c1579d776a50">PREX_IMAP_DATE_MATCH_TIME</a>];</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>  <span class="keyword">const</span> regmatch_t *mtz = &amp;match[<a class="code hl_enumvalue" href="prex_8h.html#a4c76b96e86ac45e4d02a4d2047878c5aa232a01729086ce310437c42be156d82c">PREX_IMAP_DATE_MATCH_TZ</a>];</div>
 <div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span> </div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mday), <span class="stringliteral">&quot; %d&quot;</span>, &amp;tm.tm_mday);</div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>  tm.tm_mon = <a class="code hl_function" href="mutt_2date_8c.html#a58c8238ef7c9cc33ee04f5a88dbe5559">mutt_date_check_month</a>(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mmonth));</div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(myear), <span class="stringliteral">&quot;%d&quot;</span>, &amp;tm.tm_year);</div>
-<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>  tm.tm_year -= 1900;</div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtime), <span class="stringliteral">&quot;%d:%d:%d&quot;</span>, &amp;tm.tm_hour, &amp;tm.tm_min, &amp;tm.tm_sec);</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span> </div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>  <span class="keywordtype">char</span> direction = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>  <span class="keywordtype">int</span> zhours = 0, zminutes = 0;</div>
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtz), <span class="stringliteral">&quot;%c%02d%02d&quot;</span>, &amp;direction, &amp;zhours, &amp;zminutes);</div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>  <span class="keywordtype">bool</span> zoccident = (direction == <span class="charliteral">&#39;-&#39;</span>);</div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span> </div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2date_8c.html#afebb3c39355c12efcf484c5645ace65b">add_tz_offset</a>(<a class="code hl_function" href="mutt_2date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e">mutt_date_make_time</a>(&amp;tm, <span class="keyword">false</span>), zoccident, zhours, zminutes);</div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>}</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>  <span class="keyword">struct </span>tm tm = { 0 };</div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span> </div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mday), <span class="stringliteral">&quot; %d&quot;</span>, &amp;tm.tm_mday);</div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>  tm.tm_mon = <a class="code hl_function" href="mutt_2date_8c.html#a58c8238ef7c9cc33ee04f5a88dbe5559">mutt_date_check_month</a>(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mmonth));</div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(myear), <span class="stringliteral">&quot;%d&quot;</span>, &amp;tm.tm_year);</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>  tm.tm_year -= 1900;</div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtime), <span class="stringliteral">&quot;%d:%d:%d&quot;</span>, &amp;tm.tm_hour, &amp;tm.tm_min, &amp;tm.tm_sec);</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span> </div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>  <span class="keywordtype">char</span> direction = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>  <span class="keywordtype">int</span> zhours = 0;</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>  <span class="keywordtype">int</span> zminutes = 0;</div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>  sscanf(s + <a class="code hl_function" href="regex3_8h.html#ace9a8836dfa6c039cb619573c60e253f">mutt_regmatch_start</a>(mtz), <span class="stringliteral">&quot;%c%02d%02d&quot;</span>, &amp;direction, &amp;zhours, &amp;zminutes);</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>  <span class="keywordtype">bool</span> zoccident = (direction == <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span> </div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2date_8c.html#afebb3c39355c12efcf484c5645ace65b">add_tz_offset</a>(<a class="code hl_function" href="mutt_2date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e">mutt_date_make_time</a>(&amp;tm, <span class="keyword">false</span>), zoccident, zhours, zminutes);</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>}</div>
 </div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span></div>
-<div class="foldopen" id="foldopen00891" data-start="{" data-end="}">
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">  891</a></span>time_t <a class="code hl_function" href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a>(time_t now, time_t timeout)</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>{</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>  <span class="keywordflow">if</span> (timeout &lt; 0)</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>    <span class="keywordflow">return</span> now;</div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span> </div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>  <span class="keywordflow">if</span> ((<a class="code hl_define" href="date_8h.html#a2952848347472d9fade4cde6ea2cb4a9">TIME_T_MAX</a> - now) &lt; timeout)</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="date_8h.html#a2952848347472d9fade4cde6ea2cb4a9">TIME_T_MAX</a>;</div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span></div>
+<div class="foldopen" id="foldopen00894" data-start="{" data-end="}">
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">  894</a></span>time_t <a class="code hl_function" href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a>(time_t now, time_t timeout)</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>{</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>  <span class="keywordflow">if</span> (timeout &lt; 0)</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>    <span class="keywordflow">return</span> now;</div>
 <div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span> </div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>  <span class="keywordflow">return</span> now + timeout;</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>}</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>  <span class="keywordflow">if</span> ((<a class="code hl_define" href="date_8h.html#a2952848347472d9fade4cde6ea2cb4a9">TIME_T_MAX</a> - now) &lt; timeout)</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="date_8h.html#a2952848347472d9fade4cde6ea2cb4a9">TIME_T_MAX</a>;</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span> </div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <span class="keywordflow">return</span> now + timeout;</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>}</div>
 </div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span></div>
-<div class="foldopen" id="foldopen00907" data-start="{" data-end="}">
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">  907</a></span><span class="keyword">struct </span>tm <a class="code hl_function" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a>(time_t t)</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>{</div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>  <span class="keyword">struct </span>tm tm = { 0 };</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span> </div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>  <span class="keyword">struct </span>tm *ret = localtime_r(&amp;t, &amp;tm);</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  <span class="keywordflow">if</span> (!ret)</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>  {</div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Could not convert time_t via localtime_r() to struct tm: time_t = %jd\n&quot;</span>,</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>               (intmax_t) t);</div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keyword">struct </span>tm default_tm = { 0 }; <span class="comment">// 1970-01-01 00:00:00</span></div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    mktime(&amp;default_tm); <span class="comment">// update derived fields making tm into a valid tm.</span></div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>    tm = default_tm;</div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>  }</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>  <span class="keywordflow">return</span> tm;</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>}</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span></div>
+<div class="foldopen" id="foldopen00910" data-start="{" data-end="}">
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">  910</a></span><span class="keyword">struct </span>tm <a class="code hl_function" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a>(time_t t)</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>{</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  <span class="keyword">struct </span>tm tm = { 0 };</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>  <span class="keyword">struct </span>tm *ret = localtime_r(&amp;t, &amp;tm);</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>  <span class="keywordflow">if</span> (!ret)</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>  {</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Could not convert time_t via localtime_r() to struct tm: time_t = %jd\n&quot;</span>,</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>               (intmax_t) t);</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <span class="keyword">struct </span>tm default_tm = { 0 }; <span class="comment">// 1970-01-01 00:00:00</span></div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    mktime(&amp;default_tm); <span class="comment">// update derived fields making tm into a valid tm.</span></div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    tm = default_tm;</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>  }</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>  <span class="keywordflow">return</span> tm;</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>}</div>
 </div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span></div>
-<div class="foldopen" id="foldopen00928" data-start="{" data-end="}">
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a76f10949abf7521c519bced738be2694">  928</a></span><span class="keyword">struct </span>tm <a class="code hl_function" href="mutt_2date_8c.html#a76f10949abf7521c519bced738be2694">mutt_date_gmtime</a>(time_t t)</div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>{</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>  <span class="keyword">struct </span>tm tm = { 0 };</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span> </div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  <span class="keyword">struct </span>tm *ret = gmtime_r(&amp;t, &amp;tm);</div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>  <span class="keywordflow">if</span> (!ret)</div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>  {</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Could not convert time_t via gmtime_r() to struct tm: time_t = %jd\n&quot;</span>,</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>               (intmax_t) t);</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>    <span class="keyword">struct </span>tm default_tm = { 0 }; <span class="comment">// 1970-01-01 00:00:00</span></div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>    mktime(&amp;default_tm); <span class="comment">// update derived fields making tm into a valid tm.</span></div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>    tm = default_tm;</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>  }</div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>  <span class="keywordflow">return</span> tm;</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>}</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span></div>
+<div class="foldopen" id="foldopen00931" data-start="{" data-end="}">
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a76f10949abf7521c519bced738be2694">  931</a></span><span class="keyword">struct </span>tm <a class="code hl_function" href="mutt_2date_8c.html#a76f10949abf7521c519bced738be2694">mutt_date_gmtime</a>(time_t t)</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>{</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>  <span class="keyword">struct </span>tm tm = { 0 };</div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span> </div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>  <span class="keyword">struct </span>tm *ret = gmtime_r(&amp;t, &amp;tm);</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>  <span class="keywordflow">if</span> (!ret)</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>  {</div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Could not convert time_t via gmtime_r() to struct tm: time_t = %jd\n&quot;</span>,</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>               (intmax_t) t);</div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>    <span class="keyword">struct </span>tm default_tm = { 0 }; <span class="comment">// 1970-01-01 00:00:00</span></div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>    mktime(&amp;default_tm); <span class="comment">// update derived fields making tm into a valid tm.</span></div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    tm = default_tm;</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>  }</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>  <span class="keywordflow">return</span> tm;</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>}</div>
 </div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span></div>
-<div class="foldopen" id="foldopen00952" data-start="{" data-end="}">
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a0fab1956f93fd1be1a2dbfb740788ef7">  952</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="mutt_2date_8c.html#a0fab1956f93fd1be1a2dbfb740788ef7">mutt_date_localtime_format</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, time_t t)</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>{</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>  <span class="keywordflow">if</span> (!buf || !format)</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span> </div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>  <span class="keyword">struct </span>tm tm = <a class="code hl_function" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a>(t);</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>  <span class="keywordflow">return</span> strftime(buf, buflen, format, &amp;tm);</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>}</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span></div>
+<div class="foldopen" id="foldopen00955" data-start="{" data-end="}">
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a0fab1956f93fd1be1a2dbfb740788ef7">  955</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="mutt_2date_8c.html#a0fab1956f93fd1be1a2dbfb740788ef7">mutt_date_localtime_format</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen, <span class="keyword">const</span> <span class="keywordtype">char</span> *format, time_t t)</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>{</div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>  <span class="keywordflow">if</span> (!buf || !format)</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span> </div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  <span class="keyword">struct </span>tm tm = <a class="code hl_function" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a>(t);</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>  <span class="keywordflow">return</span> strftime(buf, buflen, format, &amp;tm);</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>}</div>
 </div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span></div>
-<div class="foldopen" id="foldopen00970" data-start="{" data-end="}">
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a8011556463c04debd5e954b0dc345f51">  970</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="mutt_2date_8c.html#a8011556463c04debd5e954b0dc345f51">mutt_date_localtime_format_locale</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen,</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>                                         <span class="keyword">const</span> <span class="keywordtype">char</span> *format, time_t t, locale_t loc)</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>{</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  <span class="keywordflow">if</span> (!buf || !format)</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>  <span class="keyword">struct </span>tm tm = <a class="code hl_function" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a>(t);</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>  <span class="keywordflow">return</span> strftime_l(buf, buflen, format, &amp;tm, loc);</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>}</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span></div>
+<div class="foldopen" id="foldopen00973" data-start="{" data-end="}">
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a8011556463c04debd5e954b0dc345f51">  973</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="mutt_2date_8c.html#a8011556463c04debd5e954b0dc345f51">mutt_date_localtime_format_locale</a>(<span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen,</div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>                                         <span class="keyword">const</span> <span class="keywordtype">char</span> *format, time_t t, locale_t loc)</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>{</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>  <span class="keywordflow">if</span> (!buf || !format)</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span> </div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>  <span class="keyword">struct </span>tm tm = <a class="code hl_function" href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a>(t);</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>  <span class="keywordflow">return</span> strftime_l(buf, buflen, format, &amp;tm, loc);</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>}</div>
 </div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span></div>
-<div class="foldopen" id="foldopen00984" data-start="{" data-end="}">
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a4a5d6b65c8b5b0a07811ef64dc60c1a3">  984</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="mutt_2date_8c.html#a4a5d6b65c8b5b0a07811ef64dc60c1a3">mutt_date_sleep_ms</a>(<span class="keywordtype">size_t</span> ms)</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>{</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>  <span class="keyword">const</span> <span class="keyword">struct </span>timespec sleep = {</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>    .tv_sec = ms / 1000,</div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>    .tv_nsec = (ms % 1000) * 1000000UL,</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>  };</div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>  nanosleep(&amp;sleep, NULL);</div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>}</div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span></div>
+<div class="foldopen" id="foldopen00987" data-start="{" data-end="}">
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno"><a class="line" href="mutt_2date_8c.html#a4a5d6b65c8b5b0a07811ef64dc60c1a3">  987</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="mutt_2date_8c.html#a4a5d6b65c8b5b0a07811ef64dc60c1a3">mutt_date_sleep_ms</a>(<span class="keywordtype">size_t</span> ms)</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>{</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>  <span class="keyword">const</span> <span class="keyword">struct </span>timespec sleep = {</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>    .tv_sec = ms / 1000,</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>    .tv_nsec = (ms % 1000) * 1000000UL,</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>  };</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  nanosleep(&amp;sleep, NULL);</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>}</div>
 </div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00168">buffer.c:168</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a0849b79217aad19e4bf9381d532d59d1"><div class="ttname"><a href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a></div><div class="ttdeci">int buf_add_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string appending a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00211">buffer.c:211</a></div></div>
@@ -926,37 +929,37 @@ $(function(){initNavTree('mutt_2date_8c_source.html',''); initResizable(true); }
 <div class="ttc" id="adate_8h_html_a2952848347472d9fade4cde6ea2cb4a9"><div class="ttname"><a href="date_8h.html#a2952848347472d9fade4cde6ea2cb4a9">TIME_T_MAX</a></div><div class="ttdeci">#define TIME_T_MAX</div><div class="ttdoc">Maximum value for a time_t.</div><div class="ttdef"><b>Definition</b> <a href="date_8h_source.html#l00040">date.h:40</a></div></div>
 <div class="ttc" id="adate_8h_html_acde7b0b4db45970eec83ef26b90e9e22"><div class="ttname"><a href="date_8h.html#acde7b0b4db45970eec83ef26b90e9e22">TIME_T_MIN</a></div><div class="ttdeci">#define TIME_T_MIN</div><div class="ttdoc">Minimum value for a time_t.</div><div class="ttdef"><b>Definition</b> <a href="date_8h_source.html#l00042">date.h:42</a></div></div>
 <div class="ttc" id="aeqi_8h_html"><div class="ttname"><a href="eqi_8h.html">eqi.h</a></div><div class="ttdoc">Case-insensitive fixed-chunk comparisons.</div></div>
-<div class="ttc" id="aeqi_8h_html_a8058f110e504fe7c58007856cc3d0163"><div class="ttname"><a href="eqi_8h.html#a8058f110e504fe7c58007856cc3d0163">eqi4</a></div><div class="ttdeci">static bool eqi4(const char *a, const char b[4])</div><div class="ttdoc">Compare two 4-byte strings, ignoring case - See: Case-insensitive fixed-chunk comparisons.</div><div class="ttdef"><b>Definition</b> <a href="eqi_8h_source.html#l00106">eqi.h:106</a></div></div>
+<div class="ttc" id="aeqi_8h_html_a8058f110e504fe7c58007856cc3d0163"><div class="ttname"><a href="eqi_8h.html#a8058f110e504fe7c58007856cc3d0163">eqi4</a></div><div class="ttdeci">static bool eqi4(const char *a, const char b[4])</div><div class="ttdoc">Compare two 4-byte strings, ignoring case - See: Case-insensitive fixed-chunk comparisons.</div><div class="ttdef"><b>Definition</b> <a href="eqi_8h_source.html#l00107">eqi.h:107</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gafaa521ab22db877ccf1b87e679e1b43e"><div class="ttname"><a href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a></div><div class="ttdeci">#define mutt_perror(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00095">logging2.h:95</a></div></div>
 <div class="ttc" id="alogging2_8h_html"><div class="ttname"><a href="logging2_8h.html">logging2.h</a></div><div class="ttdoc">Logging Dispatcher.</div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a></div><div class="ttdeci">@ LL_DEBUG2</div><div class="ttdoc">Log at debug level 2.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00046">logging2.h:46</a></div></div>
 <div class="ttc" id="alogging2_8h_html_aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5"><div class="ttname"><a href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a></div><div class="ttdeci">@ LL_DEBUG1</div><div class="ttdoc">Log at debug level 1.</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00045">logging2.h:45</a></div></div>
 <div class="ttc" id="amemory_8h_html_a13aaf9e9e194ebfd84f90bcf4e264aca"><div class="ttname"><a href="memory_8h.html#a13aaf9e9e194ebfd84f90bcf4e264aca">countof</a></div><div class="ttdeci">#define countof(x)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00049">memory.h:49</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_a0d0711d4e480f33786b1c936bf2fd6ba"><div class="ttname"><a href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a></div><div class="ttdeci">struct tm mutt_date_localtime(time_t t)</div><div class="ttdoc">Converts calendar time to a broken-down time structure expressed in user timezone.</div><div class="ttdef"><b>Definition</b> <a href="#l00907">date.c:907</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_a0fab1956f93fd1be1a2dbfb740788ef7"><div class="ttname"><a href="mutt_2date_8c.html#a0fab1956f93fd1be1a2dbfb740788ef7">mutt_date_localtime_format</a></div><div class="ttdeci">size_t mutt_date_localtime_format(char *buf, size_t buflen, const char *format, time_t t)</div><div class="ttdoc">Format localtime.</div><div class="ttdef"><b>Definition</b> <a href="#l00952">date.c:952</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_a0d0711d4e480f33786b1c936bf2fd6ba"><div class="ttname"><a href="mutt_2date_8c.html#a0d0711d4e480f33786b1c936bf2fd6ba">mutt_date_localtime</a></div><div class="ttdeci">struct tm mutt_date_localtime(time_t t)</div><div class="ttdoc">Converts calendar time to a broken-down time structure expressed in user timezone.</div><div class="ttdef"><b>Definition</b> <a href="#l00910">date.c:910</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_a0fab1956f93fd1be1a2dbfb740788ef7"><div class="ttname"><a href="mutt_2date_8c.html#a0fab1956f93fd1be1a2dbfb740788ef7">mutt_date_localtime_format</a></div><div class="ttdeci">size_t mutt_date_localtime_format(char *buf, size_t buflen, const char *format, time_t t)</div><div class="ttdoc">Format localtime.</div><div class="ttdef"><b>Definition</b> <a href="#l00955">date.c:955</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a101dfcb381a53d5bc3191347566be53b"><div class="ttname"><a href="mutt_2date_8c.html#a101dfcb381a53d5bc3191347566be53b">mutt_date_now_ms</a></div><div class="ttdeci">uint64_t mutt_date_now_ms(void)</div><div class="ttdoc">Return the number of milliseconds since the Unix epoch.</div><div class="ttdef"><b>Definition</b> <a href="#l00466">date.c:466</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a387e18e72b5a6858a1e490567153cf5e"><div class="ttname"><a href="mutt_2date_8c.html#a387e18e72b5a6858a1e490567153cf5e">compute_tz</a></div><div class="ttdeci">static int compute_tz(time_t g, struct tm *utc)</div><div class="ttdoc">Calculate the number of seconds east of UTC.</div><div class="ttdef"><b>Definition</b> <a href="#l00141">date.c:141</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a394b85b0f5ce946eed457c6720611e0d"><div class="ttname"><a href="mutt_2date_8c.html#a394b85b0f5ce946eed457c6720611e0d">mutt_date_make_date</a></div><div class="ttdeci">void mutt_date_make_date(struct Buffer *buf, bool local)</div><div class="ttdoc">Write a date in RFC822 format to a buffer.</div><div class="ttdef"><b>Definition</b> <a href="#l00398">date.c:398</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a3bc7cd3ae8f7d3fad8f5c4d10691bc5e"><div class="ttname"><a href="mutt_2date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e">mutt_date_make_time</a></div><div class="ttdeci">time_t mutt_date_make_time(struct tm *t, bool local)</div><div class="ttdoc">Convert struct tm to time_t</div><div class="ttdef"><b>Definition</b> <a href="#l00243">date.c:243</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a45e62c4330ad244849f9214984371a34"><div class="ttname"><a href="mutt_2date_8c.html#a45e62c4330ad244849f9214984371a34">parse_small_uint</a></div><div class="ttdeci">static int parse_small_uint(const char *str, const char *end, int *val)</div><div class="ttdoc">Parse a positive integer of at most 5 digits.</div><div class="ttdef"><b>Definition</b> <a href="#l00508">date.c:508</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a461b0ddf34d1b407ddcf91009968358f"><div class="ttname"><a href="mutt_2date_8c.html#a461b0ddf34d1b407ddcf91009968358f">Months</a></div><div class="ttdeci">static const char *const Months[]</div><div class="ttdoc">Months of the year (abbreviated)</div><div class="ttdef"><b>Definition</b> <a href="#l00068">date.c:68</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_a4a5d6b65c8b5b0a07811ef64dc60c1a3"><div class="ttname"><a href="mutt_2date_8c.html#a4a5d6b65c8b5b0a07811ef64dc60c1a3">mutt_date_sleep_ms</a></div><div class="ttdeci">void mutt_date_sleep_ms(size_t ms)</div><div class="ttdoc">Sleep for milliseconds.</div><div class="ttdef"><b>Definition</b> <a href="#l00984">date.c:984</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_a4a5d6b65c8b5b0a07811ef64dc60c1a3"><div class="ttname"><a href="mutt_2date_8c.html#a4a5d6b65c8b5b0a07811ef64dc60c1a3">mutt_date_sleep_ms</a></div><div class="ttdeci">void mutt_date_sleep_ms(size_t ms)</div><div class="ttdoc">Sleep for milliseconds.</div><div class="ttdef"><b>Definition</b> <a href="#l00987">date.c:987</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a58c8238ef7c9cc33ee04f5a88dbe5559"><div class="ttname"><a href="mutt_2date_8c.html#a58c8238ef7c9cc33ee04f5a88dbe5559">mutt_date_check_month</a></div><div class="ttdeci">int mutt_date_check_month(const char *s)</div><div class="ttdoc">Is the string a valid month name.</div><div class="ttdef"><b>Definition</b> <a href="#l00433">date.c:433</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a6e3d63ce76dd4fc2a64fd8150f059ebb"><div class="ttname"><a href="mutt_2date_8c.html#a6e3d63ce76dd4fc2a64fd8150f059ebb">find_tz</a></div><div class="ttdeci">static const struct Tz * find_tz(const char *s, size_t len)</div><div class="ttdoc">Look up a timezone.</div><div class="ttdef"><b>Definition</b> <a href="#l00188">date.c:188</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_a76f10949abf7521c519bced738be2694"><div class="ttname"><a href="mutt_2date_8c.html#a76f10949abf7521c519bced738be2694">mutt_date_gmtime</a></div><div class="ttdeci">struct tm mutt_date_gmtime(time_t t)</div><div class="ttdoc">Converts calendar time to a broken-down time structure expressed in UTC timezone.</div><div class="ttdef"><b>Definition</b> <a href="#l00928">date.c:928</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_a8011556463c04debd5e954b0dc345f51"><div class="ttname"><a href="mutt_2date_8c.html#a8011556463c04debd5e954b0dc345f51">mutt_date_localtime_format_locale</a></div><div class="ttdeci">size_t mutt_date_localtime_format_locale(char *buf, size_t buflen, const char *format, time_t t, locale_t loc)</div><div class="ttdoc">Format localtime using a given locale.</div><div class="ttdef"><b>Definition</b> <a href="#l00970">date.c:970</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_a8193091a9ad44eba4b0db60e950c57e6"><div class="ttname"><a href="mutt_2date_8c.html#a8193091a9ad44eba4b0db60e950c57e6">mutt_date_make_tls</a></div><div class="ttdeci">int mutt_date_make_tls(char *buf, size_t buflen, time_t timestamp)</div><div class="ttdoc">Format date in TLS certificate verification style.</div><div class="ttdef"><b>Definition</b> <a href="#l00838">date.c:838</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_a76f10949abf7521c519bced738be2694"><div class="ttname"><a href="mutt_2date_8c.html#a76f10949abf7521c519bced738be2694">mutt_date_gmtime</a></div><div class="ttdeci">struct tm mutt_date_gmtime(time_t t)</div><div class="ttdoc">Converts calendar time to a broken-down time structure expressed in UTC timezone.</div><div class="ttdef"><b>Definition</b> <a href="#l00931">date.c:931</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_a8011556463c04debd5e954b0dc345f51"><div class="ttname"><a href="mutt_2date_8c.html#a8011556463c04debd5e954b0dc345f51">mutt_date_localtime_format_locale</a></div><div class="ttdeci">size_t mutt_date_localtime_format_locale(char *buf, size_t buflen, const char *format, time_t t, locale_t loc)</div><div class="ttdoc">Format localtime using a given locale.</div><div class="ttdef"><b>Definition</b> <a href="#l00973">date.c:973</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_a8193091a9ad44eba4b0db60e950c57e6"><div class="ttname"><a href="mutt_2date_8c.html#a8193091a9ad44eba4b0db60e950c57e6">mutt_date_make_tls</a></div><div class="ttdeci">int mutt_date_make_tls(char *buf, size_t buflen, time_t timestamp)</div><div class="ttdoc">Format date in TLS certificate verification style.</div><div class="ttdef"><b>Definition</b> <a href="#l00840">date.c:840</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_a81c37d1f78534423e7e2f038c4a4e120"><div class="ttname"><a href="mutt_2date_8c.html#a81c37d1f78534423e7e2f038c4a4e120">is_leap_year_feb</a></div><div class="ttdeci">static int is_leap_year_feb(const struct tm *tm)</div><div class="ttdoc">Is a given February in a leap year.</div><div class="ttdef"><b>Definition</b> <a href="#l00203">date.c:203</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_a871b4f63007a26f13156262ff04f0286"><div class="ttname"><a href="mutt_2date_8c.html#a871b4f63007a26f13156262ff04f0286">mutt_date_make_imap</a></div><div class="ttdeci">int mutt_date_make_imap(struct Buffer *buf, time_t timestamp)</div><div class="ttdoc">Format date in IMAP style: DD-MMM-YYYY HH:MM:SS +ZZzz.</div><div class="ttdef"><b>Definition</b> <a href="#l00812">date.c:812</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_a871b4f63007a26f13156262ff04f0286"><div class="ttname"><a href="mutt_2date_8c.html#a871b4f63007a26f13156262ff04f0286">mutt_date_make_imap</a></div><div class="ttdeci">int mutt_date_make_imap(struct Buffer *buf, time_t timestamp)</div><div class="ttdoc">Format date in IMAP style: DD-MMM-YYYY HH:MM:SS +ZZzz.</div><div class="ttdef"><b>Definition</b> <a href="#l00814">date.c:814</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_aa5d24504b23bed6ab0ecb092806303e7"><div class="ttname"><a href="mutt_2date_8c.html#aa5d24504b23bed6ab0ecb092806303e7">Weekdays</a></div><div class="ttdeci">static const char *const Weekdays[]</div><div class="ttdoc">Day of the week (abbreviated)</div><div class="ttdef"><b>Definition</b> <a href="#l00061">date.c:61</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_aad4023e562d394d9f7e2d13afe5f6c9a"><div class="ttname"><a href="mutt_2date_8c.html#aad4023e562d394d9f7e2d13afe5f6c9a">mutt_date_parse_rfc5322_strict</a></div><div class="ttdeci">static time_t mutt_date_parse_rfc5322_strict(const char *s, struct Tz *tz_out)</div><div class="ttdoc">Parse a date string in RFC822 format.</div><div class="ttdef"><b>Definition</b> <a href="#l00538">date.c:538</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_abba12f7ad4dc9c7e2d836742d360a81e"><div class="ttname"><a href="mutt_2date_8c.html#abba12f7ad4dc9c7e2d836742d360a81e">mutt_date_local_tz</a></div><div class="ttdeci">int mutt_date_local_tz(time_t t)</div><div class="ttdoc">Calculate the local timezone in seconds east of UTC.</div><div class="ttdef"><b>Definition</b> <a href="#l00220">date.c:220</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_ac0abb4d8ad7cd26e1dea5ac43a20a329"><div class="ttname"><a href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a></div><div class="ttdeci">time_t mutt_date_add_timeout(time_t now, time_t timeout)</div><div class="ttdoc">Safely add a timeout to a given time_t value.</div><div class="ttdef"><b>Definition</b> <a href="#l00891">date.c:891</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_ac0abb4d8ad7cd26e1dea5ac43a20a329"><div class="ttname"><a href="mutt_2date_8c.html#ac0abb4d8ad7cd26e1dea5ac43a20a329">mutt_date_add_timeout</a></div><div class="ttdeci">time_t mutt_date_add_timeout(time_t now, time_t timeout)</div><div class="ttdoc">Safely add a timeout to a given time_t value.</div><div class="ttdef"><b>Definition</b> <a href="#l00894">date.c:894</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_acf6c086a99210f984154a01727d8026d"><div class="ttname"><a href="mutt_2date_8c.html#acf6c086a99210f984154a01727d8026d">TimeZones</a></div><div class="ttdeci">static const struct Tz TimeZones[]</div><div class="ttdoc">Lookup table of Time Zones.</div><div class="ttdef"><b>Definition</b> <a href="#l00078">date.c:78</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_ad1e6304a91c7b6f3c266a9b17c1740fe"><div class="ttname"><a href="mutt_2date_8c.html#ad1e6304a91c7b6f3c266a9b17c1740fe">mutt_date_now</a></div><div class="ttdeci">time_t mutt_date_now(void)</div><div class="ttdoc">Return the number of seconds since the Unix epoch.</div><div class="ttdef"><b>Definition</b> <a href="#l00457">date.c:457</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_ad8aaf5118148ed8f6708f32bfab3146f"><div class="ttname"><a href="mutt_2date_8c.html#ad8aaf5118148ed8f6708f32bfab3146f">mutt_date_parse_date</a></div><div class="ttdeci">time_t mutt_date_parse_date(const char *s, struct Tz *tz_out)</div><div class="ttdoc">Parse a date string in RFC822 format.</div><div class="ttdef"><b>Definition</b> <a href="#l00717">date.c:717</a></div></div>
-<div class="ttc" id="amutt_2date_8c_html_adf19e8285681d19c7858a66cd0eba84d"><div class="ttname"><a href="mutt_2date_8c.html#adf19e8285681d19c7858a66cd0eba84d">mutt_date_parse_imap</a></div><div class="ttdeci">time_t mutt_date_parse_imap(const char *s)</div><div class="ttdoc">Parse date of the form: DD-MMM-YYYY HH:MM:SS +ZZzz.</div><div class="ttdef"><b>Definition</b> <a href="#l00855">date.c:855</a></div></div>
+<div class="ttc" id="amutt_2date_8c_html_adf19e8285681d19c7858a66cd0eba84d"><div class="ttname"><a href="mutt_2date_8c.html#adf19e8285681d19c7858a66cd0eba84d">mutt_date_parse_imap</a></div><div class="ttdeci">time_t mutt_date_parse_imap(const char *s)</div><div class="ttdoc">Parse date of the form: DD-MMM-YYYY HH:MM:SS +ZZzz.</div><div class="ttdef"><b>Definition</b> <a href="#l00857">date.c:857</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_ae098e85ce5035180d82f99c5e5358d18"><div class="ttname"><a href="mutt_2date_8c.html#ae098e85ce5035180d82f99c5e5358d18">mutt_time_now</a></div><div class="ttdeci">void mutt_time_now(struct timespec *tp)</div><div class="ttdoc">Set the provided time field to the current time.</div><div class="ttdef"><b>Definition</b> <a href="#l00481">date.c:481</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_ae62f60a70955bfdf32b669f4cac02571"><div class="ttname"><a href="mutt_2date_8c.html#ae62f60a70955bfdf32b669f4cac02571">mutt_date_normalize_time</a></div><div class="ttdeci">void mutt_date_normalize_time(struct tm *tm)</div><div class="ttdoc">Fix the contents of a struct tm.</div><div class="ttdef"><b>Definition</b> <a href="#l00311">date.c:311</a></div></div>
 <div class="ttc" id="amutt_2date_8c_html_afebb3c39355c12efcf484c5645ace65b"><div class="ttname"><a href="mutt_2date_8c.html#afebb3c39355c12efcf484c5645ace65b">add_tz_offset</a></div><div class="ttdeci">static time_t add_tz_offset(time_t t, bool w, time_t h, time_t m)</div><div class="ttdoc">Compute and add a timezone offset to an UTC time.</div><div class="ttdef"><b>Definition</b> <a href="#l00173">date.c:173</a></div></div>

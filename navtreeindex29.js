@@ -1,5 +1,6 @@
 var NAVTREEINDEX29 =
 {
+"long_8c.html":[2,0,13,12],
 "long_8c.html#a3719b195acce72f98e46fc5aad0e06ec":[2,0,13,12,8],
 "long_8c_source.html":[2,0,13,12],
 "lua_2commands_8c.html":[2,0,32,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX29 =
 "main_8c.html#a72d727271a09797117e369c669551aa9":[2,0,59,15],
 "main_8c.html#a7a8d4146626540e7842f98c0f5613e0c":[2,0,59,13],
 "main_8c.html#a7caa1b4eff42d8c094e4d99ddc7ab2be":[2,0,59,39],
-"main_8c.html#a840a86c166d18dbc244ad3e854cebd23":[2,0,59,56],
-"main_8c.html#a8922e9d4e5253ec07fc732f4a35e446a":[2,0,59,35]
+"main_8c.html#a840a86c166d18dbc244ad3e854cebd23":[2,0,59,56]
 };

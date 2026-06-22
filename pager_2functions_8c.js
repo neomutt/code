@@ -20,6 +20,7 @@ var pager_2functions_8c =
     [ "pager_skip_quoted_once", "pager_2functions_8c.html#a672bd009ad5787de55ef40249885a637", null ],
     [ "op_pager_skip_quoted", "group__pager__function__api.html#ga069ce763f624e8ee55fb48bf8ac11289", null ],
     [ "op_exit", "group__pager__function__api.html#gaf88d9c7576b6fe7162113b93076e0fbf", null ],
+    [ "op_quit", "group__pager__function__api.html#ga7f2c0227b06591136ad9eb3c5495bbf2", null ],
     [ "op_help", "group__pager__function__api.html#ga302a81ee8709e7638e609066d8a010bb", null ],
     [ "op_save", "group__pager__function__api.html#gaf6b93a9a5767beeb648a1b110581024b", null ],
     [ "op_search_toggle", "group__pager__function__api.html#ga5c18aaf7ae3bd8afb1480b9c4d04d6cd", null ],

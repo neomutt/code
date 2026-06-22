@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-949-g4870ee</span>
+   &#160;<span id="projectnumber">2025-12-11-956-g1154e4</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -263,42 +263,41 @@ $(function(){initNavTree('convert_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>{</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keywordtype">char</span> **tcode = NULL;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="keywordtype">size_t</span> rc;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <span class="keywordtype">int</span> cn;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <span class="keywordtype">int</span> cn = 0;</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  <span class="comment">/* Copy them */</span></div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  tcode = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(tocodes-&gt;<a class="code hl_variable" href="structSlist.html#a7ad6a474ee1f2eeb00367916567fb5a6">count</a>, <span class="keywordtype">char</span> *);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  np = NULL;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  cn = 0;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;tocodes-&gt;<a class="code hl_variable" href="structSlist.html#a6abed005cd7946996bcf80e0daa53c3b">head</a>, entries)</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    tcode[cn++] = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  rc = <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>;</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  np = NULL;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  cn = 0;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;fromcodes-&gt;<a class="code hl_variable" href="structSlist.html#a6abed005cd7946996bcf80e0daa53c3b">head</a>, entries)</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="comment">/* Try each fromcode in turn */</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    rc = <a class="code hl_function" href="convert_8c.html#ac5f9c44bbd16a77a89e0ab92f16983ca">mutt_convert_file_to</a>(fp, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>, tocodes, &amp;cn, info);</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">if</span> (rc != <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>)</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      *fromcode = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      *tocode = tcode[cn];</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      tcode[cn] = 0;</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    }</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  }</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <span class="comment">/* Free memory */</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <span class="keywordflow">for</span> (cn = 0; cn &lt; tocodes-&gt;<a class="code hl_variable" href="structSlist.html#a7ad6a474ee1f2eeb00367916567fb5a6">count</a>; cn++)</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;tcode[cn]);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;tcode);</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>}</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;tocodes-&gt;<a class="code hl_variable" href="structSlist.html#a6abed005cd7946996bcf80e0daa53c3b">head</a>, entries)</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    tcode[cn++] = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  rc = <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  np = NULL;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  cn = 0;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;fromcodes-&gt;<a class="code hl_variable" href="structSlist.html#a6abed005cd7946996bcf80e0daa53c3b">head</a>, entries)</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="comment">/* Try each fromcode in turn */</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    rc = <a class="code hl_function" href="convert_8c.html#ac5f9c44bbd16a77a89e0ab92f16983ca">mutt_convert_file_to</a>(fp, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>, tocodes, &amp;cn, info);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">if</span> (rc != <a class="code hl_define" href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a>)</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      *fromcode = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      *tocode = tcode[cn];</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      tcode[cn] = 0;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="comment">/* Free memory */</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <span class="keywordflow">for</span> (cn = 0; cn &lt; tocodes-&gt;<a class="code hl_variable" href="structSlist.html#a7ad6a474ee1f2eeb00367916567fb5a6">count</a>; cn++)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;tcode[cn]);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;tcode);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>}</div>
 </div>
 <div class="ttc" id="acontent__info_8c_html_a42a372de0db8b9b14cf47e3aeac204d3"><div class="ttname"><a href="content__info_8c.html#a42a372de0db8b9b14cf47e3aeac204d3">mutt_update_content_info</a></div><div class="ttdeci">void mutt_update_content_info(struct Content *info, struct ContentState *s, char *buf, size_t buflen)</div><div class="ttdoc">Cache some info about an email.</div><div class="ttdef"><b>Definition</b> <a href="content__info_8c_source.html#l00049">content_info.c:49</a></div></div>
 <div class="ttc" id="aconvert_2lib_8h_html"><div class="ttname"><a href="convert_2lib_8h.html">lib.h</a></div><div class="ttdoc">Conversion between different character encodings.</div></div>
@@ -313,7 +312,7 @@ $(function(){initNavTree('convert_8c_source.html',''); initResizable(true); });
 <div class="ttc" id="amutt_2charset_8h_html_aa492c8da74811c680daecd5cc99fd506"><div class="ttname"><a href="mutt_2charset_8h.html#aa492c8da74811c680daecd5cc99fd506">ICONV_ILLEGAL_SEQ</a></div><div class="ttdeci">#define ICONV_ILLEGAL_SEQ</div><div class="ttdoc">Error value for iconv() - Illegal sequence.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8h_source.html#l00114">charset.h:114</a></div></div>
 <div class="ttc" id="amutt_2charset_8h_html_af99f0dca1b479b94f1287bc8aa050e4c"><div class="ttname"><a href="mutt_2charset_8h.html#af99f0dca1b479b94f1287bc8aa050e4c">iconv_t_valid</a></div><div class="ttdeci">static bool iconv_t_valid(const iconv_t cd)</div><div class="ttdoc">Is the conversion descriptor valid?</div><div class="ttdef"><b>Definition</b> <a href="mutt_2charset_8h_source.html#l00123">charset.h:123</a></div></div>
 <div class="ttc" id="amutt_2lib_8h_html"><div class="ttname"><a href="mutt_2lib_8h.html">lib.h</a></div><div class="ttdoc">Convenience wrapper for the library headers.</div></div>
-<div class="ttc" id="amutt_2string_8c_html_a29db81d6f5a7dd216cbea75ecf8a5885"><div class="ttname"><a href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a></div><div class="ttdeci">bool mutt_istr_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00677">string.c:677</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a29db81d6f5a7dd216cbea75ecf8a5885"><div class="ttname"><a href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a></div><div class="ttdeci">bool mutt_istr_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00678">string.c:678</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00257">string.c:257</a></div></div>
 <div class="ttc" id="aqueue_8h_html_a77999ebdf5aaf7af8b8ea22bf208c432"><div class="ttname"><a href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a></div><div class="ttdeci">#define STAILQ_FOREACH(var, head, field)</div><div class="ttdef"><b>Definition</b> <a href="queue_8h_source.html#l00390">queue.h:390</a></div></div>
 <div class="ttc" id="astructContentState_html"><div class="ttname"><a href="structContentState.html">ContentState</a></div><div class="ttdoc">Info about the body of an email.</div><div class="ttdef"><b>Definition</b> <a href="content_8h_source.html#l00055">content.h:56</a></div></div>

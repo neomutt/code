@@ -51,7 +51,6 @@ var notmuch_8c =
     [ "nm_mbox_check_stats", "group__mx__mbox__check__stats.html#gaf0ba56fedbc28eeaa260e75dae131b3a", null ],
     [ "get_default_mailbox", "notmuch_8c.html#a7557b4c8c21bc1fe7da1730b0af70836", null ],
     [ "nm_record_message", "notmuch_8c.html#a76a97a39757a2e0441d23eab1ba5a221", null ],
-    [ "nm_get_all_tags", "notmuch_8c.html#a424ba19f36b097c879ff65793c8ef1d9", null ],
     [ "nm_ac_owns_path", "group__mx__ac__owns__path.html#gaf3fe12af353c56758b08fe105737fc72", null ],
     [ "nm_ac_add", "group__mx__ac__add.html#gaa3f6916994e009888cbd2616eb02efc9", null ],
     [ "nm_mbox_open", "group__mx__mbox__open.html#gaad12c3265a631efb7b39b28fae19121c", null ],

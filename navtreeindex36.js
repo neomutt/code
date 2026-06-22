@@ -1,5 +1,6 @@
 var NAVTREEINDEX36 =
 {
+"mx_8h.html#ad9772f30292be237af605c682e8f0777":[2,0,74,34],
 "mx_8h.html#add0e192c5f27bf6bd096ae2eb7c0b67b":[2,0,74,9],
 "mx_8h.html#add36baf7d8410fb37158defdaebe9a5d":[2,0,74,16],
 "mx_8h.html#addbeb100364d5be4dd89b74ac73ef067":[2,0,74,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX36 =
 "ncrypt_sort_gpgme.html":[44,29],
 "ncrypt_sort_pgp.html":[44,30],
 "neomutt_8c.html":[2,0,16,17],
-"neomutt_8c.html#a011703fce5587658fecea69131a65630":[2,0,16,17,24],
-"neomutt_8c.html#a0ab1ee9d8b5db4e46543039bc6aa2d58":[2,0,16,17,21]
+"neomutt_8c.html#a011703fce5587658fecea69131a65630":[2,0,16,17,24]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"structEmailFormatInfo.html#a931f6c23564aa27622ec4e276747e850":[1,0,87,3],
 "structEmailGarbageCollector.html":[1,0,88],
 "structEmailGarbageCollector.html#acb97d99c41d2276955613e2f8b71e9b4":[1,0,88,1],
 "structEmailGarbageCollector.html#ad04275e215eeab3e05b26f438c0c4a12":[1,0,88,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX51 =
 "structFolderFile.html#ad72eeead1dc078467a02c6c4f5e01a93":[1,0,126,14],
 "structFolderFile.html#ae1cb41d536802b724cc2b20dfc4a3d2d":[1,0,126,10],
 "structFuzzyModuleData.html":[1,0,127],
-"structFuzzyModuleData.html#a027237e869d47b4c59106b39ebf70f2b":[1,0,127,0]
+"structFuzzyModuleData.html#a027237e869d47b4c59106b39ebf70f2b":[1,0,127,0],
+"structFuzzyModuleData.html#afa80801493eeff0f822e2b8ca0149d10":[1,0,127,1]
 };

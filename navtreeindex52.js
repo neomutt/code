@@ -1,6 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"structFuzzyModuleData.html#afa80801493eeff0f822e2b8ca0149d10":[1,0,127,1],
 "structFuzzyOptions.html":[1,0,128],
 "structFuzzyOptions.html#a0daec9aa6cf4a3166131b4d19aa7366f":[1,0,128,1],
 "structFuzzyOptions.html#a541337aaa9280a9afb5e7f776dccd362":[1,0,128,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX52 =
 "structKeyModuleData.html#ae4b2ac052a0b7d2c63155c81e5491604":[1,0,172,2],
 "structKeyValue.html":[1,0,173],
 "structKeyValue.html#a03fa03cca315e589f1d85fb027e55f66":[1,0,173,0],
-"structKeyValue.html#a623bf6d5bea324ed7b6c051257f5c193":[1,0,173,1]
+"structKeyValue.html#a623bf6d5bea324ed7b6c051257f5c193":[1,0,173,1],
+"structKeymap.html":[1,0,170]
 };

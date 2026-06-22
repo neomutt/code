@@ -1,6 +1,5 @@
 var NAVTREEINDEX48 =
 {
-"socket_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa3d6056029ed5cd7c85ef1851bd8e93e2":[2,0,14,24,8,2],
 "socket_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa5cfe965f3d6f2d17db1a5d39b9925565":[2,0,14,24,8,0],
 "socket_8h.html#aa1f0e2efd52935fd01bfece0fbead81fa9fc26ca91c802212f298a77306d2b894":[2,0,14,24,8,1],
 "socket_8h.html#aada5be45f75196ab6f4f3f89908ab5d9":[2,0,14,24,14],
@@ -249,5 +248,6 @@ var NAVTREEINDEX48 =
 "structAttrColor.html#a6a3d8e5239742c70675addea01049535":[1,0,18,1],
 "structAttrColor.html#a800d75b8ce01612fe4461b08118d5568":[1,0,18,0],
 "structAttrColor.html#aab1bf6379c9a9beaea262f46ce492ede":[1,0,18,5],
-"structAttrColor.html#ad6b237f9a9be9fc2b8b513f51ca5b2b4":[1,0,18,3]
+"structAttrColor.html#ad6b237f9a9be9fc2b8b513f51ca5b2b4":[1,0,18,3],
+"structAttrColor.html#ae01a75c89fbcfa08fd701afa9a8d61b9":[1,0,18,4]
 };

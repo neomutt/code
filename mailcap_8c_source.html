@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-949-g4870ee</span>
+   &#160;<span id="projectnumber">2025-12-11-956-g1154e4</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -296,7 +296,7 @@ $(function(){initNavTree('mailcap_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  FILE *fp = <a class="code hl_define" href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a>(filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  <span class="keywordflow">if</span> (fp)</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordtype">size_t</span> buflen;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordtype">size_t</span> buflen = 0;</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">while</span> (!found &amp;&amp; (buf = <a class="code hl_function" href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a>(buf, &amp;buflen, fp, &amp;line, <a class="code hl_enumvalue" href="file_8h.html#aeb20f12c0c1b93bbaebf890d23cdeb5ba809bf951d19dbe7792cdc0a4b17ec2cc">MUTT_RL_CONT</a>)))</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    {</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <span class="comment">/* ignore comments */</span></div>
@@ -578,104 +578,106 @@ $(function(){initNavTree('mailcap_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno"><a class="line" href="mailcap_8c.html#accb5ae6e2f507053e8436a2f00b834ea">  568</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="mailcap_8c.html#accb5ae6e2f507053e8436a2f00b834ea">mailcap_expand_filename</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *nametemplate, <span class="keyword">const</span> <span class="keywordtype">char</span> *oldfile,</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>                             <span class="keyword">struct</span> <a class="code hl_struct" href="structBuffer.html">Buffer</a> *newfile)</div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>{</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  <span class="keywordtype">int</span> i, j, k;</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *s = NULL;</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>  <span class="keywordtype">bool</span> lmatch = <span class="keyword">false</span>, rmatch = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span> </div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(newfile);</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  <span class="keywordtype">int</span> i;</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  <span class="keywordtype">int</span> j;</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>  <span class="keywordtype">int</span> k;</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *s = NULL;</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>  <span class="keywordtype">bool</span> lmatch = <span class="keyword">false</span>, rmatch = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  <span class="comment">/* first, ignore leading path components */</span></div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  <a class="code hl_function" href="buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05">buf_reset</a>(newfile);</div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span> </div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>  <span class="keywordflow">if</span> (nametemplate &amp;&amp; (s = strrchr(nametemplate, <span class="charliteral">&#39;/&#39;</span>)))</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    nametemplate = s + 1;</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>  <span class="keywordflow">if</span> (oldfile &amp;&amp; (s = strrchr(oldfile, <span class="charliteral">&#39;/&#39;</span>)))</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>    oldfile = s + 1;</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span> </div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>  <span class="keywordflow">if</span> (!nametemplate)</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>  {</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>    <span class="keywordflow">if</span> (oldfile)</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(newfile, oldfile);</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  }</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!oldfile)</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  {</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    <a class="code hl_function" href="file_8c.html#ab0b0c8e739075124bcd94ca090b328e1">mutt_file_expand_fmt</a>(newfile, nametemplate, <span class="stringliteral">&quot;neomutt&quot;</span>);</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>  }</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>  <span class="keywordflow">else</span> <span class="comment">/* oldfile &amp;&amp; nametemplate */</span></div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>  {</div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>    <span class="comment">/* first, compare everything left from the &quot;%s&quot;</span></div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="comment">     * (if there is one).  */</span></div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    lmatch = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>    <span class="keywordtype">bool</span> ps = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>    <span class="keywordflow">for</span> (i = 0; nametemplate[i]; i++)</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>    {</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>      <span class="keywordflow">if</span> ((nametemplate[i] == <span class="charliteral">&#39;%&#39;</span>) &amp;&amp; (nametemplate[i + 1] == <span class="charliteral">&#39;s&#39;</span>))</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>      {</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>        ps = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>      }</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span> </div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>      <span class="comment">/* note that the following will _not_ read beyond oldfile&#39;s end. */</span></div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>  <span class="comment">/* first, ignore leading path components */</span></div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>  <span class="keywordflow">if</span> (nametemplate &amp;&amp; (s = strrchr(nametemplate, <span class="charliteral">&#39;/&#39;</span>)))</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>    nametemplate = s + 1;</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span> </div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>  <span class="keywordflow">if</span> (oldfile &amp;&amp; (s = strrchr(oldfile, <span class="charliteral">&#39;/&#39;</span>)))</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>    oldfile = s + 1;</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span> </div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  <span class="keywordflow">if</span> (!nametemplate)</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  {</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>    <span class="keywordflow">if</span> (oldfile)</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(newfile, oldfile);</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  }</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!oldfile)</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>  {</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>    <a class="code hl_function" href="file_8c.html#ab0b0c8e739075124bcd94ca090b328e1">mutt_file_expand_fmt</a>(newfile, nametemplate, <span class="stringliteral">&quot;neomutt&quot;</span>);</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>  }</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>  <span class="keywordflow">else</span> <span class="comment">/* oldfile &amp;&amp; nametemplate */</span></div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>  {</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>    <span class="comment">/* first, compare everything left from the &quot;%s&quot;</span></div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span><span class="comment">     * (if there is one).  */</span></div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>    lmatch = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>    <span class="keywordtype">bool</span> ps = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>    <span class="keywordflow">for</span> (i = 0; nametemplate[i]; i++)</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>    {</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>      <span class="keywordflow">if</span> ((nametemplate[i] == <span class="charliteral">&#39;%&#39;</span>) &amp;&amp; (nametemplate[i + 1] == <span class="charliteral">&#39;s&#39;</span>))</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>      {</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        ps = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>      }</div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span> </div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>      <span class="keywordflow">if</span> (lmatch &amp;&amp; (nametemplate[i] != oldfile[i]))</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>        lmatch = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>    }</div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span> </div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    <span class="keywordflow">if</span> (ps)</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>    {</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>      <span class="comment">/* If we had a &quot;%s&quot;, check the rest. */</span></div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span> </div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>      <span class="comment">/* now, for the right part: compare everything right from</span></div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span><span class="comment">       * the &quot;%s&quot; to the final part of oldfile.</span></div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span><span class="comment">       *</span></div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="comment">       * The logic here is as follows:</span></div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>      <span class="comment">/* note that the following will _not_ read beyond oldfile&#39;s end. */</span></div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span> </div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>      <span class="keywordflow">if</span> (lmatch &amp;&amp; (nametemplate[i] != oldfile[i]))</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>        lmatch = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    }</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span> </div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>    <span class="keywordflow">if</span> (ps)</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    {</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>      <span class="comment">/* If we had a &quot;%s&quot;, check the rest. */</span></div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>      <span class="comment">/* now, for the right part: compare everything right from</span></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="comment">       * the &quot;%s&quot; to the final part of oldfile.</span></div>
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span><span class="comment">       *</span></div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="comment">       * - We start reading from the end.</span></div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span><span class="comment">       * - There must be a match _right_ from the &quot;%s&quot;,</span></div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span><span class="comment">       *   thus the i + 2.</span></div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="comment">       * - If there was a left hand match, this stuff</span></div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="comment">       *   must not be counted again.  That&#39;s done by the</span></div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span><span class="comment">       *   condition (j &gt;= (lmatch ? i : 0)).  */</span></div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span> </div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>      rmatch = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="comment">       * The logic here is as follows:</span></div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span><span class="comment">       *</span></div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span><span class="comment">       * - We start reading from the end.</span></div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="comment">       * - There must be a match _right_ from the &quot;%s&quot;,</span></div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="comment">       *   thus the i + 2.</span></div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span><span class="comment">       * - If there was a left hand match, this stuff</span></div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span><span class="comment">       *   must not be counted again.  That&#39;s done by the</span></div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span><span class="comment">       *   condition (j &gt;= (lmatch ? i : 0)).  */</span></div>
 <div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span> </div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>      <span class="keywordflow">for</span> (j = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(oldfile) - 1, k = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(nametemplate) - 1;</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>           (j &gt;= (lmatch ? i : 0)) &amp;&amp; (k &gt;= (i + 2)); j--, k--)</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>      {</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>        <span class="keywordflow">if</span> (nametemplate[k] != oldfile[j])</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>        {</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>          rmatch = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>        }</div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>      }</div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span> </div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>      <span class="comment">/* Now, check if we had a full match. */</span></div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>      rmatch = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span> </div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>      <span class="keywordflow">for</span> (j = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(oldfile) - 1, k = <a class="code hl_function" href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a>(nametemplate) - 1;</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>           (j &gt;= (lmatch ? i : 0)) &amp;&amp; (k &gt;= (i + 2)); j--, k--)</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>      {</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>        <span class="keywordflow">if</span> (nametemplate[k] != oldfile[j])</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>        {</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>          rmatch = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>        }</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>      }</div>
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>      <span class="keywordflow">if</span> (k &gt;= i + 2)</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>        rmatch = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *left = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *right = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span> </div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>      <span class="keywordflow">if</span> (!lmatch)</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>        <a class="code hl_function" href="buffer_8c.html#a734136197aa74f67d18a150aca77d2ac">buf_strcpy_n</a>(left, nametemplate, i);</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>      <span class="keywordflow">if</span> (!rmatch)</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(right, nametemplate + i + 2);</div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>      <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(newfile, <span class="stringliteral">&quot;%s%s%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(left), oldfile, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(right));</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span> </div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;left);</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;right);</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    }</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    {</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>      <span class="comment">/* no &quot;%s&quot; in the name template. */</span></div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(newfile, nametemplate);</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    }</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>  }</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span> </div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>  <a class="code hl_define" href="muttlib_8h.html#a160b41f77aa87e063804510448b254ac">mutt_adv_mktemp</a>(newfile);</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>}</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>      <span class="comment">/* Now, check if we had a full match. */</span></div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span> </div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>      <span class="keywordflow">if</span> (k &gt;= i + 2)</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>        rmatch = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span> </div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *left = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *right = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span> </div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>      <span class="keywordflow">if</span> (!lmatch)</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>        <a class="code hl_function" href="buffer_8c.html#a734136197aa74f67d18a150aca77d2ac">buf_strcpy_n</a>(left, nametemplate, i);</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>      <span class="keywordflow">if</span> (!rmatch)</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(right, nametemplate + i + 2);</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>      <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(newfile, <span class="stringliteral">&quot;%s%s%s&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(left), oldfile, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(right));</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;left);</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;right);</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>    }</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    {</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>      <span class="comment">/* no &quot;%s&quot; in the name template. */</span></div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>      <a class="code hl_function" href="buffer_8c.html#ac958acbd189e463a2c3bbc2f23aaeb1e">buf_strcpy</a>(newfile, nametemplate);</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>    }</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>  }</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span> </div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>  <a class="code hl_define" href="muttlib_8h.html#a160b41f77aa87e063804510448b254ac">mutt_adv_mktemp</a>(newfile);</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>}</div>
 </div>
 <div class="ttc" id="aattach_2lib_8h_html"><div class="ttname"><a href="attach_2lib_8h.html">lib.h</a></div><div class="ttdoc">GUI display the mailboxes in a side panel.</div></div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00168">buffer.c:168</a></div></div>
@@ -693,7 +695,7 @@ $(function(){initNavTree('mailcap_8c_source.html',''); initResizable(true); });
 <div class="ttc" id="aemail_2body_8h_html"><div class="ttname"><a href="email_2body_8h.html">body.h</a></div><div class="ttdoc">Representation of the body of an email.</div></div>
 <div class="ttc" id="afile_8c_html_a0da2bc91bbaabcf0c3c403a1d61c8526"><div class="ttname"><a href="file_8c.html#a0da2bc91bbaabcf0c3c403a1d61c8526">buf_quote_filename</a></div><div class="ttdeci">void buf_quote_filename(struct Buffer *buf, const char *filename, bool add_outer)</div><div class="ttdoc">Quote a filename to survive the shell&#39;s quoting rules.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00803">file.c:803</a></div></div>
 <div class="ttc" id="afile_8c_html_a1ad76f956147154f16128b7761dadd58"><div class="ttname"><a href="file_8c.html#a1ad76f956147154f16128b7761dadd58">mutt_file_read_line</a></div><div class="ttdeci">char * mutt_file_read_line(char *line, size_t *size, FILE *fp, int *line_num, ReadLineFlags flags)</div><div class="ttdoc">Read a line from a file.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l00678">file.c:678</a></div></div>
-<div class="ttc" id="afile_8c_html_ab0b0c8e739075124bcd94ca090b328e1"><div class="ttname"><a href="file_8c.html#ab0b0c8e739075124bcd94ca090b328e1">mutt_file_expand_fmt</a></div><div class="ttdeci">void mutt_file_expand_fmt(struct Buffer *dest, const char *fmt, const char *src)</div><div class="ttdoc">Replace s in a string with a filename.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l01366">file.c:1366</a></div></div>
+<div class="ttc" id="afile_8c_html_ab0b0c8e739075124bcd94ca090b328e1"><div class="ttname"><a href="file_8c.html#ab0b0c8e739075124bcd94ca090b328e1">mutt_file_expand_fmt</a></div><div class="ttdeci">void mutt_file_expand_fmt(struct Buffer *dest, const char *fmt, const char *src)</div><div class="ttdoc">Replace s in a string with a filename.</div><div class="ttdef"><b>Definition</b> <a href="file_8c_source.html#l01367">file.c:1367</a></div></div>
 <div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00144">file.h:144</a></div></div>
 <div class="ttc" id="afile_8h_html_a9fa358d76519cb6bc8ffca5850976d46"><div class="ttname"><a href="file_8h.html#a9fa358d76519cb6bc8ffca5850976d46">mutt_file_fopen</a></div><div class="ttdeci">#define mutt_file_fopen(PATH, MODE)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00143">file.h:143</a></div></div>
 <div class="ttc" id="afile_8h_html_aeb20f12c0c1b93bbaebf890d23cdeb5ba809bf951d19dbe7792cdc0a4b17ec2cc"><div class="ttname"><a href="file_8h.html#aeb20f12c0c1b93bbaebf890d23cdeb5ba809bf951d19dbe7792cdc0a4b17ec2cc">MUTT_RL_CONT</a></div><div class="ttdeci">@ MUTT_RL_CONT</div><div class="ttdoc">-continuation</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00044">file.h:44</a></div></div>
@@ -721,19 +723,19 @@ $(function(){initNavTree('mailcap_8c_source.html',''); initResizable(true); });
 <div class="ttc" id="amemory_8h_html_a9aaf8f21a29735767a069ff1aee9d7d9"><div class="ttname"><a href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a></div><div class="ttdeci">#define MUTT_MEM_CALLOC(n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00052">memory.h:52</a></div></div>
 <div class="ttc" id="amutt_2lib_8h_html"><div class="ttname"><a href="mutt_2lib_8h.html">lib.h</a></div><div class="ttdoc">Convenience wrapper for the library headers.</div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a1d343dcbce0482f8979fe2a298913225"><div class="ttname"><a href="mutt_2string_8c.html#a1d343dcbce0482f8979fe2a298913225">mutt_str_remove_trailing_ws</a></div><div class="ttdeci">void mutt_str_remove_trailing_ws(char *s)</div><div class="ttdoc">Trim trailing whitespace from a string.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00570">string.c:570</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a29db81d6f5a7dd216cbea75ecf8a5885"><div class="ttname"><a href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a></div><div class="ttdeci">bool mutt_istr_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00677">string.c:677</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a1d343dcbce0482f8979fe2a298913225"><div class="ttname"><a href="mutt_2string_8c.html#a1d343dcbce0482f8979fe2a298913225">mutt_str_remove_trailing_ws</a></div><div class="ttdeci">void mutt_str_remove_trailing_ws(char *s)</div><div class="ttdoc">Trim trailing whitespace from a string.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00571">string.c:571</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a29db81d6f5a7dd216cbea75ecf8a5885"><div class="ttname"><a href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a></div><div class="ttdeci">bool mutt_istr_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00678">string.c:678</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00257">string.c:257</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a5bc328ca69776d155059041aaff9435a"><div class="ttname"><a href="mutt_2string_8c.html#a5bc328ca69776d155059041aaff9435a">mutt_str_skip_email_wsp</a></div><div class="ttdeci">char * mutt_str_skip_email_wsp(const char *s)</div><div class="ttdoc">Skip over whitespace as defined by RFC5322.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00613">string.c:613</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00665">string.c:665</a></div></div>
-<div class="ttc" id="amutt_2string_8c_html_aa2fa4dcaf72786b58e825349883f14c2"><div class="ttname"><a href="mutt_2string_8c.html#aa2fa4dcaf72786b58e825349883f14c2">mutt_str_skip_whitespace</a></div><div class="ttdeci">char * mutt_str_skip_whitespace(const char *p)</div><div class="ttdoc">Find the first non-whitespace character in a string.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00556">string.c:556</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a5bc328ca69776d155059041aaff9435a"><div class="ttname"><a href="mutt_2string_8c.html#a5bc328ca69776d155059041aaff9435a">mutt_str_skip_email_wsp</a></div><div class="ttdeci">char * mutt_str_skip_email_wsp(const char *s)</div><div class="ttdoc">Skip over whitespace as defined by RFC5322.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00614">string.c:614</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00666">string.c:666</a></div></div>
+<div class="ttc" id="amutt_2string_8c_html_aa2fa4dcaf72786b58e825349883f14c2"><div class="ttname"><a href="mutt_2string_8c.html#aa2fa4dcaf72786b58e825349883f14c2">mutt_str_skip_whitespace</a></div><div class="ttdeci">char * mutt_str_skip_whitespace(const char *p)</div><div class="ttdoc">Find the first non-whitespace character in a string.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00557">string.c:557</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_acca6786b903b22a5924219f9db96e10d"><div class="ttname"><a href="mutt_2string_8c.html#acca6786b903b22a5924219f9db96e10d">mutt_str_len</a></div><div class="ttdeci">size_t mutt_str_len(const char *a)</div><div class="ttdoc">Calculate the length of a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00503">string.c:503</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_aebd2a8a3f8a30062c31fa1474d87cc41"><div class="ttname"><a href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a></div><div class="ttdeci">size_t mutt_istr_startswith(const char *str, const char *prefix)</div><div class="ttdoc">Check whether a string starts with a prefix, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00246">string.c:246</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_aefa17bf84a5a1cb4b41afb08cd91ceff"><div class="ttname"><a href="mutt_2string_8c.html#aefa17bf84a5a1cb4b41afb08cd91ceff">mutt_istrn_equal</a></div><div class="ttdeci">bool mutt_istrn_equal(const char *a, const char *b, size_t num)</div><div class="ttdoc">Check for equality of two strings ignoring case (to a maximum), safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00457">string.c:457</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_af8c32ffc64dd55e92001a974a4be6bbf"><div class="ttname"><a href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a></div><div class="ttdeci">char * mutt_str_replace(char **p, const char *s)</div><div class="ttdoc">Replace one string with another.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00284">string.c:284</a></div></div>
 <div class="ttc" id="amutt_8h_html"><div class="ttname"><a href="mutt_8h.html">mutt.h</a></div><div class="ttdoc">Many unsorted constants and some structs.</div></div>
 <div class="ttc" id="amutt_8h_html_aa1d4ad04b000036513ca3f741059942c"><div class="ttname"><a href="mutt_8h.html#aa1d4ad04b000036513ca3f741059942c">mutt_system</a></div><div class="ttdeci">int mutt_system(const char *cmd)</div><div class="ttdoc">Run an external command.</div><div class="ttdef"><b>Definition</b> <a href="system_8c_source.html#l00051">system.c:51</a></div></div>
-<div class="ttc" id="amutt__attach_8c_html_a1a97d711180c816108d8866ef7b120cc"><div class="ttname"><a href="mutt__attach_8c.html#a1a97d711180c816108d8866ef7b120cc">mutt_check_lookup_list</a></div><div class="ttdeci">void mutt_check_lookup_list(struct Body *b, char *type, size_t len)</div><div class="ttdoc">Update the mime type.</div><div class="ttdef"><b>Definition</b> <a href="mutt__attach_8c_source.html#l00339">mutt_attach.c:339</a></div></div>
+<div class="ttc" id="amutt__attach_8c_html_a1a97d711180c816108d8866ef7b120cc"><div class="ttname"><a href="mutt__attach_8c.html#a1a97d711180c816108d8866ef7b120cc">mutt_check_lookup_list</a></div><div class="ttdeci">void mutt_check_lookup_list(struct Body *b, char *type, size_t len)</div><div class="ttdoc">Update the mime type.</div><div class="ttdef"><b>Definition</b> <a href="mutt__attach_8c_source.html#l00340">mutt_attach.c:340</a></div></div>
 <div class="ttc" id="amuttlib_8c_html_ab8f797f0a3b645c549e1503369a9832b"><div class="ttname"><a href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a></div><div class="ttdeci">void expand_path(struct Buffer *buf, bool regex)</div><div class="ttdoc">Create the canonical path.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00122">muttlib.c:122</a></div></div>
 <div class="ttc" id="amuttlib_8c_html_ac104d843cb36fbb5e37cd24faa65dac0"><div class="ttname"><a href="muttlib_8c.html#ac104d843cb36fbb5e37cd24faa65dac0">buf_sanitize_filename</a></div><div class="ttdeci">void buf_sanitize_filename(struct Buffer *buf, const char *path, short slash)</div><div class="ttdoc">Replace unsafe characters in a filename.</div><div class="ttdef"><b>Definition</b> <a href="muttlib_8c_source.html#l00913">muttlib.c:913</a></div></div>
 <div class="ttc" id="amuttlib_8h_html"><div class="ttname"><a href="muttlib_8h.html">muttlib.h</a></div><div class="ttdoc">Some miscellaneous functions.</div></div>
