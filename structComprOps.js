@@ -5,6 +5,6 @@ var structComprOps =
     [ "max_level", "structComprOps.html#a840192d536030cfc27f47675d23fc074", null ],
     [ "open", "structComprOps.html#a1211f60e8a0b5a3601138eee37bd9a9e", null ],
     [ "compress", "structComprOps.html#abf598bd81ed7c964c32c09a03b40099d", null ],
-    [ "decompress", "structComprOps.html#aa81c7f0b7164bdc47fafad9d191f0a8e", null ],
+    [ "decompress", "structComprOps.html#a7da69f9084d236efe97370df12db5503", null ],
     [ "close", "structComprOps.html#adba0c7a5be5b03f182bad1ef8513503f", null ]
 ];

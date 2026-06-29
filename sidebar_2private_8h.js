@@ -13,6 +13,7 @@ var sidebar_2private_8h =
       [ "ED_SID_FUZZY_SCORE", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a12d98612857f019378576386f1764217", null ],
       [ "ED_SID_NEW_MAIL", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a5ccb7f7dd5cc8acd67dca31f60c82890", null ],
       [ "ED_SID_NOTIFY", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774acb9234bf068fa03203e67710b7dc1089", null ],
+      [ "ED_SID_NUMBER", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774ac0daf76d58fe8d4e86ca81aef6d52160", null ],
       [ "ED_SID_OLD_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a92f4836d3746861cfb009dfdf57c0be9", null ],
       [ "ED_SID_POLL", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a90cc9e95fa2aa302cfc74f7194b72b92", null ],
       [ "ED_SID_READ_COUNT", "sidebar_2private_8h.html#aa9070d59012720e1c62fb6c0a11af774a423c18e8c05ea6184eed0b1f58e3158f", null ],

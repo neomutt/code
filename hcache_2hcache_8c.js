@@ -10,7 +10,7 @@ var hcache_2hcache_8c =
     [ "email_pack_timezone", "hcache_2hcache_8c.html#a940c6e385e0177db2ab348030a64ae14", null ],
     [ "email_unpack_timezone", "hcache_2hcache_8c.html#a5c63cb46a1df5ae2e732a76eb78c6183", null ],
     [ "dump_email", "hcache_2hcache_8c.html#a83fb46f01645076c584af0530d4cbc54", null ],
-    [ "restore_email", "hcache_2hcache_8c.html#a27b0e509e8f510ec02059b968ecfe86d", null ],
+    [ "restore_email", "hcache_2hcache_8c.html#a9114510e8cb72b856ba44e354ced237f", null ],
     [ "create_hcache_dir", "hcache_2hcache_8c.html#a5086e15744da558388677cc362f74959", null ],
     [ "hcache_per_folder", "hcache_2hcache_8c.html#ad480bed1a8153e7175a912f7b2ec6437", null ],
     [ "get_foldername", "hcache_2hcache_8c.html#af04125825e118cd83296f4d9dae9cb05", null ],

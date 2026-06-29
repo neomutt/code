@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-956-g1154e4</span>
+   &#160;<span id="projectnumber">2025-12-11-970-g3abedd</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -219,31 +219,31 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="index_2functions_8c_source.html#l00440">440</a> of file <a class="el" href="index_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  441</span>{</div>
-<div class="line"><span class="lineno">  442</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win_index);</div>
-<div class="line"><span class="lineno">  443</span>  <span class="keywordflow">if</span> (!dlg)</div>
-<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  445</span> </div>
-<div class="line"><span class="lineno">  446</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = win_index-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  447</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexSharedData.html">IndexSharedData</a> *shared = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  448</span>  <span class="keywordflow">if</span> (!shared)</div>
-<div class="line"><span class="lineno">  449</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  450</span> </div>
-<div class="line"><span class="lineno">  451</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexPrivateData.html">IndexPrivateData</a> *priv = <a class="code hl_variable" href="structIndexPrivateData.html#a1c7b6cdce8620da00b71c4337f3b8131">win_index</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3">parent</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
-<div class="line"><span class="lineno">  452</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> uncollapse = <a class="code hl_define" href="gui_2thread_8h.html#a3c51d7064c28996bbe6fed52eec84857">mutt_using_threads</a>() &amp;&amp; !<a class="code hl_function" href="mutt__window_8c.html#a24aadc0e7b2775fcdec602583e285fb4">window_is_focused</a>(priv-&gt;<a class="code hl_variable" href="structIndexPrivateData.html#a1c7b6cdce8620da00b71c4337f3b8131">win_index</a>);</div>
-<div class="line"><span class="lineno">  453</span> </div>
-<div class="line"><span class="lineno">  454</span>  <span class="keywordtype">int</span> index = <a class="code hl_function" href="dlg__index_8c.html#a9dacfcb89fcd14cae6bdd61849220ea2">find_next_undeleted</a>(<a class="code hl_variable" href="structIndexPrivateData.html#a2741546f849613d488b1e881cd091a19">shared</a>-&gt;<a class="code hl_variable" href="structIndexSharedData.html#ab30b071560cc7ec97596ec48b8820c43">mailbox_view</a>, <a class="code hl_function" href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a>(<a class="code hl_variable" href="structIndexPrivateData.html#ac048be60177ee054d7927631ab0d1f59">menu</a>), uncollapse);</div>
-<div class="line"><span class="lineno">  455</span>  <span class="keywordflow">if</span> ((index &lt; 0) || (index &gt;= <a class="code hl_variable" href="structIndexPrivateData.html#a2741546f849613d488b1e881cd091a19">shared</a>-&gt;<a class="code hl_variable" href="structIndexSharedData.html#a8797930a941704ea1662d8c1a81a8a01">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>))</div>
-<div class="line"><span class="lineno">  456</span>  {</div>
-<div class="line"><span class="lineno">  457</span>    <span class="comment">// Selection failed</span></div>
-<div class="line"><span class="lineno">  458</span>    <a class="code hl_function" href="mutt_2notify_8c.html#ade2f42f8e0d8a843e87816300799a8e1">notify_send</a>(<a class="code hl_variable" href="structIndexPrivateData.html#a2741546f849613d488b1e881cd091a19">shared</a>-&gt;<a class="code hl_variable" href="structIndexSharedData.html#ae48d4a66308d0dd8461a3113e2ce0ed0">notify</a>, <a class="code hl_enumvalue" href="notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a98eb8b8ff4dc08324442de853f38cb13">NT_INDEX</a>, <a class="code hl_enumvalue" href="index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bda805c23af411e8ac699987871efbab886">NT_INDEX_EMAIL</a>, NULL);</div>
-<div class="line"><span class="lineno">  459</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  460</span>  }</div>
-<div class="line"><span class="lineno">  461</span> </div>
-<div class="line"><span class="lineno">  462</span>  <a class="code hl_function" href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a>(<a class="code hl_variable" href="structIndexPrivateData.html#ac048be60177ee054d7927631ab0d1f59">menu</a>, index);</div>
-<div class="line"><span class="lineno">  463</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  464</span>}</div>
+<p class="definition">Definition at line <a class="el" href="index_2functions_8c_source.html#l00439">439</a> of file <a class="el" href="index_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>{</div>
+<div class="line"><span class="lineno">  441</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win_index);</div>
+<div class="line"><span class="lineno">  442</span>  <span class="keywordflow">if</span> (!dlg)</div>
+<div class="line"><span class="lineno">  443</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  444</span> </div>
+<div class="line"><span class="lineno">  445</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMenu.html">Menu</a> *menu = win_index-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  446</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexSharedData.html">IndexSharedData</a> *shared = dlg-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  447</span>  <span class="keywordflow">if</span> (!shared)</div>
+<div class="line"><span class="lineno">  448</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  449</span> </div>
+<div class="line"><span class="lineno">  450</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexPrivateData.html">IndexPrivateData</a> *priv = <a class="code hl_variable" href="structIndexPrivateData.html#a1c7b6cdce8620da00b71c4337f3b8131">win_index</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac2567e0dca80d74afa6f36e0450195f3">parent</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>;</div>
+<div class="line"><span class="lineno">  451</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> uncollapse = <a class="code hl_define" href="gui_2thread_8h.html#a3c51d7064c28996bbe6fed52eec84857">mutt_using_threads</a>() &amp;&amp; !<a class="code hl_function" href="mutt__window_8c.html#a24aadc0e7b2775fcdec602583e285fb4">window_is_focused</a>(priv-&gt;<a class="code hl_variable" href="structIndexPrivateData.html#a1c7b6cdce8620da00b71c4337f3b8131">win_index</a>);</div>
+<div class="line"><span class="lineno">  452</span> </div>
+<div class="line"><span class="lineno">  453</span>  <span class="keywordtype">int</span> index = <a class="code hl_function" href="dlg__index_8c.html#a9dacfcb89fcd14cae6bdd61849220ea2">find_next_undeleted</a>(<a class="code hl_variable" href="structIndexPrivateData.html#a2741546f849613d488b1e881cd091a19">shared</a>-&gt;<a class="code hl_variable" href="structIndexSharedData.html#ab30b071560cc7ec97596ec48b8820c43">mailbox_view</a>, <a class="code hl_function" href="menu_2lib_8h.html#a67ee9260e41986eb4487124b004cff18">menu_get_index</a>(<a class="code hl_variable" href="structIndexPrivateData.html#ac048be60177ee054d7927631ab0d1f59">menu</a>), uncollapse);</div>
+<div class="line"><span class="lineno">  454</span>  <span class="keywordflow">if</span> ((index &lt; 0) || (index &gt;= <a class="code hl_variable" href="structIndexPrivateData.html#a2741546f849613d488b1e881cd091a19">shared</a>-&gt;<a class="code hl_variable" href="structIndexSharedData.html#a8797930a941704ea1662d8c1a81a8a01">mailbox</a>-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a>))</div>
+<div class="line"><span class="lineno">  455</span>  {</div>
+<div class="line"><span class="lineno">  456</span>    <span class="comment">// Selection failed</span></div>
+<div class="line"><span class="lineno">  457</span>    <a class="code hl_function" href="mutt_2notify_8c.html#ade2f42f8e0d8a843e87816300799a8e1">notify_send</a>(<a class="code hl_variable" href="structIndexPrivateData.html#a2741546f849613d488b1e881cd091a19">shared</a>-&gt;<a class="code hl_variable" href="structIndexSharedData.html#ae48d4a66308d0dd8461a3113e2ce0ed0">notify</a>, <a class="code hl_enumvalue" href="notify__type_8h.html#addc4b6302e217e9dffab38d9dd5c02f8a98eb8b8ff4dc08324442de853f38cb13">NT_INDEX</a>, <a class="code hl_enumvalue" href="index_2lib_8h.html#a3bcc8a4bf9b98ff4ded1a594a6c4c5bda805c23af411e8ac699987871efbab886">NT_INDEX_EMAIL</a>, NULL);</div>
+<div class="line"><span class="lineno">  458</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  459</span>  }</div>
+<div class="line"><span class="lineno">  460</span> </div>
+<div class="line"><span class="lineno">  461</span>  <a class="code hl_function" href="menu_2lib_8h.html#ae279bb826b97fcc88c0714b2a6383851">menu_set_index</a>(<a class="code hl_variable" href="structIndexPrivateData.html#ac048be60177ee054d7927631ab0d1f59">menu</a>, index);</div>
+<div class="line"><span class="lineno">  462</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  463</span>}</div>
 <div class="ttc" id="adialog_8c_html_ae9143ce9323ae3351fd9b612a6063ada"><div class="ttname"><a href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a></div><div class="ttdeci">struct MuttWindow * dialog_find(struct MuttWindow *win)</div><div class="ttdoc">Find the parent Dialog of a Window.</div><div class="ttdef"><b>Definition</b> <a href="dialog_8c_source.html#l00089">dialog.c:89</a></div></div>
 <div class="ttc" id="adlg__index_8c_html_a9dacfcb89fcd14cae6bdd61849220ea2"><div class="ttname"><a href="dlg__index_8c.html#a9dacfcb89fcd14cae6bdd61849220ea2">find_next_undeleted</a></div><div class="ttdeci">int find_next_undeleted(struct MailboxView *mv, int msgno, bool uncollapse)</div><div class="ttdoc">Find the next undeleted email.</div><div class="ttdef"><b>Definition</b> <a href="dlg__index_8c_source.html#l00259">dlg_index.c:259</a></div></div>
 <div class="ttc" id="agui_2thread_8h_html_a3c51d7064c28996bbe6fed52eec84857"><div class="ttname"><a href="gui_2thread_8h.html#a3c51d7064c28996bbe6fed52eec84857">mutt_using_threads</a></div><div class="ttdeci">#define mutt_using_threads()</div><div class="ttdef"><b>Definition</b> <a href="gui_2thread_8h_source.html#l00119">thread.h:119</a></div></div>
@@ -306,13 +306,13 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="index_2functions_8c_source.html#l04100">4100</a> of file <a class="el" href="index_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 4101</span>{</div>
-<div class="line"><span class="lineno"> 4102</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>);</div>
-<div class="line"><span class="lineno"> 4103</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(mod_data);</div>
-<div class="line"><span class="lineno"> 4104</span> </div>
-<div class="line"><span class="lineno"> 4105</span>  <span class="keywordflow">return</span> mod_data-&gt;<a class="code hl_variable" href="structIndexModuleData.html#a7855959def44183371aa5bd6da578b3f">md_index</a>;</div>
-<div class="line"><span class="lineno"> 4106</span>}</div>
+<p class="definition">Definition at line <a class="el" href="index_2functions_8c_source.html#l04089">4089</a> of file <a class="el" href="index_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 4090</span>{</div>
+<div class="line"><span class="lineno"> 4091</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>);</div>
+<div class="line"><span class="lineno"> 4092</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(mod_data);</div>
+<div class="line"><span class="lineno"> 4093</span> </div>
+<div class="line"><span class="lineno"> 4094</span>  <span class="keywordflow">return</span> mod_data-&gt;<a class="code hl_variable" href="structIndexModuleData.html#a7855959def44183371aa5bd6da578b3f">md_index</a>;</div>
+<div class="line"><span class="lineno"> 4095</span>}</div>
 <div class="ttc" id="amodule__api_8h_html_a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9"><div class="ttname"><a href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a></div><div class="ttdeci">@ MODULE_ID_INDEX</div><div class="ttdoc">ModuleIndex, Index</div><div class="ttdef"><b>Definition</b> <a href="module__api_8h_source.html#l00073">module_api.h:73</a></div></div>
 <div class="ttc" id="aneomutt_8c_html_ab58efd47fa66c8187cfdce43078c94fa"><div class="ttname"><a href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a></div><div class="ttdeci">void * neomutt_get_module_data(struct NeoMutt *n, enum ModuleId id)</div><div class="ttdoc">Get the private data for a Module.</div><div class="ttdef"><b>Definition</b> <a href="neomutt_8c_source.html#l00666">neomutt.c:666</a></div></div>
 <div class="ttc" id="asignal2_8h_html_a903f9b298be75defd8a3043ebf62bd99"><div class="ttname"><a href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a></div><div class="ttdeci">#define ASSERT(COND)</div><div class="ttdef"><b>Definition</b> <a href="signal2_8h_source.html#l00059">signal2.h:59</a></div></div>
@@ -359,13 +359,13 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="index_2functions_8c_source.html#l00351">351</a> of file <a class="el" href="index_2functions_8c_source.html">functions.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  352</span>{</div>
-<div class="line"><span class="lineno">  353</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>);</div>
-<div class="line"><span class="lineno">  354</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(mod_data);</div>
-<div class="line"><span class="lineno">  355</span> </div>
-<div class="line"><span class="lineno">  356</span>  <span class="keywordflow">return</span> mod_data-&gt;<a class="code hl_variable" href="structIndexModuleData.html#ac19436c89a13f87ee829d4e571a6aebb">sm_index</a>;</div>
-<div class="line"><span class="lineno">  357</span>}</div>
+<p class="definition">Definition at line <a class="el" href="index_2functions_8c_source.html#l00350">350</a> of file <a class="el" href="index_2functions_8c_source.html">functions.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  351</span>{</div>
+<div class="line"><span class="lineno">  352</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structIndexModuleData.html">IndexModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a45018e61a44e35be9e201c1919851bb9">MODULE_ID_INDEX</a>);</div>
+<div class="line"><span class="lineno">  353</span>  <a class="code hl_define" href="signal2_8h.html#a903f9b298be75defd8a3043ebf62bd99">ASSERT</a>(mod_data);</div>
+<div class="line"><span class="lineno">  354</span> </div>
+<div class="line"><span class="lineno">  355</span>  <span class="keywordflow">return</span> mod_data-&gt;<a class="code hl_variable" href="structIndexModuleData.html#ac19436c89a13f87ee829d4e571a6aebb">sm_index</a>;</div>
+<div class="line"><span class="lineno">  356</span>}</div>
 <div class="ttc" id="astructIndexModuleData_html_ac19436c89a13f87ee829d4e571a6aebb"><div class="ttname"><a href="structIndexModuleData.html#ac19436c89a13f87ee829d4e571a6aebb">IndexModuleData::sm_index</a></div><div class="ttdeci">struct SubMenu * sm_index</div><div class="ttdoc">Index functions.</div><div class="ttdef"><b>Definition</b> <a href="index_2module__data_8h_source.html#l00035">module_data.h:35</a></div></div>
 </div><!-- fragment --><div id="dynsection-6" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>

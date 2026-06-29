@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-956-g1154e4</span>
+   &#160;<span id="projectnumber">2025-12-11-970-g3abedd</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -303,81 +303,81 @@ Events</h2>
 <p>This function uses the message window.</p>
 <p>Ask the user which flag they'd like to set/clear, e.g. <code>Clear flag? (D/N/O/r/!):</code> </p>
 
-<p class="definition">Definition at line <a class="el" href="flags_8c_source.html#l00451">451</a> of file <a class="el" href="flags_8c_source.html">flags.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  452</span>{</div>
-<div class="line"><span class="lineno">  453</span>  <span class="keywordflow">if</span> (!m || !ea || <a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(ea))</div>
-<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  455</span> </div>
-<div class="line"><span class="lineno">  456</span>  <span class="comment">// blank window (0, 0)</span></div>
-<div class="line"><span class="lineno">  457</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *win = <a class="code hl_function" href="msgwin_8c.html#a265a7fe33d69d23d8d485f90fd14ff31">msgwin_new</a>(<span class="keyword">true</span>);</div>
-<div class="line"><span class="lineno">  458</span>  <span class="keywordflow">if</span> (!win)</div>
+<p class="definition">Definition at line <a class="el" href="flags_8c_source.html#l00456">456</a> of file <a class="el" href="flags_8c_source.html">flags.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  457</span>{</div>
+<div class="line"><span class="lineno">  458</span>  <span class="keywordflow">if</span> (!m || !ea || <a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(ea))</div>
 <div class="line"><span class="lineno">  459</span>    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">  460</span> </div>
-<div class="line"><span class="lineno">  461</span>  <span class="keywordtype">char</span> prompt[256] = { 0 };</div>
-<div class="line"><span class="lineno">  462</span>  snprintf(prompt, <span class="keyword">sizeof</span>(prompt),</div>
-<div class="line"><span class="lineno">  463</span>           <span class="stringliteral">&quot;%s? (D/N/O/r/*/!): &quot;</span>, bf ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Set flag&quot;</span>) : <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Clear flag&quot;</span>));</div>
-<div class="line"><span class="lineno">  464</span>  <a class="code hl_function" href="msgwin_8c.html#ac1dc426af34116e8de4ebfb20d0cb44f">msgwin_set_text</a>(win, prompt, <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabebf88d1a3c7d705d314bee4ffcf2e43">MT_COLOR_PROMPT</a>);</div>
+<div class="line"><span class="lineno">  461</span>  <span class="comment">// blank window (0, 0)</span></div>
+<div class="line"><span class="lineno">  462</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *win = <a class="code hl_function" href="msgwin_8c.html#a265a7fe33d69d23d8d485f90fd14ff31">msgwin_new</a>(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  463</span>  <span class="keywordflow">if</span> (!win)</div>
+<div class="line"><span class="lineno">  464</span>    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno">  465</span> </div>
-<div class="line"><span class="lineno">  466</span>  <a class="code hl_function" href="msgcont_8c.html#a7fbc9d3ea3efbadfc28976f8030e7a6c">msgcont_push_window</a>(win);</div>
-<div class="line"><span class="lineno">  467</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *old_focus = <a class="code hl_function" href="mutt__window_8c.html#a9b0eb963bae817aae94c7f3427b99f7d">window_set_focus</a>(win);</div>
-<div class="line"><span class="lineno">  468</span>  <a class="code hl_function" href="mutt__window_8c.html#a0af7bfe97dbb8f95d03851ec3fe62553">window_redraw</a>(win);</div>
-<div class="line"><span class="lineno">  469</span> </div>
-<div class="line"><span class="lineno">  470</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeyEvent.html">KeyEvent</a> event = { 0, OP_NULL };</div>
-<div class="line"><span class="lineno">  471</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno">  472</span>  {</div>
-<div class="line"><span class="lineno">  473</span>    <a class="code hl_function" href="mutt__window_8c.html#a0af7bfe97dbb8f95d03851ec3fe62553">window_redraw</a>(NULL);</div>
-<div class="line"><span class="lineno">  474</span>    <span class="keyword">event</span> = <a class="code hl_function" href="get_8c.html#a7d47b607e72adbec2c1963d6ae164a85">mutt_getch</a>(<a class="code hl_enumvalue" href="get_8h.html#a22f8e5a3fd35a038b410c77dd8b7a78ca043942bf91d4e49541391a5c1aa091be">GETCH_NONE</a>);</div>
-<div class="line"><span class="lineno">  475</span>  } <span class="keywordflow">while</span> ((event.<a class="code hl_variable" href="structKeyEvent.html#a80bbf4c02749c68c88723c13e73dc94d">op</a> == <a class="code hl_define" href="opcodes_8h.html#a1edfa98369961982b96768d8816754dc">OP_TIMEOUT</a>) || (event.<a class="code hl_variable" href="structKeyEvent.html#a80bbf4c02749c68c88723c13e73dc94d">op</a> == <a class="code hl_define" href="opcodes_8h.html#a93af396c035b85cf082bcbaa05693ec2">OP_REPAINT</a>));</div>
-<div class="line"><span class="lineno">  476</span> </div>
-<div class="line"><span class="lineno">  477</span>  win = <a class="code hl_function" href="msgcont_8c.html#aa78e5fc8401697d653184962a319c907">msgcont_pop_window</a>();</div>
-<div class="line"><span class="lineno">  478</span>  <a class="code hl_function" href="mutt__window_8c.html#a9b0eb963bae817aae94c7f3427b99f7d">window_set_focus</a>(old_focus);</div>
-<div class="line"><span class="lineno">  479</span>  <a class="code hl_function" href="mutt__window_8c.html#a52ff022e671a7fbdec773fc2d24e0e15">mutt_window_free</a>(&amp;win);</div>
-<div class="line"><span class="lineno">  480</span> </div>
-<div class="line"><span class="lineno">  481</span>  <span class="keywordflow">if</span> (event.<a class="code hl_variable" href="structKeyEvent.html#a80bbf4c02749c68c88723c13e73dc94d">op</a> == <a class="code hl_define" href="opcodes_8h.html#a9d285ee08aa8460023a7c730fabf3c94">OP_ABORT</a>)</div>
-<div class="line"><span class="lineno">  482</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  483</span> </div>
-<div class="line"><span class="lineno">  484</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</a> flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a8cf735750339fbf3eb1d3c33de09dc41">MUTT_NONE</a>;</div>
-<div class="line"><span class="lineno">  485</span>  <span class="keywordflow">switch</span> (event.<a class="code hl_variable" href="structKeyEvent.html#acece69c3519a730c7105cdc96af1e105">ch</a>)</div>
-<div class="line"><span class="lineno">  486</span>  {</div>
-<div class="line"><span class="lineno">  487</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
-<div class="line"><span class="lineno">  488</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
-<div class="line"><span class="lineno">  489</span>      <span class="keywordflow">if</span> (!bf)</div>
-<div class="line"><span class="lineno">  490</span>        <a class="code hl_function" href="flags_8c.html#a7f3a51c26f4900e9af4c09e084e74b0b">mutt_emails_set_flag</a>(m, ea, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a7fb7b2e9048606a37d4c34802ea38c77">MUTT_PURGE</a>, bf);</div>
-<div class="line"><span class="lineno">  491</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>;</div>
-<div class="line"><span class="lineno">  492</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  493</span> </div>
-<div class="line"><span class="lineno">  494</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
-<div class="line"><span class="lineno">  495</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
-<div class="line"><span class="lineno">  496</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013aee9fa842e5b3bc6e0a7be34fa55f6109">MUTT_NEW</a>;</div>
+<div class="line"><span class="lineno">  466</span>  <span class="keywordtype">char</span> prompt[256] = { 0 };</div>
+<div class="line"><span class="lineno">  467</span>  snprintf(prompt, <span class="keyword">sizeof</span>(prompt),</div>
+<div class="line"><span class="lineno">  468</span>           <span class="stringliteral">&quot;%s? (D/N/O/r/*/!): &quot;</span>, bf ? <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Set flag&quot;</span>) : <a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Clear flag&quot;</span>));</div>
+<div class="line"><span class="lineno">  469</span>  <a class="code hl_function" href="msgwin_8c.html#ac1dc426af34116e8de4ebfb20d0cb44f">msgwin_set_text</a>(win, prompt, <a class="code hl_enumvalue" href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabebf88d1a3c7d705d314bee4ffcf2e43">MT_COLOR_PROMPT</a>);</div>
+<div class="line"><span class="lineno">  470</span> </div>
+<div class="line"><span class="lineno">  471</span>  <a class="code hl_function" href="msgcont_8c.html#a7fbc9d3ea3efbadfc28976f8030e7a6c">msgcont_push_window</a>(win);</div>
+<div class="line"><span class="lineno">  472</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *old_focus = <a class="code hl_function" href="mutt__window_8c.html#a9b0eb963bae817aae94c7f3427b99f7d">window_set_focus</a>(win);</div>
+<div class="line"><span class="lineno">  473</span>  <a class="code hl_function" href="mutt__window_8c.html#a0af7bfe97dbb8f95d03851ec3fe62553">window_redraw</a>(win);</div>
+<div class="line"><span class="lineno">  474</span> </div>
+<div class="line"><span class="lineno">  475</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structKeyEvent.html">KeyEvent</a> event = { 0, OP_NULL };</div>
+<div class="line"><span class="lineno">  476</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno">  477</span>  {</div>
+<div class="line"><span class="lineno">  478</span>    <a class="code hl_function" href="mutt__window_8c.html#a0af7bfe97dbb8f95d03851ec3fe62553">window_redraw</a>(NULL);</div>
+<div class="line"><span class="lineno">  479</span>    <span class="keyword">event</span> = <a class="code hl_function" href="get_8c.html#a7d47b607e72adbec2c1963d6ae164a85">mutt_getch</a>(<a class="code hl_enumvalue" href="get_8h.html#a22f8e5a3fd35a038b410c77dd8b7a78ca043942bf91d4e49541391a5c1aa091be">GETCH_NONE</a>);</div>
+<div class="line"><span class="lineno">  480</span>  } <span class="keywordflow">while</span> ((event.<a class="code hl_variable" href="structKeyEvent.html#a80bbf4c02749c68c88723c13e73dc94d">op</a> == <a class="code hl_define" href="opcodes_8h.html#a1edfa98369961982b96768d8816754dc">OP_TIMEOUT</a>) || (event.<a class="code hl_variable" href="structKeyEvent.html#a80bbf4c02749c68c88723c13e73dc94d">op</a> == <a class="code hl_define" href="opcodes_8h.html#a93af396c035b85cf082bcbaa05693ec2">OP_REPAINT</a>));</div>
+<div class="line"><span class="lineno">  481</span> </div>
+<div class="line"><span class="lineno">  482</span>  win = <a class="code hl_function" href="msgcont_8c.html#aa78e5fc8401697d653184962a319c907">msgcont_pop_window</a>();</div>
+<div class="line"><span class="lineno">  483</span>  <a class="code hl_function" href="mutt__window_8c.html#a9b0eb963bae817aae94c7f3427b99f7d">window_set_focus</a>(old_focus);</div>
+<div class="line"><span class="lineno">  484</span>  <a class="code hl_function" href="mutt__window_8c.html#a52ff022e671a7fbdec773fc2d24e0e15">mutt_window_free</a>(&amp;win);</div>
+<div class="line"><span class="lineno">  485</span> </div>
+<div class="line"><span class="lineno">  486</span>  <span class="keywordflow">if</span> (event.<a class="code hl_variable" href="structKeyEvent.html#a80bbf4c02749c68c88723c13e73dc94d">op</a> == <a class="code hl_define" href="opcodes_8h.html#a9d285ee08aa8460023a7c730fabf3c94">OP_ABORT</a>)</div>
+<div class="line"><span class="lineno">  487</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  488</span> </div>
+<div class="line"><span class="lineno">  489</span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</a> flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a8cf735750339fbf3eb1d3c33de09dc41">MUTT_NONE</a>;</div>
+<div class="line"><span class="lineno">  490</span>  <span class="keywordflow">switch</span> (event.<a class="code hl_variable" href="structKeyEvent.html#acece69c3519a730c7105cdc96af1e105">ch</a>)</div>
+<div class="line"><span class="lineno">  491</span>  {</div>
+<div class="line"><span class="lineno">  492</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
+<div class="line"><span class="lineno">  493</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
+<div class="line"><span class="lineno">  494</span>      <span class="keywordflow">if</span> (!bf)</div>
+<div class="line"><span class="lineno">  495</span>        <a class="code hl_function" href="flags_8c.html#a7f3a51c26f4900e9af4c09e084e74b0b">mutt_emails_set_flag</a>(m, ea, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a7fb7b2e9048606a37d4c34802ea38c77">MUTT_PURGE</a>, bf);</div>
+<div class="line"><span class="lineno">  496</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013acf5b4fe7fd417be2beaa75728ba8dabf">MUTT_DELETE</a>;</div>
 <div class="line"><span class="lineno">  497</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  498</span> </div>
-<div class="line"><span class="lineno">  499</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
-<div class="line"><span class="lineno">  500</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:</div>
-<div class="line"><span class="lineno">  501</span>      <a class="code hl_function" href="flags_8c.html#a7f3a51c26f4900e9af4c09e084e74b0b">mutt_emails_set_flag</a>(m, ea, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a6be24502ab2b73e6c0dfdcc682b103bd">MUTT_READ</a>, !bf);</div>
-<div class="line"><span class="lineno">  502</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a7deaef4ebf08b54c1258f117b9ec6f50">MUTT_OLD</a>;</div>
-<div class="line"><span class="lineno">  503</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  504</span> </div>
-<div class="line"><span class="lineno">  505</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;r&#39;</span>:</div>
-<div class="line"><span class="lineno">  506</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;R&#39;</span>:</div>
-<div class="line"><span class="lineno">  507</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013af85858c2c1c662fe4c0407b31c75410b">MUTT_REPLIED</a>;</div>
+<div class="line"><span class="lineno">  499</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;N&#39;</span>:</div>
+<div class="line"><span class="lineno">  500</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;n&#39;</span>:</div>
+<div class="line"><span class="lineno">  501</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013aee9fa842e5b3bc6e0a7be34fa55f6109">MUTT_NEW</a>;</div>
+<div class="line"><span class="lineno">  502</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  503</span> </div>
+<div class="line"><span class="lineno">  504</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;o&#39;</span>:</div>
+<div class="line"><span class="lineno">  505</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;O&#39;</span>:</div>
+<div class="line"><span class="lineno">  506</span>      <a class="code hl_function" href="flags_8c.html#a7f3a51c26f4900e9af4c09e084e74b0b">mutt_emails_set_flag</a>(m, ea, <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a6be24502ab2b73e6c0dfdcc682b103bd">MUTT_READ</a>, !bf);</div>
+<div class="line"><span class="lineno">  507</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a7deaef4ebf08b54c1258f117b9ec6f50">MUTT_OLD</a>;</div>
 <div class="line"><span class="lineno">  508</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  509</span> </div>
-<div class="line"><span class="lineno">  510</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:</div>
-<div class="line"><span class="lineno">  511</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a919d368fd60d2e1c19d331b78f415f3e">MUTT_TAG</a>;</div>
-<div class="line"><span class="lineno">  512</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  513</span> </div>
-<div class="line"><span class="lineno">  514</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;!&#39;</span>:</div>
-<div class="line"><span class="lineno">  515</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a98e86a6ccd0fbd487266f4f0cbf28d58">MUTT_FLAG</a>;</div>
-<div class="line"><span class="lineno">  516</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  517</span> </div>
-<div class="line"><span class="lineno">  518</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  519</span>      <a class="code hl_function" href="curs__lib_8c.html#ad4d7b60fedea755304f7d72461d860ca">mutt_beep</a>(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  520</span>      <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno">  521</span>  }</div>
+<div class="line"><span class="lineno">  510</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;r&#39;</span>:</div>
+<div class="line"><span class="lineno">  511</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;R&#39;</span>:</div>
+<div class="line"><span class="lineno">  512</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013af85858c2c1c662fe4c0407b31c75410b">MUTT_REPLIED</a>;</div>
+<div class="line"><span class="lineno">  513</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  514</span> </div>
+<div class="line"><span class="lineno">  515</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:</div>
+<div class="line"><span class="lineno">  516</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a919d368fd60d2e1c19d331b78f415f3e">MUTT_TAG</a>;</div>
+<div class="line"><span class="lineno">  517</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  518</span> </div>
+<div class="line"><span class="lineno">  519</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;!&#39;</span>:</div>
+<div class="line"><span class="lineno">  520</span>      flag = <a class="code hl_enumvalue" href="mutt_8h.html#ac6606ebe91c8ac66a2c314c79f5ab013a98e86a6ccd0fbd487266f4f0cbf28d58">MUTT_FLAG</a>;</div>
+<div class="line"><span class="lineno">  521</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  522</span> </div>
-<div class="line"><span class="lineno">  523</span>  <a class="code hl_function" href="flags_8c.html#a7f3a51c26f4900e9af4c09e084e74b0b">mutt_emails_set_flag</a>(m, ea, flag, bf);</div>
-<div class="line"><span class="lineno">  524</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  525</span>}</div>
+<div class="line"><span class="lineno">  523</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  524</span>      <a class="code hl_function" href="curs__lib_8c.html#ad4d7b60fedea755304f7d72461d860ca">mutt_beep</a>(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  525</span>      <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  526</span>  }</div>
+<div class="line"><span class="lineno">  527</span> </div>
+<div class="line"><span class="lineno">  528</span>  <a class="code hl_function" href="flags_8c.html#a7f3a51c26f4900e9af4c09e084e74b0b">mutt_emails_set_flag</a>(m, ea, flag, bf);</div>
+<div class="line"><span class="lineno">  529</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  530</span>}</div>
 <div class="ttc" id="aarray_8h_html_a748cb2df8cbe952b6fff91d62811a20a"><div class="ttname"><a href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a></div><div class="ttdeci">#define ARRAY_EMPTY(head)</div><div class="ttdoc">Check if an array is empty.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00074">array.h:74</a></div></div>
 <div class="ttc" id="acolor_8h_html_ac0dddfeb58e0f6855f22796d240b070dabebf88d1a3c7d705d314bee4ffcf2e43"><div class="ttname"><a href="color_8h.html#ac0dddfeb58e0f6855f22796d240b070dabebf88d1a3c7d705d314bee4ffcf2e43">MT_COLOR_PROMPT</a></div><div class="ttdeci">@ MT_COLOR_PROMPT</div><div class="ttdoc">Question/user input.</div><div class="ttdef"><b>Definition</b> <a href="color_8h_source.html#l00056">color.h:56</a></div></div>
 <div class="ttc" id="acurs__lib_8c_html_ad4d7b60fedea755304f7d72461d860ca"><div class="ttname"><a href="curs__lib_8c.html#ad4d7b60fedea755304f7d72461d860ca">mutt_beep</a></div><div class="ttdeci">void mutt_beep(bool force)</div><div class="ttdoc">Irritate the user.</div><div class="ttdef"><b>Definition</b> <a href="curs__lib_8c_source.html#l00068">curs_lib.c:68</a></div></div>

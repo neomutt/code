@@ -12,12 +12,13 @@ var NAVTREEINDEX6 =
 "compose_2functions_8c.html#a0cabb76c60dd56dde83ae43c0cf65821":[2,0,11,11,0],
 "compose_2functions_8c.html#a11bdcb6ab6ef4ebe2387a04a5841854b":[2,0,11,11,9],
 "compose_2functions_8c.html#a2b9793e540a32c9668d3928e0cf8b7f7":[2,0,11,11,57],
-"compose_2functions_8c.html#a2c79ae2bce366661ebe2ef47273fb962":[2,0,11,11,16],
+"compose_2functions_8c.html#a2c79ae2bce366661ebe2ef47273fb962":[2,0,11,11,17],
 "compose_2functions_8c.html#a3a00602ccff1ed66fd784dee4218bd74":[2,0,11,11,55],
 "compose_2functions_8c.html#a456939b120c600b22702f0f714b653c2":[2,0,11,11,10],
 "compose_2functions_8c.html#a6d6517aa9ace035c5e1449dd0bbcdeed":[2,0,11,11,7],
 "compose_2functions_8c.html#a78c7433990448979005f6b6824848edd":[2,0,11,11,2],
 "compose_2functions_8c.html#a7d91c80b5edb2f54d718fbfbcb42e98e":[2,0,11,11,14],
+"compose_2functions_8c.html#a883dc38b2c4864497a4b8954351937d7":[2,0,11,11,15],
 "compose_2functions_8c.html#a8a2d51a650f4a0f60dc67a5ac2cc5d89":[2,0,11,11,8],
 "compose_2functions_8c.html#a8d19f80ea0c23b542b21f280adfd8b5b":[2,0,11,11,12],
 "compose_2functions_8c.html#a95c2b9b1e2fdb68aba1433e437ea70d7":[2,0,11,11,11],
@@ -25,7 +26,7 @@ var NAVTREEINDEX6 =
 "compose_2functions_8c.html#aa294d6d72e2784111d0fc242c994e7ec":[2,0,11,11,13],
 "compose_2functions_8c.html#aa2b24f0cc84fe59a9a9542d307ac4e6f":[2,0,11,11,3],
 "compose_2functions_8c.html#ab888d10bda8b3f792707eb614bc9d7b1":[2,0,11,11,5],
-"compose_2functions_8c.html#abf8a650d1123d2e2e3af45e1d3a81af8":[2,0,11,11,15],
+"compose_2functions_8c.html#abf8a650d1123d2e2e3af45e1d3a81af8":[2,0,11,11,16],
 "compose_2functions_8c.html#ad47746953723123b042d5fd6d6719ec8":[2,0,11,11,56],
 "compose_2functions_8c.html#ae86efa2a55b5d2384fe3f0d2c98d1e1f":[2,0,11,11,4],
 "compose_2functions_8c_source.html":[2,0,11,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "config_2set_8h.html#a5b6c4a72c38c2eca93569af53cc82eed":[2,0,13,26,44],
 "config_2set_8h.html#a612674e049354da4f3eb2fbd2e15ace6":[2,0,13,26,12],
 "config_2set_8h.html#a6c9cf00df6994a9cef7caf5d9f0f01c6":[2,0,13,26,38],
-"config_2set_8h.html#a6eec066d228f0ded678c35ed8aa9ac28":[2,0,13,26,42],
-"config_2set_8h.html#a75dc50a55aa4a44a985c5e9763d78ee9":[2,0,13,26,20]
+"config_2set_8h.html#a6eec066d228f0ded678c35ed8aa9ac28":[2,0,13,26,42]
 };

@@ -16,7 +16,6 @@ var group__index__function__api =
     [ "op_exit", "group__index__function__api.html#ga63431f209c49ef4526837bf7075a116c", null ],
     [ "op_extract_keys", "group__index__function__api.html#ga8baa70784bc1de33f934abd9754a0e0a", null ],
     [ "op_flag_message", "group__index__function__api.html#gaf5633bf2939e0b85f8fcddbda22608f6", null ],
-    [ "op_forget_passphrase", "group__index__function__api.html#ga7c4e47e26b4e909fb3f81c1adc238db9", null ],
     [ "op_forward_message", "group__index__function__api.html#ga2e249ce1e9cc4ff43dfeae3a9e71203e", null ],
     [ "op_group_reply", "group__index__function__api.html#ga7f3cee7bd1ce9b1d088908c7eda744df", null ],
     [ "op_jump", "group__index__function__api.html#ga740c90565ea1186b448584e5478a5272", null ],

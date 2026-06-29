@@ -7,6 +7,6 @@ var lz4_8c =
     [ "lz4_cdata_new", "lz4_8c.html#adecf6822fc666a01c078f9f489cf0140", null ],
     [ "compr_lz4_open", "group__compress__open.html#ga089c3f6e001361279287abedae9a348a", null ],
     [ "compr_lz4_compress", "group__compress__compress.html#ga12394af19e80d42dc5461ce78422527f", null ],
-    [ "compr_lz4_decompress", "group__compress__decompress.html#ga9fd0807051fbbe379d3c0815fa6e6f49", null ],
+    [ "compr_lz4_decompress", "group__compress__decompress.html#gae45cc522448cb6ceea06bf2ec2962946", null ],
     [ "compr_lz4_close", "group__compress__close.html#ga42e736e696efe63de1b600da4c5d7f8c", null ]
 ];

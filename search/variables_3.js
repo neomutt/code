@@ -13,7 +13,7 @@ var searchData=
   ['debuglogcolor_10',['DebugLogColor',['../debug_2lib_8h.html#a7af1f4419d3fa89569a0d87c63ec126b',1,'DebugLogColor:&#160;logging.c'],['../debug_2logging_8c.html#a7af1f4419d3fa89569a0d87c63ec126b',1,'DebugLogColor:&#160;logging.c']]],
   ['debugloglevel_11',['DebugLogLevel',['../debug_2lib_8h.html#a610c94eb24e3f1da3f7456394a8fdaa5',1,'DebugLogLevel:&#160;logging.c'],['../debug_2logging_8c.html#a610c94eb24e3f1da3f7456394a8fdaa5',1,'DebugLogLevel:&#160;logging.c']]],
   ['debuglogtimestamp_12',['DebugLogTimestamp',['../debug_2lib_8h.html#a8d6c0ee2a203f0f7fadbc81ea3d32696',1,'DebugLogTimestamp:&#160;logging.c'],['../debug_2logging_8c.html#a8d6c0ee2a203f0f7fadbc81ea3d32696',1,'DebugLogTimestamp:&#160;logging.c']]],
-  ['decompress_13',['decompress',['../structComprOps.html#aa81c7f0b7164bdc47fafad9d191f0a8e',1,'ComprOps']]],
+  ['decompress_13',['decompress',['../structComprOps.html#a7da69f9084d236efe97370df12db5503',1,'ComprOps']]],
   ['decrypt_5fmime_14',['decrypt_mime',['../structCryptModuleSpecs.html#a18cf5903d388ba3cc91431e5076271ee',1,'CryptModuleSpecs']]],
   ['decrypted_15',['decrypted',['../structAttachPtr.html#aaa628364b55eb6e0feff52b9916b4f94',1,'AttachPtr']]],
   ['deep_16',['deep',['../structMuttThread.html#a8c1fd0aa931c50f735bec5e5660856b8',1,'MuttThread']]],

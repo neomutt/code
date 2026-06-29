@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-956-g1154e4</span>
+   &#160;<span id="projectnumber">2025-12-11-970-g3abedd</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -3882,139 +3882,141 @@ Variables</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno"> 2113</span>{</div>
 <div class="line"><span class="lineno"> 2114</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structImapAccountData.html">ImapAccountData</a> *<a class="code hl_variable" href="structAccount.html#ad10abe32dcee204d654a3cd350d8cd8e">adata</a> = <a class="code hl_function" href="imap_2adata_8c.html#abe5c03ce9b5a9a60450482316b4d99ea">imap_adata_get</a>(m);</div>
 <div class="line"><span class="lineno"> 2115</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structImapMboxData.html">ImapMboxData</a> *<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = <a class="code hl_function" href="imap_2mdata_8c.html#a567e2876fed5edb8626c5fefba4ac7ce">imap_mdata_get</a>(m);</div>
-<div class="line"><span class="lineno"> 2116</span> </div>
-<div class="line"><span class="lineno"> 2117</span>  <a class="code hl_function" href="#ae508cb6f612071ea4549814aa3532c89">imap_mbox_select</a>(m);</div>
+<div class="line"><span class="lineno"> 2116</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>)</div>
+<div class="line"><span class="lineno"> 2117</span>    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno"> 2118</span> </div>
-<div class="line"><span class="lineno"> 2119</span>  <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno"> 2120</span>  <span class="keywordtype">int</span> rc;</div>
-<div class="line"><span class="lineno"> 2121</span>  <span class="keywordflow">do</span></div>
-<div class="line"><span class="lineno"> 2122</span>  {</div>
-<div class="line"><span class="lineno"> 2123</span>    <span class="keywordtype">char</span> *pc = NULL;</div>
-<div class="line"><span class="lineno"> 2124</span> </div>
-<div class="line"><span class="lineno"> 2125</span>    rc = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
-<div class="line"><span class="lineno"> 2126</span>    <span class="keywordflow">if</span> (rc != <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>)</div>
-<div class="line"><span class="lineno"> 2127</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno"> 2128</span> </div>
-<div class="line"><span class="lineno"> 2129</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>, <span class="stringliteral">&quot;* &quot;</span>, 2))</div>
-<div class="line"><span class="lineno"> 2130</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 2131</span>    pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>);</div>
-<div class="line"><span class="lineno"> 2132</span> </div>
-<div class="line"><span class="lineno"> 2133</span>    <span class="comment">/* Obtain list of available flags here, may be overridden by a</span></div>
-<div class="line"><span class="lineno"> 2134</span><span class="comment">     * PERMANENTFLAGS tag in the OK response */</span></div>
-<div class="line"><span class="lineno"> 2135</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;FLAGS&quot;</span>))</div>
-<div class="line"><span class="lineno"> 2136</span>    {</div>
-<div class="line"><span class="lineno"> 2137</span>      <span class="comment">/* don&#39;t override PERMANENTFLAGS */</span></div>
-<div class="line"><span class="lineno"> 2138</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="queue_8h.html#a8427c8f43d09d73062cf6b37f303aff5">STAILQ_EMPTY</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags))</div>
-<div class="line"><span class="lineno"> 2139</span>      {</div>
-<div class="line"><span class="lineno"> 2140</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox FLAGS\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2141</span>        pc = <a class="code hl_function" href="#ad0c94b5dea653ee8d1b5974a80c772a3">get_flags</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags, pc);</div>
-<div class="line"><span class="lineno"> 2142</span>        <span class="keywordflow">if</span> (!pc)</div>
-<div class="line"><span class="lineno"> 2143</span>          <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2144</span>      }</div>
-<div class="line"><span class="lineno"> 2145</span>    }</div>
-<div class="line"><span class="lineno"> 2146</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [PERMANENTFLAGS&quot;</span>))</div>
-<div class="line"><span class="lineno"> 2147</span>    {</div>
-<div class="line"><span class="lineno"> 2148</span>      <span class="comment">/* PERMANENTFLAGS are massaged to look like FLAGS, then override FLAGS */</span></div>
-<div class="line"><span class="lineno"> 2149</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox PERMANENTFLAGS\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2150</span>      <span class="comment">/* safe to call on NULL */</span></div>
-<div class="line"><span class="lineno"> 2151</span>      <a class="code hl_function" href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags);</div>
-<div class="line"><span class="lineno"> 2152</span>      <span class="comment">/* skip &quot;OK [PERMANENT&quot; so syntax is the same as FLAGS */</span></div>
-<div class="line"><span class="lineno"> 2153</span>      pc += 13;</div>
-<div class="line"><span class="lineno"> 2154</span>      pc = <a class="code hl_function" href="#ad0c94b5dea653ee8d1b5974a80c772a3">get_flags</a>(&amp;(<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags), pc);</div>
-<div class="line"><span class="lineno"> 2155</span>      <span class="keywordflow">if</span> (!pc)</div>
-<div class="line"><span class="lineno"> 2156</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2157</span>    }</div>
-<div class="line"><span class="lineno"> 2158</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [UIDVALIDITY&quot;</span>))</div>
-<div class="line"><span class="lineno"> 2159</span>    {</div>
-<div class="line"><span class="lineno"> 2160</span>      <span class="comment">/* save UIDVALIDITY for the header cache */</span></div>
-<div class="line"><span class="lineno"> 2161</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox UIDVALIDITY\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2162</span>      pc += 3;</div>
-<div class="line"><span class="lineno"> 2163</span>      pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(pc);</div>
-<div class="line"><span class="lineno"> 2164</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="atoi_8c.html#ad704fc34b6f2eb2132de8bf992994ac1">mutt_str_atoui</a>(pc, &amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;uidvalidity))</div>
-<div class="line"><span class="lineno"> 2165</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2166</span>    }</div>
-<div class="line"><span class="lineno"> 2167</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [UIDNEXT&quot;</span>))</div>
-<div class="line"><span class="lineno"> 2168</span>    {</div>
-<div class="line"><span class="lineno"> 2169</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox UIDNEXT\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2170</span>      pc += 3;</div>
-<div class="line"><span class="lineno"> 2171</span>      pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(pc);</div>
-<div class="line"><span class="lineno"> 2172</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="atoi_8c.html#ad704fc34b6f2eb2132de8bf992994ac1">mutt_str_atoui</a>(pc, &amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;uid_next))</div>
-<div class="line"><span class="lineno"> 2173</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2174</span>    }</div>
-<div class="line"><span class="lineno"> 2175</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [HIGHESTMODSEQ&quot;</span>))</div>
-<div class="line"><span class="lineno"> 2176</span>    {</div>
-<div class="line"><span class="lineno"> 2177</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox HIGHESTMODSEQ\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2178</span>      pc += 3;</div>
-<div class="line"><span class="lineno"> 2179</span>      pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(pc);</div>
-<div class="line"><span class="lineno"> 2180</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="atoi_8c.html#a1825225ac6d68f6215d49ee558623fa8">mutt_str_atoull</a>(pc, &amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;modseq))</div>
-<div class="line"><span class="lineno"> 2181</span>        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2182</span>    }</div>
-<div class="line"><span class="lineno"> 2183</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [NOMODSEQ&quot;</span>))</div>
-<div class="line"><span class="lineno"> 2184</span>    {</div>
-<div class="line"><span class="lineno"> 2185</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Mailbox has NOMODSEQ set\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2186</span>      <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;modseq = 0;</div>
-<div class="line"><span class="lineno"> 2187</span>    }</div>
-<div class="line"><span class="lineno"> 2188</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2189</span>    {</div>
-<div class="line"><span class="lineno"> 2190</span>      pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(pc);</div>
-<div class="line"><span class="lineno"> 2191</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;EXISTS&quot;</span>))</div>
-<div class="line"><span class="lineno"> 2192</span>      {</div>
-<div class="line"><span class="lineno"> 2193</span>        count = <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;new_mail_count;</div>
-<div class="line"><span class="lineno"> 2194</span>        <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;new_mail_count = 0;</div>
-<div class="line"><span class="lineno"> 2195</span>      }</div>
-<div class="line"><span class="lineno"> 2196</span>    }</div>
-<div class="line"><span class="lineno"> 2197</span>  } <span class="keywordflow">while</span> (rc == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
-<div class="line"><span class="lineno"> 2198</span> </div>
-<div class="line"><span class="lineno"> 2199</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_define" href="imap_2private_8h.html#ac10fb2fab1bc13f077a3c973883d8088">IMAP_RES_NO</a>)</div>
-<div class="line"><span class="lineno"> 2200</span>  {</div>
-<div class="line"><span class="lineno"> 2201</span>    <span class="keywordtype">char</span> *s = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>); <span class="comment">/* skip seq */</span></div>
-<div class="line"><span class="lineno"> 2202</span>    s = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(s);                <span class="comment">/* Skip response */</span></div>
-<div class="line"><span class="lineno"> 2203</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, s);</div>
-<div class="line"><span class="lineno"> 2204</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2205</span>  }</div>
-<div class="line"><span class="lineno"> 2206</span> </div>
-<div class="line"><span class="lineno"> 2207</span>  <span class="keywordflow">if</span> (rc != <a class="code hl_define" href="imap_2private_8h.html#a3e63d724ab73ca87b3f8f43a772d32ba">IMAP_RES_OK</a>)</div>
-<div class="line"><span class="lineno"> 2208</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2209</span> </div>
-<div class="line"><span class="lineno"> 2210</span>  <span class="comment">/* check for READ-ONLY notification */</span></div>
-<div class="line"><span class="lineno"> 2211</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(<a class="code hl_function" href="imap_2private_8h.html#af7e377ed18e6573f09e3fc0ead565064">imap_get_qualifier</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>), <span class="stringliteral">&quot;[READ-ONLY]&quot;</span>) &amp;&amp;</div>
-<div class="line"><span class="lineno"> 2212</span>      !(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_enumvalue" href="imap_2private_8h.html#ad69dca684d478ad0af5832c21b50a5b0adfbf02488639116ea199590a884eb56a">IMAP_CAP_ACL</a>))</div>
-<div class="line"><span class="lineno"> 2213</span>  {</div>
-<div class="line"><span class="lineno"> 2214</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Mailbox is read-only\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2215</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#ae55237419d0e842cd6efeed0c41d27e8">readonly</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2216</span>  }</div>
-<div class="line"><span class="lineno"> 2217</span> </div>
-<div class="line"><span class="lineno"> 2218</span>  <span class="comment">/* dump the mailbox flags we&#39;ve found */</span></div>
-<div class="line"><span class="lineno"> 2219</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_debug_level = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;debug_level&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2220</span>  <span class="keywordflow">if</span> (c_debug_level &gt; <a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>)</div>
-<div class="line"><span class="lineno"> 2221</span>  {</div>
-<div class="line"><span class="lineno"> 2222</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="queue_8h.html#a8427c8f43d09d73062cf6b37f303aff5">STAILQ_EMPTY</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags))</div>
-<div class="line"><span class="lineno"> 2223</span>    {</div>
-<div class="line"><span class="lineno"> 2224</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;No folder flags found\n&quot;</span>);</div>
-<div class="line"><span class="lineno"> 2225</span>    }</div>
-<div class="line"><span class="lineno"> 2226</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno"> 2227</span>    {</div>
-<div class="line"><span class="lineno"> 2228</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
-<div class="line"><span class="lineno"> 2229</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *flag_buffer = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno"> 2230</span>      <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(flag_buffer, <span class="stringliteral">&quot;Mailbox flags: &quot;</span>);</div>
-<div class="line"><span class="lineno"> 2231</span>      <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#a2beaa276acd56ef3039d045536467873">flags</a>, entries)</div>
-<div class="line"><span class="lineno"> 2232</span>      {</div>
-<div class="line"><span class="lineno"> 2233</span>        <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(flag_buffer, <span class="stringliteral">&quot;[%s] &quot;</span>, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
-<div class="line"><span class="lineno"> 2234</span>      }</div>
-<div class="line"><span class="lineno"> 2235</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(flag_buffer));</div>
-<div class="line"><span class="lineno"> 2236</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;flag_buffer);</div>
-<div class="line"><span class="lineno"> 2237</span>    }</div>
-<div class="line"><span class="lineno"> 2238</span>  }</div>
-<div class="line"><span class="lineno"> 2239</span> </div>
-<div class="line"><span class="lineno"> 2240</span>  <span class="keywordflow">if</span> (!((m-&gt;<a class="code hl_variable" href="structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73">rights</a> &amp; <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79ab96d23d41e901084f957168329d353b6">MUTT_ACL_DELETE</a>) || (m-&gt;<a class="code hl_variable" href="structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73">rights</a> &amp; <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79ac3c89a989df1b6ce02047d2bde266616">MUTT_ACL_SEEN</a>) ||</div>
-<div class="line"><span class="lineno"> 2241</span>        (m-&gt;<a class="code hl_variable" href="structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73">rights</a> &amp; <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a5998f3e34aec2c9372c03ff076f4ff46">MUTT_ACL_WRITE</a>) || (m-&gt;<a class="code hl_variable" href="structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73">rights</a> &amp; <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a617bbf49f435cfcc203680ed4465e3d2">MUTT_ACL_INSERT</a>)))</div>
-<div class="line"><span class="lineno"> 2242</span>  {</div>
-<div class="line"><span class="lineno"> 2243</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#ae55237419d0e842cd6efeed0c41d27e8">readonly</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno"> 2244</span>  }</div>
-<div class="line"><span class="lineno"> 2245</span> </div>
-<div class="line"><span class="lineno"> 2246</span>  *countp = count;</div>
-<div class="line"><span class="lineno"> 2247</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 2248</span>}</div>
+<div class="line"><span class="lineno"> 2119</span>  <a class="code hl_function" href="#ae508cb6f612071ea4549814aa3532c89">imap_mbox_select</a>(m);</div>
+<div class="line"><span class="lineno"> 2120</span> </div>
+<div class="line"><span class="lineno"> 2121</span>  <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><span class="lineno"> 2122</span>  <span class="keywordtype">int</span> rc;</div>
+<div class="line"><span class="lineno"> 2123</span>  <span class="keywordflow">do</span></div>
+<div class="line"><span class="lineno"> 2124</span>  {</div>
+<div class="line"><span class="lineno"> 2125</span>    <span class="keywordtype">char</span> *pc = NULL;</div>
+<div class="line"><span class="lineno"> 2126</span> </div>
+<div class="line"><span class="lineno"> 2127</span>    rc = <a class="code hl_function" href="imap_2command_8c.html#a8b9d7c9333e35981d94074e9dcc28e6f">imap_cmd_step</a>(adata);</div>
+<div class="line"><span class="lineno"> 2128</span>    <span class="keywordflow">if</span> (rc != <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>)</div>
+<div class="line"><span class="lineno"> 2129</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno"> 2130</span> </div>
+<div class="line"><span class="lineno"> 2131</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt_2string_8c.html#a6f574867aa9db4d434adbc8af1f5f7e7">mutt_strn_equal</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>, <span class="stringliteral">&quot;* &quot;</span>, 2))</div>
+<div class="line"><span class="lineno"> 2132</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2133</span>    pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>);</div>
+<div class="line"><span class="lineno"> 2134</span> </div>
+<div class="line"><span class="lineno"> 2135</span>    <span class="comment">/* Obtain list of available flags here, may be overridden by a</span></div>
+<div class="line"><span class="lineno"> 2136</span><span class="comment">     * PERMANENTFLAGS tag in the OK response */</span></div>
+<div class="line"><span class="lineno"> 2137</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;FLAGS&quot;</span>))</div>
+<div class="line"><span class="lineno"> 2138</span>    {</div>
+<div class="line"><span class="lineno"> 2139</span>      <span class="comment">/* don&#39;t override PERMANENTFLAGS */</span></div>
+<div class="line"><span class="lineno"> 2140</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="queue_8h.html#a8427c8f43d09d73062cf6b37f303aff5">STAILQ_EMPTY</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags))</div>
+<div class="line"><span class="lineno"> 2141</span>      {</div>
+<div class="line"><span class="lineno"> 2142</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox FLAGS\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2143</span>        pc = <a class="code hl_function" href="#ad0c94b5dea653ee8d1b5974a80c772a3">get_flags</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags, pc);</div>
+<div class="line"><span class="lineno"> 2144</span>        <span class="keywordflow">if</span> (!pc)</div>
+<div class="line"><span class="lineno"> 2145</span>          <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2146</span>      }</div>
+<div class="line"><span class="lineno"> 2147</span>    }</div>
+<div class="line"><span class="lineno"> 2148</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [PERMANENTFLAGS&quot;</span>))</div>
+<div class="line"><span class="lineno"> 2149</span>    {</div>
+<div class="line"><span class="lineno"> 2150</span>      <span class="comment">/* PERMANENTFLAGS are massaged to look like FLAGS, then override FLAGS */</span></div>
+<div class="line"><span class="lineno"> 2151</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox PERMANENTFLAGS\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2152</span>      <span class="comment">/* safe to call on NULL */</span></div>
+<div class="line"><span class="lineno"> 2153</span>      <a class="code hl_function" href="list_8c.html#ab5c53ce94cc2aafa4299dbc81a37f4a4">mutt_list_free</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags);</div>
+<div class="line"><span class="lineno"> 2154</span>      <span class="comment">/* skip &quot;OK [PERMANENT&quot; so syntax is the same as FLAGS */</span></div>
+<div class="line"><span class="lineno"> 2155</span>      pc += 13;</div>
+<div class="line"><span class="lineno"> 2156</span>      pc = <a class="code hl_function" href="#ad0c94b5dea653ee8d1b5974a80c772a3">get_flags</a>(&amp;(<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags), pc);</div>
+<div class="line"><span class="lineno"> 2157</span>      <span class="keywordflow">if</span> (!pc)</div>
+<div class="line"><span class="lineno"> 2158</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2159</span>    }</div>
+<div class="line"><span class="lineno"> 2160</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [UIDVALIDITY&quot;</span>))</div>
+<div class="line"><span class="lineno"> 2161</span>    {</div>
+<div class="line"><span class="lineno"> 2162</span>      <span class="comment">/* save UIDVALIDITY for the header cache */</span></div>
+<div class="line"><span class="lineno"> 2163</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox UIDVALIDITY\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2164</span>      pc += 3;</div>
+<div class="line"><span class="lineno"> 2165</span>      pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(pc);</div>
+<div class="line"><span class="lineno"> 2166</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="atoi_8c.html#ad704fc34b6f2eb2132de8bf992994ac1">mutt_str_atoui</a>(pc, &amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;uidvalidity))</div>
+<div class="line"><span class="lineno"> 2167</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2168</span>    }</div>
+<div class="line"><span class="lineno"> 2169</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [UIDNEXT&quot;</span>))</div>
+<div class="line"><span class="lineno"> 2170</span>    {</div>
+<div class="line"><span class="lineno"> 2171</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox UIDNEXT\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2172</span>      pc += 3;</div>
+<div class="line"><span class="lineno"> 2173</span>      pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(pc);</div>
+<div class="line"><span class="lineno"> 2174</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="atoi_8c.html#ad704fc34b6f2eb2132de8bf992994ac1">mutt_str_atoui</a>(pc, &amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;uid_next))</div>
+<div class="line"><span class="lineno"> 2175</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2176</span>    }</div>
+<div class="line"><span class="lineno"> 2177</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [HIGHESTMODSEQ&quot;</span>))</div>
+<div class="line"><span class="lineno"> 2178</span>    {</div>
+<div class="line"><span class="lineno"> 2179</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Getting mailbox HIGHESTMODSEQ\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2180</span>      pc += 3;</div>
+<div class="line"><span class="lineno"> 2181</span>      pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(pc);</div>
+<div class="line"><span class="lineno"> 2182</span>      <span class="keywordflow">if</span> (!<a class="code hl_function" href="atoi_8c.html#a1825225ac6d68f6215d49ee558623fa8">mutt_str_atoull</a>(pc, &amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;modseq))</div>
+<div class="line"><span class="lineno"> 2183</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2184</span>    }</div>
+<div class="line"><span class="lineno"> 2185</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;OK [NOMODSEQ&quot;</span>))</div>
+<div class="line"><span class="lineno"> 2186</span>    {</div>
+<div class="line"><span class="lineno"> 2187</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;Mailbox has NOMODSEQ set\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2188</span>      <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;modseq = 0;</div>
+<div class="line"><span class="lineno"> 2189</span>    }</div>
+<div class="line"><span class="lineno"> 2190</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2191</span>    {</div>
+<div class="line"><span class="lineno"> 2192</span>      pc = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(pc);</div>
+<div class="line"><span class="lineno"> 2193</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(pc, <span class="stringliteral">&quot;EXISTS&quot;</span>))</div>
+<div class="line"><span class="lineno"> 2194</span>      {</div>
+<div class="line"><span class="lineno"> 2195</span>        count = <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;new_mail_count;</div>
+<div class="line"><span class="lineno"> 2196</span>        <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;new_mail_count = 0;</div>
+<div class="line"><span class="lineno"> 2197</span>      }</div>
+<div class="line"><span class="lineno"> 2198</span>    }</div>
+<div class="line"><span class="lineno"> 2199</span>  } <span class="keywordflow">while</span> (rc == <a class="code hl_define" href="imap_2private_8h.html#add0869283ae9186ac31a7169b246cc6b">IMAP_RES_CONTINUE</a>);</div>
+<div class="line"><span class="lineno"> 2200</span> </div>
+<div class="line"><span class="lineno"> 2201</span>  <span class="keywordflow">if</span> (rc == <a class="code hl_define" href="imap_2private_8h.html#ac10fb2fab1bc13f077a3c973883d8088">IMAP_RES_NO</a>)</div>
+<div class="line"><span class="lineno"> 2202</span>  {</div>
+<div class="line"><span class="lineno"> 2203</span>    <span class="keywordtype">char</span> *s = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>); <span class="comment">/* skip seq */</span></div>
+<div class="line"><span class="lineno"> 2204</span>    s = <a class="code hl_function" href="imap_2private_8h.html#adeb5e149a78c8a6dc9e5763fd015577a">imap_next_word</a>(s);                <span class="comment">/* Skip response */</span></div>
+<div class="line"><span class="lineno"> 2205</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<span class="stringliteral">&quot;%s&quot;</span>, s);</div>
+<div class="line"><span class="lineno"> 2206</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2207</span>  }</div>
+<div class="line"><span class="lineno"> 2208</span> </div>
+<div class="line"><span class="lineno"> 2209</span>  <span class="keywordflow">if</span> (rc != <a class="code hl_define" href="imap_2private_8h.html#a3e63d724ab73ca87b3f8f43a772d32ba">IMAP_RES_OK</a>)</div>
+<div class="line"><span class="lineno"> 2210</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2211</span> </div>
+<div class="line"><span class="lineno"> 2212</span>  <span class="comment">/* check for READ-ONLY notification */</span></div>
+<div class="line"><span class="lineno"> 2213</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#aebd2a8a3f8a30062c31fa1474d87cc41">mutt_istr_startswith</a>(<a class="code hl_function" href="imap_2private_8h.html#af7e377ed18e6573f09e3fc0ead565064">imap_get_qualifier</a>(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ae2a1c679abb95b27819897b57ee436fd">buf</a>), <span class="stringliteral">&quot;[READ-ONLY]&quot;</span>) &amp;&amp;</div>
+<div class="line"><span class="lineno"> 2214</span>      !(adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aa1ba7fde388cdd8e1133c1784e5ed4ea">capabilities</a> &amp; <a class="code hl_enumvalue" href="imap_2private_8h.html#ad69dca684d478ad0af5832c21b50a5b0adfbf02488639116ea199590a884eb56a">IMAP_CAP_ACL</a>))</div>
+<div class="line"><span class="lineno"> 2215</span>  {</div>
+<div class="line"><span class="lineno"> 2216</span>    <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;Mailbox is read-only\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2217</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#ae55237419d0e842cd6efeed0c41d27e8">readonly</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2218</span>  }</div>
+<div class="line"><span class="lineno"> 2219</span> </div>
+<div class="line"><span class="lineno"> 2220</span>  <span class="comment">/* dump the mailbox flags we&#39;ve found */</span></div>
+<div class="line"><span class="lineno"> 2221</span>  <span class="keyword">const</span> <span class="keywordtype">short</span> c_debug_level = <a class="code hl_function" href="config_2helpers_8c.html#a96039a9f8d37daad993ae7b490510339">cs_subset_number</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;debug_level&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2222</span>  <span class="keywordflow">if</span> (c_debug_level &gt; <a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>)</div>
+<div class="line"><span class="lineno"> 2223</span>  {</div>
+<div class="line"><span class="lineno"> 2224</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="queue_8h.html#a8427c8f43d09d73062cf6b37f303aff5">STAILQ_EMPTY</a>(&amp;<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;flags))</div>
+<div class="line"><span class="lineno"> 2225</span>    {</div>
+<div class="line"><span class="lineno"> 2226</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;No folder flags found\n&quot;</span>);</div>
+<div class="line"><span class="lineno"> 2227</span>    }</div>
+<div class="line"><span class="lineno"> 2228</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno"> 2229</span>    {</div>
+<div class="line"><span class="lineno"> 2230</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structListNode.html">ListNode</a> *np = NULL;</div>
+<div class="line"><span class="lineno"> 2231</span>      <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *flag_buffer = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno"> 2232</span>      <a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(flag_buffer, <span class="stringliteral">&quot;Mailbox flags: &quot;</span>);</div>
+<div class="line"><span class="lineno"> 2233</span>      <a class="code hl_define" href="queue_8h.html#a77999ebdf5aaf7af8b8ea22bf208c432">STAILQ_FOREACH</a>(np, &amp;mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#a2beaa276acd56ef3039d045536467873">flags</a>, entries)</div>
+<div class="line"><span class="lineno"> 2234</span>      {</div>
+<div class="line"><span class="lineno"> 2235</span>        <a class="code hl_function" href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a>(flag_buffer, <span class="stringliteral">&quot;[%s] &quot;</span>, np-&gt;<a class="code hl_variable" href="structListNode.html#aafe688d670318196766392d8235d00a7">data</a>);</div>
+<div class="line"><span class="lineno"> 2236</span>      }</div>
+<div class="line"><span class="lineno"> 2237</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a51339e1b6c72f67dcc9649e7859789c5">LL_DEBUG3</a>, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(flag_buffer));</div>
+<div class="line"><span class="lineno"> 2238</span>      <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;flag_buffer);</div>
+<div class="line"><span class="lineno"> 2239</span>    }</div>
+<div class="line"><span class="lineno"> 2240</span>  }</div>
+<div class="line"><span class="lineno"> 2241</span> </div>
+<div class="line"><span class="lineno"> 2242</span>  <span class="keywordflow">if</span> (!((m-&gt;<a class="code hl_variable" href="structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73">rights</a> &amp; <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79ab96d23d41e901084f957168329d353b6">MUTT_ACL_DELETE</a>) || (m-&gt;<a class="code hl_variable" href="structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73">rights</a> &amp; <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79ac3c89a989df1b6ce02047d2bde266616">MUTT_ACL_SEEN</a>) ||</div>
+<div class="line"><span class="lineno"> 2243</span>        (m-&gt;<a class="code hl_variable" href="structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73">rights</a> &amp; <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a5998f3e34aec2c9372c03ff076f4ff46">MUTT_ACL_WRITE</a>) || (m-&gt;<a class="code hl_variable" href="structMailbox.html#a44766ec39ab823278479d0a8fe7b5f73">rights</a> &amp; <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a45d2a4e59a76370453bddda9947ebe79a617bbf49f435cfcc203680ed4465e3d2">MUTT_ACL_INSERT</a>)))</div>
+<div class="line"><span class="lineno"> 2244</span>  {</div>
+<div class="line"><span class="lineno"> 2245</span>    m-&gt;<a class="code hl_variable" href="structMailbox.html#ae55237419d0e842cd6efeed0c41d27e8">readonly</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno"> 2246</span>  }</div>
+<div class="line"><span class="lineno"> 2247</span> </div>
+<div class="line"><span class="lineno"> 2248</span>  *countp = count;</div>
+<div class="line"><span class="lineno"> 2249</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 2250</span>}</div>
 <div class="ttc" id="aatoi_8c_html_a1825225ac6d68f6215d49ee558623fa8"><div class="ttname"><a href="atoi_8c.html#a1825225ac6d68f6215d49ee558623fa8">mutt_str_atoull</a></div><div class="ttdeci">const char * mutt_str_atoull(const char *str, unsigned long long *dst)</div><div class="ttdoc">Convert ASCII string to an unsigned long long.</div><div class="ttdef"><b>Definition</b> <a href="atoi_8c_source.html#l00295">atoi.c:295</a></div></div>
 <div class="ttc" id="aatoi_8c_html_ad704fc34b6f2eb2132de8bf992994ac1"><div class="ttname"><a href="atoi_8c.html#ad704fc34b6f2eb2132de8bf992994ac1">mutt_str_atoui</a></div><div class="ttdeci">const char * mutt_str_atoui(const char *str, unsigned int *dst)</div><div class="ttdoc">Convert ASCII string to an unsigned integer.</div><div class="ttdef"><b>Definition</b> <a href="atoi_8c_source.html#l00217">atoi.c:217</a></div></div>
 <div class="ttc" id="abuffer_8c_html_a0849b79217aad19e4bf9381d532d59d1"><div class="ttname"><a href="buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1">buf_add_printf</a></div><div class="ttdeci">int buf_add_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string appending a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00211">buffer.c:211</a></div></div>
@@ -4071,60 +4073,60 @@ Variables</h2></td></tr>
 </dl>
 <p>After a connection drop and successful reconnect, re-SELECT the previously open mailbox, clear stale message state, and re-fetch all headers so the index is repopulated. This avoids the destructive <a class="el" href="mx_8c.html#a4e4de522e1ca1db28736065f1499c55d" title="Free up memory associated with the Mailbox.">mx_fastclose_mailbox()</a> path that used to leave the user with an empty screen. </p>
 
-<p class="definition">Definition at line <a class="el" href="imap_8c_source.html#l02261">2261</a> of file <a class="el" href="imap_8c_source.html">imap.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 2262</span>{</div>
-<div class="line"><span class="lineno"> 2263</span>  <span class="keywordflow">if</span> (!adata || !adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ab08af69f675be131e1431c11bf6cf4f0">mailbox</a>)</div>
-<div class="line"><span class="lineno"> 2264</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2265</span> </div>
-<div class="line"><span class="lineno"> 2266</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ab08af69f675be131e1431c11bf6cf4f0">mailbox</a>;</div>
-<div class="line"><span class="lineno"> 2267</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structImapMboxData.html">ImapMboxData</a> *<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = <a class="code hl_function" href="imap_2mdata_8c.html#a567e2876fed5edb8626c5fefba4ac7ce">imap_mdata_get</a>(m);</div>
-<div class="line"><span class="lineno"> 2268</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>)</div>
-<div class="line"><span class="lineno"> 2269</span>    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2270</span> </div>
-<div class="line"><span class="lineno"> 2271</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Re-selecting mailbox %s after reconnect\n&quot;</span>, <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;name);</div>
+<p class="definition">Definition at line <a class="el" href="imap_8c_source.html#l02263">2263</a> of file <a class="el" href="imap_8c_source.html">imap.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 2264</span>{</div>
+<div class="line"><span class="lineno"> 2265</span>  <span class="keywordflow">if</span> (!adata || !adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ab08af69f675be131e1431c11bf6cf4f0">mailbox</a>)</div>
+<div class="line"><span class="lineno"> 2266</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2267</span> </div>
+<div class="line"><span class="lineno"> 2268</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMailbox.html">Mailbox</a> *m = adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#ab08af69f675be131e1431c11bf6cf4f0">mailbox</a>;</div>
+<div class="line"><span class="lineno"> 2269</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structImapMboxData.html">ImapMboxData</a> *<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a> = <a class="code hl_function" href="imap_2mdata_8c.html#a567e2876fed5edb8626c5fefba4ac7ce">imap_mdata_get</a>(m);</div>
+<div class="line"><span class="lineno"> 2270</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>)</div>
+<div class="line"><span class="lineno"> 2271</span>    <span class="keywordflow">return</span> -1;</div>
 <div class="line"><span class="lineno"> 2272</span> </div>
-<div class="line"><span class="lineno"> 2273</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
-<div class="line"><span class="lineno"> 2274</span>  {</div>
-<div class="line"><span class="lineno"> 2275</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i];</div>
-<div class="line"><span class="lineno"> 2276</span>    <span class="keywordflow">if</span> (!e)</div>
-<div class="line"><span class="lineno"> 2277</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno"> 2278</span>    <a class="code hl_function" href="group__email__edata__free.html#gaca39a57c385f6fdc7aa1297b87c48085">imap_edata_free</a>((<span class="keywordtype">void</span> **) &amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>);</div>
-<div class="line"><span class="lineno"> 2279</span>    <a class="code hl_function" href="email_2email_8c.html#ae9f719d3fc31d00b92bcf9f77d56ee67">email_free</a>(&amp;m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]);</div>
-<div class="line"><span class="lineno"> 2280</span>  }</div>
-<div class="line"><span class="lineno"> 2281</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a> = 0;</div>
-<div class="line"><span class="lineno"> 2282</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#af2632307a08699cf251e6599c8a84cac">msg_unread</a> = 0;</div>
-<div class="line"><span class="lineno"> 2283</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#ad8cc58166581060ab58acf36f22bfd4d">msg_flagged</a> = 0;</div>
-<div class="line"><span class="lineno"> 2284</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#a3348499d9eb11b4e48f073d2eddb2be4">msg_new</a> = 0;</div>
-<div class="line"><span class="lineno"> 2285</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#ab5863d8f516c6db52e2fadb531bf8557">msg_deleted</a> = 0;</div>
-<div class="line"><span class="lineno"> 2286</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#ace276d581d6d299ecf227be214841148">size</a> = 0;</div>
-<div class="line"><span class="lineno"> 2287</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a> = 0;</div>
-<div class="line"><span class="lineno"> 2288</span> </div>
-<div class="line"><span class="lineno"> 2289</span>  <a class="code hl_function" href="imap_2private_8h.html#a584330f840a82b13da6b7bd730de68c1">imap_mdata_cache_reset</a>(mdata);</div>
+<div class="line"><span class="lineno"> 2273</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Re-selecting mailbox %s after reconnect\n&quot;</span>, <a class="code hl_variable" href="structMailbox.html#a69b544c5c748ab3046dcc6e61a41f595">mdata</a>-&gt;name);</div>
+<div class="line"><span class="lineno"> 2274</span> </div>
+<div class="line"><span class="lineno"> 2275</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>; i++)</div>
+<div class="line"><span class="lineno"> 2276</span>  {</div>
+<div class="line"><span class="lineno"> 2277</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structEmail.html">Email</a> *e = m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i];</div>
+<div class="line"><span class="lineno"> 2278</span>    <span class="keywordflow">if</span> (!e)</div>
+<div class="line"><span class="lineno"> 2279</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno"> 2280</span>    <a class="code hl_function" href="group__email__edata__free.html#gaca39a57c385f6fdc7aa1297b87c48085">imap_edata_free</a>((<span class="keywordtype">void</span> **) &amp;e-&gt;<a class="code hl_variable" href="structEmail.html#a50d8a8dde5fbf0b6dba934ff7e07fb6b">edata</a>);</div>
+<div class="line"><span class="lineno"> 2281</span>    <a class="code hl_function" href="email_2email_8c.html#ae9f719d3fc31d00b92bcf9f77d56ee67">email_free</a>(&amp;m-&gt;<a class="code hl_variable" href="structMailbox.html#a73ca79846dce43a175892c5d88e932ca">emails</a>[i]);</div>
+<div class="line"><span class="lineno"> 2282</span>  }</div>
+<div class="line"><span class="lineno"> 2283</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a> = 0;</div>
+<div class="line"><span class="lineno"> 2284</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#af2632307a08699cf251e6599c8a84cac">msg_unread</a> = 0;</div>
+<div class="line"><span class="lineno"> 2285</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#ad8cc58166581060ab58acf36f22bfd4d">msg_flagged</a> = 0;</div>
+<div class="line"><span class="lineno"> 2286</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#a3348499d9eb11b4e48f073d2eddb2be4">msg_new</a> = 0;</div>
+<div class="line"><span class="lineno"> 2287</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#ab5863d8f516c6db52e2fadb531bf8557">msg_deleted</a> = 0;</div>
+<div class="line"><span class="lineno"> 2288</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#ace276d581d6d299ecf227be214841148">size</a> = 0;</div>
+<div class="line"><span class="lineno"> 2289</span>  m-&gt;<a class="code hl_variable" href="structMailbox.html#a0e1673cdf63976b1d148786457666f84">vcount</a> = 0;</div>
 <div class="line"><span class="lineno"> 2290</span> </div>
-<div class="line"><span class="lineno"> 2291</span>  mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#a5b7958aa356cbb9e73e5b95334613eb6">new_mail_count</a> = 0;</div>
-<div class="line"><span class="lineno"> 2292</span>  mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#a0361d64a273edc77a83d276053da5b6d">reopen</a> = <a class="code hl_enumvalue" href="imap_2private_8h.html#abe74435c70d7bead4230984b10520278a917aa790ee95ca07825e03183099d3a2">IMAP_OPEN_NONE</a>;</div>
-<div class="line"><span class="lineno"> 2293</span>  mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#aabd21dc6c911b4b657865b36aafef6ca">check_status</a> = <a class="code hl_enumvalue" href="imap_2private_8h.html#abe74435c70d7bead4230984b10520278a917aa790ee95ca07825e03183099d3a2">IMAP_OPEN_NONE</a>;</div>
-<div class="line"><span class="lineno"> 2294</span> </div>
-<div class="line"><span class="lineno"> 2295</span>  <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><span class="lineno"> 2296</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a4e9de6206c9244c75af6d4fb56fbd9ae">imap_select_and_poll</a>(m, &amp;count) &lt; 0)</div>
-<div class="line"><span class="lineno"> 2297</span>    <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno"> 2298</span> </div>
-<div class="line"><span class="lineno"> 2299</span>  <a class="code hl_function" href="mx_8c.html#a0572e1f7a00e528557923201a39c7de9">mx_alloc_memory</a>(m, count);</div>
+<div class="line"><span class="lineno"> 2291</span>  <a class="code hl_function" href="imap_2private_8h.html#a584330f840a82b13da6b7bd730de68c1">imap_mdata_cache_reset</a>(mdata);</div>
+<div class="line"><span class="lineno"> 2292</span> </div>
+<div class="line"><span class="lineno"> 2293</span>  mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#a5b7958aa356cbb9e73e5b95334613eb6">new_mail_count</a> = 0;</div>
+<div class="line"><span class="lineno"> 2294</span>  mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#a0361d64a273edc77a83d276053da5b6d">reopen</a> = <a class="code hl_enumvalue" href="imap_2private_8h.html#abe74435c70d7bead4230984b10520278a917aa790ee95ca07825e03183099d3a2">IMAP_OPEN_NONE</a>;</div>
+<div class="line"><span class="lineno"> 2295</span>  mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#aabd21dc6c911b4b657865b36aafef6ca">check_status</a> = <a class="code hl_enumvalue" href="imap_2private_8h.html#abe74435c70d7bead4230984b10520278a917aa790ee95ca07825e03183099d3a2">IMAP_OPEN_NONE</a>;</div>
+<div class="line"><span class="lineno"> 2296</span> </div>
+<div class="line"><span class="lineno"> 2297</span>  <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><span class="lineno"> 2298</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="#a4e9de6206c9244c75af6d4fb56fbd9ae">imap_select_and_poll</a>(m, &amp;count) &lt; 0)</div>
+<div class="line"><span class="lineno"> 2299</span>    <span class="keywordflow">goto</span> fail;</div>
 <div class="line"><span class="lineno"> 2300</span> </div>
-<div class="line"><span class="lineno"> 2301</span>  <span class="keywordflow">if</span> ((count &gt; 0) &amp;&amp; (<a class="code hl_function" href="imap_2message_8c.html#abe57c68df95e87d0dbe1453903343042">imap_read_headers</a>(m, 1, count, <span class="keyword">true</span>) &lt; 0))</div>
-<div class="line"><span class="lineno"> 2302</span>    <span class="keywordflow">goto</span> fail;</div>
-<div class="line"><span class="lineno"> 2303</span> </div>
-<div class="line"><span class="lineno"> 2304</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Reopened mailbox %s with %d messages\n&quot;</span>, mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#ad16e4ff0444eceaf5cf6700d00cc5c9f">name</a>, m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>);</div>
-<div class="line"><span class="lineno"> 2305</span>  <a class="code hl_function" href="core_2mailbox_8c.html#af09ac36728ca3255523cd3b0bfd1f172">mailbox_changed</a>(m, <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4ad0c3ae03b6a1ba8f4a91d5f8c81796ac">NT_MAILBOX_UPDATE</a>);</div>
-<div class="line"><span class="lineno"> 2306</span>  <a class="code hl_function" href="core_2mailbox_8c.html#af09ac36728ca3255523cd3b0bfd1f172">mailbox_changed</a>(m, <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a96d28ff20a133d31e2e6ce8bb4e8b78f">NT_MAILBOX_RESORT</a>);</div>
-<div class="line"><span class="lineno"> 2307</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 2308</span> </div>
-<div class="line"><span class="lineno"> 2309</span>fail:</div>
-<div class="line"><span class="lineno"> 2310</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Failed to reopen mailbox %s\n&quot;</span>, mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#ad16e4ff0444eceaf5cf6700d00cc5c9f">name</a>);</div>
-<div class="line"><span class="lineno"> 2311</span>  <span class="keywordflow">if</span> (adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aafe97c07683cbc20007c8dd315b2d19e">state</a> == <a class="code hl_enumvalue" href="imap_2private_8h.html#a3207e3d0454924e85cf684412e72ed7aad9e8eb2d142788743071016963183f21">IMAP_SELECTED</a>)</div>
-<div class="line"><span class="lineno"> 2312</span>    adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aafe97c07683cbc20007c8dd315b2d19e">state</a> = <a class="code hl_enumvalue" href="imap_2private_8h.html#a3207e3d0454924e85cf684412e72ed7aaccebf236e9a58144ad76895c753f4fa0">IMAP_AUTHENTICATED</a>;</div>
-<div class="line"><span class="lineno"> 2313</span>  <span class="keywordflow">return</span> -1;</div>
-<div class="line"><span class="lineno"> 2314</span>}</div>
+<div class="line"><span class="lineno"> 2301</span>  <a class="code hl_function" href="mx_8c.html#a0572e1f7a00e528557923201a39c7de9">mx_alloc_memory</a>(m, count);</div>
+<div class="line"><span class="lineno"> 2302</span> </div>
+<div class="line"><span class="lineno"> 2303</span>  <span class="keywordflow">if</span> ((count &gt; 0) &amp;&amp; (<a class="code hl_function" href="imap_2message_8c.html#abe57c68df95e87d0dbe1453903343042">imap_read_headers</a>(m, 1, count, <span class="keyword">true</span>) &lt; 0))</div>
+<div class="line"><span class="lineno"> 2304</span>    <span class="keywordflow">goto</span> fail;</div>
+<div class="line"><span class="lineno"> 2305</span> </div>
+<div class="line"><span class="lineno"> 2306</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Reopened mailbox %s with %d messages\n&quot;</span>, mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#ad16e4ff0444eceaf5cf6700d00cc5c9f">name</a>, m-&gt;<a class="code hl_variable" href="structMailbox.html#a3d7ee4badbaec0d67db9e29d5ba716ee">msg_count</a>);</div>
+<div class="line"><span class="lineno"> 2307</span>  <a class="code hl_function" href="core_2mailbox_8c.html#af09ac36728ca3255523cd3b0bfd1f172">mailbox_changed</a>(m, <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4ad0c3ae03b6a1ba8f4a91d5f8c81796ac">NT_MAILBOX_UPDATE</a>);</div>
+<div class="line"><span class="lineno"> 2308</span>  <a class="code hl_function" href="core_2mailbox_8c.html#af09ac36728ca3255523cd3b0bfd1f172">mailbox_changed</a>(m, <a class="code hl_enumvalue" href="core_2mailbox_8h.html#a01795608bad9d16eed1bc017f0bd96c4a96d28ff20a133d31e2e6ce8bb4e8b78f">NT_MAILBOX_RESORT</a>);</div>
+<div class="line"><span class="lineno"> 2309</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 2310</span> </div>
+<div class="line"><span class="lineno"> 2311</span>fail:</div>
+<div class="line"><span class="lineno"> 2312</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;Failed to reopen mailbox %s\n&quot;</span>, mdata-&gt;<a class="code hl_variable" href="structImapMboxData.html#ad16e4ff0444eceaf5cf6700d00cc5c9f">name</a>);</div>
+<div class="line"><span class="lineno"> 2313</span>  <span class="keywordflow">if</span> (adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aafe97c07683cbc20007c8dd315b2d19e">state</a> == <a class="code hl_enumvalue" href="imap_2private_8h.html#a3207e3d0454924e85cf684412e72ed7aad9e8eb2d142788743071016963183f21">IMAP_SELECTED</a>)</div>
+<div class="line"><span class="lineno"> 2314</span>    adata-&gt;<a class="code hl_variable" href="structImapAccountData.html#aafe97c07683cbc20007c8dd315b2d19e">state</a> = <a class="code hl_enumvalue" href="imap_2private_8h.html#a3207e3d0454924e85cf684412e72ed7aaccebf236e9a58144ad76895c753f4fa0">IMAP_AUTHENTICATED</a>;</div>
+<div class="line"><span class="lineno"> 2315</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno"> 2316</span>}</div>
 <div class="ttc" id="aemail_2email_8c_html_ae9f719d3fc31d00b92bcf9f77d56ee67"><div class="ttname"><a href="email_2email_8c.html#ae9f719d3fc31d00b92bcf9f77d56ee67">email_free</a></div><div class="ttdeci">void email_free(struct Email **ptr)</div><div class="ttdoc">Free an Email.</div><div class="ttdef"><b>Definition</b> <a href="email_2email_8c_source.html#l00046">email.c:46</a></div></div>
 <div class="ttc" id="aimap_2message_8c_html_abe57c68df95e87d0dbe1453903343042"><div class="ttname"><a href="imap_2message_8c.html#abe57c68df95e87d0dbe1453903343042">imap_read_headers</a></div><div class="ttdeci">int imap_read_headers(struct Mailbox *m, unsigned int msn_begin, unsigned int msn_end, bool initial_download)</div><div class="ttdoc">Read headers from the server.</div><div class="ttdef"><b>Definition</b> <a href="imap_2message_8c_source.html#l01366">message.c:1366</a></div></div>
 <div class="ttc" id="aimap_2private_8h_html_a584330f840a82b13da6b7bd730de68c1"><div class="ttname"><a href="imap_2private_8h.html#a584330f840a82b13da6b7bd730de68c1">imap_mdata_cache_reset</a></div><div class="ttdeci">void imap_mdata_cache_reset(struct ImapMboxData *mdata)</div><div class="ttdoc">Release and clear cache data of ImapMboxData structure.</div><div class="ttdef"><b>Definition</b> <a href="util_8c_source.html#l00111">util.c:111</a></div></div>

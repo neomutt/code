@@ -2,6 +2,7 @@ var group__window__recalc =
 [
     [ "alias_recalc", "group__window__recalc.html#ga05f270a58ed952d2a0adc246441190c5", null ],
     [ "attach_recalc", "group__window__recalc.html#gac7f32fac8e578a4905e29336e42aa250", null ],
+    [ "attach_recalc_simple", "group__window__recalc.html#ga5ea039785f712445dac406d81dd79997", null ],
     [ "cbar_recalc", "group__window__recalc.html#ga45b6ef7a2b68a84c1d71816d97ec475a", null ],
     [ "compose_recalc", "group__window__recalc.html#ga19810257ecfde2de00f4f7812906dac3", null ],
     [ "preview_recalc", "group__window__recalc.html#ga82b7f442ba2bfeb9b2cd01f5f8dce41f", null ],

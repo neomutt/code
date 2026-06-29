@@ -11,6 +11,7 @@ var sidebar_2expando_8c =
     [ "sidebar_name", "group__expando__get__string__api.html#ga27c73c7048e4197781213cb6564b2162", null ],
     [ "sidebar_new_mail", "group__expando__get__string__api.html#ga9fac9607bf92f8e56cbeb9ad5c0117fb", null ],
     [ "sidebar_new_mail_num", "group__expando__get__number__api.html#gad58d3a477aa4d47f1d69bc352c1a5043", null ],
+    [ "sidebar_number_num", "group__expando__get__number__api.html#ga99586478673f8fede9673a36694a73c2", null ],
     [ "sidebar_notify_num", "group__expando__get__number__api.html#gaf78bdc4b17d10c707c313f9f7a6496f7", null ],
     [ "sidebar_old_count_num", "group__expando__get__number__api.html#gaf0dddfe157466e501eb37b85fc9ca7e4", null ],
     [ "sidebar_poll_num", "group__expando__get__number__api.html#ga5e370cdcdf69f1233f94824cfc93b572", null ],
