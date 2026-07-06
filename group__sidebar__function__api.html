@@ -31,7 +31,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-970-g3abedd</span>
+   &#160;<span id="projectnumber">2025-12-11-977-g8a21d8</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -450,64 +450,64 @@ event is not NULL </dd></dl>
 <p>Jump to a specific mailbox - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
 <p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00438">438</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  439</span>{</div>
-<div class="line"><span class="lineno">  440</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  441</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  443</span> </div>
-<div class="line"><span class="lineno">  444</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
-<div class="line"><span class="lineno">  445</span>  {</div>
-<div class="line"><span class="lineno">  446</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;There are no mailboxes&quot;</span>));</div>
-<div class="line"><span class="lineno">  447</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  448</span>  }</div>
-<div class="line"><span class="lineno">  449</span> </div>
-<div class="line"><span class="lineno">  450</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries);</div>
-<div class="line"><span class="lineno">  451</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
-<div class="line"><span class="lineno">  452</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  453</span> </div>
-<div class="line"><span class="lineno">  454</span>  <span class="keywordtype">int</span> num = <span class="keyword">event</span>-&gt;count;</div>
-<div class="line"><span class="lineno">  455</span>  <span class="keywordflow">if</span> (num == 0)</div>
-<div class="line"><span class="lineno">  456</span>  {</div>
-<div class="line"><span class="lineno">  457</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Jump to: &quot;</span>), buf, <a class="code hl_enumvalue" href="editor_2wdata_8h.html#a293d544966d157bb250d798a057cb6a0abc88dcc1fd1193c0ddf423fb980738c7">MUTT_COMP_NONE</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL) != 0) ||</div>
-<div class="line"><span class="lineno">  458</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
-<div class="line"><span class="lineno">  459</span>    {</div>
-<div class="line"><span class="lineno">  460</span>      rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  461</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  462</span>    }</div>
-<div class="line"><span class="lineno">  463</span> </div>
-<div class="line"><span class="lineno">  464</span>    <span class="keywordflow">if</span> (!mutt_str_atoi_full(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), &amp;num))</div>
-<div class="line"><span class="lineno">  465</span>    {</div>
-<div class="line"><span class="lineno">  466</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid index number&quot;</span>));</div>
-<div class="line"><span class="lineno">  467</span>      <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  468</span>    }</div>
-<div class="line"><span class="lineno">  469</span>  }</div>
-<div class="line"><span class="lineno">  470</span> </div>
-<div class="line"><span class="lineno">  471</span>  <span class="keywordflow">if</span> ((num &lt; 1) || (num &gt; count))</div>
-<div class="line"><span class="lineno">  472</span>  {</div>
-<div class="line"><span class="lineno">  473</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid index number&quot;</span>));</div>
-<div class="line"><span class="lineno">  474</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  475</span>  }</div>
-<div class="line"><span class="lineno">  476</span> </div>
-<div class="line"><span class="lineno">  477</span>  <span class="keywordflow">if</span> ((num - 1) == wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a>)</div>
-<div class="line"><span class="lineno">  478</span>  {</div>
-<div class="line"><span class="lineno">  479</span>    rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  480</span>    <span class="keywordflow">goto</span> done;</div>
-<div class="line"><span class="lineno">  481</span>  }</div>
-<div class="line"><span class="lineno">  482</span> </div>
-<div class="line"><span class="lineno">  483</span>  wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> = num - 1; <span class="comment">// entry numbers are 1-based</span></div>
-<div class="line"><span class="lineno">  484</span>  wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253">actions</a> |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  485</span>  rc = <a class="code hl_function" href="#ga16cd1af5907bb371ce02deb142806989">op_sidebar_open</a>(fdata, event);</div>
-<div class="line"><span class="lineno">  486</span> </div>
-<div class="line"><span class="lineno">  487</span>done:</div>
-<div class="line"><span class="lineno">  488</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
-<div class="line"><span class="lineno">  489</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  490</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  440</span>{</div>
+<div class="line"><span class="lineno">  441</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  442</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  443</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  444</span> </div>
+<div class="line"><span class="lineno">  445</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
+<div class="line"><span class="lineno">  446</span>  {</div>
+<div class="line"><span class="lineno">  447</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;There are no mailboxes&quot;</span>));</div>
+<div class="line"><span class="lineno">  448</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">  449</span>  }</div>
+<div class="line"><span class="lineno">  450</span> </div>
+<div class="line"><span class="lineno">  451</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries);</div>
+<div class="line"><span class="lineno">  452</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structBuffer.html">Buffer</a> *buf = <a class="code hl_function" href="pool_8c.html#a41cba27c25d33cb6822789a2856093f2">buf_pool_get</a>();</div>
+<div class="line"><span class="lineno">  453</span>  <span class="keywordtype">int</span> rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">  454</span> </div>
+<div class="line"><span class="lineno">  455</span>  <span class="keywordtype">int</span> num = <span class="keyword">event</span>-&gt;count;</div>
+<div class="line"><span class="lineno">  456</span>  <span class="keywordflow">if</span> (num == 0)</div>
+<div class="line"><span class="lineno">  457</span>  {</div>
+<div class="line"><span class="lineno">  458</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Jump to: &quot;</span>), buf, <a class="code hl_enumvalue" href="editor_2wdata_8h.html#a293d544966d157bb250d798a057cb6a0abc88dcc1fd1193c0ddf423fb980738c7">MUTT_COMP_NONE</a>, <a class="code hl_enumvalue" href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a>, NULL, NULL) != 0) ||</div>
+<div class="line"><span class="lineno">  459</span>        <a class="code hl_function" href="buffer_8c.html#a4245e227baa2a9beb6991917404aab0d">buf_is_empty</a>(buf))</div>
+<div class="line"><span class="lineno">  460</span>    {</div>
+<div class="line"><span class="lineno">  461</span>      rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  462</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  463</span>    }</div>
+<div class="line"><span class="lineno">  464</span> </div>
+<div class="line"><span class="lineno">  465</span>    <span class="keywordflow">if</span> (!mutt_str_atoi_full(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), &amp;num))</div>
+<div class="line"><span class="lineno">  466</span>    {</div>
+<div class="line"><span class="lineno">  467</span>      <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid index number&quot;</span>));</div>
+<div class="line"><span class="lineno">  468</span>      <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  469</span>    }</div>
+<div class="line"><span class="lineno">  470</span>  }</div>
+<div class="line"><span class="lineno">  471</span> </div>
+<div class="line"><span class="lineno">  472</span>  <span class="keywordflow">if</span> ((num &lt; 1) || (num &gt; count))</div>
+<div class="line"><span class="lineno">  473</span>  {</div>
+<div class="line"><span class="lineno">  474</span>    <a class="code hl_define" href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;Invalid index number&quot;</span>));</div>
+<div class="line"><span class="lineno">  475</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  476</span>  }</div>
+<div class="line"><span class="lineno">  477</span> </div>
+<div class="line"><span class="lineno">  478</span>  <span class="keywordflow">if</span> ((num - 1) == wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a>)</div>
+<div class="line"><span class="lineno">  479</span>  {</div>
+<div class="line"><span class="lineno">  480</span>    rc = <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  481</span>    <span class="keywordflow">goto</span> done;</div>
+<div class="line"><span class="lineno">  482</span>  }</div>
+<div class="line"><span class="lineno">  483</span> </div>
+<div class="line"><span class="lineno">  484</span>  wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> = num - 1; <span class="comment">// entry numbers are 1-based</span></div>
+<div class="line"><span class="lineno">  485</span>  wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253">actions</a> |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  486</span>  rc = <a class="code hl_function" href="#ga16cd1af5907bb371ce02deb142806989">op_sidebar_open</a>(fdata, event);</div>
+<div class="line"><span class="lineno">  487</span> </div>
+<div class="line"><span class="lineno">  488</span>done:</div>
+<div class="line"><span class="lineno">  489</span>  <a class="code hl_function" href="pool_8c.html#a4cc6068279461cb8628219586dfa35a1">buf_pool_release</a>(&amp;buf);</div>
+<div class="line"><span class="lineno">  490</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  491</span>}</div>
 <div class="ttc" id="aarray_8h_html_a7f1bf469a48c0a2618c94b7b8281c5bf"><div class="ttname"><a href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a></div><div class="ttdeci">#define ARRAY_SIZE(head)</div><div class="ttdoc">The number of elements stored.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00087">array.h:87</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
 <div class="ttc" id="aeditor_2wdata_8h_html_a293d544966d157bb250d798a057cb6a0abc88dcc1fd1193c0ddf423fb980738c7"><div class="ttname"><a href="editor_2wdata_8h.html#a293d544966d157bb250d798a057cb6a0abc88dcc1fd1193c0ddf423fb980738c7">MUTT_COMP_NONE</a></div><div class="ttdeci">@ MUTT_COMP_NONE</div><div class="ttdoc">No flags are set.</div><div class="ttdef"><b>Definition</b> <a href="editor_2wdata_8h_source.html#l00046">wdata.h:46</a></div></div>
 <div class="ttc" id="agroup__gui__mw_html_gabcbd2498b412e9f8e9d953cafc01989c"><div class="ttname"><a href="group__gui__mw.html#gabcbd2498b412e9f8e9d953cafc01989c">mw_get_field</a></div><div class="ttdeci">int mw_get_field(const char *prompt, struct Buffer *buf, CompletionFlags complete, enum HistoryClass hclass, const struct CompleteOps *comp_api, void *cdata)</div><div class="ttdoc">Ask the user for a string -.</div><div class="ttdef"><b>Definition</b> <a href="editor_2window_8c_source.html#l00502">window.c:502</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
-<div class="ttc" id="agroup__sidebar__function__api_html_ga16cd1af5907bb371ce02deb142806989"><div class="ttname"><a href="#ga16cd1af5907bb371ce02deb142806989">op_sidebar_open</a></div><div class="ttdeci">int op_sidebar_open(struct SidebarFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Open highlighted mailbox - Implements sidebar_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00591">functions_sidebar.c:591</a></div></div>
+<div class="ttc" id="agroup__sidebar__function__api_html_ga16cd1af5907bb371ce02deb142806989"><div class="ttname"><a href="#ga16cd1af5907bb371ce02deb142806989">op_sidebar_open</a></div><div class="ttdeci">int op_sidebar_open(struct SidebarFunctionData *fdata, const struct KeyEvent *event)</div><div class="ttdoc">Open highlighted mailbox - Implements sidebar_function_t -.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00592">functions_sidebar.c:592</a></div></div>
 <div class="ttc" id="ahistory_2lib_8h_html_acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a"><div class="ttname"><a href="history_2lib_8h.html#acb0a49d94e5b4fe512c30e2c12621234aee9379d265cad600929abe5cc271019a">HC_OTHER</a></div><div class="ttdeci">@ HC_OTHER</div><div class="ttdoc">Miscellaneous strings.</div><div class="ttdef"><b>Definition</b> <a href="history_2lib_8h_source.html#l00061">lib.h:61</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -540,27 +540,27 @@ event is not NULL </dd></dl>
 
 <p>Selects the last unhidden mailbox - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00495">495</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  496</span>{</div>
-<div class="line"><span class="lineno">  497</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  498</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  499</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  500</span> </div>
-<div class="line"><span class="lineno">  501</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
-<div class="line"><span class="lineno">  502</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  503</span> </div>
-<div class="line"><span class="lineno">  504</span>  <span class="keywordtype">int</span> orig_hil_index = <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index;</div>
-<div class="line"><span class="lineno">  505</span> </div>
-<div class="line"><span class="lineno">  506</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries);</div>
-<div class="line"><span class="lineno">  507</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#a4c5570fc54f15ab6b010868392791b25">sb_prev</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>))</div>
-<div class="line"><span class="lineno">  508</span>    <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = orig_hil_index;</div>
-<div class="line"><span class="lineno">  509</span> </div>
-<div class="line"><span class="lineno">  510</span>  <span class="keywordflow">if</span> (orig_hil_index == <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index)</div>
-<div class="line"><span class="lineno">  511</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  512</span> </div>
-<div class="line"><span class="lineno">  513</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  514</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  515</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00496">496</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  497</span>{</div>
+<div class="line"><span class="lineno">  498</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  499</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  500</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  501</span> </div>
+<div class="line"><span class="lineno">  502</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
+<div class="line"><span class="lineno">  503</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  504</span> </div>
+<div class="line"><span class="lineno">  505</span>  <span class="keywordtype">int</span> orig_hil_index = <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index;</div>
+<div class="line"><span class="lineno">  506</span> </div>
+<div class="line"><span class="lineno">  507</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries);</div>
+<div class="line"><span class="lineno">  508</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#a4c5570fc54f15ab6b010868392791b25">sb_prev</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>))</div>
+<div class="line"><span class="lineno">  509</span>    <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = orig_hil_index;</div>
+<div class="line"><span class="lineno">  510</span> </div>
+<div class="line"><span class="lineno">  511</span>  <span class="keywordflow">if</span> (orig_hil_index == <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index)</div>
+<div class="line"><span class="lineno">  512</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  513</span> </div>
+<div class="line"><span class="lineno">  514</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  515</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  516</span>}</div>
 <div class="ttc" id="afunctions__sidebar_8c_html_a4c5570fc54f15ab6b010868392791b25"><div class="ttname"><a href="functions__sidebar_8c.html#a4c5570fc54f15ab6b010868392791b25">sb_prev</a></div><div class="ttdeci">bool sb_prev(struct SidebarWindowData *wdata)</div><div class="ttdoc">Find the previous unhidden Mailbox.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00202">functions_sidebar.c:202</a></div></div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -593,33 +593,33 @@ event is not NULL </dd></dl>
 
 <p>Selects the next unhidden mailbox - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00520">520</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  521</span>{</div>
-<div class="line"><span class="lineno">  522</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  523</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  524</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  525</span> </div>
-<div class="line"><span class="lineno">  526</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
-<div class="line"><span class="lineno">  527</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  528</span> </div>
-<div class="line"><span class="lineno">  529</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <span class="keyword">event</span>-&gt;count;</div>
-<div class="line"><span class="lineno">  530</span>  <span class="keywordflow">if</span> (count &gt; 0)</div>
-<div class="line"><span class="lineno">  531</span>  {</div>
-<div class="line"><span class="lineno">  532</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#ad504bf0664f21fba9e08716391651099">sb_next_n</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, count))</div>
-<div class="line"><span class="lineno">  533</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  534</span>  }</div>
-<div class="line"><span class="lineno">  535</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  536</span>  {</div>
-<div class="line"><span class="lineno">  537</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#ae64f05f5fb7aafc3184d3e1fcf132ed5">sb_next</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>))</div>
-<div class="line"><span class="lineno">  538</span>    {</div>
-<div class="line"><span class="lineno">  539</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;You are on the last entry&quot;</span>));</div>
-<div class="line"><span class="lineno">  540</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  541</span>    }</div>
-<div class="line"><span class="lineno">  542</span>  }</div>
-<div class="line"><span class="lineno">  543</span> </div>
-<div class="line"><span class="lineno">  544</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  545</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  546</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00521">521</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  522</span>{</div>
+<div class="line"><span class="lineno">  523</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  524</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  525</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
+<div class="line"><span class="lineno">  528</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  529</span> </div>
+<div class="line"><span class="lineno">  530</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <span class="keyword">event</span>-&gt;count;</div>
+<div class="line"><span class="lineno">  531</span>  <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><span class="lineno">  532</span>  {</div>
+<div class="line"><span class="lineno">  533</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#ad504bf0664f21fba9e08716391651099">sb_next_n</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, count))</div>
+<div class="line"><span class="lineno">  534</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  535</span>  }</div>
+<div class="line"><span class="lineno">  536</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  537</span>  {</div>
+<div class="line"><span class="lineno">  538</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#ae64f05f5fb7aafc3184d3e1fcf132ed5">sb_next</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>))</div>
+<div class="line"><span class="lineno">  539</span>    {</div>
+<div class="line"><span class="lineno">  540</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;You are on the last entry&quot;</span>));</div>
+<div class="line"><span class="lineno">  541</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">  542</span>    }</div>
+<div class="line"><span class="lineno">  543</span>  }</div>
+<div class="line"><span class="lineno">  544</span> </div>
+<div class="line"><span class="lineno">  545</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  546</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  547</span>}</div>
 <div class="ttc" id="afunctions__sidebar_8c_html_ad504bf0664f21fba9e08716391651099"><div class="ttname"><a href="functions__sidebar_8c.html#ad504bf0664f21fba9e08716391651099">sb_next_n</a></div><div class="ttdeci">static bool sb_next_n(struct SidebarWindowData *wdata, int count)</div><div class="ttdoc">Move down N unhidden Mailboxes, capping at the last.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00149">functions_sidebar.c:149</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -662,40 +662,40 @@ event is not NULL </dd></dl>
 <p>Selects the next new mailbox - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 <p>Search down the list of mail folders for one containing new mail. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00553">553</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  554</span>{</div>
-<div class="line"><span class="lineno">  555</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  556</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  557</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  558</span> </div>
-<div class="line"><span class="lineno">  559</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> max_entries = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries);</div>
-<div class="line"><span class="lineno">  560</span>  <span class="keywordflow">if</span> ((max_entries == 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
-<div class="line"><span class="lineno">  561</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  562</span> </div>
-<div class="line"><span class="lineno">  563</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1);</div>
-<div class="line"><span class="lineno">  564</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_sidebar_next_new_wrap = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#ab2ddfe31282216d5a4f7d789d17f0b05">n</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;sidebar_next_new_wrap&quot;</span>);</div>
-<div class="line"><span class="lineno">  565</span>  <span class="keywordtype">int</span> orig_hil_index = <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index;</div>
-<div class="line"><span class="lineno">  566</span> </div>
-<div class="line"><span class="lineno">  567</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
-<div class="line"><span class="lineno">  568</span>  {</div>
-<div class="line"><span class="lineno">  569</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSbEntry.html">SbEntry</a> **sbep = NULL;</div>
-<div class="line"><span class="lineno">  570</span>    <span class="keywordflow">if</span> ((sbep = <a class="code hl_function" href="functions__sidebar_8c.html#aed4fcca069d222dfe60f3274b565611e">sb_next_new</a>(wdata, wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> + 1, max_entries)) ||</div>
-<div class="line"><span class="lineno">  571</span>        (c_sidebar_next_new_wrap &amp;&amp; (sbep = <a class="code hl_function" href="functions__sidebar_8c.html#aed4fcca069d222dfe60f3274b565611e">sb_next_new</a>(wdata, 0, wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a>))))</div>
-<div class="line"><span class="lineno">  572</span>    {</div>
-<div class="line"><span class="lineno">  573</span>      wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> = <a class="code hl_define" href="array_8h.html#a10248ed1fa20ea5a7c9f4025c1abd5c8">ARRAY_IDX</a>(&amp;wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f">entries</a>, sbep);</div>
-<div class="line"><span class="lineno">  574</span>    }</div>
-<div class="line"><span class="lineno">  575</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  576</span>    {</div>
-<div class="line"><span class="lineno">  577</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  578</span>    }</div>
-<div class="line"><span class="lineno">  579</span>  }</div>
-<div class="line"><span class="lineno">  580</span> </div>
-<div class="line"><span class="lineno">  581</span>  <span class="keywordflow">if</span> (wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> == orig_hil_index)</div>
-<div class="line"><span class="lineno">  582</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  583</span> </div>
-<div class="line"><span class="lineno">  584</span>  wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253">actions</a> |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  585</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  586</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00554">554</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  555</span>{</div>
+<div class="line"><span class="lineno">  556</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  557</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  558</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  559</span> </div>
+<div class="line"><span class="lineno">  560</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> max_entries = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries);</div>
+<div class="line"><span class="lineno">  561</span>  <span class="keywordflow">if</span> ((max_entries == 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
+<div class="line"><span class="lineno">  562</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  563</span> </div>
+<div class="line"><span class="lineno">  564</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1);</div>
+<div class="line"><span class="lineno">  565</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_sidebar_next_new_wrap = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#ab2ddfe31282216d5a4f7d789d17f0b05">n</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;sidebar_next_new_wrap&quot;</span>);</div>
+<div class="line"><span class="lineno">  566</span>  <span class="keywordtype">int</span> orig_hil_index = <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index;</div>
+<div class="line"><span class="lineno">  567</span> </div>
+<div class="line"><span class="lineno">  568</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
+<div class="line"><span class="lineno">  569</span>  {</div>
+<div class="line"><span class="lineno">  570</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSbEntry.html">SbEntry</a> **sbep = NULL;</div>
+<div class="line"><span class="lineno">  571</span>    <span class="keywordflow">if</span> ((sbep = <a class="code hl_function" href="functions__sidebar_8c.html#aed4fcca069d222dfe60f3274b565611e">sb_next_new</a>(wdata, wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> + 1, max_entries)) ||</div>
+<div class="line"><span class="lineno">  572</span>        (c_sidebar_next_new_wrap &amp;&amp; (sbep = <a class="code hl_function" href="functions__sidebar_8c.html#aed4fcca069d222dfe60f3274b565611e">sb_next_new</a>(wdata, 0, wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a>))))</div>
+<div class="line"><span class="lineno">  573</span>    {</div>
+<div class="line"><span class="lineno">  574</span>      wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> = <a class="code hl_define" href="array_8h.html#a10248ed1fa20ea5a7c9f4025c1abd5c8">ARRAY_IDX</a>(&amp;wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f">entries</a>, sbep);</div>
+<div class="line"><span class="lineno">  575</span>    }</div>
+<div class="line"><span class="lineno">  576</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  577</span>    {</div>
+<div class="line"><span class="lineno">  578</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  579</span>    }</div>
+<div class="line"><span class="lineno">  580</span>  }</div>
+<div class="line"><span class="lineno">  581</span> </div>
+<div class="line"><span class="lineno">  582</span>  <span class="keywordflow">if</span> (wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> == orig_hil_index)</div>
+<div class="line"><span class="lineno">  583</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  584</span> </div>
+<div class="line"><span class="lineno">  585</span>  wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253">actions</a> |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  586</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  587</span>}</div>
 <div class="ttc" id="aarray_8h_html_a10248ed1fa20ea5a7c9f4025c1abd5c8"><div class="ttname"><a href="array_8h.html#a10248ed1fa20ea5a7c9f4025c1abd5c8">ARRAY_IDX</a></div><div class="ttdeci">#define ARRAY_IDX(head, elem)</div><div class="ttdoc">Return the index of an element of the array.</div><div class="ttdef"><b>Definition</b> <a href="array_8h_source.html#l00324">array.h:324</a></div></div>
 <div class="ttc" id="afunctions__sidebar_8c_html_aed4fcca069d222dfe60f3274b565611e"><div class="ttname"><a href="functions__sidebar_8c.html#aed4fcca069d222dfe60f3274b565611e">sb_next_new</a></div><div class="ttdeci">static struct SbEntry ** sb_next_new(struct SidebarWindowData *wdata, size_t begin, size_t end)</div><div class="ttdoc">Return the next mailbox with new messages.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00186">functions_sidebar.c:186</a></div></div>
 <div class="ttc" id="amemory_8h_html_afa99ec4acc4ecb2dc3c2d05da15d0e3f"><div class="ttname"><a href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a></div><div class="ttdeci">#define MAX(a, b)</div><div class="ttdoc">Return the maximum of two values.</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00038">memory.h:38</a></div></div>
@@ -731,17 +731,17 @@ event is not NULL </dd></dl>
 
 <p>Open highlighted mailbox - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00591">591</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  592</span>{</div>
-<div class="line"><span class="lineno">  593</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  594</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *win_sidebar = <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win;</div>
-<div class="line"><span class="lineno">  595</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(win_sidebar))</div>
-<div class="line"><span class="lineno">  596</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  597</span> </div>
-<div class="line"><span class="lineno">  598</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win_sidebar);</div>
-<div class="line"><span class="lineno">  599</span>  <a class="code hl_function" href="dlg__index_8c.html#a79bba17b676af37c3a7f120a714c3e62">index_change_folder</a>(dlg, <a class="code hl_function" href="sidebar_2private_8h.html#ae906e25c18af1c3d616b887a238bcd2d">sb_get_highlight</a>(win_sidebar));</div>
-<div class="line"><span class="lineno">  600</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  601</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00592">592</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  593</span>{</div>
+<div class="line"><span class="lineno">  594</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  595</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *win_sidebar = <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win;</div>
+<div class="line"><span class="lineno">  596</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(win_sidebar))</div>
+<div class="line"><span class="lineno">  597</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  598</span> </div>
+<div class="line"><span class="lineno">  599</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structMuttWindow.html">MuttWindow</a> *dlg = <a class="code hl_function" href="dialog_8c.html#ae9143ce9323ae3351fd9b612a6063ada">dialog_find</a>(win_sidebar);</div>
+<div class="line"><span class="lineno">  600</span>  <a class="code hl_function" href="dlg__index_8c.html#a79bba17b676af37c3a7f120a714c3e62">index_change_folder</a>(dlg, <a class="code hl_function" href="sidebar_2private_8h.html#ae906e25c18af1c3d616b887a238bcd2d">sb_get_highlight</a>(win_sidebar));</div>
+<div class="line"><span class="lineno">  601</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  602</span>}</div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -780,33 +780,33 @@ event is not NULL </dd></dl>
 
 <p>Selects the previous unhidden mailbox - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00606">606</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  607</span>{</div>
-<div class="line"><span class="lineno">  608</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  609</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  610</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  611</span> </div>
-<div class="line"><span class="lineno">  612</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
-<div class="line"><span class="lineno">  613</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  614</span> </div>
-<div class="line"><span class="lineno">  615</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <span class="keyword">event</span>-&gt;count;</div>
-<div class="line"><span class="lineno">  616</span>  <span class="keywordflow">if</span> (count &gt; 0)</div>
-<div class="line"><span class="lineno">  617</span>  {</div>
-<div class="line"><span class="lineno">  618</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#aebb93acfd59a39af5e7d010d64a263af">sb_prev_n</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, count))</div>
-<div class="line"><span class="lineno">  619</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  620</span>  }</div>
-<div class="line"><span class="lineno">  621</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  622</span>  {</div>
-<div class="line"><span class="lineno">  623</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#a4c5570fc54f15ab6b010868392791b25">sb_prev</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>))</div>
-<div class="line"><span class="lineno">  624</span>    {</div>
-<div class="line"><span class="lineno">  625</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;You are on the first entry&quot;</span>));</div>
-<div class="line"><span class="lineno">  626</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
-<div class="line"><span class="lineno">  627</span>    }</div>
-<div class="line"><span class="lineno">  628</span>  }</div>
-<div class="line"><span class="lineno">  629</span> </div>
-<div class="line"><span class="lineno">  630</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  631</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  632</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00607">607</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  608</span>{</div>
+<div class="line"><span class="lineno">  609</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  610</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  611</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  612</span> </div>
+<div class="line"><span class="lineno">  613</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
+<div class="line"><span class="lineno">  614</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  615</span> </div>
+<div class="line"><span class="lineno">  616</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <span class="keyword">event</span>-&gt;count;</div>
+<div class="line"><span class="lineno">  617</span>  <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><span class="lineno">  618</span>  {</div>
+<div class="line"><span class="lineno">  619</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#aebb93acfd59a39af5e7d010d64a263af">sb_prev_n</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, count))</div>
+<div class="line"><span class="lineno">  620</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  621</span>  }</div>
+<div class="line"><span class="lineno">  622</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  623</span>  {</div>
+<div class="line"><span class="lineno">  624</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="functions__sidebar_8c.html#a4c5570fc54f15ab6b010868392791b25">sb_prev</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>))</div>
+<div class="line"><span class="lineno">  625</span>    {</div>
+<div class="line"><span class="lineno">  626</span>      <a class="code hl_define" href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a>(<a class="code hl_define" href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a>(<span class="stringliteral">&quot;You are on the first entry&quot;</span>));</div>
+<div class="line"><span class="lineno">  627</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a586007e11e4fad5edc2990e69650f8aa">FR_ERROR</a>;</div>
+<div class="line"><span class="lineno">  628</span>    }</div>
+<div class="line"><span class="lineno">  629</span>  }</div>
+<div class="line"><span class="lineno">  630</span> </div>
+<div class="line"><span class="lineno">  631</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  632</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  633</span>}</div>
 <div class="ttc" id="afunctions__sidebar_8c_html_aebb93acfd59a39af5e7d010d64a263af"><div class="ttname"><a href="functions__sidebar_8c.html#aebb93acfd59a39af5e7d010d64a263af">sb_prev_n</a></div><div class="ttdeci">static bool sb_prev_n(struct SidebarWindowData *wdata, int count)</div><div class="ttdoc">Move up N unhidden Mailboxes, capping at the first.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00167">functions_sidebar.c:167</a></div></div>
 </div><!-- fragment --><div id="dynsection-9" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -848,41 +848,41 @@ event is not NULL </dd></dl>
 <p>Selects the previous new mailbox - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 <p>Search up the list of mail folders for one containing new mail. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00639">639</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  640</span>{</div>
-<div class="line"><span class="lineno">  641</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  642</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  643</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  644</span> </div>
-<div class="line"><span class="lineno">  645</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> max_entries = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries);</div>
-<div class="line"><span class="lineno">  646</span>  <span class="keywordflow">if</span> ((max_entries == 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
-<div class="line"><span class="lineno">  647</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  648</span> </div>
-<div class="line"><span class="lineno">  649</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1);</div>
-<div class="line"><span class="lineno">  650</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_sidebar_next_new_wrap = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#ab2ddfe31282216d5a4f7d789d17f0b05">n</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;sidebar_next_new_wrap&quot;</span>);</div>
-<div class="line"><span class="lineno">  651</span>  <span class="keywordtype">int</span> orig_hil_index = <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index;</div>
-<div class="line"><span class="lineno">  652</span> </div>
-<div class="line"><span class="lineno">  653</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
-<div class="line"><span class="lineno">  654</span>  {</div>
-<div class="line"><span class="lineno">  655</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSbEntry.html">SbEntry</a> **sbep = NULL;</div>
-<div class="line"><span class="lineno">  656</span>    <span class="keywordflow">if</span> ((sbep = <a class="code hl_function" href="functions__sidebar_8c.html#a935f1a465443c537ffac8bb3cc729ccc">sb_prev_new</a>(wdata, 0, wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a>)) ||</div>
-<div class="line"><span class="lineno">  657</span>        (c_sidebar_next_new_wrap &amp;&amp;</div>
-<div class="line"><span class="lineno">  658</span>         (sbep = <a class="code hl_function" href="functions__sidebar_8c.html#a935f1a465443c537ffac8bb3cc729ccc">sb_prev_new</a>(wdata, wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> + 1, max_entries))))</div>
-<div class="line"><span class="lineno">  659</span>    {</div>
-<div class="line"><span class="lineno">  660</span>      wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> = <a class="code hl_define" href="array_8h.html#a10248ed1fa20ea5a7c9f4025c1abd5c8">ARRAY_IDX</a>(&amp;wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f">entries</a>, sbep);</div>
-<div class="line"><span class="lineno">  661</span>    }</div>
-<div class="line"><span class="lineno">  662</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  663</span>    {</div>
-<div class="line"><span class="lineno">  664</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  665</span>    }</div>
-<div class="line"><span class="lineno">  666</span>  }</div>
-<div class="line"><span class="lineno">  667</span> </div>
-<div class="line"><span class="lineno">  668</span>  <span class="keywordflow">if</span> (wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> == orig_hil_index)</div>
-<div class="line"><span class="lineno">  669</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  670</span> </div>
-<div class="line"><span class="lineno">  671</span>  wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253">actions</a> |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  672</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  673</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00640">640</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  641</span>{</div>
+<div class="line"><span class="lineno">  642</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  643</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  644</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  645</span> </div>
+<div class="line"><span class="lineno">  646</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> max_entries = <a class="code hl_define" href="array_8h.html#a7f1bf469a48c0a2618c94b7b8281c5bf">ARRAY_SIZE</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries);</div>
+<div class="line"><span class="lineno">  647</span>  <span class="keywordflow">if</span> ((max_entries == 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0))</div>
+<div class="line"><span class="lineno">  648</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  649</span> </div>
+<div class="line"><span class="lineno">  650</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> count = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1);</div>
+<div class="line"><span class="lineno">  651</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> c_sidebar_next_new_wrap = <a class="code hl_function" href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#ab2ddfe31282216d5a4f7d789d17f0b05">n</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;sidebar_next_new_wrap&quot;</span>);</div>
+<div class="line"><span class="lineno">  652</span>  <span class="keywordtype">int</span> orig_hil_index = <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index;</div>
+<div class="line"><span class="lineno">  653</span> </div>
+<div class="line"><span class="lineno">  654</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; count; i++)</div>
+<div class="line"><span class="lineno">  655</span>  {</div>
+<div class="line"><span class="lineno">  656</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structSbEntry.html">SbEntry</a> **sbep = NULL;</div>
+<div class="line"><span class="lineno">  657</span>    <span class="keywordflow">if</span> ((sbep = <a class="code hl_function" href="functions__sidebar_8c.html#a935f1a465443c537ffac8bb3cc729ccc">sb_prev_new</a>(wdata, 0, wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a>)) ||</div>
+<div class="line"><span class="lineno">  658</span>        (c_sidebar_next_new_wrap &amp;&amp;</div>
+<div class="line"><span class="lineno">  659</span>         (sbep = <a class="code hl_function" href="functions__sidebar_8c.html#a935f1a465443c537ffac8bb3cc729ccc">sb_prev_new</a>(wdata, wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> + 1, max_entries))))</div>
+<div class="line"><span class="lineno">  660</span>    {</div>
+<div class="line"><span class="lineno">  661</span>      wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> = <a class="code hl_define" href="array_8h.html#a10248ed1fa20ea5a7c9f4025c1abd5c8">ARRAY_IDX</a>(&amp;wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#adaea35e30efa0920c11fa69ebd67e66f">entries</a>, sbep);</div>
+<div class="line"><span class="lineno">  662</span>    }</div>
+<div class="line"><span class="lineno">  663</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  664</span>    {</div>
+<div class="line"><span class="lineno">  665</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  666</span>    }</div>
+<div class="line"><span class="lineno">  667</span>  }</div>
+<div class="line"><span class="lineno">  668</span> </div>
+<div class="line"><span class="lineno">  669</span>  <span class="keywordflow">if</span> (wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#a8ad7f086b27797d4cab7ec288fe71388">hil_index</a> == orig_hil_index)</div>
+<div class="line"><span class="lineno">  670</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  671</span> </div>
+<div class="line"><span class="lineno">  672</span>  wdata-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#ac3a1303a2ed339214a8aa27f512a1253">actions</a> |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  673</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  674</span>}</div>
 <div class="ttc" id="afunctions__sidebar_8c_html_a935f1a465443c537ffac8bb3cc729ccc"><div class="ttname"><a href="functions__sidebar_8c.html#a935f1a465443c537ffac8bb3cc729ccc">sb_prev_new</a></div><div class="ttdeci">static struct SbEntry ** sb_prev_new(struct SidebarWindowData *wdata, size_t begin, size_t end)</div><div class="ttdoc">Return the previous mailbox with new messages.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00228">functions_sidebar.c:228</a></div></div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -923,23 +923,23 @@ event is not NULL </dd></dl>
 
 <p>Selects the entry at the top of the visible page - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00678">678</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  680</span>{</div>
-<div class="line"><span class="lineno">  681</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  682</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  683</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  684</span> </div>
-<div class="line"><span class="lineno">  685</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;top_index &lt; 0))</div>
-<div class="line"><span class="lineno">  686</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  687</span> </div>
-<div class="line"><span class="lineno">  688</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> index = <a class="code hl_function" href="functions__sidebar_8c.html#aca95ab50756174ceb7c52616b15e2060">sb_screen_row_index</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, 0);</div>
-<div class="line"><span class="lineno">  689</span>  <span class="keywordflow">if</span> ((index &lt; 0) || (index == <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index))</div>
-<div class="line"><span class="lineno">  690</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  691</span> </div>
-<div class="line"><span class="lineno">  692</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = index;</div>
-<div class="line"><span class="lineno">  693</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  694</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  695</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00679">679</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  681</span>{</div>
+<div class="line"><span class="lineno">  682</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  683</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  684</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  685</span> </div>
+<div class="line"><span class="lineno">  686</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;top_index &lt; 0))</div>
+<div class="line"><span class="lineno">  687</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  688</span> </div>
+<div class="line"><span class="lineno">  689</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> index = <a class="code hl_function" href="functions__sidebar_8c.html#aca95ab50756174ceb7c52616b15e2060">sb_screen_row_index</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, 0);</div>
+<div class="line"><span class="lineno">  690</span>  <span class="keywordflow">if</span> ((index &lt; 0) || (index == <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index))</div>
+<div class="line"><span class="lineno">  691</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  692</span> </div>
+<div class="line"><span class="lineno">  693</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = index;</div>
+<div class="line"><span class="lineno">  694</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  695</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  696</span>}</div>
 <div class="ttc" id="afunctions__sidebar_8c_html_aca95ab50756174ceb7c52616b15e2060"><div class="ttname"><a href="functions__sidebar_8c.html#aca95ab50756174ceb7c52616b15e2060">sb_screen_row_index</a></div><div class="ttdeci">static int sb_screen_row_index(struct SidebarWindowData *wdata, int wanted_row)</div><div class="ttdoc">Find the entry shown at a given row of the visible page.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00250">functions_sidebar.c:250</a></div></div>
 </div><!-- fragment --><div id="dynsection-11" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -980,23 +980,23 @@ event is not NULL </dd></dl>
 
 <p>Selects the entry at the middle of the visible page - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00700">700</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  702</span>{</div>
-<div class="line"><span class="lineno">  703</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  704</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  705</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  706</span> </div>
-<div class="line"><span class="lineno">  707</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;top_index &lt; 0))</div>
-<div class="line"><span class="lineno">  708</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  709</span> </div>
-<div class="line"><span class="lineno">  710</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> index = <a class="code hl_function" href="functions__sidebar_8c.html#aca95ab50756174ceb7c52616b15e2060">sb_screen_row_index</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;state.rows / 2);</div>
-<div class="line"><span class="lineno">  711</span>  <span class="keywordflow">if</span> ((index &lt; 0) || (index == <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index))</div>
-<div class="line"><span class="lineno">  712</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  713</span> </div>
-<div class="line"><span class="lineno">  714</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = index;</div>
-<div class="line"><span class="lineno">  715</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  716</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  717</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00701">701</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  703</span>{</div>
+<div class="line"><span class="lineno">  704</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  705</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  706</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  707</span> </div>
+<div class="line"><span class="lineno">  708</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;top_index &lt; 0))</div>
+<div class="line"><span class="lineno">  709</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  710</span> </div>
+<div class="line"><span class="lineno">  711</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> index = <a class="code hl_function" href="functions__sidebar_8c.html#aca95ab50756174ceb7c52616b15e2060">sb_screen_row_index</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;state.rows / 2);</div>
+<div class="line"><span class="lineno">  712</span>  <span class="keywordflow">if</span> ((index &lt; 0) || (index == <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index))</div>
+<div class="line"><span class="lineno">  713</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  714</span> </div>
+<div class="line"><span class="lineno">  715</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = index;</div>
+<div class="line"><span class="lineno">  716</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  717</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  718</span>}</div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -1036,23 +1036,23 @@ event is not NULL </dd></dl>
 
 <p>Selects the entry at the bottom of the visible page - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00722">722</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  724</span>{</div>
-<div class="line"><span class="lineno">  725</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
-<div class="line"><span class="lineno">  726</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
-<div class="line"><span class="lineno">  727</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  728</span> </div>
-<div class="line"><span class="lineno">  729</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;top_index &lt; 0))</div>
-<div class="line"><span class="lineno">  730</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  731</span> </div>
-<div class="line"><span class="lineno">  732</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> index = <a class="code hl_function" href="functions__sidebar_8c.html#aca95ab50756174ceb7c52616b15e2060">sb_screen_row_index</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;state.rows - 1);</div>
-<div class="line"><span class="lineno">  733</span>  <span class="keywordflow">if</span> ((index &lt; 0) || (index == <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index))</div>
-<div class="line"><span class="lineno">  734</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
-<div class="line"><span class="lineno">  735</span> </div>
-<div class="line"><span class="lineno">  736</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = index;</div>
-<div class="line"><span class="lineno">  737</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
-<div class="line"><span class="lineno">  738</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  739</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00723">723</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  725</span>{</div>
+<div class="line"><span class="lineno">  726</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structSidebarWindowData.html">SidebarWindowData</a> *<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a> = fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>;</div>
+<div class="line"><span class="lineno">  727</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="mutt__window_8c.html#a03920015a9ccfd1814779c1570f2fee6">mutt_window_is_visible</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win))</div>
+<div class="line"><span class="lineno">  728</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  729</span> </div>
+<div class="line"><span class="lineno">  730</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="array_8h.html#a748cb2df8cbe952b6fff91d62811a20a">ARRAY_EMPTY</a>(&amp;<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;entries) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index &lt; 0) || (<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;top_index &lt; 0))</div>
+<div class="line"><span class="lineno">  731</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  732</span> </div>
+<div class="line"><span class="lineno">  733</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> index = <a class="code hl_function" href="functions__sidebar_8c.html#aca95ab50756174ceb7c52616b15e2060">sb_screen_row_index</a>(<a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>, <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;state.rows - 1);</div>
+<div class="line"><span class="lineno">  734</span>  <span class="keywordflow">if</span> ((index &lt; 0) || (index == <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index))</div>
+<div class="line"><span class="lineno">  735</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414adf6f64b4deecf224277b3183e4223b3e">FR_NO_ACTION</a>;</div>
+<div class="line"><span class="lineno">  736</span> </div>
+<div class="line"><span class="lineno">  737</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;hil_index = index;</div>
+<div class="line"><span class="lineno">  738</span>  <a class="code hl_variable" href="structMuttWindow.html#a52d65bf614794e3385e279e71ac4fcbc">wdata</a>-&gt;win-&gt;actions |= <a class="code hl_enumvalue" href="mutt__window_8h.html#a527bdcc997ea4349a5d86f200a6cbf26a99a3c3744483664adcb4283500cb8cc8">WA_RECALC</a>;</div>
+<div class="line"><span class="lineno">  739</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  740</span>}</div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -1092,11 +1092,11 @@ event is not NULL </dd></dl>
 
 <p>Scrolls down by half a page - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00744">744</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  746</span>{</div>
-<div class="line"><span class="lineno">  747</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> half_page = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> / 2, 1);</div>
-<div class="line"><span class="lineno">  748</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1) * half_page);</div>
-<div class="line"><span class="lineno">  749</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00745">745</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  747</span>{</div>
+<div class="line"><span class="lineno">  748</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> half_page = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> / 2, 1);</div>
+<div class="line"><span class="lineno">  749</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1) * half_page);</div>
+<div class="line"><span class="lineno">  750</span>}</div>
 <div class="ttc" id="afunctions__sidebar_8c_html_ac528e58d8a9e5b0fa743daa53fcd284f"><div class="ttname"><a href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a></div><div class="ttdeci">static int sb_scroll_view(struct SidebarFunctionData *fdata, int delta)</div><div class="ttdoc">Scroll the viewport, dragging the selection into view.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00364">functions_sidebar.c:364</a></div></div>
 <div class="ttc" id="astructMuttWindow_html_a406b976fc50b1cb5beca6c85e7a3be7f"><div class="ttname"><a href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">MuttWindow::state</a></div><div class="ttdeci">struct WindowState state</div><div class="ttdoc">Current state of the Window.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00133">mutt_window.h:133</a></div></div>
 <div class="ttc" id="astructWindowState_html_ab257b2f0c7d2a9fbfcdbe8a71f986cb5"><div class="ttname"><a href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">WindowState::rows</a></div><div class="ttdeci">short rows</div><div class="ttdoc">Number of rows, can be MUTT_WIN_SIZE_UNLIMITED.</div><div class="ttdef"><b>Definition</b> <a href="mutt__window_8h_source.html#l00061">mutt_window.h:61</a></div></div>
@@ -1139,11 +1139,11 @@ event is not NULL </dd></dl>
 
 <p>Scrolls up by half a page - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00754">754</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  756</span>{</div>
-<div class="line"><span class="lineno">  757</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> half_page = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> / 2, 1);</div>
-<div class="line"><span class="lineno">  758</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, 0 - <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1) * half_page);</div>
-<div class="line"><span class="lineno">  759</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00755">755</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  757</span>{</div>
+<div class="line"><span class="lineno">  758</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> half_page = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> / 2, 1);</div>
+<div class="line"><span class="lineno">  759</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, 0 - <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1) * half_page);</div>
+<div class="line"><span class="lineno">  760</span>}</div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -1183,10 +1183,10 @@ event is not NULL </dd></dl>
 
 <p>Scrolls down by one line - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00764">764</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  766</span>{</div>
-<div class="line"><span class="lineno">  767</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1));</div>
-<div class="line"><span class="lineno">  768</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00765">765</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  767</span>{</div>
+<div class="line"><span class="lineno">  768</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1));</div>
+<div class="line"><span class="lineno">  769</span>}</div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -1226,10 +1226,10 @@ event is not NULL </dd></dl>
 
 <p>Scrolls up by one line - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00773">773</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  775</span>{</div>
-<div class="line"><span class="lineno">  776</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, 0 - <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1));</div>
-<div class="line"><span class="lineno">  777</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00774">774</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  776</span>{</div>
+<div class="line"><span class="lineno">  777</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, 0 - <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1));</div>
+<div class="line"><span class="lineno">  778</span>}</div>
 </div><!-- fragment --><div id="dynsection-17" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
@@ -1261,11 +1261,11 @@ event is not NULL </dd></dl>
 
 <p>Scrolls down by one page - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00782">782</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  783</span>{</div>
-<div class="line"><span class="lineno">  784</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> page = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>, 1);</div>
-<div class="line"><span class="lineno">  785</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1) * page);</div>
-<div class="line"><span class="lineno">  786</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00783">783</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  784</span>{</div>
+<div class="line"><span class="lineno">  785</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> page = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>, 1);</div>
+<div class="line"><span class="lineno">  786</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1) * page);</div>
+<div class="line"><span class="lineno">  787</span>}</div>
 </div><!-- fragment --><div id="dynsection-18" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-18-summary" class="dynsummary" style="display:block;">
@@ -1297,11 +1297,11 @@ event is not NULL </dd></dl>
 
 <p>Scrolls up by one page - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00791">791</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  792</span>{</div>
-<div class="line"><span class="lineno">  793</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> page = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>, 1);</div>
-<div class="line"><span class="lineno">  794</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, 0 - <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1) * page);</div>
-<div class="line"><span class="lineno">  795</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00792">792</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  793</span>{</div>
+<div class="line"><span class="lineno">  794</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> page = <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a>, 1);</div>
+<div class="line"><span class="lineno">  795</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#ac528e58d8a9e5b0fa743daa53fcd284f">sb_scroll_view</a>(fdata, 0 - <a class="code hl_define" href="memory_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f">MAX</a>(event-&gt;<a class="code hl_variable" href="structKeyEvent.html#a1f429fd5df3bf48804fca1c45e9fc757">count</a>, 1) * page);</div>
+<div class="line"><span class="lineno">  796</span>}</div>
 </div><!-- fragment --><div id="dynsection-19" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-19-summary" class="dynsummary" style="display:block;">
@@ -1341,11 +1341,11 @@ event is not NULL </dd></dl>
 
 <p>Scrolls so the selection is at the top of the screen - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00826">826</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  828</span>{</div>
-<div class="line"><span class="lineno">  829</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#a7cd8c9af93a69251dc8eeadeb7c360b3">sb_scroll_selection_to_row</a>(fdata, 0);</div>
-<div class="line"><span class="lineno">  830</span>}</div>
-<div class="ttc" id="afunctions__sidebar_8c_html_a7cd8c9af93a69251dc8eeadeb7c360b3"><div class="ttname"><a href="functions__sidebar_8c.html#a7cd8c9af93a69251dc8eeadeb7c360b3">sb_scroll_selection_to_row</a></div><div class="ttdeci">static int sb_scroll_selection_to_row(struct SidebarFunctionData *fdata, int wanted_row)</div><div class="ttdoc">Scroll the view so the selection is at a given row.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00805">functions_sidebar.c:805</a></div></div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00827">827</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  829</span>{</div>
+<div class="line"><span class="lineno">  830</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#a7cd8c9af93a69251dc8eeadeb7c360b3">sb_scroll_selection_to_row</a>(fdata, 0);</div>
+<div class="line"><span class="lineno">  831</span>}</div>
+<div class="ttc" id="afunctions__sidebar_8c_html_a7cd8c9af93a69251dc8eeadeb7c360b3"><div class="ttname"><a href="functions__sidebar_8c.html#a7cd8c9af93a69251dc8eeadeb7c360b3">sb_scroll_selection_to_row</a></div><div class="ttdeci">static int sb_scroll_selection_to_row(struct SidebarFunctionData *fdata, int wanted_row)</div><div class="ttdoc">Scroll the view so the selection is at a given row.</div><div class="ttdef"><b>Definition</b> <a href="functions__sidebar_8c_source.html#l00806">functions_sidebar.c:806</a></div></div>
 </div><!-- fragment --><div id="dynsection-20" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-20-summary" class="dynsummary" style="display:block;">
@@ -1385,10 +1385,10 @@ event is not NULL </dd></dl>
 
 <p>Scrolls so the selection is at the middle of the screen - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00835">835</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  837</span>{</div>
-<div class="line"><span class="lineno">  838</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#a7cd8c9af93a69251dc8eeadeb7c360b3">sb_scroll_selection_to_row</a>(fdata, fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> / 2);</div>
-<div class="line"><span class="lineno">  839</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00836">836</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  838</span>{</div>
+<div class="line"><span class="lineno">  839</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#a7cd8c9af93a69251dc8eeadeb7c360b3">sb_scroll_selection_to_row</a>(fdata, fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> / 2);</div>
+<div class="line"><span class="lineno">  840</span>}</div>
 </div><!-- fragment --><div id="dynsection-21" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-21-summary" class="dynsummary" style="display:block;">
@@ -1428,10 +1428,10 @@ event is not NULL </dd></dl>
 
 <p>Scrolls so the selection is at the bottom of the screen - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00844">844</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  846</span>{</div>
-<div class="line"><span class="lineno">  847</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#a7cd8c9af93a69251dc8eeadeb7c360b3">sb_scroll_selection_to_row</a>(fdata, fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> - 1);</div>
-<div class="line"><span class="lineno">  848</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00845">845</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  847</span>{</div>
+<div class="line"><span class="lineno">  848</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="functions__sidebar_8c.html#a7cd8c9af93a69251dc8eeadeb7c360b3">sb_scroll_selection_to_row</a>(fdata, fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#a7e9543106eae2e03e7b5e5634c40147a">wdata</a>-&gt;<a class="code hl_variable" href="structSidebarWindowData.html#ab75df8753237501e536a10dcdcc58ae7">win</a>-&gt;<a class="code hl_variable" href="structMuttWindow.html#a406b976fc50b1cb5beca6c85e7a3be7f">state</a>.<a class="code hl_variable" href="structWindowState.html#ab257b2f0c7d2a9fbfcdbe8a71f986cb5">rows</a> - 1);</div>
+<div class="line"><span class="lineno">  849</span>}</div>
 </div><!-- fragment --><div id="dynsection-22" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
 <div id="dynsection-22-summary" class="dynsummary" style="display:block;">
@@ -1471,12 +1471,12 @@ event is not NULL </dd></dl>
 
 <p>Make the sidebar (in)visible - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00853">853</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  855</span>{</div>
-<div class="line"><span class="lineno">  856</span>  <a class="code hl_function" href="bool_8c.html#a5ef0a3002d75e9d9a91cda84336c13f5">bool_str_toggle</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#ab2ddfe31282216d5a4f7d789d17f0b05">n</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;sidebar_visible&quot;</span>, NULL);</div>
-<div class="line"><span class="lineno">  857</span>  <a class="code hl_function" href="mutt__window_8c.html#a0c72fe947a36fde085984ea9eb477818">mutt_window_reflow</a>(NULL);</div>
-<div class="line"><span class="lineno">  858</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  859</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00854">854</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  856</span>{</div>
+<div class="line"><span class="lineno">  857</span>  <a class="code hl_function" href="bool_8c.html#a5ef0a3002d75e9d9a91cda84336c13f5">bool_str_toggle</a>(fdata-&gt;<a class="code hl_variable" href="structSidebarFunctionData.html#ab2ddfe31282216d5a4f7d789d17f0b05">n</a>-&gt;<a class="code hl_variable" href="structNeoMutt.html#af98065e32243ce9331f93b7f30247d47">sub</a>, <span class="stringliteral">&quot;sidebar_visible&quot;</span>, NULL);</div>
+<div class="line"><span class="lineno">  858</span>  <a class="code hl_function" href="mutt__window_8c.html#a0c72fe947a36fde085984ea9eb477818">mutt_window_reflow</a>(NULL);</div>
+<div class="line"><span class="lineno">  859</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  860</span>}</div>
 <div class="ttc" id="abool_8c_html_a5ef0a3002d75e9d9a91cda84336c13f5"><div class="ttname"><a href="bool_8c.html#a5ef0a3002d75e9d9a91cda84336c13f5">bool_str_toggle</a></div><div class="ttdeci">int bool_str_toggle(struct ConfigSubset *sub, const char *name, struct Buffer *err)</div><div class="ttdoc">Toggle the value of a bool.</div><div class="ttdef"><b>Definition</b> <a href="bool_8c_source.html#l00231">bool.c:231</a></div></div>
 </div><!-- fragment --><div id="dynsection-23" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
@@ -1517,10 +1517,10 @@ event is not NULL </dd></dl>
 
 <p>Deprecated - Implements <a class="el" href="functions__sidebar_8h.html#a33ac9a3748fb77f099ff7734599a34df">sidebar_function_t</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00864">864</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  866</span>{</div>
-<div class="line"><span class="lineno">  867</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
-<div class="line"><span class="lineno">  868</span>}</div>
+<p class="definition">Definition at line <a class="el" href="functions__sidebar_8c_source.html#l00865">865</a> of file <a class="el" href="functions__sidebar_8c_source.html">functions_sidebar.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  867</span>{</div>
+<div class="line"><span class="lineno">  868</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dispatcher_8h.html#a491d2646f32539a82a5d8b5f2bdc3414a0c300f5e79d1b41af8f158a457508670">FR_SUCCESS</a>;</div>
+<div class="line"><span class="lineno">  869</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
