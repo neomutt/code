@@ -8,7 +8,7 @@ var exec_8h =
     [ "mutt_crypt_hook", "exec_8h.html#adce4d617e1b3ef99bec1a7969dd08a43", null ],
     [ "mutt_default_save", "exec_8h.html#a13ff966ae261a7a9183d70d8d4da7c01", null ],
     [ "mutt_delete_hooks", "exec_8h.html#a300c28934505b92bd1a61992aa19abc3", null ],
-    [ "mutt_find_hook", "exec_8h.html#a6a4e53eede6a373cf513ab0a71dddae7", null ],
+    [ "mutt_find_hook", "exec_8h.html#a78af8489b8ab041d16fdb33ef647c239", null ],
     [ "mutt_idxfmt_hook", "exec_8h.html#a80917be2e7aeae0a2bcbc801d5762a6e", null ],
     [ "mutt_select_fcc", "exec_8h.html#a6d228c86f5a1900b27af0fde26991a63", null ]
 ];

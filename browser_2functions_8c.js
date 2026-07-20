@@ -17,7 +17,7 @@ var browser_2functions_8c =
     [ "op_create_mailbox", "group__browser__function__api.html#ga3c40c98ca7a25900b195f2de66a4b483", null ],
     [ "browser_apply_delete_mailbox", "browser_2functions_8c.html#a14ba59c5e69e5ff7e4ae69de7fb6ba25", null ],
     [ "op_delete_mailbox", "group__browser__function__api.html#ga91b9db9fec843cf9a4aa280c06a4c418", null ],
-    [ "op_enter_mask", "group__browser__function__api.html#ga9c1711325bdf4867782860b485191931", null ],
+    [ "op_browser_limit", "group__browser__function__api.html#ga565dea3fa7acbd33b436ee09e0a9e8f6", null ],
     [ "op_quit", "group__browser__function__api.html#ga84617af186b08a64a49dda20b0ef59fe", null ],
     [ "op_jump", "group__browser__function__api.html#ga41a13c4126359c2a8cd7ed845e3668f7", null ],
     [ "op_generic_select_entry", "group__browser__function__api.html#ga8eea36f1b1d7a8ec618a0f42d4836611", null ],

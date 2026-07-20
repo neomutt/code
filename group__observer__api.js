@@ -46,6 +46,7 @@ var group__observer__api =
     [ "helpbar_color_observer", "group__observer__api.html#ga40dca5830610c5304bea0d59e4d5f284", null ],
     [ "helpbar_config_observer", "group__observer__api.html#gaf5bdd54ad5934b0056562ce7f07f38be", null ],
     [ "helpbar_window_observer", "group__observer__api.html#gad9479d9b3325898cbe92e5856b2fcbc4", null ],
+    [ "history_config_observer", "group__observer__api.html#ga0e2e36344e720eb535ca836cd6b657ef", null ],
     [ "main_hist_observer", "group__observer__api.html#ga2a9a5a2068ae8c2b217cb64cd679e498", null ],
     [ "imap_timeout_observer", "group__observer__api.html#gadb8fb5371e79acd99a711766d44506a1", null ],
     [ "imap_mailbox_delete_observer", "group__observer__api.html#ga28f93853dd88ab38bda11aac4c27c158", null ],

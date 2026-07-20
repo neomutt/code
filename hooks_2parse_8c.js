@@ -15,5 +15,6 @@ var hooks_2parse_8c =
     [ "delete_idxfmt_hooks", "hooks_2parse_8c.html#a9738f8b3f197218c44f294bca64eeb94", null ],
     [ "parse_index_hook", "group__command__parse.html#gaec564b59d96c2b635ad23e39e6408ac0", null ],
     [ "parse_unhook", "group__command__parse.html#ga44b2664079587da17d63037f29be69b1", null ],
-    [ "IndexFormatDef", "hooks_2parse_8c.html#ae75adf8afa54d4ede302cc797b0a7ab1", null ]
+    [ "IndexFormatDef", "hooks_2parse_8c.html#ae75adf8afa54d4ede302cc797b0a7ab1", null ],
+    [ "CompressFormatDef", "hooks_2parse_8c.html#a6c1b542a9adb8833e20013f96e164a26", null ]
 ];

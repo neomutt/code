@@ -1,5 +1,7 @@
 var NAVTREEINDEX57 =
 {
+"structSmimeData.html#a5462d2c5db1b0741b7eb8550a962de95":[1,0,314,0],
+"structSmimeData.html#a5be8990ecf3011c64e7e364d65440f00":[1,0,314,1],
 "structSmimeData.html#a96c3870020b06a2ce3d212feb0724c1c":[1,0,314,2],
 "structSmimeFunction.html":[1,0,315],
 "structSmimeFunction.html#a47cb92cae1b60d38467119f9844458c0":[1,0,315,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX57 =
 "tdb_8c_source.html":[2,0,51,7],
 "terminal_8c.html":[2,0,24,38],
 "terminal_8c.html#a2a578d4e25e598d7eb838298d9c735a1":[2,0,24,38,5],
-"terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6":[2,0,24,38,4],
-"terminal_8c.html#a4f0d4f44cb4580ba6a8ebf298b30bdec":[2,0,24,38,0],
-"terminal_8c.html#a887af9a8f3e9ab92c7d065fbe9416003":[2,0,24,38,3]
+"terminal_8c.html#a47bc4a9075bca8a5ad5a478acc481ea6":[2,0,24,38,4]
 };

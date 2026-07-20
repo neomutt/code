@@ -1,7 +1,7 @@
 var hooks_2exec_8c =
 [
     [ "exec_folder_hook", "hooks_2exec_8c.html#a7d6a51075a1def07faeea14cf524c6aa", null ],
-    [ "mutt_find_hook", "hooks_2exec_8c.html#a6a4e53eede6a373cf513ab0a71dddae7", null ],
+    [ "mutt_find_hook", "hooks_2exec_8c.html#a78af8489b8ab041d16fdb33ef647c239", null ],
     [ "exec_message_hook", "hooks_2exec_8c.html#ab8440ad38319fcc7ba6280645e21e62f", null ],
     [ "addr_hook", "hooks_2exec_8c.html#a8865bc311360265962b08cf12378675d", null ],
     [ "mutt_default_save", "hooks_2exec_8c.html#a13ff966ae261a7a9183d70d8d4da7c01", null ],

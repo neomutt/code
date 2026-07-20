@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"structAliasModuleData.html#a494c5762f1ec6d9e73fdc2c6642efcd1":[1,0,8,11],
+"structAliasModuleData.html#a4cbe82ae9a49d3ef39681e8f128fe866":[1,0,8,10],
 "structAliasModuleData.html#a66b4c1303e96323bf84f8ce5d61a648b":[1,0,8,5],
 "structAliasModuleData.html#a6c5aa0e29d788e65fc676c5897ca1fd7":[1,0,8,9],
 "structAliasModuleData.html#a7f768edf38b34c9692badca6690d4d4b":[1,0,8,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "structCliInfo.html#afc66e5c10b4fd16d015692bc3834fd71":[1,0,41,4],
 "structCliSend.html":[1,0,42],
 "structCliSend.html#a064e5e3667f6eb5c295c81723dc84712":[1,0,42,7],
-"structCliSend.html#a0694a827ccc9da98bc3035229a7baa72":[1,0,42,0],
-"structCliSend.html#a347e7ef90ff0b4fdf37cfb0b7593256e":[1,0,42,8],
-"structCliSend.html#a60b069ce0ea2b2b214a80475de814043":[1,0,42,5]
+"structCliSend.html#a0694a827ccc9da98bc3035229a7baa72":[1,0,42,0]
 };

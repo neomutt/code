@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"structCliSend.html#a347e7ef90ff0b4fdf37cfb0b7593256e":[1,0,42,8],
+"structCliSend.html#a60b069ce0ea2b2b214a80475de814043":[1,0,42,5],
 "structCliSend.html#a67d62fe1bc65e089c5893aeba209aa79":[1,0,42,3],
 "structCliSend.html#a8913cf0551f24cd2c5f10617935bb76f":[1,0,42,1],
 "structCliSend.html#ab949d531d23f063821e5e7676f27aca1":[1,0,42,2],
@@ -124,13 +126,13 @@ var NAVTREEINDEX50 =
 "structComprOps.html#ac3121f9b8d9f6059972597315a559f44":[1,0,64,1],
 "structComprOps.html#adba0c7a5be5b03f182bad1ef8513503f":[1,0,64,6],
 "structCompressInfo.html":[1,0,62],
-"structCompressInfo.html#a0a2254cd8b511a6a5f6b726961252095":[1,0,62,2],
+"structCompressInfo.html#a1334e658d6265061f84b34301125b30c":[1,0,62,2],
 "structCompressInfo.html#a2aca1d78a4d745a6a795dab05279f8db":[1,0,62,6],
-"structCompressInfo.html#a97e20b0a307d1164a6de7265b28136f7":[1,0,62,0],
+"structCompressInfo.html#a80be06f67b540d40dafc43f365af71f3":[1,0,62,1],
 "structCompressInfo.html#a9f6c41db8d4f70ebb317146dfa5e0472":[1,0,62,4],
 "structCompressInfo.html#aac3530ca93433b36ec7118f2278f8280":[1,0,62,5],
 "structCompressInfo.html#ae92bc129b9825e39e42d7737197c3297":[1,0,62,3],
-"structCompressInfo.html#aef70fbe59eca22ca5326424873ffeaae":[1,0,62,1],
+"structCompressInfo.html#af61ae16eaafc7ddb94da3cd74f2ccfac":[1,0,62,0],
 "structCompressModuleData.html":[1,0,63],
 "structCompressModuleData.html#a38e4e71d0495bf6f4a9ed1d106bf7e4c":[1,0,63,0],
 "structConfigDef.html":[1,0,65],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "structCryptModuleSpecs.html#a9a42ba8d47527a42920e3bc345fdda71":[1,0,81,13],
 "structCryptModuleSpecs.html#a9d7b47fb748a7cdb4975f2dde8179a98":[1,0,81,6],
 "structCryptModuleSpecs.html#aa5176c9adfe75f78d99e4c2bd7e6671c":[1,0,81,11],
-"structCryptModuleSpecs.html#ab1befdfed56bdbcdd6f42b174a66fe1a":[1,0,81,21],
-"structCryptModuleSpecs.html#abbb74e663273948a7e2ad35a1135e6a2":[1,0,81,15],
-"structCryptModuleSpecs.html#abe8b95602735ac15f4f3a8d6ab1dc45b":[1,0,81,10]
+"structCryptModuleSpecs.html#ab1befdfed56bdbcdd6f42b174a66fe1a":[1,0,81,21]
 };
