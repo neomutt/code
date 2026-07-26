@@ -11,7 +11,7 @@ var searchData=
   ['ff_8',['ff',['../structFolder.html#a37163d36b029dfee673d8c86c77eb3c0',1,'Folder']]],
   ['fg_9',['fg',['../structAnsiColor.html#ae8d76de12d91edfd3b0d52a83fa79c27',1,'AnsiColor::fg'],['../structAttrColor.html#a6a3d8e5239742c70675addea01049535',1,'AttrColor::fg'],['../structCursesColor.html#a186f147b17189f1e9e6d03b57cd29816',1,'CursesColor::fg']]],
   ['file_10',['file',['../structBrowserPrivateData.html#abeda5c2b33e4275e5ed22caf3e106448',1,'BrowserPrivateData::file'],['../structLogLine.html#a44d9b3cfcef5c1e93d6e45e7357e077b',1,'LogLine::file']]],
-  ['filename_11',['filename',['../structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a',1,'Body']]],
+  ['filename_11',['filename',['../structSpellingCommandData.html#a269556278adb1b3667fddada6bd11f7e',1,'SpellingCommandData::filename'],['../structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a',1,'Body::filename']]],
   ['filenamesafechars_12',['FilenameSafeChars',['../file_8c.html#a1ec6495628a05a5e6aa1075558601290',1,'FilenameSafeChars:&#160;file.c'],['../file_8h.html#a1ec6495628a05a5e6aa1075558601290',1,'FilenameSafeChars:&#160;file.c']]],
   ['files_13',['files',['../structBrowserPrivateData.html#a031b5882af0ddee43d804800c8e9882d',1,'BrowserPrivateData::files'],['../structFileCompletionData.html#a1eaf72aea5efb3597d95fff6406fb940',1,'FileCompletionData::files']]],
   ['fillbuf_14',['fillbuf',['../md5_8c.html#ae52952d1a1d91dcbd825d5f9cb980618',1,'md5.c']]],

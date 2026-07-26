@@ -29,7 +29,7 @@ var group__compose__function__api =
     [ "op_envelope_edit_headers", "group__compose__function__api.html#ga7f6c071c91cefc6d55cac86006062e3f", null ],
     [ "op_compose_edit_file", "group__compose__function__api.html#gac7c76c030ed6b002ba4e84979ef3f2e3", null ],
     [ "op_compose_edit_message", "group__compose__function__api.html#ga0f1885dbac56b61d39923dcd394b0a7e", null ],
-    [ "op_compose_ispell", "group__compose__function__api.html#ga14f64ca72a390f0b067a5228bde304a6", null ],
+    [ "op_compose_check_spelling", "group__compose__function__api.html#ga306efeddd331a342e93caf65b3848a37", null ],
     [ "op_compose_postpone_message", "group__compose__function__api.html#ga04bb024736130852c7b33e7826b25216", null ],
     [ "op_compose_rename_file", "group__compose__function__api.html#ga308bba22dd3334e4997dd85caf2bf60b", null ],
     [ "op_compose_send_message", "group__compose__function__api.html#ga80e16eefef0acdda1183a0552e96dc10", null ],

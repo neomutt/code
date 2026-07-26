@@ -8,6 +8,7 @@ var email_2parse_8c =
     [ "mutt_filter_commandline_header_value", "email_2parse_8c.html#aeb759563267cc1a4ee017738d8ee3013", null ],
     [ "parse_parameters", "email_2parse_8c.html#af286c6b467329705cc1ca7d92f9ad954", null ],
     [ "parse_content_disposition", "email_2parse_8c.html#a870232070405e395193a6c7e00e2df60", null ],
+    [ "extract_message_id", "email_2parse_8c.html#a40e88eff198808c8e2ac96986dd20e3c", null ],
     [ "parse_references", "email_2parse_8c.html#a5b80e3daa9cb6eb8f8ed5adae704ee10", null ],
     [ "parse_content_language", "email_2parse_8c.html#a74dcb6f4b53adc8cc3f61bcf4168fd51", null ],
     [ "mutt_matches_ignore", "email_2parse_8c.html#a5f2728949322a1a6210d61d9629005d1", null ],

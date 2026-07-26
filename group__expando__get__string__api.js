@@ -47,6 +47,7 @@ var group__expando__get__string__api =
     [ "compose_attach_size", "group__expando__get__string__api.html#ga0e9f0e839fb63dd3d8f935a6cb62009e", null ],
     [ "global_hostname", "group__expando__get__string__api.html#ga2cc71e106306282938b9fc6646fb3a55", null ],
     [ "global_version", "group__expando__get__string__api.html#ga6bbe46e7c20c3ce4674877579c9869e4", null ],
+    [ "spelling_command_file", "group__expando__get__string__api.html#ga62938444fcdb62dc6db4ed3039c073ab", null ],
     [ "history_match", "group__expando__get__string__api.html#ga6f05f788b07cf3a5d6ebdc2985beb64b", null ],
     [ "email_body_characters", "group__expando__get__string__api.html#gac9d1b3f14ca4e372c349719691fde3b5", null ],
     [ "email_combined_flags", "group__expando__get__string__api.html#gac572b39e6265d21d837a05dfd86f5b0f", null ],

@@ -509,10 +509,9 @@ var searchData=
   ['is_5fvisible_506',['is_visible',['../structAliasView.html#a055227a30ef30abdbdeef27b3fd62cb4',1,'AliasView::is_visible'],['../gui_2thread_8c.html#af6f89eb1fe9177d9a3484842f7d5c1cc',1,'is_visible(struct Email *e):&#160;thread.c']]],
   ['isbom_507',['IsBOM',['../mbyte_8h.html#a0b91f5349a135366d05c62135903084f',1,'mbyte.h']]],
   ['isendwin_508',['IsEndwin',['../mutt__signal_8c.html#a242f85b7efe910d09a27a0743b14e42b',1,'mutt_signal.c']]],
-  ['ispell_509',['ISPELL',['../compose_2config_8c.html#aa4edd692877f894c7864779c8cdf767b',1,'config.c']]],
-  ['isprint_510',['IsPrint',['../mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705',1,'mbyte.h']]],
-  ['issuer_511',['issuer',['../structSmimeKey.html#a6921c2922bea84854b90eab1b7e90f1e',1,'SmimeKey']]],
-  ['iswprint_512',['IsWPrint',['../mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d',1,'mbyte.h']]],
-  ['it_513',['Generate the help-page and GUI display it',['../main_help.html',1,'index']]],
-  ['items_514',['Subset of config items',['../config_subset.html',1,'lib_config']]]
+  ['isprint_509',['IsPrint',['../mbyte_8h.html#a5d72c6bce8097c88972c989bedf2f705',1,'mbyte.h']]],
+  ['issuer_510',['issuer',['../structSmimeKey.html#a6921c2922bea84854b90eab1b7e90f1e',1,'SmimeKey']]],
+  ['iswprint_511',['IsWPrint',['../mbyte_8h.html#ac15ed1bc3e367f33ed66c9d76d16334d',1,'mbyte.h']]],
+  ['it_512',['Generate the help-page and GUI display it',['../main_help.html',1,'index']]],
+  ['items_513',['Subset of config items',['../config_subset.html',1,'lib_config']]]
 ];

@@ -20,10 +20,11 @@ var searchData=
   ['smimekey_17',['SmimeKey',['../structSmimeKey.html',1,'']]],
   ['smtpaccountdata_18',['SmtpAccountData',['../structSmtpAccountData.html',1,'']]],
   ['smtpauth_19',['SmtpAuth',['../structSmtpAuth.html',1,'']]],
-  ['state_20',['State',['../structState.html',1,'']]],
-  ['storemoduledata_21',['StoreModuleData',['../structStoreModuleData.html',1,'']]],
-  ['storeops_22',['StoreOps',['../structStoreOps.html',1,'']]],
-  ['submenu_23',['SubMenu',['../structSubMenu.html',1,'']]],
-  ['submenuid_24',['SubMenuId',['../structSubMenuId.html',1,'']]],
-  ['sysexits_25',['SysExits',['../structSysExits.html',1,'']]]
+  ['spellingcommanddata_20',['SpellingCommandData',['../structSpellingCommandData.html',1,'']]],
+  ['state_21',['State',['../structState.html',1,'']]],
+  ['storemoduledata_22',['StoreModuleData',['../structStoreModuleData.html',1,'']]],
+  ['storeops_23',['StoreOps',['../structStoreOps.html',1,'']]],
+  ['submenu_24',['SubMenu',['../structSubMenu.html',1,'']]],
+  ['submenuid_25',['SubMenuId',['../structSubMenuId.html',1,'']]],
+  ['sysexits_26',['SysExits',['../structSysExits.html',1,'']]]
 ];

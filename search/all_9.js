@@ -40,7 +40,7 @@ var searchData=
   ['file_5ftag_37',['file_tag',['../group__menu__tag.html#gaf4d5441e6e33296a9fb742390153a099',1,'dlg_browser.c']]],
   ['file_5fto_5fdata_5fobject_38',['file_to_data_object',['../crypt__gpgme_8c.html#a9e4c3751a7e9290b83db346a58f9fc95',1,'crypt_gpgme.c']]],
   ['filecompletiondata_39',['FileCompletionData',['../structFileCompletionData.html',1,'']]],
-  ['filename_40',['filename',['../structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a',1,'Body']]],
+  ['filename_40',['filename',['../structSpellingCommandData.html#a269556278adb1b3667fddada6bd11f7e',1,'SpellingCommandData::filename'],['../structBody.html#afe3cd2c4b1070e3d0edbf1fed939ac5a',1,'Body::filename']]],
   ['filenamesafechars_41',['FilenameSafeChars',['../file_8c.html#a1ec6495628a05a5e6aa1075558601290',1,'FilenameSafeChars:&#160;file.c'],['../file_8h.html#a1ec6495628a05a5e6aa1075558601290',1,'FilenameSafeChars:&#160;file.c']]],
   ['files_42',['Create Temporary Files',['../core_tmp.html',1,'lib_core']]],
   ['files_43',['files',['../structBrowserPrivateData.html#a031b5882af0ddee43d804800c8e9882d',1,'BrowserPrivateData::files'],['../structFileCompletionData.html#a1eaf72aea5efb3597d95fff6406fb940',1,'FileCompletionData::files'],['../mutt_state.html',1,'Keep track when processing files'],['../index.html#autotoc_md108',1,'Miscellaneous files']]],

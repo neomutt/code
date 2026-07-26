@@ -1,5 +1,8 @@
 var NAVTREEINDEX55 =
 {
+"structNmAccountData.html#a76f9a37a987a8e6057f4d89cdd27ea36":[1,0,230,0],
+"structNmAccountData.html#aa3dcd4870d23e936fa2292d56a8126aa":[1,0,230,2],
+"structNmEmailData.html":[1,0,231],
 "structNmEmailData.html#ab0f65adbf106a79e0a3875a128f15e0f":[1,0,231,0],
 "structNmEmailData.html#ac95286a6a9f4b7d1649cb4bed151ec97":[1,0,231,2],
 "structNmEmailData.html#acf4be7bb9a32ea7d75d34eef4de9b64c":[1,0,231,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX55 =
 "structPgpCommandContext.html#ad3677b114592699f6e148d6d824fdae2":[1,0,269,4],
 "structPgpCommandContext.html#af6757067e77513c9f8ee234b57beeb8e":[1,0,269,2],
 "structPgpData.html":[1,0,270],
-"structPgpData.html#a847cdcf199374abccac5c83488ef84b8":[1,0,270,1],
-"structPgpData.html#a98cd597ecc00d40a7671a55e56cc3b5c":[1,0,270,0],
-"structPgpData.html#ae07f0c792a99547c1f224759f67f6477":[1,0,270,2],
-"structPgpData.html#aef3fe329292d69d659e8f3404a9570fb":[1,0,270,3]
+"structPgpData.html#a847cdcf199374abccac5c83488ef84b8":[1,0,270,1]
 };

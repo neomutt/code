@@ -3,9 +3,9 @@ var lib_autocrypt =
     [ "Autocrypt shared code", "autocrypt_autocrypt.html", [
       [ "Still Todo", "lib_autocrypt.html#autotoc_md12", null ],
       [ "Developer Notes", "lib_autocrypt.html#autotoc_md13", [
-        [ "header->security | SEC_AUTOCRYPT", "lib_autocrypt.html#autotoc_md14", null ],
-        [ "header->security | SEC_AUTOCRYPT_OVERRIDE", "lib_autocrypt.html#autotoc_md15", null ],
-        [ "mutt_autocrypt_init()", "lib_autocrypt.html#autotoc_md16", null ],
+        [ "<span class=\"tt\">header-&gt;security | SEC_AUTOCRYPT</span>", "lib_autocrypt.html#autotoc_md14", null ],
+        [ "<span class=\"tt\">header-&gt;security | SEC_AUTOCRYPT_OVERRIDE</span>", "lib_autocrypt.html#autotoc_md15", null ],
+        [ "<span class=\"tt\">mutt_autocrypt_init()</span>", "lib_autocrypt.html#autotoc_md16", null ],
         [ "Database schema version", "lib_autocrypt.html#autotoc_md17", null ],
         [ "Functions", "autocrypt_autocrypt.html#autotoc_md199", null ]
       ] ]

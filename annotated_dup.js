@@ -319,6 +319,7 @@ var annotated_dup =
     [ "SmimeKey", "structSmimeKey.html", "structSmimeKey" ],
     [ "SmtpAccountData", "structSmtpAccountData.html", "structSmtpAccountData" ],
     [ "SmtpAuth", "structSmtpAuth.html", "structSmtpAuth" ],
+    [ "SpellingCommandData", "structSpellingCommandData.html", "structSpellingCommandData" ],
     [ "State", "structState.html", "structState" ],
     [ "StoreModuleData", "structStoreModuleData.html", "structStoreModuleData" ],
     [ "StoreOps", "structStoreOps.html", "structStoreOps" ],

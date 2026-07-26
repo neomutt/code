@@ -327,6 +327,7 @@ var hierarchy =
     [ "SmimeKey", "structSmimeKey.html", null ],
     [ "SmtpAccountData", "structSmtpAccountData.html", null ],
     [ "SmtpAuth", "structSmtpAuth.html", null ],
+    [ "SpellingCommandData", "structSpellingCommandData.html", null ],
     [ "State", "structState.html", null ],
     [ "StoreModuleData", "structStoreModuleData.html", null ],
     [ "StoreOps", "structStoreOps.html", null ],

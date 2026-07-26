@@ -1,5 +1,6 @@
 var compose_2functions_8c =
 [
+    [ "SpellingCommandData", "structSpellingCommandData.html", "structSpellingCommandData" ],
     [ "compose_init_keys", "compose_2functions_8c.html#a0cabb76c60dd56dde83ae43c0cf65821", null ],
     [ "check_count", "compose_2functions_8c.html#a0b0529f94fccff91159e173fb58a7c64", null ],
     [ "gen_cid", "compose_2functions_8c.html#a78c7433990448979005f6b6824848edd", null ],
@@ -47,7 +48,8 @@ var compose_2functions_8c =
     [ "op_envelope_edit_headers", "group__compose__function__api.html#ga7f6c071c91cefc6d55cac86006062e3f", null ],
     [ "op_compose_edit_file", "group__compose__function__api.html#gac7c76c030ed6b002ba4e84979ef3f2e3", null ],
     [ "op_compose_edit_message", "group__compose__function__api.html#ga0f1885dbac56b61d39923dcd394b0a7e", null ],
-    [ "op_compose_ispell", "group__compose__function__api.html#ga14f64ca72a390f0b067a5228bde304a6", null ],
+    [ "spelling_command_file", "group__expando__get__string__api.html#ga62938444fcdb62dc6db4ed3039c073ab", null ],
+    [ "op_compose_check_spelling", "group__compose__function__api.html#ga306efeddd331a342e93caf65b3848a37", null ],
     [ "op_compose_postpone_message", "group__compose__function__api.html#ga04bb024736130852c7b33e7826b25216", null ],
     [ "op_compose_rename_file", "group__compose__function__api.html#ga308bba22dd3334e4997dd85caf2bf60b", null ],
     [ "op_compose_send_message", "group__compose__function__api.html#ga80e16eefef0acdda1183a0552e96dc10", null ],
