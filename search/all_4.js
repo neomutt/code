@@ -429,7 +429,7 @@ var searchData=
   ['attachfunctiondata_426',['AttachFunctionData',['../structAttachFunctionData.html',1,'']]],
   ['attachfunctions_427',['AttachFunctions',['../attach_2functions_8c.html#ab6272403a46d39ad3c8c61e4717587df',1,'functions.c']]],
   ['attachmatch_428',['AttachMatch',['../structAttachMatch.html',1,'']]],
-  ['attachmatch_5ffree_429',['attachmatch_free',['../group__list__free__api.html#ga015bb7cac077e421c444765f614b0348',1,'attachmatch_free(struct AttachMatch **ptr):&#160;commands.c'],['../group__list__free__api.html#ga015bb7cac077e421c444765f614b0348',1,'attachmatch_free(struct AttachMatch **ptr):&#160;commands.c']]],
+  ['attachmatch_5ffree_429',['attachmatch_free',['../group__list__free__api.html#gaaf125d1b60eb044d2b2de059cb2a9a0b',1,'attachmatch_free(void **ptr):&#160;commands.c'],['../group__list__free__api.html#gaaf125d1b60eb044d2b2de059cb2a9a0b',1,'attachmatch_free(void **ptr):&#160;commands.c']]],
   ['attachmatch_5fnew_430',['attachmatch_new',['../attach_2commands_8c.html#a7f6c9372584d12bb99bbbe191a58eb92',1,'attachmatch_new(void):&#160;commands.c'],['../attach_2commands_8h.html#a7f6c9372584d12bb99bbbe191a58eb92',1,'attachmatch_new(void):&#160;commands.c']]],
   ['attachment_431',['Send/reply with an attachment',['../attach_recvcmd.html',1,'lib_attach']]],
   ['attachment_20commands_432',['Attachment commands',['../attach_commands.html',1,'lib_attach']]],
