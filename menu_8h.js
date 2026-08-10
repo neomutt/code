@@ -2,9 +2,7 @@ var menu_8h =
 [
     [ "MenuFuncOp", "structMenuFuncOp.html", "structMenuFuncOp" ],
     [ "MenuOpSeq", "structMenuOpSeq.html", "structMenuOpSeq" ],
-    [ "MenuFunctionOp", "structMenuFunctionOp.html", "structMenuFunctionOp" ],
     [ "init_keys_t", "menu_8h.html#a0cc25988f400cf0cae0c1ee04a665e25", null ],
-    [ "ARRAY_HEAD", "menu_8h.html#ab782de6607367d4eb189c254b0de1002", null ],
     [ "is_bound", "menu_8h.html#a9b034267e4d863132e876952a54f4244", null ],
     [ "km_find_func", "menu_8h.html#a95c0205a96340844a506d48c92c4ae09", null ],
     [ "km_get_op", "menu_8h.html#aebe45d5bacb7e26f1bd8c7c77b35e11c", null ],

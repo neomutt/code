@@ -30,7 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-1016-g929a3e</span>
+   &#160;<span id="projectnumber">2025-12-11-1031-gfb8e54</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -189,9 +189,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('openssl_8c_sou
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">struct </span>SslSockData</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>{</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  SSL_CTX *sctx;        </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  SSL *ssl;             </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> isopen; </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  SSL_CTX *sctx; </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  SSL *ssl;      </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordtype">bool</span> is_open;  </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>};</div>
 </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
@@ -313,10 +313,10 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('openssl_8c_sou
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">case</span> SSL_ERROR_NONE:</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">case</span> SSL_ERROR_ZERO_RETURN:</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      data-&gt;isopen = 0;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      data-&gt;is_open = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">case</span> SSL_ERROR_SYSCALL:</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      data-&gt;isopen = 0;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      data-&gt;is_open = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  }</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
@@ -1243,7 +1243,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('openssl_8c_sou
 <div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="openssl_8c.html#a7480af2397359ace6c8741be1e680295">ssl_negotiate</a>(conn, <a class="code hl_function" href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a>(conn)))</div>
 <div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>    <span class="keywordflow">goto</span> free_ssl;</div>
 <div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span> </div>
-<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>  <a class="code hl_function" href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a>(conn)-&gt;isopen = 1;</div>
+<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>  <a class="code hl_function" href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a>(conn)-&gt;is_open = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>  conn-&gt;<a class="code hl_variable" href="structConnection.html#a577e30cca37f125532cc73d4cbf51dcb">ssf</a> = SSL_CIPHER_get_bits(SSL_get_current_cipher(<a class="code hl_function" href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a>(conn)-&gt;ssl), &amp;maxbits);</div>
 <div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span> </div>
 <div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>  <span class="keywordflow">return</span> 0;</div>
@@ -1307,13 +1307,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('openssl_8c_sou
 <div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (BIO_should_retry(SSL_get_rbio(data-&gt;ssl)))</div>
 <div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>  {</div>
 <div class="line"><a id="l01361" name="l01361"></a><span class="lineno"> 1361</span>    <span class="comment">// Temporary failure, e.g. signal received</span></div>
-<div class="line"><a id="l01362" name="l01362"></a><span class="lineno"> 1362</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a>(conn, 0) &gt;= 0)</div>
+<div class="line"><a id="l01362" name="l01362"></a><span class="lineno"> 1362</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a>(conn, 0) &gt; 0)</div>
 <div class="line"><a id="l01363" name="l01363"></a><span class="lineno"> 1363</span>    {</div>
 <div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span>      <span class="keywordflow">goto</span> retry;</div>
 <div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span>    }</div>
 <div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span>  }</div>
 <div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span> </div>
-<div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span>  data-&gt;isopen = 0;</div>
+<div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span>  data-&gt;is_open = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01369" name="l01369"></a><span class="lineno"> 1369</span>  <a class="code hl_function" href="openssl_8c.html#ad0eb5f86037e1612ca14cd3a0a87a0dc">ssl_err</a>(data, rc);</div>
 <div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span>  <span class="keywordflow">return</span> rc;</div>
 <div class="line"><a id="l01371" name="l01371"></a><span class="lineno"> 1371</span>}</div>
@@ -1356,7 +1356,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('openssl_8c_sou
 <div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span> </div>
 <div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>  <span class="keywordflow">if</span> (data)</div>
 <div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>  {</div>
-<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>    <span class="keywordflow">if</span> (data-&gt;isopen &amp;&amp; (<a class="code hl_function" href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a>(conn, 0) &gt;= 0))</div>
+<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>    <span class="keywordflow">if</span> (data-&gt;is_open &amp;&amp; (<a class="code hl_function" href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a>(conn, 0) &gt;= 0))</div>
 <div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>      SSL_shutdown(data-&gt;ssl);</div>
 <div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span> </div>
 <div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>    SSL_free(data-&gt;ssl);</div>
@@ -1442,7 +1442,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('openssl_8c_sou
 <div class="ttc" id="agroup__connection__read_html_gaaba8f76cd1e6ac78b5384bd27e4c4dfb"><div class="ttname"><a href="group__connection__read.html#gaaba8f76cd1e6ac78b5384bd27e4c4dfb">raw_socket_read</a></div><div class="ttdeci">int raw_socket_read(struct Connection *conn, char *buf, size_t len)</div><div class="ttdoc">Read data from a socket - Implements Connection::read() -.</div><div class="ttdef"><b>Definition</b> <a href="raw_8c_source.html#l00295">raw.c:295</a></div></div>
 <div class="ttc" id="agroup__connection__write_html_ga40b2b0f0a706d96487919a4b0489026a"><div class="ttname"><a href="group__connection__write.html#ga40b2b0f0a706d96487919a4b0489026a">ssl_socket_write</a></div><div class="ttdeci">static int ssl_socket_write(struct Connection *conn, const char *buf, size_t count)</div><div class="ttdoc">Write data to an SSL socket - Implements Connection::write() -.</div><div class="ttdef"><b>Definition</b> <a href="#l01376">openssl.c:1376</a></div></div>
 <div class="ttc" id="agroup__connection__write_html_ga79bb2278f55b18858b3580d8bdf53142"><div class="ttname"><a href="group__connection__write.html#ga79bb2278f55b18858b3580d8bdf53142">raw_socket_write</a></div><div class="ttdeci">int raw_socket_write(struct Connection *conn, const char *buf, size_t count)</div><div class="ttdoc">Write data to a socket - Implements Connection::write() -.</div><div class="ttdef"><b>Definition</b> <a href="raw_8c_source.html#l00325">raw.c:325</a></div></div>
-<div class="ttc" id="agroup__gui__dlg_html_ga2a3679347f519661d55ad954c6b8f8b3"><div class="ttname"><a href="group__gui__dlg.html#ga2a3679347f519661d55ad954c6b8f8b3">dlg_certificate</a></div><div class="ttdeci">int dlg_certificate(const char *title, struct StringArray *carr, bool allow_always, bool allow_skip)</div><div class="ttdoc">Ask the user to validate the certificate -.</div><div class="ttdef"><b>Definition</b> <a href="dlg__verifycert_8c_source.html#l00166">dlg_verifycert.c:166</a></div></div>
+<div class="ttc" id="agroup__gui__dlg_html_ga2a3679347f519661d55ad954c6b8f8b3"><div class="ttname"><a href="group__gui__dlg.html#ga2a3679347f519661d55ad954c6b8f8b3">dlg_certificate</a></div><div class="ttdeci">int dlg_certificate(const char *title, struct StringArray *carr, bool allow_always, bool allow_skip)</div><div class="ttdoc">Ask the user to validate the certificate -.</div><div class="ttdef"><b>Definition</b> <a href="dlg__verifycert_8c_source.html#l00168">dlg_verifycert.c:168</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gacc1fd6d7ab1603e80e11e84e90d061e4"><div class="ttname"><a href="group__logging__api.html#gacc1fd6d7ab1603e80e11e84e90d061e4">mutt_error</a></div><div class="ttdeci">#define mutt_error(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00094">logging2.h:94</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae108f891125caafa9250cf0959c40c04"><div class="ttname"><a href="group__logging__api.html#gae108f891125caafa9250cf0959c40c04">mutt_message</a></div><div class="ttdeci">#define mutt_message(...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00093">logging2.h:93</a></div></div>
 <div class="ttc" id="agroup__logging__api_html_gae6c5fd73af3410b2d5e8099f8774c8da"><div class="ttname"><a href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a></div><div class="ttdeci">#define mutt_debug(LEVEL,...)</div><div class="ttdef"><b>Definition</b> <a href="logging2_8h_source.html#l00091">logging2.h:91</a></div></div>

@@ -1,6 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"mutt_2regex_8c_source.html":[2,0,38,55],
 "mutt_2slist_8c.html":[2,0,38,59],
 "mutt_2slist_8c.html#a0954344d0ad8918882a5ea5b19ce026d":[2,0,38,59,8],
 "mutt_2slist_8c.html#a2d02fa5cb8f110a65948963264371bb8":[2,0,38,59,7],
@@ -249,5 +248,6 @@ var NAVTREEINDEX34 =
 "mutt__mailbox_8c.html#a8f806bcfdbc1f01cb85a5d29ff4f6d27":[2,0,67,8],
 "mutt__mailbox_8c.html#a9e2e89628d0b2ac8cb68e6a07e0e04f3":[2,0,67,3],
 "mutt__mailbox_8c.html#aaa63cce0d13314b09e8a0824ba8fb234":[2,0,67,7],
-"mutt__mailbox_8c.html#ab9927df6282aeabd032cfca3332f4907":[2,0,67,4]
+"mutt__mailbox_8c.html#ab9927df6282aeabd032cfca3332f4907":[2,0,67,4],
+"mutt__mailbox_8c.html#ac15f82d9e76f46262014e3072cd3d15f":[2,0,67,0]
 };

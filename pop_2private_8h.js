@@ -6,7 +6,6 @@ var pop_2private_8h =
     [ "POP_SSL_PORT", "pop_2private_8h.html#a2e7c786c53a65d43284b8de44a98a5fc", null ],
     [ "POP_CACHE_LEN", "pop_2private_8h.html#a606d455144b12dcddd75503a8fb737a4", null ],
     [ "POP_CMD_RESPONSE", "pop_2private_8h.html#a320026da03c4cc9c4b7a15a78dd77568", null ],
-    [ "pop_query", "pop_2private_8h.html#a517e9120e2ec9d86ea2f93dd10696e4f", null ],
     [ "pop_fetch_t", "pop_2private_8h.html#a6f34d9779646083fed3b121e1997f4f6", null ],
     [ "PopStatus", "pop_2private_8h.html#abf5ce360d246b1f6d637d953c182ea39", [
       [ "POP_NONE", "pop_2private_8h.html#abf5ce360d246b1f6d637d953c182ea39a9202803328d8645fb7e7dcdb69b52eff", null ],
@@ -25,7 +24,7 @@ var pop_2private_8h =
     [ "pop_parse_path", "pop_2private_8h.html#ab8cd4dc0b93aa958fc8611242e05df7b", null ],
     [ "pop_connect", "pop_2private_8h.html#a2947b9ec728d7707f379e17e7c776abc", null ],
     [ "pop_open_connection", "pop_2private_8h.html#a531ae6abd6cf75fb0004bf019944a3b9", null ],
-    [ "pop_query_d", "pop_2private_8h.html#aae19861d60bcff0afc265b9327054203", null ],
+    [ "pop_query", "pop_2private_8h.html#abedc5f2391746460bacade13be4494f8", null ],
     [ "pop_fetch_data", "pop_2private_8h.html#abc1591da707c3c85897c8b450e661dcf", null ],
     [ "pop_reconnect", "pop_2private_8h.html#af75fadb2503181ccec226915d3e1984f", null ],
     [ "pop_logout", "pop_2private_8h.html#aeb87c461c48395e38564034b64ec2d37", null ],

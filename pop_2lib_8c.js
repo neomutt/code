@@ -9,7 +9,7 @@ var pop_2lib_8c =
     [ "pop_connect", "pop_2lib_8c.html#a2947b9ec728d7707f379e17e7c776abc", null ],
     [ "pop_open_connection", "pop_2lib_8c.html#a531ae6abd6cf75fb0004bf019944a3b9", null ],
     [ "pop_logout", "pop_2lib_8c.html#aeb87c461c48395e38564034b64ec2d37", null ],
-    [ "pop_query_d", "pop_2lib_8c.html#aae19861d60bcff0afc265b9327054203", null ],
+    [ "pop_query", "pop_2lib_8c.html#abedc5f2391746460bacade13be4494f8", null ],
     [ "pop_fetch_data", "pop_2lib_8c.html#abc1591da707c3c85897c8b450e661dcf", null ],
     [ "check_uidl", "group__pop__fetch__api.html#gad9f62c613d05946c91b6d12d85f8f17a", null ],
     [ "pop_reconnect", "pop_2lib_8c.html#af75fadb2503181ccec226915d3e1984f", null ]

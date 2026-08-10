@@ -30,7 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-1016-g929a3e</span>
+   &#160;<span id="projectnumber">2025-12-11-1031-gfb8e54</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -423,190 +423,195 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  224</span>          <span class="keywordflow">case</span> <span class="charliteral">&#39;u&#39;</span>:</div>
 <div class="line"><span class="lineno">  225</span>            trust = 3;</div>
 <div class="line"><span class="lineno">  226</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  227</span>        }</div>
-<div class="line"><span class="lineno">  228</span> </div>
-<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span> (!is_uid &amp;&amp; !(*is_subkey &amp;&amp; c_pgp_ignore_subkeys))</div>
-<div class="line"><span class="lineno">  230</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= <a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a>;</div>
-<div class="line"><span class="lineno">  231</span> </div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  233</span>      }</div>
-<div class="line"><span class="lineno">  234</span>      <span class="keywordflow">case</span> 3: <span class="comment">/* key length  */</span></div>
-<div class="line"><span class="lineno">  235</span>      {</div>
-<div class="line"><span class="lineno">  236</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;key len: %s\n&quot;</span>, p);</div>
-<div class="line"><span class="lineno">  237</span> </div>
-<div class="line"><span class="lineno">  238</span>        <span class="keywordflow">if</span> (!(*is_subkey &amp;&amp; c_pgp_ignore_subkeys) &amp;&amp; !mutt_str_atos_full(p, &amp;tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a6130bb27d19d78cfaf05e30c56de44da">keylen</a>))</div>
-<div class="line"><span class="lineno">  239</span>        {</div>
-<div class="line"><span class="lineno">  240</span>          <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  241</span>        }</div>
-<div class="line"><span class="lineno">  242</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  243</span>      }</div>
-<div class="line"><span class="lineno">  244</span>      <span class="keywordflow">case</span> 4: <span class="comment">/* pubkey algo */</span></div>
-<div class="line"><span class="lineno">  245</span>      {</div>
-<div class="line"><span class="lineno">  246</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;pubkey algorithm: %s\n&quot;</span>, p);</div>
-<div class="line"><span class="lineno">  247</span> </div>
-<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">if</span> (!(*is_subkey &amp;&amp; c_pgp_ignore_subkeys))</div>
-<div class="line"><span class="lineno">  249</span>        {</div>
-<div class="line"><span class="lineno">  250</span>          <span class="keywordtype">int</span> x = 0;</div>
-<div class="line"><span class="lineno">  251</span>          <span class="keywordflow">if</span> (!mutt_str_atoi_full(p, &amp;x))</div>
-<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  253</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#af6274f75bbf9a8609651c3d34a031128">numalg</a> = x;</div>
-<div class="line"><span class="lineno">  254</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#ac1da51063b789430334a7c16f648cb3a">algorithm</a> = <a class="code hl_function" href="pgplib_8c.html#a2880ea6a475fcab33e1de4e517a23ae4">pgp_pkalgbytype</a>(x);</div>
-<div class="line"><span class="lineno">  255</span>        }</div>
-<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  257</span>      }</div>
-<div class="line"><span class="lineno">  258</span>      <span class="keywordflow">case</span> 5: <span class="comment">/* 16 hex digits with the long keyid. */</span></div>
-<div class="line"><span class="lineno">  259</span>      {</div>
-<div class="line"><span class="lineno">  260</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;key id: %s\n&quot;</span>, p);</div>
-<div class="line"><span class="lineno">  261</span> </div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordflow">if</span> (!(*is_subkey &amp;&amp; c_pgp_ignore_subkeys))</div>
-<div class="line"><span class="lineno">  263</span>          <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a14a4c60b65ccf16697bd4578117ed83d">keyid</a>, p);</div>
-<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  265</span>      }</div>
-<div class="line"><span class="lineno">  266</span>      <span class="keywordflow">case</span> 6: <span class="comment">/* timestamp (1998-02-28) */</span></div>
-<div class="line"><span class="lineno">  267</span>      {</div>
-<div class="line"><span class="lineno">  268</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;time stamp: %s\n&quot;</span>, p);</div>
-<div class="line"><span class="lineno">  269</span> </div>
-<div class="line"><span class="lineno">  270</span>        <span class="keywordflow">if</span> (strchr(p, <span class="charliteral">&#39;-&#39;</span>)) <span class="comment">/* gpg pre-2.0.10 used format (yyyy-mm-dd) */</span></div>
-<div class="line"><span class="lineno">  271</span>        {</div>
-<div class="line"><span class="lineno">  272</span>          <span class="keyword">struct </span>tm time = { 0 };</div>
-<div class="line"><span class="lineno">  273</span> </div>
-<div class="line"><span class="lineno">  274</span>          time.tm_sec = 0;</div>
-<div class="line"><span class="lineno">  275</span>          time.tm_min = 0;</div>
-<div class="line"><span class="lineno">  276</span>          time.tm_hour = 12;</div>
-<div class="line"><span class="lineno">  277</span>          strncpy(tstr, p, 11);</div>
-<div class="line"><span class="lineno">  278</span>          tstr[4] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  279</span>          tstr[7] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><span class="lineno">  280</span>          <span class="keywordflow">if</span> (!mutt_str_atoi_full(tstr, &amp;time.tm_year))</div>
-<div class="line"><span class="lineno">  281</span>          {</div>
-<div class="line"><span class="lineno">  282</span>            p = tstr;</div>
-<div class="line"><span class="lineno">  283</span>            <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  284</span>          }</div>
-<div class="line"><span class="lineno">  285</span>          time.tm_year -= 1900;</div>
-<div class="line"><span class="lineno">  286</span>          <span class="keywordflow">if</span> (!mutt_str_atoi_full(tstr + 5, &amp;time.tm_mon))</div>
-<div class="line"><span class="lineno">  287</span>          {</div>
-<div class="line"><span class="lineno">  288</span>            p = tstr + 5;</div>
-<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  290</span>          }</div>
-<div class="line"><span class="lineno">  291</span>          time.tm_mon -= 1;</div>
-<div class="line"><span class="lineno">  292</span>          <span class="keywordflow">if</span> (!mutt_str_atoi_full(tstr + 8, &amp;time.tm_mday))</div>
-<div class="line"><span class="lineno">  293</span>          {</div>
-<div class="line"><span class="lineno">  294</span>            p = tstr + 8;</div>
-<div class="line"><span class="lineno">  295</span>            <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  296</span>          }</div>
-<div class="line"><span class="lineno">  297</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd">gen_time</a> = <a class="code hl_function" href="mutt_2date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e">mutt_date_make_time</a>(&amp;time, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  298</span>        }</div>
-<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">else</span> <span class="comment">/* gpg 2.0.10+ uses seconds since 1970-01-01 */</span></div>
-<div class="line"><span class="lineno">  300</span>        {</div>
-<div class="line"><span class="lineno">  301</span>          <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> secs = 0;</div>
-<div class="line"><span class="lineno">  302</span> </div>
-<div class="line"><span class="lineno">  303</span>          <span class="keywordflow">if</span> (!<a class="code hl_function" href="atoi_8c.html#a1825225ac6d68f6215d49ee558623fa8">mutt_str_atoull</a>(p, &amp;secs))</div>
-<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">goto</span> bail;</div>
-<div class="line"><span class="lineno">  305</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd">gen_time</a> = (time_t) secs;</div>
-<div class="line"><span class="lineno">  306</span>        }</div>
-<div class="line"><span class="lineno">  307</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  308</span>      }</div>
-<div class="line"><span class="lineno">  309</span>      <span class="keywordflow">case</span> 7: <span class="comment">/* valid for n days */</span></div>
-<div class="line"><span class="lineno">  310</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  311</span>      <span class="keywordflow">case</span> 8: <span class="comment">/* Local id         */</span></div>
+<div class="line"><span class="lineno">  227</span>          <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  228</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">if</span> (!is_uid &amp;&amp; !(*is_subkey &amp;&amp; c_pgp_ignore_subkeys))</div>
+<div class="line"><span class="lineno">  232</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= <a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a>;</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  235</span>      }</div>
+<div class="line"><span class="lineno">  236</span>      <span class="keywordflow">case</span> 3: <span class="comment">/* key length  */</span></div>
+<div class="line"><span class="lineno">  237</span>      {</div>
+<div class="line"><span class="lineno">  238</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;key len: %s\n&quot;</span>, p);</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>        <span class="keywordflow">if</span> (!(*is_subkey &amp;&amp; c_pgp_ignore_subkeys) &amp;&amp; !mutt_str_atos_full(p, &amp;tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a6130bb27d19d78cfaf05e30c56de44da">keylen</a>))</div>
+<div class="line"><span class="lineno">  241</span>        {</div>
+<div class="line"><span class="lineno">  242</span>          <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  243</span>        }</div>
+<div class="line"><span class="lineno">  244</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  245</span>      }</div>
+<div class="line"><span class="lineno">  246</span>      <span class="keywordflow">case</span> 4: <span class="comment">/* pubkey algo */</span></div>
+<div class="line"><span class="lineno">  247</span>      {</div>
+<div class="line"><span class="lineno">  248</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;pubkey algorithm: %s\n&quot;</span>, p);</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">if</span> (!(*is_subkey &amp;&amp; c_pgp_ignore_subkeys))</div>
+<div class="line"><span class="lineno">  251</span>        {</div>
+<div class="line"><span class="lineno">  252</span>          <span class="keywordtype">int</span> x = 0;</div>
+<div class="line"><span class="lineno">  253</span>          <span class="keywordflow">if</span> (!mutt_str_atoi_full(p, &amp;x))</div>
+<div class="line"><span class="lineno">  254</span>            <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  255</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#af6274f75bbf9a8609651c3d34a031128">numalg</a> = x;</div>
+<div class="line"><span class="lineno">  256</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#ac1da51063b789430334a7c16f648cb3a">algorithm</a> = <a class="code hl_function" href="pgplib_8c.html#a2880ea6a475fcab33e1de4e517a23ae4">pgp_pkalgbytype</a>(x);</div>
+<div class="line"><span class="lineno">  257</span>        }</div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  259</span>      }</div>
+<div class="line"><span class="lineno">  260</span>      <span class="keywordflow">case</span> 5: <span class="comment">/* 16 hex digits with the long keyid. */</span></div>
+<div class="line"><span class="lineno">  261</span>      {</div>
+<div class="line"><span class="lineno">  262</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;key id: %s\n&quot;</span>, p);</div>
+<div class="line"><span class="lineno">  263</span> </div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">if</span> (!(*is_subkey &amp;&amp; c_pgp_ignore_subkeys))</div>
+<div class="line"><span class="lineno">  265</span>          <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a14a4c60b65ccf16697bd4578117ed83d">keyid</a>, p);</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  267</span>      }</div>
+<div class="line"><span class="lineno">  268</span>      <span class="keywordflow">case</span> 6: <span class="comment">/* timestamp (1998-02-28) */</span></div>
+<div class="line"><span class="lineno">  269</span>      {</div>
+<div class="line"><span class="lineno">  270</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;time stamp: %s\n&quot;</span>, p);</div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">if</span> (strchr(p, <span class="charliteral">&#39;-&#39;</span>)) <span class="comment">/* gpg pre-2.0.10 used format (yyyy-mm-dd) */</span></div>
+<div class="line"><span class="lineno">  273</span>        {</div>
+<div class="line"><span class="lineno">  274</span>          <span class="keyword">struct </span>tm time = { 0 };</div>
+<div class="line"><span class="lineno">  275</span> </div>
+<div class="line"><span class="lineno">  276</span>          time.tm_sec = 0;</div>
+<div class="line"><span class="lineno">  277</span>          time.tm_min = 0;</div>
+<div class="line"><span class="lineno">  278</span>          time.tm_hour = 12;</div>
+<div class="line"><span class="lineno">  279</span>          strncpy(tstr, p, 11);</div>
+<div class="line"><span class="lineno">  280</span>          tstr[4] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  281</span>          tstr[7] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  282</span>          <span class="keywordflow">if</span> (!mutt_str_atoi_full(tstr, &amp;time.tm_year))</div>
+<div class="line"><span class="lineno">  283</span>          {</div>
+<div class="line"><span class="lineno">  284</span>            p = tstr;</div>
+<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  286</span>          }</div>
+<div class="line"><span class="lineno">  287</span>          time.tm_year -= 1900;</div>
+<div class="line"><span class="lineno">  288</span>          <span class="keywordflow">if</span> (!mutt_str_atoi_full(tstr + 5, &amp;time.tm_mon))</div>
+<div class="line"><span class="lineno">  289</span>          {</div>
+<div class="line"><span class="lineno">  290</span>            p = tstr + 5;</div>
+<div class="line"><span class="lineno">  291</span>            <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  292</span>          }</div>
+<div class="line"><span class="lineno">  293</span>          time.tm_mon -= 1;</div>
+<div class="line"><span class="lineno">  294</span>          <span class="keywordflow">if</span> (!mutt_str_atoi_full(tstr + 8, &amp;time.tm_mday))</div>
+<div class="line"><span class="lineno">  295</span>          {</div>
+<div class="line"><span class="lineno">  296</span>            p = tstr + 8;</div>
+<div class="line"><span class="lineno">  297</span>            <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  298</span>          }</div>
+<div class="line"><span class="lineno">  299</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd">gen_time</a> = <a class="code hl_function" href="mutt_2date_8c.html#a3bc7cd3ae8f7d3fad8f5c4d10691bc5e">mutt_date_make_time</a>(&amp;time, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  300</span>        }</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">else</span> <span class="comment">/* gpg 2.0.10+ uses seconds since 1970-01-01 */</span></div>
+<div class="line"><span class="lineno">  302</span>        {</div>
+<div class="line"><span class="lineno">  303</span>          <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> secs = 0;</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>          <span class="keywordflow">if</span> (!<a class="code hl_function" href="atoi_8c.html#a1825225ac6d68f6215d49ee558623fa8">mutt_str_atoull</a>(p, &amp;secs))</div>
+<div class="line"><span class="lineno">  306</span>            <span class="keywordflow">goto</span> bail;</div>
+<div class="line"><span class="lineno">  307</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a75b7dba5f4f4409f023b0f51890da4dd">gen_time</a> = (time_t) secs;</div>
+<div class="line"><span class="lineno">  308</span>        }</div>
+<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  310</span>      }</div>
+<div class="line"><span class="lineno">  311</span>      <span class="keywordflow">case</span> 7: <span class="comment">/* valid for n days */</span></div>
 <div class="line"><span class="lineno">  312</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  313</span>      <span class="keywordflow">case</span> 9: <span class="comment">/* ownertrust       */</span></div>
+<div class="line"><span class="lineno">  313</span>      <span class="keywordflow">case</span> 8: <span class="comment">/* Local id         */</span></div>
 <div class="line"><span class="lineno">  314</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  315</span>      <span class="keywordflow">case</span> 10: <span class="comment">/* name             */</span></div>
-<div class="line"><span class="lineno">  316</span>      {</div>
-<div class="line"><span class="lineno">  317</span>        <span class="comment">/* Empty field or no trailing colon.</span></div>
-<div class="line"><span class="lineno">  318</span><span class="comment">         * We allow an empty field for a pub record type because it is</span></div>
-<div class="line"><span class="lineno">  319</span><span class="comment">         * possible for a primary uid record to have an empty User-ID</span></div>
-<div class="line"><span class="lineno">  320</span><span class="comment">         * field.  Without any address records, it is not possible to</span></div>
-<div class="line"><span class="lineno">  321</span><span class="comment">         * use the key in neomutt.  */</span></div>
-<div class="line"><span class="lineno">  322</span>        <span class="keywordflow">if</span> (!(pend &amp;&amp; (*p || is_pub)))</div>
-<div class="line"><span class="lineno">  323</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  324</span> </div>
-<div class="line"><span class="lineno">  325</span>        <span class="keywordflow">if</span> (is_fpr)</div>
-<div class="line"><span class="lineno">  326</span>        {</div>
-<div class="line"><span class="lineno">  327</span>          <span class="comment">/* don&#39;t let a subkey fpr overwrite an existing primary key fpr */</span></div>
-<div class="line"><span class="lineno">  328</span>          <span class="keywordflow">if</span> (!tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a4cdd48d32a130fd8257a26f41508d313">fingerprint</a>)</div>
-<div class="line"><span class="lineno">  329</span>            tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a4cdd48d32a130fd8257a26f41508d313">fingerprint</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(p);</div>
-<div class="line"><span class="lineno">  330</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  331</span>        }</div>
-<div class="line"><span class="lineno">  332</span> </div>
-<div class="line"><span class="lineno">  333</span>        <span class="comment">/* ignore user IDs on subkeys */</span></div>
-<div class="line"><span class="lineno">  334</span>        <span class="keywordflow">if</span> (!is_uid &amp;&amp; (*is_subkey &amp;&amp; c_pgp_ignore_subkeys))</div>
-<div class="line"><span class="lineno">  335</span>          <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  336</span> </div>
-<div class="line"><span class="lineno">  337</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;user ID: %s\n&quot;</span>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(p));</div>
+<div class="line"><span class="lineno">  315</span>      <span class="keywordflow">case</span> 9: <span class="comment">/* ownertrust       */</span></div>
+<div class="line"><span class="lineno">  316</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  317</span>      <span class="keywordflow">case</span> 10: <span class="comment">/* name             */</span></div>
+<div class="line"><span class="lineno">  318</span>      {</div>
+<div class="line"><span class="lineno">  319</span>        <span class="comment">/* Empty field or no trailing colon.</span></div>
+<div class="line"><span class="lineno">  320</span><span class="comment">         * We allow an empty field for a pub record type because it is</span></div>
+<div class="line"><span class="lineno">  321</span><span class="comment">         * possible for a primary uid record to have an empty User-ID</span></div>
+<div class="line"><span class="lineno">  322</span><span class="comment">         * field.  Without any address records, it is not possible to</span></div>
+<div class="line"><span class="lineno">  323</span><span class="comment">         * use the key in neomutt.  */</span></div>
+<div class="line"><span class="lineno">  324</span>        <span class="keywordflow">if</span> (!(pend &amp;&amp; (*p || is_pub)))</div>
+<div class="line"><span class="lineno">  325</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  326</span> </div>
+<div class="line"><span class="lineno">  327</span>        <span class="keywordflow">if</span> (is_fpr)</div>
+<div class="line"><span class="lineno">  328</span>        {</div>
+<div class="line"><span class="lineno">  329</span>          <span class="comment">/* don&#39;t let a subkey fpr overwrite an existing primary key fpr */</span></div>
+<div class="line"><span class="lineno">  330</span>          <span class="keywordflow">if</span> (!tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a4cdd48d32a130fd8257a26f41508d313">fingerprint</a>)</div>
+<div class="line"><span class="lineno">  331</span>            tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a4cdd48d32a130fd8257a26f41508d313">fingerprint</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(p);</div>
+<div class="line"><span class="lineno">  332</span>          <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  333</span>        }</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>        <span class="comment">/* ignore user IDs on subkeys */</span></div>
+<div class="line"><span class="lineno">  336</span>        <span class="keywordflow">if</span> (!is_uid &amp;&amp; (*is_subkey &amp;&amp; c_pgp_ignore_subkeys))</div>
+<div class="line"><span class="lineno">  337</span>          <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  338</span> </div>
-<div class="line"><span class="lineno">  339</span>        uid = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structPgpUid.html">PgpUid</a>);</div>
-<div class="line"><span class="lineno">  340</span>        <a class="code hl_function" href="#a18dfeec11744f1c9a301dbbfaec153bc">fix_uid</a>(p);</div>
-<div class="line"><span class="lineno">  341</span>        uid-&gt;<a class="code hl_variable" href="structPgpUid.html#ac916dd9fa18406f33104b05352fe413d">addr</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(p);</div>
-<div class="line"><span class="lineno">  342</span>        uid-&gt;<a class="code hl_variable" href="structPgpUid.html#a581c0cff806e1f531c21b10b30529a3d">trust</a> = trust;</div>
-<div class="line"><span class="lineno">  343</span>        uid-&gt;<a class="code hl_variable" href="structPgpUid.html#abb667f6331ac3c3e8ed96da044371f3e">flags</a> |= flags;</div>
-<div class="line"><span class="lineno">  344</span>        uid-&gt;<a class="code hl_variable" href="structPgpUid.html#aebb1a9c3cc645b23c9b5813102682c4f">next</a> = tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>;</div>
-<div class="line"><span class="lineno">  345</span>        tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a> = uid;</div>
-<div class="line"><span class="lineno">  346</span> </div>
-<div class="line"><span class="lineno">  347</span>        <span class="keywordflow">if</span> (strstr(p, <span class="stringliteral">&quot;ENCR&quot;</span>))</div>
-<div class="line"><span class="lineno">  348</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fba94edd66dadb541d37d04718f88f7b3f8">KEYFLAG_PREFER_ENCRYPTION</a>;</div>
-<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (strstr(p, <span class="stringliteral">&quot;SIGN&quot;</span>))</div>
-<div class="line"><span class="lineno">  350</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fba080d8f52c43228bc39f5c9a86faa17ea">KEYFLAG_PREFER_SIGNING</a>;</div>
-<div class="line"><span class="lineno">  351</span> </div>
-<div class="line"><span class="lineno">  352</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  353</span>      }</div>
-<div class="line"><span class="lineno">  354</span>      <span class="keywordflow">case</span> 11: <span class="comment">/* signature class  */</span></div>
-<div class="line"><span class="lineno">  355</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  356</span>      <span class="keywordflow">case</span> 12: <span class="comment">/* key capabilities */</span></div>
-<div class="line"><span class="lineno">  357</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;capabilities info: %s\n&quot;</span>, p);</div>
-<div class="line"><span class="lineno">  358</span> </div>
-<div class="line"><span class="lineno">  359</span>        <span class="keywordflow">while</span> (*p)</div>
-<div class="line"><span class="lineno">  360</span>        {</div>
-<div class="line"><span class="lineno">  361</span>          <span class="keywordflow">switch</span> (*p++)</div>
-<div class="line"><span class="lineno">  362</span>          {</div>
-<div class="line"><span class="lineno">  363</span>            <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
-<div class="line"><span class="lineno">  364</span>              flags |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbaef2231b5b8f58b73dc10d8320aa41fa3">KEYFLAG_DISABLED</a>;</div>
-<div class="line"><span class="lineno">  365</span>              <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  366</span> </div>
-<div class="line"><span class="lineno">  367</span>            <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>:</div>
-<div class="line"><span class="lineno">  368</span>              flags |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbac8d36678210fec8d690d1c143164c260">KEYFLAG_CANENCRYPT</a>;</div>
-<div class="line"><span class="lineno">  369</span>              <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  370</span> </div>
-<div class="line"><span class="lineno">  371</span>            <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:</div>
-<div class="line"><span class="lineno">  372</span>              flags |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbaa888f98e9a75a829eb7c1a919cd302d0">KEYFLAG_CANSIGN</a>;</div>
-<div class="line"><span class="lineno">  373</span>              <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  374</span>          }</div>
-<div class="line"><span class="lineno">  375</span>        }</div>
+<div class="line"><span class="lineno">  339</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;user ID: %s\n&quot;</span>, <a class="code hl_define" href="string2_8h.html#a7e0481bed27661ea2679f256b24e0283">NONULL</a>(p));</div>
+<div class="line"><span class="lineno">  340</span> </div>
+<div class="line"><span class="lineno">  341</span>        uid = <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structPgpUid.html">PgpUid</a>);</div>
+<div class="line"><span class="lineno">  342</span>        <a class="code hl_function" href="#a18dfeec11744f1c9a301dbbfaec153bc">fix_uid</a>(p);</div>
+<div class="line"><span class="lineno">  343</span>        uid-&gt;<a class="code hl_variable" href="structPgpUid.html#ac916dd9fa18406f33104b05352fe413d">addr</a> = <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(p);</div>
+<div class="line"><span class="lineno">  344</span>        uid-&gt;<a class="code hl_variable" href="structPgpUid.html#a581c0cff806e1f531c21b10b30529a3d">trust</a> = trust;</div>
+<div class="line"><span class="lineno">  345</span>        uid-&gt;<a class="code hl_variable" href="structPgpUid.html#abb667f6331ac3c3e8ed96da044371f3e">flags</a> |= flags;</div>
+<div class="line"><span class="lineno">  346</span>        uid-&gt;<a class="code hl_variable" href="structPgpUid.html#aebb1a9c3cc645b23c9b5813102682c4f">next</a> = tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>;</div>
+<div class="line"><span class="lineno">  347</span>        tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a> = uid;</div>
+<div class="line"><span class="lineno">  348</span> </div>
+<div class="line"><span class="lineno">  349</span>        <span class="keywordflow">if</span> (strstr(p, <span class="stringliteral">&quot;ENCR&quot;</span>))</div>
+<div class="line"><span class="lineno">  350</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fba94edd66dadb541d37d04718f88f7b3f8">KEYFLAG_PREFER_ENCRYPTION</a>;</div>
+<div class="line"><span class="lineno">  351</span>        <span class="keywordflow">if</span> (strstr(p, <span class="stringliteral">&quot;SIGN&quot;</span>))</div>
+<div class="line"><span class="lineno">  352</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fba080d8f52c43228bc39f5c9a86faa17ea">KEYFLAG_PREFER_SIGNING</a>;</div>
+<div class="line"><span class="lineno">  353</span> </div>
+<div class="line"><span class="lineno">  354</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  355</span>      }</div>
+<div class="line"><span class="lineno">  356</span>      <span class="keywordflow">case</span> 11: <span class="comment">/* signature class  */</span></div>
+<div class="line"><span class="lineno">  357</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  358</span>      <span class="keywordflow">case</span> 12: <span class="comment">/* key capabilities */</span></div>
+<div class="line"><span class="lineno">  359</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab02ab1e1ebe44a7ad67c0d6cf0447be3">LL_DEBUG2</a>, <span class="stringliteral">&quot;capabilities info: %s\n&quot;</span>, p);</div>
+<div class="line"><span class="lineno">  360</span> </div>
+<div class="line"><span class="lineno">  361</span>        <span class="keywordflow">while</span> (*p)</div>
+<div class="line"><span class="lineno">  362</span>        {</div>
+<div class="line"><span class="lineno">  363</span>          <span class="keywordflow">switch</span> (*p++)</div>
+<div class="line"><span class="lineno">  364</span>          {</div>
+<div class="line"><span class="lineno">  365</span>            <span class="keywordflow">case</span> <span class="charliteral">&#39;D&#39;</span>:</div>
+<div class="line"><span class="lineno">  366</span>              flags |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbaef2231b5b8f58b73dc10d8320aa41fa3">KEYFLAG_DISABLED</a>;</div>
+<div class="line"><span class="lineno">  367</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  368</span> </div>
+<div class="line"><span class="lineno">  369</span>            <span class="keywordflow">case</span> <span class="charliteral">&#39;e&#39;</span>:</div>
+<div class="line"><span class="lineno">  370</span>              flags |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbac8d36678210fec8d690d1c143164c260">KEYFLAG_CANENCRYPT</a>;</div>
+<div class="line"><span class="lineno">  371</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  372</span> </div>
+<div class="line"><span class="lineno">  373</span>            <span class="keywordflow">case</span> <span class="charliteral">&#39;s&#39;</span>:</div>
+<div class="line"><span class="lineno">  374</span>              flags |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbaa888f98e9a75a829eb7c1a919cd302d0">KEYFLAG_CANSIGN</a>;</div>
+<div class="line"><span class="lineno">  375</span>              <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  376</span> </div>
-<div class="line"><span class="lineno">  377</span>        <span class="keywordflow">if</span> (!is_uid &amp;&amp; (!*is_subkey || !c_pgp_ignore_subkeys ||</div>
-<div class="line"><span class="lineno">  378</span>                        !((flags &amp; <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbaef2231b5b8f58b73dc10d8320aa41fa3">KEYFLAG_DISABLED</a>) || (flags &amp; <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fba056161384548b4c4ae53cf7d9c17824c">KEYFLAG_REVOKED</a>) ||</div>
-<div class="line"><span class="lineno">  379</span>                          (flags &amp; <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbac6437dab694ae54213747c0715e49f67">KEYFLAG_EXPIRED</a>))))</div>
-<div class="line"><span class="lineno">  380</span>        {</div>
-<div class="line"><span class="lineno">  381</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= flags;</div>
-<div class="line"><span class="lineno">  382</span>        }</div>
-<div class="line"><span class="lineno">  383</span> </div>
-<div class="line"><span class="lineno">  384</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  385</span> </div>
-<div class="line"><span class="lineno">  386</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">  387</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  388</span>    }</div>
-<div class="line"><span class="lineno">  389</span>  }</div>
+<div class="line"><span class="lineno">  377</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  378</span>              <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  379</span>          }</div>
+<div class="line"><span class="lineno">  380</span>        }</div>
+<div class="line"><span class="lineno">  381</span> </div>
+<div class="line"><span class="lineno">  382</span>        <span class="keywordflow">if</span> (!is_uid &amp;&amp; (!*is_subkey || !c_pgp_ignore_subkeys ||</div>
+<div class="line"><span class="lineno">  383</span>                        !((flags &amp; <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbaef2231b5b8f58b73dc10d8320aa41fa3">KEYFLAG_DISABLED</a>) || (flags &amp; <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fba056161384548b4c4ae53cf7d9c17824c">KEYFLAG_REVOKED</a>) ||</div>
+<div class="line"><span class="lineno">  384</span>                          (flags &amp; <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbac6437dab694ae54213747c0715e49f67">KEYFLAG_EXPIRED</a>))))</div>
+<div class="line"><span class="lineno">  385</span>        {</div>
+<div class="line"><span class="lineno">  386</span>          tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= flags;</div>
+<div class="line"><span class="lineno">  387</span>        }</div>
+<div class="line"><span class="lineno">  388</span> </div>
+<div class="line"><span class="lineno">  389</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  390</span> </div>
-<div class="line"><span class="lineno">  391</span>  <span class="comment">/* merge temp key back into real key */</span></div>
-<div class="line"><span class="lineno">  392</span>  <span class="keywordflow">if</span> (!(is_uid || is_fpr || (*is_subkey &amp;&amp; c_pgp_ignore_subkeys)))</div>
-<div class="line"><span class="lineno">  393</span>    k = <a class="code hl_define" href="memory_8h.html#af997cb3719dc7abbeabae655d0ee1b9e">MUTT_MEM_MALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a>);</div>
-<div class="line"><span class="lineno">  394</span>  <span class="keywordflow">if</span> (!k)</div>
-<div class="line"><span class="lineno">  395</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  396</span>  memcpy(k, &amp;tmp, <span class="keyword">sizeof</span>(*k));</div>
-<div class="line"><span class="lineno">  397</span>  <span class="comment">/* fixup parentship of uids after merging the temp key into</span></div>
-<div class="line"><span class="lineno">  398</span><span class="comment">   * the real key */</span></div>
-<div class="line"><span class="lineno">  399</span>  <span class="keywordflow">if</span> (tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>)</div>
-<div class="line"><span class="lineno">  400</span>  {</div>
-<div class="line"><span class="lineno">  401</span>    <span class="keywordflow">for</span> (uid = k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>; uid; uid = uid-&gt;<a class="code hl_variable" href="structPgpUid.html#aebb1a9c3cc645b23c9b5813102682c4f">next</a>)</div>
-<div class="line"><span class="lineno">  402</span>      uid-&gt;<a class="code hl_variable" href="structPgpUid.html#a8081a3650cbd28d7814573716920adaa">parent</a> = k;</div>
-<div class="line"><span class="lineno">  403</span>  }</div>
-<div class="line"><span class="lineno">  404</span> </div>
-<div class="line"><span class="lineno">  405</span>  <span class="keywordflow">return</span> k;</div>
-<div class="line"><span class="lineno">  406</span> </div>
-<div class="line"><span class="lineno">  407</span>bail:</div>
-<div class="line"><span class="lineno">  408</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;invalid number: &#39;%s&#39;\n&quot;</span>, p);</div>
-<div class="line"><span class="lineno">  409</span>  <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  410</span>}</div>
+<div class="line"><span class="lineno">  391</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  392</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  393</span>    }</div>
+<div class="line"><span class="lineno">  394</span>  }</div>
+<div class="line"><span class="lineno">  395</span> </div>
+<div class="line"><span class="lineno">  396</span>  <span class="comment">/* merge temp key back into real key */</span></div>
+<div class="line"><span class="lineno">  397</span>  <span class="keywordflow">if</span> (!(is_uid || is_fpr || (*is_subkey &amp;&amp; c_pgp_ignore_subkeys)))</div>
+<div class="line"><span class="lineno">  398</span>    k = <a class="code hl_define" href="memory_8h.html#af997cb3719dc7abbeabae655d0ee1b9e">MUTT_MEM_MALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a>);</div>
+<div class="line"><span class="lineno">  399</span>  <span class="keywordflow">if</span> (!k)</div>
+<div class="line"><span class="lineno">  400</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  401</span>  memcpy(k, &amp;tmp, <span class="keyword">sizeof</span>(*k));</div>
+<div class="line"><span class="lineno">  402</span>  <span class="comment">/* fixup parentship of uids after merging the temp key into</span></div>
+<div class="line"><span class="lineno">  403</span><span class="comment">   * the real key */</span></div>
+<div class="line"><span class="lineno">  404</span>  <span class="keywordflow">if</span> (tmp.<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>)</div>
+<div class="line"><span class="lineno">  405</span>  {</div>
+<div class="line"><span class="lineno">  406</span>    <span class="keywordflow">for</span> (uid = k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>; uid; uid = uid-&gt;<a class="code hl_variable" href="structPgpUid.html#aebb1a9c3cc645b23c9b5813102682c4f">next</a>)</div>
+<div class="line"><span class="lineno">  407</span>      uid-&gt;<a class="code hl_variable" href="structPgpUid.html#a8081a3650cbd28d7814573716920adaa">parent</a> = k;</div>
+<div class="line"><span class="lineno">  408</span>  }</div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>  <span class="keywordflow">return</span> k;</div>
+<div class="line"><span class="lineno">  411</span> </div>
+<div class="line"><span class="lineno">  412</span>bail:</div>
+<div class="line"><span class="lineno">  413</span>  <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9ab2c99902c587a013b358149516cceeb5">LL_DEBUG1</a>, <span class="stringliteral">&quot;invalid number: &#39;%s&#39;\n&quot;</span>, p);</div>
+<div class="line"><span class="lineno">  414</span>  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  415</span>}</div>
 <div class="ttc" id="aatoi_8c_html_a1825225ac6d68f6215d49ee558623fa8"><div class="ttname"><a href="atoi_8c.html#a1825225ac6d68f6215d49ee558623fa8">mutt_str_atoull</a></div><div class="ttdeci">const char * mutt_str_atoull(const char *str, unsigned long long *dst)</div><div class="ttdoc">Convert ASCII string to an unsigned long long.</div><div class="ttdef"><b>Definition</b> <a href="atoi_8c_source.html#l00295">atoi.c:295</a></div></div>
 <div class="ttc" id="aconfig_2helpers_8c_html_ae50f679dd6c5bd1ba820884c8602f038"><div class="ttname"><a href="config_2helpers_8c.html#ae50f679dd6c5bd1ba820884c8602f038">cs_subset_bool</a></div><div class="ttdeci">bool cs_subset_bool(const struct ConfigSubset *sub, const char *name)</div><div class="ttdoc">Get a boolean config item by name.</div><div class="ttdef"><b>Definition</b> <a href="config_2helpers_8c_source.html#l00047">helpers.c:47</a></div></div>
 <div class="ttc" id="agnupgparse_8c_html_a18dfeec11744f1c9a301dbbfaec153bc"><div class="ttname"><a href="#a18dfeec11744f1c9a301dbbfaec153bc">fix_uid</a></div><div class="ttdeci">static void fix_uid(char *uid)</div><div class="ttdoc">Decode backslash-escaped user ids (in place).</div><div class="ttdef"><b>Definition</b> <a href="gnupgparse_8c_source.html#l00079">gnupgparse.c:79</a></div></div>
@@ -695,76 +700,76 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="gnupgparse_8c_source.html#l00419">419</a> of file <a class="el" href="gnupgparse_8c_source.html">gnupgparse.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  420</span>{</div>
-<div class="line"><span class="lineno">  421</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structNcryptModuleData.html">NcryptModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a910be636f2953032c7decd26aab01773">MODULE_ID_NCRYPT</a>);</div>
-<div class="line"><span class="lineno">  422</span>  FILE *fp = NULL;</div>
-<div class="line"><span class="lineno">  423</span>  pid_t pid;</div>
-<div class="line"><span class="lineno">  424</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
-<div class="line"><span class="lineno">  425</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *db = NULL;</div>
-<div class="line"><span class="lineno">  426</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> **kend = NULL;</div>
-<div class="line"><span class="lineno">  427</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *k = NULL;</div>
-<div class="line"><span class="lineno">  428</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *kk = NULL;</div>
-<div class="line"><span class="lineno">  429</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *mainkey = NULL;</div>
-<div class="line"><span class="lineno">  430</span>  <span class="keywordtype">bool</span> is_sub = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  431</span> </div>
-<div class="line"><span class="lineno">  432</span>  <span class="keywordtype">int</span> fd_null = open(<span class="stringliteral">&quot;/dev/null&quot;</span>, O_RDWR);</div>
-<div class="line"><span class="lineno">  433</span>  <span class="keywordflow">if</span> (fd_null == -1)</div>
-<div class="line"><span class="lineno">  434</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  435</span> </div>
-<div class="line"><span class="lineno">  436</span>  <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;mod_data-&gt;<a class="code hl_variable" href="structNcryptModuleData.html#a77d2ff5657f4bc5da66243c043631daf">charset</a>, <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>());</div>
-<div class="line"><span class="lineno">  437</span> </div>
-<div class="line"><span class="lineno">  438</span>  pid = <a class="code hl_function" href="pgpinvoke_8c.html#a9922a095eaa2b9f874028bd0ae5332ef">pgp_invoke_list_keys</a>(NULL, &amp;fp, NULL, -1, -1, fd_null, keyring, hints);</div>
-<div class="line"><span class="lineno">  439</span>  <span class="keywordflow">if</span> (pid == -1)</div>
-<div class="line"><span class="lineno">  440</span>  {</div>
-<div class="line"><span class="lineno">  441</span>    close(fd_null);</div>
-<div class="line"><span class="lineno">  442</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><span class="lineno">  443</span>  }</div>
-<div class="line"><span class="lineno">  444</span> </div>
-<div class="line"><span class="lineno">  445</span>  kend = &amp;db;</div>
-<div class="line"><span class="lineno">  446</span>  k = NULL;</div>
-<div class="line"><span class="lineno">  447</span>  <span class="keywordflow">while</span> (fgets(buf, <span class="keyword">sizeof</span>(buf) - 1, fp))</div>
-<div class="line"><span class="lineno">  448</span>  {</div>
-<div class="line"><span class="lineno">  449</span>    kk = <a class="code hl_function" href="#aeb6c281bb02162299886e067af1fb817">parse_pub_line</a>(buf, &amp;is_sub, k);</div>
-<div class="line"><span class="lineno">  450</span>    <span class="keywordflow">if</span> (!kk)</div>
-<div class="line"><span class="lineno">  451</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  452</span> </div>
-<div class="line"><span class="lineno">  453</span>    <span class="comment">/* Only append kk to the list if it&#39;s new. */</span></div>
-<div class="line"><span class="lineno">  454</span>    <span class="keywordflow">if</span> (kk != k)</div>
-<div class="line"><span class="lineno">  455</span>    {</div>
-<div class="line"><span class="lineno">  456</span>      <span class="keywordflow">if</span> (k)</div>
-<div class="line"><span class="lineno">  457</span>        kend = &amp;k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a3eda72c22bc86126b4905fd8b607e05f">next</a>;</div>
-<div class="line"><span class="lineno">  458</span>      *kend = kk;</div>
-<div class="line"><span class="lineno">  459</span>      k = kk;</div>
-<div class="line"><span class="lineno">  460</span> </div>
-<div class="line"><span class="lineno">  461</span>      <span class="keywordflow">if</span> (is_sub)</div>
-<div class="line"><span class="lineno">  462</span>      {</div>
-<div class="line"><span class="lineno">  463</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structPgpUid.html">PgpUid</a> **l = NULL;</div>
-<div class="line"><span class="lineno">  464</span> </div>
-<div class="line"><span class="lineno">  465</span>        k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbad6eff1f3718ce34119b17306a6f696cf">KEYFLAG_SUBKEY</a>;</div>
-<div class="line"><span class="lineno">  466</span>        k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#ac918ad0c67f7cda50a3bac661ffa2e4a">parent</a> = mainkey;</div>
-<div class="line"><span class="lineno">  467</span>        <span class="keywordflow">for</span> (l = &amp;k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>; *l; l = &amp;(*l)-&gt;<a class="code hl_variable" href="structPgpUid.html#aebb1a9c3cc645b23c9b5813102682c4f">next</a>)</div>
-<div class="line"><span class="lineno">  468</span>          ; <span class="comment">// do nothing</span></div>
+<p class="definition">Definition at line <a class="el" href="gnupgparse_8c_source.html#l00424">424</a> of file <a class="el" href="gnupgparse_8c_source.html">gnupgparse.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  425</span>{</div>
+<div class="line"><span class="lineno">  426</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structNcryptModuleData.html">NcryptModuleData</a> *mod_data = <a class="code hl_function" href="neomutt_8c.html#ab58efd47fa66c8187cfdce43078c94fa">neomutt_get_module_data</a>(<a class="code hl_struct" href="structNeoMutt.html">NeoMutt</a>, <a class="code hl_enumvalue" href="module__api_8h.html#a2af2c6f2596e5cc6b96f738b48bd35d6a910be636f2953032c7decd26aab01773">MODULE_ID_NCRYPT</a>);</div>
+<div class="line"><span class="lineno">  427</span>  FILE *fp = NULL;</div>
+<div class="line"><span class="lineno">  428</span>  pid_t pid;</div>
+<div class="line"><span class="lineno">  429</span>  <span class="keywordtype">char</span> buf[1024] = { 0 };</div>
+<div class="line"><span class="lineno">  430</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *db = NULL;</div>
+<div class="line"><span class="lineno">  431</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> **kend = NULL;</div>
+<div class="line"><span class="lineno">  432</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *k = NULL;</div>
+<div class="line"><span class="lineno">  433</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *kk = NULL;</div>
+<div class="line"><span class="lineno">  434</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structPgpKeyInfo.html">PgpKeyInfo</a> *mainkey = NULL;</div>
+<div class="line"><span class="lineno">  435</span>  <span class="keywordtype">bool</span> is_sub = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  436</span> </div>
+<div class="line"><span class="lineno">  437</span>  <span class="keywordtype">int</span> fd_null = open(<span class="stringliteral">&quot;/dev/null&quot;</span>, O_RDWR);</div>
+<div class="line"><span class="lineno">  438</span>  <span class="keywordflow">if</span> (fd_null == -1)</div>
+<div class="line"><span class="lineno">  439</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  440</span> </div>
+<div class="line"><span class="lineno">  441</span>  <a class="code hl_function" href="mutt_2string_8c.html#af8c32ffc64dd55e92001a974a4be6bbf">mutt_str_replace</a>(&amp;mod_data-&gt;<a class="code hl_variable" href="structNcryptModuleData.html#a77d2ff5657f4bc5da66243c043631daf">charset</a>, <a class="code hl_function" href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a>());</div>
+<div class="line"><span class="lineno">  442</span> </div>
+<div class="line"><span class="lineno">  443</span>  pid = <a class="code hl_function" href="pgpinvoke_8c.html#a9922a095eaa2b9f874028bd0ae5332ef">pgp_invoke_list_keys</a>(NULL, &amp;fp, NULL, -1, -1, fd_null, keyring, hints);</div>
+<div class="line"><span class="lineno">  444</span>  <span class="keywordflow">if</span> (pid == -1)</div>
+<div class="line"><span class="lineno">  445</span>  {</div>
+<div class="line"><span class="lineno">  446</span>    close(fd_null);</div>
+<div class="line"><span class="lineno">  447</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  448</span>  }</div>
+<div class="line"><span class="lineno">  449</span> </div>
+<div class="line"><span class="lineno">  450</span>  kend = &amp;db;</div>
+<div class="line"><span class="lineno">  451</span>  k = NULL;</div>
+<div class="line"><span class="lineno">  452</span>  <span class="keywordflow">while</span> (fgets(buf, <span class="keyword">sizeof</span>(buf) - 1, fp))</div>
+<div class="line"><span class="lineno">  453</span>  {</div>
+<div class="line"><span class="lineno">  454</span>    kk = <a class="code hl_function" href="#aeb6c281bb02162299886e067af1fb817">parse_pub_line</a>(buf, &amp;is_sub, k);</div>
+<div class="line"><span class="lineno">  455</span>    <span class="keywordflow">if</span> (!kk)</div>
+<div class="line"><span class="lineno">  456</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>    <span class="comment">/* Only append kk to the list if it&#39;s new. */</span></div>
+<div class="line"><span class="lineno">  459</span>    <span class="keywordflow">if</span> (kk != k)</div>
+<div class="line"><span class="lineno">  460</span>    {</div>
+<div class="line"><span class="lineno">  461</span>      <span class="keywordflow">if</span> (k)</div>
+<div class="line"><span class="lineno">  462</span>        kend = &amp;k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a3eda72c22bc86126b4905fd8b607e05f">next</a>;</div>
+<div class="line"><span class="lineno">  463</span>      *kend = kk;</div>
+<div class="line"><span class="lineno">  464</span>      k = kk;</div>
+<div class="line"><span class="lineno">  465</span> </div>
+<div class="line"><span class="lineno">  466</span>      <span class="keywordflow">if</span> (is_sub)</div>
+<div class="line"><span class="lineno">  467</span>      {</div>
+<div class="line"><span class="lineno">  468</span>        <span class="keyword">struct </span><a class="code hl_struct" href="structPgpUid.html">PgpUid</a> **l = NULL;</div>
 <div class="line"><span class="lineno">  469</span> </div>
-<div class="line"><span class="lineno">  470</span>        *l = <a class="code hl_function" href="pgplib_8c.html#ab6d5c131cb7b66b96a0f45a77092db94">pgp_copy_uids</a>(mainkey-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>, k);</div>
-<div class="line"><span class="lineno">  471</span>      }</div>
-<div class="line"><span class="lineno">  472</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  473</span>      {</div>
-<div class="line"><span class="lineno">  474</span>        mainkey = k;</div>
-<div class="line"><span class="lineno">  475</span>      }</div>
-<div class="line"><span class="lineno">  476</span>    }</div>
-<div class="line"><span class="lineno">  477</span>  }</div>
-<div class="line"><span class="lineno">  478</span> </div>
-<div class="line"><span class="lineno">  479</span>  <span class="keywordflow">if</span> (ferror(fp))</div>
-<div class="line"><span class="lineno">  480</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;fgets&quot;</span>);</div>
-<div class="line"><span class="lineno">  481</span> </div>
-<div class="line"><span class="lineno">  482</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
-<div class="line"><span class="lineno">  483</span>  <a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
-<div class="line"><span class="lineno">  484</span> </div>
-<div class="line"><span class="lineno">  485</span>  close(fd_null);</div>
+<div class="line"><span class="lineno">  470</span>        k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a38de8af2454c2c95cbaad2132de7ba58">flags</a> |= <a class="code hl_enumvalue" href="ncrypt_2lib_8h.html#a7b263a18e2e46cc5365376b1eac284fbad6eff1f3718ce34119b17306a6f696cf">KEYFLAG_SUBKEY</a>;</div>
+<div class="line"><span class="lineno">  471</span>        k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#ac918ad0c67f7cda50a3bac661ffa2e4a">parent</a> = mainkey;</div>
+<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">for</span> (l = &amp;k-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>; *l; l = &amp;(*l)-&gt;<a class="code hl_variable" href="structPgpUid.html#aebb1a9c3cc645b23c9b5813102682c4f">next</a>)</div>
+<div class="line"><span class="lineno">  473</span>          ; <span class="comment">// do nothing</span></div>
+<div class="line"><span class="lineno">  474</span> </div>
+<div class="line"><span class="lineno">  475</span>        *l = <a class="code hl_function" href="pgplib_8c.html#ab6d5c131cb7b66b96a0f45a77092db94">pgp_copy_uids</a>(mainkey-&gt;<a class="code hl_variable" href="structPgpKeyInfo.html#a43881d627cc54c34f84f5a36683cc0f7">address</a>, k);</div>
+<div class="line"><span class="lineno">  476</span>      }</div>
+<div class="line"><span class="lineno">  477</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  478</span>      {</div>
+<div class="line"><span class="lineno">  479</span>        mainkey = k;</div>
+<div class="line"><span class="lineno">  480</span>      }</div>
+<div class="line"><span class="lineno">  481</span>    }</div>
+<div class="line"><span class="lineno">  482</span>  }</div>
+<div class="line"><span class="lineno">  483</span> </div>
+<div class="line"><span class="lineno">  484</span>  <span class="keywordflow">if</span> (ferror(fp))</div>
+<div class="line"><span class="lineno">  485</span>    <a class="code hl_define" href="group__logging__api.html#gafaa521ab22db877ccf1b87e679e1b43e">mutt_perror</a>(<span class="stringliteral">&quot;fgets&quot;</span>);</div>
 <div class="line"><span class="lineno">  486</span> </div>
-<div class="line"><span class="lineno">  487</span>  <span class="keywordflow">return</span> db;</div>
-<div class="line"><span class="lineno">  488</span>}</div>
+<div class="line"><span class="lineno">  487</span>  <a class="code hl_define" href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a>(&amp;fp);</div>
+<div class="line"><span class="lineno">  488</span>  <a class="code hl_function" href="mutt_2filter_8c.html#a22c6912b837b1114c3276c990e73dca3">filter_wait</a>(pid);</div>
+<div class="line"><span class="lineno">  489</span> </div>
+<div class="line"><span class="lineno">  490</span>  close(fd_null);</div>
+<div class="line"><span class="lineno">  491</span> </div>
+<div class="line"><span class="lineno">  492</span>  <span class="keywordflow">return</span> db;</div>
+<div class="line"><span class="lineno">  493</span>}</div>
 <div class="ttc" id="aconfig__cache_8c_html_a03027fb835011539c3cbfeb1b0fa8811"><div class="ttname"><a href="config__cache_8c.html#a03027fb835011539c3cbfeb1b0fa8811">cc_charset</a></div><div class="ttdeci">const char * cc_charset(void)</div><div class="ttdoc">Get the cached value of $charset.</div><div class="ttdef"><b>Definition</b> <a href="config__cache_8c_source.html#l00116">config_cache.c:116</a></div></div>
 <div class="ttc" id="afile_8h_html_a9b519e795f098be88b93cd72c49a35ec"><div class="ttname"><a href="file_8h.html#a9b519e795f098be88b93cd72c49a35ec">mutt_file_fclose</a></div><div class="ttdeci">#define mutt_file_fclose(FP)</div><div class="ttdef"><b>Definition</b> <a href="file_8h_source.html#l00144">file.h:144</a></div></div>
 <div class="ttc" id="agnupgparse_8c_html_aeb6c281bb02162299886e067af1fb817"><div class="ttname"><a href="#aeb6c281bb02162299886e067af1fb817">parse_pub_line</a></div><div class="ttdeci">static struct PgpKeyInfo * parse_pub_line(char *buf, bool *is_subkey, struct PgpKeyInfo *k)</div><div class="ttdoc">Parse the &#39;pub&#39; line from the pgp output.</div><div class="ttdef"><b>Definition</b> <a href="gnupgparse_8c_source.html#l00135">gnupgparse.c:135</a></div></div>

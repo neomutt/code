@@ -201,7 +201,6 @@ var annotated_dup =
     [ "MenuFuncOp", "structMenuFuncOp.html", "structMenuFuncOp" ],
     [ "MenuFunction", "structMenuFunction.html", "structMenuFunction" ],
     [ "MenuFunctionData", "structMenuFunctionData.html", "structMenuFunctionData" ],
-    [ "MenuFunctionOp", "structMenuFunctionOp.html", "structMenuFunctionOp" ],
     [ "MenuModuleData", "structMenuModuleData.html", "structMenuModuleData" ],
     [ "MenuOpSeq", "structMenuOpSeq.html", "structMenuOpSeq" ],
     [ "MenuStatusLineData", "structMenuStatusLineData.html", "structMenuStatusLineData" ],

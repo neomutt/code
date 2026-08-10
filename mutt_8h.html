@@ -30,7 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-1016-g929a3e</span>
+   &#160;<span id="projectnumber">2025-12-11-1031-gfb8e54</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -608,38 +608,38 @@ Variables</h2></td></tr>
 </dl>
 <p>Process an XDG environment variable or its fallback. </p>
 
-<p class="definition">Definition at line <a class="el" href="muttlib_8c_source.html#l00828">828</a> of file <a class="el" href="muttlib_8c_source.html">muttlib.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  829</span>{</div>
-<div class="line"><span class="lineno">  830</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *xdg_env = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<a class="code hl_variable" href="muttlib_8c.html#aba682f487dd08b9a7bc7e579a0cada07">XdgEnvVars</a>[type]);</div>
-<div class="line"><span class="lineno">  831</span>  <span class="keywordtype">char</span> *xdg = xdg_env ? <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(xdg_env) : <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<a class="code hl_variable" href="muttlib_8c.html#aeb5382a9fd36c9df9e15a8bb5f9287da">XdgDefaults</a>[type]);</div>
-<div class="line"><span class="lineno">  832</span>  <span class="keywordtype">char</span> *x = xdg; <span class="comment">/* mutt_str_sep() changes xdg, so free x instead later */</span></div>
-<div class="line"><span class="lineno">  833</span>  <span class="keywordtype">char</span> *token = NULL;</div>
-<div class="line"><span class="lineno">  834</span>  <span class="keywordtype">int</span> rc = 0;</div>
-<div class="line"><span class="lineno">  835</span> </div>
-<div class="line"><span class="lineno">  836</span>  <span class="keywordflow">while</span> ((token = <a class="code hl_function" href="mutt_2string_8c.html#afbb529127e4b4fae6c8380db3786c858">mutt_str_sep</a>(&amp;xdg, <span class="stringliteral">&quot;:&quot;</span>)))</div>
-<div class="line"><span class="lineno">  837</span>  {</div>
-<div class="line"><span class="lineno">  838</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%s/%s/neomuttrc&quot;</span>, token, PACKAGE) &lt; 0)</div>
-<div class="line"><span class="lineno">  839</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  840</span>    <a class="code hl_function" href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a>(buf, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  841</span>    <span class="keywordflow">if</span> (access(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), F_OK) == 0)</div>
-<div class="line"><span class="lineno">  842</span>    {</div>
-<div class="line"><span class="lineno">  843</span>      rc = 1;</div>
-<div class="line"><span class="lineno">  844</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  845</span>    }</div>
-<div class="line"><span class="lineno">  846</span> </div>
-<div class="line"><span class="lineno">  847</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%s/%s/Muttrc&quot;</span>, token, PACKAGE) &lt; 0)</div>
-<div class="line"><span class="lineno">  848</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  849</span>    <a class="code hl_function" href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a>(buf, <span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  850</span>    <span class="keywordflow">if</span> (access(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), F_OK) == 0)</div>
-<div class="line"><span class="lineno">  851</span>    {</div>
-<div class="line"><span class="lineno">  852</span>      rc = 1;</div>
-<div class="line"><span class="lineno">  853</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  854</span>    }</div>
-<div class="line"><span class="lineno">  855</span>  }</div>
-<div class="line"><span class="lineno">  856</span> </div>
-<div class="line"><span class="lineno">  857</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;x);</div>
-<div class="line"><span class="lineno">  858</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno">  859</span>}</div>
+<p class="definition">Definition at line <a class="el" href="muttlib_8c_source.html#l00836">836</a> of file <a class="el" href="muttlib_8c_source.html">muttlib.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  837</span>{</div>
+<div class="line"><span class="lineno">  838</span>  <span class="keyword">const</span> <span class="keywordtype">char</span> *xdg_env = <a class="code hl_function" href="mutt_2string_8c.html#a954e319c94dafe57f48ea9b847269127">mutt_str_getenv</a>(<a class="code hl_variable" href="muttlib_8c.html#aba682f487dd08b9a7bc7e579a0cada07">XdgEnvVars</a>[type]);</div>
+<div class="line"><span class="lineno">  839</span>  <span class="keywordtype">char</span> *xdg = xdg_env ? <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(xdg_env) : <a class="code hl_function" href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a>(<a class="code hl_variable" href="muttlib_8c.html#aeb5382a9fd36c9df9e15a8bb5f9287da">XdgDefaults</a>[type]);</div>
+<div class="line"><span class="lineno">  840</span>  <span class="keywordtype">char</span> *x = xdg; <span class="comment">/* mutt_str_sep() changes xdg, so free x instead later */</span></div>
+<div class="line"><span class="lineno">  841</span>  <span class="keywordtype">char</span> *token = NULL;</div>
+<div class="line"><span class="lineno">  842</span>  <span class="keywordtype">int</span> rc = 0;</div>
+<div class="line"><span class="lineno">  843</span> </div>
+<div class="line"><span class="lineno">  844</span>  <span class="keywordflow">while</span> ((token = <a class="code hl_function" href="mutt_2string_8c.html#afbb529127e4b4fae6c8380db3786c858">mutt_str_sep</a>(&amp;xdg, <span class="stringliteral">&quot;:&quot;</span>)))</div>
+<div class="line"><span class="lineno">  845</span>  {</div>
+<div class="line"><span class="lineno">  846</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%s/%s/neomuttrc&quot;</span>, token, PACKAGE) &lt; 0)</div>
+<div class="line"><span class="lineno">  847</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  848</span>    <a class="code hl_function" href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a>(buf, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  849</span>    <span class="keywordflow">if</span> (access(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), F_OK) == 0)</div>
+<div class="line"><span class="lineno">  850</span>    {</div>
+<div class="line"><span class="lineno">  851</span>      rc = 1;</div>
+<div class="line"><span class="lineno">  852</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  853</span>    }</div>
+<div class="line"><span class="lineno">  854</span> </div>
+<div class="line"><span class="lineno">  855</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a>(buf, <span class="stringliteral">&quot;%s/%s/Muttrc&quot;</span>, token, PACKAGE) &lt; 0)</div>
+<div class="line"><span class="lineno">  856</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  857</span>    <a class="code hl_function" href="muttlib_8c.html#ab8f797f0a3b645c549e1503369a9832b">expand_path</a>(buf, <span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  858</span>    <span class="keywordflow">if</span> (access(<a class="code hl_function" href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a>(buf), F_OK) == 0)</div>
+<div class="line"><span class="lineno">  859</span>    {</div>
+<div class="line"><span class="lineno">  860</span>      rc = 1;</div>
+<div class="line"><span class="lineno">  861</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  862</span>    }</div>
+<div class="line"><span class="lineno">  863</span>  }</div>
+<div class="line"><span class="lineno">  864</span> </div>
+<div class="line"><span class="lineno">  865</span>  <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;x);</div>
+<div class="line"><span class="lineno">  866</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno">  867</span>}</div>
 <div class="ttc" id="abuffer_8c_html_a02123807d31181ac701b566226e93b33"><div class="ttname"><a href="buffer_8c.html#a02123807d31181ac701b566226e93b33">buf_printf</a></div><div class="ttdeci">int buf_printf(struct Buffer *buf, const char *fmt,...)</div><div class="ttdoc">Format a string overwriting a Buffer.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8c_source.html#l00168">buffer.c:168</a></div></div>
 <div class="ttc" id="abuffer_8h_html_a728ebc5a947b77c8d56db44ce553a7ab"><div class="ttname"><a href="buffer_8h.html#a728ebc5a947b77c8d56db44ce553a7ab">buf_string</a></div><div class="ttdeci">static const char * buf_string(const struct Buffer *buf)</div><div class="ttdoc">Convert a buffer to a const char * &quot;string&quot;.</div><div class="ttdef"><b>Definition</b> <a href="buffer_8h_source.html#l00096">buffer.h:96</a></div></div>
 <div class="ttc" id="amemory_8h_html_a25875003b43b81a4302256caa4a13599"><div class="ttname"><a href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a></div><div class="ttdeci">#define FREE(x)</div><div class="ttdoc">Free memory and set the pointer to NULL.</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00068">memory.h:68</a></div></div>
@@ -1278,13 +1278,13 @@ Variables</h2></td></tr>
 
 <p>Initialise the signal handling. </p>
 
-<p class="definition">Definition at line <a class="el" href="mutt__signal_8c_source.html#l00135">135</a> of file <a class="el" href="mutt__signal_8c_source.html">mutt_signal.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>{</div>
-<div class="line"><span class="lineno">  137</span>  <a class="code hl_function" href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">mutt_sig_init</a>(<a class="code hl_function" href="group__sig__handler__api.html#ga36f9432f78fa1b9e33cf9f860316ffb9">curses_signal_handler</a>, <a class="code hl_function" href="group__sig__handler__api.html#gaddcb2f804ac8deee8b5ea344a23d3ad6">curses_exit_handler</a>, <a class="code hl_function" href="group__sig__handler__api.html#ga4f151ea731b3841057483913896a9b11">curses_segv_handler</a>);</div>
-<div class="line"><span class="lineno">  138</span>}</div>
+<p class="definition">Definition at line <a class="el" href="mutt__signal_8c_source.html#l00138">138</a> of file <a class="el" href="mutt__signal_8c_source.html">mutt_signal.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>{</div>
+<div class="line"><span class="lineno">  140</span>  <a class="code hl_function" href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">mutt_sig_init</a>(<a class="code hl_function" href="group__sig__handler__api.html#ga36f9432f78fa1b9e33cf9f860316ffb9">curses_signal_handler</a>, <a class="code hl_function" href="group__sig__handler__api.html#gaddcb2f804ac8deee8b5ea344a23d3ad6">curses_exit_handler</a>, <a class="code hl_function" href="group__sig__handler__api.html#ga4f151ea731b3841057483913896a9b11">curses_segv_handler</a>);</div>
+<div class="line"><span class="lineno">  141</span>}</div>
 <div class="ttc" id="agroup__sig__handler__api_html_ga36f9432f78fa1b9e33cf9f860316ffb9"><div class="ttname"><a href="group__sig__handler__api.html#ga36f9432f78fa1b9e33cf9f860316ffb9">curses_signal_handler</a></div><div class="ttdeci">static void curses_signal_handler(int sig)</div><div class="ttdoc">Catch signals and relay the info to the main program - Implements sig_handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="mutt__signal_8c_source.html#l00050">mutt_signal.c:50</a></div></div>
-<div class="ttc" id="agroup__sig__handler__api_html_ga4f151ea731b3841057483913896a9b11"><div class="ttname"><a href="group__sig__handler__api.html#ga4f151ea731b3841057483913896a9b11">curses_segv_handler</a></div><div class="ttdeci">static void curses_segv_handler(int sig)</div><div class="ttdoc">Catch a segfault and print a backtrace - Implements sig_handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="mutt__signal_8c_source.html#l00107">mutt_signal.c:107</a></div></div>
-<div class="ttc" id="agroup__sig__handler__api_html_gaddcb2f804ac8deee8b5ea344a23d3ad6"><div class="ttname"><a href="group__sig__handler__api.html#gaddcb2f804ac8deee8b5ea344a23d3ad6">curses_exit_handler</a></div><div class="ttdeci">static void curses_exit_handler(int sig)</div><div class="ttdoc">Notify the user and shutdown gracefully - Implements sig_handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="mutt__signal_8c_source.html#l00094">mutt_signal.c:94</a></div></div>
+<div class="ttc" id="agroup__sig__handler__api_html_ga4f151ea731b3841057483913896a9b11"><div class="ttname"><a href="group__sig__handler__api.html#ga4f151ea731b3841057483913896a9b11">curses_segv_handler</a></div><div class="ttdeci">static void curses_segv_handler(int sig)</div><div class="ttdoc">Catch a segfault and print a backtrace - Implements sig_handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="mutt__signal_8c_source.html#l00110">mutt_signal.c:110</a></div></div>
+<div class="ttc" id="agroup__sig__handler__api_html_gaddcb2f804ac8deee8b5ea344a23d3ad6"><div class="ttname"><a href="group__sig__handler__api.html#gaddcb2f804ac8deee8b5ea344a23d3ad6">curses_exit_handler</a></div><div class="ttdeci">static void curses_exit_handler(int sig)</div><div class="ttdoc">Notify the user and shutdown gracefully - Implements sig_handler_t -.</div><div class="ttdef"><b>Definition</b> <a href="mutt__signal_8c_source.html#l00097">mutt_signal.c:97</a></div></div>
 <div class="ttc" id="asignal_8c_html_a079bd657ae3ccdcf07507d85097abfd8"><div class="ttname"><a href="signal_8c.html#a079bd657ae3ccdcf07507d85097abfd8">mutt_sig_init</a></div><div class="ttdeci">void mutt_sig_init(sig_handler_t sig_fn, sig_handler_t exit_fn, sig_handler_t segv_fn)</div><div class="ttdoc">Initialise the signal handling.</div><div class="ttdef"><b>Definition</b> <a href="signal_8c_source.html#l00163">signal.c:163</a></div></div>
 </div><!-- fragment --><div id="dynsection-11" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">

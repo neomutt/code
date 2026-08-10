@@ -220,7 +220,6 @@ var hierarchy =
     [ "MenuFuncOp", "structMenuFuncOp.html", null ],
     [ "MenuFunction", "structMenuFunction.html", null ],
     [ "MenuFunctionData", "structMenuFunctionData.html", null ],
-    [ "MenuFunctionOp", "structMenuFunctionOp.html", null ],
     [ "MenuModuleData", "structMenuModuleData.html", null ],
     [ "MenuOpSeq", "structMenuOpSeq.html", null ],
     [ "MenuStatusLineData", "structMenuStatusLineData.html", null ],
