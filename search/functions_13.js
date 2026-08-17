@@ -34,7 +34,7 @@ var searchData=
   ['tls_5fstarttls_5fclose_31',['tls_starttls_close',['../group__connection__close.html#ga0c11cb8253f1e3cd4df8ba1a92ef3252',1,'gnutls.c']]],
   ['tls_5fverify_5fpeers_32',['tls_verify_peers',['../gnutls_8c.html#a3d0c68a01f6632452a1d0fb8346634a7',1,'gnutls.c']]],
   ['tm_5fto_5fsec_33',['tm_to_sec',['../timegm_8c.html#a77bd5e36a8b09760e6d15ff4e81f2761',1,'timegm.c']]],
-  ['toggle_5factive_34',['toggle_active',['../autocrypt_2functions_8c.html#aa18136f638e997af82e6c460609fd220',1,'functions.c']]],
+  ['toggle_5fenabled_34',['toggle_enabled',['../autocrypt_2functions_8c.html#aff3f13e7ef61b1292c73475db4474fb5',1,'functions.c']]],
   ['toggle_5fprefer_5fencrypt_35',['toggle_prefer_encrypt',['../autocrypt_2functions_8c.html#afe65406aaadf99330c651e70a73391de',1,'functions.c']]],
   ['top_5fof_5fthread_36',['top_of_thread',['../mview_8c.html#ab65b072521ed0256d873f056d8c7e8a6',1,'mview.c']]],
   ['transform_5fto_5f7bit_37',['transform_to_7bit',['../sendlib_8c.html#aad3b0f8c92ca56bbe5a4dbe51c9ce81a',1,'sendlib.c']]],

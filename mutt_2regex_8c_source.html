@@ -30,7 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-1031-gfb8e54</span>
+   &#160;<span id="projectnumber">2025-12-11-1039-g550ac6</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -537,102 +537,105 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('mutt_2regex_8c
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>      <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;%d subs\n&quot;</span>, (<span class="keywordtype">int</span>) np-&gt;<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#af9ccc25da6324c9055e53966abe9a7b3">regex</a>-&gt;re_nsub);</div>
 <div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span> </div>
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>      <span class="comment">/* Copy template into buf, with substitutions. */</span></div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>      <span class="keywordflow">for</span> (p = np-&gt;<a class="code hl_variable" href="structReplace.html#a1eb937e11ef810cd39f1738eb20df1e9">templ</a>; *p &amp;&amp; (tlen &lt; (buflen - 1));)</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>      <span class="keywordflow">if</span> (np-&gt;<a class="code hl_variable" href="structReplace.html#a1eb937e11ef810cd39f1738eb20df1e9">templ</a>)</div>
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>      {</div>
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>        <span class="comment">/* backreference to pattern match substring, eg. %1, %2, etc) */</span></div>
-<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        <span class="keywordflow">if</span> (*p == <span class="charliteral">&#39;%&#39;</span>)</div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>        {</div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>          <span class="keywordtype">char</span> *e = NULL; <span class="comment">/* used as pointer to end of integer backreference in strtol() call */</span></div>
-<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span> </div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>          p++; <span class="comment">/* skip over % char */</span></div>
-<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>          <span class="keywordtype">long</span> n = strtol(p, &amp;e, 10);</div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>          <span class="comment">/* Ensure that the integer conversion succeeded (e!=p) and bounds check.  The upper bound check</span></div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span><span class="comment">           * should not strictly be necessary since add_to_spam_list() finds the largest value, and</span></div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span><span class="comment">           * the static array above is always large enough based on that value. */</span></div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>          <span class="keywordflow">if</span> ((e != p) &amp;&amp; (n &gt;= 0) &amp;&amp; (n &lt; np-&gt;<a class="code hl_variable" href="structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51">nmatch</a>) &amp;&amp; (pmatch[n].rm_so != -1))</div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>          {</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>            <span class="comment">/* copy as much of the substring match as will fit in the output buffer, saving space for</span></div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span><span class="comment">             * the terminating nul char */</span></div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = pmatch[n].rm_so;</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                 (idx &lt; pmatch[n].rm_eo) &amp;&amp; (tlen &lt; (buflen - 1)); idx++)</div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>            {</div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>              buf[tlen++] = str[idx];</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>            }</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>          }</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>          p = e; <span class="comment">/* skip over the parsed integer */</span></div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>        }</div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>        {</div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>          buf[tlen++] = *p++;</div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>        }</div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>      }</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>      <span class="comment">/* tlen should always be less than buflen except when buflen&lt;=0</span></div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span><span class="comment">       * because the bounds checks in the above code leave room for the</span></div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span><span class="comment">       * terminal nul char.   This should avoid returning an unterminated</span></div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span><span class="comment">       * string to the caller.  When buflen&lt;=0 we make no assumption about</span></div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span><span class="comment">       * the validity of the buf pointer. */</span></div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>      <span class="keywordflow">if</span> (tlen &lt; buflen)</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>      {</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>        buf[tlen] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;\&quot;%s\&quot;\n&quot;</span>, buf);</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>      }</div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    }</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>  }</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span> </div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>}</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>        <span class="keywordflow">for</span> (p = np-&gt;<a class="code hl_variable" href="structReplace.html#a1eb937e11ef810cd39f1738eb20df1e9">templ</a>; *p &amp;&amp; (tlen &lt; (buflen - 1));)</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        {</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>          <span class="comment">/* backreference to pattern match substring, eg. %1, %2, etc) */</span></div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>          <span class="keywordflow">if</span> (*p == <span class="charliteral">&#39;%&#39;</span>)</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>          {</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>            <span class="keywordtype">char</span> *e = NULL; <span class="comment">/* used as pointer to end of integer backreference in strtol() call */</span></div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span> </div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>            p++; <span class="comment">/* skip over % char */</span></div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>            <span class="keywordtype">long</span> n = strtol(p, &amp;e, 10);</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>            <span class="comment">/* Ensure that the integer conversion succeeded (e!=p) and bounds check.  The upper bound check</span></div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span><span class="comment">             * should not strictly be necessary since add_to_spam_list() finds the largest value, and</span></div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span><span class="comment">             * the static array above is always large enough based on that value. */</span></div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>            <span class="keywordflow">if</span> ((e != p) &amp;&amp; (n &gt;= 0) &amp;&amp; (n &lt; np-&gt;<a class="code hl_variable" href="structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51">nmatch</a>) &amp;&amp; (pmatch[n].rm_so != -1))</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>            {</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>              <span class="comment">/* copy as much of the substring match as will fit in the output buffer, saving space for</span></div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span><span class="comment">               * the terminating nul char */</span></div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>              <span class="keywordflow">for</span> (<span class="keywordtype">int</span> idx = pmatch[n].rm_so;</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                   (idx &lt; pmatch[n].rm_eo) &amp;&amp; (tlen &lt; (buflen - 1)); idx++)</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>              {</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                buf[tlen++] = str[idx];</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>              }</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>            }</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>            p = e; <span class="comment">/* skip over the parsed integer */</span></div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>          }</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>          {</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>            buf[tlen++] = *p++;</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>          }</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>        }</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>      }</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>      <span class="comment">/* tlen should always be less than buflen except when buflen&lt;=0</span></div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span><span class="comment">       * because the bounds checks in the above code leave room for the</span></div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="comment">       * terminal nul char.   This should avoid returning an unterminated</span></div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span><span class="comment">       * string to the caller.  When buflen&lt;=0 we make no assumption about</span></div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span><span class="comment">       * the validity of the buf pointer. */</span></div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>      <span class="keywordflow">if</span> (tlen &lt; buflen)</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>      {</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        buf[tlen] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>        <a class="code hl_define" href="group__logging__api.html#gae6c5fd73af3410b2d5e8099f8774c8da">mutt_debug</a>(<a class="code hl_enumvalue" href="logging2_8h.html#aca1fd1d8935433e6ba2e3918214e07f9a678d278eb301551ba0b3e0dbcfcee630">LL_DEBUG5</a>, <span class="stringliteral">&quot;\&quot;%s\&quot;\n&quot;</span>, buf);</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>      }</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>    }</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>  }</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span> </div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>}</div>
 </div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span></div>
-<div class="foldopen" id="foldopen00558" data-start="{" data-end="}">
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno"><a class="line" href="mutt_2regex_8c.html#a7751f72364d5429f22e535f63f5282f3">  558</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structReplace.html">Replace</a> *<a class="code hl_function" href="mutt_2regex_8c.html#a7751f72364d5429f22e535f63f5282f3">mutt_replacelist_new</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>{</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structReplace.html">Replace</a>);</div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>}</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span></div>
+<div class="foldopen" id="foldopen00561" data-start="{" data-end="}">
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno"><a class="line" href="mutt_2regex_8c.html#a7751f72364d5429f22e535f63f5282f3">  561</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structReplace.html">Replace</a> *<a class="code hl_function" href="mutt_2regex_8c.html#a7751f72364d5429f22e535f63f5282f3">mutt_replacelist_new</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>{</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>  <span class="keywordflow">return</span> <a class="code hl_define" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">MUTT_MEM_CALLOC</a>(1, <span class="keyword">struct</span> <a class="code hl_struct" href="structReplace.html">Replace</a>);</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>}</div>
 </div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span></div>
-<div class="foldopen" id="foldopen00569" data-start="{" data-end="}">
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno"><a class="line" href="mutt_2regex_8c.html#a10e50965e40cc0fe521c15c77d1e4841">  569</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mutt_2regex_8c.html#a10e50965e40cc0fe521c15c77d1e4841">mutt_replacelist_remove</a>(<span class="keyword">struct</span> ReplaceList *rl, <span class="keyword">const</span> <span class="keywordtype">char</span> *pat)</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>{</div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  <span class="keywordflow">if</span> (!rl || !pat)</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> </div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="keywordtype">int</span> nremoved = 0;</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structReplace.html">Replace</a> *np = NULL;</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structReplace.html">Replace</a> *tmp = NULL;</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, rl, entries, tmp)</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>  {</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(np-&gt;<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#a91a347ac006d49f161382d291f0edd99">pattern</a>, pat))</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    {</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>      <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(rl, np, <a class="code hl_struct" href="structReplace.html">Replace</a>, entries);</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>      <a class="code hl_function" href="mutt_2regex_8c.html#abd8bac0c6079060b92cbb235307b92a4">mutt_regex_free</a>(&amp;np-&gt;<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>);</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np-&gt;<a class="code hl_variable" href="structReplace.html#a1eb937e11ef810cd39f1738eb20df1e9">templ</a>);</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>      nremoved++;</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>    }</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  }</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  <span class="keywordflow">return</span> nremoved;</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>}</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span></div>
+<div class="foldopen" id="foldopen00572" data-start="{" data-end="}">
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno"><a class="line" href="mutt_2regex_8c.html#a10e50965e40cc0fe521c15c77d1e4841">  572</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="mutt_2regex_8c.html#a10e50965e40cc0fe521c15c77d1e4841">mutt_replacelist_remove</a>(<span class="keyword">struct</span> ReplaceList *rl, <span class="keyword">const</span> <span class="keywordtype">char</span> *pat)</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>{</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="keywordflow">if</span> (!rl || !pat)</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  <span class="keywordtype">int</span> nremoved = 0;</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structReplace.html">Replace</a> *np = NULL;</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>  <span class="keyword">struct </span><a class="code hl_struct" href="structReplace.html">Replace</a> *tmp = NULL;</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>  <a class="code hl_define" href="queue_8h.html#ac3203dcce73148c142df4586eb55ce55">STAILQ_FOREACH_SAFE</a>(np, rl, entries, tmp)</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>  {</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a>(np-&gt;<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#a91a347ac006d49f161382d291f0edd99">pattern</a>, pat))</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>    {</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>      <a class="code hl_define" href="queue_8h.html#a2a0d6665f277f80bf301a16e6ab2403c">STAILQ_REMOVE</a>(rl, np, <a class="code hl_struct" href="structReplace.html">Replace</a>, entries);</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>      <a class="code hl_function" href="mutt_2regex_8c.html#abd8bac0c6079060b92cbb235307b92a4">mutt_regex_free</a>(&amp;np-&gt;<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>);</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np-&gt;<a class="code hl_variable" href="structReplace.html#a1eb937e11ef810cd39f1738eb20df1e9">templ</a>);</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>      <a class="code hl_define" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">FREE</a>(&amp;np);</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>      nremoved++;</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>    }</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>  }</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span> </div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>  <span class="keywordflow">return</span> nremoved;</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>}</div>
 </div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span></div>
-<div class="foldopen" id="foldopen00601" data-start="{" data-end="}">
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno"><a class="line" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">  601</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code hl_struct" href="structRegex.html">Regex</a> *<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *str,</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>                        <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51">nmatch</a>, regmatch_t matches[])</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>{</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a> || !str || !<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#af9ccc25da6324c9055e53966abe9a7b3">regex</a>)</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  <span class="keywordtype">int</span> rc = regexec(<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#af9ccc25da6324c9055e53966abe9a7b3">regex</a>, str, <a class="code hl_variable" href="structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51">nmatch</a>, matches, 0);</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>  <span class="keywordflow">return</span> ((rc == 0) ^ <a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#adf40b2d25dabe5abb853946f35fe7c44">pat_not</a>);</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>}</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span></div>
+<div class="foldopen" id="foldopen00604" data-start="{" data-end="}">
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno"><a class="line" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">  604</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code hl_struct" href="structRegex.html">Regex</a> *<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *str,</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>                        <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51">nmatch</a>, regmatch_t matches[])</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>{</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a> || !str || !<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#af9ccc25da6324c9055e53966abe9a7b3">regex</a>)</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span> </div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>  <span class="keywordtype">int</span> rc = regexec(<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#af9ccc25da6324c9055e53966abe9a7b3">regex</a>, str, <a class="code hl_variable" href="structReplace.html#a7c1ab8b35008c2b88ad77c41bea3eb51">nmatch</a>, matches, 0);</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>  <span class="keywordflow">return</span> ((rc == 0) ^ <a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>-&gt;<a class="code hl_variable" href="structRegex.html#adf40b2d25dabe5abb853946f35fe7c44">pat_not</a>);</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>}</div>
 </div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span></div>
-<div class="foldopen" id="foldopen00618" data-start="{" data-end="}">
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno"><a class="line" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">  618</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code hl_struct" href="structRegex.html">Regex</a> *<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *str)</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>{</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>, str, 0, NULL);</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>}</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span></div>
+<div class="foldopen" id="foldopen00621" data-start="{" data-end="}">
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno"><a class="line" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">  621</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code hl_struct" href="structRegex.html">Regex</a> *<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>, <span class="keyword">const</span> <span class="keywordtype">char</span> *str)</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>{</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a>(<a class="code hl_variable" href="structReplace.html#aaa2fb5cafccc0f16ab15e0f3dbb65dbb">regex</a>, str, 0, NULL);</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>}</div>
 </div>
 <div class="ttc" id="aatoi_8c_html_ae5e07d3703764e9773459be2a6461f07"><div class="ttname"><a href="atoi_8c.html#ae5e07d3703764e9773459be2a6461f07">mutt_str_atoi</a></div><div class="ttdeci">const char * mutt_str_atoi(const char *str, int *dst)</div><div class="ttdoc">Convert ASCII string to an integer.</div><div class="ttdef"><b>Definition</b> <a href="atoi_8c_source.html#l00191">atoi.c:191</a></div></div>
 <div class="ttc" id="aatoi_8h_html"><div class="ttname"><a href="atoi_8h.html">atoi.h</a></div><div class="ttdoc">Parse a number in a string.</div></div>
@@ -659,22 +662,22 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('mutt_2regex_8c
 <div class="ttc" id="amemory_8h_html_abd7aad5fe8f11bcd476c64b4243081ba"><div class="ttname"><a href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">MUTT_MEM_REALLOC</a></div><div class="ttdeci">#define MUTT_MEM_REALLOC(pptr, n, type)</div><div class="ttdef"><b>Definition</b> <a href="memory_8h_source.html#l00055">memory.h:55</a></div></div>
 <div class="ttc" id="amutt_2message_8h_html"><div class="ttname"><a href="mutt_2message_8h.html">message.h</a></div><div class="ttdoc">Message logging.</div></div>
 <div class="ttc" id="amutt_2message_8h_html_a479d658dfd60fe8d9709ec67a58b34ca"><div class="ttname"><a href="mutt_2message_8h.html#a479d658dfd60fe8d9709ec67a58b34ca">_</a></div><div class="ttdeci">#define _(a)</div><div class="ttdef"><b>Definition</b> <a href="mutt_2message_8h_source.html#l00028">message.h:28</a></div></div>
-<div class="ttc" id="amutt_2regex_8c_html_a10e50965e40cc0fe521c15c77d1e4841"><div class="ttname"><a href="mutt_2regex_8c.html#a10e50965e40cc0fe521c15c77d1e4841">mutt_replacelist_remove</a></div><div class="ttdeci">int mutt_replacelist_remove(struct ReplaceList *rl, const char *pat)</div><div class="ttdoc">Remove a pattern from a list.</div><div class="ttdef"><b>Definition</b> <a href="#l00569">regex.c:569</a></div></div>
+<div class="ttc" id="amutt_2regex_8c_html_a10e50965e40cc0fe521c15c77d1e4841"><div class="ttname"><a href="mutt_2regex_8c.html#a10e50965e40cc0fe521c15c77d1e4841">mutt_replacelist_remove</a></div><div class="ttdeci">int mutt_replacelist_remove(struct ReplaceList *rl, const char *pat)</div><div class="ttdoc">Remove a pattern from a list.</div><div class="ttdef"><b>Definition</b> <a href="#l00572">regex.c:572</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a1ffcb776145b06b744f01636241a4e2d"><div class="ttname"><a href="mutt_2regex_8c.html#a1ffcb776145b06b744f01636241a4e2d">mutt_regex_new</a></div><div class="ttdeci">struct Regex * mutt_regex_new(const char *str, uint32_t flags, struct Buffer *err)</div><div class="ttdoc">Create an Regex from a string.</div><div class="ttdef"><b>Definition</b> <a href="#l00080">regex.c:80</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a23c398c13758ae5559468bc491e138a5"><div class="ttname"><a href="mutt_2regex_8c.html#a23c398c13758ae5559468bc491e138a5">mutt_regexlist_new</a></div><div class="ttdeci">struct RegexNode * mutt_regexlist_new(void)</div><div class="ttdoc">Create a new RegexList.</div><div class="ttdef"><b>Definition</b> <a href="#l00222">regex.c:222</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a2c74d388e109ba1cda73154549e884a7"><div class="ttname"><a href="mutt_2regex_8c.html#a2c74d388e109ba1cda73154549e884a7">mutt_regex_compile</a></div><div class="ttdeci">struct Regex * mutt_regex_compile(const char *str, uint16_t flags)</div><div class="ttdoc">Create an Regex from a string.</div><div class="ttdef"><b>Definition</b> <a href="#l00059">regex.c:59</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a2c9214257c0c29629a4481d8937a8be3"><div class="ttname"><a href="mutt_2regex_8c.html#a2c9214257c0c29629a4481d8937a8be3">mutt_regexlist_free</a></div><div class="ttdeci">void mutt_regexlist_free(struct RegexList *rl)</div><div class="ttdoc">Free a RegexList object.</div><div class="ttdef"><b>Definition</b> <a href="#l00179">regex.c:179</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a305eb49ea76a2bc81bf89c1b5417c308"><div class="ttname"><a href="mutt_2regex_8c.html#a305eb49ea76a2bc81bf89c1b5417c308">mutt_regexlist_add</a></div><div class="ttdeci">int mutt_regexlist_add(struct RegexList *rl, const char *str, uint16_t flags, struct Buffer *err)</div><div class="ttdoc">Compile a regex string and add it to a list.</div><div class="ttdef"><b>Definition</b> <a href="#l00140">regex.c:140</a></div></div>
-<div class="ttc" id="amutt_2regex_8c_html_a45a90a0b1de4365be463061b6ac0bc36"><div class="ttname"><a href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a></div><div class="ttdeci">bool mutt_regex_capture(const struct Regex *regex, const char *str, size_t nmatch, regmatch_t matches[])</div><div class="ttdoc">Match a regex against a string, with provided options.</div><div class="ttdef"><b>Definition</b> <a href="#l00601">regex.c:601</a></div></div>
+<div class="ttc" id="amutt_2regex_8c_html_a45a90a0b1de4365be463061b6ac0bc36"><div class="ttname"><a href="mutt_2regex_8c.html#a45a90a0b1de4365be463061b6ac0bc36">mutt_regex_capture</a></div><div class="ttdeci">bool mutt_regex_capture(const struct Regex *regex, const char *str, size_t nmatch, regmatch_t matches[])</div><div class="ttdoc">Match a regex against a string, with provided options.</div><div class="ttdef"><b>Definition</b> <a href="#l00604">regex.c:604</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a4cd5feab8463aea0a18d195f6c3a704d"><div class="ttname"><a href="mutt_2regex_8c.html#a4cd5feab8463aea0a18d195f6c3a704d">mutt_replacelist_free</a></div><div class="ttdeci">void mutt_replacelist_free(struct ReplaceList *rl)</div><div class="ttdoc">Free a ReplaceList object.</div><div class="ttdef"><b>Definition</b> <a href="#l00452">regex.c:452</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a4fd9f92b6c20e595b9487f874cb75f02"><div class="ttname"><a href="mutt_2regex_8c.html#a4fd9f92b6c20e595b9487f874cb75f02">mutt_regexlist_remove</a></div><div class="ttdeci">int mutt_regexlist_remove(struct RegexList *rl, const char *str)</div><div class="ttdoc">Remove a Regex from a list.</div><div class="ttdef"><b>Definition</b> <a href="#l00236">regex.c:236</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a5c1dc418529747116226ffa8f97e9e88"><div class="ttname"><a href="mutt_2regex_8c.html#a5c1dc418529747116226ffa8f97e9e88">mutt_replacelist_match</a></div><div class="ttdeci">bool mutt_replacelist_match(struct ReplaceList *rl, char *buf, size_t buflen, const char *str)</div><div class="ttdoc">Does a string match a pattern?</div><div class="ttdef"><b>Definition</b> <a href="#l00481">regex.c:481</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a6e784023fdfd5e862afd7cbfa50a6129"><div class="ttname"><a href="mutt_2regex_8c.html#a6e784023fdfd5e862afd7cbfa50a6129">mutt_replacelist_apply</a></div><div class="ttdeci">char * mutt_replacelist_apply(struct ReplaceList *rl, const char *str)</div><div class="ttdoc">Apply replacements to a buffer.</div><div class="ttdef"><b>Definition</b> <a href="#l00371">regex.c:371</a></div></div>
-<div class="ttc" id="amutt_2regex_8c_html_a7751f72364d5429f22e535f63f5282f3"><div class="ttname"><a href="mutt_2regex_8c.html#a7751f72364d5429f22e535f63f5282f3">mutt_replacelist_new</a></div><div class="ttdeci">struct Replace * mutt_replacelist_new(void)</div><div class="ttdoc">Create a new ReplaceList.</div><div class="ttdef"><b>Definition</b> <a href="#l00558">regex.c:558</a></div></div>
+<div class="ttc" id="amutt_2regex_8c_html_a7751f72364d5429f22e535f63f5282f3"><div class="ttname"><a href="mutt_2regex_8c.html#a7751f72364d5429f22e535f63f5282f3">mutt_replacelist_new</a></div><div class="ttdeci">struct Replace * mutt_replacelist_new(void)</div><div class="ttdoc">Create a new ReplaceList.</div><div class="ttdef"><b>Definition</b> <a href="#l00561">regex.c:561</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_a7b0b955eaca9b1208ff025f30a98aef0"><div class="ttname"><a href="mutt_2regex_8c.html#a7b0b955eaca9b1208ff025f30a98aef0">mutt_replacelist_add</a></div><div class="ttdeci">int mutt_replacelist_add(struct ReplaceList *rl, const char *pat, const char *templ, struct Buffer *err)</div><div class="ttdoc">Add a pattern and a template to a list.</div><div class="ttdef"><b>Definition</b> <a href="#l00273">regex.c:273</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_ab0efb83f9190881306c558339efb250a"><div class="ttname"><a href="mutt_2regex_8c.html#ab0efb83f9190881306c558339efb250a">mutt_regexlist_match</a></div><div class="ttdeci">bool mutt_regexlist_match(struct RegexList *rl, const char *str)</div><div class="ttdoc">Does a string match any Regex in the list?</div><div class="ttdef"><b>Definition</b> <a href="#l00201">regex.c:201</a></div></div>
 <div class="ttc" id="amutt_2regex_8c_html_abd8bac0c6079060b92cbb235307b92a4"><div class="ttname"><a href="mutt_2regex_8c.html#abd8bac0c6079060b92cbb235307b92a4">mutt_regex_free</a></div><div class="ttdeci">void mutt_regex_free(struct Regex **ptr)</div><div class="ttdoc">Free a Regex object.</div><div class="ttdef"><b>Definition</b> <a href="#l00118">regex.c:118</a></div></div>
-<div class="ttc" id="amutt_2regex_8c_html_ad25947e610db74945537b99edf428982"><div class="ttname"><a href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a></div><div class="ttdeci">bool mutt_regex_match(const struct Regex *regex, const char *str)</div><div class="ttdoc">Shorthand to mutt_regex_capture().</div><div class="ttdef"><b>Definition</b> <a href="#l00618">regex.c:618</a></div></div>
+<div class="ttc" id="amutt_2regex_8c_html_ad25947e610db74945537b99edf428982"><div class="ttname"><a href="mutt_2regex_8c.html#ad25947e610db74945537b99edf428982">mutt_regex_match</a></div><div class="ttdeci">bool mutt_regex_match(const struct Regex *regex, const char *str)</div><div class="ttdoc">Shorthand to mutt_regex_capture().</div><div class="ttdef"><b>Definition</b> <a href="#l00621">regex.c:621</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a29db81d6f5a7dd216cbea75ecf8a5885"><div class="ttname"><a href="mutt_2string_8c.html#a29db81d6f5a7dd216cbea75ecf8a5885">mutt_istr_equal</a></div><div class="ttdeci">bool mutt_istr_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings, ignoring case.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00678">string.c:678</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a3fe33d90e4814281cd57de048119c950"><div class="ttname"><a href="mutt_2string_8c.html#a3fe33d90e4814281cd57de048119c950">mutt_str_dup</a></div><div class="ttdeci">char * mutt_str_dup(const char *str)</div><div class="ttdoc">Copy a string, safely.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00257">string.c:257</a></div></div>
 <div class="ttc" id="amutt_2string_8c_html_a6b6a50296dd2a31863a43379ef4a343d"><div class="ttname"><a href="mutt_2string_8c.html#a6b6a50296dd2a31863a43379ef4a343d">mutt_str_equal</a></div><div class="ttdeci">bool mutt_str_equal(const char *a, const char *b)</div><div class="ttdoc">Compare two strings.</div><div class="ttdef"><b>Definition</b> <a href="mutt_2string_8c_source.html#l00666">string.c:666</a></div></div>

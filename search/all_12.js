@@ -141,7 +141,7 @@ var searchData=
   ['op_5fautocrypt_5facct_5fmenu_138',['op_autocrypt_acct_menu',['../group__index__function__api.html#gab5203f9d78193e8d31d73a5ea86c6fd7',1,'functions.c']]],
   ['op_5fautocrypt_5fcreate_5facct_139',['op_autocrypt_create_acct',['../group__autocrypt__function__api.html#ga610d51ccbf10b9ac919ba41cf676284c',1,'functions.c']]],
   ['op_5fautocrypt_5fdelete_5facct_140',['op_autocrypt_delete_acct',['../group__autocrypt__function__api.html#ga69ef556ebf9a762cfd657685f33cc95a',1,'functions.c']]],
-  ['op_5fautocrypt_5ftoggle_5factive_141',['op_autocrypt_toggle_active',['../group__autocrypt__function__api.html#ga1e748d108e73ca2d9828f0865fa81b7b',1,'functions.c']]],
+  ['op_5fautocrypt_5ftoggle_5fenabled_141',['op_autocrypt_toggle_enabled',['../group__autocrypt__function__api.html#gac712bac0d784c20c7d1ce56d50c5104b',1,'functions.c']]],
   ['op_5fautocrypt_5ftoggle_5fprefer_142',['op_autocrypt_toggle_prefer',['../group__autocrypt__function__api.html#gabdf9f487c48f8ff81ef82ae44526ec1d',1,'functions.c']]],
   ['op_5fbounce_5fmessage_143',['op_bounce_message',['../group__attach__function__api.html#gaeb4d7487ae7fb91f02b778d5a3a05552',1,'op_bounce_message(struct AttachFunctionData *fdata, const struct KeyEvent *event):&#160;functions.c'],['../group__index__function__api.html#ga9b2c2d95f90c2bd3eefcdc4701c0f4f6',1,'op_bounce_message(struct IndexFunctionData *fdata, const struct KeyEvent *event):&#160;functions.c']]],
   ['op_5fbrowser_5flimit_144',['op_browser_limit',['../group__browser__function__api.html#ga565dea3fa7acbd33b436ee09e0a9e8f6',1,'functions.c']]],
