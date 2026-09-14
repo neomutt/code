@@ -43,5 +43,6 @@ var searchData=
   ['trashit_40',['TRASHIT',['../queue_8h.html#adee7bf054da0ade68bb853732c665a2b',1,'queue.h']]],
   ['txt_5fenriched_41',['TXT_ENRICHED',['../handler_8c.html#aac25f3e996b8633b1ee447360b4f4398',1,'handler.c']]],
   ['txt_5fhtml_42',['TXT_HTML',['../handler_8c.html#a984562cb651e984a5b587170dee57a89',1,'handler.c']]],
-  ['txt_5fplain_43',['TXT_PLAIN',['../handler_8c.html#a83d9765384489e5b98d948f610c4af38',1,'handler.c']]]
+  ['txt_5fplain_43',['TXT_PLAIN',['../handler_8c.html#a83d9765384489e5b98d948f610c4af38',1,'handler.c']]],
+  ['typeas_44',['typeas',['../memory_8h.html#ae78df363074d7e5f5b7cd98ad36492cc',1,'memory.h']]]
 ];

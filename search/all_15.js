@@ -263,5 +263,6 @@ var searchData=
   ['rules_260',['Rules',['../fuzzy_subseq.html#autotoc_md55',1,'Scoring Rules'],['../fuzzy_subseq.html#autotoc_md61',1,'Why These Rules?']]],
   ['run_5fdecode_5fand_5fhandler_261',['run_decode_and_handler',['../handler_8c.html#a88df4ca81c59bfc2464df374863edfd9',1,'handler.c']]],
   ['run_5fmime_5ftype_5fquery_262',['run_mime_type_query',['../sendlib_8c.html#aa4255b4325a4c4204096172fa941339b',1,'sendlib.c']]],
-  ['rxspecialchars_263',['RxSpecialChars',['../file_8c.html#ab7dabb24458c5df2588d6cea769b8393',1,'file.c']]]
+  ['rvalue_263',['RVALUE',['../memory_8h.html#a4b0e0bb948691196fec46115040e105a',1,'memory.h']]],
+  ['rxspecialchars_264',['RxSpecialChars',['../file_8c.html#ab7dabb24458c5df2588d6cea769b8393',1,'file.c']]]
 ];

@@ -347,8 +347,9 @@ var searchData=
   ['type_5fother_344',['TYPE_OTHER',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79a2c4c96a2b998731adad0506fabeb9c17',1,'mime.h']]],
   ['type_5ftext_345',['TYPE_TEXT',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79ad88e88afaec507209421bba20aeeb167',1,'mime.h']]],
   ['type_5fvideo_346',['TYPE_VIDEO',['../mime_8h.html#a3ccd048df649c335df5a7f82673bbc79afeeff8542e46439d4b704699ff009323',1,'mime.h']]],
-  ['types_347',['types',['../structConfigSet.html#ab04a207e405abc005c3f52ab602c7a5d',1,'ConfigSet']]],
-  ['types_2eh_348',['types.h',['../types_8h.html',1,'']]],
-  ['tz_349',['Tz',['../structTz.html',1,'']]],
-  ['tzname_350',['tzname',['../structTz.html#aec12fba005d9c1d398aa6f7dbb4c7f16',1,'Tz']]]
+  ['typeas_347',['typeas',['../memory_8h.html#ae78df363074d7e5f5b7cd98ad36492cc',1,'memory.h']]],
+  ['types_348',['types',['../structConfigSet.html#ab04a207e405abc005c3f52ab602c7a5d',1,'ConfigSet']]],
+  ['types_2eh_349',['types.h',['../types_8h.html',1,'']]],
+  ['tz_350',['Tz',['../structTz.html',1,'']]],
+  ['tzname_351',['tzname',['../structTz.html#aec12fba005d9c1d398aa6f7dbb4c7f16',1,'Tz']]]
 ];

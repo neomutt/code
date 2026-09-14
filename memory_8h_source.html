@@ -30,7 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-1039-g550ac6</span>
+   &#160;<span id="projectnumber">2025-12-11-1040-g5187ba</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -148,26 +148,44 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('memory_8h_sour
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="memory_8h.html#a13aaf9e9e194ebfd84f90bcf4e264aca">   49</a></span><span class="preprocessor"># define countof(x)  (sizeof(x) / sizeof((x)[0]))</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="memory_8h.html#a9aaf8f21a29735767a069ff1aee9d7d9">   52</a></span><span class="preprocessor">#define MUTT_MEM_CALLOC(n, type)  ((type *) mutt_mem_calloc(n, sizeof(type)))</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="memory_8h.html#af997cb3719dc7abbeabae655d0ee1b9e">   53</a></span><span class="preprocessor">#define MUTT_MEM_MALLOC(n, type)  ((type *) mutt_mem_mallocarray(n, sizeof(type)))</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="foldopen" id="foldopen00055" data-start="" data-end="">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="memory_8h.html#abd7aad5fe8f11bcd476c64b4243081ba">   55</a></span><span class="preprocessor">#define MUTT_MEM_REALLOC(pptr, n, type)                                       \</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">(                                                                             \</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">  _Generic(*(pptr), type *: mutt_mem_reallocarray(pptr, n, sizeof(type)))     \</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#if !defined(typeas)</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="memory_8h.html#ae78df363074d7e5f5b7cd98ad36492cc">   63</a></span><span class="preprocessor"># define typeas(T)  __typeof__(*(__typeof__(T) *){_Generic(0, T: NULL, default: NULL)})</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="memory_8h.html#a4b0e0bb948691196fec46115040e105a">   66</a></span><span class="preprocessor">#define RVALUE(lv)  ((void)0, (lv))</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="" data-end="">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="memory_8h.html#aeafdab61d049cbcacf4d41da328fc8fe">   68</a></span><span class="preprocessor">#define MUTT_MEM_CALLOC(n, T)                                         \</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">(                                                                     \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">  RVALUE((typeas(T) *){mutt_mem_calloc(n, sizeof(T))})                \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">)</span></div>
 </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> *<a class="code hl_function" href="memory_8h.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(<span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span>  <a class="code hl_function" href="memory_8h.html#a9bebfc818df2dd796af83012bbf25def">mutt_mem_free</a>(<span class="keywordtype">void</span> *ptr);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> *<a class="code hl_function" href="memory_8h.html#ab856dc3a382ecbde1e18f558b81ff5d9">mutt_mem_malloc</a>(<span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> *<a class="code hl_function" href="memory_8h.html#a6046c82d8277adb6e3587637b26f8477">mutt_mem_mallocarray</a>(<span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span>  <a class="code hl_function" href="memory_8h.html#a96ad341eb83948f7ffafb6fd7d7b43d3">mutt_mem_realloc</a>(<span class="keywordtype">void</span> *pptr, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span>  <a class="code hl_function" href="memory_8h.html#ab11a92809b08c7ee72c23295cad59a37">mutt_mem_reallocarray</a>(<span class="keywordtype">void</span> *pptr, <span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">   68</a></span><span class="preprocessor">#define FREE(x) mutt_mem_free(x)</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">/* MUTT_MUTT_MEMORY_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="" data-end="">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="memory_8h.html#a239095bd74a6ad69e20c822e9ebc8640">   73</a></span><span class="preprocessor">#define MUTT_MEM_MALLOC(n, T)                                         \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">(                                                                     \</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">  RVALUE((typeas(T) *){mutt_mem_mallocarray(n, sizeof(T))})           \</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">)</span></div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="" data-end="">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="memory_8h.html#a89f393426a1fd191e94beba23179c1fb">   78</a></span><span class="preprocessor">#define MUTT_MEM_REALLOC(pptr, n, T)                                  \</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">(                                                                     \</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">  _Generic(*(pptr), typeas(T) *: (void)0),                            \</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">  mutt_mem_reallocarray(pptr, n, sizeof(T))                           \</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">)</span></div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> *<a class="code hl_function" href="memory_8h.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a>(<span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span>  <a class="code hl_function" href="memory_8h.html#a9bebfc818df2dd796af83012bbf25def">mutt_mem_free</a>(<span class="keywordtype">void</span> *ptr);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keywordtype">void</span> *<a class="code hl_function" href="memory_8h.html#ab856dc3a382ecbde1e18f558b81ff5d9">mutt_mem_malloc</a>(<span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keywordtype">void</span> *<a class="code hl_function" href="memory_8h.html#a6046c82d8277adb6e3587637b26f8477">mutt_mem_mallocarray</a>(<span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span>  <a class="code hl_function" href="memory_8h.html#a96ad341eb83948f7ffafb6fd7d7b43d3">mutt_mem_realloc</a>(<span class="keywordtype">void</span> *pptr, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">void</span>  <a class="code hl_function" href="memory_8h.html#ab11a92809b08c7ee72c23295cad59a37">mutt_mem_reallocarray</a>(<span class="keywordtype">void</span> *pptr, <span class="keywordtype">size_t</span> nmemb, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="memory_8h.html#a25875003b43b81a4302256caa4a13599">   92</a></span><span class="preprocessor">#define FREE(x) mutt_mem_free(x)</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif </span><span class="comment">/* MUTT_MUTT_MEMORY_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="amemory_8h_html_a39469100e5b8ae30c8f6f21e206aefe8"><div class="ttname"><a href="memory_8h.html#a39469100e5b8ae30c8f6f21e206aefe8">mutt_mem_calloc</a></div><div class="ttdeci">void * mutt_mem_calloc(size_t nmemb, size_t size)</div><div class="ttdoc">Allocate zeroed memory on the heap.</div><div class="ttdef"><b>Definition</b> <a href="memory_8c_source.html#l00079">memory.c:79</a></div></div>
 <div class="ttc" id="amemory_8h_html_a6046c82d8277adb6e3587637b26f8477"><div class="ttname"><a href="memory_8h.html#a6046c82d8277adb6e3587637b26f8477">mutt_mem_mallocarray</a></div><div class="ttdeci">void * mutt_mem_mallocarray(size_t nmemb, size_t size)</div><div class="ttdoc">Allocate memory on the heap (array version).</div><div class="ttdef"><b>Definition</b> <a href="memory_8c_source.html#l00132">memory.c:132</a></div></div>
 <div class="ttc" id="amemory_8h_html_a96ad341eb83948f7ffafb6fd7d7b43d3"><div class="ttname"><a href="memory_8h.html#a96ad341eb83948f7ffafb6fd7d7b43d3">mutt_mem_realloc</a></div><div class="ttdeci">void mutt_mem_realloc(void *pptr, size_t size)</div><div class="ttdoc">Resize a block of memory on the heap.</div><div class="ttdef"><b>Definition</b> <a href="memory_8c_source.html#l00149">memory.c:149</a></div></div>

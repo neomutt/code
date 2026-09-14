@@ -18,5 +18,6 @@ var searchData=
   ['reg_5fcomp_15',['REG_COMP',['../regex3_8h.html#a349838a3143be1dd9b0500bfbe54d48f',1,'regex3.h']]],
   ['reg_5fwords_16',['REG_WORDS',['../regex3_8h.html#acbf0cd6774750d7f48bd8a5dd466d1fa',1,'regex3.h']]],
   ['round_5fup_17',['ROUND_UP',['../memory_8h.html#a82aade22dcbee55989c7825a3b099b83',1,'memory.h']]],
-  ['route_5fspecial_5fmask_18',['ROUTE_SPECIAL_MASK',['../address_2address_8c.html#a9548377a4fe15c7e7b00b0272f38f2d8',1,'address.c']]]
+  ['route_5fspecial_5fmask_18',['ROUTE_SPECIAL_MASK',['../address_2address_8c.html#a9548377a4fe15c7e7b00b0272f38f2d8',1,'address.c']]],
+  ['rvalue_19',['RVALUE',['../memory_8h.html#a4b0e0bb948691196fec46115040e105a',1,'memory.h']]]
 ];
