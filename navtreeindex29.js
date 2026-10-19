@@ -1,5 +1,7 @@
 var NAVTREEINDEX29 =
 {
+"lib_send.html":[55],
+"lib_sidebar.html":[56],
 "lib_store.html":[57],
 "lib_store.html#autotoc_md149":[0],
 "lib_store.html#autotoc_md150":[1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX29 =
 "maildir_2module_8c.html#a12d20ccd3ab710143d990f4c06bf2e29":[2,0,33,17,0],
 "maildir_2module_8c.html#a1db00dd3b8116827160df66c9cd022d0":[2,0,33,17,5],
 "maildir_2module_8c.html#a58ee5d611e2d6317bf68c7bce8b95838":[2,0,33,17,1],
-"maildir_2module_8c.html#a5a0f65a3cfb197eafd4aa3687f6c2e7f":[2,0,33,17,3],
-"maildir_2module_8c.html#a7abf1894201e47362a87d574ace005f7":[2,0,33,17,4],
-"maildir_2module_8c_source.html":[2,0,33,17]
+"maildir_2module_8c.html#a5a0f65a3cfb197eafd4aa3687f6c2e7f":[2,0,33,17,3]
 };

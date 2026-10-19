@@ -405,6 +405,6 @@ var searchData=
   ['output_20of_20cli_20pgp_20program_402',['Parse the output of CLI PGP program',['../ncrypt_gnupg.html',1,'lib_ncrypt']]],
   ['overview_403',['Overview',['../fuzzy_subseq.html#autotoc_md52',1,'Algorithm Overview'],['../lib_fuzzy.html#autotoc_md48',1,'Overview']]],
   ['overview_5ffmt_404',['overview_fmt',['../structNntpAccountData.html#a32bf65f5dcf8d90460fec390cf91c18d',1,'NntpAccountData']]],
-  ['overviewfmt_405',['OverviewFmt',['../nntp_8c.html#a2efeded3447a40360d5b6fd431b8ac56',1,'nntp.c']]],
+  ['overviewfmt_405',['OverviewFmt',['../nntp_8c.html#ae673cb3260b4f28698d52aa822628ce1',1,'nntp.c']]],
   ['owner_406',['owner',['../structRfc2369ListHeaders.html#a31d2fa611678a377293c552b411bf246',1,'Rfc2369ListHeaders']]]
 ];

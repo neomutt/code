@@ -4,7 +4,7 @@ var buffer_8c =
     [ "buf_init", "buffer_8c.html#a6ffb5cf731a68033766b9a084d8b2dc2", null ],
     [ "buf_reset", "buffer_8c.html#a3b1f80652b37dc26046f9acdd85a0b05", null ],
     [ "buf_addstr_n", "buffer_8c.html#a2881936af4a3e3b45079cb9af0cdb3e8", null ],
-    [ "buf_vaprintf", "buffer_8c.html#a4bf845c9336c262734fef11238d74f20", null ],
+    [ "buf_vaprintf", "buffer_8c.html#a48d5759cf615f2b367849a1288ce7971", null ],
     [ "buf_printf", "buffer_8c.html#a02123807d31181ac701b566226e93b33", null ],
     [ "buf_fix_dptr", "buffer_8c.html#a4964d146427002ec3b52e121513b6078", null ],
     [ "buf_add_printf", "buffer_8c.html#a0849b79217aad19e4bf9381d532d59d1", null ],

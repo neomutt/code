@@ -55,6 +55,6 @@ var searchData=
   ['orig_5fseq_52',['orig_seq',['../structAliasView.html#a8fa9dd3de008e93b120dd3e79a3cd2a5',1,'AliasView']]],
   ['orig_5fstr_53',['orig_str',['../structMbTable.html#a1f60a5feb665dab352285830600b93a9',1,'MbTable']]],
   ['overview_5ffmt_54',['overview_fmt',['../structNntpAccountData.html#a32bf65f5dcf8d90460fec390cf91c18d',1,'NntpAccountData']]],
-  ['overviewfmt_55',['OverviewFmt',['../nntp_8c.html#a2efeded3447a40360d5b6fd431b8ac56',1,'nntp.c']]],
+  ['overviewfmt_55',['OverviewFmt',['../nntp_8c.html#ae673cb3260b4f28698d52aa822628ce1',1,'nntp.c']]],
   ['owner_56',['owner',['../structRfc2369ListHeaders.html#a31d2fa611678a377293c552b411bf246',1,'Rfc2369ListHeaders']]]
 ];

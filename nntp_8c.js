@@ -37,6 +37,6 @@ var nntp_8c =
     [ "nntp_msg_close", "group__mx__msg__close.html#gab50af5211064829ec664f0eab9d29d8c", null ],
     [ "nntp_path_probe", "group__mx__path__probe.html#ga0af5851670960cce257a6e5f9f9805ff", null ],
     [ "nntp_path_canon", "group__mx__path__canon.html#ga6b0863ccb0a3324447b728571db8d903", null ],
-    [ "OverviewFmt", "nntp_8c.html#a2efeded3447a40360d5b6fd431b8ac56", null ],
+    [ "OverviewFmt", "nntp_8c.html#ae673cb3260b4f28698d52aa822628ce1", null ],
     [ "MxNntpOps", "group__mx__api.html#ga24562d83c3ae18d95f817c611452ac87", null ]
 ];

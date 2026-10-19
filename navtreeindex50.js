@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"structCliInfo.html#af4b38b7a3fb929191965cb55d1faaece":[1,0,41,2],
+"structCliInfo.html#afc66e5c10b4fd16d015692bc3834fd71":[1,0,41,4],
 "structCliSend.html":[1,0,42],
 "structCliSend.html#a064e5e3667f6eb5c295c81723dc84712":[1,0,42,7],
 "structCliSend.html#a0694a827ccc9da98bc3035229a7baa72":[1,0,42,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "structCryptModuleSpecs.html#a7660e30a85a5ae60da1a384d1d351272":[1,0,81,19],
 "structCryptModuleSpecs.html#a819c87369b2dc3806d846c3a7e9fb7b6":[1,0,81,1],
 "structCryptModuleSpecs.html#a826c8626deb6f6d25fb824668b2a7191":[1,0,81,0],
-"structCryptModuleSpecs.html#a8331dbbb3603bed062e7e80342a97b4f":[1,0,81,14],
-"structCryptModuleSpecs.html#a8e4fee6a5203c68d854e1d328559889a":[1,0,81,4],
-"structCryptModuleSpecs.html#a9a42ba8d47527a42920e3bc345fdda71":[1,0,81,13]
+"structCryptModuleSpecs.html#a8331dbbb3603bed062e7e80342a97b4f":[1,0,81,14]
 };

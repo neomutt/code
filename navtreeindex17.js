@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"globals_func_d.html":[2,1,1,3],
+"globals_func_e.html":[2,1,1,4],
 "globals_func_f.html":[2,1,1,5],
 "globals_func_g.html":[2,1,1,6],
 "globals_func_h.html":[2,1,1,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "group__autocrypt__function__api.html#ga69ef556ebf9a762cfd657685f33cc95a":[58,13,2,1],
 "group__autocrypt__function__api.html#ga90eebc2e91421c236b7ff201fe5ff4df":[58,13,2,4],
 "group__autocrypt__function__api.html#gabdf9f487c48f8ff81ef82ae44526ec1d":[58,13,2,3],
-"group__autocrypt__function__api.html#gac712bac0d784c20c7d1ce56d50c5104b":[58,13,2,2],
-"group__bcache__list__api.html":[58,1],
-"group__bcache__list__api.html#ga09e9892b91976ad32580d3e3e6696e6e":[58,1,2]
+"group__autocrypt__function__api.html#gac712bac0d784c20c7d1ce56d50c5104b":[58,13,2,2]
 };
