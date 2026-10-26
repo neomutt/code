@@ -1,5 +1,9 @@
 var NAVTREEINDEX54 =
 {
+"structMboxAccountData.html#afa831028b1f2319094fcf830892e1066":[1,0,191,3],
+"structMboxModuleData.html":[1,0,192],
+"structMboxModuleData.html#a2ec4f71a1d7a63114bf406dd96ba423f":[1,0,192,0],
+"structMd5Ctx.html":[1,0,194],
 "structMd5Ctx.html#a10af2f70e69190208f0e8f9a34803570":[1,0,194,4],
 "structMd5Ctx.html#a6be4b06ff54cc0b71d0be55d2d48ad5f":[1,0,194,3],
 "structMd5Ctx.html#a7b66ed94ceb2590938cfabee8f56f778":[1,0,194,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX54 =
 "structNeoMuttVersion.html#af0a95ec3a685705cd2be87b628d43266":[1,0,227,1],
 "structNewsrcEntry.html":[1,0,228],
 "structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565":[1,0,228,1],
-"structNewsrcEntry.html#a9754473230323401f3cfddcbdc560d0b":[1,0,228,0],
-"structNmAccountData.html":[1,0,229],
-"structNmAccountData.html#a2a97c6eb8ac5e85fe484bec736a2ae8e":[1,0,229,1],
-"structNmAccountData.html#a76f9a37a987a8e6057f4d89cdd27ea36":[1,0,229,0],
-"structNmAccountData.html#aa3dcd4870d23e936fa2292d56a8126aa":[1,0,229,2]
+"structNewsrcEntry.html#a9754473230323401f3cfddcbdc560d0b":[1,0,228,0]
 };

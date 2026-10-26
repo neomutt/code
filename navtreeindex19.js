@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"group__compose__function__api.html#ga306efeddd331a342e93caf65b3848a37":[58,13,3,29],
+"group__compose__function__api.html#ga308bba22dd3334e4997dd85caf2bf60b":[58,13,3,31],
 "group__compose__function__api.html#ga35661881b3054e6b960b398630d33a84":[58,13,3,16],
 "group__compose__function__api.html#ga3f3ea5f77b84f0d77ffde5153b9ef8e0":[58,13,3,10],
 "group__compose__function__api.html#ga40f8a8119b0ff3c3f5573b3c28efabd8":[58,13,3,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "group__envelope__function__api.html#ga9ce62ed1e4e5ab72e711e710c0a16818":[58,13,5,6],
 "group__envelope__function__api.html#gaafa7277481fb2318d646f0988ee7a110":[58,13,5,11],
 "group__envelope__function__api.html#gac4d5cb182cafb0e34932023ae8083b7b":[58,13,5,9],
-"group__envelope__function__api.html#gacb4e94d66c60d4b8ae3f1e2fd0083844":[58,13,5,0],
-"group__expando__get__data__api.html":[58,25],
-"group__expando__get__number__api.html":[58,25,1]
+"group__envelope__function__api.html#gacb4e94d66c60d4b8ae3f1e2fd0083844":[58,13,5,0]
 };

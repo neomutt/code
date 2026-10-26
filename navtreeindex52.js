@@ -1,5 +1,9 @@
 var NAVTREEINDEX52 =
 {
+"structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a":[1,0,113,0],
+"structExpandoDefinition.html":[1,0,114],
+"structExpandoDefinition.html#a4450ea6bb5fb80766cffc58c101fc323":[1,0,114,3],
+"structExpandoDefinition.html#a46172446e92db75fc21a4a756ddb2d22":[1,0,114,4],
 "structExpandoDefinition.html#aa7f3e0a1a30a0d774a768af4ff51adad":[1,0,114,1],
 "structExpandoDefinition.html#ac9ce21146072b7cbeb611ba202d8048d":[1,0,114,2],
 "structExpandoDefinition.html#af13dbf9a047dc18edc3fc1248ed69903":[1,0,114,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX52 =
 "structImapCommand.html":[1,0,157],
 "structImapCommand.html#abbbd89e5b7364a52b2b2c67535007b06":[1,0,157,1],
 "structImapCommand.html#afb06c6cd37cd8562ce79dd6e01647d56":[1,0,157,0],
-"structImapEmailData.html":[1,0,158],
-"structImapEmailData.html#a51e50c468a502ec7b3ea9f5dfa09e2f0":[1,0,158,5],
-"structImapEmailData.html#a64e9b3c8a5b91a1102fa09e26be67794":[1,0,158,6],
-"structImapEmailData.html#a8c77eb4bff1b0e97039cfc97ac898835":[1,0,158,7],
-"structImapEmailData.html#aa942cde9ad6b90d7353e448578c8f3e8":[1,0,158,9]
+"structImapEmailData.html":[1,0,158]
 };

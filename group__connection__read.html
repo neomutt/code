@@ -30,7 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <a style="color: black; text-decoration: none;" href="https://neomutt.org">
    <div id="projectname">NeoMutt
-   &#160;<span id="projectnumber">2025-12-11-1052-ga8f1ca</span>
+   &#160;<span id="projectnumber">2025-12-11-1059-g2f5469</span>
    </div>
    <div id="projectbrief">Teaching an old dog new tricks</div>
    </a>
@@ -288,36 +288,36 @@ Variables</h2></td></tr>
 
 <p>Read data from an SSL socket - Implements <a class="el" href="structConnection.html#afdd852b383b3926639ec9132c048590a">Connection::read()</a> -. </p>
 
-<p class="definition">Definition at line <a class="el" href="openssl_8c_source.html#l01344">1344</a> of file <a class="el" href="openssl_8c_source.html">openssl.c</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1345</span>{</div>
-<div class="line"><span class="lineno"> 1346</span>  <span class="keyword">struct </span>SslSockData *data = <a class="code hl_function" href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a>(conn);</div>
-<div class="line"><span class="lineno"> 1347</span>  <span class="keywordtype">int</span> rc;</div>
-<div class="line"><span class="lineno"> 1348</span> </div>
-<div class="line"><span class="lineno"> 1349</span>retry:</div>
-<div class="line"><span class="lineno"> 1350</span>  rc = SSL_read(data-&gt;ssl, buf, count);</div>
-<div class="line"><span class="lineno"> 1351</span>  <span class="keywordflow">if</span> (rc &gt; 0)</div>
-<div class="line"><span class="lineno"> 1352</span>    <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1353</span> </div>
-<div class="line"><span class="lineno"> 1354</span>  <span class="comment">// User hit Ctrl-C</span></div>
-<div class="line"><span class="lineno"> 1355</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> &amp;&amp; (errno == EINTR))</div>
-<div class="line"><span class="lineno"> 1356</span>  {</div>
-<div class="line"><span class="lineno"> 1357</span>    rc = -1;</div>
-<div class="line"><span class="lineno"> 1358</span>  }</div>
-<div class="line"><span class="lineno"> 1359</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (BIO_should_retry(SSL_get_rbio(data-&gt;ssl)))</div>
+<p class="definition">Definition at line <a class="el" href="openssl_8c_source.html#l01348">1348</a> of file <a class="el" href="openssl_8c_source.html">openssl.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1349</span>{</div>
+<div class="line"><span class="lineno"> 1350</span>  <span class="keyword">struct </span>SslSockData *data = <a class="code hl_function" href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a>(conn);</div>
+<div class="line"><span class="lineno"> 1351</span>  <span class="keywordtype">int</span> rc;</div>
+<div class="line"><span class="lineno"> 1352</span> </div>
+<div class="line"><span class="lineno"> 1353</span>retry:</div>
+<div class="line"><span class="lineno"> 1354</span>  rc = SSL_read(data-&gt;ssl, buf, count);</div>
+<div class="line"><span class="lineno"> 1355</span>  <span class="keywordflow">if</span> (rc &gt; 0)</div>
+<div class="line"><span class="lineno"> 1356</span>    <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1357</span> </div>
+<div class="line"><span class="lineno"> 1358</span>  <span class="comment">// User hit Ctrl-C</span></div>
+<div class="line"><span class="lineno"> 1359</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a> &amp;&amp; (errno == EINTR))</div>
 <div class="line"><span class="lineno"> 1360</span>  {</div>
-<div class="line"><span class="lineno"> 1361</span>    <span class="comment">// Temporary failure, e.g. signal received</span></div>
-<div class="line"><span class="lineno"> 1362</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a>(conn, 0) &gt; 0)</div>
-<div class="line"><span class="lineno"> 1363</span>    {</div>
-<div class="line"><span class="lineno"> 1364</span>      <span class="keywordflow">goto</span> retry;</div>
-<div class="line"><span class="lineno"> 1365</span>    }</div>
-<div class="line"><span class="lineno"> 1366</span>  }</div>
-<div class="line"><span class="lineno"> 1367</span> </div>
-<div class="line"><span class="lineno"> 1368</span>  data-&gt;is_open = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno"> 1369</span>  <a class="code hl_function" href="openssl_8c.html#ad0eb5f86037e1612ca14cd3a0a87a0dc">ssl_err</a>(data, rc);</div>
-<div class="line"><span class="lineno"> 1370</span>  <span class="keywordflow">return</span> rc;</div>
-<div class="line"><span class="lineno"> 1371</span>}</div>
+<div class="line"><span class="lineno"> 1361</span>    rc = -1;</div>
+<div class="line"><span class="lineno"> 1362</span>  }</div>
+<div class="line"><span class="lineno"> 1363</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (BIO_should_retry(SSL_get_rbio(data-&gt;ssl)))</div>
+<div class="line"><span class="lineno"> 1364</span>  {</div>
+<div class="line"><span class="lineno"> 1365</span>    <span class="comment">// Temporary failure, e.g. signal received</span></div>
+<div class="line"><span class="lineno"> 1366</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a>(conn, 0) &gt; 0)</div>
+<div class="line"><span class="lineno"> 1367</span>    {</div>
+<div class="line"><span class="lineno"> 1368</span>      <span class="keywordflow">goto</span> retry;</div>
+<div class="line"><span class="lineno"> 1369</span>    }</div>
+<div class="line"><span class="lineno"> 1370</span>  }</div>
+<div class="line"><span class="lineno"> 1371</span> </div>
+<div class="line"><span class="lineno"> 1372</span>  data-&gt;is_open = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno"> 1373</span>  <a class="code hl_function" href="openssl_8c.html#ad0eb5f86037e1612ca14cd3a0a87a0dc">ssl_err</a>(data, rc);</div>
+<div class="line"><span class="lineno"> 1374</span>  <span class="keywordflow">return</span> rc;</div>
+<div class="line"><span class="lineno"> 1375</span>}</div>
 <div class="ttc" id="agroup__connection__poll_html_ga3e4473be79d3294a1be08ab03d3f7eb6"><div class="ttname"><a href="group__connection__poll.html#ga3e4473be79d3294a1be08ab03d3f7eb6">raw_socket_poll</a></div><div class="ttdeci">int raw_socket_poll(struct Connection *conn, time_t wait_secs)</div><div class="ttdoc">Check if any data is waiting on a socket - Implements Connection::poll() -.</div><div class="ttdef"><b>Definition</b> <a href="raw_8c_source.html#l00355">raw.c:355</a></div></div>
-<div class="ttc" id="aopenssl_8c_html_aaf61ace510a4bea2797d93f0226dc631"><div class="ttname"><a href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a></div><div class="ttdeci">static struct SslSockData * sockdata(struct Connection *conn)</div><div class="ttdoc">Get a Connection&#39;s socket data.</div><div class="ttdef"><b>Definition</b> <a href="openssl_8c_source.html#l01211">openssl.c:1211</a></div></div>
+<div class="ttc" id="aopenssl_8c_html_aaf61ace510a4bea2797d93f0226dc631"><div class="ttname"><a href="openssl_8c.html#aaf61ace510a4bea2797d93f0226dc631">sockdata</a></div><div class="ttdeci">static struct SslSockData * sockdata(struct Connection *conn)</div><div class="ttdoc">Get a Connection&#39;s socket data.</div><div class="ttdef"><b>Definition</b> <a href="openssl_8c_source.html#l01215">openssl.c:1215</a></div></div>
 <div class="ttc" id="aopenssl_8c_html_ad0eb5f86037e1612ca14cd3a0a87a0dc"><div class="ttname"><a href="openssl_8c.html#ad0eb5f86037e1612ca14cd3a0a87a0dc">ssl_err</a></div><div class="ttdeci">static void ssl_err(struct SslSockData *data, int err)</div><div class="ttdoc">Display an SSL error message.</div><div class="ttdef"><b>Definition</b> <a href="openssl_8c_source.html#l00241">openssl.c:241</a></div></div>
 <div class="ttc" id="asignal_8c_html_a85c069643781da758ffa8281db66e8f0"><div class="ttname"><a href="signal_8c.html#a85c069643781da758ffa8281db66e8f0">SigInt</a></div><div class="ttdeci">volatile sig_atomic_t SigInt</div><div class="ttdoc">true after SIGINT is received</div><div class="ttdef"><b>Definition</b> <a href="signal_8c_source.html#l00068">signal.c:68</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Here is the call graph for this function:</div>

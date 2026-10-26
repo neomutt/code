@@ -1,5 +1,7 @@
 var NAVTREEINDEX20 =
 {
+"group__expando__get__data__api.html":[58,25],
+"group__expando__get__number__api.html":[58,25,1],
 "group__expando__get__number__api.html#ga014a179c6f03545dceada8c1a1779d74":[58,25,1,71],
 "group__expando__get__number__api.html#ga05dee214f44338047fe7b125098c3cff":[58,25,1,59],
 "group__expando__get__number__api.html#ga0b5afe56611c552478e589973ca26d12":[58,25,1,56],
@@ -247,7 +249,5 @@ var NAVTREEINDEX20 =
 "group__expando__get__string__api.html#gaedc9911f95cc08a5ffae7cbeeca6e645":[58,25,0,59],
 "group__expando__get__string__api.html#gaeff3a698cd8ae9e14f720e18de8c246e":[58,25,0,96],
 "group__expando__get__string__api.html#gaf05fb771f3208ef9722cb6464d5c0b0d":[58,25,0,79],
-"group__expando__get__string__api.html#gaf07ee318ab70ee2b612450d23996b661":[58,25,0,156],
-"group__expando__get__string__api.html#gaf2c1ed4f2c23badbb0483956e24b79c1":[58,25,0,119],
-"group__expando__get__string__api.html#gaf456c4dc8c493ebc7366902a8a20f239":[58,25,0,40]
+"group__expando__get__string__api.html#gaf07ee318ab70ee2b612450d23996b661":[58,25,0,156]
 };

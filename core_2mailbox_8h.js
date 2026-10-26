@@ -49,6 +49,7 @@ var core_2mailbox_8h =
     ] ],
     [ "ARRAY_HEAD", "core_2mailbox_8h.html#a88305ccec7ea2352238fad314006d4d4", null ],
     [ "mailbox_changed", "core_2mailbox_8h.html#af09ac36728ca3255523cd3b0bfd1f172", null ],
+    [ "mailbox_clear_emails", "core_2mailbox_8h.html#a30003d07fe0dd2f1cb4460bdad54b0e5", null ],
     [ "mailbox_find", "core_2mailbox_8h.html#afa6e5cc34622044961308aa23da3b570", null ],
     [ "mailbox_find_name", "core_2mailbox_8h.html#ac5a2a367b196f81ebd35dc1dba14242e", null ],
     [ "mailbox_free", "core_2mailbox_8h.html#aba915aae97477d1ecc6428a06f92dac9", null ],

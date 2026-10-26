@@ -1,5 +1,7 @@
 var NAVTREEINDEX33 =
 {
+"msgwin__wdata_8c.html#a037a38ed1a4786072e5ba1d6dc4b1e15":[2,0,24,18,1],
+"msgwin__wdata_8c_source.html":[2,0,24,18],
 "msgwin__wdata_8h.html":[2,0,24,19],
 "msgwin__wdata_8h.html#a037a38ed1a4786072e5ba1d6dc4b1e15":[2,0,24,19,7],
 "msgwin__wdata_8h.html#a30a25b4b7151e7815373015147f8ebf5":[2,0,24,19,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX33 =
 "mutt_2regex_8c.html#a4cd5feab8463aea0a18d195f6c3a704d":[2,0,38,55,10],
 "mutt_2regex_8c.html#a4fd9f92b6c20e595b9487f874cb75f02":[2,0,38,55,7],
 "mutt_2regex_8c.html#a5c1dc418529747116226ffa8f97e9e88":[2,0,38,55,11],
-"mutt_2regex_8c.html#a6e784023fdfd5e862afd7cbfa50a6129":[2,0,38,55,9],
-"mutt_2regex_8c.html#a7751f72364d5429f22e535f63f5282f3":[2,0,38,55,12],
-"mutt_2regex_8c.html#a7b0b955eaca9b1208ff025f30a98aef0":[2,0,38,55,8]
+"mutt_2regex_8c.html#a6e784023fdfd5e862afd7cbfa50a6129":[2,0,38,55,9]
 };

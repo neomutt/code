@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"structAliasMenuData.html#a72dc070f9a4d63c98be5510d26c71a21":[1,0,7,6],
+"structAliasMenuData.html#a80c31195ea34deeb083d2a044b98d1ca":[1,0,7,3],
+"structAliasMenuData.html#aac5de712e06fcb42cea41aae0adcc62a":[1,0,7,4],
+"structAliasMenuData.html#ac168f872d43329c8e4ca9295425ed06d":[1,0,7,7],
 "structAliasMenuData.html#af100c948f81ce4d95ec10ea660437827":[1,0,7,2],
 "structAliasModuleData.html":[1,0,8],
 "structAliasModuleData.html#a1ce55f5aeb7ca4a8d1dd42fef8261f85":[1,0,8,1],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "structCliHelp.html#a8c9dfa852379ab59d20494916c4e2e88":[1,0,40,1],
 "structCliHelp.html#aeda0754097038d0eafbae9268c276b71":[1,0,40,0],
 "structCliInfo.html":[1,0,41],
-"structCliInfo.html#a195bbef2d0228e086e2d44d39f2ad9e5":[1,0,41,3],
-"structCliInfo.html#a2e4c8a7e114628780d4ec6540a83d702":[1,0,41,0],
-"structCliInfo.html#a3bffd7556046c544b4212484ae013deb":[1,0,41,6],
-"structCliInfo.html#a3f2ce2f1342d0b2f867552205c2e8d30":[1,0,41,5],
-"structCliInfo.html#a92986df41e8f2757287727e9e57b7259":[1,0,41,1]
+"structCliInfo.html#a195bbef2d0228e086e2d44d39f2ad9e5":[1,0,41,3]
 };

@@ -4,6 +4,7 @@ var core_2mailbox_8c =
     [ "mailbox_gen", "core_2mailbox_8c.html#a764a9d8daf2de305b5a3f777a76e4a41", null ],
     [ "mailbox_new", "core_2mailbox_8c.html#aa7afbd798786af119a20e15f130555aa", null ],
     [ "mailbox_free", "core_2mailbox_8c.html#aba915aae97477d1ecc6428a06f92dac9", null ],
+    [ "mailbox_clear_emails", "core_2mailbox_8c.html#a30003d07fe0dd2f1cb4460bdad54b0e5", null ],
     [ "mailbox_find", "core_2mailbox_8c.html#afa6e5cc34622044961308aa23da3b570", null ],
     [ "mailbox_find_name", "core_2mailbox_8c.html#ac5a2a367b196f81ebd35dc1dba14242e", null ],
     [ "mailbox_update", "core_2mailbox_8c.html#ab614961b6e97592c0e56c30b47f65f29", null ],

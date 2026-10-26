@@ -1,5 +1,7 @@
 var NAVTREEINDEX29 =
 {
+"lib_progress.html":[52],
+"lib_question.html":[53],
 "lib_send.html":[55],
 "lib_sidebar.html":[56],
 "lib_store.html":[57],
@@ -247,7 +249,5 @@ var NAVTREEINDEX29 =
 "maildir_2module_8c.html":[2,0,33,17],
 "maildir_2module_8c.html#a05068ab8dc32686b0e15ff62f86e3a01":[2,0,33,17,2],
 "maildir_2module_8c.html#a12d20ccd3ab710143d990f4c06bf2e29":[2,0,33,17,0],
-"maildir_2module_8c.html#a1db00dd3b8116827160df66c9cd022d0":[2,0,33,17,5],
-"maildir_2module_8c.html#a58ee5d611e2d6317bf68c7bce8b95838":[2,0,33,17,1],
-"maildir_2module_8c.html#a5a0f65a3cfb197eafd4aa3687f6c2e7f":[2,0,33,17,3]
+"maildir_2module_8c.html#a1db00dd3b8116827160df66c9cd022d0":[2,0,33,17,5]
 };

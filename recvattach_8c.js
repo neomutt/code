@@ -5,6 +5,7 @@ var recvattach_8c =
     [ "mutt_update_tree", "recvattach_8c.html#aa9845701586d190b83e575e9e1f89303", null ],
     [ "prepend_savedir", "recvattach_8c.html#a7ead8fceb1c2b8c8c8a86b08e73a1191", null ],
     [ "has_a_message", "recvattach_8c.html#aced4d9d83c08c161c00ed3804f2fca4e", null ],
+    [ "mutt_attach_save_path", "recvattach_8c.html#a5a22355a90bd663f1f13ca4e82506f27", null ],
     [ "save_attachment_flowed_helper", "recvattach_8c.html#a3c36223d243ef6b041baf6e0bb54533f", null ],
     [ "query_save_attachment", "recvattach_8c.html#acdb2625453e4a2bacee478c06061ba7a", null ],
     [ "save_without_prompting", "recvattach_8c.html#a52c616f195a129f43883a3a3bb8f463f", null ],
