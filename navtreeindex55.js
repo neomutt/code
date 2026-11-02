@@ -1,5 +1,7 @@
 var NAVTREEINDEX55 =
 {
+"structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565":[1,0,228,1],
+"structNewsrcEntry.html#a9754473230323401f3cfddcbdc560d0b":[1,0,228,0],
 "structNmAccountData.html":[1,0,229],
 "structNmAccountData.html#a2a97c6eb8ac5e85fe484bec736a2ae8e":[1,0,229,1],
 "structNmAccountData.html#a76f9a37a987a8e6057f4d89cdd27ea36":[1,0,229,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX55 =
 "structPgpCommandContext.html":[1,0,268],
 "structPgpCommandContext.html#a78d6362d702a5890e8cd2f6e602298f9":[1,0,268,0],
 "structPgpCommandContext.html#a902503498520f373066233471d32e0ea":[1,0,268,3],
-"structPgpCommandContext.html#accc9f51d99b9369effd24f0b4a123631":[1,0,268,1],
-"structPgpCommandContext.html#ad3677b114592699f6e148d6d824fdae2":[1,0,268,4],
-"structPgpCommandContext.html#af6757067e77513c9f8ee234b57beeb8e":[1,0,268,2]
+"structPgpCommandContext.html#accc9f51d99b9369effd24f0b4a123631":[1,0,268,1]
 };

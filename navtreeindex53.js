@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"structImapCommand.html#afb06c6cd37cd8562ce79dd6e01647d56":[1,0,157,0],
+"structImapEmailData.html":[1,0,158],
 "structImapEmailData.html#a51e50c468a502ec7b3ea9f5dfa09e2f0":[1,0,158,5],
 "structImapEmailData.html#a64e9b3c8a5b91a1102fa09e26be67794":[1,0,158,6],
 "structImapEmailData.html#a8c77eb4bff1b0e97039cfc97ac898835":[1,0,158,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "structMboxAccountData.html":[1,0,191],
 "structMboxAccountData.html#a5b98e08c3191fc9525c5785a68fd6281":[1,0,191,0],
 "structMboxAccountData.html#a6b38a768ff6b78533e6d127a71041c35":[1,0,191,5],
-"structMboxAccountData.html#abbc038cf6dab4ae621b3c820f5c10251":[1,0,191,4],
-"structMboxAccountData.html#adbf1b3f43f11c3ee023ae3a8fd88bc89":[1,0,191,2],
-"structMboxAccountData.html#ae6ab6321738884d728ea2e9f55a92b7e":[1,0,191,1]
+"structMboxAccountData.html#abbc038cf6dab4ae621b3c820f5c10251":[1,0,191,4]
 };

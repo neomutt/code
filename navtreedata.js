@@ -159,17 +159,17 @@ var NAVTREEINDEX =
 "send_2header_8c.html#a520c5ce2825ef71a466e3f751bb5ac51",
 "serialize_8c.html#ac2d851a258dcd72e74a3e113bd4c4c29",
 "smime_8c.html#a9d0f081748b9e72a7355c87730919647",
-"structAliasMenuData.html#a72dc070f9a4d63c98be5510d26c71a21",
-"structCliInfo.html#a2e4c8a7e114628780d4ec6540a83d702",
-"structCryptModuleSpecs.html#a7660e30a85a5ae60da1a384d1d351272",
-"structExpando.html#aedaeeb89da666d6e27674a3d08b0b54a",
-"structImapEmailData.html#a51e50c468a502ec7b3ea9f5dfa09e2f0",
-"structMboxAccountData.html#afa831028b1f2319094fcf830892e1066",
-"structNmAccountData.html",
-"structPgpData.html",
-"structSmimeCommandContext.html#a7c5e080eefc6e98377db7ba11f5ffbba",
-"tags_8h.html#af74871b62c31994a28ea0193c3150a01",
-"utilwin_8h.html#a28f47665f258479b8674284f9c99391c"
+"structAliasMenuData.html#a48f714a2da3a1b240c60d9ec89b814b6",
+"structCliInfo.html",
+"structCryptModuleSpecs.html#a555d3da530f7c25207fcbae9efa8ab03",
+"structExpando.html",
+"structImapCommand.html#afb06c6cd37cd8562ce79dd6e01647d56",
+"structMboxAccountData.html#adbf1b3f43f11c3ee023ae3a8fd88bc89",
+"structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565",
+"structPgpCommandContext.html#ad3677b114592699f6e148d6d824fdae2",
+"structSmimeCommandContext.html#a3dee10ce395177b61300c96086c22ea4",
+"tags_8h.html#ad8747ae0afa8c43e6394a5955c3e7862",
+"utilwin_8c_source.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

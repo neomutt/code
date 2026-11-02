@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"structMboxAccountData.html#adbf1b3f43f11c3ee023ae3a8fd88bc89":[1,0,191,2],
+"structMboxAccountData.html#ae6ab6321738884d728ea2e9f55a92b7e":[1,0,191,1],
 "structMboxAccountData.html#afa831028b1f2319094fcf830892e1066":[1,0,191,3],
 "structMboxModuleData.html":[1,0,192],
 "structMboxModuleData.html#a2ec4f71a1d7a63114bf406dd96ba423f":[1,0,192,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX54 =
 "structNeoMuttVersion.html#acebc3df88ab992f4ad9506621f551657":[1,0,227,6],
 "structNeoMuttVersion.html#aee350d92afdd352b9c0688f8b019f1af":[1,0,227,5],
 "structNeoMuttVersion.html#af0a95ec3a685705cd2be87b628d43266":[1,0,227,1],
-"structNewsrcEntry.html":[1,0,228],
-"structNewsrcEntry.html#a35e1d881699320677a0032b9fc207565":[1,0,228,1],
-"structNewsrcEntry.html#a9754473230323401f3cfddcbdc560d0b":[1,0,228,0]
+"structNewsrcEntry.html":[1,0,228]
 };
